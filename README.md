@@ -32,10 +32,12 @@ UCF101の全件集計にはTSN公開実装の配布リストを用い、別の�
 
 ImageNetのカテゴリ例はILSVRC 2012の1,000クラスと照合し、重複のない100クラス（10%）であることを確認した。残る900クラスは列挙しておらず、WordNet全体を網羅する一覧でもない。見取り図の10グループは説明のための区分で、WordNetの公式の上位分類ではない。
 
-UCF101の行動例はすべて3コマの連続フレームとし、表示した時点を秒で示した。主例はI3Dの公開入力、追加例はUCF101動画の公開コピー（RichardMinsooGo-ML/5_TF2_UCF101_video_classification）を用いた。追加例のファイル名が配布分割リストに含まれることと、動画のタイムスタンプを照合した。圧縮ZIPの約7 GBという値はTensorFlow Datasetsのチェックサム記録の6,960,400,115 bytesに基づく。各デッキの参考文献には参照した内容を記載している。
+UCF101の行動例はすべて3コマの連続フレームとし、表示した時点を秒で示した。主例はI3Dの公開入力、追加例はUCF101動画の公開コピー（RichardMinsooGo-ML/5_TF2_UCF101_video_classification）を用いた。追加例のファイル名が配布分割リストに含まれることと、動画のタイムスタンプを照合した。圧縮ZIPの約7 GBという値はTensorFlow Datasetsのチェックサム記録の6,960,400,115 bytesに基づく。素材の取得元や集計元は、利用したページの出典から特定できる。末尾の参考文献は、読後の学習・研究に使う原著、公式教材・実装、評価の限界を調べる資料を選び、何を学べるかを添えた読書案内にしている。
 
-箇条書きは、提供された発表資料のp.7をXMLで確認し、本文プレースホルダー（body、idx=1）と段落のネイティブなレベル・バレットを使う方式にそろえた。第一階層は●・左余白36 pt、第二階層は○・左余白72 pt、ぶら下げは各28 ptとし、本編とAppendixの目次は番号付きリストとした。本文に丸文字を打ち込んでいないことも確認した。これらの値と手順はSKILLとマスターだけで再現できる。
+箇条書きは、提供された発表資料のp.7をXMLで確認し、本文プレースホルダー（body、idx=1）と段落のネイティブなレベル・バレットを使う方式にそろえた。第一階層は●・左余白36 pt、第二階層は○・左余白72 pt、ぶら下げは各28 ptとし、本編とAppendixの目次は番号付きリストとした。本文に丸文字を打ち込んでいないことも確認した。バレットは親子とも約13.3 ptとし、LibreOfficeで無視される`buSzPts`を使わず、段落の本文サイズに対応した整数の`buSzPct`と`buFont="Noto Sans CJK JP"`を明示した。本文と番号付き目次のサイズは独立して設定する。これらの値と手順はSKILLとマスターだけで再現できる。
 
 日本語はNoto Sans CJK JP、英数字はNoto SansをPPTXとPDFで共通に使用する。コードはLiberation Monoを使う。フォント本体は同梱・埋め込みしておらず、別端末でのPPTX編集には同じフォントの導入が必要になる。
 
-PowerPointの修復版と比較し、表セルの罫線／塗りの要素順、重複したbuNone、presentationのdefaultTextStyle／extLstの順序を修正した。4資料とマスターのPresentationML・DrawingML全パーツをECMA-376第5版のTransitional XSDで検証し、修正後はエラー0件となった。検証に用いたスキーマは https://github.com/QtExcel/ecma-376-5th のECMA-376配布物に含まれるもの。全289ページをPDFへ描画し、文字照合・タイトルの一行・出典との間隔を確認した。ZIPの整合性、内部参照、図形ID、箇条書きのXML構造も確認した。Linux環境のためMicrosoft PowerPointでの最終開封は未実施。
+PowerPointの修復版との比較で特定した、表セルの罫線／塗りの要素順、重複したbuNone、presentationのdefaultTextStyle／extLstの順序の修正は保持している。今回の4資料とマスターのPresentationML・DrawingML全372パーツは、ECMA-376第5版のTransitional XSDで構造を確認した。このXSDの`buSzPct`はパーセント文字列だけを受け付け、LibreOfficeで動作確認した整数形式を拒否するため、その値は公式Open XML SDKの`BulletSizePercentage`定義（整数25000〜400000）に照らして別途検証した。この表記差以外のXSDエラーは0件。スキーマは https://github.com/QtExcel/ecma-376-5th 、SDK定義は https://github.com/dotnet/Open-XML-SDK/blob/main/data/schemas/schemas_openxmlformats_org_drawingml_2006_main.json を用いた。
+
+完全版の全289ページをLibreOfficeでPDFへ再描画し、全ページの目視、本文・表・出典の文字照合、タイトルの一行、出典との間隔を確認した。全355個のバレットはPDF上で13.209〜13.408 pt、Noto Sans CJK JPであることを確認した。本文・図表説明など102テキスト領域を、収まる範囲で拡大した。SQuADのp.9を含む23箇所の引用枠は、全行の描画位置から上下約7 ptの余白を確保し、質問・回答も再配置した。p.12の補足は、公式v1.1 train＋devの全20,963段落を各1回、前後空白除去後の文字数で集計し、500文字未満が2,874段落あるという具体的な記述に置き換えた。原著の収集条件と配布データの実測値の違いの原因は断定していない。ZIPの整合性、内部参照、図形ID、ネイティブなバレット・番号付きリストの構造、発表者ノートがないことも確認した。Linux環境のためMicrosoft PowerPointでの最終開封は未実施。
