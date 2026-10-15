@@ -97,6 +97,7 @@ PowerPointやLibreOfficeなど、PPTXを編集・描画できる環境を使い�
 |SNLI|29|35|64|[PPTX](slides/datasets-in-10-minutes-snli.pptx)|[PDF](slides/datasets-in-10-minutes-snli.pdf)|
 |SQuAD|32|67|99|[PPTX](slides/datasets-in-10-minutes-squad.pptx)|[PDF](slides/datasets-in-10-minutes-squad.pdf)|
 |UCF101|32|36|68|[PPTX](slides/datasets-in-10-minutes-ucf101.pptx)|[PDF](slides/datasets-in-10-minutes-ucf101.pdf)|
+|MS COCO|28|32|60|[PPTX](slides/datasets-in-10-minutes-coco.pptx)|[PDF](slides/datasets-in-10-minutes-coco.pdf)|
 
 参考文献の最新の修正では、33件の正式タイトルを省略せず、著者・年・掲載先と、特徴・貢献・位置付けを記す独立した紹介文、URLを掲載しています。参考文献22ページを再配置・描画確認し、完全版PPTXとPDFの全300ページで文字欠落がないことを照合しました。参考文献より前の278ページは、PPTXのスライドXML・描画資産とPDFの本文を以前の版と照合しています。
 
@@ -110,5 +111,23 @@ PowerPointやLibreOfficeなど、PPTXを編集・描画できる環境を使い�
 PPTXとマスターのPresentationML・DrawingML全372パーツは、[ECMA-376第5版のTransitional XSD](https://github.com/QtExcel/ecma-376-5th)で構造を確認しました。このXSDが`buSzPct`の整数形式を拒否する表記差は、[公式Open XML SDKの定義](https://github.com/dotnet/Open-XML-SDK/blob/main/data/schemas/schemas_openxmlformats_org_drawingml_2006_main.json)に照らして別途検証し、それ以外のXSDエラーは0件でした。ZIPの整合性、内部参照、図形ID、リスト構造、発表者ノートがないことも確認しました。Microsoft PowerPointでの最終開封は未実施です。
 
 ImageNetでは、ILSVRC 2012の1,000クラスと照合した重複のない100クラスを例示しています。WordNet全体の一覧ではなく、10グループも説明用の整理です。UCF101の全件集計はTSN公開実装の配布リストを別の公開実装のコピーと照合しました。動画全体の長さは再集計せず、原著の値を使っています。行動例は3コマの連続フレームと秒数を確認し、圧縮ZIPの約7 GBはTensorFlow Datasetsの6,960,400,115 bytesという記録に基づきます。UCF101の公式トップ画面は当時の接続許可で取得できず、原著のarXiv公開ページを区別して掲載しています。
+
+</details>
+
+
+<details>
+<summary>MS COCOの制作範囲と検証記録（2026-10-15）</summary>
+
+共通マスターと2つのスキルを使った、日本語の完全版60ページです。本編28ページ、Appendix32ページ。物体検出、インスタンス分割、Panoptic分割の区別、収集工程、2017年版の範囲、AP・IoU・PQ、異なる検出方式の公開結果、周辺データ、入手方法を扱います。本編の予定配分は表紙・目次25秒、目的と実例130秒、作成方法と範囲160秒、評価150秒、利用と入手135秒の計600秒です。音読による実測はしていません。
+
+本編に3件、追加例の節に重複しない10件の実画像・領域注釈を掲載し、分布の最大・最小に対応する別の2画像も示しました。Panopticの例は[公式APIのサンプル](https://github.com/cocodataset/panopticapi/tree/master/sample_data)、他の例は[COCO128-segの公開画像・変換注釈](https://github.com/ultralytics/assets/releases/download/v0.0.0/coco128-seg.zip)を使用しています。加工済みの多角形注釈であることと各画像IDを、その画像のページに記載しています。
+
+集計はこの128画像に限定し、929注釈領域、平均7.2578125、中央値4、母標準偏差7.7643477、線形補間の第1・第3四分位点2・10、最大42領域（画像196）、最小0領域（画像250・508）を確認しました。注釈ファイルのない2画像は0として含めています。全80物体カテゴリのうち71カテゴリの注釈がありました。この部分集合への転換を補足の冒頭で示し、COCO全体の公式値と分けています。全80物体カテゴリの一覧は公式Panoptic APIの`isthing=1`のカテゴリと照合しました。背景の91カテゴリ（COCO-Stuff）と53カテゴリ（COCO Panoptic）は別の体系として説明しています。
+
+公式配布サイト・arXivへの接続は、この環境の許可ドメイン制限で取得できませんでした。トップ画面は[公式サイト公開ソース](https://github.com/cocodataset/cocodataset.github.io/tree/5e1c4da72464b1c6f068df0c02c91e3000ea62c4)のHTML・CSS・画像をローカルで再描画したもので、ライブ画面の取得とは区別して表示しています。配布容量は公式ページの圧縮サイズの概数であり、全画像や全注釈を取得・展開して測定した値ではありません。原著PDF本文の再照合、原著の作業者数・総作業時間の確認は未実施です。公開結果・API・Web資料の確認日は2026-10-15で、最新最高性能の網羅的調査ではありません。
+
+完全版60ページをLibreOfficeでPDFへ変換し、全ページを描画・目視確認しました。PPTX本文・表・出典の文字欠落、タイトルの折り返し、ページ外の文字、本文と出典の8 pt未満の接近はいずれも0件です。66個のバレットは`buSzPct`と`Noto Sans CJK JP`の明示により、PDF上で13.209〜13.294 ptでした。参考文献6件は正式タイトルを省略せず、著者・年・発表先・URLと独立した位置付けの紹介文を掲載しています。
+
+PresentationML・DrawingMLの75パーツはECMA-376第5版のTransitional XSDで確認し、`buSzPct`の整数表記に対する既知の表記差以外のエラーは0件でした。整数値は公式Open XML SDKの定義域と13.3 ptへの換算を別途確認しています。ZIP、内部参照、図形ID、ネイティブなリスト・目次番号、ノートがないことも確認しました。Microsoft PowerPointでの最終開封と、掲載したAPIコードによる公式val2017全体の読込み実行は未実施です。
 
 </details>
