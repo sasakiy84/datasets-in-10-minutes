@@ -31,7 +31,7 @@ English workflow: Use only this skill and the accompanying master. Identify the 
 |対象の紹介・授業|何をする対象か。なぜ作られ、何が特徴か。実例をどう理解するか。周辺の対象との違い、変遷、現在の使われ方、入手・利用方法は何か|
 |データや評価資源の紹介|何を測るための資源か。素材・注釈・単位・分割は何か。規模や偏りは何か。評価法と代表的な結果、利用状況、入手方法は何か|
 
-- 初めて出る重要な区別や例外は、必要に応じて具体例を先に示す。番号だけでは意味が不明なら「バージョン」「条件」などを添える。
+- 型・カテゴリ・グループ・個々の事例など、複数の分類やデータ単位がある場合は、単位間の包含関係と一つの具体例を本編の必要な位置で説明する。上位の区分と下位カテゴリを同じ呼び方で曖昧にせず、「〜という型に属するカテゴリ」など関係を明示する。上位区分ごとの規模や偏りが読者の判断に役立つなら、その粒度で表にまとめる。初めて出る重要な区別や例外は、必要に応じて具体例を先に示す。番号だけでは意味が不明なら「バージョン」「条件」などを添える。
 - 周辺の対象は、以前・以後の例ごとに1–2文で何を扱うかと今回の対象との差を説明する。「先行例として〜があった」「それに対して〜」「その後〜」など接続語で比較・因果・時系列をつなぐ。規模の変化には同じ単位・版・範囲による件数や倍率を示す。
 - 利用の変遷が関係する場合は、登場時の課題と代表的な結果、その後の変化、現在の利用がつながるように設計する。現役で利用される証拠と、最新最高性能を網羅したかどうかは区別する。
 - 新しい資料やユーザーの指摘が加わったら、章構成、並び順、本文と補足への配分、強調を再設計する。追加情報を末尾へ積み上げるだけにしない。
@@ -51,7 +51,7 @@ English workflow: Use only this skill and the accompanying master. Identify the 
 
 ### 数値・分布が重要な場合
 
-対象件数、集計単位、数え方、除外・加工条件を確認して、必要な記述統計を計算する。平均だけでなく中央値・標準偏差・分位点・最小・最大などを目的に合わせて選ぶ。分布が理解に重要なときはヒストグラムを使い、階級幅、単位、件数か割合か、対象件数を示す。全件を含めるか、範囲外の件数を明記する。
+入手や利用の規模を理解する助けになる場合は、配布容量も調べる。圧縮アーカイブ、展開後の動画、抽出フレームなど何の容量かを区別し、裏付けのある値だけを示す。対象件数、集計単位、数え方、除外・加工条件を確認して、必要な記述統計を計算する。平均だけでなく中央値・標準偏差・分位点・最小・最大などを目的に合わせて選ぶ。分布が理解に重要なときはヒストグラムを使い、階級幅、単位、件数か割合か、対象件数を示す。全件を含めるか、範囲外の件数を明記する。
 
 中心だけでなく、読者の判断に関わる偏り・少数側・裾を調べる。閾値以下の対象数、具体的な対象名と値、必要なら裾の拡大図を補う。性能への影響を考えるための手がかりと、測定した影響を区別する。
 
@@ -66,13 +66,13 @@ English workflow: Use only this skill and the accompanying master. Identify the 
 - Appendixが長い場合は番号付きの目次を置き、帯にもその番号と内容名を示す。対象に応じた順序でまとめ、対応する統計と極値の例を近接させる。
 - 引き算は内容の削減ではなく、重複して意味を伝える文字列の削減。既に定義からわかる否定、見ればわかる断り、制作過程の説明、重複ラベルを削る。比較結果を変える条件は残す。
 - 直接的で簡潔な文章を使う。本文で「当時：〜」「入力：〜」のようにコロンで省略せず、「当時は〜だった」「入力には〜を使う」と書く。帯の「Appendix: 方法」、URL、コード、原文・原題の記号は可。
-- 読んでほしい主張・結果・例は大きくし、必要なときに照合する出典・IDは明確に小さくする。両方を中くらいの文字にそろえない。実例の識別情報は同定に必要な最小限にする。一意な画像IDと取得元URLで足りるなら、クラスID・版・分割・リサイズ条件を重ねて書かない。必要な照合情報だけ同じページの出典末尾へ8–9 ptで添える。理解に必要な分類名や測定値は本文に残す。
+- 読んでほしい主張・結果・例は大きくし、必要なときに照合する出典・IDは明確に小さくする。両方を中くらいの文字にそろえない。実例の識別情報は同定に必要な最小限にする。URLとIDは同じ出典行にまとめ、スライド表示のための内部処理、入力配列の形状、抽出フレーム番号、不要な分割名を列挙しない。一意な画像IDと取得元URLで足りるなら、クラスID・版・分割・リサイズ条件を重ねて書かない。必要な照合情報だけ同じページの出典末尾へ8–9 ptで添える。理解に必要な分類名や測定値は本文に残す。
 - 一つの論理的な箇条書きにつき一つの段落を使う。同じ項目内の文は句点でつなぎ、本文は自動折り返しに任せる。二行以上になることは可。表示幅の都合で文を途中改行せず、階層にはPowerPointの実際の箇条書きレベルと字下げ、目次には段落の自動番号を使う。第一階層のバレットは黒丸「•」、第二階層は白丸「○」とする。ハイフンや丸を本文へ打ち込まない。第二階層は段落レベル1に設定し、第一階層からさらに字下げする。マスターの本文リストスタイルも同じ設定にし、Tabキーで階層を変えたときも白丸になるようにする。連続スペース・全角空白・タブで位置を調整しない。コードと原資料の意味上の改行は保持する。
 - スライドタイトルは一行に収める。まず短くし、必要ならタイトルの文字サイズを調整する。本文の自動折り返しと混同して二行にしない。行末の一文字や参照番号だけの孤立にも注意する。
 
 ### 出典と単体での共有
 
-重要な主張・表に1–2箇所を目安に[1]などを付け、スライド内の文献・URLに対応させる。すべての文へ繰り返さず、表は見出しに1回でよい。日本語では句点の前に「説明 [1]。」と置く。本文中の参照番号は周囲の本文と同じ文字サイズにする。表・キャプション内も、そのインラインの文字サイズにそろえる。小さくするのはページ下部の文献情報や照合用IDであり、参照番号ではない。一般的な説明へ効果の薄い出典を増やさない。実例は元資料のURL・ID・対象名などで同じページから特定できるようにする。
+重要な主張・表に1–2箇所を目安に[1]などを付け、スライド内の文献・URLに対応させる。すべての文へ繰り返さず、表は見出しに1回でよい。日本語では句点の前に「説明 [1]。」と置く。本文中の参照番号は周囲の本文と同じ文字サイズにする。表・キャプション内も、そのインラインの文字サイズにそろえる。小さくするのはページ下部の文献情報や照合用IDであり、参照番号ではない。Appendixの参考文献一覧でも、各文献を何の根拠や材料として参照したのか、短い一文で添える。原著、比較手法の評価結果、関連研究、集計元、実例の取得元、利用条件などを区別し、書誌事項とURLだけの羅列にしない。説明を追加して窮屈になる場合は参考文献ページを分割する。一般的な説明へ効果の薄い出典を増やさない。実例は元資料のURL・ID・対象名などで同じページから特定できるようにする。
 
 スライドは単体で共有される前提とする。制作中のCSV・スクリプト・検証ログへの案内で説明を代替しない。必要な定義と条件はそのページに書く。目次を含め、他のスライドへのページ参照・内部リンク、「全文はp.XX」「次ページ」などを載せない。文献のURLはこの禁止の対象ではない。制作履歴や検証上の未確認事項は納品時の記録へ置く。
 
@@ -98,7 +98,7 @@ SlideMaster.pptxは16:9、横10.000 inch、縦5.625 inch。座標は左上を原
 |表|18–20 pt。9列程度の詳細統計は補足で13–16 ptまで可|
 |出典・照合用ID|8–9 pt。本文とのサイズ差を明確にし、描画して読めることを確認する|
 
-フォントが利用できない場合は日英を表示できる近い字体に替え、描画を確認する。字体の変更だけで文字欠落が解消したと判断しない。マスター、テーマ、レイアウトを保持して、新しい発表のサンプルページを作り直す。元の8枚の例示スライドは成果物から除く。元マスターの内容は参考資料の代わりとして読めるが、その研究分野や文章は新作へ転用しない。
+日本語の本文・目次は、日本語用の字体とja-JP言語指定を段落と文字ランの両方で明示する。Latinのフォント名だけでなくEast Asianのフォント指定も確認し、中国語・韓国語用の字体へ意図せず置換されていないか描画で確かめる。目次に余白があれば26–28 ptへ拡大する。フォントが利用できない場合は日英を表示できる近い字体に替え、描画を確認する。字体の変更だけで文字欠落が解消したと判断しない。マスター、テーマ、レイアウトを保持して、新しい発表のサンプルページを作り直す。元の8枚の例示スライドは成果物から除く。元マスターの内容は参考資料の代わりとして読めるが、その研究分野や文章は新作へ転用しない。
 
 ### レイアウトとplaceholderの対応
 
@@ -128,7 +128,7 @@ CUSTOMは旧発表の目次が静的に入っているので使用しない。ON
 
 - TITLEを使用し、idx=0をx=0.500、y=1.200、w=9.000、h=2.450に置く。中央揃え・垂直中央。対象の説明は34 pt前後、主題名は48–58 ptを初期値とする。余白があるなら大きくする。
 - 副題が必要ならidx=1をx=0.600、y=4.000、w=8.800、h=0.400に置き、22 ptで中央揃えにする。内容上不要な副題は空にする。
-- 所属、氏名、作成日は3つの独立した編集可能な入力欄にする。所属と氏名のidx=10、11はx=6.000、w=3.400、h=0.250、yは順に4.620、4.920。作成日のidx=12は表紙の左上、x=0.500、y=0.300、w=4.000、h=0.250に置く。いずれも14 ptの灰色で左揃え、垂直中央にする。
+- 所属、氏名、作成日は3つの独立した編集可能な入力欄にする。所属と氏名のidx=10、11はx=6.000、w=3.400、h=0.250、yは順に4.620、4.920。作成日のidx=12は表紙の左上、x=0.500、y=0.300、w=4.000、h=0.250に置く。所属欄は14 ptの灰色で右揃え、氏名欄は20 ptの濃い灰色303437で右揃えにする。氏名欄はy=4.830、h=0.440程度へ広げる。日付・シリーズ名は14 ptの灰色で左揃えにし、各欄は垂直中央にする。同じシリーズの他の表紙にも同じ配置を適用する。
 - 日本語では「所属　［所属］」「氏名　［氏名］」「作成日　YYYY-MM-DD」を基本とする。英語ではAffiliation、Name、Dateへ自然に置き換える。入力欄を本文タイトルや副題に混ぜない。所属や氏名が長い場合は欄幅・高さを拡張し、後続の欄も移動して再描画する。
 
 ### 通常の本文と余白
@@ -166,11 +166,11 @@ CUSTOMは旧発表の目次が静的に入っているので使用しない。ON
 
 研究手法や成果物の流れを図にするのは、文章だけでは対応・順序・因果がわかりにくい場合に限る。入力、処理、出力や比較対象を明確にし、読者の理解に寄与しない矢印・装飾を増やさない。結果の図には対象、軸、単位、条件を添える。
 
-成果物の実演は、利用者の課題から操作・入力・出力・効果へつなげる。読者が判断に必要な画面と具体例を選び、制作環境や内部の処理を使い方の説明へ混ぜない。動画の例は時間順のフレーム列や必要な区間で示し、単一フレームをクリップ全体に見せない。処理済みの入力や引用の一部は、その範囲と出典を照合できるようにする。
+成果物の実演は、利用者の課題から操作・入力・出力・効果へつなげる。読者が判断に必要な画面と具体例を選び、制作環境や内部の処理を使い方の説明へ混ぜない。動画の行動や変化を説明する例は、追加例も含め、元動画から時間順のフレーム列を作る。静止画一枚で済ませず、内容を捉えられる少数のコマを大きく示す。時刻が確認できる場合は表示した各コマ、少なくとも最後のコマに秒数を添える。動画のタイムスタンプを優先し、フレーム番号から換算するならフレームレートと開始位置を確認する。単一フレームから動きや前後のコマを創作しない。処理済みの入力や引用の一部は、その範囲と出典を照合できるようにする。
 
 ユーザーが公式サイトのトップ画面を指定した場合は、そのサイトのトップページのスクリーンショットを冒頭に載せる。データカードや別のサイトの画面を公式トップ画面の代用として扱わない。取得できない場合は、サイト自体の障害と制作環境のプロキシ・接続先の許可設定を切り分ける。設定変更が可能なら、環境が提供する手順で必要な接続先だけを追加し、保存した設定案と実際に反映済みの設定を区別して疎通を再確認する。TLS検証を無効にして解消しない。環境設定などの対応を調べたうえでなお取得できない場合は、ほかの制作を進めて正確な原因と必要な対応を報告する。指定がない場合も、対象を識別し理解する助けになる画面を冒頭に置いてよい。画像の縦横比を保ち、不要な枠や効果を足さない。取得元URLを残す。公式トップ画面を解説する本文やキャプションは足さず、画面とURLを提示する。使用ブラウザ、HTMLの描画方法、制作操作の説明を本文へ足さない。再描画などの制作履歴は納品時の検証記録へ残し、最新状態を確認していない画像を最新画面と主張しない。
 
-コードは等幅フォントのコードブロックとして置き、箇条書きにしない。字下げと改行を保持する。1ページで読めない長さなら分割する。説明文と出典はコードの外へ置く。
+コードブロックの背景はコードの実際の下端に合わせ、上下に各8–12 pt、左右に各12 pt前後の均等なパディングを置く。末尾の空行や不要に大きい背景による下側の空白を除き、背景枠と文字を重ねず一つの領域として扱う。コードは等幅フォントのコードブロックとして置き、箇条書きにしない。字下げと改行を保持する。1ページで読めない長さなら分割する。説明文と出典はコードの外へ置く。
 
 ## 7. 日英で読みやすさを確認する
 
@@ -189,4 +189,4 @@ CUSTOMは旧発表の目次が静的に入っているので使用しない。ON
 7. 指定されたPPTX・PDFを納品する。標準では発表者ノートを作成・埋め込み・配布しない。明示的な要求がある場合のみ作る。本編のみの版、その他の形式も求められた場合だけ追加する。検証結果と重要な未確認事項は納品記録へ置く。
 8. 共有スキルはSKILL.mdとSlideMaster.pptxの2ファイルだけにする。Gitへのコミット・push、公開・配布はユーザーが指定した保存先と範囲で行う。最新成果物と歴史資料を区別し、古いファイルを無断削除しない。
 
-English final checks: Keep every slide title on one line and each section number on the same line as its title. Allow body text to wrap and use actual list levels, indentation and numbering; never align with spaces. Make source markers correspond to the same-slide bibliography, put markers before sentence-ending punctuation, keep inline reference markers the same size as the surrounding text, and make only bibliography entries and essential lookup IDs clearly smaller than the main content. Use filled-circle first-level bullets and hollow-circle second-level bullets through actual PowerPoint paragraph levels, including the master defaults. Prefer one large image or chart per slide, including when multiple charts were originally combined into one image. Explain changes in analysis scope and label selected examples as such. Website slides show the top-page screenshot and source URL without explanatory captions. Verify all rendered pages, source facts, experimental conditions and timings. Deliver no speaker notes or extra main-only exports unless explicitly requested.
+English final checks: Keep every slide title on one line and each section number on the same line as its title. Allow body text to wrap and use actual list levels, indentation and numbering; never align with spaces. Make source markers correspond to the same-slide bibliography, put markers before sentence-ending punctuation, keep inline reference markers the same size as the surrounding text, and make only bibliography entries and essential lookup IDs clearly smaller than the main content. Use filled-circle first-level bullets and hollow-circle second-level bullets through actual PowerPoint paragraph levels, including the master defaults. Prefer one large image or chart per slide, including when multiple charts were originally combined into one image. Explain changes in analysis scope and label selected examples as such. Website slides show the top-page screenshot and source URL without explanatory captions. Show genuine temporal sequences for video examples, including additional examples, and label verified playback times. Give each bibliography entry a concise statement of its role. Put the presenter name at the lower right, right-aligned, larger and darker than lookup metadata. Use Japanese-specific fonts and language settings for Japanese text. Fit code backgrounds to the code with balanced padding. Verify all rendered pages, source facts, experimental conditions and timings. Deliver no speaker notes or extra main-only exports unless explicitly requested.
