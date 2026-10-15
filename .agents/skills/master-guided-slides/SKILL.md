@@ -31,7 +31,7 @@ English workflow: Use only this skill and the accompanying master. Identify the 
 |対象の紹介・授業|何をする対象か。なぜ作られ、何が特徴か。実例をどう理解するか。周辺の対象との違い、変遷、現在の使われ方、入手・利用方法は何か|
 |データや評価資源の紹介|何を測るための資源か。素材・注釈・単位・分割は何か。規模や偏りは何か。評価法と代表的な結果、利用状況、入手方法は何か|
 
-- 型・カテゴリ・グループ・個々の事例など、複数の分類やデータ単位がある場合は、単位間の包含関係と一つの具体例を本編の必要な位置で説明する。上位の区分と下位カテゴリを同じ呼び方で曖昧にせず、「〜という型に属するカテゴリ」など関係を明示する。上位区分ごとの規模や偏りが読者の判断に役立つなら、その粒度で表にまとめる。初めて出る重要な区別や例外は、必要に応じて具体例を先に示す。番号だけでは意味が不明なら「バージョン」「条件」などを添える。
+- 型・カテゴリ・グループ・個々の事例など、複数の分類やデータ単位がある場合は、単位間の包含関係と一つの具体例を本編の必要な位置で説明する。「背景を共有」などの抽象的な表現だけで済ませず、撮影場所・人物・視点など何が共通するのかを具体化する。上位の区分と下位カテゴリを同じ呼び方で曖昧にせず、「〜という型に属するカテゴリ」など関係を明示する。上位区分ごとの規模や偏りが読者の判断に役立つなら、その粒度で表にまとめる。初めて出る重要な区別や例外は、必要に応じて具体例を先に示す。番号だけでは意味が不明なら「バージョン」「条件」などを添える。
 - 周辺の対象は、以前・以後の例ごとに1–2文で何を扱うかと今回の対象との差を説明する。「先行例として〜があった」「それに対して〜」「その後〜」など接続語で比較・因果・時系列をつなぐ。規模の変化には同じ単位・版・範囲による件数や倍率を示す。
 - 利用の変遷が関係する場合は、登場時の課題と代表的な結果、その後の変化、現在の利用がつながるように設計する。現役で利用される証拠と、最新最高性能を網羅したかどうかは区別する。
 - 新しい資料やユーザーの指摘が加わったら、章構成、並び順、本文と補足への配分、強調を再設計する。追加情報を末尾へ積み上げるだけにしない。
@@ -64,10 +64,10 @@ English workflow: Use only this skill and the accompanying master. Identify the 
 - 本編の冒頭にセクション番号と項目名の目次を置く。ページ番号・範囲は書かない。本編が15枚以上なら各セクションの始まりに章扉を置く。章扉は番号と章名を同じ一行にし、中央揃え・垂直中央、36–42 ptを初期値とする。目次と章扉の番号・名前を対応させる。
 - 本編の予定秒数を合計し、原文・図表・実演を見る時間と切替時間を確保する。目次・章扉や情報を追加したら時間配分も見直す。Appendixを本編の予定時間に含めない。音読していなければ予定時間と記録する。
 - Appendixが長い場合は番号付きの目次を置き、帯にもその番号と内容名を示す。対象に応じた順序でまとめ、対応する統計と極値の例を近接させる。
-- 引き算は内容の削減ではなく、重複して意味を伝える文字列の削減。既に定義からわかる否定、見ればわかる断り、制作過程の説明、重複ラベルを削る。比較結果を変える条件は残す。
+- 引き算は内容の削減ではなく、重複して意味を伝える文字列の削減。実例の名前・正解がタイトルにあるなら本文へ繰り返さず、必要な原語もタイトルにまとめる。画像列を見ればわかる動作を説明するだけのキャプションは足さない。比較条件、見落としやすい特徴、結論に関わる数値を伝える説明は残す。既に定義からわかる否定、見ればわかる断り、制作過程の説明、重複ラベルを削る。比較結果を変える条件は残す。
 - 直接的で簡潔な文章を使う。本文で「当時：〜」「入力：〜」のようにコロンで省略せず、「当時は〜だった」「入力には〜を使う」と書く。帯の「Appendix: 方法」、URL、コード、原文・原題の記号は可。
 - 読んでほしい主張・結果・例は大きくし、必要なときに照合する出典・IDは明確に小さくする。両方を中くらいの文字にそろえない。実例の識別情報は同定に必要な最小限にする。URLとIDは同じ出典行にまとめ、スライド表示のための内部処理、入力配列の形状、抽出フレーム番号、不要な分割名を列挙しない。一意な画像IDと取得元URLで足りるなら、クラスID・版・分割・リサイズ条件を重ねて書かない。必要な照合情報だけ同じページの出典末尾へ8–9 ptで添える。理解に必要な分類名や測定値は本文に残す。
-- 一つの論理的な箇条書きにつき一つの段落を使う。同じ項目内の文は句点でつなぎ、本文は自動折り返しに任せる。二行以上になることは可。表示幅の都合で文を途中改行せず、階層はPowerPointの実際の箇条書きレベルと字下げで表す。本編とAppendixの目次には、章扉や帯と対応するセクション番号を段落の自動番号として付ける。PowerPointの実際の番号付きリストを使い、単なる数字の文字列やスペースによる桁合わせで代用しない。第一階層のバレットは黒丸「●」、第二階層は白丸「○」とする。ハイフンや丸を本文へ打ち込まない。第一階層は段落レベル0、第二階層は段落レベル1に設定する。マスター／本文placeholderと各本文領域のリストスタイルに段階別の字下げ・バレットを定義し、個々の段落はそのスタイルを継承する。PowerPointでTabキーにより階層を変えたときも、白丸と字下げが一緒に切り替わるようにする。連続スペース・全角空白・タブで位置を調整しない。コードと原資料の意味上の改行は保持する。
+- 一つの論理的な箇条書きにつき一つの段落を使う。同じ項目内の文は句点でつなぎ、本文は自動折り返しに任せる。二行以上になることは可。表示幅の都合で文を途中改行せず、階層はPowerPointの実際の箇条書きレベルと字下げで表す。本編とAppendixの目次には、章扉や帯と対応するセクション番号を段落の自動番号として付ける。PowerPointの実際の番号付きリストを使い、単なる数字の文字列やスペースによる桁合わせで代用しない。第一階層のバレットは黒丸「●」、第二階層は白丸「○」とする。ハイフンや丸を本文へ打ち込まない。第一階層は段落レベル0、第二階層は段落レベル1に設定する。マスターと本文レイアウトのリストスタイルに段階別の字下げ・バレットを定義する。通常の箇条書きはONE_COLUMN_TEXT_1の本文placeholder（type="body", idx="1"）で作り、段落のa:pPrにlvl="0"またはlvl="1"を設定する。各段落にはa:buCharを使い、親はchar="●"・marL="457200"、子はchar="○"・marL="914400"、両者ともindent="-355600"・a:buSzPts val="2000"とする。これは本文のa:tに丸を入れる操作ではない。個々の段落で指定しない属性はレイアウトから継承し、a:lstStyleだけを独立したテキストボックスへ複製して済ませない。PowerPointでTabキーにより階層を変えたときも、白丸と字下げが一緒に切り替わるようにする。連続スペース・全角空白・タブで位置を調整しない。コードと原資料の意味上の改行は保持する。
 - スライドタイトルは一行に収める。まず短くし、必要ならタイトルの文字サイズを調整する。本文の自動折り返しと混同して二行にしない。行末の一文字や参照番号だけの孤立にも注意する。
 
 ### 出典と単体での共有
@@ -89,8 +89,8 @@ SlideMaster.pptxは16:9、横10.000 inch、縦5.625 inch。座標は左上を原
 |上部の章名帯|2C9100、緑|
 |強調|B13731、赤。正解範囲・重要な差に限定する|
 |補助色|2166AC、青。図表で必要な場合にだけ使う|
-|日本語|ＭＳ Ｐゴシック。テーマのJpanと文字ランのEast Asian指定をそろえる。フォント未導入時の描画にはNoto Sans CJK JPを代替として使い、同一字体とは主張しない|
-|英語・英文引用|Arial。未導入時の描画にはLiberation Sansを代替として使う|
+|日本語|Noto Sans CJK JP。テーマのJpanと文字ランのEast Asian指定をそろえる。全端末で同じ配布版・バージョンを使う|
+|英語・英文引用|Noto Sans。日本語と同じNoto系統を使い、英文の字幅と折り返しも描画して確認する|
 |コード|利用可能な等幅フォント。Liberation Monoなど|
 |本文タイトル|28 pt、太字、必ず1行|
 |本文・子項目|本文23 pt、子項目21 pt。密な説明や表の解説は19–21 ptを選ぶ|
@@ -98,7 +98,7 @@ SlideMaster.pptxは16:9、横10.000 inch、縦5.625 inch。座標は左上を原
 |表|18–20 pt。9列程度の詳細統計は補足で13–16 ptまで可|
 |出典・照合用ID|8–9 pt。本文とのサイズ差を明確にし、描画して読めることを確認する|
 
-日本語の本文・目次は、ＭＳ Ｐゴシックとja-JP言語指定を段落と文字ランの両方で明示する。英数字のLatin指定はArialとする。Latinのフォント名だけでなくEast Asianのフォント指定も確認し、中国語・韓国語用の字体へ意図せず置換されていないか描画で確かめる。目次に余白があれば26–28 ptへ拡大する。指定フォントが使えない環境では、描画アプリのフォント置換でＭＳ ＰゴシックからNoto Sans CJK JP、ArialからLiberation Sansへの対応を明示する。PPTXの指定名を維持したまま代替描画してよい。字体の変更だけで文字欠落が解消したと判断しない。フォント名の指定とフォントプログラムの配布・埋め込みを区別し、実際の利用・埋め込みは入手元のライセンスに従う。未確認のフォントファイルをスキルに同梱したり抽出して配布したりしない。指定字体が環境にない場合もPPTXの指定名を維持できるが、PDFなどで使った代替字体と再現の限界を納品時に説明する。マスター、テーマ、レイアウトを保持して、新しい発表のサンプルページを作り直す。元の8枚の例示スライドは成果物から除く。元マスターの内容は参考資料の代わりとして読めるが、その研究分野や文章は新作へ転用しない。
+日本語の本文・目次は、Noto Sans CJK JPとja-JP言語指定を段落と文字ランの両方で明示する。英数字のLatin指定はNoto Sansとする。East Asianの指定も確認し、中国語・韓国語用の字体へ意図せず置換されていないか描画で確かめる。目次に余白があれば26–28 ptへ拡大する。フォント名の指定とフォントプログラムの配布・埋め込みを区別し、実際の利用・埋め込みは入手元のライセンスに従う。未確認のフォントファイルをスキルに同梱したり抽出して配布したりしない。指定フォントがない環境では導入可否を調べ、代替した場合は字体名と再現の限界を納品時に説明する。マスター、テーマ、レイアウトを保持して、新しい発表のサンプルページを作り直す。元の8枚の例示スライドは成果物から除く。元マスターの内容は参考資料の代わりとして読めるが、その研究分野や文章は新作へ転用しない。
 
 ### レイアウトとplaceholderの対応
 
@@ -183,10 +183,10 @@ CUSTOMは旧発表の目次が静的に入っているので使用しない。ON
 1. 編集可能なPPTXを保存して開き直す。マスター・テーマ・レイアウトの保持、表紙のシリーズ名・日付・作成者欄、本編と補足の目次・章扉、並び順を確認する。
 2. PowerPoint、LibreOfficeなど利用可能な環境でPDFへ描画する。描画できなければその限界を報告し、検証済みと主張しない。
 3. 全ページを目視確認する。タイトルの一行、帯の垂直中央、本文の自動折り返しと階層、表の列揃え、表と説明、引用枠の上下余白、実例の対応、本文と出典、ページ外へのはみ出し、要素の重なり・文字欠落を確認する。図形の座標だけで検証を済ませない。
-4. PowerPointの箇条書き・番号付きリストが正しく保持されることを確認する。OOXMLを直接編集する場合は、段落プロパティの子要素順を守り、buCharやbuAutoNumをdefRPrより前に置く。重複したendParaRPrを残さない。PDFで番号が見えるだけで編集構造が正しいと判断しない。直したページを再描画する。表の行高自動拡張、フォント代替、最下段、出典、背景枠も確認し、全体の一貫性を保つ。可能ならPPTXの本文・表とPDFの文字を照合する。
+4. PowerPointの箇条書き・番号付きリストが正しく保持されることをXMLでも確認する。a:tに丸やハイフンを打ち込まず、a:pPrのlvlとbuChar／buAutoNum、p:phのtype／idx、レイアウトの継承関係を調べる。OOXMLを直接編集する場合はスキーマの子要素順・選択肢・出現回数を守る。buCharやbuAutoNumはdefRPrより前、表セルtcPrのlnL・lnR・lnT・lnBなどの罫線はsolidFillなどの塗りより前、presentationのdefaultTextStyleはextLstより前に置く。buNoneとbuCharの併存や重複、重複したendParaRPrを残さない。生成したパッケージはECMA-376 Transitionalなど対応する標準スキーマで、本文だけでなくpresentation・マスター・レイアウト・表も検証する。PowerPoint修復版が提供されたら元ファイルとXMLを比較し、通常の保存正規化と実際の削除・修復を区別して原因を調べる。PDFで番号が見えるだけで編集構造が正しいと判断しない。直したページを再描画する。表の行高自動拡張、フォント代替、最下段、出典、背景枠も確認し、全体の一貫性を保つ。可能ならPPTXの本文・表とPDFの文字を照合する。
 5. 原資料・配布物へ戻り、引用、数値、版・条件、単位、集計、極値と実例、1例の得点と全件の集計を確認する。資料間の不一致は範囲と数え方を調べ、採用した値と根拠を記録する。未確認の値を補わない。
 6. 時間配分を見直し、目的に必要な説明と根拠が本編で伝わるか確認する。1題材の成功で分野横断の品質を保証しない。フィードバックは一般化できる制作規則へ戻し、特定分野の章構成を必須化しない。
-7. 指定されたPPTX・PDFを納品する。標準では発表者ノートを作成・埋め込み・配布しない。明示的な要求がある場合のみ作る。本編のみの版、その他の形式も求められた場合だけ追加する。検証結果と重要な未確認事項は納品記録へ置く。
+7. 指定されたPPTX・PDFをそれぞれ直接開けるリンクで納品する。ZIPを付ける場合も、それだけで代替しない。標準では発表者ノートを作成・埋め込み・配布しない。明示的な要求がある場合のみ作る。本編のみの版、その他の形式も求められた場合だけ追加する。検証結果と重要な未確認事項は納品記録へ置く。
 8. 共有スキルはSKILL.mdとSlideMaster.pptxの2ファイルだけにする。Gitへのコミット・push、公開・配布はユーザーが指定した保存先と範囲で行う。最新成果物と歴史資料を区別し、古いファイルを無断削除しない。
 
-English final checks: Keep every slide title on one line and each section number on the same line as its title. Allow body text to wrap and use actual list levels, indentation and numbering; never align with spaces. Make source markers correspond to the same-slide bibliography, put markers before sentence-ending punctuation, keep inline reference markers the same size as the surrounding text, and make only bibliography entries and essential lookup IDs clearly smaller than the main content. Use actual PowerPoint levels and inherited list styles: a filled circle ● at level 0 and a hollow circle ○ at level 1, with 36 pt and 72 pt left margins, respectively, and a 28 pt hanging indent. Number both contents slides by section using native numbering. Specify Arial for Latin text and MS PGothic for Japanese text, and disclose any rendering substitutions when the requested font is unavailable. Prefer one large image or chart per slide, including when multiple charts were originally combined into one image. Explain changes in analysis scope and label selected examples as such. Website slides show the top-page screenshot and source URL without explanatory captions. Show genuine temporal sequences for video examples, including additional examples, and label verified playback times. Give each bibliography entry a concise statement of its role. Put the presenter name at the lower right, right-aligned, larger and darker than lookup metadata. Use Japanese-specific fonts and language settings for Japanese text. Fit code backgrounds to the code with balanced padding. Verify all rendered pages, source facts, experimental conditions and timings. Deliver no speaker notes or extra main-only exports unless explicitly requested.
+English final checks: Keep every slide title on one line and each section number on the same line as its title. Allow body text to wrap and use actual list levels, indentation and numbering; never align with spaces. Make source markers correspond to the same-slide bibliography, put markers before sentence-ending punctuation, keep inline reference markers the same size as the surrounding text, and make only bibliography entries and essential lookup IDs clearly smaller than the main content. Use a native body placeholder, actual pPr list levels and buChar elements, plus inherited master/layout styles: a filled circle ● at level 0 and a hollow circle ○ at level 1, with 36 pt and 72 pt left margins, respectively, and a 28 pt hanging indent. Number both contents slides by section using native numbering. Specify Noto Sans for Latin text and Noto Sans CJK JP for Japanese text, and disclose any rendering substitutions when the requested font is unavailable. Validate XML against the appropriate OOXML schemas, including child order and mutually exclusive properties; rendering alone does not establish PowerPoint compatibility. Prefer one large image or chart per slide, including when multiple charts were originally combined into one image. Explain changes in analysis scope and label selected examples as such. Website slides show the top-page screenshot and source URL without explanatory captions. Show genuine temporal sequences for video examples, including additional examples, and label verified playback times. Give each bibliography entry a concise statement of its role. Put the presenter name at the lower right, right-aligned, larger and darker than lookup metadata. Use Japanese-specific fonts and language settings for Japanese text. Fit code backgrounds to the code with balanced padding. Verify all rendered pages, source facts, experimental conditions and timings. Deliver no speaker notes or extra main-only exports unless explicitly requested.
