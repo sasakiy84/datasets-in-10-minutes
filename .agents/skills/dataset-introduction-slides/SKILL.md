@@ -9,6 +9,8 @@ description: Research and plan Japanese or English dataset introductions: tasks,
 
 先に[master-guided-slides](../master-guided-slides/SKILL.md)を読み、共通の[SlideMaster.pptx](../master-guided-slides/SlideMaster.pptx)を使う。本スキルでは、データセットの調査、内容設計、内容の照合を扱う。文章、組版、図表、出典、描画、納品の共通手順は汎用スキルに従い、別のマスターや制作スクリプトを必須にしない。
 
+**特に、汎用スキル§4「注意書きを増やさず、読み手を信頼する」を重視する。** 単位・評価条件・説明用の例を適切に示したうえで、そこから分かる注意書きや免責文を重ねない。本文だけでなく、表注とAppendixも同じ基準で見直す。
+
 ### 対象と依頼の条件を確認する
 
 対象のデータセット名だけでなく、紹介する版、サブセット、課題の範囲を確認する。言語、聴衆、本編の時間と読み方、Appendix、表紙、保存先は、汎用スキル§1の優先順位で決める。既存シリーズの続編では、記録された条件を引き継ぐ。
