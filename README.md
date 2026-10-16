@@ -66,5 +66,6 @@ python -m http.server 8000 --directory _site
 |COCO|[PPTX](slides/datasets-in-10-minutes-coco.pptx)|[PDF](slides/datasets-in-10-minutes-coco.pdf)|
 |FineWeb|[PPTX](slides/datasets-in-10-minutes-fineweb.pptx)|[PDF](slides/datasets-in-10-minutes-fineweb.pdf)|
 |GPQA|[PPTX](slides/datasets-in-10-minutes-gpqa.pptx)|[PDF](slides/datasets-in-10-minutes-gpqa.pdf)|
+|HLE|[PPTX](slides/datasets-in-10-minutes-hle.pptx)|[PDF](slides/datasets-in-10-minutes-hle.pdf)|
 
 [ユーザー指示の記録](docs/user-instructions.md)
