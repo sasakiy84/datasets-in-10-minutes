@@ -36,6 +36,18 @@ PPTXの編集・描画にはPowerPointやLibreOfficeなどを使います。コ�
 
 フォントは日本語にNoto Sans CJK JP、英数字にNoto Sans、コードにLiberation Monoなどの等幅フォントを使います。フォント本体は同梱していません。
 
+## Webギャラリー
+
+CSV管理のスライドギャラリーをGitHub Pages向けにビルドできます。
+
+```sh
+python -m pip install -r site/requirements.txt
+python scripts/build_site.py
+python -m http.server 8000 --directory _site
+```
+
+資料情報は[site/datasets.csv](site/datasets.csv)、サイト設定は[site/config.json](site/config.json)で管理します。[公開・更新・カスタムドメインの手順](docs/github-pages.md)を参照してください。
+
 ## 制作例：datasets in 10 minutes
 
 このシリーズでは、速い読者が本編を約10分で黙読・流し読みする想定です。Appendixは時間に含めず、閲覧時間は未実測です。原稿や口頭の補足がなくても理解できる説明を資料内に置きます。
@@ -53,5 +65,6 @@ PPTXの編集・描画にはPowerPointやLibreOfficeなどを使います。コ�
 |UCF101|[PPTX](slides/datasets-in-10-minutes-ucf101.pptx)|[PDF](slides/datasets-in-10-minutes-ucf101.pdf)|
 |COCO|[PPTX](slides/datasets-in-10-minutes-coco.pptx)|[PDF](slides/datasets-in-10-minutes-coco.pdf)|
 |FineWeb|[PPTX](slides/datasets-in-10-minutes-fineweb.pptx)|[PDF](slides/datasets-in-10-minutes-fineweb.pdf)|
+|GPQA|[PPTX](slides/datasets-in-10-minutes-gpqa.pptx)|[PDF](slides/datasets-in-10-minutes-gpqa.pdf)|
 
 [ユーザー指示の記録](docs/user-instructions.md)
