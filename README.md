@@ -77,5 +77,6 @@ python -m http.server 8000 --directory _site
 |MCP Atlas|[PPTX](slides/datasets-in-10-minutes-mcp-atlas.pptx)|[PDF](slides/datasets-in-10-minutes-mcp-atlas.pdf)|
 |SWE-bench Pro|[PPTX](slides/datasets-in-10-minutes-swe-bench-pro.pptx)|[PDF](slides/datasets-in-10-minutes-swe-bench-pro.pdf)|
 |SimpleQA Verified|[PPTX](slides/datasets-in-10-minutes-simpleqa-verified.pptx)|[PDF](slides/datasets-in-10-minutes-simpleqa-verified.pdf)|
+|MMMLU|[PPTX](slides/datasets-in-10-minutes-mmmlu.pptx)|[PDF](slides/datasets-in-10-minutes-mmmlu.pdf)|
 
 [ユーザー指示の記録](docs/user-instructions.md)
