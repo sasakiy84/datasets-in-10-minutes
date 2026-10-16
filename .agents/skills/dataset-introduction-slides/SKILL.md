@@ -9,8 +9,8 @@ description: Plan and research Japanese or English dataset-introduction slides: 
 
 先に[master-guided-slides](../master-guided-slides/SKILL.md)を読む。このファイルはデータセットの調査・内容設計・内容の検証を扱い、レイアウト、日英の字体、引用枠、表、バレット、描画、納品は共通スキルに従う。[SlideMaster.pptx](../master-guided-slides/SlideMaster.pptx)を共有し、別のマスター、参考スライド、配布Pythonスクリプト、設定ファイルを要求しない。制作・集計用の一時コードは利用環境で作ってよい。
 
-- 対象、紹介する版・サブセット、聴衆、言語、本編の発表時間、Appendix、成果物の指定を確認する。一般的な学習用・開発用の説明を必要以上に加えず、当該分野の学部4年〜修士1年相当を標準とする。
-- 「datasets in 10 minutes」、著者名、所属不要、保存先、ファイル名、約10分という時間は、今回そう指定された場合の条件とする。すべてのデータセット紹介へ固定しない。既存シリーズの指定があれば、その表記・範囲だけを引き継ぐ。
+- 対象、紹介する版・サブセット、聴衆、言語、本編の想定時間と読み方、Appendix、成果物の指定を確認する。一般的な学習用・開発用の説明を必要以上に加えず、当該分野の学部4年〜修士1年相当を標準とする。
+- 「datasets in 10 minutes」、著者名、所属不要、保存先、ファイル名、約10分という時間は、指定されたシリーズ・依頼の条件として扱い、すべてのデータセット紹介へ固定しない。既存シリーズとして依頼された場合は、共通スキル§1の優先順位に従って、時間が口頭発表・黙読・流し読みのどれを指すかも含め、適用される既定を引き継ぐ。プロジェクトにシリーズ条件が記録されていれば確認する。記録がなくても、このスキルと共通マスターで新しい資料を制作できる構成を保つ。
 - 表紙は対象を直接示す。たとえば「読解型質問応答用データセット」と主題名を組み合わせ、略称に正式名称があれば併記する。版の細部で主題名を小さくしない。「約10分」や制作条件、謳い文句をタイトルに入れない。
 - 新しい研究発表や成果物発表全般へ、この専門スキルの調査項目を必須化しない。
 
@@ -72,7 +72,7 @@ description: Plan and research Japanese or English dataset-introduction slides: 
 
 件数は何の数かを書く。記事数ならWikipediaなど出所を明記し、質問数、段落数、注釈数と分ける。正解ラベルなしや回答不能など、数が異なる理由を示す。公式テストが非公開なら、データセット運営者のどの集合が非公開で、どの集合で得点が採点されたかを説明する。
 
-入手・利用規模の理解に役立つ配布容量を調べる。圧縮ZIP・RAR、展開後の画像・動画、抽出フレームのどれかを区別し、GBとbytesなどの単位と裏付けを確認する。未取得の全データを測定済みとしない。
+入手・利用規模の理解に役立つ配布容量を調べる。圧縮ZIP・RAR、展開後の画像・動画、抽出フレームのどれかを区別し、GBとbytesなどの単位と裏付けを確認する。未取得の全データを測定済みとしない。公式カードの容量メタデータを使う場合は掲載値であることを明示し、手元で取得・展開して計測した値と混同しない。
 
 ### 記述統計と集計条件
 
@@ -80,6 +80,7 @@ description: Plan and research Japanese or English dataset-introduction slides: 
 - 平均だけでなく中央値、母標準偏差または標本標準偏差、分位点、最小・最大など、目的に必要な記述統計を計算する。全項目をすべての題材に機械的に課さない。
 - 使用した版・分割、対象件数、単位、除外・加工、空白の扱い、単語の区切り方、分位点の計算法などを再現に必要な粒度で記す。定義から分かる否定を繰り返さない。
 - 文対ごとに前提文を数える集計と、異なる前提文を各1回数える集計を区別する。質問ごとの先頭正解と、同じ質問の複数正解・重複を含む全注釈も分ける。段落を各1回数える場合、質問数による重複カウントをしない。
+- Web文書などで長さを数える場合は、配布レコード・抽出したページ全体・一つの記事本文のどれを数えたか具体的に説明する。実例に見出し・一覧・複数投稿が含まれるなら、その内容と集計値の関係を書く。「単一記事の分量と一致しない」だけで説明を終えない。
 - 最大文字数や最大単語数を示したら、対応する実例・測定値・IDを確認し、近くに置く。文字数の最大と単語数の最大が同一例とは限らない。長い原文は意味を保って補足へ分け、表示が再抜粋であることを示す。
 
 ### 分布・少数側・分析対象の転換
@@ -103,6 +104,8 @@ description: Plan and research Japanese or English dataset-introduction slides: 
 
 現在も現役かを、確認時点での公開実装、学習・評価手順、論文などで確認する。過去の有名モデルだけを「現在の利用例」と呼ばない。最新記録を網羅したか、単に利用が続いていると確認したかを分ける。取得できる範囲と日付を明らかにし、未確認の現状を断定しない。
 
+利用動向の章は、データ名や「利用と入手」だけを並べず、対象分野で何が変わり、現在どのように使われ、どう入手するかが分かる章名にする。実際の利用例には、利用モデルの目的、混合する他のデータ、量・比率・学習段階など、公表されている具体的な構成を添える。先行コーパスの説明は各原著へ直接対応させる。
+
 入手方法では、公式の配布先、必要な利用条件・ライセンス・申請、版や分割の選び方を示す。コードが役立つ場合は、ダウンロードや読み込みの最小例をコードブロックで載せる。コードの余白・文字サイズ・背景は共通スキルに従う。利用条件や統計を一時ファイルへの参照だけで代替しない。
 
 読後の参考文献は、原著、公式教材・実装の文書、評価の限界や新しい課題を扱う研究から選ぶ。書誌情報と組版は共通スキルに従い、正式タイトルを省略せず、著者・年・掲載先・URLを確認する。紹介文は書誌情報と独立した形式で、その資料の特徴・貢献・位置付けを簡潔に述べる。たとえば「SQuADの原著論文で、データセットの収集方法と評価手法が書かれている」とする。「収集方法を学ぶ」「評価法を理解できる」などの学習効果や読者への助言にしない。素材の取得ログや容量のチェックサムを並べず、主張・実例・容量などの照合元は、それを使ったページの出典へ残す。
@@ -117,8 +120,8 @@ description: Plan and research Japanese or English dataset-introduction slides: 
 - 全件の集計と部分集合、収集条件と配布物の実測、1例の得点と集合の値を混同していないか。件数と容量は正しい単位か。
 - 原文・質問・訳・回答の対応、動画のフレーム順と秒数、引用枠の上下余白を実描画で確認したか。
 - 当時の目的、作成方法・作業体制、周辺との差、代表モデルの条件、現在の利用、入手・読後の資料が発表の目的に必要な範囲でそろっているか。
-- 本編の時間配分を見直したか。音読していなければ予定時間と報告し、Appendixを含む全ページの閲覧時間を本編の時間と混同していないか。
+- 本編の時間配分を見直したか。口頭発表・黙読・流し読みのどの想定かを確認し、対応する測定をしていなければ予定時間と報告する。Appendixを含む全ページの閲覧時間を本編の時間と混同していないか。
 
 完全版のPPTXとPDFを同じ改訂で納品し、本編だけの版や発表者ノートは明示的な依頼がある場合だけ作る。検証した版・範囲と、重要な未確認事項を納品記録に残す。特定のデータセットで成功したことを、別のデータや研究発表全般の品質保証にしない。
 
-English use: Read master-guided-slides for shared production rules and use its single shared master. Research the dataset's purpose, task, genuine examples, collection and annotation, units, versions, statistics, evaluation, historical and current use, access, and useful further reading. Use at least three varied main examples when real data and access permit; aim for about ten additional examples when an appendix is appropriate. Verify source IDs, counting units, extrema, split and evaluation conditions, temporal frames, and claims about current use. Do not impose a past series name, presenter, duration, filename, or dataset-specific statistics on a new task. Deliver complete editable PPTX and matching PDF files with individual links.
+English use: Read master-guided-slides for shared production rules and use its single shared master. Research the dataset's purpose, task, genuine examples, collection and annotation, units, versions, statistics, evaluation, historical and current use, access, and useful further reading. Use at least three varied main examples when real data and access permit; aim for about ten additional examples when an appendix is appropriate. Verify source IDs, counting units, extrema, split and evaluation conditions, temporal frames, and claims about current use. For a requested series continuation, inherit applicable user-approved series settings, including whether its duration means oral presentation, silent reading, or skimming. Do not impose those settings or dataset-specific statistics on unrelated tasks. Deliver complete editable PPTX and matching PDF files with individual links.
