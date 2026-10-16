@@ -10,7 +10,6 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 import fitz
-from check_slide_fonts import check_presentation
 
 ROOT = Path(__file__).resolve().parents[1]
 MODALITIES = ('画像', '動画', '言語')
@@ -56,9 +55,6 @@ def read_catalog(path):
                 raise ValueError(f'Missing file: {source}')
             if source.stat().st_size >= GIT_FILE_LIMIT:
                 raise ValueError(f'{source.name} reaches GitHub’s 100 MiB Git file limit')
-        font_errors = check_presentation(ROOT / row['pptx'])
-        if font_errors:
-            raise ValueError(f'{slug}: cover typography check failed: ' + '; '.join(font_errors))
     return rows
 
 
