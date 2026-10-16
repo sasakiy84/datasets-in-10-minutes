@@ -83,5 +83,6 @@ python -m http.server 8000 --directory _site
 |MRCR v2|[PPTX](slides/datasets-in-10-minutes-mrcr-v2.pptx)|[PDF](slides/datasets-in-10-minutes-mrcr-v2.pdf)|
 |FACTS Grounding|[PPTX](slides/datasets-in-10-minutes-facts-grounding.pptx)|[PDF](slides/datasets-in-10-minutes-facts-grounding.pdf)|
 |OSWorld-Verified|[PPTX](slides/datasets-in-10-minutes-osworld-verified.pptx)|[PDF](slides/datasets-in-10-minutes-osworld-verified.pdf)|
+|OmniDocBench|[PPTX](slides/datasets-in-10-minutes-omnidocbench.pptx)|[PDF](slides/datasets-in-10-minutes-omnidocbench.pdf)|
 
 [ユーザー指示の記録](docs/user-instructions.md)
