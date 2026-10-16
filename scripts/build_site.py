@@ -105,7 +105,7 @@ def build(output):
         pdf = esc(files['pdf']['url'])
         cards.append(f'''<a class="card" href="{pdf}" aria-labelledby="title-{row['slug']}" data-modality="{esc(row['modality'])}" data-tasks="{esc(row['tasks'])}" data-year="{row['year']}">
 <div class="cover"><img src="thumbnails/{row['slug']}.png" alt="" width="960" height="540" loading="lazy"></div>
-<div class="card-body"><h2 id="title-{row['slug']}">{esc(row['title'])}</h2><div class="tags">{tags}</div></div></a>''')
+<div class="card-body"><h2 id="title-{row['slug']}" title="{esc(row['title'])}">{esc(row['title'])}</h2><div class="tags">{tags}</div></div></a>''')
         public_rows.append({**row, 'tasks': tasks, 'pages': pages, 'files': files, 'thumbnail': f'thumbnails/{row["slug"]}.png'})
     canon_meta = ''
     if canonical:
