@@ -69,5 +69,6 @@ python -m http.server 8000 --directory _site
 |HLE|[PPTX](slides/datasets-in-10-minutes-hle.pptx)|[PDF](slides/datasets-in-10-minutes-hle.pdf)|
 |Terminal-Bench|[PPTX](slides/datasets-in-10-minutes-terminal-bench.pptx)|[PDF](slides/datasets-in-10-minutes-terminal-bench.pdf)|
 |ScreenSpot-Pro|[PPTX](slides/datasets-in-10-minutes-screenspot-pro.pptx)|[PDF](slides/datasets-in-10-minutes-screenspot-pro.pdf)|
+|τ²-bench|[PPTX](slides/datasets-in-10-minutes-tau2-bench.pptx)|[PDF](slides/datasets-in-10-minutes-tau2-bench.pdf)|
 
 [ユーザー指示の記録](docs/user-instructions.md)
