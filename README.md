@@ -75,5 +75,6 @@ python -m http.server 8000 --directory _site
 |SWE-bench Verified|[PPTX](slides/datasets-in-10-minutes-swe-bench-verified.pptx)|[PDF](slides/datasets-in-10-minutes-swe-bench-verified.pdf)|
 |SciCode|[PPTX](slides/datasets-in-10-minutes-scicode.pptx)|[PDF](slides/datasets-in-10-minutes-scicode.pdf)|
 |MCP Atlas|[PPTX](slides/datasets-in-10-minutes-mcp-atlas.pptx)|[PDF](slides/datasets-in-10-minutes-mcp-atlas.pdf)|
+|SWE-bench Pro|[PPTX](slides/datasets-in-10-minutes-swe-bench-pro.pptx)|[PDF](slides/datasets-in-10-minutes-swe-bench-pro.pdf)|
 
 [ユーザー指示の記録](docs/user-instructions.md)
