@@ -1,0 +1,53 @@
+# 表紙の正式名称と追加事例の確認
+
+2026-10-17。公開済み18資料の表紙と追加事例の節を確認した。例の件数はページ数ではなく、本編と重複しない問題・文対・画像・動画・文書の単位で数えた。一つの問題の設問・選択肢・解説を分割したページはまとめて1件とした。
+
+## 表紙の名称
+
+- ARC-AGI-2：表紙に **Abstraction and Reasoning Corpus for Artificial General Intelligence v2** を追加。[Chollet et al., ARC-AGI-2: A New Challenge for Frontier AI Reasoning Systems](https://arxiv.org/abs/2505.11831v2)の本文冒頭と、既存資料で引用した公式配布物の名称を照合した。
+- MMMU-Pro：表紙に **MMMU = Massive Multi-discipline Multimodal Understanding and Reasoning** を追加。[Yue et al., MMMU-Pro: A More Robust Multi-discipline Multimodal Understanding Benchmark](https://arxiv.org/abs/2409.02813v3)の冒頭・関連研究、および[公式README](https://github.com/MMMU-Benchmark/MMMU)を確認した。展開形はMMMUに対応することをラベルで示し、Proは主題名に保った。
+- MCP Atlas：表紙に **MCP = Model Context Protocol** を追加。[公式README](https://github.com/scaleapi/mcp-atlas)のOverview前の定義に対応する。MCPの展開形を示し、独自の「Model Context Protocol Atlas」という名称にはしていない。
+- GPQA、HLE、SNLI、SQuAD、MS COCO、UCF101：表紙に既にある正式名称・正式タイトルを確認した。
+- ImageNet-1k、FineWeb、SciCode、ScreenSpot-Pro、Terminal-Bench、τ²-bench、SWE-bench Verified、SWE-bench Pro、SimpleQA Verified：公式資料で使われている対象名を保持。原著論文の題名やベンチマークの用途を、対象名の展開形として作っていない。ImageNet-1kは従来の指定どおり大きな主題を保ち、別の評価大会名ILSVRCへ置き換えていない。
+
+## 追加事例の件数
+
+|資料|本編と別の追加事例|該当ページ|
+|---|---:|---|
+|ImageNet-1k|9|47–55|
+|MS COCO|10|65–74|
+|UCF101|10|45–54|
+|SNLI|10|44–53|
+|SQuAD|10|50–59|
+|GPQA|10|52–82（設問・選択肢・解説を問題ごとに数える）|
+|HLE|3|38–46（各問題3ページ）|
+|FineWeb|10|54–63（最短・最長文書の別例はこの件数に含めない）|
+|MMMU-Pro|10|39–48|
+|ScreenSpot-Pro|10|39–48|
+|Terminal-Bench|10|45–54|
+|τ²-bench|10|43–52|
+|ARC-AGI-2|10|40–59（各課題2ページ）|
+|SWE-bench Verified|10|38–47|
+|SciCode|10|37–46|
+|MCP Atlas|10|36–55（各課題2ページ）|
+|SWE-bench Pro|10|37–56（各課題2ページ）|
+|SimpleQA Verified|10|34–43|
+
+HLE以外の17資料は追加5件以上を掲載済みだった。HLEは、一般公開された論文の6問のうち3問を本編、別の3問をAppendixに掲載している。
+
+## HLEの追加調査と掲載範囲
+
+2026-10-17に次の一次資料を再調査した。
+
+- [公式GitHub README](https://github.com/centerforaisafety/hle)：現在のREADMEとリポジトリの公開ファイルを確認。READMEの画像は分野構成の図で、追加の設問一覧ではない。
+- [arXiv論文v11のHTML](https://arxiv.org/html/2501.14249v11)：取得成功。本文・付録・全図表のキャプションを確認し、一般公開の実例図はFig. 2。取得済みPDFの6問と対応する。採点用プロンプトの例を、別のベンチマーク問題として数えていない。
+- [公式Hugging Faceページ](https://huggingface.co/datasets/cais/hle)と[API](https://huggingface.co/api/datasets/cais/hle)：取得成功。利用登録を要する状態（gated: auto）と、問題集合の公開共有・再アップロード・配布を控える要請を再確認した。未認証のREADME直接取得は401。データへの代理登録・同意や、公開ミラーから問題を転載する対応は行っていない。
+- 公式サイトlastexam.ai（www付きも含む）、Nature掲載ページ、CAISの紹介記事を再試行したが、この環境ではプロキシのCONNECT 403。未確認のページに追加例がないとは結論していない。
+
+この調査範囲では、追加5件にするために新たに掲載できる2問を確認できなかった。既存の公開6問の配分を保ち、HLEだけ追加3件を維持した。本編の問題を再掲したり、一つの問題の分割ページを別件と数えたりして不足を埋めていない。
+
+## 制作・確認
+
+2つのSKILL.mdに、表紙の正式名称の確認と、追加事例を可能な限り最低5件確保する調査方針を追記した。目安の追加10件は維持し、不足時は調査先・取得結果・掲載条件・件数を記録して納品時にも報告する。
+
+3資料のPPTXは表紙のXMLだけを変更し、本文・表・事例・出典・ページ順・画像・マスターなど他のパーツが変更前と一致することを確認した。最終PPTXをLibreOfficeでPDFへ再出力し、表紙の文字・改行・中央配置・余白を拡大確認。全ページを旧PDFと描画比較し、表紙以外の変化はMMMU-Pro p.25の描画の微差のみで、本文は同一・拡大確認でも配置崩れなし。PPTXのZIP・内部参照とXMLスキーマを検査した。公開ビルドで更新後の表紙からサムネイルを再生成した。検証用の一時スクリプトはコミットしていない。
