@@ -80,5 +80,6 @@ python -m http.server 8000 --directory _site
 |MMMLU|[PPTX](slides/datasets-in-10-minutes-mmmlu.pptx)|[PDF](slides/datasets-in-10-minutes-mmmlu.pdf)|
 |CharXiv|[PPTX](slides/datasets-in-10-minutes-charxiv.pptx)|[PDF](slides/datasets-in-10-minutes-charxiv.pdf)|
 |Global PIQA|[PPTX](slides/datasets-in-10-minutes-global-piqa.pptx)|[PDF](slides/datasets-in-10-minutes-global-piqa.pdf)|
+|MRCR v2|[PPTX](slides/datasets-in-10-minutes-mrcr-v2.pptx)|[PDF](slides/datasets-in-10-minutes-mrcr-v2.pdf)|
 
 [ユーザー指示の記録](docs/user-instructions.md)
