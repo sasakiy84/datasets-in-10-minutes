@@ -72,5 +72,6 @@ python -m http.server 8000 --directory _site
 |τ²-bench|[PPTX](slides/datasets-in-10-minutes-tau2-bench.pptx)|[PDF](slides/datasets-in-10-minutes-tau2-bench.pdf)|
 |MMMU-Pro|[PPTX](slides/datasets-in-10-minutes-mmmu-pro.pptx)|[PDF](slides/datasets-in-10-minutes-mmmu-pro.pdf)|
 |ARC-AGI-2|[PPTX](slides/datasets-in-10-minutes-arc-agi-2.pptx)|[PDF](slides/datasets-in-10-minutes-arc-agi-2.pdf)|
+|SWE-bench Verified|[PPTX](slides/datasets-in-10-minutes-swe-bench-verified.pptx)|[PDF](slides/datasets-in-10-minutes-swe-bench-verified.pdf)|
 
 [ユーザー指示の記録](docs/user-instructions.md)
