@@ -1,0 +1,671 @@
+{
+  "dataset": "imdb",
+  "checked_at": "2026-10-17T16:27:56Z",
+  "repository": "stanfordnlp/imdb",
+  "revision": "e6281661ce1c48d982bc483cf8a173c1bbeb5d31",
+  "sources": [
+    {
+      "path": "test-00000-of-00001.parquet",
+      "url": "https://huggingface.co/datasets/stanfordnlp/imdb/resolve/e6281661ce1c48d982bc483cf8a173c1bbeb5d31/plain_text/test-00000-of-00001.parquet",
+      "sha256": "b52e26e2f872d282ffac460bf9770b25ac6f102cda0e6ca7158df98c94e8b3da",
+      "bytes": 20470363
+    },
+    {
+      "path": "imdb-paper.pdf",
+      "bytes": 156182,
+      "sha256": "319e8ed97b9255ca3e929c268ff9ee7515fd0d0a218f89c40b2446325f74d1be"
+    },
+    {
+      "path": "helm-release-summary.json",
+      "bytes": 95,
+      "sha256": "9b38c903d4d2ebdf9075d3b05a67d1a67514c9815d8779873f6732dc375d6211"
+    },
+    {
+      "path": "helm-release-schema.json",
+      "bytes": 213689,
+      "sha256": "ab2ea213329376e811ce41a422b8fc7b35329e2bed4e60c323ffd38b7ada2d2f"
+    },
+    {
+      "path": "helm-release-run_specs.json",
+      "bytes": 27233068,
+      "sha256": "ef94fb6d3d234ef3193ed043b4a718cd75e0cf2aaf94f0439693cf46a4ff6f62"
+    },
+    {
+      "path": "helm-release-runs_to_run_suites.json",
+      "bytes": 907445,
+      "sha256": "ac6eb84b2493b44ffc433f7899c562864fb37fa23e281c596dbc17551fe957fb"
+    },
+    {
+      "path": "release-imdb_scenario.py",
+      "bytes": 6175,
+      "sha256": "f9b7e39bfe378f496c7c6b24cf64c735e28004295df74ac54d9e725adf054c71"
+    }
+  ],
+  "source_urls": {
+    "paper": [
+      "Andrew L. Maas et al. (2011). Learning Word Vectors for Sentiment Analysis. ACL 2011.",
+      "https://aclanthology.org/P11-1015/"
+    ],
+    "data": [
+      "stanfordnlp/imdb、改訂e6281661。2026-10-17参照。",
+      "https://huggingface.co/datasets/stanfordnlp/imdb"
+    ],
+    "page": [
+      "IMDb 公式公開ページ。2026-10-17参照。",
+      "https://ai.stanford.edu/~amaas/data/sentiment/"
+    ],
+    "stats": [
+      "stanfordnlp/imdb、改訂e6281661。test全25,000件を集計。",
+      "https://huggingface.co/datasets/stanfordnlp/imdb"
+    ],
+    "helm": [
+      "Liang et al. Holistic Evaluation of Language Models. TMLR 2023. Classic v0.4.0（2023-11-17）。",
+      "https://crfm.stanford.edu/helm/classic/v0.4.0/"
+    ],
+    "config": [
+      "HELM Classic v0.4.0。公開run_specsと実行別statsのcanonical設定を照合。",
+      "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/releases/v0.4.0/run_specs.json"
+    ],
+    "harness": [
+      "EleutherAI. Language Model Evaluation Harness。2026-10-17参照。",
+      "https://github.com/EleutherAI/lm-evaluation-harness"
+    ],
+    "superglue": [
+      "Wang et al. (2019). SuperGLUE: A Stickier Benchmark for General-Purpose Language Understanding Systems. NeurIPS.",
+      "https://arxiv.org/abs/1905.00537"
+    ],
+    "faithful": [
+      "Maynez et al. (2020). On Faithfulness and Factuality in Abstractive Summarization. ACL.",
+      "https://aclanthology.org/2020.acl-main.173/"
+    ],
+    "bart": [
+      "Lewis et al. (2020). BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension. ACL.",
+      "https://aclanthology.org/2020.acl-main.703/"
+    ]
+  },
+  "stats": {
+    "n": 25000,
+    "partition": "test",
+    "words": {
+      "mean": 228.52668,
+      "std_population": 168.88031504049727,
+      "min": 4.0,
+      "q25": 126.0,
+      "median": 172.0,
+      "q75": 277.0,
+      "max": 2278.0
+    },
+    "histogram": [
+      599,
+      2492,
+      11744,
+      7018,
+      2726,
+      421
+    ],
+    "bins": [
+      "0–49",
+      "50–99",
+      "100–199",
+      "200–399",
+      "400–799",
+      "800以上"
+    ],
+    "labels": {
+      "Negative": 12500,
+      "Positive": 12500
+    }
+  },
+  "method": "str.split() on all rows in the named partition; numpy.std(ddof=0); numpy.quantile(method=linear); histogram bins [0,50,100,200,400,800,100000]",
+  "selection": "Independent public records: first 3 main, remaining 10 appendix; no duplicates. Short records selected for readable full bilingual presentation; not a random sample.",
+  "examples": [
+    {
+      "index": 41,
+      "title": "低い評価が明示されたレビュー",
+      "raw": {
+        "text": "Widow hires a psychopath as a handyman. Sloppy film noir thriller which doesn't make much of its tension promising set-up. (3/10)",
+        "label": 0
+      },
+      "units": [
+        {
+          "label": "レビュー（全文）",
+          "en": "Widow hires a psychopath as a handyman. Sloppy film noir thriller which doesn't make much of its tension promising set-up. (3/10)",
+          "ja": "未亡人が便利屋として精神病質者を雇う。緊張感を期待させる設定をほとんど生かせていない、雑なフィルム・ノワール風スリラーだ。（3/10）"
+        }
+      ],
+      "note": "配布されたレビュー全体の評価ラベル：Negative（否定的）。",
+      "answer": "Negative（否定的）",
+      "raw_sha256": "de18d4ef019fe33421032a811731a73255832e6fd51a2ad9b4db521e8374fdad"
+    },
+    {
+      "index": 61,
+      "title": "好きな点があっても否定的",
+      "raw": {
+        "text": "This film features two of my favorite guilty pleasures. Sure, the effects are laughable, the story confused, but just watching Hasselhoff in his Knight Rider days is always fun. I especially like the old hotel they used to shoot this in, it added to what little suspense was mustered. Give it a 3.",
+        "label": 0
+      },
+      "units": [
+        {
+          "label": "レビュー（前半）",
+          "en": "This film features two of my favorite guilty pleasures. Sure, the effects are laughable, the story confused, but just watching Hasselhoff in his Knight Rider days is always fun.",
+          "ja": "この映画には、好きだが人には少し言いにくい楽しみが二つある。確かに特殊効果は笑ってしまう出来で、話も混乱しているが、『ナイトライダー』時代のハッセルホフを見るだけでも楽しい。"
+        },
+        {
+          "label": "レビュー（後半）",
+          "en": "I especially like the old hotel they used to shoot this in, it added to what little suspense was mustered. Give it a 3.",
+          "ja": "特に撮影に使われた古いホテルが好きで、わずかな緊張感を高めていた。評価は3点。"
+        }
+      ],
+      "note": "配布されたレビュー全体の評価ラベル：Negative（否定的）。",
+      "answer": "Negative（否定的）",
+      "raw_sha256": "fc696dabe5699b982c54486661a679b3be87253ce27f3ecd2742ffe442e9aaf2"
+    },
+    {
+      "index": 24818,
+      "title": "「最悪」でも勧めている",
+      "raw": {
+        "text": "Worst horror film ever but funniest film ever rolled in one you have got to see this film it is so cheap it is unbeliaveble but you have to see it really!!!! P.s watch the carrot",
+        "label": 1
+      },
+      "units": [
+        {
+          "label": "レビュー（全文）",
+          "en": "Worst horror film ever but funniest film ever rolled in one you have got to see this film it is so cheap it is unbeliaveble but you have to see it really!!!! P.s watch the carrot",
+          "ja": "史上最悪のホラーと史上最高に笑える映画が一つになっている。ぜひ見てほしい。信じられないほど安っぽいが、本当に見てほしい!!!! 追伸：ニンジンに注目。"
+        }
+      ],
+      "note": "配布されたレビュー全体の評価ラベル：Positive（肯定的）。",
+      "answer": "Positive（肯定的）",
+      "raw_sha256": "4d609c63476c17c7d57f80e29b1b2f6f53670b8066f9ae4e975539eed62b97d4"
+    },
+    {
+      "index": 49,
+      "title": "最後まで集中できない",
+      "raw": {
+        "text": "I found this movie really hard to sit through, my attention kept wandering off the tv. As far as romantic movies go..this one is the worst I've seen. Don't bother with it.",
+        "label": 0
+      },
+      "units": [
+        {
+          "label": "レビュー（全文）",
+          "en": "I found this movie really hard to sit through, my attention kept wandering off the tv. As far as romantic movies go..this one is the worst I've seen. Don't bother with it.",
+          "ja": "見続けるのが本当に苦痛で、テレビから注意がそれてばかりだった。恋愛映画としては、これまで見た中で最悪だ。見る必要はない。"
+        }
+      ],
+      "note": "配布されたレビュー全体の評価ラベル：Negative（否定的）。",
+      "answer": "Negative（否定的）",
+      "raw_sha256": "13876d3b9f624ae98489c5d93d13cd4187bc86ecb6529b91f91c8fd40706f6cd"
+    },
+    {
+      "index": 704,
+      "title": "脚本と脇役への不満",
+      "raw": {
+        "text": "I could almost wish this movie had not been made. Stan Laurel was dying, and it shows in his face, even more angular and gaunt than usual. A poor script, and inept supporting cast.",
+        "label": 0
+      },
+      "units": [
+        {
+          "label": "レビュー（全文）",
+          "en": "I could almost wish this movie had not been made. Stan Laurel was dying, and it shows in his face, even more angular and gaunt than usual. A poor script, and inept supporting cast.",
+          "ja": "作られなければよかったとさえ思いかける映画だ。スタン・ローレルは死期が近く、いつもより骨張ってやつれた顔にもそれが表れている。脚本はひどく、脇役陣も下手だ。"
+        }
+      ],
+      "note": "配布されたレビュー全体の評価ラベル：Negative（否定的）。",
+      "answer": "Negative（否定的）",
+      "raw_sha256": "363a434690a2101e252a3e5468c928c3da18a359ac88c8f020b0894f58207903"
+    },
+    {
+      "index": 861,
+      "title": "途中で見るのをやめた",
+      "raw": {
+        "text": "This must be the first movie I've rented and not seen to the end. Complete garbage! The acting, the plot, set and wardrobe looked like it came from a porno movie with a plot. Not even a B move.",
+        "label": 0
+      },
+      "units": [
+        {
+          "label": "レビュー（全文）",
+          "en": "This must be the first movie I've rented and not seen to the end. Complete garbage! The acting, the plot, set and wardrobe looked like it came from a porno movie with a plot. Not even a B move.",
+          "ja": "借りたのに最後まで見なかった映画は、これが初めてだと思う。まったくの駄作だ。演技も筋もセットも衣装も、筋書きのあるポルノ映画から持ってきたようだった。B級にすら届かない。"
+        }
+      ],
+      "note": "配布されたレビュー全体の評価ラベル：Negative（否定的）。",
+      "answer": "Negative（否定的）",
+      "raw_sha256": "9230409202d206c039ce802d19279ffe2de8f6ac66fbb65b5b3e7541481e4705"
+    },
+    {
+      "index": 1013,
+      "title": "技術と創造性を分ける",
+      "raw": {
+        "text": "You may like Tim Burton's fantasies, but not in a commercial-like show off lasting 8 minutes. It demonstrates good technical points without real creativity or some established narrative pace.",
+        "label": 0
+      },
+      "units": [
+        {
+          "label": "レビュー（全文）",
+          "en": "You may like Tim Burton's fantasies, but not in a commercial-like show off lasting 8 minutes. It demonstrates good technical points without real creativity or some established narrative pace.",
+          "ja": "ティム・バートンの空想の世界は好きかもしれないが、8分も続くCMのような見せびらかしは別だ。技術的に良い点はあるが、本当の創造性も、しっかりした物語のテンポもない。"
+        }
+      ],
+      "note": "配布されたレビュー全体の評価ラベル：Negative（否定的）。",
+      "answer": "Negative（否定的）",
+      "raw_sha256": "04dd708087fc9e44f3caabce3851422ac8bd185d73f3dd1eee8890dd5087a0c8"
+    },
+    {
+      "index": 12510,
+      "title": "人物の描き方を評価",
+      "raw": {
+        "text": "While the romance in this film is an important aspect, it is largely about the role of responsibility and duty in modern Indian. All of the major characters were well fleshed out, and had their own \"inner life\". I recommend this strongly",
+        "label": 1
+      },
+      "units": [
+        {
+          "label": "レビュー（全文）",
+          "en": "While the romance in this film is an important aspect, it is largely about the role of responsibility and duty in modern Indian. All of the major characters were well fleshed out, and had their own \"inner life\". I recommend this strongly",
+          "ja": "この映画では恋愛も重要な要素だが、主なテーマは現代インドにおける責任と義務の役割である。主要人物は皆よく描かれ、それぞれの内面があった。強く勧めたい。"
+        }
+      ],
+      "note": "配布されたレビュー全体の評価ラベル：Positive（肯定的）。",
+      "answer": "Positive（肯定的）",
+      "raw_sha256": "f3b8670d22be02046c493377b64a506969cef33e10a524177e111e44cafec388"
+    },
+    {
+      "index": 13210,
+      "title": "俳優への好意",
+      "raw": {
+        "text": "I think this movie is my favorite movie. I am not sure why, but it is. Julia Duffy has been my favorite actress for awhile, and when I saw this, I went crazy. It's sort of romantic, and I definitely recommend this movie.",
+        "label": 1
+      },
+      "units": [
+        {
+          "label": "レビュー（全文）",
+          "en": "I think this movie is my favorite movie. I am not sure why, but it is. Julia Duffy has been my favorite actress for awhile, and when I saw this, I went crazy. It's sort of romantic, and I definitely recommend this movie.",
+          "ja": "この映画がいちばん好きだと思う。理由ははっきりしないが、そうなのだ。ジュリア・ダフィは以前から大好きな女優で、この映画を見て夢中になった。少しロマンチックで、ぜひ勧めたい。"
+        }
+      ],
+      "note": "配布されたレビュー全体の評価ラベル：Positive（肯定的）。",
+      "answer": "Positive（肯定的）",
+      "raw_sha256": "dfbd0de73f4e9a80dbba8c583dbcc3557fb8f9cba87cf58c24fe08a0a815969f"
+    },
+    {
+      "index": 13687,
+      "title": "家族で楽しめる作品",
+      "raw": {
+        "text": "At last, a great film that doesn't have to be edited for profanity or sex! It's a fun film that the whole family can enjoy. Willis is great, as always. \"Rusty\" was delightful. Just enough action to keep interest going.",
+        "label": 1
+      },
+      "units": [
+        {
+          "label": "レビュー（全文）",
+          "en": "At last, a great film that doesn't have to be edited for profanity or sex! It's a fun film that the whole family can enjoy. Willis is great, as always. \"Rusty\" was delightful. Just enough action to keep interest going.",
+          "ja": "卑語や性描写を編集で削る必要がない、すばらしい映画がついに登場した！ 家族全員で楽しめる。ウィリスはいつもどおりすばらしく、「ラスティ」も魅力的だった。興味を保つのにちょうどよい量のアクションもある。"
+        }
+      ],
+      "note": "配布されたレビュー全体の評価ラベル：Positive（肯定的）。",
+      "answer": "Positive（肯定的）",
+      "raw_sha256": "219da0b7dff729b73f523a4d88776fbf44e99c32f5928f852201c55d500af32d"
+    },
+    {
+      "index": 13691,
+      "title": "自然な演技",
+      "raw": {
+        "text": "I couldnt believe how well this kid did on screen, you will completely forget that they are actors and loose yourself in the movie. It is like watching home movies with a twist. I recomend this to everyone. Highly.",
+        "label": 1
+      },
+      "units": [
+        {
+          "label": "レビュー（全文）",
+          "en": "I couldnt believe how well this kid did on screen, you will completely forget that they are actors and loose yourself in the movie. It is like watching home movies with a twist. I recomend this to everyone. Highly.",
+          "ja": "この子が画面でこれほど上手に演じるとは信じられなかった。俳優だということをすっかり忘れて、映画に入り込んでしまう。ひとひねりあるホームビデオを見ているようだ。誰にでも、強く勧めたい。"
+        }
+      ],
+      "note": "配布されたレビュー全体の評価ラベル：Positive（肯定的）。",
+      "answer": "Positive（肯定的）",
+      "raw_sha256": "747d869c5e223bef78a0725edffc8ae666c1388028ffa3e42de6008086268f5e"
+    },
+    {
+      "index": 13798,
+      "title": "別作品との比較",
+      "raw": {
+        "text": "This movie is based on the novel Island of dr. Moreau By H.G. Wells. It's a fairly good one too, it's at least better than the version by John Frankenheimer.",
+        "label": 1
+      },
+      "units": [
+        {
+          "label": "レビュー（全文）",
+          "en": "This movie is based on the novel Island of dr. Moreau By H.G. Wells. It's a fairly good one too, it's at least better than the version by John Frankenheimer.",
+          "ja": "H・G・ウェルズの小説『モロー博士の島』をもとにした映画だ。かなり良い出来でもあり、少なくともジョン・フランケンハイマー版よりは良い。"
+        }
+      ],
+      "note": "配布されたレビュー全体の評価ラベル：Positive（肯定的）。",
+      "answer": "Positive（肯定的）",
+      "raw_sha256": "885bc9fed6145ba17b2a85cff28a46000a3143ef1cef2c85cda208b2dc962349"
+    },
+    {
+      "index": 14107,
+      "title": "映画と小説を勧める",
+      "raw": {
+        "text": "Morte a Venezia is one of my favorite movies. More than beautiful, it's really sublime. It gives you important aesthetic experiences, it's a masterpiece. I also recommend the novel. Luchino Visconti is a genius.",
+        "label": 1
+      },
+      "units": [
+        {
+          "label": "レビュー（全文）",
+          "en": "Morte a Venezia is one of my favorite movies. More than beautiful, it's really sublime. It gives you important aesthetic experiences, it's a masterpiece. I also recommend the novel. Luchino Visconti is a genius.",
+          "ja": "『ベニスに死す』は大好きな映画の一つだ。美しいだけでなく、本当に崇高である。重要な美的体験をもたらす傑作だ。小説も勧めたい。ルキノ・ヴィスコンティは天才だ。"
+        }
+      ],
+      "note": "配布されたレビュー全体の評価ラベル：Positive（肯定的）。",
+      "answer": "Positive（肯定的）",
+      "raw_sha256": "24ee660d8d8f7d3a5fe25088b0859dc4644bf9ea4e4de86a77db423964d966cf"
+    }
+  ],
+  "helm_release": "v0.4.0",
+  "helm_release_date": "2023-11-17",
+  "helm_runs": [
+    {
+      "name": "imdb:model=meta_llama-2-70b,data_augmentation=canonical",
+      "underlying_suite": "v0.3.0",
+      "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/imdb%3Amodel%3Dmeta_llama-2-70b%2Cdata_augmentation%3Dcanonical/stats.json",
+      "adapter_spec": {
+        "method": "generation",
+        "global_prefix": "",
+        "instructions": "",
+        "input_prefix": "Passage: ",
+        "input_suffix": "\n",
+        "reference_prefix": "A. ",
+        "reference_suffix": "\n",
+        "output_prefix": "Sentiment: ",
+        "output_suffix": "\n",
+        "instance_prefix": "\n",
+        "substitutions": [],
+        "max_train_instances": 5,
+        "max_eval_instances": 1000,
+        "num_outputs": 1,
+        "num_train_trials": 1,
+        "sample_train": true,
+        "model": "meta/llama-2-70b",
+        "temperature": 0.0,
+        "max_tokens": 5,
+        "stop_sequences": [
+          "\n"
+        ],
+        "multi_label": false
+      },
+      "scenario_spec": {
+        "class_name": "helm.benchmark.scenarios.imdb_scenario.IMDBScenario",
+        "args": {
+          "only_contrast": false
+        }
+      },
+      "metric": "quasi_exact_match",
+      "split": "valid",
+      "mean": 0.961,
+      "display_value": 96.1,
+      "stats": [
+        {
+          "name": {
+            "name": "num_train_trials",
+            "split": "valid"
+          },
+          "count": 1,
+          "sum": 1.0,
+          "sum_squared": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "variance": 0.0,
+          "stddev": 0.0
+        },
+        {
+          "name": {
+            "name": "num_train_instances",
+            "split": "valid"
+          },
+          "count": 1,
+          "sum": 5.0,
+          "sum_squared": 25.0,
+          "min": 5.0,
+          "max": 5.0,
+          "mean": 5.0,
+          "variance": 0.0,
+          "stddev": 0.0
+        },
+        {
+          "name": {
+            "name": "quasi_exact_match",
+            "split": "valid"
+          },
+          "count": 1,
+          "sum": 0.961,
+          "sum_squared": 0.9235209999999999,
+          "min": 0.961,
+          "max": 0.961,
+          "mean": 0.961,
+          "variance": 0.0,
+          "stddev": 0.0
+        },
+        {
+          "name": {
+            "name": "num_instances",
+            "split": "valid"
+          },
+          "count": 1,
+          "sum": 1000.0,
+          "sum_squared": 1000000.0,
+          "min": 1000.0,
+          "max": 1000.0,
+          "mean": 1000.0,
+          "variance": 0.0,
+          "stddev": 0.0
+        }
+      ]
+    },
+    {
+      "name": "imdb:model=openai_text-davinci-003,data_augmentation=canonical",
+      "underlying_suite": "v0.3.0",
+      "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/imdb%3Amodel%3Dopenai_text-davinci-003%2Cdata_augmentation%3Dcanonical/stats.json",
+      "adapter_spec": {
+        "method": "generation",
+        "global_prefix": "",
+        "instructions": "",
+        "input_prefix": "Passage: ",
+        "input_suffix": "\n",
+        "reference_prefix": "A. ",
+        "reference_suffix": "\n",
+        "output_prefix": "Sentiment: ",
+        "output_suffix": "\n",
+        "instance_prefix": "\n",
+        "substitutions": [],
+        "max_train_instances": 5,
+        "max_eval_instances": 1000,
+        "num_outputs": 1,
+        "num_train_trials": 3,
+        "sample_train": true,
+        "model": "openai/text-davinci-003",
+        "temperature": 0.0,
+        "max_tokens": 5,
+        "stop_sequences": [
+          "\n"
+        ],
+        "multi_label": false
+      },
+      "scenario_spec": {
+        "class_name": "helm.benchmark.scenarios.imdb_scenario.IMDBScenario",
+        "args": {
+          "only_contrast": false
+        }
+      },
+      "metric": "quasi_exact_match",
+      "split": "valid",
+      "mean": 0.8483333333333333,
+      "display_value": 84.83,
+      "stats": [
+        {
+          "name": {
+            "name": "num_train_trials",
+            "split": "valid"
+          },
+          "count": 3,
+          "sum": 9.0,
+          "sum_squared": 27.0,
+          "min": 3.0,
+          "max": 3.0,
+          "mean": 3.0,
+          "variance": 0.0,
+          "stddev": 0.0
+        },
+        {
+          "name": {
+            "name": "num_train_instances",
+            "split": "valid"
+          },
+          "count": 3,
+          "sum": 15.0,
+          "sum_squared": 75.0,
+          "min": 5.0,
+          "max": 5.0,
+          "mean": 5.0,
+          "variance": 0.0,
+          "stddev": 0.0
+        },
+        {
+          "name": {
+            "name": "quasi_exact_match",
+            "split": "valid"
+          },
+          "count": 3,
+          "sum": 2.545,
+          "sum_squared": 2.160641,
+          "min": 0.828,
+          "max": 0.881,
+          "mean": 0.8483333333333333,
+          "variance": 0.0005442222222222792,
+          "stddev": 0.02332857094256481
+        },
+        {
+          "name": {
+            "name": "num_instances",
+            "split": "valid"
+          },
+          "count": 3,
+          "sum": 3000.0,
+          "sum_squared": 3000000.0,
+          "min": 1000.0,
+          "max": 1000.0,
+          "mean": 1000.0,
+          "variance": 0.0,
+          "stddev": 0.0
+        }
+      ]
+    },
+    {
+      "name": "imdb:model=together_opt-175b,data_augmentation=canonical",
+      "underlying_suite": "v0.3.0",
+      "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/imdb%3Amodel%3Dtogether_opt-175b%2Cdata_augmentation%3Dcanonical/stats.json",
+      "adapter_spec": {
+        "method": "generation",
+        "global_prefix": "",
+        "instructions": "",
+        "input_prefix": "Passage: ",
+        "input_suffix": "\n",
+        "reference_prefix": "A. ",
+        "reference_suffix": "\n",
+        "output_prefix": "Sentiment: ",
+        "output_suffix": "\n",
+        "instance_prefix": "\n",
+        "substitutions": [],
+        "max_train_instances": 5,
+        "max_eval_instances": 1000,
+        "num_outputs": 1,
+        "num_train_trials": 3,
+        "sample_train": true,
+        "model": "together/opt-175b",
+        "temperature": 0.0,
+        "max_tokens": 5,
+        "stop_sequences": [
+          "\n"
+        ],
+        "multi_label": false
+      },
+      "scenario_spec": {
+        "class_name": "helm.benchmark.scenarios.imdb_scenario.IMDBScenario",
+        "args": {
+          "only_contrast": false
+        }
+      },
+      "metric": "quasi_exact_match",
+      "split": "valid",
+      "mean": 0.9473333333333334,
+      "display_value": 94.73,
+      "stats": [
+        {
+          "name": {
+            "name": "num_train_trials",
+            "split": "valid"
+          },
+          "count": 3,
+          "sum": 9.0,
+          "sum_squared": 27.0,
+          "min": 3.0,
+          "max": 3.0,
+          "mean": 3.0,
+          "variance": 0.0,
+          "stddev": 0.0
+        },
+        {
+          "name": {
+            "name": "num_train_instances",
+            "split": "valid"
+          },
+          "count": 3,
+          "sum": 14.798000000000002,
+          "sum_squared": 73.00506800000001,
+          "min": 4.846,
+          "max": 4.986,
+          "mean": 4.932666666666667,
+          "variance": 0.0038222222222223934,
+          "stddev": 0.061824123303306076
+        },
+        {
+          "name": {
+            "name": "quasi_exact_match",
+            "split": "valid"
+          },
+          "count": 3,
+          "sum": 2.842,
+          "sum_squared": 2.692724,
+          "min": 0.932,
+          "max": 0.96,
+          "mean": 0.9473333333333334,
+          "variance": 0.00013422222222225777,
+          "stddev": 0.011585431464656713
+        },
+        {
+          "name": {
+            "name": "num_instances",
+            "split": "valid"
+          },
+          "count": 3,
+          "sum": 3000.0,
+          "sum_squared": 3000000.0,
+          "min": 1000.0,
+          "max": 1000.0,
+          "mean": 1000.0,
+          "variance": 0.0,
+          "stddev": 0.0
+        }
+      ]
+    }
+  ],
+  "artifact_sha256": {
+    "pptx": "3698215e262c333ade48d920f93affacd3bff84eb766b02748ae880536d2ce2a",
+    "pdf": "1af41c5407f12e80f99edc8e23612d2fb1c57991fab62f1a847c2d751211ef33"
+  },
+  "load_dataset_revision_resolution": {
+    "dataset": "imdb",
+    "url": "https://huggingface.co/api/datasets/stanfordnlp/imdb/revision/e6281661",
+    "status": 200,
+    "resolved": "e6281661ce1c48d982bc483cf8a173c1bbeb5d31",
+    "matches": true
+  }
+}

@@ -27,7 +27,7 @@ GSM8KとHumanEvalは既存資料で対象データセットを紹介済み。MML
 |msmarco_trec|MS MARCO (TREC track)|未着手||
 |summarization_cnndm|CNN/DailyMail|未着手||
 |summarization_xsum|XSUM|今回制作|xsum|
-|imdb|IMDB|今回制作|imdb|
+|imdb|IMDB|作成済み|[PPTX](../slides/datasets-in-10-minutes-imdb.pptx) / [PDF](../slides/datasets-in-10-minutes-imdb.pdf)|
 |raft|RAFT (Real-world Annotated Few-Shot)|未着手||
 |civil_comments|CivilComments|未着手||
 |ice|ICE (International Corpus of English)|未着手||
