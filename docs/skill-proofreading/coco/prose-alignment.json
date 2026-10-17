@@ -1,0 +1,93 @@
+{
+  "dataset": "coco",
+  "review_method": "skill_based_codex",
+  "reviewer": "Codex",
+  "new_gemini_api_calls": 0,
+  "page": 60,
+  "changes": [
+    {
+      "page": 60,
+      "part": "ppt/slides/slide61.xml",
+      "paragraph_index": 1,
+      "shape": "Text Placeholder 2",
+      "original": "分析対象はCOCO128-segの128画像である [1]。",
+      "revised": "分析には、COCO128-segの128枚の画像を使う [1]。",
+      "reason": "省略した助詞・述語を補い、分析対象と分割・集計条件を通常の文章で説明する。",
+      "provenance": "skill_original"
+    },
+    {
+      "page": 60,
+      "part": "ppt/slides/slide61.xml",
+      "paragraph_index": 2,
+      "shape": "Text Placeholder 2",
+      "original": "変換して公開された領域注釈を画像ごとに数え、注釈ファイルがない2画像は領域数0として含める。",
+      "revised": "変換・公開された領域注釈を画像ごとに数え、注釈ファイルがない2枚は領域数を0として集計に含める。",
+      "reason": "省略した助詞・述語を補い、分析対象と分割・集計条件を通常の文章で説明する。",
+      "provenance": "skill_original"
+    }
+  ],
+  "layout_adjustments": [
+    {
+      "page": 60,
+      "shape": "Title 1",
+      "original_alignment": "center",
+      "revised_alignment": "left",
+      "original_rect_emu": {
+        "x": 468172,
+        "y": 1306154,
+        "w": 8206740,
+        "h": 594360
+      },
+      "revised_rect_emu": {
+        "x": 468172,
+        "y": 650240,
+        "w": 8206740,
+        "h": 594360
+      },
+      "reason": "文量のある説明を中央配置から、通常の本文ページの見出し・左揃えの段落へ変更。文字サイズは維持。"
+    },
+    {
+      "page": 60,
+      "shape": "Text Placeholder 2",
+      "original_alignment": "center",
+      "revised_alignment": "left",
+      "original_rect_emu": {
+        "x": 594360,
+        "y": 2220554,
+        "w": 7955279,
+        "h": 1737360
+      },
+      "revised_rect_emu": {
+        "x": 594360,
+        "y": 1508760,
+        "w": 7955279,
+        "h": 2794000
+      },
+      "reason": "文量のある説明を中央配置から、通常の本文ページの見出し・左揃えの段落へ変更。文字サイズは維持。"
+    }
+  ],
+  "skill_path": ".agents/skills/japanese-slide-proofreading/SKILL.md",
+  "source_pptx_sha256": "c2b73167bf22c46007b9373beeb26418269f8c74b7c26904b2757a00d99f5033",
+  "validation": {
+    "pages": 82,
+    "final_pptx_rendered": true,
+    "changed_page_visually_reviewed": true,
+    "alignment_verified": "left",
+    "numeric_tokens_unchanged": true,
+    "actual_text_changes_match_record": true,
+    "unchanged_pages_pixel_identical": true,
+    "masters_media_other_slide_parts_unchanged": true,
+    "new_schema_errors": [],
+    "zip_integrity": "passed",
+    "powerpoint_desktop_opened": false
+  },
+  "skill": {
+    "name": "japanese-slide-proofreading",
+    "revision": "bd542fb",
+    "sha256": "d2a08ebf92172cceb1ff56d8d1b783cde971f22d44d733d0f62143dd6302e2c2"
+  },
+  "source_pdf_sha256": "a4849b2795479ef257a8fef1c00669211dbb711c5f40df95e29381c48e4f7dce",
+  "final_pptx_sha256": "aec215bb5303ab9b9fcb6781684ba42bf2e5d6af061fe81268e5155321316af4",
+  "final_pdf_sha256": "5b09353e90da8cfb48ec3fccf62cba60fe9cc2e30da13197265fcda6140b9e03",
+  "source_commit": "bd542fb"
+}
