@@ -1,0 +1,821 @@
+{
+  "dataset": "xsum",
+  "checked_at": "2026-10-17T16:27:56Z",
+  "repository": "EdinburghNLP/xsum",
+  "revision": "7d4d486c2f8ef850b1a11aead99b894ff3dd7da9",
+  "sources": [
+    {
+      "path": "test-00000-of-00001.parquet",
+      "url": "https://huggingface.co/datasets/EdinburghNLP/xsum/resolve/7d4d486c2f8ef850b1a11aead99b894ff3dd7da9/data/test-00000-of-00001.parquet",
+      "sha256": "224e9dbc6fed987759c1954603b43cb280b8d475d78893779130aa707d967ed7",
+      "bytes": 16731226
+    },
+    {
+      "path": "validation-00000-of-00001.parquet",
+      "url": "https://huggingface.co/datasets/EdinburghNLP/xsum/resolve/7d4d486c2f8ef850b1a11aead99b894ff3dd7da9/data/validation-00000-of-00001.parquet",
+      "sha256": "b7fc808c2dd3d1340349481aeef489e6eb8c22ff5739d8bce6d0f99e5ef8044d",
+      "bytes": 16447668
+    },
+    {
+      "path": "xsum-paper.pdf",
+      "bytes": 406385,
+      "sha256": "77ad171c060d5455e04f3dd3fbb4fca757d339450aa319df3bc1595fb6cee97b"
+    },
+    {
+      "path": "helm-release-summary.json",
+      "bytes": 95,
+      "sha256": "9b38c903d4d2ebdf9075d3b05a67d1a67514c9815d8779873f6732dc375d6211"
+    },
+    {
+      "path": "helm-release-schema.json",
+      "bytes": 213689,
+      "sha256": "ab2ea213329376e811ce41a422b8fc7b35329e2bed4e60c323ffd38b7ada2d2f"
+    },
+    {
+      "path": "helm-release-run_specs.json",
+      "bytes": 27233068,
+      "sha256": "ef94fb6d3d234ef3193ed043b4a718cd75e0cf2aaf94f0439693cf46a4ff6f62"
+    },
+    {
+      "path": "helm-release-runs_to_run_suites.json",
+      "bytes": 907445,
+      "sha256": "ac6eb84b2493b44ffc433f7899c562864fb37fa23e281c596dbc17551fe957fb"
+    },
+    {
+      "path": "release-summarization_scenario.py",
+      "bytes": 6847,
+      "sha256": "32534c82c637ebd0c2d389e1314746da8f58762eb2cded5f18e8c2d1b2be5304"
+    },
+    {
+      "path": "bart-paper.pdf",
+      "bytes": 322247,
+      "sha256": "3562c723fe7bebb8b362533122b3ca5c065037c8e8d67460654cf3740652bb59"
+    },
+    {
+      "path": "xsum-hallucination.pdf",
+      "bytes": 388798,
+      "sha256": "0a17c97845c277210c687e4481f4f4f41fe78e5b8abfabdc0ac1e2b751f92674"
+    }
+  ],
+  "source_urls": {
+    "paper": [
+      "Shashi Narayan et al. (2018). Don’t Give Me the Details, Just the Summary! Topic-Aware Convolutional Neural Networks for Extreme Summarization. EMNLP 2018.",
+      "https://aclanthology.org/D18-1206/"
+    ],
+    "data": [
+      "EdinburghNLP/xsum、改訂7d4d486c。2026-10-17参照。",
+      "https://huggingface.co/datasets/EdinburghNLP/xsum"
+    ],
+    "page": [
+      "XSum 公式公開ページ。2026-10-17参照。",
+      "https://github.com/EdinburghNLP/XSum"
+    ],
+    "stats": [
+      "EdinburghNLP/xsum、改訂7d4d486c。test全11,334件を集計。",
+      "https://huggingface.co/datasets/EdinburghNLP/xsum"
+    ],
+    "helm": [
+      "Liang et al. Holistic Evaluation of Language Models. TMLR 2023. Classic v0.4.0（2023-11-17）。",
+      "https://crfm.stanford.edu/helm/classic/v0.4.0/"
+    ],
+    "config": [
+      "HELM Classic v0.4.0。公開run_specsと実行別statsのcanonical設定を照合。",
+      "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/releases/v0.4.0/run_specs.json"
+    ],
+    "harness": [
+      "EleutherAI. Language Model Evaluation Harness。2026-10-17参照。",
+      "https://github.com/EleutherAI/lm-evaluation-harness"
+    ],
+    "superglue": [
+      "Wang et al. (2019). SuperGLUE: A Stickier Benchmark for General-Purpose Language Understanding Systems. NeurIPS.",
+      "https://arxiv.org/abs/1905.00537"
+    ],
+    "faithful": [
+      "Maynez et al. (2020). On Faithfulness and Factuality in Abstractive Summarization. ACL.",
+      "https://aclanthology.org/2020.acl-main.173/"
+    ],
+    "bart": [
+      "Lewis et al. (2020). BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension. ACL.",
+      "https://aclanthology.org/2020.acl-main.703/"
+    ]
+  },
+  "stats": {
+    "n": 11334,
+    "partition": "test",
+    "words": {
+      "mean": 376.1446973707429,
+      "std_population": 308.2301972256513,
+      "min": 0.0,
+      "q25": 179.0,
+      "median": 295.0,
+      "q75": 492.0,
+      "max": 10315.0
+    },
+    "histogram": [
+      159,
+      1030,
+      2139,
+      4116,
+      2935,
+      955
+    ],
+    "bins": [
+      "0–49",
+      "50–99",
+      "100–199",
+      "200–399",
+      "400–799",
+      "800以上"
+    ],
+    "summary_words_mean": 21.097582495147343,
+    "unique_ids": 11334
+  },
+  "method": "str.split() on all rows in the named partition; numpy.std(ddof=0); numpy.quantile(method=linear); histogram bins [0,50,100,200,400,800,100000]",
+  "selection": "Independent public records: first 3 main, remaining 10 appendix; no duplicates. Short records selected for readable full bilingual presentation; not a random sample.",
+  "examples": [
+    {
+      "index": 1,
+      "title": "捜索と出廷",
+      "raw": {
+        "document": "Officers searched properties in the Waterfront Park and Colonsay View areas of the city on Wednesday.\nDetectives said three firearms, ammunition and a five-figure sum of money were recovered.\nA 26-year-old man who was arrested and charged appeared at Edinburgh Sheriff Court on Thursday.",
+        "summary": "A man has appeared in court after firearms, ammunition and cash were seized by police in Edinburgh.",
+        "id": "34227252"
+      },
+      "units": [
+        {
+          "label": "入力本文（全3段落中の1）",
+          "en": "Officers searched properties in the Waterfront Park and Colonsay View areas of the city on Wednesday.",
+          "ja": "警察官は水曜日、市内のウォーターフロント・パークとコロンゼイ・ビュー地区の物件を捜索した。"
+        },
+        {
+          "label": "入力本文（全3段落中の2）",
+          "en": "Detectives said three firearms, ammunition and a five-figure sum of money were recovered.",
+          "ja": "刑事によると、銃器3丁、弾薬、5桁の金額の現金を押収した。"
+        },
+        {
+          "label": "入力本文（全3段落中の3）",
+          "en": "A 26-year-old man who was arrested and charged appeared at Edinburgh Sheriff Court on Thursday.",
+          "ja": "逮捕・起訴された26歳の男は木曜日、エディンバラのシェリフ裁判所に出廷した。"
+        },
+        {
+          "label": "参照要約（全文）",
+          "en": "A man has appeared in court after firearms, ammunition and cash were seized by police in Edinburgh.",
+          "ja": "エディンバラで警察が銃器、弾薬、現金を押収し、男が出廷した。"
+        }
+      ],
+      "note": "BBC記事ID 34227252。入力は、要約として使う冒頭文を除いた本文。",
+      "answer": "A man has appeared in court after firearms, ammunition and cash were seized by police in Edinburgh.",
+      "raw_sha256": "e60ad32861e2245fa2a89d5e145ed3cf3caaf65d95db35a5333b99200a9ba781"
+    },
+    {
+      "index": 3,
+      "title": "本文にない人名",
+      "raw": {
+        "document": "The 48-year-old former Arsenal goalkeeper played for the Royals for four years.\nHe was appointed youth academy director in 2000 and has been director of football since 2003.\nA West Brom statement said: \"He played a key role in the Championship club twice winning promotion to the Premier League in 2006 and 2012.\"",
+        "summary": "West Brom have appointed Nicky Hammond as technical director, ending his 20-year association with Reading.",
+        "id": "36175342"
+      },
+      "units": [
+        {
+          "label": "入力本文（全3段落中の1）",
+          "en": "The 48-year-old former Arsenal goalkeeper played for the Royals for four years.",
+          "ja": "48歳の元アーセナルGKは、ロイヤルズで4年間プレーした。"
+        },
+        {
+          "label": "入力本文（全3段落中の2）",
+          "en": "He was appointed youth academy director in 2000 and has been director of football since 2003.",
+          "ja": "2000年に育成部門の責任者に、2003年にはフットボール部門の責任者に就いた。"
+        },
+        {
+          "label": "入力本文（全3段落中の3）",
+          "en": "A West Brom statement said: \"He played a key role in the Championship club twice winning promotion to the Premier League in 2006 and 2012.\"",
+          "ja": "ウェスト・ブロムは声明で「2006年と2012年のプレミアリーグ昇格に大きく貢献した」と述べた。"
+        },
+        {
+          "label": "参照要約（全文）",
+          "en": "West Brom have appointed Nicky Hammond as technical director, ending his 20-year association with Reading.",
+          "ja": "ウェスト・ブロムはニッキー・ハモンドをテクニカルディレクターに任命し、レディングとの20年の関係が終わった。"
+        }
+      ],
+      "note": "参照要約のNicky Hammondという人名と新しい任命は、この入力本文には明記されていない。",
+      "answer": "West Brom have appointed Nicky Hammond as technical director, ending his 20-year association with Reading.",
+      "raw_sha256": "01ea41f875e633a515560a72b52c7bc1463cab5c43812bc5dedc7394298d99a9"
+    },
+    {
+      "index": 127,
+      "title": "野鳥の救助",
+      "raw": {
+        "document": "The bird's head and wings became stuck in the wire fence in Bethesda while it was chasing a wood pigeon.\nRSPCA Inspector Mike Pugh, who freed the animal, said: \"The buzzard was feisty, but luckily, had not had much feather damage.\n\"I released the bird back to the wild where he belongs straight away.\"",
+        "summary": "A buzzard has been rescued after becoming trapped between fencing and a wall in Gwynedd.",
+        "id": "37250267"
+      },
+      "units": [
+        {
+          "label": "入力本文（全3段落中の1）",
+          "en": "The bird's head and wings became stuck in the wire fence in Bethesda while it was chasing a wood pigeon.",
+          "ja": "モリバトを追っていた鳥の頭と翼が、ベセスダの金網に引っ掛かった。"
+        },
+        {
+          "label": "入力本文（全3段落中の2）",
+          "en": "RSPCA Inspector Mike Pugh, who freed the animal, said: \"The buzzard was feisty, but luckily, had not had much feather damage.",
+          "ja": "救助したRSPCAのマイク・ピュー調査員は「ノスリは暴れたが、幸い羽の損傷はほとんどなかった。"
+        },
+        {
+          "label": "入力本文（全3段落中の3）",
+          "en": "\"I released the bird back to the wild where he belongs straight away.\"",
+          "ja": "すぐに本来の居場所である野生に戻した」と話した。"
+        },
+        {
+          "label": "参照要約（全文）",
+          "en": "A buzzard has been rescued after becoming trapped between fencing and a wall in Gwynedd.",
+          "ja": "グウィネズで、柵と壁の間に挟まったノスリが救助された。"
+        }
+      ],
+      "note": "BBC記事ID 37250267。入力は、要約として使う冒頭文を除いた本文。",
+      "answer": "A buzzard has been rescued after becoming trapped between fencing and a wall in Gwynedd.",
+      "raw_sha256": "c876b4f57b42ab1cdba7c2609c694f1a7a6710b0e87797a85e0e9957b2de96d4"
+    },
+    {
+      "index": 53,
+      "title": "道路の一覧から要約",
+      "raw": {
+        "document": "Causanagh Road, Loughgall\nTannyoky Road, Poyntzpass\nCarrowreagh Road, Dundonald\nEdenticullo Road, Hillsborough\nNew Line Road, Rathfriland\nDrumanure Road, Derrygonnelly",
+        "summary": "These roads in Northern Ireland are closed due to poor weather conditions as of Friday 15 January.",
+        "id": "34833729"
+      },
+      "units": [
+        {
+          "label": "入力本文（全6段落中の1）",
+          "en": "Causanagh Road, Loughgall",
+          "ja": "コーサナー・ロード（ラフガル）"
+        },
+        {
+          "label": "入力本文（全6段落中の2）",
+          "en": "Tannyoky Road, Poyntzpass",
+          "ja": "タニオーキー・ロード（ポイントパス）"
+        },
+        {
+          "label": "入力本文（全6段落中の3）",
+          "en": "Carrowreagh Road, Dundonald",
+          "ja": "キャロウリー・ロード（ダンドナルド）"
+        },
+        {
+          "label": "入力本文（全6段落中の4）",
+          "en": "Edenticullo Road, Hillsborough",
+          "ja": "エデンティキュロ・ロード（ヒルズバラ）"
+        },
+        {
+          "label": "入力本文（全6段落中の5）",
+          "en": "New Line Road, Rathfriland",
+          "ja": "ニュー・ライン・ロード（ラスフリランド）"
+        },
+        {
+          "label": "入力本文（全6段落中の6）",
+          "en": "Drumanure Road, Derrygonnelly",
+          "ja": "ドラマヌア・ロード（デリーゴネリー）"
+        },
+        {
+          "label": "参照要約（全文）",
+          "en": "These roads in Northern Ireland are closed due to poor weather conditions as of Friday 15 January.",
+          "ja": "北アイルランドのこれらの道路は、1月15日金曜日現在、悪天候のため通行止めになっている。"
+        }
+      ],
+      "note": "BBC記事ID 34833729。入力は、要約として使う冒頭文を除いた本文。",
+      "answer": "These roads in Northern Ireland are closed due to poor weather conditions as of Friday 15 January.",
+      "raw_sha256": "8d4b9f791c680e10c2e9c3a9edf9a8af48353c847b7c604815e98bd46aa0309b"
+    },
+    {
+      "index": 272,
+      "title": "完成予定と未完成の部屋",
+      "raw": {
+        "document": "Penglais Farm will have a total of 1,000 rooms, but only 700 will be ready this month to welcome students.\nThe university said developer Balfour Beatty confirmed the remaining 300 rooms will be ready during the 2015-16 academic year.\nBalfour Beatty has been asked to comment.\nThe unfinished rooms have not been let to students.",
+        "summary": "Hundreds of rooms at a £45m student halls development at Aberystwyth University will not be ready for the new term.",
+        "id": "34231916"
+      },
+      "units": [
+        {
+          "label": "入力本文（全4段落中の1）",
+          "en": "Penglais Farm will have a total of 1,000 rooms, but only 700 will be ready this month to welcome students.",
+          "ja": "Penglais Farmには計1,000室が設けられるが、今月、学生を迎えられるのは700室だけだ。"
+        },
+        {
+          "label": "入力本文（全4段落中の2）",
+          "en": "The university said developer Balfour Beatty confirmed the remaining 300 rooms will be ready during the 2015-16 academic year.",
+          "ja": "大学によると、開発会社Balfour Beattyは残る300室が2015〜16年度中に完成すると確認した。"
+        },
+        {
+          "label": "入力本文（全4段落中の3）",
+          "en": "Balfour Beatty has been asked to comment.",
+          "ja": "同社にコメントを求めている。"
+        },
+        {
+          "label": "入力本文（全4段落中の4）",
+          "en": "The unfinished rooms have not been let to students.",
+          "ja": "未完成の部屋は学生に貸し出されていない。"
+        },
+        {
+          "label": "参照要約（全文）",
+          "en": "Hundreds of rooms at a £45m student halls development at Aberystwyth University will not be ready for the new term.",
+          "ja": "アベリストウィス大学で4,500万ポンドをかけて開発中の学生寮の数百室が、新学期に間に合わない。"
+        }
+      ],
+      "note": "BBC記事ID 34231916。入力は、要約として使う冒頭文を除いた本文。",
+      "answer": "Hundreds of rooms at a £45m student halls development at Aberystwyth University will not be ready for the new term.",
+      "raw_sha256": "d066371d2b13b7dd3a14698b9c12fdb176bd45b03d612bf9c3cda01467a05d66"
+    },
+    {
+      "index": 382,
+      "title": "小学校の定員拡大",
+      "raw": {
+        "document": "Sayes Court will double in size and provide an additional 210 places by September 2015.\nSurrey County Council said it needs to \"bridge a Â£215m funding gap\" for 13,000 places, blaming an \"unprecedented demand\" on its services.\nIt said nearby Esher School is also being completely rebuilt to boost capacity by 210 places.",
+        "summary": "An artist's impression of how an expanded primary school in Addlestone will look has been unveiled.",
+        "id": "30157987"
+      },
+      "units": [
+        {
+          "label": "入力本文（全3段落中の1）",
+          "en": "Sayes Court will double in size and provide an additional 210 places by September 2015.",
+          "ja": "Sayes Courtは2015年9月までに規模を倍にし、定員を210人増やす。"
+        },
+        {
+          "label": "入力本文（全3段落中の2）",
+          "en": "Surrey County Council said it needs to \"bridge a Â£215m funding gap\" for 13,000 places, blaming an \"unprecedented demand\" on its services.",
+          "ja": "サリー州議会は、需要の前例のない増大により、1万3,000人分の定員に必要な2億1,500万ポンドの資金不足を埋める必要があると述べた。"
+        },
+        {
+          "label": "入力本文（全3段落中の3）",
+          "en": "It said nearby Esher School is also being completely rebuilt to boost capacity by 210 places.",
+          "ja": "近くのEsher Schoolも全面改築され、定員が210人増えるという。"
+        },
+        {
+          "label": "参照要約（全文）",
+          "en": "An artist's impression of how an expanded primary school in Addlestone will look has been unveiled.",
+          "ja": "アドルストーンの小学校を拡張した際の完成予想図が公開された。"
+        }
+      ],
+      "note": "BBC記事ID 30157987。入力は、要約として使う冒頭文を除いた本文。",
+      "answer": "An artist's impression of how an expanded primary school in Addlestone will look has been unveiled.",
+      "raw_sha256": "fe0b5b2046084b550af34f0b7ba74dc4f96d2a58f8a2f3c88130a1780471471b"
+    },
+    {
+      "index": 434,
+      "title": "投票から開票へ",
+      "raw": {
+        "document": "Polling booths opened at 07:00 BST in the area's 15 constituencies, with results expected to be declared after midnight.\nVotes will be counted after the polls close at 22:00 BST.\nFor the latest news from all the counts on Merseyside, go to our election live service or check the results on your constituency profile page.",
+        "summary": "People are voting across Merseyside in the general and local council elections.",
+        "id": "32610327"
+      },
+      "units": [
+        {
+          "label": "入力本文（全3段落中の1）",
+          "en": "Polling booths opened at 07:00 BST in the area's 15 constituencies, with results expected to be declared after midnight.",
+          "ja": "地域内の15選挙区では午前7時（英国夏時間）に投票が始まり、結果は深夜以降に発表される見込みだ。"
+        },
+        {
+          "label": "入力本文（全3段落中の2）",
+          "en": "Votes will be counted after the polls close at 22:00 BST.",
+          "ja": "午後10時の投票終了後に開票する。"
+        },
+        {
+          "label": "入力本文（全3段落中の3）",
+          "en": "For the latest news from all the counts on Merseyside, go to our election live service or check the results on your constituency profile page.",
+          "ja": "マージーサイド各地の開票の最新情報は選挙ライブサービスか、各選挙区の結果ページで確認できる。"
+        },
+        {
+          "label": "参照要約（全文）",
+          "en": "People are voting across Merseyside in the general and local council elections.",
+          "ja": "マージーサイド各地で、総選挙と地方議会選挙の投票が行われている。"
+        }
+      ],
+      "note": "BBC記事ID 32610327。入力は、要約として使う冒頭文を除いた本文。",
+      "answer": "People are voting across Merseyside in the general and local council elections.",
+      "raw_sha256": "2a4f1f3c0a322b0cc9de3f46a2b39826d2be8be654f3aec11bd0c3d6f46da155"
+    },
+    {
+      "index": 492,
+      "title": "テニスの試合結果",
+      "raw": {
+        "document": "Watson, 22, was seeded eighth in the tournament but lost 7-5 6-2 to the world number 101 in Seoul.\nThe British number one, ranked 46 in the world, converted just one of seven break points in the first set and the American dominated the second set.\nWatson's early departure comes less than a month after her first-round defeat in straight sets at the US Open.",
+        "summary": "Britain's Heather Watson has been knocked out of the first round of the Korea Open by qualifier Nicole Gibbs.",
+        "id": "29218607"
+      },
+      "units": [
+        {
+          "label": "入力本文（全3段落中の1）",
+          "en": "Watson, 22, was seeded eighth in the tournament but lost 7-5 6-2 to the world number 101 in Seoul.",
+          "ja": "第8シードの22歳ワトソンは、ソウルで世界101位の選手に7-5、6-2で敗れた。"
+        },
+        {
+          "label": "入力本文（全3段落中の2）",
+          "en": "The British number one, ranked 46 in the world, converted just one of seven break points in the first set and the American dominated the second set.",
+          "ja": "世界46位の英国1位選手は、第1セットの7度のブレークポイントのうち1度しか生かせず、第2セットは米国選手が優勢だった。"
+        },
+        {
+          "label": "入力本文（全3段落中の3）",
+          "en": "Watson's early departure comes less than a month after her first-round defeat in straight sets at the US Open.",
+          "ja": "全米オープンでストレート負けの初戦敗退を喫してから1か月もたたないうちの早期敗退となった。"
+        },
+        {
+          "label": "参照要約（全文）",
+          "en": "Britain's Heather Watson has been knocked out of the first round of the Korea Open by qualifier Nicole Gibbs.",
+          "ja": "英国のヘザー・ワトソンは、韓国オープンの初戦で予選通過者のニコール・ギブスに敗れた。"
+        }
+      ],
+      "note": "BBC記事ID 29218607。入力は、要約として使う冒頭文を除いた本文。",
+      "answer": "Britain's Heather Watson has been knocked out of the first round of the Korea Open by qualifier Nicole Gibbs.",
+      "raw_sha256": "17236bc6a054e526ed7e5760bfddc5a6db41012ac348167563ffc2a2812e630a"
+    },
+    {
+      "index": 532,
+      "title": "グラミー賞候補",
+      "raw": {
+        "document": "6 December 2014 Last updated at 09:15 GMT\nThe Grammy Awards is one of the most prestigious music ceremony's in the world.\nSam Smith, who topped the BBC's Sound of 2014 in January, has six nominations including best new artist.\nHis single Stay With Me is also up for best pop performance and record of the year.",
+        "summary": "British artists have scooped several nominations for the 2015 Grammys.",
+        "id": "30358562"
+      },
+      "units": [
+        {
+          "label": "入力本文（全4段落中の1）",
+          "en": "6 December 2014 Last updated at 09:15 GMT",
+          "ja": "2014年12月6日、最終更新09:15 GMT。"
+        },
+        {
+          "label": "入力本文（全4段落中の2）",
+          "en": "The Grammy Awards is one of the most prestigious music ceremony's in the world.",
+          "ja": "グラミー賞は世界で最も権威ある音楽賞の一つである。"
+        },
+        {
+          "label": "入力本文（全4段落中の3）",
+          "en": "Sam Smith, who topped the BBC's Sound of 2014 in January, has six nominations including best new artist.",
+          "ja": "1月にBBC Sound of 2014の首位となったサム・スミスは、最優秀新人賞を含む6部門に候補入りした。"
+        },
+        {
+          "label": "入力本文（全4段落中の4）",
+          "en": "His single Stay With Me is also up for best pop performance and record of the year.",
+          "ja": "シングル「Stay With Me」も最優秀ポップ・パフォーマンスと年間最優秀レコードの候補になっている。"
+        },
+        {
+          "label": "参照要約（全文）",
+          "en": "British artists have scooped several nominations for the 2015 Grammys.",
+          "ja": "英国のアーティストが、2015年グラミー賞の複数部門で候補入りした。"
+        }
+      ],
+      "note": "BBC記事ID 30358562。入力は、要約として使う冒頭文を除いた本文。",
+      "answer": "British artists have scooped several nominations for the 2015 Grammys.",
+      "raw_sha256": "86b8380059f4917084b4a573a9bb1bdb4584e4dd375780acea4c6399a5236b47"
+    },
+    {
+      "index": 570,
+      "title": "停電と復旧",
+      "raw": {
+        "document": "Areas in Counties Londonderry, Antrim and Down were affected.\nA spokesperson for Northern Ireland Electricity said was an equipment fault was detected at 21.40 BST.\nAll properties have had power restored had their power restored by 22.14 BST.",
+        "summary": "Several thousand customers were left without electricity for a time on Wednesday night.",
+        "id": "36852171"
+      },
+      "units": [
+        {
+          "label": "入力本文（全3段落中の1）",
+          "en": "Areas in Counties Londonderry, Antrim and Down were affected.",
+          "ja": "ロンドンデリー、アントリム、ダウン各県の地域が影響を受けた。"
+        },
+        {
+          "label": "入力本文（全3段落中の2）",
+          "en": "A spokesperson for Northern Ireland Electricity said was an equipment fault was detected at 21.40 BST.",
+          "ja": "北アイルランド電力の広報担当によると、21時40分（英国夏時間）に設備の故障が検出された。"
+        },
+        {
+          "label": "入力本文（全3段落中の3）",
+          "en": "All properties have had power restored had their power restored by 22.14 BST.",
+          "ja": "22時14分までに、すべての建物への電力供給が復旧した。"
+        },
+        {
+          "label": "参照要約（全文）",
+          "en": "Several thousand customers were left without electricity for a time on Wednesday night.",
+          "ja": "水曜日の夜、数千世帯が一時停電した。"
+        }
+      ],
+      "note": "BBC記事ID 36852171。入力は、要約として使う冒頭文を除いた本文。",
+      "answer": "Several thousand customers were left without electricity for a time on Wednesday night.",
+      "raw_sha256": "aec443aec7614abf74208ec2f2aafa75bf5ffea67a509ea6506c35722618d097"
+    },
+    {
+      "index": 791,
+      "title": "山での救助",
+      "raw": {
+        "document": "Two were picked up by a coastguard helicopter high up on the 3,196ft (974 metre) Munro.\nLomond Mountain Rescue Team located two others on the lower slopes.\nMountain weather forecasters were predicting winds of up to 80mph with frequent snow showers at summit level in western Scotland for Wednesday.",
+        "summary": "Four hillwalkers who got into difficulties during severe weather on Ben Lomond have been rescued.",
+        "id": "38586981"
+      },
+      "units": [
+        {
+          "label": "入力本文（全3段落中の1）",
+          "en": "Two were picked up by a coastguard helicopter high up on the 3,196ft (974 metre) Munro.",
+          "ja": "2人は標高3,196フィート（974m）の山の高所で、沿岸警備隊のヘリコプターに救助された。"
+        },
+        {
+          "label": "入力本文（全3段落中の2）",
+          "en": "Lomond Mountain Rescue Team located two others on the lower slopes.",
+          "ja": "ローモンド山岳救助隊は、低い斜面で別の2人を発見した。"
+        },
+        {
+          "label": "入力本文（全3段落中の3）",
+          "en": "Mountain weather forecasters were predicting winds of up to 80mph with frequent snow showers at summit level in western Scotland for Wednesday.",
+          "ja": "山岳気象予報では、水曜日のスコットランド西部の山頂付近で、最大時速80マイルの風が吹き、にわか雪がたびたび降ると予想されていた。"
+        },
+        {
+          "label": "参照要約（全文）",
+          "en": "Four hillwalkers who got into difficulties during severe weather on Ben Lomond have been rescued.",
+          "ja": "ベン・ローモンドで悪天候のため動けなくなった登山者4人が救助された。"
+        }
+      ],
+      "note": "BBC記事ID 38586981。入力は、要約として使う冒頭文を除いた本文。",
+      "answer": "Four hillwalkers who got into difficulties during severe weather on Ben Lomond have been rescued.",
+      "raw_sha256": "89400d7834c474cc9ae215b35fe3503dbef0b65e33d9f5f0554fe42eff0cc251"
+    },
+    {
+      "index": 15,
+      "title": "サッカー選手の期限付き移籍",
+      "raw": {
+        "document": "The 33-year-old has featured only twice for the Foxes this term, having signed a new one-year deal with the Premier League newcomers in the summer.\nFormer Blackpool forward Taylor-Fletcher scored three goals in 23 games for his parent club last season.\nHe joined the 13th-placed Owls prior to Saturday's Championship game against Norwich City.",
+        "summary": "Leicester City striker Gary Taylor-Fletcher has joined Sheffield Wednesday on an initial month-long loan.",
+        "id": "29771956"
+      },
+      "units": [
+        {
+          "label": "入力本文（全3段落中の1）",
+          "en": "The 33-year-old has featured only twice for the Foxes this term, having signed a new one-year deal with the Premier League newcomers in the summer.",
+          "ja": "33歳の選手は、夏にプレミアリーグ昇格組と新たな1年契約を結んだが、今季のフォクシーズでの出場は2試合だけだ。"
+        },
+        {
+          "label": "入力本文（全3段落中の2）",
+          "en": "Former Blackpool forward Taylor-Fletcher scored three goals in 23 games for his parent club last season.",
+          "ja": "元ブラックプールFWのテイラー＝フレッチャーは、昨季、所属元のクラブで23試合に出場して3得点した。"
+        },
+        {
+          "label": "入力本文（全3段落中の3）",
+          "en": "He joined the 13th-placed Owls prior to Saturday's Championship game against Norwich City.",
+          "ja": "ノリッジとの土曜日の2部リーグの試合前に、13位のオウルズへ加わった。"
+        },
+        {
+          "label": "参照要約（全文）",
+          "en": "Leicester City striker Gary Taylor-Fletcher has joined Sheffield Wednesday on an initial month-long loan.",
+          "ja": "レスター・シティのFWギャリー・テイラー＝フレッチャーが、当初1か月の期限付き移籍でシェフィールド・ウェンズデイに加わった。"
+        }
+      ],
+      "note": "BBC記事ID 29771956。入力は、要約として使う冒頭文を除いた本文。",
+      "answer": "Leicester City striker Gary Taylor-Fletcher has joined Sheffield Wednesday on an initial month-long loan.",
+      "raw_sha256": "09ffa309e3ec149c0da0d80415fa22ef08a5fade422fe361de014ecb0622f8ee"
+    },
+    {
+      "index": 161,
+      "title": "宇宙飛行士との交流",
+      "raw": {
+        "document": "3 February 2016 Last updated at 08:07 GMT\nThe British astronaut has been up there for six weeks, but took time out to speak to children and share some experiments.\nLeah went to meet some of kids lucky enough to be able to talk direct to the astronaut...",
+        "summary": "Children across Britain linked up with Tim Peake on the International Space Station yesterday for a big question and answer session.",
+        "id": "35480672"
+      },
+      "units": [
+        {
+          "label": "入力本文（全3段落中の1）",
+          "en": "3 February 2016 Last updated at 08:07 GMT",
+          "ja": "2016年2月3日、最終更新08:07 GMT。"
+        },
+        {
+          "label": "入力本文（全3段落中の2）",
+          "en": "The British astronaut has been up there for six weeks, but took time out to speak to children and share some experiments.",
+          "ja": "英国の宇宙飛行士は6週間、宇宙に滞在しているが、時間を取って子どもたちと話し、実験を紹介した。"
+        },
+        {
+          "label": "入力本文（全3段落中の3）",
+          "en": "Leah went to meet some of kids lucky enough to be able to talk direct to the astronaut...",
+          "ja": "リアは、この宇宙飛行士と直接話せる幸運に恵まれた子どもたちに会いに行った。"
+        },
+        {
+          "label": "参照要約（全文）",
+          "en": "Children across Britain linked up with Tim Peake on the International Space Station yesterday for a big question and answer session.",
+          "ja": "昨日、英国各地の子どもたちが国際宇宙ステーションにいるティム・ピークと通信し、大規模な質疑応答を行った。"
+        }
+      ],
+      "note": "BBC記事ID 35480672。入力は、要約として使う冒頭文を除いた本文。",
+      "answer": "Children across Britain linked up with Tim Peake on the International Space Station yesterday for a big question and answer session.",
+      "raw_sha256": "4392ee0ff8c52a7b7a23403c94a9a1c573a5aea972285f1987302ba1091c1ca9"
+    }
+  ],
+  "helm_release": "v0.4.0",
+  "helm_release_date": "2023-11-17",
+  "helm_runs": [
+    {
+      "name": "summarization_xsum:temperature=0.3,device=cpu,model=openai_text-davinci-003",
+      "underlying_suite": "v0.3.0",
+      "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/summarization_xsum%3Atemperature%3D0.3%2Cdevice%3Dcpu%2Cmodel%3Dopenai_text-davinci-003/stats.json",
+      "adapter_spec": {
+        "method": "generation",
+        "global_prefix": "",
+        "instructions": "",
+        "input_prefix": "###\nArticle: ",
+        "input_suffix": "\n\n",
+        "reference_prefix": "A. ",
+        "reference_suffix": "\n",
+        "output_prefix": "Summarize the above article in 1 sentence.\n",
+        "output_suffix": "\n",
+        "instance_prefix": "\n",
+        "substitutions": [],
+        "max_train_instances": 5,
+        "max_eval_instances": 1000,
+        "num_outputs": 1,
+        "num_train_trials": 3,
+        "sample_train": true,
+        "model": "openai/text-davinci-003",
+        "temperature": 0.3,
+        "max_tokens": 64,
+        "stop_sequences": [
+          "###"
+        ],
+        "multi_label": false
+      },
+      "scenario_spec": {
+        "class_name": "helm.benchmark.scenarios.summarization_scenario.SummarizationScenario",
+        "args": {
+          "dataset_name": "xsum-sampled",
+          "sampling_min_length": 50,
+          "sampling_max_length": 150,
+          "doc_max_length": 512
+        }
+      },
+      "metric": "rouge_2",
+      "split": "test",
+      "mean": 0.12395799815526115,
+      "display_value": 12.4,
+      "stats": [
+        {
+          "name": {
+            "name": "rouge_2",
+            "split": "test"
+          },
+          "count": 3,
+          "sum": 0.37187399446578345,
+          "sum_squared": 0.04610471820122759,
+          "min": 0.12188997593291122,
+          "max": 0.12587155670126135,
+          "mean": 0.12395799815526115,
+          "variance": 2.6540937494712313e-06,
+          "stddev": 0.0016291389595339103
+        },
+        {
+          "name": {
+            "name": "num_train_trials",
+            "split": "test"
+          },
+          "count": 3,
+          "sum": 9.0,
+          "sum_squared": 27.0,
+          "min": 3.0,
+          "max": 3.0,
+          "mean": 3.0,
+          "variance": 0.0,
+          "stddev": 0.0
+        },
+        {
+          "name": {
+            "name": "num_train_instances",
+            "split": "test"
+          },
+          "count": 3,
+          "sum": 15.0,
+          "sum_squared": 75.0,
+          "min": 5.0,
+          "max": 5.0,
+          "mean": 5.0,
+          "variance": 0.0,
+          "stddev": 0.0
+        },
+        {
+          "name": {
+            "name": "num_instances",
+            "split": "test"
+          },
+          "count": 3,
+          "sum": 1554.0,
+          "sum_squared": 804972.0,
+          "min": 518.0,
+          "max": 518.0,
+          "mean": 518.0,
+          "variance": 0.0,
+          "stddev": 0.0
+        }
+      ]
+    },
+    {
+      "name": "summarization_xsum:temperature=0.3,device=cpu,model=together_opt-175b",
+      "underlying_suite": "v0.3.0",
+      "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/summarization_xsum%3Atemperature%3D0.3%2Cdevice%3Dcpu%2Cmodel%3Dtogether_opt-175b/stats.json",
+      "adapter_spec": {
+        "method": "generation",
+        "global_prefix": "",
+        "instructions": "",
+        "input_prefix": "###\nArticle: ",
+        "input_suffix": "\n\n",
+        "reference_prefix": "A. ",
+        "reference_suffix": "\n",
+        "output_prefix": "Summarize the above article in 1 sentence.\n",
+        "output_suffix": "\n",
+        "instance_prefix": "\n",
+        "substitutions": [],
+        "max_train_instances": 5,
+        "max_eval_instances": 1000,
+        "num_outputs": 1,
+        "num_train_trials": 3,
+        "sample_train": true,
+        "model": "together/opt-175b",
+        "temperature": 0.3,
+        "max_tokens": 64,
+        "stop_sequences": [
+          "###"
+        ],
+        "multi_label": false
+      },
+      "scenario_spec": {
+        "class_name": "helm.benchmark.scenarios.summarization_scenario.SummarizationScenario",
+        "args": {
+          "dataset_name": "xsum-sampled",
+          "sampling_min_length": 50,
+          "sampling_max_length": 150,
+          "doc_max_length": 512
+        }
+      },
+      "metric": "rouge_2",
+      "split": "test",
+      "mean": 0.1548653970323593,
+      "display_value": 15.49,
+      "stats": [
+        {
+          "name": {
+            "name": "rouge_2",
+            "split": "test"
+          },
+          "count": 3,
+          "sum": 0.4645961910970779,
+          "sum_squared": 0.071962733133412,
+          "min": 0.15307386975907494,
+          "max": 0.15776680077689453,
+          "mean": 0.1548653970323593,
+          "variance": 4.286513147055276e-06,
+          "stddev": 0.002070389612381031
+        },
+        {
+          "name": {
+            "name": "num_train_trials",
+            "split": "test"
+          },
+          "count": 3,
+          "sum": 9.0,
+          "sum_squared": 27.0,
+          "min": 3.0,
+          "max": 3.0,
+          "mean": 3.0,
+          "variance": 0.0,
+          "stddev": 0.0
+        },
+        {
+          "name": {
+            "name": "num_train_instances",
+            "split": "test"
+          },
+          "count": 3,
+          "sum": 14.996138996138995,
+          "sum_squared": 74.96139741506536,
+          "min": 4.998069498069498,
+          "max": 5.0,
+          "mean": 4.998712998712999,
+          "variance": 8.281861525460954e-07,
+          "stddev": 0.0009100473353326712
+        },
+        {
+          "name": {
+            "name": "num_instances",
+            "split": "test"
+          },
+          "count": 3,
+          "sum": 1554.0,
+          "sum_squared": 804972.0,
+          "min": 518.0,
+          "max": 518.0,
+          "mean": 518.0,
+          "variance": 0.0,
+          "stddev": 0.0
+        }
+      ]
+    }
+  ],
+  "artifact_sha256": {
+    "pptx": "0711ccad945596218e23014450c58c75997afac7f83a94c7293572bcc5cd0eab",
+    "pdf": "11e5e5bbb9a765259117c4cb4862a3b2e2935d3bce77e7b4c79b7ff1e7578cbb"
+  },
+  "load_dataset_revision_resolution": {
+    "dataset": "xsum",
+    "url": "https://huggingface.co/api/datasets/EdinburghNLP/xsum/revision/7d4d486c",
+    "status": 200,
+    "resolved": "7d4d486c2f8ef850b1a11aead99b894ff3dd7da9",
+    "matches": true
+  }
+}

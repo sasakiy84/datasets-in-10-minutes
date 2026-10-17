@@ -44,3 +44,4 @@
 |HellaSwag|[変更対](hellaswag.md)・[TSV](hellaswag/changes.tsv)|[pages.jsonl](hellaswag/pages.jsonl)|[制作記録](../hellaswag-sources.md)・[最終検査](hellaswag/review.json)|
 |TruthfulQA|[変更対](truthfulqa.md)・[TSV](truthfulqa/changes.tsv)|[pages.jsonl](truthfulqa/pages.jsonl)|[制作記録](../truthfulqa-sources.md)・[最終検査](truthfulqa/review.json)|
 |IMDb|[変更対](imdb.md)・[TSV](imdb/changes.tsv)|[pages.jsonl](imdb/pages.jsonl)|[制作記録](../imdb-sources.md)・[最終検査](imdb/review.json)|
+|XSum|[変更対](xsum.md)・[TSV](xsum/changes.tsv)|[pages.jsonl](xsum/pages.jsonl)|[制作記録](../xsum-sources.md)・[最終検査](xsum/review.json)|
