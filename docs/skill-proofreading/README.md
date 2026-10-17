@@ -14,3 +14,4 @@
 | mcp-atlas | [変更対・採否](mcp-atlas.md) | [PPTX](../../slides/datasets-in-10-minutes-mcp-atlas.pptx) | [PDF](../../slides/datasets-in-10-minutes-mcp-atlas.pdf) |
 | omnidocbench | [変更対・採否](omnidocbench.md) | [PPTX](../../slides/datasets-in-10-minutes-omnidocbench.pptx) | [PDF](../../slides/datasets-in-10-minutes-omnidocbench.pdf) |
 | osworld-verified | [変更対・採否](osworld-verified.md) | [PPTX](../../slides/datasets-in-10-minutes-osworld-verified.pptx) | [PDF](../../slides/datasets-in-10-minutes-osworld-verified.pdf) |
+| snli | [変更対・採否](snli.md) | [PPTX](../../slides/datasets-in-10-minutes-snli.pptx) | [PDF](../../slides/datasets-in-10-minutes-snli.pdf) |

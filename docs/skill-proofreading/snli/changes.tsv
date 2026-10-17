@@ -1,0 +1,26 @@
+original_page	revised_page	before	after	reason	provenance
+13	13	Stanford Natural Language Inference Corpusとして、570,152組を収録し、2015年のEMNLPで発表された。	Stanford Natural Language Inference Corpusとして570,152組が収録され、2015年のEMNLPで発表された。	「収録し（能動）」と「発表された（受動）」が混在して主述のねじれが生じていたため、「収録され」に統一して受動文の構造を整えました。	cached_proposal_reassessed
+14	14	作業者には写真を見せず、その説明文だけを提示した。同じ写真の状況について、確実に真・真かもしれない・確実に偽の文を各1つ書いた。	作業者には写真を見せず、その説明文だけを提示した。作業者は同じ写真の状況について、確実に真・真かもしれない・確実に偽の文を各1つ書いた。	提示した主体と文を書いた主体を分け、作業者が仮説を作ったことを明示する。	cached_proposal_reassessed_and_revised
+15	15	判定者	区分	正解ラベル行も含むため、判定者だけを指す列名を包括的な語へ整える。	skill_original
+21	21	仮説は “The people who are shown are not all doing the exact same thing.”正解は含意。	仮説は “The people who are shown are not all doing the exact same thing.” で、正解は含意。	引用の閉じ引用符の直後に句読点のないまま「正解は…」と次の文が連続しており読みづらいため、「で、」を補って文の接続を自然にしました。	cached_proposal_reassessed
+26	26	いずれもSNLIの学習用で学習し、テスト用で評価した [1]。	いずれもSNLIの学習データで学習し、テストデータで評価した [1]。	「学習用」「テスト用」のままでは名詞として座りが悪く口語的に感じられるため、「学習データ」「テストデータ」と補うことで学術報告として自然な表現になります。	cached_proposal_reassessed
+29	29	仮説だけを使う分類器で約67%という報告がある。	仮説文だけを使う分類器で正解率約67%という報告がある。	上の項目（「仮説文」）と用語を揃えるとともに、数値が何の指標か明確になるよう「正解率」を補いました。	cached_proposal_reassessed
+31	31	SNLIは写真説明を扱った。これに対し、会話・小説など10ジャンルへ広げた [2]。	写真説明を扱ったSNLIに対し、会話・小説など10ジャンルへ対象を広げた [2]。	前半と後半が分断され、後半で目的語（対象）が曖昧で接続がやや不自然だったため、対比の構造を整えて簡潔にまとめました。	cached_proposal_reassessed
+31	31	さらに、未知のジャンルへの汎化も評価する。	さらに、未知のジャンルへの汎化性能も評価できる。	データセットの特徴を説明する文脈において、動作主が曖昧な能動表現「評価する」よりも、ベンチマークとしての機能を示す「汎化性能も評価できる」とするほうが自然です。	cached_proposal_reassessed
+33	33	モデルの予測を作業者へ返し、難しい例を集める。この例でモデルを学び直す工程を繰り返す。	モデルの予測を作業者へ返し、難しい例を集める。これらの例でモデルを学習し直す工程を繰り返す。	複数の収集例を指す語と、モデルを再学習する動詞を自然にする。	skill_original
+43	43	第一著者のSamuel R. Bowmanは自然言語推論を研究する。	第一著者のSamuel R. Bowmanは自然言語推論を研究している。	研究者の現在の専門分野や継続的な研究活動を述べる文脈では、ル形（研究する）よりもテイル形（研究している）のほうが日本語として自然なため。	cached_proposal_reassessed
+43	43	最終著者のChristopher D. Manningは単語表現などを研究する。	最終著者のChristopher D. Manningは単語表現などを研究している。	段落3と同様に、継続的な研究活動・専門分野の記述としてテイル形（研究している）に整えるため。	cached_proposal_reassessed
+54	54	文長を集計した版・分割と文対数	文長集計の対象データと集計条件	本文は全件の対象と数え方を説明するため、記載のない分割別件数を見出しで期待させない。	skill_original
+54	54	正解付き569,033組を使い、ラベルが「-」の組は除く。	正解付き569,033組を使い、ラベルが「-」の組は除いた。	大項目の時制（集計した・数えた）に合わせて、文末を過去形に統一しました。	cached_proposal_reassessed
+54	54	Pythonのlen()で空白・句読点を含むUnicode文字を数える。	Pythonのlen()で空白・句読点を含むUnicode文字を数えた。	親箇条書き（加工せずに数えた）の時制に合わせて文末を過去形に統一しました。	cached_proposal_reassessed
+54	54	str.split()で空白区切りの単語を数える。	str.split()で空白区切りの単語を数えた。	親箇条書きおよび並列する項目に合わせて文末を過去形に統一しました。	cached_proposal_reassessed
+54	54	前提は文対ごとに繰り返し数える。	前提は文対ごとに重複して数えた。	先行する大項目に合わせて時制を揃えるとともに、前提（Premise）がユニーク文単位ではなく文対ごとに重複して計上されている意図が明瞭に伝わるよう「重複して数えた」に改めました。	cached_proposal_reassessed
+56	56	中央	中央値	統計量の列見出しとして「中央」よりも「中央値」とするほうが正確で一般的です。	cached_proposal_reassessed
+56	56	前提を文対ごとに数える。	前提文は文対ごとに集計。	前文の「〜を集計」と述語のトーンを揃え、助詞を整えて注記として自然な表現に改善しました。	cached_proposal_reassessed
+57	57	中央	中央値	隣接する統計表と統一し、統計量名を正確に記す。	skill_original
+59	59	分割別の前提の単語数	分割別の前提文の単語数	章タイトル（前提文の長さ）や前後のスライド表記（前提文）と用語を揃え、対象を明確にするため「前提文」とします。	cached_proposal_reassessed
+59	59	中央	中央値	平均や標準偏差と並ぶ要約統計量のラベルとして、一般的な「中央値」に補正します。	cached_proposal_reassessed
+61	61	分割別の仮説の単語数	分割別の仮説文の単語数	前提文の表と対応する見出しで対象を明示する。	skill_original
+61	61	中央	中央値	平均や標準偏差と並ぶ統計指標の列名であるため、「中央」ではなく「中央値」とするのが自然です。	cached_proposal_reassessed
+62	62	前提は “A doberman bites a large blue ball.”正解は矛盾。仮説には前提と無関係な描写が多い。	前提は“A doberman bites a large blue ball.”で、正解は矛盾。仮説には前提と無関係な描写が多い。	引用符の後ろに句読点や接続詞がなく文が唐突に続いていたため、「で、」で繋いで文の流れを自然に整えました。	cached_proposal_reassessed
+66	66	公式のJSONLにはsentence1、sentence2、gold_labelなどを含む。	公式のJSONLにはsentence1、sentence2、gold_labelなどが含まれる。	ファイルを場所として示す助詞と自動詞を対応させる。	skill_original
