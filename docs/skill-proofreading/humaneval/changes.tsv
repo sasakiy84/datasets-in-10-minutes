@@ -1,0 +1,9 @@
+pages	scope	before	after	reason	review_mode
+10	language	空白を無視して括弧列を読み、入れ子になった各グループを文字列として返す。各グループは閉じており、グループ同士は入れ子にならない。	空白を無視して括弧列を読み、各グループを文字列に分け、そのリストを返す。各グループの括弧は対応して閉じており、グループ同士は入れ子にならない。	返す対象が文字列のリストであることと、括弧の対応を原文に合わせて明確化。	skill_based_codex
+28	title	HumanEval+は同じ仕様を、より多くの入力で試す	HumanEval+は同じ仕様のテストを増やす	一行に収め、追加する対象を具体化。	skill_based_codex
+21	language	公開テストが見逃す入力で誤る実装もあり得る。後続のHumanEval+は、入力を増やしてそのような誤りを検出する。	HumanEval+はテストの入力を増やし、元のテストで見逃した誤りを検出する。	同じ因果関係を一文に整理。	skill_based_codex
+21	language	公開問題への高い得点を、未知の仕様や大きなコードベースを扱う能力へ、そのまま置き換えることはできない。	未知の仕様や大きなコードベースを扱う能力は、公開問題の得点だけでは分からない。	直訳的な「能力へ置き換える」を自然な説明へ変更。	skill_based_codex
+31	language	公式リポジトリから、164問を収めたHumanEval.jsonl.gzと読み込み・評価コードを取得できる。	公式リポジトリでは、問題ファイルと読み込み・評価コードをMIT Licenseで公開している。	入手先と利用条件を簡潔に統合。問題数は既出の表に保持。	skill_based_codex
+31	language	評価する候補は、task_idとcompletionを持つJSON Linesとして保存する。completionには、promptの続きとなる関数本体を入れる。	候補は、task_idとcompletionを持つJSON Linesとして保存する。completionにはpromptに続く関数本体を入れる。	重複する語を減らし、修飾を簡潔化。	skill_based_codex
+31	language	生成コードの実行は隔離した環境で行う。公式READMEも、信頼できない生成コードの実行環境を分離するよう求めている。	公式READMEに従い、生成コードは隔離した環境で実行する。	出典に基づく同じ指示を一文に整理。	skill_based_codex
+51	deduplication	末尾側の最長の回文を探し、その前に残った接頭部を逆順にして末尾に付ける。		日本語訳に同じアルゴリズムを説明しているため、コード下の重複説明を削除。	skill_based_codex

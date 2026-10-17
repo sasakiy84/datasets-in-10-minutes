@@ -85,5 +85,6 @@ python -m http.server 8000 --directory _site
 |OSWorld-Verified|[PPTX](slides/datasets-in-10-minutes-osworld-verified.pptx)|[PDF](slides/datasets-in-10-minutes-osworld-verified.pdf)|
 |OmniDocBench|[PPTX](slides/datasets-in-10-minutes-omnidocbench.pptx)|[PDF](slides/datasets-in-10-minutes-omnidocbench.pdf)|
 |GSM8K|[PPTX](slides/datasets-in-10-minutes-gsm8k.pptx)|[PDF](slides/datasets-in-10-minutes-gsm8k.pdf)|
+|HumanEval|[PPTX](slides/datasets-in-10-minutes-humaneval.pptx)|[PDF](slides/datasets-in-10-minutes-humaneval.pdf)|
 
 [ユーザー指示の記録](docs/user-instructions.md)

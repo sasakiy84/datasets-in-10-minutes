@@ -1,0 +1,382 @@
+{
+  "dataset": "humaneval",
+  "checked_at": "2026-10-17T15:01:43Z",
+  "sources": [
+    {
+      "path": "humaneval/data.jsonl.gz",
+      "url": "https://raw.githubusercontent.com/openai/human-eval/master/data/HumanEval.jsonl.gz",
+      "bytes": 44877,
+      "sha256": "b796127e635a67f93fb35c04f4cb03cf06f38c8072ee7cee8833d7bee06979ef"
+    },
+    {
+      "path": "humaneval/README.md",
+      "url": "https://raw.githubusercontent.com/openai/human-eval/master/README.md",
+      "bytes": 5031,
+      "sha256": "a6a3741a64527ae20026b7880e37af5de88e8ae4dcfed81eb19620c674b6e272"
+    },
+    {
+      "path": "humaneval/LICENSE",
+      "url": "https://raw.githubusercontent.com/openai/human-eval/master/LICENSE",
+      "bytes": 1083,
+      "sha256": "bcba3de214851cce46ed5af42d6698044616eeace887c3231bc7a20474ab639e"
+    },
+    {
+      "path": "humaneval/paper.pdf",
+      "url": "https://arxiv.org/pdf/2107.03374",
+      "bytes": 1885177,
+      "sha256": "ebae72ea0e8a5eb2ecbccdb985aec6cc1254a7c4d29e6d4de7866db1e66c4855"
+    },
+    {
+      "path": "humaneval/evalplus-README.md",
+      "url": "https://raw.githubusercontent.com/evalplus/evalplus/master/README.md",
+      "bytes": 15259,
+      "sha256": "667f3f937cf8dfa67dd6624c24c22cb0e938c9b31179cf2e40457d2708ff2260"
+    },
+    {
+      "path": "humaneval/evalplus-paper.pdf",
+      "url": "https://arxiv.org/pdf/2305.01210",
+      "bytes": 970804,
+      "sha256": "52d35d25a10c38da3db132beceb8d29bee77abd46f18aafe76c5b0c63f0a6541"
+    },
+    {
+      "path": "humaneval/qwen25coder-paper.pdf",
+      "url": "https://arxiv.org/pdf/2409.12186",
+      "bytes": 1204247,
+      "sha256": "8416ad8d885737ed15f757180499f5202fa93e791180a6d3fcd6f0381d79595e"
+    },
+    {
+      "path": "humaneval/evaluation.py",
+      "url": "https://raw.githubusercontent.com/openai/human-eval/master/human_eval/evaluation.py",
+      "sha256": "e926d5e9b8f1ec040096cd5952e8cf79f8dc0b7fb80ba6667ce604ffea0397bc",
+      "bytes": 3438
+    }
+  ],
+  "statistics": {
+    "n": 164,
+    "prompt_chars": {
+      "n": 164,
+      "mean": 450.5975609756098,
+      "median": 396.0,
+      "sd": 229.6005470672127,
+      "min": 115,
+      "p25": 288,
+      "p75": 567,
+      "p95": 926,
+      "max": 1360
+    },
+    "prompt_lines": {
+      "n": 164,
+      "mean": 13.707317073170731,
+      "median": 13.0,
+      "sd": 5.135927505182389,
+      "min": 6,
+      "p25": 10,
+      "p75": 15,
+      "p95": 24,
+      "max": 36
+    },
+    "solution_lines": {
+      "n": 164,
+      "mean": 6.786585365853658,
+      "median": 6.0,
+      "sd": 5.52683613006269,
+      "min": 1,
+      "p25": 2,
+      "p75": 10,
+      "p95": 16,
+      "max": 31
+    },
+    "assert_nodes": {
+      "n": 164,
+      "mean": 7.201219512195122,
+      "median": 7.0,
+      "sd": 3.7075728008719686,
+      "min": 1,
+      "p25": 5,
+      "p75": 9,
+      "p95": 13,
+      "max": 26
+    },
+    "buckets": [
+      31,
+      86,
+      27,
+      14,
+      6
+    ]
+  },
+  "statistics_method": {
+    "character_count": "Python len(), Unicode code points including whitespace and punctuation",
+    "word_count": "Python str.split()",
+    "line_count": "Python str.splitlines()",
+    "standard_deviation": "population: statistics.pstdev",
+    "quantiles": "sorted_values[round((n-1)*p)]",
+    "rounding": "display only; raw JSON preserves precision"
+  },
+  "examples": [
+    {
+      "task_id": "HumanEval/0",
+      "prompt": "from typing import List\n\n\ndef has_close_elements(numbers: List[float], threshold: float) -> bool:\n    \"\"\" Check if in given list of numbers, are any two numbers closer to each other than\n    given threshold.\n    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)\n    False\n    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)\n    True\n    \"\"\"\n",
+      "entry_point": "has_close_elements",
+      "canonical_solution": "    for idx, elem in enumerate(numbers):\n        for idx2, elem2 in enumerate(numbers):\n            if idx != idx2:\n                distance = abs(elem - elem2)\n                if distance < threshold:\n                    return True\n\n    return False\n",
+      "test": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate([1.0, 2.0, 3.9, 4.0, 5.0, 2.2], 0.3) == True\n    assert candidate([1.0, 2.0, 3.9, 4.0, 5.0, 2.2], 0.05) == False\n    assert candidate([1.0, 2.0, 5.9, 4.0, 5.0], 0.95) == True\n    assert candidate([1.0, 2.0, 5.9, 4.0, 5.0], 0.8) == False\n    assert candidate([1.0, 2.0, 3.0, 4.0, 5.0, 2.0], 0.1) == True\n    assert candidate([1.1, 2.2, 3.1, 4.1, 5.1], 1.0) == True\n    assert candidate([1.1, 2.2, 3.1, 4.1, 5.1], 0.5) == False\n\n",
+      "index": 0,
+      "role": "main",
+      "title": "数値の近さを判定する",
+      "jp": "数値のリストに、差の絶対値がしきい値より小さい2要素があればTrueを返す。しきい値と等しい差は条件を満たさない。",
+      "explanation": "全ての組を比較する。差がしきい値未満なら、その場でTrueを返す。",
+      "english_spec": "Check if in given list of numbers, are any two numbers closer to each other than\ngiven threshold.",
+      "example_code": "has_close_elements([1.0, 2.0, 3.0], 0.5)\nFalse"
+    },
+    {
+      "task_id": "HumanEval/1",
+      "prompt": "from typing import List\n\n\ndef separate_paren_groups(paren_string: str) -> List[str]:\n    \"\"\" Input to this function is a string containing multiple groups of nested parentheses. Your goal is to\n    separate those group into separate strings and return the list of those.\n    Separate groups are balanced (each open brace is properly closed) and not nested within each other\n    Ignore any spaces in the input string.\n    >>> separate_paren_groups('( ) (( )) (( )( ))')\n    ['()', '(())', '(()())']\n    \"\"\"\n",
+      "entry_point": "separate_paren_groups",
+      "canonical_solution": "    result = []\n    current_string = []\n    current_depth = 0\n\n    for c in paren_string:\n        if c == '(':\n            current_depth += 1\n            current_string.append(c)\n        elif c == ')':\n            current_depth -= 1\n            current_string.append(c)\n\n            if current_depth == 0:\n                result.append(''.join(current_string))\n                current_string.clear()\n\n    return result\n",
+      "test": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate('(()()) ((())) () ((())()())') == [\n        '(()())', '((()))', '()', '((())()())'\n    ]\n    assert candidate('() (()) ((())) (((())))') == [\n        '()', '(())', '((()))', '(((())))'\n    ]\n    assert candidate('(()(())((())))') == [\n        '(()(())((())))'\n    ]\n    assert candidate('( ) (( )) (( )( ))') == ['()', '(())', '(()())']\n",
+      "index": 1,
+      "role": "main",
+      "title": "括弧のまとまりを分ける",
+      "jp": "空白を無視して括弧列を読み、入れ子になった各グループを文字列として返す。各グループは閉じており、グループ同士は入れ子にならない。",
+      "explanation": "開き括弧で深さを増やし、閉じ括弧で減らす。深さが0に戻るたびに1グループを確定する。",
+      "english_spec": "Input to this function is a string containing multiple groups of nested parentheses. Your goal is to\nseparate those group into separate strings and return the list of those.\nSeparate groups are balanced (each open brace is properly closed) and not nested within each other\nIgnore any spaces in the input string.",
+      "example_code": "separate_paren_groups('( ) (( )) (( )( ))')\n['()', '(())', '(()())']"
+    },
+    {
+      "task_id": "HumanEval/3",
+      "prompt": "from typing import List\n\n\ndef below_zero(operations: List[int]) -> bool:\n    \"\"\" You're given a list of deposit and withdrawal operations on a bank account that starts with\n    zero balance. Your task is to detect if at any point the balance of account fallls below zero, and\n    at that point function should return True. Otherwise it should return False.\n    >>> below_zero([1, 2, 3])\n    False\n    >>> below_zero([1, 2, -4, 5])\n    True\n    \"\"\"\n",
+      "entry_point": "below_zero",
+      "canonical_solution": "    balance = 0\n\n    for op in operations:\n        balance += op\n        if balance < 0:\n            return True\n\n    return False\n",
+      "test": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate([]) == False\n    assert candidate([1, 2, -3, 1, 2, -3]) == False\n    assert candidate([1, 2, -4, 5, 6]) == True\n    assert candidate([1, -1, 2, -2, 5, -5, 4, -4]) == False\n    assert candidate([1, -1, 2, -2, 5, -5, 4, -5]) == True\n    assert candidate([1, -2, 2, -2, 5, -5, 4, -4]) == True\n",
+      "index": 3,
+      "role": "main",
+      "title": "途中の残高を調べる",
+      "jp": "残高0から入出金のリストを順に適用する。途中で一度でも残高が負になればTrue、ならなければFalseを返す。",
+      "explanation": "最終残高だけでなく、更新のたびに負になったかを判定する。",
+      "english_spec": "You're given a list of deposit and withdrawal operations on a bank account that starts with\nzero balance. Your task is to detect if at any point the balance of account fallls below zero, and\nat that point function should return True. Otherwise it should return False.",
+      "example_code": "below_zero([1, 2, 3])\nFalse"
+    },
+    {
+      "task_id": "HumanEval/2",
+      "prompt": "\n\ndef truncate_number(number: float) -> float:\n    \"\"\" Given a positive floating point number, it can be decomposed into\n    and integer part (largest integer smaller than given number) and decimals\n    (leftover part always smaller than 1).\n\n    Return the decimal part of the number.\n    >>> truncate_number(3.5)\n    0.5\n    \"\"\"\n",
+      "entry_point": "truncate_number",
+      "canonical_solution": "    return number % 1.0\n",
+      "test": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate(3.5) == 0.5\n    assert abs(candidate(1.33) - 0.33) < 1e-6\n    assert abs(candidate(123.456) - 0.456) < 1e-6\n",
+      "index": 2,
+      "role": "appendix",
+      "title": "小数部分を取り出す",
+      "jp": "正の浮動小数点数を受け取り、整数部分を除いた、1未満の小数部分を返す。",
+      "explanation": "配布された参照実装は、1.0で割った余りを返す。",
+      "english_spec": "Given a positive floating point number, it can be decomposed into\nand integer part (largest integer smaller than given number) and decimals\n(leftover part always smaller than 1).\nReturn the decimal part of the number.",
+      "example_code": "truncate_number(3.5)\n0.5"
+    },
+    {
+      "task_id": "HumanEval/4",
+      "prompt": "from typing import List\n\n\ndef mean_absolute_deviation(numbers: List[float]) -> float:\n    \"\"\" For a given list of input numbers, calculate Mean Absolute Deviation\n    around the mean of this dataset.\n    Mean Absolute Deviation is the average absolute difference between each\n    element and a centerpoint (mean in this case):\n    MAD = average | x - x_mean |\n    >>> mean_absolute_deviation([1.0, 2.0, 3.0, 4.0])\n    1.0\n    \"\"\"\n",
+      "entry_point": "mean_absolute_deviation",
+      "canonical_solution": "    mean = sum(numbers) / len(numbers)\n    return sum(abs(x - mean) for x in numbers) / len(numbers)\n",
+      "test": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert abs(candidate([1.0, 2.0, 3.0]) - 2.0/3.0) < 1e-6\n    assert abs(candidate([1.0, 2.0, 3.0, 4.0]) - 1.0) < 1e-6\n    assert abs(candidate([1.0, 2.0, 3.0, 4.0, 5.0]) - 6.0/5.0) < 1e-6\n\n",
+      "index": 4,
+      "role": "appendix",
+      "title": "平均絶対偏差を求める",
+      "jp": "数値のリストについて平均を求め、各要素と平均との差の絶対値を平均する。",
+      "explanation": "平均との差の符号を打ち消すため、各差の絶対値を取ってから合計する。",
+      "english_spec": "For a given list of input numbers, calculate Mean Absolute Deviation\naround the mean of this dataset.\nMean Absolute Deviation is the average absolute difference between each\nelement and a centerpoint (mean in this case):\nMAD = average | x - x_mean |",
+      "example_code": "mean_absolute_deviation([1.0, 2.0, 3.0, 4.0])\n1.0"
+    },
+    {
+      "task_id": "HumanEval/5",
+      "prompt": "from typing import List\n\n\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    \"\"\" Insert a number 'delimeter' between every two consecutive elements of input list `numbers'\n    >>> intersperse([], 4)\n    []\n    >>> intersperse([1, 2, 3], 4)\n    [1, 4, 2, 4, 3]\n    \"\"\"\n",
+      "entry_point": "intersperse",
+      "canonical_solution": "    if not numbers:\n        return []\n\n    result = []\n\n    for n in numbers[:-1]:\n        result.append(n)\n        result.append(delimeter)\n\n    result.append(numbers[-1])\n\n    return result\n",
+      "test": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate([], 7) == []\n    assert candidate([5, 6, 3, 2], 8) == [5, 8, 6, 8, 3, 8, 2]\n    assert candidate([2, 2, 2], 2) == [2, 2, 2, 2, 2]\n",
+      "index": 5,
+      "role": "appendix",
+      "title": "要素の間に値を挟む",
+      "jp": "整数リストの隣り合う要素の間に、指定された整数を挟んで返す。",
+      "explanation": "区切り値を先頭や末尾には加えない。空リストには空リストを返す。",
+      "english_spec": "Insert a number 'delimeter' between every two consecutive elements of input list `numbers'",
+      "example_code": "intersperse([], 4)\n[]"
+    },
+    {
+      "task_id": "HumanEval/6",
+      "prompt": "from typing import List\n\n\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    \"\"\" Input to this function is a string represented multiple groups for nested parentheses separated by spaces.\n    For each of the group, output the deepest level of nesting of parentheses.\n    E.g. (()()) has maximum two levels of nesting while ((())) has three.\n\n    >>> parse_nested_parens('(()()) ((())) () ((())()())')\n    [2, 3, 1, 3]\n    \"\"\"\n",
+      "entry_point": "parse_nested_parens",
+      "canonical_solution": "    def parse_paren_group(s):\n        depth = 0\n        max_depth = 0\n        for c in s:\n            if c == '(':\n                depth += 1\n                max_depth = max(depth, max_depth)\n            else:\n                depth -= 1\n\n        return max_depth\n\n    return [parse_paren_group(x) for x in paren_string.split(' ') if x]\n",
+      "test": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate('(()()) ((())) () ((())()())') == [2, 3, 1, 3]\n    assert candidate('() (()) ((())) (((())))') == [1, 2, 3, 4]\n    assert candidate('(()(())((())))') == [4]\n",
+      "index": 6,
+      "role": "appendix",
+      "title": "括弧の最大深さを求める",
+      "jp": "空白で区切られた括弧の各グループについて、入れ子の最大深さを順に返す。",
+      "explanation": "現在の深さと、そのグループで到達した最大値を別々に保持する。",
+      "english_spec": "Input to this function is a string represented multiple groups for nested parentheses separated by spaces.\nFor each of the group, output the deepest level of nesting of parentheses.\nE.g. (()()) has maximum two levels of nesting while ((())) has three.",
+      "example_code": "parse_nested_parens('(()()) ((())) () ((())()())')\n[2, 3, 1, 3]"
+    },
+    {
+      "task_id": "HumanEval/7",
+      "prompt": "from typing import List\n\n\ndef filter_by_substring(strings: List[str], substring: str) -> List[str]:\n    \"\"\" Filter an input list of strings only for ones that contain given substring\n    >>> filter_by_substring([], 'a')\n    []\n    >>> filter_by_substring(['abc', 'bacd', 'cde', 'array'], 'a')\n    ['abc', 'bacd', 'array']\n    \"\"\"\n",
+      "entry_point": "filter_by_substring",
+      "canonical_solution": "    return [x for x in strings if substring in x]\n",
+      "test": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate([], 'john') == []\n    assert candidate(['xxx', 'asd', 'xxy', 'john doe', 'xxxAAA', 'xxx'], 'xxx') == ['xxx', 'xxxAAA', 'xxx']\n    assert candidate(['xxx', 'asd', 'aaaxxy', 'john doe', 'xxxAAA', 'xxx'], 'xx') == ['xxx', 'aaaxxy', 'xxxAAA', 'xxx']\n    assert candidate(['grunt', 'trumpet', 'prune', 'gruesome'], 'run') == ['grunt', 'prune']\n",
+      "index": 7,
+      "role": "appendix",
+      "title": "部分文字列で絞り込む",
+      "jp": "文字列リストから、指定された部分文字列を含む要素だけを元の順に返す。",
+      "explanation": "部分文字列が含まれるかを要素ごとに判定する。",
+      "english_spec": "Filter an input list of strings only for ones that contain given substring",
+      "example_code": "filter_by_substring([], 'a')\n[]"
+    },
+    {
+      "task_id": "HumanEval/8",
+      "prompt": "from typing import List, Tuple\n\n\ndef sum_product(numbers: List[int]) -> Tuple[int, int]:\n    \"\"\" For a given list of integers, return a tuple consisting of a sum and a product of all the integers in a list.\n    Empty sum should be equal to 0 and empty product should be equal to 1.\n    >>> sum_product([])\n    (0, 1)\n    >>> sum_product([1, 2, 3, 4])\n    (10, 24)\n    \"\"\"\n",
+      "entry_point": "sum_product",
+      "canonical_solution": "    sum_value = 0\n    prod_value = 1\n\n    for n in numbers:\n        sum_value += n\n        prod_value *= n\n    return sum_value, prod_value\n",
+      "test": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate([]) == (0, 1)\n    assert candidate([1, 1, 1]) == (3, 1)\n    assert candidate([100, 0]) == (100, 0)\n    assert candidate([3, 5, 7]) == (3 + 5 + 7, 3 * 5 * 7)\n    assert candidate([10]) == (10, 10)\n",
+      "index": 8,
+      "role": "appendix",
+      "title": "和と積を同時に返す",
+      "jp": "整数リストの全要素の和と積をタプルで返す。空リストの和は0、積は1とする。",
+      "explanation": "和を0、積を1で初期化すると、空リストも同じ処理で扱える。",
+      "english_spec": "For a given list of integers, return a tuple consisting of a sum and a product of all the integers in a list.\nEmpty sum should be equal to 0 and empty product should be equal to 1.",
+      "example_code": "sum_product([])\n(0, 1)"
+    },
+    {
+      "task_id": "HumanEval/9",
+      "prompt": "from typing import List, Tuple\n\n\ndef rolling_max(numbers: List[int]) -> List[int]:\n    \"\"\" From a given list of integers, generate a list of rolling maximum element found until given moment\n    in the sequence.\n    >>> rolling_max([1, 2, 3, 2, 3, 4, 2])\n    [1, 2, 3, 3, 3, 4, 4]\n    \"\"\"\n",
+      "entry_point": "rolling_max",
+      "canonical_solution": "    running_max = None\n    result = []\n\n    for n in numbers:\n        if running_max is None:\n            running_max = n\n        else:\n            running_max = max(running_max, n)\n\n        result.append(running_max)\n\n    return result\n",
+      "test": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate([]) == []\n    assert candidate([1, 2, 3, 4]) == [1, 2, 3, 4]\n    assert candidate([4, 3, 2, 1]) == [4, 4, 4, 4]\n    assert candidate([3, 2, 3, 100, 3]) == [3, 3, 3, 100, 100]\n",
+      "index": 9,
+      "role": "appendix",
+      "title": "それまでの最大値を返す",
+      "jp": "整数列を先頭から読み、各位置までに現れた値の最大値をリストにして返す。",
+      "explanation": "直前までの最大値と今回の値を比較して更新する。",
+      "english_spec": "From a given list of integers, generate a list of rolling maximum element found until given moment\nin the sequence.",
+      "example_code": "rolling_max([1, 2, 3, 2, 3, 4, 2])\n[1, 2, 3, 3, 3, 4, 4]"
+    },
+    {
+      "task_id": "HumanEval/10",
+      "prompt": "\n\ndef is_palindrome(string: str) -> bool:\n    \"\"\" Test if given string is a palindrome \"\"\"\n    return string == string[::-1]\n\n\ndef make_palindrome(string: str) -> str:\n    \"\"\" Find the shortest palindrome that begins with a supplied string.\n    Algorithm idea is simple:\n    - Find the longest postfix of supplied string that is a palindrome.\n    - Append to the end of the string reverse of a string prefix that comes before the palindromic suffix.\n    >>> make_palindrome('')\n    ''\n    >>> make_palindrome('cat')\n    'catac'\n    >>> make_palindrome('cata')\n    'catac'\n    \"\"\"\n",
+      "entry_point": "make_palindrome",
+      "canonical_solution": "    if not string:\n        return ''\n\n    beginning_of_suffix = 0\n\n    while not is_palindrome(string[beginning_of_suffix:]):\n        beginning_of_suffix += 1\n\n    return string + string[:beginning_of_suffix][::-1]\n",
+      "test": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate('') == ''\n    assert candidate('x') == 'x'\n    assert candidate('xyz') == 'xyzyx'\n    assert candidate('xyx') == 'xyx'\n    assert candidate('jerry') == 'jerryrrej'\n",
+      "index": 10,
+      "role": "appendix",
+      "title": "最短の回文を作る",
+      "jp": "与えられた文字列で始まる、最短の回文を返す。元の文字列の末尾にだけ文字を加える。",
+      "explanation": "末尾側の最長の回文を探し、その前に残った接頭部を逆順にして末尾に付ける。",
+      "english_spec": "Find the shortest palindrome that begins with a supplied string.\nAlgorithm idea is simple:\n- Find the longest postfix of supplied string that is a palindrome.\n- Append to the end of the string reverse of a string prefix that comes before the palindromic suffix.",
+      "example_code": "make_palindrome('')\n''"
+    },
+    {
+      "task_id": "HumanEval/11",
+      "prompt": "from typing import List\n\n\ndef string_xor(a: str, b: str) -> str:\n    \"\"\" Input are two strings a and b consisting only of 1s and 0s.\n    Perform binary XOR on these inputs and return result also as a string.\n    >>> string_xor('010', '110')\n    '100'\n    \"\"\"\n",
+      "entry_point": "string_xor",
+      "canonical_solution": "    def xor(i, j):\n        if i == j:\n            return '0'\n        else:\n            return '1'\n\n    return ''.join(xor(x, y) for x, y in zip(a, b))\n",
+      "test": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate('111000', '101010') == '010010'\n    assert candidate('1', '1') == '0'\n    assert candidate('0101', '0000') == '0101'\n",
+      "index": 11,
+      "role": "appendix",
+      "title": "ビット列の排他的論理和",
+      "jp": "0と1からなる二つの文字列について、各位置の排他的論理和を文字列で返す。",
+      "explanation": "同じ文字同士なら0、異なる文字同士なら1を返す。",
+      "english_spec": "Input are two strings a and b consisting only of 1s and 0s.\nPerform binary XOR on these inputs and return result also as a string.",
+      "example_code": "string_xor('010', '110')\n'100'"
+    },
+    {
+      "task_id": "HumanEval/12",
+      "prompt": "from typing import List, Optional\n\n\ndef longest(strings: List[str]) -> Optional[str]:\n    \"\"\" Out of list of strings, return the longest one. Return the first one in case of multiple\n    strings of the same length. Return None in case the input list is empty.\n    >>> longest([])\n\n    >>> longest(['a', 'b', 'c'])\n    'a'\n    >>> longest(['a', 'bb', 'ccc'])\n    'ccc'\n    \"\"\"\n",
+      "entry_point": "longest",
+      "canonical_solution": "    if not strings:\n        return None\n\n    maxlen = max(len(x) for x in strings)\n    for s in strings:\n        if len(s) == maxlen:\n            return s\n",
+      "test": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candidate([]) == None\n    assert candidate(['x', 'y', 'z']) == 'x'\n    assert candidate(['x', 'yyy', 'zzzz', 'www', 'kkkk', 'abc']) == 'zzzz'\n",
+      "index": 12,
+      "role": "appendix",
+      "title": "最長の文字列を選ぶ",
+      "jp": "文字列リストで最も長い要素を返す。同じ長さなら先に現れたものを選び、空リストならNoneを返す。",
+      "explanation": "最大長を求め、その長さを持つ最初の文字列を返す。",
+      "english_spec": "Out of list of strings, return the longest one. Return the first one in case of multiple\nstrings of the same length. Return None in case the input list is empty.",
+      "example_code": "longest([])\n"
+    }
+  ],
+  "verification": {
+    "original_examples_checked": 13,
+    "all_fields_match": true,
+    "official_tests": [
+      {
+        "task_id": "HumanEval/0",
+        "reference_passes_official_tests": true
+      },
+      {
+        "task_id": "HumanEval/1",
+        "reference_passes_official_tests": true
+      },
+      {
+        "task_id": "HumanEval/3",
+        "reference_passes_official_tests": true
+      },
+      {
+        "task_id": "HumanEval/2",
+        "reference_passes_official_tests": true
+      },
+      {
+        "task_id": "HumanEval/4",
+        "reference_passes_official_tests": true
+      },
+      {
+        "task_id": "HumanEval/5",
+        "reference_passes_official_tests": true
+      },
+      {
+        "task_id": "HumanEval/6",
+        "reference_passes_official_tests": true
+      },
+      {
+        "task_id": "HumanEval/7",
+        "reference_passes_official_tests": true
+      },
+      {
+        "task_id": "HumanEval/8",
+        "reference_passes_official_tests": true
+      },
+      {
+        "task_id": "HumanEval/9",
+        "reference_passes_official_tests": true
+      },
+      {
+        "task_id": "HumanEval/10",
+        "reference_passes_official_tests": true
+      },
+      {
+        "task_id": "HumanEval/11",
+        "reference_passes_official_tests": true
+      },
+      {
+        "task_id": "HumanEval/12",
+        "reference_passes_official_tests": true
+      }
+    ],
+    "boundary_and_empty_input_examples": "passed",
+    "pass_at_k_example": "passed",
+    "native_chart_workbook_checks": [
+      {
+        "cached_values": [
+          31.0,
+          86.0,
+          27.0,
+          14.0,
+          6.0
+        ],
+        "embedded_values": [
+          31,
+          86,
+          27,
+          14,
+          6
+        ]
+      }
+    ]
+  },
+  "artifact_sha256": {
+    "pptx": "ce9b76d4fc9fb32839341b3af1d7981e665519f961f2c11be3c2b225eb43eee3",
+    "pdf": "905be84dbda8a5c884ee7e01021f4492d0e19da5c50268f41366af70106c00d5"
+  }
+}
