@@ -41,15 +41,47 @@ function filter() {
   count.append(number, ` / ${cards.length} datasets`);
   empty.hidden = visible > 0;
 }
-for (const select of [modality, task, year]) select.addEventListener('change', filter);
-titleSearch.addEventListener('input', filter);
-sortOrder.addEventListener('change', sortCards);
-document.querySelector('#reset').addEventListener('click', () => {
-  titleSearch.value = '';
-  for (const select of [modality, task, year]) select.value = '';
-  sortOrder.value = 'year-desc';
+const queryControls = new Map([
+  ['q', titleSearch], ['modality', modality], ['task', task], ['year', year], ['sort', sortOrder],
+]);
+const defaults = new Map([['sort', 'year-desc']]);
+function restoreQuery() {
+  const params = new URLSearchParams(window.location.search);
+  for (const [key, control] of queryControls) {
+    const fallback = defaults.get(key) || '';
+    const value = params.get(key) ?? fallback;
+    control.value = control === titleSearch || [...control.options].some(option => option.value === value)
+      ? value : fallback;
+  }
+}
+function syncQuery(mode) {
+  const url = new URL(window.location.href);
+  for (const [key, control] of queryControls) {
+    if (control.value === (defaults.get(key) || '')) url.searchParams.delete(key);
+    else url.searchParams.set(key, control.value);
+  }
+  if (url.href !== window.location.href) {
+    window.history[mode === 'push' ? 'pushState' : 'replaceState'](window.history.state, '', url);
+  }
+}
+function update(mode = 'replace') {
   sortCards();
   filter();
+  syncQuery(mode);
+}
+for (const select of [modality, task, year, sortOrder]) {
+  select.addEventListener('change', () => update('push'));
+}
+// Avoid one history entry for every keystroke.
+titleSearch.addEventListener('input', () => update('replace'));
+document.querySelector('#reset').addEventListener('click', () => {
+  for (const [key, control] of queryControls) control.value = defaults.get(key) || '';
+  update('push');
 });
-sortCards();
+window.addEventListener('popstate', () => {
+  restoreQuery();
+  update();
+});
+restoreQuery();
+update();
 document.querySelector('.filters').hidden = false;
