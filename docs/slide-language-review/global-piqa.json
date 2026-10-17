@@ -1,0 +1,306 @@
+{
+  "dataset": "global-piqa",
+  "method": "日本語校正スキル＋スライド制作スキル（Gemini不使用）",
+  "wording": [
+    {
+      "old_page": 18,
+      "shape_id": 3,
+      "before": "原著のプロプライエタリモデル評価は、temperature 0.90、生成上限2,048トークン。GeminiとClaudeは、思考用に1,024トークンを割り当てる。\nGPT-5.4はmedium推論設定。上限を超えた一部の応答は、low設定で再実行した。\n記号を含む指定の回答表現を文字列で照合して採点する。評価コードはLM Evaluation Harness向けに公開している。",
+      "after": "プロプライエタリモデルの評価条件は、temperature 0.90、生成上限2,048トークン。GeminiとClaudeは、思考用に1,024トークンを割り当てる。\nGPT-5.4はmedium推論設定。上限を超えた一部の応答は、low設定で再実行した。\n記号を含む指定の回答表現を文字列で照合して採点する。評価コードはLM Evaluation Harness向けに公開している。",
+      "page": 17
+    },
+    {
+      "old_page": 57,
+      "shape_id": 3,
+      "before": "指示に合わせた回答生成とは別に、候補ごとの対数確率を計算するcloze形式も用意している。主に事前学習のみのベースモデルに使う。\n候補の対数確率を、その候補のUTF-8バイト数で割る。正解候補の値が他の候補より大きければ、その問題を正解とする。\n原著のオープンモデルの評価は、モデルの種類に応じて生成形式とcloze形式を使い分けている。",
+      "after": "指示に合わせた回答生成とは別に、候補ごとの対数確率を計算するcloze形式も用意している。主に事前学習のみのベースモデルに使う。\n候補の対数確率を、その候補のUTF-8バイト数で割る。正解候補の値が他の候補より大きければ、その問題を正解とする。\nオープンモデルの評価では、モデルの種類に応じて生成形式とcloze形式を使い分けている。",
+      "page": 46
+    },
+    {
+      "old_page": 61,
+      "shape_id": 3,
+      "before": "共同第一著者はTyler A. Chang（UC San Diego）とCatherine Arnett（EleutherAI）。MRL Workshopの参加者を中心に、350人以上が制作へ参加した。\n各言語の担当者は、母語の話者・研究者として問題を書き、翻訳の確認や文化に関する判断にも関わった。\n原著では全著者と各チームの所属・データ作成方法が付録に掲載されている。公開された全著者リストの最終著者はDavid Ifeoluwa Adelani。",
+      "after": "共同第一著者はTyler A. Chang（UC San Diego）とCatherine Arnett（EleutherAI）。MRL Workshopの参加者を中心に、350人以上が制作へ参加した。\n各言語の担当者は、母語の話者・研究者として問題を書き、翻訳の確認や文化に関する判断にも関わった。\n論文の付録に、全著者と各チームの所属・データ作成方法が掲載されている。公開された全著者リストの最終著者はDavid Ifeoluwa Adelani。",
+      "page": 50
+    }
+  ],
+  "layout": [
+    {
+      "old_pages": [
+        9,
+        10
+      ],
+      "decision": "merge-entire-pair",
+      "font_pt": 19,
+      "layout": "原文左・日本語訳右。設問、選択肢、正解、解説を保持。",
+      "page": 9,
+      "source_note_before": "Global PIQA v1 / nonparallel / group0123_ex000088_eng_latn_0_v1。CC BY-SA 4.0。\nhttps://huggingface.co/datasets/mrlbenchmarks/global-piqa-nonparallel",
+      "source_note_after": "Global PIQA v1 / nonparallel / group0123_ex000088_eng_latn_0_v1。CC BY-SA 4.0。\nhttps://huggingface.co/datasets/mrlbenchmarks/global-piqa-nonparallel"
+    },
+    {
+      "old_pages": [
+        13,
+        14
+      ],
+      "decision": "separate-long-original",
+      "reason": "四択の全文と訳を18pt以上で併記すると正解・出典と重なるため",
+      "page": 12
+    },
+    {
+      "old_pages": [
+        33,
+        34
+      ],
+      "decision": "merge-entire-pair",
+      "font_pt": 19,
+      "layout": "原文左・日本語訳右。設問、選択肢、正解、解説を保持。",
+      "page": 32,
+      "source_note_before": "Global PIQA v1 / nonparallel / group0042_ex000020_spa_latn_spai_0_v1。CC BY-SA 4.0。\nhttps://huggingface.co/datasets/mrlbenchmarks/global-piqa-nonparallel",
+      "source_note_after": "Global PIQA v1 / nonparallel / group0042_ex000020_spa_latn_spai_0_v1。CC BY-SA 4.0。\nhttps://huggingface.co/datasets/mrlbenchmarks/global-piqa-nonparallel"
+    },
+    {
+      "old_pages": [
+        35,
+        36
+      ],
+      "decision": "merge-entire-pair",
+      "font_pt": 19,
+      "layout": "原文左・日本語訳右。設問、選択肢、正解、解説を保持。",
+      "page": 33,
+      "source_note_before": "Global PIQA v1 / nonparallel / group0004_ex000001_fra_latn_fran_0_v1。CC BY-SA 4.0。\nhttps://huggingface.co/datasets/mrlbenchmarks/global-piqa-nonparallel",
+      "source_note_after": "Global PIQA v1 / nonparallel / group0004_ex000001_fra_latn_fran_0_v1。CC BY-SA 4.0。\nhttps://huggingface.co/datasets/mrlbenchmarks/global-piqa-nonparallel"
+    },
+    {
+      "old_pages": [
+        37,
+        38
+      ],
+      "decision": "merge-entire-pair",
+      "font_pt": 19,
+      "layout": "原文左・日本語訳右。設問、選択肢、正解、解説を保持。",
+      "page": 34,
+      "source_note_before": "Global PIQA v1 / nonparallel / group0121_ex000066_deu_latn_0_v1。CC BY-SA 4.0。\nhttps://huggingface.co/datasets/mrlbenchmarks/global-piqa-nonparallel",
+      "source_note_after": "Global PIQA v1 / nonparallel / group0121_ex000066_deu_latn_0_v1。CC BY-SA 4.0。\nhttps://huggingface.co/datasets/mrlbenchmarks/global-piqa-nonparallel"
+    },
+    {
+      "old_pages": [
+        39,
+        40
+      ],
+      "decision": "merge-entire-pair",
+      "font_pt": 19,
+      "layout": "原文左・日本語訳右。設問、選択肢、正解、解説を保持。",
+      "page": 35,
+      "source_note_before": "Global PIQA v1 / nonparallel / group0013_ex000094_por_latn_braz_0_v1。CC BY-SA 4.0。\nhttps://huggingface.co/datasets/mrlbenchmarks/global-piqa-nonparallel",
+      "source_note_after": "Global PIQA v1 / nonparallel / group0013_ex000094_por_latn_braz_0_v1。CC BY-SA 4.0。\nhttps://huggingface.co/datasets/mrlbenchmarks/global-piqa-nonparallel"
+    },
+    {
+      "old_pages": [
+        41,
+        42
+      ],
+      "decision": "merge-entire-pair",
+      "font_pt": 19,
+      "layout": "原文左・日本語訳右。設問、選択肢、正解、解説を保持。",
+      "page": 36,
+      "source_note_before": "Global PIQA v1 / nonparallel / group0010_ex000244_ind_latn_0_v1。CC BY-SA 4.0。\nhttps://huggingface.co/datasets/mrlbenchmarks/global-piqa-nonparallel",
+      "source_note_after": "Global PIQA v1 / nonparallel / group0010_ex000244_ind_latn_0_v1。CC BY-SA 4.0。\nhttps://huggingface.co/datasets/mrlbenchmarks/global-piqa-nonparallel"
+    },
+    {
+      "old_pages": [
+        43,
+        44
+      ],
+      "decision": "merge-entire-pair",
+      "font_pt": 19,
+      "layout": "原文左・日本語訳右。設問、選択肢、正解、解説を保持。",
+      "page": 37,
+      "source_note_before": "Global PIQA v1 / nonparallel / group0062_ex000182_swh_latn_0_v1。CC BY-SA 4.0。\nhttps://huggingface.co/datasets/mrlbenchmarks/global-piqa-nonparallel",
+      "source_note_after": "Global PIQA v1 / nonparallel / group0062_ex000182_swh_latn_0_v1。CC BY-SA 4.0。\nhttps://huggingface.co/datasets/mrlbenchmarks/global-piqa-nonparallel"
+    },
+    {
+      "old_pages": [
+        45,
+        46
+      ],
+      "decision": "merge-entire-pair",
+      "font_pt": 19,
+      "layout": "原文左・日本語訳右。設問、選択肢、正解、解説を保持。",
+      "page": 38,
+      "source_note_before": "Global PIQA v1 / nonparallel / group0065_ex000039_arb_arab_0_v1。CC BY-SA 4.0。\nhttps://huggingface.co/datasets/mrlbenchmarks/global-piqa-nonparallel",
+      "source_note_after": "Global PIQA v1 / nonparallel / group0065_ex000039_arb_arab_0_v1。CC BY-SA 4.0。\nhttps://huggingface.co/datasets/mrlbenchmarks/global-piqa-nonparallel"
+    },
+    {
+      "old_pages": [
+        47,
+        48
+      ],
+      "decision": "merge-entire-pair",
+      "font_pt": 19,
+      "layout": "原文左・日本語訳右。設問、選択肢、正解、解説を保持。",
+      "page": 39,
+      "source_note_before": "Global PIQA v1 / nonparallel / group0098_ex000091_hin_deva_9_v1。CC BY-SA 4.0。\nhttps://huggingface.co/datasets/mrlbenchmarks/global-piqa-nonparallel",
+      "source_note_after": "Global PIQA v1 / nonparallel / group0098_ex000091_hin_deva_9_v1。CC BY-SA 4.0。\nhttps://huggingface.co/datasets/mrlbenchmarks/global-piqa-nonparallel"
+    },
+    {
+      "old_pages": [
+        49,
+        50
+      ],
+      "decision": "merge-entire-pair",
+      "font_pt": 19,
+      "layout": "原文左・日本語訳右。設問、選択肢、正解、解説を保持。",
+      "page": 40,
+      "source_note_before": "Global PIQA v1 / nonparallel / group0018_ex000012_kor_hang_0_v1。CC BY-SA 4.0。\nhttps://huggingface.co/datasets/mrlbenchmarks/global-piqa-nonparallel",
+      "source_note_after": "Global PIQA v1 / nonparallel / group0018_ex000012_kor_hang_0_v1。CC BY-SA 4.0。\nhttps://huggingface.co/datasets/mrlbenchmarks/global-piqa-nonparallel"
+    },
+    {
+      "old_pages": [
+        51,
+        52
+      ],
+      "decision": "merge-entire-pair",
+      "font_pt": 19,
+      "layout": "原文左・日本語訳右。設問、選択肢、正解、解説を保持。",
+      "page": 41,
+      "source_note_before": "Global PIQA v1 / nonparallel / group0048_ex000334_cmn_hans_2_v1。CC BY-SA 4.0。\nhttps://huggingface.co/datasets/mrlbenchmarks/global-piqa-nonparallel",
+      "source_note_after": "Global PIQA v1 / nonparallel / group0048_ex000334_cmn_hans_2_v1。CC BY-SA 4.0。\nhttps://huggingface.co/datasets/mrlbenchmarks/global-piqa-nonparallel"
+    }
+  ],
+  "old_page_count": 64,
+  "page_count": 53,
+  "old_to_new_pages": {
+    "1": 1,
+    "2": 2,
+    "3": 3,
+    "4": 4,
+    "5": 5,
+    "6": 6,
+    "7": 7,
+    "8": 8,
+    "9": 9,
+    "10": 9,
+    "11": 10,
+    "12": 11,
+    "13": 12,
+    "14": 13,
+    "15": 14,
+    "16": 15,
+    "17": 16,
+    "18": 17,
+    "19": 18,
+    "20": 19,
+    "21": 20,
+    "22": 21,
+    "23": 22,
+    "24": 23,
+    "25": 24,
+    "26": 25,
+    "27": 26,
+    "28": 27,
+    "29": 28,
+    "30": 29,
+    "31": 30,
+    "32": 31,
+    "33": 32,
+    "34": 32,
+    "35": 33,
+    "36": 33,
+    "37": 34,
+    "38": 34,
+    "39": 35,
+    "40": 35,
+    "41": 36,
+    "42": 36,
+    "43": 37,
+    "44": 37,
+    "45": 38,
+    "46": 38,
+    "47": 39,
+    "48": 39,
+    "49": 40,
+    "50": 40,
+    "51": 41,
+    "52": 41,
+    "53": 42,
+    "54": 43,
+    "55": 44,
+    "56": 45,
+    "57": 46,
+    "58": 47,
+    "59": 48,
+    "60": 49,
+    "61": 50,
+    "62": 51,
+    "63": 52,
+    "64": 53
+  },
+  "empty_hyperlinks_removed": 0,
+  "updated_at": "2026-10-17T15:34:43Z",
+  "gemini_used": false,
+  "review_mode": "skill_based_codex",
+  "skill_sha256": {
+    ".agents/skills/japanese-slide-proofreading/SKILL.md": "0bc7bfa18092fe93750fcbf354d4e8306b5c38f014fb7fb3e6d29c6514fa9050",
+    ".agents/skills/master-guided-slides/SKILL.md": "a38cbdc3b7d55ba1a6c945dd0a100c260a26f67911345a3ccd7b871f91fcd009",
+    ".agents/skills/dataset-introduction-slides/SKILL.md": "02d63df78fc49aee6690ce6b2ea185a84fb690057ab9f07633190672370eb5f7"
+  },
+  "artifacts": {
+    "pptx": {
+      "path": "slides/datasets-in-10-minutes-global-piqa.pptx",
+      "sha256": "3f820107935cfa75e24e90ba7fd0ce6aec899a251f5abbdf7d6266617c6949e6"
+    },
+    "pdf": {
+      "path": "slides/datasets-in-10-minutes-global-piqa.pdf",
+      "sha256": "89a2888f3e85d585907688379caf302457034f3b02ff2a51fc86ba964f2b25e8"
+    }
+  },
+  "validation": {
+    "all_slide_text_no_original_word": true,
+    "xml_parse": "passed",
+    "charts_workbooks_media": "referenced contents byte-identical",
+    "unused_parts_omitted": [],
+    "url_only_hyperlinks": 45,
+    "originals_and_translations_retained": true,
+    "tables_retained": true,
+    "pdf_text_comparison": "all pages passed",
+    "changed_page_images": [
+      9,
+      17,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      46,
+      50
+    ],
+    "visual_review": "変更した各ページを1440×810の個別画像で確認。引用枠、訳、コード、表、出典の間隔を確認し、実描画に基づいて引用枠の高さを調整。"
+  },
+  "pdf_audit": {
+    "pages": 53,
+    "changed_pages": [
+      9,
+      17,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      46,
+      50
+    ],
+    "missing": [],
+    "outside": [],
+    "wrapped_titles": []
+  }
+}
