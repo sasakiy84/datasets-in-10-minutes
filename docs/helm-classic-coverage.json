@@ -1,0 +1,1433 @@
+{
+  "source_url": "https://crfm.stanford.edu/helm/classic/latest/",
+  "release": "v0.4.0",
+  "release_date": "2023-11-17",
+  "schema_url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/releases/v0.4.0/schema.json",
+  "schema_sha256": "ab2ea213329376e811ce41a422b8fc7b35329e2bed4e60c323ffd38b7ada2d2f",
+  "run_specs_sha256": "ef94fb6d3d234ef3193ed043b4a718cd75e0cf2aaf94f0439693cf46a4ff6f62",
+  "schema_groups": 119,
+  "run_specs": 8526,
+  "selected": {
+    "boolq": "boolq",
+    "hellaswag": "hellaswag",
+    "truthful_qa": "truthfulqa",
+    "imdb": "imdb",
+    "summarization_xsum": "xsum"
+  },
+  "cleva_policy": "CLEVAのプラットフォーム全体の資料を作り、個別データセットは公開事例を確認して別資料とする。31タスク群を31データセットとみなさない。CLEVA系列はそれ以外の制作の後に回す。",
+  "scenarios": [
+    {
+      "scenario": "core_scenarios",
+      "title": "Core scenarios",
+      "kind": "分類・分析軸",
+      "parent_groups": [],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "進捗集計の対象外",
+      "source_description": "The scenarios where we evaluate all the models."
+    },
+    {
+      "scenario": "targeted_evaluations",
+      "title": "Targeted evaluations",
+      "kind": "分類・分析軸",
+      "parent_groups": [],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "進捗集計の対象外",
+      "source_description": "Targeted evaluation of specific skills (e.g., knowledge, reasoning) and risks (e.g., disinformation, memorization/copyright)."
+    },
+    {
+      "scenario": "question_answering",
+      "title": "Question answering",
+      "kind": "分類・分析軸",
+      "parent_groups": [
+        "core_scenarios"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "進捗集計の対象外",
+      "source_description": "In question answering, given a question and (optionally, in open-book settings) a passage, the goal is to produce the answer. QA is a general format that captures a wide range of tasks involving varying levels of world and commonsense knowledge and reasoning abilities."
+    },
+    {
+      "scenario": "information_retrieval",
+      "title": "Information retrieval",
+      "kind": "分類・分析軸",
+      "parent_groups": [
+        "core_scenarios"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "進捗集計の対象外",
+      "source_description": "In information retrieval, given a query and a set of candidate documents, the goal is to produce a ranking of the documents."
+    },
+    {
+      "scenario": "summarization",
+      "title": "Summarization",
+      "kind": "分類・分析軸",
+      "parent_groups": [
+        "core_scenarios"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "進捗集計の対象外",
+      "source_description": "In text summarization, given a piece of text (paragraph or document), the goal is to produce a much shorter summary."
+    },
+    {
+      "scenario": "sentiment_analysis",
+      "title": "Sentiment analysis",
+      "kind": "分類・分析軸",
+      "parent_groups": [
+        "core_scenarios"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "進捗集計の対象外",
+      "source_description": "In sentiment classification, given a text (e.g., movie review), the goal is to predict the sentiment (positive or negative)."
+    },
+    {
+      "scenario": "toxicity_detection",
+      "title": "Toxicity detection",
+      "kind": "分類・分析軸",
+      "parent_groups": [
+        "core_scenarios"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "進捗集計の対象外",
+      "source_description": "In toxicity detection, given a text, the goal is to predict whether the text has toxic content."
+    },
+    {
+      "scenario": "miscellaneous_text_classification",
+      "title": "Text classification",
+      "kind": "分類・分析軸",
+      "parent_groups": [
+        "core_scenarios"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "進捗集計の対象外",
+      "source_description": "Text classification is a general format that aims to classify text into a set of categories. This includes a wide range of classification tasks where the input is text."
+    },
+    {
+      "scenario": "aspirational",
+      "title": "Aspirational scenarios",
+      "kind": "分類・分析軸",
+      "parent_groups": [],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "進捗集計の対象外",
+      "source_description": "Scenarios that we should support."
+    },
+    {
+      "scenario": "language",
+      "title": "Language",
+      "kind": "分類・分析軸",
+      "parent_groups": [
+        "targeted_evaluations"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "進捗集計の対象外",
+      "source_description": "Targeted evaluation of linguistic capabilities."
+    },
+    {
+      "scenario": "knowledge",
+      "title": "Knowledge",
+      "kind": "分類・分析軸",
+      "parent_groups": [
+        "targeted_evaluations"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "進捗集計の対象外",
+      "source_description": "Targeted evaluation of knowledge (e.g. factual, cultural, commonsense)."
+    },
+    {
+      "scenario": "reasoning",
+      "title": "Reasoning",
+      "kind": "分類・分析軸",
+      "parent_groups": [
+        "targeted_evaluations"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "進捗集計の対象外",
+      "source_description": "Targeted evaluation of reasoning capabilities (e.g. mathematical, hierarchical)."
+    },
+    {
+      "scenario": "harms",
+      "title": "Harms",
+      "kind": "分類・分析軸",
+      "parent_groups": [
+        "targeted_evaluations"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "進捗集計の対象外",
+      "source_description": "Targeted evaluation of social harms (e.g., copyright, disinformation, social bias, toxicity)."
+    },
+    {
+      "scenario": "efficiency",
+      "title": "Efficiency",
+      "kind": "分類・分析軸",
+      "parent_groups": [
+        "targeted_evaluations"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "進捗集計の対象外",
+      "source_description": "Targeted evaluation of training and inference efficiency."
+    },
+    {
+      "scenario": "calibration",
+      "title": "Calibration",
+      "kind": "分類・分析軸",
+      "parent_groups": [],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "進捗集計の対象外",
+      "source_description": "Extended calibration metrics."
+    },
+    {
+      "scenario": "ablation_in_context",
+      "title": "Vary number of in-context examples",
+      "kind": "分類・分析軸",
+      "parent_groups": [],
+      "run_specs": 264,
+      "slide_slug": "",
+      "status": "進捗集計の対象外",
+      "source_description": "Vary the number of in-context training examples."
+    },
+    {
+      "scenario": "ablation_multiple_choice",
+      "title": "Vary multiple-choice strategy",
+      "kind": "分類・分析軸",
+      "parent_groups": [],
+      "run_specs": 270,
+      "slide_slug": "",
+      "status": "進捗集計の対象外",
+      "source_description": "Vary the adapation strategy for multiple-choice questions."
+    },
+    {
+      "scenario": "ablation_prompts",
+      "title": "Vary prompting",
+      "kind": "分類・分析軸",
+      "parent_groups": [],
+      "run_specs": 264,
+      "slide_slug": "",
+      "status": "進捗集計の対象外",
+      "source_description": "Vary the instructions and labels for input/output."
+    },
+    {
+      "scenario": "robustness_contrast_sets",
+      "title": "Robustness to contrast sets",
+      "kind": "分類・分析軸",
+      "parent_groups": [],
+      "run_specs": 84,
+      "slide_slug": "",
+      "status": "進捗集計の対象外",
+      "source_description": "Evaluating equivariance to semantics-altering perturbations"
+    },
+    {
+      "scenario": "robustness_individual",
+      "title": "Robustness to single types of perturbations",
+      "kind": "分類・分析軸",
+      "parent_groups": [],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "進捗集計の対象外",
+      "source_description": "Evaluating robsustness to a single perturbation at a time (e.g., typos, synonyms)"
+    },
+    {
+      "scenario": "chinese_cleva",
+      "title": "CLEVA (Chinese) scenarios",
+      "kind": "分類・分析軸",
+      "parent_groups": [],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "CLEVA系列として最後に着手",
+      "source_description": "Scenarios for evaluating Chinese language models"
+    },
+    {
+      "scenario": "boolq",
+      "title": "BoolQ",
+      "kind": "個別シナリオ",
+      "parent_groups": [
+        "question_answering",
+        "robustness_contrast_sets"
+      ],
+      "run_specs": 109,
+      "slide_slug": "boolq",
+      "status": "今回制作",
+      "source_description": "The BoolQ benchmark for binary (yes/no) question answering [(Clark et al., 2019)](https://aclanthology.org/N19-1300/)."
+    },
+    {
+      "scenario": "narrative_qa",
+      "title": "NarrativeQA",
+      "kind": "個別シナリオ",
+      "parent_groups": [
+        "question_answering"
+      ],
+      "run_specs": 66,
+      "slide_slug": "",
+      "status": "未着手",
+      "source_description": "The NarrativeQA benchmark for reading comprehension over narratives [(Kočiský et al., 2017)](https://aclanthology.org/Q18-1023/)."
+    },
+    {
+      "scenario": "natural_qa_closedbook",
+      "title": "NaturalQuestions (closed-book)",
+      "kind": "個別シナリオ",
+      "parent_groups": [
+        "question_answering",
+        "knowledge"
+      ],
+      "run_specs": 67,
+      "slide_slug": "",
+      "status": "未着手",
+      "source_description": "The NaturalQuestions [(Kwiatkowski et al., 2019)](https://aclanthology.org/Q19-1026/) benchmark for question answering based on naturally-occurring queries through Google Search. The input does not include the Wikipedia page with the answer."
+    },
+    {
+      "scenario": "natural_qa_openbook_longans",
+      "title": "NaturalQuestions (open-book)",
+      "kind": "個別シナリオ",
+      "parent_groups": [
+        "question_answering",
+        "ablation_in_context",
+        "ablation_prompts"
+      ],
+      "run_specs": 198,
+      "slide_slug": "",
+      "status": "未着手",
+      "source_description": "The NaturalQuestions [(Kwiatkowski et al., 2019)](https://aclanthology.org/Q19-1026/) benchmark for question answering based on naturally-occurring queries through Google Search. The input includes the Wikipedia page with the answer."
+    },
+    {
+      "scenario": "quac",
+      "title": "QuAC (Question Answering in Context)",
+      "kind": "個別シナリオ",
+      "parent_groups": [
+        "question_answering"
+      ],
+      "run_specs": 66,
+      "slide_slug": "",
+      "status": "未着手",
+      "source_description": "The QuAC benchmark for question answering in the context of dialogues [(Choi et al., 2018)](https://aclanthology.org/D18-1241/)."
+    },
+    {
+      "scenario": "hellaswag",
+      "title": "HellaSwag",
+      "kind": "個別シナリオ",
+      "parent_groups": [
+        "question_answering",
+        "knowledge",
+        "ablation_multiple_choice"
+      ],
+      "run_specs": 50,
+      "slide_slug": "hellaswag",
+      "status": "今回制作",
+      "source_description": "The HellaSwag benchmark for commonsense reasoning in question answering [(Zellers et al., 2019)](https://aclanthology.org/P19-1472/)."
+    },
+    {
+      "scenario": "openbookqa",
+      "title": "OpenbookQA",
+      "kind": "個別シナリオ",
+      "parent_groups": [
+        "question_answering",
+        "knowledge",
+        "ablation_multiple_choice"
+      ],
+      "run_specs": 50,
+      "slide_slug": "",
+      "status": "未着手",
+      "source_description": "The OpenbookQA benchmark for commonsense-intensive open book question answering [(Mihaylov et al., 2018)](https://aclanthology.org/D18-1260/)."
+    },
+    {
+      "scenario": "truthful_qa",
+      "title": "TruthfulQA",
+      "kind": "個別シナリオ",
+      "parent_groups": [
+        "question_answering",
+        "knowledge",
+        "ablation_multiple_choice"
+      ],
+      "run_specs": 96,
+      "slide_slug": "truthfulqa",
+      "status": "今回制作",
+      "source_description": "The TruthfulQA benchmarking for measuring model truthfulness and commonsense knowledge in question answering [(Lin et al., 2022)](https://aclanthology.org/2022.acl-long.229/)."
+    },
+    {
+      "scenario": "mmlu",
+      "title": "MMLU (Massive Multitask Language Understanding)",
+      "kind": "個別シナリオ",
+      "parent_groups": [
+        "question_answering",
+        "knowledge",
+        "calibration",
+        "ablation_multiple_choice"
+      ],
+      "run_specs": 425,
+      "slide_slug": "",
+      "status": "未着手",
+      "source_description": "The Massive Multitask Language Understanding (MMLU) benchmark for knowledge-intensive question answering across 57 domains [(Hendrycks et al., 2021)](https://openreview.net/forum?id=d7KBjmI3GmQ)."
+    },
+    {
+      "scenario": "msmarco_regular",
+      "title": "MS MARCO (regular track)",
+      "kind": "個別シナリオ",
+      "parent_groups": [
+        "information_retrieval"
+      ],
+      "run_specs": 31,
+      "slide_slug": "",
+      "status": "未着手",
+      "source_description": "The MS MARCO benchmark's regular track for passage retrieval in information retrieval [(https://microsoft.github.io/msmarco/)](https://microsoft.github.io/msmarco/)."
+    },
+    {
+      "scenario": "msmarco_trec",
+      "title": "MS MARCO (TREC track)",
+      "kind": "個別シナリオ",
+      "parent_groups": [
+        "information_retrieval"
+      ],
+      "run_specs": 32,
+      "slide_slug": "",
+      "status": "未着手",
+      "source_description": "The MS MARCO benchmark's deep learning TREC track for passage retrieval in information retrieval [(https://trec.nist.gov)](https://microsoft.github.io/msmarco/)."
+    },
+    {
+      "scenario": "summarization_cnndm",
+      "title": "CNN/DailyMail",
+      "kind": "個別シナリオ",
+      "parent_groups": [
+        "summarization",
+        "ablation_in_context",
+        "ablation_prompts"
+      ],
+      "run_specs": 218,
+      "slide_slug": "",
+      "status": "未着手",
+      "source_description": "The CNN/DailyMail benchmark for text summarization ([Hermann et al., 2015](https://papers.nips.cc/paper/2015/hash/afdec7005cc9f14302cd0474fd0f3c96-Abstract.html); [Nallapati et al.,2016](https://aclanthology.org/K16-1028/))."
+    },
+    {
+      "scenario": "summarization_xsum",
+      "title": "XSUM",
+      "kind": "個別シナリオ",
+      "parent_groups": [
+        "summarization"
+      ],
+      "run_specs": 86,
+      "slide_slug": "xsum",
+      "status": "今回制作",
+      "source_description": "The XSUM benchmark for text summarization of BBC news articles [(Narayan et al., 2018)](https://aclanthology.org/D18-1206/)."
+    },
+    {
+      "scenario": "imdb",
+      "title": "IMDB",
+      "kind": "個別シナリオ",
+      "parent_groups": [
+        "sentiment_analysis",
+        "calibration",
+        "ablation_in_context",
+        "ablation_prompts",
+        "robustness_contrast_sets"
+      ],
+      "run_specs": 241,
+      "slide_slug": "imdb",
+      "status": "今回制作",
+      "source_description": "The IMDB benchmark for sentiment analysis in movie review [(Maas et al., 2011)](https://aclanthology.org/P11-1015/)."
+    },
+    {
+      "scenario": "raft",
+      "title": "RAFT (Real-world Annotated Few-Shot)",
+      "kind": "個別シナリオ",
+      "parent_groups": [
+        "miscellaneous_text_classification",
+        "calibration"
+      ],
+      "run_specs": 737,
+      "slide_slug": "",
+      "status": "未着手",
+      "source_description": "The Real-world annotated few-shot (RAFT) meta-benchmark of 11 real-world text classification tasks [(Alex et al., 2021)](https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/hash/ca46c1b9512a7a8315fa3c5a946e8265-Abstract-round2.html)."
+    },
+    {
+      "scenario": "civil_comments",
+      "title": "CivilComments",
+      "kind": "個別シナリオ",
+      "parent_groups": [
+        "toxicity_detection",
+        "calibration",
+        "ablation_in_context",
+        "ablation_prompts"
+      ],
+      "run_specs": 735,
+      "slide_slug": "",
+      "status": "未着手",
+      "source_description": "The CivilComments benchmark for toxicity detection [(Borkan et al., 2019)](https://arxiv.org/pdf/1903.04561.pdf)."
+    },
+    {
+      "scenario": "ice",
+      "title": "ICE (International Corpus of English)",
+      "kind": "個別シナリオ",
+      "parent_groups": [
+        "language"
+      ],
+      "run_specs": 192,
+      "slide_slug": "",
+      "status": "未着手",
+      "source_description": "The International Corpus of English (ICE) drawn from English speakers from various places in the world, initiated by [Greenbaum (1991)](https://www.cambridge.org/core/journals/english-today/article/abs/ice-the-international-corpus-of-english/47808205394C538393C3FD8E62E5E701)."
+    },
+    {
+      "scenario": "the_pile",
+      "title": "The Pile",
+      "kind": "個別シナリオ",
+      "parent_groups": [
+        "language"
+      ],
+      "run_specs": 168,
+      "slide_slug": "",
+      "status": "未着手",
+      "source_description": "The Pile corpus for measuring lanugage model performance across various domains [(Gao et al., 2020)](https://arxiv.org/pdf/2101.00027.pdf)."
+    },
+    {
+      "scenario": "twitter_aae",
+      "title": "TwitterAAE",
+      "kind": "個別シナリオ",
+      "parent_groups": [
+        "language"
+      ],
+      "run_specs": 64,
+      "slide_slug": "",
+      "status": "未着手",
+      "source_description": "The TwitterAAE corpus of [Blodgett et al. (2016)](https://aclanthology.org/D16-1120/) for measuring language model performance in tweets as a function of speaker dialect."
+    },
+    {
+      "scenario": "twitter_aae_aa",
+      "title": "TwitterAAE (AA)",
+      "kind": "個別シナリオ",
+      "parent_groups": [],
+      "run_specs": 32,
+      "slide_slug": "",
+      "status": "未着手",
+      "source_description": "The TwitterAAE corpus of [Blodgett et al. (2016)](https://aclanthology.org/D16-1120/) for measuring language model performance on African-American-aligned Tweets."
+    },
+    {
+      "scenario": "twitter_aae_white",
+      "title": "TwitterAAE (white)",
+      "kind": "個別シナリオ",
+      "parent_groups": [],
+      "run_specs": 32,
+      "slide_slug": "",
+      "status": "未着手",
+      "source_description": "The TwitterAAE corpus of [Blodgett et al. (2016)](https://aclanthology.org/D16-1120/) for measuring language model performance on White-aligned Tweets."
+    },
+    {
+      "scenario": "blimp",
+      "title": "BLiMP (The Benchmark of Linguistic Minimal Pairs for English)",
+      "kind": "個別シナリオ",
+      "parent_groups": [
+        "language",
+        "ablation_multiple_choice"
+      ],
+      "run_specs": 200,
+      "slide_slug": "",
+      "status": "未着手",
+      "source_description": "The Benchmark of Linguistic Minimal Pairs for English (BLiMP) for measuring performance on linguistic phenomena using minimal pair design [(Warstadt et al., 2020)](https://aclanthology.org/2020.tacl-1.25/)."
+    },
+    {
+      "scenario": "wikifact",
+      "title": "WikiFact",
+      "kind": "個別シナリオ",
+      "parent_groups": [
+        "knowledge"
+      ],
+      "run_specs": 669,
+      "slide_slug": "",
+      "status": "未着手",
+      "source_description": "Scenario introduced in this work, inspired by [Petroni et al. (2019)](https://aclanthology.org/D19-1250/), to more extensively test factual knowledge."
+    },
+    {
+      "scenario": "babi_qa",
+      "title": "bAbI",
+      "kind": "個別シナリオ",
+      "parent_groups": [
+        "reasoning"
+      ],
+      "run_specs": 280,
+      "slide_slug": "",
+      "status": "未着手",
+      "source_description": "The bAbI benchmark for measuring understanding and reasoning [(Weston et al., 2015)](https://arxiv.org/pdf/1502.05698.pdf)."
+    },
+    {
+      "scenario": "dyck_language",
+      "title": "Dyck",
+      "kind": "個別シナリオ",
+      "parent_groups": [
+        "reasoning"
+      ],
+      "run_specs": 69,
+      "slide_slug": "",
+      "status": "未着手",
+      "source_description": "Scenario testing hierarchical reasoning through the Dyck formal languages [(Suzgun et al., 2019)](https://aclanthology.org/W19-3905/)."
+    },
+    {
+      "scenario": "numeracy",
+      "title": "Numerical reasoning",
+      "kind": "個別シナリオ",
+      "parent_groups": [],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "未着手",
+      "source_description": "Scenario introduced in this work to test numerical reasoning via symbolic regression."
+    },
+    {
+      "scenario": "synthetic_reasoning",
+      "title": "Synthetic reasoning (abstract symbols)",
+      "kind": "個別シナリオ",
+      "parent_groups": [
+        "reasoning"
+      ],
+      "run_specs": 345,
+      "slide_slug": "",
+      "status": "未着手",
+      "source_description": "Synthetic reasoning tasks defined using abstract symbols based on LIME [(Wu et al., 2021)](https://proceedings.mlr.press/v139/wu21c.html)."
+    },
+    {
+      "scenario": "synthetic_reasoning_natural",
+      "title": "Synthetic reasoning (natural language)",
+      "kind": "個別シナリオ",
+      "parent_groups": [
+        "reasoning"
+      ],
+      "run_specs": 138,
+      "slide_slug": "",
+      "status": "未着手",
+      "source_description": "Synthetic reasoning tasks defined using simple natural language based on LIME [(Wu et al., 2021)](https://proceedings.mlr.press/v139/wu21c.html)."
+    },
+    {
+      "scenario": "gsm",
+      "title": "GSM8K (Grade school math word problems)",
+      "kind": "個別シナリオ",
+      "parent_groups": [
+        "reasoning"
+      ],
+      "run_specs": 69,
+      "slide_slug": "gsm8k",
+      "status": "作成済み",
+      "source_description": "The grade school math word problems dataset (GSM8K) for testing mathematical reasoning on grade-school math problems [(Cobbe et al., 2021)](https://arxiv.org/pdf/2110.14168.pdf)."
+    },
+    {
+      "scenario": "math_regular",
+      "title": "MATH",
+      "kind": "個別シナリオ",
+      "parent_groups": [
+        "reasoning"
+      ],
+      "run_specs": 483,
+      "slide_slug": "",
+      "status": "未着手",
+      "source_description": "The MATH benchmark for measuring mathematical problem solving on competition math problems [(Hendrycks et al., 2021)](https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/hash/be83ab3ecd0db773eb2dc1b0a17836a1-Abstract-round2.html)."
+    },
+    {
+      "scenario": "math_chain_of_thought",
+      "title": "MATH (chain-of-thought)",
+      "kind": "個別シナリオ",
+      "parent_groups": [
+        "reasoning"
+      ],
+      "run_specs": 483,
+      "slide_slug": "",
+      "status": "未着手",
+      "source_description": "The MATH benchmark for measuring mathematical problem solving on competition math problems with chain-of-thought style reasoning [(Hendrycks et al., 2021)](https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/hash/be83ab3ecd0db773eb2dc1b0a17836a1-Abstract-round2.html)."
+    },
+    {
+      "scenario": "code_apps",
+      "title": "APPS (Code)",
+      "kind": "個別シナリオ",
+      "parent_groups": [
+        "reasoning"
+      ],
+      "run_specs": 2,
+      "slide_slug": "",
+      "status": "未着手",
+      "source_description": "The APPS benchmark for measuring competence on code challenges [(Hendrycks et al., 2021)](https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/hash/c24cd76e1ce41366a4bbe8a49b02a028-Abstract-round2.html)."
+    },
+    {
+      "scenario": "code_humaneval",
+      "title": "HumanEval (Code)",
+      "kind": "個別シナリオ",
+      "parent_groups": [
+        "reasoning"
+      ],
+      "run_specs": 2,
+      "slide_slug": "humaneval",
+      "status": "作成済み",
+      "source_description": "The HumanEval benchmark for measuring functional correctness for synthesizing programs from docstrings [(Chen et al., 2021)](https://arxiv.org/pdf/2107.03374.pdf)."
+    },
+    {
+      "scenario": "legalbench",
+      "title": "LegalBench",
+      "kind": "個別シナリオ",
+      "parent_groups": [],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "未着手",
+      "source_description": "LegalBench is a large collaboratively constructed benchmark of legal reasoning. Five representative tasks are included here. See [(Guha et al, 2023)[https://arxiv.org/abs/2308.11462] for more details."
+    },
+    {
+      "scenario": "legal_support",
+      "title": "LegalSupport",
+      "kind": "個別シナリオ",
+      "parent_groups": [
+        "reasoning",
+        "ablation_multiple_choice"
+      ],
+      "run_specs": 87,
+      "slide_slug": "",
+      "status": "未着手",
+      "source_description": "Scenario introduced in this work to measure fine-grained legal reasoning through reverse entailment."
+    },
+    {
+      "scenario": "lsat_qa",
+      "title": "LSAT",
+      "kind": "個別シナリオ",
+      "parent_groups": [
+        "reasoning",
+        "ablation_multiple_choice"
+      ],
+      "run_specs": 87,
+      "slide_slug": "",
+      "status": "未着手",
+      "source_description": "The LSAT benchmark for measuring analytical reasoning on the Law School Admission Test (LSAT; [Zhong et al., 2021](https://arxiv.org/pdf/2104.06598.pdf))."
+    },
+    {
+      "scenario": "med_qa",
+      "title": "MedQA",
+      "kind": "個別シナリオ",
+      "parent_groups": [],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "未着手",
+      "source_description": "MedQA is an open domain question answering dataset composed of questions from professional medical board exams ([Jin et al. 2020](https://arxiv.org/pdf/2009.13081.pdf))."
+    },
+    {
+      "scenario": "wmt_14",
+      "title": "WMT 2014",
+      "kind": "個別シナリオ",
+      "parent_groups": [],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "未着手",
+      "source_description": "WMT 2014 is a collection of machine translation datasets."
+    },
+    {
+      "scenario": "lextreme",
+      "title": "LEXTREME",
+      "kind": "個別シナリオ",
+      "parent_groups": [],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "未着手",
+      "source_description": "A Multilingual Legal Benchmark for Natural Language Understanding"
+    },
+    {
+      "scenario": "lex_glue",
+      "title": "LexGLUE",
+      "kind": "個別シナリオ",
+      "parent_groups": [],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "未着手",
+      "source_description": "A Benchmark Dataset for Legal Language Understanding in English"
+    },
+    {
+      "scenario": "billsum_legal_summarization",
+      "title": "BillSum",
+      "kind": "個別シナリオ",
+      "parent_groups": [],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "未着手",
+      "source_description": "The BillSum benchmark for legal text summarization ([Kornilova & Eidelmann, 2020](https://aclanthology.org/D19-5406/))."
+    },
+    {
+      "scenario": "multilexsum_legal_summarization",
+      "title": "MultiLexSum",
+      "kind": "個別シナリオ",
+      "parent_groups": [],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "未着手",
+      "source_description": "The MultiLexSum benchmark for legal text summarization ([Shen et al., 2022](https://arxiv.org/abs/2206.10883))."
+    },
+    {
+      "scenario": "eurlexsum_legal_summarization",
+      "title": "EurLexSum",
+      "kind": "個別シナリオ",
+      "parent_groups": [],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "未着手",
+      "source_description": "The EurLexSum benchmark for legal text summarization ([Aumiller et al., 2022](https://arxiv.org/abs/2210.13448))."
+    },
+    {
+      "scenario": "entity_data_imputation",
+      "title": "Data imputation",
+      "kind": "個別シナリオ",
+      "parent_groups": [
+        "reasoning"
+      ],
+      "run_specs": 134,
+      "slide_slug": "",
+      "status": "未着手",
+      "source_description": "Scenario from [Mei et al. (2021)](https://ieeexplore.ieee.org/document/9458712/) that tests the ability to impute missing entities in a data table."
+    },
+    {
+      "scenario": "entity_matching",
+      "title": "Entity matching",
+      "kind": "個別シナリオ",
+      "parent_groups": [
+        "reasoning"
+      ],
+      "run_specs": 201,
+      "slide_slug": "",
+      "status": "未着手",
+      "source_description": "Scenario from Magellan [(Konda et al., 2016)](https://dl.acm.org/doi/10.14778/3007263.3007314) that tests the ability to determine if two entities match."
+    },
+    {
+      "scenario": "copyright_text",
+      "title": "Copyright (text)",
+      "kind": "個別シナリオ",
+      "parent_groups": [
+        "harms"
+      ],
+      "run_specs": 145,
+      "slide_slug": "",
+      "status": "未着手",
+      "source_description": "Scenario introduced in this work to measure copyright and memorization behavior for books, based off of [Carlini et al. (2021)](https://www.usenix.org/biblio-11958)."
+    },
+    {
+      "scenario": "copyright_code",
+      "title": "Copyright (code)",
+      "kind": "個別シナリオ",
+      "parent_groups": [
+        "harms"
+      ],
+      "run_specs": 4,
+      "slide_slug": "",
+      "status": "未着手",
+      "source_description": "Scenario introduced in this work to measure copyright and memorization behavior for code, based off of [Carlini et al. (2021)](https://www.usenix.org/biblio-11958)."
+    },
+    {
+      "scenario": "disinformation_reiteration",
+      "title": "Disinformation (reiteration)",
+      "kind": "個別シナリオ",
+      "parent_groups": [
+        "harms"
+      ],
+      "run_specs": 84,
+      "slide_slug": "",
+      "status": "未着手",
+      "source_description": "Scenario from [Buchanan et al. (2021)](https://cset.georgetown.edu/publication/truth-lies-and-automation/) that tests the ability to reiterate disinformation content."
+    },
+    {
+      "scenario": "disinformation_wedging",
+      "title": "Disinformation (wedging)",
+      "kind": "個別シナリオ",
+      "parent_groups": [
+        "harms"
+      ],
+      "run_specs": 42,
+      "slide_slug": "",
+      "status": "未着手",
+      "source_description": "Scenario from [Buchanan et al. (2021)](https://cset.georgetown.edu/publication/truth-lies-and-automation/) that tests the ability to generate divisive and wedging content."
+    },
+    {
+      "scenario": "bbq",
+      "title": "BBQ (Bias Benchmark for Question Answering)",
+      "kind": "個別シナリオ",
+      "parent_groups": [
+        "harms",
+        "ablation_multiple_choice"
+      ],
+      "run_specs": 60,
+      "slide_slug": "",
+      "status": "未着手",
+      "source_description": "The Bias Benchmark for Question Answering (BBQ) for measuring social bias in question answering in ambiguous and unambigous context [(Parrish et al., 2022)](https://aclanthology.org/2022.findings-acl.165/)."
+    },
+    {
+      "scenario": "bold",
+      "title": "BOLD (Bias in Open-Ended Language Generation Dataset)",
+      "kind": "個別シナリオ",
+      "parent_groups": [
+        "harms"
+      ],
+      "run_specs": 42,
+      "slide_slug": "",
+      "status": "未着手",
+      "source_description": "The Bias in Open-Ended Language Generation Dataset (BOLD) for measuring biases and toxicity in open-ended language generation [(Dhamala et al., 2021)](https://dl.acm.org/doi/10.1145/3442188.3445924)."
+    },
+    {
+      "scenario": "real_toxicity_prompts",
+      "title": "RealToxicityPrompts",
+      "kind": "個別シナリオ",
+      "parent_groups": [
+        "harms"
+      ],
+      "run_specs": 42,
+      "slide_slug": "",
+      "status": "未着手",
+      "source_description": "The RealToxicityPrompts dataset for measuring toxicity in prompted model generations [(Gehman et al., 2020)](https://aclanthology.org/2020.findings-emnlp.301/)."
+    },
+    {
+      "scenario": "synthetic_efficiency",
+      "title": "Synthetic efficiency",
+      "kind": "個別シナリオ",
+      "parent_groups": [
+        "efficiency"
+      ],
+      "run_specs": 1365,
+      "slide_slug": "",
+      "status": "未着手",
+      "source_description": "Scenario introduced in this work to better understand inference runtime performance of various models."
+    },
+    {
+      "scenario": "cleva_closed_book_question_answering",
+      "title": "CLEVA (Chinese) closed book question answering",
+      "kind": "CLEVAのタスク群",
+      "parent_groups": [
+        "chinese_cleva"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "CLEVA系列として最後に着手",
+      "source_description": "Closed-book question answering task comprises three subtasks. One is for the medical domain, another for open-domain, and the last measures if a model generates truthful answers."
+    },
+    {
+      "scenario": "cleva_summarization",
+      "title": "CLEVA (Chinese) summarization",
+      "kind": "CLEVAのタスク群",
+      "parent_groups": [
+        "chinese_cleva"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "CLEVA系列として最後に着手",
+      "source_description": "Summarize a dialogue between a customer representative and a customer."
+    },
+    {
+      "scenario": "cleva_text_classification",
+      "title": "CLEVA (Chinese) text classification",
+      "kind": "CLEVAのタスク群",
+      "parent_groups": [
+        "chinese_cleva"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "CLEVA系列として最後に着手",
+      "source_description": "This scenario has two subtasks. Classify if an utterance is humorous and identify news topic based on its title."
+    },
+    {
+      "scenario": "cleva_translation",
+      "title": "CLEVA (Chinese) translation",
+      "kind": "CLEVAのタスク群",
+      "parent_groups": [
+        "chinese_cleva"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "CLEVA系列として最後に着手",
+      "source_description": "Scenario for measuring the translation quality between Chinese and English."
+    },
+    {
+      "scenario": "cleva_data_to_text_generation",
+      "title": "CLEVA (Chinese) data to text generation",
+      "kind": "CLEVAのタスク群",
+      "parent_groups": [
+        "chinese_cleva"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "CLEVA系列として最後に着手",
+      "source_description": "Generate a product description based on structured data containing various product properties."
+    },
+    {
+      "scenario": "cleva_dialogue_generation",
+      "title": "CLEVA (Chinese) dialogue generation",
+      "kind": "CLEVAのタスク群",
+      "parent_groups": [
+        "chinese_cleva"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "CLEVA系列として最後に着手",
+      "source_description": "Task-oriented dialogue between a user and a system."
+    },
+    {
+      "scenario": "cleva_opinion_mining",
+      "title": "CLEVA (Chinese) opinion mining",
+      "kind": "CLEVAのタスク群",
+      "parent_groups": [
+        "chinese_cleva"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "CLEVA系列として最後に着手",
+      "source_description": "Extract the target of an opinion."
+    },
+    {
+      "scenario": "cleva_paraphrase_generation",
+      "title": "CLEVA (Chinese) paraphrase generation",
+      "kind": "CLEVAのタスク群",
+      "parent_groups": [
+        "chinese_cleva"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "CLEVA系列として最後に着手",
+      "source_description": "Generate a paraphrase of a given sentence."
+    },
+    {
+      "scenario": "cleva_paraphrase_identification",
+      "title": "CLEVA (Chinese) paraphrase identification",
+      "kind": "CLEVAのタスク群",
+      "parent_groups": [
+        "chinese_cleva"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "CLEVA系列として最後に着手",
+      "source_description": "Identify if two sentences, from a dialogue or from the finance domain, share the same meaning."
+    },
+    {
+      "scenario": "cleva_reading_comprehension",
+      "title": "CLEVA (Chinese) reading comprehension",
+      "kind": "CLEVAのタスク群",
+      "parent_groups": [
+        "chinese_cleva"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "CLEVA系列として最後に着手",
+      "source_description": "Answer a multiple-choice question based on a given paragraph."
+    },
+    {
+      "scenario": "cleva_sentiment_analysis",
+      "title": "CLEVA (Chinese) sentiment analysis",
+      "kind": "CLEVAのタスク群",
+      "parent_groups": [
+        "chinese_cleva"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "CLEVA系列として最後に着手",
+      "source_description": "Chinese sentiment analysis for product reviews."
+    },
+    {
+      "scenario": "cleva_language_modeling",
+      "title": "CLEVA (Chinese) language modeling",
+      "kind": "CLEVAのタスク群",
+      "parent_groups": [
+        "chinese_cleva"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "CLEVA系列として最後に着手",
+      "source_description": "Scenario for measuring language model performance across various domains (wikipedia and news)."
+    },
+    {
+      "scenario": "cleva_pinyin_transliteration",
+      "title": "CLEVA (Chinese) pinyin transliteration",
+      "kind": "CLEVAのタスク群",
+      "parent_groups": [
+        "chinese_cleva"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "CLEVA系列として最後に着手",
+      "source_description": "Scenario that asks the model to translate between Chinese and Pinyin."
+    },
+    {
+      "scenario": "cleva_classical_chinese_understanding",
+      "title": "CLEVA (Chinese) classical Chinese understanding",
+      "kind": "CLEVAのタスク群",
+      "parent_groups": [
+        "chinese_cleva"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "CLEVA系列として最後に着手",
+      "source_description": "Scenario for evaluating the understanding of classical Chinese by selecting the appropriate classical Chinese translation for a given modern Chinese sentence."
+    },
+    {
+      "scenario": "cleva_coreference_resolution",
+      "title": "CLEVA (Chinese) coreference resolution",
+      "kind": "CLEVAのタスク群",
+      "parent_groups": [
+        "chinese_cleva"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "CLEVA系列として最後に着手",
+      "source_description": "Scenario for testing models on solving coreference resolution problems (the winograd schema challenge)."
+    },
+    {
+      "scenario": "cleva_intent_understanding",
+      "title": "CLEVA (Chinese) intent understanding",
+      "kind": "CLEVAのタスク群",
+      "parent_groups": [
+        "chinese_cleva"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "CLEVA系列として最後に着手",
+      "source_description": "Tests whether the model could capture the writing intention of the authors after reading an article."
+    },
+    {
+      "scenario": "cleva_subject_knowledge",
+      "title": "CLEVA (Chinese) subject knowledge",
+      "kind": "CLEVAのタスク群",
+      "parent_groups": [
+        "chinese_cleva"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "CLEVA系列として最後に着手",
+      "source_description": "Scenario inspired by [Petroni et al. (2019)](https://aclanthology.org/D19-1250/) to extensively test factual knowledge in Chinese. It contains 13 subjects and a general domain."
+    },
+    {
+      "scenario": "cleva_cultural_knowledge",
+      "title": "CLEVA (Chinese) cultural knowledge",
+      "kind": "CLEVAのタスク群",
+      "parent_groups": [
+        "chinese_cleva"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "CLEVA系列として最後に着手",
+      "source_description": "Scenario for evaluating models' understanding of Chinese culture. It has a Chinese-idiom-focused subtask."
+    },
+    {
+      "scenario": "cleva_reasoning_primitive",
+      "title": "CLEVA (Chinese) reasoning primitive",
+      "kind": "CLEVAのタスク群",
+      "parent_groups": [
+        "chinese_cleva"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "CLEVA系列として最後に着手",
+      "source_description": "Scenario focused on primitive reasoning, including dyck language continuation, variable substitution, pattern induction, and pattern matching."
+    },
+    {
+      "scenario": "cleva_deductive_reasoning",
+      "title": "CLEVA (Chinese) deductive reasoning",
+      "kind": "CLEVAのタスク群",
+      "parent_groups": [
+        "chinese_cleva"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "CLEVA系列として最後に着手",
+      "source_description": "Scenario that gauges model's ability to reason deductive arguments. It includes a modus tollens subtask."
+    },
+    {
+      "scenario": "cleva_inductive_reasoning",
+      "title": "CLEVA (Chinese) inductive reasoning",
+      "kind": "CLEVAのタスク群",
+      "parent_groups": [
+        "chinese_cleva"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "CLEVA系列として最後に着手",
+      "source_description": "Scenario that tests models' ability to conclude rules from demonstrations and apply them to unseen test instances."
+    },
+    {
+      "scenario": "cleva_code_synthesis",
+      "title": "CLEVA (Chinese) code synthesis",
+      "kind": "CLEVAのタスク群",
+      "parent_groups": [
+        "chinese_cleva"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "CLEVA系列として最後に着手",
+      "source_description": "Scenario for measuring functional correctness for synthesizing programs from Chinese docstrings."
+    },
+    {
+      "scenario": "cleva_commonsense_reasoning",
+      "title": "CLEVA (Chinese) commonsense reasoning",
+      "kind": "CLEVAのタスク群",
+      "parent_groups": [
+        "chinese_cleva"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "CLEVA系列として最後に着手",
+      "source_description": "Scenario that tests models' commonsense reasoning ability. There are two subtasks: textual entailment and commonsense question answering."
+    },
+    {
+      "scenario": "cleva_mathematical_reasoning",
+      "title": "CLEVA (Chinese) mathematical reasoning",
+      "kind": "CLEVAのタスク群",
+      "parent_groups": [
+        "chinese_cleva"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "CLEVA系列として最後に着手",
+      "source_description": "Scenario that tests models' mathematical reasoning ability with chain-of-thought style reasoning. It contains a math word problem solving subtask."
+    },
+    {
+      "scenario": "cleva_conceptual_generalization",
+      "title": "CLEVA (Chinese) conceptual generalization",
+      "kind": "CLEVAのタスク群",
+      "parent_groups": [
+        "chinese_cleva"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "CLEVA系列として最後に着手",
+      "source_description": "Scenario that assesses whether models could generalize physical relations to a synthetic grid world."
+    },
+    {
+      "scenario": "cleva_toxicity_detection",
+      "title": "CLEVA (Chinese) toxicity detection",
+      "kind": "CLEVAのタスク群",
+      "parent_groups": [
+        "chinese_cleva"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "CLEVA系列として最後に着手",
+      "source_description": "Ask models about the offensiveness of the given text."
+    },
+    {
+      "scenario": "cleva_bias",
+      "title": "CLEVA (Chinese) bias",
+      "kind": "CLEVAのタスク群",
+      "parent_groups": [
+        "chinese_cleva"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "CLEVA系列として最後に着手",
+      "source_description": "Scenario that gauges bias of four demographic categories in dialogues, including race, gender, region, and occupation."
+    },
+    {
+      "scenario": "cleva_copyright",
+      "title": "CLEVA (Chinese) copyright",
+      "kind": "CLEVAのタスク群",
+      "parent_groups": [
+        "chinese_cleva"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "CLEVA系列として最後に着手",
+      "source_description": "Scenario that measures copyright and memorization behavior for Chinese books and code, based off of [Carlini et al. (2021)](https://www.usenix.org/biblio-11958)."
+    },
+    {
+      "scenario": "cleva_fact_checking",
+      "title": "CLEVA (Chinese) fact checking",
+      "kind": "CLEVAのタスク群",
+      "parent_groups": [
+        "chinese_cleva"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "CLEVA系列として最後に着手",
+      "source_description": "Scenario that lets models identify whether the given fact is true to test their factuality."
+    },
+    {
+      "scenario": "cleva_instruction_following",
+      "title": "CLEVA (Chinese) instruction following",
+      "kind": "CLEVAのタスク群",
+      "parent_groups": [
+        "chinese_cleva"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "CLEVA系列として最後に着手",
+      "source_description": "Scenario that examines whether models could follow human instructions, mainly uncommon ones. It contains two subtasks: 'redefine' and 'pattern_matching_suppression'."
+    },
+    {
+      "scenario": "cleva_mathematical_calculation",
+      "title": "CLEVA (Chinese) mathematical calculation",
+      "kind": "CLEVAのタスク群",
+      "parent_groups": [
+        "chinese_cleva"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "CLEVA系列として最後に着手",
+      "source_description": "Scenario that evaluates the calculation ability of models. It has four subtasks: three-digit addition, three-digit subtraction, two-digit multiplication, and significant figures."
+    },
+    {
+      "scenario": "data_to_text_generation",
+      "title": "Data-to-text generation",
+      "kind": "構想上の領域",
+      "parent_groups": [
+        "aspirational"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "対象データセットの具体化が必要",
+      "source_description": "Currently, we prioritize user-facing tasks in our core scenarios, but don't implement data-to-text generation. Could be implemented via WebNLG, E2E, ToTTo, etc."
+    },
+    {
+      "scenario": "fact_verification",
+      "title": "Fact verification",
+      "kind": "構想上の領域",
+      "parent_groups": [
+        "aspirational"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "対象データセットの具体化が必要",
+      "source_description": "Currently, we prioritize user-facing tasks in our core scenarios, but don't implement fact verification. Could be implemented via FEVER."
+    },
+    {
+      "scenario": "copywriting",
+      "title": "Copywriting",
+      "kind": "構想上の領域",
+      "parent_groups": [
+        "aspirational"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "対象データセットの具体化が必要",
+      "source_description": "Currently, we prioritize user-facing tasks in our core scenarios, but don't implement tasks that have not been historically studied in the NLP research community like (ad) copywriting."
+    },
+    {
+      "scenario": "story_generation",
+      "title": "Story generation",
+      "kind": "構想上の領域",
+      "parent_groups": [
+        "aspirational"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "対象データセットの具体化が必要",
+      "source_description": "Currently, we prioritize user-facing tasks in our core scenarios, but don't implement more creative and interactive tasks like story generation."
+    },
+    {
+      "scenario": "biomedical_scenarios",
+      "title": "Biomedical scenarios",
+      "kind": "構想上の領域",
+      "parent_groups": [
+        "aspirational"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "対象データセットの具体化が必要",
+      "source_description": "Currently, we implement scenarios from common domains in NLP research, neglecting various domains where language technologies could provide significant value."
+    },
+    {
+      "scenario": "clinical_scenarios",
+      "title": "Clinical scenarios",
+      "kind": "構想上の領域",
+      "parent_groups": [
+        "aspirational"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "対象データセットの具体化が必要",
+      "source_description": "Currently, we implement scenarios from common domains in NLP research, neglecting various domains where language technologies could provide significant value."
+    },
+    {
+      "scenario": "financial_scenarios",
+      "title": "Financial scenarios",
+      "kind": "構想上の領域",
+      "parent_groups": [
+        "aspirational"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "対象データセットの具体化が必要",
+      "source_description": "Currently, we implement scenarios from common domains in NLP research, neglecting various domains where language technologies could provide significant value."
+    },
+    {
+      "scenario": "customer_service_scenarios",
+      "title": "Customer services scenarios",
+      "kind": "構想上の領域",
+      "parent_groups": [
+        "aspirational"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "対象データセットの具体化が必要",
+      "source_description": "Currently, we implement scenarios from common domains in NLP research, neglecting various domains where language technologies could provide significant value."
+    },
+    {
+      "scenario": "educational_scenarios",
+      "title": "Educational scenarios",
+      "kind": "構想上の領域",
+      "parent_groups": [
+        "aspirational"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "対象データセットの具体化が必要",
+      "source_description": "Currently, we implement scenarios from common domains in NLP research, neglecting various domains where language technologies could provide significant value."
+    },
+    {
+      "scenario": "very_recent_scenarios",
+      "title": "Very recent scenarios",
+      "kind": "構想上の領域",
+      "parent_groups": [
+        "aspirational"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "対象データセットの具体化が必要",
+      "source_description": "Currently, we implement scenarios using standard NLP datasets. However, to test temporal generalization as the world and language change, we should implement scenarios with very recent data (e.g., current world events) like StreamingQA."
+    },
+    {
+      "scenario": "historical_scenarios",
+      "title": "Scenarios involving historic data",
+      "kind": "構想上の領域",
+      "parent_groups": [
+        "aspirational"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "対象データセットの具体化が必要",
+      "source_description": "Currently, we implement scenarios using standard NLP datasets, which predominantly are from post-Internet and contemporary society. However, to test temporal generalization for using models in the digital humanities for historic data, we should implement scenarios with significantly older data (e.g., text from 1800s)."
+    },
+    {
+      "scenario": "not_native_English_speaker",
+      "title": "Scenarios involving non-native speakers",
+      "kind": "構想上の領域",
+      "parent_groups": [
+        "aspirational"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "対象データセットの具体化が必要",
+      "source_description": "Currently, we implement scenarios of an unknown composition of native and non-native English speakers. We should implement scenarios to ensure coverage of language from non-native English speakers."
+    },
+    {
+      "scenario": "non_US_demographics",
+      "title": "Scenarios involving data from marginalized demographics in non-US English-speaking regions",
+      "kind": "構想上の領域",
+      "parent_groups": [
+        "aspirational"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "対象データセットの具体化が必要",
+      "source_description": "Currently, we ensure some coverage of language based on US-centric demographic groups, including marginalized groups. We should implement scenarios to ensure coverage of other socially-relevant groups beyond US demographics (e.g., caste in India)."
+    },
+    {
+      "scenario": "user_facing_tasks_english_dialects",
+      "title": "Scenarios with user-facing tasks on English dialects",
+      "kind": "構想上の領域",
+      "parent_groups": [
+        "aspirational"
+      ],
+      "run_specs": 0,
+      "slide_slug": "",
+      "status": "対象データセットの具体化が必要",
+      "source_description": "Currently, evaluate performance on English dialects via language modeling (e.g., TwitterAAE, ICE), but it would be good to implement user-facing tasks for these dialects."
+    }
+  ]
+}

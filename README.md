@@ -36,6 +36,8 @@ PPTXの編集・描画にはPowerPointやLibreOfficeなどを使います。コ�
 
 フォントは日本語にNoto Sans CJK JP、英数字にNoto Sans、コードにLiberation Monoなどの等幅フォントを使います。フォント本体は同梱していません。
 
+[HELM Classicの対象と制作進捗](docs/helm-classic-coverage.md)を記録しています。CLEVA系列は後回しにし、プラットフォームと公開実例のある個別データセットを分けて制作します。
+
 ## Webギャラリー
 
 CSV管理のスライドギャラリーをGitHub Pages向けにビルドできます。
