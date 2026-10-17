@@ -5,8 +5,8 @@
 ## 表紙の名称
 
 - ARC-AGI-2：表紙に **Abstraction and Reasoning Corpus for Artificial General Intelligence v2** を追加。[Chollet et al., ARC-AGI-2: A New Challenge for Frontier AI Reasoning Systems](https://arxiv.org/abs/2505.11831v2)の本文冒頭と、既存資料で引用した公式配布物の名称を照合した。
-- MMMU-Pro：表紙に **MMMU = Massive Multi-discipline Multimodal Understanding and Reasoning** を追加。[Yue et al., MMMU-Pro: A More Robust Multi-discipline Multimodal Understanding Benchmark](https://arxiv.org/abs/2409.02813v3)の冒頭・関連研究、および[公式README](https://github.com/MMMU-Benchmark/MMMU)を確認した。展開形はMMMUに対応することをラベルで示し、Proは主題名に保った。
-- MCP Atlas：表紙に **MCP = Model Context Protocol** を追加。[公式README](https://github.com/scaleapi/mcp-atlas)のOverview前の定義に対応する。MCPの展開形を示し、独自の「Model Context Protocol Atlas」という名称にはしていない。
+- MMMU-Pro：ユーザーの指定（2026-10-17）に従い、表紙の「MMMU =」による展開表記を削除。主題名と用途の説明を保ち、文字群を中央へ再配置した。
+- MCP Atlas：ユーザーの指定（2026-10-17）に従い、表紙の「MCP =」による展開表記と、本文のMCPに添えた英語の括弧書きを削除。主題名と用途の説明を保ち、表紙を再配置した。
 - GPQA、HLE、SNLI、SQuAD、MS COCO、UCF101：表紙に既にある正式名称・正式タイトルを確認した。
 - ImageNet-1k、FineWeb、SciCode、ScreenSpot-Pro、Terminal-Bench、τ²-bench、SWE-bench Verified、SWE-bench Pro、SimpleQA Verified：公式資料で使われている対象名を保持。原著論文の題名やベンチマークの用途を、対象名の展開形として作っていない。ImageNet-1kは従来の指定どおり大きな主題を保ち、別の評価大会名ILSVRCへ置き換えていない。
 
