@@ -1,0 +1,1092 @@
+{
+  "dataset": "squad",
+  "model": "Codex (skill application; no external generation API)",
+  "review_mode": "skill_based_codex",
+  "reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109
+  ],
+  "request_count": 0,
+  "accepted_edits": [
+    {
+      "paragraph_index": 2,
+      "original": "配布データの全体は記事の集合である。各記事には複数の段落があり、それぞれの段落に質問と正解回答が付く。",
+      "revised": "配布データの全体は記事の集合である。各記事には複数の段落があり、それぞれの段落に質問と正解が付く。",
+      "reason": "「正解回答」は意味が重複した表現となっているため、タイトル表現（「質問と正解が付く」）に合わせて「正解」に統一し、自然な表現に整えました。",
+      "provenance": "cached_proposal_reassessed",
+      "page": 6
+    },
+    {
+      "paragraph_index": 8,
+      "original": "Rollo の側が王に忠誠を誓う。王が誰に誓ったかは記載されていない。",
+      "revised": "Rolloの側が王に忠誠を誓ったのであり、王が誰に誓ったかは記載されていない。",
+      "reason": "「誓う」と現在形で言い切るよりも、過去の記述内容として「誓ったのであり」と後文につなげることで、質問との主客のねじれ（Rollo側が王に誓ったのであって王が誓ったわけではないこと）が明確かつ自然に伝わります。",
+      "provenance": "cached_proposal_reassessed",
+      "page": 10
+    },
+    {
+      "paragraph_index": 3,
+      "original": "質問に対応する本文中の範囲を回答する",
+      "revised": "質問に対応する本文中の範囲を回答する。",
+      "reason": "同階層の他の箇条書き項目（段落5・6）の文末表現と統一するため、末尾に句点を補いました。",
+      "provenance": "cached_proposal_reassessed",
+      "page": 11
+    },
+    {
+      "paragraph_index": 4,
+      "original": "バージョン2.0では、回答不能な質問を追加する [2]。",
+      "revised": "バージョン2.0では、回答不能な質問が追加された [2]。",
+      "reason": "公開済みのデータセットの構成・特徴を説明する文脈において、主語のない現在形「追加する」は不自然であるため、「追加された」に修正しました。",
+      "provenance": "cached_proposal_reassessed",
+      "page": 11
+    },
+    {
+      "paragraph_index": 4,
+      "original": "段落の話題に関連させ、一見すると回答可能に見える質問を作成させた。",
+      "revised": "段落の話題に関連させ、一見すると回答可能に見える質問を作成した。",
+      "reason": "親項目が「作業者が…作成した」と作業者を主語とする能動表現になっているため、子項目で使役の「作成させた」を用いると視点（主述関係）が揺らぎます。「作成した」に統一することで記述の視点を揃えました。",
+      "provenance": "cached_proposal_reassessed",
+      "page": 19
+    },
+    {
+      "paragraph_index": 4,
+      "original": "回答不能",
+      "revised": "回答不能数",
+      "reason": "隣接する列見出し（質問数、Wikipedia記事数）およびスライド題名（回答不能数）と表現の形式を揃えるため。",
+      "provenance": "cached_proposal_reassessed",
+      "page": 20
+    },
+    {
+      "paragraph_index": 4,
+      "original": "複数正解がある質問は最良の得点を採用する。バージョン2.0では、回答不能な質問に回答を控えた場合を正解として採点する。",
+      "revised": "複数正解がある質問では最良の得点を採用する。バージョン2.0では、回答不能な質問に回答を控えた場合を正解として採点する。",
+      "reason": "「質問は〜採用する」という主述のねじれを解消し、対象・場面を表す「質問では」にすることで文意を明瞭にするため。",
+      "provenance": "cached_proposal_reassessed",
+      "page": 31
+    },
+    {
+      "paragraph_index": 5,
+      "original": "単語一致を使うSliding Window",
+      "revised": "単語一致によるSliding Window",
+      "reason": "手法ラベルとして「〜を使う」よりも「〜による」とする方が自然で引き締まった表現になるため。",
+      "provenance": "cached_proposal_reassessed",
+      "page": 32
+    },
+    {
+      "paragraph_index": 14,
+      "original": "SQuADバージョン1.0のテスト用で評価した [1]。人の得点は、追加の正解回答を予測として採点した。",
+      "revised": "SQuADバージョン1.0のテストセットで評価した [1]。人の得点は、追加の正解回答を予測として採点した。",
+      "reason": "「テスト用」は評価対象データの表現として不自然なため、学術・技術資料で一般的な「テストセット」に改めた。",
+      "provenance": "cached_proposal_reassessed",
+      "page": 32
+    },
+    {
+      "paragraph_index": 14,
+      "original": "SQuAD 2.0の学習用で微調整し、開発用で評価した公表値。答えの開始・終了位置を予測する抽出型モデルを比較する。",
+      "revised": "SQuAD 2.0の学習データで微調整し、開発データで評価した公表値。答えの開始・終了位置を予測する抽出型モデルを比較する。",
+      "reason": "「学習用」「開発用」の対象（データ）を明示することで、文意を明確かつ自然な表現に整えました。",
+      "provenance": "cached_proposal_reassessed",
+      "page": 34
+    },
+    {
+      "paragraph_index": 2,
+      "original": "抽出型は、段落中の開始・終了位置を予測する。読解モデルBiDAFや言語モデルBERTを使い、原文中の回答範囲を選ぶ。",
+      "revised": "抽出型は、段落中の開始・終了位置を予測する。読解モデルBiDAFや言語モデルBERTなどで用いられ、原文中の回答範囲を選ぶ。",
+      "reason": "BiDAFやBERT自体が抽出型モデルの代表例であるため、「抽出型は……BERTを使い」と読める表現を「〜などで用いられ」に改め、主述・修飾の関係を自然にしました。",
+      "provenance": "cached_proposal_reassessed",
+      "page": 36
+    },
+    {
+      "paragraph_index": 3,
+      "original": "1-shotでは、答え付きの例を1件入力に提示してから別の質問へ答えさせる。この提示だけではモデルのパラメータを更新しない。",
+      "revised": "1-shotでは、答え付きの例を1件入力に提示してから別の質問に答えさせる。この提示だけではモデルのパラメータを更新しない。",
+      "reason": "「質問へ答える」よりも助詞「に」を用いて「質問に答える」とするほうが自然な表現になるため。",
+      "provenance": "cached_proposal_reassessed",
+      "page": 37
+    },
+    {
+      "paragraph_index": 4,
+      "original": "人手作成の質問を大規模に評価するため、2016年に発表。",
+      "revised": "人手で作成した質問による大規模な読解評価を目的に、2016年に発表。",
+      "reason": "質問そのものを評価するという曖昧さを避け、読解評価のためのデータであることを示す。",
+      "provenance": "cached_proposal_reassessed_and_revised",
+      "cached_proposal": "人手作成の質問で大規模に評価するため、2016年に発表。",
+      "page": 45
+    },
+    {
+      "paragraph_index": 0,
+      "original": "SQuADの目的・版の違いと評価方法",
+      "revised": "SQuADの目的・バージョンの違いと評価方法",
+      "reason": "改訂を表す語をバージョンにそろえる。",
+      "provenance": "skill_original",
+      "page": 45
+    },
+    {
+      "paragraph_index": 0,
+      "original": "SQuAD各版の著者と発表先",
+      "revised": "SQuADの各バージョンの著者と発表先",
+      "reason": "圧縮した「各版」を、本文と対応する自然な語へ整える。",
+      "provenance": "skill_original",
+      "page": 48
+    },
+    {
+      "paragraph_index": 3,
+      "original": "SQuADと、胸部X線のデータセットCheXpertに貢献した（2019年） [5]。",
+      "revised": "SQuADに加え、2019年の胸部X線データセットCheXpertの開発にも貢献した [5]。",
+      "reason": "2019年がCheXpertを修飾することを明確にし、SQuADの発表年と混同させない。",
+      "provenance": "cached_proposal_reassessed_and_revised",
+      "cached_proposal": "SQuADや、胸部X線データセットCheXpertの開発に貢献した（2019年） [5]。",
+      "page": 49
+    },
+    {
+      "paragraph_index": 2,
+      "original": "バージョン1.1では、48記事／2.0 このうち35記事。",
+      "revised": "バージョン1.1は48記事、2.0はそのうち35記事。",
+      "reason": "「2.0 このうち」の助詞の欠落を補い、二つのバージョンの収録範囲を自然に並べる。",
+      "provenance": "skill_original",
+      "page": 85
+    },
+    {
+      "paragraph_index": 2,
+      "original": "バージョン1.1では、48記事／2.0 このうち35記事。",
+      "revised": "バージョン1.1は48記事、2.0はそのうち35記事。",
+      "reason": "「2.0 このうち」の助詞の欠落を補い、二つのバージョンの収録範囲を自然に並べる。",
+      "provenance": "skill_original",
+      "page": 86
+    }
+  ],
+  "rejected_edits": [
+    {
+      "paragraph_index": 2,
+      "original": "第一著者のPranav Rajpurkarは、読解型QAと医療AIを研究している [1,2]。",
+      "revised": "筆頭著者のPranav Rajpurkarは、読解型QAと医療AIを研究している [1,2]。",
+      "reason": "スライドタイトル「筆頭・最終著者の研究分野と関連実績」および後続の「最終著者のPercy Liang…」と表記を揃え、整合性を高めるため。",
+      "provenance": "cached_proposal_reassessed",
+      "page": 49,
+      "decision_reason": "第一著者も自然で正確な用語であり、筆頭への好みだけの置換は不要。"
+    }
+  ],
+  "structure_decisions": [
+    {
+      "proposal": "本文の文字サイズまたは行間をわずかに縮小し、3つ目の箇条書きと下部の参考文献表記（[1]）が重ならないよう余白を確保する。",
+      "reason": "文字と出典の重なりを最終描画で確認し、文言を保持して本文枠・行間を修正する。",
+      "page": 5,
+      "decision": "採用"
+    },
+    {
+      "proposal": "抜粋文中の「agreed to swear fealty to King Charles III」に下線または太字の強調を加える。",
+      "reason": "根拠となる英文と日本語説明が対応しており、引用へ強調を追加しない。",
+      "page": 10,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "バージョン2.0の箇条書きにおいて、段落5（データセット作成の工夫）と段落6（モデルに課される読解タスク）の主語・観点が異なるため、段落3のタスク定義と対比させる形で「タスク内容（判定・棄権）」を先に示し、「作成方法」を補足として整理すると、版ごとの違いがより明快に伝わります。",
+      "reason": "バージョン2.0の追加データ→作成方法→課題への影響という順序も自然なため保持。",
+      "page": 11,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "MCTestとSQuADの比較（対象テキスト：物語 vs Wikipedia、回答形式：4択 vs 連続テキストの抽出）を、2項目の対比表または対照的な2列配置で整理する。",
+      "reason": "3文で対象と回答形式の差が読めるため、校正のために表へ組み直さない。",
+      "page": 14,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "1つ目の箇条書き（段落2）のテキストボックス幅またはフォントサイズを微調整し、3行目の「た。」を2行目に収めることを推奨します。",
+      "reason": "本文中の少数文字の折り返しは既存の制作規則で許容されるため、折り返しだけを理由に文字を縮小したり強制改行を入れたりしない。最終描画では欠落・重なりを別途検証する。",
+      "page": 15,
+      "decision": "見送り",
+      "decision_rule": "project_body_wrapping_policy"
+    },
+    {
+      "proposal": "2つ目の箇条書き（段落3）について、テキストボックスの幅をわずかに広げるかフォントサイズ・字間を微調整し、「る。」の1文字だけが3行目に送られている状態（寡婦行）を解消することを推奨します。",
+      "reason": "本文中の少数文字の折り返しは既存の制作規則で許容されるため、折り返しだけを理由に文字を縮小したり強制改行を入れたりしない。最終描画では欠落・重なりを別途検証する。",
+      "page": 18,
+      "decision": "見送り",
+      "decision_rule": "project_body_wrapping_policy"
+    },
+    {
+      "proposal": "「質問数」列が回答不能質問も含んだ合計数（全体数）であることが一目でわかるよう、列見出しを「質問総数」とするか、下部の注釈で「質問数は回答不能な質問を含む合計」と補足する。",
+      "reason": "質問総数と回答不能の内訳は表の構成で分かり、見出しを長くしない。",
+      "page": 20,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "箇条書きでは「4,063」「20,963」と3桁区切りカンマが用いられているため、表内の4桁以上の数値（1312.0、4063）についてもカンマ表記の有無を統一すると、全体の体裁がより整います。",
+      "reason": "桁区切りは意味を変えない体裁差。今回はデータの数値セルを保持する。",
+      "page": 23,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "引用英文の中で、前ページ（p.24）で示された質問への直接的な回答に該当する箇所を太字や下線、マーカー等で視覚的に強調する。",
+      "reason": "前ページの質問と正解に対応する原文をそのまま保ち、解答文字列の強調を重ねない。",
+      "page": 25,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "実例である質問文（段落4・5）を1項目めのサブ箇条書き（インデント下げ）にするか、枠で囲むなどして「確認された1件の実例」であることが視覚的に直感できる配置にすると、論理的な包含関係がより明確になる。",
+      "reason": "質問は独立した引用と訳で既に示しており、追加の枠や下位項目化は不要。",
+      "page": 27,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "第1箇条書き（段落2）の枠幅をわずかに広げるか文字サイズ・字間を微調整し、「る。」だけの行送り（泣き別れ）を解消する。",
+      "reason": "本文中の少数文字の折り返しは既存の制作規則で許容されるため、折り返しだけを理由に文字を縮小したり強制改行を入れたりしない。最終描画では欠落・重なりを別途検証する。",
+      "page": 29,
+      "decision": "見送り",
+      "decision_rule": "project_body_wrapping_policy"
+    },
+    {
+      "proposal": "スライドタイトルで触れられているF1 51.0%の行（ロジスティック回帰）を太字や背景色で強調する。",
+      "reason": "値と指標はタイトル・表から読めるため、背景塗りのない共通表を維持。",
+      "page": 32,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "表に人間による読解性能（Human performance）の基準値を1行追加するか、箇条書きで言及することを検討してください。",
+      "reason": "人の評価は前の原著比較で説明済み。異なる条件の基準値を既存表へ追加しない。",
+      "page": 33,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "3つ目の箇条書き（段落4）の行間を前2つよりわずかに広げるか、小見出し（例：「評価の共通点：」等）を冒頭に補うと、個別解説と総括（共通点）の階層差が伝わりやすくなります。",
+      "reason": "文末の共通評価が自然に総括となっているため、追加の小見出しを重ねない。",
+      "page": 36,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "段落3の末尾に「[1]」、段落4の末尾またはツール名付近に「[2]」の参照番号を付記する。",
+      "reason": "出典名と評価名の対応が明確なため、番号を重複追加しない。",
+      "page": 41,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "段落3の「SQuAD 2」を段落4に合わせて「SQuAD 2.0」とするか、元文献の表記意図に合わせて揃える。",
+      "reason": "SQuAD 2は引用先Llamaの表記に合わせた名称で、2.0と同じ対象と読めるため保持。",
+      "page": 41,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "箇条書き各項目の末尾（「[1]。」や「Percy Liang である。」など）がわずかにはみ出して改行されているため、テキストボックスの横幅を広げるかフォントサイズを微調整して各項目を1行に収めると視認性が向上します。",
+      "reason": "本文の少数文字の折返しは許容し、欠落・重なりだけを修正する。",
+      "page": 48,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "各著者の名前・研究分野の項目（段落2・4）に対し、関連実績（段落3・5）を1段階インデントしてネスト構造にする。",
+      "reason": "各著者と関連実績は連続2段落で対応している。新たな階層書式は追加しない。",
+      "page": 49,
+      "decision": "見送り"
+    }
+  ],
+  "structural_and_factual_actions": [
+    {
+      "type": "layout",
+      "page": 5,
+      "reason": "本文最終行と出典の重なり解消",
+      "review_page": 5,
+      "provenance": "prior_decision_reassessed_by_skill"
+    }
+  ],
+  "fact_review": [
+    {
+      "paragraph_index": 0,
+      "question": "データセット名の表記は「SQuAD 2.0」ではなく「SQuAD 2」で統一されていますか。",
+      "reason": "一般的には「SQuAD 2.0」と表記されることが多いため、資料全体で表記の統一が取れているか確認が必要です。",
+      "page": 35,
+      "decision": "原文を保持",
+      "finding": "Llamaの公表表に合わせたSQuAD 2という表記。データの版の説明はSQuAD 2.0としてあり、異なるデータとしない。"
+    },
+    {
+      "paragraph_index": 5,
+      "question": "初版（EMNLP 2016）が受賞した賞の正確な名称は「ACL Test of Time Award」でしょうか、それとも「EMNLP Test of Time Award」でしょうか。",
+      "reason": "EMNLP発表の論文であるため、ACL本体のTest of Time AwardではなくEMNLP Test of Time Awardである可能性が考えられます。",
+      "page": 48,
+      "decision": "原文を保持",
+      "finding": "既存の制作済み書誌・出典にあるACL Test of Time Awardを保持。校正案の疑問だけで賞名をEMNLPへ変更しない。今回の外部再調査は行っていない。"
+    },
+    {
+      "paragraph_index": 11,
+      "question": "参考文献の番号が [1], [2], [3], [5] となっており [4] が欠番ですが、意図的な番号設定（他スライドとの通し番号など）でしょうか。単一スライド内での誤記（[4] の誤り）でないかご確認ください。",
+      "reason": "本文参照および下部の文献リストにおいて [3] の次が [5] となっており、番号の連続性が欠けているため。",
+      "page": 49,
+      "decision": "原文を保持",
+      "finding": "同ページにCheXpertを示す出典[5]が実在し、本文と対応。欠番だけを理由に参照番号を振り直さない。"
+    }
+  ],
+  "accepted_moves": [],
+  "base_order": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109
+  ],
+  "prior_trial_changes": [
+    {
+      "original_page": 5,
+      "page": 5,
+      "paragraph_index": 0,
+      "original": "段落と質問を入力し答えの範囲を選ぶ",
+      "revised": "段落と質問から答えの範囲を特定する"
+    },
+    {
+      "original_page": 5,
+      "page": 5,
+      "paragraph_index": 2,
+      "original": "読解型質問応答は、文章を根拠に質問へ答える課題である。SQuADでは、英語Wikipediaの記事から選んだ1段落と、その段落に対する質問を入力する。",
+      "revised": "読解型質問応答は、文章を根拠に質問に答える課題である。SQuADでは、英語Wikipediaの記事から選んだ1段落と、その段落に対する質問を入力する。"
+    },
+    {
+      "original_page": 5,
+      "page": 5,
+      "paragraph_index": 3,
+      "original": "答えは、段落内にある連続した語句を選ぶ。固有名詞・年・数量に限らず、複数語からなる表現も正解となる。",
+      "revised": "答えとして、段落内にある連続した語句を選ぶ。固有名詞・年・数量に限らず、複数語からなる表現も正解となる。"
+    },
+    {
+      "original_page": 5,
+      "page": 5,
+      "paragraph_index": 4,
+      "original": "バージョン2.0には段落から答えられない質問もあり、答えの抽出に加えて回答を控える判断を行う。",
+      "revised": "バージョン2.0には段落から答えられない質問も含まれており、答えの抽出に加えて回答を控える判断も行う。"
+    },
+    {
+      "original_page": 16,
+      "page": 16,
+      "paragraph_index": 3,
+      "original": "原著は、各記事から段落を取り出し、500文字未満を除いたと説明する。学習・開発・テストは記事単位で分けた。",
+      "revised": "原著では各記事から段落を抽出し、500文字未満を除外したと説明されている。また、学習・開発・テストの分割は記事単位で行われた。"
+    },
+    {
+      "original_page": 16,
+      "page": 16,
+      "paragraph_index": 4,
+      "original": "公開バージョン1.1の学習用・開発用には、20,963段落のうち500文字未満の段落が2,874件ある。",
+      "revised": "公開データセット（v1.1の学習用・開発用）では、全20,963段落のうち500文字未満の段落が2,874件含まれている。"
+    },
+    {
+      "original_page": 17,
+      "page": 17,
+      "paragraph_index": 4,
+      "original": "答えとなる最小限の連続した範囲を段落内で選んだ。この範囲が、回答位置を予測するモデルの学習用の正解となる。",
+      "revised": "答えとなる最小限の連続した範囲を段落内から抽出した。この範囲が、回答位置を予測するモデルの正解ラベルとなる。"
+    },
+    {
+      "original_page": 18,
+      "page": 18,
+      "paragraph_index": 3,
+      "original": "同じ質問にも、長さや表現が異なる妥当な回答がありうるため、1問に複数の正解を持たせる。",
+      "revised": "同一の質問に対しても長さや表現の異なる妥当な回答が存在しうるため、1問に対して複数の正解を付与している。"
+    },
+    {
+      "original_page": 18,
+      "page": 18,
+      "paragraph_index": 4,
+      "original": "評価では各正解との一致を計算し、その中で最も高い得点を質問の得点とする。",
+      "revised": "評価時は人手による各正解との一致度を計算し、その最高値を該当する質問のスコアとする。"
+    },
+    {
+      "original_page": 19,
+      "page": 19,
+      "paragraph_index": 4,
+      "original": "段落の話題に関連し、回答可能な質問に見えるようにする。",
+      "revised": "段落の話題に関連させ、一見すると回答可能に見える質問を作成させた。"
+    },
+    {
+      "original_page": 19,
+      "page": 19,
+      "paragraph_index": 5,
+      "original": "段落内に、答えに見える候補がある質問にする。",
+      "revised": "段落内に正解の候補となりそうなもっともらしい表現が含まれる質問とした。"
+    },
+    {
+      "original_page": 19,
+      "page": 19,
+      "paragraph_index": 6,
+      "original": "記事・段落ごとの作業を分配し、人手で50,000問以上を追加。",
+      "revised": "記事や段落ごとにタスクを分配し、人手で50,000問以上の回答不能な質問を追加した。"
+    },
+    {
+      "original_page": 19,
+      "page": 19,
+      "paragraph_index": 7,
+      "original": "回答範囲の抽出と、回答保留の判断を評価する。",
+      "revised": "回答範囲の特定に加え、回答不能であるかどうかの棄却判断も評価対象となる。"
+    },
+    {
+      "original_page": 20,
+      "page": 20,
+      "paragraph_index": 22,
+      "original": "記事数は、質問の元となったWikipedia記事の数。",
+      "revised": "記事数は、質問の作成元となったWikipedia記事の総数である。"
+    },
+    {
+      "original_page": 20,
+      "page": 20,
+      "paragraph_index": 23,
+      "original": "バージョン2.0は同じ記事に回答不能な質問を追加。",
+      "revised": "バージョン2.0では、既存の記事に対して回答不能な質問を追加している。"
+    },
+    {
+      "original_page": 22,
+      "page": 21,
+      "paragraph_index": 0,
+      "original": "長い入力段落の例 Sahara",
+      "revised": "極端に長い入力段落の実例（Sahara）"
+    },
+    {
+      "original_page": 22,
+      "page": 21,
+      "paragraph_index": 4,
+      "original": "正解は the Great Desert",
+      "revised": "正解スパンは the Great Desert である。"
+    },
+    {
+      "original_page": 22,
+      "page": 21,
+      "paragraph_index": 5,
+      "original": "対象の版と分割は 1.1/train、2.0/train。",
+      "revised": "該当する収録データは 1.1/train および 2.0/train である。"
+    },
+    {
+      "original_page": 21,
+      "page": 27,
+      "paragraph_index": 2,
+      "original": "前後に大量の空白が含まれる質問を1件確認 [1]。",
+      "revised": "前後に大量の空白文字を含む質問が1件確認されている [1]。"
+    },
+    {
+      "original_page": 21,
+      "page": 27,
+      "paragraph_index": 6,
+      "original": "主要統計は前後空白だけを除去し、本文の文字は保持。",
+      "revised": "本資料の主要統計では前後の空白のみを除去し、質問文中の文字列はそのまま保持している。"
+    }
+  ],
+  "final_text_changes": [
+    {
+      "part": "ppt/slides/slide6.xml",
+      "paragraph_index": 2,
+      "original_page": 6,
+      "page": 6,
+      "original": "配布データの全体は記事の集合である。各記事には複数の段落があり、それぞれの段落に質問と正解回答が付く。",
+      "revised": "配布データの全体は記事の集合である。各記事には複数の段落があり、それぞれの段落に質問と正解が付く。"
+    },
+    {
+      "part": "ppt/slides/slide10.xml",
+      "paragraph_index": 8,
+      "original_page": 10,
+      "page": 10,
+      "original": "Rollo の側が王に忠誠を誓う。王が誰に誓ったかは記載されていない。",
+      "revised": "Rolloの側が王に忠誠を誓ったのであり、王が誰に誓ったかは記載されていない。"
+    },
+    {
+      "part": "ppt/slides/slide11.xml",
+      "paragraph_index": 3,
+      "original_page": 11,
+      "page": 11,
+      "original": "質問に対応する本文中の範囲を回答する",
+      "revised": "質問に対応する本文中の範囲を回答する。"
+    },
+    {
+      "part": "ppt/slides/slide11.xml",
+      "paragraph_index": 4,
+      "original_page": 11,
+      "page": 11,
+      "original": "バージョン2.0では、回答不能な質問を追加する [2]。",
+      "revised": "バージョン2.0では、回答不能な質問が追加された [2]。"
+    },
+    {
+      "part": "ppt/slides/slide19.xml",
+      "paragraph_index": 4,
+      "original_page": 19,
+      "page": 19,
+      "original": "段落の話題に関連し、回答可能な質問に見えるようにする。",
+      "revised": "段落の話題に関連させ、一見すると回答可能に見える質問を作成した。"
+    },
+    {
+      "part": "ppt/slides/slide20.xml",
+      "paragraph_index": 4,
+      "original_page": 20,
+      "page": 20,
+      "original": "回答不能",
+      "revised": "回答不能数"
+    },
+    {
+      "part": "ppt/slides/slide31.xml",
+      "paragraph_index": 4,
+      "original_page": 31,
+      "page": 31,
+      "original": "複数正解がある質問は最良の得点を採用する。バージョン2.0では、回答不能な質問に回答を控えた場合を正解として採点する。",
+      "revised": "複数正解がある質問では最良の得点を採用する。バージョン2.0では、回答不能な質問に回答を控えた場合を正解として採点する。"
+    },
+    {
+      "part": "ppt/slides/slide32.xml",
+      "paragraph_index": 5,
+      "original_page": 32,
+      "page": 32,
+      "original": "単語一致を使うSliding Window",
+      "revised": "単語一致によるSliding Window"
+    },
+    {
+      "part": "ppt/slides/slide32.xml",
+      "paragraph_index": 14,
+      "original_page": 32,
+      "page": 32,
+      "original": "SQuADバージョン1.0のテスト用で評価した [1]。人の得点は、追加の正解回答を予測として採点した。",
+      "revised": "SQuADバージョン1.0のテストセットで評価した [1]。人の得点は、追加の正解回答を予測として採点した。"
+    },
+    {
+      "part": "ppt/slides/slide34.xml",
+      "paragraph_index": 14,
+      "original_page": 34,
+      "page": 34,
+      "original": "SQuAD 2.0の学習用で微調整し、開発用で評価した公表値。答えの開始・終了位置を予測する抽出型モデルを比較する。",
+      "revised": "SQuAD 2.0の学習データで微調整し、開発データで評価した公表値。答えの開始・終了位置を予測する抽出型モデルを比較する。"
+    },
+    {
+      "part": "ppt/slides/slide36.xml",
+      "paragraph_index": 2,
+      "original_page": 36,
+      "page": 36,
+      "original": "抽出型は、段落中の開始・終了位置を予測する。読解モデルBiDAFや言語モデルBERTを使い、原文中の回答範囲を選ぶ。",
+      "revised": "抽出型は、段落中の開始・終了位置を予測する。読解モデルBiDAFや言語モデルBERTなどで用いられ、原文中の回答範囲を選ぶ。"
+    },
+    {
+      "part": "ppt/slides/slide37.xml",
+      "paragraph_index": 3,
+      "original_page": 37,
+      "page": 37,
+      "original": "1-shotでは、答え付きの例を1件入力に提示してから別の質問へ答えさせる。この提示だけではモデルのパラメータを更新しない。",
+      "revised": "1-shotでは、答え付きの例を1件入力に提示してから別の質問に答えさせる。この提示だけではモデルのパラメータを更新しない。"
+    },
+    {
+      "part": "ppt/slides/slide45.xml",
+      "paragraph_index": 4,
+      "original_page": 45,
+      "page": 45,
+      "original": "人手作成の質問を大規模に評価するため、2016年に発表。",
+      "revised": "人手で作成した質問による大規模な読解評価を目的に、2016年に発表。"
+    },
+    {
+      "part": "ppt/slides/slide45.xml",
+      "paragraph_index": 0,
+      "original_page": 45,
+      "page": 45,
+      "original": "SQuADの目的・版の違いと評価方法",
+      "revised": "SQuADの目的・バージョンの違いと評価方法"
+    },
+    {
+      "part": "ppt/slides/slide48.xml",
+      "paragraph_index": 0,
+      "original_page": 48,
+      "page": 48,
+      "original": "SQuAD各版の著者と発表先",
+      "revised": "SQuADの各バージョンの著者と発表先"
+    },
+    {
+      "part": "ppt/slides/slide49.xml",
+      "paragraph_index": 3,
+      "original_page": 49,
+      "page": 49,
+      "original": "SQuADと、胸部X線のデータセットCheXpertに貢献した（2019年） [5]。",
+      "revised": "SQuADに加え、2019年の胸部X線データセットCheXpertの開発にも貢献した [5]。"
+    },
+    {
+      "part": "ppt/slides/slide85.xml",
+      "paragraph_index": 2,
+      "original_page": 85,
+      "page": 85,
+      "original": "バージョン1.1では、48記事／2.0 このうち35記事。",
+      "revised": "バージョン1.1は48記事、2.0はそのうち35記事。"
+    },
+    {
+      "part": "ppt/slides/slide86.xml",
+      "paragraph_index": 2,
+      "original_page": 86,
+      "page": 86,
+      "original": "バージョン1.1では、48記事／2.0 このうち35記事。",
+      "revised": "バージョン1.1は48記事、2.0はそのうち35記事。"
+    },
+    {
+      "part": "ppt/slides/slide5.xml",
+      "paragraph_index": 0,
+      "original_page": 5,
+      "page": 5,
+      "original": "段落と質問を入力し答えの範囲を選ぶ",
+      "revised": "段落と質問から答えの範囲を特定する"
+    },
+    {
+      "part": "ppt/slides/slide5.xml",
+      "paragraph_index": 2,
+      "original_page": 5,
+      "page": 5,
+      "original": "読解型質問応答は、文章を根拠に質問へ答える課題である。SQuADでは、英語Wikipediaの記事から選んだ1段落と、その段落に対する質問を入力する。",
+      "revised": "読解型質問応答は、文章を根拠に質問に答える課題である。SQuADでは、英語Wikipediaの記事から選んだ1段落と、その段落に対する質問を入力する。"
+    },
+    {
+      "part": "ppt/slides/slide5.xml",
+      "paragraph_index": 3,
+      "original_page": 5,
+      "page": 5,
+      "original": "答えは、段落内にある連続した語句を選ぶ。固有名詞・年・数量に限らず、複数語からなる表現も正解となる。",
+      "revised": "答えとして、段落内にある連続した語句を選ぶ。固有名詞・年・数量に限らず、複数語からなる表現も正解となる。"
+    },
+    {
+      "part": "ppt/slides/slide5.xml",
+      "paragraph_index": 4,
+      "original_page": 5,
+      "page": 5,
+      "original": "バージョン2.0には段落から答えられない質問もあり、答えの抽出に加えて回答を控える判断を行う。",
+      "revised": "バージョン2.0には段落から答えられない質問も含まれており、答えの抽出に加えて回答を控える判断も行う。"
+    },
+    {
+      "part": "ppt/slides/slide16.xml",
+      "paragraph_index": 3,
+      "original_page": 16,
+      "page": 16,
+      "original": "原著は、各記事から段落を取り出し、500文字未満を除いたと説明する。学習・開発・テストは記事単位で分けた。",
+      "revised": "原著では各記事から段落を抽出し、500文字未満を除外したと説明されている。また、学習・開発・テストの分割は記事単位で行われた。"
+    },
+    {
+      "part": "ppt/slides/slide16.xml",
+      "paragraph_index": 4,
+      "original_page": 16,
+      "page": 16,
+      "original": "公開バージョン1.1の学習用・開発用には、20,963段落のうち500文字未満の段落が2,874件ある。",
+      "revised": "公開データセット（v1.1の学習用・開発用）では、全20,963段落のうち500文字未満の段落が2,874件含まれている。"
+    },
+    {
+      "part": "ppt/slides/slide17.xml",
+      "paragraph_index": 4,
+      "original_page": 17,
+      "page": 17,
+      "original": "答えとなる最小限の連続した範囲を段落内で選んだ。この範囲が、回答位置を予測するモデルの学習用の正解となる。",
+      "revised": "答えとなる最小限の連続した範囲を段落内から抽出した。この範囲が、回答位置を予測するモデルの正解ラベルとなる。"
+    },
+    {
+      "part": "ppt/slides/slide18.xml",
+      "paragraph_index": 3,
+      "original_page": 18,
+      "page": 18,
+      "original": "同じ質問にも、長さや表現が異なる妥当な回答がありうるため、1問に複数の正解を持たせる。",
+      "revised": "同一の質問に対しても長さや表現の異なる妥当な回答が存在しうるため、1問に対して複数の正解を付与している。"
+    },
+    {
+      "part": "ppt/slides/slide18.xml",
+      "paragraph_index": 4,
+      "original_page": 18,
+      "page": 18,
+      "original": "評価では各正解との一致を計算し、その中で最も高い得点を質問の得点とする。",
+      "revised": "評価時は人手による各正解との一致度を計算し、その最高値を該当する質問のスコアとする。"
+    },
+    {
+      "part": "ppt/slides/slide19.xml",
+      "paragraph_index": 5,
+      "original_page": 19,
+      "page": 19,
+      "original": "段落内に、答えに見える候補がある質問にする。",
+      "revised": "段落内に正解の候補となりそうなもっともらしい表現が含まれる質問とした。"
+    },
+    {
+      "part": "ppt/slides/slide19.xml",
+      "paragraph_index": 6,
+      "original_page": 19,
+      "page": 19,
+      "original": "記事・段落ごとの作業を分配し、人手で50,000問以上を追加。",
+      "revised": "記事や段落ごとにタスクを分配し、人手で50,000問以上の回答不能な質問を追加した。"
+    },
+    {
+      "part": "ppt/slides/slide19.xml",
+      "paragraph_index": 7,
+      "original_page": 19,
+      "page": 19,
+      "original": "回答範囲の抽出と、回答保留の判断を評価する。",
+      "revised": "回答範囲の特定に加え、回答不能であるかどうかの棄却判断も評価対象となる。"
+    },
+    {
+      "part": "ppt/slides/slide20.xml",
+      "paragraph_index": 22,
+      "original_page": 20,
+      "page": 20,
+      "original": "記事数は、質問の元となったWikipedia記事の数。",
+      "revised": "記事数は、質問の作成元となったWikipedia記事の総数である。"
+    },
+    {
+      "part": "ppt/slides/slide20.xml",
+      "paragraph_index": 23,
+      "original_page": 20,
+      "page": 20,
+      "original": "バージョン2.0は同じ記事に回答不能な質問を追加。",
+      "revised": "バージョン2.0では、既存の記事に対して回答不能な質問を追加している。"
+    },
+    {
+      "part": "ppt/slides/slide22.xml",
+      "paragraph_index": 0,
+      "original_page": 22,
+      "page": 21,
+      "original": "長い入力段落の例 Sahara",
+      "revised": "極端に長い入力段落の実例（Sahara）"
+    },
+    {
+      "part": "ppt/slides/slide22.xml",
+      "paragraph_index": 4,
+      "original_page": 22,
+      "page": 21,
+      "original": "正解は the Great Desert",
+      "revised": "正解スパンは the Great Desert である。"
+    },
+    {
+      "part": "ppt/slides/slide22.xml",
+      "paragraph_index": 5,
+      "original_page": 22,
+      "page": 21,
+      "original": "対象の版と分割は 1.1/train、2.0/train。",
+      "revised": "該当する収録データは 1.1/train および 2.0/train である。"
+    },
+    {
+      "part": "ppt/slides/slide21.xml",
+      "paragraph_index": 2,
+      "original_page": 21,
+      "page": 27,
+      "original": "前後に大量の空白が含まれる質問を1件確認 [1]。",
+      "revised": "前後に大量の空白文字を含む質問が1件確認されている [1]。"
+    },
+    {
+      "part": "ppt/slides/slide21.xml",
+      "paragraph_index": 6,
+      "original_page": 21,
+      "page": 27,
+      "original": "主要統計は前後空白だけを除去し、本文の文字は保持。",
+      "revised": "本資料の主要統計では前後の空白のみを除去し、質問文中の文字列はそのまま保持している。"
+    }
+  ],
+  "layout_adjustments": [
+    {
+      "page": 5,
+      "shape_name": "body",
+      "old_sizes": [
+        23.0
+      ],
+      "new_parent_size": 21.0,
+      "reason": "校正後の本文と出典の重なりを解消。文言・図表・数値は保持。"
+    },
+    {
+      "page": 34,
+      "shape_name": "content-text",
+      "old_sizes": [
+        20.0
+      ],
+      "new_parent_size": 19.0,
+      "reason": "校正後の本文と出典の重なりを解消。文言・図表・数値は保持。"
+    },
+    {
+      "page": 45,
+      "shape_name": "content-text",
+      "old_sizes": [
+        21.0,
+        22.0
+      ],
+      "new_parent_size": 20.0,
+      "reason": "校正後の本文と出典の重なりを解消。文言・図表・数値は保持。"
+    }
+  ],
+  "validation": {
+    "pages": 109,
+    "rendered_from_final_pptx": true,
+    "unchanged_original_pdf_retained": false,
+    "missing_revised_text": [],
+    "layout_flags": [],
+    "changed_pages": [
+      5,
+      6,
+      10,
+      11,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      31,
+      32,
+      34,
+      36,
+      37,
+      45,
+      48,
+      49,
+      85,
+      86
+    ],
+    "pdf_page_count": "passed",
+    "zip_integrity": "passed",
+    "schema": {
+      "checked_parts": 124,
+      "new_non_lexical_errors": [],
+      "baseline_error_count": 240,
+      "final_error_count": 240,
+      "integer_bullet_domain_checks": 240,
+      "note": "標準XSDを変更せず照合。既存の整数形式buSzPctとXSDの百分率字句形式の差を区別し、Open XML BulletSizePercentageの25000–400000の範囲を別途検証。既存エラーと新規エラーを分離。"
+    },
+    "xml_parts_parsed": 251,
+    "internal_relationship_targets": "passed",
+    "package_integrity": "passed",
+    "table_cell_issues": [],
+    "table_cells_checked": 12,
+    "text_diff_matches_record": true,
+    "all_original_non_slide_parts_unchanged": true,
+    "masters_media_themes_unchanged": true,
+    "visual_review_complete": true,
+    "visual_review_scope": "全ページの一覧と変更ページの拡大描画を確認。本文・表・引用枠・出典・見出しを検査。最終調整後の描画も再確認。",
+    "unresolved_layout_flags": [],
+    "layout_flag_resolutions": []
+  },
+  "special_actions_applied": true,
+  "special_actions_details": [],
+  "review_method": "skill_based_codex",
+  "reviewer": "Codex",
+  "skill": {
+    "name": "japanese-slide-proofreading",
+    "version": "1.0",
+    "path": ".agents/skills/japanese-slide-proofreading/SKILL.md",
+    "sha256": "cc532134c9392242c6ca755e3c3bfbf6bb855791112d5b570967138da688b232"
+  },
+  "new_gemini_api_calls": 0,
+  "audit": {
+    "review_unit": "one page at a time, local text review and rendered change verification",
+    "reviewed_page_count": 109,
+    "cached_gemini_page_count": 61,
+    "pages_without_cached_gemini_proposals": 48,
+    "new_external_generation_api_calls": 0,
+    "source_pptx_sha256": "7cb672af38f9e3f19fb0252d08d81b770776b2d5dc36815992387fd9fd78750d",
+    "base_pptx_sha256": "97ebec9cf9b7143531edabc357a96cb409a6f350a76f89571f75a4e6477db1b1",
+    "final_pptx_sha256": "6e959b093c4a0ff8780b9bb6093e20b321cce7d8ec0b4a971f737662c03022e6",
+    "final_pdf_sha256": "ff904d1d787def51d55cdf19cac49fdf5456b8836e39184dd89d318afe847de8",
+    "date": "2026-10-17",
+    "page_review_file": "pages.jsonl",
+    "prior_proposal_file": "prior-gemini-proposals.jsonl",
+    "prior_trial_note": "SQuADの先行10ページ試行で採用済みの変更を継承。今回のスキル適用と区別。"
+  }
+}
