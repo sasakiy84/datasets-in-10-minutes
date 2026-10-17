@@ -4,5 +4,6 @@
 
 | データセット | 変更対と確認記録 |
 |---|---|
+| facts-grounding | [facts-grounding](facts-grounding.md) |
 | global-piqa | [global-piqa](global-piqa.md) |
 | mmmlu | [mmmlu](mmmlu.md) |
