@@ -1,5 +1,7 @@
 # CharXiv 制作・出典記録
 
+2026-10-17の画面・配置の改訂は[横断レビュー](series-layout-and-sites-review.md)を参照。以下の取得失敗や画面・ハッシュの記載は制作時点の記録で、今回再取得した公式画面を優先する。
+
 作成日：2026-10-17（Asia/Tokyo）。本編29ページ、Appendixを含む65ページ。著者sasakiy84。編集可能なPPTXと、その最終版からLibreOfficeで描画したPDF。
 
 ## 一次資料と参照範囲

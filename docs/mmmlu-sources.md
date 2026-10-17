@@ -1,5 +1,7 @@
 # MMMLU：出典と制作記録
 
+2026-10-17の画面・配置の改訂は[横断レビュー](series-layout-and-sites-review.md)を参照。以下の取得失敗や画面・ハッシュの記載は制作時点の記録で、今回再取得した公式画面を優先する。
+
 2026-10-17制作。正式名称は **Multilingual Massive Multitask Language Understanding**。本編31枚＋Appendix26枚、計57枚。約10分の黙読・流し読み向けの日本語資料で、閲覧時間は未実測。編集可能なPPTXと同じ最終版から出力したPDFを保存した。
 
 ## 一次資料とバージョン
