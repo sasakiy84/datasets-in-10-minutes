@@ -19,3 +19,13 @@
 | tau2-bench | [変更対・採否](tau2-bench.md) | [PPTX](../../slides/datasets-in-10-minutes-tau2-bench.pptx) | [PDF](../../slides/datasets-in-10-minutes-tau2-bench.pdf) |
 | terminal-bench | [変更対・採否](terminal-bench.md) | [PPTX](../../slides/datasets-in-10-minutes-terminal-bench.pptx) | [PDF](../../slides/datasets-in-10-minutes-terminal-bench.pdf) |
 | ucf101 | [変更対・採否](ucf101.md) | [PPTX](../../slides/datasets-in-10-minutes-ucf101.pptx) | [PDF](../../slides/datasets-in-10-minutes-ucf101.pdf) |
+
+## 2026-10-17の新規資料
+
+次の3資料は新規に作成し、日本語校正スキルで全ページを確認した。Geminiは利用していない。初稿からの修正対とページごとの最終文言を保存し、出典・実例・集計・表示の検証も記録した。
+
+|資料|修正前後の対|全ページの記録|出典・検証|
+|---|---|---|---|
+|GSM8K|[changes.tsv](gsm8k/changes.tsv)|[pages.jsonl](gsm8k/pages.jsonl)|[制作記録](../gsm8k-sources.md)・[最終検査](gsm8k/review.json)|
+|HumanEval|[changes.tsv](humaneval/changes.tsv)|[pages.jsonl](humaneval/pages.jsonl)|[制作記録](../humaneval-sources.md)・[最終検査](humaneval/review.json)|
+|VQA v2|[changes.tsv](vqa-v2/changes.tsv)|[pages.jsonl](vqa-v2/pages.jsonl)|[制作記録](../vqa-v2-sources.md)・[最終検査](vqa-v2/review.json)|
