@@ -21,7 +21,7 @@ GSM8KとHumanEvalは既存資料で対象データセットを紹介済み。MML
 |quac|QuAC (Question Answering in Context)|未着手||
 |hellaswag|HellaSwag|作成済み|[PPTX](../slides/datasets-in-10-minutes-hellaswag.pptx) / [PDF](../slides/datasets-in-10-minutes-hellaswag.pdf)|
 |openbookqa|OpenbookQA|未着手||
-|truthful_qa|TruthfulQA|今回制作|truthfulqa|
+|truthful_qa|TruthfulQA|作成済み|[PPTX](../slides/datasets-in-10-minutes-truthfulqa.pptx) / [PDF](../slides/datasets-in-10-minutes-truthfulqa.pdf)|
 |mmlu|MMLU (Massive Multitask Language Understanding)|未着手||
 |msmarco_regular|MS MARCO (regular track)|未着手||
 |msmarco_trec|MS MARCO (TREC track)|未着手||

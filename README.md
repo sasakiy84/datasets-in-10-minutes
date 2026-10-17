@@ -91,5 +91,6 @@ python -m http.server 8000 --directory _site
 |VQA v2|[PPTX](slides/datasets-in-10-minutes-vqa-v2.pptx)|[PDF](slides/datasets-in-10-minutes-vqa-v2.pdf)|
 |BoolQ|[PPTX](slides/datasets-in-10-minutes-boolq.pptx)|[PDF](slides/datasets-in-10-minutes-boolq.pdf)|
 |HellaSwag|[PPTX](slides/datasets-in-10-minutes-hellaswag.pptx)|[PDF](slides/datasets-in-10-minutes-hellaswag.pdf)|
+|TruthfulQA|[PPTX](slides/datasets-in-10-minutes-truthfulqa.pptx)|[PDF](slides/datasets-in-10-minutes-truthfulqa.pdf)|
 
 [ユーザー指示の記録](docs/user-instructions.md)
