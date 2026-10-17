@@ -17,3 +17,4 @@
 | snli | [変更対・採否](snli.md) | [PPTX](../../slides/datasets-in-10-minutes-snli.pptx) | [PDF](../../slides/datasets-in-10-minutes-snli.pdf) |
 | squad | [変更対・採否](squad.md) | [PPTX](../../slides/datasets-in-10-minutes-squad.pptx) | [PDF](../../slides/datasets-in-10-minutes-squad.pdf) |
 | tau2-bench | [変更対・採否](tau2-bench.md) | [PPTX](../../slides/datasets-in-10-minutes-tau2-bench.pptx) | [PDF](../../slides/datasets-in-10-minutes-tau2-bench.pdf) |
+| terminal-bench | [変更対・採否](terminal-bench.md) | [PPTX](../../slides/datasets-in-10-minutes-terminal-bench.pptx) | [PDF](../../slides/datasets-in-10-minutes-terminal-bench.pdf) |
