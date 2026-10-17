@@ -1,0 +1,678 @@
+{
+  "dataset": "swe-bench-pro",
+  "model": "gemini-3.8-flash",
+  "review_mode": "one_slide_per_request_with_image",
+  "reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66
+  ],
+  "request_count": 66,
+  "accepted_edits": [
+    {
+      "paragraph_index": 2,
+      "original": "Proでは、業務アプリや開発ツールなどの対象を広げ、長い修正や複数ファイルの変更を扱う。問題文に人手で要件と必要なインターフェースを補う。",
+      "revised": "Proでは、業務アプリや開発ツールなどへ対象を広げ、長い修正や複数ファイルの変更を扱う。問題文に人手で要件と必要なインターフェースを補う。",
+      "reason": "「などの対象を広げ」は助詞の修飾関係としてやや不自然なため、「などへ対象を広げ」として拡張先との意味のつながりを自然にしました。",
+      "page": 6
+    },
+    {
+      "paragraph_index": 0,
+      "original": "本資料の実例は、公開バージョン2から選ぶ",
+      "revised": "本資料の実例は公開バージョン2から選定",
+      "reason": "スライド見出しとして引き締まった表現にするため、体言止めに整え読点を省きました。",
+      "page": 7
+    },
+    {
+      "paragraph_index": 8,
+      "original": "検証を改めたバージョン2",
+      "revised": "検証を見直したバージョン2",
+      "reason": "「検証を改めた」はコロケーションとしてやや不自然なため、「見直した」に改善しました。",
+      "page": 7
+    },
+    {
+      "paragraph_index": 14,
+      "original": "実例はバージョン2から本編3件・Appendix10件を選んだ。",
+      "revised": "実例はバージョン2から本編3件・Appendix 10件を選定した。",
+      "reason": "英字と数字の間に半角スペースを補い、研究発表として自然な言葉遣い（選定した）に整えました。",
+      "page": 7
+    },
+    {
+      "paragraph_index": 15,
+      "original": "HARD-51は難しい課題を選んだサブセット。",
+      "revised": "HARD-51は難度の高い課題を抽出したサブセット。",
+      "reason": "「難しい課題を選んだ」という平易な修飾を、技術資料として自然な表現に整えました。",
+      "page": 7
+    },
+    {
+      "paragraph_index": 5,
+      "original": "存在しないフォルダーを指定したら、保存を始めずに[[error:invalid-path]]を返す。",
+      "revised": "存在しないフォルダーを指定した場合は、保存を開始せずに[[error:invalid-path]]を返す。",
+      "reason": "「指定したら」「保存を始めずに」は口語的なため、「指定した場合は」「保存を開始せずに」と改め、スライドの文体として自然に整えました。",
+      "page": 10
+    },
+    {
+      "paragraph_index": 9,
+      "original": "存在しない保存先を拒否する1件と、既存のアップロード・削除・取得など34件のテストを通す。",
+      "revised": "存在しない保存先を拒否する1件と、既存のアップロード・削除・取得など34件のテストが通過すること。",
+      "reason": "見出し「テストが確認すること」に対して「テストを通す」では主述の関係が不自然になるため、「テストが通過すること」と見出しに呼応する形に整えました。",
+      "page": 10
+    },
+    {
+      "paragraph_index": 0,
+      "original": "必要なテストがすべて通れば、課題の合格",
+      "revised": "必要なテストがすべて通れば課題合格",
+      "reason": "「課題の合格」という助詞付きの連体形よりも「課題合格」とするほうが、見出しとして簡潔で座りがよくなります。",
+      "page": 16
+    },
+    {
+      "paragraph_index": 0,
+      "original": "公開前に、参照修正と空の修正を全件実行した",
+      "revised": "公開前に、参照パッチと空パッチを全件実行した",
+      "reason": "表内の項目名（参照パッチ・空パッチ）と用語を統一し、検証内容を直感的に分かりやすくするため。",
+      "page": 21
+    },
+    {
+      "paragraph_index": 0,
+      "original": "HARD-51は、難しい51課題を抜き出す",
+      "revised": "HARD-51は、難しい51課題を抜き出したサブセット",
+      "reason": "主語のデータセット名「HARD-51」に対して述語が能動動作の「抜き出す」となっており主述の呼応が不自然なため、「抜き出したサブセット」として整合性を整えました。",
+      "page": 22
+    },
+    {
+      "paragraph_index": 2,
+      "original": "差分のうちテスト関連の変更を採点用のテストパッチにし、それ以外を参照修正のgold patchとして分ける。",
+      "revised": "差分のうちテスト関連の変更を採点用のテストパッチとし、それ以外を参照修正のgold patchとする。",
+      "reason": "「〜にし、…として分ける」という表現は述語の呼応が不自然なため、「〜とし、…とする」に整えて簡潔で明確な表現にしました。",
+      "page": 24
+    },
+    {
+      "paragraph_index": 3,
+      "original": "公開・留保集合ではコピーレフトのプロジェクトを使い、商用集合では提携したスタートアップの非公開コードを用いた。",
+      "revised": "公開・留保集合ではコピーレフトのプロジェクトを使い、商用集合では提携したスタートアップの非公開コードを用いる。",
+      "reason": "第1・第2項目の文末が現在形（「〜する」「〜とする」）であるため、文末を「用いる」に合わせて時制の整合性を保ちました。",
+      "page": 24
+    },
+    {
+      "paragraph_index": 0,
+      "original": "当初の全1,865課題は、3集合からなる",
+      "revised": "当初の全1,865課題は、3つの集合からなる",
+      "reason": "助数詞「つの」を補うことで、見出しとしてより自然な日本語になります。",
+      "page": 27
+    },
+    {
+      "paragraph_index": 18,
+      "original": "2025年論文の構成。集合間ではリポジトリを分ける。",
+      "revised": "2025年論文の構成。集合間でリポジトリは重複しない。",
+      "reason": "「分ける」という動作表現から、各集合間でリポジトリが独立（非重複）であるというデータセットの仕様を客観的に示す表現に改善します。",
+      "page": 27
+    },
+    {
+      "paragraph_index": 0,
+      "original": "バージョン2では、89課題を除外した",
+      "revised": "バージョン2では、89件の課題を除外した",
+      "reason": "「89課題」に助数詞を補い「89件の課題」とすることで、より自然な日本語表現になる。",
+      "page": 28
+    },
+    {
+      "paragraph_index": 12,
+      "original": "要求文と採点条件の対応を確かめ、各課題の修正前コミットは維持。",
+      "revised": "要求文と採点条件の対応を確認し、各課題の修正前コミットは維持した。",
+      "reason": "口語的な「確かめ」を技術発表に適した「確認し」に改め、中途半端な体言止めになっていた文末を常体の述語「維持した。」に揃えて主述の対応を整えた。",
+      "page": 28
+    },
+    {
+      "paragraph_index": 3,
+      "original": "公開バージョン2は642課題。課題文と採点環境を改めて検証し、難しい51課題を選ぶHARD-51も提供する。",
+      "revised": "公開バージョン2は642課題。課題文と採点環境を改めて検証し、難しい51課題を選んだHARD-51も提供する。",
+      "reason": "「選ぶHARD-51」ではHARD-51が主体となって選ぶようにも読め、連体修飾として座りが悪いため、「選んだ」として選定済みのサブセットであることを明確にしました。",
+      "page": 33
+    },
+    {
+      "paragraph_index": 5,
+      "original": "def.collectionのようにPythonの予約語を含む名前は、名前の検証結果をFalseにする。",
+      "revised": "def.collectionのようにPythonの予約語を含む名前は、検証結果をFalseにする。",
+      "reason": "「名前は、名前の検証結果を」と「名前」が重複してぎこちないため、後者の「名前の」を省いて主述の係り受けを自然に整えました。",
+      "page": 38
+    },
+    {
+      "paragraph_index": 9,
+      "original": "TestLoadで、設定が読み込まれることと、許されない組み合わせが指定のエラーメッセージになることを確かめる。",
+      "revised": "TestLoadで、設定が読み込まれることと、許されない組み合わせで指定のエラーメッセージが返されることを確かめる。",
+      "reason": "「組み合わせがエラーメッセージになる」という主述の不自然さを解消し、「組み合わせで指定のエラーメッセージが返される」とすることでより正確で自然な表現にしました。",
+      "page": 42
+    },
+    {
+      "paragraph_index": 4,
+      "original": "Element Webのメッセージ入力欄。未入力時の案内文を、リッチテキストとプレーンテキストの両方で切り替える。",
+      "revised": "Element Webのメッセージ入力欄。未入力時の案内文の表示を、リッチテキストとプレーンテキストの両方で切り替える。",
+      "reason": "「案内文を切り替える」では文面自体を切り替えるようにも読めて曖昧なため、「案内文の表示を切り替える」としてタイトル（表示制御）および英文抜粋（hide/show）の趣旨に合致させました。",
+      "page": 45
+    },
+    {
+      "paragraph_index": 9,
+      "original": "グループの詳細画面で、複数件の表示と、メールアドレスが1件だけの表示を2テストで確認する。",
+      "revised": "グループの詳細画面で、複数件の表示と、メールアドレスが1件だけの表示を2つのテストで確認する。",
+      "reason": "「2テスト」は助数詞が欠けており不自然な表現のため、「2つのテスト」に整えました。",
+      "page": 48
+    },
+    {
+      "paragraph_index": 7,
+      "original": "投稿IDから所属カテゴリを調べる。管理者以外には、そのカテゴリのtopics:read権限があることを確認する。",
+      "revised": "投稿IDから所属カテゴリを調べる。管理者以外の場合は、そのカテゴリのtopics:read権限があることを確認する。",
+      "reason": "「管理者以外には」だと「管理者以外の人に権限が存在することを確認する」とも誤読されやすく、条件分岐（管理者でなければ権限チェックを行う処理）の意図が曖昧になるため、「管理者以外の場合は」として処理の流れを明確にしました。",
+      "page": 54
+    },
+    {
+      "paragraph_index": 0,
+      "original": "Scale AIが、課題と実行環境を公開した",
+      "revised": "Scale AIが課題と実行環境を公開した",
+      "reason": "助詞「が」の直後にある不要な読点を省き、見出しとしてスムーズに読めるように整えました。",
+      "page": 63
+    },
+    {
+      "paragraph_index": 1,
+      "original": "論文の共同第一著者はXiang DengとJeff Da。Scale AIの研究として、ソフトウェア開発エージェントの実務的な評価を目的に制作した。",
+      "revised": "論文の共同第一著者はXiang DengとJeff Da。Scale AIの研究として、ソフトウェア開発エージェントの実務的な評価を目的に開発された。",
+      "reason": "後文で目的語が省略されている文脈において、能動態「制作した」のままでは主語との係り受けが不自然になるため、受動表現「開発された」に改めました。",
+      "page": 63
+    },
+    {
+      "paragraph_index": 3,
+      "original": "データのバージョン2は2026年9月22日に公開した別の更新。課題文・テスト・コンテナ・評価手順の修正を含む。",
+      "revised": "データのバージョン2は2026年9月22日に公開された別の更新。課題文・テスト・コンテナ・評価手順の修正を含む。",
+      "reason": "主語「データのバージョン2は」に対して「公開した」と能動表現になっているため、「公開された」に修正しました。",
+      "page": 63
+    }
+  ],
+  "rejected_edits": [],
+  "structure_decisions": [
+    {
+      "proposal": "下部の説明テキスト2行にビュレット（中黒や箇条書き記号）を付与するか、HARD-51の説明を表の直下に注釈（※）として配置するレイアウトを検討してください。",
+      "reason": "選定方針とHARD-51の説明は表の直下に近接して記載し、対象名も明示している。箇条書き記号や注記記号を重ねない。",
+      "page": 7,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "表内に「修正対象（Fail to Pass）」「既存維持（Pass to Pass）」といったテスト種別の分類ラベルを明記する。",
+      "reason": "修正対象の1テストと既存動作の34テストは、タイトルと2行の説明から区別できる。未導入の略語を付け足さない。",
+      "page": 17,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "箇条書きのテキストボックスの横幅をわずかに広げるか、フォントサイズ・文字間隔を微調整して、2項目目の「く。」や3項目目の「元、」といった1〜2文字だけの行送りを解消する。",
+      "reason": "本文中の少数文字の折り返しは既存の制作規則で許容されるため、折り返しだけを理由に文字を縮小したり強制改行を入れたりしない。最終描画では欠落・重なりを別途検証する。",
+      "page": 26,
+      "decision": "見送り",
+      "decision_rule": "project_body_wrapping_policy"
+    },
+    {
+      "proposal": "表の「リポジトリ数」と「公開範囲」の列間隔を広げ、各列の数値を中央揃えまたは右揃えでヘッダーと位置を揃える。",
+      "reason": "数値列は右端をそろえる既存の表仕様を保持。文字の接触や欠落がなければ、列の均等化だけを理由に変更しない。",
+      "page": 27,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "「課題の説明」のテキストボックスの横幅をわずかに広げるか、「リッチテキスト」の前で改行を入れて単語の泣き別れ（「リッ／チテキスト」）を防ぐ。",
+      "reason": "本文中の少数文字の折り返しは既存規則で許容。欠落・重なりがなければ折り返しだけを理由に書式を変更しない。",
+      "page": 45,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "前ページ（p.58）から続く表である場合、スライドタイトルに「（続き）」を付記するか、表頭に前ページからの継続であることがわかる注記を設けることを検討してください。",
+      "reason": "2ページに分けた同じ一覧であることをタイトルで明示する。",
+      "page": 59,
+      "decision": "採用"
+    }
+  ],
+  "structural_and_factual_actions": [
+    {
+      "type": "text_edit",
+      "page": 58,
+      "paragraph_index": 0,
+      "revised": "公開バージョン2のリポジトリ別の課題数（1/2）",
+      "review_page": 59,
+      "original": "公開バージョン2のリポジトリ別の課題数"
+    },
+    {
+      "type": "text_edit",
+      "page": 59,
+      "paragraph_index": 0,
+      "revised": "公開バージョン2のリポジトリ別の課題数（2/2）",
+      "review_page": 59,
+      "original": "公開バージョン2のリポジトリ別の課題数"
+    }
+  ],
+  "fact_review": [],
+  "accepted_moves": [],
+  "base_order": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66
+  ],
+  "prior_trial_changes": [],
+  "final_text_changes": [
+    {
+      "part": "ppt/slides/slide6.xml",
+      "paragraph_index": 2,
+      "original_page": 6,
+      "page": 6,
+      "original": "Proでは、業務アプリや開発ツールなどの対象を広げ、長い修正や複数ファイルの変更を扱う。問題文に人手で要件と必要なインターフェースを補う。",
+      "revised": "Proでは、業務アプリや開発ツールなどへ対象を広げ、長い修正や複数ファイルの変更を扱う。問題文に人手で要件と必要なインターフェースを補う。"
+    },
+    {
+      "part": "ppt/slides/slide7.xml",
+      "paragraph_index": 0,
+      "original_page": 7,
+      "page": 7,
+      "original": "本資料の実例は、公開バージョン2から選ぶ",
+      "revised": "本資料の実例は公開バージョン2から選定"
+    },
+    {
+      "part": "ppt/slides/slide7.xml",
+      "paragraph_index": 8,
+      "original_page": 7,
+      "page": 7,
+      "original": "検証を改めたバージョン2",
+      "revised": "検証を見直したバージョン2"
+    },
+    {
+      "part": "ppt/slides/slide7.xml",
+      "paragraph_index": 14,
+      "original_page": 7,
+      "page": 7,
+      "original": "実例はバージョン2から本編3件・Appendix10件を選んだ。",
+      "revised": "実例はバージョン2から本編3件・Appendix 10件を選定した。"
+    },
+    {
+      "part": "ppt/slides/slide7.xml",
+      "paragraph_index": 15,
+      "original_page": 7,
+      "page": 7,
+      "original": "HARD-51は難しい課題を選んだサブセット。",
+      "revised": "HARD-51は難度の高い課題を抽出したサブセット。"
+    },
+    {
+      "part": "ppt/slides/slide10.xml",
+      "paragraph_index": 5,
+      "original_page": 10,
+      "page": 10,
+      "original": "存在しないフォルダーを指定したら、保存を始めずに[[error:invalid-path]]を返す。",
+      "revised": "存在しないフォルダーを指定した場合は、保存を開始せずに[[error:invalid-path]]を返す。"
+    },
+    {
+      "part": "ppt/slides/slide10.xml",
+      "paragraph_index": 9,
+      "original_page": 10,
+      "page": 10,
+      "original": "存在しない保存先を拒否する1件と、既存のアップロード・削除・取得など34件のテストを通す。",
+      "revised": "存在しない保存先を拒否する1件と、既存のアップロード・削除・取得など34件のテストが通過すること。"
+    },
+    {
+      "part": "ppt/slides/slide16.xml",
+      "paragraph_index": 0,
+      "original_page": 16,
+      "page": 16,
+      "original": "必要なテストがすべて通れば、課題の合格",
+      "revised": "必要なテストがすべて通れば課題合格"
+    },
+    {
+      "part": "ppt/slides/slide21.xml",
+      "paragraph_index": 0,
+      "original_page": 21,
+      "page": 21,
+      "original": "公開前に、参照修正と空の修正を全件実行した",
+      "revised": "公開前に、参照パッチと空パッチを全件実行した"
+    },
+    {
+      "part": "ppt/slides/slide22.xml",
+      "paragraph_index": 0,
+      "original_page": 22,
+      "page": 22,
+      "original": "HARD-51は、難しい51課題を抜き出す",
+      "revised": "HARD-51は、難しい51課題を抜き出したサブセット"
+    },
+    {
+      "part": "ppt/slides/slide24.xml",
+      "paragraph_index": 2,
+      "original_page": 24,
+      "page": 24,
+      "original": "差分のうちテスト関連の変更を採点用のテストパッチにし、それ以外を参照修正のgold patchとして分ける。",
+      "revised": "差分のうちテスト関連の変更を採点用のテストパッチとし、それ以外を参照修正のgold patchとする。"
+    },
+    {
+      "part": "ppt/slides/slide24.xml",
+      "paragraph_index": 3,
+      "original_page": 24,
+      "page": 24,
+      "original": "公開・留保集合ではコピーレフトのプロジェクトを使い、商用集合では提携したスタートアップの非公開コードを用いた。",
+      "revised": "公開・留保集合ではコピーレフトのプロジェクトを使い、商用集合では提携したスタートアップの非公開コードを用いる。"
+    },
+    {
+      "part": "ppt/slides/slide27.xml",
+      "paragraph_index": 0,
+      "original_page": 27,
+      "page": 27,
+      "original": "当初の全1,865課題は、3集合からなる",
+      "revised": "当初の全1,865課題は、3つの集合からなる"
+    },
+    {
+      "part": "ppt/slides/slide27.xml",
+      "paragraph_index": 18,
+      "original_page": 27,
+      "page": 27,
+      "original": "2025年論文の構成。集合間ではリポジトリを分ける。",
+      "revised": "2025年論文の構成。集合間でリポジトリは重複しない。"
+    },
+    {
+      "part": "ppt/slides/slide28.xml",
+      "paragraph_index": 0,
+      "original_page": 28,
+      "page": 28,
+      "original": "バージョン2では、89課題を除外した",
+      "revised": "バージョン2では、89件の課題を除外した"
+    },
+    {
+      "part": "ppt/slides/slide28.xml",
+      "paragraph_index": 12,
+      "original_page": 28,
+      "page": 28,
+      "original": "要求文と採点条件の対応を確かめ、各課題の修正前コミットは維持。",
+      "revised": "要求文と採点条件の対応を確認し、各課題の修正前コミットは維持した。"
+    },
+    {
+      "part": "ppt/slides/slide33.xml",
+      "paragraph_index": 3,
+      "original_page": 33,
+      "page": 33,
+      "original": "公開バージョン2は642課題。課題文と採点環境を改めて検証し、難しい51課題を選ぶHARD-51も提供する。",
+      "revised": "公開バージョン2は642課題。課題文と採点環境を改めて検証し、難しい51課題を選んだHARD-51も提供する。"
+    },
+    {
+      "part": "ppt/slides/slide38.xml",
+      "paragraph_index": 5,
+      "original_page": 38,
+      "page": 38,
+      "original": "def.collectionのようにPythonの予約語を含む名前は、名前の検証結果をFalseにする。",
+      "revised": "def.collectionのようにPythonの予約語を含む名前は、検証結果をFalseにする。"
+    },
+    {
+      "part": "ppt/slides/slide42.xml",
+      "paragraph_index": 9,
+      "original_page": 42,
+      "page": 42,
+      "original": "TestLoadで、設定が読み込まれることと、許されない組み合わせが指定のエラーメッセージになることを確かめる。",
+      "revised": "TestLoadで、設定が読み込まれることと、許されない組み合わせで指定のエラーメッセージが返されることを確かめる。"
+    },
+    {
+      "part": "ppt/slides/slide45.xml",
+      "paragraph_index": 4,
+      "original_page": 45,
+      "page": 45,
+      "original": "Element Webのメッセージ入力欄。未入力時の案内文を、リッチテキストとプレーンテキストの両方で切り替える。",
+      "revised": "Element Webのメッセージ入力欄。未入力時の案内文の表示を、リッチテキストとプレーンテキストの両方で切り替える。"
+    },
+    {
+      "part": "ppt/slides/slide48.xml",
+      "paragraph_index": 9,
+      "original_page": 48,
+      "page": 48,
+      "original": "グループの詳細画面で、複数件の表示と、メールアドレスが1件だけの表示を2テストで確認する。",
+      "revised": "グループの詳細画面で、複数件の表示と、メールアドレスが1件だけの表示を2つのテストで確認する。"
+    },
+    {
+      "part": "ppt/slides/slide54.xml",
+      "paragraph_index": 7,
+      "original_page": 54,
+      "page": 54,
+      "original": "投稿IDから所属カテゴリを調べる。管理者以外には、そのカテゴリのtopics:read権限があることを確認する。",
+      "revised": "投稿IDから所属カテゴリを調べる。管理者以外の場合は、そのカテゴリのtopics:read権限があることを確認する。"
+    },
+    {
+      "part": "ppt/slides/slide63.xml",
+      "paragraph_index": 0,
+      "original_page": 63,
+      "page": 63,
+      "original": "Scale AIが、課題と実行環境を公開した",
+      "revised": "Scale AIが課題と実行環境を公開した"
+    },
+    {
+      "part": "ppt/slides/slide63.xml",
+      "paragraph_index": 1,
+      "original_page": 63,
+      "page": 63,
+      "original": "論文の共同第一著者はXiang DengとJeff Da。Scale AIの研究として、ソフトウェア開発エージェントの実務的な評価を目的に制作した。",
+      "revised": "論文の共同第一著者はXiang DengとJeff Da。Scale AIの研究として、ソフトウェア開発エージェントの実務的な評価を目的に開発された。"
+    },
+    {
+      "part": "ppt/slides/slide63.xml",
+      "paragraph_index": 3,
+      "original_page": 63,
+      "page": 63,
+      "original": "データのバージョン2は2026年9月22日に公開した別の更新。課題文・テスト・コンテナ・評価手順の修正を含む。",
+      "revised": "データのバージョン2は2026年9月22日に公開された別の更新。課題文・テスト・コンテナ・評価手順の修正を含む。"
+    },
+    {
+      "part": "ppt/slides/slide58.xml",
+      "paragraph_index": 0,
+      "original_page": 58,
+      "page": 58,
+      "original": "公開バージョン2のリポジトリ別の課題数",
+      "revised": "公開バージョン2のリポジトリ別の課題数（1/2）"
+    },
+    {
+      "part": "ppt/slides/slide59.xml",
+      "paragraph_index": 0,
+      "original_page": 59,
+      "page": 59,
+      "original": "公開バージョン2のリポジトリ別の課題数",
+      "revised": "公開バージョン2のリポジトリ別の課題数（2/2）"
+    }
+  ],
+  "layout_adjustments": [
+    {
+      "page": 22,
+      "shape_name": "Title 1",
+      "old_sizes": [
+        28.0
+      ],
+      "new_parent_size": 25.0,
+      "reason": "校正後の通常タイトルを1行に収め、本文・図表との重なりを防ぐ。"
+    },
+    {
+      "page": 58,
+      "shape_name": "Title 1",
+      "old_sizes": [
+        28.0
+      ],
+      "new_parent_size": 25.0,
+      "reason": "校正後の通常タイトルを1行に収め、本文・図表との重なりを防ぐ。"
+    },
+    {
+      "page": 59,
+      "shape_name": "Title 1",
+      "old_sizes": [
+        28.0
+      ],
+      "new_parent_size": 25.0,
+      "reason": "校正後の通常タイトルを1行に収め、本文・図表との重なりを防ぐ。"
+    }
+  ],
+  "validation": {
+    "pages": 66,
+    "rendered_from_final_pptx": true,
+    "unchanged_original_pdf_retained": false,
+    "missing_revised_text": [],
+    "layout_flags": [],
+    "changed_pages": [
+      6,
+      7,
+      10,
+      16,
+      21,
+      22,
+      24,
+      27,
+      28,
+      33,
+      38,
+      42,
+      45,
+      48,
+      54,
+      58,
+      59,
+      63
+    ],
+    "pdf_page_count": "passed",
+    "zip_integrity": "passed",
+    "xml_parts_parsed": 167,
+    "internal_relationship_targets": "passed",
+    "package_integrity": "passed",
+    "table_cell_issues": [],
+    "table_cells_checked": 30,
+    "visual_review_complete": true,
+    "unresolved_layout_flags": []
+  },
+  "special_actions_applied": true,
+  "special_actions_details": [],
+  "audit": {
+    "review_unit": "one slide text and image per API request",
+    "request_count": 66,
+    "prompts": {
+      "a89e1b5c6f706d96417b624dc1b699a4467af9afe9e7cd72162ccbdce6b7d8f8": "現在の日付は2026-10-17（日本時間）です。資料内の2026年の制作日・参照日・モデル名を、知識の不足だけで誤りと判断しないでください。共通マスターの緑帯と章扉の中央見出しの反復は意図したデザインです。これを削除する提案や、空白を埋める目的の装飾・注意書きの追加は不要です。\nあなたは日本語の研究発表スライドの校正者です。このリクエストの対象は添付した1ページのみです。ページ内の全ての日本語を丁寧に確認し、日本語として自然な言葉遣いに直してください。助詞の不足、主述の不一致、不自然な修飾、文末、意味が取りにくい表現を改善してください。意味が自然なら短い見出し、ラベル、体言止めは保ってよい。常体を保つ。単なる好みの言い換え、不要な専門用語化、冗長な説明や注意書きは加えない。\n元の技術的意味・情報量・事実・数値・単位・日時・版・固有名詞・比較条件・限定・不確実性・出典番号を保持する。比較を歴史的移行や因果関係に変えない。引用原文、実データ、英語の質問と回答、コード、書誌、URL、ID、数値セル、人名・所属、章名・目次は変更しない。protected=trueの段落は変更しない。質問の日本語訳は意味を保って日本語のみ自然にする。\n見出しは1行のため長くしない。表セル・ラベルは短く保つ。本文は原文と同等以下の長さを優先し、長くても原文比1.1倍程度までとする。自然でないのに体言止めを強制する必要はない。段落の分割・統合はしない。\n添付画像で実際の文字の見え方も確認する。情報の出し方、強調、説明順などに改善意見があれば、具体的な根拠とともに返す。新情報の追加、ページ間の移動、レイアウトの変更は文言校正とは別の提案にする。効果のない装飾や箱図は勧めない。構成への意見は必要な場合だけ最大2件。前後タイトルは接続を把握する補助情報であり、前後ページの本文を見たとは扱わない。\n事実が疑わしい場合は記憶で修正せずfact_questionsへ記録する。全部の段落が自然ならeditsを空にし、確認した内容をreview_commentに具体的に記す。reviewed_paragraph_indicesにはprotectedを含め、このページで渡された全段落のインデックスを漏れなく列挙する。\nJSONのみを返す：{\"page\":5,\"reviewed_paragraph_indices\":[0,1,2],\"edits\":[{\"paragraph_index\":2,\"original\":\"原文全文\",\"revised\":\"修正文全文\",\"reason\":\"理由\"}],\"structure_suggestions\":[{\"proposal\":\"具体案\",\"reason\":\"理由\"}],\"fact_questions\":[{\"paragraph_index\":2,\"question\":\"確認事項\",\"reason\":\"理由\"}],\"review_comment\":\"ページ全体の所見\"}\n"
+    },
+    "source_pptx_sha256": "6cb9d3c817b7adc5f57af2564c28d5dc57cc2ef1d176cf5e19a89a6d7ea0281c",
+    "final_pptx_sha256": "aca4125bcbb9c5c806591322ee2013fe992c23df1ad958663a7575dab0e32703",
+    "final_pdf_sha256": "217c9f0ef5ba0aad5a5439994b0a7cdd14f412476526a1ffd2b213cb7f71d988",
+    "date_jst": "2026-10-17",
+    "requests_file": "requests.jsonl",
+    "responses_file": "responses.jsonl"
+  }
+}
