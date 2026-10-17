@@ -8,3 +8,4 @@
 |---|---|---|---|
 | arc-agi-2 | [変更対・採否](arc-agi-2.md) | [PPTX](../../slides/datasets-in-10-minutes-arc-agi-2.pptx) | [PDF](../../slides/datasets-in-10-minutes-arc-agi-2.pdf) |
 | coco | [変更対・採否](coco.md) | [PPTX](../../slides/datasets-in-10-minutes-coco.pptx) | [PDF](../../slides/datasets-in-10-minutes-coco.pdf) |
+| fineweb | [変更対・採否](fineweb.md) | [PPTX](../../slides/datasets-in-10-minutes-fineweb.pptx) | [PDF](../../slides/datasets-in-10-minutes-fineweb.pdf) |
