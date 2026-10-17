@@ -1,0 +1,431 @@
+{
+  "dataset": "swe-bench-verified",
+  "model": "gemini-3.8-flash",
+  "review_mode": "one_slide_per_request_with_image",
+  "reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62
+  ],
+  "request_count": 62,
+  "accepted_edits": [
+    {
+      "paragraph_index": 1,
+      "original": "GitHubの不具合報告を読み、コードを修正する\n人が検証した500課題で評価するデータセット",
+      "revised": "GitHubの不具合報告を読み、コードを修正する能力を\n人間が検証した500課題で評価するデータセット",
+      "reason": "改行を挟んで「コードを修正する人」と誤読される可能性を排除し、評価対象が「コードを修正する能力」であることを補って文意を明瞭にしました。また、学術スライドの表現として「人」を「人間」に整えました。",
+      "page": 1
+    },
+    {
+      "paragraph_index": 0,
+      "original": "解決率は、解決した課題数を全課題数で割る",
+      "revised": "解決率は、解決した課題数を全課題数で割って算出する",
+      "reason": "主語「解決率は」に対して述語が「割る」で終わっており主述が噛み合っていないため、「割って算出する」として文構造を自然に整えました。",
+      "page": 18
+    },
+    {
+      "paragraph_index": 2,
+      "original": "マージ済みで、Issueを解決し、テストファイルも変更したPull Requestを候補にする。",
+      "revised": "マージ済みで、Issueを解決し、テストファイルも変更したPull Requestを候補とした。",
+      "reason": "前後の項目（収集した／残した）が過去の手順として「〜た」で統一されているのに対し、本項目のみ「〜にする」となっているため、時制・文末を揃えて自然な流れに整えました。",
+      "page": 22
+    },
+    {
+      "paragraph_index": 0,
+      "original": "参照修正は1ファイルが429課題",
+      "revised": "参照パッチが1ファイルの課題は429件",
+      "reason": "表頭の「参照パッチ」と用語を統一し、「〜は〜が…課題」と助詞が重なって意味の把握しにくかった主述関係を自然な日本語に整理しました。",
+      "page": 27
+    },
+    {
+      "paragraph_index": 0,
+      "original": "SWE-Bench Proは別の、長い作業を含む評価",
+      "revised": "SWE-Bench Proは長時間の作業を扱う別の評価",
+      "reason": "「別の、長い作業を含む評価」は読点の入り方や修飾関係が不自然なため、本文の用語（長時間の〜）と揃えて「長時間の作業を扱う別の評価」と整理しました。",
+      "page": 31
+    },
+    {
+      "paragraph_index": 0,
+      "original": "候補パッチを渡し、テスト実行とレポートを得る",
+      "revised": "候補パッチを渡し、テストを実行してレポートを得る",
+      "reason": "「テスト実行を得る」という動詞と目的語の結びつきが不自然なため、「テストを実行してレポートを得る」と動作の流れを自然な表現に改めました。",
+      "page": 33
+    },
+    {
+      "paragraph_index": 2,
+      "original": "モデルはIssueとリポジトリからパッチを作り、不具合を直すテストと既存動作の維持を確認する。",
+      "revised": "モデルはIssueとリポジトリからパッチを作り、不具合の修正と既存動作の維持をテストで確認する。",
+      "reason": "「テスト」と「既存動作の維持」が並列されて「確認する」にかかっており、「テストを確認する」という不自然な係り受けになっています。手段である「テストで」と、確認対象である「不具合の修正と既存動作の維持」に整理することで意味関係が明快になります。",
+      "page": 34
+    },
+    {
+      "paragraph_index": 4,
+      "original": "Seaborn：大きな数の凡例で倍率が表示されず、値が誤って読める。参照修正は、凡例でオフセットと科学表記を使わない設定にする。",
+      "revised": "Seaborn：大きな数の凡例で倍率が表示されず、値が誤って読み取られる。参照修正は、凡例でオフセットと科学表記を使わない設定にする。",
+      "reason": "「値が誤って読める」は可能表現と受身・状況描写が混ざり日本語として不自然なため、「誤って読み取られる」に改めました。",
+      "page": 42
+    },
+    {
+      "paragraph_index": 12,
+      "original": "500件のproblem_statement.mdで前後の空白を除き、",
+      "revised": "500件のproblem_statement.mdから前後の空白を除き、",
+      "reason": "「空白を除く」という動作に対して、対象元を示す助詞は「で」よりも「から」のほうが自然なため。",
+      "page": 52
+    },
+    {
+      "paragraph_index": 0,
+      "original": "実Issueの修正を評価にした研究者たち",
+      "revised": "実Issueの修正を評価対象にした研究者たち",
+      "reason": "「評価にした」は表現としてやや舌足らずで不自然なため、「評価対象にした」と補うことで自然な見出しにします。",
+      "page": 59
+    }
+  ],
+  "rejected_edits": [],
+  "structure_decisions": [
+    {
+      "proposal": "表の右列見出し「課題に含まれるもの」を「内容」や「該当するデータ・要素」などに変更することを検討してください。",
+      "reason": "入力だけでなくモデルの出力も扱う表であるため、列見出しを「内容」へ変更する。",
+      "page": 6,
+      "decision": "採用"
+    },
+    {
+      "proposal": "段落4のテキストボックスの幅をわずかに広げるか、折り返し位置を調整して「符号化」が単語の途中で改行されないようにする。",
+      "reason": "本文中の少数文字の折り返しは既存の制作規則で許容されるため、折り返しだけを理由に文字を縮小したり強制改行を入れたりしない。最終描画では欠落・重なりを別途検証する。",
+      "page": 13,
+      "decision": "見送り",
+      "decision_rule": "project_body_wrapping_policy"
+    },
+    {
+      "proposal": "表内または注記に、各ファイル数の割合（例: 1ファイル 85.8%［429/500］）を併記することを検討してください。",
+      "reason": "件数と全体500件を明示しており、タイトルの定性的な傾向も確認できる。同じ値を割合の列として繰り返さない。",
+      "page": 27,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "表の下に配置されている「Multimodal v2」の補足文（段落10）を、表内の4行目（例：系列列に「Multimodal v2 / 2026」、対象列に「ローカル実行可能な480課題」）として組み込むか、注記であることを明示するレイアウトにすると、表との対応関係がより直感的に伝わります。",
+      "reason": "2024年のMultimodalと2026年のv2は表と補足で明確に区別している。両者を同じ行・条件と誤解させない現在の配置を保持。",
+      "page": 30,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "第1項目および第2項目のテキストボックス幅をわずかに広げるか文字間を詰め、「ク。」や「ある。」が単独で次行に追い出されるレイアウト（寡婦行）を解消する。",
+      "reason": "本文中の少数文字の折り返しは既存規則で許容。欠落・重なりがなければ折り返しだけを理由に書式を変更しない。",
+      "page": 31,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "1つ目の箇条書き末尾の「る。」が3行目に孤立して改行（追い出し）されているため、フォントサイズをわずかに縮小するか枠幅を広げて2行に収める。",
+      "reason": "本文中の少数文字の折り返しは既存規則で許容。欠落・重なりがなければ折り返しだけを理由に書式を変更しない。",
+      "page": 34,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "説明文（段落3）をコード抜粋（段落2・6）の上に配置し、「概要説明 → コード提示」の順に並べ替えることを検討してください。",
+      "reason": "具体的なパッチを先に示し、直後に変更の意味を説明する既存の実例レイアウトを保持する。",
+      "page": 38,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "説明文（TextBox 4）をパッチコード抜粋（Rectangle 3・TextBox 6）の上に配置する順序への入れ替えを検討してください。",
+      "reason": "具体的なパッチを先に示し、直後に変更の意味を説明する既存の実例レイアウトを保持する。",
+      "page": 42,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "表に「割合（%）」の列を追加するか、注記に「1〜5行が全体の44.6%（223/500）」などの数値を添える。",
+      "reason": "件数と全体500件を明示しており、タイトルの定性的な傾向も確認できる。同じ値を割合の列として繰り返さない。",
+      "page": 51,
+      "decision": "見送り"
+    }
+  ],
+  "structural_and_factual_actions": [
+    {
+      "type": "text_edit",
+      "page": 6,
+      "paragraph_index": 3,
+      "revised": "内容",
+      "review_page": 6,
+      "original": "課題に含まれるもの"
+    }
+  ],
+  "fact_review": [],
+  "accepted_moves": [],
+  "base_order": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62
+  ],
+  "prior_trial_changes": [],
+  "final_text_changes": [
+    {
+      "part": "ppt/slides/slide1.xml",
+      "paragraph_index": 1,
+      "original_page": 1,
+      "page": 1,
+      "original": "GitHubの不具合報告を読み、コードを修正する\n人が検証した500課題で評価するデータセット",
+      "revised": "GitHubの不具合報告を読み、コードを修正する能力を\n人間が検証した500課題で評価するデータセット"
+    },
+    {
+      "part": "ppt/slides/slide18.xml",
+      "paragraph_index": 0,
+      "original_page": 18,
+      "page": 18,
+      "original": "解決率は、解決した課題数を全課題数で割る",
+      "revised": "解決率は、解決した課題数を全課題数で割って算出する"
+    },
+    {
+      "part": "ppt/slides/slide22.xml",
+      "paragraph_index": 2,
+      "original_page": 22,
+      "page": 22,
+      "original": "マージ済みで、Issueを解決し、テストファイルも変更したPull Requestを候補にする。",
+      "revised": "マージ済みで、Issueを解決し、テストファイルも変更したPull Requestを候補とした。"
+    },
+    {
+      "part": "ppt/slides/slide27.xml",
+      "paragraph_index": 0,
+      "original_page": 27,
+      "page": 27,
+      "original": "参照修正は1ファイルが429課題",
+      "revised": "参照パッチが1ファイルの課題は429件"
+    },
+    {
+      "part": "ppt/slides/slide31.xml",
+      "paragraph_index": 0,
+      "original_page": 31,
+      "page": 31,
+      "original": "SWE-Bench Proは別の、長い作業を含む評価",
+      "revised": "SWE-Bench Proは長時間の作業を扱う別の評価"
+    },
+    {
+      "part": "ppt/slides/slide33.xml",
+      "paragraph_index": 0,
+      "original_page": 33,
+      "page": 33,
+      "original": "候補パッチを渡し、テスト実行とレポートを得る",
+      "revised": "候補パッチを渡し、テストを実行してレポートを得る"
+    },
+    {
+      "part": "ppt/slides/slide34.xml",
+      "paragraph_index": 2,
+      "original_page": 34,
+      "page": 34,
+      "original": "モデルはIssueとリポジトリからパッチを作り、不具合を直すテストと既存動作の維持を確認する。",
+      "revised": "モデルはIssueとリポジトリからパッチを作り、不具合の修正と既存動作の維持をテストで確認する。"
+    },
+    {
+      "part": "ppt/slides/slide42.xml",
+      "paragraph_index": 4,
+      "original_page": 42,
+      "page": 42,
+      "original": "Seaborn：大きな数の凡例で倍率が表示されず、値が誤って読める。参照修正は、凡例でオフセットと科学表記を使わない設定にする。",
+      "revised": "Seaborn：大きな数の凡例で倍率が表示されず、値が誤って読み取られる。参照修正は、凡例でオフセットと科学表記を使わない設定にする。"
+    },
+    {
+      "part": "ppt/slides/slide52.xml",
+      "paragraph_index": 12,
+      "original_page": 52,
+      "page": 52,
+      "original": "500件のproblem_statement.mdで前後の空白を除き、",
+      "revised": "500件のproblem_statement.mdから前後の空白を除き、"
+    },
+    {
+      "part": "ppt/slides/slide59.xml",
+      "paragraph_index": 0,
+      "original_page": 59,
+      "page": 59,
+      "original": "実Issueの修正を評価にした研究者たち",
+      "revised": "実Issueの修正を評価対象にした研究者たち"
+    },
+    {
+      "part": "ppt/slides/slide6.xml",
+      "paragraph_index": 3,
+      "original_page": 6,
+      "page": 6,
+      "original": "課題に含まれるもの",
+      "revised": "内容"
+    }
+  ],
+  "layout_adjustments": [
+    {
+      "page": 18,
+      "shape_name": "Title 1",
+      "old_sizes": [
+        28.0
+      ],
+      "new_parent_size": 25.0,
+      "reason": "校正後の通常タイトルを1行に収め、本文・図表との重なりを防ぐ。"
+    },
+    {
+      "page": 33,
+      "shape_name": "Title 1",
+      "old_sizes": [
+        28.0
+      ],
+      "new_parent_size": 25.0,
+      "reason": "校正後の通常タイトルを1行に収め、本文・図表との重なりを防ぐ。"
+    }
+  ],
+  "validation": {
+    "pages": 62,
+    "rendered_from_final_pptx": true,
+    "unchanged_original_pdf_retained": false,
+    "missing_revised_text": [],
+    "layout_flags": [],
+    "changed_pages": [
+      1,
+      6,
+      18,
+      22,
+      27,
+      31,
+      33,
+      34,
+      42,
+      52,
+      59
+    ],
+    "pdf_page_count": "passed",
+    "zip_integrity": "passed",
+    "xml_parts_parsed": 159,
+    "internal_relationship_targets": "passed",
+    "package_integrity": "passed",
+    "table_cell_issues": [],
+    "table_cells_checked": 8,
+    "visual_review_complete": true,
+    "unresolved_layout_flags": []
+  },
+  "special_actions_applied": true,
+  "special_actions_details": [],
+  "audit": {
+    "review_unit": "one slide text and image per API request",
+    "request_count": 62,
+    "prompts": {
+      "a89e1b5c6f706d96417b624dc1b699a4467af9afe9e7cd72162ccbdce6b7d8f8": "現在の日付は2026-10-17（日本時間）です。資料内の2026年の制作日・参照日・モデル名を、知識の不足だけで誤りと判断しないでください。共通マスターの緑帯と章扉の中央見出しの反復は意図したデザインです。これを削除する提案や、空白を埋める目的の装飾・注意書きの追加は不要です。\nあなたは日本語の研究発表スライドの校正者です。このリクエストの対象は添付した1ページのみです。ページ内の全ての日本語を丁寧に確認し、日本語として自然な言葉遣いに直してください。助詞の不足、主述の不一致、不自然な修飾、文末、意味が取りにくい表現を改善してください。意味が自然なら短い見出し、ラベル、体言止めは保ってよい。常体を保つ。単なる好みの言い換え、不要な専門用語化、冗長な説明や注意書きは加えない。\n元の技術的意味・情報量・事実・数値・単位・日時・版・固有名詞・比較条件・限定・不確実性・出典番号を保持する。比較を歴史的移行や因果関係に変えない。引用原文、実データ、英語の質問と回答、コード、書誌、URL、ID、数値セル、人名・所属、章名・目次は変更しない。protected=trueの段落は変更しない。質問の日本語訳は意味を保って日本語のみ自然にする。\n見出しは1行のため長くしない。表セル・ラベルは短く保つ。本文は原文と同等以下の長さを優先し、長くても原文比1.1倍程度までとする。自然でないのに体言止めを強制する必要はない。段落の分割・統合はしない。\n添付画像で実際の文字の見え方も確認する。情報の出し方、強調、説明順などに改善意見があれば、具体的な根拠とともに返す。新情報の追加、ページ間の移動、レイアウトの変更は文言校正とは別の提案にする。効果のない装飾や箱図は勧めない。構成への意見は必要な場合だけ最大2件。前後タイトルは接続を把握する補助情報であり、前後ページの本文を見たとは扱わない。\n事実が疑わしい場合は記憶で修正せずfact_questionsへ記録する。全部の段落が自然ならeditsを空にし、確認した内容をreview_commentに具体的に記す。reviewed_paragraph_indicesにはprotectedを含め、このページで渡された全段落のインデックスを漏れなく列挙する。\nJSONのみを返す：{\"page\":5,\"reviewed_paragraph_indices\":[0,1,2],\"edits\":[{\"paragraph_index\":2,\"original\":\"原文全文\",\"revised\":\"修正文全文\",\"reason\":\"理由\"}],\"structure_suggestions\":[{\"proposal\":\"具体案\",\"reason\":\"理由\"}],\"fact_questions\":[{\"paragraph_index\":2,\"question\":\"確認事項\",\"reason\":\"理由\"}],\"review_comment\":\"ページ全体の所見\"}\n"
+    },
+    "source_pptx_sha256": "ac68a394cdd418662b378c3a61575fbcb5068e2d7d2492e95afb67508bf9c688",
+    "final_pptx_sha256": "7117ad8ec06f2f1bdc4c7d4e3a28b77f8893ff012a42a4027f8c34767637c029",
+    "final_pdf_sha256": "bdd4db446b416aa9937e3f5ec6cf0db1c3158f7a5c321595507a783832b0d2d3",
+    "date_jst": "2026-10-17",
+    "requests_file": "requests.jsonl",
+    "responses_file": "responses.jsonl"
+  }
+}

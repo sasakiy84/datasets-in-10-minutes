@@ -1,0 +1,17 @@
+original_page	revised_page	before	after	reason	provenance
+14	14	YouTubeから動画をダウンロードし、収集する行動カテゴリに該当しない動画を人手で除去した。	YouTubeから動画をダウンロードし、収集対象の行動カテゴリに該当しない動画を人手で除去した。	「収集する行動カテゴリ」ではカテゴリそのものを収集するかのように読めるため、「収集対象の行動カテゴリ」として修飾関係を明確にしました。	cached_proposal_reassessed
+14	14	映像は320×240画素、1秒当たり25フレーム（25 fps）へ統一し、動画ファイル形式AVIでカテゴリ別に配布した。	映像は320×240画素、1秒当たり25フレーム（25 fps）に統一し、動画ファイル形式AVIでカテゴリ別に配布した。	変更・帰着先を示す格助詞として「へ」よりも「に」が自然なため修正しました。	cached_proposal_reassessed
+25	25	公式の3分割では、それぞれ別の学習用で学習し、対応するテスト用で評価する。	公式の3分割では、それぞれ別の学習用データで学習し、対応するテスト用データで評価する。	「学習用」「テスト用」だけでは言葉が不足しており、「学習用で学習し」という重複表現もぎこちないため、「データ」を補って自然な表現に整えました。	cached_proposal_reassessed
+26	26	原著は局所的な動きと見た目を特徴量にして、映像を特徴の出現頻度で表した [1]。	原著では局所的な動きと見た目を特徴量にして、映像を特徴の出現頻度で表した [1]。	「原著は〜表した」という主述のねじれを解消し、文献での分析・手法提示を表す自然な助詞「原著では」に改めた。	cached_proposal_reassessed
+26	26	25グループのうち1グループをテストにし、25回入れ替える交差検証を行った。	25グループのうち1グループをテスト用とし、25回入れ替える交差検証を行った。	「テストにし」は口語的であるため、研究発表の文脈に合わせて「テスト用とし」に整えた。	cached_proposal_reassessed
+29	29	固定する特徴モデル [1]	特徴抽出モデル [1]	表の見出しとして「固定する特徴モデル」は動詞の連体修飾が不自然なため、一般的な名詞表現である「特徴抽出モデル」に改めました。	cached_proposal_reassessed
+29	29	特徴を固定し、UCF101の学習用で線形分類器を学習する。	特徴を固定し、UCF101の学習データで線形分類器を学習する。	「学習用で」は言葉が欠けており不自然なため、「学習データで」と明確に補正しました。	cached_proposal_reassessed
+30	30	事前学習は、別の画像や映像から特徴の取り出し方を先に学ぶ工程である。微調整では、UCF101の学習用でそのモデルを更新する。	事前学習は、別の画像や映像から特徴の取り出し方を先に学ぶ工程である。微調整では、UCF101の学習用データでそのモデルを更新する。	「学習用」の後に名詞が抜けており不自然なため、「学習用データ」と補って文意を明確にしました。	cached_proposal_reassessed
+32	32	ViTは、画像や映像を小さな領域に分け、その間の関係をTransformerで扱うモデルである。表のViT-Bは基本サイズを表す。	ViTは、画像や映像を小さな領域に分け、その間の関係をTransformerで扱うモデルである。ViT-BのBは基本サイズを表す。	同じページにない表を指さず、記号そのものと意味を対応させる。	skill_original
+33	33	2024年の比較では画像特徴モデルDINOv2を使う方式も91.2%だった [1]。	2024年の比較では、画像特徴モデルDINOv2を使う方式もTop-1正解率91.2%だった [1]。	数値の評価指標を短く明示し、前の線形分類の比較と対応させる。	skill_original
+37	37	InternVideo2（2024）は、固定特徴の線形分類とゼロショットの評価に用いた [1]。	InternVideo2（2024）では、固定特徴の線形分類とゼロショットの評価に用いられた [2]。	同一ページの3出典をCarreira[1]、Wang[2]、MMAction2[3]へ区別し、本文の参照番号と対応させる。論文名・URL・発表年は変更しない。	cached_proposal_reassessed_and_revised
+37	37	2026-10-15の確認時点でも、MMAction2は取得・前処理・評価手順を公開している [2]。	2026-10-15の確認時点でも、MMAction2は取得・前処理・評価手順を公開している [3]。	同一ページの3出典をCarreira[1]、Wang[2]、MMAction2[3]へ区別し、本文の参照番号と対応させる。論文名・URL・発表年は変更しない。	skill_structural_or_factual_action
+37	37	Wang et al. (2024). arXiv:2403.15377. InternVideo2: Scaling Foundation Models for Multimodal Video Understanding.	[2] Wang et al. (2024). arXiv:2403.15377. InternVideo2: Scaling Foundation Models for Multimodal Video Understanding.	同一ページの3出典をCarreira[1]、Wang[2]、MMAction2[3]へ区別し、本文の参照番号と対応させる。論文名・URL・発表年は変更しない。	skill_structural_or_factual_action
+37	37	[2] MMAction2 contributors (n.d.). MMAction2 documentation. 参照 2026-10-15. Preparing UCF-101.	[3] MMAction2 contributors (n.d.). MMAction2 documentation. 参照 2026-10-15. Preparing UCF-101.	同一ページの3出典をCarreira[1]、Wang[2]、MMAction2[3]へ区別し、本文の参照番号と対応させる。論文名・URL・発表年は変更しない。	skill_structural_or_factual_action
+39	39	データを扱うMMAction2などの手順で、フレーム抽出と入力用リストを準備できる [2]。	MMAction2などのデータ準備手順で、フレーム抽出と入力用リストを準備できる [1]。	読込手順の対象を明確にし、MMAction2の出典番号を同ページの[1]へ合わせる。	cached_proposal_reassessed_and_revised
+44	44	CRCV-TR-12-01としてまとめ、2012-12-03にarXivへ投稿した [1]。	技術報告CRCV-TR-12-01としてまとめられ、2012-12-03にarXivへ投稿された [1]。	能動表現「まとめ、〜投稿した」だと主語（スライド発表者なのか原著者なのか）が曖昧になりやすいため、客観的な受動表現に改め、CRCV-TR-12-01が技術報告（Technical Report）であることを明示しました。	cached_proposal_reassessed

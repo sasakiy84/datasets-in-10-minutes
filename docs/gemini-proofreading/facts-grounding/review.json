@@ -1,0 +1,657 @@
+{
+  "dataset": "facts-grounding",
+  "model": "gemini-3.8-flash",
+  "review_mode": "one_slide_per_request_with_image",
+  "reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60
+  ],
+  "request_count": 60,
+  "accepted_edits": [
+    {
+      "paragraph_index": 0,
+      "original": "与えられた文書だけを根拠に、依頼へ答える",
+      "revised": "与えられた文書だけを根拠に、依頼に応える",
+      "reason": "「依頼」を受ける動詞としては、方向を示す「へ答える」よりも「に応える」とするほうが自然なコロケーションになります。",
+      "page": 5
+    },
+    {
+      "paragraph_index": 1,
+      "original": "FACTS Groundingは、文書と依頼を読み、文書に基づく回答を生成する評価。質問応答、要約、比較、書き換えなどを扱う。",
+      "revised": "FACTS Groundingは、文書と依頼を読み、文書に基づく回答を生成する能力を評価する。質問応答、要約、比較、書き換えなどを扱う。",
+      "reason": "「回答を生成する評価」という名詞止めは係り受けが不自然なため、「生成する能力を評価する」と述語の形を整えました。",
+      "page": 5
+    },
+    {
+      "paragraph_index": 3,
+      "original": "採点では、回答が依頼に応えているかと、回答中の主張が文書に支えられているかを調べる。",
+      "revised": "採点では、回答が依頼に応えているかと、回答中の主張が文書に裏付けられているかを調べる。",
+      "reason": "英語の「supported」の直訳と思われる「文書に支えられている」を、主張と根拠の関係として自然な「文書に裏付けられている」に改めました。",
+      "page": 5
+    },
+    {
+      "paragraph_index": 1,
+      "original": "人名や年を一つ答える評価に対し、この課題は複数の主張を含む回答を対象にする。文書の情報を選び、まとめて依頼へ応える。",
+      "revised": "人名や年を一つ答える評価に対し、この課題は複数の主張を含む回答を対象にする。文書の情報を選び、まとめて依頼に応える。",
+      "reason": "「応える」に係る助詞として、方向を示す「へ」よりも定型的な格助詞「に」を用いる方が自然な日本語表現になるため。",
+      "page": 6
+    },
+    {
+      "paragraph_index": 2,
+      "original": "さらに、依頼へ十分に応えた回答かを判定する。依頼を満たさない回答は、根拠のある内容だけでも0点として集計する。",
+      "revised": "さらに、依頼へ十分に応えた回答かを判定する。依頼を満たさない回答は、根拠のある内容だけであっても0点として集計する。",
+      "reason": "「内容だけでも」はやや口語的で文脈上の接続が粗いため、学術スライドの文面として自然な「内容だけであっても」に整えました。",
+      "page": 14
+    },
+    {
+      "paragraph_index": 0,
+      "original": "Groundingと、4課題の総合得点の関係",
+      "revised": "Groundingと4課題の総合得点の関係",
+      "reason": "並立の助詞「と」の直後に不要な読点が入っており、見出しとして不自然なため削除しました。",
+      "page": 18
+    },
+    {
+      "paragraph_index": 10,
+      "original": "全件を確認",
+      "revised": "全件を確認する",
+      "reason": "他の工程項目（「資料を選ぶ」「依頼を作る」「入力をそろえる」「集合へ分ける」）が動詞終止形で統一されているため、「する」を補って文末を揃えます。",
+      "page": 20
+    },
+    {
+      "paragraph_index": 11,
+      "original": "指示との整合と文書の可読性を人が点検",
+      "revised": "指示との整合性と文書の可読性を人が点検する",
+      "reason": "「指示との整合」を自然な名詞「指示との整合性」に改め、作業内容列の他の文末（「集める」「書く」「加える」）に合わせて「点検する」で結びます。",
+      "page": 20
+    },
+    {
+      "paragraph_index": 13,
+      "original": "バランスを取った無作為抽出で公開・非公開へ",
+      "revised": "バランスを取った無作為抽出で公開・非公開に分割する",
+      "reason": "文末が助詞「へ」で途切れて述語が欠落しているため、「分割する」を補って文を完結させます。",
+      "page": 20
+    },
+    {
+      "paragraph_index": 1,
+      "original": "作成者には、長い文書を処理し、長い回答を書く依頼を求めた。専門知識、複雑な推論、文体や著者意図の分析を必要とする依頼は避ける。",
+      "revised": "作成者には、長い文書を処理し、長い回答を書く依頼を求めた。専門知識、複雑な推論、文体や著者意図の分析を必要とする依頼は避けた。",
+      "reason": "前文の「求めた」や次段落の「除いた」「除外した」と揃え、データ作成時の手順・条件に関する記述の時制（過去形）を統一するため。",
+      "page": 21
+    },
+    {
+      "paragraph_index": 1,
+      "original": "2024年12月に、文書に基づく回答を扱うFACTS Groundingを公開。公開860問と非公開859問で評価を運営する。",
+      "revised": "2024年12月に、文書に基づく回答を扱うFACTS Groundingを公開。公開860問と非公開859問で評価を実施する。",
+      "reason": "「評価を運営する」はコロケーションとして不自然なため、「評価を実施する」（または「評価を行う」）に改めます。",
+      "page": 25
+    },
+    {
+      "paragraph_index": 1,
+      "original": "FACTS Groundingは、文書の情報を使い、依頼へ応える文章を生成する評価。質問応答だけでなく要約・比較・書き換えも含む。",
+      "revised": "FACTS Groundingは、文書の情報を使い、依頼に応える文章を生成する評価。質問応答だけでなく要約・比較・書き換えも含む。",
+      "reason": "「応える」の対象を示す助詞は「へ」ではなく「に」とするのが自然です。",
+      "page": 27
+    },
+    {
+      "paragraph_index": 2,
+      "original": "v2は入力問題を保ち、判定モデルと採点指示を更新した。事実性に加え、依頼へ十分に応えることを得点に反映する。",
+      "revised": "v2は入力問題を維持し、判定モデルと採点指示を更新した。事実性に加え、依頼に十分応えることを得点に反映する。",
+      "reason": "「問題を保ち」をより自然な「問題を維持し」に改め、「依頼へ」を慣用的な「依頼に」へ修正しました。",
+      "page": 27
+    },
+    {
+      "paragraph_index": 5,
+      "original": "ガンマ線望遠鏡と赤外線望遠鏡の違いを説明する。",
+      "revised": "ガンマ線望遠鏡と赤外線望遠鏡の違いを説明せよ。",
+      "reason": "原文の英語指示文（Explain...）に対応する日本語訳として、「説明する。」では自身の動作宣言のように読めるため、常体の命令・指示表現「説明せよ。」に改めました。",
+      "page": 36
+    },
+    {
+      "paragraph_index": 7,
+      "original": "ガンマ線望遠鏡はレンズや鏡を使わず検出する。赤外線望遠鏡は、塵に包まれた天体の観測などに使う。",
+      "revised": "ガンマ線望遠鏡はレンズや鏡を使わずに検出する。赤外線望遠鏡は、塵に包まれた天体の観測などに使う。",
+      "reason": "「使わず検出する」に助詞「に」を補い、「使わずに検出する」とすることで節の接続をより自然にしました。",
+      "page": 36
+    },
+    {
+      "paragraph_index": 5,
+      "original": "慢性C型肝炎ウイルス（HCV）感染者のうち、感染を自覚している人の世界全体での割合は。",
+      "revised": "慢性C型肝炎ウイルス（HCV）感染者のうち、感染を自覚している人の世界全体での割合は何％か。",
+      "reason": "助詞「は」で文末が途切れた形になっており質問文として不自然なため、英語原文（What percentage...）に合わせて「何％か。」と結びを補いました。",
+      "page": 38
+    },
+    {
+      "paragraph_index": 5,
+      "original": "パンフレットに掲載されたディズニーのテーマパーク名を挙げる。",
+      "revised": "パンフレットに掲載されているディズニーのテーマパークの名前は何か。",
+      "reason": "原文の疑問文（What are the names of...?）に対する日本語訳として、「〜名を挙げる。」では動作のメモのような記述になっており不自然なため、常体の疑問文に改めました。また、冊子内の記載状態を表す表現として「掲載された」を「掲載されている」に整えています。",
+      "page": 40
+    },
+    {
+      "paragraph_index": 5,
+      "original": "無線インターネット事業者（WISP）の接続に問題を起こす地形は。",
+      "revised": "無線インターネット事業者（WISP）の接続に問題を引き起こす地形は何か。",
+      "reason": "文末が「地形は。」で途切れており疑問文として不自然なため、「地形は何か。」と結びを整え、「問題を起こす」を「問題を引き起こす」に改めて自然な問いの表現にしました。",
+      "page": 42
+    },
+    {
+      "paragraph_index": 5,
+      "original": "利用できるファイアウォールと、その動作を説明する。",
+      "revised": "利用できるファイアウォールと、その動作を説明してください。",
+      "reason": "原文の依頼文（Please explain...）に対し、「〜を説明する。」では回答側の宣言のように読めて不自然なため、依頼・指示の文意が正確に伝わる表現に修正します。",
+      "page": 44
+    },
+    {
+      "paragraph_index": 5,
+      "original": "FEMA経由と比べ、Wi-Fiや携帯網で地震速報を送る利点は。",
+      "revised": "FEMA経由と比べ、Wi-Fiや携帯網で地震速報を送る利点は何か。",
+      "reason": "英語の疑問文（What are the advantages...）に対する訳文として、文末が「利点は。」で切れており述部が欠落しているため、「利点は何か。」と補って自然な疑問文に整えました。",
+      "page": 46
+    },
+    {
+      "paragraph_index": 0,
+      "original": "依頼の残りの種類と、構成比",
+      "revised": "依頼の残りの種類と構成比",
+      "reason": "並列の助詞「と」の直後に読点が入ると視覚的・統語的に不自然な区切りとなるため、読点を削除して簡潔につなげました。",
+      "page": 54
+    },
+    {
+      "paragraph_index": 0,
+      "original": "配布する入力と、バージョン別の評価資料",
+      "revised": "配布されている入力と、バージョン別の評価資料",
+      "reason": "「配布する」だと発表者がこれから配布するかのように読めるため、Googleによってすでに提供されている状態を表す「配布されている」に改めました。",
+      "page": 56
+    },
+    {
+      "paragraph_index": 1,
+      "original": "データはGoogleのHugging Face配布から、examples.csvを取得する。ライセンスはCC BY 4.0。転載した文書・依頼と訳には出典を付した。",
+      "revised": "データはGoogleのHugging Face配布から、examples.csvを取得した。ライセンスはCC BY 4.0。転載した文書・依頼と訳には出典を付した。",
+      "reason": "同段落の後続文「出典を付した」という過去形と揃え、データ取得の実施事実を明確にするため「取得した」に統一しました。",
+      "page": 56
+    },
+    {
+      "paragraph_index": 2,
+      "original": "同じ配布にあるevaluation_prompts.csvは、2024年の初期評価の採点指示。v2の判定モデル・指示の変更は、2025年のスイート論文で確認する。",
+      "revised": "同じ配布にあるevaluation_prompts.csvは、2024年の初期評価の採点指示。v2の判定モデル・指示の変更は、2025年のスイート論文で確認できる。",
+      "reason": "参照先となる文献を読者に案内する文脈であるため、「確認する」から可能表現の「確認できる」へ変更して自然にしました。",
+      "page": 56
+    }
+  ],
+  "rejected_edits": [],
+  "structure_decisions": [
+    {
+      "proposal": "ヘッダーの「FACTS Grounding: 配布ページ」と中央上部の大見出し「FACTS Grounding の公式配布ページ」で文言が重複しているため、大見出しを削除してスクリーンショットを大きく表示するか、見出し側でデータセットの概要や公開元（Hugging Faceで公開など）を補足すると情報が整理されます。",
+      "reason": "緑帯・章扉・通常タイトルは指定された共通マスターの構造を保持する。反復だけを理由に削除しない。",
+      "page": 2,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "TextBox 8（解説文）の幅をわずかに広げるか改行位置を調整し、「weight no. 01）」が一連で表示されるようにする。",
+      "reason": "本文中の少数文字の折り返しや単語途中の改行は、既存の制作規則で許容。欠落・重なりがなければ、折り返しだけを理由にサイズや幅を変更しない。",
+      "page": 10,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "「依頼の日本語訳」の本文枠の横幅をわずかに広げるか文字間を調整し、「る。」が次行に1文字だけ孤立して改行されるのを防ぐ。",
+      "reason": "本文中の少数文字の折り返しは既存の制作規則で許容されるため、折り返しだけを理由に文字を縮小したり強制改行を入れたりしない。最終描画では欠落・重なりを別途検証する。",
+      "page": 12,
+      "decision": "見送り",
+      "decision_rule": "project_body_wrapping_policy"
+    },
+    {
+      "proposal": "スライド見出しの語句（「事実の抽出」「抽出して要約する」）と、表内の項目名（「事実を探す」「探して要約する」）の動詞・名詞表現（探す／抽出）を統一することを検討してください。",
+      "reason": "表の分類名を本文見出しと同じ「抽出」にそろえる。",
+      "page": 23,
+      "decision": "採用"
+    },
+    {
+      "proposal": "「依頼の日本語訳」本文（段落5）のテキストボックス幅をわずかに広げるか、文字間隔を調整して「る。」の1文字だけが2行目に改行（行頭孤立）されるのを防ぐ。",
+      "reason": "本文中の少数文字の折り返しは既存の制作規則で許容されるため、折り返しだけを理由に文字を縮小したり強制改行を入れたりしない。最終描画では欠落・重なりを別途検証する。",
+      "page": 34,
+      "decision": "見送り",
+      "decision_rule": "project_body_wrapping_policy"
+    },
+    {
+      "proposal": "「解説：回答に含める要点」の本文テキストボックスの幅やフォントサイズをわずかに調整し、「塵」の1文字だけが1行目末尾に残る改行位置（塵／に包まれた…）を解消する。",
+      "reason": "本文中の少数文字の折り返しは既存の制作規則で許容。欠落・重なりがなければ折り返しだけを理由に書式を変更しない。",
+      "page": 36,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "段落7（「発効日は2020年4月8日。…」）のテキストボックスの横幅をわずかに広げるか、フォントサイズを微調整して1行に収めるか、文節単位で改行する。",
+      "reason": "本文中の少数文字の折り返しは既存の制作規則で許容されるため、折り返しだけを理由に文字を縮小したり強制改行を入れたりしない。最終描画では欠落・重なりを別途検証する。",
+      "page": 50,
+      "decision": "見送り",
+      "decision_rule": "project_body_wrapping_policy"
+    }
+  ],
+  "structural_and_factual_actions": [
+    {
+      "type": "text_edit",
+      "page": 23,
+      "paragraph_index": 4,
+      "revised": "事実の抽出",
+      "review_page": 23,
+      "original": "事実を探す"
+    },
+    {
+      "type": "text_edit",
+      "page": 23,
+      "paragraph_index": 6,
+      "revised": "抽出して要約する",
+      "review_page": 23,
+      "original": "探して要約する"
+    }
+  ],
+  "fact_review": [
+    {
+      "paragraph_index": 3,
+      "question": "日付が「2026-10-17」となっていますが、意図した日付でしょうか（過去や現在の年からの誤記ではないでしょうか）。",
+      "reason": "通常のスライド発表日としては未来の日付になっているため確認が必要です。",
+      "page": 1,
+      "decision": "原文を保持",
+      "finding": "現在日は2026-10-17（日本時間）。既存の制作日・参照日2026-10-15〜17は未来日ではなく、指定どおり保持する。"
+    },
+    {
+      "paragraph_index": 7,
+      "question": "報告書の公開年月は「2025年12月」で正しいでしょうか。先行する文献1（Jacovi et al.）と同時期の「2024年12月」などの誤記ではないかご確認ください。",
+      "reason": "FACTS Leaderboard関連の技術報告（suite paper）の公開時期として、文献1（2024年12月）と離れた2025年12月と記載されているため確認が必要です。",
+      "page": 59,
+      "decision": "原文を保持",
+      "finding": "保存済みの公式スイート報告suite.pdfの1ページ目に2025-12-11と明記。2024年の初期Grounding報告とは別の報告である。",
+      "evidence": "/workspace/scratch/facts-grounding-research/suite.pdf page 1"
+    }
+  ],
+  "accepted_moves": [],
+  "base_order": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60
+  ],
+  "prior_trial_changes": [],
+  "final_text_changes": [
+    {
+      "part": "ppt/slides/slide5.xml",
+      "paragraph_index": 0,
+      "original_page": 5,
+      "page": 5,
+      "original": "与えられた文書だけを根拠に、依頼へ答える",
+      "revised": "与えられた文書だけを根拠に、依頼に応える"
+    },
+    {
+      "part": "ppt/slides/slide5.xml",
+      "paragraph_index": 1,
+      "original_page": 5,
+      "page": 5,
+      "original": "FACTS Groundingは、文書と依頼を読み、文書に基づく回答を生成する評価。質問応答、要約、比較、書き換えなどを扱う。",
+      "revised": "FACTS Groundingは、文書と依頼を読み、文書に基づく回答を生成する能力を評価する。質問応答、要約、比較、書き換えなどを扱う。"
+    },
+    {
+      "part": "ppt/slides/slide5.xml",
+      "paragraph_index": 3,
+      "original_page": 5,
+      "page": 5,
+      "original": "採点では、回答が依頼に応えているかと、回答中の主張が文書に支えられているかを調べる。",
+      "revised": "採点では、回答が依頼に応えているかと、回答中の主張が文書に裏付けられているかを調べる。"
+    },
+    {
+      "part": "ppt/slides/slide6.xml",
+      "paragraph_index": 1,
+      "original_page": 6,
+      "page": 6,
+      "original": "人名や年を一つ答える評価に対し、この課題は複数の主張を含む回答を対象にする。文書の情報を選び、まとめて依頼へ応える。",
+      "revised": "人名や年を一つ答える評価に対し、この課題は複数の主張を含む回答を対象にする。文書の情報を選び、まとめて依頼に応える。"
+    },
+    {
+      "part": "ppt/slides/slide14.xml",
+      "paragraph_index": 2,
+      "original_page": 14,
+      "page": 14,
+      "original": "さらに、依頼へ十分に応えた回答かを判定する。依頼を満たさない回答は、根拠のある内容だけでも0点として集計する。",
+      "revised": "さらに、依頼へ十分に応えた回答かを判定する。依頼を満たさない回答は、根拠のある内容だけであっても0点として集計する。"
+    },
+    {
+      "part": "ppt/slides/slide18.xml",
+      "paragraph_index": 0,
+      "original_page": 18,
+      "page": 18,
+      "original": "Groundingと、4課題の総合得点の関係",
+      "revised": "Groundingと4課題の総合得点の関係"
+    },
+    {
+      "part": "ppt/slides/slide20.xml",
+      "paragraph_index": 10,
+      "original_page": 20,
+      "page": 20,
+      "original": "全件を確認",
+      "revised": "全件を確認する"
+    },
+    {
+      "part": "ppt/slides/slide20.xml",
+      "paragraph_index": 11,
+      "original_page": 20,
+      "page": 20,
+      "original": "指示との整合と文書の可読性を人が点検",
+      "revised": "指示との整合性と文書の可読性を人が点検する"
+    },
+    {
+      "part": "ppt/slides/slide20.xml",
+      "paragraph_index": 13,
+      "original_page": 20,
+      "page": 20,
+      "original": "バランスを取った無作為抽出で公開・非公開へ",
+      "revised": "バランスを取った無作為抽出で公開・非公開に分割する"
+    },
+    {
+      "part": "ppt/slides/slide21.xml",
+      "paragraph_index": 1,
+      "original_page": 21,
+      "page": 21,
+      "original": "作成者には、長い文書を処理し、長い回答を書く依頼を求めた。専門知識、複雑な推論、文体や著者意図の分析を必要とする依頼は避ける。",
+      "revised": "作成者には、長い文書を処理し、長い回答を書く依頼を求めた。専門知識、複雑な推論、文体や著者意図の分析を必要とする依頼は避けた。"
+    },
+    {
+      "part": "ppt/slides/slide25.xml",
+      "paragraph_index": 1,
+      "original_page": 25,
+      "page": 25,
+      "original": "2024年12月に、文書に基づく回答を扱うFACTS Groundingを公開。公開860問と非公開859問で評価を運営する。",
+      "revised": "2024年12月に、文書に基づく回答を扱うFACTS Groundingを公開。公開860問と非公開859問で評価を実施する。"
+    },
+    {
+      "part": "ppt/slides/slide27.xml",
+      "paragraph_index": 1,
+      "original_page": 27,
+      "page": 27,
+      "original": "FACTS Groundingは、文書の情報を使い、依頼へ応える文章を生成する評価。質問応答だけでなく要約・比較・書き換えも含む。",
+      "revised": "FACTS Groundingは、文書の情報を使い、依頼に応える文章を生成する評価。質問応答だけでなく要約・比較・書き換えも含む。"
+    },
+    {
+      "part": "ppt/slides/slide27.xml",
+      "paragraph_index": 2,
+      "original_page": 27,
+      "page": 27,
+      "original": "v2は入力問題を保ち、判定モデルと採点指示を更新した。事実性に加え、依頼へ十分に応えることを得点に反映する。",
+      "revised": "v2は入力問題を維持し、判定モデルと採点指示を更新した。事実性に加え、依頼に十分応えることを得点に反映する。"
+    },
+    {
+      "part": "ppt/slides/slide36.xml",
+      "paragraph_index": 5,
+      "original_page": 36,
+      "page": 36,
+      "original": "ガンマ線望遠鏡と赤外線望遠鏡の違いを説明する。",
+      "revised": "ガンマ線望遠鏡と赤外線望遠鏡の違いを説明せよ。"
+    },
+    {
+      "part": "ppt/slides/slide36.xml",
+      "paragraph_index": 7,
+      "original_page": 36,
+      "page": 36,
+      "original": "ガンマ線望遠鏡はレンズや鏡を使わず検出する。赤外線望遠鏡は、塵に包まれた天体の観測などに使う。",
+      "revised": "ガンマ線望遠鏡はレンズや鏡を使わずに検出する。赤外線望遠鏡は、塵に包まれた天体の観測などに使う。"
+    },
+    {
+      "part": "ppt/slides/slide38.xml",
+      "paragraph_index": 5,
+      "original_page": 38,
+      "page": 38,
+      "original": "慢性C型肝炎ウイルス（HCV）感染者のうち、感染を自覚している人の世界全体での割合は。",
+      "revised": "慢性C型肝炎ウイルス（HCV）感染者のうち、感染を自覚している人の世界全体での割合は何％か。"
+    },
+    {
+      "part": "ppt/slides/slide40.xml",
+      "paragraph_index": 5,
+      "original_page": 40,
+      "page": 40,
+      "original": "パンフレットに掲載されたディズニーのテーマパーク名を挙げる。",
+      "revised": "パンフレットに掲載されているディズニーのテーマパークの名前は何か。"
+    },
+    {
+      "part": "ppt/slides/slide42.xml",
+      "paragraph_index": 5,
+      "original_page": 42,
+      "page": 42,
+      "original": "無線インターネット事業者（WISP）の接続に問題を起こす地形は。",
+      "revised": "無線インターネット事業者（WISP）の接続に問題を引き起こす地形は何か。"
+    },
+    {
+      "part": "ppt/slides/slide44.xml",
+      "paragraph_index": 5,
+      "original_page": 44,
+      "page": 44,
+      "original": "利用できるファイアウォールと、その動作を説明する。",
+      "revised": "利用できるファイアウォールと、その動作を説明してください。"
+    },
+    {
+      "part": "ppt/slides/slide46.xml",
+      "paragraph_index": 5,
+      "original_page": 46,
+      "page": 46,
+      "original": "FEMA経由と比べ、Wi-Fiや携帯網で地震速報を送る利点は。",
+      "revised": "FEMA経由と比べ、Wi-Fiや携帯網で地震速報を送る利点は何か。"
+    },
+    {
+      "part": "ppt/slides/slide54.xml",
+      "paragraph_index": 0,
+      "original_page": 54,
+      "page": 54,
+      "original": "依頼の残りの種類と、構成比",
+      "revised": "依頼の残りの種類と構成比"
+    },
+    {
+      "part": "ppt/slides/slide56.xml",
+      "paragraph_index": 0,
+      "original_page": 56,
+      "page": 56,
+      "original": "配布する入力と、バージョン別の評価資料",
+      "revised": "配布されている入力と、バージョン別の評価資料"
+    },
+    {
+      "part": "ppt/slides/slide56.xml",
+      "paragraph_index": 1,
+      "original_page": 56,
+      "page": 56,
+      "original": "データはGoogleのHugging Face配布から、examples.csvを取得する。ライセンスはCC BY 4.0。転載した文書・依頼と訳には出典を付した。",
+      "revised": "データはGoogleのHugging Face配布から、examples.csvを取得した。ライセンスはCC BY 4.0。転載した文書・依頼と訳には出典を付した。"
+    },
+    {
+      "part": "ppt/slides/slide56.xml",
+      "paragraph_index": 2,
+      "original_page": 56,
+      "page": 56,
+      "original": "同じ配布にあるevaluation_prompts.csvは、2024年の初期評価の採点指示。v2の判定モデル・指示の変更は、2025年のスイート論文で確認する。",
+      "revised": "同じ配布にあるevaluation_prompts.csvは、2024年の初期評価の採点指示。v2の判定モデル・指示の変更は、2025年のスイート論文で確認できる。"
+    },
+    {
+      "part": "ppt/slides/slide23.xml",
+      "paragraph_index": 4,
+      "original_page": 23,
+      "page": 23,
+      "original": "事実を探す",
+      "revised": "事実の抽出"
+    },
+    {
+      "part": "ppt/slides/slide23.xml",
+      "paragraph_index": 6,
+      "original_page": 23,
+      "page": 23,
+      "original": "探して要約する",
+      "revised": "抽出して要約する"
+    }
+  ],
+  "layout_adjustments": [
+    {
+      "page": 20,
+      "table_row": 5,
+      "old_height_pt": 36.0,
+      "new_height_pt": 60.0,
+      "reason": "校正後の複数行のセルの文字を下罫線内に収め、余白を確保。"
+    }
+  ],
+  "validation": {
+    "pages": 60,
+    "rendered_from_final_pptx": true,
+    "unchanged_original_pdf_retained": false,
+    "missing_revised_text": [],
+    "layout_flags": [],
+    "changed_pages": [
+      5,
+      6,
+      14,
+      18,
+      20,
+      21,
+      23,
+      25,
+      27,
+      36,
+      38,
+      40,
+      42,
+      44,
+      46,
+      54,
+      56
+    ],
+    "pdf_page_count": "passed",
+    "zip_integrity": "passed",
+    "xml_parts_parsed": 153,
+    "internal_relationship_targets": "passed",
+    "package_integrity": "passed",
+    "table_cell_issues": [],
+    "table_cells_checked": 20,
+    "visual_review_complete": true,
+    "unresolved_layout_flags": []
+  },
+  "special_actions_applied": true,
+  "special_actions_details": [],
+  "audit": {
+    "review_unit": "one slide text and image per API request",
+    "request_count": 60,
+    "prompts": {
+      "9cfe78c5324294fb782f99f7ff64957cad712275ed1fed10d7879daf86bdae45": "あなたは日本語の研究発表スライドの校正者です。このリクエストの対象は添付した1ページのみです。ページ内の全ての日本語を丁寧に確認し、日本語として自然な言葉遣いに直してください。助詞の不足、主述の不一致、不自然な修飾、文末、意味が取りにくい表現を改善してください。意味が自然なら短い見出し、ラベル、体言止めは保ってよい。常体を保つ。単なる好みの言い換え、不要な専門用語化、冗長な説明や注意書きは加えない。\n元の技術的意味・情報量・事実・数値・単位・日時・版・固有名詞・比較条件・限定・不確実性・出典番号を保持する。比較を歴史的移行や因果関係に変えない。引用原文、実データ、英語の質問と回答、コード、書誌、URL、ID、数値セル、人名・所属、章名・目次は変更しない。protected=trueの段落は変更しない。質問の日本語訳は意味を保って日本語のみ自然にする。\n見出しは1行のため長くしない。表セル・ラベルは短く保つ。本文は原文と同等以下の長さを優先し、長くても原文比1.1倍程度までとする。自然でないのに体言止めを強制する必要はない。段落の分割・統合はしない。\n添付画像で実際の文字の見え方も確認する。情報の出し方、強調、説明順などに改善意見があれば、具体的な根拠とともに返す。新情報の追加、ページ間の移動、レイアウトの変更は文言校正とは別の提案にする。効果のない装飾や箱図は勧めない。構成への意見は必要な場合だけ最大2件。前後タイトルは接続を把握する補助情報であり、前後ページの本文を見たとは扱わない。\n事実が疑わしい場合は記憶で修正せずfact_questionsへ記録する。全部の段落が自然ならeditsを空にし、確認した内容をreview_commentに具体的に記す。reviewed_paragraph_indicesにはprotectedを含め、このページで渡された全段落のインデックスを漏れなく列挙する。\nJSONのみを返す：{\"page\":5,\"reviewed_paragraph_indices\":[0,1,2],\"edits\":[{\"paragraph_index\":2,\"original\":\"原文全文\",\"revised\":\"修正文全文\",\"reason\":\"理由\"}],\"structure_suggestions\":[{\"proposal\":\"具体案\",\"reason\":\"理由\"}],\"fact_questions\":[{\"paragraph_index\":2,\"question\":\"確認事項\",\"reason\":\"理由\"}],\"review_comment\":\"ページ全体の所見\"}\n",
+      "a89e1b5c6f706d96417b624dc1b699a4467af9afe9e7cd72162ccbdce6b7d8f8": "現在の日付は2026-10-17（日本時間）です。資料内の2026年の制作日・参照日・モデル名を、知識の不足だけで誤りと判断しないでください。共通マスターの緑帯と章扉の中央見出しの反復は意図したデザインです。これを削除する提案や、空白を埋める目的の装飾・注意書きの追加は不要です。\nあなたは日本語の研究発表スライドの校正者です。このリクエストの対象は添付した1ページのみです。ページ内の全ての日本語を丁寧に確認し、日本語として自然な言葉遣いに直してください。助詞の不足、主述の不一致、不自然な修飾、文末、意味が取りにくい表現を改善してください。意味が自然なら短い見出し、ラベル、体言止めは保ってよい。常体を保つ。単なる好みの言い換え、不要な専門用語化、冗長な説明や注意書きは加えない。\n元の技術的意味・情報量・事実・数値・単位・日時・版・固有名詞・比較条件・限定・不確実性・出典番号を保持する。比較を歴史的移行や因果関係に変えない。引用原文、実データ、英語の質問と回答、コード、書誌、URL、ID、数値セル、人名・所属、章名・目次は変更しない。protected=trueの段落は変更しない。質問の日本語訳は意味を保って日本語のみ自然にする。\n見出しは1行のため長くしない。表セル・ラベルは短く保つ。本文は原文と同等以下の長さを優先し、長くても原文比1.1倍程度までとする。自然でないのに体言止めを強制する必要はない。段落の分割・統合はしない。\n添付画像で実際の文字の見え方も確認する。情報の出し方、強調、説明順などに改善意見があれば、具体的な根拠とともに返す。新情報の追加、ページ間の移動、レイアウトの変更は文言校正とは別の提案にする。効果のない装飾や箱図は勧めない。構成への意見は必要な場合だけ最大2件。前後タイトルは接続を把握する補助情報であり、前後ページの本文を見たとは扱わない。\n事実が疑わしい場合は記憶で修正せずfact_questionsへ記録する。全部の段落が自然ならeditsを空にし、確認した内容をreview_commentに具体的に記す。reviewed_paragraph_indicesにはprotectedを含め、このページで渡された全段落のインデックスを漏れなく列挙する。\nJSONのみを返す：{\"page\":5,\"reviewed_paragraph_indices\":[0,1,2],\"edits\":[{\"paragraph_index\":2,\"original\":\"原文全文\",\"revised\":\"修正文全文\",\"reason\":\"理由\"}],\"structure_suggestions\":[{\"proposal\":\"具体案\",\"reason\":\"理由\"}],\"fact_questions\":[{\"paragraph_index\":2,\"question\":\"確認事項\",\"reason\":\"理由\"}],\"review_comment\":\"ページ全体の所見\"}\n"
+    },
+    "source_pptx_sha256": "ea84dcd301badd56bd9064f305750367516b63822283f53e784f00f55c89eba8",
+    "final_pptx_sha256": "67f28b07e88a0ad3e8399407ce48cd15c00a531426227cd966c815b6f3f9f564",
+    "final_pdf_sha256": "bc910a6a5ce36e20befd52f18e921324e7fc1ede124f4f541e347c8206e1a4f4",
+    "date_jst": "2026-10-17",
+    "requests_file": "requests.jsonl",
+    "responses_file": "responses.jsonl"
+  }
+}

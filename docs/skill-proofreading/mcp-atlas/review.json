@@ -1,0 +1,841 @@
+{
+  "dataset": "mcp-atlas",
+  "model": "Codex (skill application; no external generation API)",
+  "review_mode": "skill_based_codex",
+  "reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68
+  ],
+  "request_count": 0,
+  "accepted_edits": [
+    {
+      "paragraph_index": 10,
+      "original": "参照履歴はGitHubで対象リポジトリを確認し、",
+      "revised": "参照履歴ではGitHubで対象リポジトリを確認し、",
+      "reason": "「参照履歴は…確認し」では履歴自体が主体として動作しているように読め主述が不自然になるため、助詞を「では」に改めて参照履歴（手順）の内容であることを明確にしました。",
+      "provenance": "cached_proposal_reassessed",
+      "page": 9
+    },
+    {
+      "paragraph_index": 0,
+      "original": "外部の出来事を、社内データの期間指定へ使う",
+      "revised": "外部の出来事を、社内データの期間指定に使う",
+      "reason": "用途・目的を表す助詞としては「へ」よりも「に」を用いるほうが自然なため。",
+      "provenance": "cached_proposal_reassessed",
+      "page": 11
+    },
+    {
+      "paragraph_index": 0,
+      "original": "論文バージョン3では、上位モデルは約8割",
+      "revised": "論文バージョン3では、上位モデルの合格率は約8割",
+      "reason": "「約8割」が何の値（モデル数の割合なのか合格率なのか）を指しているか曖昧なため、表の指標である「合格率」を補って意味を明確にしました。",
+      "provenance": "cached_proposal_reassessed",
+      "page": 18
+    },
+    {
+      "paragraph_index": 0,
+      "original": "専門家が、外部データの必要な仕事を作る",
+      "revised": "専門家が、外部データが必要な課題を作る",
+      "reason": "本文中で「課題作成者」「1課題」と表現されているため用語を「課題」に統一し、助詞の連体修飾「外部データの必要な」をより自然な「外部データが必要な」に改めました。",
+      "provenance": "cached_proposal_reassessed",
+      "page": 22
+    },
+    {
+      "paragraph_index": 3,
+      "original": "参照の操作履歴と、ツールの返した情報に基づく最終回答を用意する。1課題の作成・検証・文書化は平均4.6時間。",
+      "revised": "参照用の操作履歴と、ツールの返した情報に基づく最終回答を用意する。1課題の作成・検証・文書化は平均4.6時間。",
+      "reason": "「参照の操作履歴」は直訳調で座りが悪いため、「参照用の操作履歴」と補正して自然な日本語にしました。",
+      "provenance": "cached_proposal_reassessed",
+      "page": 22
+    },
+    {
+      "paragraph_index": 3,
+      "original": "確かめる内容",
+      "revised": "検証内容",
+      "reason": "表頭のラベルとして「品質確認」と対比させる際、「確かめる内容」よりも簡潔で座りのよい表現に整えました。",
+      "provenance": "cached_proposal_reassessed",
+      "page": 24
+    },
+    {
+      "paragraph_index": 8,
+      "original": "別のレビュー",
+      "revised": "別担当者によるレビュー",
+      "reason": "同列の他項目（作成者、分野の専門家、LLM）が実施主体を示しているのに対し、「別のレビュー」では主体が曖昧で表現もやや口語的であるため、意味を保ったまま体裁を揃えました。",
+      "provenance": "cached_proposal_reassessed",
+      "page": 24
+    },
+    {
+      "paragraph_index": 0,
+      "original": "公開500課題には、依頼と正解条件を配布する",
+      "revised": "公開500課題では、依頼と正解条件を配布する",
+      "reason": "「課題には…配布する」は助詞の係り受けが不自然なため、「課題では」に整えました。",
+      "provenance": "cached_proposal_reassessed",
+      "page": 27
+    },
+    {
+      "paragraph_index": 0,
+      "original": "MCPサーバーを固定したコンテナーで動かす",
+      "revised": "バージョンを固定したMCPサーバーを動かす",
+      "reason": "固定するのはサーバーの実装・依存関係のバージョンであり、本文の具体的な条件にタイトルを合わせる。",
+      "provenance": "cached_proposal_reassessed_and_revised",
+      "cached_proposal": "MCPサーバーをコンテナーで固定して動かす",
+      "page": 29
+    },
+    {
+      "paragraph_index": 1,
+      "original": "MCP Atlasは、自然な依頼に対して、必要なツールを探し、複数サーバーの結果をつないで回答を作る評価。",
+      "revised": "MCP Atlasは、自然な依頼に対して、必要なツールを探し、複数サーバーの結果をつないで回答を作る能力を評価する。",
+      "reason": "主語「MCP Atlasは」に対して文末が「回答を作る評価」で終わっており、主述の結びつきが不自然なため、「回答を作る能力を評価する」と整えました。",
+      "provenance": "cached_proposal_reassessed",
+      "page": 32
+    },
+    {
+      "paragraph_index": 2,
+      "original": "参照履歴は、ローカルのディレクトリや複数ファイルを読み、端末コマンドでコード量と依存情報を確認する。",
+      "revised": "参照履歴では、ローカルのディレクトリや複数ファイルを読み、端末コマンドでコード量と依存情報を確認している。",
+      "reason": "「参照履歴は……確認する」では主述の対応が不自然なため、助詞を「では」に改め、参照履歴（正解手順）において行われている処理内容であることを明確にしました。",
+      "provenance": "cached_proposal_reassessed",
+      "page": 39
+    },
+    {
+      "paragraph_index": 2,
+      "original": "参照履歴は、端末でリポジトリを調べ、Gitの履歴を取得する。コードで対象コミットを絞り、Gitで変更内容を読む。",
+      "revised": "参照履歴では、端末でリポジトリを調べ、Gitの履歴を取得する。コードで対象コミットを絞り、Gitで変更内容を読む。",
+      "reason": "「参照履歴は〜取得する」という主述のねじれを解消するため、助詞「は」を「では」に修正しました。",
+      "provenance": "cached_proposal_reassessed",
+      "page": 41
+    },
+    {
+      "paragraph_index": 2,
+      "original": "参照履歴は、Slackのチャンネルとメッセージを検索した後、ローカルのディレクトリを探して該当ファイルを読む。",
+      "revised": "参照履歴では、Slackのチャンネルとメッセージを検索した後、ローカルのディレクトリを探して該当ファイルを読んでいる。",
+      "reason": "「参照履歴は〜読む」という主述のねじれを解消し、「参照履歴では〜読んでいる」として自然な文筋に整えました。",
+      "provenance": "cached_proposal_reassessed",
+      "page": 43
+    },
+    {
+      "paragraph_index": 2,
+      "original": "参照履歴は、メモリーサーバーの組織グラフを読み、Notionで満足度調査のデータベースを検索・照会する。",
+      "revised": "参照履歴では、メモリーサーバーの組織グラフを読み、Notionで満足度調査のデータベースを検索・照会している。",
+      "reason": "「参照履歴は」では履歴自体が「読む」「照会する」の動作主体となってしまい主述がねじれるため、文脈を提示する「参照履歴では」に改め、実行内容の記述として自然な文末（「照会している」）に調整しました。",
+      "provenance": "cached_proposal_reassessed",
+      "page": 45
+    },
+    {
+      "paragraph_index": 0,
+      "original": "二つの日付を特定し、同じ期間の価格を比べる",
+      "revised": "二つの日付を特定し、その期間の価格を比べる",
+      "reason": "特定した二つの日付の間の期間を指しているため、「同じ期間」とするよりも「その期間」とする方が前後の文脈として自然です。",
+      "provenance": "cached_proposal_reassessed",
+      "page": 47
+    },
+    {
+      "paragraph_index": 2,
+      "original": "配布正解の価格変化率は約47.03%の上昇。参照履歴はWeb検索で日付を確認し、AlchemyでEthereumの価格履歴を取得してコードで計算する。",
+      "revised": "配布正解の価格変化率は約47.03%の上昇。参照履歴ではWeb検索で日付を確認し、AlchemyでEthereumの価格履歴を取得してコードで計算している。",
+      "reason": "「参照履歴は…計算する」では主語と述語が噛み合わないため、「参照履歴では…計算している」として記述内容を述べる形に整えました。",
+      "provenance": "cached_proposal_reassessed",
+      "page": 47
+    },
+    {
+      "paragraph_index": 2,
+      "original": "2025年8月11日の日最高気温は30.6℃。参照履歴は、公園情報と案内所を検索してから、その地点の気象履歴を取得する。",
+      "revised": "2025年8月11日の日最高気温は30.6℃。参照履歴では、公園情報と案内所を検索してから、その地点の気象履歴を取得している。",
+      "reason": "主語「参照履歴は」に対して述部が「取得する」となっており主述が噛み合っていないため、「参照履歴では〜取得している」に改めて履歴の内容を示す自然な文構造にしました。",
+      "provenance": "cached_proposal_reassessed",
+      "page": 49
+    },
+    {
+      "paragraph_index": 2,
+      "original": "参照履歴は、Metの所蔵品検索で作品を見つけて詳細を読み、DuckDuckGoで工房の歴史を検索する。",
+      "revised": "参照履歴では、Metの所蔵品検索で作品を見つけて詳細を読み、DuckDuckGoで工房の歴史を検索している。",
+      "reason": "「参照履歴は…検索する」という主述のねじれを解消し、「参照履歴では…検索している」と自然な文脈に整えました。",
+      "provenance": "cached_proposal_reassessed",
+      "page": 51
+    },
+    {
+      "paragraph_index": 2,
+      "original": "家族の映画鑑賞会は2025年7月29日、20:00〜22:00（ET）。参照履歴は、ローカルの映画ファイルを読み、Google Workspaceの予定を取得する。",
+      "revised": "家族の映画鑑賞会は2025年7月29日、20:00〜22:00（ET）。参照履歴では、ローカルの映画ファイルを読み、Google Workspaceの予定を取得する。",
+      "reason": "「参照履歴は、…取得する」では主語と述語の対応が不自然になるため、「参照履歴では」に改めて実行内容の説明として整合させました。",
+      "provenance": "cached_proposal_reassessed",
+      "page": 53
+    },
+    {
+      "paragraph_index": 2,
+      "original": "参照履歴は、端末でローカルファイルを探し、コード実行サーバーでCSVを集計する。依頼の対象でないBarber 3は比較に含めない。",
+      "revised": "参照履歴では、端末でローカルファイルを探し、コード実行サーバーでCSVを集計する。依頼の対象でないBarber 3は比較に含めない。",
+      "reason": "「参照履歴は…集計する」という主述のねじれを解消し、文脈に即した自然な表現にするため助詞を「参照履歴では」に改めました。",
+      "provenance": "cached_proposal_reassessed",
+      "page": 55
+    },
+    {
+      "paragraph_index": 0,
+      "original": "36サーバーのうち、検索系は多くの課題で使う",
+      "revised": "36サーバーのうち、検索系は多くの課題で使われる",
+      "reason": "能動態の「使う」では主語が曖昧で口語的な印象を与えるため、客観的な報告スライドとして自然な受身の「使われる」に整えました。",
+      "provenance": "cached_proposal_reassessed",
+      "page": 56
+    },
+    {
+      "paragraph_index": 15,
+      "original": "参照の操作履歴は、1課題あたり平均9.8回のツール呼び出し。",
+      "revised": "参照の操作履歴におけるツール呼び出しは、1課題あたり平均9.8回。",
+      "reason": "主語「参照の操作履歴は」に対して末尾が「ツール呼び出し」で終わっており主述の照応がぎこちないため、「参照の操作履歴におけるツール呼び出しは、〜平均9.8回。」と自然な係り受けに整えました。",
+      "provenance": "cached_proposal_reassessed",
+      "page": 57
+    },
+    {
+      "paragraph_index": 6,
+      "original": "ツールの選択違い",
+      "revised": "ツールの選択誤り",
+      "reason": "「選択違い」はやや口語的で硬度の揃わない表現のため、上の「引数の誤り」に合わせて「ツールの選択誤り」とすることで自然かつ簡潔にします。",
+      "provenance": "cached_proposal_reassessed",
+      "page": 58
+    },
+    {
+      "paragraph_index": 7,
+      "original": "依頼を解けないツールを選ぶ",
+      "revised": "依頼に対応できないツールを選ぶ",
+      "reason": "「依頼を解く」はコロケーションとして不自然なため、「依頼に対応できない」に改めます。",
+      "provenance": "cached_proposal_reassessed",
+      "page": 58
+    }
+  ],
+  "rejected_edits": [
+    {
+      "paragraph_index": 4,
+      "original": "COMPの流動性マイニング開始日から同年の秋の初日まで、Ethereumの価格変化率を求める。",
+      "revised": "バイデンが大統領選に勝利した年のCOMP流動性マイニング開始日から同年の秋の初日まで、Ethereumの価格変化率を求める。",
+      "reason": "原文に含まれる条件「the year that joe biden wins the presidential election」が抜けているため、文中の「同年」の指示対象が存在せず意味が取りにくくなっています。基準となる年を補うことで指示関係と文意を明確にしました。",
+      "provenance": "cached_proposal_reassessed",
+      "page": 46,
+      "decision_reason": "原文の日本語は課題の要約であり、対象年は直後の正解ページで2020年と明示。冗長な年の手掛かりを追加しない。"
+    }
+  ],
+  "structure_decisions": [
+    {
+      "proposal": "第2項目の「MCPの定義」を第1項目（MCP Atlasの目的）の前に配置するか、または各項目の冒頭に「【目的】」「【前提】」「【規模と手順】」のようなラベルを付けることを検討してください。",
+      "reason": "採用：同じ本文枠内でMCPの定義をMCP Atlasの説明より前へ移し、略語の前提を先に導入する。",
+      "page": 5,
+      "decision": "採用"
+    },
+    {
+      "proposal": "2つ目の箇条書き（段落2）で末尾の「る。」が1文字だけ3行目に折り返されているため、テキストボックスの幅をわずかに広げるか字間を微調整して2行に収める。",
+      "reason": "本文中の少数文字の折り返しや単語途中の改行は、既存の制作規則で許容。欠落・重なりがなければ、折り返しだけを理由にサイズや幅を変更しない。",
+      "page": 7,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "下部の日本語説明文（段落4）の上にも「課題の要約」などの小見出しラベルを添えることを検討してください。",
+      "reason": "日本語の説明は原文と独立した本文枠に配置されている。意味が明確な説明に追加見出しを重ねない。",
+      "page": 8,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "箇条書きテキストのフォントサイズをわずかに縮小するかテキスト枠の幅を広げ、単語の途中での改行（1行目の「課題」の泣き別れなど）を解消する。",
+      "reason": "本文中の少数文字の折り返しは既存の制作規則で許容されるため、折り返しだけを理由に文字を縮小したり強制改行を入れたりしない。最終描画では欠落・重なりを別途検証する。",
+      "page": 17,
+      "decision": "見送り",
+      "decision_rule": "project_body_wrapping_policy"
+    },
+    {
+      "proposal": "下部テキスト（段落12・13）が「表全体のデータがGeminiの公式比較で採用されたもの」を指しているのかが初見でやや分かりにくいため、表のキャプションとして配置するか、主語（例：「上記の評価データはGemini 3.1 Proの公式Performance表で採用され…」）を補うと対応関係がより明確になります。",
+      "reason": "表全体が採用対象だと分かるよう主語を補う。",
+      "page": 19,
+      "decision": "採用"
+    },
+    {
+      "proposal": "第3項目のテキストボックス幅またはフォントサイズ・文字間隔をわずかに調整し、「間。」だけの3行目（ウィドウ）を解消して2行に収める。",
+      "reason": "本文中の少数文字の折り返しは既存規則で許容。欠落や重なりがない限り、折り返しだけを理由に書式を変えない。",
+      "page": 22,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "グラフ横軸の「4 以上」を「4 サーバー以上」（または各項目を「1台」「2台」「3台」「4台以上」）とし、キャプションの「平均2.55」にも「平均2.55台」や「平均2.55サーバー」と単位を補う。",
+      "reason": "横軸のサーバー数は題・注記から分かるため保持。平均値には単位を補う。",
+      "page": 26,
+      "decision": "採用"
+    },
+    {
+      "proposal": "表の列見出し「入手できるもの」に対して、非公開行の内容を「なし（運営側で保持する評価用課題）」のように、一般には入手不可であることが一目で伝わる表記に整理することを検討してください。",
+      "reason": "入手できない行であることをセルにも明記する。",
+      "page": 27,
+      "decision": "採用"
+    },
+    {
+      "proposal": "表の右列見出し「使うもの」を「実装・動作内容」または「概要」などに変更することを検討してください。",
+      "reason": "実行環境だけでなく動作手順も含む表に合わせた列見出しにする。",
+      "page": 29,
+      "decision": "採用"
+    },
+    {
+      "proposal": "「開始日」と「地域」の値をスラッシュ区切りで並べる代わりに、キャンペーンごとに列を分けた表（例：キャンペーンA/B/Cを列にして開始日と地域を各行に配置）にすることを検討する。",
+      "reason": "日付と地域が同じ順という明示があり、現在の表を保持。仮想のキャンペーン名は導入しない。",
+      "page": 37,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "前後のスライドに合わせて、タイトルを「追加例○：人物の同定と調査レコードの取得をつなぐ」のようにナンバリング付きの形式に統一することを検討してください。",
+      "reason": "追加例番号は依頼ページにあり、正解・解説ページには付けない既存の一貫した構造を保持。",
+      "page": 45,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "下部の日本語訳（TextBox 5）の上に「日本語訳」または「課題の概要」といったラベルを追加する。",
+      "reason": "原文と独立した日本語要約は配置と言語で分かり、同義のラベルを重ねない。",
+      "page": 46,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "棒グラフ上で「検索系」に該当するサーバー（oxylabs、exa、wikipediaなど）の棒の色を変えるか注記を添える。",
+      "reason": "個別サーバー名と件数が読める。新たな検索系の分類や色を追加しない。",
+      "page": 56,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "表中の「0.75以上」の列見出しまたはデータ列に薄い塗りつぶしや枠線などの強調を施すことを検討してください。",
+      "reason": "主結果の閾値は本文で示され、背景塗りを使わない共通の表を維持。",
+      "page": 62,
+      "decision": "見送り"
+    }
+  ],
+  "structural_and_factual_actions": [
+    {
+      "type": "paragraph_order",
+      "page": 5,
+      "shape_name": "Text Placeholder 2",
+      "note": "MCP定義の段落を目的説明の直前へ移動。実際の段落順は最終本文から特定して検証する。",
+      "review_page": 5,
+      "indices": [
+        2,
+        1,
+        3
+      ],
+      "original_order": [
+        1,
+        2,
+        3
+      ],
+      "provenance": "prior_decision_reassessed_by_skill"
+    },
+    {
+      "type": "text_edit",
+      "page": 19,
+      "paragraph_index": 12,
+      "revised": "表の評価データはGemini 3.1 Proの公式比較に掲載。",
+      "review_page": 19,
+      "original": "Gemini 3.1 Proの公式Performance表で採用。",
+      "provenance": "skill_structural_or_factual_action"
+    },
+    {
+      "type": "text_edit",
+      "page": 26,
+      "paragraph_index": 2,
+      "revised": "全1,000課題の必要サーバー数の割合（%）。平均2.55サーバー。",
+      "review_page": 26,
+      "original": "全1,000課題の必要サーバー数の割合（%）。平均2.55。",
+      "provenance": "prior_decision_reassessed_by_skill"
+    },
+    {
+      "type": "text_edit",
+      "page": 27,
+      "paragraph_index": 10,
+      "revised": "入手不可（運営側で保持する評価用課題）",
+      "review_page": 27,
+      "original": "運営側で保持する評価用の課題",
+      "provenance": "prior_decision_reassessed_by_skill"
+    },
+    {
+      "type": "text_edit",
+      "page": 29,
+      "paragraph_index": 3,
+      "revised": "実装・動作内容",
+      "review_page": 29,
+      "original": "使うもの",
+      "provenance": "prior_decision_reassessed_by_skill"
+    }
+  ],
+  "fact_review": [
+    {
+      "paragraph_index": 3,
+      "question": "日付が「2026-10-16」となっていますが、「2024-10-16」または「2025-10-16」などの誤記ではないでしょうか。",
+      "reason": "未来の日付（2026年）が記載されているため、発表日や作成日として意図通りか確認が必要です。",
+      "page": 1,
+      "decision": "原文を保持",
+      "finding": "現在日は2026-10-17（日本時間）。既存の制作日・参照日2026-10-15〜17は未来日ではなく、指定どおり保持する。"
+    },
+    {
+      "paragraph_index": 2,
+      "question": "参照日の年が「2026-10-16」となっていますが、未来の日付（2024年または2025年等の誤り）ではありませんか。",
+      "reason": "出典情報の日付が未来の年になっており、タイポの可能性が高いため確認が必要です。",
+      "page": 2,
+      "decision": "原文を保持",
+      "finding": "現在日は2026-10-17（日本時間）。既存の制作日・参照日2026-10-15〜17は未来日ではなく、指定どおり保持する。"
+    }
+  ],
+  "accepted_moves": [],
+  "base_order": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68
+  ],
+  "prior_trial_changes": [],
+  "final_text_changes": [
+    {
+      "part": "ppt/slides/slide9.xml",
+      "paragraph_index": 10,
+      "original_page": 9,
+      "page": 9,
+      "original": "参照履歴はGitHubで対象リポジトリを確認し、",
+      "revised": "参照履歴ではGitHubで対象リポジトリを確認し、"
+    },
+    {
+      "part": "ppt/slides/slide11.xml",
+      "paragraph_index": 0,
+      "original_page": 11,
+      "page": 11,
+      "original": "外部の出来事を、社内データの期間指定へ使う",
+      "revised": "外部の出来事を、社内データの期間指定に使う"
+    },
+    {
+      "part": "ppt/slides/slide18.xml",
+      "paragraph_index": 0,
+      "original_page": 18,
+      "page": 18,
+      "original": "論文バージョン3では、上位モデルは約8割",
+      "revised": "論文バージョン3では、上位モデルの合格率は約8割"
+    },
+    {
+      "part": "ppt/slides/slide22.xml",
+      "paragraph_index": 0,
+      "original_page": 22,
+      "page": 22,
+      "original": "専門家が、外部データの必要な仕事を作る",
+      "revised": "専門家が、外部データが必要な課題を作る"
+    },
+    {
+      "part": "ppt/slides/slide22.xml",
+      "paragraph_index": 3,
+      "original_page": 22,
+      "page": 22,
+      "original": "参照の操作履歴と、ツールの返した情報に基づく最終回答を用意する。1課題の作成・検証・文書化は平均4.6時間。",
+      "revised": "参照用の操作履歴と、ツールの返した情報に基づく最終回答を用意する。1課題の作成・検証・文書化は平均4.6時間。"
+    },
+    {
+      "part": "ppt/slides/slide24.xml",
+      "paragraph_index": 3,
+      "original_page": 24,
+      "page": 24,
+      "original": "確かめる内容",
+      "revised": "検証内容"
+    },
+    {
+      "part": "ppt/slides/slide24.xml",
+      "paragraph_index": 8,
+      "original_page": 24,
+      "page": 24,
+      "original": "別のレビュー",
+      "revised": "別担当者によるレビュー"
+    },
+    {
+      "part": "ppt/slides/slide27.xml",
+      "paragraph_index": 0,
+      "original_page": 27,
+      "page": 27,
+      "original": "公開500課題には、依頼と正解条件を配布する",
+      "revised": "公開500課題では、依頼と正解条件を配布する"
+    },
+    {
+      "part": "ppt/slides/slide29.xml",
+      "paragraph_index": 0,
+      "original_page": 29,
+      "page": 29,
+      "original": "MCPサーバーを固定したコンテナーで動かす",
+      "revised": "バージョンを固定したMCPサーバーを動かす"
+    },
+    {
+      "part": "ppt/slides/slide32.xml",
+      "paragraph_index": 1,
+      "original_page": 32,
+      "page": 32,
+      "original": "MCP Atlasは、自然な依頼に対して、必要なツールを探し、複数サーバーの結果をつないで回答を作る評価。",
+      "revised": "MCP Atlasは、自然な依頼に対して、必要なツールを探し、複数サーバーの結果をつないで回答を作る能力を評価する。"
+    },
+    {
+      "part": "ppt/slides/slide39.xml",
+      "paragraph_index": 2,
+      "original_page": 39,
+      "page": 39,
+      "original": "参照履歴は、ローカルのディレクトリや複数ファイルを読み、端末コマンドでコード量と依存情報を確認する。",
+      "revised": "参照履歴では、ローカルのディレクトリや複数ファイルを読み、端末コマンドでコード量と依存情報を確認している。"
+    },
+    {
+      "part": "ppt/slides/slide41.xml",
+      "paragraph_index": 2,
+      "original_page": 41,
+      "page": 41,
+      "original": "参照履歴は、端末でリポジトリを調べ、Gitの履歴を取得する。コードで対象コミットを絞り、Gitで変更内容を読む。",
+      "revised": "参照履歴では、端末でリポジトリを調べ、Gitの履歴を取得する。コードで対象コミットを絞り、Gitで変更内容を読む。"
+    },
+    {
+      "part": "ppt/slides/slide43.xml",
+      "paragraph_index": 2,
+      "original_page": 43,
+      "page": 43,
+      "original": "参照履歴は、Slackのチャンネルとメッセージを検索した後、ローカルのディレクトリを探して該当ファイルを読む。",
+      "revised": "参照履歴では、Slackのチャンネルとメッセージを検索した後、ローカルのディレクトリを探して該当ファイルを読んでいる。"
+    },
+    {
+      "part": "ppt/slides/slide45.xml",
+      "paragraph_index": 2,
+      "original_page": 45,
+      "page": 45,
+      "original": "参照履歴は、メモリーサーバーの組織グラフを読み、Notionで満足度調査のデータベースを検索・照会する。",
+      "revised": "参照履歴では、メモリーサーバーの組織グラフを読み、Notionで満足度調査のデータベースを検索・照会している。"
+    },
+    {
+      "part": "ppt/slides/slide47.xml",
+      "paragraph_index": 0,
+      "original_page": 47,
+      "page": 47,
+      "original": "二つの日付を特定し、同じ期間の価格を比べる",
+      "revised": "二つの日付を特定し、その期間の価格を比べる"
+    },
+    {
+      "part": "ppt/slides/slide47.xml",
+      "paragraph_index": 2,
+      "original_page": 47,
+      "page": 47,
+      "original": "配布正解の価格変化率は約47.03%の上昇。参照履歴はWeb検索で日付を確認し、AlchemyでEthereumの価格履歴を取得してコードで計算する。",
+      "revised": "配布正解の価格変化率は約47.03%の上昇。参照履歴ではWeb検索で日付を確認し、AlchemyでEthereumの価格履歴を取得してコードで計算している。"
+    },
+    {
+      "part": "ppt/slides/slide49.xml",
+      "paragraph_index": 2,
+      "original_page": 49,
+      "page": 49,
+      "original": "2025年8月11日の日最高気温は30.6℃。参照履歴は、公園情報と案内所を検索してから、その地点の気象履歴を取得する。",
+      "revised": "2025年8月11日の日最高気温は30.6℃。参照履歴では、公園情報と案内所を検索してから、その地点の気象履歴を取得している。"
+    },
+    {
+      "part": "ppt/slides/slide51.xml",
+      "paragraph_index": 2,
+      "original_page": 51,
+      "page": 51,
+      "original": "参照履歴は、Metの所蔵品検索で作品を見つけて詳細を読み、DuckDuckGoで工房の歴史を検索する。",
+      "revised": "参照履歴では、Metの所蔵品検索で作品を見つけて詳細を読み、DuckDuckGoで工房の歴史を検索している。"
+    },
+    {
+      "part": "ppt/slides/slide53.xml",
+      "paragraph_index": 2,
+      "original_page": 53,
+      "page": 53,
+      "original": "家族の映画鑑賞会は2025年7月29日、20:00〜22:00（ET）。参照履歴は、ローカルの映画ファイルを読み、Google Workspaceの予定を取得する。",
+      "revised": "家族の映画鑑賞会は2025年7月29日、20:00〜22:00（ET）。参照履歴では、ローカルの映画ファイルを読み、Google Workspaceの予定を取得する。"
+    },
+    {
+      "part": "ppt/slides/slide55.xml",
+      "paragraph_index": 2,
+      "original_page": 55,
+      "page": 55,
+      "original": "参照履歴は、端末でローカルファイルを探し、コード実行サーバーでCSVを集計する。依頼の対象でないBarber 3は比較に含めない。",
+      "revised": "参照履歴では、端末でローカルファイルを探し、コード実行サーバーでCSVを集計する。依頼の対象でないBarber 3は比較に含めない。"
+    },
+    {
+      "part": "ppt/slides/slide56.xml",
+      "paragraph_index": 0,
+      "original_page": 56,
+      "page": 56,
+      "original": "36サーバーのうち、検索系は多くの課題で使う",
+      "revised": "36サーバーのうち、検索系は多くの課題で使われる"
+    },
+    {
+      "part": "ppt/slides/slide57.xml",
+      "paragraph_index": 15,
+      "original_page": 57,
+      "page": 57,
+      "original": "参照の操作履歴は、1課題あたり平均9.8回のツール呼び出し。",
+      "revised": "参照の操作履歴におけるツール呼び出しは、1課題あたり平均9.8回。"
+    },
+    {
+      "part": "ppt/slides/slide58.xml",
+      "paragraph_index": 6,
+      "original_page": 58,
+      "page": 58,
+      "original": "ツールの選択違い",
+      "revised": "ツールの選択誤り"
+    },
+    {
+      "part": "ppt/slides/slide58.xml",
+      "paragraph_index": 7,
+      "original_page": 58,
+      "page": 58,
+      "original": "依頼を解けないツールを選ぶ",
+      "revised": "依頼に対応できないツールを選ぶ"
+    },
+    {
+      "part": "ppt/slides/slide19.xml",
+      "paragraph_index": 12,
+      "original_page": 19,
+      "page": 19,
+      "original": "Gemini 3.1 Proの公式Performance表で採用。",
+      "revised": "表の評価データはGemini 3.1 Proの公式比較に掲載。"
+    },
+    {
+      "part": "ppt/slides/slide26.xml",
+      "paragraph_index": 2,
+      "original_page": 26,
+      "page": 26,
+      "original": "全1,000課題の必要サーバー数の割合（%）。平均2.55。",
+      "revised": "全1,000課題の必要サーバー数の割合（%）。平均2.55サーバー。"
+    },
+    {
+      "part": "ppt/slides/slide27.xml",
+      "paragraph_index": 10,
+      "original_page": 27,
+      "page": 27,
+      "original": "運営側で保持する評価用の課題",
+      "revised": "入手不可（運営側で保持する評価用課題）"
+    },
+    {
+      "part": "ppt/slides/slide29.xml",
+      "paragraph_index": 3,
+      "original_page": 29,
+      "page": 29,
+      "original": "使うもの",
+      "revised": "実装・動作内容"
+    }
+  ],
+  "layout_adjustments": [
+    {
+      "page": 18,
+      "shape_name": "Title 1",
+      "old_sizes": [
+        28.0
+      ],
+      "new_parent_size": 25.0,
+      "reason": "長い見出しが1行に収まるよう、当該見出しを25ptに調整。本文サイズは維持し、描画で確認。"
+    },
+    {
+      "page": 56,
+      "shape_name": "Title 1",
+      "old_sizes": [
+        28.0
+      ],
+      "new_parent_size": 25.0,
+      "reason": "長い見出しが1行に収まるよう、当該見出しを25ptに調整。本文サイズは維持し、描画で確認。"
+    }
+  ],
+  "validation": {
+    "pages": 68,
+    "rendered_from_final_pptx": true,
+    "unchanged_original_pdf_retained": false,
+    "missing_revised_text": [],
+    "layout_flags": [],
+    "changed_pages": [
+      5,
+      9,
+      11,
+      18,
+      19,
+      22,
+      24,
+      26,
+      27,
+      29,
+      32,
+      39,
+      41,
+      43,
+      45,
+      47,
+      49,
+      51,
+      53,
+      55,
+      56,
+      57,
+      58
+    ],
+    "pdf_page_count": "passed",
+    "zip_integrity": "passed",
+    "schema": {
+      "checked_parts": 86,
+      "new_non_lexical_errors": [],
+      "baseline_error_count": 142,
+      "final_error_count": 142,
+      "integer_bullet_domain_checks": 142,
+      "note": "標準XSDを変更せず照合。既存の整数形式buSzPctとXSDの百分率字句形式の差を区別し、Open XML BulletSizePercentageの25000–400000の範囲を別途検証。既存エラーと新規エラーを分離。"
+    },
+    "xml_parts_parsed": 175,
+    "internal_relationship_targets": "passed",
+    "package_integrity": "passed",
+    "table_cell_issues": [],
+    "table_cells_checked": 51,
+    "text_diff_matches_record": true,
+    "all_original_non_slide_parts_unchanged": true,
+    "masters_media_themes_unchanged": true,
+    "visual_review_complete": true,
+    "visual_review_scope": "全ページの一覧と変更ページの拡大描画を確認。本文・表・引用枠・出典・見出しを検査。最終調整後の描画も再確認。",
+    "unresolved_layout_flags": [],
+    "layout_flag_resolutions": []
+  },
+  "special_actions_applied": true,
+  "special_actions_details": [],
+  "review_method": "skill_based_codex",
+  "reviewer": "Codex",
+  "skill": {
+    "name": "japanese-slide-proofreading",
+    "version": "1.0",
+    "path": ".agents/skills/japanese-slide-proofreading/SKILL.md",
+    "sha256": "cc532134c9392242c6ca755e3c3bfbf6bb855791112d5b570967138da688b232"
+  },
+  "new_gemini_api_calls": 0,
+  "audit": {
+    "review_unit": "one page at a time, local text review and rendered change verification",
+    "reviewed_page_count": 68,
+    "cached_gemini_page_count": 63,
+    "pages_without_cached_gemini_proposals": 5,
+    "new_external_generation_api_calls": 0,
+    "source_pptx_sha256": "bdc5dd8fa93adfc0f6badcde2996621478ee12469a41af4d146930ef7aff28eb",
+    "base_pptx_sha256": "bdc5dd8fa93adfc0f6badcde2996621478ee12469a41af4d146930ef7aff28eb",
+    "final_pptx_sha256": "fa04186367d8cb97b87088c226772f79b3e445f0f900db921e7d97c973989741",
+    "final_pdf_sha256": "7f6850a4ad358b48971a2c9745fe0642b16d0e4be66f52ac743975c1b9553d71",
+    "date": "2026-10-17",
+    "page_review_file": "pages.jsonl",
+    "prior_proposal_file": "prior-gemini-proposals.jsonl",
+    "prior_trial_note": null
+  }
+}

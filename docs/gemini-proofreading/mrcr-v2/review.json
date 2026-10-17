@@ -1,0 +1,754 @@
+{
+  "dataset": "mrcr-v2",
+  "model": "gemini-3.8-flash",
+  "review_mode": "one_slide_per_request_with_image",
+  "reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51
+  ],
+  "request_count": 51,
+  "accepted_edits": [
+    {
+      "paragraph_index": 1,
+      "original": "長い会話の中で、似た依頼の順序をたどる\n指定された過去の応答を再掲する評価",
+      "revised": "長い会話の中で似た依頼の順序をたどり、\n指定された過去の応答を再掲する評価",
+      "reason": "1行目が「たどる」と終止形で終わっており2行目との接続が曖昧だったため、「たどり、」と連用形でつなげて評価タスクの説明として文意を明確にしました。",
+      "page": 1
+    },
+    {
+      "paragraph_index": 4,
+      "original": "「宇宙探査」を題材にした、改まった文体のエッセイの4番目を再掲する。",
+      "revised": "「宇宙探査」を題材にした、改まった文体の4番目のエッセイを再掲する。",
+      "reason": "「エッセイの4番目」よりも「4番目のエッセイ」とする方が日本語として自然な修飾順になります。",
+      "page": 14
+    },
+    {
+      "paragraph_index": 0,
+      "original": "会話を長くする区間と、needle数を選べる",
+      "revised": "会話の長さの区間と、needle数を選べる",
+      "reason": "「会話を長くする区間」だと動作を表すように読めて不自然なため、「会話の長さの区間」としてコンテキスト長の区間設定であることが明確に伝わるようにしました。",
+      "page": 23
+    },
+    {
+      "paragraph_index": 11,
+      "original": "1M、2M、4M、8Mに向かう区間を配布",
+      "revised": "1M、2M、4M、8Mに至る区間を配布",
+      "reason": "数値の範囲に対して「〜に向かう区間」とする表現は日本語として不自然なため、「〜に至る区間」に修正しました。",
+      "page": 23
+    },
+    {
+      "paragraph_index": 0,
+      "original": "長文の中で、似た依頼と順序を保って追えるか",
+      "revised": "長文の中で、似た依頼を順序通りに追えるか",
+      "reason": "「似た依頼と順序を保って」では助詞「と」によって「依頼」と「順序」が並列になり、「依頼を保って追う」という不自然な係り受けに見えるため、「依頼を順序通りに追えるか」と整理しました。",
+      "page": 27
+    },
+    {
+      "paragraph_index": 4,
+      "original": "「園芸のコツ」を題材にした、ユーモラスな文体の詩の1番目を再掲する。",
+      "revised": "「園芸のコツ」を題材にした、ユーモラスな文体の1番目の詩を再掲する。",
+      "reason": "英語指示文の日本語訳として自然になるよう文末を指示・命令の調子に整え、「詩の1番目」を「最初の詩」に改めました。",
+      "page": 36,
+      "proposed_revised": "「園芸のコツ」を題材にした、ユーモラスな文体の最初の詩を出力せよ。",
+      "decision_reason": "数字1と応答を再掲するという元の動作を保持し、日本語の修飾順のみを自然にする。"
+    },
+    {
+      "paragraph_index": 18,
+      "original": "平均長はCSVのcontext_len（トークン）。会話は最終指示を除いて重複排除。",
+      "revised": "平均長はCSVのcontext_len（トークン）。会話は最終指示を除いて重複を排除。",
+      "reason": "後文の「重複排除」に助詞「を」を補い、「重複を排除」とすることで文末の収まりを自然に整えた。",
+      "page": 42
+    },
+    {
+      "paragraph_index": 2,
+      "original": "OpenAIも2025年に、別のMRCRデータをHugging Faceで公開している。こちらは、2025年12月に対象応答の数と正解の誤りを修正した。",
+      "revised": "OpenAIも2025年に、別のMRCRデータをHugging Faceで公開している。こちらは、2025年12月に対象応答の数と正解の誤りが修正された。",
+      "reason": "主語である「こちらは（前文のMRCRデータ）」に対して他動詞「修正した」を結ぶと主述のねじれが生じるため、「修正された」として整合させました。",
+      "page": 46
+    },
+    {
+      "paragraph_index": 3,
+      "original": "本資料は最短の4K〜8K区間のCSV3本を取得した。より長い区間はdownload.shで選んで取得できる。",
+      "revised": "本資料では最短の4K〜8K区間のCSV3本を取得した。より長い区間はdownload.shで選んで取得できる。",
+      "reason": "資料自体が能動的にデータを取得したような主述の不自然さを解消し、文脈を整えるため助詞を「は」から「では」に修正します。",
+      "page": 47
+    },
+    {
+      "paragraph_index": 1,
+      "original": "MRCRを説明したMichelangelo論文の第一著者はKiran Vodrahalli、最終著者はKate Olszewska。Google DeepMindとGoogle Researchの研究として2024年に公開された。",
+      "revised": "MRCRを提案したMichelangelo論文の第一著者はKiran Vodrahalli、最終著者はKate Olszewska。Google DeepMindとGoogle Researchの研究として2024年に公開された。",
+      "reason": "ベンチマークを新規に導入・発表した原著論文に対する表現として、「説明した」よりも「提案した」とする方が研究発表の文脈として自然です。",
+      "page": 49
+    },
+    {
+      "paragraph_index": 3,
+      "original": "公開v2はGoogle DeepMindのeval_hubに収録され、モデルカードの数値を再現するためのデータと評価コードを提供する。",
+      "revised": "公開版のv2はGoogle DeepMindのeval_hubに収録され、モデルカードの数値を再現するためのデータと評価コードを提供する。",
+      "reason": "「公開v2」は名詞の接続としてやや不自然なため、「公開版のv2」と補うことで文頭の座りを改善しました。",
+      "page": 49
+    }
+  ],
+  "rejected_edits": [],
+  "structure_decisions": [
+    {
+      "proposal": "「MRCRはMulti-round Coreference Resolutionの略」という説明を、3つ目の箇条書き末尾ではなく、MRCRが初出する1つ目の箇条書きの冒頭または別枠（サブタイトル等）に配置することを検討してください。",
+      "reason": "MRCRの正式名を最初の使用箇所へ移し、末尾の重複を除く。",
+      "page": 6,
+      "decision": "採用"
+    },
+    {
+      "proposal": "段落4の文字サイズをわずかに縮小して1行に収めるか、「くだけた文体の」の後など意味の区切りで改行することを検討する。",
+      "reason": "本文中の少数文字の折り返しは既存の制作規則で許容されるため、折り返しだけを理由に文字を縮小したり強制改行を入れたりしない。最終描画では欠落・重なりを別途検証する。",
+      "page": 9,
+      "decision": "見送り",
+      "decision_rule": "project_body_wrapping_policy"
+    },
+    {
+      "proposal": "段落12の「太字が指定対象」という説明について、スライド上では4番目の項目が赤字でも強調されているため、「赤字・太字が指定対象」または「赤太字が指定対象」と表記すると、視覚的な案内としてより分かりやすくなります。",
+      "reason": "「太字」だけで指定対象を識別できる。赤色も併用していることは見れば分かるため説明を重ねない。",
+      "page": 12,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "段落4（日本語の指示要約）のフォントサイズを段落3（英語指示原文）と同等かやや小さめに調整し、対応関係を明確にすることを推奨します。",
+      "reason": "大きな日本語本文を要旨と明示して原文と区別。英語より小さくするという一律のサイズ調整はしない。",
+      "page": 14,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "下部の補足文（TextBox 4）のテキスト枠の幅をわずかに広げるか、文字間・フォントサイズを微調整して1行に収める。",
+      "reason": "本文中の少数文字の折り返しは既存の制作規則で許容されるため、折り返しだけを理由に文字を縮小したり強制改行を入れたりしない。最終描画では欠落・重なりを別途検証する。",
+      "page": 17,
+      "decision": "見送り",
+      "decision_rule": "project_body_wrapping_policy"
+    },
+    {
+      "proposal": "表の左列（行見出し）である「長さの最短区間」「128Kまで」「長い区間」の表現レベルを統一（例：「最短区間」「中規模区間（128Kまで）」「長大区間（1M〜8M）」など）すると、データの階層構造がより直感的に伝わります。",
+      "reason": "見出しは実際の配布区分を表す。中規模・長大など独自の区分名を増やさず既存の長さの条件を保持する。",
+      "page": 23,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "段落4が指示内容の日本語訳・要約である場合、ラベル（例：「指示の要約」など）を付けるか、段落2・3との関係性が分かるレイアウトに整理することを検討してください。",
+      "reason": "日本語文が逐語訳ではなく応答選択の要旨であることを明記。原文の形式条件は省略せず既存の全文に保持。",
+      "page": 31,
+      "decision": "採用"
+    },
+    {
+      "proposal": "段落4（TextBox 5）の枠幅をわずかに広げるか、「なぞなぞの1番目を／再掲する。」のように文節単位で改行を入れる。",
+      "reason": "本文の少数文字の折り返しは既存規則で許容。欠落・重なりがなければ折り返しだけを理由に書式を変えない。",
+      "page": 33,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "段落4のテキストボックスの横幅をわずかに広げるか文字間隔を調整し、2行目に孤立している「する。」を1行に収める。",
+      "reason": "本文の少数文字の折り返しは既存規則で許容。欠落・重なりがなければ折り返しだけを理由に書式を変えない。",
+      "page": 34,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "段落4（TextBox 5）のテキスト枠の幅をわずかに広げるかフォントサイズを微小に縮小し、「る。」が次行に1文字だけ孤立して改行される現象を解消する。",
+      "reason": "本文の少数文字の折り返しは既存規則で許容。欠落・重なりがなければ折り返しだけを理由に書式を変えない。",
+      "page": 37,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "中央の日本語要約文（段落4）について、テキストボックスの横幅をわずかに広げるかフォントサイズを微調整し、1行に収めるか、「短編小説の4番目を／再掲する。」のように文節で折り返すレイアウトにすることを推奨します。",
+      "reason": "本文中の少数文字の折り返しは既存の制作規則で許容されるため、折り返しだけを理由に文字を縮小したり強制改行を入れたりしない。最終描画では欠落・重なりを別途検証する。",
+      "page": 38,
+      "decision": "見送り",
+      "decision_rule": "project_body_wrapping_policy"
+    },
+    {
+      "proposal": "下部注記（TextBox 4）のテキストボックス幅をわずかに広げるかフォントサイズを微調整し、1行で収まるように表示する。",
+      "reason": "本文の少数文字の折り返しは既存規則で許容。欠落・重なりがなければ折り返しだけを理由に書式を変えない。",
+      "page": 42,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "スライドタイトルが「評価条件と、データの入手先」となっているのに対し、本文第1項目では公式の記載要件（コード実行ツールの有無の明記）に触れるにとどまっています。本資料での検証において「コード実行ツールを使用したのか／直接読ませたのか」の採用条件を1文補足すると、内容の完結性が高まります。",
+      "reason": "本資料は公開データ・公式評価条件の紹介であり、新規のモデル実行結果を提示する資料ではない。未実施のモデル実行設定を追加しない。",
+      "page": 47,
+      "decision": "見送り"
+    }
+  ],
+  "structural_and_factual_actions": [
+    {
+      "type": "text_edit",
+      "page": 6,
+      "paragraph_index": 1,
+      "revised": "長文から一つの目印を探すだけの評価に対して、MRCR（Multi-round Coreference Resolution）は似た依頼を複数置く。同じ題材でも、文章の形式や文体が異なる。",
+      "review_page": 6,
+      "original": "長文から一つの目印を探すだけの評価に対して、MRCRは似た依頼を複数置く。同じ題材でも、文章の形式や文体が異なる。"
+    },
+    {
+      "type": "text_edit",
+      "page": 6,
+      "paragraph_index": 3,
+      "revised": "会話を長くしながら、同じ処理を続けられるかを調べる。",
+      "review_page": 6,
+      "original": "会話を長くしながら、同じ処理を続けられるかを調べる。MRCRはMulti-round Coreference Resolutionの略。"
+    },
+    {
+      "type": "text_edit",
+      "page": 9,
+      "paragraph_index": 4,
+      "revised": "要旨：「園芸のコツ」を題材にした、くだけた文体の短編小説の2番目を再掲する。",
+      "reason": "他の実例と同様に、逐語訳ではなく応答選択の要旨であることを明示。",
+      "review_page": 9,
+      "original": "「園芸のコツ」を題材にした、くだけた文体の短編小説の2番目を再掲する。"
+    },
+    {
+      "type": "text_edit",
+      "page": 11,
+      "paragraph_index": 4,
+      "revised": "要旨：「古代の神話」を題材にした、ユーモラスな文体のエッセイの1番目を再掲する。",
+      "reason": "他の実例と同様に、逐語訳ではなく応答選択の要旨であることを明示。",
+      "review_page": 11,
+      "original": "「古代の神話」を題材にした、ユーモラスな文体のエッセイの1番目を再掲する。"
+    },
+    {
+      "type": "text_edit",
+      "page": 13,
+      "paragraph_index": 12,
+      "revised": "一致する依頼への応答を出現順に抜粋。",
+      "review_page": 13,
+      "original": "一致する依頼への応答を出現順に抜粋。太字が指定対象。"
+    },
+    {
+      "type": "text_edit",
+      "page": 14,
+      "paragraph_index": 4,
+      "revised": "要旨：「宇宙探査」を題材にした、改まった文体の4番目のエッセイを再掲する。",
+      "review_page": 14,
+      "original": "「宇宙探査」を題材にした、改まった文体の4番目のエッセイを再掲する。"
+    },
+    {
+      "type": "text_edit",
+      "page": 31,
+      "paragraph_index": 4,
+      "revised": "要旨：「ペンギン」を題材にした、技術的な文体のツイートの2番目を再掲する。",
+      "review_page": 31,
+      "original": "「ペンギン」を題材にした、技術的な文体のツイートの2番目を再掲する。"
+    },
+    {
+      "type": "text_edit",
+      "page": 32,
+      "paragraph_index": 4,
+      "revised": "要旨：「宇宙探査」を題材にした、古風な文体の詩の1番目を再掲する。",
+      "review_page": 32,
+      "original": "「宇宙探査」を題材にした、古風な文体の詩の1番目を再掲する。"
+    },
+    {
+      "type": "text_edit",
+      "page": 33,
+      "paragraph_index": 4,
+      "revised": "要旨：「フラミンゴ」を題材にした、くだけた文体のなぞなぞの1番目を再掲する。",
+      "review_page": 33,
+      "original": "「フラミンゴ」を題材にした、くだけた文体のなぞなぞの1番目を再掲する。"
+    },
+    {
+      "type": "text_edit",
+      "page": 34,
+      "paragraph_index": 4,
+      "revised": "要旨：「架空の製品発表」を題材にした、くだけた文体の詩の2番目を再掲する。",
+      "review_page": 34,
+      "original": "「架空の製品発表」を題材にした、くだけた文体の詩の2番目を再掲する。"
+    },
+    {
+      "type": "text_edit",
+      "page": 35,
+      "paragraph_index": 4,
+      "revised": "要旨：「園芸のコツ」を題材にした、古風な文体の短編小説の2番目を再掲する。",
+      "review_page": 35,
+      "original": "「園芸のコツ」を題材にした、古風な文体の短編小説の2番目を再掲する。"
+    },
+    {
+      "type": "text_edit",
+      "page": 36,
+      "paragraph_index": 4,
+      "revised": "要旨：「園芸のコツ」を題材にした、ユーモラスな文体の1番目の詩を再掲する。",
+      "review_page": 36,
+      "original": "「園芸のコツ」を題材にした、ユーモラスな文体の1番目の詩を再掲する。"
+    },
+    {
+      "type": "text_edit",
+      "page": 37,
+      "paragraph_index": 4,
+      "revised": "要旨：「ペンギン」を題材にした、ユーモラスな文体の詩の5番目を再掲する。",
+      "review_page": 37,
+      "original": "「ペンギン」を題材にした、ユーモラスな文体の詩の5番目を再掲する。"
+    },
+    {
+      "type": "text_edit",
+      "page": 38,
+      "paragraph_index": 4,
+      "revised": "要旨：「古代の神話」を題材にした、技術的な文体の短編小説の4番目を再掲する。",
+      "reason": "他の実例と同様に、逐語訳ではなく応答選択の要旨であることを明示。",
+      "review_page": 38,
+      "original": "「古代の神話」を題材にした、技術的な文体の短編小説の4番目を再掲する。"
+    },
+    {
+      "type": "text_edit",
+      "page": 39,
+      "paragraph_index": 4,
+      "revised": "要旨：「架空の製品発表」を題材にした、改まった文体のブログ記事の2番目を再掲する。",
+      "review_page": 39,
+      "original": "「架空の製品発表」を題材にした、改まった文体のブログ記事の2番目を再掲する。"
+    },
+    {
+      "type": "text_edit",
+      "page": 40,
+      "paragraph_index": 4,
+      "revised": "要旨：「架空の製品発表」を題材にした、古風な文体のツイートの1番目を再掲する。",
+      "reason": "他の実例と同様に、逐語訳ではなく応答選択の要旨であることを明示。",
+      "review_page": 40,
+      "original": "「架空の製品発表」を題材にした、古風な文体のツイートの1番目を再掲する。"
+    }
+  ],
+  "fact_review": [
+    {
+      "paragraph_index": 12,
+      "question": "表内（5〜8番目）の項目に太字が適用されていません。「太字が指定対象。」という説明は、指定対象（次ページタイトルより「4番目」と推測）が存在する前スライド（1〜4番目）の記述がそのまま残っているのか、あるいは本ページ内のいずれかの項目を太字にする意図だったのか確認が必要です。",
+      "reason": "説明文に「太字が指定対象」と記載されているものの、本スライドの一覧には太字表記された行が存在せず、表示内容と注記が不整合になっているため。",
+      "page": 13,
+      "decision": "不適切な注記を削除",
+      "finding": "このページの5〜8番目には指定対象の4番目が含まれず、太字の行もないことを画像で確認。ここに当てはまらない「太字が指定対象」の一文だけを除く。"
+    },
+    {
+      "paragraph_index": 4,
+      "question": "段落4は段落3の指示に対する和訳または要約と思われますが、原文にある「指定文字列の先頭付加（Prepend HROIt7tHWU5j...）」や「それ以外のテキストを含めない（Do not include...）」という条件が省略されています。タスクの要点のみを示した意図的な要約でしょうか。",
+      "reason": "参照応答（段落7）には「HROIt7tHWU5j」が付加されているため、指示の和訳文として読む場合に条件の欠落と受け取られる可能性があるためです。",
+      "page": 14,
+      "decision": "要旨であることを明示",
+      "finding": "日本語文は対象の応答を選ぶというタスクの要旨。原文は同じページで全文を掲載しており、文字列前置・他の文を出さない条件を保持。日本語文に「要旨：」を付けて逐語訳との違いを明示する。"
+    },
+    {
+      "paragraph_index": 2,
+      "question": "Gemini 3.1 ProとGemini 3 Proの1Mにおける評価スコアがともに「26.3%」となっていますが、転記ミスではなく実際の報告値として同値でしょうか。",
+      "reason": "両モデルの1Mでのスコアが完全に一致しているため、数値の誤記やコピー＆ペーストによる重複がないか確認するため。",
+      "page": 19,
+      "decision": "原文を保持",
+      "finding": "公式モデルカードの1M点評価はGemini 3.1 ProとGemini 3 Proともに26.3%。既存の取得・画像照合記録と一致。",
+      "evidence": "docs/mrcr-v2-sources.md:41"
+    },
+    {
+      "paragraph_index": 4,
+      "question": "段落4は段落3の英語指示（Prepend Q7jYVGPcnz10 to the second tweet...）の要約または日本語訳でしょうか。その場合、「Q7jYVGPcnz10を先頭に付加する」という指示内容が反映されておらず、「ツイートの2番目を再掲する」となっている点に情報不足や意図のずれがないかご確認ください。",
+      "reason": "英語原文のタスク指示は「条件に該当するツイートの先頭に特定文字列（Q7jYVGPcnz10）を付加して出力する」というneedle retrievalタスクですが、段落4では文字列付加の指示が省かれ、単に「ツイートの2番目を再掲する」という文意になっているためです。",
+      "page": 31,
+      "decision": "要旨であることを明示",
+      "finding": "日本語文は対象の応答を選ぶというタスクの要旨。原文は同じページで全文を掲載しており、文字列前置・他の文を出さない条件を保持。日本語文に「要旨：」を付けて逐語訳との違いを明示する。"
+    },
+    {
+      "paragraph_index": 4,
+      "question": "段落4の文言は直前の段落3の指示文（Prepend h4z2lNFlIUaU to the first poem...）の翻訳または要約と見られますが、「再掲する」となっており、先頭への文字列付与（Prepend）の指示が含まれていません。元のタスク指示の要約として意図通りかご確認ください。",
+      "reason": "段落3の「Prepend [文字列] to the first poem...」という指示内容に対し、段落4ではプレフィックスの付与指示が言及されておらず、単に「詩の1番目を再掲する」となっており、指示文の要約として乖離がある可能性があるため。",
+      "page": 32,
+      "decision": "要旨であることを明示",
+      "finding": "日本語文は対象の応答を選ぶというタスクの要旨。原文は同じページで全文を掲載しており、文字列前置・他の文を出さない条件を保持。日本語文に「要旨：」を付けて逐語訳との違いを明示する。"
+    },
+    {
+      "paragraph_index": 4,
+      "question": "段落4は直上の最終指示（英語原文）の日本語訳・要約の意図でしょうか。もし指示文の対訳である場合、原文にある「sG29eA0kcEo0を先頭に付加する（Prepend）」および「他のテキストを含めない」という中核的な条件が欠落しています。",
+      "reason": "段落3の英語指示では文字列の付加が指示されているのに対し、段落4は「なぞなぞの1番目を再掲する。」となっており、指示内容と整合していない可能性があるため。",
+      "page": 33,
+      "decision": "要旨であることを明示",
+      "finding": "日本語文は対象の応答を選ぶというタスクの要旨。原文は同じページで全文を掲載しており、文字列前置・他の文を出さない条件を保持。日本語文に「要旨：」を付けて逐語訳との違いを明示する。"
+    },
+    {
+      "paragraph_index": 4,
+      "question": "原文指示に含まれる「Prepend ekKyY8Sdf6gC to...（指定の文字列を先頭に付加する）」という条件が日本語文では省かれ、「〜を再掲する。」となっていますが、指示全体の日本語訳ではなくタスクの主要動作のみを意図的に要約した記載でしょうか。",
+      "reason": "最終指示（原文）と見比べた際に、MRCRタスク特有のランダム文字列の前置指示という制約条件が日本語文から抜け落ちているように見えるため確認が必要です。",
+      "page": 34,
+      "decision": "要旨であることを明示",
+      "finding": "日本語文は対象の応答を選ぶというタスクの要旨。原文は同じページで全文を掲載しており、文字列前置・他の文を出さない条件を保持。日本語文に「要旨：」を付けて逐語訳との違いを明示する。"
+    },
+    {
+      "paragraph_index": 4,
+      "question": "段落4の「『園芸のコツ』を題材にした、古風な文体の短編小説の2番目を再掲する。」は、直上の指示原文（段落3）にある「Prepend X5SOAJjpF9d2 ...（指定IDを先頭に付与して出力する）」の指示内容を省略した意図的な要約説明でしょうか。指示の日本語訳・要約として提示されているのであれば、IDの付加指示が含まれていない点をご確認ください。",
+      "reason": "指示原文（TextBox 4）では特定文字列（X5SOAJjpF9d2）を先頭に付加して余計な文を含めず出力することが求められていますが、TextBox 5の説明文では該当部分に触れられておらず、タスクの指示内容と説明の対応関係に齟齬があるように見受けられるためです。",
+      "page": 35,
+      "decision": "要旨であることを明示",
+      "finding": "日本語文は対象の応答を選ぶというタスクの要旨。原文は同じページで全文を掲載しており、文字列前置・他の文を出さない条件を保持。日本語文に「要旨：」を付けて逐語訳との違いを明示する。"
+    },
+    {
+      "paragraph_index": 4,
+      "question": "段落4は直上の英語指示原文（Prepend DpyaXA527tK7 to the fifth poem about penguins in a humorous style. Do not include any other text in your response.）の訳出または解説文と見られますが、「再掲する」となっており、指示原文の要点であるプレフィックス文字列の付加（Prepend DpyaXA527tK7）や回答制約（Do not include...）が反映されていません。意図的な意訳・要約表記か、あるいは指示内容との乖離がないか確認してください。",
+      "reason": "英語指示では指定文字列を付加して出力することが求められているのに対し、日本語文では文字列への言及がなく単に「再掲する」と書かれており、技術的要件の伝達に齟齬が生じている可能性があるため。",
+      "page": 37,
+      "decision": "要旨であることを明示",
+      "finding": "日本語文は対象の応答を選ぶというタスクの要旨。原文は同じページで全文を掲載しており、文字列前置・他の文を出さない条件を保持。日本語文に「要旨：」を付けて逐語訳との違いを明示する。"
+    },
+    {
+      "paragraph_index": 4,
+      "question": "段落4は指示原文（段落3）の日本語訳でしょうか、それともスライド独自のタスク概要説明でしょうか。もし指示文の対訳である場合、原文の「Prepend 1XzzaxnaJc94」や「Do not include any other text...」に対応するID付与や排他指定が省略されています。",
+      "reason": "原文の指示内容と比べるとプレフィックス付与の要件が含まれておらず、「再掲する」という記述がタスクの要約説明なのか指示の意訳なのか判断が分かれるためです。",
+      "page": 39,
+      "decision": "要旨であることを明示",
+      "finding": "日本語文は対象の応答を選ぶというタスクの要旨。原文は同じページで全文を掲載しており、文字列前置・他の文を出さない条件を保持。日本語文に「要旨：」を付けて逐語訳との違いを明示する。"
+    }
+  ],
+  "accepted_moves": [],
+  "base_order": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51
+  ],
+  "prior_trial_changes": [],
+  "final_text_changes": [
+    {
+      "part": "ppt/slides/slide1.xml",
+      "paragraph_index": 1,
+      "original_page": 1,
+      "page": 1,
+      "original": "長い会話の中で、似た依頼の順序をたどる\n指定された過去の応答を再掲する評価",
+      "revised": "長い会話の中で似た依頼の順序をたどり、\n指定された過去の応答を再掲する評価"
+    },
+    {
+      "part": "ppt/slides/slide14.xml",
+      "paragraph_index": 4,
+      "original_page": 14,
+      "page": 14,
+      "original": "「宇宙探査」を題材にした、改まった文体のエッセイの4番目を再掲する。",
+      "revised": "要旨：「宇宙探査」を題材にした、改まった文体の4番目のエッセイを再掲する。"
+    },
+    {
+      "part": "ppt/slides/slide23.xml",
+      "paragraph_index": 0,
+      "original_page": 23,
+      "page": 23,
+      "original": "会話を長くする区間と、needle数を選べる",
+      "revised": "会話の長さの区間と、needle数を選べる"
+    },
+    {
+      "part": "ppt/slides/slide23.xml",
+      "paragraph_index": 11,
+      "original_page": 23,
+      "page": 23,
+      "original": "1M、2M、4M、8Mに向かう区間を配布",
+      "revised": "1M、2M、4M、8Mに至る区間を配布"
+    },
+    {
+      "part": "ppt/slides/slide27.xml",
+      "paragraph_index": 0,
+      "original_page": 27,
+      "page": 27,
+      "original": "長文の中で、似た依頼と順序を保って追えるか",
+      "revised": "長文の中で、似た依頼を順序通りに追えるか"
+    },
+    {
+      "part": "ppt/slides/slide36.xml",
+      "paragraph_index": 4,
+      "original_page": 36,
+      "page": 36,
+      "original": "「園芸のコツ」を題材にした、ユーモラスな文体の詩の1番目を再掲する。",
+      "revised": "要旨：「園芸のコツ」を題材にした、ユーモラスな文体の1番目の詩を再掲する。"
+    },
+    {
+      "part": "ppt/slides/slide42.xml",
+      "paragraph_index": 18,
+      "original_page": 42,
+      "page": 42,
+      "original": "平均長はCSVのcontext_len（トークン）。会話は最終指示を除いて重複排除。",
+      "revised": "平均長はCSVのcontext_len（トークン）。会話は最終指示を除いて重複を排除。"
+    },
+    {
+      "part": "ppt/slides/slide46.xml",
+      "paragraph_index": 2,
+      "original_page": 46,
+      "page": 46,
+      "original": "OpenAIも2025年に、別のMRCRデータをHugging Faceで公開している。こちらは、2025年12月に対象応答の数と正解の誤りを修正した。",
+      "revised": "OpenAIも2025年に、別のMRCRデータをHugging Faceで公開している。こちらは、2025年12月に対象応答の数と正解の誤りが修正された。"
+    },
+    {
+      "part": "ppt/slides/slide47.xml",
+      "paragraph_index": 3,
+      "original_page": 47,
+      "page": 47,
+      "original": "本資料は最短の4K〜8K区間のCSV3本を取得した。より長い区間はdownload.shで選んで取得できる。",
+      "revised": "本資料では最短の4K〜8K区間のCSV3本を取得した。より長い区間はdownload.shで選んで取得できる。"
+    },
+    {
+      "part": "ppt/slides/slide49.xml",
+      "paragraph_index": 1,
+      "original_page": 49,
+      "page": 49,
+      "original": "MRCRを説明したMichelangelo論文の第一著者はKiran Vodrahalli、最終著者はKate Olszewska。Google DeepMindとGoogle Researchの研究として2024年に公開された。",
+      "revised": "MRCRを提案したMichelangelo論文の第一著者はKiran Vodrahalli、最終著者はKate Olszewska。Google DeepMindとGoogle Researchの研究として2024年に公開された。"
+    },
+    {
+      "part": "ppt/slides/slide49.xml",
+      "paragraph_index": 3,
+      "original_page": 49,
+      "page": 49,
+      "original": "公開v2はGoogle DeepMindのeval_hubに収録され、モデルカードの数値を再現するためのデータと評価コードを提供する。",
+      "revised": "公開版のv2はGoogle DeepMindのeval_hubに収録され、モデルカードの数値を再現するためのデータと評価コードを提供する。"
+    },
+    {
+      "part": "ppt/slides/slide6.xml",
+      "paragraph_index": 1,
+      "original_page": 6,
+      "page": 6,
+      "original": "長文から一つの目印を探すだけの評価に対して、MRCRは似た依頼を複数置く。同じ題材でも、文章の形式や文体が異なる。",
+      "revised": "長文から一つの目印を探すだけの評価に対して、MRCR（Multi-round Coreference Resolution）は似た依頼を複数置く。同じ題材でも、文章の形式や文体が異なる。"
+    },
+    {
+      "part": "ppt/slides/slide6.xml",
+      "paragraph_index": 3,
+      "original_page": 6,
+      "page": 6,
+      "original": "会話を長くしながら、同じ処理を続けられるかを調べる。MRCRはMulti-round Coreference Resolutionの略。",
+      "revised": "会話を長くしながら、同じ処理を続けられるかを調べる。"
+    },
+    {
+      "part": "ppt/slides/slide9.xml",
+      "paragraph_index": 4,
+      "original_page": 9,
+      "page": 9,
+      "original": "「園芸のコツ」を題材にした、くだけた文体の短編小説の2番目を再掲する。",
+      "revised": "要旨：「園芸のコツ」を題材にした、くだけた文体の短編小説の2番目を再掲する。"
+    },
+    {
+      "part": "ppt/slides/slide11.xml",
+      "paragraph_index": 4,
+      "original_page": 11,
+      "page": 11,
+      "original": "「古代の神話」を題材にした、ユーモラスな文体のエッセイの1番目を再掲する。",
+      "revised": "要旨：「古代の神話」を題材にした、ユーモラスな文体のエッセイの1番目を再掲する。"
+    },
+    {
+      "part": "ppt/slides/slide13.xml",
+      "paragraph_index": 12,
+      "original_page": 13,
+      "page": 13,
+      "original": "一致する依頼への応答を出現順に抜粋。太字が指定対象。",
+      "revised": "一致する依頼への応答を出現順に抜粋。"
+    },
+    {
+      "part": "ppt/slides/slide31.xml",
+      "paragraph_index": 4,
+      "original_page": 31,
+      "page": 31,
+      "original": "「ペンギン」を題材にした、技術的な文体のツイートの2番目を再掲する。",
+      "revised": "要旨：「ペンギン」を題材にした、技術的な文体のツイートの2番目を再掲する。"
+    },
+    {
+      "part": "ppt/slides/slide32.xml",
+      "paragraph_index": 4,
+      "original_page": 32,
+      "page": 32,
+      "original": "「宇宙探査」を題材にした、古風な文体の詩の1番目を再掲する。",
+      "revised": "要旨：「宇宙探査」を題材にした、古風な文体の詩の1番目を再掲する。"
+    },
+    {
+      "part": "ppt/slides/slide33.xml",
+      "paragraph_index": 4,
+      "original_page": 33,
+      "page": 33,
+      "original": "「フラミンゴ」を題材にした、くだけた文体のなぞなぞの1番目を再掲する。",
+      "revised": "要旨：「フラミンゴ」を題材にした、くだけた文体のなぞなぞの1番目を再掲する。"
+    },
+    {
+      "part": "ppt/slides/slide34.xml",
+      "paragraph_index": 4,
+      "original_page": 34,
+      "page": 34,
+      "original": "「架空の製品発表」を題材にした、くだけた文体の詩の2番目を再掲する。",
+      "revised": "要旨：「架空の製品発表」を題材にした、くだけた文体の詩の2番目を再掲する。"
+    },
+    {
+      "part": "ppt/slides/slide35.xml",
+      "paragraph_index": 4,
+      "original_page": 35,
+      "page": 35,
+      "original": "「園芸のコツ」を題材にした、古風な文体の短編小説の2番目を再掲する。",
+      "revised": "要旨：「園芸のコツ」を題材にした、古風な文体の短編小説の2番目を再掲する。"
+    },
+    {
+      "part": "ppt/slides/slide37.xml",
+      "paragraph_index": 4,
+      "original_page": 37,
+      "page": 37,
+      "original": "「ペンギン」を題材にした、ユーモラスな文体の詩の5番目を再掲する。",
+      "revised": "要旨：「ペンギン」を題材にした、ユーモラスな文体の詩の5番目を再掲する。"
+    },
+    {
+      "part": "ppt/slides/slide38.xml",
+      "paragraph_index": 4,
+      "original_page": 38,
+      "page": 38,
+      "original": "「古代の神話」を題材にした、技術的な文体の短編小説の4番目を再掲する。",
+      "revised": "要旨：「古代の神話」を題材にした、技術的な文体の短編小説の4番目を再掲する。"
+    },
+    {
+      "part": "ppt/slides/slide39.xml",
+      "paragraph_index": 4,
+      "original_page": 39,
+      "page": 39,
+      "original": "「架空の製品発表」を題材にした、改まった文体のブログ記事の2番目を再掲する。",
+      "revised": "要旨：「架空の製品発表」を題材にした、改まった文体のブログ記事の2番目を再掲する。"
+    },
+    {
+      "part": "ppt/slides/slide40.xml",
+      "paragraph_index": 4,
+      "original_page": 40,
+      "page": 40,
+      "original": "「架空の製品発表」を題材にした、古風な文体のツイートの1番目を再掲する。",
+      "revised": "要旨：「架空の製品発表」を題材にした、古風な文体のツイートの1番目を再掲する。"
+    }
+  ],
+  "layout_adjustments": [],
+  "validation": {
+    "pages": 51,
+    "rendered_from_final_pptx": true,
+    "unchanged_original_pdf_retained": false,
+    "missing_revised_text": [],
+    "layout_flags": [],
+    "changed_pages": [
+      1,
+      6,
+      9,
+      11,
+      13,
+      14,
+      23,
+      27,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      42,
+      46,
+      47,
+      49
+    ],
+    "pdf_page_count": "passed",
+    "zip_integrity": "passed",
+    "xml_parts_parsed": 135,
+    "internal_relationship_targets": "passed",
+    "package_integrity": "passed",
+    "table_cell_issues": [],
+    "table_cells_checked": 7,
+    "visual_review_complete": true,
+    "unresolved_layout_flags": []
+  },
+  "special_actions_applied": true,
+  "special_actions_details": [],
+  "audit": {
+    "review_unit": "one slide text and image per API request",
+    "request_count": 51,
+    "prompts": {
+      "a89e1b5c6f706d96417b624dc1b699a4467af9afe9e7cd72162ccbdce6b7d8f8": "現在の日付は2026-10-17（日本時間）です。資料内の2026年の制作日・参照日・モデル名を、知識の不足だけで誤りと判断しないでください。共通マスターの緑帯と章扉の中央見出しの反復は意図したデザインです。これを削除する提案や、空白を埋める目的の装飾・注意書きの追加は不要です。\nあなたは日本語の研究発表スライドの校正者です。このリクエストの対象は添付した1ページのみです。ページ内の全ての日本語を丁寧に確認し、日本語として自然な言葉遣いに直してください。助詞の不足、主述の不一致、不自然な修飾、文末、意味が取りにくい表現を改善してください。意味が自然なら短い見出し、ラベル、体言止めは保ってよい。常体を保つ。単なる好みの言い換え、不要な専門用語化、冗長な説明や注意書きは加えない。\n元の技術的意味・情報量・事実・数値・単位・日時・版・固有名詞・比較条件・限定・不確実性・出典番号を保持する。比較を歴史的移行や因果関係に変えない。引用原文、実データ、英語の質問と回答、コード、書誌、URL、ID、数値セル、人名・所属、章名・目次は変更しない。protected=trueの段落は変更しない。質問の日本語訳は意味を保って日本語のみ自然にする。\n見出しは1行のため長くしない。表セル・ラベルは短く保つ。本文は原文と同等以下の長さを優先し、長くても原文比1.1倍程度までとする。自然でないのに体言止めを強制する必要はない。段落の分割・統合はしない。\n添付画像で実際の文字の見え方も確認する。情報の出し方、強調、説明順などに改善意見があれば、具体的な根拠とともに返す。新情報の追加、ページ間の移動、レイアウトの変更は文言校正とは別の提案にする。効果のない装飾や箱図は勧めない。構成への意見は必要な場合だけ最大2件。前後タイトルは接続を把握する補助情報であり、前後ページの本文を見たとは扱わない。\n事実が疑わしい場合は記憶で修正せずfact_questionsへ記録する。全部の段落が自然ならeditsを空にし、確認した内容をreview_commentに具体的に記す。reviewed_paragraph_indicesにはprotectedを含め、このページで渡された全段落のインデックスを漏れなく列挙する。\nJSONのみを返す：{\"page\":5,\"reviewed_paragraph_indices\":[0,1,2],\"edits\":[{\"paragraph_index\":2,\"original\":\"原文全文\",\"revised\":\"修正文全文\",\"reason\":\"理由\"}],\"structure_suggestions\":[{\"proposal\":\"具体案\",\"reason\":\"理由\"}],\"fact_questions\":[{\"paragraph_index\":2,\"question\":\"確認事項\",\"reason\":\"理由\"}],\"review_comment\":\"ページ全体の所見\"}\n"
+    },
+    "source_pptx_sha256": "5fe10d72b607364eabaf7e960aaa85da897ca29a761e3d7ca65f69f5e6731448",
+    "final_pptx_sha256": "05d682b0b491bb11617d8a6ddbd2a0947c7f3e0905975f1687db3cd4c85c930c",
+    "final_pdf_sha256": "a34acf6d87c1dacef69437cc73d0494a7f3cb65376729c4d95b030f27631547e",
+    "date_jst": "2026-10-17",
+    "requests_file": "requests.jsonl",
+    "responses_file": "responses.jsonl"
+  }
+}

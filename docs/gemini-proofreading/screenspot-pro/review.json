@@ -1,0 +1,547 @@
+{
+  "dataset": "screenspot-pro",
+  "model": "gemini-3.8-flash",
+  "review_mode": "one_slide_per_request_with_image",
+  "reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65
+  ],
+  "request_count": 65,
+  "accepted_edits": [
+    {
+      "paragraph_index": 0,
+      "original": "実例1は、更新アイコンの位置を答える",
+      "revised": "実例1では、更新アイコンの位置を答える",
+      "reason": "「実例1は」では実例そのものが答える主体のように読めて主述が不自然になるため、助詞を「実例1では」に変更してこの事例で扱う課題内容であることを明確にしました。",
+      "page": 8
+    },
+    {
+      "paragraph_index": 0,
+      "original": "実例2は、3D画面上部の設定を探す",
+      "revised": "実例2では、3D画面上部の設定を探す",
+      "reason": "主語「実例2は」と述語「探す」の間で主述の対応が不自然になっているため、格助詞「では」に改めて文脈を整えました。",
+      "page": 10
+    },
+    {
+      "paragraph_index": 2,
+      "original": "OpenAIの公表表のモデル",
+      "revised": "OpenAI公表のモデル",
+      "reason": "「公表表」は語の重複（タイポ）であり、表の列見出しとして不自然なため整理しました。",
+      "page": 17
+    },
+    {
+      "paragraph_index": 8,
+      "original": "Fable 5欄（Mythos）",
+      "revised": "Mythos（Fable 5欄）",
+      "reason": "モデル名が並ぶ表のセル内に「欄」という語が入っておりラベルとして不自然なため削除しました。",
+      "page": 17,
+      "proposed_revised": "Fable 5（Mythos）",
+      "decision_reason": "掲載欄の名称Fable 5と、実際に計測されたMythosを区別するため、「欄」を削らず順序を自然にする。"
+    },
+    {
+      "paragraph_index": 2,
+      "original": "専門ソフトは、多くの道具と設定を高解像度の画面に並べる。画面全体に対して、個々の操作対象が小さくなる。",
+      "revised": "専門ソフトは、多くのツールや設定を高解像度の画面に配置するため、画面全体に対して個々の操作対象が小さくなる。",
+      "reason": "ソフトウェアのUI要素に対して「道具」とする表現は直訳調で不自然なため「ツール」に改めました。また、2文に分断されていた前後の因果関係を接続助詞でつなぎ、文意の通りをスムーズにしました。",
+      "page": 22
+    },
+    {
+      "paragraph_index": 3,
+      "original": "正解の四角形は操作できる部分を囲む。文字の手掛かりの有無に基づきtextとiconを分類する。",
+      "revised": "正解の四角形は操作できる部分を囲む。文字の手掛かりの有無に基づきtextとiconに分類する。",
+      "reason": "「text」と「icon」は分類先のカテゴリであるため、助詞「を」ではなく帰着先を示す「に」を用いるのが自然です。",
+      "page": 24
+    },
+    {
+      "paragraph_index": 0,
+      "original": "ScreenSpot-Proは専門画面の位置推定を測る",
+      "revised": "ScreenSpot-Proは専門画面の位置推定を評価する",
+      "reason": "「位置推定を測る」は動詞の結びつきとして不自然なため、「評価する」に改めて述語の整合性を整えました。",
+      "page": 35
+    },
+    {
+      "paragraph_index": 2,
+      "original": "量",
+      "revised": "項目",
+      "reason": "表の列見出しとして「量」とするよりも「項目」とする方が、日本語の表として自然で内容（各座標名）に合致します。",
+      "page": 56
+    },
+    {
+      "paragraph_index": 8,
+      "original": "公式eval_sample_positive_gtの判定条件を、説明用に変数名を整理して抜粋。",
+      "revised": "公式のeval_sample_positive_gtにおける判定条件を、説明用に変数名を整理して抜粋。",
+      "reason": "英字の関数名に「公式」が助詞なしで直結しており座りが悪いため、「公式の〜における」として修飾関係を自然に整えました。",
+      "page": 57
+    },
+    {
+      "paragraph_index": 0,
+      "original": "中国語の指示も同じ画面へ対応する",
+      "revised": "中国語の指示も同じ画面に対応する",
+      "reason": "「画面へ対応する」は助詞の用法として不自然なため、「画面に対応する」に修正しました。",
+      "page": 58
+    },
+    {
+      "paragraph_index": 1,
+      "original": "公開注釈にはinstructionとinstruction_cnがあり、同じ対象について英語・中国語の指示を持つ。",
+      "revised": "公開注釈にはinstructionとinstruction_cnがあり、同じ対象に対する英語・中国語の指示が含まれる。",
+      "reason": "データセット注釈の説明として、「同じ対象について〜指示を持つ」よりも「同じ対象に対する〜指示が含まれる」とする方が日本語として自然です。",
+      "page": 58
+    },
+    {
+      "paragraph_index": 2,
+      "original": "中国語はGPT-4による初期翻訳を、著者らが確認・修正して作成した。",
+      "revised": "中国語の指示は、GPT-4による初期翻訳を著者らが確認・修正したものである。",
+      "reason": "文頭の主題「中国語は」に対して述部を「作成された」と受身に合わせ、主述のねじれを解消しました。",
+      "page": 58,
+      "proposed_revised": "中国語はGPT-4による初期翻訳を、著者らが確認・修正して作成された。",
+      "decision_reason": "「中国語」自体の作成ではなく指示の翻訳であることを明示し、「著者らが…作成された」という主述の不整合を避ける。"
+    },
+    {
+      "paragraph_index": 4,
+      "original": "専門家による画面の収集、正解領域の注釈、初期評価とScreenSeekeRを説明する。",
+      "revised": "専門家による画面の収集、正解領域の注釈、初期評価、およびScreenSeekeRについて説明する。",
+      "reason": "並列の要素（画面収集、注釈、初期評価）とモデル名（ScreenSeekeR）の係り受けを整理し、「について説明する」とすることで自然な文構造に整えました。",
+      "page": 61
+    }
+  ],
+  "rejected_edits": [],
+  "structure_decisions": [
+    {
+      "proposal": "正解領域（横30 × 縦36 px）とその周辺を切り出した拡大画像を併記する。",
+      "reason": "直前に全画面と正解領域を大きく示すページを設けている。説明ページに同じ画像を追加して重複させない。",
+      "page": 8,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "Blenderの画面キャプチャと、正解領域（bounding box）を示す図をスライド内に配置することを検討してください。",
+      "reason": "直前に全画面と正解領域を大きく示すページを設けている。説明ページに同じ画像を追加して重複させない。",
+      "page": 10,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "段落10の注記の先頭に「※」などを付け、表のキャプションとしてフォントサイズをやや下げるか、表直下に近づけて配置することを検討してください。",
+      "reason": "ツールなし・Mythosの条件は表のすぐ下に明記。表との対応が明確なため、注記を小さくする必要はない。",
+      "page": 17,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "3点目の箇条書き（メニューやパネルの構造を手掛かりに…絞り込む）を2点目に移動し、具体的な採用モデル（Liらは計画役にGPT-4o…）を最後にする順序を検討する。",
+      "reason": "手法の概要→探索の仕組み→具体的なモデル構成の順へ並べ替える。",
+      "page": 18,
+      "decision": "採用"
+    },
+    {
+      "proposal": "見出しで「アイコンの成績が低い」と述べているため、表内の「icon」列（4.0%および22.4%）の数値を太字や色などで強調すると、スライドの要点が視覚的に伝わりやすくなります。",
+      "reason": "見出しと列名からtext/iconの比較軸が分かる。数値の読み取りを妨げない既存の均一な表の書式を保持。",
+      "page": 20,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "3項目目の「オフィス」が「オ」と「フィス」で行をまたいで分割されているため、テキスト枠の幅を広げるか適切な位置で改行を入れて単語の泣き別れを解消する。",
+      "reason": "本文中の少数文字・単語の折り返しは既存規則で許容。欠落や重なりがなければ折り返しだけを理由にサイズや字間を変えない。",
+      "page": 22,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "画面下部の広い余白に、面積比率の分布図（ヒストグラム等）や、第2項目で触れているVS Codeの実画面における対象サイズ（30×36 px）の視覚的な対比イメージを配置する。",
+      "reason": "対象が小さいことは実画面と具体的な幅・高さ・割合で説明済み。余白を埋めることだけを理由に二つ目の図を追加しない。",
+      "page": 27,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "表に構成比（％）の列を追加するか、タイトルまたは注記等でWindowsとmacOSで全体の約97%を占める偏りに触れることを検討してください。",
+      "reason": "3行の件数表でOS間の分布を読める。既存の件数を保持し、同じ情報を示す合算割合の列は加えない。",
+      "page": 29,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "表を左右2列のレイアウト（1ページあたり13〜14件）に変更し、26環境の提示を全2ページ程度に集約することを検討してください。",
+      "reason": "一覧・文献を大きな文字で読み進められる既存の分割を保持する。余白の削減だけを目的にページを統合しない。",
+      "page": 50,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "表の最下行に全26環境の総合計（1,581件）または本スライドの小計（341件）の行を追加することを検討してください。",
+      "reason": "全体の注釈数は既存の表注に明示済み。部分の一覧へ同じ総数を重ねず、個別環境の件数を保持する。",
+      "page": 53,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "表の並び順を件数の降順（または解像度順）に整理することを検討してください。",
+      "reason": "解像度ごとの件数を降順にし、主要な画面サイズを先に読めるようにする。",
+      "page": 54,
+      "decision": "採用"
+    },
+    {
+      "proposal": "計算式の除数となっている画面解像度（2560 × 1664 px）を、表の直前や注記などに前提条件として一言明記する。",
+      "reason": "実例の画面サイズは前に明示しており、表でも横・縦それぞれの除数を示している。今回の校正では同じ数値をさらに重ねない。",
+      "page": 56,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "コード下の説明文（TextBox 4）のフォントサイズまたは枠幅をわずかに調整し、「抜粋。」の2行目への単語落ち（ウィドウ）を解消して1行に収める。",
+      "reason": "本文中の少数文字・単語の折り返しは既存規則で許容。欠落や重なりがなければ折り返しだけを理由にサイズや字間を変えない。",
+      "page": 57,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "次ページ（p.62）の参考文献と統合し、1スライドに複数文献をまとめて掲載することを検討してください。",
+      "reason": "一覧・文献を大きな文字で読み進められる既存の分割を保持する。余白の削減だけを目的にページを統合しない。",
+      "page": 61,
+      "decision": "見送り"
+    }
+  ],
+  "structural_and_factual_actions": [
+    {
+      "type": "paragraph_order",
+      "page": 18,
+      "indices": [
+        1,
+        3,
+        2
+      ],
+      "review_page": 18,
+      "original_order": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "type": "table_row_order",
+      "page": 54,
+      "order": [
+        0,
+        3,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7
+      ],
+      "review_page": 54
+    }
+  ],
+  "fact_review": [
+    {
+      "paragraph_index": 10,
+      "question": "「Claude欄はFableの安全策を減らしたMythos」とありますが、元資料における正確な表記（セーフガードの緩和条件やモデル名の対応）と一致しているか確認してください。",
+      "reason": "「安全策を減らした」という表現が技術的な条件（セーフガードの緩和設定など）を適切に示せているか、また表中のモデル名との対応が読者に誤解を与えないか確認が必要なためです。",
+      "page": 17,
+      "decision": "比較条件を保持",
+      "finding": "OpenAI公表表の脚注17はFable 5欄の値を安全策を減らしたMythosの結果と明示。欄名と実際のモデル条件を同一視しない表記を保持する。",
+      "evidence": "docs/screenspot-pro-sources.md:7"
+    }
+  ],
+  "accepted_moves": [],
+  "base_order": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65
+  ],
+  "prior_trial_changes": [],
+  "final_text_changes": [
+    {
+      "part": "ppt/slides/slide8.xml",
+      "paragraph_index": 0,
+      "original_page": 8,
+      "page": 8,
+      "original": "実例1は、更新アイコンの位置を答える",
+      "revised": "実例1では、更新アイコンの位置を答える"
+    },
+    {
+      "part": "ppt/slides/slide10.xml",
+      "paragraph_index": 0,
+      "original_page": 10,
+      "page": 10,
+      "original": "実例2は、3D画面上部の設定を探す",
+      "revised": "実例2では、3D画面上部の設定を探す"
+    },
+    {
+      "part": "ppt/slides/slide17.xml",
+      "paragraph_index": 2,
+      "original_page": 17,
+      "page": 17,
+      "original": "OpenAIの公表表のモデル",
+      "revised": "OpenAI公表のモデル"
+    },
+    {
+      "part": "ppt/slides/slide17.xml",
+      "paragraph_index": 8,
+      "original_page": 17,
+      "page": 17,
+      "original": "Fable 5欄（Mythos）",
+      "revised": "Mythos（Fable 5欄）"
+    },
+    {
+      "part": "ppt/slides/slide22.xml",
+      "paragraph_index": 2,
+      "original_page": 22,
+      "page": 22,
+      "original": "専門ソフトは、多くの道具と設定を高解像度の画面に並べる。画面全体に対して、個々の操作対象が小さくなる。",
+      "revised": "専門ソフトは、多くのツールや設定を高解像度の画面に配置するため、画面全体に対して個々の操作対象が小さくなる。"
+    },
+    {
+      "part": "ppt/slides/slide24.xml",
+      "paragraph_index": 3,
+      "original_page": 24,
+      "page": 24,
+      "original": "正解の四角形は操作できる部分を囲む。文字の手掛かりの有無に基づきtextとiconを分類する。",
+      "revised": "正解の四角形は操作できる部分を囲む。文字の手掛かりの有無に基づきtextとiconに分類する。"
+    },
+    {
+      "part": "ppt/slides/slide35.xml",
+      "paragraph_index": 0,
+      "original_page": 35,
+      "page": 35,
+      "original": "ScreenSpot-Proは専門画面の位置推定を測る",
+      "revised": "ScreenSpot-Proは専門画面の位置推定を評価する"
+    },
+    {
+      "part": "ppt/slides/slide56.xml",
+      "paragraph_index": 2,
+      "original_page": 56,
+      "page": 56,
+      "original": "量",
+      "revised": "項目"
+    },
+    {
+      "part": "ppt/slides/slide57.xml",
+      "paragraph_index": 8,
+      "original_page": 57,
+      "page": 57,
+      "original": "公式eval_sample_positive_gtの判定条件を、説明用に変数名を整理して抜粋。",
+      "revised": "公式のeval_sample_positive_gtにおける判定条件を、説明用に変数名を整理して抜粋。"
+    },
+    {
+      "part": "ppt/slides/slide58.xml",
+      "paragraph_index": 0,
+      "original_page": 58,
+      "page": 58,
+      "original": "中国語の指示も同じ画面へ対応する",
+      "revised": "中国語の指示も同じ画面に対応する"
+    },
+    {
+      "part": "ppt/slides/slide58.xml",
+      "paragraph_index": 1,
+      "original_page": 58,
+      "page": 58,
+      "original": "公開注釈にはinstructionとinstruction_cnがあり、同じ対象について英語・中国語の指示を持つ。",
+      "revised": "公開注釈にはinstructionとinstruction_cnがあり、同じ対象に対する英語・中国語の指示が含まれる。"
+    },
+    {
+      "part": "ppt/slides/slide58.xml",
+      "paragraph_index": 2,
+      "original_page": 58,
+      "page": 58,
+      "original": "中国語はGPT-4による初期翻訳を、著者らが確認・修正して作成した。",
+      "revised": "中国語の指示は、GPT-4による初期翻訳を著者らが確認・修正したものである。"
+    },
+    {
+      "part": "ppt/slides/slide61.xml",
+      "paragraph_index": 4,
+      "original_page": 61,
+      "page": 61,
+      "original": "専門家による画面の収集、正解領域の注釈、初期評価とScreenSeekeRを説明する。",
+      "revised": "専門家による画面の収集、正解領域の注釈、初期評価、およびScreenSeekeRについて説明する。"
+    }
+  ],
+  "layout_adjustments": [
+    {
+      "page": 35,
+      "shape_name": "Title 1",
+      "old_sizes": [
+        28.0
+      ],
+      "new_parent_size": 25.0,
+      "reason": "校正後の通常タイトルを1行に収め、本文・図表との重なりを防ぐ。"
+    }
+  ],
+  "validation": {
+    "pages": 65,
+    "rendered_from_final_pptx": true,
+    "unchanged_original_pdf_retained": false,
+    "missing_revised_text": [],
+    "layout_flags": [],
+    "changed_pages": [
+      8,
+      10,
+      17,
+      18,
+      22,
+      24,
+      35,
+      54,
+      56,
+      57,
+      58,
+      61
+    ],
+    "pdf_page_count": "passed",
+    "zip_integrity": "passed",
+    "xml_parts_parsed": 167,
+    "internal_relationship_targets": "passed",
+    "package_integrity": "passed",
+    "table_cell_issues": [],
+    "table_cells_checked": 15,
+    "visual_review_complete": true,
+    "unresolved_layout_flags": []
+  },
+  "special_actions_applied": true,
+  "special_actions_details": [
+    {
+      "type": "table_row_order",
+      "page": 54,
+      "order": [
+        0,
+        3,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7
+      ],
+      "review_page": 54
+    }
+  ],
+  "audit": {
+    "review_unit": "one slide text and image per API request",
+    "request_count": 65,
+    "prompts": {
+      "a89e1b5c6f706d96417b624dc1b699a4467af9afe9e7cd72162ccbdce6b7d8f8": "現在の日付は2026-10-17（日本時間）です。資料内の2026年の制作日・参照日・モデル名を、知識の不足だけで誤りと判断しないでください。共通マスターの緑帯と章扉の中央見出しの反復は意図したデザインです。これを削除する提案や、空白を埋める目的の装飾・注意書きの追加は不要です。\nあなたは日本語の研究発表スライドの校正者です。このリクエストの対象は添付した1ページのみです。ページ内の全ての日本語を丁寧に確認し、日本語として自然な言葉遣いに直してください。助詞の不足、主述の不一致、不自然な修飾、文末、意味が取りにくい表現を改善してください。意味が自然なら短い見出し、ラベル、体言止めは保ってよい。常体を保つ。単なる好みの言い換え、不要な専門用語化、冗長な説明や注意書きは加えない。\n元の技術的意味・情報量・事実・数値・単位・日時・版・固有名詞・比較条件・限定・不確実性・出典番号を保持する。比較を歴史的移行や因果関係に変えない。引用原文、実データ、英語の質問と回答、コード、書誌、URL、ID、数値セル、人名・所属、章名・目次は変更しない。protected=trueの段落は変更しない。質問の日本語訳は意味を保って日本語のみ自然にする。\n見出しは1行のため長くしない。表セル・ラベルは短く保つ。本文は原文と同等以下の長さを優先し、長くても原文比1.1倍程度までとする。自然でないのに体言止めを強制する必要はない。段落の分割・統合はしない。\n添付画像で実際の文字の見え方も確認する。情報の出し方、強調、説明順などに改善意見があれば、具体的な根拠とともに返す。新情報の追加、ページ間の移動、レイアウトの変更は文言校正とは別の提案にする。効果のない装飾や箱図は勧めない。構成への意見は必要な場合だけ最大2件。前後タイトルは接続を把握する補助情報であり、前後ページの本文を見たとは扱わない。\n事実が疑わしい場合は記憶で修正せずfact_questionsへ記録する。全部の段落が自然ならeditsを空にし、確認した内容をreview_commentに具体的に記す。reviewed_paragraph_indicesにはprotectedを含め、このページで渡された全段落のインデックスを漏れなく列挙する。\nJSONのみを返す：{\"page\":5,\"reviewed_paragraph_indices\":[0,1,2],\"edits\":[{\"paragraph_index\":2,\"original\":\"原文全文\",\"revised\":\"修正文全文\",\"reason\":\"理由\"}],\"structure_suggestions\":[{\"proposal\":\"具体案\",\"reason\":\"理由\"}],\"fact_questions\":[{\"paragraph_index\":2,\"question\":\"確認事項\",\"reason\":\"理由\"}],\"review_comment\":\"ページ全体の所見\"}\n"
+    },
+    "source_pptx_sha256": "d6917f4a29e1bc870577cae5370697b5ca0ae8ff8b114b13841b448d2b58da04",
+    "final_pptx_sha256": "9fdc4f1bac9fa4cf997768984461451395d2c9c754ab9f4e64c01062c59e0a2c",
+    "final_pdf_sha256": "78bc922155ce4290acf89a2ea27de4dc62f3449d09dfa5d93c7c8d3e9247cebf",
+    "date_jst": "2026-10-17",
+    "requests_file": "requests.jsonl",
+    "responses_file": "responses.jsonl"
+  }
+}
