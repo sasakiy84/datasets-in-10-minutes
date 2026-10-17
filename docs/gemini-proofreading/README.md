@@ -7,4 +7,5 @@
 | facts-grounding | [facts-grounding](facts-grounding.md) |
 | global-piqa | [global-piqa](global-piqa.md) |
 | mmmlu | [mmmlu](mmmlu.md) |
+| mmmu-pro | [mmmu-pro](mmmu-pro.md) |
 | simpleqa-verified | [simpleqa-verified](simpleqa-verified.md) |
