@@ -1,0 +1,536 @@
+{
+  "dataset": "osworld-verified",
+  "model": "Codex (skill application; no external generation API)",
+  "review_mode": "skill_based_codex",
+  "reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65
+  ],
+  "request_count": 0,
+  "accepted_edits": [
+    {
+      "paragraph_index": 3,
+      "original": "OSWorld-Verifiedは、2025年に課題・採点・環境を改修した更新。ここでは現在の公開定義と、検証済みの評価結果を紹介する。",
+      "revised": "OSWorld-Verifiedは、2025年に課題・採点・環境を改修した更新版。ここでは現在の公開定義と、検証済みの評価結果を紹介する。",
+      "reason": "「改修した更新」という体言止めは表現としてやや座りが悪いため、「更新版」と補って自然な名詞表現に整えました。",
+      "provenance": "cached_proposal_reassessed",
+      "page": 5
+    },
+    {
+      "paragraph_index": 0,
+      "original": "実例3：操作の依頼と採点",
+      "revised": "実例3：操作指示の原文",
+      "reason": "このページは長い原文のみを掲載し、訳と採点は次の2ページにあるため内容に合わせる。",
+      "provenance": "skill_original",
+      "page": 14
+    },
+    {
+      "paragraph_index": 14,
+      "original": "採点は端末からの起動とCSV内容を検査。参照CSVの先頭3データ行を示す。",
+      "revised": "採点では端末からの起動とCSV内容を検査。参照CSVの先頭3データ行を示す。",
+      "reason": "「採点は〜検査」だと主語と述語の対応が不自然なため、「採点では」として検査の対象・範囲であることを明確に整えました。",
+      "provenance": "cached_proposal_reassessed",
+      "page": 16
+    },
+    {
+      "paragraph_index": 3,
+      "original": "以下は最大100ステップの提出。共通ループでは、観測から次の操作列を予測する1回を1ステップとして数える。",
+      "revised": "続く比較表は最大100ステップの提出を扱う。共通ループでは、観測から次の操作列を予測する1回を1ステップとして数える。",
+      "reason": "同ページ内に表がないため、評価条件の適用先を続く比較表と明確にする。",
+      "provenance": "skill_original",
+      "page": 18
+    },
+    {
+      "paragraph_index": 1,
+      "original": "Claude系の表は、画面を入力し、GUI操作を出す構成。追加のアクセシビリティツリー、画面操作以外のコード実行、複数試行は使わない。",
+      "revised": "Claude系の表は、画面を入力とし、GUI操作を出力する構成。追加のアクセシビリティツリー、画面操作以外のコード実行、複数試行は使わない。",
+      "reason": "「画面を入力し、GUI操作を出す」という表現を「入力とし、GUI操作を出力する」に整え、入出力関係を正確かつ学術スライドとして自然な表現にします。",
+      "provenance": "cached_proposal_reassessed",
+      "page": 19
+    },
+    {
+      "paragraph_index": 3,
+      "original": "両表とも最大100ステップで、追加のアクセシビリティツリーと複数試行はなし。課題数と公開表の日付を、提出ごとに示す。",
+      "revised": "両表とも最大100ステップで、追加のアクセシビリティツリーと複数試行は使わない。課題数と公開表の日付を、提出ごとに示す。",
+      "reason": "「複数試行はなし」という口語的な体言止めを「使わない」に改め、段落1（使わない）や段落2（使う）と文末の表現トーンを揃えます。",
+      "provenance": "cached_proposal_reassessed",
+      "page": 19
+    },
+    {
+      "paragraph_index": 1,
+      "original": "OSWorld-Verifiedは、実際のアプリを操作し、文書・表・画像・設定などの成果を検査する評価。初期状態と課題ごとの採点器を持つ。",
+      "revised": "OSWorld-Verifiedは、実際のアプリを操作し、文書・表・画像・設定などの成果を検査して評価する。初期状態と課題ごとの採点器を持つ。",
+      "reason": "前文末の「〜検査する評価。」という不自然な体言止めを動詞述語に改め、文全体のつながりと後文との調子を自然に整えるため。",
+      "provenance": "cached_proposal_reassessed",
+      "page": 30
+    },
+    {
+      "paragraph_index": 2,
+      "original": "369課題の全体版と、Google Driveの8課題を除く361課題版がある。評価にはステップ数、追加ツール、対象課題数を対応させる。",
+      "revised": "369課題の全体版と、Google Driveの8課題を除く361課題版がある。評価結果にはステップ数、追加ツール、対象課題数を併記する。",
+      "reason": "「対応させる」が条件の統一を意味するように読まれないよう、結果ごとの条件の表示と具体化する。",
+      "provenance": "skill_original",
+      "page": 30
+    },
+    {
+      "paragraph_index": 6,
+      "original": "採点：二つの許容される参照文書と行間を比べる。",
+      "revised": "採点：許容される二つの参照文書と行間を比べる。",
+      "reason": "「二つの許容される」という不自然な修飾順を整える。",
+      "provenance": "skill_original",
+      "page": 49
+    },
+    {
+      "paragraph_index": 5,
+      "original": "訳：配色テーマをVisual Studio Darkへ変更する。",
+      "revised": "訳：VS Codeの配色テーマをVisual Studio Darkへ変更する。",
+      "reason": "英語原文の対象（VS Code）が省略されており指示内容の具体性が落ちているため、対象アプリ名を補って正確な訳文に整えました。",
+      "provenance": "cached_proposal_reassessed",
+      "page": 51
+    },
+    {
+      "paragraph_index": 1,
+      "original": "複数の採点関数を組み合わせられる。ANDは0点があれば0点、すべて正なら平均。ORは最大値を採る。",
+      "revised": "複数の採点関数を組み合わせられる。ANDは0点があれば0点、すべて正なら平均。ORは最大値をとる。",
+      "reason": "数値の評価や演算において「値をとる」とする場合、漢字は「採る」ではなく「取る（とる）」を用いるのが自然です。",
+      "provenance": "cached_proposal_reassessed",
+      "page": 58
+    },
+    {
+      "paragraph_index": 1,
+      "original": "test_all.jsonは369課題、test_nogdrive.jsonは361課題。後者は、Google Driveの操作を含む8課題を全体版から除く。",
+      "revised": "test_all.jsonは369課題、test_nogdrive.jsonは361課題。後者は、Google Driveの操作を含む8課題を全体版から除いている。",
+      "reason": "データセットの構成・仕様を説明する記述として、「除く」よりも「除いている」とする方が自然です。",
+      "provenance": "cached_proposal_reassessed",
+      "page": 59
+    },
+    {
+      "paragraph_index": 3,
+      "original": "実行にはVMとエージェントの設定が必要。公式リポジトリはVMware、Docker、AWSなどの手順を案内する。",
+      "revised": "実行にはVMとエージェントの設定が必要。公式リポジトリでVMware、Docker、AWSなどの手順が案内されている。",
+      "reason": "「リポジトリは〜案内する」という無生物主語の表現を「リポジトリで〜案内されている」に改め、より自然な主述関係に整えました。",
+      "provenance": "cached_proposal_reassessed",
+      "page": 59
+    }
+  ],
+  "rejected_edits": [],
+  "structure_decisions": [
+    {
+      "proposal": "スクリーンショット内のファイル一覧が縮小されていて文字が視認しづらいため、どのような軌跡データ（例：Claude系、UI-TARS、AutoGLM等のモデル別・ステップ別実行ログ）が含まれているかを端的に箇条書きや小見出しで添えると、一目で内容が把握しやすくなります。",
+      "reason": "このページは公式配布先の案内。未説明のモデル名を導入して軌跡の種類を並べるより、後続の課題・配布形式の説明を優先する。",
+      "page": 2,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "英語の操作指示ボックスの直下に「訳」を近づけて配置し、「採点」との間に適度な間隔を設けるレイアウトを検討してください。",
+      "reason": "原文・訳・採点のまとまりは既存の縦順とラベルで明確。間隔の好みだけで移動しない。",
+      "page": 9,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "請求書番号別の件数を表す表が画面右側に寄っているため、表全体をスライド中央に配置するか、左側に前ページ（実例2のタスク内容）に対応する簡単な条件や集計概要を添えるレイアウトに調整する。",
+      "reason": "表と余白は既存の読みやすい配置を維持し、前ページの課題を重複して載せない。",
+      "page": 12,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "スライドタイトルが「実例3：操作の依頼と採点」となっていますが、本スライドには操作指示原文のみが掲載されています。採点基準や評価方法が後続スライドで扱われる構成であれば、本スライドのタイトルを「実例3：操作指示（原文）」など内容に即した名称に整理することを検討してください。",
+      "reason": "原文のみというページの役割をタイトルに反映。",
+      "page": 14,
+      "decision": "採用"
+    },
+    {
+      "proposal": "下部説明文（段落14）のテキストボックスの横幅をわずかに広げるか文字間・サイズを微調整し、末尾の「す。」のみが改行されている状態を解消する。",
+      "reason": "本文の自動折返しを保ち、末尾数文字だけを理由に縮小しない。",
+      "page": 16,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "3つ目の箇条書き「以下は最大100ステップの提出。」について、同一ページ内に表やスコアが掲載されていないため、後続ページの結果を指すのであれば「以降の評価は最大100ステップの提出に基づく。」のように範囲を明示することを検討してください。",
+      "reason": "後続の比較表の条件と明記。",
+      "page": 18,
+      "decision": "採用"
+    },
+    {
+      "proposal": "表の最下行に合計行（「合計」「361」）を追加することを検討する。",
+      "reason": "合計361はタイトルに明示され、合計行を重ねない。",
+      "page": 26,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "コードブロックの下部または右側に、print文で実際に出力される文字列（instructionの指示文抜粋やevaluatorの関数名）の実行結果例を1〜2行で添えることを検討してください。",
+      "reason": "各課題の指示と採点の実例は既に示した。読込コードに同じ出力例を重複追加しない。",
+      "page": 29,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "段落5（訳文）のテキストボックスの横幅をわずかに広げるか文字サイズを微調整し、1行に収める。",
+      "reason": "本文中の少数文字の折り返しは既存の制作規則で許容されるため、折り返しだけを理由に文字を縮小したり強制改行を入れたりしない。最終描画では欠落・重なりを別途検証する。",
+      "page": 47,
+      "decision": "見送り",
+      "decision_rule": "project_body_wrapping_policy"
+    },
+    {
+      "proposal": "英語の操作指示ボックスと、その下の「訳」および「採点」の行間が大きく離れているため、引用文の直下に訳と採点基準をまとめて配置するレイアウトに調整することを推奨します。",
+      "reason": "原文と訳・採点の独立した配置を保ち、余白だけを理由に詰めない。",
+      "page": 53,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "表の最下部に「小計（またはオフィス・日常操作計：195）」の行を追加することを検討してください。",
+      "reason": "集計範囲はタイトルと本編の内訳で明確。新たな小計を追加しない。",
+      "page": 56,
+      "decision": "見送り"
+    },
+    {
+      "proposal": "1つ目の箇条書き項目において、末尾の「く。」が3行目に1文字だけで折り返されているため、枠幅の微調整や不要なスペース・読点の整理により2行に収めることを推奨します。",
+      "reason": "本文の少数文字の折返しは許容し、欠落・重なりがない限り保持。",
+      "page": 59,
+      "decision": "見送り"
+    }
+  ],
+  "structural_and_factual_actions": [],
+  "fact_review": [
+    {
+      "paragraph_index": 2,
+      "question": "「評価にはステップ数、追加ツール、対象課題数を対応させる」とありますが、これは「評価結果の比較時にステップ数・追加ツール・対象課題数などの条件を揃える（統一する）」という意味でしょうか、それとも「評価設定として各実行にこれらを紐付けて記録する」という意味でしょうか。",
+      "reason": "「評価に〜を対応させる」の対象や目的が多義的であり、文意がやや曖昧なため。",
+      "page": 30,
+      "decision": "明確化",
+      "finding": "同じ条件へ統一するという指示ではなく、異なる提出ごとに条件を併記する趣旨。本文を具体化。"
+    }
+  ],
+  "accepted_moves": [],
+  "base_order": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65
+  ],
+  "prior_trial_changes": [],
+  "final_text_changes": [
+    {
+      "part": "ppt/slides/slide5.xml",
+      "paragraph_index": 3,
+      "original_page": 5,
+      "page": 5,
+      "original": "OSWorld-Verifiedは、2025年に課題・採点・環境を改修した更新。ここでは現在の公開定義と、検証済みの評価結果を紹介する。",
+      "revised": "OSWorld-Verifiedは、2025年に課題・採点・環境を改修した更新版。ここでは現在の公開定義と、検証済みの評価結果を紹介する。"
+    },
+    {
+      "part": "ppt/slides/slide14.xml",
+      "paragraph_index": 0,
+      "original_page": 14,
+      "page": 14,
+      "original": "実例3：操作の依頼と採点",
+      "revised": "実例3：操作指示の原文"
+    },
+    {
+      "part": "ppt/slides/slide16.xml",
+      "paragraph_index": 14,
+      "original_page": 16,
+      "page": 16,
+      "original": "採点は端末からの起動とCSV内容を検査。参照CSVの先頭3データ行を示す。",
+      "revised": "採点では端末からの起動とCSV内容を検査。参照CSVの先頭3データ行を示す。"
+    },
+    {
+      "part": "ppt/slides/slide18.xml",
+      "paragraph_index": 3,
+      "original_page": 18,
+      "page": 18,
+      "original": "以下は最大100ステップの提出。共通ループでは、観測から次の操作列を予測する1回を1ステップとして数える。",
+      "revised": "続く比較表は最大100ステップの提出を扱う。共通ループでは、観測から次の操作列を予測する1回を1ステップとして数える。"
+    },
+    {
+      "part": "ppt/slides/slide19.xml",
+      "paragraph_index": 1,
+      "original_page": 19,
+      "page": 19,
+      "original": "Claude系の表は、画面を入力し、GUI操作を出す構成。追加のアクセシビリティツリー、画面操作以外のコード実行、複数試行は使わない。",
+      "revised": "Claude系の表は、画面を入力とし、GUI操作を出力する構成。追加のアクセシビリティツリー、画面操作以外のコード実行、複数試行は使わない。"
+    },
+    {
+      "part": "ppt/slides/slide19.xml",
+      "paragraph_index": 3,
+      "original_page": 19,
+      "page": 19,
+      "original": "両表とも最大100ステップで、追加のアクセシビリティツリーと複数試行はなし。課題数と公開表の日付を、提出ごとに示す。",
+      "revised": "両表とも最大100ステップで、追加のアクセシビリティツリーと複数試行は使わない。課題数と公開表の日付を、提出ごとに示す。"
+    },
+    {
+      "part": "ppt/slides/slide30.xml",
+      "paragraph_index": 1,
+      "original_page": 30,
+      "page": 30,
+      "original": "OSWorld-Verifiedは、実際のアプリを操作し、文書・表・画像・設定などの成果を検査する評価。初期状態と課題ごとの採点器を持つ。",
+      "revised": "OSWorld-Verifiedは、実際のアプリを操作し、文書・表・画像・設定などの成果を検査して評価する。初期状態と課題ごとの採点器を持つ。"
+    },
+    {
+      "part": "ppt/slides/slide30.xml",
+      "paragraph_index": 2,
+      "original_page": 30,
+      "page": 30,
+      "original": "369課題の全体版と、Google Driveの8課題を除く361課題版がある。評価にはステップ数、追加ツール、対象課題数を対応させる。",
+      "revised": "369課題の全体版と、Google Driveの8課題を除く361課題版がある。評価結果にはステップ数、追加ツール、対象課題数を併記する。"
+    },
+    {
+      "part": "ppt/slides/slide49.xml",
+      "paragraph_index": 6,
+      "original_page": 49,
+      "page": 49,
+      "original": "採点：二つの許容される参照文書と行間を比べる。",
+      "revised": "採点：許容される二つの参照文書と行間を比べる。"
+    },
+    {
+      "part": "ppt/slides/slide51.xml",
+      "paragraph_index": 5,
+      "original_page": 51,
+      "page": 51,
+      "original": "訳：配色テーマをVisual Studio Darkへ変更する。",
+      "revised": "訳：VS Codeの配色テーマをVisual Studio Darkへ変更する。"
+    },
+    {
+      "part": "ppt/slides/slide58.xml",
+      "paragraph_index": 1,
+      "original_page": 58,
+      "page": 58,
+      "original": "複数の採点関数を組み合わせられる。ANDは0点があれば0点、すべて正なら平均。ORは最大値を採る。",
+      "revised": "複数の採点関数を組み合わせられる。ANDは0点があれば0点、すべて正なら平均。ORは最大値をとる。"
+    },
+    {
+      "part": "ppt/slides/slide59.xml",
+      "paragraph_index": 1,
+      "original_page": 59,
+      "page": 59,
+      "original": "test_all.jsonは369課題、test_nogdrive.jsonは361課題。後者は、Google Driveの操作を含む8課題を全体版から除く。",
+      "revised": "test_all.jsonは369課題、test_nogdrive.jsonは361課題。後者は、Google Driveの操作を含む8課題を全体版から除いている。"
+    },
+    {
+      "part": "ppt/slides/slide59.xml",
+      "paragraph_index": 3,
+      "original_page": 59,
+      "page": 59,
+      "original": "実行にはVMとエージェントの設定が必要。公式リポジトリはVMware、Docker、AWSなどの手順を案内する。",
+      "revised": "実行にはVMとエージェントの設定が必要。公式リポジトリでVMware、Docker、AWSなどの手順が案内されている。"
+    }
+  ],
+  "layout_adjustments": [
+    {
+      "page": 18,
+      "shape_name": "Text Placeholder 2",
+      "old_sizes": [
+        22.0
+      ],
+      "new_parent_size": 19.0,
+      "reason": "校正後の本文と出典の重なりを解消。文言・図表・数値は保持。"
+    }
+  ],
+  "validation": {
+    "pages": 65,
+    "rendered_from_final_pptx": true,
+    "unchanged_original_pdf_retained": false,
+    "missing_revised_text": [],
+    "layout_flags": [
+      {
+        "page": 59,
+        "kind": "possible_source_overlap",
+        "body_bottom": 367.0,
+        "source_top": 369.2
+      }
+    ],
+    "changed_pages": [
+      5,
+      14,
+      16,
+      18,
+      19,
+      30,
+      49,
+      51,
+      58,
+      59
+    ],
+    "pdf_page_count": "passed",
+    "zip_integrity": "passed",
+    "xml_parts_parsed": 163,
+    "internal_relationship_targets": "passed",
+    "package_integrity": "passed",
+    "table_cell_issues": [],
+    "table_cells_checked": 10,
+    "schema": {
+      "checked_parts": 80,
+      "new_non_lexical_errors": [],
+      "baseline_error_count": 127,
+      "final_error_count": 127,
+      "integer_bullet_domain_checks": 127,
+      "note": "標準XSDを変更せず照合。既存の整数形式buSzPctとXSDの百分率字句形式の差を区別し、Open XML BulletSizePercentageの25000–400000の範囲を別途検証。既存エラーと新規エラーを分離。"
+    },
+    "text_diff_matches_record": true,
+    "all_original_non_slide_parts_unchanged": true,
+    "masters_media_themes_unchanged": true,
+    "visual_review_complete": true,
+    "visual_review_scope": "全ページの一覧と変更ページの拡大描画を確認。本文・表・引用枠・出典・見出しを検査。最終調整後の描画も再確認。",
+    "unresolved_layout_flags": [],
+    "layout_flag_resolutions": [
+      {
+        "flag": {
+          "page": 59,
+          "kind": "possible_source_overlap",
+          "body_bottom": 367.0,
+          "source_top": 369.2
+        },
+        "resolution": "拡大描画で本文の実際の字形と出典の間に余白があることを確認。フォントの境界ボックスによる検出で、文字の重なりはない。"
+      }
+    ]
+  },
+  "special_actions_applied": true,
+  "special_actions_details": [],
+  "review_method": "skill_based_codex",
+  "reviewer": "Codex",
+  "skill": {
+    "name": "japanese-slide-proofreading",
+    "version": "1.0",
+    "path": ".agents/skills/japanese-slide-proofreading/SKILL.md",
+    "sha256": "cc532134c9392242c6ca755e3c3bfbf6bb855791112d5b570967138da688b232"
+  },
+  "new_gemini_api_calls": 0,
+  "audit": {
+    "review_unit": "one page at a time, local text review and rendered change verification",
+    "reviewed_page_count": 65,
+    "cached_gemini_page_count": 59,
+    "pages_without_cached_gemini_proposals": 6,
+    "new_external_generation_api_calls": 0,
+    "source_pptx_sha256": "76b09fdf4d661ac3ac4960c1484cbc06a58df42d8e4b03a11b93ee48c30a33c1",
+    "base_pptx_sha256": "76b09fdf4d661ac3ac4960c1484cbc06a58df42d8e4b03a11b93ee48c30a33c1",
+    "final_pptx_sha256": "84ef8a70f3411177935411945a7c2953ccda890add00cbe6eaed037b03784c46",
+    "final_pdf_sha256": "792a38abf91c834bdc59bb9f32dec0791822ed3d84e1ab044a67464eaf2f420d",
+    "date": "2026-10-17",
+    "page_review_file": "pages.jsonl",
+    "prior_proposal_file": "prior-gemini-proposals.jsonl",
+    "prior_trial_note": null
+  }
+}
