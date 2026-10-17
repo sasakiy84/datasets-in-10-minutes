@@ -41,3 +41,4 @@
 |資料|修正前後の対|全ページの記録|出典・検証|
 |---|---|---|---|
 |BoolQ|[変更対](boolq.md)・[TSV](boolq/changes.tsv)|[pages.jsonl](boolq/pages.jsonl)|[制作記録](../boolq-sources.md)・[最終検査](boolq/review.json)|
+|HellaSwag|[変更対](hellaswag.md)・[TSV](hellaswag/changes.tsv)|[pages.jsonl](hellaswag/pages.jsonl)|[制作記録](../hellaswag-sources.md)・[最終検査](hellaswag/review.json)|

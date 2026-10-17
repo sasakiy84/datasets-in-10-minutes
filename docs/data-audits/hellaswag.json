@@ -1,0 +1,1009 @@
+{
+  "dataset": "hellaswag",
+  "checked_at": "2026-10-17T16:27:56Z",
+  "repository": "Rowan/hellaswag",
+  "revision": "218ec52e09a7e7462a5400043bb9a69a41d06b76",
+  "sources": [
+    {
+      "path": "test-00000-of-00001.parquet",
+      "url": "https://huggingface.co/datasets/Rowan/hellaswag/resolve/218ec52e09a7e7462a5400043bb9a69a41d06b76/data/test-00000-of-00001.parquet",
+      "sha256": "e572fd5579bd1768b1985f47234f8bbe29247aca200a778b635bffc637714a41",
+      "bytes": 6112397
+    },
+    {
+      "path": "validation-00000-of-00001.parquet",
+      "url": "https://huggingface.co/datasets/Rowan/hellaswag/resolve/218ec52e09a7e7462a5400043bb9a69a41d06b76/data/validation-00000-of-00001.parquet",
+      "sha256": "899813071e1e95efafec90f856e1987d2150fa4d020fc005df6962c259f660cd",
+      "bytes": 6315951
+    },
+    {
+      "path": "hellaswag-paper.pdf",
+      "bytes": 1544236,
+      "sha256": "ac3980adce5fe671df166179c969adde42cacbcec64993cc616a6c559403a310"
+    },
+    {
+      "path": "helm-release-summary.json",
+      "bytes": 95,
+      "sha256": "9b38c903d4d2ebdf9075d3b05a67d1a67514c9815d8779873f6732dc375d6211"
+    },
+    {
+      "path": "helm-release-schema.json",
+      "bytes": 213689,
+      "sha256": "ab2ea213329376e811ce41a422b8fc7b35329e2bed4e60c323ffd38b7ada2d2f"
+    },
+    {
+      "path": "helm-release-run_specs.json",
+      "bytes": 27233068,
+      "sha256": "ef94fb6d3d234ef3193ed043b4a718cd75e0cf2aaf94f0439693cf46a4ff6f62"
+    },
+    {
+      "path": "helm-release-runs_to_run_suites.json",
+      "bytes": 907445,
+      "sha256": "ac6eb84b2493b44ffc433f7899c562864fb37fa23e281c596dbc17551fe957fb"
+    },
+    {
+      "path": "release-multiple_choice_separate_adapter.py",
+      "bytes": 2091,
+      "sha256": "55453333a56a87d0c71ce53716a274f2bb67835c78caed005fb48658c8d98f60"
+    }
+  ],
+  "source_urls": {
+    "paper": [
+      "Rowan Zellers et al. (2019). HellaSwag: Can a Machine Really Finish Your Sentence?. ACL 2019.",
+      "https://aclanthology.org/P19-1472/"
+    ],
+    "data": [
+      "Rowan/hellaswag、改訂218ec52e。2026-10-17参照。",
+      "https://huggingface.co/datasets/Rowan/hellaswag"
+    ],
+    "page": [
+      "HellaSwag 公式公開ページ。2026-10-17参照。",
+      "https://rowanzellers.com/hellaswag/"
+    ],
+    "stats": [
+      "Rowan/hellaswag、改訂218ec52e。validation全10,042件を集計。",
+      "https://huggingface.co/datasets/Rowan/hellaswag"
+    ],
+    "helm": [
+      "Liang et al. Holistic Evaluation of Language Models. TMLR 2023. Classic v0.4.0（2023-11-17）。",
+      "https://crfm.stanford.edu/helm/classic/v0.4.0/"
+    ],
+    "config": [
+      "HELM Classic v0.4.0。公開run_specsと実行別statsのcanonical設定を照合。",
+      "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/releases/v0.4.0/run_specs.json"
+    ],
+    "harness": [
+      "EleutherAI. Language Model Evaluation Harness。2026-10-17参照。",
+      "https://github.com/EleutherAI/lm-evaluation-harness"
+    ],
+    "superglue": [
+      "Wang et al. (2019). SuperGLUE: A Stickier Benchmark for General-Purpose Language Understanding Systems. NeurIPS.",
+      "https://arxiv.org/abs/1905.00537"
+    ],
+    "faithful": [
+      "Maynez et al. (2020). On Faithfulness and Factuality in Abstractive Summarization. ACL.",
+      "https://aclanthology.org/2020.acl-main.173/"
+    ],
+    "bart": [
+      "Lewis et al. (2020). BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension. ACL.",
+      "https://aclanthology.org/2020.acl-main.703/"
+    ]
+  },
+  "stats": {
+    "n": 10042,
+    "partition": "validation",
+    "words": {
+      "mean": 40.123381796454886,
+      "std_population": 15.520896893730043,
+      "min": 8.0,
+      "q25": 27.0,
+      "median": 42.0,
+      "q75": 52.0,
+      "max": 85.0
+    },
+    "histogram": [
+      6967,
+      3075,
+      0,
+      0,
+      0,
+      0
+    ],
+    "bins": [
+      "0–49",
+      "50–99",
+      "100–199",
+      "200–399",
+      "400–799",
+      "800以上"
+    ],
+    "sources": {
+      "activitynet": 3243,
+      "wikihow": 6799
+    },
+    "split_types": {
+      "indomain": 5001,
+      "zeroshot": 5041
+    },
+    "labels": {
+      "D": 2458,
+      "C": 2584,
+      "B": 2485,
+      "A": 2515
+    }
+  },
+  "method": "str.split() on all rows in the named partition; numpy.std(ddof=0); numpy.quantile(method=linear); histogram bins [0,50,100,200,400,800,100000]",
+  "selection": "Independent public records: first 3 main, remaining 10 appendix; no duplicates. Short records selected for readable full bilingual presentation; not a random sample.",
+  "examples": [
+    {
+      "index": 0,
+      "title": "屋根材をはがす",
+      "raw": {
+        "ind": 24,
+        "activity_label": "Roof shingle removal",
+        "ctx_a": "A man is sitting on a roof.",
+        "ctx_b": "he",
+        "ctx": "A man is sitting on a roof. he",
+        "endings": [
+          "is using wrap to wrap a pair of skis.",
+          "is ripping level tiles off.",
+          "is holding a rubik's cube.",
+          "starts pulling up roofing on a roof."
+        ],
+        "source_id": "activitynet~v_-JhWjGDPHMY",
+        "split": "val",
+        "split_type": "indomain",
+        "label": "3"
+      },
+      "units": [
+        {
+          "label": "文脈（全文）",
+          "en": "A man is sitting on a roof. he",
+          "ja": "男性が屋根に座っている。彼は"
+        },
+        {
+          "label": "A：選択肢（全文）",
+          "en": "is using wrap to wrap a pair of skis.",
+          "ja": "ラップでスキー板を一組包んでいる。"
+        },
+        {
+          "label": "B：選択肢（全文）",
+          "en": "is ripping level tiles off.",
+          "ja": "平らなタイルをはがしている。"
+        },
+        {
+          "label": "C：選択肢（全文）",
+          "en": "is holding a rubik's cube.",
+          "ja": "ルービックキューブを持っている。"
+        },
+        {
+          "label": "D：選択肢（全文）",
+          "en": "starts pulling up roofing on a roof.",
+          "ja": "屋根の屋根材を引きはがし始める。"
+        }
+      ],
+      "note": "四つの候補のうち、配布された正解はD。選択肢の不自然な表現も配布文面を保持した。",
+      "answer": "D",
+      "raw_sha256": "608df6f1ffa1420ab48958fda0d0f5b2fbe15e00c12e80cd5a8c46203df447b2"
+    },
+    {
+      "index": 1,
+      "title": "バーベルを持ち上げる",
+      "raw": {
+        "ind": 92,
+        "activity_label": "Clean and jerk",
+        "ctx_a": "A lady walks to a barbell. She bends down and grabs the pole.",
+        "ctx_b": "the lady",
+        "ctx": "A lady walks to a barbell. She bends down and grabs the pole. the lady",
+        "endings": [
+          "swings and lands in her arms.",
+          "pulls the barbell forward.",
+          "pulls a rope attached to the barbell.",
+          "stands and lifts the weight over her head."
+        ],
+        "source_id": "activitynet~v_-lJS58hyo1c",
+        "split": "val",
+        "split_type": "zeroshot",
+        "label": "3"
+      },
+      "units": [
+        {
+          "label": "文脈（全文）",
+          "en": "A lady walks to a barbell. She bends down and grabs the pole. the lady",
+          "ja": "女性がバーベルに歩み寄る。かがんでバーをつかむ。その女性は"
+        },
+        {
+          "label": "A：選択肢（全文）",
+          "en": "swings and lands in her arms.",
+          "ja": "揺れて自分の腕の中に着地する。"
+        },
+        {
+          "label": "B：選択肢（全文）",
+          "en": "pulls the barbell forward.",
+          "ja": "バーベルを前へ引く。"
+        },
+        {
+          "label": "C：選択肢（全文）",
+          "en": "pulls a rope attached to the barbell.",
+          "ja": "バーベルに付いたロープを引く。"
+        },
+        {
+          "label": "D：選択肢（全文）",
+          "en": "stands and lifts the weight over her head.",
+          "ja": "立ち上がり、重りを頭上へ持ち上げる。"
+        }
+      ],
+      "note": "四つの候補のうち、配布された正解はD。選択肢の不自然な表現も配布文面を保持した。",
+      "answer": "D",
+      "raw_sha256": "1475119e2129c50c36aa063e54258628b4aabc0c9261c34bcb2025925828b3b9"
+    },
+    {
+      "index": 3,
+      "title": "走り高跳び",
+      "raw": {
+        "ind": 114,
+        "activity_label": "High jump",
+        "ctx_a": "A boy is running down a track.",
+        "ctx_b": "the boy",
+        "ctx": "A boy is running down a track. the boy",
+        "endings": [
+          "runs into a car.",
+          "gets in a mat.",
+          "lifts his body above the height of a pole.",
+          "stands on his hands and springs."
+        ],
+        "source_id": "activitynet~v_-zHX3Gdx6I4",
+        "split": "val",
+        "split_type": "zeroshot",
+        "label": "2"
+      },
+      "units": [
+        {
+          "label": "文脈（全文）",
+          "en": "A boy is running down a track. the boy",
+          "ja": "少年が走路を走っている。その少年は"
+        },
+        {
+          "label": "A：選択肢（全文）",
+          "en": "runs into a car.",
+          "ja": "車にぶつかる。"
+        },
+        {
+          "label": "B：選択肢（全文）",
+          "en": "gets in a mat.",
+          "ja": "マットの中に入る。"
+        },
+        {
+          "label": "C：選択肢（全文）",
+          "en": "lifts his body above the height of a pole.",
+          "ja": "体をバーより高く持ち上げる。"
+        },
+        {
+          "label": "D：選択肢（全文）",
+          "en": "stands on his hands and springs.",
+          "ja": "逆立ちをして跳ねる。"
+        }
+      ],
+      "note": "四つの候補のうち、配布された正解はC。選択肢の不自然な表現も配布文面を保持した。",
+      "answer": "C",
+      "raw_sha256": "28af967d2e59379e6b6a05ebfcd4da8ec7f9f4a289f3fdcf89b8a2dab31e1226"
+    },
+    {
+      "index": 6,
+      "title": "ハーモニカの演奏",
+      "raw": {
+        "ind": 149,
+        "activity_label": "Playing harmonica",
+        "ctx_a": "A man is standing in front of a camera. He starts playing a harmonica for the camera.",
+        "ctx_b": "he",
+        "ctx": "A man is standing in front of a camera. He starts playing a harmonica for the camera. he",
+        "endings": [
+          "begins to play the harmonica with his body while looking at the camera.",
+          "seems to be singing while playing the harmonica.",
+          "rocks back and forth to the music as he goes.",
+          "painted a fence in front of the camera."
+        ],
+        "source_id": "activitynet~v_0RUMAGGab1k",
+        "split": "val",
+        "split_type": "zeroshot",
+        "label": "2"
+      },
+      "units": [
+        {
+          "label": "文脈（全文）",
+          "en": "A man is standing in front of a camera. He starts playing a harmonica for the camera. he",
+          "ja": "男性がカメラの前に立っている。カメラに向かってハーモニカを吹き始める。彼は"
+        },
+        {
+          "label": "A：選択肢（全文）",
+          "en": "begins to play the harmonica with his body while looking at the camera.",
+          "ja": "カメラを見ながら、体でハーモニカを演奏し始める。"
+        },
+        {
+          "label": "B：選択肢（全文）",
+          "en": "seems to be singing while playing the harmonica.",
+          "ja": "ハーモニカを吹きながら歌っているように見える。"
+        },
+        {
+          "label": "C：選択肢（全文）",
+          "en": "rocks back and forth to the music as he goes.",
+          "ja": "音楽に合わせて体を前後に揺らす。"
+        },
+        {
+          "label": "D：選択肢（全文）",
+          "en": "painted a fence in front of the camera.",
+          "ja": "カメラの前の塀を塗った。"
+        }
+      ],
+      "note": "四つの候補のうち、配布された正解はC。選択肢の不自然な表現も配布文面を保持した。",
+      "answer": "C",
+      "raw_sha256": "86bdca61243c785f505e8899f62ee86bab8ade3609217b365618b59dc277ad58"
+    },
+    {
+      "index": 14,
+      "title": "公園での演奏",
+      "raw": {
+        "ind": 192,
+        "activity_label": "Playing bagpipes",
+        "ctx_a": "A person is playing bagpipes out in a park. A man and two boys watching from a far.",
+        "ctx_b": "the camera",
+        "ctx": "A person is playing bagpipes out in a park. A man and two boys watching from a far. the camera",
+        "endings": [
+          "shoots areas all around the park while the bagpipes play.",
+          "is covered to the boy that is playing there.",
+          "then goes black and we see a black opening scene.",
+          "watching the boy and boy as they play a game of drums."
+        ],
+        "source_id": "activitynet~v_0dgmG3h9RLA",
+        "split": "val",
+        "split_type": "indomain",
+        "label": "0"
+      },
+      "units": [
+        {
+          "label": "文脈（全文）",
+          "en": "A person is playing bagpipes out in a park. A man and two boys watching from a far. the camera",
+          "ja": "公園でバグパイプを演奏している人がいる。男性と少年2人が遠くから見ている。カメラは"
+        },
+        {
+          "label": "A：選択肢（全文）",
+          "en": "shoots areas all around the park while the bagpipes play.",
+          "ja": "バグパイプの演奏中、公園のあちこちを映す。"
+        },
+        {
+          "label": "B：選択肢（全文）",
+          "en": "is covered to the boy that is playing there.",
+          "ja": "そこで演奏する少年に覆われる。"
+        },
+        {
+          "label": "C：選択肢（全文）",
+          "en": "then goes black and we see a black opening scene.",
+          "ja": "その後暗転し、黒いオープニング場面になる。"
+        },
+        {
+          "label": "D：選択肢（全文）",
+          "en": "watching the boy and boy as they play a game of drums.",
+          "ja": "少年と少年がドラムの遊びをするのを見ている。"
+        }
+      ],
+      "note": "四つの候補のうち、配布された正解はA。選択肢の不自然な表現も配布文面を保持した。",
+      "answer": "A",
+      "raw_sha256": "65be58923740c82099ad1e0f71be6f11a59fcfb6d42d4dd3ff543b3e9bae2bca"
+    },
+    {
+      "index": 17,
+      "title": "チアリーディング",
+      "raw": {
+        "ind": 245,
+        "activity_label": "Cheerleading",
+        "ctx_a": "A group of cheerleaders run onto a stage before a cheering audience.",
+        "ctx_b": "they",
+        "ctx": "A group of cheerleaders run onto a stage before a cheering audience. they",
+        "endings": [
+          "get into formation, then begin dancing and flipping as male cheerleaders join them.",
+          "perform a cheer routine before the girls, along with makeup artists, spread out and pose.",
+          "take turns jumping on each other like they are performing karate.",
+          "are then shown performing the type of cheerleading dance, using batons and pole vaults."
+        ],
+        "source_id": "activitynet~v_1AZxtWKkRlo",
+        "split": "val",
+        "split_type": "indomain",
+        "label": "0"
+      },
+      "units": [
+        {
+          "label": "文脈（全文）",
+          "en": "A group of cheerleaders run onto a stage before a cheering audience. they",
+          "ja": "歓声を上げる観客の前で、チアリーダーたちが舞台へ走り込む。彼女たちは"
+        },
+        {
+          "label": "A：選択肢（全文）",
+          "en": "get into formation, then begin dancing and flipping as male cheerleaders join them.",
+          "ja": "隊形を作り、男性チアリーダーも加わって踊ったり宙返りしたりし始める。"
+        },
+        {
+          "label": "B：選択肢（全文）",
+          "en": "perform a cheer routine before the girls, along with makeup artists, spread out and pose.",
+          "ja": "演技を披露した後、女子とメイク担当者が散らばってポーズを取る。"
+        },
+        {
+          "label": "C：選択肢（全文）",
+          "en": "take turns jumping on each other like they are performing karate.",
+          "ja": "空手をするかのように、交互に互いの上へ跳び乗る。"
+        },
+        {
+          "label": "D：選択肢（全文）",
+          "en": "are then shown performing the type of cheerleading dance, using batons and pole vaults.",
+          "ja": "その後、バトンや棒高跳びの棒を使ったチアダンスを披露する。"
+        }
+      ],
+      "note": "四つの候補のうち、配布された正解はA。選択肢の不自然な表現も配布文面を保持した。",
+      "answer": "A",
+      "raw_sha256": "23a4075f91d1b865925f1ad313bc2242448875739282527607afc3de5f8ba5b6"
+    },
+    {
+      "index": 21,
+      "title": "芝刈りの動き",
+      "raw": {
+        "ind": 354,
+        "activity_label": "Cutting the grass",
+        "ctx_a": "A man is outside of a building. He is using commercial lawn mowing equipment.",
+        "ctx_b": "he",
+        "ctx": "A man is outside of a building. He is using commercial lawn mowing equipment. he",
+        "endings": [
+          "walks back and forth as he mows the grass.",
+          "is animated as he does the task.",
+          "relaxes, making sure his lawn is pristine.",
+          "runs from one side of the building to the other."
+        ],
+        "source_id": "activitynet~v_2eep4G5Tgho",
+        "split": "val",
+        "split_type": "zeroshot",
+        "label": "0"
+      },
+      "units": [
+        {
+          "label": "文脈（全文）",
+          "en": "A man is outside of a building. He is using commercial lawn mowing equipment. he",
+          "ja": "男性が建物の外にいる。業務用の芝刈り機を使っている。彼は"
+        },
+        {
+          "label": "A：選択肢（全文）",
+          "en": "walks back and forth as he mows the grass.",
+          "ja": "芝を刈りながら行ったり来たりする。"
+        },
+        {
+          "label": "B：選択肢（全文）",
+          "en": "is animated as he does the task.",
+          "ja": "作業中、活発な様子である。"
+        },
+        {
+          "label": "C：選択肢（全文）",
+          "en": "relaxes, making sure his lawn is pristine.",
+          "ja": "芝生が完璧な状態なのを確かめながらくつろぐ。"
+        },
+        {
+          "label": "D：選択肢（全文）",
+          "en": "runs from one side of the building to the other.",
+          "ja": "建物の一方の側から反対側まで走る。"
+        }
+      ],
+      "note": "四つの候補のうち、配布された正解はA。選択肢の不自然な表現も配布文面を保持した。",
+      "answer": "A",
+      "raw_sha256": "b33e12e8ff87a8eb80d08c76bdb74d5e16040dd3f5bed1e5800ff5ccca4712b3"
+    },
+    {
+      "index": 22,
+      "title": "家族のデザート",
+      "raw": {
+        "ind": 378,
+        "activity_label": "Having an ice cream",
+        "ctx_a": "Children bring desert out for their family member.",
+        "ctx_b": "the family",
+        "ctx": "Children bring desert out for their family member. the family",
+        "endings": [
+          "floats in a river.",
+          "member stands looking into a hut and then handing people photographs.",
+          "member cuts a piece of sunscreen.",
+          "enjoys eating the desert together."
+        ],
+        "source_id": "activitynet~v_2rA5pyel_NE",
+        "split": "val",
+        "split_type": "zeroshot",
+        "label": "3"
+      },
+      "units": [
+        {
+          "label": "文脈（全文）",
+          "en": "Children bring desert out for their family member. the family",
+          "ja": "子どもたちが家族にデザートを運んでくる。その家族は"
+        },
+        {
+          "label": "A：選択肢（全文）",
+          "en": "floats in a river.",
+          "ja": "川に浮かんでいる。"
+        },
+        {
+          "label": "B：選択肢（全文）",
+          "en": "member stands looking into a hut and then handing people photographs.",
+          "ja": "小屋をのぞき込み、その後、人々に写真を手渡す。"
+        },
+        {
+          "label": "C：選択肢（全文）",
+          "en": "member cuts a piece of sunscreen.",
+          "ja": "日焼け止めを一切れ切る。"
+        },
+        {
+          "label": "D：選択肢（全文）",
+          "en": "enjoys eating the desert together.",
+          "ja": "一緒にデザートを食べて楽しむ。"
+        }
+      ],
+      "note": "正解はD。原文のdesertは、そのまま保持し、文脈に沿って「デザート」と訳した。",
+      "answer": "D",
+      "raw_sha256": "367dfc58fdde23671d3d1d5a5bb67fe2362fe5822e9c536c293f00cdbe791302"
+    },
+    {
+      "index": 8029,
+      "title": "壁の下地を清掃する",
+      "raw": {
+        "ind": 35425,
+        "activity_label": "Food and Entertaining",
+        "ctx_a": "[header] How to caulk walls [title] Clean the wall. [step] Caulk should never go on a dirty surface. Wipe down the wall with a dry cloth to remove dust.",
+        "ctx_b": "",
+        "ctx": "[header] How to caulk walls [title] Clean the wall. [step] Caulk should never go on a dirty surface. Wipe down the wall with a dry cloth to remove dust.",
+        "endings": [
+          "Also use a brush to vacuum the surface. Don't use a brush on a dirty surface.",
+          "Then let the caulk dry and smooth out any uneven surfaces. Use a knife to cut a 2 inch (5.1 cm) square at the edge of the wall.",
+          "Next, caulk around the entire wall with a rag. A putty knife or a mop may work, too.",
+          "Wash with an all-purpose cleaner to remove grease and dirt. Rubbing alcohol and a wire brush will remove stubborn stains."
+        ],
+        "source_id": "wikihow~58359",
+        "split": "val",
+        "split_type": "indomain",
+        "label": "3"
+      },
+      "units": [
+        {
+          "label": "文脈（全文）",
+          "en": "[header] How to caulk walls [title] Clean the wall. [step] Caulk should never go on a dirty surface. Wipe down the wall with a dry cloth to remove dust.",
+          "ja": "［見出し］壁をコーキングする方法［項目］壁をきれいにする。［手順］汚れた面にコーキングしてはいけない。乾いた布で壁を拭き、ほこりを除く。"
+        },
+        {
+          "label": "A：選択肢（全文）",
+          "en": "Also use a brush to vacuum the surface. Don't use a brush on a dirty surface.",
+          "ja": "ブラシを使って表面を吸引する。汚れた面にはブラシを使わない。"
+        },
+        {
+          "label": "B：選択肢（全文）",
+          "en": "Then let the caulk dry and smooth out any uneven surfaces. Use a knife to cut a 2 inch (5.1 cm) square at the edge of the wall.",
+          "ja": "次にコーキング材を乾かし、凹凸をならす。ナイフで壁の端に2インチ（5.1cm）の正方形を切る。"
+        },
+        {
+          "label": "C：選択肢（全文）",
+          "en": "Next, caulk around the entire wall with a rag. A putty knife or a mop may work, too.",
+          "ja": "次に布で壁全体の周囲をコーキングする。パテ用ナイフやモップでもよい。"
+        },
+        {
+          "label": "D：選択肢（全文）",
+          "en": "Wash with an all-purpose cleaner to remove grease and dirt. Rubbing alcohol and a wire brush will remove stubborn stains.",
+          "ja": "万能洗剤で洗い、油や汚れを落とす。しつこい汚れは消毒用アルコールとワイヤーブラシで落とす。"
+        }
+      ],
+      "note": "四つの候補のうち、配布された正解はD。選択肢の不自然な表現も配布文面を保持した。",
+      "answer": "D",
+      "raw_sha256": "576a1030e37d954e1809c82594d73c539087386b96581826c7fc89f9bd2147f5"
+    },
+    {
+      "index": 8042,
+      "title": "リンゴジャムの下ごしらえ",
+      "raw": {
+        "ind": 35533,
+        "activity_label": "Food and Entertaining",
+        "ctx_a": "[header] How to make apple jam [title] Peel and chop your apples. [step] Wash your apples and peel them. Core the apples to remove their stems.",
+        "ctx_b": "",
+        "ctx": "[header] How to make apple jam [title] Peel and chop your apples. [step] Wash your apples and peel them. Core the apples to remove their stems.",
+        "endings": [
+          "Trim the apples into smaller pieces to use as jam. Use 3 to 4 large apple chunks in the jam.",
+          "Some may have chunks of skin if you cut them off. You'll need about two peeled apples for the total jam.",
+          "Carefully dice the apples finely so they're no larger than 1/4 \" cubes. Place all of the apples in a large 4-cup measuring cup.",
+          "From the core, you should cut off all the small, stringy flesh. You should also grate them on a separate cutting board."
+        ],
+        "source_id": "wikihow~58526",
+        "split": "val",
+        "split_type": "indomain",
+        "label": "2"
+      },
+      "units": [
+        {
+          "label": "文脈（全文）",
+          "en": "[header] How to make apple jam [title] Peel and chop your apples. [step] Wash your apples and peel them. Core the apples to remove their stems.",
+          "ja": "［見出し］リンゴジャムの作り方［項目］リンゴの皮をむいて切る。［手順］洗って皮をむき、芯を取り、軸を除く。"
+        },
+        {
+          "label": "A：選択肢（全文）",
+          "en": "Trim the apples into smaller pieces to use as jam. Use 3 to 4 large apple chunks in the jam.",
+          "ja": "ジャムにするため、リンゴを小さく切る。大きめの塊を3〜4個使う。"
+        },
+        {
+          "label": "B：選択肢（全文）",
+          "en": "Some may have chunks of skin if you cut them off. You'll need about two peeled apples for the total jam.",
+          "ja": "皮を切り取ると、一部に皮の塊が残ることがある。全体で皮をむいたリンゴを約2個使う。"
+        },
+        {
+          "label": "C：選択肢（全文）",
+          "en": "Carefully dice the apples finely so they're no larger than 1/4 \" cubes. Place all of the apples in a large 4-cup measuring cup.",
+          "ja": "1辺1/4インチ以下の角切りになるよう、注意して細かく切る。すべてのリンゴを4カップ用の大きな計量カップに入れる。"
+        },
+        {
+          "label": "D：選択肢（全文）",
+          "en": "From the core, you should cut off all the small, stringy flesh. You should also grate them on a separate cutting board.",
+          "ja": "芯から小さな筋っぽい果肉をすべて切り落とす。別のまな板ですりおろすことも必要だ。"
+        }
+      ],
+      "note": "四つの候補のうち、配布された正解はC。選択肢の不自然な表現も配布文面を保持した。",
+      "answer": "C",
+      "raw_sha256": "3569c31fa1340cfdd061de150bb216640470cbc5380443a0ef879f498522de9c"
+    },
+    {
+      "index": 4264,
+      "title": "ポプリ用のリンゴ",
+      "raw": {
+        "ind": 7737,
+        "activity_label": "Personal Care and Style",
+        "ctx_a": "[header] How to make fall potpourri [title] Dry the apple. [step] Preheat your oven to 150 degrees f (65 degrees c). Wash one apple and slice it into 1/4-inch slices.",
+        "ctx_b": "",
+        "ctx": "[header] How to make fall potpourri [title] Dry the apple. [step] Preheat your oven to 150 degrees f (65 degrees c). Wash one apple and slice it into 1/4-inch slices.",
+        "endings": [
+          "Lay the slices in a single layer on a baking sheet. Bake the apple slices for 30 minutes.",
+          "Place the slices onto a stove top burner over medium high heat. Set the burner to 350 degrees f (177 degrees c) and heat it.",
+          "Set the apple slices on a spice rack on your counter. Run cold water over them until they are dry.",
+          "Place the apple slices on a lightly greased baking sheet. Then, lay the sheet on the kitchen counter with the apples face down."
+        ],
+        "source_id": "wikihow~12767",
+        "split": "val",
+        "split_type": "zeroshot",
+        "label": "0"
+      },
+      "units": [
+        {
+          "label": "文脈（全文）",
+          "en": "[header] How to make fall potpourri [title] Dry the apple. [step] Preheat your oven to 150 degrees f (65 degrees c). Wash one apple and slice it into 1/4-inch slices.",
+          "ja": "［見出し］秋のポプリの作り方［項目］リンゴを乾燥させる。［手順］オーブンを150°F（65°C）に予熱する。リンゴ1個を洗い、1/4インチの薄切りにする。"
+        },
+        {
+          "label": "A：選択肢（全文）",
+          "en": "Lay the slices in a single layer on a baking sheet. Bake the apple slices for 30 minutes.",
+          "ja": "天板に重ならないように並べ、30分焼く。"
+        },
+        {
+          "label": "B：選択肢（全文）",
+          "en": "Place the slices onto a stove top burner over medium high heat. Set the burner to 350 degrees f (177 degrees c) and heat it.",
+          "ja": "コンロのバーナーに載せ、中強火にする。バーナーを350°F（177°C）に設定して加熱する。"
+        },
+        {
+          "label": "C：選択肢（全文）",
+          "en": "Set the apple slices on a spice rack on your counter. Run cold water over them until they are dry.",
+          "ja": "調理台のスパイスラックに載せ、乾くまで冷水を流す。"
+        },
+        {
+          "label": "D：選択肢（全文）",
+          "en": "Place the apple slices on a lightly greased baking sheet. Then, lay the sheet on the kitchen counter with the apples face down.",
+          "ja": "薄く油を塗った天板に載せる。その後、リンゴを下向きにして天板を調理台に置く。"
+        }
+      ],
+      "note": "四つの候補のうち、配布された正解はA。選択肢の不自然な表現も配布文面を保持した。",
+      "answer": "A",
+      "raw_sha256": "2ea73557799294479524c1ad7f6c158981beea1d76ff14d0e1eaf18ade582bb5"
+    },
+    {
+      "index": 6675,
+      "title": "食洗機の外側を拭く",
+      "raw": {
+        "ind": 25332,
+        "activity_label": "Home and Garden",
+        "ctx_a": "[header] How to clean a frigidaire dishwasher [title] Get a dish cloth damp. [step] Dip a dish rag in warm, soapy water. Use a mild dish detergent over a chemical cleaner.",
+        "ctx_b": "",
+        "ctx": "[header] How to clean a frigidaire dishwasher [title] Get a dish cloth damp. [step] Dip a dish rag in warm, soapy water. Use a mild dish detergent over a chemical cleaner.",
+        "endings": [
+          "[title] Scrub the sides and bottom of the frigidaire. [step] You will need to use a scrubbing tool, like a fork.",
+          "Ring the rag out slightly so it's just damp. [title] Wipe the exterior with the damp cloth.",
+          "Wring out the excess moisture before wiping down the top and sides of the frigidaire. [title] Pat the rusty surface of the frigidaire with the cloth.",
+          "Dampen the rag and wring it out between uses. [title] Remove your frigidaire from the dishwasher."
+        ],
+        "source_id": "wikihow~41761",
+        "split": "val",
+        "split_type": "indomain",
+        "label": "1"
+      },
+      "units": [
+        {
+          "label": "文脈（全文）",
+          "en": "[header] How to clean a frigidaire dishwasher [title] Get a dish cloth damp. [step] Dip a dish rag in warm, soapy water. Use a mild dish detergent over a chemical cleaner.",
+          "ja": "［見出し］Frigidaire製食洗機の掃除方法［項目］布巾を湿らせる。［手順］温かい石けん水に布巾を浸す。強い化学洗剤よりも、刺激の少ない食器用洗剤を使う。"
+        },
+        {
+          "label": "A：選択肢（全文）",
+          "en": "[title] Scrub the sides and bottom of the frigidaire. [step] You will need to use a scrubbing tool, like a fork.",
+          "ja": "［項目］Frigidaireの側面と底をこする。［手順］フォークなど、こする道具が必要だ。"
+        },
+        {
+          "label": "B：選択肢（全文）",
+          "en": "Ring the rag out slightly so it's just damp. [title] Wipe the exterior with the damp cloth.",
+          "ja": "少し絞って、軽く湿った状態にする。［項目］湿った布で外側を拭く。"
+        },
+        {
+          "label": "C：選択肢（全文）",
+          "en": "Wring out the excess moisture before wiping down the top and sides of the frigidaire. [title] Pat the rusty surface of the frigidaire with the cloth.",
+          "ja": "上面と側面を拭く前に、余分な水分を絞る。［項目］さびた表面を布で軽くたたく。"
+        },
+        {
+          "label": "D：選択肢（全文）",
+          "en": "Dampen the rag and wring it out between uses. [title] Remove your frigidaire from the dishwasher.",
+          "ja": "使うたびに布を湿らせて絞る。［項目］食洗機からFrigidaireを取り出す。"
+        }
+      ],
+      "note": "四つの候補のうち、配布された正解はB。選択肢の不自然な表現も配布文面を保持した。",
+      "answer": "B",
+      "raw_sha256": "0faa7e6ea9d1bbb445657342ac7f6ede50c7c5e4a6c6279761317ee56b1112f9"
+    },
+    {
+      "index": 6051,
+      "title": "塩と酢を混ぜる",
+      "raw": {
+        "ind": 20785,
+        "activity_label": "Home and Garden",
+        "ctx_a": "[header] How to unclog a drain with salt and vinegar [title] Mix salt and vinegar. [step] In a small bowl, pour 1 cup of salt. Add 1 cup of vinegar.",
+        "ctx_b": "",
+        "ctx": "[header] How to unclog a drain with salt and vinegar [title] Mix salt and vinegar. [step] In a small bowl, pour 1 cup of salt. Add 1 cup of vinegar.",
+        "endings": [
+          "Place 1 cup of distilled white vinegar in a small bowl. The salt and vinegar will help the solution penetrate the clogged drain.",
+          "Stir well so the salt soaks up all the vinegar. Continue stirring until the mixture is smooth and even.",
+          "Mix the salt in, going slowly but bringing the mixture to a boil. Always stir the solution well, making sure nothing gets broken.",
+          "If possible, give it an extra stir. The vinegar will set the clog, and it will give it a smoother initial scrubbing."
+        ],
+        "source_id": "wikihow~34313",
+        "split": "val",
+        "split_type": "indomain",
+        "label": "1"
+      },
+      "units": [
+        {
+          "label": "文脈（全文）",
+          "en": "[header] How to unclog a drain with salt and vinegar [title] Mix salt and vinegar. [step] In a small bowl, pour 1 cup of salt. Add 1 cup of vinegar.",
+          "ja": "［見出し］塩と酢で排水口の詰まりを解消する方法［項目］塩と酢を混ぜる。［手順］小さなボウルに塩1カップを入れ、酢1カップを加える。"
+        },
+        {
+          "label": "A：選択肢（全文）",
+          "en": "Place 1 cup of distilled white vinegar in a small bowl. The salt and vinegar will help the solution penetrate the clogged drain.",
+          "ja": "小さなボウルに蒸留白酢1カップを入れる。塩と酢が詰まった排水口に浸透する助けになる。"
+        },
+        {
+          "label": "B：選択肢（全文）",
+          "en": "Stir well so the salt soaks up all the vinegar. Continue stirring until the mixture is smooth and even.",
+          "ja": "塩が酢をすべて吸うようによく混ぜる。滑らかで均一になるまで混ぜ続ける。"
+        },
+        {
+          "label": "C：選択肢（全文）",
+          "en": "Mix the salt in, going slowly but bringing the mixture to a boil. Always stir the solution well, making sure nothing gets broken.",
+          "ja": "ゆっくり塩を混ぜながら、沸騰させる。何も壊れないよう、必ずよくかき混ぜる。"
+        },
+        {
+          "label": "D：選択肢（全文）",
+          "en": "If possible, give it an extra stir. The vinegar will set the clog, and it will give it a smoother initial scrubbing.",
+          "ja": "できればさらに混ぜる。酢が詰まりを固め、最初にこすりやすくする。"
+        }
+      ],
+      "note": "四つの候補のうち、配布された正解はB。選択肢の不自然な表現も配布文面を保持した。",
+      "answer": "B",
+      "raw_sha256": "06524762f44eb8335e1baeae18171b970dea858ee0767a7abdc514a0ecf7d252"
+    }
+  ],
+  "helm_release": "v0.4.0",
+  "helm_release_date": "2023-11-17",
+  "helm_runs": [
+    {
+      "name": "commonsense:dataset=hellaswag,method=multiple_choice_separate_original,model=openai_text-davinci-003,data_augmentation=canonical",
+      "underlying_suite": "v0.3.0",
+      "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/commonsense%3Adataset%3Dhellaswag%2Cmethod%3Dmultiple_choice_separate_original%2Cmodel%3Dopenai_text-davinci-003%2Cdata_augmentation%3Dcanonical/stats.json",
+      "adapter_spec": {
+        "method": "multiple_choice_separate_original",
+        "global_prefix": "",
+        "instructions": "",
+        "input_prefix": "",
+        "input_suffix": "",
+        "reference_prefix": "A. ",
+        "reference_suffix": "\n",
+        "output_prefix": " ",
+        "output_suffix": "",
+        "instance_prefix": "\n",
+        "substitutions": [],
+        "max_train_instances": 0,
+        "max_eval_instances": 1000,
+        "num_outputs": 1,
+        "num_train_trials": 1,
+        "sample_train": true,
+        "model": "openai/text-davinci-003",
+        "temperature": 0.0,
+        "max_tokens": 0,
+        "stop_sequences": [],
+        "multi_label": false
+      },
+      "scenario_spec": {
+        "class_name": "helm.benchmark.scenarios.commonsense_scenario.CommonSenseScenario",
+        "args": {
+          "dataset": "hellaswag"
+        }
+      },
+      "metric": "exact_match",
+      "split": "valid",
+      "mean": 0.822,
+      "display_value": 82.2,
+      "stats": [
+        {
+          "name": {
+            "name": "num_train_trials",
+            "split": "valid"
+          },
+          "count": 1,
+          "sum": 1.0,
+          "sum_squared": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "variance": 0.0,
+          "stddev": 0.0
+        },
+        {
+          "name": {
+            "name": "num_train_instances",
+            "split": "valid"
+          },
+          "count": 1,
+          "sum": 0.0,
+          "sum_squared": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "variance": 0.0,
+          "stddev": 0.0
+        },
+        {
+          "name": {
+            "name": "exact_match",
+            "split": "valid"
+          },
+          "count": 1,
+          "sum": 0.822,
+          "sum_squared": 0.675684,
+          "min": 0.822,
+          "max": 0.822,
+          "mean": 0.822,
+          "variance": 0.0,
+          "stddev": 0.0
+        },
+        {
+          "name": {
+            "name": "num_instances",
+            "split": "valid"
+          },
+          "count": 1,
+          "sum": 1000.0,
+          "sum_squared": 1000000.0,
+          "min": 1000.0,
+          "max": 1000.0,
+          "mean": 1000.0,
+          "variance": 0.0,
+          "stddev": 0.0
+        }
+      ]
+    },
+    {
+      "name": "commonsense:dataset=hellaswag,method=multiple_choice_separate_original,model=together_opt-175b,data_augmentation=canonical",
+      "underlying_suite": "v0.3.0",
+      "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/commonsense%3Adataset%3Dhellaswag%2Cmethod%3Dmultiple_choice_separate_original%2Cmodel%3Dtogether_opt-175b%2Cdata_augmentation%3Dcanonical/stats.json",
+      "adapter_spec": {
+        "method": "multiple_choice_separate_original",
+        "global_prefix": "",
+        "instructions": "",
+        "input_prefix": "",
+        "input_suffix": "",
+        "reference_prefix": "A. ",
+        "reference_suffix": "\n",
+        "output_prefix": " ",
+        "output_suffix": "",
+        "instance_prefix": "\n",
+        "substitutions": [],
+        "max_train_instances": 0,
+        "max_eval_instances": 1000,
+        "num_outputs": 1,
+        "num_train_trials": 1,
+        "sample_train": true,
+        "model": "together/opt-175b",
+        "temperature": 0.0,
+        "max_tokens": 0,
+        "stop_sequences": [],
+        "multi_label": false
+      },
+      "scenario_spec": {
+        "class_name": "helm.benchmark.scenarios.commonsense_scenario.CommonSenseScenario",
+        "args": {
+          "dataset": "hellaswag"
+        }
+      },
+      "metric": "exact_match",
+      "split": "valid",
+      "mean": 0.791,
+      "display_value": 79.1,
+      "stats": [
+        {
+          "name": {
+            "name": "num_train_trials",
+            "split": "valid"
+          },
+          "count": 1,
+          "sum": 1.0,
+          "sum_squared": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "variance": 0.0,
+          "stddev": 0.0
+        },
+        {
+          "name": {
+            "name": "num_train_instances",
+            "split": "valid"
+          },
+          "count": 1,
+          "sum": 0.0,
+          "sum_squared": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0,
+          "variance": 0.0,
+          "stddev": 0.0
+        },
+        {
+          "name": {
+            "name": "exact_match",
+            "split": "valid"
+          },
+          "count": 1,
+          "sum": 0.791,
+          "sum_squared": 0.625681,
+          "min": 0.791,
+          "max": 0.791,
+          "mean": 0.791,
+          "variance": 0.0,
+          "stddev": 0.0
+        },
+        {
+          "name": {
+            "name": "num_instances",
+            "split": "valid"
+          },
+          "count": 1,
+          "sum": 1000.0,
+          "sum_squared": 1000000.0,
+          "min": 1000.0,
+          "max": 1000.0,
+          "mean": 1000.0,
+          "variance": 0.0,
+          "stddev": 0.0
+        }
+      ]
+    }
+  ],
+  "artifact_sha256": {
+    "pptx": "ce80103baba53b7537f8de54d94cfe4a9993f37ca0d7e578bcc6553cdbdf27f2",
+    "pdf": "417fc0454821ded63acef7acf5d89f2c17dd7f76c4096d5e152249c4ea6eb44f"
+  },
+  "load_dataset_revision_resolution": {
+    "dataset": "hellaswag",
+    "url": "https://huggingface.co/api/datasets/Rowan/hellaswag/revision/218ec52e",
+    "status": 200,
+    "resolved": "218ec52e09a7e7462a5400043bb9a69a41d06b76",
+    "matches": true
+  }
+}

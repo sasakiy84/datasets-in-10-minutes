@@ -90,5 +90,6 @@ python -m http.server 8000 --directory _site
 |HumanEval|[PPTX](slides/datasets-in-10-minutes-humaneval.pptx)|[PDF](slides/datasets-in-10-minutes-humaneval.pdf)|
 |VQA v2|[PPTX](slides/datasets-in-10-minutes-vqa-v2.pptx)|[PDF](slides/datasets-in-10-minutes-vqa-v2.pdf)|
 |BoolQ|[PPTX](slides/datasets-in-10-minutes-boolq.pptx)|[PDF](slides/datasets-in-10-minutes-boolq.pdf)|
+|HellaSwag|[PPTX](slides/datasets-in-10-minutes-hellaswag.pptx)|[PDF](slides/datasets-in-10-minutes-hellaswag.pdf)|
 
 [ユーザー指示の記録](docs/user-instructions.md)
