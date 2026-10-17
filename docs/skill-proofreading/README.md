@@ -16,3 +16,4 @@
 | osworld-verified | [変更対・採否](osworld-verified.md) | [PPTX](../../slides/datasets-in-10-minutes-osworld-verified.pptx) | [PDF](../../slides/datasets-in-10-minutes-osworld-verified.pdf) |
 | snli | [変更対・採否](snli.md) | [PPTX](../../slides/datasets-in-10-minutes-snli.pptx) | [PDF](../../slides/datasets-in-10-minutes-snli.pdf) |
 | squad | [変更対・採否](squad.md) | [PPTX](../../slides/datasets-in-10-minutes-squad.pptx) | [PDF](../../slides/datasets-in-10-minutes-squad.pdf) |
+| tau2-bench | [変更対・採否](tau2-bench.md) | [PPTX](../../slides/datasets-in-10-minutes-tau2-bench.pptx) | [PDF](../../slides/datasets-in-10-minutes-tau2-bench.pdf) |
