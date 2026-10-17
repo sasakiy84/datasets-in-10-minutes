@@ -11,4 +11,5 @@
 | mmmlu | [mmmlu](mmmlu.md) |
 | mmmu-pro | [mmmu-pro](mmmu-pro.md) |
 | mrcr-v2 | [mrcr-v2](mrcr-v2.md) |
+| scicode | [scicode](scicode.md) |
 | simpleqa-verified | [simpleqa-verified](simpleqa-verified.md) |
