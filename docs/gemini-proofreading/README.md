@@ -5,3 +5,4 @@
 | データセット | 変更対と確認記録 |
 |---|---|
 | global-piqa | [global-piqa](global-piqa.md) |
+| mmmlu | [mmmlu](mmmlu.md) |
