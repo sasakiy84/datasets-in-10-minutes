@@ -29,3 +29,7 @@
 |GSM8K|[changes.tsv](gsm8k/changes.tsv)|[pages.jsonl](gsm8k/pages.jsonl)|[制作記録](../gsm8k-sources.md)・[最終検査](gsm8k/review.json)|
 |HumanEval|[changes.tsv](humaneval/changes.tsv)|[pages.jsonl](humaneval/pages.jsonl)|[制作記録](../humaneval-sources.md)・[最終検査](humaneval/review.json)|
 |VQA v2|[changes.tsv](vqa-v2/changes.tsv)|[pages.jsonl](vqa-v2/pages.jsonl)|[制作記録](../vqa-v2-sources.md)・[最終検査](vqa-v2/review.json)|
+
+## 原文・訳の併記と説明文の最新改訂
+
+全28資料を確認し、15資料を改訂した。Geminiは使用していない。[変更対・ページ対応・検証記録](../slide-language-review/README.md)に、94件の文言変更、36組の併記、現行成果物のハッシュを保存した。このファイルから辿れる従来の記録は、その時点の版の履歴として保持する。
