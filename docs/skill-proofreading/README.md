@@ -10,3 +10,4 @@
 | coco | [変更対・採否](coco.md) | [PPTX](../../slides/datasets-in-10-minutes-coco.pptx) | [PDF](../../slides/datasets-in-10-minutes-coco.pdf) |
 | fineweb | [変更対・採否](fineweb.md) | [PPTX](../../slides/datasets-in-10-minutes-fineweb.pptx) | [PDF](../../slides/datasets-in-10-minutes-fineweb.pdf) |
 | gpqa | [変更対・採否](gpqa.md) | [PPTX](../../slides/datasets-in-10-minutes-gpqa.pptx) | [PDF](../../slides/datasets-in-10-minutes-gpqa.pdf) |
+| imagenet | [変更対・採否](imagenet.md) | [PPTX](../../slides/datasets-in-10-minutes-imagenet.pptx) | [PDF](../../slides/datasets-in-10-minutes-imagenet.pdf) |
