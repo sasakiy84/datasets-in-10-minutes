@@ -7,6 +7,7 @@
 | charxiv | [charxiv](charxiv.md) |
 | facts-grounding | [facts-grounding](facts-grounding.md) |
 | global-piqa | [global-piqa](global-piqa.md) |
+| hle | [hle](hle.md) |
 | mmmlu | [mmmlu](mmmlu.md) |
 | mmmu-pro | [mmmu-pro](mmmu-pro.md) |
 | mrcr-v2 | [mrcr-v2](mrcr-v2.md) |
