@@ -1,0 +1,411 @@
+{
+  "dataset": "fineweb",
+  "method": "日本語校正スキル＋スライド制作スキル（Gemini不使用）",
+  "wording": [
+    {
+      "old_page": 14,
+      "shape_id": 3,
+      "before": "Common Crawlは、元のHTMLを含むWARCと、抽出済みテキストのWETを公開している [1]。\n原著ではWETにメニューや定型文が多く残ることを確認し、WARCからTrafilaturaという本文抽出器で取り出した。",
+      "after": "Common Crawlは、元のHTMLを含むWARCと、抽出済みテキストのWETを公開している [1]。\n構築時にはWETにメニューや定型文が多く残ることを確認し、WARCからTrafilaturaという本文抽出器で取り出した。",
+      "page": 14
+    },
+    {
+      "old_page": 20,
+      "shape_id": 5,
+      "before": "GPT-2で算定。原著は2013〜2024-04、現行設定は2025-06まで。Eduは原著の96クロールから選別 [1, 2]。",
+      "after": "GPT-2で算定。論文の収集範囲は2013〜2024-04、現行設定は2025-06まで。Eduは同じ96クロールから選別 [1, 2]。",
+      "page": 20
+    },
+    {
+      "old_page": 23,
+      "shape_id": 3,
+      "before": "46万文書をLLMで採点し、教育的な有用性の注釈を得る。原著は小中学校程度の知識を重視した [1]。\n41万文書で回帰モデルを学習し、残る5万文書で検証する。LLMの採点傾向を軽量なモデルで近似する。\n全体への予測値を0〜5の整数へ丸め、3以上の文書を残す。これがFineWeb-Eduとなる。",
+      "after": "46万文書をLLMで採点し、教育的な有用性の注釈を得る。選別では小中学校程度の知識を重視した [1]。\n41万文書で回帰モデルを学習し、残る5万文書で検証する。LLMの採点傾向を軽量なモデルで近似する。\n全体への予測値を0〜5の整数へ丸め、3以上の文書を残す。これがFineWeb-Eduとなる。",
+      "page": 23
+    },
+    {
+      "old_page": 27,
+      "shape_id": 5,
+      "before": "正解率 = 正解数 ÷ 設問数。この2問なら50%。原著では選択肢全文の尤度や長さ正規化を用い、複数課題を集計する [1]。",
+      "after": "正解率 = 正解数 ÷ 設問数。この2問なら50%。公開時の評価では選択肢全文の尤度や長さ正規化を用い、複数課題を集計する [1]。",
+      "page": 27
+    },
+    {
+      "old_page": 28,
+      "shape_id": 2,
+      "before": "原著で採用した知識・推論の評価課題",
+      "after": "公開時に採用した知識・推論の評価課題",
+      "page": 28
+    },
+    {
+      "old_page": 30,
+      "shape_id": 5,
+      "before": "原著v2における1.71Bモデル・350Bトークンでの比較 [1]。",
+      "after": "論文バージョン2の1.71Bモデル・350Bトークンでの比較 [1]。",
+      "page": 30
+    },
+    {
+      "old_page": 31,
+      "shape_id": 2,
+      "before": "原著の比較実験に用いたモデル構成",
+      "after": "公開時の比較実験に用いたモデル構成",
+      "page": 31
+    },
+    {
+      "old_page": 33,
+      "shape_id": 5,
+      "before": "差はFineWeb-Edu − FineWeb。各5万文書の標本に基づく。\n原著掲載39分類から、増加側・減少側の上位3分類ずつを例示 [1]。",
+      "after": "差はFineWeb-Edu − FineWeb。各5万文書の標本に基づく。\n話題分析の39分類から、増加側・減少側の上位3分類ずつを例示 [1]。",
+      "page": 33
+    },
+    {
+      "old_page": 34,
+      "shape_id": 3,
+      "before": "FineWebとFineWeb-Eduから各5万文書を抽出し、文の意味を数値化するモデルで文書を表現した [1]。\n似た文書を自動でまとめ、密度の高い100クラスタを抽出し、Llama 3.1 70Bで話題名を付けた。\n原著の図18は、構成比の差の絶対値が0.5ポイント以上の39分類を示す [1]。",
+      "after": "FineWebとFineWeb-Eduから各5万文書を抽出し、文の意味を数値化するモデルで文書を表現した [1]。\n似た文書を自動でまとめ、密度の高い100クラスタを抽出し、Llama 3.1 70Bで話題名を付けた。\nPenedoら（2024）の図18は、構成比の差の絶対値が0.5ポイント以上の39分類を示す [1]。",
+      "page": 34
+    },
+    {
+      "old_page": 64,
+      "shape_id": 3,
+      "before": "WARCはHTMLやリクエストのメタデータを保持する。WETは抽出済みテキストである [1]。\n原著はWETにメニューなどが多く残ることを確認し、WARCからTrafilaturaで本文を抽出した。",
+      "after": "WARCはHTMLやリクエストのメタデータを保持する。WETは抽出済みテキストである [1]。\n構築時にはWETにメニューなどが多く残ることを確認し、WARCからTrafilaturaで本文を抽出した。",
+      "page": 64
+    },
+    {
+      "old_page": 66,
+      "shape_id": 5,
+      "before": "原著は460k注釈、初期カードは500k表記 [1, 2]。",
+      "after": "論文では460k件、初期カードでは500k件の注釈と表記 [1, 2]。",
+      "page": 66
+    },
+    {
+      "old_page": 67,
+      "shape_id": 2,
+      "before": "初期公開CSVと原著v2の評価条件",
+      "after": "初期公開CSVと論文バージョン2の評価条件",
+      "page": 67
+    },
+    {
+      "old_page": 67,
+      "shape_id": 3,
+      "before": "公開CSVは7データセットの学習曲線を含む初期の比較系列。最終167,000 stepのagg_scoreを図に使用した [1]。\nFineWeb-EduのMMLU・ARC比較には、原著v2本文の丸め値を使用した [2]。",
+      "after": "公開CSVは7データセットの学習曲線を含む初期の比較系列。最終167,000 stepのagg_scoreを図に使用した [1]。\nFineWeb-EduのMMLU・ARC比較には、論文バージョン2本文の丸め値を使用した [2]。",
+      "page": 67
+    },
+    {
+      "old_page": 75,
+      "shape_id": 3,
+      "before": "原著の話題分析では、FineWebとEduから各50,000件を埋め込み、100個の密なクラスタを比較した [1]。\nEduは教育・歴史などの比重が高く、商業・娯楽・旅行などの比重が低い。\n次トークンの予測しにくさを表すperplexityでも得意分野が異なり、一般WebではFineWeb側が有利な分野もある。",
+      "after": "話題分析では、FineWebとEduから各50,000件を埋め込み、100個の密なクラスタを比較した [1]。\nEduは教育・歴史などの比重が高く、商業・娯楽・旅行などの比重が低い。\n次トークンの予測しにくさを表すperplexityでも得意分野が異なり、一般WebではFineWeb側が有利な分野もある。",
+      "page": 75
+    },
+    {
+      "old_page": 80,
+      "shape_id": 3,
+      "before": "Guilherme Penedoが第一著者、Thomas Wolfが最終著者。原著の所属表記はHugging Face [1]。\n両者は大規模テキスト処理ライブラリdatatroveの公開引用にも共著者として記載されている [2]。\nHynek Kydlíček、Loubna Ben Allal、Anton Lozhkov、Margaret Mitchell、Colin Raffel、Leandro von Werraとの共同研究。",
+      "after": "Guilherme Penedoが第一著者、Thomas Wolfが最終著者。発表時の所属はHugging Face [1]。\n両者は大規模テキスト処理ライブラリdatatroveの公開引用にも共著者として記載されている [2]。\nHynek Kydlíček、Loubna Ben Allal、Anton Lozhkov、Margaret Mitchell、Colin Raffel、Leandro von Werraとの共同研究。",
+      "page": 80
+    },
+    {
+      "old_page": 81,
+      "shape_id": 6,
+      "before": "T5の原著。英語WebコーパスC4と、テキスト変換に統一した学習・評価を提案する。",
+      "after": "英語WebコーパスC4と、テキスト変換に統一した学習・評価を提案する。",
+      "page": 81
+    },
+    {
+      "old_page": 82,
+      "shape_id": 6,
+      "before": "FineWebとEduの原著。抽出・重複除去・品質選別の比較実験を報告する。",
+      "after": "抽出・重複除去・品質選別の比較実験を報告する。",
+      "page": 82
+    },
+    {
+      "old_page": 20,
+      "shape_id": 4,
+      "cell": [
+        1,
+        0
+      ],
+      "before": "原著のFineWeb（2024）",
+      "after": "2024年のFineWeb",
+      "page": 20
+    },
+    {
+      "old_page": 20,
+      "shape_id": 4,
+      "cell": [
+        3,
+        0
+      ],
+      "before": "原著のFineWeb-Edu",
+      "after": "2024年のFineWeb-Edu",
+      "page": 20
+    },
+    {
+      "old_page": 66,
+      "shape_id": 4,
+      "cell": [
+        0,
+        0
+      ],
+      "before": "原著v2の設定",
+      "after": "論文第2版の設定",
+      "page": 66
+    },
+    {
+      "old_page": 68,
+      "shape_id": 4,
+      "cell": [
+        0,
+        0
+      ],
+      "before": "話題（原著ラベルの和訳）",
+      "after": "話題（掲載ラベルの和訳）",
+      "page": 68
+    },
+    {
+      "old_page": 69,
+      "shape_id": 4,
+      "cell": [
+        0,
+        0
+      ],
+      "before": "話題（原著ラベルの和訳）",
+      "after": "話題（掲載ラベルの和訳）",
+      "page": 69
+    },
+    {
+      "old_page": 70,
+      "shape_id": 4,
+      "cell": [
+        0,
+        0
+      ],
+      "before": "話題（原著ラベルの和訳）",
+      "after": "話題（掲載ラベルの和訳）",
+      "page": 70
+    },
+    {
+      "old_page": 71,
+      "shape_id": 4,
+      "cell": [
+        0,
+        0
+      ],
+      "before": "話題（原著ラベルの和訳）",
+      "after": "話題（掲載ラベルの和訳）",
+      "page": 71
+    },
+    {
+      "old_page": 72,
+      "shape_id": 4,
+      "cell": [
+        0,
+        0
+      ],
+      "before": "話題（原著ラベルの和訳）",
+      "after": "話題（掲載ラベルの和訳）",
+      "page": 72
+    },
+    {
+      "old_page": 73,
+      "shape_id": 4,
+      "cell": [
+        0,
+        0
+      ],
+      "before": "話題（原著ラベルの和訳）",
+      "after": "話題（掲載ラベルの和訳）",
+      "page": 73
+    },
+    {
+      "old_page": 74,
+      "shape_id": 4,
+      "cell": [
+        0,
+        0
+      ],
+      "before": "話題（原著ラベルの和訳）",
+      "after": "話題（掲載ラベルの和訳）",
+      "page": 74
+    }
+  ],
+  "layout": [],
+  "old_page_count": 85,
+  "page_count": 85,
+  "old_to_new_pages": {
+    "1": 1,
+    "2": 2,
+    "3": 3,
+    "4": 4,
+    "5": 5,
+    "6": 6,
+    "7": 7,
+    "8": 8,
+    "9": 9,
+    "10": 10,
+    "11": 11,
+    "12": 12,
+    "13": 13,
+    "14": 14,
+    "15": 15,
+    "16": 16,
+    "17": 17,
+    "18": 18,
+    "19": 19,
+    "20": 20,
+    "21": 21,
+    "22": 22,
+    "23": 23,
+    "24": 24,
+    "25": 25,
+    "26": 26,
+    "27": 27,
+    "28": 28,
+    "29": 29,
+    "30": 30,
+    "31": 31,
+    "32": 32,
+    "33": 33,
+    "34": 34,
+    "35": 35,
+    "36": 36,
+    "37": 37,
+    "38": 38,
+    "39": 39,
+    "40": 40,
+    "41": 41,
+    "42": 42,
+    "43": 43,
+    "44": 44,
+    "45": 45,
+    "46": 46,
+    "47": 47,
+    "48": 48,
+    "49": 49,
+    "50": 50,
+    "51": 51,
+    "52": 52,
+    "53": 53,
+    "54": 54,
+    "55": 55,
+    "56": 56,
+    "57": 57,
+    "58": 58,
+    "59": 59,
+    "60": 60,
+    "61": 61,
+    "62": 62,
+    "63": 63,
+    "64": 64,
+    "65": 65,
+    "66": 66,
+    "67": 67,
+    "68": 68,
+    "69": 69,
+    "70": 70,
+    "71": 71,
+    "72": 72,
+    "73": 73,
+    "74": 74,
+    "75": 75,
+    "76": 76,
+    "77": 77,
+    "78": 78,
+    "79": 79,
+    "80": 80,
+    "81": 81,
+    "82": 82,
+    "83": 83,
+    "84": 84,
+    "85": 85
+  },
+  "empty_hyperlinks_removed": 1,
+  "updated_at": "2026-10-17T15:34:43Z",
+  "gemini_used": false,
+  "review_mode": "skill_based_codex",
+  "skill_sha256": {
+    ".agents/skills/japanese-slide-proofreading/SKILL.md": "0bc7bfa18092fe93750fcbf354d4e8306b5c38f014fb7fb3e6d29c6514fa9050",
+    ".agents/skills/master-guided-slides/SKILL.md": "a38cbdc3b7d55ba1a6c945dd0a100c260a26f67911345a3ccd7b871f91fcd009",
+    ".agents/skills/dataset-introduction-slides/SKILL.md": "02d63df78fc49aee6690ce6b2ea185a84fb690057ab9f07633190672370eb5f7"
+  },
+  "artifacts": {
+    "pptx": {
+      "path": "slides/datasets-in-10-minutes-fineweb.pptx",
+      "sha256": "468d452b66b2b29c1add445879470c6e45f415e082bb557aad53e88f7a035ec8"
+    },
+    "pdf": {
+      "path": "slides/datasets-in-10-minutes-fineweb.pdf",
+      "sha256": "58fa7f526e6591e675c4c6f378bd15a102627f3781b5a72f46008daa8e4b8fd3"
+    }
+  },
+  "validation": {
+    "all_slide_text_no_original_word": true,
+    "xml_parse": "passed",
+    "charts_workbooks_media": "referenced contents byte-identical",
+    "unused_parts_omitted": [],
+    "url_only_hyperlinks": 111,
+    "originals_and_translations_retained": true,
+    "tables_retained": true,
+    "pdf_text_comparison": "all pages passed",
+    "changed_page_images": [
+      14,
+      20,
+      23,
+      27,
+      28,
+      30,
+      31,
+      33,
+      34,
+      64,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      80,
+      81,
+      82
+    ],
+    "visual_review": "変更した各ページを1440×810の個別画像で確認。引用枠、訳、コード、表、出典の間隔を確認し、実描画に基づいて引用枠の高さを調整。"
+  },
+  "pdf_audit": {
+    "pages": 85,
+    "changed_pages": [
+      14,
+      20,
+      23,
+      27,
+      28,
+      30,
+      31,
+      33,
+      34,
+      64,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      80,
+      81,
+      82
+    ],
+    "missing": [],
+    "outside": [],
+    "wrapped_titles": []
+  }
+}
