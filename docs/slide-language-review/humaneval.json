@@ -1,0 +1,430 @@
+{
+  "dataset": "humaneval",
+  "method": "日本語校正スキル＋スライド制作スキル（Gemini不使用）",
+  "wording": [
+    {
+      "old_page": 19,
+      "shape_id": 5,
+      "before": "原著Table 1。各指標には論文が選んだ生成温度を使う。12Bは約120億パラメータ。",
+      "after": "Chenら（2021）のTable 1。各指標には論文が選んだ生成温度を使う。12Bは約120億パラメータ。",
+      "page": 19
+    },
+    {
+      "old_page": 23,
+      "shape_id": 3,
+      "before": "原著は、GitHub由来のコードで学習したCodexを評価するため、問題を手作業で新しく作成した。\n仕様の読解、推論、アルゴリズム、簡単な数学を必要とする問題を含む。関数の署名とdocstring、参照実装、テストをそろえた。\n原著は1問あたり平均7.7件のテストを報告する。モデルが仕様を満たすかを、実際の実行結果で調べる。",
+      "after": "GitHub由来のコードで学習したCodexを評価するため、問題を手作業で新しく作成した。\n仕様の読解、推論、アルゴリズム、簡単な数学を必要とする問題を含む。関数の署名とdocstring、参照実装、テストをそろえた。\n公開時には1問あたり平均7.7件のテストが用意された。モデルが仕様を満たすかを、実際の実行結果で調べる。",
+      "page": 23
+    },
+    {
+      "old_page": 61,
+      "shape_id": 2,
+      "before": "原著はコード生成モデルと評価方法を提示した",
+      "after": "OpenAIがコード生成モデルと評価方法を提示した",
+      "page": 60
+    },
+    {
+      "old_page": 61,
+      "shape_id": 3,
+      "before": "Mark Chen、Jerry TworekらのOpenAIの研究チームが、Codexと、その評価用のHumanEvalを発表した。\n原著は、手書きの問題、実行による正しさの判定、複数候補から成功率を推定するpass@kを組み合わせた。\n後続のEvalPlusはテストを強化し、同じ仕様に対する、より幅広い入力での正しさを調べる。",
+      "after": "Mark Chen、Jerry TworekらのOpenAIの研究チームが、Codexと、その評価用のHumanEvalを発表した。\n評価では、手書きの問題、実行による正しさの判定、複数候補から成功率を推定するpass@kを組み合わせた。\n後続のEvalPlusはテストを強化し、同じ仕様に対する、より幅広い入力での正しさを調べる。",
+      "page": 60
+    },
+    {
+      "old_page": 62,
+      "shape_id": 4,
+      "before": "Evaluating Large Language Models Trained on Code\nChen et al. (2021). OpenAI. arXiv:2107.03374.\nHumanEval、Codex、実行テスト、pass@kの定義と実験を示した原著。\nhttps://arxiv.org/abs/2107.03374",
+      "after": "Evaluating Large Language Models Trained on Code\nChen et al. (2021). OpenAI. arXiv:2107.03374.\nHumanEval、Codex、実行テスト、pass@kの定義と実験を示した論文。\nhttps://arxiv.org/abs/2107.03374",
+      "page": 61
+    }
+  ],
+  "layout": [
+    {
+      "old_pages": [
+        7,
+        8
+      ],
+      "decision": "pair-original-translation-keep-explanation",
+      "font_pt": 20,
+      "original": "Check if in given list of numbers, are any two numbers closer to each other than given threshold.",
+      "translation": "数値のリストに、差の絶対値がしきい値より小さい2要素があればTrueを返す。しきい値と等しい差は条件を満たさない。",
+      "delete_translation_page": false,
+      "page": 7,
+      "quote_fitted_from_pdf": true,
+      "quote_height_pt": 60.68,
+      "following_blocks_shift_pt": -1.12,
+      "source_note_before": "[1] OpenAI. HumanEval.jsonl.gz. 改訂b9453e8。 HumanEval/0。入出力例は日本語訳とともに掲載。\nhttps://github.com/openai/human-eval/blob/b9453e8/data/HumanEval.jsonl.gz",
+      "source_note_after": "[1] OpenAI. HumanEval.jsonl.gz. 改訂b9453e8。 HumanEval/0。仕様文を抜粋。\nhttps://github.com/openai/human-eval/blob/b9453e8/data/HumanEval.jsonl.gz"
+    },
+    {
+      "old_pages": [
+        9,
+        10
+      ],
+      "decision": "pair-original-translation-keep-explanation",
+      "font_pt": 20,
+      "original": "Input to this function is a string containing multiple groups of nested parentheses. Your goal is to separate those group into separate strings and return the list of those. Separate groups are balanced (each open brace is properly closed) and not nested within each other Ignore any spaces in the input string.",
+      "translation": "空白を無視して括弧列を読み、各グループを文字列に分け、そのリストを返す。各グループの括弧は対応して閉じており、グループ同士は入れ子にならない。",
+      "delete_translation_page": false,
+      "page": 9,
+      "quote_fitted_from_pdf": true,
+      "quote_height_pt": 130.95,
+      "following_blocks_shift_pt": -1.05,
+      "source_note_before": "[1] OpenAI. HumanEval.jsonl.gz. 改訂b9453e8。 HumanEval/1。入出力例は日本語訳とともに掲載。\nhttps://github.com/openai/human-eval/blob/b9453e8/data/HumanEval.jsonl.gz",
+      "source_note_after": "[1] OpenAI. HumanEval.jsonl.gz. 改訂b9453e8。 HumanEval/1。仕様文を抜粋。\nhttps://github.com/openai/human-eval/blob/b9453e8/data/HumanEval.jsonl.gz"
+    },
+    {
+      "old_pages": [
+        11,
+        12
+      ],
+      "decision": "pair-original-translation-keep-explanation",
+      "font_pt": 20,
+      "original": "You're given a list of deposit and withdrawal operations on a bank account that starts with zero balance. Your task is to detect if at any point the balance of account fallls below zero, and at that point function should return True. Otherwise it should return False.",
+      "translation": "残高0から入出金のリストを順に適用する。途中で一度でも残高が負になればTrue、ならなければFalseを返す。",
+      "delete_translation_page": false,
+      "page": 11,
+      "quote_fitted_from_pdf": true,
+      "quote_height_pt": 130.95,
+      "following_blocks_shift_pt": -1.05,
+      "source_note_before": "[1] OpenAI. HumanEval.jsonl.gz. 改訂b9453e8。 HumanEval/3。入出力例は日本語訳とともに掲載。\nhttps://github.com/openai/human-eval/blob/b9453e8/data/HumanEval.jsonl.gz",
+      "source_note_after": "[1] OpenAI. HumanEval.jsonl.gz. 改訂b9453e8。 HumanEval/3。仕様文を抜粋。\nhttps://github.com/openai/human-eval/blob/b9453e8/data/HumanEval.jsonl.gz"
+    },
+    {
+      "old_pages": [
+        36,
+        37
+      ],
+      "decision": "pair-original-translation-keep-explanation",
+      "font_pt": 20,
+      "original": "Given a positive floating point number, it can be decomposed into and integer part (largest integer smaller than given number) and decimals (leftover part always smaller than 1). Return the decimal part of the number.",
+      "translation": "正の浮動小数点数を受け取り、整数部分を除いた、1未満の小数部分を返す。",
+      "delete_translation_page": false,
+      "page": 36,
+      "quote_fitted_from_pdf": true,
+      "quote_height_pt": 107.54,
+      "following_blocks_shift_pt": -1.06,
+      "source_note_before": "[1] OpenAI. HumanEval.jsonl.gz. 改訂b9453e8。 HumanEval/2。入出力例は日本語訳とともに掲載。\nhttps://github.com/openai/human-eval/blob/b9453e8/data/HumanEval.jsonl.gz",
+      "source_note_after": "[1] OpenAI. HumanEval.jsonl.gz. 改訂b9453e8。 HumanEval/2。仕様文を抜粋。\nhttps://github.com/openai/human-eval/blob/b9453e8/data/HumanEval.jsonl.gz"
+    },
+    {
+      "old_pages": [
+        38,
+        39
+      ],
+      "decision": "pair-original-translation-keep-explanation",
+      "font_pt": 20,
+      "original": "For a given list of input numbers, calculate Mean Absolute Deviation around the mean of this dataset. Mean Absolute Deviation is the average absolute difference between each element and a centerpoint (mean in this case): MAD = average | x - x_mean |",
+      "translation": "数値のリストについて、平均からの平均絶対偏差を求める。各要素と平均との差の絶対値を取り、その平均を返す。",
+      "delete_translation_page": false,
+      "page": 38,
+      "quote_fitted_from_pdf": true,
+      "quote_height_pt": 130.95,
+      "following_blocks_shift_pt": -1.05,
+      "source_note_before": "[1] OpenAI. HumanEval.jsonl.gz. 改訂b9453e8。 HumanEval/4。入出力例は日本語訳とともに掲載。\nhttps://github.com/openai/human-eval/blob/b9453e8/data/HumanEval.jsonl.gz",
+      "source_note_after": "[1] OpenAI. HumanEval.jsonl.gz. 改訂b9453e8。 HumanEval/4。仕様文を抜粋。\nhttps://github.com/openai/human-eval/blob/b9453e8/data/HumanEval.jsonl.gz"
+    },
+    {
+      "old_pages": [
+        40,
+        41
+      ],
+      "decision": "pair-original-translation-keep-explanation",
+      "font_pt": 20,
+      "original": "Insert a number 'delimeter' between every two consecutive elements of input list `numbers'",
+      "translation": "整数リストの隣り合う要素の間に、指定された整数を挟んで返す。",
+      "delete_translation_page": false,
+      "page": 40,
+      "quote_fitted_from_pdf": true,
+      "quote_height_pt": 60.68,
+      "following_blocks_shift_pt": -1.12,
+      "source_note_before": "[1] OpenAI. HumanEval.jsonl.gz. 改訂b9453e8。 HumanEval/5。入出力例は日本語訳とともに掲載。\nhttps://github.com/openai/human-eval/blob/b9453e8/data/HumanEval.jsonl.gz",
+      "source_note_after": "[1] OpenAI. HumanEval.jsonl.gz. 改訂b9453e8。 HumanEval/5。仕様文を抜粋。\nhttps://github.com/openai/human-eval/blob/b9453e8/data/HumanEval.jsonl.gz"
+    },
+    {
+      "old_pages": [
+        42,
+        43
+      ],
+      "decision": "pair-original-translation-keep-explanation",
+      "font_pt": 20,
+      "original": "Input to this function is a string represented multiple groups for nested parentheses separated by spaces. For each of the group, output the deepest level of nesting of parentheses. E.g. (()()) has maximum two levels of nesting while ((())) has three.",
+      "translation": "空白で区切られた括弧の各グループについて、入れ子の最大深さを返す。たとえば(()())は深さ2、((()))は深さ3となる。",
+      "delete_translation_page": false,
+      "page": 42,
+      "quote_fitted_from_pdf": true,
+      "quote_height_pt": 107.54,
+      "following_blocks_shift_pt": -1.06,
+      "source_note_before": "[1] OpenAI. HumanEval.jsonl.gz. 改訂b9453e8。 HumanEval/6。入出力例は日本語訳とともに掲載。\nhttps://github.com/openai/human-eval/blob/b9453e8/data/HumanEval.jsonl.gz",
+      "source_note_after": "[1] OpenAI. HumanEval.jsonl.gz. 改訂b9453e8。 HumanEval/6。仕様文を抜粋。\nhttps://github.com/openai/human-eval/blob/b9453e8/data/HumanEval.jsonl.gz"
+    },
+    {
+      "old_pages": [
+        44,
+        45
+      ],
+      "decision": "merge-entire-pair",
+      "font_pt": 19,
+      "original": "Filter an input list of strings only for ones that contain given substring",
+      "translation": "文字列リストから、指定された部分文字列を含む要素だけを元の順に返す。",
+      "delete_translation_page": true,
+      "page": 44,
+      "quote_fitted_from_pdf": true,
+      "quote_height_pt": 58.23,
+      "following_blocks_shift_pt": 21.0,
+      "source_note_before": "[1] OpenAI. HumanEval.jsonl.gz. 改訂b9453e8。 HumanEval/7。入出力例は日本語訳とともに掲載。\nhttps://github.com/openai/human-eval/blob/b9453e8/data/HumanEval.jsonl.gz",
+      "source_note_after": "[1] OpenAI. HumanEval.jsonl.gz. 改訂b9453e8。 HumanEval/7。仕様文を抜粋。#以降は期待する返り値。\nhttps://github.com/openai/human-eval/blob/b9453e8/data/HumanEval.jsonl.gz"
+    },
+    {
+      "old_pages": [
+        46,
+        47
+      ],
+      "decision": "pair-original-translation-keep-explanation",
+      "font_pt": 20,
+      "original": "For a given list of integers, return a tuple consisting of a sum and a product of all the integers in a list. Empty sum should be equal to 0 and empty product should be equal to 1.",
+      "translation": "整数リストの全要素の和と積をタプルで返す。空リストの和は0、積は1とする。",
+      "delete_translation_page": false,
+      "page": 45,
+      "quote_fitted_from_pdf": true,
+      "quote_height_pt": 84.09,
+      "following_blocks_shift_pt": -1.11,
+      "source_note_before": "[1] OpenAI. HumanEval.jsonl.gz. 改訂b9453e8。 HumanEval/8。入出力例は日本語訳とともに掲載。\nhttps://github.com/openai/human-eval/blob/b9453e8/data/HumanEval.jsonl.gz",
+      "source_note_after": "[1] OpenAI. HumanEval.jsonl.gz. 改訂b9453e8。 HumanEval/8。仕様文を抜粋。\nhttps://github.com/openai/human-eval/blob/b9453e8/data/HumanEval.jsonl.gz"
+    },
+    {
+      "old_pages": [
+        48,
+        49
+      ],
+      "decision": "pair-original-translation-keep-explanation",
+      "font_pt": 20,
+      "original": "From a given list of integers, generate a list of rolling maximum element found until given moment in the sequence.",
+      "translation": "整数列を先頭から読み、各位置までに現れた値の最大値をリストにして返す。",
+      "delete_translation_page": false,
+      "page": 47,
+      "quote_fitted_from_pdf": true,
+      "quote_height_pt": 60.68,
+      "following_blocks_shift_pt": -1.12,
+      "source_note_before": "[1] OpenAI. HumanEval.jsonl.gz. 改訂b9453e8。 HumanEval/9。入出力例は日本語訳とともに掲載。\nhttps://github.com/openai/human-eval/blob/b9453e8/data/HumanEval.jsonl.gz",
+      "source_note_after": "[1] OpenAI. HumanEval.jsonl.gz. 改訂b9453e8。 HumanEval/9。仕様文を抜粋。\nhttps://github.com/openai/human-eval/blob/b9453e8/data/HumanEval.jsonl.gz"
+    },
+    {
+      "old_pages": [
+        50,
+        51
+      ],
+      "decision": "pair-original-translation-keep-explanation",
+      "font_pt": 20,
+      "original": "Find the shortest palindrome that begins with a supplied string. Algorithm idea is simple: - Find the longest postfix of supplied string that is a palindrome. - Append to the end of the string reverse of a string prefix that comes before the palindromic suffix.",
+      "translation": "与えられた文字列で始まる最短の回文を返す。末尾側の最長の回文を探し、その前に残った部分を逆順にして末尾へ付ける。",
+      "delete_translation_page": false,
+      "page": 49,
+      "quote_fitted_from_pdf": true,
+      "quote_height_pt": 130.95,
+      "following_blocks_shift_pt": 22.35,
+      "source_note_before": "[1] OpenAI. HumanEval.jsonl.gz. 改訂b9453e8。 HumanEval/10。入出力例は日本語訳とともに掲載。\nhttps://github.com/openai/human-eval/blob/b9453e8/data/HumanEval.jsonl.gz",
+      "source_note_after": "[1] OpenAI. HumanEval.jsonl.gz. 改訂b9453e8。 HumanEval/10。仕様文を抜粋。\nhttps://github.com/openai/human-eval/blob/b9453e8/data/HumanEval.jsonl.gz"
+    },
+    {
+      "old_pages": [
+        52,
+        53
+      ],
+      "decision": "pair-original-translation-keep-explanation",
+      "font_pt": 20,
+      "original": "Input are two strings a and b consisting only of 1s and 0s. Perform binary XOR on these inputs and return result also as a string.",
+      "translation": "0と1からなる二つの文字列について、各位置の排他的論理和を文字列で返す。",
+      "delete_translation_page": false,
+      "page": 51,
+      "quote_fitted_from_pdf": true,
+      "quote_height_pt": 84.09,
+      "following_blocks_shift_pt": 22.29,
+      "source_note_before": "[1] OpenAI. HumanEval.jsonl.gz. 改訂b9453e8。 HumanEval/11。入出力例は日本語訳とともに掲載。\nhttps://github.com/openai/human-eval/blob/b9453e8/data/HumanEval.jsonl.gz",
+      "source_note_after": "[1] OpenAI. HumanEval.jsonl.gz. 改訂b9453e8。 HumanEval/11。仕様文を抜粋。\nhttps://github.com/openai/human-eval/blob/b9453e8/data/HumanEval.jsonl.gz"
+    },
+    {
+      "old_pages": [
+        54,
+        55
+      ],
+      "decision": "pair-original-translation-keep-explanation",
+      "font_pt": 20,
+      "original": "Out of list of strings, return the longest one. Return the first one in case of multiple strings of the same length. Return None in case the input list is empty.",
+      "translation": "文字列リストで最も長い要素を返す。同じ長さなら先に現れたものを選び、空リストならNoneを返す。",
+      "delete_translation_page": false,
+      "page": 53,
+      "quote_fitted_from_pdf": true,
+      "quote_height_pt": 84.09,
+      "following_blocks_shift_pt": -1.11,
+      "source_note_before": "[1] OpenAI. HumanEval.jsonl.gz. 改訂b9453e8。 HumanEval/12。入出力例は日本語訳とともに掲載。\nhttps://github.com/openai/human-eval/blob/b9453e8/data/HumanEval.jsonl.gz",
+      "source_note_after": "[1] OpenAI. HumanEval.jsonl.gz. 改訂b9453e8。 HumanEval/12。仕様文を抜粋。\nhttps://github.com/openai/human-eval/blob/b9453e8/data/HumanEval.jsonl.gz"
+    }
+  ],
+  "old_page_count": 64,
+  "page_count": 63,
+  "old_to_new_pages": {
+    "1": 1,
+    "2": 2,
+    "3": 3,
+    "4": 4,
+    "5": 5,
+    "6": 6,
+    "7": 7,
+    "8": 8,
+    "9": 9,
+    "10": 10,
+    "11": 11,
+    "12": 12,
+    "13": 13,
+    "14": 14,
+    "15": 15,
+    "16": 16,
+    "17": 17,
+    "18": 18,
+    "19": 19,
+    "20": 20,
+    "21": 21,
+    "22": 22,
+    "23": 23,
+    "24": 24,
+    "25": 25,
+    "26": 26,
+    "27": 27,
+    "28": 28,
+    "29": 29,
+    "30": 30,
+    "31": 31,
+    "32": 32,
+    "33": 33,
+    "34": 34,
+    "35": 35,
+    "36": 36,
+    "37": 37,
+    "38": 38,
+    "39": 39,
+    "40": 40,
+    "41": 41,
+    "42": 42,
+    "43": 43,
+    "44": 44,
+    "45": 44,
+    "46": 45,
+    "47": 46,
+    "48": 47,
+    "49": 48,
+    "50": 49,
+    "51": 50,
+    "52": 51,
+    "53": 52,
+    "54": 53,
+    "55": 54,
+    "56": 55,
+    "57": 56,
+    "58": 57,
+    "59": 58,
+    "60": 59,
+    "61": 60,
+    "62": 61,
+    "63": 62,
+    "64": 63
+  },
+  "empty_hyperlinks_removed": 0,
+  "updated_at": "2026-10-17T15:34:43Z",
+  "gemini_used": false,
+  "review_mode": "skill_based_codex",
+  "skill_sha256": {
+    ".agents/skills/japanese-slide-proofreading/SKILL.md": "0bc7bfa18092fe93750fcbf354d4e8306b5c38f014fb7fb3e6d29c6514fa9050",
+    ".agents/skills/master-guided-slides/SKILL.md": "a38cbdc3b7d55ba1a6c945dd0a100c260a26f67911345a3ccd7b871f91fcd009",
+    ".agents/skills/dataset-introduction-slides/SKILL.md": "02d63df78fc49aee6690ce6b2ea185a84fb690057ab9f07633190672370eb5f7"
+  },
+  "artifacts": {
+    "pptx": {
+      "path": "slides/datasets-in-10-minutes-humaneval.pptx",
+      "sha256": "bbb85c7eb7f59f998ef3967f2ec9c6ba564a720bcd894f806cf055d53074bcfb"
+    },
+    "pdf": {
+      "path": "slides/datasets-in-10-minutes-humaneval.pdf",
+      "sha256": "d3046c0ee7dbfd2ff4f2f17a6f72b65b00a88fbad01e94c7c86127436214e1dc"
+    }
+  },
+  "validation": {
+    "all_slide_text_no_original_word": true,
+    "xml_parse": "passed",
+    "charts_workbooks_media": "referenced contents byte-identical",
+    "unused_parts_omitted": [],
+    "url_only_hyperlinks": 56,
+    "originals_and_translations_retained": true,
+    "tables_retained": true,
+    "pdf_text_comparison": "all pages passed",
+    "changed_page_images": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      19,
+      23,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      60,
+      61
+    ],
+    "visual_review": "変更した各ページを1440×810の個別画像で確認。引用枠、訳、コード、表、出典の間隔を確認し、実描画に基づいて引用枠の高さを調整。"
+  },
+  "pdf_audit": {
+    "pages": 63,
+    "changed_pages": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      19,
+      23,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      60,
+      61
+    ],
+    "missing": [],
+    "outside": [],
+    "wrapped_titles": []
+  }
+}
