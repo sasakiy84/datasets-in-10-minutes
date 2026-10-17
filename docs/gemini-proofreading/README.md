@@ -15,3 +15,4 @@
 | screenspot-pro | [screenspot-pro](screenspot-pro.md) |
 | simpleqa-verified | [simpleqa-verified](simpleqa-verified.md) |
 | swe-bench-pro | [swe-bench-pro](swe-bench-pro.md) |
+| swe-bench-verified | [swe-bench-verified](swe-bench-verified.md) |
