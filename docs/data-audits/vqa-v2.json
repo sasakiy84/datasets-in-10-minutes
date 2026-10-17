@@ -1,0 +1,1527 @@
+{
+  "dataset": "vqa-v2",
+  "checked_at": "2026-10-17T15:01:43Z",
+  "sources": [
+    {
+      "path": "vqa-v2/paper.pdf",
+      "url": "https://arxiv.org/pdf/1612.00837",
+      "bytes": 3749846,
+      "sha256": "ac9d1009c8a25a6ba0439e7d91eccee269ed93dfdb7f02603f60ba046f7ab015"
+    },
+    {
+      "path": "vqa-v2/index.html",
+      "url": "https://visualqa.org/",
+      "bytes": 34354,
+      "sha256": "d52acfbd1d7e9b71b6b3778367a7ad194c46048422b3093a3dd9359f719d6860"
+    },
+    {
+      "path": "vqa-v2/download.html",
+      "url": "https://visualqa.org/download.html",
+      "bytes": 61107,
+      "sha256": "ae42f341c394488bee9e1b11d061451c5e78489307c473cc8824aed61a9ea477"
+    },
+    {
+      "path": "vqa-v2/evaluation.html",
+      "url": "https://visualqa.org/evaluation.html",
+      "bytes": 9374,
+      "sha256": "36c9b463f1b90334f8315d56af10be31dbbfeef08704dad0eaba86fe5d89b590"
+    },
+    {
+      "path": "vqa-v2/val-annotations.zip",
+      "url": "https://s3.amazonaws.com/cvmlp/vqa/mscoco/vqa/v2_Annotations_Val_mscoco.zip",
+      "bytes": 10518930,
+      "sha256": "0caae7c8d1dafd852727f5ac046bc1efca9b72026bd6ffa34fc489f3a7b3291e"
+    },
+    {
+      "path": "vqa-v2/val-questions.zip",
+      "url": "https://s3.amazonaws.com/cvmlp/vqa/mscoco/vqa/v2_Questions_Val_mscoco.zip",
+      "bytes": 3494929,
+      "sha256": "e71f6c5c3e97a51d050f28243e262b28cd0c48d11a6b4632d769d30d3f93222a"
+    },
+    {
+      "path": "vqa-v2/vqa-tools-README.md",
+      "url": "https://raw.githubusercontent.com/GT-Vision-Lab/VQA/master/README.md",
+      "bytes": 5382,
+      "sha256": "5a5ee44f4587dde364e54a3738b40271f72b5026210bbdf80b969e25193b9180"
+    },
+    {
+      "path": "vqa-v2/eval.py",
+      "url": "https://raw.githubusercontent.com/GT-Vision-Lab/VQA/master/PythonEvaluationTools/vqaEvaluation/vqaEval.py",
+      "bytes": 8428,
+      "sha256": "f08edfcad5be0112500993e245c706b6cb928eadebe203f89f838e5e0d04bec8"
+    },
+    {
+      "path": "vqa-v2/blip2-paper.pdf",
+      "url": "https://arxiv.org/pdf/2301.12597",
+      "bytes": 6737540,
+      "sha256": "6bc5d399d6127a64ace5167a2f0c00112a49725d2475d80322dbf0083f139e80"
+    },
+    {
+      "path": "vqa-v2/lmms-eval-README.md",
+      "url": "https://raw.githubusercontent.com/EvolvingLMMs-Lab/lmms-eval/main/README.md",
+      "bytes": 23066,
+      "sha256": "bc38fbdd5b1b6ef74e4ef1cbbb6308a8cd3244012e326c07fa2b09182d0918e7"
+    },
+    {
+      "path": "vqa-v2/lavis-README.md",
+      "url": "https://raw.githubusercontent.com/salesforce/LAVIS/main/README.md",
+      "sha256": "562f60eadefd1a9c799289c68f20d0d2a9fbdab0eb3337cb0ef7bc4e1ab88aeb",
+      "bytes": 20118
+    },
+    {
+      "path": "vqa-v2/lavis-vqa.py",
+      "url": "https://raw.githubusercontent.com/salesforce/LAVIS/main/lavis/tasks/vqa.py",
+      "sha256": "f342b8f538fc37d553608104086d847125f5ce21c00720c916bd1de1966ed38c",
+      "bytes": 17116
+    }
+  ],
+  "statistics": {
+    "questions": 214354,
+    "images": 40504,
+    "answers": 2143540,
+    "answer_types": {
+      "other": 105679,
+      "yes/no": 80541,
+      "number": 28134
+    },
+    "question_chars": {
+      "n": 214354,
+      "mean": 30.831866911744125,
+      "median": 29.0,
+      "sd": 10.10003855544516,
+      "min": 10,
+      "p25": 24,
+      "p75": 36,
+      "p95": 49,
+      "max": 100
+    },
+    "question_words": {
+      "n": 214354,
+      "mean": 6.184857758660907,
+      "median": 6.0,
+      "sd": 1.9357694277340742,
+      "min": 2,
+      "p25": 5,
+      "p75": 7,
+      "p95": 10,
+      "max": 23
+    },
+    "question_types": [
+      [
+        "how many",
+        20462
+      ],
+      [
+        "is the",
+        17265
+      ],
+      [
+        "what",
+        15897
+      ],
+      [
+        "what color is the",
+        14061
+      ],
+      [
+        "what is the",
+        11353
+      ],
+      [
+        "none of the above",
+        8550
+      ],
+      [
+        "is this",
+        7841
+      ],
+      [
+        "is this a",
+        7492
+      ],
+      [
+        "what is",
+        6328
+      ],
+      [
+        "what kind of",
+        5840
+      ],
+      [
+        "are the",
+        5264
+      ],
+      [
+        "is there a",
+        4679
+      ]
+    ],
+    "agreement_raw": {
+      "7": 17459,
+      "9": 31221,
+      "6": 17373,
+      "10": 70228,
+      "8": 20483,
+      "5": 16223,
+      "2": 11540,
+      "4": 13589,
+      "3": 13626,
+      "1": 2612
+    },
+    "buckets": [
+      35103,
+      134416,
+      37994,
+      5662,
+      1179
+    ]
+  },
+  "statistics_method": {
+    "character_count": "Python len(), Unicode code points including whitespace and punctuation",
+    "word_count": "Python str.split()",
+    "line_count": "Python str.splitlines()",
+    "standard_deviation": "population: statistics.pstdev",
+    "quantiles": "sorted_values[round((n-1)*p)]",
+    "rounding": "display only; raw JSON preserves precision"
+  },
+  "examples": [
+    {
+      "question": "Is there a graffiti on the wall?",
+      "question_id": 28714002,
+      "image_id": 28714,
+      "answer": "yes",
+      "answers": [
+        {
+          "answer": "yes",
+          "answer_confidence": "yes",
+          "answer_id": 1
+        },
+        {
+          "answer": "no",
+          "answer_confidence": "yes",
+          "answer_id": 2
+        },
+        {
+          "answer": "yes",
+          "answer_confidence": "maybe",
+          "answer_id": 3
+        },
+        {
+          "answer": "yes",
+          "answer_confidence": "maybe",
+          "answer_id": 4
+        },
+        {
+          "answer": "yes",
+          "answer_confidence": "yes",
+          "answer_id": 5
+        },
+        {
+          "answer": "yes",
+          "answer_confidence": "yes",
+          "answer_id": 6
+        },
+        {
+          "answer": "yes",
+          "answer_confidence": "yes",
+          "answer_id": 7
+        },
+        {
+          "answer": "yes",
+          "answer_confidence": "yes",
+          "answer_id": 8
+        },
+        {
+          "answer": "yes",
+          "answer_confidence": "yes",
+          "answer_id": 9
+        },
+        {
+          "answer": "yes",
+          "answer_confidence": "yes",
+          "answer_id": 10
+        }
+      ],
+      "answer_type": "yes/no",
+      "role": "main",
+      "title": "壁の落書き：あり",
+      "jp": "壁に落書きはあるか。",
+      "explanation": "壁の絵や文字を確認すると、yesと答えられる。",
+      "answer_counts": {
+        "yes": 9,
+        "no": 1
+      }
+    },
+    {
+      "question": "Is there a graffiti on the wall?",
+      "question_id": 426166003,
+      "image_id": 426166,
+      "answer": "no",
+      "answers": [
+        {
+          "answer": "no",
+          "answer_confidence": "yes",
+          "answer_id": 1
+        },
+        {
+          "answer": "no",
+          "answer_confidence": "yes",
+          "answer_id": 2
+        },
+        {
+          "answer": "no",
+          "answer_confidence": "yes",
+          "answer_id": 3
+        },
+        {
+          "answer": "no",
+          "answer_confidence": "yes",
+          "answer_id": 4
+        },
+        {
+          "answer": "no",
+          "answer_confidence": "yes",
+          "answer_id": 5
+        },
+        {
+          "answer": "no",
+          "answer_confidence": "yes",
+          "answer_id": 6
+        },
+        {
+          "answer": "no",
+          "answer_confidence": "yes",
+          "answer_id": 7
+        },
+        {
+          "answer": "no",
+          "answer_confidence": "yes",
+          "answer_id": 8
+        },
+        {
+          "answer": "no",
+          "answer_confidence": "maybe",
+          "answer_id": 9
+        },
+        {
+          "answer": "no",
+          "answer_confidence": "yes",
+          "answer_id": 10
+        }
+      ],
+      "answer_type": "yes/no",
+      "role": "main",
+      "title": "壁の落書き：なし",
+      "jp": "壁に落書きはあるか。",
+      "explanation": "同じ質問でも、こちらの画像ではnoが正解注釈となる。",
+      "answer_counts": {
+        "no": 10
+      }
+    },
+    {
+      "question": "How many are playing ball?",
+      "question_id": 131089002,
+      "image_id": 131089,
+      "answer": "1",
+      "answers": [
+        {
+          "answer": "1",
+          "answer_confidence": "yes",
+          "answer_id": 1
+        },
+        {
+          "answer": "1",
+          "answer_confidence": "yes",
+          "answer_id": 2
+        },
+        {
+          "answer": "1",
+          "answer_confidence": "yes",
+          "answer_id": 3
+        },
+        {
+          "answer": "1",
+          "answer_confidence": "yes",
+          "answer_id": 4
+        },
+        {
+          "answer": "1",
+          "answer_confidence": "yes",
+          "answer_id": 5
+        },
+        {
+          "answer": "1",
+          "answer_confidence": "yes",
+          "answer_id": 6
+        },
+        {
+          "answer": "1",
+          "answer_confidence": "maybe",
+          "answer_id": 7
+        },
+        {
+          "answer": "1",
+          "answer_confidence": "yes",
+          "answer_id": 8
+        },
+        {
+          "answer": "1",
+          "answer_confidence": "yes",
+          "answer_id": 9
+        },
+        {
+          "answer": "boy",
+          "answer_confidence": "maybe",
+          "answer_id": 10
+        }
+      ],
+      "answer_type": "number",
+      "role": "main",
+      "title": "人数を数える",
+      "jp": "ボール遊びをしているのは何人か。",
+      "explanation": "画像にはバットを持つ子どもが1人いる。",
+      "answer_counts": {
+        "1": 9,
+        "boy": 1
+      }
+    },
+    {
+      "question": "Where is he looking?",
+      "question_id": 262148000,
+      "image_id": 262148,
+      "answer": "down",
+      "answers": [
+        {
+          "answer": "down",
+          "answer_confidence": "yes",
+          "answer_id": 1
+        },
+        {
+          "answer": "down",
+          "answer_confidence": "yes",
+          "answer_id": 2
+        },
+        {
+          "answer": "at table",
+          "answer_confidence": "yes",
+          "answer_id": 3
+        },
+        {
+          "answer": "skateboard",
+          "answer_confidence": "yes",
+          "answer_id": 4
+        },
+        {
+          "answer": "down",
+          "answer_confidence": "yes",
+          "answer_id": 5
+        },
+        {
+          "answer": "table",
+          "answer_confidence": "yes",
+          "answer_id": 6
+        },
+        {
+          "answer": "down",
+          "answer_confidence": "yes",
+          "answer_id": 7
+        },
+        {
+          "answer": "down",
+          "answer_confidence": "yes",
+          "answer_id": 8
+        },
+        {
+          "answer": "down",
+          "answer_confidence": "yes",
+          "answer_id": 9
+        },
+        {
+          "answer": "down",
+          "answer_confidence": "yes",
+          "answer_id": 10
+        }
+      ],
+      "answer_type": "other",
+      "role": "main",
+      "title": "視線の向きを答える",
+      "jp": "彼はどこを見ているか。",
+      "explanation": "視線の向きと、視線の先にある物の名前で回答が分かれている。",
+      "answer_counts": {
+        "down": 7,
+        "at table": 1,
+        "skateboard": 1,
+        "table": 1
+      }
+    },
+    {
+      "question": "What color is the kids hair?",
+      "question_id": 393243003,
+      "image_id": 393243,
+      "answer": "blonde",
+      "answers": [
+        {
+          "answer": "blonde",
+          "answer_confidence": "yes",
+          "answer_id": 1
+        },
+        {
+          "answer": "blonde",
+          "answer_confidence": "yes",
+          "answer_id": 2
+        },
+        {
+          "answer": "blonde",
+          "answer_confidence": "yes",
+          "answer_id": 3
+        },
+        {
+          "answer": "blonde",
+          "answer_confidence": "yes",
+          "answer_id": 4
+        },
+        {
+          "answer": "blonde",
+          "answer_confidence": "yes",
+          "answer_id": 5
+        },
+        {
+          "answer": "blonde",
+          "answer_confidence": "yes",
+          "answer_id": 6
+        },
+        {
+          "answer": "blonde",
+          "answer_confidence": "yes",
+          "answer_id": 7
+        },
+        {
+          "answer": "blonde",
+          "answer_confidence": "yes",
+          "answer_id": 8
+        },
+        {
+          "answer": "blonde",
+          "answer_confidence": "yes",
+          "answer_id": 9
+        },
+        {
+          "answer": "blonde",
+          "answer_confidence": "yes",
+          "answer_id": 10
+        }
+      ],
+      "answer_type": "other",
+      "role": "appendix",
+      "title": "髪の色を答える",
+      "jp": "この子の髪は何色か。",
+      "explanation": "見えている髪の色をblondeと答える。",
+      "answer_counts": {
+        "blonde": 10
+      }
+    },
+    {
+      "question": "What sport is the man doing?",
+      "question_id": 393284003,
+      "image_id": 393284,
+      "answer": "snowboarding",
+      "answers": [
+        {
+          "answer": "snowboarding",
+          "answer_confidence": "yes",
+          "answer_id": 1
+        },
+        {
+          "answer": "snowboarding",
+          "answer_confidence": "yes",
+          "answer_id": 2
+        },
+        {
+          "answer": "snowboarding",
+          "answer_confidence": "yes",
+          "answer_id": 3
+        },
+        {
+          "answer": "snowboarding",
+          "answer_confidence": "yes",
+          "answer_id": 4
+        },
+        {
+          "answer": "snowboarding",
+          "answer_confidence": "yes",
+          "answer_id": 5
+        },
+        {
+          "answer": "snowboarding",
+          "answer_confidence": "yes",
+          "answer_id": 6
+        },
+        {
+          "answer": "snowboarding",
+          "answer_confidence": "maybe",
+          "answer_id": 7
+        },
+        {
+          "answer": "snowboarding",
+          "answer_confidence": "yes",
+          "answer_id": 8
+        },
+        {
+          "answer": "snowboarding",
+          "answer_confidence": "yes",
+          "answer_id": 9
+        },
+        {
+          "answer": "snowboarding",
+          "answer_confidence": "yes",
+          "answer_id": 10
+        }
+      ],
+      "answer_type": "other",
+      "role": "appendix",
+      "title": "スポーツの種類を答える",
+      "jp": "男性は何のスポーツをしているか。",
+      "explanation": "足元の板や姿勢から、snowboardingと答える。",
+      "answer_counts": {
+        "snowboarding": 10
+      }
+    },
+    {
+      "question": "What is the man doing?",
+      "question_id": 132024002,
+      "image_id": 132024,
+      "answer": "skiing",
+      "answers": [
+        {
+          "answer": "skiing",
+          "answer_confidence": "yes",
+          "answer_id": 1
+        },
+        {
+          "answer": "standing",
+          "answer_confidence": "yes",
+          "answer_id": 2
+        },
+        {
+          "answer": "skiing",
+          "answer_confidence": "yes",
+          "answer_id": 3
+        },
+        {
+          "answer": "skiing",
+          "answer_confidence": "yes",
+          "answer_id": 4
+        },
+        {
+          "answer": "skiing",
+          "answer_confidence": "yes",
+          "answer_id": 5
+        },
+        {
+          "answer": "skiing",
+          "answer_confidence": "yes",
+          "answer_id": 6
+        },
+        {
+          "answer": "skiing",
+          "answer_confidence": "yes",
+          "answer_id": 7
+        },
+        {
+          "answer": "skiing",
+          "answer_confidence": "yes",
+          "answer_id": 8
+        },
+        {
+          "answer": "skiing",
+          "answer_confidence": "yes",
+          "answer_id": 9
+        },
+        {
+          "answer": "skiing",
+          "answer_confidence": "yes",
+          "answer_id": 10
+        }
+      ],
+      "answer_type": "other",
+      "role": "appendix",
+      "title": "動作を答える",
+      "jp": "男性は何をしているか。",
+      "explanation": "スキー板やストックと雪上の状況を見て、skiingと答える。",
+      "answer_counts": {
+        "skiing": 9,
+        "standing": 1
+      }
+    },
+    {
+      "question": "What animal is in the picture?",
+      "question_id": 524621008,
+      "image_id": 524621,
+      "answer": "giraffe",
+      "answers": [
+        {
+          "answer": "giraffe",
+          "answer_confidence": "yes",
+          "answer_id": 1
+        },
+        {
+          "answer": "giraffe",
+          "answer_confidence": "yes",
+          "answer_id": 2
+        },
+        {
+          "answer": "zebra",
+          "answer_confidence": "yes",
+          "answer_id": 3
+        },
+        {
+          "answer": "giraffe",
+          "answer_confidence": "maybe",
+          "answer_id": 4
+        },
+        {
+          "answer": "giraffe",
+          "answer_confidence": "yes",
+          "answer_id": 5
+        },
+        {
+          "answer": "giraffe",
+          "answer_confidence": "yes",
+          "answer_id": 6
+        },
+        {
+          "answer": "giraffe",
+          "answer_confidence": "yes",
+          "answer_id": 7
+        },
+        {
+          "answer": "giraffe",
+          "answer_confidence": "yes",
+          "answer_id": 8
+        },
+        {
+          "answer": "giraffe",
+          "answer_confidence": "yes",
+          "answer_id": 9
+        },
+        {
+          "answer": "giraffe",
+          "answer_confidence": "yes",
+          "answer_id": 10
+        }
+      ],
+      "answer_type": "other",
+      "role": "appendix",
+      "title": "動物の種類を答える",
+      "jp": "画像には何の動物が写っているか。",
+      "explanation": "首の長い動物をgiraffeと答える。",
+      "answer_counts": {
+        "giraffe": 9,
+        "zebra": 1
+      }
+    },
+    {
+      "question": "What room is this?",
+      "question_id": 262284003,
+      "image_id": 262284,
+      "answer": "bathroom",
+      "answers": [
+        {
+          "answer": "bathroom",
+          "answer_confidence": "yes",
+          "answer_id": 1
+        },
+        {
+          "answer": "bathroom",
+          "answer_confidence": "yes",
+          "answer_id": 2
+        },
+        {
+          "answer": "bathroom",
+          "answer_confidence": "yes",
+          "answer_id": 3
+        },
+        {
+          "answer": "bathroom",
+          "answer_confidence": "yes",
+          "answer_id": 4
+        },
+        {
+          "answer": "bathroom",
+          "answer_confidence": "yes",
+          "answer_id": 5
+        },
+        {
+          "answer": "bathroom",
+          "answer_confidence": "yes",
+          "answer_id": 6
+        },
+        {
+          "answer": "bathroom",
+          "answer_confidence": "yes",
+          "answer_id": 7
+        },
+        {
+          "answer": "bathroom",
+          "answer_confidence": "yes",
+          "answer_id": 8
+        },
+        {
+          "answer": "bathroom",
+          "answer_confidence": "yes",
+          "answer_id": 9
+        },
+        {
+          "answer": "bathroom",
+          "answer_confidence": "yes",
+          "answer_id": 10
+        }
+      ],
+      "answer_type": "other",
+      "role": "appendix",
+      "title": "部屋の種類を答える",
+      "jp": "これは何の部屋か。",
+      "explanation": "浴槽やシャワーから、bathroomと答える。",
+      "answer_counts": {
+        "bathroom": 10
+      }
+    },
+    {
+      "question": "Is there a mirror in the room?",
+      "question_id": 262162016,
+      "image_id": 262162,
+      "answer": "no",
+      "answers": [
+        {
+          "answer": "no",
+          "answer_confidence": "yes",
+          "answer_id": 1
+        },
+        {
+          "answer": "no",
+          "answer_confidence": "maybe",
+          "answer_id": 2
+        },
+        {
+          "answer": "no",
+          "answer_confidence": "yes",
+          "answer_id": 3
+        },
+        {
+          "answer": "no",
+          "answer_confidence": "yes",
+          "answer_id": 4
+        },
+        {
+          "answer": "no",
+          "answer_confidence": "maybe",
+          "answer_id": 5
+        },
+        {
+          "answer": "no",
+          "answer_confidence": "yes",
+          "answer_id": 6
+        },
+        {
+          "answer": "no",
+          "answer_confidence": "yes",
+          "answer_id": 7
+        },
+        {
+          "answer": "no",
+          "answer_confidence": "yes",
+          "answer_id": 8
+        },
+        {
+          "answer": "no",
+          "answer_confidence": "yes",
+          "answer_id": 9
+        },
+        {
+          "answer": "no",
+          "answer_confidence": "yes",
+          "answer_id": 10
+        }
+      ],
+      "answer_type": "yes/no",
+      "role": "appendix",
+      "title": "物がないことを答える",
+      "jp": "部屋に鏡はあるか。",
+      "explanation": "壁の額縁と鏡を区別して、noと答える。",
+      "answer_counts": {
+        "no": 10
+      }
+    },
+    {
+      "question": "What is the woman sitting on?",
+      "question_id": 524436003,
+      "image_id": 524436,
+      "answer": "bench",
+      "answers": [
+        {
+          "answer": "bench",
+          "answer_confidence": "yes",
+          "answer_id": 1
+        },
+        {
+          "answer": "bench",
+          "answer_confidence": "yes",
+          "answer_id": 2
+        },
+        {
+          "answer": "bench",
+          "answer_confidence": "yes",
+          "answer_id": 3
+        },
+        {
+          "answer": "bench",
+          "answer_confidence": "yes",
+          "answer_id": 4
+        },
+        {
+          "answer": "bench",
+          "answer_confidence": "yes",
+          "answer_id": 5
+        },
+        {
+          "answer": "bench",
+          "answer_confidence": "yes",
+          "answer_id": 6
+        },
+        {
+          "answer": "bench",
+          "answer_confidence": "yes",
+          "answer_id": 7
+        },
+        {
+          "answer": "bench",
+          "answer_confidence": "yes",
+          "answer_id": 8
+        },
+        {
+          "answer": "bench",
+          "answer_confidence": "yes",
+          "answer_id": 9
+        },
+        {
+          "answer": "bench",
+          "answer_confidence": "yes",
+          "answer_id": 10
+        }
+      ],
+      "answer_type": "other",
+      "role": "appendix",
+      "title": "何の上に座るかを答える",
+      "jp": "女性は何に座っているか。",
+      "explanation": "座面のあるベンチを見て、benchと答える。",
+      "answer_counts": {
+        "bench": 10
+      }
+    },
+    {
+      "question": "What kind of building is this?",
+      "question_id": 393288000,
+      "image_id": 393288,
+      "answer": "church",
+      "answers": [
+        {
+          "answer": "church",
+          "answer_confidence": "yes",
+          "answer_id": 1
+        },
+        {
+          "answer": "church",
+          "answer_confidence": "yes",
+          "answer_id": 2
+        },
+        {
+          "answer": "church",
+          "answer_confidence": "yes",
+          "answer_id": 3
+        },
+        {
+          "answer": "church",
+          "answer_confidence": "yes",
+          "answer_id": 4
+        },
+        {
+          "answer": "church",
+          "answer_confidence": "yes",
+          "answer_id": 5
+        },
+        {
+          "answer": "cathedral",
+          "answer_confidence": "yes",
+          "answer_id": 6
+        },
+        {
+          "answer": "church",
+          "answer_confidence": "yes",
+          "answer_id": 7
+        },
+        {
+          "answer": "church",
+          "answer_confidence": "yes",
+          "answer_id": 8
+        },
+        {
+          "answer": "church",
+          "answer_confidence": "yes",
+          "answer_id": 9
+        },
+        {
+          "answer": "church",
+          "answer_confidence": "yes",
+          "answer_id": 10
+        }
+      ],
+      "answer_type": "other",
+      "role": "appendix",
+      "title": "建物の種類を答える",
+      "jp": "これは何の建物か。",
+      "explanation": "塔や十字架のある建物をchurchと答える。",
+      "answer_counts": {
+        "church": 9,
+        "cathedral": 1
+      }
+    },
+    {
+      "question": "Where is the setting?",
+      "question_id": 262682015,
+      "image_id": 262682,
+      "answer": "kitchen",
+      "answers": [
+        {
+          "answer": "kitchen",
+          "answer_confidence": "yes",
+          "answer_id": 1
+        },
+        {
+          "answer": "kitchen",
+          "answer_confidence": "yes",
+          "answer_id": 2
+        },
+        {
+          "answer": "kitchen",
+          "answer_confidence": "maybe",
+          "answer_id": 3
+        },
+        {
+          "answer": "kitchen",
+          "answer_confidence": "yes",
+          "answer_id": 4
+        },
+        {
+          "answer": "kitchen",
+          "answer_confidence": "yes",
+          "answer_id": 5
+        },
+        {
+          "answer": "kitchen",
+          "answer_confidence": "yes",
+          "answer_id": 6
+        },
+        {
+          "answer": "kitchen",
+          "answer_confidence": "yes",
+          "answer_id": 7
+        },
+        {
+          "answer": "kitchen",
+          "answer_confidence": "yes",
+          "answer_id": 8
+        },
+        {
+          "answer": "kitchen",
+          "answer_confidence": "yes",
+          "answer_id": 9
+        },
+        {
+          "answer": "kitchen",
+          "answer_confidence": "yes",
+          "answer_id": 10
+        }
+      ],
+      "answer_type": "other",
+      "role": "appendix",
+      "title": "場所を答える",
+      "jp": "ここはどんな場所か。",
+      "explanation": "流し台や調理台から、kitchenと答える。",
+      "answer_counts": {
+        "kitchen": 10
+      }
+    },
+    {
+      "question": "Is the man wearing plaid pants?",
+      "question_id": 200058000,
+      "image_id": 200058,
+      "answer": "yes",
+      "answers": [
+        {
+          "answer": "yes",
+          "answer_confidence": "yes",
+          "answer_id": 1
+        },
+        {
+          "answer": "yes",
+          "answer_confidence": "yes",
+          "answer_id": 2
+        },
+        {
+          "answer": "yes",
+          "answer_confidence": "yes",
+          "answer_id": 3
+        },
+        {
+          "answer": "yes",
+          "answer_confidence": "yes",
+          "answer_id": 4
+        },
+        {
+          "answer": "yes",
+          "answer_confidence": "yes",
+          "answer_id": 5
+        },
+        {
+          "answer": "yes",
+          "answer_confidence": "yes",
+          "answer_id": 6
+        },
+        {
+          "answer": "yes",
+          "answer_confidence": "yes",
+          "answer_id": 7
+        },
+        {
+          "answer": "yes",
+          "answer_confidence": "yes",
+          "answer_id": 8
+        },
+        {
+          "answer": "yes",
+          "answer_confidence": "maybe",
+          "answer_id": 9
+        },
+        {
+          "answer": "yes",
+          "answer_confidence": "yes",
+          "answer_id": 10
+        }
+      ],
+      "answer_type": "yes/no",
+      "role": "appendix",
+      "title": "服の模様を答える",
+      "jp": "男性はチェック柄のズボンをはいているか。",
+      "explanation": "白と濃色の格子模様が見えるため、yesと答える。",
+      "answer_counts": {
+        "yes": 10
+      }
+    }
+  ],
+  "verification": {
+    "original_question_image_answer_records_checked": 14,
+    "distinct_question_cases": 13,
+    "complementary_pair_verified": [
+      28714002,
+      426166003
+    ],
+    "official_evaluator_match_count_scores": {
+      "0": 0.0,
+      "1": 30.0,
+      "2": 60.0,
+      "3": 90.0,
+      "4": 100.0,
+      "5": 100.0,
+      "6": 100.0,
+      "7": 100.0,
+      "8": 100.0,
+      "9": 100.0,
+      "10": 100.0
+    },
+    "evaluator_execution": "official Python 2 source converted to Python 3 with lib2to3; no scoring changes",
+    "native_chart_workbook_checks": [
+      {
+        "cached_values": [
+          35103.0,
+          134416.0,
+          37994.0,
+          5662.0,
+          1179.0
+        ],
+        "embedded_values": [
+          35103,
+          134416,
+          37994,
+          5662,
+          1179
+        ]
+      }
+    ]
+  },
+  "artifact_sha256": {
+    "pptx": "9c233bfa0e3de933c897d454851256d6954e69a6a6c848631469e57f52a3bcbf",
+    "pdf": "cbd9867fca4693288ea388eee9e9dfd1ec8b692f6b5239afa947bd00225f660c"
+  },
+  "photo_metadata": [
+    {
+      "license": 3,
+      "file_name": "COCO_val2014_000000262284.jpg",
+      "coco_url": "http://images.cocodataset.org/val2014/COCO_val2014_000000262284.jpg",
+      "height": 640,
+      "width": 480,
+      "date_captured": "2013-11-15 01:45:50",
+      "flickr_url": "http://farm8.staticflickr.com/7396/9627540643_b3ec7096c8_z.jpg",
+      "id": 262284,
+      "license_details": {
+        "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+        "id": 3,
+        "name": "Attribution-NonCommercial-NoDerivs License"
+      }
+    },
+    {
+      "license": 5,
+      "file_name": "COCO_val2014_000000200058.jpg",
+      "coco_url": "http://images.cocodataset.org/val2014/COCO_val2014_000000200058.jpg",
+      "height": 428,
+      "width": 640,
+      "date_captured": "2013-11-20 08:30:05",
+      "flickr_url": "http://farm3.staticflickr.com/2248/2456758025_77d425a95a_z.jpg",
+      "id": 200058,
+      "license_details": {
+        "url": "http://creativecommons.org/licenses/by-sa/2.0/",
+        "id": 5,
+        "name": "Attribution-ShareAlike License"
+      }
+    },
+    {
+      "license": 1,
+      "file_name": "COCO_val2014_000000131089.jpg",
+      "coco_url": "http://images.cocodataset.org/val2014/COCO_val2014_000000131089.jpg",
+      "height": 427,
+      "width": 640,
+      "date_captured": "2013-11-22 22:23:05",
+      "flickr_url": "http://farm5.staticflickr.com/4117/4866736626_297f0b22b9_z.jpg",
+      "id": 131089,
+      "license_details": {
+        "url": "http://creativecommons.org/licenses/by-nc-sa/2.0/",
+        "id": 1,
+        "name": "Attribution-NonCommercial-ShareAlike License"
+      }
+    },
+    {
+      "license": 3,
+      "file_name": "COCO_val2014_000000524436.jpg",
+      "coco_url": "http://images.cocodataset.org/val2014/COCO_val2014_000000524436.jpg",
+      "height": 424,
+      "width": 640,
+      "date_captured": "2013-11-16 12:35:10",
+      "flickr_url": "http://farm8.staticflickr.com/7213/6981041686_5914368e78_z.jpg",
+      "id": 524436,
+      "license_details": {
+        "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+        "id": 3,
+        "name": "Attribution-NonCommercial-NoDerivs License"
+      }
+    },
+    {
+      "license": 1,
+      "file_name": "COCO_val2014_000000393243.jpg",
+      "coco_url": "http://images.cocodataset.org/val2014/COCO_val2014_000000393243.jpg",
+      "height": 640,
+      "width": 480,
+      "date_captured": "2013-11-20 13:20:35",
+      "flickr_url": "http://farm3.staticflickr.com/2294/1562760533_6893778f46_z.jpg",
+      "id": 393243,
+      "license_details": {
+        "url": "http://creativecommons.org/licenses/by-nc-sa/2.0/",
+        "id": 1,
+        "name": "Attribution-NonCommercial-ShareAlike License"
+      }
+    },
+    {
+      "license": 1,
+      "file_name": "COCO_val2014_000000262148.jpg",
+      "coco_url": "http://images.cocodataset.org/val2014/COCO_val2014_000000262148.jpg",
+      "height": 512,
+      "width": 640,
+      "date_captured": "2013-11-20 05:50:03",
+      "flickr_url": "http://farm5.staticflickr.com/4028/4549977479_547e6b22ae_z.jpg",
+      "id": 262148,
+      "license_details": {
+        "url": "http://creativecommons.org/licenses/by-nc-sa/2.0/",
+        "id": 1,
+        "name": "Attribution-NonCommercial-ShareAlike License"
+      }
+    },
+    {
+      "license": 4,
+      "file_name": "COCO_val2014_000000393288.jpg",
+      "coco_url": "http://images.cocodataset.org/val2014/COCO_val2014_000000393288.jpg",
+      "height": 480,
+      "width": 640,
+      "date_captured": "2013-11-16 15:37:15",
+      "flickr_url": "http://farm3.staticflickr.com/2806/9324458628_01b371c5e9_z.jpg",
+      "id": 393288,
+      "license_details": {
+        "url": "http://creativecommons.org/licenses/by/2.0/",
+        "id": 4,
+        "name": "Attribution License"
+      }
+    },
+    {
+      "license": 6,
+      "file_name": "COCO_val2014_000000393284.jpg",
+      "coco_url": "http://images.cocodataset.org/val2014/COCO_val2014_000000393284.jpg",
+      "height": 640,
+      "width": 427,
+      "date_captured": "2013-11-20 09:18:57",
+      "flickr_url": "http://farm5.staticflickr.com/4093/4872033447_176d7158a6_z.jpg",
+      "id": 393284,
+      "license_details": {
+        "url": "http://creativecommons.org/licenses/by-nd/2.0/",
+        "id": 6,
+        "name": "Attribution-NoDerivs License"
+      }
+    },
+    {
+      "license": 3,
+      "file_name": "COCO_val2014_000000262682.jpg",
+      "coco_url": "http://images.cocodataset.org/val2014/COCO_val2014_000000262682.jpg",
+      "height": 640,
+      "width": 427,
+      "date_captured": "2013-11-14 21:23:26",
+      "flickr_url": "http://farm9.staticflickr.com/8022/7556152056_eff00ab722_z.jpg",
+      "id": 262682,
+      "license_details": {
+        "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+        "id": 3,
+        "name": "Attribution-NonCommercial-NoDerivs License"
+      }
+    },
+    {
+      "license": 6,
+      "file_name": "COCO_val2014_000000028714.jpg",
+      "coco_url": "http://images.cocodataset.org/val2014/COCO_val2014_000000028714.jpg",
+      "height": 427,
+      "width": 640,
+      "date_captured": "2013-11-15 02:54:32",
+      "flickr_url": "http://farm9.staticflickr.com/8100/8614354814_eab96f3727_z.jpg",
+      "id": 28714,
+      "license_details": {
+        "url": "http://creativecommons.org/licenses/by-nd/2.0/",
+        "id": 6,
+        "name": "Attribution-NoDerivs License"
+      }
+    },
+    {
+      "license": 4,
+      "file_name": "COCO_val2014_000000132024.jpg",
+      "coco_url": "http://images.cocodataset.org/val2014/COCO_val2014_000000132024.jpg",
+      "height": 640,
+      "width": 478,
+      "date_captured": "2013-11-19 19:45:15",
+      "flickr_url": "http://farm9.staticflickr.com/8259/8653774735_470097c4aa_z.jpg",
+      "id": 132024,
+      "license_details": {
+        "url": "http://creativecommons.org/licenses/by/2.0/",
+        "id": 4,
+        "name": "Attribution License"
+      }
+    },
+    {
+      "license": 3,
+      "file_name": "COCO_val2014_000000262162.jpg",
+      "coco_url": "http://images.cocodataset.org/val2014/COCO_val2014_000000262162.jpg",
+      "height": 480,
+      "width": 640,
+      "date_captured": "2013-11-20 21:37:11",
+      "flickr_url": "http://farm5.staticflickr.com/4136/4918042336_472817e6b6_z.jpg",
+      "id": 262162,
+      "license_details": {
+        "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+        "id": 3,
+        "name": "Attribution-NonCommercial-NoDerivs License"
+      }
+    },
+    {
+      "license": 1,
+      "file_name": "COCO_val2014_000000524621.jpg",
+      "coco_url": "http://images.cocodataset.org/val2014/COCO_val2014_000000524621.jpg",
+      "height": 426,
+      "width": 640,
+      "date_captured": "2013-11-17 00:18:30",
+      "flickr_url": "http://farm4.staticflickr.com/3114/2873582007_36ea66187d_z.jpg",
+      "id": 524621,
+      "license_details": {
+        "url": "http://creativecommons.org/licenses/by-nc-sa/2.0/",
+        "id": 1,
+        "name": "Attribution-NonCommercial-ShareAlike License"
+      }
+    },
+    {
+      "license": 4,
+      "file_name": "COCO_val2014_000000426166.jpg",
+      "coco_url": "http://images.cocodataset.org/val2014/COCO_val2014_000000426166.jpg",
+      "height": 332,
+      "width": 500,
+      "date_captured": "2013-11-15 02:50:26",
+      "flickr_url": "http://farm4.staticflickr.com/3052/2319776213_ced79b883c_z.jpg",
+      "id": 426166,
+      "license_details": {
+        "url": "http://creativecommons.org/licenses/by/2.0/",
+        "id": 4,
+        "name": "Attribution License"
+      }
+    }
+  ],
+  "photo_attribution": [
+    {
+      "image_id": 262284,
+      "photo_id": "9627540643",
+      "source_url": "https://www.flickr.com/photos/101095425@N08/9627540643/",
+      "license_name": "CC BY-NC-ND 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "author_name": "geeksquadthe",
+      "author_url": "https://www.flickr.com/photos/101095425@N08/",
+      "title": "Master Bedroom Bathroom Walk-In Shower - Village Lofts"
+    },
+    {
+      "image_id": 200058,
+      "photo_id": "2456758025",
+      "source_url": "https://www.flickr.com/photos/platano/2456758025/",
+      "license_name": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "author_name": "Bananaguay",
+      "author_url": "https://www.flickr.com/photos/platano/",
+      "title": "Snow"
+    },
+    {
+      "image_id": 131089,
+      "photo_id": "4866736626",
+      "source_url": "https://www.flickr.com/photos/riz94107/4866736626/",
+      "license_name": "CC BY-NC-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-nc-sa/2.0/",
+      "author_name": "riz94107",
+      "author_url": "https://www.flickr.com/photos/riz94107/",
+      "title": "IMG_9593"
+    },
+    {
+      "image_id": 524436,
+      "photo_id": "6981041686",
+      "source_url": "https://www.flickr.com/photos/darkb4dawn/6981041686/",
+      "license_name": "CC BY-NC-ND 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "author_name": "DarkB4Dawn",
+      "author_url": "https://www.flickr.com/photos/darkb4dawn/",
+      "title": "Istanbul"
+    },
+    {
+      "image_id": 393243,
+      "photo_id": "1562760533",
+      "source_url": "https://www.flickr.com/photo.gne?id=1562760533",
+      "license_name": null,
+      "license_url": null,
+      "author_name": null,
+      "author_url": null,
+      "title": null
+    },
+    {
+      "image_id": 262148,
+      "photo_id": "4549977479",
+      "source_url": "https://www.flickr.com/photos/litek/4549977479/",
+      "license_name": "CC BY-NC-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-nc-sa/2.0/",
+      "author_name": "Ketil Johansen",
+      "author_url": "https://www.flickr.com/photos/litek/",
+      "title": "Sk8 with boardshop & DC shoe"
+    },
+    {
+      "image_id": 393288,
+      "photo_id": "9324458628",
+      "source_url": "https://www.flickr.com/photos/ell-r-brown/9324458628/",
+      "license_name": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "author_name": "ell brown",
+      "author_url": "https://www.flickr.com/photos/ell-r-brown/",
+      "title": "St John's RC Cathedral - Alfred Road, Portsmouth - statue - St John"
+    },
+    {
+      "image_id": 393284,
+      "photo_id": "4872033447",
+      "source_url": "https://www.flickr.com/photos/klingele/4872033447/",
+      "license_name": "CC BY-ND 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-nd/2.0/",
+      "author_name": "BlueLight1990",
+      "author_url": "https://www.flickr.com/photos/klingele/",
+      "title": "DCIM_1"
+    },
+    {
+      "image_id": 262682,
+      "photo_id": "7556152056",
+      "source_url": "https://www.flickr.com/photos/j0nny_t/7556152056/",
+      "license_name": "CC BY-NC-ND 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "author_name": "J0nny_t",
+      "author_url": "https://www.flickr.com/photos/j0nny_t/",
+      "title": "Kitchen"
+    },
+    {
+      "image_id": 28714,
+      "photo_id": "8614354814",
+      "source_url": "https://www.flickr.com/photo.gne?id=8614354814",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "image_id": 132024,
+      "photo_id": "8653774735",
+      "source_url": "https://www.flickr.com/photos/trongton/8653774735/",
+      "license_name": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "author_name": "Trong Ton",
+      "author_url": "https://www.flickr.com/photos/trongton/",
+      "title": "End of ski season"
+    },
+    {
+      "image_id": 262162,
+      "photo_id": "4918042336",
+      "source_url": "https://www.flickr.com/photo.gne?id=4918042336",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "image_id": 524621,
+      "photo_id": "2873582007",
+      "source_url": "https://www.flickr.com/photos/vpillar/2873582007/",
+      "license_name": "CC BY-NC-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-nc-sa/2.0/",
+      "author_name": "Valerio Pillar",
+      "author_url": "https://www.flickr.com/photos/vpillar/",
+      "title": "DSC_4172.JPG"
+    },
+    {
+      "image_id": 426166,
+      "photo_id": "2319776213",
+      "source_url": "https://www.flickr.com/photos/rustydarbonne/2319776213/",
+      "license_name": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "author_name": "Rusty Darbonne",
+      "author_url": "https://www.flickr.com/photos/rustydarbonne/",
+      "title": "Blue Bike"
+    }
+  ],
+  "image_sha256": {
+    "28714": "bd6a948534d6d6487076dab2d793b21467705f0cdf1be893aff9e9aa7e47895f",
+    "426166": "898e8d59cef547eb784066bd529f6a2f22c05ee0beddba310b7cd7c7531f7e6b",
+    "131089": "a3f3266f3dc61867674c2dc9bfb07fef86605e01077ccaf1e3063189ebebe811",
+    "262148": "de1bbb9f8431b6f9626c92a0290ebea21b0ad989e19b8eb938679cb20fc285d7",
+    "393243": "3373b873ec01b189fd7ba2f498d276a5a5a0ed44e32bb5e9052ebb815fc52d6e",
+    "393284": "7cf6a8694a0238c16e79ac74b340450cee5939391c119e998e9cc0aeb67cff8d",
+    "132024": "4826de0172924553af372bf494888bef5a95ac3cad95bd9ad51aa7e56b713c13",
+    "524621": "75ff9441d1640b746c513d268fa8c5c1014d94647efb7f0d73edc7355e2ae03f",
+    "262284": "b9931321cfd92d6b7359cb8a478b5948eccf2ac0f3b54438537180512aa030e6",
+    "262162": "72c0ae383a29525e80159ffea0f3279913d3a1d41705f4174d62aa5ea8203865",
+    "524436": "7dd8cbe75dc58c92c558fe47dea5e5168a438ca2a9ac919875583bc0bb0028bd",
+    "393288": "71d585a24471298336ad9b921b57c7fcc80a876ddb5ba0b7a9187e59144f26b5",
+    "262682": "40e469d78ea8f94bdb8d8ed4c04351b49e46593e2c7b6db0433a72e6b1b2bd2f",
+    "200058": "d9312497c031badac5c10fc6d9f8513a0ac4a60ccb1159a6f0dfe9d1554464ab"
+  }
+}
