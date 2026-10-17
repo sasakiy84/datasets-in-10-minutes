@@ -1,0 +1,745 @@
+{
+  "dataset": "boolq",
+  "checked_at": "2026-10-17T16:27:56Z",
+  "repository": "google/boolq",
+  "revision": "35b264d03638db9f4ce671b711558bf7ff0f80d5",
+  "sources": [
+    {
+      "path": "train-00000-of-00001.parquet",
+      "url": "https://huggingface.co/datasets/google/boolq/resolve/35b264d03638db9f4ce671b711558bf7ff0f80d5/data/train-00000-of-00001.parquet",
+      "sha256": "4f028e992c0bd4df30b9f056f4946b64f5c23028034ff0ed5ea467d8538cc623",
+      "bytes": 3685146
+    },
+    {
+      "path": "validation-00000-of-00001.parquet",
+      "url": "https://huggingface.co/datasets/google/boolq/resolve/35b264d03638db9f4ce671b711558bf7ff0f80d5/data/validation-00000-of-00001.parquet",
+      "sha256": "52355d11524b4b874a9b9dcc278feb10f672d52c4f4eff9872e695ede59820f8",
+      "bytes": 1257630
+    },
+    {
+      "path": "boolq-paper.pdf",
+      "bytes": 309990,
+      "sha256": "efc839292bc64dd886d76b41873f483c534c8b332eddaedffc52d623f4a5a602"
+    },
+    {
+      "path": "helm-release-summary.json",
+      "bytes": 95,
+      "sha256": "9b38c903d4d2ebdf9075d3b05a67d1a67514c9815d8779873f6732dc375d6211"
+    },
+    {
+      "path": "helm-release-schema.json",
+      "bytes": 213689,
+      "sha256": "ab2ea213329376e811ce41a422b8fc7b35329e2bed4e60c323ffd38b7ada2d2f"
+    },
+    {
+      "path": "helm-release-run_specs.json",
+      "bytes": 27233068,
+      "sha256": "ef94fb6d3d234ef3193ed043b4a718cd75e0cf2aaf94f0439693cf46a4ff6f62"
+    },
+    {
+      "path": "helm-release-runs_to_run_suites.json",
+      "bytes": 907445,
+      "sha256": "ac6eb84b2493b44ffc433f7899c562864fb37fa23e281c596dbc17551fe957fb"
+    }
+  ],
+  "source_urls": {
+    "paper": [
+      "Christopher Clark et al. (2019). BoolQ: Exploring the Surprising Difficulty of Natural Yes/No Questions. NAACL-HLT 2019.",
+      "https://aclanthology.org/N19-1300/"
+    ],
+    "data": [
+      "google/boolq、改訂35b264d0。2026-10-17参照。",
+      "https://huggingface.co/datasets/google/boolq"
+    ],
+    "page": [
+      "BoolQ 公式公開ページ。2026-10-17参照。",
+      "https://github.com/google-research-datasets/boolean-questions"
+    ],
+    "stats": [
+      "google/boolq、改訂35b264d0。validation全3,270件を集計。",
+      "https://huggingface.co/datasets/google/boolq"
+    ],
+    "helm": [
+      "Liang et al. Holistic Evaluation of Language Models. TMLR 2023. Classic v0.4.0（2023-11-17）。",
+      "https://crfm.stanford.edu/helm/classic/v0.4.0/"
+    ],
+    "config": [
+      "HELM Classic v0.4.0。公開run_specsと実行別statsのcanonical設定を照合。",
+      "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/releases/v0.4.0/run_specs.json"
+    ],
+    "harness": [
+      "EleutherAI. Language Model Evaluation Harness。2026-10-17参照。",
+      "https://github.com/EleutherAI/lm-evaluation-harness"
+    ],
+    "superglue": [
+      "Wang et al. (2019). SuperGLUE: A Stickier Benchmark for General-Purpose Language Understanding Systems. NeurIPS.",
+      "https://arxiv.org/abs/1905.00537"
+    ],
+    "faithful": [
+      "Maynez et al. (2020). On Faithfulness and Factuality in Abstractive Summarization. ACL.",
+      "https://aclanthology.org/2020.acl-main.173/"
+    ],
+    "bart": [
+      "Lewis et al. (2020). BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension. ACL.",
+      "https://aclanthology.org/2020.acl-main.703/"
+    ]
+  },
+  "stats": {
+    "n": 3270,
+    "partition": "validation",
+    "words": {
+      "mean": 92.17217125382263,
+      "std_population": 55.020380065052095,
+      "min": 8.0,
+      "q25": 56.0,
+      "median": 82.0,
+      "q75": 114.75,
+      "max": 813.0
+    },
+    "histogram": [
+      640,
+      1473,
+      1035,
+      113,
+      8,
+      1
+    ],
+    "bins": [
+      "0–49",
+      "50–99",
+      "100–199",
+      "200–399",
+      "400–799",
+      "800以上"
+    ],
+    "labels": {
+      "No": 1237,
+      "Yes": 2033
+    }
+  },
+  "method": "str.split() on all rows in the named partition; numpy.std(ddof=0); numpy.quantile(method=linear); histogram bins [0,50,100,200,400,800,100000]",
+  "selection": "Independent public records: first 3 main, remaining 10 appendix; no duplicates. Short records selected for readable full bilingual presentation; not a random sample.",
+  "examples": [
+    {
+      "index": 43,
+      "title": "トマトピューレとソース",
+      "raw": {
+        "question": "is pureed tomatoes the same as tomato sauce",
+        "answer": false,
+        "passage": "Tomato purée is a thick liquid made by cooking and straining tomatoes. The difference between tomato paste, tomato purée, and tomato sauce is consistency; tomato puree has a thicker consistency and a deeper flavour than sauce."
+      },
+      "units": [
+        {
+          "label": "質問（全文）",
+          "en": "is pureed tomatoes the same as tomato sauce",
+          "ja": "トマトピューレはトマトソースと同じものですか。"
+        },
+        {
+          "label": "段落（全文）",
+          "en": "Tomato purée is a thick liquid made by cooking and straining tomatoes. The difference between tomato paste, tomato purée, and tomato sauce is consistency; tomato puree has a thicker consistency and a deeper flavour than sauce.",
+          "ja": "トマトピューレは、トマトを加熱して裏ごしした、とろみのある液体である。トマトペースト、トマトピューレ、トマトソースの違いは濃度にあり、ピューレはソースよりも濃厚で風味が強い。"
+        }
+      ],
+      "note": "同じ原料でも、濃度と風味が異なる。",
+      "answer": "No",
+      "raw_sha256": "a652827f939d54775d95de9a9968ad52d6e9c3739b22cfbf165a6d2442165d39"
+    },
+    {
+      "index": 64,
+      "title": "代表選手のその後",
+      "raw": {
+        "question": "did anyone from the 1980 us hockey team play in the nhl",
+        "answer": true,
+        "passage": "Of the 20 players on Team USA, 13 eventually played in the NHL. Five of them went on to play over 500 NHL games, and three would play over 1,000 NHL games."
+      },
+      "units": [
+        {
+          "label": "質問（全文）",
+          "en": "did anyone from the 1980 us hockey team play in the nhl",
+          "ja": "1980年の米国アイスホッケー代表で、NHLでプレーした選手はいますか。"
+        },
+        {
+          "label": "段落（全文）",
+          "en": "Of the 20 players on Team USA, 13 eventually played in the NHL. Five of them went on to play over 500 NHL games, and three would play over 1,000 NHL games.",
+          "ja": "米国代表20人のうち、13人が後にNHLでプレーした。そのうち5人は500試合を超え、3人は1,000試合を超えて出場した。"
+        }
+      ],
+      "note": "13人という記述が、少なくとも1人いたことを裏付ける。",
+      "answer": "Yes",
+      "raw_sha256": "6dbac7178927f1211dd885aa4c0397e5f8cf806800e30d7b974fb16e0c93b6b8"
+    },
+    {
+      "index": 311,
+      "title": "形容詞の位置",
+      "raw": {
+        "question": "do adjectives have to come before a noun",
+        "answer": false,
+        "passage": "A postpositive or postnominal adjective is an attributive adjective that is placed after the noun or pronoun that it modifies. This contrasts with prepositive adjectives, which come before the noun or pronoun."
+      },
+      "units": [
+        {
+          "label": "質問（全文）",
+          "en": "do adjectives have to come before a noun",
+          "ja": "形容詞は名詞の前に置かなければなりませんか。"
+        },
+        {
+          "label": "段落（全文）",
+          "en": "A postpositive or postnominal adjective is an attributive adjective that is placed after the noun or pronoun that it modifies. This contrasts with prepositive adjectives, which come before the noun or pronoun.",
+          "ja": "後置形容詞とは、修飾する名詞や代名詞の後ろに置かれる限定用法の形容詞である。名詞や代名詞の前に置かれる前置形容詞とは対照的である。"
+        }
+      ],
+      "note": "後ろに置く用法があるので、必ず前とはいえない。",
+      "answer": "No",
+      "raw_sha256": "625b609b85096c3f5d43de5936e557008deb938e57319080cf22046853ba2432"
+    },
+    {
+      "index": 77,
+      "title": "動脈と静脈",
+      "raw": {
+        "question": "is there a right and left brachiocephalic artery",
+        "answer": false,
+        "passage": "There is no brachiocephalic artery for the left side of the body. The left common carotid, and the left subclavian artery, come directly off the aortic arch. However, there are two brachiocephalic veins."
+      },
+      "units": [
+        {
+          "label": "質問（全文）",
+          "en": "is there a right and left brachiocephalic artery",
+          "ja": "腕頭動脈は左右にありますか。"
+        },
+        {
+          "label": "段落（全文）",
+          "en": "There is no brachiocephalic artery for the left side of the body. The left common carotid, and the left subclavian artery, come directly off the aortic arch. However, there are two brachiocephalic veins.",
+          "ja": "体の左側には腕頭動脈がない。左総頸動脈と左鎖骨下動脈は大動脈弓から直接分岐する。一方、腕頭静脈は2本ある。"
+        }
+      ],
+      "note": "2本あるのは静脈であり、質問は動脈について尋ねている。",
+      "answer": "No",
+      "raw_sha256": "1ef31a722ea235aab5c55e6f9af33ae05c0b2dd40e58d9d4fd1a4324561cb733"
+    },
+    {
+      "index": 88,
+      "title": "映画評価の0%",
+      "raw": {
+        "question": "is there a movie with 0 on rotten tomatoes",
+        "answer": true,
+        "passage": "On the film review aggregation website Rotten Tomatoes, films that all surveyed critics consider bad have a 0% rating. Some of these are often considered some of the worst films ever made."
+      },
+      "units": [
+        {
+          "label": "質問（全文）",
+          "en": "is there a movie with 0 on rotten tomatoes",
+          "ja": "Rotten Tomatoesで評価が0%の映画はありますか。"
+        },
+        {
+          "label": "段落（全文）",
+          "en": "On the film review aggregation website Rotten Tomatoes, films that all surveyed critics consider bad have a 0% rating. Some of these are often considered some of the worst films ever made.",
+          "ja": "映画評の集約サイトRotten Tomatoesでは、集計対象の批評家全員が悪いと判断した映画の評価は0%になる。その中には、史上最悪の映画の一つとされる作品もある。"
+        }
+      ],
+      "note": "全員が低く評価した作品が存在するという段落である。",
+      "answer": "Yes",
+      "raw_sha256": "0d4693e4bd54fb10fe67bc8c121989f2dd571b0bdb95b9787f4c07dd5ce9731a"
+    },
+    {
+      "index": 94,
+      "title": "ドラマの撮影地",
+      "raw": {
+        "question": "is anne with an e filmed on pei",
+        "answer": true,
+        "passage": "The series is filmed partially in Prince Edward Island as well as locations in Southern Ontario (including Millbrook and Caledon)."
+      },
+      "units": [
+        {
+          "label": "質問（全文）",
+          "en": "is anne with an e filmed on pei",
+          "ja": "『アンという名の少女』はプリンスエドワード島で撮影されていますか。"
+        },
+        {
+          "label": "段落（全文）",
+          "en": "The series is filmed partially in Prince Edward Island as well as locations in Southern Ontario (including Millbrook and Caledon).",
+          "ja": "このシリーズは、プリンスエドワード島のほか、オンタリオ州南部の各地（ミルブルックやカレドンを含む）でも撮影されている。"
+        }
+      ],
+      "note": "一部が島で撮影されていればYesとなる。",
+      "answer": "Yes",
+      "raw_sha256": "2cc15846efa6c2ac57d3d3dbb134082a5c7601568e99be525c3ad0e78b4caaae"
+    },
+    {
+      "index": 146,
+      "title": "へその呼び方",
+      "raw": {
+        "question": "is navel and belly button the same thing",
+        "answer": true,
+        "passage": "The navel (clinically known as the umbilicus, colloquially known as the belly button, or tummy button) is a hollowed or sometimes raised area on the abdomen at the attachment site of the umbilical cord. All placental mammals have a navel."
+      },
+      "units": [
+        {
+          "label": "質問（全文）",
+          "en": "is navel and belly button the same thing",
+          "ja": "navelとbelly buttonは同じものですか。"
+        },
+        {
+          "label": "段落（全文）",
+          "en": "The navel (clinically known as the umbilicus, colloquially known as the belly button, or tummy button) is a hollowed or sometimes raised area on the abdomen at the attachment site of the umbilical cord. All placental mammals have a navel.",
+          "ja": "へそ（医学的にはumbilicus、日常語ではbelly buttonやtummy buttonと呼ぶ）は、臍帯が付着していた腹部の、くぼんだ、または盛り上がった部分である。すべての有胎盤哺乳類にはへそがある。"
+        }
+      ],
+      "note": "専門的・日常的な呼称の対応を読み取る。",
+      "answer": "Yes",
+      "raw_sha256": "bcebe3af4a7f5064c59ca0080f295f726f95444aab4324f9c3227c1dde4e8d05"
+    },
+    {
+      "index": 183,
+      "title": "湖から海への航路",
+      "raw": {
+        "question": "can you boat from lake michigan to atlantic ocean",
+        "answer": true,
+        "passage": "The waterway allows passage from the Atlantic Ocean to the inland port of Duluth on Lake Superior, a distance of 2,340 miles (3,770 km) and to Chicago, on Lake Michigan, at 2,250 miles (3,620 km)."
+      },
+      "units": [
+        {
+          "label": "質問（全文）",
+          "en": "can you boat from lake michigan to atlantic ocean",
+          "ja": "ミシガン湖から大西洋まで船で行けますか。"
+        },
+        {
+          "label": "段落（全文）",
+          "en": "The waterway allows passage from the Atlantic Ocean to the inland port of Duluth on Lake Superior, a distance of 2,340 miles (3,770 km) and to Chicago, on Lake Michigan, at 2,250 miles (3,620 km).",
+          "ja": "この水路により、大西洋からスペリオル湖の内陸港ダルースまで2,340マイル（3,770km）、ミシガン湖のシカゴまで2,250マイル（3,620km）の航行が可能となる。"
+        }
+      ],
+      "note": "大西洋とシカゴを結ぶ水路が記載されている。",
+      "answer": "Yes",
+      "raw_sha256": "9ce9f80654f580c8762668f428048c1a587572820876f9ef9fac91ee260910c0"
+    },
+    {
+      "index": 228,
+      "title": "英国の国民保険番号",
+      "raw": {
+        "question": "do all ni numbers have a letter at the end",
+        "answer": true,
+        "passage": "The format of the number is two prefix letters, six digits, and one suffix letter. The example used is typically QQ123456C. Often, the number is printed with spaces to pair off the digits, like this: QQ 12 34 56 C."
+      },
+      "units": [
+        {
+          "label": "質問（全文）",
+          "en": "do all ni numbers have a letter at the end",
+          "ja": "国民保険番号はすべて末尾が英字ですか。"
+        },
+        {
+          "label": "段落（全文）",
+          "en": "The format of the number is two prefix letters, six digits, and one suffix letter. The example used is typically QQ123456C. Often, the number is printed with spaces to pair off the digits, like this: QQ 12 34 56 C.",
+          "ja": "番号は、先頭の英字2文字、数字6桁、末尾の英字1文字からなる。通常、例にはQQ123456Cを使う。数字を2桁ずつ空白で区切り、QQ 12 34 56 Cのように印字することも多い。"
+        }
+      ],
+      "note": "NIは英国のNational Insuranceを指す。末尾の1文字に注目する。",
+      "answer": "Yes",
+      "raw_sha256": "09f647f9c2e8be0456188461c8e7aacf12c8f875cd1bff6da2b9376cc750a63e"
+    },
+    {
+      "index": 236,
+      "title": "エンジンの別名",
+      "raw": {
+        "question": "is there a difference between 2 cycle and 2 stroke",
+        "answer": false,
+        "passage": "Two-stroke oil (also referred to as two-cycle oil, 2-cycle oil, 2T oil, 2-stroke oil or petroil) is a special type of motor oil intended for use in crankcase compression two-stroke engines."
+      },
+      "units": [
+        {
+          "label": "質問（全文）",
+          "en": "is there a difference between 2 cycle and 2 stroke",
+          "ja": "2-cycleと2-strokeには違いがありますか。"
+        },
+        {
+          "label": "段落（全文）",
+          "en": "Two-stroke oil (also referred to as two-cycle oil, 2-cycle oil, 2T oil, 2-stroke oil or petroil) is a special type of motor oil intended for use in crankcase compression two-stroke engines.",
+          "ja": "2ストロークオイル（two-cycle oil、2-cycle oil、2T oil、2-stroke oil、petroilとも呼ぶ）は、クランクケース圧縮式2ストロークエンジン用の特殊なエンジンオイルである。"
+        }
+      ],
+      "note": "段落内の別名の列挙が、二つの呼称を結び付ける。",
+      "answer": "No",
+      "raw_sha256": "bc1316f7e3c4f2afc74e6dd9a510a36cb03cfb9ac51ca876968d072ffbfb5d0e"
+    },
+    {
+      "index": 303,
+      "title": "陸上の国境",
+      "raw": {
+        "question": "is there a border between england and scotland",
+        "answer": true,
+        "passage": "The Anglo-Scottish border between England and Scotland runs for 96 miles (154 km) between Marshall Meadows Bay on the east coast and the Solway Firth in the west. It is Scotland's only land border."
+      },
+      "units": [
+        {
+          "label": "質問（全文）",
+          "en": "is there a border between england and scotland",
+          "ja": "イングランドとスコットランドの間に国境はありますか。"
+        },
+        {
+          "label": "段落（全文）",
+          "en": "The Anglo-Scottish border between England and Scotland runs for 96 miles (154 km) between Marshall Meadows Bay on the east coast and the Solway Firth in the west. It is Scotland's only land border.",
+          "ja": "イングランドとスコットランドの境界は、東のマーシャル・メドウズ湾から西のソルウェー湾まで96マイル（154km）続く。これはスコットランドで唯一の陸上の国境である。"
+        }
+      ],
+      "note": "国境の存在と、その距離が明記されている。",
+      "answer": "Yes",
+      "raw_sha256": "d0d0779aa32dafedd18dbdd3784a391cc55d37d724554961a92ce920a86a6820"
+    },
+    {
+      "index": 350,
+      "title": "脚本から小説への順序",
+      "raw": {
+        "question": "was the movie insomnia based on a book",
+        "answer": false,
+        "passage": "Robert Westbrook adapted the screenplay to novel form, which was published by Alex in May 2002."
+      },
+      "units": [
+        {
+          "label": "質問（全文）",
+          "en": "was the movie insomnia based on a book",
+          "ja": "映画『インソムニア』は本をもとに作られましたか。"
+        },
+        {
+          "label": "段落（全文）",
+          "en": "Robert Westbrook adapted the screenplay to novel form, which was published by Alex in May 2002.",
+          "ja": "ロバート・ウェストブルックが脚本を小説化し、2002年5月にAlexから刊行された。"
+        }
+      ],
+      "note": "小説から映画ではなく、脚本から小説への翻案が記されている。",
+      "answer": "No",
+      "raw_sha256": "0e783ea60dbd753c03aebefcef44868a296ba8fc2c3e5fe4a21b4c6e457338a1"
+    },
+    {
+      "index": 367,
+      "title": "フィクションか実話か",
+      "raw": {
+        "question": "was the color purple based on a true story",
+        "answer": false,
+        "passage": "The Color Purple is a 1982 epistolary novel by American author Alice Walker which won the 1983 Pulitzer Prize for Fiction and the National Book Award for Fiction. It was later adapted into a film and musical of the same name."
+      },
+      "units": [
+        {
+          "label": "質問（全文）",
+          "en": "was the color purple based on a true story",
+          "ja": "『カラーパープル』は実話をもとにしていますか。"
+        },
+        {
+          "label": "段落（全文）",
+          "en": "The Color Purple is a 1982 epistolary novel by American author Alice Walker which won the 1983 Pulitzer Prize for Fiction and the National Book Award for Fiction. It was later adapted into a film and musical of the same name.",
+          "ja": "『カラーパープル』は米国の作家アリス・ウォーカーによる1982年の書簡体小説で、1983年のピュリツァー賞小説部門と全米図書賞小説部門を受賞した。後に同名の映画とミュージカルになった。"
+        }
+      ],
+      "note": "配布ラベルはNo。書簡体という形式自体が実話であることを意味するわけではない。",
+      "answer": "No",
+      "raw_sha256": "eddcfaee2027956909adbb39c83023f5a32d82ed8c74158fcd5988aa50b07098"
+    }
+  ],
+  "helm_release": "v0.4.0",
+  "helm_release_date": "2023-11-17",
+  "helm_runs": [
+    {
+      "name": "boolq:model=meta_llama-2-70b,data_augmentation=canonical",
+      "underlying_suite": "v0.3.0",
+      "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/boolq%3Amodel%3Dmeta_llama-2-70b%2Cdata_augmentation%3Dcanonical/stats.json",
+      "adapter_spec": {
+        "method": "generation",
+        "global_prefix": "",
+        "instructions": "",
+        "input_prefix": "Passage: ",
+        "input_suffix": "\n",
+        "reference_prefix": "A. ",
+        "reference_suffix": "\n",
+        "output_prefix": "Answer: ",
+        "output_suffix": "\n",
+        "instance_prefix": "\n",
+        "substitutions": [],
+        "max_train_instances": 5,
+        "max_eval_instances": 1000,
+        "num_outputs": 1,
+        "num_train_trials": 1,
+        "sample_train": true,
+        "model": "meta/llama-2-70b",
+        "temperature": 0.0,
+        "max_tokens": 5,
+        "stop_sequences": [
+          "\n"
+        ],
+        "multi_label": false
+      },
+      "scenario_spec": {
+        "class_name": "helm.benchmark.scenarios.boolq_scenario.BoolQScenario",
+        "args": {
+          "only_contrast": false
+        }
+      },
+      "metric": "quasi_exact_match",
+      "split": "valid",
+      "mean": 0.886,
+      "display_value": 88.6,
+      "stats": [
+        {
+          "name": {
+            "name": "num_train_trials",
+            "split": "valid"
+          },
+          "count": 1,
+          "sum": 1.0,
+          "sum_squared": 1.0,
+          "min": 1.0,
+          "max": 1.0,
+          "mean": 1.0,
+          "variance": 0.0,
+          "stddev": 0.0
+        },
+        {
+          "name": {
+            "name": "num_train_instances",
+            "split": "valid"
+          },
+          "count": 1,
+          "sum": 5.0,
+          "sum_squared": 25.0,
+          "min": 5.0,
+          "max": 5.0,
+          "mean": 5.0,
+          "variance": 0.0,
+          "stddev": 0.0
+        },
+        {
+          "name": {
+            "name": "quasi_exact_match",
+            "split": "valid"
+          },
+          "count": 1,
+          "sum": 0.886,
+          "sum_squared": 0.784996,
+          "min": 0.886,
+          "max": 0.886,
+          "mean": 0.886,
+          "variance": 0.0,
+          "stddev": 0.0
+        },
+        {
+          "name": {
+            "name": "num_instances",
+            "split": "valid"
+          },
+          "count": 1,
+          "sum": 1000.0,
+          "sum_squared": 1000000.0,
+          "min": 1000.0,
+          "max": 1000.0,
+          "mean": 1000.0,
+          "variance": 0.0,
+          "stddev": 0.0
+        }
+      ]
+    },
+    {
+      "name": "boolq:model=openai_text-davinci-003,data_augmentation=canonical",
+      "underlying_suite": "v0.3.0",
+      "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/boolq%3Amodel%3Dopenai_text-davinci-003%2Cdata_augmentation%3Dcanonical/stats.json",
+      "adapter_spec": {
+        "method": "generation",
+        "global_prefix": "",
+        "instructions": "",
+        "input_prefix": "Passage: ",
+        "input_suffix": "\n",
+        "reference_prefix": "A. ",
+        "reference_suffix": "\n",
+        "output_prefix": "Answer: ",
+        "output_suffix": "\n",
+        "instance_prefix": "\n",
+        "substitutions": [],
+        "max_train_instances": 5,
+        "max_eval_instances": 1000,
+        "num_outputs": 1,
+        "num_train_trials": 3,
+        "sample_train": true,
+        "model": "openai/text-davinci-003",
+        "temperature": 0.0,
+        "max_tokens": 5,
+        "stop_sequences": [
+          "\n"
+        ],
+        "multi_label": false
+      },
+      "scenario_spec": {
+        "class_name": "helm.benchmark.scenarios.boolq_scenario.BoolQScenario",
+        "args": {
+          "only_contrast": false
+        }
+      },
+      "metric": "quasi_exact_match",
+      "split": "valid",
+      "mean": 0.8813333333333334,
+      "display_value": 88.13,
+      "stats": [
+        {
+          "name": {
+            "name": "num_train_trials",
+            "split": "valid"
+          },
+          "count": 3,
+          "sum": 9.0,
+          "sum_squared": 27.0,
+          "min": 3.0,
+          "max": 3.0,
+          "mean": 3.0,
+          "variance": 0.0,
+          "stddev": 0.0
+        },
+        {
+          "name": {
+            "name": "num_train_instances",
+            "split": "valid"
+          },
+          "count": 3,
+          "sum": 15.0,
+          "sum_squared": 75.0,
+          "min": 5.0,
+          "max": 5.0,
+          "mean": 5.0,
+          "variance": 0.0,
+          "stddev": 0.0
+        },
+        {
+          "name": {
+            "name": "quasi_exact_match",
+            "split": "valid"
+          },
+          "count": 3,
+          "sum": 2.644,
+          "sum_squared": 2.330254,
+          "min": 0.879,
+          "max": 0.883,
+          "mean": 0.8813333333333334,
+          "variance": 2.888888888774588e-06,
+          "stddev": 0.0016996731711639704
+        },
+        {
+          "name": {
+            "name": "num_instances",
+            "split": "valid"
+          },
+          "count": 3,
+          "sum": 3000.0,
+          "sum_squared": 3000000.0,
+          "min": 1000.0,
+          "max": 1000.0,
+          "mean": 1000.0,
+          "variance": 0.0,
+          "stddev": 0.0
+        }
+      ]
+    },
+    {
+      "name": "boolq:model=together_opt-175b,data_augmentation=canonical",
+      "underlying_suite": "v0.3.0",
+      "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/boolq%3Amodel%3Dtogether_opt-175b%2Cdata_augmentation%3Dcanonical/stats.json",
+      "adapter_spec": {
+        "method": "generation",
+        "global_prefix": "",
+        "instructions": "",
+        "input_prefix": "Passage: ",
+        "input_suffix": "\n",
+        "reference_prefix": "A. ",
+        "reference_suffix": "\n",
+        "output_prefix": "Answer: ",
+        "output_suffix": "\n",
+        "instance_prefix": "\n",
+        "substitutions": [],
+        "max_train_instances": 5,
+        "max_eval_instances": 1000,
+        "num_outputs": 1,
+        "num_train_trials": 3,
+        "sample_train": true,
+        "model": "together/opt-175b",
+        "temperature": 0.0,
+        "max_tokens": 5,
+        "stop_sequences": [
+          "\n"
+        ],
+        "multi_label": false
+      },
+      "scenario_spec": {
+        "class_name": "helm.benchmark.scenarios.boolq_scenario.BoolQScenario",
+        "args": {
+          "only_contrast": false
+        }
+      },
+      "metric": "quasi_exact_match",
+      "split": "valid",
+      "mean": 0.793,
+      "display_value": 79.3,
+      "stats": [
+        {
+          "name": {
+            "name": "num_train_trials",
+            "split": "valid"
+          },
+          "count": 3,
+          "sum": 9.0,
+          "sum_squared": 27.0,
+          "min": 3.0,
+          "max": 3.0,
+          "mean": 3.0,
+          "variance": 0.0,
+          "stddev": 0.0
+        },
+        {
+          "name": {
+            "name": "num_train_instances",
+            "split": "valid"
+          },
+          "count": 3,
+          "sum": 15.0,
+          "sum_squared": 75.0,
+          "min": 5.0,
+          "max": 5.0,
+          "mean": 5.0,
+          "variance": 0.0,
+          "stddev": 0.0
+        },
+        {
+          "name": {
+            "name": "quasi_exact_match",
+            "split": "valid"
+          },
+          "count": 3,
+          "sum": 2.379,
+          "sum_squared": 1.8872190000000002,
+          "min": 0.777,
+          "max": 0.813,
+          "mean": 0.793,
+          "variance": 0.00022400000000000198,
+          "stddev": 0.01496662954709583
+        },
+        {
+          "name": {
+            "name": "num_instances",
+            "split": "valid"
+          },
+          "count": 3,
+          "sum": 3000.0,
+          "sum_squared": 3000000.0,
+          "min": 1000.0,
+          "max": 1000.0,
+          "mean": 1000.0,
+          "variance": 0.0,
+          "stddev": 0.0
+        }
+      ]
+    }
+  ],
+  "artifact_sha256": {
+    "pptx": "3d36f94db960e3890f39f4dc7b9210ab32d222bfba450d7e3edba781448cd5cb",
+    "pdf": "c8f1868c5d8a2e9cabf4ce1aa86cd10176cbd917b727406a1494cf49a693c98b"
+  },
+  "load_dataset_revision_resolution": {
+    "dataset": "boolq",
+    "url": "https://huggingface.co/api/datasets/google/boolq/revision/35b264d0",
+    "status": 200,
+    "resolved": "35b264d03638db9f4ce671b711558bf7ff0f80d5",
+    "matches": true
+  }
+}
