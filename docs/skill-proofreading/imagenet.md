@@ -96,3 +96,19 @@
 [PPTX](../../slides/datasets-in-10-minutes-imagenet.pptx) / [PDF](../../slides/datasets-in-10-minutes-imagenet.pdf)
 
 [変更対TSV](imagenet/changes.tsv) / [校正・検証JSON](imagenet/review.json) / [全ページの確認記録](imagenet/pages.jsonl) / [参照した過去のGemini案](imagenet/prior-gemini-proposals.jsonl)
+
+## 追加修正：文量のある説明を通常の文章・左揃えにする
+
+Codexが日本語校正スキル（改訂bd542fb）を適用。今回のGemini API呼出しは0回。以下は上記の初回校正後に行った修正。
+
+57ページの本文を自然な文章へ整え、見出しと本文を左揃えにした。通常の本文ページの位置に配置し、文字サイズ、数値、対象、出典は保持した。
+
+| ページ | 修正前 | 修正後 | 理由 |
+|---|---|---|---|
+| 57 | ImageNet-1kの学習用は約128万枚ある。そこで、画像サイズの実測には10クラス・13,394枚のImagenetteを使う [1]。 | ImageNet-1kの学習用画像は約128万枚あるため、画像サイズの実測には10クラス・13,394枚のImagenetteを使う [1]。 | 省略した助詞・述語を補い、分析対象と分割・集計条件を通常の文章で説明する。 |
+| 57 | 分析には、短辺160 pxへリサイズしたImagenetteの画像を使用する。 | 分析対象は、短辺を160 pxにリサイズした画像である。 | 省略した助詞・述語を補い、分析対象と分割・集計条件を通常の文章で説明する。 |
+| 57 | 学習用9,469枚、検証用3,925枚。分割はImagenette独自のものである。 | 内訳は学習用9,469枚、検証用3,925枚で、Imagenette独自の分割を用いる。 | 省略した助詞・述語を補い、分析対象と分割・集計条件を通常の文章で説明する。 |
+
+最終PPTXからPDFを出力し、変更ページを拡大して確認。残る73ページの描画は変更前と一致し、変更文言・左揃え・数値・スキーマ・パッケージも検査した。PowerPointデスクトップでの開封は未実施。
+
+[追加修正の変更対TSV](imagenet/prose-alignment-changes.tsv) / [配置・検証・最終ファイルのハッシュ](imagenet/prose-alignment.json) / [全25資料の同種箇所の確認](prose-alignment-scope.json)
