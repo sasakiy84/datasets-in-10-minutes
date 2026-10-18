@@ -29,7 +29,7 @@
 |21|multilexsum|multilexsum_legal_summarization|作成済み|
 |22|eurlexsum|eurlexsum_legal_summarization|作成済み|
 |23|data-imputation|entity_data_imputation|作成済み|
-|24|entity-matching|entity_matching|未着手|
+|24|entity-matching|entity_matching|作成済み|
 |25|copyright-text|copyright_text|未着手|
 |26|copyright-code|copyright_code|未着手|
 |27|disinformation|disinformation_reiteration, disinformation_wedging|未着手|

@@ -1,0 +1,49 @@
+{
+  "method": "skill_based_codex",
+  "review_mode": "skill_based_codex",
+  "gemini_used": false,
+  "changes": [
+    {
+      "page": 5,
+      "before": "二つのデータは同じであるかを判定する",
+      "after": "二つのレコードが同じ実体を指すかを判定する",
+      "reason": "判定対象・数量の単位・助詞を明確にする。"
+    },
+    {
+      "page": 5,
+      "before": "ラベルが同じなら文字列も同じとは限らない",
+      "after": "同じ実体でも、名称や属性の表記が異なる",
+      "reason": "判定対象・数量の単位・助詞を明確にする。"
+    },
+    {
+      "page": 18,
+      "before": "データを各クラスで同じ数にする",
+      "after": "学習ペアの正例と負例を同数にする",
+      "reason": "判定対象・数量の単位・助詞を明確にする。"
+    },
+    {
+      "page": 27,
+      "before": "全データから1000を評価する",
+      "after": "validとtestを合わせて最大1,000ペアを評価する",
+      "reason": "判定対象・数量の単位・助詞を明確にする。"
+    },
+    {
+      "page": 7,
+      "before": "同じAmber Waves、度数は少し違う",
+      "after": "Amber Wavesの度数差",
+      "reason": "訳ページでも通常タイトルを1行に保ち、意味を短く示す。"
+    },
+    {
+      "page": 19,
+      "before": "配布tableA.csvとtableB.csvの実行数",
+      "after": "配布tableA.csvとtableB.csvの実測行数",
+      "reason": "処理の実行回数と表の行数を区別。"
+    },
+    {
+      "page": 46,
+      "before": "発売年が異なるBillyの正例",
+      "after": "年の表記が異なるBillyの正例",
+      "reason": "BのReleasedはnan、2004日付はSong_Name内なので属性を断定しない。原文・訳・配布正解を維持。"
+    }
+  ]
+}
