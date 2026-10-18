@@ -1,7 +1,7 @@
 {
   "dataset": "apps",
   "created_at": "2026-10-18T00:55:12+00:00",
-  "updated_at": "2026-10-18T00:55:12+00:00",
+  "updated_at": "2026-10-18T10:52:08+09:00",
   "model": "Codex (local skill application; no external generation API)",
   "review_mode": "skill_based_codex",
   "skill_path": ".agents/skills/japanese-slide-proofreading/SKILL.md",
@@ -138,8 +138,8 @@
   ],
   "visual_review_method": "全ページ一覧を確認し、引用・コード・表・参考文献・公式画面・グラフを1080×608の画像で個別に目視。最終変更ページは再描画して確認。",
   "artifact_sha256": {
-    "pptx": "3dceb11b1eed3b167147a3876d1398d460145241ec430e26244a7f7e29462d6d",
-    "pdf": "45d79c024172b48daff41e9a6c5b7747b22e747b35c3b340f77e0d638bab835e"
+    "pdf": "6ac86dddba1d88b03c3f9a2fcc22602eec891eb31e4f9115b898d040d23a8bff",
+    "pptx": "e72f26d4554c6b1186fea515ed441d063787c783754d7603d9fa8995f78e2383"
   },
   "wording_changes": 6,
   "layout_and_explanation_changes": [
@@ -236,5 +236,62 @@
       "issues": []
     }
   },
-  "scope_notes": "train全5,000問、テストを持つ4,805問、fn_nameを持つ3,063問を集計した。13実例は問題文全文と訳を段落単位で対応させ、配布テストを各最大2件保持。解答コードは実行していない。id 323は引数の文字列に引用符自体を含むため問題文の例と入力内容が異なり、Falseを誤りと断定しない。id 2099の原文末尾の式は配布表記を保持し、訳では隣接項の差を示すと補足。every secondは2番目・4番目・6番目の1個おき。初期Top-1／Top-5とHELMの1候補、部分テスト平均と全テスト通過率を区別。MIT。"
+  "scope_notes": "train全5,000問、テストを持つ4,805問、fn_nameを持つ3,063問を集計した。13実例は問題文全文と訳を段落単位で対応させ、配布テストを各最大2件保持。解答コードは実行していない。id 323は引数の文字列に引用符自体を含むため問題文の例と入力内容が異なり、Falseを誤りと断定しない。id 2099の原文末尾の式は配布表記を保持し、訳では隣接項の差を示すと補足。every secondは2番目・4番目・6番目の1個おき。初期Top-1／Top-5とHELMの1候補、部分テスト平均と全テスト通過率を区別。MIT。",
+  "revision_history": [
+    {
+      "checked_at": "2026-10-18T00:55:12+00:00",
+      "artifact_sha256": {
+        "pptx": "3dceb11b1eed3b167147a3876d1398d460145241ec430e26244a7f7e29462d6d",
+        "pdf": "45d79c024172b48daff41e9a6c5b7747b22e747b35c3b340f77e0d638bab835e"
+      },
+      "checks": {
+        "package": {
+          "parsed_xml_parts": 169,
+          "integer_bullets": 108,
+          "hyperlinks": 56,
+          "new_schema_errors": [],
+          "baseline_schema_errors": 11,
+          "package_integrity": "passed",
+          "internal_relationship_targets": "passed",
+          "unique_shape_ids": "passed",
+          "schema_note": "標準XSDを変更せず確認。マスター由来の既存エラーと、整数buSzPctの百分率字句形式との差を分離。整数箇条書きサイズは25000–400000で別途検査。",
+          "pages": 67,
+          "native_tables": 5,
+          "native_charts": 1
+        },
+        "layout": {
+          "paragraphs_checked": 420,
+          "table_cells_checked": 42,
+          "issues": []
+        },
+        "text": {
+          "pages": 67,
+          "missing": [],
+          "quote_missing": [],
+          "unique_examples": 13,
+          "all_original_paragraphs_and_translations_present": true,
+          "notes": false,
+          "unnecessary_original_paper_word": 0,
+          "extraction_note": "数式記号の別ブロックとfi合字のゼロ幅文字は、実際の文字・基線・座標を保って行順を復元。文字の削除による代用なし。"
+        },
+        "links": {
+          "native_url_only_runs": 56,
+          "pdf_link_rectangles": 56,
+          "pdf_link_text_exactly_matches_url": true,
+          "issues": []
+        }
+      }
+    }
+  ],
+  "follow_up_reviews": [
+    {
+      "record": "answer-and-citation-review.json",
+      "checked_at": "2026-10-18T10:52:08+09:00",
+      "answer_display_changes": 0,
+      "citation_wording_changes": 1,
+      "changed_pages": [
+        21
+      ]
+    }
+  ]
 }
