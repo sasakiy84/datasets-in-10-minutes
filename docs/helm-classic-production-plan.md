@@ -18,7 +18,7 @@
 |10|dyck|dyck_language|作成済み|
 |11|numeracy|numeracy|作成済み|
 |12|synthetic-reasoning|synthetic_reasoning, synthetic_reasoning_natural|作成済み|
-|13|math|math_regular, math_chain_of_thought|未着手|
+|13|math|math_regular, math_chain_of_thought|作成済み|
 |14|legalbench|legalbench|未着手|
 |15|legal-support|legal_support|未着手|
 |16|lsat|lsat_qa|未着手|

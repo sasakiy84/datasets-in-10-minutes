@@ -1,0 +1,70 @@
+{
+  "reviewer": "/root/create_pile",
+  "target": "math",
+  "approved": true,
+  "remaining_issues": [],
+  "findings": [
+    {
+      "id": "MATH-01",
+      "priority": "P2",
+      "page": 20,
+      "issue": "生成条件の出典がscenarioのみでadapter条件を含まない",
+      "resolution": "固定v0.3.0 run_specs.py/get_math_specへ変更",
+      "status": "resolved",
+      "verified": "最終p20のURL・実描画とselected-run-specsを照合"
+    }
+  ],
+  "checks": "content-checks.json",
+  "visual_review": {
+    "method": "actual_individual_view_image",
+    "pages": [
+      2,
+      6,
+      8,
+      10,
+      11,
+      14,
+      15,
+      17,
+      18,
+      19,
+      20,
+      23,
+      24,
+      28,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      53,
+      54,
+      55
+    ],
+    "scope": "13問題と訳・解答・native数式の意味とLaTeX対応、2生成、全表8/chart1/code/画面/refs、主要評価条件",
+    "result": "数式・上付き・負号・根号・度記号・π・≤の意味保持。実例原文欠落なし。重なり・はみ出しなし。"
+  },
+  "final_artifacts": [
+    {
+      "path": "/workspace/artifacts/helm-parallel/math/datasets-in-10-minutes-math.pptx",
+      "bytes": 229797,
+      "sha256": "bc40995bea25effde38953bc845d7d152c5bfeb2da8d87f4e704f4ec3ad566f1"
+    },
+    {
+      "path": "/workspace/artifacts/helm-parallel/math/datasets-in-10-minutes-math.pdf",
+      "bytes": 955877,
+      "sha256": "650a1fb3079ec5d2d177dc33b2c50ebceb01a7585d803c95229cd5ab18fda76d"
+    }
+  ]
+}

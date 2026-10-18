@@ -45,8 +45,8 @@ GSM8KとHumanEvalは既存資料で対象データセットを紹介済み。MML
 |synthetic_reasoning|Synthetic reasoning (abstract symbols)|作成済み|[PPTX](../slides/datasets-in-10-minutes-synthetic-reasoning.pptx) / [PDF](../slides/datasets-in-10-minutes-synthetic-reasoning.pdf)|
 |synthetic_reasoning_natural|Synthetic reasoning (natural language)|作成済み|[PPTX](../slides/datasets-in-10-minutes-synthetic-reasoning.pptx) / [PDF](../slides/datasets-in-10-minutes-synthetic-reasoning.pdf)|
 |gsm|GSM8K (Grade school math word problems)|作成済み|[PPTX](../slides/datasets-in-10-minutes-gsm8k.pptx)|
-|math_regular|MATH|未着手||
-|math_chain_of_thought|MATH (chain-of-thought)|未着手||
+|math_regular|MATH|作成済み|[PPTX](../slides/datasets-in-10-minutes-math.pptx) / [PDF](../slides/datasets-in-10-minutes-math.pdf)|
+|math_chain_of_thought|MATH (chain-of-thought)|作成済み|[PPTX](../slides/datasets-in-10-minutes-math.pptx) / [PDF](../slides/datasets-in-10-minutes-math.pdf)|
 |code_apps|APPS (Code)|作成済み|[PPTX](../slides/datasets-in-10-minutes-apps.pptx) / [PDF](../slides/datasets-in-10-minutes-apps.pdf)|
 |code_humaneval|HumanEval (Code)|作成済み|[PPTX](../slides/datasets-in-10-minutes-humaneval.pptx)|
 |legalbench|LegalBench|未着手||

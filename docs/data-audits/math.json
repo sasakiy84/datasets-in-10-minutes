@@ -1,0 +1,3100 @@
+{
+  "dataset": "math",
+  "checked_at": "2026-10-18T07:39:42Z",
+  "examples": [
+    {
+      "index": 1,
+      "role": "main",
+      "subject": "algebra",
+      "test_row": 372,
+      "id": "algebra/test/372",
+      "problem": "Evaluate $(x+ y)(x-y)$ when $x= 15$ and $y= 5$.",
+      "level": "Level 1",
+      "type": "Algebra",
+      "solution": "We have $(x+y)(x-y) = (15+5)(15-5) = (20)(10) = \\boxed{200}$.",
+      "answer_latex": "200",
+      "display_original": "Evaluate (x + y)(x − y) when x = 15 and y = 5.",
+      "translation": "x = 15、y = 5のとき、(x + y)(x − y)の値を求めよ。",
+      "answer_display": "200",
+      "explanation_ja": "(15 + 5)(15 − 5) = 20 × 10 = 200。",
+      "title_ja": "差の積を計算する",
+      "record_sha256": "ce2df48575f5fe2b69cf5a55e92f306e6de3ddcfceee1798acaedd273c121422",
+      "source_file": "algebra-test-00000-of-00001.parquet",
+      "source_revision": "21a5633873b6a120296cce3e2df9d5550074f4a3",
+      "source_url": "https://huggingface.co/datasets/EleutherAI/hendrycks_math",
+      "copyright": "Source competition problems and AoPS solution material retain their respective authorship; repository/Mirror MIT metadata recorded separately."
+    },
+    {
+      "index": 2,
+      "role": "main",
+      "subject": "intermediate_algebra",
+      "test_row": 457,
+      "id": "intermediate_algebra/test/457",
+      "problem": "Simplify the expression \\[\\sqrt{41+24\\sqrt2}.\\]",
+      "level": "Level 3",
+      "type": "Intermediate Algebra",
+      "solution": "We look for integers $a$ and $b$ such that \\[\\sqrt{41+24\\sqrt2} = a+b\\sqrt2.\\]Squaring both sides, we have $41+24\\sqrt2=(a+b\\sqrt2)^2 = (a^2+2b^2) + 2ab\\sqrt2.$ Therefore, we must have \\[\\begin{aligned} a^2+2b^2 &=41, \\\\ 2ab &= 24. \\end{aligned}\\]The second equation gives $ab=12.$ Trying the factor pairs of $12,$ we find that $(a,b)=(3,4)$ satisfies $a^2+2b^2=41.$ Therefore, $41+24\\sqrt2=(3+4\\sqrt2)^2.$ Since $3+4\\sqrt2 \\ge 0,$ it follows that \\[\\sqrt{41+24\\sqrt2} = \\boxed{3+4\\sqrt2}.\\]",
+      "answer_latex": "3+4\\sqrt2",
+      "display_original": "Simplify the expression √(41 + 24√2).",
+      "translation": "式 √(41 + 24√2) を簡単にせよ。",
+      "answer_display": "3 + 4√2",
+      "explanation_ja": "(3 + 4√2)² = 9 + 32 + 24√2。3 + 4√2は正なので、平方根はこの値になる。",
+      "title_ja": "二重根号を外す",
+      "record_sha256": "506cc6a6f0b26778d13d28da1af49cf93c8521299b3be89763d30d5a8d3c602f",
+      "source_file": "intermediate_algebra-test-00000-of-00001.parquet",
+      "source_revision": "21a5633873b6a120296cce3e2df9d5550074f4a3",
+      "source_url": "https://huggingface.co/datasets/EleutherAI/hendrycks_math",
+      "copyright": "Source competition problems and AoPS solution material retain their respective authorship; repository/Mirror MIT metadata recorded separately."
+    },
+    {
+      "index": 3,
+      "role": "main",
+      "subject": "counting_and_probability",
+      "test_row": 445,
+      "id": "counting_and_probability/test/445",
+      "problem": "How many triples $(a,b,c)$ of even positive integers satisfy $a^3 + b^2 + c \\leq 50$?",
+      "level": "Level 5",
+      "type": "Counting & Probability",
+      "solution": "If $a \\geq 4$, then $a^3+b^2+c>a^3\\geq 4^3>50$. But we want $a^3+b^2+c \\leq 50$, so we must have $a=2$.  Now we substitute $a=2$ into $a^3+b^2+c \\leq 50$, which gives $b^2+c\\leq 42$. Since $b^2<42$, we know that $b$ must be one of 2, 4, or 6.\n\nWhen $b=2,$ $c\\leq 38$. There are 19 even positive integers less than or equal to 38, namely $2\\times 1$, $2\\times 2$, $\\ldots$, $2\\times 19$.\n\nWhen $b=4,$ $c\\leq 26$. There are 13 even positive integers less than or equal to 26.\n\nWhen $b=6,$ $c\\leq 6$. There are 3 even positive integers less than or equal to 6.\n\nThus the answer is $19+13+3=\\boxed{35}$.",
+      "answer_latex": "35",
+      "display_original": "How many triples (a, b, c) of even positive integers satisfy a³ + b² + c ≤ 50?",
+      "translation": "a³ + b² + c ≤ 50を満たす、正の偶数の3つ組(a, b, c)はいくつあるか。",
+      "answer_display": "35",
+      "explanation_ja": "aは2だけ。b = 2、4、6のとき、cの候補は順に19個、13個、3個なので、合計35個。",
+      "title_ja": "偶数の組を数える",
+      "record_sha256": "2a97f68cff17a0d2b60684b149bb581ee096ed059e6ef482876e7915b2780d05",
+      "source_file": "counting_and_probability-test-00000-of-00001.parquet",
+      "source_revision": "21a5633873b6a120296cce3e2df9d5550074f4a3",
+      "source_url": "https://huggingface.co/datasets/EleutherAI/hendrycks_math",
+      "copyright": "Source competition problems and AoPS solution material retain their respective authorship; repository/Mirror MIT metadata recorded separately."
+    },
+    {
+      "index": 4,
+      "role": "appendix",
+      "subject": "prealgebra",
+      "test_row": 134,
+      "id": "prealgebra/test/134",
+      "problem": "Compute $(-49)\\div 7$.",
+      "level": "Level 1",
+      "type": "Prealgebra",
+      "solution": "When $y$ is nonzero, we have $(-x)\\div y = -(x\\div y)$, so \\[(-49)\\div 7 = - (49\\div 7) = \\boxed{-7}.\\]",
+      "answer_latex": "-7",
+      "display_original": "Compute (−49) ÷ 7.",
+      "translation": "(−49) ÷ 7を計算せよ。",
+      "answer_display": "−7",
+      "explanation_ja": "49 ÷ 7 = 7で、負の数を正の数で割るので答えは−7。",
+      "title_ja": "負の数を割る",
+      "record_sha256": "dce18cc5042d7853e24fa410e824abd0e51d0e682f0b3ec4b30aaac13e501ec7",
+      "source_file": "prealgebra-test-00000-of-00001.parquet",
+      "source_revision": "21a5633873b6a120296cce3e2df9d5550074f4a3",
+      "source_url": "https://huggingface.co/datasets/EleutherAI/hendrycks_math",
+      "copyright": "Source competition problems and AoPS solution material retain their respective authorship; repository/Mirror MIT metadata recorded separately."
+    },
+    {
+      "index": 5,
+      "role": "appendix",
+      "subject": "geometry",
+      "test_row": 235,
+      "id": "geometry/test/235",
+      "problem": "Compute $\\cos 30^\\circ$.",
+      "level": "Level 2",
+      "type": "Geometry",
+      "solution": "Let $P$ be the point on the unit circle that is $30^\\circ$ counterclockwise from $(1,0)$, and let $D$ be the foot of the altitude from $P$ to the $x$-axis, as shown below.\n\n[asy]\npair A,C,P,O,D;\ndraw((0,-1.2)--(0,1.2),p=black+1.2bp,Arrows(0.15cm));\ndraw((-1.2,0)--(1.2,0),p=black+1.2bp,Arrows(0.15cm));\nA = (1,0);\nO= (0,0);\nlabel(\"$x$\",(1.2,0),SE);\nlabel(\"$y$\",(0,1.2),NE);\n\nP = rotate(30)*A;\nD = foot(P,A,-A);\ndraw(O--P--D);\ndraw(rightanglemark(O,D,P,2));\ndraw(Circle(O,1));\nlabel(\"$O$\",O,SE);\nlabel(\"$P$\",P,NE);\n//label(\"$A$\",A,SE);\nlabel(\"$D$\",D,S);\n[/asy]\n\nTriangle $POD$ is a 30-60-90 triangle, so $DO = \\frac{\\sqrt{3}}{2}$ and $DP = \\frac12$.  Therefore, the coordinates of $P$ are $\\left(\\frac{\\sqrt{3}}{2}, \\frac12\\right)$, so $\\cos 30^\\circ = \\boxed{\\frac{\\sqrt{3}}{2}}$.",
+      "answer_latex": "\\frac{\\sqrt{3}}{2}",
+      "display_original": "Compute cos 30°.",
+      "translation": "cos 30°を求めよ。",
+      "answer_display": "√3 / 2",
+      "explanation_ja": "30°・60°・90°の直角三角形の辺の比から、cos 30° = √3 / 2。",
+      "title_ja": "30度の余弦",
+      "record_sha256": "7a4ff805d040e6ae41ac1b96e749f16a7acfa3a36c9efd50b51d2887b4dbfa7a",
+      "source_file": "geometry-test-00000-of-00001.parquet",
+      "source_revision": "21a5633873b6a120296cce3e2df9d5550074f4a3",
+      "source_url": "https://huggingface.co/datasets/EleutherAI/hendrycks_math",
+      "copyright": "Source competition problems and AoPS solution material retain their respective authorship; repository/Mirror MIT metadata recorded separately."
+    },
+    {
+      "index": 6,
+      "role": "appendix",
+      "subject": "number_theory",
+      "test_row": 345,
+      "id": "number_theory/test/345",
+      "problem": "Find the number of positive divisors of 9!.",
+      "level": "Level 4",
+      "type": "Number Theory",
+      "solution": "The prime factorization of 9! is\n\\[2^7 \\cdot 3^4 \\cdot 5 \\cdot 7,\\]so from the formula for the number of factors of a number, the number of factors of 9! is $(7+1)(4+1)(1+1)(1+1) = \\boxed{160}.$",
+      "answer_latex": "160",
+      "display_original": "Find the number of positive divisors of 9!.",
+      "translation": "9!の正の約数の個数を求めよ。",
+      "answer_display": "160",
+      "explanation_ja": "9! = 2⁷ × 3⁴ × 5 × 7。約数は各素因数の指数を選ぶので、8 × 5 × 2 × 2 = 160個。",
+      "title_ja": "階乗の約数を数える",
+      "record_sha256": "e4e4eb1f9e0d326d2cf1608365570dea70920bcdd5cccab809f1bd8c3e676395",
+      "source_file": "number_theory-test-00000-of-00001.parquet",
+      "source_revision": "21a5633873b6a120296cce3e2df9d5550074f4a3",
+      "source_url": "https://huggingface.co/datasets/EleutherAI/hendrycks_math",
+      "copyright": "Source competition problems and AoPS solution material retain their respective authorship; repository/Mirror MIT metadata recorded separately."
+    },
+    {
+      "index": 7,
+      "role": "appendix",
+      "subject": "precalculus",
+      "test_row": 235,
+      "id": "precalculus/test/235",
+      "problem": "Compute $e^{\\pi i}.$",
+      "level": "Level 1",
+      "type": "Precalculus",
+      "solution": "We have that $e^{\\pi i} = \\cos \\pi + i \\sin \\pi = \\boxed{-1}.$",
+      "answer_latex": "-1",
+      "display_original": "Compute e^(πi).",
+      "translation": "e^(πi)を計算せよ。",
+      "answer_display": "−1",
+      "explanation_ja": "オイラーの公式から、e^(πi) = cos π + i sin π = −1。",
+      "title_ja": "複素指数関数の値",
+      "record_sha256": "256a22a7f4dcbe0cbf0b5f0536313413063ef09e4152367d8b67b192133058fb",
+      "source_file": "precalculus-test-00000-of-00001.parquet",
+      "source_revision": "21a5633873b6a120296cce3e2df9d5550074f4a3",
+      "source_url": "https://huggingface.co/datasets/EleutherAI/hendrycks_math",
+      "copyright": "Source competition problems and AoPS solution material retain their respective authorship; repository/Mirror MIT metadata recorded separately."
+    },
+    {
+      "index": 8,
+      "role": "appendix",
+      "subject": "algebra",
+      "test_row": 195,
+      "id": "algebra/test/195",
+      "problem": "Find the domain of $\\sqrt{6-x-x^2}$.",
+      "level": "Level 5",
+      "type": "Algebra",
+      "solution": "First, we simplify the expression: $$\\sqrt{6-x-x^2}=\\sqrt{(2-x)(3+x)}$$ The expression inside the square root must be non-negative. The quadratic changes signs at the roots $2$ and $-3$ and is positive between the two values. Therefore, the domain of the expression is $\\boxed{[-3,2]}$.",
+      "answer_latex": "[-3,2]",
+      "display_original": "Find the domain of √(6 − x − x²).",
+      "translation": "√(6 − x − x²)の定義域を求めよ。",
+      "answer_display": "[−3, 2]",
+      "explanation_ja": "根号の中が0以上という条件は、(x + 3)(x − 2) ≤ 0。したがって−3 ≤ x ≤ 2。",
+      "title_ja": "平方根の定義域",
+      "record_sha256": "79c375bb5d6ba5873c6a752a214147f5393289a770e9d28d0ce5d1fa95045682",
+      "source_file": "algebra-test-00000-of-00001.parquet",
+      "source_revision": "21a5633873b6a120296cce3e2df9d5550074f4a3",
+      "source_url": "https://huggingface.co/datasets/EleutherAI/hendrycks_math",
+      "copyright": "Source competition problems and AoPS solution material retain their respective authorship; repository/Mirror MIT metadata recorded separately."
+    },
+    {
+      "index": 9,
+      "role": "appendix",
+      "subject": "counting_and_probability",
+      "test_row": 156,
+      "id": "counting_and_probability/test/156",
+      "problem": "How many positive three-digit numbers are not multiples of 7?",
+      "level": "Level 3",
+      "type": "Counting & Probability",
+      "solution": "It's easy to count the number of three-digit numbers which are multiples of 7: the smallest multiple of 7 which is a three-digit number is $15 \\times 7 = 105$, and the largest multiple of 7 which is a three-digit number is $142 \\times 7 = 994$.  Therefore, there are $142-15+1 = 128$ three-digit numbers which are multiples of 7.  There are 900 three-digit numbers in total (from 100 to 999), so there are $900-128 = \\boxed{772}$ three-digit numbers which are not multiples of 7.",
+      "answer_latex": "772",
+      "display_original": "How many positive three-digit numbers are not multiples of 7?",
+      "translation": "正の3桁の整数のうち、7の倍数でないものはいくつあるか。",
+      "answer_display": "772",
+      "explanation_ja": "3桁の整数は900個。7の倍数は105から994まで128個なので、900 − 128 = 772個。",
+      "title_ja": "7の倍数を除く",
+      "record_sha256": "148a54e6ba18fc062a776166d20416e8599feaa7ad391db58a6a12299f64a395",
+      "source_file": "counting_and_probability-test-00000-of-00001.parquet",
+      "source_revision": "21a5633873b6a120296cce3e2df9d5550074f4a3",
+      "source_url": "https://huggingface.co/datasets/EleutherAI/hendrycks_math",
+      "copyright": "Source competition problems and AoPS solution material retain their respective authorship; repository/Mirror MIT metadata recorded separately."
+    },
+    {
+      "index": 10,
+      "role": "appendix",
+      "subject": "prealgebra",
+      "test_row": 190,
+      "id": "prealgebra/test/190",
+      "problem": "Simplify $\\sqrt{242}$.",
+      "level": "Level 4",
+      "type": "Prealgebra",
+      "solution": "Factor 242 as $11^2 \\cdot 2$. Then $\\sqrt{242} = \\sqrt{11^2} \\cdot \\sqrt2 = \\boxed{11\\sqrt2}$.",
+      "answer_latex": "11\\sqrt2",
+      "display_original": "Simplify √242.",
+      "translation": "√242を簡単にせよ。",
+      "answer_display": "11√2",
+      "explanation_ja": "242 = 11² × 2なので、√242 = 11√2。",
+      "title_ja": "平方因子を根号の外へ出す",
+      "record_sha256": "588fff56b0b18063dc4aa18e73ebf2dc8492b80e3c3975121bf80fb5765f705e",
+      "source_file": "prealgebra-test-00000-of-00001.parquet",
+      "source_revision": "21a5633873b6a120296cce3e2df9d5550074f4a3",
+      "source_url": "https://huggingface.co/datasets/EleutherAI/hendrycks_math",
+      "copyright": "Source competition problems and AoPS solution material retain their respective authorship; repository/Mirror MIT metadata recorded separately."
+    },
+    {
+      "index": 11,
+      "role": "appendix",
+      "subject": "geometry",
+      "test_row": 167,
+      "id": "geometry/test/167",
+      "problem": "Compute $\\sin 30^\\circ$.",
+      "level": "Level 1",
+      "type": "Geometry",
+      "solution": "Let $P$ be the point on the unit circle that is $30^\\circ$ counterclockwise from $(1,0)$, and let $D$ be the foot of the altitude from $P$ to the $x$-axis, as shown below.\n\n[asy]\n\npair A,C,P,O,D;\n\ndraw((0,-1.2)--(0,1.2),p=black+1.2bp,Arrows(0.15cm));\n\ndraw((-1.2,0)--(1.2,0),p=black+1.2bp,Arrows(0.15cm));\n\nA = (1,0);\n\nO= (0,0);\n\nlabel(\"$x$\",(1.2,0),SE);\n\nlabel(\"$y$\",(0,1.2),NE);\n\nP = rotate(30)*A;\n\nD = foot(P,A,-A);\n\ndraw(O--P--D);\n\ndraw(rightanglemark(O,D,P,2));\n\ndraw(Circle(O,1));\n\nlabel(\"$O$\",O,SE);\n\nlabel(\"$P$\",P,NE);\n\n//label(\"$A$\",A,SE);\n\nlabel(\"$D$\",D,S);\n\n[/asy]\n\nTriangle $POD$ is a 30-60-90 triangle, so $DO = \\frac{\\sqrt{3}}{2}$ and $DP = \\frac12$.  Therefore, the coordinates of $P$ are $\\left(\\frac{\\sqrt{3}}{2}, \\frac12\\right)$, so $\\sin 30^\\circ = \\boxed{\\frac{1}{2}}$.",
+      "answer_latex": "\\frac{1}{2}",
+      "display_original": "Compute sin 30°.",
+      "translation": "sin 30°を求めよ。",
+      "answer_display": "1 / 2",
+      "explanation_ja": "30°・60°・90°の直角三角形では、30°の対辺は斜辺の半分。",
+      "title_ja": "30度の正弦",
+      "record_sha256": "c2cb95acedf63704219f3654b5c990929c966cdae234e1048c48bbf5b5bf3961",
+      "source_file": "geometry-test-00000-of-00001.parquet",
+      "source_revision": "21a5633873b6a120296cce3e2df9d5550074f4a3",
+      "source_url": "https://huggingface.co/datasets/EleutherAI/hendrycks_math",
+      "copyright": "Source competition problems and AoPS solution material retain their respective authorship; repository/Mirror MIT metadata recorded separately."
+    },
+    {
+      "index": 12,
+      "role": "appendix",
+      "subject": "number_theory",
+      "test_row": 89,
+      "id": "number_theory/test/89",
+      "problem": "How many factors of $2^5\\cdot3^6$ are perfect squares?",
+      "level": "Level 5",
+      "type": "Number Theory",
+      "solution": "All factors of $2^5\\cdot 3^6$ that are perfect squares must be in the form $(2^m\\cdot 3^n)^2=2^{2m}\\cdot 3^{2n}$, where $0\\le2m\\le5$ and $0\\le2n\\le6$ for integers $m$ and $n$. Thus, $0\\le m\\le2$ and $0\\le n\\le3$, for a total of $3\\cdot4=\\boxed{12}$ factors that are perfect squares.",
+      "answer_latex": "12",
+      "display_original": "How many factors of 2⁵ · 3⁶ are perfect squares?",
+      "translation": "2⁵ · 3⁶の約数のうち、平方数はいくつあるか。",
+      "answer_display": "12",
+      "explanation_ja": "平方数では、素因数の指数がすべて偶数になる。2の指数は0・2・4の3通り、3の指数は0・2・4・6の4通り。",
+      "title_ja": "平方数の約数を数える",
+      "record_sha256": "6f5a0282a280602d2b98956368f674372d323afc803ca2b8b4c294427dc94fdf",
+      "source_file": "number_theory-test-00000-of-00001.parquet",
+      "source_revision": "21a5633873b6a120296cce3e2df9d5550074f4a3",
+      "source_url": "https://huggingface.co/datasets/EleutherAI/hendrycks_math",
+      "copyright": "Source competition problems and AoPS solution material retain their respective authorship; repository/Mirror MIT metadata recorded separately."
+    },
+    {
+      "index": 13,
+      "role": "appendix",
+      "subject": "precalculus",
+      "test_row": 541,
+      "id": "precalculus/test/541",
+      "problem": "If $\\sin x + \\cos x = \\frac{1}{5}$ and $0 < x < \\pi,$ find $\\tan x.$",
+      "level": "Level 5",
+      "type": "Precalculus",
+      "solution": "From the given equation, $\\cos x = \\frac{1}{5} - \\sin x.$  Substituting into $\\cos^2 x + \\sin^2 x = 1,$ we get\n\\[\\left( \\frac{1}{5} - \\sin x \\right)^2 + \\sin^2 x = 1.\\]This simplifies to $25 \\sin^2 x - 5 \\sin x - 12 = 0,$ which factors as $(5 \\sin x - 4)(5 \\sin x + 3) = 0.$  Since $0 < x < \\pi,$ $\\sin x$ is positive, so $\\sin x = \\frac{4}{5}.$\n\nThen $\\cos x = \\frac{1}{5} - \\sin x = -\\frac{3}{5},$ so\n\\[\\tan x = \\frac{\\sin x}{\\cos x} = \\frac{-4/5}{3/5} = \\boxed{-\\frac{4}{3}}.\\]",
+      "answer_latex": "-\\frac{4}{3}",
+      "display_original": "If sin x + cos x = 1/5 and 0 < x < π, find tan x.",
+      "translation": "sin x + cos x = 1/5、0 < x < πのとき、tan xを求めよ。",
+      "answer_display": "−4 / 3",
+      "explanation_ja": "0 < x < πよりsin x > 0。条件からsin x = 4/5、cos x = −3/5となり、tan x = −4/3。",
+      "title_ja": "三角比の符号を選ぶ",
+      "record_sha256": "3b427a1967b39eaf2ef4a48f794a3bdbd359a003d2b5ea92bde1a9cfa0ad9f10",
+      "source_file": "precalculus-test-00000-of-00001.parquet",
+      "source_revision": "21a5633873b6a120296cce3e2df9d5550074f4a3",
+      "source_url": "https://huggingface.co/datasets/EleutherAI/hendrycks_math",
+      "copyright": "Source competition problems and AoPS solution material retain their respective authorship; repository/Mirror MIT metadata recorded separately."
+    }
+  ],
+  "statistics": {
+    "n_full": 12500,
+    "n_train": 7500,
+    "n_test": 5000,
+    "subject_counts": [
+      {
+        "subject": "algebra",
+        "train": 1744,
+        "test": 1187,
+        "test_level1": 135
+      },
+      {
+        "subject": "counting_and_probability",
+        "train": 771,
+        "test": 474,
+        "test_level1": 39
+      },
+      {
+        "subject": "geometry",
+        "train": 870,
+        "test": 479,
+        "test_level1": 38
+      },
+      {
+        "subject": "intermediate_algebra",
+        "train": 1295,
+        "test": 903,
+        "test_level1": 52
+      },
+      {
+        "subject": "number_theory",
+        "train": 869,
+        "test": 540,
+        "test_level1": 30
+      },
+      {
+        "subject": "prealgebra",
+        "train": 1205,
+        "test": 871,
+        "test_level1": 86
+      },
+      {
+        "subject": "precalculus",
+        "train": 746,
+        "test": 546,
+        "test_level1": 57
+      }
+    ],
+    "test_level_counts": {
+      "Level 1": 437,
+      "Level 2": 894,
+      "Level 3": 1131,
+      "Level 4": 1214,
+      "Level 5": 1324
+    },
+    "n_helm_level1": 437,
+    "official_combined_equals_split_multiset": true,
+    "missing_boxed_answers_test": 0,
+    "test_question_words": {
+      "mean": 30.6522,
+      "min": 2,
+      "max": 252
+    },
+    "helm_results": [
+      {
+        "subject": "algebra",
+        "mode": "regular",
+        "model": "openai_text-davinci-003",
+        "n": 135.0,
+        "score": 0.2814814814814815,
+        "score_name": "math_equiv",
+        "num_train_instances": 8.0,
+        "prompt_truncated": 0.0,
+        "trials": 3
+      },
+      {
+        "subject": "counting_and_probability",
+        "mode": "regular",
+        "model": "openai_text-davinci-003",
+        "n": 39.0,
+        "score": 0.35042735042735046,
+        "score_name": "math_equiv",
+        "num_train_instances": 8.0,
+        "prompt_truncated": 0.0,
+        "trials": 3
+      },
+      {
+        "subject": "geometry",
+        "mode": "regular",
+        "model": "openai_text-davinci-003",
+        "n": 38.0,
+        "score": 0.5614035087719299,
+        "score_name": "math_equiv",
+        "num_train_instances": 8.0,
+        "prompt_truncated": 0.0,
+        "trials": 3
+      },
+      {
+        "subject": "intermediate_algebra",
+        "mode": "regular",
+        "model": "openai_text-davinci-003",
+        "n": 52.0,
+        "score": 0.2692307692307692,
+        "score_name": "math_equiv",
+        "num_train_instances": 8.0,
+        "prompt_truncated": 0.0,
+        "trials": 3
+      },
+      {
+        "subject": "number_theory",
+        "mode": "regular",
+        "model": "openai_text-davinci-003",
+        "n": 30.0,
+        "score": 0.2888888888888889,
+        "score_name": "math_equiv",
+        "num_train_instances": 8.0,
+        "prompt_truncated": 0.0,
+        "trials": 3
+      },
+      {
+        "subject": "prealgebra",
+        "mode": "regular",
+        "model": "openai_text-davinci-003",
+        "n": 86.0,
+        "score": 0.5465116279069768,
+        "score_name": "math_equiv",
+        "num_train_instances": 8.0,
+        "prompt_truncated": 0.0,
+        "trials": 3
+      },
+      {
+        "subject": "precalculus",
+        "mode": "regular",
+        "model": "openai_text-davinci-003",
+        "n": 57.0,
+        "score": 0.43274853801169594,
+        "score_name": "math_equiv",
+        "num_train_instances": 8.0,
+        "prompt_truncated": 0.0,
+        "trials": 3
+      },
+      {
+        "subject": "algebra",
+        "mode": "cot",
+        "model": "openai_text-davinci-003",
+        "n": 135.0,
+        "score": 0.5037037037037037,
+        "score_name": "math_equiv_chain_of_thought",
+        "num_train_instances": 8.0,
+        "prompt_truncated": 0.0,
+        "trials": 3
+      },
+      {
+        "subject": "counting_and_probability",
+        "mode": "cot",
+        "model": "openai_text-davinci-003",
+        "n": 39.0,
+        "score": 0.4444444444444445,
+        "score_name": "math_equiv_chain_of_thought",
+        "num_train_instances": 8.0,
+        "prompt_truncated": 0.0,
+        "trials": 3
+      },
+      {
+        "subject": "geometry",
+        "mode": "cot",
+        "model": "openai_text-davinci-003",
+        "n": 38.0,
+        "score": 0.4473684210526316,
+        "score_name": "math_equiv_chain_of_thought",
+        "num_train_instances": 8.0,
+        "prompt_truncated": 0.0,
+        "trials": 3
+      },
+      {
+        "subject": "intermediate_algebra",
+        "mode": "cot",
+        "model": "openai_text-davinci-003",
+        "n": 52.0,
+        "score": 0.32051282051282054,
+        "score_name": "math_equiv_chain_of_thought",
+        "num_train_instances": 8.0,
+        "prompt_truncated": 0.0,
+        "trials": 3
+      },
+      {
+        "subject": "number_theory",
+        "mode": "cot",
+        "model": "openai_text-davinci-003",
+        "n": 30.0,
+        "score": 0.3888888888888889,
+        "score_name": "math_equiv_chain_of_thought",
+        "num_train_instances": 8.0,
+        "prompt_truncated": 0.0,
+        "trials": 3
+      },
+      {
+        "subject": "prealgebra",
+        "mode": "cot",
+        "model": "openai_text-davinci-003",
+        "n": 86.0,
+        "score": 0.6124031007751938,
+        "score_name": "math_equiv_chain_of_thought",
+        "num_train_instances": 8.0,
+        "prompt_truncated": 0.0,
+        "trials": 3
+      },
+      {
+        "subject": "precalculus",
+        "mode": "cot",
+        "model": "openai_text-davinci-003",
+        "n": 57.0,
+        "score": 0.4269005847953216,
+        "score_name": "math_equiv_chain_of_thought",
+        "num_train_instances": 8.0,
+        "prompt_truncated": 0.0,
+        "trials": 3
+      },
+      {
+        "subject": "algebra",
+        "mode": "regular",
+        "model": "together_opt-175b",
+        "n": 135.0,
+        "score": 0.03950617283950617,
+        "score_name": "math_equiv",
+        "num_train_instances": 8.0,
+        "prompt_truncated": 0.0,
+        "trials": 3
+      },
+      {
+        "subject": "counting_and_probability",
+        "mode": "regular",
+        "model": "together_opt-175b",
+        "n": 39.0,
+        "score": 0.07692307692307693,
+        "score_name": "math_equiv",
+        "num_train_instances": 8.0,
+        "prompt_truncated": 0.0,
+        "trials": 3
+      },
+      {
+        "subject": "geometry",
+        "mode": "regular",
+        "model": "together_opt-175b",
+        "n": 38.0,
+        "score": 0.10526315789473684,
+        "score_name": "math_equiv",
+        "num_train_instances": 8.0,
+        "prompt_truncated": 0.0,
+        "trials": 3
+      },
+      {
+        "subject": "intermediate_algebra",
+        "mode": "regular",
+        "model": "together_opt-175b",
+        "n": 52.0,
+        "score": 0.0,
+        "score_name": "math_equiv",
+        "num_train_instances": 8.0,
+        "prompt_truncated": 0.0,
+        "trials": 3
+      },
+      {
+        "subject": "number_theory",
+        "mode": "regular",
+        "model": "together_opt-175b",
+        "n": 30.0,
+        "score": 0.06666666666666667,
+        "score_name": "math_equiv",
+        "num_train_instances": 8.0,
+        "prompt_truncated": 0.0,
+        "trials": 3
+      },
+      {
+        "subject": "prealgebra",
+        "mode": "regular",
+        "model": "together_opt-175b",
+        "n": 86.0,
+        "score": 0.12015503875968991,
+        "score_name": "math_equiv",
+        "num_train_instances": 8.0,
+        "prompt_truncated": 0.0,
+        "trials": 3
+      },
+      {
+        "subject": "precalculus",
+        "mode": "regular",
+        "model": "together_opt-175b",
+        "n": 57.0,
+        "score": 0.04678362573099415,
+        "score_name": "math_equiv",
+        "num_train_instances": 8.0,
+        "prompt_truncated": 0.0,
+        "trials": 3
+      },
+      {
+        "subject": "algebra",
+        "mode": "cot",
+        "model": "together_opt-175b",
+        "n": 135.0,
+        "score": 0.007407407407407408,
+        "score_name": "math_equiv_chain_of_thought",
+        "num_train_instances": 8.0,
+        "prompt_truncated": 0.0,
+        "trials": 3
+      },
+      {
+        "subject": "counting_and_probability",
+        "mode": "cot",
+        "model": "together_opt-175b",
+        "n": 39.0,
+        "score": 0.0,
+        "score_name": "math_equiv_chain_of_thought",
+        "num_train_instances": 8.0,
+        "prompt_truncated": 0.0,
+        "trials": 3
+      },
+      {
+        "subject": "geometry",
+        "mode": "cot",
+        "model": "together_opt-175b",
+        "n": 38.0,
+        "score": 0.02631578947368421,
+        "score_name": "math_equiv_chain_of_thought",
+        "num_train_instances": 5.87719298245614,
+        "prompt_truncated": 0.0,
+        "trials": 3
+      },
+      {
+        "subject": "intermediate_algebra",
+        "mode": "cot",
+        "model": "together_opt-175b",
+        "n": 52.0,
+        "score": 0.019230769230769232,
+        "score_name": "math_equiv_chain_of_thought",
+        "num_train_instances": 5.160256410256411,
+        "prompt_truncated": 0.0,
+        "trials": 3
+      },
+      {
+        "subject": "number_theory",
+        "mode": "cot",
+        "model": "together_opt-175b",
+        "n": 30.0,
+        "score": 0.0888888888888889,
+        "score_name": "math_equiv_chain_of_thought",
+        "num_train_instances": 8.0,
+        "prompt_truncated": 0.0,
+        "trials": 3
+      },
+      {
+        "subject": "prealgebra",
+        "mode": "cot",
+        "model": "together_opt-175b",
+        "n": 86.0,
+        "score": 0.011627906976744186,
+        "score_name": "math_equiv_chain_of_thought",
+        "num_train_instances": 8.0,
+        "prompt_truncated": 0.0,
+        "trials": 3
+      },
+      {
+        "subject": "precalculus",
+        "mode": "cot",
+        "model": "together_opt-175b",
+        "n": 57.0,
+        "score": 0.029239766081871343,
+        "score_name": "math_equiv_chain_of_thought",
+        "num_train_instances": 6.87719298245614,
+        "prompt_truncated": 0.0,
+        "trials": 3
+      },
+      {
+        "subject": "algebra",
+        "mode": "regular",
+        "model": "anthropic_stanford-online-all-v4-s3",
+        "n": 135.0,
+        "score": 0.09876543209876543,
+        "score_name": "math_equiv",
+        "num_train_instances": 8.0,
+        "prompt_truncated": 0.0,
+        "trials": 3
+      },
+      {
+        "subject": "counting_and_probability",
+        "mode": "regular",
+        "model": "anthropic_stanford-online-all-v4-s3",
+        "n": 39.0,
+        "score": 0.2735042735042735,
+        "score_name": "math_equiv",
+        "num_train_instances": 8.0,
+        "prompt_truncated": 0.0,
+        "trials": 3
+      },
+      {
+        "subject": "geometry",
+        "mode": "regular",
+        "model": "anthropic_stanford-online-all-v4-s3",
+        "n": 38.0,
+        "score": 0.27192982456140347,
+        "score_name": "math_equiv",
+        "num_train_instances": 8.0,
+        "prompt_truncated": 0.0,
+        "trials": 3
+      },
+      {
+        "subject": "intermediate_algebra",
+        "mode": "regular",
+        "model": "anthropic_stanford-online-all-v4-s3",
+        "n": 52.0,
+        "score": 0.1794871794871795,
+        "score_name": "math_equiv",
+        "num_train_instances": 8.0,
+        "prompt_truncated": 0.0,
+        "trials": 3
+      },
+      {
+        "subject": "number_theory",
+        "mode": "regular",
+        "model": "anthropic_stanford-online-all-v4-s3",
+        "n": 30.0,
+        "score": 0.15555555555555556,
+        "score_name": "math_equiv",
+        "num_train_instances": 8.0,
+        "prompt_truncated": 0.0,
+        "trials": 3
+      },
+      {
+        "subject": "prealgebra",
+        "mode": "regular",
+        "model": "anthropic_stanford-online-all-v4-s3",
+        "n": 86.0,
+        "score": 0.18992248062015504,
+        "score_name": "math_equiv",
+        "num_train_instances": 8.0,
+        "prompt_truncated": 0.0,
+        "trials": 3
+      },
+      {
+        "subject": "precalculus",
+        "mode": "regular",
+        "model": "anthropic_stanford-online-all-v4-s3",
+        "n": 57.0,
+        "score": 0.21637426900584797,
+        "score_name": "math_equiv",
+        "num_train_instances": 8.0,
+        "prompt_truncated": 0.0,
+        "trials": 3
+      },
+      {
+        "subject": "algebra",
+        "mode": "cot",
+        "model": "anthropic_stanford-online-all-v4-s3",
+        "n": 135.0,
+        "score": 0.12839506172839507,
+        "score_name": "math_equiv_chain_of_thought",
+        "num_train_instances": 8.0,
+        "prompt_truncated": 0.0,
+        "trials": 3
+      },
+      {
+        "subject": "counting_and_probability",
+        "mode": "cot",
+        "model": "anthropic_stanford-online-all-v4-s3",
+        "n": 39.0,
+        "score": 0.1794871794871795,
+        "score_name": "math_equiv_chain_of_thought",
+        "num_train_instances": 8.0,
+        "prompt_truncated": 0.0,
+        "trials": 3
+      },
+      {
+        "subject": "geometry",
+        "mode": "cot",
+        "model": "anthropic_stanford-online-all-v4-s3",
+        "n": 38.0,
+        "score": 0.20175438596491227,
+        "score_name": "math_equiv_chain_of_thought",
+        "num_train_instances": 8.0,
+        "prompt_truncated": 0.0,
+        "trials": 3
+      },
+      {
+        "subject": "intermediate_algebra",
+        "mode": "cot",
+        "model": "anthropic_stanford-online-all-v4-s3",
+        "n": 52.0,
+        "score": 0.1346153846153846,
+        "score_name": "math_equiv_chain_of_thought",
+        "num_train_instances": 8.0,
+        "prompt_truncated": 0.0,
+        "trials": 3
+      },
+      {
+        "subject": "number_theory",
+        "mode": "cot",
+        "model": "anthropic_stanford-online-all-v4-s3",
+        "n": 30.0,
+        "score": 0.11111111111111112,
+        "score_name": "math_equiv_chain_of_thought",
+        "num_train_instances": 8.0,
+        "prompt_truncated": 0.0,
+        "trials": 3
+      },
+      {
+        "subject": "prealgebra",
+        "mode": "cot",
+        "model": "anthropic_stanford-online-all-v4-s3",
+        "n": 86.0,
+        "score": 0.2209302325581395,
+        "score_name": "math_equiv_chain_of_thought",
+        "num_train_instances": 8.0,
+        "prompt_truncated": 0.0,
+        "trials": 3
+      },
+      {
+        "subject": "precalculus",
+        "mode": "cot",
+        "model": "anthropic_stanford-online-all-v4-s3",
+        "n": 57.0,
+        "score": 0.15789473684210525,
+        "score_name": "math_equiv_chain_of_thought",
+        "num_train_instances": 8.0,
+        "prompt_truncated": 0.0,
+        "trials": 3
+      }
+    ],
+    "helm_count_weighted_summary": [
+      {
+        "model": "openai_text-davinci-003",
+        "mode": "regular",
+        "n": 437.0,
+        "accuracy": 0.3829138062547674,
+        "aggregation": "Own recomputation: weighted mean of seven subject-specific test accuracies; weights equal actual question counts. Each subject is already averaged over 3 trials."
+      },
+      {
+        "model": "openai_text-davinci-003",
+        "mode": "cot",
+        "n": 437.0,
+        "accuracy": 0.47520976353928296,
+        "aggregation": "Own recomputation: weighted mean of seven subject-specific test accuracies; weights equal actual question counts. Each subject is already averaged over 3 trials."
+      },
+      {
+        "model": "together_opt-175b",
+        "mode": "regular",
+        "n": 437.0,
+        "accuracy": 0.06254767353165522,
+        "aggregation": "Own recomputation: weighted mean of seven subject-specific test accuracies; weights equal actual question counts. Each subject is already averaged over 3 trials."
+      },
+      {
+        "model": "together_opt-175b",
+        "mode": "cot",
+        "n": 437.0,
+        "accuracy": 0.01906941266209001,
+        "aggregation": "Own recomputation: weighted mean of seven subject-specific test accuracies; weights equal actual question counts. Each subject is already averaged over 3 trials."
+      },
+      {
+        "model": "anthropic_stanford-online-all-v4-s3",
+        "mode": "regular",
+        "n": 437.0,
+        "accuracy": 0.17620137299771166,
+        "aggregation": "Own recomputation: weighted mean of seven subject-specific test accuracies; weights equal actual question counts. Each subject is already averaged over 3 trials."
+      },
+      {
+        "model": "anthropic_stanford-online-all-v4-s3",
+        "mode": "cot",
+        "n": 437.0,
+        "accuracy": 0.16094584286803965,
+        "aggregation": "Own recomputation: weighted mean of seven subject-specific test accuracies; weights equal actual question counts. Each subject is already averaged over 3 trials."
+      }
+    ]
+  },
+  "build_info": {
+    "slug": "math",
+    "title": "MATH",
+    "year": 2021,
+    "main_pages": 31,
+    "total_pages": 55,
+    "source_urls": {
+      "paper": "https://arxiv.org/abs/2103.03874",
+      "repo": "https://github.com/hendrycks/math",
+      "data": "https://huggingface.co/datasets/EleutherAI/hendrycks_math",
+      "linked": "https://huggingface.co/datasets/qwedsacf/competition_math",
+      "helm": "https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/math_regular",
+      "cot": "https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/math_chain_of_thought",
+      "code": "https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/math_scenario.py",
+      "liang": "https://arxiv.org/abs/2211.09110"
+    },
+    "main_examples": 3,
+    "appendix_examples": 10,
+    "read_time": "約10分の本編黙読・流し読みを予定。未実測。",
+    "dataset_revision": "21a5633873b6a120296cce3e2df9d5550074f4a3",
+    "helm_version": "v0.4.0",
+    "run_suite": "v0.3.0",
+    "modality": "text",
+    "native_math": "Editable native text, Unicode symbols and superscript runs; no raster equations."
+  },
+  "source_records": [
+    {
+      "file": "panel-fit.json",
+      "bytes": 4159,
+      "sha256": "8ffb8d8c748715ae4b5b98b6644f40f2ada32e65d7c049b0e93f48d4c1c206a0"
+    },
+    {
+      "file": "candidates.json",
+      "bytes": 44734,
+      "sha256": "fbef7db794683b8bfb151483b2588debfd5291c4f865fde55c6d61993de74255"
+    },
+    {
+      "file": "sources.md",
+      "bytes": 8622,
+      "sha256": "e9a5fc33a0c703ee6c505a194c5c18bac9ea8982248a4b6270dcef33f20b5eb6"
+    },
+    {
+      "file": "text-audit.json",
+      "bytes": 147,
+      "sha256": "93a95296aedfe2886163515fdf5056eb7da0e6850c3f2b7bc4e8e08a977b2232"
+    },
+    {
+      "file": "records.py",
+      "bytes": 6522,
+      "sha256": "9e1a48984d25d8d92cbe962a14939f96ba355b01ca34d100dd7648e8a1162db3"
+    },
+    {
+      "file": "prepare.py",
+      "bytes": 7665,
+      "sha256": "44bb08dee0b31727a49587f0760a5819c645d5ee06ae16a6fcd138442bc9d1e1"
+    },
+    {
+      "file": "all-algebra-score-recheck.json",
+      "bytes": 336,
+      "sha256": "b065ce9d575e58073a897753200395c3f330ccf214c1cfbfd784e544edba8908"
+    },
+    {
+      "file": "render.py",
+      "bytes": 782,
+      "sha256": "3f1a747d41a2819016ffe3a07ca3e23d32c39c17eac1755b771af82e896049d7"
+    },
+    {
+      "file": "native-math-audit.json",
+      "bytes": 430,
+      "sha256": "c64f28d0631e65c77e66ad0385147ca8f8e5d50b2d3ec62f79321f85def5d863"
+    },
+    {
+      "file": "fetch-log.json",
+      "bytes": 20411,
+      "sha256": "d6692026878dc017291e6eb3970d6fe528f602db8339a56b217190d7ed1b6017"
+    },
+    {
+      "file": "helm-generation-cot.json",
+      "bytes": 9152,
+      "sha256": "504fe6a34606b908f0f59ad41b7058b5a7d5f8b4fd38e72c62cf05de9fe3c912"
+    },
+    {
+      "file": "datasets-in-10-minutes-math.pdf",
+      "bytes": 955877,
+      "sha256": "650a1fb3079ec5d2d177dc33b2c50ebceb01a7585d803c95229cd5ab18fda76d"
+    },
+    {
+      "file": "check_links.py",
+      "bytes": 2322,
+      "sha256": "94cb09149f7dc53d505e04b49e9fd80404e4e7434caed69d1d21128bd123caab"
+    },
+    {
+      "file": "audit_package.py",
+      "bytes": 2879,
+      "sha256": "223542c5028909c3fb693e354a302a8588aabf9c5e30c9dee49bb6891ebe8828"
+    },
+    {
+      "file": "fetch_data.py",
+      "bytes": 729,
+      "sha256": "f1473cf0f47851acd54bf103b5690827257eb4e9eb9d2dc5e66775415134f3c5"
+    },
+    {
+      "file": "package-audit.json",
+      "bytes": 519,
+      "sha256": "91a6095ca50289ca26406cbae16460c83dd838bc96e486aa7216e792bca5e5be"
+    },
+    {
+      "file": "layout-audit.json",
+      "bytes": 76,
+      "sha256": "e659c7fcc3357c17193b389149230a8111bdc8e2117e4dcf3d37c0cef9ba3519"
+    },
+    {
+      "file": "proofreading-changes.json",
+      "bytes": 2019,
+      "sha256": "9d7d16dd612a60506dedfc248812b28a75df2b18788fc7bbc0885740b3ab4a72"
+    },
+    {
+      "file": "panel-ink-fit.json",
+      "bytes": 6382,
+      "sha256": "c698c78d2ca04d80986c3a73b3be026372c3f78463f1b99203ee125bcd5b072c"
+    },
+    {
+      "file": "data-fetch-log.json",
+      "bytes": 4983,
+      "sha256": "3eab42019c0a685dc0afe95f7d1302ca4254ec6d5aa951b0a0954cd1455d5699"
+    },
+    {
+      "file": "audit_layout.py",
+      "bytes": 3895,
+      "sha256": "dcee7c5f706dea35d85e562cd75db0bb6ccd0f565cf515c2321e8291bda29602"
+    },
+    {
+      "file": "fit_panels.py",
+      "bytes": 1489,
+      "sha256": "8fd32e3ad66deaca84fdcc19ace1d8d5482f46d521107469afaad404a0a25450"
+    },
+    {
+      "file": "final_footer.py",
+      "bytes": 1046,
+      "sha256": "eeeb9ea5c91af9b4023a101d9dc0eef44e9fcaf8c7541fe5050dc37d19ec33b5"
+    },
+    {
+      "file": "manifest.json",
+      "bytes": 24212,
+      "sha256": "f471e7a193fe21a8a0f26468e51ec97176d8f8faa9f2451646e065f219f202a9"
+    },
+    {
+      "file": "reading-plan.json",
+      "bytes": 178,
+      "sha256": "d93e3b3ef73ff05b349a4a700f65d406b63592f870235ffe9dfd105d4be3cb2a"
+    },
+    {
+      "file": "capture_sites.py",
+      "bytes": 3068,
+      "sha256": "eba99c8f8380088d409e607ae59b12d602243a8ddbef4f501ab621ccbadf690c"
+    },
+    {
+      "file": "pre-refinement-page-hashes.json",
+      "bytes": 4457,
+      "sha256": "4a6d49a9b13eee5e492136280550a192d809cc72236c87754ef28f3bcca06b12"
+    },
+    {
+      "file": "content-corrections.json",
+      "bytes": 747,
+      "sha256": "1216ca525b71759850a0c1f4aea44b9fea3086badbc95d384c797ac12f410700"
+    },
+    {
+      "file": "links-audit.json",
+      "bytes": 229,
+      "sha256": "05763429955c0e537da193def3115e700cd928dc395b4ad3cac9708fd93815d1"
+    },
+    {
+      "file": "build.py",
+      "bytes": 20401,
+      "sha256": "c176e1d89bf2e659ce2040b574e750d71fa3abd8a8ff3162ea1bdf9590aa4be9"
+    },
+    {
+      "file": "build-info.json",
+      "bytes": 1071,
+      "sha256": "88538d0528391ed1bebff2fa2761f832a78b1a2f54cf458d0a1886acbed65f81"
+    },
+    {
+      "file": "examples.json",
+      "bytes": 19077,
+      "sha256": "51a00385e58949df32f592d33252922096f614ce428dd7da805d93f415853132"
+    },
+    {
+      "file": "example-audit.json",
+      "bytes": 8822,
+      "sha256": "301fc29bb67f278f6faeb162b8907bf4ddf995b184eb816785fc25606d87e7d8"
+    },
+    {
+      "file": "ink_panels.py",
+      "bytes": 1802,
+      "sha256": "77d1fe3440cc2eb181692a3e38fcd8a73082571629dde7dc4100a58b861b2c21"
+    },
+    {
+      "file": "handoff.json",
+      "bytes": 3272,
+      "sha256": "05e11f924b8721a537dcf0ec26f4fdcefe42e2389dcf129ec87703772ca160c8"
+    },
+    {
+      "file": "visual-inspection.json",
+      "bytes": 1046,
+      "sha256": "6b67604d1196132ada45c098f3fb15e2cc06161a925636c6c6710453ea4b3ab2"
+    },
+    {
+      "file": "generation-scoring.json",
+      "bytes": 642,
+      "sha256": "6bdb84e0f8c90c21cfa199ffbea0a8b241905bde2ce8db8dc22f2e1decc5bccd"
+    },
+    {
+      "file": "convert.py",
+      "bytes": 519,
+      "sha256": "0cf05c00de5e239363961d34c4b809b9c6780dc3d0cbd6bd4fa8fe026842f95e"
+    },
+    {
+      "file": "helm-generation-regular.json",
+      "bytes": 2398,
+      "sha256": "901df6cdeb80048dd5bb8869195b06e0dcd53d97fae750b0fbb37212bcc73cfd"
+    },
+    {
+      "file": "evidence-inventory.json",
+      "bytes": 13863,
+      "sha256": "6f8847c8675e0f5bacb53df0366597006023bdffb3c5ec8b926adfb668b7f343"
+    },
+    {
+      "file": "screenshot-log.json",
+      "bytes": 398,
+      "sha256": "46d47613014f1d2270b03e911a1c36622644d7b5e1338e0631a945e3b687c34f"
+    },
+    {
+      "file": "research.py",
+      "bytes": 2171,
+      "sha256": "ac9d1fea9769aa9125fa6d8c87c9c69284786c7513e67ca6eb58e899837f6c49"
+    },
+    {
+      "file": "page-text-and-proofreading.json",
+      "bytes": 77685,
+      "sha256": "9aba131affe29fd15f99f98e46ebde0e6a91cd13904f9305fdcba1ecea3630b0"
+    },
+    {
+      "file": "panel-ink-audit.json",
+      "bytes": 2185,
+      "sha256": "4a59d019f2b21af5cbe676e8e26ee4927425f8ed8e2b26ca5711e6352ae5f337"
+    },
+    {
+      "file": "mathematical-answer-check.json",
+      "bytes": 1572,
+      "sha256": "450632410eee5b5f99a316a8056ad917c6720c646d74eef927400929dd9eefaa"
+    },
+    {
+      "file": "stats.json",
+      "bytes": 15477,
+      "sha256": "c0c32f7797e6beefa278c9592484a8eea3829a8e54cf15ab62c1d2caeaaf2fa3"
+    },
+    {
+      "file": "evidence/prealgebra-regular-together_opt-175b-stats.json",
+      "bytes": 32121,
+      "sha256": "8d7e42df76e37cb5989f6056c048417bdf46c9cd998c29c40fe9b61256258829"
+    },
+    {
+      "file": "evidence/number_theory-cot-anthropic_stanford-online-all-v4-s3-stats.json",
+      "bytes": 29966,
+      "sha256": "a6fc2ff3f690e87b74e2b787218cc0cc86e9d8cd8d4d16cd3dcd95bafb348472"
+    },
+    {
+      "file": "evidence/intermediate_algebra-cot-anthropic_stanford-online-all-v4-s3-stats.json",
+      "bytes": 29858,
+      "sha256": "547f782f7081f671a31865788e47be17b78ab4d0a94358edc31dce8aa9094a2d"
+    },
+    {
+      "file": "evidence/hf-original-api.json",
+      "bytes": 2108,
+      "sha256": "ee162cb49151d00dc982f2a8867a1c533bfa625bad9688e345993fff8a56abc6"
+    },
+    {
+      "file": "evidence/prealgebra-regular-openai_text-davinci-003-stats.json",
+      "bytes": 27479,
+      "sha256": "02f80a788dccd70ce7bb4b76ca1bb3fb5fffa2a5c56cedc7f491c5322baa66f1"
+    },
+    {
+      "file": "evidence/math-v030.py",
+      "bytes": 13843,
+      "sha256": "9e57937707dbb63bfb1e5b5700f7298e546702ff22890423a1e2ad2fc66bf2f9"
+    },
+    {
+      "file": "evidence/precalculus-cot-openai_text-davinci-003-stats.json",
+      "bytes": 27529,
+      "sha256": "92fe6efe7988790bafde7d7dfccbd930738b16583d95c1b5c6d04bd104e840ce"
+    },
+    {
+      "file": "evidence/precalculus-regular-anthropic_stanford-online-all-v4-s3-stats.json",
+      "bytes": 30114,
+      "sha256": "e3601f609ceaba43589922aa840901bc69ce74053495f9ac10f733dd23663512"
+    },
+    {
+      "file": "evidence/intermediate_algebra-cot-together_opt-175b-stats.json",
+      "bytes": 32746,
+      "sha256": "2a20ae366ffef5d844563b33044fdcd8bcc5bee92c490e8763ae4b2a0db0cea2"
+    },
+    {
+      "file": "evidence/number_theory-cot-together_opt-175b-stats.json",
+      "bytes": 32096,
+      "sha256": "8c0095872a8ae50ccdf84fc2e8ebd584bb75ba1df153e6eb565bcff910abee60"
+    },
+    {
+      "file": "evidence/counting_and_probability-cot-anthropic_stanford-online-all-v4-s3-stats.json",
+      "bytes": 30167,
+      "sha256": "5f8f32f84f85747a77c0fd6694489c0e4ae28c1f151ee096369017d11173b91d"
+    },
+    {
+      "file": "evidence/prealgebra-cot-openai_text-davinci-003-stats.json",
+      "bytes": 27749,
+      "sha256": "68bdaca81685216a97dbac82782e99e0e03b4501c7c3e41d97cc7bd1f86c443b"
+    },
+    {
+      "file": "evidence/number_theory-regular-together_opt-175b-stats.json",
+      "bytes": 32069,
+      "sha256": "331131e64711d1757efed4badc796b9d9adc681475aec6e753b0d0de4680029e"
+    },
+    {
+      "file": "evidence/counting_and_probability-cot-together_opt-175b-stats.json",
+      "bytes": 32025,
+      "sha256": "0b60176118e0e14e52714ff8c77084f4c21b6e07982aa767a98c035c8a9d3065"
+    },
+    {
+      "file": "evidence/selected-run-specs.json",
+      "bytes": 134321,
+      "sha256": "9f624544688ae7428db2f934abceac1e8b85a2060cf12c21e88b2e9d1afad57a"
+    },
+    {
+      "file": "evidence/official-data-api.json",
+      "bytes": 1868,
+      "sha256": "a8e15e59e9e06b2cbc6c90ff8923ff9a1388ff1e914f78a14e463b342fa6b282"
+    },
+    {
+      "file": "evidence/geometry-regular-anthropic_stanford-online-all-v4-s3-stats.json",
+      "bytes": 30086,
+      "sha256": "aa5052b21c3e2732b7c333ab0a58dd7db941029c57940b920cac1e53c877461c"
+    },
+    {
+      "file": "evidence/intermediate_algebra-regular-openai_text-davinci-003-stats.json",
+      "bytes": 27444,
+      "sha256": "8e8987fcfef2aed4338df2c513d4a0b27c0e7b0db8684f9ff7748f35e8f050a1"
+    },
+    {
+      "file": "evidence/geometry-cot-together_opt-175b-stats.json",
+      "bytes": 32577,
+      "sha256": "5d17f38e165d8f5590175595b261e2f672dcb10c7cb5d9c5311dfc903bf44b50"
+    },
+    {
+      "file": "evidence/counting_and_probability-cot-openai_text-davinci-003-stats.json",
+      "bytes": 27636,
+      "sha256": "859c3431358239dce6df2551a78fd01d5da09e816af0293994b5d54276e2bb01"
+    },
+    {
+      "file": "evidence/intermediate_algebra-regular-anthropic_stanford-online-all-v4-s3-stats.json",
+      "bytes": 30131,
+      "sha256": "f8d4964a7108ff2f8a7638ee8a44a0e0310c80e2c905090f2b7ef52ae0cc3961"
+    },
+    {
+      "file": "evidence/math-main.py",
+      "bytes": 16043,
+      "sha256": "8bcfca0f2de1cc907e4b8779ea478ba80e644458e2fabb5502e44107033cdf84"
+    },
+    {
+      "file": "evidence/prealgebra-cot-together_opt-175b-stats.json",
+      "bytes": 32796,
+      "sha256": "0e61cea66b3edf4e562bfe1c1f7a761969c0f8ecac84ccb3eb1d3623479d224b"
+    },
+    {
+      "file": "evidence/algebra-regular-openai_text-davinci-003-stats.json",
+      "bytes": 27626,
+      "sha256": "ecf177fdcc28a25b512e58b1756741c57d83f4f292655c6004118b1a0e4eab78"
+    },
+    {
+      "file": "evidence/prealgebra-regular-anthropic_stanford-online-all-v4-s3-stats.json",
+      "bytes": 30170,
+      "sha256": "68ad6a75256985a25df5b5fd68b85d943dafc4e96815ad3fc86beb55ad621d26"
+    },
+    {
+      "file": "evidence/number_theory-cot-openai_text-davinci-003-stats.json",
+      "bytes": 27443,
+      "sha256": "d5778f9c02f8c1ba959b95b202946ca13d7ef11f96c5ab934a8cea0b54f1ab30"
+    },
+    {
+      "file": "evidence/algebra-regular-anthropic_stanford-online-all-v4-s3-stats.json",
+      "bytes": 30183,
+      "sha256": "754f083534abc6b4c462f26eda524eaf5c78571d07d63984ac8de4a78d4b0b8b"
+    },
+    {
+      "file": "evidence/algebra-regular-openai_text-davinci-003-scenario_state.json",
+      "bytes": 1153514,
+      "sha256": "bd2862ecb308988d09ab33f4959a4e7451b5e4970620f8d5da87371babf137bb"
+    },
+    {
+      "file": "evidence/geometry-cot-anthropic_stanford-online-all-v4-s3-stats.json",
+      "bytes": 30155,
+      "sha256": "650adbc723eb23d5af52b9b041acd72bc40c6ebbc1d0b7c47817956e3a3d01b2"
+    },
+    {
+      "file": "evidence/intermediate_algebra-cot-openai_text-davinci-003-stats.json",
+      "bytes": 27602,
+      "sha256": "284d25c9dc0a01d6f79aaf5210e4ed877e89cf13a907ce59046d985eda1dcee8"
+    },
+    {
+      "file": "evidence/precalculus-regular-together_opt-175b-stats.json",
+      "bytes": 32254,
+      "sha256": "c511677b33f62a24fa17b600a9b62fe3baeb2463b9db588e18f664efa20c1b1d"
+    },
+    {
+      "file": "evidence/number_theory-regular-anthropic_stanford-online-all-v4-s3-stats.json",
+      "bytes": 29809,
+      "sha256": "77e24d6d1b1892ec34ec11b22f6e0825586fee3bf2f7402f6ccf05fd4cb91986"
+    },
+    {
+      "file": "evidence/algebra-cot-openai_text-davinci-003-scenario_state.json",
+      "bytes": 7002910,
+      "sha256": "95d09cdb36ad39dfec9a219d52e1497cdb57adf88c0772b4f4df9426c20e57be"
+    },
+    {
+      "file": "evidence/precalculus-cot-anthropic_stanford-online-all-v4-s3-stats.json",
+      "bytes": 30162,
+      "sha256": "094da2b73b7d23120b84f9d3ba676209baa51f24f93c98a2b00389c359250406"
+    },
+    {
+      "file": "evidence/official-data-readme.md",
+      "bytes": 4819,
+      "sha256": "fce0b61555d36ef9603e29823871e0789f015ed5c1e1d73a9a95b9a90b81016d"
+    },
+    {
+      "file": "evidence/algebra-cot-anthropic_stanford-online-all-v4-s3-stats.json",
+      "bytes": 30475,
+      "sha256": "ec2394083075dc05c641e0f6cbef4921d26c25da471e4c40307ad60a7f6dfdc5"
+    },
+    {
+      "file": "evidence/paper.pdf",
+      "bytes": 2030715,
+      "sha256": "a6f448173e57d808a38679dd817bcc2e01324176cbf491d08c43cc0e7ca30bfe"
+    },
+    {
+      "file": "evidence/all-math-run-specs.json",
+      "bytes": 3107833,
+      "sha256": "1c42c80126d979d7cda9f3118c8cb66a1efac81376efd0a003fc0c182d38ab1e"
+    },
+    {
+      "file": "evidence/prealgebra-cot-anthropic_stanford-online-all-v4-s3-stats.json",
+      "bytes": 30382,
+      "sha256": "bc86dd2240a5e295871064d2616c80249d86ce130577b3af15c8f05c30b0c446"
+    },
+    {
+      "file": "evidence/geometry-regular-together_opt-175b-stats.json",
+      "bytes": 32117,
+      "sha256": "408e0657558287124f170b7b083e9cb564fbc37f42337afaa9008162fa6cf7c3"
+    },
+    {
+      "file": "evidence/counting_and_probability-regular-together_opt-175b-stats.json",
+      "bytes": 32116,
+      "sha256": "6fa5aae8c378fb858c7799b28b78efbc6dcfc1a8b98330c941ab053eb2b9a80c"
+    },
+    {
+      "file": "evidence/hf-readme.md",
+      "bytes": 3926,
+      "sha256": "2372e22a154ca3ed5865378e270b32d8ed5b615c4592fad42630a731a950bcc0"
+    },
+    {
+      "file": "evidence/precalculus-regular-openai_text-davinci-003-stats.json",
+      "bytes": 27503,
+      "sha256": "f8017ff4d29bfb900ebcdaf1796f048c7be2fa322f6a5274af6dc6249dcd7643"
+    },
+    {
+      "file": "evidence/paper.txt",
+      "bytes": 97880,
+      "sha256": "00e1bfd4c5ddd4944a09d08d2aa34f5e8cf096d532f3ce0f6efbb2bf02d50da8"
+    },
+    {
+      "file": "evidence/counting_and_probability-regular-openai_text-davinci-003-stats.json",
+      "bytes": 27485,
+      "sha256": "417b35ed3acce2f89721756c347e5c50b0bb635d38fc95beef8789cdf67fa05b"
+    },
+    {
+      "file": "evidence/algebra-regular-together_opt-175b-stats.json",
+      "bytes": 32383,
+      "sha256": "9a29d1c78dd45916fe399c1b4cb2d64992ec87954952c66e13976324cd923eb6"
+    },
+    {
+      "file": "evidence/intermediate_algebra-regular-together_opt-175b-stats.json",
+      "bytes": 32032,
+      "sha256": "5882056f2b4f6ad66ebc633e38563945cf88685c594e445d47da14d41639f19a"
+    },
+    {
+      "file": "evidence/algebra-cot-openai_text-davinci-003-stats.json",
+      "bytes": 27669,
+      "sha256": "28dc8c97026b703130f0d5a760cbc2961f3c119ace57ee2f4478cdc107cbeb5f"
+    },
+    {
+      "file": "evidence/main-code-fetch-log.json",
+      "bytes": 216,
+      "sha256": "08ce3e03d2eabdf425bed510bac7f38d4b580b273073031d059fb91f5cc388d2"
+    },
+    {
+      "file": "evidence/geometry-cot-openai_text-davinci-003-stats.json",
+      "bytes": 27549,
+      "sha256": "e56f97f950b35c40682f4e4427b6eaa14e2316e5eb839e65e538ef8fde51f005"
+    },
+    {
+      "file": "evidence/hf-api.json",
+      "bytes": 5373,
+      "sha256": "4bdf06a3b132e19b56646bfff45b4939194025540e4054310c83b0bbf5617e32"
+    },
+    {
+      "file": "evidence/number_theory-regular-openai_text-davinci-003-stats.json",
+      "bytes": 27402,
+      "sha256": "c9251b162ceef9b2b4d9e3f23f1a3a92aca0b78b7b49e857dac6ba803f09c6c0"
+    },
+    {
+      "file": "evidence/counting_and_probability-regular-anthropic_stanford-online-all-v4-s3-stats.json",
+      "bytes": 30107,
+      "sha256": "36111e16d31cb8813338cda372007ced4c452c7e3be69f0f3e533fe02778b6f3"
+    },
+    {
+      "file": "evidence/algebra-cot-together_opt-175b-stats.json",
+      "bytes": 32439,
+      "sha256": "70c2afa07e655dd7349f36cbfbdf4f5e68c355ed55c123fb3f6ed88bce17c149"
+    },
+    {
+      "file": "evidence/official-readme.md",
+      "bytes": 1345,
+      "sha256": "ea2a34912f19c4e98dfb76a99578daa42b195d5b15a71c359147cf440c6eb018"
+    },
+    {
+      "file": "evidence/geometry-regular-openai_text-davinci-003-stats.json",
+      "bytes": 27492,
+      "sha256": "7d6df870f80ded4f7a58a6cec41d95d68f93c5109ae9cc7a154b0ec4085a03cb"
+    },
+    {
+      "file": "evidence/precalculus-cot-together_opt-175b-stats.json",
+      "bytes": 32606,
+      "sha256": "08054a517b9ab8d20a23de0bcf7b79873d0493431bd9bf4abf5062720fb940a8"
+    },
+    {
+      "file": "evidence/native-equation-probe/probe.pdf",
+      "bytes": 15961,
+      "sha256": "518934d265c4cb334df40b35aa69e3976502732f238463d0f3d09eaabc48bd50"
+    },
+    {
+      "file": "evidence/native-equation-probe/probe_math.py",
+      "bytes": 1213,
+      "sha256": "16bc06c22bd495ba346a8131d0cc1fbda877ade29aea75404e6984e4437fcc9b"
+    }
+  ],
+  "provenance_logs": {
+    "text-audit.json": {
+      "pages": 55,
+      "paragraphs_checked": 319,
+      "table_cells_checked": 87,
+      "issues": [],
+      "replacement_characters": false,
+      "notes_slides": 0
+    },
+    "native-math-audit.json": {
+      "equations": "Editable native Unicode text and superscript runs",
+      "superscript_runs": [
+        {
+          "page": 38,
+          "text": "πi"
+        },
+        {
+          "page": 38,
+          "text": "πi"
+        },
+        {
+          "page": 38,
+          "text": "πi"
+        }
+      ],
+      "raster_equations": 0,
+      "raw_latex_preserved": true,
+      "omml_probe": "LibreOffice did not preserve a14 math; probe retained in evidence/native-equation-probe, never adopted."
+    },
+    "fetch-log.json": [
+      {
+        "file": "official-readme.md",
+        "url": "https://raw.githubusercontent.com/hendrycks/math/main/README.md",
+        "bytes": 1345,
+        "sha256": "ea2a34912f19c4e98dfb76a99578daa42b195d5b15a71c359147cf440c6eb018"
+      },
+      {
+        "file": "paper.pdf",
+        "url": "https://arxiv.org/pdf/2103.03874",
+        "bytes": 2030715,
+        "sha256": "a6f448173e57d808a38679dd817bcc2e01324176cbf491d08c43cc0e7ca30bfe"
+      },
+      {
+        "file": "hf-api.json",
+        "url": "https://huggingface.co/api/datasets/EleutherAI/hendrycks_math",
+        "bytes": 5373,
+        "sha256": "4bdf06a3b132e19b56646bfff45b4939194025540e4054310c83b0bbf5617e32"
+      },
+      {
+        "file": "hf-readme.md",
+        "url": "https://huggingface.co/datasets/EleutherAI/hendrycks_math/raw/main/README.md",
+        "bytes": 3926,
+        "sha256": "2372e22a154ca3ed5865378e270b32d8ed5b615c4592fad42630a731a950bcc0"
+      },
+      {
+        "file": "math-v030.py",
+        "url": "https://raw.githubusercontent.com/stanford-crfm/helm/v0.3.0/src/helm/benchmark/scenarios/math_scenario.py",
+        "bytes": 13843,
+        "sha256": "9e57937707dbb63bfb1e5b5700f7298e546702ff22890423a1e2ad2fc66bf2f9"
+      },
+      {
+        "file": "hf-original-api.json",
+        "url": "https://huggingface.co/api/datasets/hendrycks/competition_math",
+        "bytes": 2108,
+        "sha256": "ee162cb49151d00dc982f2a8867a1c533bfa625bad9688e345993fff8a56abc6"
+      },
+      {
+        "file": "algebra-cot-anthropic_stanford-online-all-v4-s3-stats.json",
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/math%3Asubject%3Dalgebra%2Clevel%3D1%2Cuse_official_examples%3DFalse%2Cuse_chain_of_thought%3DTrue%2Cmodel%3Danthropic_stanford-online-all-v4-s3/stats.json",
+        "bytes": 30475,
+        "sha256": "ec2394083075dc05c641e0f6cbef4921d26c25da471e4c40307ad60a7f6dfdc5"
+      },
+      {
+        "file": "algebra-cot-openai_text-davinci-003-stats.json",
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/math%3Asubject%3Dalgebra%2Clevel%3D1%2Cuse_official_examples%3DFalse%2Cuse_chain_of_thought%3DTrue%2Cmodel%3Dopenai_text-davinci-003/stats.json",
+        "bytes": 27669,
+        "sha256": "28dc8c97026b703130f0d5a760cbc2961f3c119ace57ee2f4478cdc107cbeb5f"
+      },
+      {
+        "file": "algebra-cot-openai_text-davinci-003-scenario_state.json",
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/math%3Asubject%3Dalgebra%2Clevel%3D1%2Cuse_official_examples%3DFalse%2Cuse_chain_of_thought%3DTrue%2Cmodel%3Dopenai_text-davinci-003/scenario_state.json",
+        "bytes": 7002910,
+        "sha256": "95d09cdb36ad39dfec9a219d52e1497cdb57adf88c0772b4f4df9426c20e57be"
+      },
+      {
+        "file": "algebra-cot-together_opt-175b-stats.json",
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/math%3Asubject%3Dalgebra%2Clevel%3D1%2Cuse_official_examples%3DFalse%2Cuse_chain_of_thought%3DTrue%2Cmodel%3Dtogether_opt-175b/stats.json",
+        "bytes": 32439,
+        "sha256": "70c2afa07e655dd7349f36cbfbdf4f5e68c355ed55c123fb3f6ed88bce17c149"
+      },
+      {
+        "file": "algebra-regular-anthropic_stanford-online-all-v4-s3-stats.json",
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/math%3Asubject%3Dalgebra%2Clevel%3D1%2Cuse_official_examples%3DTrue%2Cuse_chain_of_thought%3DFalse%2Cmodel%3Danthropic_stanford-online-all-v4-s3/stats.json",
+        "bytes": 30183,
+        "sha256": "754f083534abc6b4c462f26eda524eaf5c78571d07d63984ac8de4a78d4b0b8b"
+      },
+      {
+        "file": "algebra-regular-openai_text-davinci-003-stats.json",
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/math%3Asubject%3Dalgebra%2Clevel%3D1%2Cuse_official_examples%3DTrue%2Cuse_chain_of_thought%3DFalse%2Cmodel%3Dopenai_text-davinci-003/stats.json",
+        "bytes": 27626,
+        "sha256": "ecf177fdcc28a25b512e58b1756741c57d83f4f292655c6004118b1a0e4eab78"
+      },
+      {
+        "file": "algebra-regular-openai_text-davinci-003-scenario_state.json",
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/math%3Asubject%3Dalgebra%2Clevel%3D1%2Cuse_official_examples%3DTrue%2Cuse_chain_of_thought%3DFalse%2Cmodel%3Dopenai_text-davinci-003/scenario_state.json",
+        "bytes": 1153514,
+        "sha256": "bd2862ecb308988d09ab33f4959a4e7451b5e4970620f8d5da87371babf137bb"
+      },
+      {
+        "file": "algebra-regular-together_opt-175b-stats.json",
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/math%3Asubject%3Dalgebra%2Clevel%3D1%2Cuse_official_examples%3DTrue%2Cuse_chain_of_thought%3DFalse%2Cmodel%3Dtogether_opt-175b/stats.json",
+        "bytes": 32383,
+        "sha256": "9a29d1c78dd45916fe399c1b4cb2d64992ec87954952c66e13976324cd923eb6"
+      },
+      {
+        "file": "counting_and_probability-cot-anthropic_stanford-online-all-v4-s3-stats.json",
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/math%3Asubject%3Dcounting_and_probability%2Clevel%3D1%2Cuse_official_examples%3DFalse%2Cuse_chain_of_thought%3DTrue%2Cmodel%3Danthropic_stanford-online-all-v4-s3/stats.json",
+        "bytes": 30167,
+        "sha256": "5f8f32f84f85747a77c0fd6694489c0e4ae28c1f151ee096369017d11173b91d"
+      },
+      {
+        "file": "counting_and_probability-cot-openai_text-davinci-003-stats.json",
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/math%3Asubject%3Dcounting_and_probability%2Clevel%3D1%2Cuse_official_examples%3DFalse%2Cuse_chain_of_thought%3DTrue%2Cmodel%3Dopenai_text-davinci-003/stats.json",
+        "bytes": 27636,
+        "sha256": "859c3431358239dce6df2551a78fd01d5da09e816af0293994b5d54276e2bb01"
+      },
+      {
+        "file": "counting_and_probability-cot-together_opt-175b-stats.json",
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/math%3Asubject%3Dcounting_and_probability%2Clevel%3D1%2Cuse_official_examples%3DFalse%2Cuse_chain_of_thought%3DTrue%2Cmodel%3Dtogether_opt-175b/stats.json",
+        "bytes": 32025,
+        "sha256": "0b60176118e0e14e52714ff8c77084f4c21b6e07982aa767a98c035c8a9d3065"
+      },
+      {
+        "file": "counting_and_probability-regular-anthropic_stanford-online-all-v4-s3-stats.json",
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/math%3Asubject%3Dcounting_and_probability%2Clevel%3D1%2Cuse_official_examples%3DTrue%2Cuse_chain_of_thought%3DFalse%2Cmodel%3Danthropic_stanford-online-all-v4-s3/stats.json",
+        "bytes": 30107,
+        "sha256": "36111e16d31cb8813338cda372007ced4c452c7e3be69f0f3e533fe02778b6f3"
+      },
+      {
+        "file": "counting_and_probability-regular-openai_text-davinci-003-stats.json",
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/math%3Asubject%3Dcounting_and_probability%2Clevel%3D1%2Cuse_official_examples%3DTrue%2Cuse_chain_of_thought%3DFalse%2Cmodel%3Dopenai_text-davinci-003/stats.json",
+        "bytes": 27485,
+        "sha256": "417b35ed3acce2f89721756c347e5c50b0bb635d38fc95beef8789cdf67fa05b"
+      },
+      {
+        "file": "counting_and_probability-regular-together_opt-175b-stats.json",
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/math%3Asubject%3Dcounting_and_probability%2Clevel%3D1%2Cuse_official_examples%3DTrue%2Cuse_chain_of_thought%3DFalse%2Cmodel%3Dtogether_opt-175b/stats.json",
+        "bytes": 32116,
+        "sha256": "6fa5aae8c378fb858c7799b28b78efbc6dcfc1a8b98330c941ab053eb2b9a80c"
+      },
+      {
+        "file": "geometry-cot-anthropic_stanford-online-all-v4-s3-stats.json",
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/math%3Asubject%3Dgeometry%2Clevel%3D1%2Cuse_official_examples%3DFalse%2Cuse_chain_of_thought%3DTrue%2Cmodel%3Danthropic_stanford-online-all-v4-s3/stats.json",
+        "bytes": 30155,
+        "sha256": "650adbc723eb23d5af52b9b041acd72bc40c6ebbc1d0b7c47817956e3a3d01b2"
+      },
+      {
+        "file": "geometry-cot-openai_text-davinci-003-stats.json",
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/math%3Asubject%3Dgeometry%2Clevel%3D1%2Cuse_official_examples%3DFalse%2Cuse_chain_of_thought%3DTrue%2Cmodel%3Dopenai_text-davinci-003/stats.json",
+        "bytes": 27549,
+        "sha256": "e56f97f950b35c40682f4e4427b6eaa14e2316e5eb839e65e538ef8fde51f005"
+      },
+      {
+        "file": "geometry-cot-together_opt-175b-stats.json",
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/math%3Asubject%3Dgeometry%2Clevel%3D1%2Cuse_official_examples%3DFalse%2Cuse_chain_of_thought%3DTrue%2Cmodel%3Dtogether_opt-175b/stats.json",
+        "bytes": 32577,
+        "sha256": "5d17f38e165d8f5590175595b261e2f672dcb10c7cb5d9c5311dfc903bf44b50"
+      },
+      {
+        "file": "geometry-regular-anthropic_stanford-online-all-v4-s3-stats.json",
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/math%3Asubject%3Dgeometry%2Clevel%3D1%2Cuse_official_examples%3DTrue%2Cuse_chain_of_thought%3DFalse%2Cmodel%3Danthropic_stanford-online-all-v4-s3/stats.json",
+        "bytes": 30086,
+        "sha256": "aa5052b21c3e2732b7c333ab0a58dd7db941029c57940b920cac1e53c877461c"
+      },
+      {
+        "file": "geometry-regular-openai_text-davinci-003-stats.json",
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/math%3Asubject%3Dgeometry%2Clevel%3D1%2Cuse_official_examples%3DTrue%2Cuse_chain_of_thought%3DFalse%2Cmodel%3Dopenai_text-davinci-003/stats.json",
+        "bytes": 27492,
+        "sha256": "7d6df870f80ded4f7a58a6cec41d95d68f93c5109ae9cc7a154b0ec4085a03cb"
+      },
+      {
+        "file": "geometry-regular-together_opt-175b-stats.json",
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/math%3Asubject%3Dgeometry%2Clevel%3D1%2Cuse_official_examples%3DTrue%2Cuse_chain_of_thought%3DFalse%2Cmodel%3Dtogether_opt-175b/stats.json",
+        "bytes": 32117,
+        "sha256": "408e0657558287124f170b7b083e9cb564fbc37f42337afaa9008162fa6cf7c3"
+      },
+      {
+        "file": "intermediate_algebra-cot-anthropic_stanford-online-all-v4-s3-stats.json",
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/math%3Asubject%3Dintermediate_algebra%2Clevel%3D1%2Cuse_official_examples%3DFalse%2Cuse_chain_of_thought%3DTrue%2Cmodel%3Danthropic_stanford-online-all-v4-s3/stats.json",
+        "bytes": 29858,
+        "sha256": "547f782f7081f671a31865788e47be17b78ab4d0a94358edc31dce8aa9094a2d"
+      },
+      {
+        "file": "intermediate_algebra-cot-openai_text-davinci-003-stats.json",
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/math%3Asubject%3Dintermediate_algebra%2Clevel%3D1%2Cuse_official_examples%3DFalse%2Cuse_chain_of_thought%3DTrue%2Cmodel%3Dopenai_text-davinci-003/stats.json",
+        "bytes": 27602,
+        "sha256": "284d25c9dc0a01d6f79aaf5210e4ed877e89cf13a907ce59046d985eda1dcee8"
+      },
+      {
+        "file": "intermediate_algebra-cot-together_opt-175b-stats.json",
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/math%3Asubject%3Dintermediate_algebra%2Clevel%3D1%2Cuse_official_examples%3DFalse%2Cuse_chain_of_thought%3DTrue%2Cmodel%3Dtogether_opt-175b/stats.json",
+        "bytes": 32746,
+        "sha256": "2a20ae366ffef5d844563b33044fdcd8bcc5bee92c490e8763ae4b2a0db0cea2"
+      },
+      {
+        "file": "intermediate_algebra-regular-anthropic_stanford-online-all-v4-s3-stats.json",
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/math%3Asubject%3Dintermediate_algebra%2Clevel%3D1%2Cuse_official_examples%3DTrue%2Cuse_chain_of_thought%3DFalse%2Cmodel%3Danthropic_stanford-online-all-v4-s3/stats.json",
+        "bytes": 30131,
+        "sha256": "f8d4964a7108ff2f8a7638ee8a44a0e0310c80e2c905090f2b7ef52ae0cc3961"
+      },
+      {
+        "file": "intermediate_algebra-regular-openai_text-davinci-003-stats.json",
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/math%3Asubject%3Dintermediate_algebra%2Clevel%3D1%2Cuse_official_examples%3DTrue%2Cuse_chain_of_thought%3DFalse%2Cmodel%3Dopenai_text-davinci-003/stats.json",
+        "bytes": 27444,
+        "sha256": "8e8987fcfef2aed4338df2c513d4a0b27c0e7b0db8684f9ff7748f35e8f050a1"
+      },
+      {
+        "file": "intermediate_algebra-regular-together_opt-175b-stats.json",
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/math%3Asubject%3Dintermediate_algebra%2Clevel%3D1%2Cuse_official_examples%3DTrue%2Cuse_chain_of_thought%3DFalse%2Cmodel%3Dtogether_opt-175b/stats.json",
+        "bytes": 32032,
+        "sha256": "5882056f2b4f6ad66ebc633e38563945cf88685c594e445d47da14d41639f19a"
+      },
+      {
+        "file": "number_theory-cot-anthropic_stanford-online-all-v4-s3-stats.json",
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/math%3Asubject%3Dnumber_theory%2Clevel%3D1%2Cuse_official_examples%3DFalse%2Cuse_chain_of_thought%3DTrue%2Cmodel%3Danthropic_stanford-online-all-v4-s3/stats.json",
+        "bytes": 29966,
+        "sha256": "a6fc2ff3f690e87b74e2b787218cc0cc86e9d8cd8d4d16cd3dcd95bafb348472"
+      },
+      {
+        "file": "number_theory-cot-openai_text-davinci-003-stats.json",
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/math%3Asubject%3Dnumber_theory%2Clevel%3D1%2Cuse_official_examples%3DFalse%2Cuse_chain_of_thought%3DTrue%2Cmodel%3Dopenai_text-davinci-003/stats.json",
+        "bytes": 27443,
+        "sha256": "d5778f9c02f8c1ba959b95b202946ca13d7ef11f96c5ab934a8cea0b54f1ab30"
+      },
+      {
+        "file": "number_theory-cot-together_opt-175b-stats.json",
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/math%3Asubject%3Dnumber_theory%2Clevel%3D1%2Cuse_official_examples%3DFalse%2Cuse_chain_of_thought%3DTrue%2Cmodel%3Dtogether_opt-175b/stats.json",
+        "bytes": 32096,
+        "sha256": "8c0095872a8ae50ccdf84fc2e8ebd584bb75ba1df153e6eb565bcff910abee60"
+      },
+      {
+        "file": "number_theory-regular-anthropic_stanford-online-all-v4-s3-stats.json",
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/math%3Asubject%3Dnumber_theory%2Clevel%3D1%2Cuse_official_examples%3DTrue%2Cuse_chain_of_thought%3DFalse%2Cmodel%3Danthropic_stanford-online-all-v4-s3/stats.json",
+        "bytes": 29809,
+        "sha256": "77e24d6d1b1892ec34ec11b22f6e0825586fee3bf2f7402f6ccf05fd4cb91986"
+      },
+      {
+        "file": "number_theory-regular-openai_text-davinci-003-stats.json",
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/math%3Asubject%3Dnumber_theory%2Clevel%3D1%2Cuse_official_examples%3DTrue%2Cuse_chain_of_thought%3DFalse%2Cmodel%3Dopenai_text-davinci-003/stats.json",
+        "bytes": 27402,
+        "sha256": "c9251b162ceef9b2b4d9e3f23f1a3a92aca0b78b7b49e857dac6ba803f09c6c0"
+      },
+      {
+        "file": "number_theory-regular-together_opt-175b-stats.json",
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/math%3Asubject%3Dnumber_theory%2Clevel%3D1%2Cuse_official_examples%3DTrue%2Cuse_chain_of_thought%3DFalse%2Cmodel%3Dtogether_opt-175b/stats.json",
+        "bytes": 32069,
+        "sha256": "331131e64711d1757efed4badc796b9d9adc681475aec6e753b0d0de4680029e"
+      },
+      {
+        "file": "prealgebra-cot-anthropic_stanford-online-all-v4-s3-stats.json",
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/math%3Asubject%3Dprealgebra%2Clevel%3D1%2Cuse_official_examples%3DFalse%2Cuse_chain_of_thought%3DTrue%2Cmodel%3Danthropic_stanford-online-all-v4-s3/stats.json",
+        "bytes": 30382,
+        "sha256": "bc86dd2240a5e295871064d2616c80249d86ce130577b3af15c8f05c30b0c446"
+      },
+      {
+        "file": "prealgebra-cot-openai_text-davinci-003-stats.json",
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/math%3Asubject%3Dprealgebra%2Clevel%3D1%2Cuse_official_examples%3DFalse%2Cuse_chain_of_thought%3DTrue%2Cmodel%3Dopenai_text-davinci-003/stats.json",
+        "bytes": 27749,
+        "sha256": "68bdaca81685216a97dbac82782e99e0e03b4501c7c3e41d97cc7bd1f86c443b"
+      },
+      {
+        "file": "prealgebra-cot-together_opt-175b-stats.json",
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/math%3Asubject%3Dprealgebra%2Clevel%3D1%2Cuse_official_examples%3DFalse%2Cuse_chain_of_thought%3DTrue%2Cmodel%3Dtogether_opt-175b/stats.json",
+        "bytes": 32796,
+        "sha256": "0e61cea66b3edf4e562bfe1c1f7a761969c0f8ecac84ccb3eb1d3623479d224b"
+      },
+      {
+        "file": "prealgebra-regular-anthropic_stanford-online-all-v4-s3-stats.json",
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/math%3Asubject%3Dprealgebra%2Clevel%3D1%2Cuse_official_examples%3DTrue%2Cuse_chain_of_thought%3DFalse%2Cmodel%3Danthropic_stanford-online-all-v4-s3/stats.json",
+        "bytes": 30170,
+        "sha256": "68ad6a75256985a25df5b5fd68b85d943dafc4e96815ad3fc86beb55ad621d26"
+      },
+      {
+        "file": "prealgebra-regular-openai_text-davinci-003-stats.json",
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/math%3Asubject%3Dprealgebra%2Clevel%3D1%2Cuse_official_examples%3DTrue%2Cuse_chain_of_thought%3DFalse%2Cmodel%3Dopenai_text-davinci-003/stats.json",
+        "bytes": 27479,
+        "sha256": "02f80a788dccd70ce7bb4b76ca1bb3fb5fffa2a5c56cedc7f491c5322baa66f1"
+      },
+      {
+        "file": "prealgebra-regular-together_opt-175b-stats.json",
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/math%3Asubject%3Dprealgebra%2Clevel%3D1%2Cuse_official_examples%3DTrue%2Cuse_chain_of_thought%3DFalse%2Cmodel%3Dtogether_opt-175b/stats.json",
+        "bytes": 32121,
+        "sha256": "8d7e42df76e37cb5989f6056c048417bdf46c9cd998c29c40fe9b61256258829"
+      },
+      {
+        "file": "precalculus-cot-anthropic_stanford-online-all-v4-s3-stats.json",
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/math%3Asubject%3Dprecalculus%2Clevel%3D1%2Cuse_official_examples%3DFalse%2Cuse_chain_of_thought%3DTrue%2Cmodel%3Danthropic_stanford-online-all-v4-s3/stats.json",
+        "bytes": 30162,
+        "sha256": "094da2b73b7d23120b84f9d3ba676209baa51f24f93c98a2b00389c359250406"
+      },
+      {
+        "file": "precalculus-cot-openai_text-davinci-003-stats.json",
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/math%3Asubject%3Dprecalculus%2Clevel%3D1%2Cuse_official_examples%3DFalse%2Cuse_chain_of_thought%3DTrue%2Cmodel%3Dopenai_text-davinci-003/stats.json",
+        "bytes": 27529,
+        "sha256": "92fe6efe7988790bafde7d7dfccbd930738b16583d95c1b5c6d04bd104e840ce"
+      },
+      {
+        "file": "precalculus-cot-together_opt-175b-stats.json",
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/math%3Asubject%3Dprecalculus%2Clevel%3D1%2Cuse_official_examples%3DFalse%2Cuse_chain_of_thought%3DTrue%2Cmodel%3Dtogether_opt-175b/stats.json",
+        "bytes": 32606,
+        "sha256": "08054a517b9ab8d20a23de0bcf7b79873d0493431bd9bf4abf5062720fb940a8"
+      },
+      {
+        "file": "precalculus-regular-anthropic_stanford-online-all-v4-s3-stats.json",
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/math%3Asubject%3Dprecalculus%2Clevel%3D1%2Cuse_official_examples%3DTrue%2Cuse_chain_of_thought%3DFalse%2Cmodel%3Danthropic_stanford-online-all-v4-s3/stats.json",
+        "bytes": 30114,
+        "sha256": "e3601f609ceaba43589922aa840901bc69ce74053495f9ac10f733dd23663512"
+      },
+      {
+        "file": "precalculus-regular-openai_text-davinci-003-stats.json",
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/math%3Asubject%3Dprecalculus%2Clevel%3D1%2Cuse_official_examples%3DTrue%2Cuse_chain_of_thought%3DFalse%2Cmodel%3Dopenai_text-davinci-003/stats.json",
+        "bytes": 27503,
+        "sha256": "f8017ff4d29bfb900ebcdaf1796f048c7be2fa322f6a5274af6dc6249dcd7643"
+      },
+      {
+        "file": "precalculus-regular-together_opt-175b-stats.json",
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/math%3Asubject%3Dprecalculus%2Clevel%3D1%2Cuse_official_examples%3DTrue%2Cuse_chain_of_thought%3DFalse%2Cmodel%3Dtogether_opt-175b/stats.json",
+        "bytes": 32254,
+        "sha256": "c511677b33f62a24fa17b600a9b62fe3baeb2463b9db588e18f664efa20c1b1d"
+      }
+    ],
+    "package-audit.json": {
+      "parsed_xml_parts": 145,
+      "integer_bullets": 138,
+      "hyperlinks": 46,
+      "new_schema_errors": [],
+      "baseline_schema_errors": 11,
+      "package_integrity": "passed",
+      "internal_relationship_targets": "passed",
+      "unique_shape_ids": "passed",
+      "schema_note": "標準XSDを変更せず確認。マスター由来の既存エラーと、整数buSzPctの百分率字句形式との差を分離。整数箇条書きサイズは25000–400000で別途検査。",
+      "pages": 55,
+      "native_tables": 8,
+      "native_charts": 1
+    },
+    "layout-audit.json": {
+      "paragraphs_checked": 319,
+      "table_cells_checked": 87,
+      "issues": []
+    },
+    "data-fetch-log.json": [
+      {
+        "file": "algebra-test-00000-of-00001.parquet",
+        "url": "https://huggingface.co/datasets/EleutherAI/hendrycks_math/resolve/21a5633873b6a120296cce3e2df9d5550074f4a3/algebra/test-00000-of-00001.parquet",
+        "bytes": 353114,
+        "sha256": "0e04a850dac9cfc758eac0c80afd2d0cc65e29ea72f916c8ac1045b12af937f5"
+      },
+      {
+        "file": "algebra-train-00000-of-00001.parquet",
+        "url": "https://huggingface.co/datasets/EleutherAI/hendrycks_math/resolve/21a5633873b6a120296cce3e2df9d5550074f4a3/algebra/train-00000-of-00001.parquet",
+        "bytes": 505186,
+        "sha256": "73347f5b55869f21ff094361025dbd12d291e971aa4d72142eacee10438e449f"
+      },
+      {
+        "file": "counting_and_probability-test-00000-of-00001.parquet",
+        "url": "https://huggingface.co/datasets/EleutherAI/hendrycks_math/resolve/21a5633873b6a120296cce3e2df9d5550074f4a3/counting_and_probability/test-00000-of-00001.parquet",
+        "bytes": 175032,
+        "sha256": "c324818949c75a6227c0328a8499d58023cbbf6757cfc1736f5ab24cc8d87966"
+      },
+      {
+        "file": "counting_and_probability-train-00000-of-00001.parquet",
+        "url": "https://huggingface.co/datasets/EleutherAI/hendrycks_math/resolve/21a5633873b6a120296cce3e2df9d5550074f4a3/counting_and_probability/train-00000-of-00001.parquet",
+        "bytes": 329354,
+        "sha256": "d37ae017930df41678edee50dcde18c17fb06afaff9eb505c1b95f1002bfcb31"
+      },
+      {
+        "file": "geometry-test-00000-of-00001.parquet",
+        "url": "https://huggingface.co/datasets/EleutherAI/hendrycks_math/resolve/21a5633873b6a120296cce3e2df9d5550074f4a3/geometry/test-00000-of-00001.parquet",
+        "bytes": 263835,
+        "sha256": "98720f3a8134ad9784fd8951195245264495df03ffc5c9485a9a54ff5ae2431a"
+      },
+      {
+        "file": "geometry-train-00000-of-00001.parquet",
+        "url": "https://huggingface.co/datasets/EleutherAI/hendrycks_math/resolve/21a5633873b6a120296cce3e2df9d5550074f4a3/geometry/train-00000-of-00001.parquet",
+        "bytes": 549388,
+        "sha256": "9dbf5e5b55499e696e0ba72da9d85d4f0be3acbf7eaa6cb014b0fc78bb63784f"
+      },
+      {
+        "file": "intermediate_algebra-test-00000-of-00001.parquet",
+        "url": "https://huggingface.co/datasets/EleutherAI/hendrycks_math/resolve/21a5633873b6a120296cce3e2df9d5550074f4a3/intermediate_algebra/test-00000-of-00001.parquet",
+        "bytes": 394797,
+        "sha256": "e859f72486c951c2017da880541ca729940eaa986b0364eb23e238983df9bfeb"
+      },
+      {
+        "file": "intermediate_algebra-train-00000-of-00001.parquet",
+        "url": "https://huggingface.co/datasets/EleutherAI/hendrycks_math/resolve/21a5633873b6a120296cce3e2df9d5550074f4a3/intermediate_algebra/train-00000-of-00001.parquet",
+        "bytes": 575154,
+        "sha256": "0c87f3798ebdfb915b1f9b6fc13c1a8d064c3cb91631ccbe85b83ed5d71150f6"
+      },
+      {
+        "file": "number_theory-test-00000-of-00001.parquet",
+        "url": "https://huggingface.co/datasets/EleutherAI/hendrycks_math/resolve/21a5633873b6a120296cce3e2df9d5550074f4a3/number_theory/test-00000-of-00001.parquet",
+        "bytes": 182003,
+        "sha256": "ba156c9c9fa2040836ba12135fd964e6e67d6bccd8c469ec4a3ad941f8f6fbe9"
+      },
+      {
+        "file": "number_theory-train-00000-of-00001.parquet",
+        "url": "https://huggingface.co/datasets/EleutherAI/hendrycks_math/resolve/21a5633873b6a120296cce3e2df9d5550074f4a3/number_theory/train-00000-of-00001.parquet",
+        "bytes": 308653,
+        "sha256": "81c08649149b39811f2d1d7ddf5dfccf6c4c8044a2e169cfb24db09160c941f4"
+      },
+      {
+        "file": "prealgebra-test-00000-of-00001.parquet",
+        "url": "https://huggingface.co/datasets/EleutherAI/hendrycks_math/resolve/21a5633873b6a120296cce3e2df9d5550074f4a3/prealgebra/test-00000-of-00001.parquet",
+        "bytes": 267729,
+        "sha256": "301e5d8ade5c7b5038032532e498bdc9dca799e7f1061a63f2e7d980803240cc"
+      },
+      {
+        "file": "prealgebra-train-00000-of-00001.parquet",
+        "url": "https://huggingface.co/datasets/EleutherAI/hendrycks_math/resolve/21a5633873b6a120296cce3e2df9d5550074f4a3/prealgebra/train-00000-of-00001.parquet",
+        "bytes": 383626,
+        "sha256": "765b526fb5c0b8385cb7be2c16bf4f6f28cf71f2bc15c826abfbb5fa7f8616cc"
+      },
+      {
+        "file": "precalculus-test-00000-of-00001.parquet",
+        "url": "https://huggingface.co/datasets/EleutherAI/hendrycks_math/resolve/21a5633873b6a120296cce3e2df9d5550074f4a3/precalculus/test-00000-of-00001.parquet",
+        "bytes": 242241,
+        "sha256": "da37474ba3761ae5727af3844a7ba963a735bd6a14c65e6137593669a4fe3b9c"
+      },
+      {
+        "file": "precalculus-train-00000-of-00001.parquet",
+        "url": "https://huggingface.co/datasets/EleutherAI/hendrycks_math/resolve/21a5633873b6a120296cce3e2df9d5550074f4a3/precalculus/train-00000-of-00001.parquet",
+        "bytes": 353745,
+        "sha256": "28bb1ff95525c8d32521509bef91de76339659f5467a381e6e8deea204538f0e"
+      },
+      {
+        "file": "official-combined.parquet",
+        "url": "https://huggingface.co/datasets/qwedsacf/competition_math/resolve/e839825f9ec5c6cfa585c654a59610969ec13993/data/train-00000-of-00001-7320a6f3aba8ebd2.parquet",
+        "bytes": 4848345,
+        "sha256": "2325458edc03d786939ee9e1e5795efb9e2480247b6e1ed2c51f41bea7369c6a"
+      }
+    ],
+    "manifest.json": [
+      {
+        "page": 1,
+        "title": "MATH",
+        "section": "",
+        "kind": "cover",
+        "contains_native_table": false,
+        "contains_native_chart": false
+      },
+      {
+        "page": 2,
+        "title": "公式リポジトリ",
+        "section": "MATH",
+        "kind": "image",
+        "sources": [
+          "repo"
+        ],
+        "contains_native_table": false,
+        "contains_native_chart": false
+      },
+      {
+        "page": 3,
+        "title": "",
+        "section": "目次",
+        "kind": "toc",
+        "contains_native_table": false,
+        "contains_native_chart": false
+      },
+      {
+        "page": 4,
+        "title": "競技数学の問題と解答",
+        "section": "1. 競技数学の問題と解答",
+        "kind": "divider",
+        "contains_native_table": false,
+        "contains_native_chart": false
+      },
+      {
+        "page": 5,
+        "title": "問題、途中の解説、最終解答がそろう",
+        "section": "1. 競技数学の問題と解答",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ],
+        "body_text": [
+          "MATHは、競技数学の12,500問に、途中の解説と最終解答を付けたデータセット。",
+          "AMCやAIMEなど、米国の数学競技から問題を集めた。入力は英語の問題文で、数式や図の記述も含む。",
+          "最終解答はLaTeXのboxedに入る。解答だけを出す条件と、解説を含めて出す条件の両方で使われる。"
+        ],
+        "contains_native_table": false,
+        "contains_native_chart": false
+      },
+      {
+        "page": 6,
+        "title": "実例1：差の積を計算する",
+        "section": "1. 競技数学の問題と解答",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "example_index": 1,
+        "exampleID": "algebra/test/372",
+        "language": "en+ja",
+        "quoted_text": "Evaluate (x + y)(x − y) when x = 15 and y = 5.",
+        "raw_problem": "Evaluate $(x+ y)(x-y)$ when $x= 15$ and $y= 5$.",
+        "answer_text": "200",
+        "contains_native_table": false,
+        "contains_native_chart": false
+      },
+      {
+        "page": 7,
+        "title": "同じ問題でも、モデルの出力は異なる",
+        "section": "1. 競技数学の問題と解答",
+        "kind": "content",
+        "sources": [
+          "helm"
+        ],
+        "body_text": [
+          "式に値を代入すれば、(15 + 5)(15 − 5) = 20 × 10で200になる。",
+          "HELMの公開実行では、text-davinci-003が解答だけの条件で100、解説を出す条件で200と答えた。",
+          "二つの条件では提示する例も変わる。具体的な入力条件と採点は次の章で扱う。"
+        ],
+        "contains_native_table": false,
+        "contains_native_chart": false
+      },
+      {
+        "page": 8,
+        "title": "実例2：二重根号を外す",
+        "section": "1. 競技数学の問題と解答",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "example_index": 2,
+        "exampleID": "intermediate_algebra/test/457",
+        "language": "en+ja",
+        "quoted_text": "Simplify the expression √(41 + 24√2).",
+        "raw_problem": "Simplify the expression \\[\\sqrt{41+24\\sqrt2}.\\]",
+        "answer_text": "3 + 4√2",
+        "contains_native_table": false,
+        "contains_native_chart": false
+      },
+      {
+        "page": 9,
+        "title": "形を見抜いて、確かめる",
+        "section": "1. 競技数学の問題と解答",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ],
+        "body_text": [
+          "平方根をa + b√2と置き、両辺を二乗すると、a² + 2b² = 41、2ab = 24が必要になる。",
+          "a = 3、b = 4なら両方を満たす。正の平方根を求めているので、3 + 4√2を選ぶ。"
+        ],
+        "contains_native_table": false,
+        "contains_native_chart": false
+      },
+      {
+        "page": 10,
+        "title": "実例3：偶数の組を数える",
+        "section": "1. 競技数学の問題と解答",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "example_index": 3,
+        "exampleID": "counting_and_probability/test/445",
+        "language": "en+ja",
+        "quoted_text": "How many triples (a, b, c) of even positive integers satisfy a³ + b² + c ≤ 50?",
+        "raw_problem": "How many triples $(a,b,c)$ of even positive integers satisfy $a^3 + b^2 + c \\leq 50$?",
+        "answer_text": "35",
+        "contains_native_table": false,
+        "contains_native_chart": false
+      },
+      {
+        "page": 11,
+        "title": "条件から、候補を絞って数える",
+        "section": "1. 競技数学の問題と解答",
+        "kind": "content",
+        "sources": [
+          "data"
+        ],
+        "contains_native_table": true,
+        "contains_native_chart": false
+      },
+      {
+        "page": 12,
+        "title": "採点とHELMの比較条件",
+        "section": "2. 採点とHELMの比較条件",
+        "kind": "divider",
+        "contains_native_table": false,
+        "contains_native_chart": false
+      },
+      {
+        "page": 13,
+        "title": "最終解答を正規化して照合する",
+        "section": "2. 採点とHELMの比較条件",
+        "kind": "content",
+        "sources": [
+          "code"
+        ],
+        "body_text": [
+          "生成した最終解答を、参照解答と照合する。空白やLaTeXの一部を整え、分数や平方根などの表記をそろえる。",
+          "各問を正解1・不正解0で採点し、評価集合の正解率を求める。",
+          "chain-of-thought条件でも、採点するのは最後のboxedから取り出した解答。途中の推論を個別には採点しない。"
+        ],
+        "contains_native_table": false,
+        "contains_native_chart": false
+      },
+      {
+        "page": 14,
+        "title": "HELMの解答抽出は条件で変わる",
+        "section": "2. 採点とHELMの比較条件",
+        "kind": "content",
+        "sources": [
+          "code"
+        ],
+        "contains_native_table": true,
+        "contains_native_chart": false
+      },
+      {
+        "page": 15,
+        "title": "同じ問題の、実際に生成された二つの出力",
+        "section": "2. 採点とHELMの比較条件",
+        "kind": "generation",
+        "sources": [
+          "helm"
+        ],
+        "exampleID": "algebra/test/372",
+        "language": "en+ja",
+        "raw_generated_text": " Plugging in the given values for $x$ and $y$, we get $(15+5)(15-5) = \\boxed{200}$.",
+        "contains_native_table": false,
+        "contains_native_chart": false
+      },
+      {
+        "page": 16,
+        "title": "正しい最終解答と、正しい推論を分ける",
+        "section": "2. 採点とHELMの比較条件",
+        "kind": "content",
+        "sources": [
+          "code"
+        ],
+        "body_text": [
+          "公開実行のregularは100を出したため不正解。chain-of-thoughtは最後のboxedから200を抽出できるため正解。",
+          "この採点は、途中の各等式や説明が正しいかを証明するものではない。",
+          "解説付きの学習データは、最終解答だけでは見えない解法や誤りを調べる材料にもなる。"
+        ],
+        "contains_native_table": false,
+        "contains_native_chart": false
+      },
+      {
+        "page": 17,
+        "title": "2021年：全5,000問では低い正解率",
+        "section": "2. 採点とHELMの比較条件",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ],
+        "contains_native_table": true,
+        "contains_native_chart": false
+      },
+      {
+        "page": 18,
+        "title": "HELMはLevel 1の437問を評価する",
+        "section": "2. 採点とHELMの比較条件",
+        "kind": "content",
+        "sources": [
+          "helm"
+        ],
+        "body_text": [
+          "HELM Classicの二つの条件は、7分野のLevel 1に絞った437問を評価する。",
+          "全testの5,000問のうち8.74%。Level 2〜5の4,563問は、この二つの公開グループの評価には入らない。",
+          "以下は各分野の実行値から、評価問題数で重み付けして再集計した正解率。各分野の値は3試行平均。"
+        ],
+        "contains_native_table": false,
+        "contains_native_chart": false
+      },
+      {
+        "page": 19,
+        "title": "解説付き条件の正解率はモデルで異なる",
+        "section": "2. 採点とHELMの比較条件",
+        "kind": "content",
+        "sources": [
+          "helm"
+        ],
+        "contains_native_table": true,
+        "contains_native_chart": false
+      },
+      {
+        "page": 20,
+        "title": "提示例と生成条件も同時に変わる",
+        "section": "2. 採点とHELMの比較条件",
+        "kind": "content",
+        "sources": [
+          "run"
+        ],
+        "contains_native_table": true,
+        "contains_native_chart": false
+      },
+      {
+        "page": 21,
+        "title": "収集とデータの全体像",
+        "section": "3. 収集とデータの全体像",
+        "kind": "divider",
+        "contains_native_table": false,
+        "contains_native_chart": false
+      },
+      {
+        "page": 22,
+        "title": "数学競技の問題と、公開された解説を集める",
+        "section": "3. 収集とデータの全体像",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ],
+        "body_text": [
+          "AMC 10、AMC 12、AIMEなどの競技問題と、Art of Problem Solvingのコミュニティにある解説が主な素材。",
+          "7,500問を学習、5,000問をtestに分け、各問に分野・難度・途中の解説・最終解答を対応させた。",
+          "問題と解説はLaTeXで数式を表し、必要な図はAsymptoteという作図言語で記述する。"
+        ],
+        "contains_native_table": false,
+        "contains_native_chart": false
+      },
+      {
+        "page": 23,
+        "title": "7分野を、学習とtestに分けて収録",
+        "section": "3. 収集とデータの全体像",
+        "kind": "content",
+        "sources": [
+          "data"
+        ],
+        "contains_native_table": true,
+        "contains_native_chart": false
+      },
+      {
+        "page": 24,
+        "title": "testには難度1から5までを含む",
+        "section": "3. 収集とデータの全体像",
+        "kind": "content",
+        "sources": [
+          "data"
+        ],
+        "contains_native_table": false,
+        "contains_native_chart": true
+      },
+      {
+        "page": 25,
+        "title": "難度は、同じ分野の中で付けられる",
+        "section": "3. 収集とデータの全体像",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ],
+        "body_text": [
+          "難度は各分野の中で1〜5を付ける。1が易しく、5が難しい。",
+          "AoPSの難度を使い、AMC 8の序盤の問題はLevel 1、AIMEの問題はLevel 5に当たることが多い。",
+          "分野と難度は別の注釈。例えば複素数の絶対値や三角関数も、Level 1に含まれる。"
+        ],
+        "contains_native_table": false,
+        "contains_native_chart": false
+      },
+      {
+        "page": 26,
+        "title": "利用の変化と入手方法",
+        "section": "4. 利用の変化と入手方法",
+        "kind": "divider",
+        "contains_native_table": false,
+        "contains_native_chart": false
+      },
+      {
+        "page": 27,
+        "title": "数学の学習と、汎用モデルの評価に使われる",
+        "section": "4. 利用の変化と入手方法",
+        "kind": "content",
+        "sources": [
+          "repo"
+        ],
+        "body_text": [
+          "2021年は、解説付きデータでの学習と、別途AMPSでの数学事前学習を組み合わせて評価した。",
+          "HELMでは、学習例をプロンプトに入れる方法で複数の汎用言語モデルを比較した。",
+          "2026-10-18時点で公式リポジトリ、固定した公開配布、HELMの実装を取得できる。"
+        ],
+        "contains_native_table": false,
+        "contains_native_chart": false
+      },
+      {
+        "page": 28,
+        "title": "分野、分割、バージョンを固定して読む",
+        "section": "4. 利用の変化と入手方法",
+        "kind": "code",
+        "sources": [
+          "data"
+        ],
+        "contains_native_table": false,
+        "contains_native_chart": false
+      },
+      {
+        "page": 29,
+        "title": "公式リンクと、分割を保つ配布を照合した",
+        "section": "4. 利用の変化と入手方法",
+        "kind": "content",
+        "sources": [
+          "linked"
+        ],
+        "body_text": [
+          "公式READMEが案内する配布では、12,500問を1つの集合として取得できた。",
+          "今回の実例には、学習・testと7分野の分割を保つEleutherAIの公開配布を使った。",
+          "両方の配布を全件取得し、問題・解説・分野・難度の12,500レコードが、重複数も含めて一致することを確認した。"
+        ],
+        "contains_native_table": false,
+        "contains_native_chart": false
+      },
+      {
+        "page": 30,
+        "title": "元の競技問題の帰属を保って利用する",
+        "section": "4. 利用の変化と入手方法",
+        "kind": "content",
+        "sources": [
+          "repo"
+        ],
+        "body_text": [
+          "公式コードと公開データカードのライセンス表示はMIT。元の競技問題やAoPS上の解説の著者・出所も保持する。",
+          "今回取得した分割付きParquetは合計約4.9 MB。公式リンク先の統合Parquetは約4.8 MBで、どちらも取得実測。",
+          "実例の問題全文・解説全文・最終解答・固定revision・レコードhashを検証記録に保存した。"
+        ],
+        "contains_native_table": false,
+        "contains_native_chart": false
+      },
+      {
+        "page": 31,
+        "title": "式を読み、解法を組み立て、最終解答を出す",
+        "section": "4. 利用の変化と入手方法",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ],
+        "body_text": [
+          "MATHは12,500問の競技数学データで、7分野・5段階の難度と解説付きの解答を持つ。",
+          "最終解答の採点と、途中の推論の正しさは別に検討する。",
+          "HELMのregularと解説付き条件は、Level 1の437問を、異なる提示例と出力条件で比べる。"
+        ],
+        "contains_native_table": false,
+        "contains_native_chart": false
+      },
+      {
+        "page": 32,
+        "title": "Appendix",
+        "section": "Appendix",
+        "kind": "divider",
+        "contains_native_table": false,
+        "contains_native_chart": false
+      },
+      {
+        "page": 33,
+        "title": "",
+        "section": "Appendix: 目次",
+        "kind": "toc",
+        "contains_native_table": false,
+        "contains_native_chart": false
+      },
+      {
+        "page": 34,
+        "title": "分野と難度が異なる追加例",
+        "section": "Appendix: 1. 分野と難度が異なる追加例",
+        "kind": "divider",
+        "contains_native_table": false,
+        "contains_native_chart": false
+      },
+      {
+        "page": 35,
+        "title": "実例4：負の数を割る",
+        "section": "Appendix: 1. 分野と難度が異なる追加例",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "example_index": 4,
+        "exampleID": "prealgebra/test/134",
+        "language": "en+ja",
+        "quoted_text": "Compute (−49) ÷ 7.",
+        "raw_problem": "Compute $(-49)\\div 7$.",
+        "answer_text": "−7",
+        "contains_native_table": false,
+        "contains_native_chart": false
+      },
+      {
+        "page": 36,
+        "title": "実例5：30度の余弦",
+        "section": "Appendix: 1. 分野と難度が異なる追加例",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "example_index": 5,
+        "exampleID": "geometry/test/235",
+        "language": "en+ja",
+        "quoted_text": "Compute cos 30°.",
+        "raw_problem": "Compute $\\cos 30^\\circ$.",
+        "answer_text": "√3 / 2",
+        "contains_native_table": false,
+        "contains_native_chart": false
+      },
+      {
+        "page": 37,
+        "title": "実例6：階乗の約数を数える",
+        "section": "Appendix: 1. 分野と難度が異なる追加例",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "example_index": 6,
+        "exampleID": "number_theory/test/345",
+        "language": "en+ja",
+        "quoted_text": "Find the number of positive divisors of 9!.",
+        "raw_problem": "Find the number of positive divisors of 9!.",
+        "answer_text": "160",
+        "contains_native_table": false,
+        "contains_native_chart": false
+      },
+      {
+        "page": 38,
+        "title": "実例7：複素指数関数の値",
+        "section": "Appendix: 1. 分野と難度が異なる追加例",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "example_index": 7,
+        "exampleID": "precalculus/test/235",
+        "language": "en+ja",
+        "quoted_text": "Compute e^(πi).",
+        "raw_problem": "Compute $e^{\\pi i}.$",
+        "answer_text": "−1",
+        "contains_native_table": false,
+        "contains_native_chart": false
+      },
+      {
+        "page": 39,
+        "title": "実例8：平方根の定義域",
+        "section": "Appendix: 1. 分野と難度が異なる追加例",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "example_index": 8,
+        "exampleID": "algebra/test/195",
+        "language": "en+ja",
+        "quoted_text": "Find the domain of √(6 − x − x²).",
+        "raw_problem": "Find the domain of $\\sqrt{6-x-x^2}$.",
+        "answer_text": "[−3, 2]",
+        "contains_native_table": false,
+        "contains_native_chart": false
+      },
+      {
+        "page": 40,
+        "title": "実例9：7の倍数を除く",
+        "section": "Appendix: 1. 分野と難度が異なる追加例",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "example_index": 9,
+        "exampleID": "counting_and_probability/test/156",
+        "language": "en+ja",
+        "quoted_text": "How many positive three-digit numbers are not multiples of 7?",
+        "raw_problem": "How many positive three-digit numbers are not multiples of 7?",
+        "answer_text": "772",
+        "contains_native_table": false,
+        "contains_native_chart": false
+      },
+      {
+        "page": 41,
+        "title": "実例10：平方因子を根号の外へ出す",
+        "section": "Appendix: 1. 分野と難度が異なる追加例",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "example_index": 10,
+        "exampleID": "prealgebra/test/190",
+        "language": "en+ja",
+        "quoted_text": "Simplify √242.",
+        "raw_problem": "Simplify $\\sqrt{242}$.",
+        "answer_text": "11√2",
+        "contains_native_table": false,
+        "contains_native_chart": false
+      },
+      {
+        "page": 42,
+        "title": "実例11：30度の正弦",
+        "section": "Appendix: 1. 分野と難度が異なる追加例",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "example_index": 11,
+        "exampleID": "geometry/test/167",
+        "language": "en+ja",
+        "quoted_text": "Compute sin 30°.",
+        "raw_problem": "Compute $\\sin 30^\\circ$.",
+        "answer_text": "1 / 2",
+        "contains_native_table": false,
+        "contains_native_chart": false
+      },
+      {
+        "page": 43,
+        "title": "実例12：平方数の約数を数える",
+        "section": "Appendix: 1. 分野と難度が異なる追加例",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "example_index": 12,
+        "exampleID": "number_theory/test/89",
+        "language": "en+ja",
+        "quoted_text": "How many factors of 2⁵ · 3⁶ are perfect squares?",
+        "raw_problem": "How many factors of $2^5\\cdot3^6$ are perfect squares?",
+        "answer_text": "12",
+        "contains_native_table": false,
+        "contains_native_chart": false
+      },
+      {
+        "page": 44,
+        "title": "実例13：三角比の符号を選ぶ",
+        "section": "Appendix: 1. 分野と難度が異なる追加例",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "example_index": 13,
+        "exampleID": "precalculus/test/541",
+        "language": "en+ja",
+        "quoted_text": "If sin x + cos x = 1/5 and 0 < x < π, find tan x.",
+        "raw_problem": "If $\\sin x + \\cos x = \\frac{1}{5}$ and $0 < x < \\pi,$ find $\\tan x.$",
+        "answer_text": "−4 / 3",
+        "contains_native_table": false,
+        "contains_native_chart": false
+      },
+      {
+        "page": 45,
+        "title": "実行条件と配布の補足",
+        "section": "Appendix: 2. 実行条件と配布の補足",
+        "kind": "divider",
+        "contains_native_table": false,
+        "contains_native_chart": false
+      },
+      {
+        "page": 46,
+        "title": "Level 1の分野別評価対象数",
+        "section": "Appendix: 2. 実行条件と配布の補足",
+        "kind": "content",
+        "sources": [
+          "helm"
+        ],
+        "contains_native_table": true,
+        "contains_native_chart": false
+      },
+      {
+        "page": 47,
+        "title": "text-davinci-003の分野別正解率",
+        "section": "Appendix: 2. 実行条件と配布の補足",
+        "kind": "content",
+        "sources": [
+          "helm"
+        ],
+        "contains_native_table": true,
+        "contains_native_chart": false
+      },
+      {
+        "page": 48,
+        "title": "実際の提示例数はモデルと分野で異なる",
+        "section": "Appendix: 2. 実行条件と配布の補足",
+        "kind": "content",
+        "sources": [
+          "cot"
+        ],
+        "body_text": [
+          "regularでは今回の3モデルとも8例。解説付き条件でも、text-davinci-003とAnthropicは全分野で8例だった。",
+          "OPTの解説付き条件は、中級代数5.16例、幾何5.88例、解析の基礎6.88例が平均。ほかは8例。",
+          "入力を切り詰めた割合prompt_truncatedは、今回の42実行すべて0。提示例を減らして収めた場合も、この値は0になる。"
+        ],
+        "contains_native_table": false,
+        "contains_native_chart": false
+      },
+      {
+        "page": 49,
+        "title": "表記の正規化を、数学の同値判定と区別する",
+        "section": "Appendix: 2. 実行条件と配布の補足",
+        "kind": "content",
+        "sources": [
+          "code"
+        ],
+        "body_text": [
+          "例えば1/2とLaTeXの\\frac{1}{2}は、表記をそろえて一致と判定される。",
+          "一方で、(x + 1)²とx² + 2x + 1を一般に展開して比較する記号計算器は使わない。",
+          "chain-of-thought条件では、生成と参照解説の最後のboxedを取り出してから、同じ正規化を行う。"
+        ],
+        "contains_native_table": false,
+        "contains_native_chart": false
+      },
+      {
+        "page": 50,
+        "title": "人の成績は、20問の別標本で調べた",
+        "section": "Appendix: 2. 実行条件と配布の補足",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ],
+        "body_text": [
+          "testから20問を無作為に選び、大学生6人が1時間、手計算で解いた。",
+          "数学を好まない参加者は8/20、IMOで3度金メダルを得た参加者は18/20だった。",
+          "ほかの4人は13問、14問、15問、18問に正解した。数学経験が異なる参加者を、同じ20問で比較した。"
+        ],
+        "contains_native_table": false,
+        "contains_native_chart": false
+      },
+      {
+        "page": 51,
+        "title": "解説の符号も、最終解答とは別に確かめる",
+        "section": "Appendix: 2. 実行条件と配布の補足",
+        "kind": "content",
+        "sources": [
+          "data"
+        ],
+        "body_text": [
+          "実例13の配布解説では、sin x = 4/5、cos x = −3/5を導いた後、最後の分数で符号の位置が入れ替わっている。",
+          "最終解答−4/3は変わらないが、途中の式は、(4/5) ÷ (−3/5)と書くのが導出に対応する。",
+          "資料の解説はこの対応を保って説明し、配布解説の原文は変更せず検証記録へ保存した。"
+        ],
+        "contains_native_table": false,
+        "contains_native_chart": false
+      },
+      {
+        "page": 52,
+        "title": "研究と参考文献",
+        "section": "Appendix: 3. 研究と参考文献",
+        "kind": "divider",
+        "contains_native_table": false,
+        "contains_native_chart": false
+      },
+      {
+        "page": 53,
+        "title": "競技数学を、大規模な解説付き評価にする",
+        "section": "Appendix: 3. 研究と参考文献",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ],
+        "body_text": [
+          "第一著者はDan Hendrycks、最終著者はJacob Steinhardt。計8人の著者による研究としてNeurIPS 2021 Datasets and Benchmarksに発表された。",
+          "競技数学の問題、段階的な解説、難度と分野の注釈を組み合わせ、数学的な問題解決を測る資源を作った。",
+          "同時にAMPSを公開し、数学に特化した事前学習データが性能に与える影響も調べた。"
+        ],
+        "contains_native_table": false,
+        "contains_native_chart": false
+      },
+      {
+        "page": 54,
+        "title": "参考文献",
+        "section": "Appendix: 3. 研究と参考文献",
+        "kind": "references",
+        "contains_native_table": false,
+        "contains_native_chart": false
+      },
+      {
+        "page": 55,
+        "title": "参考文献",
+        "section": "Appendix: 3. 研究と参考文献",
+        "kind": "references",
+        "contains_native_table": false,
+        "contains_native_chart": false
+      }
+    ],
+    "links-audit.json": {
+      "native_url_only_runs": 46,
+      "pdf_link_rectangles": 46,
+      "pdf_link_text_exactly_matches_url": true,
+      "pdf_link_character_centers_match_url": true,
+      "glyph_box_overhangs": [],
+      "shortened_url_labels": [],
+      "issues": []
+    },
+    "example-audit.json": {
+      "count": 13,
+      "main": 3,
+      "appendix": 10,
+      "checks": [
+        {
+          "index": 1,
+          "id": "algebra/test/372",
+          "role": "main",
+          "raw_record_exact": true,
+          "sha256": "ce2df48575f5fe2b69cf5a55e92f306e6de3ddcfceee1798acaedd273c121422",
+          "original_latex": "Evaluate $(x+ y)(x-y)$ when $x= 15$ and $y= 5$.",
+          "display_native_text": "Evaluate (x + y)(x − y) when x = 15 and y = 5.",
+          "translation": "x = 15、y = 5のとき、(x + y)(x − y)の値を求めよ。",
+          "answer_latex": "200",
+          "answer_display": "200",
+          "copyright": "Source competition problems and AoPS solution material retain their respective authorship; repository/Mirror MIT metadata recorded separately."
+        },
+        {
+          "index": 2,
+          "id": "intermediate_algebra/test/457",
+          "role": "main",
+          "raw_record_exact": true,
+          "sha256": "506cc6a6f0b26778d13d28da1af49cf93c8521299b3be89763d30d5a8d3c602f",
+          "original_latex": "Simplify the expression \\[\\sqrt{41+24\\sqrt2}.\\]",
+          "display_native_text": "Simplify the expression √(41 + 24√2).",
+          "translation": "式 √(41 + 24√2) を簡単にせよ。",
+          "answer_latex": "3+4\\sqrt2",
+          "answer_display": "3 + 4√2",
+          "copyright": "Source competition problems and AoPS solution material retain their respective authorship; repository/Mirror MIT metadata recorded separately."
+        },
+        {
+          "index": 3,
+          "id": "counting_and_probability/test/445",
+          "role": "main",
+          "raw_record_exact": true,
+          "sha256": "2a97f68cff17a0d2b60684b149bb581ee096ed059e6ef482876e7915b2780d05",
+          "original_latex": "How many triples $(a,b,c)$ of even positive integers satisfy $a^3 + b^2 + c \\leq 50$?",
+          "display_native_text": "How many triples (a, b, c) of even positive integers satisfy a³ + b² + c ≤ 50?",
+          "translation": "a³ + b² + c ≤ 50を満たす、正の偶数の3つ組(a, b, c)はいくつあるか。",
+          "answer_latex": "35",
+          "answer_display": "35",
+          "copyright": "Source competition problems and AoPS solution material retain their respective authorship; repository/Mirror MIT metadata recorded separately."
+        },
+        {
+          "index": 4,
+          "id": "prealgebra/test/134",
+          "role": "appendix",
+          "raw_record_exact": true,
+          "sha256": "dce18cc5042d7853e24fa410e824abd0e51d0e682f0b3ec4b30aaac13e501ec7",
+          "original_latex": "Compute $(-49)\\div 7$.",
+          "display_native_text": "Compute (−49) ÷ 7.",
+          "translation": "(−49) ÷ 7を計算せよ。",
+          "answer_latex": "-7",
+          "answer_display": "−7",
+          "copyright": "Source competition problems and AoPS solution material retain their respective authorship; repository/Mirror MIT metadata recorded separately."
+        },
+        {
+          "index": 5,
+          "id": "geometry/test/235",
+          "role": "appendix",
+          "raw_record_exact": true,
+          "sha256": "7a4ff805d040e6ae41ac1b96e749f16a7acfa3a36c9efd50b51d2887b4dbfa7a",
+          "original_latex": "Compute $\\cos 30^\\circ$.",
+          "display_native_text": "Compute cos 30°.",
+          "translation": "cos 30°を求めよ。",
+          "answer_latex": "\\frac{\\sqrt{3}}{2}",
+          "answer_display": "√3 / 2",
+          "copyright": "Source competition problems and AoPS solution material retain their respective authorship; repository/Mirror MIT metadata recorded separately."
+        },
+        {
+          "index": 6,
+          "id": "number_theory/test/345",
+          "role": "appendix",
+          "raw_record_exact": true,
+          "sha256": "e4e4eb1f9e0d326d2cf1608365570dea70920bcdd5cccab809f1bd8c3e676395",
+          "original_latex": "Find the number of positive divisors of 9!.",
+          "display_native_text": "Find the number of positive divisors of 9!.",
+          "translation": "9!の正の約数の個数を求めよ。",
+          "answer_latex": "160",
+          "answer_display": "160",
+          "copyright": "Source competition problems and AoPS solution material retain their respective authorship; repository/Mirror MIT metadata recorded separately."
+        },
+        {
+          "index": 7,
+          "id": "precalculus/test/235",
+          "role": "appendix",
+          "raw_record_exact": true,
+          "sha256": "256a22a7f4dcbe0cbf0b5f0536313413063ef09e4152367d8b67b192133058fb",
+          "original_latex": "Compute $e^{\\pi i}.$",
+          "display_native_text": "Compute e^(πi).",
+          "translation": "e^(πi)を計算せよ。",
+          "answer_latex": "-1",
+          "answer_display": "−1",
+          "copyright": "Source competition problems and AoPS solution material retain their respective authorship; repository/Mirror MIT metadata recorded separately."
+        },
+        {
+          "index": 8,
+          "id": "algebra/test/195",
+          "role": "appendix",
+          "raw_record_exact": true,
+          "sha256": "79c375bb5d6ba5873c6a752a214147f5393289a770e9d28d0ce5d1fa95045682",
+          "original_latex": "Find the domain of $\\sqrt{6-x-x^2}$.",
+          "display_native_text": "Find the domain of √(6 − x − x²).",
+          "translation": "√(6 − x − x²)の定義域を求めよ。",
+          "answer_latex": "[-3,2]",
+          "answer_display": "[−3, 2]",
+          "copyright": "Source competition problems and AoPS solution material retain their respective authorship; repository/Mirror MIT metadata recorded separately."
+        },
+        {
+          "index": 9,
+          "id": "counting_and_probability/test/156",
+          "role": "appendix",
+          "raw_record_exact": true,
+          "sha256": "148a54e6ba18fc062a776166d20416e8599feaa7ad391db58a6a12299f64a395",
+          "original_latex": "How many positive three-digit numbers are not multiples of 7?",
+          "display_native_text": "How many positive three-digit numbers are not multiples of 7?",
+          "translation": "正の3桁の整数のうち、7の倍数でないものはいくつあるか。",
+          "answer_latex": "772",
+          "answer_display": "772",
+          "copyright": "Source competition problems and AoPS solution material retain their respective authorship; repository/Mirror MIT metadata recorded separately."
+        },
+        {
+          "index": 10,
+          "id": "prealgebra/test/190",
+          "role": "appendix",
+          "raw_record_exact": true,
+          "sha256": "588fff56b0b18063dc4aa18e73ebf2dc8492b80e3c3975121bf80fb5765f705e",
+          "original_latex": "Simplify $\\sqrt{242}$.",
+          "display_native_text": "Simplify √242.",
+          "translation": "√242を簡単にせよ。",
+          "answer_latex": "11\\sqrt2",
+          "answer_display": "11√2",
+          "copyright": "Source competition problems and AoPS solution material retain their respective authorship; repository/Mirror MIT metadata recorded separately."
+        },
+        {
+          "index": 11,
+          "id": "geometry/test/167",
+          "role": "appendix",
+          "raw_record_exact": true,
+          "sha256": "c2cb95acedf63704219f3654b5c990929c966cdae234e1048c48bbf5b5bf3961",
+          "original_latex": "Compute $\\sin 30^\\circ$.",
+          "display_native_text": "Compute sin 30°.",
+          "translation": "sin 30°を求めよ。",
+          "answer_latex": "\\frac{1}{2}",
+          "answer_display": "1 / 2",
+          "copyright": "Source competition problems and AoPS solution material retain their respective authorship; repository/Mirror MIT metadata recorded separately."
+        },
+        {
+          "index": 12,
+          "id": "number_theory/test/89",
+          "role": "appendix",
+          "raw_record_exact": true,
+          "sha256": "6f5a0282a280602d2b98956368f674372d323afc803ca2b8b4c294427dc94fdf",
+          "original_latex": "How many factors of $2^5\\cdot3^6$ are perfect squares?",
+          "display_native_text": "How many factors of 2⁵ · 3⁶ are perfect squares?",
+          "translation": "2⁵ · 3⁶の約数のうち、平方数はいくつあるか。",
+          "answer_latex": "12",
+          "answer_display": "12",
+          "copyright": "Source competition problems and AoPS solution material retain their respective authorship; repository/Mirror MIT metadata recorded separately."
+        },
+        {
+          "index": 13,
+          "id": "precalculus/test/541",
+          "role": "appendix",
+          "raw_record_exact": true,
+          "sha256": "3b427a1967b39eaf2ef4a48f794a3bdbd359a003d2b5ea92bde1a9cfa0ad9f10",
+          "original_latex": "If $\\sin x + \\cos x = \\frac{1}{5}$ and $0 < x < \\pi,$ find $\\tan x.$",
+          "display_native_text": "If sin x + cos x = 1/5 and 0 < x < π, find tan x.",
+          "translation": "sin x + cos x = 1/5、0 < x < πのとき、tan xを求めよ。",
+          "answer_latex": "-\\frac{4}{3}",
+          "answer_display": "−4 / 3",
+          "copyright": "Source competition problems and AoPS solution material retain their respective authorship; repository/Mirror MIT metadata recorded separately."
+        }
+      ],
+      "display_note": "Native editable text with mathematical Unicode and native superscript runs. Raw LaTeX preserved verbatim in examples.json and Parquet. No raster equations; semantic grouping retained with parentheses."
+    },
+    "screenshot-log.json": {
+      "pages": [
+        {
+          "slug": "math",
+          "url": "https://github.com/hendrycks/math",
+          "status": 200,
+          "title": "GitHub - hendrycks/math: The MATH Dataset (NeurIPS 2021) · GitHub",
+          "css": 34,
+          "screenshot": "official-site.png",
+          "transport": "system-CA-verified urllib responses rendered in Chromium; persistent trust unchanged"
+        }
+      ],
+      "asset_failures": []
+    },
+    "panel-ink-audit.json": [
+      {
+        "page": 6,
+        "top_pt": 7.7333333333333485,
+        "bottom_pt": 8.266614173228334,
+        "target_pt": 8,
+        "raster_tolerance_pt": 1.5
+      },
+      {
+        "page": 8,
+        "top_pt": 8.400000000000006,
+        "bottom_pt": 7.599999999999994,
+        "target_pt": 8,
+        "raster_tolerance_pt": 1.5
+      },
+      {
+        "page": 10,
+        "top_pt": 8.400000000000006,
+        "bottom_pt": 8.266640419947521,
+        "target_pt": 8,
+        "raster_tolerance_pt": 1.5
+      },
+      {
+        "page": 15,
+        "top_pt": 7.7333333333333485,
+        "bottom_pt": 8.266614173228334,
+        "target_pt": 8,
+        "raster_tolerance_pt": 1.5
+      },
+      {
+        "page": 15,
+        "top_pt": 7.683228346456701,
+        "bottom_pt": 8.316771653543299,
+        "target_pt": 8,
+        "raster_tolerance_pt": 1.5
+      },
+      {
+        "page": 35,
+        "top_pt": 7.7333333333333485,
+        "bottom_pt": 8.266614173228334,
+        "target_pt": 8,
+        "raster_tolerance_pt": 1.5
+      },
+      {
+        "page": 36,
+        "top_pt": 7.7333333333333485,
+        "bottom_pt": 8.266614173228334,
+        "target_pt": 8,
+        "raster_tolerance_pt": 1.5
+      },
+      {
+        "page": 37,
+        "top_pt": 7.7333333333333485,
+        "bottom_pt": 8.266640419947521,
+        "target_pt": 8,
+        "raster_tolerance_pt": 1.5
+      },
+      {
+        "page": 38,
+        "top_pt": 7.7333333333333485,
+        "bottom_pt": 8.266614173228334,
+        "target_pt": 8,
+        "raster_tolerance_pt": 1.5
+      },
+      {
+        "page": 39,
+        "top_pt": 8.400000000000006,
+        "bottom_pt": 7.599973753280835,
+        "target_pt": 8,
+        "raster_tolerance_pt": 1.5
+      },
+      {
+        "page": 40,
+        "top_pt": 7.7333333333333485,
+        "bottom_pt": 8.266640419947521,
+        "target_pt": 8,
+        "raster_tolerance_pt": 1.5
+      },
+      {
+        "page": 41,
+        "top_pt": 8.400000000000006,
+        "bottom_pt": 7.599999999999994,
+        "target_pt": 8,
+        "raster_tolerance_pt": 1.5
+      },
+      {
+        "page": 42,
+        "top_pt": 7.7333333333333485,
+        "bottom_pt": 8.266614173228334,
+        "target_pt": 8,
+        "raster_tolerance_pt": 1.5
+      },
+      {
+        "page": 43,
+        "top_pt": 7.7333333333333485,
+        "bottom_pt": 8.266640419947521,
+        "target_pt": 8,
+        "raster_tolerance_pt": 1.5
+      },
+      {
+        "page": 44,
+        "top_pt": 7.7333333333333485,
+        "bottom_pt": 8.266614173228334,
+        "target_pt": 8,
+        "raster_tolerance_pt": 1.5
+      }
+    ],
+    "evidence/main-code-fetch-log.json": {
+      "url": "https://raw.githubusercontent.com/stanford-crfm/helm/main/src/helm/benchmark/scenarios/math_scenario.py",
+      "bytes": 16043,
+      "sha256": "8bcfca0f2de1cc907e4b8779ea478ba80e644458e2fabb5502e44107033cdf84"
+    }
+  },
+  "artifact_sha256": {
+    "pdf": "650a1fb3079ec5d2d177dc33b2c50ebceb01a7585d803c95229cd5ab18fda76d",
+    "pptx": "bc40995bea25effde38953bc845d7d152c5bfeb2da8d87f4e704f4ec3ad566f1"
+  },
+  "independent_review": "../skill-proofreading/math/independent-review/",
+  "example-audit.json": {
+    "count": 13,
+    "main": 3,
+    "appendix": 10,
+    "checks": [
+      {
+        "index": 1,
+        "id": "algebra/test/372",
+        "role": "main",
+        "raw_record_exact": true,
+        "sha256": "ce2df48575f5fe2b69cf5a55e92f306e6de3ddcfceee1798acaedd273c121422",
+        "original_latex": "Evaluate $(x+ y)(x-y)$ when $x= 15$ and $y= 5$.",
+        "display_native_text": "Evaluate (x + y)(x − y) when x = 15 and y = 5.",
+        "translation": "x = 15、y = 5のとき、(x + y)(x − y)の値を求めよ。",
+        "answer_latex": "200",
+        "answer_display": "200",
+        "copyright": "Source competition problems and AoPS solution material retain their respective authorship; repository/Mirror MIT metadata recorded separately."
+      },
+      {
+        "index": 2,
+        "id": "intermediate_algebra/test/457",
+        "role": "main",
+        "raw_record_exact": true,
+        "sha256": "506cc6a6f0b26778d13d28da1af49cf93c8521299b3be89763d30d5a8d3c602f",
+        "original_latex": "Simplify the expression \\[\\sqrt{41+24\\sqrt2}.\\]",
+        "display_native_text": "Simplify the expression √(41 + 24√2).",
+        "translation": "式 √(41 + 24√2) を簡単にせよ。",
+        "answer_latex": "3+4\\sqrt2",
+        "answer_display": "3 + 4√2",
+        "copyright": "Source competition problems and AoPS solution material retain their respective authorship; repository/Mirror MIT metadata recorded separately."
+      },
+      {
+        "index": 3,
+        "id": "counting_and_probability/test/445",
+        "role": "main",
+        "raw_record_exact": true,
+        "sha256": "2a97f68cff17a0d2b60684b149bb581ee096ed059e6ef482876e7915b2780d05",
+        "original_latex": "How many triples $(a,b,c)$ of even positive integers satisfy $a^3 + b^2 + c \\leq 50$?",
+        "display_native_text": "How many triples (a, b, c) of even positive integers satisfy a³ + b² + c ≤ 50?",
+        "translation": "a³ + b² + c ≤ 50を満たす、正の偶数の3つ組(a, b, c)はいくつあるか。",
+        "answer_latex": "35",
+        "answer_display": "35",
+        "copyright": "Source competition problems and AoPS solution material retain their respective authorship; repository/Mirror MIT metadata recorded separately."
+      },
+      {
+        "index": 4,
+        "id": "prealgebra/test/134",
+        "role": "appendix",
+        "raw_record_exact": true,
+        "sha256": "dce18cc5042d7853e24fa410e824abd0e51d0e682f0b3ec4b30aaac13e501ec7",
+        "original_latex": "Compute $(-49)\\div 7$.",
+        "display_native_text": "Compute (−49) ÷ 7.",
+        "translation": "(−49) ÷ 7を計算せよ。",
+        "answer_latex": "-7",
+        "answer_display": "−7",
+        "copyright": "Source competition problems and AoPS solution material retain their respective authorship; repository/Mirror MIT metadata recorded separately."
+      },
+      {
+        "index": 5,
+        "id": "geometry/test/235",
+        "role": "appendix",
+        "raw_record_exact": true,
+        "sha256": "7a4ff805d040e6ae41ac1b96e749f16a7acfa3a36c9efd50b51d2887b4dbfa7a",
+        "original_latex": "Compute $\\cos 30^\\circ$.",
+        "display_native_text": "Compute cos 30°.",
+        "translation": "cos 30°を求めよ。",
+        "answer_latex": "\\frac{\\sqrt{3}}{2}",
+        "answer_display": "√3 / 2",
+        "copyright": "Source competition problems and AoPS solution material retain their respective authorship; repository/Mirror MIT metadata recorded separately."
+      },
+      {
+        "index": 6,
+        "id": "number_theory/test/345",
+        "role": "appendix",
+        "raw_record_exact": true,
+        "sha256": "e4e4eb1f9e0d326d2cf1608365570dea70920bcdd5cccab809f1bd8c3e676395",
+        "original_latex": "Find the number of positive divisors of 9!.",
+        "display_native_text": "Find the number of positive divisors of 9!.",
+        "translation": "9!の正の約数の個数を求めよ。",
+        "answer_latex": "160",
+        "answer_display": "160",
+        "copyright": "Source competition problems and AoPS solution material retain their respective authorship; repository/Mirror MIT metadata recorded separately."
+      },
+      {
+        "index": 7,
+        "id": "precalculus/test/235",
+        "role": "appendix",
+        "raw_record_exact": true,
+        "sha256": "256a22a7f4dcbe0cbf0b5f0536313413063ef09e4152367d8b67b192133058fb",
+        "original_latex": "Compute $e^{\\pi i}.$",
+        "display_native_text": "Compute e^(πi).",
+        "translation": "e^(πi)を計算せよ。",
+        "answer_latex": "-1",
+        "answer_display": "−1",
+        "copyright": "Source competition problems and AoPS solution material retain their respective authorship; repository/Mirror MIT metadata recorded separately."
+      },
+      {
+        "index": 8,
+        "id": "algebra/test/195",
+        "role": "appendix",
+        "raw_record_exact": true,
+        "sha256": "79c375bb5d6ba5873c6a752a214147f5393289a770e9d28d0ce5d1fa95045682",
+        "original_latex": "Find the domain of $\\sqrt{6-x-x^2}$.",
+        "display_native_text": "Find the domain of √(6 − x − x²).",
+        "translation": "√(6 − x − x²)の定義域を求めよ。",
+        "answer_latex": "[-3,2]",
+        "answer_display": "[−3, 2]",
+        "copyright": "Source competition problems and AoPS solution material retain their respective authorship; repository/Mirror MIT metadata recorded separately."
+      },
+      {
+        "index": 9,
+        "id": "counting_and_probability/test/156",
+        "role": "appendix",
+        "raw_record_exact": true,
+        "sha256": "148a54e6ba18fc062a776166d20416e8599feaa7ad391db58a6a12299f64a395",
+        "original_latex": "How many positive three-digit numbers are not multiples of 7?",
+        "display_native_text": "How many positive three-digit numbers are not multiples of 7?",
+        "translation": "正の3桁の整数のうち、7の倍数でないものはいくつあるか。",
+        "answer_latex": "772",
+        "answer_display": "772",
+        "copyright": "Source competition problems and AoPS solution material retain their respective authorship; repository/Mirror MIT metadata recorded separately."
+      },
+      {
+        "index": 10,
+        "id": "prealgebra/test/190",
+        "role": "appendix",
+        "raw_record_exact": true,
+        "sha256": "588fff56b0b18063dc4aa18e73ebf2dc8492b80e3c3975121bf80fb5765f705e",
+        "original_latex": "Simplify $\\sqrt{242}$.",
+        "display_native_text": "Simplify √242.",
+        "translation": "√242を簡単にせよ。",
+        "answer_latex": "11\\sqrt2",
+        "answer_display": "11√2",
+        "copyright": "Source competition problems and AoPS solution material retain their respective authorship; repository/Mirror MIT metadata recorded separately."
+      },
+      {
+        "index": 11,
+        "id": "geometry/test/167",
+        "role": "appendix",
+        "raw_record_exact": true,
+        "sha256": "c2cb95acedf63704219f3654b5c990929c966cdae234e1048c48bbf5b5bf3961",
+        "original_latex": "Compute $\\sin 30^\\circ$.",
+        "display_native_text": "Compute sin 30°.",
+        "translation": "sin 30°を求めよ。",
+        "answer_latex": "\\frac{1}{2}",
+        "answer_display": "1 / 2",
+        "copyright": "Source competition problems and AoPS solution material retain their respective authorship; repository/Mirror MIT metadata recorded separately."
+      },
+      {
+        "index": 12,
+        "id": "number_theory/test/89",
+        "role": "appendix",
+        "raw_record_exact": true,
+        "sha256": "6f5a0282a280602d2b98956368f674372d323afc803ca2b8b4c294427dc94fdf",
+        "original_latex": "How many factors of $2^5\\cdot3^6$ are perfect squares?",
+        "display_native_text": "How many factors of 2⁵ · 3⁶ are perfect squares?",
+        "translation": "2⁵ · 3⁶の約数のうち、平方数はいくつあるか。",
+        "answer_latex": "12",
+        "answer_display": "12",
+        "copyright": "Source competition problems and AoPS solution material retain their respective authorship; repository/Mirror MIT metadata recorded separately."
+      },
+      {
+        "index": 13,
+        "id": "precalculus/test/541",
+        "role": "appendix",
+        "raw_record_exact": true,
+        "sha256": "3b427a1967b39eaf2ef4a48f794a3bdbd359a003d2b5ea92bde1a9cfa0ad9f10",
+        "original_latex": "If $\\sin x + \\cos x = \\frac{1}{5}$ and $0 < x < \\pi,$ find $\\tan x.$",
+        "display_native_text": "If sin x + cos x = 1/5 and 0 < x < π, find tan x.",
+        "translation": "sin x + cos x = 1/5、0 < x < πのとき、tan xを求めよ。",
+        "answer_latex": "-\\frac{4}{3}",
+        "answer_display": "−4 / 3",
+        "copyright": "Source competition problems and AoPS solution material retain their respective authorship; repository/Mirror MIT metadata recorded separately."
+      }
+    ],
+    "display_note": "Native editable text with mathematical Unicode and native superscript runs. Raw LaTeX preserved verbatim in examples.json and Parquet. No raster equations; semantic grouping retained with parentheses."
+  },
+  "screenshot-log.json": {
+    "pages": [
+      {
+        "slug": "math",
+        "url": "https://github.com/hendrycks/math",
+        "status": 200,
+        "title": "GitHub - hendrycks/math: The MATH Dataset (NeurIPS 2021) · GitHub",
+        "css": 34,
+        "screenshot": "official-site.png",
+        "transport": "system-CA-verified urllib responses rendered in Chromium; persistent trust unchanged"
+      }
+    ],
+    "asset_failures": []
+  }
+}
