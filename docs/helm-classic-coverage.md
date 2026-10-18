@@ -68,43 +68,43 @@ GSM8KとHumanEvalは既存資料で対象データセットを紹介済み。MML
 |bbq|BBQ (Bias Benchmark for Question Answering)|作成済み|[PPTX](../slides/datasets-in-10-minutes-bbq.pptx) / [PDF](../slides/datasets-in-10-minutes-bbq.pdf)|
 |bold|BOLD (Bias in Open-Ended Language Generation Dataset)|作成済み|[PPTX](../slides/datasets-in-10-minutes-bold.pptx) / [PDF](../slides/datasets-in-10-minutes-bold.pdf)|
 |real_toxicity_prompts|RealToxicityPrompts|作成済み|[PPTX](../slides/datasets-in-10-minutes-realtoxicityprompts.pptx) / [PDF](../slides/datasets-in-10-minutes-realtoxicityprompts.pdf)|
-|synthetic_efficiency|Synthetic efficiency|未着手||
+|synthetic_efficiency|Synthetic efficiency|作成済み|[PPTX](../slides/datasets-in-10-minutes-synthetic-efficiency.pptx) / [PDF](../slides/datasets-in-10-minutes-synthetic-efficiency.pdf)|
 
 ## CLEVAのタスク群
 
 |シナリオ|表示名|状態|資料|
 |---|---|---|---|
-|cleva_closed_book_question_answering|CLEVA (Chinese) closed book question answering|CLEVA系列として最後に着手||
-|cleva_summarization|CLEVA (Chinese) summarization|CLEVA系列として最後に着手||
-|cleva_text_classification|CLEVA (Chinese) text classification|CLEVA系列として最後に着手||
-|cleva_translation|CLEVA (Chinese) translation|CLEVA系列として最後に着手||
-|cleva_data_to_text_generation|CLEVA (Chinese) data to text generation|CLEVA系列として最後に着手||
-|cleva_dialogue_generation|CLEVA (Chinese) dialogue generation|CLEVA系列として最後に着手||
-|cleva_opinion_mining|CLEVA (Chinese) opinion mining|CLEVA系列として最後に着手||
-|cleva_paraphrase_generation|CLEVA (Chinese) paraphrase generation|CLEVA系列として最後に着手||
-|cleva_paraphrase_identification|CLEVA (Chinese) paraphrase identification|CLEVA系列として最後に着手||
-|cleva_reading_comprehension|CLEVA (Chinese) reading comprehension|CLEVA系列として最後に着手||
-|cleva_sentiment_analysis|CLEVA (Chinese) sentiment analysis|CLEVA系列として最後に着手||
-|cleva_language_modeling|CLEVA (Chinese) language modeling|CLEVA系列として最後に着手||
-|cleva_pinyin_transliteration|CLEVA (Chinese) pinyin transliteration|CLEVA系列として最後に着手||
-|cleva_classical_chinese_understanding|CLEVA (Chinese) classical Chinese understanding|CLEVA系列として最後に着手||
-|cleva_coreference_resolution|CLEVA (Chinese) coreference resolution|CLEVA系列として最後に着手||
-|cleva_intent_understanding|CLEVA (Chinese) intent understanding|CLEVA系列として最後に着手||
-|cleva_subject_knowledge|CLEVA (Chinese) subject knowledge|CLEVA系列として最後に着手||
-|cleva_cultural_knowledge|CLEVA (Chinese) cultural knowledge|CLEVA系列として最後に着手||
-|cleva_reasoning_primitive|CLEVA (Chinese) reasoning primitive|CLEVA系列として最後に着手||
-|cleva_deductive_reasoning|CLEVA (Chinese) deductive reasoning|CLEVA系列として最後に着手||
-|cleva_inductive_reasoning|CLEVA (Chinese) inductive reasoning|CLEVA系列として最後に着手||
-|cleva_code_synthesis|CLEVA (Chinese) code synthesis|CLEVA系列として最後に着手||
-|cleva_commonsense_reasoning|CLEVA (Chinese) commonsense reasoning|CLEVA系列として最後に着手||
-|cleva_mathematical_reasoning|CLEVA (Chinese) mathematical reasoning|CLEVA系列として最後に着手||
-|cleva_conceptual_generalization|CLEVA (Chinese) conceptual generalization|CLEVA系列として最後に着手||
-|cleva_toxicity_detection|CLEVA (Chinese) toxicity detection|CLEVA系列として最後に着手||
-|cleva_bias|CLEVA (Chinese) bias|CLEVA系列として最後に着手||
-|cleva_copyright|CLEVA (Chinese) copyright|CLEVA系列として最後に着手||
-|cleva_fact_checking|CLEVA (Chinese) fact checking|CLEVA系列として最後に着手||
-|cleva_instruction_following|CLEVA (Chinese) instruction following|CLEVA系列として最後に着手||
-|cleva_mathematical_calculation|CLEVA (Chinese) mathematical calculation|CLEVA系列として最後に着手||
+|cleva_closed_book_question_answering|CLEVA (Chinese) closed book question answering|プラットフォーム作成済み・個別採用元を制作中|[CLEVAプラットフォーム](../slides/datasets-in-10-minutes-cleva.pdf) / [採用元台帳](cleva-source-inventory.md)|
+|cleva_summarization|CLEVA (Chinese) summarization|プラットフォーム作成済み・個別採用元を制作中|[CLEVAプラットフォーム](../slides/datasets-in-10-minutes-cleva.pdf) / [採用元台帳](cleva-source-inventory.md)|
+|cleva_text_classification|CLEVA (Chinese) text classification|プラットフォーム作成済み・個別採用元を制作中|[CLEVAプラットフォーム](../slides/datasets-in-10-minutes-cleva.pdf) / [採用元台帳](cleva-source-inventory.md)|
+|cleva_translation|CLEVA (Chinese) translation|プラットフォーム作成済み・個別採用元を制作中|[CLEVAプラットフォーム](../slides/datasets-in-10-minutes-cleva.pdf) / [採用元台帳](cleva-source-inventory.md)|
+|cleva_data_to_text_generation|CLEVA (Chinese) data to text generation|プラットフォーム作成済み・個別採用元を制作中|[CLEVAプラットフォーム](../slides/datasets-in-10-minutes-cleva.pdf) / [採用元台帳](cleva-source-inventory.md)|
+|cleva_dialogue_generation|CLEVA (Chinese) dialogue generation|プラットフォーム作成済み・個別採用元を制作中|[CLEVAプラットフォーム](../slides/datasets-in-10-minutes-cleva.pdf) / [採用元台帳](cleva-source-inventory.md)|
+|cleva_opinion_mining|CLEVA (Chinese) opinion mining|プラットフォーム作成済み・個別採用元を制作中|[CLEVAプラットフォーム](../slides/datasets-in-10-minutes-cleva.pdf) / [採用元台帳](cleva-source-inventory.md)|
+|cleva_paraphrase_generation|CLEVA (Chinese) paraphrase generation|プラットフォーム作成済み・個別採用元を制作中|[CLEVAプラットフォーム](../slides/datasets-in-10-minutes-cleva.pdf) / [採用元台帳](cleva-source-inventory.md)|
+|cleva_paraphrase_identification|CLEVA (Chinese) paraphrase identification|プラットフォーム作成済み・個別採用元を制作中|[CLEVAプラットフォーム](../slides/datasets-in-10-minutes-cleva.pdf) / [採用元台帳](cleva-source-inventory.md)|
+|cleva_reading_comprehension|CLEVA (Chinese) reading comprehension|プラットフォーム作成済み・個別採用元を制作中|[CLEVAプラットフォーム](../slides/datasets-in-10-minutes-cleva.pdf) / [採用元台帳](cleva-source-inventory.md)|
+|cleva_sentiment_analysis|CLEVA (Chinese) sentiment analysis|プラットフォーム作成済み・個別採用元を制作中|[CLEVAプラットフォーム](../slides/datasets-in-10-minutes-cleva.pdf) / [採用元台帳](cleva-source-inventory.md)|
+|cleva_language_modeling|CLEVA (Chinese) language modeling|プラットフォーム作成済み・個別採用元を制作中|[CLEVAプラットフォーム](../slides/datasets-in-10-minutes-cleva.pdf) / [採用元台帳](cleva-source-inventory.md)|
+|cleva_pinyin_transliteration|CLEVA (Chinese) pinyin transliteration|プラットフォーム作成済み・個別採用元を制作中|[CLEVAプラットフォーム](../slides/datasets-in-10-minutes-cleva.pdf) / [採用元台帳](cleva-source-inventory.md)|
+|cleva_classical_chinese_understanding|CLEVA (Chinese) classical Chinese understanding|プラットフォーム作成済み・個別採用元を制作中|[CLEVAプラットフォーム](../slides/datasets-in-10-minutes-cleva.pdf) / [採用元台帳](cleva-source-inventory.md)|
+|cleva_coreference_resolution|CLEVA (Chinese) coreference resolution|プラットフォーム作成済み・個別採用元を制作中|[CLEVAプラットフォーム](../slides/datasets-in-10-minutes-cleva.pdf) / [採用元台帳](cleva-source-inventory.md)|
+|cleva_intent_understanding|CLEVA (Chinese) intent understanding|プラットフォーム作成済み・個別採用元を制作中|[CLEVAプラットフォーム](../slides/datasets-in-10-minutes-cleva.pdf) / [採用元台帳](cleva-source-inventory.md)|
+|cleva_subject_knowledge|CLEVA (Chinese) subject knowledge|プラットフォーム作成済み・個別採用元を制作中|[CLEVAプラットフォーム](../slides/datasets-in-10-minutes-cleva.pdf) / [採用元台帳](cleva-source-inventory.md)|
+|cleva_cultural_knowledge|CLEVA (Chinese) cultural knowledge|プラットフォーム作成済み・個別採用元を制作中|[CLEVAプラットフォーム](../slides/datasets-in-10-minutes-cleva.pdf) / [採用元台帳](cleva-source-inventory.md)|
+|cleva_reasoning_primitive|CLEVA (Chinese) reasoning primitive|プラットフォーム作成済み・個別採用元を制作中|[CLEVAプラットフォーム](../slides/datasets-in-10-minutes-cleva.pdf) / [採用元台帳](cleva-source-inventory.md)|
+|cleva_deductive_reasoning|CLEVA (Chinese) deductive reasoning|プラットフォーム作成済み・個別採用元を制作中|[CLEVAプラットフォーム](../slides/datasets-in-10-minutes-cleva.pdf) / [採用元台帳](cleva-source-inventory.md)|
+|cleva_inductive_reasoning|CLEVA (Chinese) inductive reasoning|プラットフォーム作成済み・個別採用元を制作中|[CLEVAプラットフォーム](../slides/datasets-in-10-minutes-cleva.pdf) / [採用元台帳](cleva-source-inventory.md)|
+|cleva_code_synthesis|CLEVA (Chinese) code synthesis|プラットフォーム作成済み・個別採用元を制作中|[CLEVAプラットフォーム](../slides/datasets-in-10-minutes-cleva.pdf) / [採用元台帳](cleva-source-inventory.md)|
+|cleva_commonsense_reasoning|CLEVA (Chinese) commonsense reasoning|プラットフォーム作成済み・個別採用元を制作中|[CLEVAプラットフォーム](../slides/datasets-in-10-minutes-cleva.pdf) / [採用元台帳](cleva-source-inventory.md)|
+|cleva_mathematical_reasoning|CLEVA (Chinese) mathematical reasoning|プラットフォーム作成済み・個別採用元を制作中|[CLEVAプラットフォーム](../slides/datasets-in-10-minutes-cleva.pdf) / [採用元台帳](cleva-source-inventory.md)|
+|cleva_conceptual_generalization|CLEVA (Chinese) conceptual generalization|プラットフォーム作成済み・個別採用元を制作中|[CLEVAプラットフォーム](../slides/datasets-in-10-minutes-cleva.pdf) / [採用元台帳](cleva-source-inventory.md)|
+|cleva_toxicity_detection|CLEVA (Chinese) toxicity detection|プラットフォーム作成済み・個別採用元を制作中|[CLEVAプラットフォーム](../slides/datasets-in-10-minutes-cleva.pdf) / [採用元台帳](cleva-source-inventory.md)|
+|cleva_bias|CLEVA (Chinese) bias|プラットフォーム作成済み・個別採用元を制作中|[CLEVAプラットフォーム](../slides/datasets-in-10-minutes-cleva.pdf) / [採用元台帳](cleva-source-inventory.md)|
+|cleva_copyright|CLEVA (Chinese) copyright|プラットフォーム作成済み・個別採用元を制作中|[CLEVAプラットフォーム](../slides/datasets-in-10-minutes-cleva.pdf) / [採用元台帳](cleva-source-inventory.md)|
+|cleva_fact_checking|CLEVA (Chinese) fact checking|プラットフォーム作成済み・個別採用元を制作中|[CLEVAプラットフォーム](../slides/datasets-in-10-minutes-cleva.pdf) / [採用元台帳](cleva-source-inventory.md)|
+|cleva_instruction_following|CLEVA (Chinese) instruction following|プラットフォーム作成済み・個別採用元を制作中|[CLEVAプラットフォーム](../slides/datasets-in-10-minutes-cleva.pdf) / [採用元台帳](cleva-source-inventory.md)|
+|cleva_mathematical_calculation|CLEVA (Chinese) mathematical calculation|プラットフォーム作成済み・個別採用元を制作中|[CLEVAプラットフォーム](../slides/datasets-in-10-minutes-cleva.pdf) / [採用元台帳](cleva-source-inventory.md)|
 
 ## 構想上の領域
 
