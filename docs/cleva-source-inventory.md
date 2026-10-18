@@ -75,3 +75,7 @@ opinion_mining、固有名未判明の分野知識/意図/ピンイン/中国語
 ## NLPCC2018の公式ガイドラインを追加確認
 
 2018年当時の公式案内の公開アーカイブから、Task 7の公式ガイドラインPDFを取得した。中国語KBQA・KBQGと英語KBQUの3課題を区別し、正解の形式と採点方法を確認できた。中国語KBQAの公開説明例は1件で、原コーパスの全体やCLEVA選定版を取得したことにはならない。公式テストZIPは現サイト503、照会したアーカイブにはスナップショットがなく、訓練データのBaiduリンクはこの環境の接続経路で403となった。[取得先・SHA・公開例・接続結果](data-audits/nlpcc2018-source-access.json)を記録した。
+
+## 概念の一般化：参照論文の本文を取得
+
+Patel–PavlickのICLR2022論文 *Mapping Language Models to Grounded Conceptual Spaces* は、OpenReview現サイトへの接続が403だったが、公式PDF URLの公開アーカイブから本文を取得できた。原論文と著者実装を照合する材料が増えた一方、CLEVA独自の生成器・乱数seed・中国語の評価集合は未取得のままである。[取得先・SHA・ページ数](data-audits/cleva-family-origins.json)を更新した。
