@@ -1,0 +1,120 @@
+{
+  "dataset": "TwitterAAE",
+  "reviewer": "/root/create_cnndm",
+  "status": "passed",
+  "final_hashes": {
+    "datasets-in-10-minutes-twitter-aae.pptx": "1d57e8c24efd2a8044e3a7db755a4adc70e67b871965085353db359da2ab80e8",
+    "datasets-in-10-minutes-twitter-aae.pdf": "743ebbd4263d0a85174791a97d9ddd1dde680696a43a872041380b5f6aaea931"
+  },
+  "primary_sources_reviewed": [
+    "2016 EMNLP full paper sections2.1/2.3/3/4.1",
+    "official model README",
+    "HELM current scenario code",
+    "HELM BasicMetric byte/scoring implementation",
+    "published run stats and 2,000 actual request states"
+  ],
+  "source_checks": [
+    "地域の人口統計と言語の混合比を、個人の人種確率として説明していない",
+    "2016年はユーザー単位の80%/5%閾値、HELMは投稿比率の上位抽出と5万件標本と区別",
+    "13件は公開request_statesの原文・ID・hashと一致、生成した正解文は付けていない",
+    "4runの集計統計からBPBとperplexityを再計算して一致",
+    "text-davinci-003 AA/white各1,000原記録から、条件トークン除外後のlogprobとbyte数を独立集計し公開BPB/perplexityと浮動小数点誤差内で一致",
+    "AA7/white6、英語原文の全文と訳の対応を確認",
+    "投稿本文の権利とコードMITを区別"
+  ],
+  "visual": {
+    "overview_viewed": true,
+    "required_important_pages": [
+      2,
+      8,
+      9,
+      10,
+      15,
+      16,
+      19,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      40,
+      42,
+      44,
+      48,
+      49
+    ],
+    "all_required_pages_individually_viewed": true,
+    "pages_individually_viewed": [
+      2,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      12,
+      13,
+      14,
+      15,
+      16,
+      19,
+      21,
+      24,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      40,
+      42,
+      43,
+      44,
+      48,
+      49
+    ],
+    "changed_pages_rechecked": [
+      12,
+      34
+    ]
+  },
+  "findings": [
+    {
+      "priority": "P2",
+      "page": 12,
+      "issue": "第2段落最終行と第3段落が約13.86pt重なる",
+      "evidence": "旧PDFの前者字形y228.14–258.56pt、後者y244.70–275.22pt",
+      "resolution": "制作者が各段落の位置を明示し20ptへ調整。再描画で分離を確認。",
+      "resolved": true
+    },
+    {
+      "priority": "P2",
+      "page": 34,
+      "issue": "Not tired at allを、文脈なしで眠気に限定した訳と見出し",
+      "resolution": "全然疲れてない。／疲れを否定する、へ修正。再描画と元レコードで確認。",
+      "resolved": true
+    }
+  ],
+  "package": {
+    "zip_integrity": true,
+    "internal_relationships": true,
+    "unique_shape_ids": true,
+    "notes_slides": 0,
+    "native_tables": 6,
+    "native_url_only_runs": 43
+  },
+  "limitations": [
+    "CodaLab元CSV全5万件ずつは取得されておらず、集合全体の分布は独立確認していない。公開run各1,000件と標本抽出コードの説明を確認した。",
+    "OPT-175Bは集計statsから再計算し、全トークンrawの再取得はしていない。"
+  ],
+  "remaining_issues": []
+}

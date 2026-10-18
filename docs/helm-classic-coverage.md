@@ -34,9 +34,9 @@ GSM8KとHumanEvalは既存資料で対象データセットを紹介済み。MML
 |civil_comments|CivilComments|作成済み|[PPTX](../slides/datasets-in-10-minutes-civil-comments.pptx) / [PDF](../slides/datasets-in-10-minutes-civil-comments.pdf)|
 |ice|ICE (International Corpus of English)|作成済み|[PPTX](../slides/datasets-in-10-minutes-ice.pptx) / [PDF](../slides/datasets-in-10-minutes-ice.pdf)|
 |the_pile|The Pile|作成済み|[PPTX](../slides/datasets-in-10-minutes-the-pile.pptx) / [PDF](../slides/datasets-in-10-minutes-the-pile.pdf)|
-|twitter_aae|TwitterAAE|未着手||
-|twitter_aae_aa|TwitterAAE (AA)|未着手||
-|twitter_aae_white|TwitterAAE (white)|未着手||
+|twitter_aae|TwitterAAE|作成済み|[PPTX](../slides/datasets-in-10-minutes-twitter-aae.pptx) / [PDF](../slides/datasets-in-10-minutes-twitter-aae.pdf)|
+|twitter_aae_aa|TwitterAAE (AA)|作成済み|[PPTX](../slides/datasets-in-10-minutes-twitter-aae.pptx) / [PDF](../slides/datasets-in-10-minutes-twitter-aae.pdf)|
+|twitter_aae_white|TwitterAAE (white)|作成済み|[PPTX](../slides/datasets-in-10-minutes-twitter-aae.pptx) / [PDF](../slides/datasets-in-10-minutes-twitter-aae.pdf)|
 |blimp|BLiMP (The Benchmark of Linguistic Minimal Pairs for English)|作成済み|[PPTX](../slides/datasets-in-10-minutes-blimp.pptx) / [PDF](../slides/datasets-in-10-minutes-blimp.pdf)|
 |wikifact|WikiFact|未着手||
 |babi_qa|bAbI|作成済み|[PPTX](../slides/datasets-in-10-minutes-babi.pptx) / [PDF](../slides/datasets-in-10-minutes-babi.pdf)|
