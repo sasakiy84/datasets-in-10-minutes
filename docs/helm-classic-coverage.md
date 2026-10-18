@@ -4,9 +4,11 @@
 
 最初の5資料はBoolQ、HellaSwag、TruthfulQA、IMDb、XSum。いずれも既存28資料にはなく、読解、常識的な文章補完、真実性、感情分類、要約を横断でき、公開実例がある。
 
+続く10資料はOpenBookQA、MMLU、bAbI、BLiMP、APPS、BBQ、BOLD、RAFT、CivilComments、WMT14。知識・文法・プログラミング・偏り・少数例分類・翻訳を扱う。WMT14はスキーマに定義があるが、同リリースの公開実行設定は0件。
+
 CLEVA系列は最後に扱う。CLEVAそのものの仕組みと評価設計を紹介する資料を用意し、個別データセットは事例が公開されていれば、それぞれ独立した資料にする。スキーマの31個のタスク群を、31個のデータセットとして扱わない。
 
-GSM8KとHumanEvalは既存資料で対象データセットを紹介済み。MMLUに関連する既存のMMMLUは多言語版の資料なので、MMLUを作成済みとは扱わない。HELM固有の設定について必要な追補は、その対象を制作・更新する際に照合する。
+GSM8KとHumanEvalは既存資料で対象データセットを紹介済み。MMLUに関連する既存のMMMLUは多言語版の資料なので、今回の英語MMLUとは別資料として扱う。HELM固有の設定について必要な追補は、その対象を制作・更新する際に照合する。
 
 [機械可読の全項目・実行設定件数・出典ハッシュ](helm-classic-coverage.json)。実行設定件数は公開されたrun_specsのgroupsに、その名前が含まれる件数。0件はシナリオや公開事例が存在しないことを意味しない。
 
@@ -20,24 +22,24 @@ GSM8KとHumanEvalは既存資料で対象データセットを紹介済み。MML
 |natural_qa_openbook_longans|NaturalQuestions (open-book)|未着手||
 |quac|QuAC (Question Answering in Context)|未着手||
 |hellaswag|HellaSwag|作成済み|[PPTX](../slides/datasets-in-10-minutes-hellaswag.pptx) / [PDF](../slides/datasets-in-10-minutes-hellaswag.pdf)|
-|openbookqa|OpenbookQA|未着手||
+|openbookqa|OpenbookQA|今回制作|openbookqa|
 |truthful_qa|TruthfulQA|作成済み|[PPTX](../slides/datasets-in-10-minutes-truthfulqa.pptx) / [PDF](../slides/datasets-in-10-minutes-truthfulqa.pdf)|
-|mmlu|MMLU (Massive Multitask Language Understanding)|未着手||
+|mmlu|MMLU (Massive Multitask Language Understanding)|今回制作|mmlu|
 |msmarco_regular|MS MARCO (regular track)|未着手||
 |msmarco_trec|MS MARCO (TREC track)|未着手||
 |summarization_cnndm|CNN/DailyMail|未着手||
 |summarization_xsum|XSUM|作成済み|[PPTX](../slides/datasets-in-10-minutes-xsum.pptx) / [PDF](../slides/datasets-in-10-minutes-xsum.pdf)|
 |imdb|IMDB|作成済み|[PPTX](../slides/datasets-in-10-minutes-imdb.pptx) / [PDF](../slides/datasets-in-10-minutes-imdb.pdf)|
-|raft|RAFT (Real-world Annotated Few-Shot)|未着手||
-|civil_comments|CivilComments|未着手||
+|raft|RAFT (Real-world Annotated Few-Shot)|今回制作|raft|
+|civil_comments|CivilComments|今回制作|civil-comments|
 |ice|ICE (International Corpus of English)|未着手||
 |the_pile|The Pile|未着手||
 |twitter_aae|TwitterAAE|未着手||
 |twitter_aae_aa|TwitterAAE (AA)|未着手||
 |twitter_aae_white|TwitterAAE (white)|未着手||
-|blimp|BLiMP (The Benchmark of Linguistic Minimal Pairs for English)|未着手||
+|blimp|BLiMP (The Benchmark of Linguistic Minimal Pairs for English)|今回制作|blimp|
 |wikifact|WikiFact|未着手||
-|babi_qa|bAbI|未着手||
+|babi_qa|bAbI|今回制作|babi|
 |dyck_language|Dyck|未着手||
 |numeracy|Numerical reasoning|未着手||
 |synthetic_reasoning|Synthetic reasoning (abstract symbols)|未着手||
@@ -45,13 +47,13 @@ GSM8KとHumanEvalは既存資料で対象データセットを紹介済み。MML
 |gsm|GSM8K (Grade school math word problems)|作成済み|[PPTX](../slides/datasets-in-10-minutes-gsm8k.pptx)|
 |math_regular|MATH|未着手||
 |math_chain_of_thought|MATH (chain-of-thought)|未着手||
-|code_apps|APPS (Code)|未着手||
+|code_apps|APPS (Code)|今回制作|apps|
 |code_humaneval|HumanEval (Code)|作成済み|[PPTX](../slides/datasets-in-10-minutes-humaneval.pptx)|
 |legalbench|LegalBench|未着手||
 |legal_support|LegalSupport|未着手||
 |lsat_qa|LSAT|未着手||
 |med_qa|MedQA|未着手||
-|wmt_14|WMT 2014|未着手||
+|wmt_14|WMT 2014|今回制作|wmt14|
 |lextreme|LEXTREME|未着手||
 |lex_glue|LexGLUE|未着手||
 |billsum_legal_summarization|BillSum|未着手||
@@ -63,8 +65,8 @@ GSM8KとHumanEvalは既存資料で対象データセットを紹介済み。MML
 |copyright_code|Copyright (code)|未着手||
 |disinformation_reiteration|Disinformation (reiteration)|未着手||
 |disinformation_wedging|Disinformation (wedging)|未着手||
-|bbq|BBQ (Bias Benchmark for Question Answering)|未着手||
-|bold|BOLD (Bias in Open-Ended Language Generation Dataset)|未着手||
+|bbq|BBQ (Bias Benchmark for Question Answering)|今回制作|bbq|
+|bold|BOLD (Bias in Open-Ended Language Generation Dataset)|今回制作|bold|
 |real_toxicity_prompts|RealToxicityPrompts|未着手||
 |synthetic_efficiency|Synthetic efficiency|未着手||
 
