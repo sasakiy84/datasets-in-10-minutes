@@ -1,7 +1,7 @@
 {
   "dataset": "wmt14",
   "created_at": "2026-10-18T00:55:12+00:00",
-  "updated_at": "2026-10-18T00:55:12+00:00",
+  "updated_at": "2026-10-18T10:52:08+09:00",
   "model": "Codex (local skill application; no external generation API)",
   "review_mode": "skill_based_codex",
   "skill_path": ".agents/skills/japanese-slide-proofreading/SKILL.md",
@@ -97,8 +97,8 @@
   ],
   "visual_review_method": "全ページ一覧を確認し、引用・コード・表・参考文献・公式画面・グラフを1080×608の画像で個別に目視。最終変更ページは再描画して確認。",
   "artifact_sha256": {
-    "pptx": "91bb056ee168834a9181f6fcd66478910042fe7172a168c4b7c80a1ce5f27935",
-    "pdf": "acea91a213cdf23266d73371085f5c342b4f33106e67f431b9e26649e1925e6d"
+    "pdf": "d406187331b461a60260f2f808af9a91ac7aaf32991e702b98588e6b7c1c59eb",
+    "pptx": "77781a0c1b6b2b454bc3b9afd5fd2e93f40455767569d5bccc45bfc627db9422"
   },
   "wording_changes": 21,
   "layout_and_explanation_changes": [
@@ -191,7 +191,7 @@
       "native_charts": 0
     },
     "layout": {
-      "paragraphs_checked": 232,
+      "paragraphs_checked": 231,
       "table_cells_checked": 37,
       "issues": []
     },
@@ -212,5 +212,62 @@
       "issues": []
     }
   },
-  "scope_notes": "5言語組のtest全14,519対訳レコードを取得。de/fr/cs/ru各3,003件、hi 2,507件。英語を共有するため14,519件の異なる記事とはしない。13例は英語と参照訳を保持し、それぞれの意味訳を添えた。ヒンディー語文字のPDF欠落なし。10翻訳方向、newstest2013と2014、コーパスBLEUと文ごとの平均を区別。GNMT Table 5とTransformer Table 2を別々に照合。HELM v0.4.0の定義はあるがrun_specsは0件のため、HELM得点を創作しない。コードのtrain最大20,000件・翻訳先重複除去を説明。著者13名と最終著者Ales Tamchynaを論文で確認。言語組を横断した一律のライセンスを推定しない。"
+  "scope_notes": "5言語組のtest全14,519対訳レコードを取得。de/fr/cs/ru各3,003件、hi 2,507件。英語を共有するため14,519件の異なる記事とはしない。13例は英語と参照訳を保持し、それぞれの意味訳を添えた。ヒンディー語文字のPDF欠落なし。10翻訳方向、newstest2013と2014、コーパスBLEUと文ごとの平均を区別。GNMT Table 5とTransformer Table 2を別々に照合。HELM v0.4.0の定義はあるがrun_specsは0件のため、HELM得点を創作しない。コードのtrain最大20,000件・翻訳先重複除去を説明。著者13名と最終著者Ales Tamchynaを論文で確認。言語組を横断した一律のライセンスを推定しない。",
+  "revision_history": [
+    {
+      "checked_at": "2026-10-18T00:55:12+00:00",
+      "artifact_sha256": {
+        "pptx": "91bb056ee168834a9181f6fcd66478910042fe7172a168c4b7c80a1ce5f27935",
+        "pdf": "acea91a213cdf23266d73371085f5c342b4f33106e67f431b9e26649e1925e6d"
+      },
+      "checks": {
+        "package": {
+          "parsed_xml_parts": 127,
+          "integer_bullets": 109,
+          "hyperlinks": 36,
+          "new_schema_errors": [],
+          "baseline_schema_errors": 11,
+          "package_integrity": "passed",
+          "internal_relationship_targets": "passed",
+          "unique_shape_ids": "passed",
+          "schema_note": "標準XSDを変更せず確認。マスター由来の既存エラーと、整数buSzPctの百分率字句形式との差を分離。整数箇条書きサイズは25000–400000で別途検査。",
+          "pages": 47,
+          "native_tables": 4,
+          "native_charts": 0
+        },
+        "layout": {
+          "paragraphs_checked": 232,
+          "table_cells_checked": 37,
+          "issues": []
+        },
+        "text": {
+          "pages": 47,
+          "missing": [],
+          "quote_missing": [],
+          "unique_examples": 13,
+          "all_original_paragraphs_and_translations_present": true,
+          "notes": false,
+          "unnecessary_original_paper_word": 0,
+          "extraction_note": "数式記号の別ブロックとfi合字のゼロ幅文字は、実際の文字・基線・座標を保って行順を復元。文字の削除による代用なし。"
+        },
+        "links": {
+          "native_url_only_runs": 36,
+          "pdf_link_rectangles": 36,
+          "pdf_link_text_exactly_matches_url": true,
+          "issues": []
+        }
+      }
+    }
+  ],
+  "follow_up_reviews": [
+    {
+      "record": "answer-and-citation-review.json",
+      "checked_at": "2026-10-18T10:52:08+09:00",
+      "answer_display_changes": 0,
+      "citation_wording_changes": 2,
+      "changed_pages": [
+        17
+      ]
+    }
+  ]
 }
