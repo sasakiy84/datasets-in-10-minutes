@@ -62,3 +62,20 @@
 |RAFT|[変更対](raft.md)・[TSV](raft/changes.tsv)|[pages.jsonl](raft/pages.jsonl)|[制作記録](../raft-sources.md)・[最終検査](raft/review.json)|
 |CivilComments|[変更対](civil-comments.md)・[TSV](civil-comments/changes.tsv)|[pages.jsonl](civil-comments/pages.jsonl)|[制作記録](../civil-comments-sources.md)・[最終検査](civil-comments/review.json)|
 |WMT14|[変更対](wmt14.md)・[TSV](wmt14/changes.tsv)|[pages.jsonl](wmt14/pages.jsonl)|[制作記録](../wmt14-sources.md)・[最終検査](wmt14/review.json)|
+
+## 2026-10-18：追加10資料の正解表示と出典表現
+
+全507ページを点検。5資料90ページの独立した正解表示を12.5ptから22ptの太字に拡大し、8資料の図表番号を含む9か所の出典表現を整理した。原文・訳・正解値・評価値・ページ数は保持。BOLDは対象なし。Geminiは使用していない。
+
+|資料|正解表示|出典表現|今回の点検記録|
+|---|---:|---:|---|
+|OpenBookQA|22|0|[記録](openbookqa/answer-and-citation-review.json)|
+|MMLU|13|1|[記録](mmlu/answer-and-citation-review.json)|
+|bAbI|16|1|[記録](babi/answer-and-citation-review.json)|
+|BLiMP|13|1|[記録](blimp/answer-and-citation-review.json)|
+|APPS|0|1|[記録](apps/answer-and-citation-review.json)|
+|BBQ|26|1|[記録](bbq/answer-and-citation-review.json)|
+|BOLD|0|0|[記録](bold/answer-and-citation-review.json)|
+|RAFT|0|1|[記録](raft/answer-and-citation-review.json)|
+|CivilComments|0|1|[記録](civil-comments/answer-and-citation-review.json)|
+|WMT14|0|2|[記録](wmt14/answer-and-citation-review.json)|
