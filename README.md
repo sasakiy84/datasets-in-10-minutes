@@ -102,5 +102,6 @@ python -m http.server 8000 --directory _site
 |BBQ|[PPTX](slides/datasets-in-10-minutes-bbq.pptx)|[PDF](slides/datasets-in-10-minutes-bbq.pdf)|
 |BOLD|[PPTX](slides/datasets-in-10-minutes-bold.pptx)|[PDF](slides/datasets-in-10-minutes-bold.pdf)|
 |RAFT|[PPTX](slides/datasets-in-10-minutes-raft.pptx)|[PDF](slides/datasets-in-10-minutes-raft.pdf)|
+|CivilComments|[PPTX](slides/datasets-in-10-minutes-civil-comments.pptx)|[PDF](slides/datasets-in-10-minutes-civil-comments.pdf)|
 
 [ユーザー指示の記録](docs/user-instructions.md)

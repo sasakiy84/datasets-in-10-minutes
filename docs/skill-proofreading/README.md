@@ -60,3 +60,4 @@
 |BBQ|[変更対](bbq.md)・[TSV](bbq/changes.tsv)|[pages.jsonl](bbq/pages.jsonl)|[制作記録](../bbq-sources.md)・[最終検査](bbq/review.json)|
 |BOLD|[変更対](bold.md)・[TSV](bold/changes.tsv)|[pages.jsonl](bold/pages.jsonl)|[制作記録](../bold-sources.md)・[最終検査](bold/review.json)|
 |RAFT|[変更対](raft.md)・[TSV](raft/changes.tsv)|[pages.jsonl](raft/pages.jsonl)|[制作記録](../raft-sources.md)・[最終検査](raft/review.json)|
+|CivilComments|[変更対](civil-comments.md)・[TSV](civil-comments/changes.tsv)|[pages.jsonl](civil-comments/pages.jsonl)|[制作記録](../civil-comments-sources.md)・[最終検査](civil-comments/review.json)|
