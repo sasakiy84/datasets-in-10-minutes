@@ -1,7 +1,7 @@
 {
   "dataset": "boolq",
   "created_at": "2026-10-17T16:27:56Z",
-  "updated_at": "2026-10-17T16:27:56Z",
+  "updated_at": "2026-10-18T02:47:27+00:00",
   "model": "Codex (skill application; no external generation API)",
   "review_mode": "skill_based_codex",
   "skill_path": ".agents/skills/japanese-slide-proofreading/SKILL.md",
@@ -60,203 +60,439 @@
     50,
     51,
     52,
-    53,
-    54,
-    55,
-    56,
-    57,
-    58,
-    59,
-    60
+    53
   ],
   "all_pages_overview": true,
   "individual_visual_review_pages": [
-    1,
-    3,
-    4,
-    6,
     7,
-    8,
-    10,
-    12,
-    13,
-    15,
-    19,
-    22,
-    24,
-    26,
-    28,
-    31,
-    33,
-    34,
-    35,
-    36,
+    11,
     37,
     38,
     39,
-    40,
     41,
-    42,
-    43,
-    44,
-    45,
-    46,
-    47,
-    48,
-    49,
-    50,
-    51,
-    53,
-    55,
-    57,
-    58,
-    59,
-    60
+    43
   ],
-  "visual_review_method": "全ページ一覧後、引用・コード・表・参考文献と表紙・目次・章扉を1080×608のページ画像で個別に確認。変更後に本文変更ページを再描画し、正解ラベルや記事IDだけを追加した領域も拡大して再確認。",
+  "visual_review_method": "最終PDFを1080×608で1ページずつ目視。全ページ一覧で流れ・順序を確認。変更のないスライドはOOXMLが変更前と同一であることを照合。",
   "artifact_sha256": {
-    "pptx": "3d36f94db960e3890f39f4dc7b9210ab32d222bfba450d7e3edba781448cd5cb",
-    "pdf": "c8f1868c5d8a2e9cabf4ce1aa86cd10176cbd917b727406a1494cf49a693c98b"
+    "pptx": "c1f05b59ba8c96e762a84afb71df6cbcc4414f6c11d54c5bca92f008a1611af8",
+    "pdf": "9e0970b67c8121a8750705d02b2611e3ba650c0dd4c183bfe668565222ca1184"
   },
   "wording_changes": 3,
   "layout_and_explanation_changes": [
     {
-      "page": 16,
-      "before": "本文22 pt",
-      "after": "本文20.5 pt、行送り24.395 pt",
-      "reason": "本文最下行と出典の間隔を確保する。"
-    },
-    {
-      "page": 13,
-      "shape": 5,
-      "before_height_pt": 108.06,
-      "after_height_pt": 86.045,
-      "rendered_lines": 3,
-      "translation_shapes_shifted": [
-        6
-      ],
-      "reason": "実描画の行数に合わせて引用背景の余分な上下余白を除く。"
-    },
-    {
       "page": 7,
-      "before": "正解ラベルは出典欄に表示",
-      "after": "正解：Noを本文の見出し横にも表示",
-      "reason": "実例を読む際に、正解を見つけやすくする。"
+      "old_pages": [
+        7,
+        8
+      ],
+      "new_pages": [
+        7
+      ],
+      "reason": "原文の表示範囲を1枚にまとめることを優先。訳は併記できる場合に併記し、収まらなければ別ページ。原文そのものが長い場合のみ分割。"
     },
     {
-      "page": 10,
-      "before": "正解ラベルは出典欄に表示",
-      "after": "正解：Yesを本文の見出し横にも表示",
-      "reason": "実例を読む際に、正解を見つけやすくする。"
-    },
-    {
-      "page": 12,
-      "before": "正解ラベルは出典欄に表示",
-      "after": "正解：Noを本文の見出し横にも表示",
-      "reason": "実例を読む際に、正解を見つけやすくする。"
-    },
-    {
-      "page": 36,
-      "before": "正解ラベルは出典欄に表示",
-      "after": "正解：Noを本文の見出し横にも表示",
-      "reason": "実例を読む際に、正解を見つけやすくする。"
+      "page": 11,
+      "old_pages": [
+        12,
+        13
+      ],
+      "new_pages": [
+        11
+      ],
+      "reason": "原文の表示範囲を1枚にまとめることを優先。訳は併記できる場合に併記し、収まらなければ別ページ。原文そのものが長い場合のみ分割。"
     },
     {
       "page": 37,
-      "before": "正解ラベルは出典欄に表示",
-      "after": "正解：Yesを本文の見出し横にも表示",
-      "reason": "実例を読む際に、正解を見つけやすくする。"
+      "old_pages": [
+        39,
+        40
+      ],
+      "new_pages": [
+        37
+      ],
+      "reason": "原文の表示範囲を1枚にまとめることを優先。訳は併記できる場合に併記し、収まらなければ別ページ。原文そのものが長い場合のみ分割。"
     },
     {
       "page": 38,
-      "before": "正解ラベルは出典欄に表示",
-      "after": "正解：Yesを本文の見出し横にも表示",
-      "reason": "実例を読む際に、正解を見つけやすくする。"
+      "old_pages": [
+        41,
+        42
+      ],
+      "new_pages": [
+        38
+      ],
+      "reason": "原文の表示範囲を1枚にまとめることを優先。訳は併記できる場合に併記し、収まらなければ別ページ。原文そのものが長い場合のみ分割。"
     },
     {
       "page": 39,
-      "before": "正解ラベルは出典欄に表示",
-      "after": "正解：Yesを本文の見出し横にも表示",
-      "reason": "実例を読む際に、正解を見つけやすくする。"
+      "old_pages": [
+        43,
+        44
+      ],
+      "new_pages": [
+        39
+      ],
+      "reason": "原文の表示範囲を1枚にまとめることを優先。訳は併記できる場合に併記し、収まらなければ別ページ。原文そのものが長い場合のみ分割。"
     },
     {
       "page": 41,
-      "before": "正解ラベルは出典欄に表示",
-      "after": "正解：Yesを本文の見出し横にも表示",
-      "reason": "実例を読む際に、正解を見つけやすくする。"
+      "old_pages": [
+        46,
+        47
+      ],
+      "new_pages": [
+        41
+      ],
+      "reason": "原文の表示範囲を1枚にまとめることを優先。訳は併記できる場合に併記し、収まらなければ別ページ。原文そのものが長い場合のみ分割。"
     },
     {
       "page": 43,
-      "before": "正解ラベルは出典欄に表示",
-      "after": "正解：Yesを本文の見出し横にも表示",
-      "reason": "実例を読む際に、正解を見つけやすくする。"
-    },
-    {
-      "page": 45,
-      "before": "正解ラベルは出典欄に表示",
-      "after": "正解：Noを本文の見出し横にも表示",
-      "reason": "実例を読む際に、正解を見つけやすくする。"
-    },
-    {
-      "page": 46,
-      "before": "正解ラベルは出典欄に表示",
-      "after": "正解：Yesを本文の見出し横にも表示",
-      "reason": "実例を読む際に、正解を見つけやすくする。"
-    },
-    {
-      "page": 48,
-      "before": "正解ラベルは出典欄に表示",
-      "after": "正解：Noを本文の見出し横にも表示",
-      "reason": "実例を読む際に、正解を見つけやすくする。"
-    },
-    {
-      "page": 49,
-      "before": "正解ラベルは出典欄に表示",
-      "after": "正解：Noを本文の見出し横にも表示",
-      "reason": "実例を読む際に、正解を見つけやすくする。"
+      "old_pages": [
+        49,
+        50
+      ],
+      "new_pages": [
+        43
+      ],
+      "reason": "原文の表示範囲を1枚にまとめることを優先。訳は併記できる場合に併記し、収まらなければ別ページ。原文そのものが長い場合のみ分割。"
     }
   ],
   "public_examples": 13,
   "main_examples": 3,
   "additional_examples": 10,
-  "main_pages": 32,
-  "total_pages": 60,
+  "main_pages": 30,
+  "total_pages": 53,
   "reading_time": "本編約10分の黙読・流し読みを想定。実測はしていない。",
   "checks": {
     "package": {
-      "parsed_xml_parts": 157,
+      "parsed_xml_parts": 143,
       "integer_bullets": 131,
-      "hyperlinks": 49,
+      "hyperlinks": 42,
       "new_schema_errors": [],
       "baseline_schema_errors": 11,
       "package_integrity": "passed",
       "internal_relationship_targets": "passed",
       "unique_shape_ids": "passed",
       "schema_note": "標準XSDを変更せず確認。マスター由来の既存エラーと、整数buSzPctの百分率字句形式との差を分離。整数箇条書きサイズは25000–400000で別途検査。",
-      "pages": 60,
+      "pages": 53,
       "native_tables": 5,
       "native_charts": 2
     },
     "layout": {
-      "paragraphs_checked": 303,
+      "paragraphs_checked": 268,
       "table_cells_checked": 42,
       "issues": []
     },
     "text": {
-      "pages": 60,
+      "dataset": "boolq",
+      "old_pages": 60,
+      "new_pages": 53,
+      "unchanged_slides_xml_identical": 46,
+      "original_and_translation_missing": [],
+      "glyph_missing": [],
+      "title_multiline": [],
+      "original_record_hashes_unchanged": true,
       "missing": [],
       "quote_missing": [],
-      "unique_examples": 13,
-      "all_original_paragraphs_and_translations_present": true,
-      "notes": false,
-      "unnecessary_original_paper_word": 0
+      "all_original_paragraphs_and_translations_present": true
     },
     "links": {
-      "native_url_only_runs": 49,
-      "pdf_link_rectangles": 49,
+      "native_url_only_runs": 42,
+      "pdf_link_rectangles": 42,
       "pdf_link_text_exactly_matches_url": true,
+      "issues": []
+    },
+    "answer_display": {
+      "standalone_answers": 7,
+      "answer_size_pt": 22,
+      "theme_color": "accent1",
+      "resolved_color": "B13731",
       "issues": []
     }
   },
-  "scope_notes": "質問を先に収集したこと、Noと回答不能の違い、多数派ベースラインを本編で説明した。公式リポジトリの2026年4月のアーカイブを確認し、現在も入手できるGoogleミラーを案内した。ライセンスは公式READMEとミラーのCC BY-SA 3.0を照合した。"
+  "scope_notes": "質問を先に収集したこと、Noと回答不能の違い、多数派ベースラインを本編で説明した。公式リポジトリの2026年4月のアーカイブを確認し、現在も入手できるGoogleミラーを案内した。ライセンスは公式READMEとミラーのCC BY-SA 3.0を照合した。",
+  "revision_history": [
+    {
+      "dataset": "boolq",
+      "created_at": "2026-10-17T16:27:56Z",
+      "updated_at": "2026-10-17T16:27:56Z",
+      "model": "Codex (skill application; no external generation API)",
+      "review_mode": "skill_based_codex",
+      "skill_path": ".agents/skills/japanese-slide-proofreading/SKILL.md",
+      "skill_sha256": "0bc7bfa18092fe93750fcbf354d4e8306b5c38f014fb7fb3e6d29c6514fa9050",
+      "gemini_used": false,
+      "reviewed_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60
+      ],
+      "all_pages_overview": true,
+      "individual_visual_review_pages": [
+        1,
+        3,
+        4,
+        6,
+        7,
+        8,
+        10,
+        12,
+        13,
+        15,
+        19,
+        22,
+        24,
+        26,
+        28,
+        31,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        53,
+        55,
+        57,
+        58,
+        59,
+        60
+      ],
+      "visual_review_method": "全ページ一覧後、引用・コード・表・参考文献と表紙・目次・章扉を1080×608のページ画像で個別に確認。変更後に本文変更ページを再描画し、正解ラベルや記事IDだけを追加した領域も拡大して再確認。",
+      "artifact_sha256": {
+        "pptx": "3d36f94db960e3890f39f4dc7b9210ab32d222bfba450d7e3edba781448cd5cb",
+        "pdf": "c8f1868c5d8a2e9cabf4ce1aa86cd10176cbd917b727406a1494cf49a693c98b"
+      },
+      "wording_changes": 3,
+      "layout_and_explanation_changes": [
+        {
+          "page": 16,
+          "before": "本文22 pt",
+          "after": "本文20.5 pt、行送り24.395 pt",
+          "reason": "本文最下行と出典の間隔を確保する。"
+        },
+        {
+          "page": 13,
+          "shape": 5,
+          "before_height_pt": 108.06,
+          "after_height_pt": 86.045,
+          "rendered_lines": 3,
+          "translation_shapes_shifted": [
+            6
+          ],
+          "reason": "実描画の行数に合わせて引用背景の余分な上下余白を除く。"
+        },
+        {
+          "page": 7,
+          "before": "正解ラベルは出典欄に表示",
+          "after": "正解：Noを本文の見出し横にも表示",
+          "reason": "実例を読む際に、正解を見つけやすくする。"
+        },
+        {
+          "page": 10,
+          "before": "正解ラベルは出典欄に表示",
+          "after": "正解：Yesを本文の見出し横にも表示",
+          "reason": "実例を読む際に、正解を見つけやすくする。"
+        },
+        {
+          "page": 12,
+          "before": "正解ラベルは出典欄に表示",
+          "after": "正解：Noを本文の見出し横にも表示",
+          "reason": "実例を読む際に、正解を見つけやすくする。"
+        },
+        {
+          "page": 36,
+          "before": "正解ラベルは出典欄に表示",
+          "after": "正解：Noを本文の見出し横にも表示",
+          "reason": "実例を読む際に、正解を見つけやすくする。"
+        },
+        {
+          "page": 37,
+          "before": "正解ラベルは出典欄に表示",
+          "after": "正解：Yesを本文の見出し横にも表示",
+          "reason": "実例を読む際に、正解を見つけやすくする。"
+        },
+        {
+          "page": 38,
+          "before": "正解ラベルは出典欄に表示",
+          "after": "正解：Yesを本文の見出し横にも表示",
+          "reason": "実例を読む際に、正解を見つけやすくする。"
+        },
+        {
+          "page": 39,
+          "before": "正解ラベルは出典欄に表示",
+          "after": "正解：Yesを本文の見出し横にも表示",
+          "reason": "実例を読む際に、正解を見つけやすくする。"
+        },
+        {
+          "page": 41,
+          "before": "正解ラベルは出典欄に表示",
+          "after": "正解：Yesを本文の見出し横にも表示",
+          "reason": "実例を読む際に、正解を見つけやすくする。"
+        },
+        {
+          "page": 43,
+          "before": "正解ラベルは出典欄に表示",
+          "after": "正解：Yesを本文の見出し横にも表示",
+          "reason": "実例を読む際に、正解を見つけやすくする。"
+        },
+        {
+          "page": 45,
+          "before": "正解ラベルは出典欄に表示",
+          "after": "正解：Noを本文の見出し横にも表示",
+          "reason": "実例を読む際に、正解を見つけやすくする。"
+        },
+        {
+          "page": 46,
+          "before": "正解ラベルは出典欄に表示",
+          "after": "正解：Yesを本文の見出し横にも表示",
+          "reason": "実例を読む際に、正解を見つけやすくする。"
+        },
+        {
+          "page": 48,
+          "before": "正解ラベルは出典欄に表示",
+          "after": "正解：Noを本文の見出し横にも表示",
+          "reason": "実例を読む際に、正解を見つけやすくする。"
+        },
+        {
+          "page": 49,
+          "before": "正解ラベルは出典欄に表示",
+          "after": "正解：Noを本文の見出し横にも表示",
+          "reason": "実例を読む際に、正解を見つけやすくする。"
+        }
+      ],
+      "public_examples": 13,
+      "main_examples": 3,
+      "additional_examples": 10,
+      "main_pages": 32,
+      "total_pages": 60,
+      "reading_time": "本編約10分の黙読・流し読みを想定。実測はしていない。",
+      "checks": {
+        "package": {
+          "parsed_xml_parts": 157,
+          "integer_bullets": 131,
+          "hyperlinks": 49,
+          "new_schema_errors": [],
+          "baseline_schema_errors": 11,
+          "package_integrity": "passed",
+          "internal_relationship_targets": "passed",
+          "unique_shape_ids": "passed",
+          "schema_note": "標準XSDを変更せず確認。マスター由来の既存エラーと、整数buSzPctの百分率字句形式との差を分離。整数箇条書きサイズは25000–400000で別途検査。",
+          "pages": 60,
+          "native_tables": 5,
+          "native_charts": 2
+        },
+        "layout": {
+          "paragraphs_checked": 303,
+          "table_cells_checked": 42,
+          "issues": []
+        },
+        "text": {
+          "pages": 60,
+          "missing": [],
+          "quote_missing": [],
+          "unique_examples": 13,
+          "all_original_paragraphs_and_translations_present": true,
+          "notes": false,
+          "unnecessary_original_paper_word": 0
+        },
+        "links": {
+          "native_url_only_runs": 49,
+          "pdf_link_rectangles": 49,
+          "pdf_link_text_exactly_matches_url": true,
+          "issues": []
+        }
+      },
+      "scope_notes": "質問を先に収集したこと、Noと回答不能の違い、多数派ベースラインを本編で説明した。公式リポジトリの2026年4月のアーカイブを確認し、現在も入手できるGoogleミラーを案内した。ライセンスは公式READMEとミラーのCC BY-SA 3.0を照合した。",
+      "page_numbering": "原文優先の再構成より前",
+      "pages_snapshot": "pages-before-original-first.jsonl"
+    }
+  ],
+  "follow_up_reviews": [
+    {
+      "record": "original-first-review.json",
+      "checked_at": "2026-10-18T02:47:27+00:00",
+      "old_pages": 60,
+      "new_pages": 53,
+      "examples": 7,
+      "changed_pages": [
+        7,
+        11,
+        37,
+        38,
+        39,
+        41,
+        43
+      ]
+    }
+  ]
 }
