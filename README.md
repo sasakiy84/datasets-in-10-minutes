@@ -96,5 +96,6 @@ python -m http.server 8000 --directory _site
 |XSum|[PPTX](slides/datasets-in-10-minutes-xsum.pptx)|[PDF](slides/datasets-in-10-minutes-xsum.pdf)|
 |OpenBookQA|[PPTX](slides/datasets-in-10-minutes-openbookqa.pptx)|[PDF](slides/datasets-in-10-minutes-openbookqa.pdf)|
 |MMLU|[PPTX](slides/datasets-in-10-minutes-mmlu.pptx)|[PDF](slides/datasets-in-10-minutes-mmlu.pdf)|
+|bAbI|[PPTX](slides/datasets-in-10-minutes-babi.pptx)|[PDF](slides/datasets-in-10-minutes-babi.pdf)|
 
 [ユーザー指示の記録](docs/user-instructions.md)

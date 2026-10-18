@@ -1,0 +1,32 @@
+# bAbI：出典と制作・校正記録
+
+2026-10-18作成。本編24ページ、Appendix25ページ、合計49ページ。本編約10分の黙読・流し読みを想定し、閲覧時間は未実測。編集可能なPPTXと、その最終版から出力したPDFを保存した。
+
+## 出典と版
+
+|資料|用途|
+|---|---|
+|[Jason Weston et al. (2015). Towards AI-Complete Question Answering: A Set of Prerequisite Toy Tasks. arXiv:1502.05698, 2015.](https://arxiv.org/abs/1502.05698)|paper|
+|[Muennighoff/babi、改訂1da25875。2026-10-18参照。](https://huggingface.co/datasets/Muennighoff/babi)|data|
+|[bAbI、en-valid/test全20,000件を集計。2026-10-18取得。](https://huggingface.co/datasets/Muennighoff/babi)|stats|
+|[bAbI 公式公開ページ。2026-10-18参照。](https://github.com/facebookarchive/bAbI-tasks)|page|
+|[Liang et al. Holistic Evaluation of Language Models. TMLR 2023. Classic v0.4.0（2023-11-17）。](https://crfm.stanford.edu/helm/classic/v0.4.0/)|helm|
+|[Stanford CRFM. HELM Classic v0.4.0. 公開run_specs。2023-11-17のリリース。](https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/releases/v0.4.0/run_specs.json)|config|
+
+取得日：2026-10-18。配布元 `Muennighoff/babi`、固定改訂 `1da25875bda08552be0dbb0ec4ee1d37c6f31667`。冒頭はCSSとフォントを読み込んだブラウザ画面。取得URL、ファイルのbytes・SHA-256、13実例の識別子・原文・訳・元レコード・ハッシュを[検証データ](data-audits/babi.json)に保存した。
+
+## 内容・実例・評価の照合
+
+公式tarは404、別の公式配布先は403だったため、HELMと同じ変換手順をREADMEに示すMuennighoff/babiを使用した。固定改訂からtrain・valid・testを再取得し、保存ファイルとバイト単位で一致。testは20課題各1,000問。trainは18,013問、validは1,987問で、課題17・18・20は900／100と異なる。HELM test 906問とvalid 94問を混ぜていない。経路表記はミラーの変換後の語句を保持した。MemNNの根拠教師付き条件と回答のみの条件を区別。ソフトウェアのBSDとミラーのデータCC BY 3.0を分けて説明した。
+
+本編3件、追加10件の13公開レコードを掲載。長い実例は文・段落単位で分割し、同じレコードは1件と数えた。原文と訳は同じページで読める配置。HELMのcanonical実行2件について、モデル、指標、split、提示例数、試行数と実行別statsを照合した。2023年の固定版の値であり最新順位ではない。
+
+集計対象は `en-valid/test` の全20,000件。データの構造に合わせた全件集計を示した。取得した容量と、未取得分を含めた配布全体の容量は区別して扱った。
+
+## 日本語校正と最終検査
+
+**Geminiは使用していない。** Codexが[日本語校正スキル](../.agents/skills/japanese-slide-proofreading/SKILL.md)を1ページずつ適用した。[実際の修正前後の対](skill-proofreading/babi/changes.tsv)、[全ページの最終文言](skill-proofreading/babi/pages.jsonl)、[検査とレイアウト変更の記録](skill-proofreading/babi/review.json)を保存。削除ページは最終pageをnull、初稿番号をdraft_pageとして記録した。
+
+全49ページを描画して一覧を確認し、引用・コード・表・参考文献・公式画面・グラフは個別に拡大した。最終変更ページは再出力して再確認。文字欠落、原文・訳の保持、表セルと引用のはみ出し、本文と出典の間隔、URLだけのリンク範囲を検査。最終PPTX・PDFのSHA-256を記録した。
+
+OOXMLはマスター、レイアウト、表、内部参照、図形IDも検査し、新規の標準XSD構造エラー0件。元のマスター由来の既存11件とbuSzPctの整数字句表記の差は分離した。整数値25000–400000を別に検査し、XSD自体は変更していない。[定義](https://learn.microsoft.com/en-us/dotnet/api/documentformat.openxml.drawing.bulletsizepercentage)を参照。PowerPointでの手動開封は実施せず、LibreOffice変換とネイティブ編集構造を検証した。
