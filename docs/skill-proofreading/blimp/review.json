@@ -1,7 +1,7 @@
 {
   "dataset": "blimp",
   "created_at": "2026-10-18T00:55:12+00:00",
-  "updated_at": "2026-10-18T00:55:12+00:00",
+  "updated_at": "2026-10-18T10:52:08+09:00",
   "model": "Codex (local skill application; no external generation API)",
   "review_mode": "skill_based_codex",
   "skill_path": ".agents/skills/japanese-slide-proofreading/SKILL.md",
@@ -93,8 +93,8 @@
   ],
   "visual_review_method": "全ページ一覧を確認し、引用・コード・表・参考文献・公式画面・グラフを1080×608の画像で個別に目視。最終変更ページは再描画して確認。",
   "artifact_sha256": {
-    "pptx": "fa827d483ebb078fe0fa07fbb35324d89343b93f3e70b46810749ace92908d29",
-    "pdf": "c6887087bc52a6fbbf0385fc5ce8021bab7b941c3f576724b2076bc218d4ebff"
+    "pdf": "3ddfc57a6cdd374d29e351cc52d821cd482a7a7f36a05f968bd086c74dc07cfa",
+    "pptx": "52dfa6db59f6139a16bf99ab3d99db2502e387a91e79806df3d5c08caac89ccb"
   },
   "wording_changes": 13,
   "layout_and_explanation_changes": [
@@ -161,5 +161,75 @@
       "issues": []
     }
   },
-  "scope_notes": "全67ファイル各1,000対、計67,000対を取得。linguistics_termは13値だがs-selection 2,000対をargument_structureに合算して公式12分類に集約した。英語の許容／非許容文を保持し、訳は意味と英語の文法上の対比を示す。singular theyや自動詞seeを一般に誤りとはせず生成設定に範囲を限定。人の直接判断88.6%と多数決一致96.4%を区別。HELMは4現象のみ、表はbindingの1,000対・0-shot・1試行。初期公開2019年、TACL発表2020年。CC BY 4.0。"
+  "scope_notes": "全67ファイル各1,000対、計67,000対を取得。linguistics_termは13値だがs-selection 2,000対をargument_structureに合算して公式12分類に集約した。英語の許容／非許容文を保持し、訳は意味と英語の文法上の対比を示す。singular theyや自動詞seeを一般に誤りとはせず生成設定に範囲を限定。人の直接判断88.6%と多数決一致96.4%を区別。HELMは4現象のみ、表はbindingの1,000対・0-shot・1試行。初期公開2019年、TACL発表2020年。CC BY 4.0。",
+  "revision_history": [
+    {
+      "checked_at": "2026-10-18T00:55:12+00:00",
+      "artifact_sha256": {
+        "pptx": "fa827d483ebb078fe0fa07fbb35324d89343b93f3e70b46810749ace92908d29",
+        "pdf": "c6887087bc52a6fbbf0385fc5ce8021bab7b941c3f576724b2076bc218d4ebff"
+      },
+      "checks": {
+        "package": {
+          "parsed_xml_parts": 123,
+          "integer_bullets": 107,
+          "hyperlinks": 33,
+          "new_schema_errors": [],
+          "baseline_schema_errors": 11,
+          "package_integrity": "passed",
+          "internal_relationship_targets": "passed",
+          "unique_shape_ids": "passed",
+          "schema_note": "標準XSDを変更せず確認。マスター由来の既存エラーと、整数buSzPctの百分率字句形式との差を分離。整数箇条書きサイズは25000–400000で別途検査。",
+          "pages": 44,
+          "native_tables": 6,
+          "native_charts": 1
+        },
+        "layout": {
+          "paragraphs_checked": 216,
+          "table_cells_checked": 60,
+          "issues": []
+        },
+        "text": {
+          "pages": 44,
+          "missing": [],
+          "quote_missing": [],
+          "unique_examples": 13,
+          "all_original_paragraphs_and_translations_present": true,
+          "notes": false,
+          "unnecessary_original_paper_word": 0,
+          "extraction_note": "数式記号の別ブロックとfi合字のゼロ幅文字は、実際の文字・基線・座標を保って行順を復元。文字の削除による代用なし。"
+        },
+        "links": {
+          "native_url_only_runs": 33,
+          "pdf_link_rectangles": 33,
+          "pdf_link_text_exactly_matches_url": true,
+          "issues": []
+        }
+      }
+    }
+  ],
+  "follow_up_reviews": [
+    {
+      "record": "answer-and-citation-review.json",
+      "checked_at": "2026-10-18T10:52:08+09:00",
+      "answer_display_changes": 13,
+      "citation_wording_changes": 1,
+      "changed_pages": [
+        7,
+        8,
+        9,
+        17,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36
+      ]
+    }
+  ]
 }
