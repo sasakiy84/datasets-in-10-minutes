@@ -1,0 +1,141 @@
+{
+  "status": "passed_after_revision",
+  "findings": [
+    {
+      "location": "p1",
+      "issue": "正式展開形のGeneral/Evaluationが欠落",
+      "requested": "Legal General Language Understanding Evaluation",
+      "status": "resolved and final rendered page checked"
+    },
+    {
+      "location": "metadata year",
+      "issue": "ACL2022年と初回arXiv公開2021年を区別",
+      "requested": "year2021; ACL2022本文は保持",
+      "evidence": "arxiv-v1.html citation_date2021/10/03",
+      "status": "resolved and final rendered page checked"
+    },
+    {
+      "location": "example13 Japanese option3/1",
+      "issue": "弁護人を無効は弁護活動の不十分さという原意と異なる",
+      "requested": "ineffective counselを弁護活動は不十分だった等へ。legally available/no other viable defense保持。sentencing manipulationは量刑操作へ。",
+      "status": "resolved and final rendered page checked"
+    },
+    {
+      "location": "既存データを、比較しやすい形へ整える",
+      "issue": "EURLEXとLEDGARの100クラスは頻出順という選択条件",
+      "requested": "頻出100概念/頻出100テーマを明記",
+      "status": "resolved and final rendered page checked"
+    },
+    {
+      "location": "p49 footer",
+      "issue": "論文側の空集合率を新たに載せた比較表に、論文出典がない",
+      "requested": "正式ACL paperと固定配布dataの2出典にする",
+      "status": "resolved; final p49 individually reopened, both ACL paper and fixed dataset sources visible without collision"
+    }
+  ],
+  "individually_viewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57
+  ],
+  "unresolved": [],
+  "evidence": [
+    "check.py",
+    "independent-data-audit.json",
+    "metrics_conditions.py",
+    "metric-condition-audit.json",
+    "arxiv-v1.html",
+    "check_display.py",
+    "native-display-audit.json",
+    "final-render-diff.json"
+  ],
+  "visual_assessment": "All 57 pages individually opened via view_image. No clipping, glyph loss or answer/footer collision found. Original/translation coexistence, 20 quote frames, code, all eight tables and references inspected.",
+  "final_rechecked_pages": [
+    49
+  ],
+  "final_artifacts": [
+    {
+      "path": "/workspace/artifacts/helm-parallel/lexglue/datasets-in-10-minutes-lexglue.pptx",
+      "sha256": "3d0457589c35d2f4b6d7089f9fdd3bf635f4106bbd400c346deee7223ae7481b"
+    },
+    {
+      "path": "/workspace/artifacts/helm-parallel/lexglue/datasets-in-10-minutes-lexglue.pdf",
+      "sha256": "a53a1ca21e92a2a84180b48b92d8c47ec77b4e5ba19749d47f1930b224044050"
+    }
+  ],
+  "final_hashes_match_creator_handoff": true,
+  "reviewed_at": "2026-10-18T08:10:08.696574+00:00",
+  "scope": {
+    "fixed_test_parquets": 7,
+    "test_records_checked": 23607,
+    "selected_raw_examples_checked": 13,
+    "official_selected_instance_generator_cases": 13,
+    "formal_ACL_macroF1_cells": 14,
+    "split_count_cells": 18,
+    "HELM_condition_cells": 12,
+    "individual_pages_viewed": 57,
+    "final_modified_pages": [
+      49
+    ],
+    "public_release_run_matches": 0
+  },
+  "limitations": [
+    "公式generate_instance/reduce_wrong_reference_countの選択13件を実行照合。全23,607件に対するHELM全ローダー実行を主張しない。",
+    "空集合指標の独立実行は制御配列による仕様確認で、公開モデル結果ではない。",
+    "CaseHOLD件数/SCOTUSカテゴリ数などの論文・固定配布差の原因は確定しない。公開run0のため番号ずれによる実測影響は主張しない。"
+  ]
+}

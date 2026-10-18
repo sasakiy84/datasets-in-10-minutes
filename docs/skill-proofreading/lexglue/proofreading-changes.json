@@ -1,0 +1,53 @@
+{
+  "method": "skill_based_codex",
+  "review_mode": "skill_based_codex",
+  "gemini_used": false,
+  "skill": "/workspace/datasets-in-10-minutes/.agents/skills/japanese-slide-proofreading/SKILL.md",
+  "changes": [
+    {
+      "page": 7,
+      "stage": "rendered_page_proofreading",
+      "before": "判決の予測だけが法律の言語処理ではない。契約を内容別に整理するような用途も、LexGLUEの対象に入る。",
+      "after": "LexGLUEは、契約を内容別に整理するような用途も対象に含む。",
+      "reason": "対象を直接述べ、不要な否定と対比を減らす。"
+    },
+    {
+      "page": 9,
+      "stage": "rendered_page_proofreading",
+      "before": "すべての文が不公正という扱いではなく、種類が付かない空のラベル集合も含む。",
+      "after": "どの種類にも当たらない文には、空のラベル集合が付く。",
+      "reason": "空集合が何に対応するかを主語と述語で明確にする。"
+    },
+    {
+      "page": 19,
+      "stage": "rendered_page_proofreading",
+      "before": "少ないクラスの成績も、各クラスと同じ重みで入る。",
+      "after": "出現の少ないクラスも、多いクラスと同じ重みで数える。",
+      "reason": "「少ない」が指す対象を明示し、重みの比較を自然にする。"
+    },
+    {
+      "page": 28,
+      "stage": "rendered_page_proofreading",
+      "before": "公式リポジトリのコードと、収録文書の利用条件は同じものとして扱わず、再配布時は各出所も確認する。",
+      "after": "コードと収録文書では利用条件の出所が異なるため、再配布時は各出所を確認する。",
+      "reason": "理由と行動を一文でつなぎ、助詞の重複を減らす。"
+    },
+    {
+      "page": 41,
+      "stage": "translation_information_review",
+      "exampleID": "scotus/test/18",
+      "before": "503 U.S. 257 / 112 S.Ct. 1151 / 117 L.Ed.2d 400\nPFZ PROPERTIES, INC. 対 RODRIGUEZほか\n事件番号91-122。1992年3月9日。\n第1巡回区控訴裁判所からの裁量上訴。原審928 F.2d 28。裁判所の名による意見。\n1. 裁量上訴を認めたことが不適切だったため、これを却下する。",
+      "after": "503 U.S. 257 / 112 S.Ct. 1151 / 117 L.Ed.2d 400\n申立人PFZ PROPERTIES, INC. 対 Rene Alberto RODRIGUEZほか\n事件番号91-122。1992年3月9日。\n第1巡回区控訴裁判所からの裁量上訴。原審928 F.2d 28。裁判所の名による意見。\n1. 裁量上訴を認めたことが不適切だったため、これを却下する。",
+      "reason": "当事者の立場と氏名を省略せず、原文の情報を保つ。"
+    },
+    {
+      "page": 45,
+      "stage": "translation_information_review",
+      "exampleID": "case_hold/test/38",
+      "before": "ターナーはこの先例を認めつつ、反対の結論に達した他の巡回区を挙げ、当巡回区の見解の再検討を求める。例えばUnited States v. Ciszkowski, 492 F.3d 1264, 1270 (第11巡回区、2007年)（<HOLDING>）、United States v. Rizzo, 121 F.3d 794, 801 &\n0: 管轄権への異議を有効な主張と認める\n1: 刑の操作を有効な抗弁と認める\n2: 第一次的危険引受けを有効な法理と認める\n3: 法的に可能なほかに有効な抗弁のない状況で、おとり捜査の抗弁を主張しなかった弁護人を無効と判断する\n4: そのような理論がTitle VIIの下で有効と判断する",
+      "after": "ターナーはこの先例を認めつつ、反対の結論に達した他の巡回区を挙げ、当巡回区の見解の再検討を求める。例えばUnited States v. Ciszkowski, 492 F.3d 1264, 1270 (第11巡回区、2007年)（<HOLDING>）、United States v. Rizzo, 121 F.3d 794, 801 &\n0: 管轄権への異議を有効な主張と認める\n1: 量刑操作を有効な抗弁と認める\n2: 第一次的危険引受けを有効な法理と認める\n3: おとり捜査の抗弁が法的に認められ、ほかに有効な抗弁がなかったのに、それを主張しなかった弁護活動は不十分だったと判断する\n4: そのような理論がTitle VIIの下で有効と判断する",
+      "reason": "ineffective counselを人の無効と訳さず、弁護活動の不十分さと訳す。量刑操作という用語を明確にする。",
+      "origin": "independent_review"
+    }
+  ]
+}

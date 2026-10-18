@@ -24,7 +24,7 @@
 |16|lsat|lsat_qa|作成済み|
 |17|medqa|med_qa|作成済み|
 |18|lextreme|lextreme|作成済み|
-|19|lexglue|lex_glue|未着手|
+|19|lexglue|lex_glue|作成済み|
 |20|billsum|billsum_legal_summarization|未着手|
 |21|multilexsum|multilexsum_legal_summarization|未着手|
 |22|eurlexsum|eurlexsum_legal_summarization|未着手|
