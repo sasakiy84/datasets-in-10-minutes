@@ -89,6 +89,21 @@
             }
           }
         ]
+      },
+      "neqa": {
+        "matches": [
+          {
+            "line_1based": 58,
+            "record": {
+              "prompt": "The following are multiple choice questions (with answers) about common sense.\n\nQuestion: A person puts a potato in some embers on the edge of a campfire. The embers are not\nA. doing a thermal release\nB. taking in the warmth\nAnswer:",
+              "classes": "[' A', ' B']",
+              "answer_index": 1,
+              "round": 1,
+              "part": 1
+            }
+          }
+        ],
+        "relation": "HELM CLEVA commonsense_question_answering potato/embers example is a translation of this exact input and preserves class order and answer index."
       }
     },
     "license": "CC-BY-4.0 according to official data-release README",
@@ -188,5 +203,35 @@
       "English KBQU"
     ],
     "limits": "Only public abstract inspected; full chapter subscription-restricted. Original shared-task distribution not established. Existing NLPCC2016 datasets cannot replace 2018."
+  },
+  "physical_concepts": {
+    "formal_paper": "Mapping Language Models to Grounded Conceptual Spaces",
+    "authors": [
+      "Roma Patel",
+      "Ellie Pavlick"
+    ],
+    "conference": "ICLR 2022",
+    "official_poster": "https://iclr.cc/virtual/2022/poster/5992",
+    "official_forum": "https://openreview.net/forum?id=gJcEM8sxHK",
+    "author_website": "https://roma-patel.github.io/",
+    "author_source_repository": "https://github.com/roma-patel/mapping-lms",
+    "source_commit": "615bf9e328c07c31a3a1f991d395c27f81e81b0c",
+    "files": [
+      {
+        "name": "physical-src-log_grounded_gpt3.py",
+        "bytes": 4799,
+        "sha256": "8f96fe21341d5e65cacf3bdc736f9c026d0f17238c962b70dc5ef254393b5002"
+      },
+      {
+        "name": "physical-src-log_grounded_gpt.py",
+        "bytes": 5076,
+        "sha256": "8607b0fe799f044061c6796dc6c287936fab57aa880154820cb4cb2d6c7028d0"
+      }
+    ],
+    "limits": [
+      "Official conference abstract and author code available; full paper PDF returned HTTP403.",
+      "No license file in fixed source tree.",
+      "CLEVA describes synthesis according to this recipe; its generator, seed and raw Chinese examples remain unavailable."
+    ]
   }
 }
