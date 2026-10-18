@@ -45,3 +45,11 @@
 |TruthfulQA|[変更対](truthfulqa.md)・[TSV](truthfulqa/changes.tsv)|[pages.jsonl](truthfulqa/pages.jsonl)|[制作記録](../truthfulqa-sources.md)・[最終検査](truthfulqa/review.json)|
 |IMDb|[変更対](imdb.md)・[TSV](imdb/changes.tsv)|[pages.jsonl](imdb/pages.jsonl)|[制作記録](../imdb-sources.md)・[最終検査](imdb/review.json)|
 |XSum|[変更対](xsum.md)・[TSV](xsum/changes.tsv)|[pages.jsonl](xsum/pages.jsonl)|[制作記録](../xsum-sources.md)・[最終検査](xsum/review.json)|
+
+## HELM Classicから追加した10資料
+
+全10資料・507ページに、日本語校正スキルを1ページずつ適用した。Geminiは使用していない。各資料に本編3件・追加10件の公開実例を収録。WMT14はHELMの公開実行が0件で、得点を掲載していない。
+
+|資料|修正前後の対|全ページの記録|出典・検証|
+|---|---|---|---|
+|OpenBookQA|[変更対](openbookqa.md)・[TSV](openbookqa/changes.tsv)|[pages.jsonl](openbookqa/pages.jsonl)|[制作記録](../openbookqa-sources.md)・[最終検査](openbookqa/review.json)|
