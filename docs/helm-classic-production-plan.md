@@ -54,7 +54,7 @@
 |7|cold|COLD|調査中|
 |8|cdial-bias|CDial-Bias|未着手|
 |9|chef|CHEF|未着手|
-|10|c3|C3|制作中|
+|10|c3|C3|作成済み|
 |11|nlpcc2018-qa|NLPCC 2018 Open Domain QA|未着手|
 |12|cmedqa2|cMedQA2|未着手|
 |13|csds|CSDS|未着手|
