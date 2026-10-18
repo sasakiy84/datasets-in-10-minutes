@@ -1,7 +1,7 @@
 {
   "dataset": "mmlu",
   "created_at": "2026-10-18T00:55:12+00:00",
-  "updated_at": "2026-10-18T10:52:08+09:00",
+  "updated_at": "2026-10-18T11:13:42+09:00",
   "model": "Codex (local skill application; no external generation API)",
   "review_mode": "skill_based_codex",
   "skill_path": ".agents/skills/japanese-slide-proofreading/SKILL.md",
@@ -110,8 +110,8 @@
   ],
   "visual_review_method": "全ページ一覧を確認し、引用・コード・表・参考文献・公式画面・グラフを1080×608の画像で個別に目視。最終変更ページは再描画して確認。",
   "artifact_sha256": {
-    "pdf": "41076d27707e87e21bba8cb297f73d2f112d1df8713da2887f5b231be905e995",
-    "pptx": "3533893eaa0db7496bbd68fb512a5ad8cd7aa0b642b7263e5b39b5eaa6cbba5d"
+    "pdf": "e0b073f416af2e4508171f467983c64416a2cffa4551055f95c1b85dc0127c11",
+    "pptx": "ddfc59d87ec74c1f9a9702c8ed1ad647894a2e3d3d6478201d431b6afcc3601c"
   },
   "wording_changes": 10,
   "layout_and_explanation_changes": [
@@ -176,6 +176,30 @@
       "pdf_link_rectangles": 42,
       "pdf_link_text_exactly_matches_url": true,
       "issues": []
+    },
+    "answer_color": {
+      "dataset": "mmlu",
+      "changed_pages": [
+        7,
+        8,
+        9,
+        27,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37
+      ],
+      "only_answer_theme_color_changed": true,
+      "all_text_fonts_and_geometry_identical": true,
+      "other_shapes_identical": true,
+      "old_color": "2C9100",
+      "new_color": "B13731",
+      "theme_color": "accent1"
     }
   },
   "scope_notes": "57科目のtest全14,042問、dev 285問、validation 1,531問を区別し、全57科目の件数も掲載した。HELMの実行は5科目のみで、表はcomputer_securityの100問。57科目全体の初期評価と同じ集合とはしていない。初期公開2020年、ICLR発表2021年。菌類をdetritivoreとする配布ラベルは変更せず、通常のdecomposerとの違いを補足した。多言語MMMLUとは別の英語版を扱う。",
@@ -223,6 +247,74 @@
           "issues": []
         }
       }
+    },
+    {
+      "checked_at": "2026-10-18T10:52:08+09:00",
+      "artifact_sha256": {
+        "pdf": "41076d27707e87e21bba8cb297f73d2f112d1df8713da2887f5b231be905e995",
+        "pptx": "3533893eaa0db7496bbd68fb512a5ad8cd7aa0b642b7263e5b39b5eaa6cbba5d"
+      },
+      "checks": {
+        "package": {
+          "parsed_xml_parts": 141,
+          "integer_bullets": 108,
+          "hyperlinks": 42,
+          "new_schema_errors": [],
+          "baseline_schema_errors": 11,
+          "package_integrity": "passed",
+          "internal_relationship_targets": "passed",
+          "unique_shape_ids": "passed",
+          "schema_note": "標準XSDを変更せず確認。マスター由来の既存エラーと、整数buSzPctの百分率字句形式との差を分離。整数箇条書きサイズは25000–400000で別途検査。",
+          "pages": 53,
+          "native_tables": 14,
+          "native_charts": 1
+        },
+        "layout": {
+          "paragraphs_checked": 278,
+          "table_cells_checked": 155,
+          "issues": []
+        },
+        "text": {
+          "pages": 53,
+          "missing": [],
+          "quote_missing": [],
+          "unique_examples": 13,
+          "all_original_paragraphs_and_translations_present": true,
+          "notes": false,
+          "unnecessary_original_paper_word": 0,
+          "extraction_note": "数式記号の別ブロックとfi合字のゼロ幅文字は、実際の文字・基線・座標を保って行順を復元。文字の削除による代用なし。"
+        },
+        "links": {
+          "native_url_only_runs": 42,
+          "pdf_link_rectangles": 42,
+          "pdf_link_text_exactly_matches_url": true,
+          "issues": []
+        },
+        "answer_color": {
+          "dataset": "mmlu",
+          "changed_pages": [
+            7,
+            8,
+            9,
+            27,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37
+          ],
+          "only_answer_theme_color_changed": true,
+          "all_text_fonts_and_geometry_identical": true,
+          "other_shapes_identical": true,
+          "old_color": "2C9100",
+          "new_color": "B13731",
+          "theme_color": "accent1"
+        }
+      }
     }
   ],
   "follow_up_reviews": [
@@ -247,6 +339,13 @@
         36,
         37
       ]
+    },
+    {
+      "record": "answer-color-review.json",
+      "checked_at": "2026-10-18T11:13:42+09:00",
+      "answer_color_changes": 13,
+      "color": "B13731",
+      "theme_color": "accent1"
     }
   ]
 }
