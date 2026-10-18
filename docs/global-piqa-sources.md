@@ -71,3 +71,7 @@ Pythonの読み込み例は公式データカードの設定名・分割と照�
 冒頭は公式リポジトリのREADMEを実ブラウザで撮影した。Global PIQA v1の説明と世界地図が見える位置で、CSSとフォントの読み込みを確認。https://github.com/mrlbenchmarks/global-piqa#readme
 
 今回の全資料での配置・公式画面の確認結果は[横断レビュー](series-layout-and-sites-review.md)に記録。旧52ページ版のページ番号・ハッシュ・確認件数は、この改訂の値として流用しない。制作・調査・検査用のスクリプトはscratchのみへ置き、コミットしない。
+
+## 2026-10-18：正解表示と出典表現の再確認
+
+正解の読みやすさ・個人の好みのえんじ色と、本文の図表番号を確認した。原文・訳・正解値・統計値・評価条件・ページ数を保持。Codexによるスキル適用、Gemini使用なし。[変更対と最終版の検査](skill-proofreading/global-piqa/answer-style-review.json)。
