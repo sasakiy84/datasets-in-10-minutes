@@ -1,0 +1,209 @@
+{
+  "splits": [
+    {
+      "split": "train",
+      "rows": 21778,
+      "unique_translations": 21483,
+      "unique_full_questions": 21778,
+      "answer_counts": {
+        "1": 5455,
+        "3": 5547,
+        "0": 5324,
+        "2": 5452
+      }
+    },
+    {
+      "split": "valid",
+      "rows": 2720,
+      "unique_translations": 2710,
+      "unique_full_questions": 2720,
+      "answer_counts": {
+        "3": 673,
+        "2": 661,
+        "1": 677,
+        "0": 709
+      }
+    },
+    {
+      "split": "test_public",
+      "rows": 2720,
+      "unique_translations": 2716,
+      "unique_full_questions": 2720,
+      "answer_counts": {
+        "absent": 2720
+      }
+    }
+  ],
+  "examples": [
+    {
+      "index": 1,
+      "source": "train",
+      "line": 14,
+      "sha256": true,
+      "record_equal": true,
+      "all_choices_order": true,
+      "answer_equal": true
+    },
+    {
+      "index": 2,
+      "source": "train",
+      "line": 18823,
+      "sha256": true,
+      "record_equal": true,
+      "all_choices_order": true,
+      "answer_equal": true
+    },
+    {
+      "index": 3,
+      "source": "train",
+      "line": 14876,
+      "sha256": true,
+      "record_equal": true,
+      "all_choices_order": true,
+      "answer_equal": true
+    },
+    {
+      "index": 4,
+      "source": "valid",
+      "line": 1,
+      "sha256": true,
+      "record_equal": true,
+      "all_choices_order": true,
+      "answer_equal": true
+    },
+    {
+      "index": 5,
+      "source": "valid",
+      "line": 5,
+      "sha256": true,
+      "record_equal": true,
+      "all_choices_order": true,
+      "answer_equal": true
+    },
+    {
+      "index": 6,
+      "source": "valid",
+      "line": 14,
+      "sha256": true,
+      "record_equal": true,
+      "all_choices_order": true,
+      "answer_equal": true
+    },
+    {
+      "index": 7,
+      "source": "valid",
+      "line": 24,
+      "sha256": true,
+      "record_equal": true,
+      "all_choices_order": true,
+      "answer_equal": true
+    },
+    {
+      "index": 8,
+      "source": "valid",
+      "line": 25,
+      "sha256": true,
+      "record_equal": true,
+      "all_choices_order": true,
+      "answer_equal": true
+    },
+    {
+      "index": 9,
+      "source": "valid",
+      "line": 35,
+      "sha256": true,
+      "record_equal": true,
+      "all_choices_order": true,
+      "answer_equal": true
+    },
+    {
+      "index": 10,
+      "source": "valid",
+      "line": 47,
+      "sha256": true,
+      "record_equal": true,
+      "all_choices_order": true,
+      "answer_equal": true
+    },
+    {
+      "index": 11,
+      "source": "valid",
+      "line": 52,
+      "sha256": true,
+      "record_equal": true,
+      "all_choices_order": true,
+      "answer_equal": true
+    },
+    {
+      "index": 12,
+      "source": "valid",
+      "line": 60,
+      "sha256": true,
+      "record_equal": true,
+      "all_choices_order": true,
+      "answer_equal": true
+    },
+    {
+      "index": 13,
+      "source": "valid",
+      "line": 65,
+      "sha256": true,
+      "record_equal": true,
+      "all_choices_order": true,
+      "answer_equal": true
+    }
+  ],
+  "intersections": {
+    "train__valid": {
+      "translations": 65,
+      "full_questions": 0
+    },
+    "train__test_public": {
+      "translations": 82,
+      "full_questions": 1
+    },
+    "valid__test_public": {
+      "translations": 11,
+      "full_questions": 0
+    }
+  },
+  "rain_first": {
+    "translation": "山间连绵阴雨刚刚有了一点停止的意思。",
+    "choices": [
+      "寒雨初开霁",
+      "山晓雨初霁",
+      "宿雨天初霁",
+      "山雨初含霁"
+    ],
+    "answer": 3
+  },
+  "rain_second": {
+    "translation": "山间连绵阴雨刚刚有了一点停止的意思。",
+    "choices": [
+      "山雨初含霁",
+      "久雨初收霁",
+      "山晓雨初霁",
+      "山雨幸初霁"
+    ],
+    "answer": 0
+  },
+  "empty_test_record": {
+    "translation": "",
+    "choices": [
+      "浮花浪蕊相随去，莺语丁宁挽不来。",
+      "即遣花开深造次，便觉莺语太丁宁。",
+      "时当暖活花争醉，语似丁宁燕几双。",
+      "馀春春闰太从容，即次莺花老渐慵。"
+    ]
+  },
+  "short_train_record": {
+    "translation": "”景公说：“不用处死了。",
+    "choices": [
+      "勿谓公孙老",
+      "公曰：勿杀",
+      "曰狂我岂敢",
+      "公今徒杀身"
+    ],
+    "answer": 1
+  }
+}
