@@ -53,7 +53,7 @@
 |6|math23k|Math23K|未着手|
 |7|cold|COLD|作成済み|
 |8|cdial-bias|CDial-Bias|未着手|
-|9|chef|CHEF|制作中|
+|9|chef|CHEF|作成済み|
 |10|c3|C3|作成済み|
 |11|nlpcc2018-qa|NLPCC 2018 Open Domain QA|未着手|
 |12|cmedqa2|cMedQA2|未着手|
