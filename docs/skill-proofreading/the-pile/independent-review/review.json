@@ -1,0 +1,192 @@
+{
+  "slug": "the-pile",
+  "review_mode": "skill_based_codex",
+  "gemini_used": false,
+  "source_artifacts": {
+    "pptx": "/workspace/artifacts/helm-parallel/the-pile/datasets-in-10-minutes-the-pile.pptx",
+    "pdf": "/workspace/artifacts/helm-parallel/the-pile/datasets-in-10-minutes-the-pile.pdf"
+  },
+  "sha256": {
+    "pptx": "9a0a259e18a128b5d3b2287e1702dd2df155aed0a24f7e542815692c4cbb2b68",
+    "pdf": "91869344620f774509459b348db0260b6c5f4526411f41c7adaba8d7070d165f"
+  },
+  "all_page_text_reviewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56
+  ],
+  "overview_viewed": true,
+  "individual_view_image_pages": [
+    2,
+    6,
+    7,
+    8,
+    11,
+    13,
+    17,
+    19,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    51,
+    54,
+    55,
+    56
+  ],
+  "japanese_review": "56頁の本文・訳を通読し、主述・助詞・修飾・用語・並列・時制・つながり・意味保持を確認。好みだけの書換えなし。",
+  "checked": [
+    "22要素の全容量・反復・混合比をTable1と照合",
+    "構築時のPublic/ToS/Author3軸22要素をTable5と照合。現在の権利の法的判定として扱っていない",
+    "13の異なる原レコード・連続抜粋位置・text SHAを再照合",
+    "9実行すべてBPBを生logprob/byte合計から再計算",
+    "6要素・168実行・language_modeling・0学習例・1試行・最大1000・max_tokens0をrun_specsに照合",
+    "group0重複除去・昇順と3小要素の例外を実装照合",
+    "40GB同量実験のBPB/PPL/accuracyをTable3と照合",
+    "Pythia8規模・300B/207Bの説明、標準/重複除去条件を確認",
+    "架空の正解を付けていない。原文を訳のために分割していない",
+    "文献は全頁2件、正式タイトル/書誌/独立説明/URLあり。公式GitHub画面CSS読込済み",
+    "疑わしい数値接触・文献欠落はPDF bboxで確認し、誤認として指摘しなかった"
+  ],
+  "source_checks": "/workspace/artifacts/helm-parallel/review-pile/source-checks.json",
+  "package_independent": {
+    "parsed_xml_parts": 145,
+    "integer_bullets": 130,
+    "hyperlinks": 58,
+    "new_errors": []
+  },
+  "findings": [
+    {
+      "severity": "minor",
+      "pages": [
+        28,
+        34,
+        35
+      ],
+      "category": "layout",
+      "finding": "引用枠の下余白が上より大きい。",
+      "evidence": "/workspace/artifacts/helm-parallel/review-pile/panel-visible-gaps.json",
+      "measurements_pt": {
+        "28": [
+          8.67,
+          12.67
+        ],
+        "34": [
+          8.67,
+          16.67
+        ],
+        "35": [
+          8.67,
+          12.67
+        ]
+      },
+      "recommendation": "下余白を上と同じ約9ptにそろえ、説明を枠の差分に連動して上へ動かす。文字の折り返しは保持。"
+    },
+    {
+      "severity": "minor",
+      "pages": [
+        17
+      ],
+      "category": "precision",
+      "finding": "Table 3注記がfinal tokenを明記する対象はperplexity。accuracyの単位まで最終トークンと断定する根拠は同注記だけでは不足。",
+      "before": "LAMBADAは最終トークンの正解率。",
+      "suggested_after": "LAMBADAは末尾の解答の正解率。",
+      "evidence": "/workspace/artifacts/helm-parallel/the-pile/evidence/paper.txt:522",
+      "note": "表示値50.1/49.7/43.8自体は論文と一致。明確な数値誤りではなく、採点単位の表現精度。"
+    }
+  ],
+  "blocking_findings": [],
+  "verdict": "承認。独立レビューの軽微な4頁修正を再確認済み。",
+  "limitations": [
+    "保存済み固定版一次資料・公式配布レコード・実行記録への照合。公開URLの再取得はしていない。",
+    "全頁本文の校正とoverview、重要34頁を個別目視。個別viewページは記録どおり。",
+    "元成果物・repoは編集していない。"
+  ],
+  "follow_up": {
+    "resolved_pages": [
+      17,
+      28,
+      34,
+      35
+    ],
+    "individual_final_view_image_pages": [
+      17,
+      28,
+      34,
+      35
+    ],
+    "result": "全4頁を再描画画像で個別確認。p17の末尾単語への訂正、p28/34/35のgray枠下端と説明の連動移動を確認。",
+    "remaining_issues": []
+  }
+}

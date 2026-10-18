@@ -12,7 +12,7 @@
 |4|msmarco|msmarco_regular, msmarco_trec|作成済み|
 |5|cnn-dailymail|summarization_cnndm|作成済み|
 |6|ice|ice|作成済み|
-|7|the-pile|the_pile|未着手|
+|7|the-pile|the_pile|作成済み|
 |8|twitter-aae|twitter_aae, twitter_aae_aa, twitter_aae_white|未着手|
 |9|wikifact|wikifact|未着手|
 |10|dyck|dyck_language|未着手|

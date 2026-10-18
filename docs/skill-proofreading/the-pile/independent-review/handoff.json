@@ -1,0 +1,55 @@
+{
+  "slug": "the-pile",
+  "review_complete": true,
+  "blocking_findings": [],
+  "minor_findings": [
+    {
+      "severity": "minor",
+      "pages": [
+        28,
+        34,
+        35
+      ],
+      "category": "layout",
+      "finding": "引用枠の下余白が上より大きい。",
+      "evidence": "/workspace/artifacts/helm-parallel/review-pile/panel-visible-gaps.json",
+      "measurements_pt": {
+        "28": [
+          8.67,
+          12.67
+        ],
+        "34": [
+          8.67,
+          16.67
+        ],
+        "35": [
+          8.67,
+          12.67
+        ]
+      },
+      "recommendation": "下余白を上と同じ約9ptにそろえ、説明を枠の差分に連動して上へ動かす。文字の折り返しは保持。"
+    },
+    {
+      "severity": "minor",
+      "pages": [
+        17
+      ],
+      "category": "precision",
+      "finding": "Table 3注記がfinal tokenを明記する対象はperplexity。accuracyの単位まで最終トークンと断定する根拠は同注記だけでは不足。",
+      "before": "LAMBADAは最終トークンの正解率。",
+      "suggested_after": "LAMBADAは末尾の解答の正解率。",
+      "evidence": "/workspace/artifacts/helm-parallel/the-pile/evidence/paper.txt:522",
+      "note": "表示値50.1/49.7/43.8自体は論文と一致。明確な数値誤りではなく、採点単位の表現精度。"
+    }
+  ],
+  "review": "/workspace/artifacts/helm-parallel/review-pile/review.json",
+  "report": "/workspace/artifacts/helm-parallel/review-pile/review.md",
+  "approved": true,
+  "remaining_issues": [],
+  "resolved_pages": [
+    17,
+    28,
+    34,
+    35
+  ]
+}
