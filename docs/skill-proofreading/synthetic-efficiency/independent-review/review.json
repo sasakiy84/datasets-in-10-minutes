@@ -1,0 +1,157 @@
+{
+  "slug": "synthetic-efficiency",
+  "status": "approved",
+  "remaining_issues": [],
+  "pages": 66,
+  "main_pages": 31,
+  "actual_examples": 10,
+  "distribution": "3main+7appendix;5books,2different passages each",
+  "final_artifacts": [
+    {
+      "path": "/workspace/artifacts/helm-parallel/synthetic-efficiency/datasets-in-10-minutes-synthetic-efficiency.pptx",
+      "sha256": "61099a3addd0f7b996b961de9bf8ce8b74c002af373167dc6e0783f8f52bd42d",
+      "bytes": 270223
+    },
+    {
+      "path": "/workspace/artifacts/helm-parallel/synthetic-efficiency/datasets-in-10-minutes-synthetic-efficiency.pdf",
+      "sha256": "291500fcd01dc116a37e542ff7a9dd268eb023b4cde2818e0f4acb7ef61d1663",
+      "bytes": 1387275
+    }
+  ],
+  "personally_viewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66
+  ],
+  "final_changed_pages_rechecked": [
+    17,
+    22
+  ],
+  "added_output_translation_pages_personally_viewed": [
+    15,
+    49,
+    51
+  ],
+  "japanese_review": "Read all final page text and every full input translation against source English; reviewed all10 public output translations preserving incomplete endings. No remaining material translation issue.",
+  "independent_sources": "47 files independently GET:5complete scenario states,27publicstats,historical metric/estimator/generator code,tokenizer assets,official NeurIPS paper/HTML. Byte equal to creator copies.",
+  "checks": [
+    "50request runtime/output token counts and5run means recomputed using historical estimator AST,allmatch",
+    "30GPT2 prompt input token counts/roundtrip independently replayed;AI21 input tokenizer not executed,publicstats boundary retained",
+    "1365configs39models35conditions,each10inputs1trial0train;generation script main call30 is distinct",
+    "10unique sourceinputs5books,raw IDs/SHA/output matched;Gutenberg boundaries allmatched,8fulltextand2Prideedition differences explicitly retained",
+    "Native full EN/JP input and output fields all10 matched;27rawtable values+9chartpoints independently publicstats matched",
+    "OPT raw12.2892062664=12batch,denoised1.0241005222perinput;DV2.0185783148raw andmissing estimates remainnull;AI21raw1.2073632240/den.996/ideal1.057",
+    "Primary paper §4 andhistorical code confirmidealized commonhardware/software stack andAPI bestcase denoised;actualoutput token count(o−1),promptnearest larger coefficient proportional scaling,overhead,offlineoverride preserved",
+    "Empty reference with correct tag is placeholder,not quality answer;cached logs not newmeasurement;publicsuitev030 vs fixedreleasev040 separated",
+    "All66pages actualview: original entirety priority,all16tables/1chart/code/refs2perpage/officialsite andfooter/scope readable",
+    "Independent layout423paragraphs156cells0;package167XMLparts0newXSD/11masterbaseline,notes0;68native URLruns and68PDF links character centers URL-only",
+    "PDFlinkrect bbox extraction onp30/58 includesadjacentglyph bounding-boxoverhang butactualcharactercenters andnative hyperlink runs URL-only;not an unresolved hyperlink issue",
+    "20quoteframes measured realdarkglyph vsgray edges:top10.0267–12.0267pt,bottom10.0266–12.1733pt,maximbalance0.8133pt"
+  ],
+  "coexist": {
+    "review_copy": "/workspace/artifacts/helm-parallel/review-synthetic-efficiency/coexist-probe/trial.pptx",
+    "font": 15,
+    "widths": [
+      5.1,
+      3.5
+    ],
+    "line_spacing": 17.55,
+    "personally_viewed_trials": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "result": "All10 fail complete bilingual samepage;shortestexample6/id5 JPoverflowsfooter. Originalsinglepage+separatetranslation retained.",
+    "measurement_limit": "PDFvisible bounds clip overflow;loggedbodybottom is lowerbound. Fullsource completeness check separately fails oneorboth languages for everytrial."
+  },
+  "fixes": [
+    {
+      "issue": "10publicoutput translations not displayed",
+      "resolution": "Added3nativeJPtablesp15/49/51;output_jaall10 saved,sourceandunfinished scope retained"
+    },
+    {
+      "issue": "p17headerlast限isolated",
+      "resolution": "Meaningboundary explicitlinebreak;finalviewconfirmed"
+    },
+    {
+      "issue": "p22rawdescriptionlast間isolated",
+      "resolution": "Meaningboundary explicitlinebreak;finalviewconfirmed"
+    }
+  ],
+  "limitations": [
+    "OriginalCodaLabfiles/id10unavailable503;10publicinputs not inflated13",
+    "AI21 tokenizer not independently locally replayed",
+    "TwoPridepassages differ currentGutenberg edition;HELMrawretained",
+    "Missing DV model coefficients are missing estimates,notzero/qualityfailure"
+  ]
+}
