@@ -1,6 +1,6 @@
 # Natural Questions：出典と制作記録
 
-2026-10-18作成。本編36ページ、Appendix32ページ、計68ページ。本編約10分の黙読・流し読みを想定し、閲覧時間は未実測。編集可能なPPTXと最終版から出力したPDF。共通マスターを使用し、発表者ノートなし。
+2026-10-18作成。本編36ページ、Appendix31ページ、計67ページ。本編約10分の黙読・流し読みを想定し、閲覧時間は未実測。編集可能なPPTXと最終版から出力したPDF。共通マスターを使用し、発表者ノートなし。
 
 ## 一次資料・配布物
 
@@ -21,7 +21,7 @@
 
 ## 課題・評価・統計
 
-本編3件と追加10件は、異なる13記事。単一スパン、複数スパン、NULL、yes／noを含む。3例では原文と訳を同じページ、他の10例は原文を1枚に保って訳を次ページに置いた。参照回答は21ptのえんじ色。複数スパンは1人の注釈の集合、yes／noは非NULLの最多注釈を示し、その注釈に対応するlong answerを確認した。
+本編3件と追加10件は、異なる13記事。単一スパン、複数スパン、NULL、yes／noを含む。4例では原文と訳を同じページ、他の9例は原文を1枚に保って訳を次ページに置いた。参照回答は21ptのえんじ色。複数スパンは1人の注釈の集合、yes／noは非NULLの最多注釈を示し、その注釈に対応するlong answerを確認した。
 
 2019年のNQは、5注釈中2人以上の非NULL判定と範囲の一致からP/R/F1を算出する。HELMは元のdevのうち、短い回答のスパンが少なくとも1注釈ある4,289例を対象候補にし、ファイル内で交互に提示用・評価用に分け、評価側1,000件を使う。回答なしとyes／no専用フィールドは使わず、複数スパンは別々の参照回答として生成回答を採点する。両者のF1を同じ指標として比較しない。
 
@@ -33,7 +33,7 @@ HELM Classic v0.4.0の質問のみ／正解long answerありの6実行を、v0.3
 
 **Geminiは使用していない。** Codexが[日本語校正スキル](../.agents/skills/japanese-slide-proofreading/SKILL.md)をページごとに適用。[実際の修正対](skill-proofreading/naturalquestions.md)、[全ページ文言](skill-proofreading/naturalquestions/pages.jsonl)、[検査とレイアウト記録](skill-proofreading/naturalquestions/review.json)を保存。
 
-全68ページを描画して一覧を確認し、引用・訳・表・グラフ・公式画面・参考文献を個別に拡大。引用枠はPDFの字形境界から下余白8ptを確保し、回答位置も追従させた。最終変更ページは再出力して確認。文字欠落、枠のはみ出し、出典との重なり0件。URLだけのリンク58件、ネイティブ表8件、グラフ1件。標準XSDの新規エラー0件。マスター由来11件と整数buSzPctの字句形式差は分離し、XSDは変更していない。PowerPointの手動開封は未実施、LibreOffice変換と構造検証を行った。
+全67ページを描画して一覧を確認し、引用・訳・表・グラフ・公式画面・参考文献を個別に拡大。引用枠の可視字形をPNG実画素で測定し、上下各6.67〜7.33ptに調整。回答位置も追従させた。最終変更ページは再出力して確認。文字欠落、枠のはみ出し、出典との重なり0件。URLだけのリンク57件、ネイティブ表8件、グラフ1件。標準XSDの新規エラー0件。マスター由来11件と整数buSzPctの字句形式差は分離し、XSDは変更していない。PowerPointの手動開封は未実施、LibreOffice変換と構造検証を行った。
 
 ## Wikipediaの帰属と翻訳
 
@@ -52,3 +52,9 @@ HELM Classic v0.4.0の質問のみ／正解long answerありの6実行を、v0.3
 - 実例11：Wikipedia contributors, [List of countries with left-hand traffic](https://en.wikipedia.org//w/index.php?title=List_of_countries_with_left-hand_traffic&amp;oldid=835288332)。タグ除去・空白整形・日本語訳。
 - 実例12：Wikipedia contributors, [Dust Bowl](https://en.wikipedia.org//w/index.php?title=Dust_Bowl&amp;oldid=801829264)。タグ除去・空白整形・日本語訳。
 - 実例13：Wikipedia contributors, [Pericardium](https://en.wikipedia.org//w/index.php?title=Pericardium&amp;oldid=821015178)。タグ除去・空白整形・日本語訳。
+
+## 独立レビュー後の最終版
+
+作成者と別のサブエージェントが元の固定配布レコードと数値条件を独立照合。実例の原文・質問・参照回答を保持しつつ、幅と余白を調整して原文・訳の併記を追加した。全引用枠の可視字形上下余白は各6.67〜7.33pt。現在は本編36、全67ページ。改訂前の校正対・ページ番号は履歴として保存した。[独立レビュー](skill-proofreading/naturalquestions/independent-review/review.json)。
+
+最大出力長の旧記載100トークンは誤りで、全6実行のadapter_spec.max_tokens=300に訂正した。得点は変更していない。

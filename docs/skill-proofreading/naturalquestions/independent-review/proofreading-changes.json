@@ -1,0 +1,62 @@
+[
+  {
+    "original_page": 63,
+    "page": 62,
+    "before": "最大出力100トークン",
+    "after": "最大出力300トークン",
+    "reason": "保存済みevaluations.json全6実行のadapter_spec.max_tokensは300。",
+    "kind": "factual",
+    "evidence": "/workspace/artifacts/helm-classic-remaining/naturalquestions/evaluations.json",
+    "method": "skill_based_codex",
+    "gemini_used": false
+  },
+  {
+    "example": 4,
+    "before_pages": [
+      41,
+      42
+    ],
+    "after_pages": [
+      41
+    ],
+    "before": "原文1頁＋訳1頁",
+    "after": "原文と訳を同一頁の2列に配置。回答21pt bold #B13731を保持。",
+    "reason": "訳のフォント・余白を調整して同居可能であることを実描画で確認。",
+    "kind": "layout",
+    "method": "skill_based_codex",
+    "gemini_used": false
+  },
+  {
+    "pages": [
+      7,
+      9,
+      10,
+      13,
+      14,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57
+    ],
+    "before": "gray引用枠の可視字形上下余白に差があった。",
+    "after": "PNG実画素を測定して可視字形の上・下各6.67–7.33ptへ調整。",
+    "reason": "設定marginやPDFフォントbboxを可視字形の余白と混同しない。",
+    "kind": "layout",
+    "evidence": "/workspace/artifacts/helm-parallel/review/naturalquestions/panel-ink-audit.json",
+    "method": "skill_based_codex",
+    "gemini_used": false
+  }
+]

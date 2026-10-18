@@ -1,0 +1,744 @@
+[
+  {
+    "page": 1,
+    "title": "NQ",
+    "section": "",
+    "kind": "cover"
+  },
+  {
+    "page": 2,
+    "title": "公式サイト",
+    "section": "Natural Questions",
+    "kind": "image",
+    "sources": [
+      "site"
+    ]
+  },
+  {
+    "page": 3,
+    "title": "",
+    "section": "目次",
+    "kind": "toc"
+  },
+  {
+    "page": 4,
+    "title": "検索質問と実際の回答",
+    "section": "1. 検索質問と実際の回答",
+    "kind": "divider"
+  },
+  {
+    "page": 5,
+    "title": "検索質問とWikipediaのページが入力",
+    "section": "1. 検索質問と実際の回答",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "Google検索で実際に使われた英語の質問に、検索上位のWikipediaページを対応させた。",
+      "文章・表・リストなどから、根拠となる範囲と短い答えを選ぶ。",
+      "ページに答えがなければ、回答なし（NULL）も正解になる。"
+    ]
+  },
+  {
+    "page": 6,
+    "title": "長い回答は根拠、短い回答は答え",
+    "section": "1. 検索質問と実際の回答",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "long answerは、答えを導ける段落・表・リストなどの範囲。",
+      "short answerは、その中の1つ以上の文字列、またはyes／no。長い回答だけがある例もある。",
+      "以下の実例では、注釈されたlong answer全体をタグ除去・空白整形して示す。記事名と質問も添える。"
+    ]
+  },
+  {
+    "page": 7,
+    "title": "実例1：米国上院の議員数",
+    "section": "1. 検索質問と実際の回答",
+    "kind": "example",
+    "sources": [
+      "data"
+    ],
+    "example_index": 1,
+    "language": "en+ja",
+    "quoted_text": "The United States Senate consists of 100 members, two from each of the 50 states. Below is a list of the current U.S. Senators, sitting in the 115th United States Congress.\nQuestion: how many senators are there in the us senate",
+    "answer_text": "100"
+  },
+  {
+    "page": 8,
+    "title": "数字を含む範囲を選ぶ",
+    "section": "1. 検索質問と実際の回答",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "long answerは、米国上院の構成を説明した段落全体。short answerは「100」の範囲。",
+      "元の課題では、短い文字列を生成するだけでなく、記事内のどこが答えかを指定する。"
+    ]
+  },
+  {
+    "page": 9,
+    "title": "実例2：四つの州をまとめて答える",
+    "section": "1. 検索質問と実際の回答",
+    "kind": "example",
+    "sources": [
+      "data"
+    ],
+    "example_index": 2,
+    "language": "en",
+    "quoted_text": "Commonwealth is a designation used by four of the 50 states of the United States in their full official state names: Kentucky[1] (the law creating Kentucky names it the \"State of Kentucky\"[2] but it was originally part of the land grant of the Colony of Virginia), Massachusetts,[3] Pennsylvania,[4] and Virginia.[5] Each was, prior to 1776, a British colony, or parts thereof, and share a strong influence of English common law in some of their laws and institutions.[6][7]\nQuestion: how many us states are commonwealths and which states are they",
+    "answer_text": "Kentucky\nMassachusetts\nPennsylvania\nVirginia"
+  },
+  {
+    "page": 10,
+    "title": "実例2：四つの州をまとめて答える（訳）",
+    "section": "1. 検索質問と実際の回答",
+    "kind": "translation",
+    "sources": [
+      "data"
+    ],
+    "example_index": 2,
+    "language": "ja"
+  },
+  {
+    "page": 11,
+    "title": "短い回答が複数の箇所に分かれる",
+    "section": "1. 検索質問と実際の回答",
+    "kind": "content",
+    "sources": [
+      "data"
+    ],
+    "body_text": [
+      "4つの州名が、それぞれ離れた範囲にある。配布注釈では、この4範囲の集合が短い回答。",
+      "コモンウェルスは州の正式名称に使われる呼称で、別種の行政区分を意味しない。",
+      "ここでは1人分の注釈を示した。他の作業者の注釈も検証記録に保持している。"
+    ]
+  },
+  {
+    "page": 12,
+    "title": "回答なしの例では記事冒頭を抜粋する",
+    "section": "1. 検索質問と実際の回答",
+    "kind": "content",
+    "sources": [
+      "data"
+    ],
+    "body_text": [
+      "次の例は、5人ともlong answerを付けていない。表示する本文は記事冒頭の抜粋。",
+      "実際の課題では記事全文を読む。画面に示した抜粋だけで、不在を判定した注釈ではない。"
+    ]
+  },
+  {
+    "page": 13,
+    "title": "実例3：回答なしも正解になる",
+    "section": "1. 検索質問と実際の回答",
+    "kind": "example",
+    "sources": [
+      "data"
+    ],
+    "example_index": 3,
+    "language": "en",
+    "quoted_text": "Typical applications of robots include welding, painting, assembly, pick and place for printed circuit boards, packaging and labeling, palletizing, product inspection, and testing; all accomplished with high endurance, speed, and precision. They can assist in material handling.\nQuestion: which of this following is not an activity typically performed by robots in the automotive industry",
+    "answer_text": "NULL (all 5 annotators)"
+  },
+  {
+    "page": 14,
+    "title": "実例3：回答なしも正解になる（訳）",
+    "section": "1. 検索質問と実際の回答",
+    "kind": "translation",
+    "sources": [
+      "data"
+    ],
+    "example_index": 3,
+    "language": "ja"
+  },
+  {
+    "page": 15,
+    "title": "質問の前提がそろっているか",
+    "section": "1. 検索質問と実際の回答",
+    "kind": "content",
+    "sources": [
+      "data"
+    ],
+    "body_text": [
+      "質問は「次のうち」と尋ねるが、選択肢は書かれていない。",
+      "記事にロボットの用途は並んでいても、この質問には5人とも回答なしの注釈を付けた。",
+      "答えを作らず、回答しないと判断することも評価の一部になる。"
+    ]
+  },
+  {
+    "page": 16,
+    "title": "収集・注釈とデータの全体像",
+    "section": "2. 収集・注釈とデータの全体像",
+    "kind": "divider"
+  },
+  {
+    "page": 17,
+    "title": "答えを見て作った質問から離れる",
+    "section": "2. 収集・注釈とデータの全体像",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "SQuAD（2016年）では、文章を見て作業者が質問を書いた。NQは情報を探す利用者の検索質問を使う。",
+      "答えを含む一段落を渡すのではなく、HTML構造を持つ記事全体を入力にする。",
+      "答えが見つからない質問も残し、回答の可否を判断する課題にした。"
+    ]
+  },
+  {
+    "page": 18,
+    "title": "8語以上の検索質問を集める",
+    "section": "2. 収集・注釈とデータの全体像",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "短い期間に複数の利用者が検索した、8語以上の英語の質問を対象にした。",
+      "疑問詞や文の形などの条件で、事実を尋ねる質問を選んだ。how toで始まる質問は対象外。",
+      "検索の上位5件にWikipediaがある質問を採り、最上位のWikipediaページを組にした。"
+    ]
+  },
+  {
+    "page": 19,
+    "title": "人が質問・根拠・短い答えを順に確認",
+    "section": "2. 収集・注釈とデータの全体像",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "まず記事を見ずに、事実を尋ねる理解可能な質問かを判断する。",
+      "次に記事内で、回答に必要な情報がそろう最小のHTML要素を選ぶ。複数あれば先に出るものを選ぶ。",
+      "その範囲から短い回答を選び、yes／noや、短い回答なしも指定する。"
+    ]
+  },
+  {
+    "page": 20,
+    "title": "複数の注釈で判断の揺れを捉える",
+    "section": "2. 収集・注釈とデータの全体像",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "約50人の作業者が担当し、1件当たりの平均作業時間は80秒。",
+      "学習データは各1人、開発・テストは各5人が注釈した。別の標本には25人分を集めた。",
+      "4人の専門家が独立に正しさを評価し、判断が割れた例を議論して合意を取った。"
+    ]
+  },
+  {
+    "page": 21,
+    "title": "30万件を超える学習データ",
+    "section": "2. 収集・注釈とデータの全体像",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ]
+  },
+  {
+    "page": 22,
+    "title": "開発集合では、回答なしも多い",
+    "section": "2. 収集・注釈とデータの全体像",
+    "kind": "content",
+    "sources": [
+      "data"
+    ]
+  },
+  {
+    "page": 23,
+    "title": "短い答えの有無も判断が割れる",
+    "section": "2. 収集・注釈とデータの全体像",
+    "kind": "content",
+    "sources": [
+      "data"
+    ]
+  },
+  {
+    "page": 24,
+    "title": "採点とHELMでの使われ方",
+    "section": "3. 採点とHELMでの使われ方",
+    "kind": "divider"
+  },
+  {
+    "page": 25,
+    "title": "NQの採点：回答するか、範囲は一致するか",
+    "section": "3. 採点とHELMでの使われ方",
+    "kind": "content",
+    "sources": [
+      "repo"
+    ],
+    "body_text": [
+      "5人中2人以上が回答ありとしたら、回答すべき例とする。",
+      "long answerは、いずれか1人の非NULLの範囲と一致すれば正解。short answerは範囲の集合かyes／noで照合する。",
+      "正しく回答した件数から適合率・再現率を求め、集合全体のF1を計算する。"
+    ]
+  },
+  {
+    "page": 26,
+    "title": "2019年のベースライン",
+    "section": "3. 採点とHELMでの使われ方",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ]
+  },
+  {
+    "page": 27,
+    "title": "HELMでは短い回答の生成に使う",
+    "section": "3. 採点とHELMでの使われ方",
+    "kind": "content",
+    "sources": [
+      "code"
+    ],
+    "body_text": [
+      "公開開発集合のうち、少なくとも1人が短い回答のスパンを付けた4,289例を利用対象にする。",
+      "回答なしの例と、yes／noの専用フィールドは使わない。元の学習集合も使わない。",
+      "各ファイル内で交互に提示例用と評価用へ分け、公開実行では評価側から1,000件を採点した。"
+    ]
+  },
+  {
+    "page": 28,
+    "title": "HELMの二つの入力条件",
+    "section": "3. 採点とHELMでの使われ方",
+    "kind": "content",
+    "sources": [
+      "code"
+    ]
+  },
+  {
+    "page": 29,
+    "title": "HELMのF1は回答文の語の重なり",
+    "section": "3. 採点とHELMでの使われ方",
+    "kind": "content",
+    "sources": [
+      "helm"
+    ],
+    "body_text": [
+      "回答を小文字化し、句読点・冠詞・余分な空白を除き、語の重なりから各問のF1を計算する。",
+      "短い回答の各スパンを別々の参照回答として扱い、最も高い得点を使う。",
+      "この平均値は、回答なしも扱うNQの範囲選択F1とは課題と計算方法が異なる。"
+    ]
+  },
+  {
+    "page": 30,
+    "title": "根拠を渡すと回答の得点が上がる",
+    "section": "3. 採点とHELMでの使われ方",
+    "kind": "content",
+    "sources": [
+      "open"
+    ]
+  },
+  {
+    "page": 31,
+    "title": "根拠ありでも、記事から探す課題とは違う",
+    "section": "3. 採点とHELMでの使われ方",
+    "kind": "content",
+    "sources": [
+      "open"
+    ],
+    "body_text": [
+      "long answerの注釈を使うので、記事全体から根拠を探す段階は省かれている。",
+      "本文がない条件では、学習済みの知識などから短い答えを生成する。",
+      "最大提示例数は5。根拠あり条件では入力上限のため例数が減り、一部の入力が切り詰められた。"
+    ]
+  },
+  {
+    "page": 32,
+    "title": "利用の変化と入手方法",
+    "section": "4. 利用の変化と入手方法",
+    "kind": "divider"
+  },
+  {
+    "page": 33,
+    "title": "範囲選択から、知識と文脈利用の比較へ",
+    "section": "4. 利用の変化と入手方法",
+    "kind": "content",
+    "sources": [
+      "code"
+    ],
+    "body_text": [
+      "2019年の課題は、実際の検索質問に対して、記事から答えを見つけ、回答できるかを決めること。",
+      "HELMでは質問のみ・根拠ありの条件を使い、言語モデルが知識と与えられた文脈をどう使うかを比べる。",
+      "2026-10-18時点の公開HELMコードにも、この2条件の実装がある。"
+    ]
+  },
+  {
+    "page": 34,
+    "title": "公開データから実例と注釈を読む",
+    "section": "4. 利用の変化と入手方法",
+    "kind": "content",
+    "sources": [
+      "data"
+    ],
+    "body_text": [
+      "公式サイトから課題の仕様と公開データへ進める。学習・開発データは公開、テスト正解は非公開。",
+      "今回取得したHugging Faceのdev配布は、7個のParquetファイルで約1.34 GB。全7,830例が入る。",
+      "各例には質問、WikipediaのHTML、長い回答の候補、注釈者ごとの長い回答・短い回答・yes／noがある。"
+    ]
+  },
+  {
+    "page": 35,
+    "title": "データの条件と元記事の条件を確認する",
+    "section": "4. 利用の変化と入手方法",
+    "kind": "content",
+    "sources": [
+      "repo"
+    ],
+    "body_text": [
+      "公式リポジトリのライセンスはApache 2.0。",
+      "収録Wikipedia本文のHTMLには、CC BY-SA 3.0の表示がある。元記事のURLも付いている。",
+      "元記事を更新後の内容で読み直す場合は、配布時点の本文や注釈と分けて扱う。"
+    ]
+  },
+  {
+    "page": 36,
+    "title": "答えを探すことと、答えない判断を測る",
+    "section": "4. 利用の変化と入手方法",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "検索から集めた質問と記事に、根拠の範囲・短い答え・回答なしの注釈がある。",
+      "表やリスト、複数箇所の答え、注釈者間の揺れも課題の一部。",
+      "HELMで使う場合は、短い回答がある例への絞り込みと、質問のみ・根拠ありの条件を押さえる。"
+    ]
+  },
+  {
+    "page": 37,
+    "title": "Appendix",
+    "section": "Appendix",
+    "kind": "divider"
+  },
+  {
+    "page": 38,
+    "title": "",
+    "section": "Appendix: 目次",
+    "kind": "toc"
+  },
+  {
+    "page": 39,
+    "title": "追加の実例",
+    "section": "Appendix: 1. 追加の実例",
+    "kind": "divider"
+  },
+  {
+    "page": 40,
+    "title": "追加例にはyes／noの注釈も含める",
+    "section": "Appendix: 1. 追加の実例",
+    "kind": "content",
+    "sources": [
+      "data"
+    ],
+    "body_text": [
+      "以下の10例は、本編とは異なる10記事から選んだ。元のNQの課題を示すため、HELMが使わないyes／noも含める。",
+      "短い回答は、1人の注釈の範囲集合を表示する。yes／noは5人のうち最も多い非NULLの注釈を示す。",
+      "本文は、その注釈に対応するlong answerの全文。記事名も原文と訳に添えている。"
+    ]
+  },
+  {
+    "page": 41,
+    "title": "実例4：二つの呼び名を抽出する",
+    "section": "Appendix: 1. 追加の実例",
+    "kind": "example",
+    "sources": [
+      "data"
+    ],
+    "example_index": 4,
+    "language": "en+ja",
+    "quoted_text": "Deposition is a thermodynamic process, a phase transition in which gas transforms into solid without passing through the liquid phase. The reverse of deposition is sublimation and hence sometimes deposition is called desublimation.\nQuestion: phase change from gas to solid is called",
+    "answer_text": "Deposition\ndesublimation"
+  },
+  {
+    "page": 42,
+    "title": "実例5：シーズンで歌い手が変わる",
+    "section": "Appendix: 1. 追加の実例",
+    "kind": "example",
+    "sources": [
+      "data"
+    ],
+    "example_index": 5,
+    "language": "en",
+    "quoted_text": "Opening theme \"In the Street\" by Big Star as performed by; Todd Griffin (season 1) Cheap Trick (seasons 2–8)\nQuestion: who sang the theme song to that 70s show",
+    "answer_text": "Todd Griffin (season 1)\nCheap Trick (seasons 2–8)"
+  },
+  {
+    "page": 43,
+    "title": "実例5：シーズンで歌い手が変わる（訳）",
+    "section": "Appendix: 1. 追加の実例",
+    "kind": "translation",
+    "sources": [
+      "data"
+    ],
+    "example_index": 5,
+    "language": "ja"
+  },
+  {
+    "page": 44,
+    "title": "実例6：病気と微生物の関係",
+    "section": "Appendix: 1. 追加の実例",
+    "kind": "example",
+    "sources": [
+      "data"
+    ],
+    "example_index": 6,
+    "language": "en",
+    "quoted_text": "The Italian Agostino Bassi was the first person to prove that a disease was caused by a microorganism when he conducted a series of experiments between 1808 and 1813, demonstrating that a \"vegetable parasite\" caused a disease in silkworms known as calcinaccio—this disease was devastating the French silk industry at the time. The \"vegetable parasite\" is now known to be a fungus pathogenic to insects called Beauveria bassiana (named after Bassi).\nQuestion: who established the idea that microorganisms play a role in disease",
+    "answer_text": "Agostino Bassi"
+  },
+  {
+    "page": 45,
+    "title": "実例6：病気と微生物の関係（訳）",
+    "section": "Appendix: 1. 追加の実例",
+    "kind": "translation",
+    "sources": [
+      "data"
+    ],
+    "example_index": 6,
+    "language": "ja"
+  },
+  {
+    "page": 46,
+    "title": "実例7：データベースの種類",
+    "section": "Appendix: 1. 追加の実例",
+    "kind": "example",
+    "sources": [
+      "data"
+    ],
+    "example_index": 7,
+    "language": "en",
+    "quoted_text": "Library Literature and Information Science is a bibliographic database that indexes over 410 library and information science periodicals published internationally. It also covers books, chapters within books, library school theses, and pamphlets. In 2011, the H. W. Wilson Company, the firm that created the index, sold it to EBSCO Publishing along with other H.W. Wilson indexes and databases.[1]\nQuestion: what type of database is library literature and information science",
+    "answer_text": "bibliographic"
+  },
+  {
+    "page": 47,
+    "title": "実例7：データベースの種類（訳）",
+    "section": "Appendix: 1. 追加の実例",
+    "kind": "translation",
+    "sources": [
+      "data"
+    ],
+    "example_index": 7,
+    "language": "ja"
+  },
+  {
+    "page": 48,
+    "title": "実例8：胃から小腸への通り道",
+    "section": "Appendix: 1. 追加の実例",
+    "kind": "example",
+    "sources": [
+      "data"
+    ],
+    "example_index": 8,
+    "language": "en+ja",
+    "quoted_text": "Chyme or chymus (/kaɪm/; from Greek χυμός khymos, \"juice\"[1][2]) is the semi-fluid mass of partly digested food that is expelled by the stomach, through the pyloric valve, into the duodenum[3] (the beginning of the small intestine).\nQuestion: what allows chyme to enter the small intestine",
+    "answer_text": "pyloric valve"
+  },
+  {
+    "page": 49,
+    "title": "実例9：実話に基づく映画か",
+    "section": "Appendix: 1. 追加の実例",
+    "kind": "example",
+    "sources": [
+      "data"
+    ],
+    "example_index": 9,
+    "language": "en",
+    "quoted_text": "Draft Day is a 2014 American sports drama film directed by Ivan Reitman and starring Kevin Costner. The premise revolves around the fictional general manager of the Cleveland Browns (Costner) deciding what to do after his team acquires the number one draft pick in the upcoming National Football League draft.\nQuestion: is draft day the movie based on a true story",
+    "answer_text": "NO"
+  },
+  {
+    "page": 50,
+    "title": "実例9：実話に基づく映画か（訳）",
+    "section": "Appendix: 1. 追加の実例",
+    "kind": "translation",
+    "sources": [
+      "data"
+    ],
+    "example_index": 9,
+    "language": "ja"
+  },
+  {
+    "page": 51,
+    "title": "実例10：過去に発生したことがあるか",
+    "section": "Appendix: 1. 追加の実例",
+    "kind": "example",
+    "sources": [
+      "data"
+    ],
+    "example_index": 10,
+    "language": "en+ja",
+    "quoted_text": "Alaska has only been hit by 2 tornadoes between 1950 and 2006 (the first being November 4, 1959[38] and the other was August 2, 2005[39]); both were only F0. Hawaii has only been hit by 49 tornadoes since 1950.\nQuestion: has there ever been a tornado in alaska",
+    "answer_text": "YES"
+  },
+  {
+    "page": 52,
+    "title": "実例11：通行方向を記事名から読む",
+    "section": "Appendix: 1. 追加の実例",
+    "kind": "example",
+    "sources": [
+      "data"
+    ],
+    "example_index": 11,
+    "language": "en",
+    "quoted_text": "Title: List of countries with left-hand traffic\nAustralia Christmas Island (Australia) Cocos (Keeling) Islands (Australia) Cook Islands (New Zealand) Fiji Kiribati Nauru New Zealand Niue Norfolk Island (Australia) Papua New Guinea Pitcairn Islands (U.K. Overseas Territory) Solomon Islands Samoa (since September 1, 2009) Tokelau (New Zealand) Tonga Tuvalu\nQuestion: does australia drive on the right side of the road",
+    "answer_text": "NO"
+  },
+  {
+    "page": 53,
+    "title": "実例11：通行方向を記事名から読む（訳）",
+    "section": "Appendix: 1. 追加の実例",
+    "kind": "translation",
+    "sources": [
+      "data"
+    ],
+    "example_index": 11,
+    "language": "ja"
+  },
+  {
+    "page": 54,
+    "title": "実例12：複数の州を拾う",
+    "section": "Appendix: 1. 追加の実例",
+    "kind": "example",
+    "sources": [
+      "data"
+    ],
+    "example_index": 12,
+    "language": "en",
+    "quoted_text": "The drought and erosion of the Dust Bowl affected 100,000,000 acres (400,000 km2) that centered on the panhandles of Texas and Oklahoma and touched adjacent sections of New Mexico, Colorado, and Kansas.[5]\nQuestion: what states were most affected by the dust bowl",
+    "answer_text": "Texas\nOklahoma\nNew Mexico\nColorado\nKansas"
+  },
+  {
+    "page": 55,
+    "title": "実例12：複数の州を拾う（訳）",
+    "section": "Appendix: 1. 追加の実例",
+    "kind": "translation",
+    "sources": [
+      "data"
+    ],
+    "example_index": 12,
+    "language": "ja"
+  },
+  {
+    "page": 56,
+    "title": "実例13：複数の機能を答える",
+    "section": "Appendix: 1. 追加の実例",
+    "kind": "example",
+    "sources": [
+      "data"
+    ],
+    "example_index": 13,
+    "language": "en",
+    "quoted_text": "Sets heart in mediastinum and limits its motion Protects it from infections coming from other organs (such as lungs) Prevents excessive dilation of the heart in cases of acute volume overload Lubricates the heart\nQuestion: what is the function of the pericardial sac",
+    "answer_text": "Sets heart in mediastinum and limits its motion\nProtects it from infections coming from other organs (such as lungs)\nPrevents excessive dilation of the heart in cases of acute volume overload\nLubricates the heart"
+  },
+  {
+    "page": 57,
+    "title": "実例13：複数の機能を答える（訳）",
+    "section": "Appendix: 1. 追加の実例",
+    "kind": "translation",
+    "sources": [
+      "data"
+    ],
+    "example_index": 13,
+    "language": "ja"
+  },
+  {
+    "page": 58,
+    "title": "注釈と実行条件の補足",
+    "section": "Appendix: 2. 注釈と実行条件の補足",
+    "kind": "divider"
+  },
+  {
+    "page": 59,
+    "title": "検索質問の長さ",
+    "section": "Appendix: 2. 注釈と実行条件の補足",
+    "kind": "content",
+    "sources": [
+      "data"
+    ]
+  },
+  {
+    "page": 60,
+    "title": "人の得点は別の標本で推定した",
+    "section": "Appendix: 2. 注釈と実行条件の補足",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "25人が注釈した別標本から、1人の注釈者の得点と、人の判断から得られる上限を推定した。",
+      "1人の注釈者はlong F1 73.4、short F1 57.5。上限の推定はそれぞれ87.2、75.7。",
+      "通常の開発集合で全注釈者の回答をそのまま平均した得点ではない。"
+    ]
+  },
+  {
+    "page": 61,
+    "title": "HELMの完全一致も確認する",
+    "section": "Appendix: 2. 注釈と実行条件の補足",
+    "kind": "content",
+    "sources": [
+      "open"
+    ]
+  },
+  {
+    "page": 62,
+    "title": "根拠あり条件の実際の入力",
+    "section": "Appendix: 2. 注釈と実行条件の補足",
+    "kind": "content",
+    "sources": [
+      "open"
+    ]
+  },
+  {
+    "page": 63,
+    "title": "取得データと公開実行記録を照合した",
+    "section": "Appendix: 2. 注釈と実行条件の補足",
+    "kind": "content",
+    "sources": [
+      "data"
+    ],
+    "body_text": [
+      "旧GCSのdev URLは匿名アクセスで403になったため、公開Hugging Face配布を取得した。",
+      "HELMの公開scenario_stateから、摂動なし・第1試行の1,000例を取り出した。",
+      "取得した開発集合と質問・参照回答を照合し、1,000例すべてで一致を確認した。"
+    ]
+  },
+  {
+    "page": 64,
+    "title": "研究と参考文献",
+    "section": "Appendix: 3. 研究と参考文献",
+    "kind": "divider"
+  },
+  {
+    "page": 65,
+    "title": "Google Researchによる検索質問の課題",
+    "section": "Appendix: 3. 研究と参考文献",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "第一著者はTom Kwiatkowski、最終著者はSlav Petrov。Google Researchのチームが構築した。",
+      "検索に使われる質問を基に、読解と回答の可否を扱う大規模な注釈付きデータを公開した。",
+      "2019年にTACLで発表。注釈者の判断が割れることも、評価設計の中心に置いた。"
+    ]
+  },
+  {
+    "page": 66,
+    "title": "参考文献",
+    "section": "Appendix: 3. 研究と参考文献",
+    "kind": "references"
+  },
+  {
+    "page": 67,
+    "title": "参考文献",
+    "section": "Appendix: 3. 研究と参考文献",
+    "kind": "references"
+  }
+]
