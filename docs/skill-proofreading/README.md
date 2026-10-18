@@ -61,3 +61,4 @@
 |BOLD|[変更対](bold.md)・[TSV](bold/changes.tsv)|[pages.jsonl](bold/pages.jsonl)|[制作記録](../bold-sources.md)・[最終検査](bold/review.json)|
 |RAFT|[変更対](raft.md)・[TSV](raft/changes.tsv)|[pages.jsonl](raft/pages.jsonl)|[制作記録](../raft-sources.md)・[最終検査](raft/review.json)|
 |CivilComments|[変更対](civil-comments.md)・[TSV](civil-comments/changes.tsv)|[pages.jsonl](civil-comments/pages.jsonl)|[制作記録](../civil-comments-sources.md)・[最終検査](civil-comments/review.json)|
+|WMT14|[変更対](wmt14.md)・[TSV](wmt14/changes.tsv)|[pages.jsonl](wmt14/pages.jsonl)|[制作記録](../wmt14-sources.md)・[最終検査](wmt14/review.json)|
