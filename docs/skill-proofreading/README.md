@@ -79,3 +79,9 @@
 |RAFT|0|1|[記録](raft/answer-and-citation-review.json)|
 |CivilComments|0|1|[記録](civil-comments/answer-and-citation-review.json)|
 |WMT14|0|2|[記録](wmt14/answer-and-citation-review.json)|
+
+## 2026-10-18：正解色の好み
+
+今回の10件を点検し、独立した正解表示のある5資料90か所をテーマaccent1（#B13731、えんじ系の赤）へ変更した。ユーザー個人の好みとして制作スキルにも記録した。22pt・太字と、文章・値・配置は保持。Geminiは使用していない。
+
+[openbookqa](openbookqa/answer-color-review.json)・[mmlu](mmlu/answer-color-review.json)・[babi](babi/answer-color-review.json)・[blimp](blimp/answer-color-review.json)・[bbq](bbq/answer-color-review.json)
