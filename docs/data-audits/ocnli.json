@@ -1,0 +1,2838 @@
+{
+  "dataset": "ocnli",
+  "checked_at": "2026-10-18T09:59:29Z",
+  "examples": [
+    {
+      "index": 1,
+      "role": "main",
+      "split": "dev",
+      "row": 1162,
+      "line_1based": 1163,
+      "id": 1162,
+      "prem_id": "phone_1432",
+      "raw_record": {
+        "level": "medium",
+        "sentence1": "篮子嘛,一块钱,一块钱啊.",
+        "sentence2": "这个篮子是可以卖的。",
+        "label": "entailment",
+        "label0": "entailment",
+        "label1": "entailment",
+        "label2": "entailment",
+        "label3": "entailment",
+        "label4": "entailment",
+        "genre": "phone",
+        "prem_id": "phone_1432",
+        "id": 1162
+      },
+      "raw_line_sha256": "032e7603679d82c044cd44f27104c943024b6663d906d205822fa422066100f5",
+      "record_sha256": "5f2b47c9e392ee2fb3174230e159866353e4784f00810d511299f96e0b1828c0",
+      "premise": "篮子嘛,一块钱,一块钱啊.",
+      "hypothesis": "这个篮子是可以卖的。",
+      "label": "entailment",
+      "votes": {
+        "entailment": 5
+      },
+      "title_ja": "値段の発言から販売を読み取る",
+      "premise_ja": "かごね、1元、1元だよ。",
+      "hypothesis_ja": "このかごは売ることができる。",
+      "explanation_ja": "値段を繰り返す発話を、かごを販売できる状況として解釈する。CLEVAの公開論文例と同じ原票。",
+      "display_scope": "full premise and hypothesis; original three labels, no supplied multiple-choice options",
+      "source_url": "https://github.com/CLUEbenchmark/OCNLI",
+      "source_revision": "b53efdee17257a5c33993cf6fcf8ffff0497ea0e",
+      "copyright": "OCNLI: Hu et al., CC BY-NC 2.0. Premise sources retain respective rights; news LCMC permission from ELRA."
+    },
+    {
+      "index": 2,
+      "role": "main",
+      "split": "dev",
+      "row": 2627,
+      "line_1based": 2628,
+      "id": 2627,
+      "prem_id": "lit_525",
+      "raw_record": {
+        "level": "medium",
+        "sentence1": "咖啡馆里面对面坐的年轻男女也是上一代的故事,她已是过来人了",
+        "sentence2": "男人和女人是背对背坐着的",
+        "label": "contradiction",
+        "label0": "contradiction",
+        "label1": "contradiction",
+        "label2": "contradiction",
+        "label3": "neutral",
+        "label4": "neutral",
+        "genre": "lit",
+        "prem_id": "lit_525",
+        "id": 2627
+      },
+      "raw_line_sha256": "baf78fa855d152fc9ed8e28ee98b98746c8edcd5c46697a89759dd7a73f5ed60",
+      "record_sha256": "08da011cb37796e5928afb4240040dba32d07fe773b1d43fdbd88fd93b788a7e",
+      "premise": "咖啡馆里面对面坐的年轻男女也是上一代的故事,她已是过来人了",
+      "hypothesis": "男人和女人是背对背坐着的",
+      "label": "contradiction",
+      "votes": {
+        "contradiction": 3,
+        "neutral": 2
+      },
+      "title_ja": "向かい合わせと背中合わせ",
+      "premise_ja": "喫茶店で向かい合って座る若い男女というのも、もう一世代前の話で、彼女はすでにそうした経験をしてきたのだ。",
+      "hypothesis_ja": "男性と女性は背中合わせに座っている。",
+      "explanation_ja": "座り方が食い違う。配布正解はcontradictionだが、5人の内訳は矛盾3・中立2で、全員一致ではない。",
+      "display_scope": "full premise and hypothesis; original three labels, no supplied multiple-choice options",
+      "source_url": "https://github.com/CLUEbenchmark/OCNLI",
+      "source_revision": "b53efdee17257a5c33993cf6fcf8ffff0497ea0e",
+      "copyright": "OCNLI: Hu et al., CC BY-NC 2.0. Premise sources retain respective rights; news LCMC permission from ELRA."
+    },
+    {
+      "index": 3,
+      "role": "main",
+      "split": "dev",
+      "row": 1060,
+      "line_1based": 1061,
+      "id": 1060,
+      "prem_id": "news_1947",
+      "raw_record": {
+        "level": "easy",
+        "sentence1": "今天,这一受人关注的会议终于在波恩举行",
+        "sentence2": "这一会议原定于昨天举行",
+        "label": "neutral",
+        "label0": "neutral",
+        "label1": "neutral",
+        "label2": "neutral",
+        "label3": "neutral",
+        "label4": "contradiction",
+        "genre": "news",
+        "prem_id": "news_1947",
+        "id": 1060
+      },
+      "raw_line_sha256": "c56f46693e7afa7017168e6a959435d619e307c4bc93bd7cc7e9f14582f2c72d",
+      "record_sha256": "7a5d5880c41df10c12916b3d8de094ee56f47a29e2e48e836e634e9227efa0d3",
+      "premise": "今天,这一受人关注的会议终于在波恩举行",
+      "hypothesis": "这一会议原定于昨天举行",
+      "label": "neutral",
+      "votes": {
+        "neutral": 4,
+        "contradiction": 1
+      },
+      "title_ja": "実際の開催日と、当初の予定",
+      "premise_ja": "今日、注目を集めていたこの会議が、ついにボンで開催された。",
+      "hypothesis_ja": "この会議は当初、昨日開催される予定だった。",
+      "explanation_ja": "今日開催されたことから、昨日が当初の予定日だったとは決まらない。予定が昨日だった可能性も、別の日だった可能性も残る。",
+      "display_scope": "full premise and hypothesis; original three labels, no supplied multiple-choice options",
+      "source_url": "https://github.com/CLUEbenchmark/OCNLI",
+      "source_revision": "b53efdee17257a5c33993cf6fcf8ffff0497ea0e",
+      "copyright": "OCNLI: Hu et al., CC BY-NC 2.0. Premise sources retain respective rights; news LCMC permission from ELRA."
+    },
+    {
+      "index": 4,
+      "role": "appendix",
+      "split": "dev",
+      "row": 0,
+      "line_1based": 1,
+      "id": 0,
+      "prem_id": "lit_635",
+      "raw_record": {
+        "level": "medium",
+        "sentence1": "身上裹一件工厂发的棉大衣,手插在袖筒里",
+        "sentence2": "身上至少一件衣服",
+        "label": "entailment",
+        "label0": "entailment",
+        "label1": "entailment",
+        "label2": "entailment",
+        "label3": "entailment",
+        "label4": "entailment",
+        "genre": "lit",
+        "prem_id": "lit_635",
+        "id": 0
+      },
+      "raw_line_sha256": "591cfd4c347f5f0a2299b6703e32f88b3332cb253c76d2fbd72b6e0035cf11e1",
+      "record_sha256": "82d187834ccbada6c3304aa0ccb260278f853925b5292530333c793eeb730870",
+      "premise": "身上裹一件工厂发的棉大衣,手插在袖筒里",
+      "hypothesis": "身上至少一件衣服",
+      "label": "entailment",
+      "votes": {
+        "entailment": 5
+      },
+      "title_ja": "衣服の記述と「少なくとも」",
+      "premise_ja": "工場から支給された綿入りの外套を身にまとい、両手を袖の中へ差し入れている。",
+      "hypothesis_ja": "少なくとも1着の服を身につけている。",
+      "explanation_ja": "外套を身につけていることから、少なくとも1着は着ていると推論する。",
+      "display_scope": "full premise and hypothesis; original three labels, no supplied multiple-choice options",
+      "source_url": "https://github.com/CLUEbenchmark/OCNLI",
+      "source_revision": "b53efdee17257a5c33993cf6fcf8ffff0497ea0e",
+      "copyright": "OCNLI: Hu et al., CC BY-NC 2.0. Premise sources retain respective rights; news LCMC permission from ELRA."
+    },
+    {
+      "index": 5,
+      "role": "appendix",
+      "split": "dev",
+      "row": 4,
+      "line_1based": 5,
+      "id": 4,
+      "prem_id": "phone_443",
+      "raw_record": {
+        "level": "medium",
+        "sentence1": "等他回来,我们就出去吃啊.",
+        "sentence2": "我们在等他",
+        "label": "entailment",
+        "label0": "entailment",
+        "label1": "entailment",
+        "label2": "entailment",
+        "label3": "entailment",
+        "label4": "entailment",
+        "genre": "phone",
+        "prem_id": "phone_443",
+        "id": 4
+      },
+      "raw_line_sha256": "8b2dc7d8255b67fff4fc62d5f2aaafc1b6f179a5e9bf39cf2d82a67bab6de259",
+      "record_sha256": "4c4e2483a8208fb785e6c322bae720c3d7336f60db0b96f86464fc1dcc77ddfd",
+      "premise": "等他回来,我们就出去吃啊.",
+      "hypothesis": "我们在等他",
+      "label": "entailment",
+      "votes": {
+        "entailment": 5
+      },
+      "title_ja": "帰宅を待って外食へ行く",
+      "premise_ja": "彼が帰ってきたら、私たちは外へ食べに行くんだよ。",
+      "hypothesis_ja": "私たちは彼を待っている。",
+      "explanation_ja": "帰宅を条件に外食へ出かける発話から、彼を待っていると解釈する配布例。",
+      "display_scope": "full premise and hypothesis; original three labels, no supplied multiple-choice options",
+      "source_url": "https://github.com/CLUEbenchmark/OCNLI",
+      "source_revision": "b53efdee17257a5c33993cf6fcf8ffff0497ea0e",
+      "copyright": "OCNLI: Hu et al., CC BY-NC 2.0. Premise sources retain respective rights; news LCMC permission from ELRA."
+    },
+    {
+      "index": 6,
+      "role": "appendix",
+      "split": "dev",
+      "row": 12,
+      "line_1based": 13,
+      "id": 12,
+      "prem_id": "news_1355",
+      "raw_record": {
+        "level": "easy",
+        "sentence1": "要狠抓造林质量不放松",
+        "sentence2": "种的树越多越好,至于成活率和质量并不需要考虑",
+        "label": "contradiction",
+        "label0": "contradiction",
+        "label1": "contradiction",
+        "label2": "contradiction",
+        "label3": "contradiction",
+        "label4": "contradiction",
+        "genre": "news",
+        "prem_id": "news_1355",
+        "id": 12
+      },
+      "raw_line_sha256": "06aa3d98a2a06605f384b291b61c907b0cbfe026eb7510de876d7a061c5d4bb9",
+      "record_sha256": "d2ecd647b6899df1a47fb579cba74f0f3ce0c5ee9e7ab152e2f1c5213db31ee2",
+      "premise": "要狠抓造林质量不放松",
+      "hypothesis": "种的树越多越好,至于成活率和质量并不需要考虑",
+      "label": "contradiction",
+      "votes": {
+        "contradiction": 5
+      },
+      "title_ja": "植林の量と、質を確保する義務",
+      "premise_ja": "植林の質の確保に、手を緩めず取り組まなければならない。",
+      "hypothesis_ja": "植える木は多ければ多いほどよく、活着率や質を考慮する必要はない。",
+      "explanation_ja": "前提が重視する質を、仮説が考慮不要としており、方針が対立する。",
+      "display_scope": "full premise and hypothesis; original three labels, no supplied multiple-choice options",
+      "source_url": "https://github.com/CLUEbenchmark/OCNLI",
+      "source_revision": "b53efdee17257a5c33993cf6fcf8ffff0497ea0e",
+      "copyright": "OCNLI: Hu et al., CC BY-NC 2.0. Premise sources retain respective rights; news LCMC permission from ELRA."
+    },
+    {
+      "index": 7,
+      "role": "appendix",
+      "split": "dev",
+      "row": 15,
+      "line_1based": 16,
+      "id": 15,
+      "prem_id": "lit_152",
+      "raw_record": {
+        "level": "medium",
+        "sentence1": "他们的生活起居是一个谜,他们的生平遭际更是一个谜",
+        "sentence2": "他们的生平遭际比生活起居还难知道",
+        "label": "entailment",
+        "label0": "entailment",
+        "label1": "neutral",
+        "label2": "entailment",
+        "label3": "entailment",
+        "label4": "entailment",
+        "genre": "lit",
+        "prem_id": "lit_152",
+        "id": 15
+      },
+      "raw_line_sha256": "c7531fe1fdad855cbb54b186ae28e9bea724f624da1e23f77a422333a1fb518b",
+      "record_sha256": "d21106e1b1cbce9bc244f51a7c5af8163ad645081b14b3bffc0b0319f15958a9",
+      "premise": "他们的生活起居是一个谜,他们的生平遭际更是一个谜",
+      "hypothesis": "他们的生平遭际比生活起居还难知道",
+      "label": "entailment",
+      "votes": {
+        "entailment": 4,
+        "neutral": 1
+      },
+      "title_ja": "二つの謎の比較",
+      "premise_ja": "彼らの日々の暮らしぶりは謎だが、これまでの人生で経験してきたことは、それ以上に謎だ。",
+      "hypothesis_ja": "彼らのこれまでの人生での経験は、日々の暮らしぶりよりも、いっそう分かりにくい。",
+      "explanation_ja": "「さらに謎だ」という比較を、何がより分かりにくいかという関係に言い換える。",
+      "display_scope": "full premise and hypothesis; original three labels, no supplied multiple-choice options",
+      "source_url": "https://github.com/CLUEbenchmark/OCNLI",
+      "source_revision": "b53efdee17257a5c33993cf6fcf8ffff0497ea0e",
+      "copyright": "OCNLI: Hu et al., CC BY-NC 2.0. Premise sources retain respective rights; news LCMC permission from ELRA."
+    },
+    {
+      "index": 8,
+      "role": "appendix",
+      "split": "dev",
+      "row": 26,
+      "line_1based": 27,
+      "id": 26,
+      "prem_id": "tv_1373",
+      "raw_record": {
+        "level": "easy",
+        "sentence1": "我现在觉得,有些事你要是老不出去接触社会,山中方七日,世上已千年",
+        "sentence2": "要出去多接触社会,才能跟上时代。",
+        "label": "entailment",
+        "label0": "entailment",
+        "label1": "entailment",
+        "label2": "entailment",
+        "label3": "entailment",
+        "label4": "entailment",
+        "genre": "tv",
+        "prem_id": "tv_1373",
+        "id": 26
+      },
+      "raw_line_sha256": "5f710829e78ec941ce6ccede981ca27d1ab6890fa507c5d26c759db4e6f15880",
+      "record_sha256": "49f374d27ccc1ac56e7eb8ec90e41b1fefabd9145e55c149f9a2045b37756aff",
+      "premise": "我现在觉得,有些事你要是老不出去接触社会,山中方七日,世上已千年",
+      "hypothesis": "要出去多接触社会,才能跟上时代。",
+      "label": "entailment",
+      "votes": {
+        "entailment": 5
+      },
+      "title_ja": "社会との接触と時代の変化",
+      "premise_ja": "今は思うんだ。社会に触れに出かけないでいると、山の中ではたった7日でも、世間ではもう千年が過ぎている、ということがある。",
+      "hypothesis_ja": "社会にもっと出て触れなければ、時代についていけない。",
+      "explanation_ja": "世の変化の速さを述べる慣用的な表現を、社会との接触の必要性として解釈する。",
+      "display_scope": "full premise and hypothesis; original three labels, no supplied multiple-choice options",
+      "source_url": "https://github.com/CLUEbenchmark/OCNLI",
+      "source_revision": "b53efdee17257a5c33993cf6fcf8ffff0497ea0e",
+      "copyright": "OCNLI: Hu et al., CC BY-NC 2.0. Premise sources retain respective rights; news LCMC permission from ELRA."
+    },
+    {
+      "index": 9,
+      "role": "appendix",
+      "split": "dev",
+      "row": 35,
+      "line_1based": 36,
+      "id": 35,
+      "prem_id": "tv_502",
+      "raw_record": {
+        "level": "easy",
+        "sentence1": "因为咱们请来了一个真正的专家,李玫瑾老师,每次观众都知道李老师一来,大的案件就发生了",
+        "sentence2": "李玫瑾老师第一次参加这个节目。",
+        "label": "contradiction",
+        "label0": "contradiction",
+        "label1": "contradiction",
+        "label2": "contradiction",
+        "label3": "contradiction",
+        "label4": "contradiction",
+        "genre": "tv",
+        "prem_id": "tv_502",
+        "id": 35
+      },
+      "raw_line_sha256": "edc4846adc48724e2f483eb3f1fcd27816e7c13be8367df8cc703bcfb78e2feb",
+      "record_sha256": "bbef5b188338111a1f444381f86bf6a88be873afcae8ba4006d066c4240b1873",
+      "premise": "因为咱们请来了一个真正的专家,李玫瑾老师,每次观众都知道李老师一来,大的案件就发生了",
+      "hypothesis": "李玫瑾老师第一次参加这个节目。",
+      "label": "contradiction",
+      "votes": {
+        "contradiction": 5
+      },
+      "title_ja": "番組への再登場と初出演",
+      "premise_ja": "本当の専門家である李玫瑾先生をお招きしたからだ。視聴者はいつも、李先生が来ると大きな事件が起きたのだと分かる。",
+      "hypothesis_ja": "李玫瑾先生はこの番組に初めて出演する。",
+      "explanation_ja": "「いつも」「来ると分かる」という反復を示す文脈と、初めての出演という仮説が対立する。",
+      "display_scope": "full premise and hypothesis; original three labels, no supplied multiple-choice options",
+      "source_url": "https://github.com/CLUEbenchmark/OCNLI",
+      "source_revision": "b53efdee17257a5c33993cf6fcf8ffff0497ea0e",
+      "copyright": "OCNLI: Hu et al., CC BY-NC 2.0. Premise sources retain respective rights; news LCMC permission from ELRA."
+    },
+    {
+      "index": 10,
+      "role": "appendix",
+      "split": "dev",
+      "row": 36,
+      "line_1based": 37,
+      "id": 36,
+      "prem_id": "lit_813",
+      "raw_record": {
+        "level": "easy",
+        "sentence1": "心里有些生畏,又不知畏惧什么",
+        "sentence2": "有点感到害怕",
+        "label": "entailment",
+        "label0": "entailment",
+        "label1": "entailment",
+        "label2": "entailment",
+        "label3": "entailment",
+        "label4": "entailment",
+        "genre": "lit",
+        "prem_id": "lit_813",
+        "id": 36
+      },
+      "raw_line_sha256": "d22d929551e6622f26a2f9ecd2c1406b5a9b42a0eed894f6d4ce6657ab7e7f8e",
+      "record_sha256": "c0d0a81c26473f3f6d8949a7636ed23bd3abf6b082887cf20b8090386b558dc7",
+      "premise": "心里有些生畏,又不知畏惧什么",
+      "hypothesis": "有点感到害怕",
+      "label": "entailment",
+      "votes": {
+        "entailment": 5
+      },
+      "title_ja": "畏れと、怖さの言い換え",
+      "premise_ja": "心の中で少し畏れを感じるが、何を畏れているのかは分からない。",
+      "hypothesis_ja": "少し怖いと感じている。",
+      "explanation_ja": "畏れている対象が分からなくても、怖さを感じていることは前提に含まれる。",
+      "display_scope": "full premise and hypothesis; original three labels, no supplied multiple-choice options",
+      "source_url": "https://github.com/CLUEbenchmark/OCNLI",
+      "source_revision": "b53efdee17257a5c33993cf6fcf8ffff0497ea0e",
+      "copyright": "OCNLI: Hu et al., CC BY-NC 2.0. Premise sources retain respective rights; news LCMC permission from ELRA."
+    },
+    {
+      "index": 11,
+      "role": "appendix",
+      "split": "dev",
+      "row": 937,
+      "line_1based": 938,
+      "id": 937,
+      "prem_id": "gov_1710",
+      "raw_record": {
+        "level": "hard",
+        "sentence1": "完善加工贸易政策体系",
+        "sentence2": "完善加工贸易政策体系是当下最重要的任务",
+        "label": "neutral",
+        "label0": "neutral",
+        "label1": "neutral",
+        "label2": "neutral",
+        "label3": "neutral",
+        "label4": "neutral",
+        "genre": "gov",
+        "prem_id": "gov_1710",
+        "id": 937
+      },
+      "raw_line_sha256": "2dff46b2a371c663f20e0008eaae261b77061b49d4257b0d1a85f7e3825117a4",
+      "record_sha256": "2e1110cf4d617d579d46baa46c08d09881b8bbe449e7223932fc5b8a46fe70bd",
+      "premise": "完善加工贸易政策体系",
+      "hypothesis": "完善加工贸易政策体系是当下最重要的任务",
+      "label": "neutral",
+      "votes": {
+        "neutral": 5
+      },
+      "title_ja": "政策の改善と、優先順位",
+      "premise_ja": "加工貿易の政策体系を改善する。",
+      "hypothesis_ja": "加工貿易の政策体系を改善することは、今、最も重要な任務である。",
+      "explanation_ja": "改善する方針だけでは、他の任務より最も重要かどうかは決まらない。",
+      "display_scope": "full premise and hypothesis; original three labels, no supplied multiple-choice options",
+      "source_url": "https://github.com/CLUEbenchmark/OCNLI",
+      "source_revision": "b53efdee17257a5c33993cf6fcf8ffff0497ea0e",
+      "copyright": "OCNLI: Hu et al., CC BY-NC 2.0. Premise sources retain respective rights; news LCMC permission from ELRA."
+    },
+    {
+      "index": 12,
+      "role": "appendix",
+      "split": "dev",
+      "row": 227,
+      "line_1based": 228,
+      "id": 227,
+      "prem_id": "phone_1444",
+      "raw_record": {
+        "level": "hard",
+        "sentence1": "嗯,今天星期六我们这儿,嗯哼.",
+        "sentence2": "说话人有一本日历",
+        "label": "neutral",
+        "label0": "neutral",
+        "label1": "neutral",
+        "label2": "neutral",
+        "label3": "neutral",
+        "label4": "neutral",
+        "genre": "phone",
+        "prem_id": "phone_1444",
+        "id": 227
+      },
+      "raw_line_sha256": "ea0c2ca20d78214fb74b7d988690eb2198dd7236b4a7b8ba1153798fb6b0f879",
+      "record_sha256": "29931e98bf7163f579340299f1a2cd78253f00f363302365e98240c96e299f0b",
+      "premise": "嗯,今天星期六我们这儿,嗯哼.",
+      "hypothesis": "说话人有一本日历",
+      "label": "neutral",
+      "votes": {
+        "neutral": 5
+      },
+      "title_ja": "曜日の発言と持ち物",
+      "premise_ja": "うん、今日はこちらでは土曜日なんだ、うん。",
+      "hypothesis_ja": "話し手はカレンダーを1冊持っている。",
+      "explanation_ja": "曜日を言えることから、カレンダーを所有しているとは限らない。持っていないとも断定できない。",
+      "display_scope": "full premise and hypothesis; original three labels, no supplied multiple-choice options",
+      "source_url": "https://github.com/CLUEbenchmark/OCNLI",
+      "source_revision": "b53efdee17257a5c33993cf6fcf8ffff0497ea0e",
+      "copyright": "OCNLI: Hu et al., CC BY-NC 2.0. Premise sources retain respective rights; news LCMC permission from ELRA."
+    },
+    {
+      "index": 13,
+      "role": "appendix",
+      "split": "dev",
+      "row": 34,
+      "line_1based": 35,
+      "id": 34,
+      "prem_id": "gov_373",
+      "raw_record": {
+        "level": "hard",
+        "sentence1": "要切实加强国有资产管理,做好清产核资工作,保证国有资产保值增值",
+        "sentence2": "清产核资工作做不好,国有资产增值保值也可以实现。",
+        "label": "contradiction",
+        "label0": "neutral",
+        "label1": "contradiction",
+        "label2": "contradiction",
+        "label3": "contradiction",
+        "label4": "neutral",
+        "genre": "gov",
+        "prem_id": "gov_373",
+        "id": 34
+      },
+      "raw_line_sha256": "8dcdd5e8d9d0ebf6a77442bee64b37df999ec153a7687ab8b8cd88bb178ddbe8",
+      "record_sha256": "b7476ab7346eb8a8ff95e0568921237f9f2a2a794483cefbaed3ddac3f73bbd9",
+      "premise": "要切实加强国有资产管理,做好清产核资工作,保证国有资产保值增值",
+      "hypothesis": "清产核资工作做不好,国有资产增值保值也可以实现。",
+      "label": "contradiction",
+      "votes": {
+        "neutral": 2,
+        "contradiction": 3
+      },
+      "title_ja": "国有資産の管理と資産評価",
+      "premise_ja": "国有資産の管理を確実に強化し、資産の調査・評価を適切に行い、国有資産の価値の維持と増大を保証しなければならない。",
+      "hypothesis_ja": "資産の調査・評価を適切に行わなくても、国有資産の価値の維持と増大は実現できる。",
+      "explanation_ja": "前提が求める管理・調査の必要性を、仮説が不要とする関係として矛盾に分類される。",
+      "display_scope": "full premise and hypothesis; original three labels, no supplied multiple-choice options",
+      "source_url": "https://github.com/CLUEbenchmark/OCNLI",
+      "source_revision": "b53efdee17257a5c33993cf6fcf8ffff0497ea0e",
+      "copyright": "OCNLI: Hu et al., CC BY-NC 2.0. Premise sources retain respective rights; news LCMC permission from ELRA."
+    }
+  ],
+  "statistics": {
+    "splits": {
+      "train.50k": {
+        "rows": 50486,
+        "valid_labels": 50437,
+        "labels": {
+          "entailment": 16779,
+          "neutral": 17182,
+          "contradiction": 16476,
+          "-": 49
+        },
+        "genres": {
+          "phone": 8992,
+          "lit": 10606,
+          "news": 10680,
+          "gov": 10402,
+          "tv": 9803,
+          "missing": 3
+        },
+        "levels": {
+          "na": 11986,
+          "medium": 14300,
+          "easy": 14742,
+          "hard": 9458
+        },
+        "distinct_premise_texts": 8049,
+        "verified5": 3907,
+        "always_neutral_accuracy": 0.3406626087990959,
+        "dev_distinct_premise_text_overlap": 2184,
+        "dev_pair_overlap": 0,
+        "dev_prem_id_overlap": 2185
+      },
+      "train.30k": {
+        "rows": 30286,
+        "valid_labels": 30237,
+        "labels": {
+          "entailment": 10073,
+          "neutral": 10311,
+          "contradiction": 9853,
+          "-": 49
+        },
+        "genres": {
+          "phone": 5775,
+          "lit": 6177,
+          "news": 6250,
+          "gov": 6151,
+          "tv": 5930,
+          "missing": 3
+        },
+        "levels": {
+          "na": 11977,
+          "medium": 6862,
+          "easy": 7177,
+          "hard": 4270
+        },
+        "distinct_premise_texts": 4847,
+        "verified5": 3903,
+        "always_neutral_accuracy": 0.341006052187717,
+        "dev_distinct_premise_text_overlap": 0,
+        "dev_pair_overlap": 0,
+        "dev_prem_id_overlap": 2
+      },
+      "train.10k": {
+        "rows": 10000,
+        "valid_labels": 9985,
+        "labels": {
+          "contradiction": 3242,
+          "neutral": 3434,
+          "entailment": 3309,
+          "-": 15
+        },
+        "genres": {
+          "gov": 2038,
+          "phone": 1887,
+          "tv": 1998,
+          "lit": 2014,
+          "news": 2063
+        },
+        "levels": {
+          "medium": 2215,
+          "na": 4034,
+          "hard": 1359,
+          "easy": 2392
+        },
+        "distinct_premise_texts": 4012,
+        "verified5": 1329,
+        "always_neutral_accuracy": 0.3439158738107161
+      },
+      "train.3k": {
+        "rows": 3000,
+        "valid_labels": 2994,
+        "labels": {
+          "contradiction": 966,
+          "neutral": 1054,
+          "entailment": 974,
+          "-": 6
+        },
+        "genres": {
+          "gov": 598,
+          "phone": 556,
+          "tv": 637,
+          "lit": 618,
+          "news": 591
+        },
+        "levels": {
+          "medium": 672,
+          "na": 1228,
+          "hard": 380,
+          "easy": 720
+        },
+        "distinct_premise_texts": 2138,
+        "verified5": 388,
+        "always_neutral_accuracy": 0.3520374081496326
+      },
+      "dev": {
+        "rows": 3000,
+        "valid_labels": 2950,
+        "labels": {
+          "entailment": 947,
+          "neutral": 1103,
+          "contradiction": 900,
+          "-": 50
+        },
+        "genres": {
+          "lit": 609,
+          "gov": 622,
+          "phone": 492,
+          "tv": 615,
+          "news": 662
+        },
+        "levels": {
+          "medium": 975,
+          "easy": 1008,
+          "hard": 1017
+        },
+        "distinct_premise_texts": 2188,
+        "verified5": 3000,
+        "always_neutral_accuracy": 0.37389830508474575
+      },
+      "test": {
+        "rows": 3000,
+        "valid_labels": 0,
+        "labels": {
+          "hidden": 3000
+        },
+        "genres": {
+          "missing": 3000
+        },
+        "levels": {
+          "missing": 3000
+        },
+        "distinct_premise_texts": 2149,
+        "verified5": 0
+      }
+    },
+    "public_release_total": 56486,
+    "public_test_labels": false,
+    "zip_matches_official_fixed_repo": true,
+    "repo_revision": "b53efdee17257a5c33993cf6fcf8ffff0497ea0e",
+    "published_HELM_release": "v0.4.0",
+    "all_release_runs": 8526,
+    "cleva_runs": 0,
+    "collection_strategy_pairs": {
+      "Single": 11986,
+      "Multi": 12328,
+      "MultiEncourage": 16584,
+      "MultiConstraint": 15627
+    },
+    "paper_note": "Formal Table3 four strategy counts sum56525 but displayed total56486 and public file total56486. Difference39 unexplained; no count repair assumed.",
+    "accuracy_recheck": {
+      "method": "Official evaluate_classifier AST executed, batch_size=1, neutral fixed predictions on valid labels",
+      "dev_correct": 1103,
+      "dev_total": 2950
+    }
+  },
+  "build_info": {
+    "slug": "ocnli",
+    "title": "OCNLI",
+    "main_pages": 32,
+    "total_pages": 57,
+    "sections": [
+      "二つの文の関係を判定する",
+      "原生中国語での収集と検証",
+      "2020年の評価と残る手掛かり",
+      "CLEVAでの採用と現在の配布"
+    ],
+    "appendix": [
+      "文体と推論の追加例",
+      "分割・注釈・実装の補足",
+      "研究と参考文献"
+    ],
+    "source_urls": {
+      "paper": [
+        "Hu et al. (2020). OCNLI: Original Chinese Natural Language Inference. Findings of EMNLP.",
+        "https://aclanthology.org/2020.findings-emnlp.314/"
+      ],
+      "repo": [
+        "Hu et al. OCNLI公式リポジトリ。固定版b53efdee1725、2026-10-18取得。",
+        "https://github.com/CLUEbenchmark/OCNLI"
+      ],
+      "data": [
+        "Hu et al. OCNLI公開dev、CC BY-NC 2.0。前提の出所は各文体資料。",
+        "https://github.com/CLUEbenchmark/OCNLI/blob/main/data/ocnli/dev.json"
+      ],
+      "clue": [
+        "CLUEbenchmark. CLUE公式配布、OCNLI公開ZIP。",
+        "https://github.com/CLUEbenchmark/CLUE"
+      ],
+      "cleva": [
+        "Li et al. (2023). CLEVA: Chinese Language Models EVAluation Platform. EMNLP System Demonstrations.",
+        "https://aclanthology.org/2023.emnlp-demo.17/"
+      ],
+      "helm": [
+        "Stanford CRFM. HELM v0.4.0 CLEVAScenario / CLEVACommonsenseReasoningScenario.",
+        "https://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py"
+      ],
+      "eval": [
+        "Hu et al. OCNLI公式baseline評価コード、evaluate_classifier。",
+        "https://github.com/CLUEbenchmark/OCNLI/blob/main/ocnli/mnli_code/util/evaluate.py"
+      ],
+      "xnli": [
+        "Conneau et al. (2018). XNLI: Evaluating Cross-lingual Sentence Representations. EMNLP.",
+        "https://aclanthology.org/D18-1269/"
+      ],
+      "mnli": [
+        "Williams et al. (2018). A Broad-Coverage Challenge Corpus for Sentence Understanding through Inference. NAACL-HLT.",
+        "https://aclanthology.org/N18-1101/"
+      ]
+    },
+    "repo_revision": "b53efdee17257a5c33993cf6fcf8ffff0497ea0e"
+  },
+  "source_records": [
+    {
+      "file": "datasets-in-10-minutes-ocnli.pdf",
+      "bytes": 1191614,
+      "sha256": "86ba3572d1d480d56bd821b0988ebbc1b27c0d47554a97c28e0f4748c5468d3f"
+    },
+    {
+      "file": "panel-fit.json",
+      "bytes": 566,
+      "sha256": "41e2db69fafb6746877a59bb226e120640c80de27ff3b98d9dbbed894415b191"
+    },
+    {
+      "file": "sources.md",
+      "bytes": 8423,
+      "sha256": "b42a9b7a746e5be798f8fe348c89ed6b634d0d89aa15a51ecff00517aff241ea"
+    },
+    {
+      "file": "text-audit.json",
+      "bytes": 167,
+      "sha256": "eb9e65c3093744be879b6e3edbd9ac14b8a9052efd7cf13e428fa177bbca4e7f"
+    },
+    {
+      "file": "records.py",
+      "bytes": 9618,
+      "sha256": "7f387b079a0ed38f2ad71680f7e46ebfa1c2fbbe62a258a2f0926b0e4597793a"
+    },
+    {
+      "file": "visual-proofreading-changes.json",
+      "bytes": 2458,
+      "sha256": "95c8ffb7e1dc2c841518f0db1cfa17de4a697720134249bfe17bdc73f30aa1bd"
+    },
+    {
+      "file": "prepare.py",
+      "bytes": 8760,
+      "sha256": "9f3b986dd899acc0058194063fc17c8a76b60ca235978ce246432d9406ee03b9"
+    },
+    {
+      "file": "before-reviewfix-page-hashes.json",
+      "bytes": 4619,
+      "sha256": "3eb195f241b372141fed6d838a3568afd07eec1573dc6cd93eb16c0bd0bce38b"
+    },
+    {
+      "file": "proofreading-draft.json",
+      "bytes": 2380,
+      "sha256": "c00ac38e228d58753c33d77c770fdd87547ee1220534273fa8f19e1c20a4a7bf"
+    },
+    {
+      "file": "visual_text_fixes.py",
+      "bytes": 3012,
+      "sha256": "b5e27dad7725cd20be657b7f781d88c3d815fea02380638b2b7570dd9cb6d4ac"
+    },
+    {
+      "file": "prepare-output.txt",
+      "bytes": 3033,
+      "sha256": "706af0f8641538832469ea74b99be9b6ba99e855c44747915f79e9c839cfa4da"
+    },
+    {
+      "file": "render.py",
+      "bytes": 782,
+      "sha256": "3f1a747d41a2819016ffe3a07ca3e23d32c39c17eac1755b771af82e896049d7"
+    },
+    {
+      "file": "final-layout-adjustments.json",
+      "bytes": 1494,
+      "sha256": "72d61b9fe90dd3a8483092b0de5b56a58c97084b91db55e5912c67763a421885"
+    },
+    {
+      "file": "fetch-log.json",
+      "bytes": 3346,
+      "sha256": "ebf4d0fb844bad8d65b3bbfd9c6f9f1dde09bf7aa03737273edcc16c3b8a9c64"
+    },
+    {
+      "file": "layout-trials.json",
+      "bytes": 4753,
+      "sha256": "10165049f1fdc543298937b7d19f5330e4734d4cdc70153205dcddab2f96c635"
+    },
+    {
+      "file": "check_links.py",
+      "bytes": 2322,
+      "sha256": "94cb09149f7dc53d505e04b49e9fd80404e4e7434caed69d1d21128bd123caab"
+    },
+    {
+      "file": "primary_checks.py",
+      "bytes": 3144,
+      "sha256": "7bf4ca5b7763a51300dee27313c92951abc866435b6e9202a67f6df657fd512d"
+    },
+    {
+      "file": "fetch.py",
+      "bytes": 1047,
+      "sha256": "83f6cfc57455e8da9dc9db9dfbfcdcb010a74f88e18f7360e0a89eb418bdcc2d"
+    },
+    {
+      "file": "audit_package.py",
+      "bytes": 2879,
+      "sha256": "223542c5028909c3fb693e354a302a8588aabf9c5e30c9dee49bb6891ebe8828"
+    },
+    {
+      "file": "fetch_data.py",
+      "bytes": 798,
+      "sha256": "389f7bc27fac717e67a21af54bffb3eec2f7b960b0dc7d14f938ca1258385a25"
+    },
+    {
+      "file": "package-audit.json",
+      "bytes": 519,
+      "sha256": "1330f8c7f179a102eba1154646e4290a97078fb3e3907b2ac964a3f5d83aa580"
+    },
+    {
+      "file": "selected_ink.py",
+      "bytes": 1856,
+      "sha256": "4425660af2cdb28316f2828f812d91661c14bd0e1a71908b21f88079e9e7e1f0"
+    },
+    {
+      "file": "layout-audit.json",
+      "bytes": 76,
+      "sha256": "12ec85f77709aa5519b3144e1d80397df328926474e0df780cfa56ef4c170091"
+    },
+    {
+      "file": "proofreading-changes.json",
+      "bytes": 5062,
+      "sha256": "b390b90126b33e6a56d77a21e8d45232e5f43fc3430d46c1fc5e3570fa8aff5b"
+    },
+    {
+      "file": "selected_fit.py",
+      "bytes": 1511,
+      "sha256": "48060217041c668f229e202a3428b00d124d5270c4a1a3c00adeac290df6deff"
+    },
+    {
+      "file": "panel-ink-fit.json",
+      "bytes": 1282,
+      "sha256": "a8e00db91a7441d0ba08d59eb178b289e9007d8536a239dbbb23e5c038a6b59c"
+    },
+    {
+      "file": "audit_layout.py",
+      "bytes": 3895,
+      "sha256": "dcee7c5f706dea35d85e562cd75db0bb6ccd0f565cf515c2321e8291bda29602"
+    },
+    {
+      "file": "native-table-audit.json",
+      "bytes": 3342,
+      "sha256": "dd201fca463a7d14049bfc3be84a1f10fd8c640fdb8cecdad83a68a92b043ff8"
+    },
+    {
+      "file": "fit_panels.py",
+      "bytes": 1490,
+      "sha256": "15ab8dcee772cbf340834cbae788e92d539fce70cd79a249ce31c05357b1bf7a"
+    },
+    {
+      "file": "answer-style-audit.json",
+      "bytes": 1900,
+      "sha256": "990d4200a29228ff703b37ffc6c583e99f063cf461cf8bdadc0ebc4b9b82accb"
+    },
+    {
+      "file": "manifest.json",
+      "bytes": 23373,
+      "sha256": "230e2444a8702e9dd64f04542c097363993926e168a773269d57090fd16570fd"
+    },
+    {
+      "file": "reading-plan.json",
+      "bytes": 210,
+      "sha256": "7d9a748739e2602dc19924948643d4997fecefd786ae9ea2b16137ed33725c93"
+    },
+    {
+      "file": "capture_sites.py",
+      "bytes": 3070,
+      "sha256": "ad9f538b470bf10879a30ab263d3204f72d774e5f4c46664bb0dd57de7bb7ed4"
+    },
+    {
+      "file": "links-audit.json",
+      "bytes": 229,
+      "sha256": "c30fa5ee9fcfff55cbbf6a1bfe13442bac3061951c0a883ccf262edb8b7ffc72"
+    },
+    {
+      "file": "engine.py",
+      "bytes": 25944,
+      "sha256": "0b4c229d21bec56cb2d207132976b74184970a65dbcc2dfcbb6be16dcdf1c7ac"
+    },
+    {
+      "file": "build.py",
+      "bytes": 24379,
+      "sha256": "3b5dbe5479d2194f46eeee86d58a6ea0f7979edef3991b214e24821963cd05e9"
+    },
+    {
+      "file": "build-info.json",
+      "bytes": 2075,
+      "sha256": "4b2e071d2d9c588029d66a4ebc34e6f042c8b9ae23e13dff98b64b2197267353"
+    },
+    {
+      "file": "examples.json",
+      "bytes": 23016,
+      "sha256": "36aedf389064308e2d8e9ec068c962bf1ca8e078be2bb59253b5ce1f26438d08"
+    },
+    {
+      "file": "example-audit.json",
+      "bytes": 3555,
+      "sha256": "fd34aebe89d81979649525b8380b97f152c19cea9e3af376a77ccf8e3b8901d0"
+    },
+    {
+      "file": "final_layout.py",
+      "bytes": 1021,
+      "sha256": "a432655f3d47e5766adbbec4c040bf64dac17fe0d97940a3213f5370de5e2d7e"
+    },
+    {
+      "file": "ink_panels.py",
+      "bytes": 1803,
+      "sha256": "37965226b71ce083c9820aa57262416c50d2e6263e726033ccf77a743c5de361"
+    },
+    {
+      "file": "independent_review_fix.py",
+      "bytes": 1222,
+      "sha256": "4f07029a90f200217d57e9677cdf614aa4c593bbbb2795eceb993a41dffdf013"
+    },
+    {
+      "file": "primary-source-checks.json",
+      "bytes": 21329,
+      "sha256": "3b8e46e7d3a696ee286a657f972be89cf9ebb393c2f79fd1b78ea833ed754e4d"
+    },
+    {
+      "file": "handoff.json",
+      "bytes": 3963,
+      "sha256": "0349c3be6606dfe06ec9e4bb6b510611dc86868f7f2e295a7503e8e8fa67c7bb"
+    },
+    {
+      "file": "visual-inspection.json",
+      "bytes": 1026,
+      "sha256": "61788b5af311fdb491b2a1e64f50d95b9c992974fb8636f966e2587a6cc55c08"
+    },
+    {
+      "file": "convert.py",
+      "bytes": 520,
+      "sha256": "087dbe35a2c0493a04eec5466807fcadef33c084d386fa582ada73e9af4e3d45"
+    },
+    {
+      "file": "evidence-inventory.json",
+      "bytes": 5450,
+      "sha256": "80ab51a6edaef609501e0abeda370f108a013625a69b596915bd17501dd52dce"
+    },
+    {
+      "file": "screenshot-log.json",
+      "bytes": 421,
+      "sha256": "90cd08089b2c8d29326b7551c9e5269d6b5e3953bd180412c77c26a9ff6c3138"
+    },
+    {
+      "file": "page-text-and-proofreading.json",
+      "bytes": 59327,
+      "sha256": "7fd9cadae319012c81ea3fd5dbff53c273ba0766975ec2dd62508ba61191ab26"
+    },
+    {
+      "file": "panel-ink-audit.json",
+      "bytes": 3481,
+      "sha256": "b8c3cb73ce9bb20cda7ef31fb01959040dd82b3675aec5ba49a660aeeb50f5b1"
+    },
+    {
+      "file": "local_layout_fixes.py",
+      "bytes": 1378,
+      "sha256": "5c65f63f4dcef1d801395353aecca3d4ecb9df041b5c619a7a52578460e34a66"
+    },
+    {
+      "file": "stats.json",
+      "bytes": 4097,
+      "sha256": "bb4a77e8a522e2aed6f54a5ea01b8be01f01b32240136cd356b10ff5ff447169"
+    },
+    {
+      "file": "repo-data-fetch-log.json",
+      "bytes": 1668,
+      "sha256": "31c99b0c34c1ed2d9ebbde0366a079a6510d1b51496a31a8f4d83e72165d6141"
+    },
+    {
+      "file": "independent_review_fix2.py",
+      "bytes": 1102,
+      "sha256": "7b5adcad4da20c93dbd57892bce95764f6362a6fdc4159bd9847f453efbcbc8e"
+    },
+    {
+      "file": "evidence/cleva-extra-fetch.json",
+      "bytes": 445,
+      "sha256": "4e6f1bf6797c80f90396db6f7e32ad0d4fa21cf336134822756102933650849f"
+    },
+    {
+      "file": "evidence/repo-train.50k.json",
+      "bytes": 14627367,
+      "sha256": "cb47a6c00105bfb49bbb791dd537b284d3138f9f1ad5cd1e187afc470ff004e0"
+    },
+    {
+      "file": "evidence/rep-baseline.md",
+      "bytes": 5407,
+      "sha256": "fd0fa38203999f5f0c95ec283766342828d6c78f5684efda104b73d74918fdd8"
+    },
+    {
+      "file": "evidence/extra-fetch-log.json",
+      "bytes": 944,
+      "sha256": "95ff79c7f0d9e64f051270203773de055863f77fc76fd0beec3318cad1ec268d"
+    },
+    {
+      "file": "evidence/repo-train.10k.json",
+      "bytes": 2893982,
+      "sha256": "b8a0b7b72f62eb8d47a4d21ba34c4948bf2bdf5fde649a964ef3779504c7ab81"
+    },
+    {
+      "file": "evidence/repo-train.3k.json",
+      "bytes": 866767,
+      "sha256": "b6911d293ad88b4c053c5f847b6643c79de72bdf42f9061c5f61f43f8a79dca6"
+    },
+    {
+      "file": "evidence/paper-meta.html",
+      "bytes": 43328,
+      "sha256": "d0c54c66c535b75904fa0aaebde6834180d8076d6bc5f65b08c7f44e1b728a0f"
+    },
+    {
+      "file": "evidence/cleva-meta.html",
+      "bytes": 45489,
+      "sha256": "5e6b2053a946b8a9b78a8002f81eadc90e4f55a2b3fd1d9ec77c7555f98ad99c"
+    },
+    {
+      "file": "evidence/paper-final.txt",
+      "bytes": 82042,
+      "sha256": "b1622a90f0478b3f07887c637be69b019e5c79016f11f55deee571fe5b98d1c0"
+    },
+    {
+      "file": "evidence/fixed-readme.md",
+      "bytes": 11666,
+      "sha256": "f1da61502d1f56db90adc8e07bd31806eb54d76d9bc516848d49a50824d83040"
+    },
+    {
+      "file": "evidence/repo-test.json",
+      "bytes": 440950,
+      "sha256": "5fb387fd5188ea7de7c13dda0c56d44fba50d526a126a7926a5e5d131fde86bb"
+    },
+    {
+      "file": "evidence/cleva-fitz.txt",
+      "bytes": 137033,
+      "sha256": "73ada023c5a86e20a5fbdd86b2ab00167f37bbbb282af320edfe6ba0c039470a"
+    },
+    {
+      "file": "evidence/mnli-meta.html",
+      "bytes": 41284,
+      "sha256": "86e96e0d36c10450a42f12aa9d43f35c9bba262ef24e776d840ce01b8c7cbf03"
+    },
+    {
+      "file": "evidence/xnli-meta.html",
+      "bytes": 44921,
+      "sha256": "cef58ac2dd91a71bb5ffccef03e0ebc2274a52757cf596d9b29b71ebb354b8da"
+    },
+    {
+      "file": "evidence/baseline-evaluate.py",
+      "bytes": 6787,
+      "sha256": "3580849c835a4d0f1e370d4e139ae53e6718fc053305209d382a4b123652446d"
+    },
+    {
+      "file": "evidence/clue-readme.md",
+      "bytes": 51104,
+      "sha256": "5ad4912bd96f8b30c0b898b519ff7b2a3a2b5bb04d660d2aaf0798779e06108d"
+    },
+    {
+      "file": "evidence/repo-train.30k.json",
+      "bytes": 8773579,
+      "sha256": "0141ac058fabf8fdba51834bfbd4297a6f4fc7d3e9ecad0beb09906ba8bfa05e"
+    },
+    {
+      "file": "evidence/baseline-code.py",
+      "bytes": 7567,
+      "sha256": "f698d7bca35a405a3ca63f9eadfb39f7441c516785d5096e358a797564f3f513"
+    },
+    {
+      "file": "evidence/acl-volume.html",
+      "bytes": 1174197,
+      "sha256": "ef773fa688d084246c477c795249ef098c55c307b07567a295ab6c4b6c888a4e"
+    },
+    {
+      "file": "evidence/cleva-paper.pdf",
+      "bytes": 3283448,
+      "sha256": "49412cfeff8d70fd6cae8a77d6d63e4298a51481f05b5e0847e24f9561900fd8"
+    },
+    {
+      "file": "evidence/cleva-scenario.py",
+      "bytes": 57939,
+      "sha256": "c61c19eb5ea2cf408dddf6087eb5c7715d5795c4508f23d2ccc2fc7eaf03de5e"
+    },
+    {
+      "file": "evidence/cleva-endpoint-check.json",
+      "bytes": 242,
+      "sha256": "040ea88fd66e7af5d61519c12b6d69179f937ba2a49547682ed5325e8fbfbe6e"
+    },
+    {
+      "file": "evidence/repo-info.json",
+      "bytes": 6320,
+      "sha256": "a36f98c60f4e8bbe00e8d65b1e24f8422c1d5809ba5ad07b8a4f3db0520c39e4"
+    },
+    {
+      "file": "evidence/fixed-readme-check.json",
+      "bytes": 251,
+      "sha256": "0276aed5d5ab05e1d7f087f3f32122d0306246ad6755e806ce09e213922098e3"
+    },
+    {
+      "file": "evidence/repo-dev.json",
+      "bytes": 977426,
+      "sha256": "001ded235d73a18dac68a45a38cd5f9b3f9311fa4246df623e199422c073ddc5"
+    },
+    {
+      "file": "evidence/paper-arxiv.pdf",
+      "bytes": 672509,
+      "sha256": "fa195fa1f0657b54441db59a074f53360066cac729a06e37db68f514b65a4b1a"
+    },
+    {
+      "file": "evidence/paper.pdf",
+      "bytes": 679443,
+      "sha256": "acc1878cfafe44a88da1df4d18154a396b4c0846762831ddcb0b499a90deec43"
+    },
+    {
+      "file": "evidence/official-tree.json",
+      "bytes": 13511,
+      "sha256": "dd2bc354876028ad8eb0aa0abadafa3a1b01065a6caeb7ee743f55d53c2d2a8c"
+    },
+    {
+      "file": "evidence/paper.txt",
+      "bytes": 86323,
+      "sha256": "62914ef4b3da76c85af63a85265312fcfced8e99e62a09155c869058197a239c"
+    },
+    {
+      "file": "evidence/cleva-paper.txt",
+      "bytes": 418961,
+      "sha256": "8b1ba52069ceed95d0852119361fa5602b6b506eb4a1cedf5b41ff7def1592a8"
+    },
+    {
+      "file": "evidence/official-readme.md",
+      "bytes": 11666,
+      "sha256": "f1da61502d1f56db90adc8e07bd31806eb54d76d9bc516848d49a50824d83040"
+    },
+    {
+      "file": "evidence/data/test.json",
+      "bytes": 440950,
+      "sha256": "5fb387fd5188ea7de7c13dda0c56d44fba50d526a126a7926a5e5d131fde86bb"
+    },
+    {
+      "file": "evidence/data/train.50k.json",
+      "bytes": 14627367,
+      "sha256": "cb47a6c00105bfb49bbb791dd537b284d3138f9f1ad5cd1e187afc470ff004e0"
+    },
+    {
+      "file": "evidence/data/dev.json",
+      "bytes": 977426,
+      "sha256": "001ded235d73a18dac68a45a38cd5f9b3f9311fa4246df623e199422c073ddc5"
+    }
+  ],
+  "provenance_logs": {
+    "text-audit.json": {
+      "pages": 57,
+      "native_text_in_PDF": true,
+      "missing": [],
+      "replacement_characters": 0,
+      "notes": 0,
+      "paragraphs_checked": 356,
+      "table_cells_checked": 95
+    },
+    "fetch-log.json": [
+      {
+        "file": "official-readme.md",
+        "url": "https://raw.githubusercontent.com/CLUEbenchmark/OCNLI/master/README.md",
+        "bytes": 11666,
+        "sha256": "f1da61502d1f56db90adc8e07bd31806eb54d76d9bc516848d49a50824d83040"
+      },
+      {
+        "file": "official-tree.json",
+        "url": "https://api.github.com/repos/CLUEbenchmark/OCNLI/git/trees/master?recursive=1",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "file": "cleva-scenario.py",
+        "url": "https://raw.githubusercontent.com/stanford-crfm/helm/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py",
+        "bytes": 57939,
+        "sha256": "c61c19eb5ea2cf408dddf6087eb5c7715d5795c4508f23d2ccc2fc7eaf03de5e"
+      },
+      {
+        "file": "paper-arxiv.pdf",
+        "url": "https://arxiv.org/pdf/2010.05444",
+        "bytes": 672509,
+        "sha256": "fa195fa1f0657b54441db59a074f53360066cac729a06e37db68f514b65a4b1a"
+      },
+      {
+        "file": "acl-volume.html",
+        "url": "https://aclanthology.org/2020.findings-emnlp/",
+        "bytes": 1174197,
+        "sha256": "ef773fa688d084246c477c795249ef098c55c307b07567a295ab6c4b6c888a4e"
+      },
+      {
+        "file": "repo-info.json",
+        "url": "https://api.github.com/repos/CLUEbenchmark/OCNLI",
+        "bytes": 6320,
+        "sha256": "a36f98c60f4e8bbe00e8d65b1e24f8422c1d5809ba5ad07b8a4f3db0520c39e4"
+      },
+      {
+        "file": "official-tree.json",
+        "url": "https://api.github.com/repos/CLUEbenchmark/OCNLI/git/trees/main?recursive=1",
+        "bytes": 13511,
+        "sha256": "dd2bc354876028ad8eb0aa0abadafa3a1b01065a6caeb7ee743f55d53c2d2a8c"
+      },
+      {
+        "file": "cleva-paper.pdf",
+        "url": "https://aclanthology.org/2023.emnlp-demo.17.pdf",
+        "error": "IncompleteRead(2785280 bytes read, 498168 more expected)"
+      },
+      {
+        "file": "data.zip",
+        "url": "https://storage.googleapis.com/cluebenchmark/tasks/ocnli_public.zip",
+        "bytes": 2195457,
+        "sha256": "672220f457c07cda3e673c20dfc2079803451c3cf3893e7b90ceea3203236e74"
+      },
+      {
+        "file": "paper.pdf",
+        "url": "https://aclanthology.org/2020.findings-emnlp.314.pdf",
+        "bytes": 679443,
+        "sha256": "acc1878cfafe44a88da1df4d18154a396b4c0846762831ddcb0b499a90deec43"
+      },
+      {
+        "file": "paper-meta.html",
+        "url": "https://aclanthology.org/2020.findings-emnlp.314/",
+        "bytes": 43328,
+        "sha256": "d0c54c66c535b75904fa0aaebde6834180d8076d6bc5f65b08c7f44e1b728a0f"
+      },
+      {
+        "file": "cleva-paper.pdf",
+        "url": "https://aclanthology.org/2023.emnlp-demo.17.pdf",
+        "bytes": 3283448,
+        "sha256": "49412cfeff8d70fd6cae8a77d6d63e4298a51481f05b5e0847e24f9561900fd8"
+      },
+      {
+        "file": "baseline-code.py",
+        "url": "https://raw.githubusercontent.com/CLUEbenchmark/OCNLI/b53efdee17257a5c33993cf6fcf8ffff0497ea0e/ocnli/mnli_code/util/data_processing.py",
+        "bytes": 7567,
+        "sha256": "f698d7bca35a405a3ca63f9eadfb39f7441c516785d5096e358a797564f3f513"
+      },
+      {
+        "file": "baseline-evaluate.py",
+        "url": "https://raw.githubusercontent.com/CLUEbenchmark/OCNLI/b53efdee17257a5c33993cf6fcf8ffff0497ea0e/ocnli/mnli_code/util/evaluate.py",
+        "bytes": 6787,
+        "sha256": "3580849c835a4d0f1e370d4e139ae53e6718fc053305209d382a4b123652446d"
+      },
+      {
+        "file": "rep-baseline.md",
+        "url": "https://raw.githubusercontent.com/CLUEbenchmark/OCNLI/b53efdee17257a5c33993cf6fcf8ffff0497ea0e/rep_baseline.md",
+        "bytes": 5407,
+        "sha256": "fd0fa38203999f5f0c95ec283766342828d6c78f5684efda104b73d74918fdd8"
+      }
+    ],
+    "package-audit.json": {
+      "parsed_xml_parts": 147,
+      "integer_bullets": 145,
+      "hyperlinks": 54,
+      "new_schema_errors": [],
+      "baseline_schema_errors": 11,
+      "package_integrity": "passed",
+      "internal_relationship_targets": "passed",
+      "unique_shape_ids": "passed",
+      "schema_note": "標準XSDを変更せず確認。マスター由来の既存エラーと、整数buSzPctの百分率字句形式との差を分離。整数箇条書きサイズは25000–400000で別途検査。",
+      "pages": 57,
+      "native_tables": 8,
+      "native_charts": 0
+    },
+    "layout-audit.json": {
+      "paragraphs_checked": 356,
+      "table_cells_checked": 95,
+      "issues": []
+    },
+    "native-table-audit.json": {
+      "tables": {
+        "6": [
+          [
+            "配布ラベル",
+            "仮説との関係"
+          ],
+          [
+            "entailment",
+            "前提から仮説が成り立つ"
+          ],
+          [
+            "contradiction",
+            "前提と仮説が両立しない"
+          ],
+          [
+            "neutral",
+            "前提だけでは仮説の真偽が決まらない"
+          ]
+        ],
+        "15": [
+          [
+            "文体",
+            "前提の素材"
+          ],
+          [
+            "gov",
+            "中国政府の年次政府活動報告"
+          ],
+          [
+            "news",
+            "LCMC（中国語コーパス）のニュース部分"
+          ],
+          [
+            "lit",
+            "現代小説2作品"
+          ],
+          [
+            "tv",
+            "対談番組「鏘鏘三人行」の書き起こし"
+          ],
+          [
+            "phone",
+            "中国語Callhome電話会話の書き起こし"
+          ]
+        ],
+        "19": [
+          [
+            "分割",
+            "全行数",
+            "3ラベルがある行"
+          ],
+          [
+            "train.50k",
+            "50,486",
+            "50,437"
+          ],
+          [
+            "dev",
+            "3,000",
+            "2,950"
+          ],
+          [
+            "test",
+            "3,000",
+            "非公開"
+          ]
+        ],
+        "23": [
+          [
+            "方式",
+            "正解率（%）"
+          ],
+          [
+            "常にneutral",
+            "38.1"
+          ],
+          [
+            "CBOW：文字表現の平均",
+            "55.7 ± 0.5"
+          ],
+          [
+            "biLSTM：双方向の系列モデル",
+            "59.2 ± 0.5"
+          ],
+          [
+            "ESIM：文どうしの相互照合",
+            "59.8 ± 0.4"
+          ],
+          [
+            "BERT-base（中国語）",
+            "72.2 ± 0.7"
+          ],
+          [
+            "RoBERTa-large（中国語・全単語マスク）",
+            "78.2 ± 0.7"
+          ]
+        ],
+        "25": [
+          [
+            "モデル",
+            "dev（%）",
+            "test（%）"
+          ],
+          [
+            "BERT",
+            "65.3",
+            "64.3"
+          ],
+          [
+            "RoBERTa",
+            "65.7",
+            "65.0"
+          ]
+        ],
+        "47": [
+          [
+            "配布名",
+            "全行数",
+            "有効ラベル"
+          ],
+          [
+            "train.50k",
+            "50,486",
+            "50,437"
+          ],
+          [
+            "train.30k",
+            "30,286",
+            "30,237"
+          ],
+          [
+            "train.10k",
+            "10,000",
+            "9,985"
+          ],
+          [
+            "train.3k",
+            "3,000",
+            "2,994"
+          ]
+        ],
+        "48": [
+          [
+            "文体",
+            "train.50k",
+            "dev"
+          ],
+          [
+            "gov",
+            "10,402",
+            "622"
+          ],
+          [
+            "news",
+            "10,680",
+            "662"
+          ],
+          [
+            "lit",
+            "10,606",
+            "609"
+          ],
+          [
+            "tv",
+            "9,803",
+            "615"
+          ],
+          [
+            "phone",
+            "8,992",
+            "492"
+          ],
+          [
+            "genre欠測",
+            "3",
+            "0"
+          ]
+        ],
+        "49": [
+          [
+            "配布ラベル",
+            "件数",
+            "3ラベル中の割合"
+          ],
+          [
+            "entailment",
+            "947",
+            "32.10%"
+          ],
+          [
+            "neutral",
+            "1,103",
+            "37.39%"
+          ],
+          [
+            "contradiction",
+            "900",
+            "30.51%"
+          ],
+          [
+            "-",
+            "50",
+            "分母から除く"
+          ]
+        ]
+      },
+      "all_values_checked": true,
+      "metric_code_output": "1103 2950 0.37389830508474575"
+    },
+    "answer-style-audit.json": [
+      {
+        "page": 7,
+        "text": "配布正解：含意（entailment）",
+        "size": 21,
+        "bold": true,
+        "color": "B13731"
+      },
+      {
+        "page": 9,
+        "text": "配布正解：矛盾（contradiction）",
+        "size": 21,
+        "bold": true,
+        "color": "B13731"
+      },
+      {
+        "page": 11,
+        "text": "配布正解：中立（neutral）",
+        "size": 21,
+        "bold": true,
+        "color": "B13731"
+      },
+      {
+        "page": 29,
+        "text": "公開例の正解：A（总是可以／常にできる）",
+        "size": 21,
+        "bold": true,
+        "color": "B13731"
+      },
+      {
+        "page": 36,
+        "text": "配布正解：含意（entailment）",
+        "size": 21,
+        "bold": true,
+        "color": "B13731"
+      },
+      {
+        "page": 37,
+        "text": "配布正解：含意（entailment）",
+        "size": 21,
+        "bold": true,
+        "color": "B13731"
+      },
+      {
+        "page": 38,
+        "text": "配布正解：矛盾（contradiction）",
+        "size": 21,
+        "bold": true,
+        "color": "B13731"
+      },
+      {
+        "page": 39,
+        "text": "配布正解：含意（entailment）",
+        "size": 21,
+        "bold": true,
+        "color": "B13731"
+      },
+      {
+        "page": 40,
+        "text": "配布正解：含意（entailment）",
+        "size": 21,
+        "bold": true,
+        "color": "B13731"
+      },
+      {
+        "page": 41,
+        "text": "配布正解：矛盾（contradiction）",
+        "size": 21,
+        "bold": true,
+        "color": "B13731"
+      },
+      {
+        "page": 42,
+        "text": "配布正解：含意（entailment）",
+        "size": 21,
+        "bold": true,
+        "color": "B13731"
+      },
+      {
+        "page": 43,
+        "text": "配布正解：中立（neutral）",
+        "size": 21,
+        "bold": true,
+        "color": "B13731"
+      },
+      {
+        "page": 44,
+        "text": "配布正解：中立（neutral）",
+        "size": 21,
+        "bold": true,
+        "color": "B13731"
+      },
+      {
+        "page": 45,
+        "text": "配布正解：矛盾（contradiction）",
+        "size": 21,
+        "bold": true,
+        "color": "B13731"
+      }
+    ],
+    "manifest.json": [
+      {
+        "page": 1,
+        "title": "OCNLI",
+        "section": "",
+        "kind": "cover"
+      },
+      {
+        "page": 2,
+        "title": "公式リポジトリ",
+        "section": "OCNLI",
+        "kind": "image",
+        "sources": [
+          "repo"
+        ]
+      },
+      {
+        "page": 3,
+        "title": "",
+        "section": "目次",
+        "kind": "toc"
+      },
+      {
+        "page": 4,
+        "title": "二つの文の関係を判定する",
+        "section": "1. 二つの文の関係を判定する",
+        "kind": "divider"
+      },
+      {
+        "page": 5,
+        "title": "中国語で書かれた、前提と仮説のペア",
+        "section": "1. 二つの文の関係を判定する",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ],
+        "body_text": [
+          "OCNLIは、中国語の文章から選んだ前提に対し、中国語の母語話者が仮説を書いた自然言語推論データセット。",
+          "入力は前提と仮説の順序付きペア。前提を真としたときに仮説をどう判断するかを、含意・矛盾・中立の3種類で答える。",
+          "2020年に公開。英語の推論データを訳す方法ではなく、5文体の中国語から集めた前提と、人が書いた仮説を使う。"
+        ]
+      },
+      {
+        "page": 6,
+        "title": "前提を真としたときの三つの関係",
+        "section": "1. 二つの文の関係を判定する",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ]
+      },
+      {
+        "page": 7,
+        "title": "実例1：値段の発言から販売を読み取る",
+        "section": "1. 二つの文の関係を判定する",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "example_index": 1,
+        "exampleID": 1162,
+        "source_split": "dev",
+        "source_row": 1162,
+        "language": "zh+ja",
+        "display_scope": "full premise and hypothesis"
+      },
+      {
+        "page": 8,
+        "title": "販売の場面を、発話から読み取る",
+        "section": "1. 二つの文の関係を判定する",
+        "kind": "content",
+        "sources": [
+          "paper",
+          "data"
+        ],
+        "body_text": [
+          "値段を繰り返す発話を、かごを販売できる状況として解釈する。CLEVAの公開論文例と同じ原票。",
+          "前提は短い電話会話の断片。仮説は同じ語を写すだけではなく、値段を伝える発話の意味を表現している。",
+          "本編3例と追加10例は、ラベル公開済みのdevから選んだ異なるペア。5文体、3ラベル、作成順の異なる仮説を含む。"
+        ]
+      },
+      {
+        "page": 9,
+        "title": "実例2：向かい合わせと背中合わせ",
+        "section": "1. 二つの文の関係を判定する",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "example_index": 2,
+        "exampleID": 2627,
+        "source_split": "dev",
+        "source_row": 2627,
+        "language": "zh+ja",
+        "display_scope": "full premise and hypothesis"
+      },
+      {
+        "page": 10,
+        "title": "配布正解は、注釈者の多数決で決まる",
+        "section": "1. 二つの文の関係を判定する",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ],
+        "body_text": [
+          "座り方が食い違う。配布正解はcontradictionだが、5人の内訳は矛盾3・中立2で、全員一致ではない。",
+          "5人中3人以上が同じラベルを選んだ場合、その多数決ラベルを正解とする。",
+          "作成者のラベルに4人の独立した判断を加える。多数決が成立しない例は「-」として残し、通常の学習・評価から除く。"
+        ]
+      },
+      {
+        "page": 11,
+        "title": "実例3：実際の開催日と、当初の予定",
+        "section": "1. 二つの文の関係を判定する",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "example_index": 3,
+        "exampleID": 1060,
+        "source_split": "dev",
+        "source_row": 1060,
+        "language": "zh+ja",
+        "display_scope": "full premise and hypothesis"
+      },
+      {
+        "page": 12,
+        "title": "中立は、前提だけで予定を確定できない",
+        "section": "1. 二つの文の関係を判定する",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ],
+        "body_text": [
+          "neutral（中立）は、前提だけでは仮説が成り立つとも、成り立たないとも決められない関係。",
+          "今日開催されたことから、昨日が当初の予定日だったとは決まらない。予定が昨日だった可能性も、別の日だった可能性も残る。",
+          "「ついに」という語があっても、当初の予定日が具体的に与えられたことにはならない。"
+        ]
+      },
+      {
+        "page": 13,
+        "title": "原生中国語での収集と検証",
+        "section": "2. 原生中国語での収集と検証",
+        "kind": "divider"
+      },
+      {
+        "page": 14,
+        "title": "英語から訳す代わりに、中国語で作る",
+        "section": "2. 原生中国語での収集と検証",
+        "kind": "content",
+        "sources": [
+          "paper",
+          "xnli"
+        ],
+        "body_text": [
+          "SNLIとMNLIは、前提を示して人に仮説を書かせる英語の推論コーパス。OCNLIはMNLIの作成・再注釈の手順を中国語へ展開した。",
+          "XNLIは英語の推論問題を多言語へ翻訳した資源。OCNLIでは、翻訳調の表現や元の文化的背景への偏りを避けるため、中国語の素材と母語話者を使う。",
+          "翻訳の品質と、注釈者が自然に使う語や推論の手掛かりは、それぞれ検討の対象になる。"
+        ]
+      },
+      {
+        "page": 15,
+        "title": "書き言葉と話し言葉を、5文体から集める",
+        "section": "2. 原生中国語での収集と検証",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ]
+      },
+      {
+        "page": 16,
+        "title": "同じ前提から、複数の推論を引き出す",
+        "section": "2. 原生中国語での収集と検証",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ],
+        "body_text": [
+          "前提は8〜50文字の文から選ぶ。電話会話の転記記号を取り除く。素材の文を、仮説の言い換えで作り直す方式ではない。",
+          "Singleは、1前提につき各ラベルの仮説を1文ずつ作る。Multiは、各ラベルについて最大3文、合計最大9文を作る。",
+          "Multi Encourageは多様な推論や否定語を使わない矛盾を奨励する。Multi Constraintは、矛盾3文のうち否定語を含むものを1文までに制限する。"
+        ]
+      },
+      {
+        "page": 17,
+        "title": "easy・medium・hardは、仮説を書く順序",
+        "section": "2. 原生中国語での収集と検証",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ],
+        "body_text": [
+          "easy・medium・hardは、同じ前提とラベルについて、作成者が仮説を書いた1番目・2番目・3番目を表す。",
+          "複数の仮説を書くことで、最初に思いつく単純な言い換え・否定以外の推論を引き出すことを狙った。すべての前提で3文目まで作れたわけではない。",
+          "どの条件でも、仮説が前提と70%を超えて重ならないよう指示した。文字の重なりだけで解ける問題を減らす意図がある。"
+        ]
+      },
+      {
+        "page": 18,
+        "title": "言語を学ぶ母語話者が書き、別の人が確かめる",
+        "section": "2. 原生中国語での収集と検証",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ],
+        "body_text": [
+          "中国語または他言語を専攻する、中国語母語話者の大学生・大学院生145人が仮説を作成した。作成は1ペア約0.3元、再注釈は約0.2元。",
+          "各作成条件の一部を無作為に選び、4人が独立にラベルを付け直す。作成時のラベルを合わせて5票とし、3票以上の一致を採用する。",
+          "再注釈したMulti EncourageとMulti Constraintの計6,000組を、dev・testへ各3,000組ずつ割り当てた。残りとSingle・Multiを学習集合に使う。"
+        ]
+      },
+      {
+        "page": 19,
+        "title": "公開50k版の行数と、有効な正解ラベル",
+        "section": "2. 原生中国語での収集と検証",
+        "kind": "content",
+        "sources": [
+          "repo"
+        ]
+      },
+      {
+        "page": 20,
+        "title": "50k版は、前提を共有して異なる仮説を評価する",
+        "section": "2. 原生中国語での収集と検証",
+        "kind": "content",
+        "sources": [
+          "repo"
+        ],
+        "body_text": [
+          "公開50k学習集合とdevでは、同じ前提文が複数の分割に現れる。",
+          "固定公開版では、train.50kとdevが共有する前提文は2,184種類。同じ前提・仮説の完全一致ペアは0組だった。",
+          "前提の重複を除く学習用のtrain.30kも提供される。実測30,286組で、devと同じ前提文は0種類。10k・3k版も同じdev・testを使う。"
+        ]
+      },
+      {
+        "page": 21,
+        "title": "2020年の評価と残る手掛かり",
+        "section": "3. 2020年の評価と残る手掛かり",
+        "kind": "divider"
+      },
+      {
+        "page": 22,
+        "title": "正解率は、ラベルが一致したペアの割合",
+        "section": "3. 2020年の評価と残る手掛かり",
+        "kind": "content",
+        "sources": [
+          "paper",
+          "eval"
+        ],
+        "body_text": [
+          "多数決が成立しない「-」を除き、配布正解と予測ラベルが一致する割合を正解率とする。",
+          "公開devなら2,950組で評価できる。常にneutralと答える基準は、1,103 ÷ 2,950 = 37.39%。公式評価関数と公開原票から再計算した。",
+          "2020年のモデル成績は、学習集合で訓練・微調整したモデルを非公開ラベルのtestで評価した値。5回の学習試行の平均と標準偏差を報告する。"
+        ]
+      },
+      {
+        "page": 23,
+        "title": "2020年：50k版で学習したモデルのtest正解率",
+        "section": "3. 2020年の評価と残る手掛かり",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ]
+      },
+      {
+        "page": 24,
+        "title": "人手評価は、別の300組を5人で判定した",
+        "section": "3. 2020年の評価と残る手掛かり",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ],
+        "body_text": [
+          "収集・検証に参加していない中国語母語話者の学生5人へ、20例で練習した後、testから無作為に選んだ300組を提示した。",
+          "5人の多数決を配布正解と比較し、90.3%の正解率を得た。多数決が成立しない2組には、testで最多のneutralを割り当てた。",
+          "2020年のRoBERTa 78.2%との差は約12.1ポイント。人手は300組、モデルは有効なtest全体という、異なる評価範囲を記した比較である。"
+        ]
+      },
+      {
+        "page": 25,
+        "title": "仮説だけでも残る、注釈の手掛かり",
+        "section": "3. 2020年の評価と残る手掛かり",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ]
+      },
+      {
+        "page": 26,
+        "title": "複数仮説と制約だけで、手掛かりは消えない",
+        "section": "3. 2020年の評価と残る手掛かり",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ],
+        "body_text": [
+          "仮説の「任何（どんな〜も）」「从来（これまで／かつて）」は矛盾、「至少（少なくとも）」は含意と結び付きやすかった。",
+          "Multi Constraintでは、矛盾と結び付く上位の語に否定語が現れず、代わりに「只有」「只」（〜だけ）が現れた。",
+          "語の手掛かりを抑える収集方法と、前提・仮説の関係を測る評価の両方が研究課題になる。"
+        ]
+      },
+      {
+        "page": 27,
+        "title": "CLEVAでの採用と現在の配布",
+        "section": "4. CLEVAでの採用と現在の配布",
+        "kind": "divider"
+      },
+      {
+        "page": 28,
+        "title": "CLEVAはOCNLIを、多肢選択の推論課題に採用",
+        "section": "4. CLEVAでの採用と現在の配布",
+        "kind": "content",
+        "sources": [
+          "cleva",
+          "helm"
+        ],
+        "body_text": [
+          "2023年のCLEVAは、commonsense_reasoningのtextual_entailmentでOCNLIから標本を選び、多肢選択形式にして正解率を測る。",
+          "公開論文の「篮子嘛,一块钱…」と「这个篮子是可以卖的。」は、OCNLI devのid1162に全文一致し、配布ラベルもentailmentだった。",
+          "CLEVAが選んだOCNLIの全原票・分割・テンプレート本文は、今回の取得範囲では確認できなかった。"
+        ]
+      },
+      {
+        "page": 29,
+        "title": "CLEVAの公開例：三つの選択肢へ変換",
+        "section": "4. CLEVAでの採用と現在の配布",
+        "kind": "adoption_example",
+        "sources": [
+          "cleva"
+        ],
+        "example_index": 1,
+        "language": "zh+ja",
+        "display_scope": "Full published CLEVA prompt/choices; repeats original example for adoption comparison"
+      },
+      {
+        "page": 30,
+        "title": "HELMには実装と設定があり、公開実行は0件",
+        "section": "4. CLEVAでの採用と現在の配布",
+        "kind": "content",
+        "sources": [
+          "config"
+        ],
+        "body_text": [
+          "HELM Classic v0.4.0は、CLEVAのversion・subtask・prompt_idを受け取り、prompts.jsonで入力と選択肢を変換する。textual_entailmentの設定はprompt_id 0〜5の6種類。",
+          "2023-11-17の固定公開版に含まれる8,526実行を調べると、CLEVAの実行は0件。OCNLIの公開HELM成績や実要求出力は、この版からは得られない。",
+          "実装先のCLEVA配布URLは今回も取得できなかった。元OCNLIの50k学習・dev・testを、CLEVAの抽出・提示例数と同一の条件には置き換えない。"
+        ]
+      },
+      {
+        "page": 31,
+        "title": "現在の入手先と、引用文の利用条件",
+        "section": "4. CLEVAでの採用と現在の配布",
+        "kind": "content",
+        "sources": [
+          "repo"
+        ],
+        "body_text": [
+          "公式リポジトリは50k・30k・10k・3kの学習集合と、共通のdev・ラベル非公開testを公開する。CLUEの公開ZIPは50k・dev・testを収録する。",
+          "OCNLIはCC BY-NC 2.0を掲示する。帰属を示し、非商用の条件を守る。newsの前提はLCMCからELRAの許可を得て採用したと記される。",
+          "前提には政府報告、ニュース、小説、番組・電話会話が含まれる。原資料の出所と、データセットの作成者・ライセンスを区別して利用する。"
+        ]
+      },
+      {
+        "page": 32,
+        "title": "中国語の推論を、作成法と分割を含めて捉える",
+        "section": "4. CLEVAでの採用と現在の配布",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ],
+        "body_text": [
+          "OCNLIは、原生中国語の5文体の前提と、人が書いた仮説を含意・矛盾・中立で結ぶ。複数仮説と否定語への制約で、多様な推論を引き出した。",
+          "公開版は56,486組で、学習・開発には多数決不成立の例が残る。50k版の前提共有と、30k版の前提非共有は、評価条件の違いになる。",
+          "2020年の教師あり評価、仮説のみの分析、CLEVAの多肢選択化は、それぞれ入力・分母・学習の仕方を確認して解釈する。"
+        ]
+      },
+      {
+        "page": 33,
+        "title": "Appendix",
+        "section": "Appendix",
+        "kind": "appendix"
+      },
+      {
+        "page": 34,
+        "title": "",
+        "section": "Appendix: 目次",
+        "kind": "toc"
+      },
+      {
+        "page": 35,
+        "title": "文体と推論の追加例",
+        "section": "Appendix: 1. 文体と推論の追加例",
+        "kind": "divider"
+      },
+      {
+        "page": 36,
+        "title": "実例4：衣服の記述と「少なくとも」",
+        "section": "Appendix: 1. 文体と推論の追加例",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "example_index": 4,
+        "exampleID": 0,
+        "source_split": "dev",
+        "source_row": 0,
+        "language": "zh+ja",
+        "display_scope": "full premise and hypothesis"
+      },
+      {
+        "page": 37,
+        "title": "実例5：帰宅を待って外食へ行く",
+        "section": "Appendix: 1. 文体と推論の追加例",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "example_index": 5,
+        "exampleID": 4,
+        "source_split": "dev",
+        "source_row": 4,
+        "language": "zh+ja",
+        "display_scope": "full premise and hypothesis"
+      },
+      {
+        "page": 38,
+        "title": "実例6：植林の量と、質を確保する義務",
+        "section": "Appendix: 1. 文体と推論の追加例",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "example_index": 6,
+        "exampleID": 12,
+        "source_split": "dev",
+        "source_row": 12,
+        "language": "zh+ja",
+        "display_scope": "full premise and hypothesis"
+      },
+      {
+        "page": 39,
+        "title": "実例7：二つの謎の比較",
+        "section": "Appendix: 1. 文体と推論の追加例",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "example_index": 7,
+        "exampleID": 15,
+        "source_split": "dev",
+        "source_row": 15,
+        "language": "zh+ja",
+        "display_scope": "full premise and hypothesis"
+      },
+      {
+        "page": 40,
+        "title": "実例8：社会との接触と時代の変化",
+        "section": "Appendix: 1. 文体と推論の追加例",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "example_index": 8,
+        "exampleID": 26,
+        "source_split": "dev",
+        "source_row": 26,
+        "language": "zh+ja",
+        "display_scope": "full premise and hypothesis"
+      },
+      {
+        "page": 41,
+        "title": "実例9：番組への再登場と初出演",
+        "section": "Appendix: 1. 文体と推論の追加例",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "example_index": 9,
+        "exampleID": 35,
+        "source_split": "dev",
+        "source_row": 35,
+        "language": "zh+ja",
+        "display_scope": "full premise and hypothesis"
+      },
+      {
+        "page": 42,
+        "title": "実例10：畏れと、怖さの言い換え",
+        "section": "Appendix: 1. 文体と推論の追加例",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "example_index": 10,
+        "exampleID": 36,
+        "source_split": "dev",
+        "source_row": 36,
+        "language": "zh+ja",
+        "display_scope": "full premise and hypothesis"
+      },
+      {
+        "page": 43,
+        "title": "実例11：政策の改善と、優先順位",
+        "section": "Appendix: 1. 文体と推論の追加例",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "example_index": 11,
+        "exampleID": 937,
+        "source_split": "dev",
+        "source_row": 937,
+        "language": "zh+ja",
+        "display_scope": "full premise and hypothesis"
+      },
+      {
+        "page": 44,
+        "title": "実例12：曜日の発言と持ち物",
+        "section": "Appendix: 1. 文体と推論の追加例",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "example_index": 12,
+        "exampleID": 227,
+        "source_split": "dev",
+        "source_row": 227,
+        "language": "zh+ja",
+        "display_scope": "full premise and hypothesis"
+      },
+      {
+        "page": 45,
+        "title": "実例13：国有資産の管理と資産評価",
+        "section": "Appendix: 1. 文体と推論の追加例",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "example_index": 13,
+        "exampleID": 34,
+        "source_split": "dev",
+        "source_row": 34,
+        "language": "zh+ja",
+        "display_scope": "full premise and hypothesis"
+      },
+      {
+        "page": 46,
+        "title": "分割・注釈・実装の補足",
+        "section": "Appendix: 2. 分割・注釈・実装の補足",
+        "kind": "divider"
+      },
+      {
+        "page": 47,
+        "title": "四つの学習用配布：行数と有効ラベル",
+        "section": "Appendix: 2. 分割・注釈・実装の補足",
+        "kind": "content",
+        "sources": [
+          "repo"
+        ]
+      },
+      {
+        "page": 48,
+        "title": "公開50kとdevの、文体別ペア数",
+        "section": "Appendix: 2. 分割・注釈・実装の補足",
+        "kind": "content",
+        "sources": [
+          "repo"
+        ]
+      },
+      {
+        "page": 49,
+        "title": "devのラベルを、全行で数える",
+        "section": "Appendix: 2. 分割・注釈・実装の補足",
+        "kind": "content",
+        "sources": [
+          "repo"
+        ]
+      },
+      {
+        "page": 50,
+        "title": "作成条件の内訳と、公開分割の総数に差がある",
+        "section": "Appendix: 2. 分割・注釈・実装の補足",
+        "kind": "content",
+        "sources": [
+          "paper",
+          "repo"
+        ],
+        "body_text": [
+          "論文の4作成条件の件数は11,986、12,328、16,584、15,627で、合計56,525。表示された総数56,486および公開3分割の合計との差は39組ある。",
+          "今回の全件集計は、公式公開版の50,486 + 3,000 + 3,000 = 56,486組を分母とした。表の内訳を推測で補正しない。",
+          "公開30kとdevは同じ前提文0種類だが、prem_idは2種類共通する。識別子が同じでも文が異なる例があり、前提文そのものでも照合した。"
+        ]
+      },
+      {
+        "page": 51,
+        "title": "公開devで、常に中立と答える基準を再計算",
+        "section": "Appendix: 2. 分割・注釈・実装の補足",
+        "kind": "code",
+        "sources": [
+          "eval"
+        ]
+      },
+      {
+        "page": 52,
+        "title": "CLEVAのテンプレート設定と、確認できた範囲",
+        "section": "Appendix: 2. 分割・注釈・実装の補足",
+        "kind": "content",
+        "sources": [
+          "config"
+        ],
+        "body_text": [
+          "公開設定はcommonsense_reasoning / textual_entailment / v1で、prompt_id 0〜5。設定数は6で、6個の元コーパスを意味しない。",
+          "HELMのConverterは、choicesの各項目をReferenceへ変換し、正解indexの項目へcorrectを付ける。元OCNLIのラベル文字列と、そのまま同じ表現ではない。",
+          "公開論文例はA/B/C形式。コードの説明例は別の文で、正解C。完全なテンプレート本文と採用原票を取得できていないため、一律の選択肢順や全件数を断定しない。"
+        ]
+      },
+      {
+        "page": 53,
+        "title": "研究と参考文献",
+        "section": "Appendix: 3. 研究と参考文献",
+        "kind": "divider"
+      },
+      {
+        "page": 54,
+        "title": "言語・論理・評価を結び付けた共同研究",
+        "section": "Appendix: 3. 研究と参考文献",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ],
+        "body_text": [
+          "Hai Hu、Kyle Richardson、Liang Xu、Lu Li、Sandra Kübler、Lawrence S. Mossによる、Indiana University・Allen Institute for AI・CLUEの共同研究。",
+          "Findings of EMNLP 2020で発表された。翻訳へ依存せず、母語話者の推論と再注釈を中国語の基準として整備した。",
+          "教師ありモデルの成績だけでなく、仮説のみの語彙的な手掛かりや、翻訳学習データからの転移を分析した。"
+        ]
+      },
+      {
+        "page": 55,
+        "title": "参考文献",
+        "section": "Appendix: 3. 研究と参考文献",
+        "kind": "references"
+      },
+      {
+        "page": 56,
+        "title": "参考文献",
+        "section": "Appendix: 3. 研究と参考文献",
+        "kind": "references"
+      },
+      {
+        "page": 57,
+        "title": "参考文献",
+        "section": "Appendix: 3. 研究と参考文献",
+        "kind": "references"
+      }
+    ],
+    "links-audit.json": {
+      "native_url_only_runs": 54,
+      "pdf_link_rectangles": 54,
+      "pdf_link_text_exactly_matches_url": true,
+      "pdf_link_character_centers_match_url": true,
+      "glyph_box_overhangs": [],
+      "shortened_url_labels": [],
+      "issues": []
+    },
+    "example-audit.json": [
+      {
+        "index": 1,
+        "page": 7,
+        "raw_id": 1162,
+        "source_row": 1162,
+        "full_CN_and_JP_native": true,
+        "full_original_on_one_page": true,
+        "label": "entailment",
+        "raw_line_sha256": "032e7603679d82c044cd44f27104c943024b6663d906d205822fa422066100f5"
+      },
+      {
+        "index": 2,
+        "page": 9,
+        "raw_id": 2627,
+        "source_row": 2627,
+        "full_CN_and_JP_native": true,
+        "full_original_on_one_page": true,
+        "label": "contradiction",
+        "raw_line_sha256": "baf78fa855d152fc9ed8e28ee98b98746c8edcd5c46697a89759dd7a73f5ed60"
+      },
+      {
+        "index": 3,
+        "page": 11,
+        "raw_id": 1060,
+        "source_row": 1060,
+        "full_CN_and_JP_native": true,
+        "full_original_on_one_page": true,
+        "label": "neutral",
+        "raw_line_sha256": "c56f46693e7afa7017168e6a959435d619e307c4bc93bd7cc7e9f14582f2c72d"
+      },
+      {
+        "index": 4,
+        "page": 36,
+        "raw_id": 0,
+        "source_row": 0,
+        "full_CN_and_JP_native": true,
+        "full_original_on_one_page": true,
+        "label": "entailment",
+        "raw_line_sha256": "591cfd4c347f5f0a2299b6703e32f88b3332cb253c76d2fbd72b6e0035cf11e1"
+      },
+      {
+        "index": 5,
+        "page": 37,
+        "raw_id": 4,
+        "source_row": 4,
+        "full_CN_and_JP_native": true,
+        "full_original_on_one_page": true,
+        "label": "entailment",
+        "raw_line_sha256": "8b2dc7d8255b67fff4fc62d5f2aaafc1b6f179a5e9bf39cf2d82a67bab6de259"
+      },
+      {
+        "index": 6,
+        "page": 38,
+        "raw_id": 12,
+        "source_row": 12,
+        "full_CN_and_JP_native": true,
+        "full_original_on_one_page": true,
+        "label": "contradiction",
+        "raw_line_sha256": "06aa3d98a2a06605f384b291b61c907b0cbfe026eb7510de876d7a061c5d4bb9"
+      },
+      {
+        "index": 7,
+        "page": 39,
+        "raw_id": 15,
+        "source_row": 15,
+        "full_CN_and_JP_native": true,
+        "full_original_on_one_page": true,
+        "label": "entailment",
+        "raw_line_sha256": "c7531fe1fdad855cbb54b186ae28e9bea724f624da1e23f77a422333a1fb518b"
+      },
+      {
+        "index": 8,
+        "page": 40,
+        "raw_id": 26,
+        "source_row": 26,
+        "full_CN_and_JP_native": true,
+        "full_original_on_one_page": true,
+        "label": "entailment",
+        "raw_line_sha256": "5f710829e78ec941ce6ccede981ca27d1ab6890fa507c5d26c759db4e6f15880"
+      },
+      {
+        "index": 9,
+        "page": 41,
+        "raw_id": 35,
+        "source_row": 35,
+        "full_CN_and_JP_native": true,
+        "full_original_on_one_page": true,
+        "label": "contradiction",
+        "raw_line_sha256": "edc4846adc48724e2f483eb3f1fcd27816e7c13be8367df8cc703bcfb78e2feb"
+      },
+      {
+        "index": 10,
+        "page": 42,
+        "raw_id": 36,
+        "source_row": 36,
+        "full_CN_and_JP_native": true,
+        "full_original_on_one_page": true,
+        "label": "entailment",
+        "raw_line_sha256": "d22d929551e6622f26a2f9ecd2c1406b5a9b42a0eed894f6d4ce6657ab7e7f8e"
+      },
+      {
+        "index": 11,
+        "page": 43,
+        "raw_id": 937,
+        "source_row": 937,
+        "full_CN_and_JP_native": true,
+        "full_original_on_one_page": true,
+        "label": "neutral",
+        "raw_line_sha256": "2dff46b2a371c663f20e0008eaae261b77061b49d4257b0d1a85f7e3825117a4"
+      },
+      {
+        "index": 12,
+        "page": 44,
+        "raw_id": 227,
+        "source_row": 227,
+        "full_CN_and_JP_native": true,
+        "full_original_on_one_page": true,
+        "label": "neutral",
+        "raw_line_sha256": "ea0c2ca20d78214fb74b7d988690eb2198dd7236b4a7b8ba1153798fb6b0f879"
+      },
+      {
+        "index": 13,
+        "page": 45,
+        "raw_id": 34,
+        "source_row": 34,
+        "full_CN_and_JP_native": true,
+        "full_original_on_one_page": true,
+        "label": "contradiction",
+        "raw_line_sha256": "8dcdd5e8d9d0ebf6a77442bee64b37df999ec153a7687ab8b8cd88bb178ddbe8"
+      }
+    ],
+    "screenshot-log.json": {
+      "pages": [
+        {
+          "slug": "ocnli",
+          "url": "https://github.com/CLUEbenchmark/OCNLI",
+          "status": 200,
+          "title": "GitHub - CLUEbenchmark/OCNLI: OCNLI: 中文原版自然语言推理任务 · GitHub",
+          "css": 34,
+          "screenshot": "official-site.png",
+          "transport": "system-CA-verified urllib responses rendered in Chromium; persistent trust unchanged"
+        }
+      ],
+      "asset_failures": []
+    },
+    "panel-ink-audit.json": [
+      {
+        "page": 7,
+        "type": "quote-frame",
+        "top_pt": 8.133333333333354,
+        "bottom_pt": 7.866640419947515
+      },
+      {
+        "page": 7,
+        "type": "quote-frame",
+        "top_pt": 8.133333333333354,
+        "bottom_pt": 7.866640419947515
+      },
+      {
+        "page": 9,
+        "type": "quote-frame",
+        "top_pt": 7.466666666666669,
+        "bottom_pt": 7.866587926509226
+      },
+      {
+        "page": 9,
+        "type": "quote-frame",
+        "top_pt": 7.466666666666669,
+        "bottom_pt": 7.866640419947487
+      },
+      {
+        "page": 11,
+        "type": "quote-frame",
+        "top_pt": 8.133333333333354,
+        "bottom_pt": 7.866666666666646
+      },
+      {
+        "page": 11,
+        "type": "quote-frame",
+        "top_pt": 7.466666666666669,
+        "bottom_pt": 7.8666141732282995
+      },
+      {
+        "page": 29,
+        "type": "quote-frame",
+        "top_pt": 8.133333333333354,
+        "bottom_pt": 7.8666141732282995
+      },
+      {
+        "page": 29,
+        "type": "quote-frame",
+        "top_pt": 8.133333333333354,
+        "bottom_pt": 8.533280839894985
+      },
+      {
+        "page": 36,
+        "type": "quote-frame",
+        "top_pt": 8.133333333333354,
+        "bottom_pt": 7.866666666666646
+      },
+      {
+        "page": 36,
+        "type": "quote-frame",
+        "top_pt": 7.466666666666669,
+        "bottom_pt": 7.8666141732282995
+      },
+      {
+        "page": 37,
+        "type": "quote-frame",
+        "top_pt": 8.133333333333354,
+        "bottom_pt": 7.866640419947515
+      },
+      {
+        "page": 37,
+        "type": "quote-frame",
+        "top_pt": 8.133333333333354,
+        "bottom_pt": 7.866666666666646
+      },
+      {
+        "page": 38,
+        "type": "quote-frame",
+        "top_pt": 8.133333333333354,
+        "bottom_pt": 7.866666666666646
+      },
+      {
+        "page": 38,
+        "type": "quote-frame",
+        "top_pt": 7.466666666666669,
+        "bottom_pt": 7.8666141732282995
+      },
+      {
+        "page": 39,
+        "type": "quote-frame",
+        "top_pt": 7.466666666666669,
+        "bottom_pt": 7.866587926509226
+      },
+      {
+        "page": 39,
+        "type": "quote-frame",
+        "top_pt": 7.466666666666669,
+        "bottom_pt": 7.866640419947487
+      },
+      {
+        "page": 40,
+        "type": "quote-frame",
+        "top_pt": 8.133333333333354,
+        "bottom_pt": 7.866666666666646
+      },
+      {
+        "page": 40,
+        "type": "quote-frame",
+        "top_pt": 8.133333333333354,
+        "bottom_pt": 7.866666666666674
+      },
+      {
+        "page": 41,
+        "type": "quote-frame",
+        "top_pt": 7.466666666666669,
+        "bottom_pt": 7.8666141732282995
+      },
+      {
+        "page": 41,
+        "type": "quote-frame",
+        "top_pt": 7.466666666666669,
+        "bottom_pt": 7.866640419947487
+      },
+      {
+        "page": 42,
+        "type": "quote-frame",
+        "top_pt": 8.133333333333354,
+        "bottom_pt": 7.866640419947515
+      },
+      {
+        "page": 42,
+        "type": "quote-frame",
+        "top_pt": 7.466666666666669,
+        "bottom_pt": 7.866587926509226
+      },
+      {
+        "page": 43,
+        "type": "quote-frame",
+        "top_pt": 8.133333333333354,
+        "bottom_pt": 7.866666666666646
+      },
+      {
+        "page": 43,
+        "type": "quote-frame",
+        "top_pt": 7.466666666666669,
+        "bottom_pt": 7.8666141732282995
+      },
+      {
+        "page": 44,
+        "type": "quote-frame",
+        "top_pt": 8.133333333333354,
+        "bottom_pt": 7.866640419947515
+      },
+      {
+        "page": 44,
+        "type": "quote-frame",
+        "top_pt": 7.466666666666669,
+        "bottom_pt": 7.866587926509226
+      },
+      {
+        "page": 45,
+        "type": "quote-frame",
+        "top_pt": 8.13333333333334,
+        "bottom_pt": 7.866614173228356
+      },
+      {
+        "page": 45,
+        "type": "quote-frame",
+        "top_pt": 8.13333333333334,
+        "bottom_pt": 7.866614173228356
+      },
+      {
+        "page": 51,
+        "type": "code-frame",
+        "top_pt": 7.866666666666674,
+        "bottom_pt": 8.133280839895008
+      }
+    ],
+    "repo-data-fetch-log.json": [
+      {
+        "file": "repo-train.50k.json",
+        "url": "https://raw.githubusercontent.com/CLUEbenchmark/OCNLI/b53efdee17257a5c33993cf6fcf8ffff0497ea0e/data/ocnli/train.50k.json",
+        "bytes": 14627367,
+        "sha256": "cb47a6c00105bfb49bbb791dd537b284d3138f9f1ad5cd1e187afc470ff004e0"
+      },
+      {
+        "file": "repo-train.30k.json",
+        "url": "https://raw.githubusercontent.com/CLUEbenchmark/OCNLI/b53efdee17257a5c33993cf6fcf8ffff0497ea0e/data/ocnli/train.30k.json",
+        "bytes": 8773579,
+        "sha256": "0141ac058fabf8fdba51834bfbd4297a6f4fc7d3e9ecad0beb09906ba8bfa05e"
+      },
+      {
+        "file": "repo-train.10k.json",
+        "url": "https://raw.githubusercontent.com/CLUEbenchmark/OCNLI/b53efdee17257a5c33993cf6fcf8ffff0497ea0e/data/ocnli/train.10k.json",
+        "bytes": 2893982,
+        "sha256": "b8a0b7b72f62eb8d47a4d21ba34c4948bf2bdf5fde649a964ef3779504c7ab81"
+      },
+      {
+        "file": "repo-train.3k.json",
+        "url": "https://raw.githubusercontent.com/CLUEbenchmark/OCNLI/b53efdee17257a5c33993cf6fcf8ffff0497ea0e/data/ocnli/train.3k.json",
+        "bytes": 866767,
+        "sha256": "b6911d293ad88b4c053c5f847b6643c79de72bdf42f9061c5f61f43f8a79dca6"
+      },
+      {
+        "file": "repo-dev.json",
+        "url": "https://raw.githubusercontent.com/CLUEbenchmark/OCNLI/b53efdee17257a5c33993cf6fcf8ffff0497ea0e/data/ocnli/dev.json",
+        "bytes": 977426,
+        "sha256": "001ded235d73a18dac68a45a38cd5f9b3f9311fa4246df623e199422c073ddc5"
+      },
+      {
+        "file": "repo-test.json",
+        "url": "https://raw.githubusercontent.com/CLUEbenchmark/OCNLI/b53efdee17257a5c33993cf6fcf8ffff0497ea0e/data/ocnli/test.json",
+        "bytes": 440950,
+        "sha256": "5fb387fd5188ea7de7c13dda0c56d44fba50d526a126a7926a5e5d131fde86bb"
+      }
+    ],
+    "evidence/cleva-extra-fetch.json": [
+      {
+        "file": "cleva-config.conf",
+        "url": "https://raw.githubusercontent.com/stanford-crfm/helm/v0.4.0/src/helm/benchmark/presentation/run_specs_cleva_v1.conf",
+        "bytes": 37466,
+        "sha256": "062bed783973956ebcde2b875c9d76905eb3696fee25be4710bee9fc4fbe0e59"
+      },
+      {
+        "file": "cleva-data-retry.zip",
+        "url": "https://www.lavicleva.com/data/v1/commonsense_reasoning.zip",
+        "error": "HTTP Error 503: Service Unavailable"
+      }
+    ],
+    "evidence/extra-fetch-log.json": [
+      {
+        "file": "clue-readme.md",
+        "url": "https://raw.githubusercontent.com/CLUEbenchmark/CLUE/master/README.md",
+        "bytes": 51104,
+        "sha256": "5ad4912bd96f8b30c0b898b519ff7b2a3a2b5bb04d660d2aaf0798779e06108d"
+      },
+      {
+        "file": "license.html",
+        "url": "https://creativecommons.org/licenses/by-nc/2.0/",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "file": "xnli-meta.html",
+        "url": "https://aclanthology.org/D18-1269/",
+        "bytes": 44921,
+        "sha256": "cef58ac2dd91a71bb5ffccef03e0ebc2274a52757cf596d9b29b71ebb354b8da"
+      },
+      {
+        "file": "mnli-meta.html",
+        "url": "https://aclanthology.org/N18-1101/",
+        "bytes": 41284,
+        "sha256": "86e96e0d36c10450a42f12aa9d43f35c9bba262ef24e776d840ce01b8c7cbf03"
+      },
+      {
+        "file": "cleva-meta.html",
+        "url": "https://aclanthology.org/2023.emnlp-demo.17/",
+        "bytes": 45489,
+        "sha256": "5e6b2053a946b8a9b78a8002f81eadc90e4f55a2b3fd1d9ec77c7555f98ad99c"
+      }
+    ]
+  },
+  "artifact_sha256": {
+    "pdf": "86ba3572d1d480d56bd821b0988ebbc1b27c0d47554a97c28e0f4748c5468d3f",
+    "pptx": "c8441ec62357bfaf3b28b5c1b0b4fc99a5b4800831712d769a7a5f399dac1005"
+  },
+  "independent_review": "../skill-proofreading/ocnli/independent-review/",
+  "example-audit.json": [
+    {
+      "index": 1,
+      "page": 7,
+      "raw_id": 1162,
+      "source_row": 1162,
+      "full_CN_and_JP_native": true,
+      "full_original_on_one_page": true,
+      "label": "entailment",
+      "raw_line_sha256": "032e7603679d82c044cd44f27104c943024b6663d906d205822fa422066100f5"
+    },
+    {
+      "index": 2,
+      "page": 9,
+      "raw_id": 2627,
+      "source_row": 2627,
+      "full_CN_and_JP_native": true,
+      "full_original_on_one_page": true,
+      "label": "contradiction",
+      "raw_line_sha256": "baf78fa855d152fc9ed8e28ee98b98746c8edcd5c46697a89759dd7a73f5ed60"
+    },
+    {
+      "index": 3,
+      "page": 11,
+      "raw_id": 1060,
+      "source_row": 1060,
+      "full_CN_and_JP_native": true,
+      "full_original_on_one_page": true,
+      "label": "neutral",
+      "raw_line_sha256": "c56f46693e7afa7017168e6a959435d619e307c4bc93bd7cc7e9f14582f2c72d"
+    },
+    {
+      "index": 4,
+      "page": 36,
+      "raw_id": 0,
+      "source_row": 0,
+      "full_CN_and_JP_native": true,
+      "full_original_on_one_page": true,
+      "label": "entailment",
+      "raw_line_sha256": "591cfd4c347f5f0a2299b6703e32f88b3332cb253c76d2fbd72b6e0035cf11e1"
+    },
+    {
+      "index": 5,
+      "page": 37,
+      "raw_id": 4,
+      "source_row": 4,
+      "full_CN_and_JP_native": true,
+      "full_original_on_one_page": true,
+      "label": "entailment",
+      "raw_line_sha256": "8b2dc7d8255b67fff4fc62d5f2aaafc1b6f179a5e9bf39cf2d82a67bab6de259"
+    },
+    {
+      "index": 6,
+      "page": 38,
+      "raw_id": 12,
+      "source_row": 12,
+      "full_CN_and_JP_native": true,
+      "full_original_on_one_page": true,
+      "label": "contradiction",
+      "raw_line_sha256": "06aa3d98a2a06605f384b291b61c907b0cbfe026eb7510de876d7a061c5d4bb9"
+    },
+    {
+      "index": 7,
+      "page": 39,
+      "raw_id": 15,
+      "source_row": 15,
+      "full_CN_and_JP_native": true,
+      "full_original_on_one_page": true,
+      "label": "entailment",
+      "raw_line_sha256": "c7531fe1fdad855cbb54b186ae28e9bea724f624da1e23f77a422333a1fb518b"
+    },
+    {
+      "index": 8,
+      "page": 40,
+      "raw_id": 26,
+      "source_row": 26,
+      "full_CN_and_JP_native": true,
+      "full_original_on_one_page": true,
+      "label": "entailment",
+      "raw_line_sha256": "5f710829e78ec941ce6ccede981ca27d1ab6890fa507c5d26c759db4e6f15880"
+    },
+    {
+      "index": 9,
+      "page": 41,
+      "raw_id": 35,
+      "source_row": 35,
+      "full_CN_and_JP_native": true,
+      "full_original_on_one_page": true,
+      "label": "contradiction",
+      "raw_line_sha256": "edc4846adc48724e2f483eb3f1fcd27816e7c13be8367df8cc703bcfb78e2feb"
+    },
+    {
+      "index": 10,
+      "page": 42,
+      "raw_id": 36,
+      "source_row": 36,
+      "full_CN_and_JP_native": true,
+      "full_original_on_one_page": true,
+      "label": "entailment",
+      "raw_line_sha256": "d22d929551e6622f26a2f9ecd2c1406b5a9b42a0eed894f6d4ce6657ab7e7f8e"
+    },
+    {
+      "index": 11,
+      "page": 43,
+      "raw_id": 937,
+      "source_row": 937,
+      "full_CN_and_JP_native": true,
+      "full_original_on_one_page": true,
+      "label": "neutral",
+      "raw_line_sha256": "2dff46b2a371c663f20e0008eaae261b77061b49d4257b0d1a85f7e3825117a4"
+    },
+    {
+      "index": 12,
+      "page": 44,
+      "raw_id": 227,
+      "source_row": 227,
+      "full_CN_and_JP_native": true,
+      "full_original_on_one_page": true,
+      "label": "neutral",
+      "raw_line_sha256": "ea0c2ca20d78214fb74b7d988690eb2198dd7236b4a7b8ba1153798fb6b0f879"
+    },
+    {
+      "index": 13,
+      "page": 45,
+      "raw_id": 34,
+      "source_row": 34,
+      "full_CN_and_JP_native": true,
+      "full_original_on_one_page": true,
+      "label": "contradiction",
+      "raw_line_sha256": "8dcdd5e8d9d0ebf6a77442bee64b37df999ec153a7687ab8b8cd88bb178ddbe8"
+    }
+  ],
+  "screenshot-log.json": {
+    "pages": [
+      {
+        "slug": "ocnli",
+        "url": "https://github.com/CLUEbenchmark/OCNLI",
+        "status": 200,
+        "title": "GitHub - CLUEbenchmark/OCNLI: OCNLI: 中文原版自然语言推理任务 · GitHub",
+        "css": 34,
+        "screenshot": "official-site.png",
+        "transport": "system-CA-verified urllib responses rendered in Chromium; persistent trust unchanged"
+      }
+    ],
+    "asset_failures": []
+  }
+}

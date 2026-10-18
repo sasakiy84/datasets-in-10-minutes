@@ -49,7 +49,7 @@
 |2|cluewsc2020|CLUEWSC / CLUEWSC2020|制作中|
 |3|ccpm|CCPM|作成済み|
 |4|chid|ChID|未着手|
-|5|ocnli|OCNLI|制作中|
+|5|ocnli|OCNLI|作成済み|
 |6|math23k|Math23K|未着手|
 |7|cold|COLD|制作中|
 |8|cdial-bias|CDial-Bias|未着手|
