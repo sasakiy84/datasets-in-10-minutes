@@ -25,3 +25,8 @@ Geminiは使用していない。Codexが日本語校正スキルをページご
 |22|これは、生成モデルへ例を数件提示して答えさせるCLEVAの実行とは異なる。|これは、生成モデルにプロンプトを与えて答えさせるCLEVAの評価とは異なる。|独立レビュー：未取得infer_paramsの実提示例数を、数件と前提にしない表現へ改める。|
 
 [全ページ文言](cluewsc2020/pages.jsonl)・[自己検査・独立レビュー](cluewsc2020/review.json)
+
+
+## 読者向けの説明・日本語の改訂（2026年10月）
+
+Geminiは使用せず、Codexがスキルで校正し、別担当が独立レビューした。削除・統合を含む[問題点と変更対](cluewsc2020/editorial-2026-10/changes.md)、[旧ページとの対応](cluewsc2020/editorial-2026-10/page-map.json)、[独立レビュー](cluewsc2020/editorial-2026-10/independent-review/handoff.json)、[最終ページの全文](cluewsc2020/pages.jsonl)。旧版の校正・検証記録は保持している。
