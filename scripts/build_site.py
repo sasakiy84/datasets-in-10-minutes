@@ -107,12 +107,15 @@ def options(values):
     return ''.join(f'<option value="{esc(v)}">{esc(v)}</option>' for v in values)
 
 
-def build(output):
+def build(output, *, update_dates=False):
     if output.exists() and not (output / '.gallery-build').exists():
         raise ValueError(f'Refusing to overwrite an unmanaged directory: {output}')
     if output == ROOT or ROOT.is_relative_to(output) or output.is_relative_to(ROOT / 'slides'):
         raise ValueError('Output must be a separate build directory')
-    rows = sorted(read_catalog(ROOT / 'site/datasets.csv'), key=lambda row: int(row['year']), reverse=True)
+    rows = read_catalog(ROOT / 'site/datasets.csv')
+    if update_dates:
+        write_catalog(ROOT / 'site/datasets.csv', rows)
+    rows = sorted(rows, key=lambda row: int(row['year']), reverse=True)
     config = json.loads((ROOT / 'site/config.json').read_text())
     domain = config.get('custom_domain', '')
     if domain and not re.fullmatch(r'(?=.{1,253}$)(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z]{2,63}', domain):
@@ -187,6 +190,4 @@ if __name__ == '__main__':
     parser.add_argument('--output', type=Path, default=ROOT / '_site')
     parser.add_argument('--update-dates', action='store_true', help='Restore Git timestamps into site/datasets.csv before building')
     args = parser.parse_args()
-    if args.update_dates:
-        write_catalog(ROOT / 'site/datasets.csv', read_catalog(ROOT / 'site/datasets.csv'))
-    build(args.output.resolve())
+    build(args.output.resolve(), update_dates=args.update_dates)
