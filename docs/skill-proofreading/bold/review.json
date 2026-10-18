@@ -1,7 +1,7 @@
 {
   "dataset": "bold",
   "created_at": "2026-10-18T00:55:12+00:00",
-  "updated_at": "2026-10-18T00:55:12+00:00",
+  "updated_at": "2026-10-18T10:52:08+09:00",
   "model": "Codex (local skill application; no external generation API)",
   "review_mode": "skill_based_codex",
   "skill_path": ".agents/skills/japanese-slide-proofreading/SKILL.md",
@@ -92,8 +92,8 @@
   ],
   "visual_review_method": "全ページ一覧を確認し、引用・コード・表・参考文献・公式画面・グラフを1080×608の画像で個別に目視。最終変更ページは再描画して確認。",
   "artifact_sha256": {
-    "pptx": "4d30bba5bb28d24b2e3e04f07f971c0f5eb042e062e105e076699af11260f03a",
-    "pdf": "445e6d58a0c57a61c966866343b5246368be9806dd0ceed99b6355c4669bea53"
+    "pdf": "445e6d58a0c57a61c966866343b5246368be9806dd0ceed99b6355c4669bea53",
+    "pptx": "4d30bba5bb28d24b2e3e04f07f971c0f5eb042e062e105e076699af11260f03a"
   },
   "wording_changes": 9,
   "layout_and_explanation_changes": [
@@ -163,5 +163,60 @@
       "issues": []
     }
   },
-  "scope_notes": "公式amazon-science/boldのコミット3ad652c773f5d1e30d5f6f61657ed934d768ecadの5ファイルをGit blob SHA-1で照合した。23,679書き出し、5ドメイン43グループ。HELMは各topicの最初の書き出しを使い、候補は7,201件。canonical実行1,000入力すべてが実際にこの候補に対応（adapter末尾空白を除去して照合、重複を除くと994文）。13例は未完の書き出しを保持し、続きや唯一の正解を創作しない。重複する注意の本文3ページを削除。初期の定性的比較に数値を補わない。HELMは20トークン・温度0.9・各1生成のPerspective指標。公式CC BY-SA 4.0とHFカードCC BY 4.0の違いを明記。"
+  "scope_notes": "公式amazon-science/boldのコミット3ad652c773f5d1e30d5f6f61657ed934d768ecadの5ファイルをGit blob SHA-1で照合した。23,679書き出し、5ドメイン43グループ。HELMは各topicの最初の書き出しを使い、候補は7,201件。canonical実行1,000入力すべてが実際にこの候補に対応（adapter末尾空白を除去して照合、重複を除くと994文）。13例は未完の書き出しを保持し、続きや唯一の正解を創作しない。重複する注意の本文3ページを削除。初期の定性的比較に数値を補わない。HELMは20トークン・温度0.9・各1生成のPerspective指標。公式CC BY-SA 4.0とHFカードCC BY 4.0の違いを明記。",
+  "revision_history": [
+    {
+      "checked_at": "2026-10-18T00:55:12+00:00",
+      "artifact_sha256": {
+        "pptx": "4d30bba5bb28d24b2e3e04f07f971c0f5eb042e062e105e076699af11260f03a",
+        "pdf": "445e6d58a0c57a61c966866343b5246368be9806dd0ceed99b6355c4669bea53"
+      },
+      "checks": {
+        "package": {
+          "parsed_xml_parts": 123,
+          "integer_bullets": 108,
+          "hyperlinks": 34,
+          "new_schema_errors": [],
+          "baseline_schema_errors": 11,
+          "package_integrity": "passed",
+          "internal_relationship_targets": "passed",
+          "unique_shape_ids": "passed",
+          "schema_note": "標準XSDを変更せず確認。マスター由来の既存エラーと、整数buSzPctの百分率字句形式との差を分離。整数箇条書きサイズは25000–400000で別途検査。",
+          "pages": 44,
+          "native_tables": 5,
+          "native_charts": 1
+        },
+        "layout": {
+          "paragraphs_checked": 209,
+          "table_cells_checked": 45,
+          "issues": []
+        },
+        "text": {
+          "pages": 44,
+          "missing": [],
+          "quote_missing": [],
+          "unique_examples": 13,
+          "all_original_paragraphs_and_translations_present": true,
+          "notes": false,
+          "unnecessary_original_paper_word": 0,
+          "extraction_note": "数式記号の別ブロックとfi合字のゼロ幅文字は、実際の文字・基線・座標を保って行順を復元。文字の削除による代用なし。"
+        },
+        "links": {
+          "native_url_only_runs": 34,
+          "pdf_link_rectangles": 34,
+          "pdf_link_text_exactly_matches_url": true,
+          "issues": []
+        }
+      }
+    }
+  ],
+  "follow_up_reviews": [
+    {
+      "record": "answer-and-citation-review.json",
+      "checked_at": "2026-10-18T10:52:08+09:00",
+      "answer_display_changes": 0,
+      "citation_wording_changes": 0,
+      "changed_pages": []
+    }
+  ]
 }

@@ -15,3 +15,9 @@ Geminiは使用していない。Codexが日本語校正スキルを1ページ�
 |44|AmazonScience/bold / 改訂be5f5a99 / 2026-10-18参照|amazon-science/bold / コミット3ad652c773f5 / 2026-10-18参照|リンク先と全件集計に用いた公式リポジトリのコミットへ書誌情報を対応させた。ミラーの改訂は検証記録に別途保持。|
 
 [全ページの記録](bold/pages.jsonl)・[検査とレイアウト変更](bold/review.json)・[出典](../bold-sources.md)
+
+## 2026-10-18：正解表示と出典表現の点検
+
+全44ページを点検。小さい独立した正解表示や不要な図表番号はなく、PPTX・PDFのバイト列は変更していない。生成課題に唯一の正解は追加していない。Geminiは使用していない。
+
+[今回の点検・変更と範囲照合](bold/answer-and-citation-review.json)
