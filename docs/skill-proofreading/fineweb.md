@@ -86,3 +86,11 @@
 [PPTX](../../slides/datasets-in-10-minutes-fineweb.pptx) / [PDF](../../slides/datasets-in-10-minutes-fineweb.pdf)
 
 [変更対TSV](fineweb/changes.tsv) / [校正・検証JSON](fineweb/review.json) / [全ページの確認記録](fineweb/pages.jsonl) / [参照した過去のGemini案](fineweb/prior-gemini-proposals.jsonl)
+
+## 2026-10-18：正解表示と本文の出典表現
+
+独立した正解は本文と同程度の大きさ・太字で示し、ユーザー個人の好みのえんじ色（accent1 / #B13731）を適用した。本文の不要な図表番号を省き、評価条件・原文・訳・正解値は保持した。Codexによるスキル適用、Gemini使用なし。[全変更対・個別確認ページ・検査とハッシュ](fineweb/answer-style-review.json)。
+
+|ページ|変更前|変更後|
+|---|---|---|
+|34|FineWebとFineWeb-Eduから各5万文書を抽出し、文の意味を数値化するモデルで文書を表現した [1]。<br>似た文書を自動でまとめ、密度の高い100クラスタを抽出し、Llama 3.1 70Bで話題名を付けた。<br>Penedoら（2024）の図18は、構成比の差の絶対値が0.5ポイント以上の39分類を示す [1]。|FineWebとFineWeb-Eduから各5万文書を抽出し、文の意味を数値化するモデルで文書を表現した [1]。<br>似た文書を自動でまとめ、密度の高い100クラスタを抽出し、Llama 3.1 70Bで話題名を付けた。<br>公開された構成比の比較は、構成比の差の絶対値が0.5ポイント以上の39分類を示す [1]。|
