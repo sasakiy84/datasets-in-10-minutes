@@ -1,0 +1,1187 @@
+[
+  {
+    "page": 1,
+    "title": "BillSum",
+    "section": "",
+    "kind": "cover",
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 2,
+    "title": "公式リポジトリ",
+    "section": "BillSum",
+    "kind": "image",
+    "sources": [
+      "repo"
+    ],
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 3,
+    "title": "",
+    "section": "目次",
+    "kind": "toc",
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 4,
+    "title": "法案をどう要約するか",
+    "section": "1. 法案をどう要約するか",
+    "kind": "divider",
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 5,
+    "title": "法案本文と、人が書いた要約を対応付ける",
+    "section": "1. 法案をどう要約するか",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "BillSumは、米連邦議会とCalifornia州の法案本文を、人が書いた要約と対応付けたデータセット。",
+      "入力は条文や改正指示を含む長い法案。出力は、主要な措置や変更点を伝える短い要約。",
+      "連邦議会の要約はCongressional Research Service（CRS）、Californiaの要約はLegislative Counselが作成した。"
+    ],
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 6,
+    "title": "表示する抜粋と、要約の対象を区別する",
+    "section": "1. 法案をどう要約するか",
+    "kind": "content",
+    "sources": [
+      "data"
+    ],
+    "body_text": [
+      "本編3件と追加10件は、固定した公開test・ca_testから選んだ異なる法案。地域と、教育・融資・農業・保健などの内容を変えた。",
+      "入力は意味の通る連続した範囲を抜粋し、各頁に入力全文の語数を示す。法案全文は検証記録に保存した。",
+      "参照要約は法案全文に対する全文を載せる。抜粋だけから生成された要約や、今回のモデル出力ではない。"
+    ],
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 7,
+    "title": "実例1：授業料給付の算定式",
+    "section": "1. 法案をどう要約するか",
+    "kind": "example",
+    "sources": [
+      "data"
+    ],
+    "example_index": 1,
+    "exampleID": "test/row-1010",
+    "language": "en+ja",
+    "example_part": "input",
+    "source_split": "test",
+    "raw_char_range": [
+      756,
+      2053
+    ],
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 8,
+    "title": "実例1：参照要約",
+    "section": "1. 法案をどう要約するか",
+    "kind": "reference_summary",
+    "sources": [
+      "data"
+    ],
+    "example_index": 1,
+    "exampleID": "test/row-1010",
+    "language": "en",
+    "example_part": "summary",
+    "source_split": "test",
+    "raw_char_range": null,
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 9,
+    "title": "実例1：参照要約の訳",
+    "section": "1. 法案をどう要約するか",
+    "kind": "reference_summary",
+    "sources": [
+      "data"
+    ],
+    "example_index": 1,
+    "exampleID": "test/row-1010",
+    "language": "ja",
+    "example_part": "summary",
+    "source_split": "test",
+    "raw_char_range": null,
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 10,
+    "title": "算定式を、給付の仕組みとして説明する",
+    "section": "1. 法案をどう要約するか",
+    "kind": "content",
+    "sources": [
+      "data"
+    ],
+    "body_text": [
+      "入力全文には二段階の比較がある。参照要約は、追加される計算方法を中心に説明する。",
+      "法案の階層的な番号や数式的な比較を、対象者・費用・基準額という形でまとめる。",
+      "主要な制度変更と、その変更が適用される条件を保つことが、要約の課題になる。"
+    ],
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 11,
+    "title": "実例2：州外資格を使う教員認可",
+    "section": "1. 法案をどう要約するか",
+    "kind": "example",
+    "sources": [
+      "data"
+    ],
+    "example_index": 2,
+    "exampleID": "ca_test/row-1059",
+    "language": "en+ja",
+    "example_part": "input",
+    "source_split": "ca_test",
+    "raw_char_range": [
+      4970,
+      5340
+    ],
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 12,
+    "title": "実例2：参照要約",
+    "section": "1. 法案をどう要約するか",
+    "kind": "reference_summary",
+    "sources": [
+      "data"
+    ],
+    "example_index": 2,
+    "exampleID": "ca_test/row-1059",
+    "language": "en",
+    "example_part": "summary",
+    "source_split": "ca_test",
+    "raw_char_range": null,
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 13,
+    "title": "実例2：参照要約の訳",
+    "section": "1. 法案をどう要約するか",
+    "kind": "reference_summary",
+    "sources": [
+      "data"
+    ],
+    "example_index": 2,
+    "exampleID": "ca_test/row-1059",
+    "language": "ja",
+    "example_part": "summary",
+    "source_split": "ca_test",
+    "raw_char_range": null,
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 14,
+    "title": "現行の制度と、新しい変更点を分ける",
+    "section": "1. 法案をどう要約するか",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "Californiaの参照要約は、現行法を説明してから、法案が変える点を述べることが多い。",
+      "教員認可の実例では、既存の最低要件を背景として説明し、州外資格を使える手続きを続けて述べる。",
+      "条文の中に現行法と新しい文言が混在するため、書かれた制度のすべてを法案による新設と解釈しない。"
+    ],
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 15,
+    "title": "実例3：借り手の死亡と学生ローン",
+    "section": "1. 法案をどう要約するか",
+    "kind": "example",
+    "sources": [
+      "data"
+    ],
+    "example_index": 3,
+    "exampleID": "test/row-2363",
+    "language": "en+ja",
+    "example_part": "input",
+    "source_split": "test",
+    "raw_char_range": [
+      3775,
+      4259
+    ],
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 16,
+    "title": "実例3：参照要約",
+    "section": "1. 法案をどう要約するか",
+    "kind": "reference_summary",
+    "sources": [
+      "data"
+    ],
+    "example_index": 3,
+    "exampleID": "test/row-2363",
+    "language": "en",
+    "example_part": "summary",
+    "source_split": "test",
+    "raw_char_range": null,
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 17,
+    "title": "実例3：参照要約の訳",
+    "section": "1. 法案をどう要約するか",
+    "kind": "reference_summary",
+    "sources": [
+      "data"
+    ],
+    "example_index": 3,
+    "exampleID": "test/row-2363",
+    "language": "ja",
+    "example_part": "summary",
+    "source_split": "test",
+    "raw_char_range": null,
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 18,
+    "title": "本則だけでなく、別の条項もまとめる",
+    "section": "1. 法案をどう要約するか",
+    "kind": "content",
+    "sources": [
+      "data"
+    ],
+    "body_text": [
+      "抜粋は免除の本則。参照要約は、別の条項にある濫用防止と義務復活の権限も含める。",
+      "参照要約に含まれる情報が、本文のどこにあるかを確かめる。法案の一部だけを読むと、重要な例外や施行条件を落とすことがある。"
+    ],
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 19,
+    "title": "収集と二つの評価集合",
+    "section": "2. 収集と二つの評価集合",
+    "kind": "divider",
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 20,
+    "title": "連邦議会で学び、別の州議会へ試す",
+    "section": "2. 収集と二つの評価集合",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "contains_native_table": true,
+    "contains_native_chart": false
+  },
+  {
+    "page": 21,
+    "title": "中程度の長さの法案を選ぶ",
+    "section": "2. 収集と二つの評価集合",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "連邦議会の本文はGovinfoから収集し、Californiaは州議会サイトから取得した。最終の法案本文と利用可能な要約を対応付けた。",
+      "本文5,000〜20,000文字、要約2,000文字以下を中心に選ぶ。短い法案は変更が小さく、非常に長い法案は複数の大きな節を含むため除く。",
+      "文字数で選別したのは、入れ子の箇条書きが多く、単語・文の区切りを一貫して測りにくいため。"
+    ],
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 22,
+    "title": "似た法案が、分割をまたがないようにする",
+    "section": "2. 収集と二つの評価集合",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "同じ法案が両院や別の会期に再提出されるため、本文と要約の類似度から近い重複を除いた。",
+      "本文・要約をそれぞれ単語頻度ベクトルにし、二つのコサイン類似度の平均が0.96を超えれば重複とみなす。",
+      "同じ題名が残る法案は、すべて学習用の集合に入れる。"
+    ],
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 23,
+    "title": "現在の配布本文でも、入力は長い",
+    "section": "2. 収集と二つの評価集合",
+    "kind": "content",
+    "sources": [
+      "data"
+    ],
+    "contains_native_table": true,
+    "contains_native_chart": false
+  },
+  {
+    "page": 24,
+    "title": "US test本文の長さには幅がある",
+    "section": "2. 収集と二つの評価集合",
+    "kind": "content",
+    "sources": [
+      "data"
+    ],
+    "contains_native_table": false,
+    "contains_native_chart": true
+  },
+  {
+    "page": 25,
+    "title": "2019年の方法と成績",
+    "section": "3. 2019年の方法と成績",
+    "kind": "divider",
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 26,
+    "title": "重要な文を選ぶ、抽出型の出発点",
+    "section": "3. 2019年の方法と成績",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "2019年は、各文の重要度を予測して本文から選ぶ抽出型要約を評価した。ニュース向けの生成モデルをそのまま使うと、不自然な文が生じた。",
+      "DOCは、文の位置・見出しとの近さ・TF-IDFなどから文脈上の重要度を予測する。",
+      "SUMは、米議会の本文で追加事前学習したBERT-Large Uncasedを使い、要約に入りやすい文を分類する。"
+    ],
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 27,
+    "title": "重要度と重複を見ながら、文を選ぶ",
+    "section": "3. 2019年の方法と成績",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "参照要約とのROUGE-2 precisionが0.1を超えるかを使い、本文の各文に学習用の二値ラベルを作る。",
+      "DOCとSUMの予測を組み合わせ、重要度を高く、既に選んだ文との類似度を低くするMMRで選ぶ。",
+      "出力は最大2,000文字。BillSumの配布ラベルは人が書いた要約であり、文ごとのラベルは学習時に計算する。"
+    ],
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 28,
+    "title": "語の重なりを、適合率と再現率で読む",
+    "section": "3. 2019年の方法と成績",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "ROUGEは、参照要約と生成要約が共有する語や語の並びを数える。",
+      "ROUGE-1は単語、ROUGE-2は連続2語、ROUGE-Lは最長共通部分列を使う。2019年の比較は適合率と再現率を合わせたF値。",
+      "語を共有していても、金額・例外・義務の主体を取り違えることはある。法律上の変更点と事実の対応も読む。"
+    ],
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 29,
+    "title": "2019年：米連邦議会の抽出型要約",
+    "section": "3. 2019年の方法と成績",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "contains_native_table": true,
+    "contains_native_chart": false
+  },
+  {
+    "page": 30,
+    "title": "2019年：Californiaの抽出型要約",
+    "section": "3. 2019年の方法と成績",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "contains_native_table": true,
+    "contains_native_chart": false
+  },
+  {
+    "page": 31,
+    "title": "州が変わると、要約の書き方も変わる",
+    "section": "3. 2019年の方法と成績",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "DOC＋SUMのROUGE-2は、USで23.83、Californiaで21.14。学習した議会の外でも、未学習の手法より高い得点を得た。",
+      "Californiaでは現行法の説明を含む要約があり、変更内容を中心に書く連邦議会と文体が異なる。",
+      "この比較は2019年の抽出型モデルの記録。新しい生成モデルの得点と直接同じ条件として扱わない。"
+    ],
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 32,
+    "title": "HELMの範囲と現在の入手",
+    "section": "4. HELMの範囲と現在の入手",
+    "kind": "divider",
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 33,
+    "title": "HELMは実装を持つが、固定公開実行はない",
+    "section": "4. HELMの範囲と現在の入手",
+    "kind": "content",
+    "sources": [
+      "helm"
+    ],
+    "body_text": [
+      "HELMの実装はUSのtrainとtestを読む。ca_testは読み込む分割に含まれない。",
+      "HELM Classic v0.4.0の公開run_specs 8,526件を調べ、BillSumを含む法律要約シナリオの実行は0件だった。",
+      "したがって、ここでのモデル成績は2019年の評価。HELMの実際の生成数・試行数・提示例数の実測値は作らない。"
+    ],
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 34,
+    "title": "HELMに定義された入力・生成条件",
+    "section": "4. HELMの範囲と現在の入手",
+    "kind": "content",
+    "sources": [
+      "run"
+    ],
+    "contains_native_table": true,
+    "contains_native_chart": false
+  },
+  {
+    "page": 35,
+    "title": "公開配布は、生成モデルの入力にも使える",
+    "section": "4. HELMの範囲と現在の入手",
+    "kind": "content",
+    "sources": [
+      "repo"
+    ],
+    "body_text": [
+      "公式リポジトリは、本文・前処理済み本文・要約・題名・bill_idを含むJSON Lines形式を案内する。2019-12-03の更新後のデータを使うよう告知している。",
+      "Hugging Faceの現在の配布はtext・summary・titleの3列。今回の実例はその固定改訂を取得した。",
+      "データカードはCC0-1.0を表示する。元の法案と要約の作成主体、取得版、分割も記録して扱う。"
+    ],
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 36,
+    "title": "固定した分割から、本文と参照要約を読む",
+    "section": "4. HELMの範囲と現在の入手",
+    "kind": "code",
+    "sources": [
+      "data"
+    ],
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 37,
+    "title": "法案の構造を読み、何が変わるかを伝える",
+    "section": "4. HELMの範囲と現在の入手",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "BillSumは、法案本文と専門職が書いた要約を対応付け、法律文書の自動要約を研究するために作られた。",
+      "USの22,218件を学習・評価に分け、Californiaの1,237件で議会をまたぐ転移を調べる。",
+      "条文の書換え、階層構造、現行法と変更点の関係を保ちながら、主要な措置を短くまとめる。"
+    ],
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 38,
+    "title": "Appendix",
+    "section": "Appendix",
+    "kind": "divider",
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 39,
+    "title": "",
+    "section": "Appendix: 目次",
+    "kind": "toc",
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 40,
+    "title": "追加の法案と参照要約",
+    "section": "Appendix: 1. 追加の法案と参照要約",
+    "kind": "divider",
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 41,
+    "title": "実例4：退役軍人向け融資の保証料",
+    "section": "Appendix: 1. 追加の法案と参照要約",
+    "kind": "example",
+    "sources": [
+      "data"
+    ],
+    "example_index": 4,
+    "exampleID": "test/row-1496",
+    "language": "en+ja",
+    "example_part": "input",
+    "source_split": "test",
+    "raw_char_range": [
+      731,
+      1466
+    ],
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 42,
+    "title": "実例4：参照要約",
+    "section": "Appendix: 1. 追加の法案と参照要約",
+    "kind": "reference_summary",
+    "sources": [
+      "data"
+    ],
+    "example_index": 4,
+    "exampleID": "test/row-1496",
+    "language": "en",
+    "example_part": "summary",
+    "source_split": "test",
+    "raw_char_range": null,
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 43,
+    "title": "実例4：参照要約の訳",
+    "section": "Appendix: 1. 追加の法案と参照要約",
+    "kind": "reference_summary",
+    "sources": [
+      "data"
+    ],
+    "example_index": 4,
+    "exampleID": "test/row-1496",
+    "language": "ja",
+    "example_part": "summary",
+    "source_split": "test",
+    "raw_char_range": null,
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 44,
+    "title": "実例5：休耕地での採草と放牧",
+    "section": "Appendix: 1. 追加の法案と参照要約",
+    "kind": "example",
+    "sources": [
+      "data"
+    ],
+    "example_index": 5,
+    "exampleID": "test/row-732",
+    "language": "en+ja",
+    "example_part": "input",
+    "source_split": "test",
+    "raw_char_range": [
+      1946,
+      2617
+    ],
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 45,
+    "title": "実例5：参照要約",
+    "section": "Appendix: 1. 追加の法案と参照要約",
+    "kind": "reference_summary",
+    "sources": [
+      "data"
+    ],
+    "example_index": 5,
+    "exampleID": "test/row-732",
+    "language": "en",
+    "example_part": "summary",
+    "source_split": "test",
+    "raw_char_range": null,
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 46,
+    "title": "実例5：参照要約の訳",
+    "section": "Appendix: 1. 追加の法案と参照要約",
+    "kind": "reference_summary",
+    "sources": [
+      "data"
+    ],
+    "example_index": 5,
+    "exampleID": "test/row-732",
+    "language": "ja",
+    "example_part": "summary",
+    "source_split": "test",
+    "raw_char_range": null,
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 47,
+    "title": "実例6：遺跡群とナバホ・ネイション",
+    "section": "Appendix: 1. 追加の法案と参照要約",
+    "kind": "example",
+    "sources": [
+      "data"
+    ],
+    "example_index": 6,
+    "exampleID": "test/row-2931",
+    "language": "en+ja",
+    "example_part": "input",
+    "source_split": "test",
+    "raw_char_range": [
+      4470,
+      5056
+    ],
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 48,
+    "title": "実例6：参照要約",
+    "section": "Appendix: 1. 追加の法案と参照要約",
+    "kind": "reference_summary",
+    "sources": [
+      "data"
+    ],
+    "example_index": 6,
+    "exampleID": "test/row-2931",
+    "language": "en",
+    "example_part": "summary",
+    "source_split": "test",
+    "raw_char_range": null,
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 49,
+    "title": "実例6：参照要約の訳",
+    "section": "Appendix: 1. 追加の法案と参照要約",
+    "kind": "reference_summary",
+    "sources": [
+      "data"
+    ],
+    "example_index": 6,
+    "exampleID": "test/row-2931",
+    "language": "ja",
+    "example_part": "summary",
+    "source_split": "test",
+    "raw_char_range": null,
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 50,
+    "title": "実例7：生活費に応じた人的控除",
+    "section": "Appendix: 1. 追加の法案と参照要約",
+    "kind": "example",
+    "sources": [
+      "data"
+    ],
+    "example_index": 7,
+    "exampleID": "test/row-1401",
+    "language": "en+ja",
+    "example_part": "input",
+    "source_split": "test",
+    "raw_char_range": [
+      1444,
+      2061
+    ],
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 51,
+    "title": "実例7：参照要約",
+    "section": "Appendix: 1. 追加の法案と参照要約",
+    "kind": "reference_summary",
+    "sources": [
+      "data"
+    ],
+    "example_index": 7,
+    "exampleID": "test/row-1401",
+    "language": "en",
+    "example_part": "summary",
+    "source_split": "test",
+    "raw_char_range": null,
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 52,
+    "title": "実例7：参照要約の訳",
+    "section": "Appendix: 1. 追加の法案と参照要約",
+    "kind": "reference_summary",
+    "sources": [
+      "data"
+    ],
+    "example_index": 7,
+    "exampleID": "test/row-1401",
+    "language": "ja",
+    "example_part": "summary",
+    "source_split": "test",
+    "raw_char_range": null,
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 53,
+    "title": "実例8：学生数を単位時間から数える",
+    "section": "Appendix: 1. 追加の法案と参照要約",
+    "kind": "example",
+    "sources": [
+      "data"
+    ],
+    "example_index": 8,
+    "exampleID": "test/row-753",
+    "language": "en+ja",
+    "example_part": "input",
+    "source_split": "test",
+    "raw_char_range": [
+      1273,
+      1960
+    ],
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 54,
+    "title": "実例8：参照要約",
+    "section": "Appendix: 1. 追加の法案と参照要約",
+    "kind": "reference_summary",
+    "sources": [
+      "data"
+    ],
+    "example_index": 8,
+    "exampleID": "test/row-753",
+    "language": "en",
+    "example_part": "summary",
+    "source_split": "test",
+    "raw_char_range": null,
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 55,
+    "title": "実例8：参照要約の訳",
+    "section": "Appendix: 1. 追加の法案と参照要約",
+    "kind": "reference_summary",
+    "sources": [
+      "data"
+    ],
+    "example_index": 8,
+    "exampleID": "test/row-753",
+    "language": "ja",
+    "example_part": "summary",
+    "source_split": "test",
+    "raw_char_range": null,
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 56,
+    "title": "実例9：オンライン有権者登録",
+    "section": "Appendix: 1. 追加の法案と参照要約",
+    "kind": "example",
+    "sources": [
+      "data"
+    ],
+    "example_index": 9,
+    "exampleID": "ca_test/row-26",
+    "language": "en+ja",
+    "example_part": "input",
+    "source_split": "ca_test",
+    "raw_char_range": [
+      692,
+      969
+    ],
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 57,
+    "title": "実例9：参照要約",
+    "section": "Appendix: 1. 追加の法案と参照要約",
+    "kind": "reference_summary",
+    "sources": [
+      "data"
+    ],
+    "example_index": 9,
+    "exampleID": "ca_test/row-26",
+    "language": "en",
+    "example_part": "summary",
+    "source_split": "ca_test",
+    "raw_char_range": null,
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 58,
+    "title": "実例9：参照要約の訳",
+    "section": "Appendix: 1. 追加の法案と参照要約",
+    "kind": "reference_summary",
+    "sources": [
+      "data"
+    ],
+    "example_index": 9,
+    "exampleID": "ca_test/row-26",
+    "language": "ja",
+    "example_part": "summary",
+    "source_split": "ca_test",
+    "raw_char_range": null,
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 59,
+    "title": "実例10：オフィス内の保育施設",
+    "section": "Appendix: 1. 追加の法案と参照要約",
+    "kind": "example",
+    "sources": [
+      "data"
+    ],
+    "example_index": 10,
+    "exampleID": "ca_test/row-111",
+    "language": "en+ja",
+    "example_part": "input",
+    "source_split": "ca_test",
+    "raw_char_range": [
+      5391,
+      5622
+    ],
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 60,
+    "title": "実例10：参照要約",
+    "section": "Appendix: 1. 追加の法案と参照要約",
+    "kind": "reference_summary",
+    "sources": [
+      "data"
+    ],
+    "example_index": 10,
+    "exampleID": "ca_test/row-111",
+    "language": "en",
+    "example_part": "summary",
+    "source_split": "ca_test",
+    "raw_char_range": null,
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 61,
+    "title": "実例10：参照要約の訳",
+    "section": "Appendix: 1. 追加の法案と参照要約",
+    "kind": "reference_summary",
+    "sources": [
+      "data"
+    ],
+    "example_index": 10,
+    "exampleID": "ca_test/row-111",
+    "language": "ja",
+    "example_part": "summary",
+    "source_split": "ca_test",
+    "raw_char_range": null,
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 62,
+    "title": "実例11：退役軍人と地域精神保健",
+    "section": "Appendix: 1. 追加の法案と参照要約",
+    "kind": "example",
+    "sources": [
+      "data"
+    ],
+    "example_index": 11,
+    "exampleID": "ca_test/row-77",
+    "language": "en+ja",
+    "example_part": "input",
+    "source_split": "ca_test",
+    "raw_char_range": [
+      4929,
+      5321
+    ],
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 63,
+    "title": "実例11：参照要約",
+    "section": "Appendix: 1. 追加の法案と参照要約",
+    "kind": "reference_summary",
+    "sources": [
+      "data"
+    ],
+    "example_index": 11,
+    "exampleID": "ca_test/row-77",
+    "language": "en",
+    "example_part": "summary",
+    "source_split": "ca_test",
+    "raw_char_range": null,
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 64,
+    "title": "実例11：参照要約の訳",
+    "section": "Appendix: 1. 追加の法案と参照要約",
+    "kind": "reference_summary",
+    "sources": [
+      "data"
+    ],
+    "example_index": 11,
+    "exampleID": "ca_test/row-77",
+    "language": "ja",
+    "example_part": "summary",
+    "source_split": "ca_test",
+    "raw_char_range": null,
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 65,
+    "title": "実例12：後見の権限と代理人の継続",
+    "section": "Appendix: 1. 追加の法案と参照要約",
+    "kind": "example",
+    "sources": [
+      "data"
+    ],
+    "example_index": 12,
+    "exampleID": "ca_test/row-510",
+    "language": "en+ja",
+    "example_part": "input",
+    "source_split": "ca_test",
+    "raw_char_range": [
+      4038,
+      4398
+    ],
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 66,
+    "title": "実例12：参照要約",
+    "section": "Appendix: 1. 追加の法案と参照要約",
+    "kind": "reference_summary",
+    "sources": [
+      "data"
+    ],
+    "example_index": 12,
+    "exampleID": "ca_test/row-510",
+    "language": "en",
+    "example_part": "summary",
+    "source_split": "ca_test",
+    "raw_char_range": null,
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 67,
+    "title": "実例12：参照要約の訳",
+    "section": "Appendix: 1. 追加の法案と参照要約",
+    "kind": "reference_summary",
+    "sources": [
+      "data"
+    ],
+    "example_index": 12,
+    "exampleID": "ca_test/row-510",
+    "language": "ja",
+    "example_part": "summary",
+    "source_split": "ca_test",
+    "raw_char_range": null,
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 68,
+    "title": "実例13：警察ボディーカメラの保存",
+    "section": "Appendix: 1. 追加の法案と参照要約",
+    "kind": "example",
+    "sources": [
+      "data"
+    ],
+    "example_index": 13,
+    "exampleID": "ca_test/row-420",
+    "language": "en+ja",
+    "example_part": "input",
+    "source_split": "ca_test",
+    "raw_char_range": [
+      1316,
+      1657
+    ],
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 69,
+    "title": "実例13：参照要約",
+    "section": "Appendix: 1. 追加の法案と参照要約",
+    "kind": "reference_summary",
+    "sources": [
+      "data"
+    ],
+    "example_index": 13,
+    "exampleID": "ca_test/row-420",
+    "language": "en",
+    "example_part": "summary",
+    "source_split": "ca_test",
+    "raw_char_range": null,
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 70,
+    "title": "実例13：参照要約の訳",
+    "section": "Appendix: 1. 追加の法案と参照要約",
+    "kind": "reference_summary",
+    "sources": [
+      "data"
+    ],
+    "example_index": 13,
+    "exampleID": "ca_test/row-420",
+    "language": "ja",
+    "example_part": "summary",
+    "source_split": "ca_test",
+    "raw_char_range": null,
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 71,
+    "title": "実装・配布と採点の補足",
+    "section": "Appendix: 2. 実装・配布と採点の補足",
+    "kind": "divider",
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 72,
+    "title": "本文と前処理済み本文の統計を区別する",
+    "section": "Appendix: 2. 実装・配布と採点の補足",
+    "kind": "content",
+    "sources": [
+      "paper",
+      "data"
+    ],
+    "contains_native_table": true,
+    "contains_native_chart": false
+  },
+  {
+    "page": 73,
+    "title": "2,048語への切詰めは、全文評価と異なる",
+    "section": "Appendix: 2. 実装・配布と採点の補足",
+    "kind": "content",
+    "sources": [
+      "code"
+    ],
+    "body_text": [
+      "US testの362件、Californiaの268件が2,048語を超えた。これは今回の配布全件の長さから数えた値。",
+      "HELMの既定実装が読むのはUSだけ。本文を切り詰めても、参照要約は全文に対するものを使う。",
+      "末尾の重要な条項を落とす可能性は、モデルの生成能力とは別の入力条件になる。"
+    ],
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 74,
+    "title": "取得した容量と、元の識別子を記録する",
+    "section": "Appendix: 2. 実装・配布と採点の補足",
+    "kind": "content",
+    "sources": [
+      "data"
+    ],
+    "body_text": [
+      "US testのParquetを15,797,079 bytes、Californiaを6,121,191 bytesで取得した。合計約21.9 MBで、学習集合はこの実測に含めない。",
+      "HF配布の3列にはbill_idがない。実例のrowは固定ファイル内の位置であり、元の議会の法案番号ではない。",
+      "全13件の本文全文、連続抜粋の文字位置、参照要約、訳、原行SHA256を保存した。"
+    ],
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 75,
+    "title": "研究と参考文献",
+    "section": "Appendix: 3. 研究と参考文献",
+    "kind": "divider",
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 76,
+    "title": "法律文書の要約を、別の議会へ広げる",
+    "section": "Appendix: 3. 研究と参考文献",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "Anastassia KornilovaとVladimir EidelmanによるFiscalNote Researchの研究。2019年の第2回New Frontiers in Summarizationワークショップで発表された。",
+      "連邦議会の専門的な要約を学習資源にし、人による要約が十分にない州や地方の法案にも適用することを目指した。",
+      "抽出型モデルと公開コーパスを示し、技術的な条文と要約の文体の違いを研究課題として整理した。"
+    ],
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 77,
+    "title": "参考文献",
+    "section": "Appendix: 3. 研究と参考文献",
+    "kind": "references",
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 78,
+    "title": "参考文献",
+    "section": "Appendix: 3. 研究と参考文献",
+    "kind": "references",
+    "contains_native_table": false,
+    "contains_native_chart": false
+  },
+  {
+    "page": 79,
+    "title": "参考文献",
+    "section": "Appendix: 3. 研究と参考文献",
+    "kind": "references",
+    "contains_native_table": false,
+    "contains_native_chart": false
+  }
+]
