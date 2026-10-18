@@ -1,0 +1,159 @@
+{
+  "status": "passed_after_revision",
+  "reviewer": "/root/create_ice",
+  "scope": "Independent review; target directory read only; no shared repo/git edits",
+  "final_artifacts": {
+    "datasets-in-10-minutes-cleva.pptx": {
+      "path": "/workspace/artifacts/helm-parallel/cleva/datasets-in-10-minutes-cleva.pptx",
+      "bytes": 292978,
+      "sha256": "360923cba63ef024524fd48ce555c3515a45e10c6510989c343bdd849203a569"
+    },
+    "datasets-in-10-minutes-cleva.pdf": {
+      "path": "/workspace/artifacts/helm-parallel/cleva/datasets-in-10-minutes-cleva.pdf",
+      "bytes": 1545059,
+      "sha256": "700acf47ffb144faa388ac59bd516f6b2f1e89243e20b480263dbec66a8c3bbb"
+    }
+  },
+  "unresolved_issues": [],
+  "findings": [
+    {
+      "id": "R1",
+      "pages": [
+        60,
+        61,
+        62
+      ],
+      "kind": "native reference frame too short",
+      "affected_frames": 5,
+      "before": "URLs rendered14.18–18.74pt below the original native frame bottom",
+      "resolution": "Author extended frame heights without text or position changes; final native PDF clipped-to-frame text comparison passes",
+      "status": "resolved",
+      "individually_reviewed_after_fix": [
+        60,
+        61,
+        62
+      ]
+    }
+  ],
+  "visual_review": {
+    "overview_viewed": true,
+    "individual_view_image_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62
+    ],
+    "final_rechecked_pages": [
+      60,
+      61,
+      62
+    ],
+    "all_pages_proofread": true,
+    "all13_Chinese_Japanese_examples_compared": true
+  },
+  "facts": {
+    "formal_paper": "EMNLP2023 demo17 pp186–217,32PDFpages",
+    "examples": "13 paper explanation cases; raw CLEVA test collection not acquired; no invented raw IDs",
+    "counts": "31task/84datasets/370K/9M/33.98%/3.95 paper values;31/65/253 independently parsed fixed conf;8526 public specs independently scanned, CLEVA0",
+    "README": "four conditions/eight values independently compared with native table; differing metric scales/model version/random seed caveats retained",
+    "metrics9": [
+      "Accuracy",
+      "Calibration",
+      "Robustness",
+      "Fairness",
+      "Bias/Stereotypes",
+      "Toxicity",
+      "Efficiency",
+      "Diversity",
+      "Privacy"
+    ],
+    "D7": "QPS=modelAPI queries per second, p20 accurate",
+    "D8": "inter distinct pools test output ngrams; intra averages per instance, p55 accurate",
+    "D9": "PII_match is fraction of instances with≥1 detectedPII in output, Azure; notPIIentities/character ratio, p55 accurate",
+    "G4": "Separate/Joint, Chatbot/Completion and8models×4tasks,4–8shot trend scoped accurately",
+    "math": "1200×3/5=720; induction all six pairs sum+1; final1055",
+    "origins": "CSDS news/CrossWOZ television examples excluded; opinion corpus not guessed; original collection/translated CLEVA split distinguished",
+    "rights": "RepositoryCCBYNCND4 versus ACLpaperCCBY4 and underlying source rights separated",
+    "version": "2023CLEVA versus2024/2025C2LEVA separated; metadata2023"
+  },
+  "native_audit": {
+    "paragraphs": 409,
+    "cells": 93,
+    "native_tables": 8,
+    "native_charts": 1,
+    "text_issues": 0,
+    "shape_overlaps": 0,
+    "URL_only_links": 53,
+    "notes": 0,
+    "new_XSD_errors": 0,
+    "all62_PNGs_pixel_identical_to_fresh_independent_PDF_render": true
+  },
+  "evidence": [
+    "facts-check.json",
+    "native-final-audit.json",
+    "package-independent-audit.json",
+    "release-independent-scan.json",
+    "check_facts.py",
+    "check_final.py",
+    "check_package.py"
+  ],
+  "completed_utc": "2026-10-18T09:25:15.579300+00:00"
+}

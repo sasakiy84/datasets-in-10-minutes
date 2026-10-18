@@ -44,7 +44,7 @@
 
 |順|対象|資料範囲|状態|
 |---|---|---|---|
-|0|cleva|プラットフォーム|独立レビュー中|
+|0|cleva|プラットフォーム|作成済み|
 |1|cluecorpus2020|CLUECorpus2020|未着手|
 |2|cluewsc2020|CLUEWSC / CLUEWSC2020|未着手|
 |3|ccpm|CCPM|制作中|

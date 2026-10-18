@@ -149,4 +149,4 @@ GSM8KとHumanEvalは既存資料で対象データセットを紹介済み。MML
 |ablation_prompts|Vary prompting|進捗集計の対象外||
 |robustness_contrast_sets|Robustness to contrast sets|進捗集計の対象外||
 |robustness_individual|Robustness to single types of perturbations|進捗集計の対象外||
-|chinese_cleva|CLEVA (Chinese) scenarios|CLEVA系列として最後に着手||
+|chinese_cleva|CLEVA (Chinese) scenarios|作成済み|[PPTX](../slides/datasets-in-10-minutes-cleva.pptx) / [PDF](../slides/datasets-in-10-minutes-cleva.pdf)|
