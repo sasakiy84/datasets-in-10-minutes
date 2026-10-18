@@ -56,7 +56,7 @@
 |9|chef|CHEF|作成済み|
 |10|c3|C3|作成済み|
 |11|nlpcc2018-qa|NLPCC 2018 Open Domain QA|未着手|
-|12|cmedqa2|cMedQA2|制作中|
+|12|cmedqa2|cMedQA2|作成済み|
 |13|csds|CSDS|未着手|
 |14|adgen|ADGEN / Shao2019 product advertising data|未着手|
 |15|pku-paraphrase-bank|PKU Paraphrase Bank|未着手|

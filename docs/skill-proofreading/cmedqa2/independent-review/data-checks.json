@@ -1,0 +1,434 @@
+{
+  "independent_GET": "fetch-log.json",
+  "files": [
+    {
+      "file": "question.csv",
+      "bytes": 18076417,
+      "sha256": "09b742685359050de368e36345394b56680f960fe641a393c4be23ed776110dc",
+      "matched": true
+    },
+    {
+      "file": "answer.csv",
+      "bytes": 71375911,
+      "sha256": "0a9dd9050c6577d7044782f7a05a073d87cff502b84668ee69f0ca90acdad015",
+      "matched": true
+    },
+    {
+      "file": "train_candidates.txt",
+      "bytes": 109536252,
+      "sha256": "85cd2798264e7a7cc31129e7221988f92a2359a4608731517bb0e69e20e000ce",
+      "matched": true
+    },
+    {
+      "file": "dev_candidates.txt",
+      "bytes": 8122900,
+      "sha256": "ab06f96e6aeed7eb86153c2ed4bd756e0e13e7b9084586974d720ba96e7abd33",
+      "matched": true
+    },
+    {
+      "file": "test_candidates.txt",
+      "bytes": 8119572,
+      "sha256": "f4ba80ae7c9cbbd6da1a5113b7132801a9b351a9029192a6002ac3de90707519",
+      "matched": true
+    }
+  ],
+  "total_questions": 120000,
+  "total_answers": 226266,
+  "candidate_rows": 5800000,
+  "splits": {
+    "train": {
+      "candidate_rows": 5000000,
+      "questions": 100000,
+      "unique_positive_answers": 188490,
+      "unique_negative_answers": 226266,
+      "rows_per_question_distribution": {
+        "50": 100000
+      },
+      "positive_answers_per_question_distribution": {
+        "2": 21531,
+        "3": 8946,
+        "1": 59044,
+        "4": 4487,
+        "7": 800,
+        "10": 232,
+        "6": 1265,
+        "8": 504,
+        "11": 174,
+        "5": 2299,
+        "9": 338,
+        "15": 48,
+        "12": 105,
+        "14": 49,
+        "20": 7,
+        "16": 30,
+        "13": 69,
+        "17": 27,
+        "18": 13,
+        "22": 6,
+        "23": 6,
+        "27": 1,
+        "24": 4,
+        "19": 5,
+        "31": 1,
+        "21": 5,
+        "26": 1,
+        "25": 2,
+        "29": 1
+      },
+      "owned_answer_rows": 188783,
+      "owned_answers_missing_from_positive_candidates": 293,
+      "question_chars_mean": 47.94238,
+      "positive_answer_chars_mean": 100.74451695050135
+    },
+    "dev": {
+      "candidate_rows": 400000,
+      "questions": 4000,
+      "unique_positive_answers": 7527,
+      "unique_negative_answers": 186189,
+      "rows_per_question_distribution": {
+        "100": 4000
+      },
+      "positive_answers_per_question_distribution": {
+        "1": 2319,
+        "2": 921,
+        "4": 164,
+        "11": 5,
+        "3": 363,
+        "5": 82,
+        "7": 34,
+        "6": 50,
+        "9": 21,
+        "8": 20,
+        "10": 8,
+        "14": 4,
+        "19": 1,
+        "13": 3,
+        "16": 1,
+        "18": 1,
+        "12": 2,
+        "17": 1
+      },
+      "owned_answer_rows": 7527,
+      "owned_answers_missing_from_positive_candidates": 0,
+      "question_chars_mean": 48.45825,
+      "positive_answer_chars_mean": 100.4769496479341,
+      "label_counts": {
+        "1": 7527,
+        "0": 392473
+      },
+      "cnt_nonsequential_rows": 0,
+      "duplicate_candidate_answer_occurrences": 89,
+      "positive_after_negative_rows": 0
+    },
+    "test": {
+      "candidate_rows": 400000,
+      "questions": 4000,
+      "unique_positive_answers": 7552,
+      "unique_negative_answers": 186461,
+      "rows_per_question_distribution": {
+        "100": 4000
+      },
+      "positive_answers_per_question_distribution": {
+        "2": 841,
+        "4": 162,
+        "1": 2350,
+        "3": 404,
+        "5": 103,
+        "7": 32,
+        "14": 2,
+        "10": 7,
+        "19": 2,
+        "6": 56,
+        "15": 1,
+        "8": 16,
+        "11": 3,
+        "9": 11,
+        "20": 1,
+        "22": 1,
+        "41": 1,
+        "12": 4,
+        "17": 1,
+        "13": 2
+      },
+      "owned_answer_rows": 7552,
+      "owned_answers_missing_from_positive_candidates": 0,
+      "question_chars_mean": 48.80525,
+      "positive_answer_chars_mean": 99.60010593220339,
+      "label_counts": {
+        "1": 7552,
+        "0": 392448
+      },
+      "cnt_nonsequential_rows": 0,
+      "duplicate_candidate_answer_occurrences": 91,
+      "positive_after_negative_rows": 0
+    }
+  },
+  "all_creator_stats_matched": true,
+  "all5800000_candidate_rows_IDs_and_owner_labels_checked": true,
+  "examples_original13_labels_and_sources_matched": true,
+  "source_records": [
+    {
+      "file": "question.csv",
+      "row": 245,
+      "physical_lines": [
+        247,
+        247
+      ],
+      "hash": "07b0472ac02ab10211915cb2256d2ab581b1bc029672a949654b1755a3215ede",
+      "matched": true
+    },
+    {
+      "file": "question.csv",
+      "row": 7930,
+      "physical_lines": [
+        7932,
+        7932
+      ],
+      "hash": "2b529ec9e13266614a174a3c70f6ad612e25bd791b2a07765b7fb19e8e040d18",
+      "matched": true
+    },
+    {
+      "file": "question.csv",
+      "row": 11429,
+      "physical_lines": [
+        11431,
+        11431
+      ],
+      "hash": "e3ebffde664300df20c25bc867cc1015220eea79157c7f8f8724b7a6441312f1",
+      "matched": true
+    },
+    {
+      "file": "question.csv",
+      "row": 28687,
+      "physical_lines": [
+        28689,
+        28689
+      ],
+      "hash": "2fa282178383a7f73590e8a53eff835f6032ddafc5d5f1cfddc85f8faf1affac",
+      "matched": true
+    },
+    {
+      "file": "question.csv",
+      "row": 39920,
+      "physical_lines": [
+        39922,
+        39922
+      ],
+      "hash": "12f00a08ed080754929b68e380f12089893be9305498af41cb47f83db3660e9a",
+      "matched": true
+    },
+    {
+      "file": "question.csv",
+      "row": 50400,
+      "physical_lines": [
+        50402,
+        50402
+      ],
+      "hash": "ca1c81ebce57df967718116305b43b46841be49bc5bba6100fed70c74f817e75",
+      "matched": true
+    },
+    {
+      "file": "question.csv",
+      "row": 58925,
+      "physical_lines": [
+        58927,
+        58927
+      ],
+      "hash": "39966deaf40836deab649a6a4d0ad45aea70823d6eff05d20076a863cee30402",
+      "matched": true
+    },
+    {
+      "file": "question.csv",
+      "row": 60422,
+      "physical_lines": [
+        60424,
+        60424
+      ],
+      "hash": "39a4d657801bbb7f0f37dba156ea711d155bd353378e31b10a9fb7515afd792d",
+      "matched": true
+    },
+    {
+      "file": "question.csv",
+      "row": 63247,
+      "physical_lines": [
+        63249,
+        63249
+      ],
+      "hash": "6186aa3c32499e665e94e072453cc34d761661f245c42ed71870f639e1218478",
+      "matched": true
+    },
+    {
+      "file": "question.csv",
+      "row": 70244,
+      "physical_lines": [
+        70246,
+        70246
+      ],
+      "hash": "9d168667498c0d90813517e62136731bc538dfc211b691f24fed4dff9efc1b71",
+      "matched": true
+    },
+    {
+      "file": "question.csv",
+      "row": 71850,
+      "physical_lines": [
+        71852,
+        71852
+      ],
+      "hash": "97ec2e787832a57ac249eed29c3071c863dbad633b4978d3d97bd73d6fd25e83",
+      "matched": true
+    },
+    {
+      "file": "question.csv",
+      "row": 91925,
+      "physical_lines": [
+        91927,
+        91927
+      ],
+      "hash": "f9eb384bf4236d557e29a9fe4af33f7323720acf940071327c04d820642f0550",
+      "matched": true
+    },
+    {
+      "file": "question.csv",
+      "row": 118846,
+      "physical_lines": [
+        118848,
+        118848
+      ],
+      "hash": "74dc5f495e4072b7eb8723bc72ee4b86ab8d42cb7a9fbeeb275657e77ac1f5dc",
+      "matched": true
+    },
+    {
+      "file": "answer.csv",
+      "row": 11064,
+      "physical_lines": [
+        11066,
+        11066
+      ],
+      "hash": "1d1449665bfda648cc98da872c95323ad1ab0dbe7be54fabd70eebb9cb10cc05",
+      "matched": true
+    },
+    {
+      "file": "answer.csv",
+      "row": 16361,
+      "physical_lines": [
+        16363,
+        16363
+      ],
+      "hash": "4f3095708e1198a1c7f190e90ebdf41b430c5d1159ba39b000f89066798f80b4",
+      "matched": true
+    },
+    {
+      "file": "answer.csv",
+      "row": 25076,
+      "physical_lines": [
+        25078,
+        25078
+      ],
+      "hash": "9cf684c29f1ff06d85288477bfc2fc532e08d57b13ef32a2ab26c8d87140be46",
+      "matched": true
+    },
+    {
+      "file": "answer.csv",
+      "row": 41534,
+      "physical_lines": [
+        41536,
+        41536
+      ],
+      "hash": "17cc22c4cee185934d154866b81b4e181452c8da5021507bdf8ab09be51f972d",
+      "matched": true
+    },
+    {
+      "file": "answer.csv",
+      "row": 52595,
+      "physical_lines": [
+        52597,
+        52597
+      ],
+      "hash": "71e8215352052a8f6e0041e3010cbde8083fbfd10ff2c2dfda5b82733db3b545",
+      "matched": true
+    },
+    {
+      "file": "answer.csv",
+      "row": 52869,
+      "physical_lines": [
+        52871,
+        52871
+      ],
+      "hash": "a9f2b5061b1aa86df5d5054d8211e4dba70a2e5bdd6c55fd46e2d368f42a2df7",
+      "matched": true
+    },
+    {
+      "file": "answer.csv",
+      "row": 63133,
+      "physical_lines": [
+        63135,
+        63135
+      ],
+      "hash": "409033b74f1b20fdeeb4698c1bacbad906e4eb35a26f4c6283f1a11a0e8308e1",
+      "matched": true
+    },
+    {
+      "file": "answer.csv",
+      "row": 125372,
+      "physical_lines": [
+        125374,
+        125374
+      ],
+      "hash": "8c9eb91e2317685007c72de02f98d95edee640b6b09c62ffcb8ce63077a4c5e9",
+      "matched": true
+    },
+    {
+      "file": "answer.csv",
+      "row": 143632,
+      "physical_lines": [
+        143634,
+        143634
+      ],
+      "hash": "908de29f92aceb8b29a558365c3caa0d7b351a3782c22ac624696cfceab3df1b",
+      "matched": true
+    },
+    {
+      "file": "answer.csv",
+      "row": 148636,
+      "physical_lines": [
+        148638,
+        148638
+      ],
+      "hash": "6062b7674978fa62926aa474b24532c516d41ba9e4aede5b1f9a1ea6416db4ca",
+      "matched": true
+    },
+    {
+      "file": "answer.csv",
+      "row": 155770,
+      "physical_lines": [
+        155772,
+        155772
+      ],
+      "hash": "2463c8654b58fd77c29edae8e5bac83b70edd2202e2bc81f1bafff20d1f3cf86",
+      "matched": true
+    },
+    {
+      "file": "answer.csv",
+      "row": 213726,
+      "physical_lines": [
+        213728,
+        213728
+      ],
+      "hash": "7a4085eab12efa2fbe78d68ffc4bc79b351498f79385c7c6b4046d955d260572",
+      "matched": true
+    },
+    {
+      "file": "answer.csv",
+      "row": 219054,
+      "physical_lines": [
+        219056,
+        219056
+      ],
+      "hash": "ccc698e8c6568326e249da1b786c3aba2005d951260705f35a0169a4ac36c15f",
+      "matched": true
+    }
+  ],
+  "all_zero_test_candidate_accuracy": 0.98112,
+  "first_cnt0_has_positive": true,
+  "medical_correctness_independently_adjudicated": false
+}

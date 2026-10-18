@@ -1,0 +1,139 @@
+{
+  "slug": "cmedqa2",
+  "reviewer": "/root/create_cnndm",
+  "approved": true,
+  "status": "independent_review_passed",
+  "remaining_issues": [],
+  "final_artifacts": [
+    {
+      "path": "/workspace/artifacts/helm-parallel/cmedqa2/datasets-in-10-minutes-cmedqa2.pptx",
+      "bytes": 228764,
+      "sha256": "4d2db176ecf060d63ecd96433b45e165447e72084e2c8fc5535e77741e649377"
+    },
+    {
+      "path": "/workspace/artifacts/helm-parallel/cmedqa2/datasets-in-10-minutes-cmedqa2.pdf",
+      "bytes": 1088404,
+      "sha256": "c7c6f5e7a9ccd4336e7818ce4c7bab9dda57ab897f0286756995c73e46a9b363"
+    }
+  ],
+  "pages": 56,
+  "independent_GET_hash_matches": 11,
+  "all_candidate_rows_checked": 5800000,
+  "unique_original_examples": 13,
+  "full_CN_JP_on_same_page": 13,
+  "all_pages_individually_viewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56
+  ],
+  "final_changed_pages_reviewed": [
+    7,
+    28,
+    29
+  ],
+  "independent_render_all_56_PNG_equal": true,
+  "checks": {
+    "primary_data": "data-checks.json",
+    "scope": "scope-checks.json",
+    "native": "native-checks.json",
+    "source_hash": "source-hash-comparison.json",
+    "layout": "stage/cmedqa2/layout-audit.json",
+    "package": "stage/cmedqa2/package-audit.json",
+    "links": "stage/cmedqa2/links-audit.json",
+    "text": "stage/cmedqa2/text-audit.json"
+  },
+  "fixes": [
+    {
+      "id": "CMED-01",
+      "page": 7,
+      "status": "resolved",
+      "issue": "2か月・5か月を検査間隔とも読める訳",
+      "resolution": "妊娠2か月のときに1回、5か月のときに1回と時点を明示。原回答内容は保持。"
+    },
+    {
+      "id": "CMED-02",
+      "pages": [
+        28,
+        29
+      ],
+      "status": "resolved",
+      "issue": "制作・保存過程を主語にした説明",
+      "resolution": "原文利用条件と版・ID・候補行による参照方法を読者向けに説明。"
+    }
+  ],
+  "audits": {
+    "layout_issues": 0,
+    "new_XSD_errors": 0,
+    "text_issues": 0,
+    "URL_issues": 0,
+    "URL_count": 57,
+    "native_tables": 10,
+    "native_charts": 1,
+    "answers": 13,
+    "frames": 27,
+    "notes": 0
+  },
+  "limitations": [
+    "正式IEEE論文本文は独立アクセスでもHTTP418。公開要旨・正式書誌・原データで確認できる説明に限定。",
+    "公開固定8526runで対象実行0。CLEVA変換済み実集合は未取得。",
+    "候補対応ラベルを医療的正確性の独立判定と解釈しない。"
+  ],
+  "proofreading": {
+    "method": "skill_based_codex",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false
+  }
+}
