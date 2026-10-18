@@ -19,3 +19,8 @@ Geminiは使用していない。Codexが日本語校正スキルをページご
 |7|山の雨が、晴れ間の気配を含み始めた。|山の雨に、ようやく晴れる兆しが見え始めた。|初含霁を、晴れ始める気配を保った自然な日本語へ整える。|
 
 [全ページ文言](ccpm/pages.jsonl)・[自己検査・独立レビュー](ccpm/review.json)
+
+
+## 読者向けの説明・日本語の改訂（2026年10月）
+
+Geminiは使用せず、Codexがスキルで校正し、別担当が独立レビューした。削除・統合を含む[問題点と変更対](ccpm/editorial-2026-10/changes.md)、[旧ページとの対応](ccpm/editorial-2026-10/page-map.json)、[独立レビュー](ccpm/editorial-2026-10/independent-review/handoff.json)、[最終ページの全文](ccpm/pages.jsonl)。旧版の校正・検証記録は保持している。

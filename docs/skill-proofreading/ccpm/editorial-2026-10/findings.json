@@ -1,0 +1,796 @@
+[
+  {
+    "old_page": 5,
+    "shape_id": 3,
+    "before": "CCPMは、中国古典詩の意味理解を調べる四択データセット。現代中国語で書かれた説明を読み、意味が最も対応する古典詩句を選ぶ。古典詩句と現代語訳の対を、正解の根拠として使う。\n候補には、正解に似た語や表現を持つ別の詩句を含める。詩を新しく書く課題ではなく、与えられた候補の意味の違いを識別する。",
+    "after": "CCPMは、中国古典詩の意味理解を調べる四択データセット。現代中国語の説明を読み、意味が最も対応する古典詩句を選ぶ。古典詩句と現代語訳の対が、正解の根拠になる。\n候補には、正解に似た語や表現を持つ別の詩句も含まれる。似た言葉の中から、意味の違いを読み取ることが求められる。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 5
+  },
+  {
+    "old_page": 11,
+    "action": "replace_diagram_with_list",
+    "before": "四つの箱と矢印による直列の手順",
+    "after": "約6,000段落の古典文と現代語訳をWebから収集する。\n句読点やWeb上の行境界で分割し、五言・七言の詩型に合う27,218の対訳を残す。二行の対も含む。\n正解に似た別の詩句を三つ選び、正解と混ぜて四択問題にする。",
+    "reason": "単純な順序を読める文章にする",
+    "new_page": 11
+  },
+  {
+    "old_page": 12,
+    "shape_id": 3,
+    "before": "収集した古典文には、詩以外の文学も含まれていた。そこで、よく使われる五言・七言の詩型に合う長さの詩句を残した。\n二行で連続した意味を持つ対は、そのまま二行単位で扱う。ここでいう27,218件は問題数であり、詩の作品数や作者数ではない。",
+    "after": "収集した古典文には、詩以外の文学も含まれていた。そこで、よく使われる五言・七言の詩型に合う長さの詩句を残した。\n二行で連続した意味を持つ対は、そのまま二行単位で扱う。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 12
+  },
+  {
+    "old_page": 15,
+    "shape_id": 5,
+    "before": "件数は配布ファイルの全行と一致。論文のテスト正解率と、公開テストの正解なし配布を区別する。",
+    "after": "学習・検証には正解が付く。公開テストの正解は非公開。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 15
+  },
+  {
+    "old_page": 16,
+    "shape_id": 5,
+    "before": "全27,218問。形式別の件数は構築時の集計。配布文字列には特殊な表記を含む少数の例もある。",
+    "after": "全27,218問。形式別の件数は、データ構築時の集計。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 16
+  },
+  {
+    "old_page": 17,
+    "shape_id": 5,
+    "before": "answerは0始まりの位置。表示上のA/B/C/Dは、元の候補順へ対応させる。元JSONLには問題ID・詩題・作者の欄はない。",
+    "after": "translationが問題文、choicesが四候補。answer=0は先頭の候補Aを指す。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 17
+  },
+  {
+    "old_page": 20,
+    "shape_id": 3,
+    "before": "指標はAccuracy（正解率）。各問題で予測した選択肢が元のanswerと一致したかを数え、評価した問題数で割る。四つの候補から一つを選ぶため、各問の正誤は0か1になる。\n2021年の実験は、学習分割でBERTを微調整し、テスト分割で評価した。公開テストの正解は非公開で、比較表には2021年の報告値を示す。",
+    "after": "選んだ候補が正解と一致した問題の割合を、Accuracy（正解率）で評価する。\n2021年の実験では、学習21,778問でBERTを微調整し、テスト2,720問で評価した。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 19
+  },
+  {
+    "old_page": 21,
+    "shape_id": 5,
+    "before": "CCPMの同じテスト2,720問を対象とする、構築時の報告値。BERTの基盤はbert-base-chinese。",
+    "after": "2021年の報告値。同じテスト2,720問で評価。両方式の基盤はbert-base-chinese。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 20
+  },
+  {
+    "old_page": 25,
+    "shape_id": 3,
+    "before": "2023年のCLEVAは、中国語モデルを多様な課題で評価するプラットフォーム。古典中国語理解の課題としてCCPMから四択問題を抽出し、現代語と古典候補の意味の対応を正解率で評価する。\n掲載例は実例2の「山間の雨が晴れ始める」問題で、公式trainの18,823行と四候補・正解Dが一致する。同じ説明文に別候補が付く問題もある。",
+    "after": "2023年のCLEVAは、中国語モデルを多様な課題で評価するプラットフォーム。CCPMの四択問題を、古典中国語理解の評価に用いる。\n現代語の説明と四候補を提示し、選んだ候補の正誤を正解率で評価する。実例2の雨の問題は、CLEVA論文にも掲載されている。\nHELMにも同課題の評価実装が公開されている。CLEVAで評価した問題の総数は、公開説明には記されていない。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 23
+  },
+  {
+    "old_page": 28,
+    "shape_id": 2,
+    "before": "公式JSONLを取得でき、再利用条件は確認が必要",
+    "after": "公式GitHubで問題と技術報告を公開する",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 24
+  },
+  {
+    "old_page": 28,
+    "shape_id": 3,
+    "before": "公式GitHubはtrain.jsonl、valid.jsonl、test_public.jsonlと技術報告を公開し、利用時にはCCPMの引用を求める。2021年8月21日の更新版には、これらを含む五つのファイルがある。\n取得したリポジトリにはライセンスファイルがなく、元Web素材の個別出所・作者も各レコードには含まれない。古典詩の原句、現代語説明、収集データの利用条件を同じものとして推定せず、配布元を確認して利用する。",
+    "after": "公式GitHubは、学習・検証・公開テストのJSONLと技術報告を公開している。利用時にはCCPMの論文を引用する。\nリポジトリにはライセンスが明示されていない。再利用・再配布の条件は、配布元へ確認する。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 24
+  },
+  {
+    "old_page": 29,
+    "shape_id": 3,
+    "before": "CCPMは現代中国語の説明と古典詩句の対応を問う27,218問の四択データ。正解との対訳に、似た詩句を検索した三つの負例を組み合わせる。\n2021年のBERT二方式はテスト正解率84.96%と82.60%。後にCLEVAの古典中国語理解へ採用された。公開元データ・掲載例・未取得の後利用集合を対応させて読む。",
+    "after": "CCPMは、現代中国語の説明と古典詩句の対応を問う27,218問の四択データ。正解との対訳に、似た詩句を検索した三つの負例を組み合わせる。\n2021年のBERT二方式は、テストで84.96%と82.60%の正解率を示した。後にCLEVAの古典中国語理解にも採用され、中国語モデルの意味理解を調べる課題となった。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 25
+  },
+  {
+    "old_page": 31,
+    "shape_id": 3,
+    "before": "追加10問の原文と日本語訳\n分割・重複・入力形式の補足\n参考文献",
+    "after": "追加10問の原文と日本語訳\n入力形式と詩句の読み方\n参考文献",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 27
+  },
+  {
+    "old_page": 42,
+    "shape_id": 2,
+    "before": "分割・重複・入力形式の補足",
+    "after": "入力形式と詩句の読み方",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 38
+  },
+  {
+    "old_page": 42,
+    "shape_id": 3,
+    "before": "Appendix: 2. 分割・重複・入力形式の補足",
+    "after": "Appendix: 2. 入力形式と詩句の読み方",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 38
+  },
+  {
+    "old_page": 43,
+    "shape_id": 3,
+    "before": "Appendix: 2. 分割・重複・入力形式の補足",
+    "after": "Appendix: 2. 入力形式と詩句の読み方",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 39
+  },
+  {
+    "old_page": 44,
+    "shape_id": 3,
+    "before": "Appendix: 2. 分割・重複・入力形式の補足",
+    "after": "Appendix: 2. 入力形式と詩句の読み方",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": null
+  },
+  {
+    "old_page": 45,
+    "shape_id": 3,
+    "before": "Appendix: 2. 分割・重複・入力形式の補足",
+    "after": "Appendix: 2. 入力形式と詩句の読み方",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 40
+  },
+  {
+    "old_page": 46,
+    "shape_id": 3,
+    "before": "Appendix: 2. 分割・重複・入力形式の補足",
+    "after": "Appendix: 2. 入力形式と詩句の読み方",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": null
+  },
+  {
+    "old_page": 47,
+    "shape_id": 4,
+    "before": "Appendix: 2. 分割・重複・入力形式の補足",
+    "after": "Appendix: 2. 入力形式と詩句の読み方",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 41
+  },
+  {
+    "old_page": 48,
+    "shape_id": 3,
+    "before": "Appendix: 2. 分割・重複・入力形式の補足",
+    "after": "Appendix: 2. 入力形式と詩句の読み方",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 42
+  },
+  {
+    "old_page": 49,
+    "shape_id": 4,
+    "before": "Appendix: 2. 分割・重複・入力形式の補足",
+    "after": "Appendix: 2. 入力形式と詩句の読み方",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 43
+  },
+  {
+    "old_page": 43,
+    "shape_id": 2,
+    "before": "同じ雨の説明でも、候補と正解位置が変わる",
+    "after": "同じ説明に、異なる候補の組が付く",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 39
+  },
+  {
+    "old_page": 43,
+    "before": "train 18,823行",
+    "after": "候補の組1",
+    "reason": "番号・検査用表現を自然な説明へ整理",
+    "action": "rewrite",
+    "new_page": 39
+  },
+  {
+    "old_page": 43,
+    "before": "train 21,287行",
+    "after": "候補の組2",
+    "reason": "番号・検査用表現を自然な説明へ整理",
+    "action": "rewrite",
+    "new_page": 39
+  },
+  {
+    "old_page": 43,
+    "before": "D（answer=3）",
+    "after": "D",
+    "reason": "番号・検査用表現を自然な説明へ整理",
+    "action": "rewrite",
+    "new_page": 39
+  },
+  {
+    "old_page": 43,
+    "before": "A（answer=0）",
+    "after": "A",
+    "reason": "番号・検査用表現を自然な説明へ整理",
+    "action": "rewrite",
+    "new_page": 39
+  },
+  {
+    "old_page": 43,
+    "shape_id": 5,
+    "before": "両方の説明は「山间连绵阴雨刚刚有了一点停止的意思。」。CLEVA掲載例は18,823行。",
+    "after": "共通の説明：「山间连绵阴雨刚刚有了一点停止的意思。」\n候補の組1が、実例2とCLEVA論文に掲載された問題。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 39
+  },
+  {
+    "old_page": 45,
+    "before": "answer / 表示",
+    "after": "正解の候補",
+    "reason": "番号・検査用表現を自然な説明へ整理",
+    "action": "rewrite",
+    "new_page": 40
+  },
+  {
+    "old_page": 45,
+    "before": "0 / A",
+    "after": "A",
+    "reason": "番号・検査用表現を自然な説明へ整理",
+    "action": "rewrite",
+    "new_page": 40
+  },
+  {
+    "old_page": 45,
+    "before": "1 / B",
+    "after": "B",
+    "reason": "番号・検査用表現を自然な説明へ整理",
+    "action": "rewrite",
+    "new_page": 40
+  },
+  {
+    "old_page": 45,
+    "before": "2 / C",
+    "after": "C",
+    "reason": "番号・検査用表現を自然な説明へ整理",
+    "action": "rewrite",
+    "new_page": 40
+  },
+  {
+    "old_page": 45,
+    "before": "3 / D",
+    "after": "D",
+    "reason": "番号・検査用表現を自然な説明へ整理",
+    "action": "rewrite",
+    "new_page": 40
+  },
+  {
+    "old_page": 45,
+    "action": "remove_repeated_note",
+    "before": "公開テストにはanswerがない。候補順を維持し、0始まりの番号をA〜Dへ対応させた。",
+    "after": "",
+    "reason": "独立レビュー：見出しと表から分かる正解位置の均等さの重複注を除く",
+    "new_page": 40
+  },
+  {
+    "old_page": 47,
+    "shape_id": 2,
+    "before": "配布文字列には、空の説明や特殊な表記もある",
+    "after": "一部の問題には、説明の欠落や形式の例外がある",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 41
+  },
+  {
+    "old_page": 47,
+    "shape_id": 3,
+    "before": "公開テスト2,026行のtranslationは空文字列で、四候補は残っている。正解が非公開のため、意図した説明や答えは補っていない。\n学習6,518行には「公曰：勿杀」という五言・七言に収まらない正解文字列がある。別の行には拡張漢字や文字コードを表すような文字列もあり、配布物を一律に標準漢字だけへ直していない。",
+    "after": "公開テストには、説明が空の問題が1問ある。四候補は残っているが、説明との意味対応を評価するための入力が欠けている。\n五言・七言の詩型に当てはまらない文や、特殊な漢字表記を含む問題もある。\n学習と公開テストで、説明と四候補が一致する問題が1問ある。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 41
+  },
+  {
+    "old_page": 48,
+    "shape_id": 2,
+    "before": "一つのJSONL行から四候補と参照位置を読む",
+    "after": "JSONLから問題文・候補・正解を読み出す",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 42
+  },
+  {
+    "old_page": 48,
+    "shape_id": 4,
+    "before": "record = json.loads(line)\nmodern = record[\"translation\"]\nchoices = record[\"choices\"]\n# train / valid\nanswer_index = record[\"answer\"]  # 0, 1, 2, 3\nanswer_text = choices[answer_index]",
+    "after": "import json\nwith open(\"train.jsonl\", encoding=\"utf-8\") as f:\n    question = json.loads(next(f))\nprint(question[\"translation\"])\nfor i, verse in enumerate(question[\"choices\"]):\n    print(f\"{chr(65+i)}. {verse}\")\nprint(\"正解:\", chr(65 + question[\"answer\"]))",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 42
+  },
+  {
+    "old_page": 48,
+    "shape_id": 5,
+    "before": "CCPM配布の読み方。CLEVAの実際のpromptは、別途配布されるテンプレートで組み立てる。",
+    "after": "train.jsonlは1行に1問のJSONを収める。最初の問題の説明、四候補、正解記号を表示する。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 42
+  },
+  {
+    "old_page": 35,
+    "shape_id": 7,
+    "before": "現代語：大雨が水煙を巻き上げ、辺りはかすみ、天地はもの寂しい景色になった。\nA. 村の煙が途切れる所を渡り、野の景色が眺めの中で開ける。\nB. 立ちこめる煙が雨の景色をかすませ、もの寂しさが視界に迫る。\nC. 幾重もの山は煙る雨の向こう。眺めようとしても青々とした姿を見失う。\nD. かすみが遠くの眺めを覆い、もの寂しい様子が寒々しい音を送る。",
+    "after": "現代語：大雨が水煙を巻き上げ、辺りはかすみ、天地はもの寂しい景色になった。\nA. 村の煙が途切れる所を渡り、野の景色が眺めの中で開ける。\nB. 立ちこめる煙が雨の景色をかすませ、もの寂しさが視界に迫る。\nC. 幾重もの山は煙る雨の向こう。眺めようとしても青々とした姿を見失う。\nD. かすみが遠くの眺めを覆い、寒々しい物音がもの寂しく響く。",
+    "reason": "独立レビュー：不自然な主述関係を原詩の景色と音の描写に沿って自然化",
+    "action": "rewrite",
+    "new_page": 31
+  },
+  {
+    "old_page": 40,
+    "shape_id": 7,
+    "before": "現代語：初秋の寒蝉が、野の朝風の中で、声をからして鳴いている。\nA. 猿が、秋の野風の中で叫ぶ。\nB. 蝉が、風の前でせわしなく鳴く。\nC. 蝉が、秋の野風の中で鳴く。\nD. 蛍が、秋の野風の中で散る。",
+    "after": "現代語：初秋の蝉が、野の朝風の中で、声をからして鳴いている。\nA. 猿が、秋の野風の中で叫ぶ。\nB. 蝉が、風の前でせわしなく鳴く。\nC. 蝉が、秋の野風の中で鳴く。\nD. 蛍が、秋の野風の中で散る。",
+    "reason": "独立レビュー：寒蝉を日本語で伝わる季節の蝉として訳す",
+    "action": "rewrite",
+    "new_page": 36
+  },
+  {
+    "old_page": 2,
+    "shape_id": 5,
+    "before": "[1] THUNLP-AIPoet. CCPM. 公式配布、commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5、2026-10-18参照。  https://github.com/THUNLP-AIPoet/CCPM",
+    "after": "[1] THUNLP-AIPoet (2021). CCPM.  https://github.com/THUNLP-AIPoet/CCPM",
+    "reason": "出典行からコミット・行番号・正解番号などの監査情報を除く",
+    "action": "rewrite",
+    "new_page": 2
+  },
+  {
+    "old_page": 6,
+    "shape_id": 9,
+    "before": "[1] THUNLP-AIPoet. CCPM. 公式配布、commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5、2026-10-18参照。 train.jsonl:14行 / answer=0\nhttps://github.com/THUNLP-AIPoet/CCPM",
+    "after": "[1] THUNLP-AIPoet (2021). CCPM.  https://github.com/THUNLP-AIPoet/CCPM",
+    "reason": "出典行からコミット・行番号・正解番号などの監査情報を除く",
+    "action": "rewrite",
+    "new_page": 6
+  },
+  {
+    "old_page": 7,
+    "shape_id": 9,
+    "before": "[1] THUNLP-AIPoet. CCPM. 公式配布、commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5、2026-10-18参照。 train.jsonl:18823行 / answer=3\nhttps://github.com/THUNLP-AIPoet/CCPM",
+    "after": "[1] THUNLP-AIPoet (2021). CCPM.  https://github.com/THUNLP-AIPoet/CCPM",
+    "reason": "出典行からコミット・行番号・正解番号などの監査情報を除く",
+    "action": "rewrite",
+    "new_page": 7
+  },
+  {
+    "old_page": 8,
+    "shape_id": 9,
+    "before": "[1] THUNLP-AIPoet. CCPM. 公式配布、commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5、2026-10-18参照。 train.jsonl:14876行 / answer=1\nhttps://github.com/THUNLP-AIPoet/CCPM",
+    "after": "[1] THUNLP-AIPoet (2021). CCPM.  https://github.com/THUNLP-AIPoet/CCPM",
+    "reason": "出典行からコミット・行番号・正解番号などの監査情報を除く",
+    "action": "rewrite",
+    "new_page": 8
+  },
+  {
+    "old_page": 15,
+    "shape_id": 6,
+    "before": "[1] Li, Qi, Sun, Yi & Zhang (2021). CCPM: A Chinese Classical Poetry Matching Dataset. arXiv:2106.01979v1.  https://arxiv.org/abs/2106.01979\n[2] THUNLP-AIPoet. CCPM. 公式配布、commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5、2026-10-18参照。  https://github.com/THUNLP-AIPoet/CCPM",
+    "after": "[1] Li, Qi, Sun, Yi & Zhang (2021). CCPM: A Chinese Classical Poetry Matching Dataset. arXiv:2106.01979v1.  https://arxiv.org/abs/2106.01979\n[2] THUNLP-AIPoet (2021). CCPM.  https://github.com/THUNLP-AIPoet/CCPM",
+    "reason": "出典行からコミット・行番号・正解番号などの監査情報を除く",
+    "action": "rewrite",
+    "new_page": 15
+  },
+  {
+    "old_page": 17,
+    "shape_id": 6,
+    "before": "[1] THUNLP-AIPoet. CCPM. 公式配布、commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5、2026-10-18参照。  https://github.com/THUNLP-AIPoet/CCPM",
+    "after": "[1] THUNLP-AIPoet (2021). CCPM.  https://github.com/THUNLP-AIPoet/CCPM",
+    "reason": "出典行からコミット・行番号・正解番号などの監査情報を除く",
+    "action": "rewrite",
+    "new_page": 17
+  },
+  {
+    "old_page": 18,
+    "shape_id": 6,
+    "before": "[1] THUNLP-AIPoet. CCPM. 公式配布、commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5、2026-10-18参照。  https://github.com/THUNLP-AIPoet/CCPM",
+    "after": "[1] THUNLP-AIPoet (2021). CCPM.  https://github.com/THUNLP-AIPoet/CCPM",
+    "reason": "出典行からコミット・行番号・正解番号などの監査情報を除く",
+    "action": "rewrite",
+    "new_page": null
+  },
+  {
+    "old_page": 28,
+    "shape_id": 5,
+    "before": "[1] THUNLP-AIPoet. CCPM. 公式配布、commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5、2026-10-18参照。  https://github.com/THUNLP-AIPoet/CCPM",
+    "after": "[1] THUNLP-AIPoet (2021). CCPM.  https://github.com/THUNLP-AIPoet/CCPM",
+    "reason": "出典行からコミット・行番号・正解番号などの監査情報を除く",
+    "action": "rewrite",
+    "new_page": 24
+  },
+  {
+    "old_page": 32,
+    "shape_id": 9,
+    "before": "[1] THUNLP-AIPoet. CCPM. 公式配布、commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5、2026-10-18参照。 valid.jsonl:1行 / answer=3\nhttps://github.com/THUNLP-AIPoet/CCPM",
+    "after": "[1] THUNLP-AIPoet (2021). CCPM.  https://github.com/THUNLP-AIPoet/CCPM",
+    "reason": "出典行からコミット・行番号・正解番号などの監査情報を除く",
+    "action": "rewrite",
+    "new_page": 28
+  },
+  {
+    "old_page": 33,
+    "shape_id": 9,
+    "before": "[1] THUNLP-AIPoet. CCPM. 公式配布、commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5、2026-10-18参照。 valid.jsonl:5行 / answer=2\nhttps://github.com/THUNLP-AIPoet/CCPM",
+    "after": "[1] THUNLP-AIPoet (2021). CCPM.  https://github.com/THUNLP-AIPoet/CCPM",
+    "reason": "出典行からコミット・行番号・正解番号などの監査情報を除く",
+    "action": "rewrite",
+    "new_page": 29
+  },
+  {
+    "old_page": 34,
+    "shape_id": 9,
+    "before": "[1] THUNLP-AIPoet. CCPM. 公式配布、commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5、2026-10-18参照。 valid.jsonl:14行 / answer=1\nhttps://github.com/THUNLP-AIPoet/CCPM",
+    "after": "[1] THUNLP-AIPoet (2021). CCPM.  https://github.com/THUNLP-AIPoet/CCPM",
+    "reason": "出典行からコミット・行番号・正解番号などの監査情報を除く",
+    "action": "rewrite",
+    "new_page": 30
+  },
+  {
+    "old_page": 35,
+    "shape_id": 9,
+    "before": "[1] THUNLP-AIPoet. CCPM. 公式配布、commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5、2026-10-18参照。 valid.jsonl:24行 / answer=1\nhttps://github.com/THUNLP-AIPoet/CCPM",
+    "after": "[1] THUNLP-AIPoet (2021). CCPM.  https://github.com/THUNLP-AIPoet/CCPM",
+    "reason": "出典行からコミット・行番号・正解番号などの監査情報を除く",
+    "action": "rewrite",
+    "new_page": 31
+  },
+  {
+    "old_page": 36,
+    "shape_id": 9,
+    "before": "[1] THUNLP-AIPoet. CCPM. 公式配布、commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5、2026-10-18参照。 valid.jsonl:25行 / answer=0\nhttps://github.com/THUNLP-AIPoet/CCPM",
+    "after": "[1] THUNLP-AIPoet (2021). CCPM.  https://github.com/THUNLP-AIPoet/CCPM",
+    "reason": "出典行からコミット・行番号・正解番号などの監査情報を除く",
+    "action": "rewrite",
+    "new_page": 32
+  },
+  {
+    "old_page": 37,
+    "shape_id": 9,
+    "before": "[1] THUNLP-AIPoet. CCPM. 公式配布、commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5、2026-10-18参照。 valid.jsonl:35行 / answer=0\nhttps://github.com/THUNLP-AIPoet/CCPM",
+    "after": "[1] THUNLP-AIPoet (2021). CCPM.  https://github.com/THUNLP-AIPoet/CCPM",
+    "reason": "出典行からコミット・行番号・正解番号などの監査情報を除く",
+    "action": "rewrite",
+    "new_page": 33
+  },
+  {
+    "old_page": 38,
+    "shape_id": 9,
+    "before": "[1] THUNLP-AIPoet. CCPM. 公式配布、commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5、2026-10-18参照。 valid.jsonl:47行 / answer=1\nhttps://github.com/THUNLP-AIPoet/CCPM",
+    "after": "[1] THUNLP-AIPoet (2021). CCPM.  https://github.com/THUNLP-AIPoet/CCPM",
+    "reason": "出典行からコミット・行番号・正解番号などの監査情報を除く",
+    "action": "rewrite",
+    "new_page": 34
+  },
+  {
+    "old_page": 39,
+    "shape_id": 9,
+    "before": "[1] THUNLP-AIPoet. CCPM. 公式配布、commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5、2026-10-18参照。 valid.jsonl:52行 / answer=3\nhttps://github.com/THUNLP-AIPoet/CCPM",
+    "after": "[1] THUNLP-AIPoet (2021). CCPM.  https://github.com/THUNLP-AIPoet/CCPM",
+    "reason": "出典行からコミット・行番号・正解番号などの監査情報を除く",
+    "action": "rewrite",
+    "new_page": 35
+  },
+  {
+    "old_page": 40,
+    "shape_id": 9,
+    "before": "[1] THUNLP-AIPoet. CCPM. 公式配布、commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5、2026-10-18参照。 valid.jsonl:60行 / answer=2\nhttps://github.com/THUNLP-AIPoet/CCPM",
+    "after": "[1] THUNLP-AIPoet (2021). CCPM.  https://github.com/THUNLP-AIPoet/CCPM",
+    "reason": "出典行からコミット・行番号・正解番号などの監査情報を除く",
+    "action": "rewrite",
+    "new_page": 36
+  },
+  {
+    "old_page": 41,
+    "shape_id": 9,
+    "before": "[1] THUNLP-AIPoet. CCPM. 公式配布、commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5、2026-10-18参照。 valid.jsonl:65行 / answer=3\nhttps://github.com/THUNLP-AIPoet/CCPM",
+    "after": "[1] THUNLP-AIPoet (2021). CCPM.  https://github.com/THUNLP-AIPoet/CCPM",
+    "reason": "出典行からコミット・行番号・正解番号などの監査情報を除く",
+    "action": "rewrite",
+    "new_page": 37
+  },
+  {
+    "old_page": 43,
+    "shape_id": 6,
+    "before": "[1] THUNLP-AIPoet. CCPM. 公式配布、commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5、2026-10-18参照。  https://github.com/THUNLP-AIPoet/CCPM",
+    "after": "[1] THUNLP-AIPoet (2021). CCPM.  https://github.com/THUNLP-AIPoet/CCPM",
+    "reason": "出典行からコミット・行番号・正解番号などの監査情報を除く",
+    "action": "rewrite",
+    "new_page": 39
+  },
+  {
+    "old_page": 45,
+    "shape_id": 6,
+    "before": "[1] THUNLP-AIPoet. CCPM. 公式配布、commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5、2026-10-18参照。  https://github.com/THUNLP-AIPoet/CCPM",
+    "after": "[1] THUNLP-AIPoet (2021). CCPM.  https://github.com/THUNLP-AIPoet/CCPM",
+    "reason": "出典行からコミット・行番号・正解番号などの監査情報を除く",
+    "action": "rewrite",
+    "new_page": 40
+  },
+  {
+    "old_page": 46,
+    "shape_id": 6,
+    "before": "[1] THUNLP-AIPoet. CCPM. 公式配布、commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5、2026-10-18参照。  https://github.com/THUNLP-AIPoet/CCPM",
+    "after": "[1] THUNLP-AIPoet (2021). CCPM.  https://github.com/THUNLP-AIPoet/CCPM",
+    "reason": "出典行からコミット・行番号・正解番号などの監査情報を除く",
+    "action": "rewrite",
+    "new_page": null
+  },
+  {
+    "old_page": 47,
+    "shape_id": 5,
+    "before": "[1] THUNLP-AIPoet. CCPM. 公式配布、commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5、2026-10-18参照。  https://github.com/THUNLP-AIPoet/CCPM",
+    "after": "[1] THUNLP-AIPoet (2021). CCPM.  https://github.com/THUNLP-AIPoet/CCPM",
+    "reason": "出典行からコミット・行番号・正解番号などの監査情報を除く",
+    "action": "rewrite",
+    "new_page": 41
+  },
+  {
+    "old_page": 48,
+    "shape_id": 6,
+    "before": "[1] THUNLP-AIPoet. CCPM. 公式配布、commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5、2026-10-18参照。  https://github.com/THUNLP-AIPoet/CCPM",
+    "after": "[1] THUNLP-AIPoet (2021). CCPM.  https://github.com/THUNLP-AIPoet/CCPM",
+    "reason": "出典行からコミット・行番号・正解番号などの監査情報を除く",
+    "action": "rewrite",
+    "new_page": 42
+  },
+  {
+    "old_page": 49,
+    "shape_id": 5,
+    "before": "[1] THUNLP-AIPoet. CCPM. 公式配布、commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5、2026-10-18参照。  https://github.com/THUNLP-AIPoet/CCPM",
+    "after": "[1] THUNLP-AIPoet (2021). CCPM.  https://github.com/THUNLP-AIPoet/CCPM",
+    "reason": "出典行からコミット・行番号・正解番号などの監査情報を除く",
+    "action": "rewrite",
+    "new_page": 43
+  },
+  {
+    "old_page": 51,
+    "shape_id": 5,
+    "before": "CCPM — Official Dataset Repository\nTHUNLP-AIPoet · 2021 · commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5\n学習・検証・正解非公開テストのJSONLと技術報告、データ形式、正解率による評価方法を公開する。\nhttps://github.com/THUNLP-AIPoet/CCPM",
+    "after": "CCPM — Official Dataset Repository\nTHUNLP-AIPoet · 2021\n学習・検証・正解非公開テストのJSONLと技術報告、データ形式、正解率による評価方法を公開する。\nhttps://github.com/THUNLP-AIPoet/CCPM",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 45
+  },
+  {
+    "old_page": 18,
+    "action": "remove_slide",
+    "before": "説明文だけでは、問題を一意に特定できない\n2. 対訳と似た詩句から問題を作る\n2026-10-18、配布全件の文字列を加工せず集計。学習と公開テストには、説明と四候補が同じ問題が1件ある。\n[1] THUNLP-AIPoet (2021). CCPM.  https://github.com/THUNLP-AIPoet/CCPM",
+    "after": "",
+    "reason": "問題・説明の文字列一意数の監査",
+    "new_page": null,
+    "before_tables": [
+      [
+        [
+          "比較する単位",
+          "学習",
+          "検証",
+          "公開テスト"
+        ],
+        [
+          "レコード数",
+          "21,778",
+          "2,720",
+          "2,720"
+        ],
+        [
+          "説明文の種類",
+          "21,483",
+          "2,710",
+          "2,716"
+        ],
+        [
+          "説明＋四候補の種類",
+          "21,778",
+          "2,720",
+          "2,720"
+        ]
+      ]
+    ],
+    "relocated_to": "baseline-pages.json and original sources/audit records"
+  },
+  {
+    "old_page": 23,
+    "action": "remove_slide",
+    "before": "両方式を同じ学習設定で微調整した\n3. 正解率で意味の対応を評価する\nBERT-CCPoemは負例の検索に使うモデルで、ここで評価した二方式の基盤とは区別する。\n[1] Li, Qi, Sun, Yi & Zhang (2021). CCPM: A Chinese Classical Poetry Matching Dataset. arXiv:2106.01979v1.  https://arxiv.org/abs/2106.01979",
+    "after": "",
+    "reason": "細かな最適化設定は外部記録へ移し、基盤モデル・学習回数は結果頁に保持",
+    "new_page": null,
+    "before_tables": [
+      [
+        [
+          "項目",
+          "設定"
+        ],
+        [
+          "文の符号化器",
+          "bert-base-chinese"
+        ],
+        [
+          "最適化手法",
+          "Adam"
+        ],
+        [
+          "初期学習率",
+          "2×10⁻⁵、線形に減衰"
+        ],
+        [
+          "学習回数",
+          "4 epochs"
+        ]
+      ]
+    ],
+    "relocated_to": "baseline-pages.json and original sources/audit records"
+  },
+  {
+    "old_page": 26,
+    "action": "remove_slide",
+    "before": "HELMにも課題の実装があり、公開実行は0件\nHELM v0.4.0にはCLEVAClassicalChineseUnderstandingScenarioがあり、実例1と同じ説明・候補・正解Aを記す。データとテンプレートを外部ZIPから読み、候補の番号を正解参照へ変換する。\nClassic v0.4.0の公開run_specs全8,526件にはCLEVA実行がない。CLEVA用評価ZIPも取得できていないため、HELMでの得点、実際の学習例数や生成条件は示さない。\n4. CLEVAでの後利用と公開配布\n[1] Stanford CRFM. CLEVAClassicalChineseUnderstandingScenario / Converter. HELM v0.4.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py",
+    "after": "",
+    "reason": "公開実行件数と未取得の制作状況",
+    "new_page": null,
+    "before_tables": [],
+    "relocated_to": "baseline-pages.json and original sources/audit records"
+  },
+  {
+    "old_page": 27,
+    "action": "remove_slide",
+    "before": "元のCCPM配布と、後利用の集合を区別する\n4. CLEVAでの後利用と公開配布\n[1] Li et al. (2023). CLEVA: Chinese Language Models EVAluation Platform. EMNLP 2023: System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/\n[2] Stanford CRFM. CLEVAClassicalChineseUnderstandingScenario / Converter. HELM v0.4.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py",
+    "after": "",
+    "reason": "確認範囲の監査表",
+    "new_page": null,
+    "before_tables": [
+      [
+        [
+          "対象",
+          "確認できた内容"
+        ],
+        [
+          "CCPM公式配布",
+          "全27,218問、train/valid正解、test_public正解なし"
+        ],
+        [
+          "CLEVA論文",
+          "CCPMから抽出する課題と、候補まで一致した掲載例"
+        ],
+        [
+          "HELM実装・設定",
+          "同課題のクラス、外部データ読込、6テンプレートID"
+        ],
+        [
+          "HELM公開実行",
+          "0件。CLEVA評価集合・保存requestは未取得"
+        ]
+      ]
+    ],
+    "relocated_to": "baseline-pages.json and original sources/audit records"
+  },
+  {
+    "old_page": 44,
+    "action": "remove_slide",
+    "before": "形式別件数の内訳\nAppendix: 2. 入力形式と詩句の読み方\n[1] Li, Qi, Sun, Yi & Zhang (2021). CCPM: A Chinese Classical Poetry Matching Dataset. arXiv:2106.01979v1.  https://arxiv.org/abs/2106.01979",
+    "after": "",
+    "reason": "詩型ごとの分割別詳細は外部記録へ移し、全体分布は本編に保持",
+    "new_page": null,
+    "before_tables": [
+      [
+        [
+          "形式",
+          "学習",
+          "検証",
+          "テスト",
+          "合計"
+        ],
+        [
+          "五言・一行",
+          "10,166",
+          "1,270",
+          "1,270",
+          "12,706"
+        ],
+        [
+          "七言・一行",
+          "9,392",
+          "1,173",
+          "1,173",
+          "11,738"
+        ],
+        [
+          "五言・二行",
+          "1,025",
+          "128",
+          "128",
+          "1,281"
+        ],
+        [
+          "七言・二行",
+          "1,195",
+          "149",
+          "149",
+          "1,493"
+        ],
+        [
+          "合計",
+          "21,778",
+          "2,720",
+          "2,720",
+          "27,218"
+        ]
+      ]
+    ],
+    "relocated_to": "baseline-pages.json and original sources/audit records"
+  },
+  {
+    "old_page": 46,
+    "action": "remove_slide",
+    "before": "分割間の一致は、比較する単位で異なる\nAppendix: 2. 入力形式と詩句の読み方\n全行の説明文と四候補を、表記を変えずに比較した共通要素数。説明＋候補の一致1件はtrain14,734行とtest_public1,020行。\n[1] THUNLP-AIPoet (2021). CCPM.  https://github.com/THUNLP-AIPoet/CCPM",
+    "after": "",
+    "reason": "分割間の文字列共通要素の監査。完全一致1問の制約は残す",
+    "new_page": null,
+    "before_tables": [
+      [
+        [
+          "組み合わせ",
+          "共通の説明文",
+          "共通の説明＋四候補"
+        ],
+        [
+          "学習 × 検証",
+          "65",
+          "0"
+        ],
+        [
+          "学習 × 公開テスト",
+          "82",
+          "1"
+        ],
+        [
+          "検証 × 公開テスト",
+          "11",
+          "0"
+        ]
+      ]
+    ],
+    "relocated_to": "baseline-pages.json and original sources/audit records"
+  },
+  {
+    "old_page": 54,
+    "action": "remove_slide",
+    "before": "参考文献\nAppendix: 3. 参考文献\nrun_specs_cleva_v1.conf\nStanford CRFM · HELM v0.4.0 · CLEVA設定\n古典中国語理解を含む課題とprompt IDを設定し、同課題には0〜5の六つのIDを登録する。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/presentation/run_specs_cleva_v1.conf",
+    "after": "",
+    "reason": "評価設定ファイルだけの参考文献",
+    "new_page": null,
+    "before_tables": [],
+    "relocated_to": "baseline-pages.json and original sources/audit records"
+  }
+]

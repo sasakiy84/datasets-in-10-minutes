@@ -1,0 +1,585 @@
+[
+  {
+    "page": 1,
+    "text": [
+      "CCPM",
+      "Chinese Classical Poetry Matching Dataset\n現代中国語の説明に合う、中国古典の詩句を選ぶ",
+      "sasakiy84",
+      "datasets in 10 minutes (2026-10-18)"
+    ]
+  },
+  {
+    "page": 2,
+    "text": [
+      "公式配布：CCPMのデータと技術報告",
+      "CCPM",
+      "[1] THUNLP-AIPoet. CCPM. 公式配布、commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5、2026-10-18参照。  https://github.com/THUNLP-AIPoet/CCPM"
+    ]
+  },
+  {
+    "page": 3,
+    "text": [
+      "",
+      "現代語の説明から古典詩句を選ぶ\n対訳と似た詩句から問題を作る\n正解率で意味の対応を評価する\nCLEVAでの後利用と公開配布",
+      "目次"
+    ]
+  },
+  {
+    "page": 4,
+    "text": [
+      "現代語の説明から古典詩句を選ぶ",
+      "1. 現代語の説明から古典詩句を選ぶ"
+    ]
+  },
+  {
+    "page": 5,
+    "text": [
+      "四つの似た詩句から、説明に対応する一つを選ぶ",
+      "CCPMは、中国古典詩の意味理解を調べる四択データセット。現代中国語で書かれた説明を読み、意味が最も対応する古典詩句を選ぶ。古典詩句と現代語訳の対を、正解の根拠として使う。\n候補には、正解に似た語や表現を持つ別の詩句を含める。詩を新しく書く課題ではなく、与えられた候補の意味の違いを識別する。",
+      "1. 現代語の説明から古典詩句を選ぶ",
+      "[1] Li, Qi, Sun, Yi & Zhang (2021). CCPM: A Chinese Classical Poetry Matching Dataset. arXiv:2106.01979v1.  https://arxiv.org/abs/2106.01979"
+    ]
+  },
+  {
+    "page": 6,
+    "text": [
+      "実例1：遠い故郷を恨まない",
+      "1. 現代語の説明から古典詩句を選ぶ",
+      "中国語原文：現代語の説明と古典候補",
+      "日本語訳：説明と各候補の意味",
+      "現代語：也不要埋怨故乡太遥远。\nA. 莫恨故乡遥\nB. 谁道故乡遥\nC. 故乡应渐遥\nD. 莫动故乡情",
+      "現代語：故郷があまりにも遠いことを、恨んでもいけない。\nA. 故郷が遠いことを恨むな。\nB. 誰が故郷は遠いと言ったのか。\nC. 故郷は次第に遠くなるはずだ。\nD. 故郷への思いをかき立てるな。",
+      "正解：A　莫恨故乡遥",
+      "[1] THUNLP-AIPoet. CCPM. 公式配布、commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5、2026-10-18参照。 train.jsonl:14行 / answer=0\nhttps://github.com/THUNLP-AIPoet/CCPM"
+    ]
+  },
+  {
+    "page": 7,
+    "text": [
+      "実例2：山の雨が晴れ始める",
+      "1. 現代語の説明から古典詩句を選ぶ",
+      "中国語原文：現代語の説明と古典候補",
+      "日本語訳：説明と各候補の意味",
+      "現代語：山间连绵阴雨刚刚有了一点停止的意思。\nA. 寒雨初开霁\nB. 山晓雨初霁\nC. 宿雨天初霁\nD. 山雨初含霁",
+      "現代語：山間で降り続いた雨に、ようやく少しやむ気配が見えてきた。\nA. 冷たい雨が、今しがた上がった。\nB. 明け方の山で、雨が今しがた上がった。\nC. 一晩降った雨で曇った空が、今しがた晴れた。\nD. 山の雨に、ようやく晴れる兆しが見え始めた。",
+      "正解：D　山雨初含霁",
+      "[1] THUNLP-AIPoet. CCPM. 公式配布、commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5、2026-10-18参照。 train.jsonl:18823行 / answer=3\nhttps://github.com/THUNLP-AIPoet/CCPM"
+    ]
+  },
+  {
+    "page": 8,
+    "text": [
+      "実例3：病を抱えて独り高台へ登る",
+      "1. 現代語の説明から古典詩句を選ぶ",
+      "中国語原文：現代語の説明と古典候補",
+      "日本語訳：説明と各候補の意味",
+      "現代語：一生当中疾病缠身今日独上高台。\nA. 一春多病几登台\nB. 百年多病独登台\nC. 百年多病负登临\nD. 况多愁病独登台",
+      "現代語：一生のあいだ病に苦しみ、今日、独りで高台へ登る。\nA. 春のあいだ病がちで、幾度高台へ登っただろう。\nB. 長い一生を病がちに過ごし、独り高台へ登る。\nC. 長い一生を病がちに過ごし、高みに登ることもかなわない。\nD. まして、憂いも病も多く、独り高台へ登る。",
+      "正解：B　百年多病独登台",
+      "[1] THUNLP-AIPoet. CCPM. 公式配布、commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5、2026-10-18参照。 train.jsonl:14876行 / answer=1\nhttps://github.com/THUNLP-AIPoet/CCPM"
+    ]
+  },
+  {
+    "page": 9,
+    "text": [
+      "短い詩句の中に、主体・時間・感情が含まれる",
+      "「莫恨」と「谁道」では、故郷が遠いという話題が同じでも、「恨むな」と「誰が言った」の違いがある。「初含霁」は晴れ始める気配を表し、雨の場所や時間も候補ごとに変わる。\n五言・七言の一行を中心とし、二行で一つの問題になる例もある。現代語の長い説明から、短い詩句へ圧縮された意味を対応させる。",
+      "1. 現代語の説明から古典詩句を選ぶ",
+      "[1] Li, Qi, Sun, Yi & Zhang (2021). CCPM: A Chinese Classical Poetry Matching Dataset. arXiv:2106.01979v1.  https://arxiv.org/abs/2106.01979"
+    ]
+  },
+  {
+    "page": 10,
+    "text": [
+      "対訳と似た詩句から問題を作る",
+      "2. 対訳と似た詩句から問題を作る"
+    ]
+  },
+  {
+    "page": 11,
+    "text": [
+      "対訳を整え、正解に似た三つの候補を集める",
+      "2. 対訳と似た詩句から問題を作る",
+      "",
+      "Webの古典文と\n現代語訳を収集",
+      "→",
+      "",
+      "行ごとに分割し\n詩型で絞り込む",
+      "→",
+      "",
+      "似た詩句から\n負例を三つ選ぶ",
+      "→",
+      "",
+      "正解と混ぜて\n四択問題にする",
+      "約6,000段落の古典文と現代語訳から始め、分割・形式の絞り込みを経て、27,218の対訳にした。句読点やWeb上の行境界で区切り、一行に分けきれない二行の対も残した。",
+      "[1] Li, Qi, Sun, Yi & Zhang (2021). CCPM: A Chinese Classical Poetry Matching Dataset. arXiv:2106.01979v1.  https://arxiv.org/abs/2106.01979"
+    ]
+  },
+  {
+    "page": 12,
+    "text": [
+      "五言・七言の一行と二行を対象にする",
+      "収集した古典文には、詩以外の文学も含まれていた。そこで、よく使われる五言・七言の詩型に合う長さの詩句を残した。\n二行で連続した意味を持つ対は、そのまま二行単位で扱う。ここでいう27,218件は問題数であり、詩の作品数や作者数ではない。",
+      "2. 対訳と似た詩句から問題を作る",
+      "[1] Li, Qi, Sun, Yi & Zhang (2021). CCPM: A Chinese Classical Poetry Matching Dataset. arXiv:2106.01979v1.  https://arxiv.org/abs/2106.01979"
+    ]
+  },
+  {
+    "page": 13,
+    "text": [
+      "正解の詩句に似た候補を、詩のコーパスから探す",
+      "中国古典詩で事前学習したBERT-CCPoemを使い、各詩句をベクトルで表す。正解とのコサイン類似度を求め、局所性鋭敏型ハッシュ（LSH）で似た候補を効率よく探す。\n検索の素材はCCPC-Full v1.0で、926,024作品、8,933,162文を含む。意味の類似度に、文字列の最長共通部分列（LCS）も加え、候補の順序を付け直す。",
+      "2. 対訳と似た詩句から問題を作る",
+      "[1] Li, Qi, Sun, Yi & Zhang (2021). CCPM: A Chinese Classical Poetry Matching Dataset. arXiv:2106.01979v1.  https://arxiv.org/abs/2106.01979"
+    ]
+  },
+  {
+    "page": 14,
+    "text": [
+      "意味と文字列の似方を合わせ、負例を選ぶ",
+      "2. 対訳と似た詩句から問題を作る",
+      "Sim(A, B) = 0.4 × LCS(A, B) + 0.6 × EMB(A, B)\n\n負例1：最も似た候補\n負例2：類似度順位2〜5から無作為に一つ\n負例3：類似度順位6〜10から無作為に一つ",
+      "EMBは詩句ベクトルのコサイン類似度。三つの負例を正解と混ぜ、選択肢の順番を入れ替える。",
+      "[1] Li, Qi, Sun, Yi & Zhang (2021). CCPM: A Chinese Classical Poetry Matching Dataset. arXiv:2106.01979v1.  https://arxiv.org/abs/2106.01979"
+    ]
+  },
+  {
+    "page": 15,
+    "text": [
+      "27,218問を学習・検証・テストに分ける",
+      "2. 対訳と似た詩句から問題を作る",
+      "分割 | 問題数 | 公開の正解欄",
+      "学習 train | 21,778 | あり（0〜3）",
+      "検証 valid | 2,720 | あり（0〜3）",
+      "test_public | 2,720 | なし",
+      "件数は配布ファイルの全行と一致。論文のテスト正解率と、公開テストの正解なし配布を区別する。",
+      "[1] Li, Qi, Sun, Yi & Zhang (2021). CCPM: A Chinese Classical Poetry Matching Dataset. arXiv:2106.01979v1.  https://arxiv.org/abs/2106.01979\n[2] THUNLP-AIPoet. CCPM. 公式配布、commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5、2026-10-18参照。  https://github.com/THUNLP-AIPoet/CCPM"
+    ]
+  },
+  {
+    "page": 16,
+    "text": [
+      "一行の問題が全体の約9割を占める",
+      "2. 対訳と似た詩句から問題を作る",
+      "形式 | 問題数 | 割合",
+      "五言・一行 | 12,706 | 46.68%",
+      "七言・一行 | 11,738 | 43.13%",
+      "五言・二行 | 1,281 | 4.71%",
+      "七言・二行 | 1,493 | 5.49%",
+      "全27,218問。形式別の件数は構築時の集計。配布文字列には特殊な表記を含む少数の例もある。",
+      "[1] Li, Qi, Sun, Yi & Zhang (2021). CCPM: A Chinese Classical Poetry Matching Dataset. arXiv:2106.01979v1.  https://arxiv.org/abs/2106.01979"
+    ]
+  },
+  {
+    "page": 17,
+    "text": [
+      "データは説明・四候補・正解番号を持つ",
+      "2. 対訳と似た詩句から問題を作る",
+      "{\n  \"translation\": \"也不要埋怨故乡太遥远。\",\n  \"choices\": [\"莫恨故乡遥\", \"谁道故乡遥\",\n              \"故乡应渐遥\", \"莫动故乡情\"],\n  \"answer\": 0\n}",
+      "answerは0始まりの位置。表示上のA/B/C/Dは、元の候補順へ対応させる。元JSONLには問題ID・詩題・作者の欄はない。",
+      "[1] THUNLP-AIPoet. CCPM. 公式配布、commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5、2026-10-18参照。  https://github.com/THUNLP-AIPoet/CCPM"
+    ]
+  },
+  {
+    "page": 18,
+    "text": [
+      "説明文だけでは、問題を一意に特定できない",
+      "2. 対訳と似た詩句から問題を作る",
+      "比較する単位 | 学習 | 検証 | 公開テスト",
+      "レコード数 | 21,778 | 2,720 | 2,720",
+      "説明文の種類 | 21,483 | 2,710 | 2,716",
+      "説明＋四候補の種類 | 21,778 | 2,720 | 2,720",
+      "2026-10-18、配布全件の文字列を加工せず集計。学習と公開テストには、説明と四候補が同じ問題が1件ある。",
+      "[1] THUNLP-AIPoet. CCPM. 公式配布、commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5、2026-10-18参照。  https://github.com/THUNLP-AIPoet/CCPM"
+    ]
+  },
+  {
+    "page": 19,
+    "text": [
+      "正解率で意味の対応を評価する",
+      "3. 正解率で意味の対応を評価する"
+    ]
+  },
+  {
+    "page": 20,
+    "text": [
+      "評価は、正しい候補を選んだ問題の割合",
+      "指標はAccuracy（正解率）。各問題で予測した選択肢が元のanswerと一致したかを数え、評価した問題数で割る。四つの候補から一つを選ぶため、各問の正誤は0か1になる。\n2021年の実験は、学習分割でBERTを微調整し、テスト分割で評価した。公開テストの正解は非公開で、比較表には2021年の報告値を示す。",
+      "3. 正解率で意味の対応を評価する",
+      "[1] Li, Qi, Sun, Yi & Zhang (2021). CCPM: A Chinese Classical Poetry Matching Dataset. arXiv:2106.01979v1.  https://arxiv.org/abs/2106.01979"
+    ]
+  },
+  {
+    "page": 21,
+    "text": [
+      "BERTの二方式は、テストで約83〜85%の正解率",
+      "3. 正解率で意味の対応を評価する",
+      "方式（2021年） | テストAccuracy (%)",
+      "BERT-Cls | 84.96",
+      "BERT-Match | 82.60",
+      "CCPMの同じテスト2,720問を対象とする、構築時の報告値。BERTの基盤はbert-base-chinese。",
+      "[1] Li, Qi, Sun, Yi & Zhang (2021). CCPM: A Chinese Classical Poetry Matching Dataset. arXiv:2106.01979v1.  https://arxiv.org/abs/2106.01979"
+    ]
+  },
+  {
+    "page": 22,
+    "text": [
+      "説明と候補を一緒に読むか、別々に表すか",
+      "3. 正解率で意味の対応を評価する",
+      "",
+      "BERT-Cls\n説明＋候補を連結\n↓\nBERTの[CLS]表現\n↓\n一致するかを分類",
+      "",
+      "BERT-Match\n説明と候補を別々に符号化\n↓\nそれぞれのベクトル\n↓\nコサイン類似度が最大の候補",
+      "Clsは説明と詩句の間で注意機構が働く。Matchは別々の表現を作り、その近さで選ぶ。",
+      "[1] Li, Qi, Sun, Yi & Zhang (2021). CCPM: A Chinese Classical Poetry Matching Dataset. arXiv:2106.01979v1.  https://arxiv.org/abs/2106.01979"
+    ]
+  },
+  {
+    "page": 23,
+    "text": [
+      "両方式を同じ学習設定で微調整した",
+      "3. 正解率で意味の対応を評価する",
+      "項目 | 設定",
+      "文の符号化器 | bert-base-chinese",
+      "最適化手法 | Adam",
+      "初期学習率 | 2×10⁻⁵、線形に減衰",
+      "学習回数 | 4 epochs",
+      "BERT-CCPoemは負例の検索に使うモデルで、ここで評価した二方式の基盤とは区別する。",
+      "[1] Li, Qi, Sun, Yi & Zhang (2021). CCPM: A Chinese Classical Poetry Matching Dataset. arXiv:2106.01979v1.  https://arxiv.org/abs/2106.01979"
+    ]
+  },
+  {
+    "page": 24,
+    "text": [
+      "CLEVAでの後利用と公開配布",
+      "4. CLEVAでの後利用と公開配布"
+    ]
+  },
+  {
+    "page": 25,
+    "text": [
+      "CLEVAは、古典中国語理解の評価へ採用した",
+      "2023年のCLEVAは、中国語モデルを多様な課題で評価するプラットフォーム。古典中国語理解の課題としてCCPMから四択問題を抽出し、現代語と古典候補の意味の対応を正解率で評価する。\n掲載例は実例2の「山間の雨が晴れ始める」問題で、公式trainの18,823行と四候補・正解Dが一致する。同じ説明文に別候補が付く問題もある。",
+      "4. CLEVAでの後利用と公開配布",
+      "[1] Li et al. (2023). CLEVA: Chinese Language Models EVAluation Platform. EMNLP 2023: System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/"
+    ]
+  },
+  {
+    "page": 26,
+    "text": [
+      "HELMにも課題の実装があり、公開実行は0件",
+      "HELM v0.4.0にはCLEVAClassicalChineseUnderstandingScenarioがあり、実例1と同じ説明・候補・正解Aを記す。データとテンプレートを外部ZIPから読み、候補の番号を正解参照へ変換する。\nClassic v0.4.0の公開run_specs全8,526件にはCLEVA実行がない。CLEVA用評価ZIPも取得できていないため、HELMでの得点、実際の学習例数や生成条件は示さない。",
+      "4. CLEVAでの後利用と公開配布",
+      "[1] Stanford CRFM. CLEVAClassicalChineseUnderstandingScenario / Converter. HELM v0.4.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py"
+    ]
+  },
+  {
+    "page": 27,
+    "text": [
+      "元のCCPM配布と、後利用の集合を区別する",
+      "4. CLEVAでの後利用と公開配布",
+      "対象 | 確認できた内容",
+      "CCPM公式配布 | 全27,218問、train/valid正解、test_public正解なし",
+      "CLEVA論文 | CCPMから抽出する課題と、候補まで一致した掲載例",
+      "HELM実装・設定 | 同課題のクラス、外部データ読込、6テンプレートID",
+      "HELM公開実行 | 0件。CLEVA評価集合・保存requestは未取得",
+      "[1] Li et al. (2023). CLEVA: Chinese Language Models EVAluation Platform. EMNLP 2023: System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/\n[2] Stanford CRFM. CLEVAClassicalChineseUnderstandingScenario / Converter. HELM v0.4.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py"
+    ]
+  },
+  {
+    "page": 28,
+    "text": [
+      "公式JSONLを取得でき、再利用条件は確認が必要",
+      "公式GitHubはtrain.jsonl、valid.jsonl、test_public.jsonlと技術報告を公開し、利用時にはCCPMの引用を求める。2021年8月21日の更新版には、これらを含む五つのファイルがある。\n取得したリポジトリにはライセンスファイルがなく、元Web素材の個別出所・作者も各レコードには含まれない。古典詩の原句、現代語説明、収集データの利用条件を同じものとして推定せず、配布元を確認して利用する。",
+      "4. CLEVAでの後利用と公開配布",
+      "[1] THUNLP-AIPoet. CCPM. 公式配布、commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5、2026-10-18参照。  https://github.com/THUNLP-AIPoet/CCPM"
+    ]
+  },
+  {
+    "page": 29,
+    "text": [
+      "まとめ：似た言葉の中から、対応する意味を選ぶ",
+      "CCPMは現代中国語の説明と古典詩句の対応を問う27,218問の四択データ。正解との対訳に、似た詩句を検索した三つの負例を組み合わせる。\n2021年のBERT二方式はテスト正解率84.96%と82.60%。後にCLEVAの古典中国語理解へ採用された。公開元データ・掲載例・未取得の後利用集合を対応させて読む。",
+      "4. CLEVAでの後利用と公開配布",
+      "[1] Li, Qi, Sun, Yi & Zhang (2021). CCPM: A Chinese Classical Poetry Matching Dataset. arXiv:2106.01979v1.  https://arxiv.org/abs/2106.01979\n[2] Li et al. (2023). CLEVA: Chinese Language Models EVAluation Platform. EMNLP 2023: System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/"
+    ]
+  },
+  {
+    "page": 30,
+    "text": [
+      "Appendix",
+      "Appendix"
+    ]
+  },
+  {
+    "page": 31,
+    "text": [
+      "",
+      "追加10問の原文と日本語訳\n分割・重複・入力形式の補足\n参考文献",
+      "Appendix: 目次"
+    ]
+  },
+  {
+    "page": 32,
+    "text": [
+      "実例4：消えた灯を再びともす",
+      "Appendix: 1. 追加10問の原文と日本語訳",
+      "中国語原文：現代語の説明と古典候補",
+      "日本語訳：説明と各候補の意味",
+      "現代語：昏暗的灯熄灭了又被重新点亮。\nA. 渔灯灭复明\nB. 残灯灭又然\nC. 残灯暗复明\nD. 残灯灭又明",
+      "現代語：薄暗い灯が消え、またともされた。\nA. 漁火が消え、また明るくなる。\nB. 消えかけの灯が消え、また燃える。\nC. 消えかけの灯が暗くなり、また明るくなる。\nD. 消えかけの灯が消え、また明るくなる。",
+      "正解：D　残灯灭又明",
+      "[1] THUNLP-AIPoet. CCPM. 公式配布、commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5、2026-10-18参照。 valid.jsonl:1行 / answer=3\nhttps://github.com/THUNLP-AIPoet/CCPM"
+    ]
+  },
+  {
+    "page": 33,
+    "text": [
+      "実例5：清らかな泉を愛する",
+      "Appendix: 1. 追加10問の原文と日本語訳",
+      "中国語原文：現代語の説明と古典候補",
+      "日本語訳：説明と各候補の意味",
+      "現代語：清冽的泉水纯净透明，惹人喜爱。\nA. 却爱石泉清\nB. 寒泉自清洁\nC. 爱此寒泉清\nD. 爱此清秋光",
+      "現代語：澄んで冷たい泉の水は、清らかで透明で、心を引く。\nA. かえって、岩間の泉の清らかさを愛する。\nB. 冷たい泉は、おのずと清らかだ。\nC. この冷たい泉の清らかさを愛する。\nD. この澄んだ秋の光を愛する。",
+      "正解：C　爱此寒泉清",
+      "[1] THUNLP-AIPoet. CCPM. 公式配布、commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5、2026-10-18参照。 valid.jsonl:5行 / answer=2\nhttps://github.com/THUNLP-AIPoet/CCPM"
+    ]
+  },
+  {
+    "page": 34,
+    "text": [
+      "実例6：西風に帰る時を尋ねる",
+      "Appendix: 1. 追加10問の原文と日本語訳",
+      "中国語原文：現代語の説明と古典候補",
+      "日本語訳：説明と各候補の意味",
+      "現代語：曾经听说秦地刮起西风就会下雨，西风啊，你什么时候回去啊？\nA. 为问西风来几日，夕阳宫殿亦秋声。\nB. 尝闻秦地西风雨，为问西风早晚回。\nC. 驿使回时曾寄语，西风早晚渡秦川。\nD. 并州旧日风声恶，怅望乡书早晚回。",
+      "現代語：秦の地では西風が吹くと雨になると聞いた。西風よ、いつ帰ってゆくのか。\nA. 西風に、来て何日になるか尋ねる。夕日の宮殿にも秋の響き。\nB. 秦の地の西風は雨をもたらすと聞く。西風に、いつ帰るのか尋ねる。\nC. 使者が戻る時に言葉を託した。西風はいつ秦の地を渡るのか。\nD. 并州の昔日の風は激しかった。故郷の便りを待ち望む、いつ帰るのか。",
+      "正解：B　尝闻秦地西风雨，为问西风早晚回。",
+      "[1] THUNLP-AIPoet. CCPM. 公式配布、commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5、2026-10-18参照。 valid.jsonl:14行 / answer=1\nhttps://github.com/THUNLP-AIPoet/CCPM"
+    ]
+  },
+  {
+    "page": 35,
+    "text": [
+      "実例7：雨と水煙のもの寂しい景色",
+      "Appendix: 1. 追加10問の原文と日本語訳",
+      "中国語原文：現代語の説明と古典候補",
+      "日本語訳：説明と各候補の意味",
+      "現代語：大雨激起水雾，空蒙一片，天地都是萧瑟的景象。\nA. 村烟空处渡，野色望中开。\nB. 空烟迷雨色，萧飒望中来。\nC. 乱山烟雨外，欲望失苍苍。\nD. 空蒙迷远望，萧瑟送寒声。",
+      "現代語：大雨が水煙を巻き上げ、辺りはかすみ、天地はもの寂しい景色になった。\nA. 村の煙が途切れる所を渡り、野の景色が眺めの中で開ける。\nB. 立ちこめる煙が雨の景色をかすませ、もの寂しさが視界に迫る。\nC. 幾重もの山は煙る雨の向こう。眺めようとしても青々とした姿を見失う。\nD. かすみが遠くの眺めを覆い、もの寂しい様子が寒々しい音を送る。",
+      "正解：B　空烟迷雨色，萧飒望中来。",
+      "[1] THUNLP-AIPoet. CCPM. 公式配布、commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5、2026-10-18参照。 valid.jsonl:24行 / answer=1\nhttps://github.com/THUNLP-AIPoet/CCPM"
+    ]
+  },
+  {
+    "page": 36,
+    "text": [
+      "実例8：半ばは修道、半ばは君ゆえ",
+      "Appendix: 1. 追加10問の原文と日本語訳",
+      "中国語原文：現代語の説明と古典候補",
+      "日本語訳：説明と各候補の意味",
+      "現代語：这缘由，一半是因为修道人的清心寡欲，一半是因为曾经拥有过的你。\nA. 半缘修道半缘君\nB. 尘缘悟后道缘长\nC. 半缘山野半缘君\nD. 生缘断处参吾道",
+      "現代語：そのわけは、半分は修道者として欲を抑えて心静かに暮らすため、半分はかつてともにいたあなたのためだ。\nA. 半ばは道を修めるゆえ、半ばは君ゆえ。\nB. 俗世との縁を悟った後、道との縁は長くなる。\nC. 半ばは山野ゆえ、半ばは君ゆえ。\nD. 生の縁が断たれる所で、私の道を究める。",
+      "正解：A　半缘修道半缘君",
+      "[1] THUNLP-AIPoet. CCPM. 公式配布、commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5、2026-10-18参照。 valid.jsonl:25行 / answer=0\nhttps://github.com/THUNLP-AIPoet/CCPM"
+    ]
+  },
+  {
+    "page": 37,
+    "text": [
+      "実例9：取り戻されない河湟の地",
+      "Appendix: 1. 追加10問の原文と日本語訳",
+      "中国語原文：現代語の説明と古典候補",
+      "日本語訳：説明と各候補の意味",
+      "現代語：国土一角仍沦陷，天子没有收河湟。\nA. 未收天子河湟地\nB. 天子新收秦陇地\nC. 天不收子地容君\nD. 全收朔雪天王地",
+      "現代語：国土の一角はいまだ敵の手にあり、天子は河湟の地を取り戻していない。\nA. 天子は、河湟の地をまだ取り戻していない。\nB. 天子は、秦隴の地を新たに取り戻した。\nC. 天は子を受け入れず、地は君を受け入れる。\nD. 天王の地である、雪深い北方をすべて取り戻す。",
+      "正解：A　未收天子河湟地",
+      "[1] THUNLP-AIPoet. CCPM. 公式配布、commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5、2026-10-18参照。 valid.jsonl:35行 / answer=0\nhttps://github.com/THUNLP-AIPoet/CCPM"
+    ]
+  },
+  {
+    "page": 38,
+    "text": [
+      "実例10：白髪が簪を支えられない",
+      "Appendix: 1. 追加10問の原文と日本語訳",
+      "中国語原文：現代語の説明と古典候補",
+      "日本語訳：説明と各候補の意味",
+      "現代語：白发越搔越短，简直要不能插簪了。\nA. 近欲不胜簪\nB. 浑欲不胜簪\nC. 酒秃不胜簪\nD. 浑欲不胜愁",
+      "現代語：白髪はかくほどに短くなり、もう簪を挿せないほどだ。\nA. ほとんど、簪を支えられなくなりそうだ。\nB. まったく、簪を支えられなくなりそうだ。\nC. 酒で髪が抜け、簪を支えられない。\nD. まったく、憂いに堪えられなくなりそうだ。",
+      "正解：B　浑欲不胜簪",
+      "[1] THUNLP-AIPoet. CCPM. 公式配布、commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5、2026-10-18参照。 valid.jsonl:47行 / answer=1\nhttps://github.com/THUNLP-AIPoet/CCPM"
+    ]
+  },
+  {
+    "page": 39,
+    "text": [
+      "実例11：深い雲の中にいる人を探す",
+      "Appendix: 1. 追加10問の原文と日本語訳",
+      "中国語原文：現代語の説明と古典候補",
+      "日本語訳：説明と各候補の意味",
+      "現代語：可是林深云密，我也不知道他到底在哪。\nA. 云深不可知\nB. 云深杳何处\nC. 云迷不知处\nD. 云深不知处",
+      "現代語：けれど林は深く雲は濃く、私にも、あの人がいったいどこにいるのか分からない。\nA. 雲が深く、知りようがない。\nB. 雲が深く、いずことも知れない。\nC. 雲にかすみ、居場所が分からない。\nD. 雲が深く、居場所が分からない。",
+      "正解：D　云深不知处",
+      "[1] THUNLP-AIPoet. CCPM. 公式配布、commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5、2026-10-18参照。 valid.jsonl:52行 / answer=3\nhttps://github.com/THUNLP-AIPoet/CCPM"
+    ]
+  },
+  {
+    "page": 40,
+    "text": [
+      "実例12：秋の野風に鳴く蝉",
+      "Appendix: 1. 追加10問の原文と日本語訳",
+      "中国語原文：現代語の説明と古典候補",
+      "日本語訳：説明と各候補の意味",
+      "現代語：初秋寒蝉在野外晨风中嘶声噪鸣。\nA. 猿啸野风秋\nB. 蝉噪风前急\nC. 蝉噪野风秋\nD. 萤散野风秋",
+      "現代語：初秋の寒蝉が、野の朝風の中で、声をからして鳴いている。\nA. 猿が、秋の野風の中で叫ぶ。\nB. 蝉が、風の前でせわしなく鳴く。\nC. 蝉が、秋の野風の中で鳴く。\nD. 蛍が、秋の野風の中で散る。",
+      "正解：C　蝉噪野风秋",
+      "[1] THUNLP-AIPoet. CCPM. 公式配布、commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5、2026-10-18参照。 valid.jsonl:60行 / answer=2\nhttps://github.com/THUNLP-AIPoet/CCPM"
+    ]
+  },
+  {
+    "page": 41,
+    "text": [
+      "実例13：北を望み、飛ぶ鳥を眺める",
+      "Appendix: 1. 追加10問の原文と日本語訳",
+      "中国語原文：現代語の説明と古典候補",
+      "日本語訳：説明と各候補の意味",
+      "現代語：我向北方观望，一片渺茫，鸟儿可以自由地飞来飞去。\nA. 茫茫极浦舟南北，渺渺长空鸟去来。\nB. 云水苍茫共渺然，眼看飞鸟没苍烟。\nC. 六合茫茫天共远，五湖杳杳雁飞还。\nD. 北望茫茫渺渺间，鸟飞不尽又飞还。",
+      "現代語：北を望むと、はるかにかすみ、鳥は自由に行き来している。\nA. 広々とした遠い水辺を舟が南北に行く。はるかな空を鳥が行き来する。\nB. 雲も水も一様に果てしなくかすむ。飛ぶ鳥が青いもやへ消えるのを見る。\nC. 天地は果てしなく遠い。いくつもの湖を雁が遠くへ飛び、また帰る。\nD. 北を望めば、果てしなく、はるかにかすむ。鳥は尽きることなく飛び、また帰る。",
+      "正解：D　北望茫茫渺渺间，鸟飞不尽又飞还。",
+      "[1] THUNLP-AIPoet. CCPM. 公式配布、commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5、2026-10-18参照。 valid.jsonl:65行 / answer=3\nhttps://github.com/THUNLP-AIPoet/CCPM"
+    ]
+  },
+  {
+    "page": 42,
+    "text": [
+      "分割・重複・入力形式の補足",
+      "Appendix: 2. 分割・重複・入力形式の補足"
+    ]
+  },
+  {
+    "page": 43,
+    "text": [
+      "同じ雨の説明でも、候補と正解位置が変わる",
+      "Appendix: 2. 分割・重複・入力形式の補足",
+      "候補 | train 18,823行 | train 21,287行",
+      "A | 寒雨初开霁 | 山雨初含霁",
+      "B | 山晓雨初霁 | 久雨初收霁",
+      "C | 宿雨天初霁 | 山晓雨初霁",
+      "D | 山雨初含霁 | 山雨幸初霁",
+      "正解 | D（answer=3） | A（answer=0）",
+      "両方の説明は「山间连绵阴雨刚刚有了一点停止的意思。」。CLEVA掲載例は18,823行。",
+      "[1] THUNLP-AIPoet. CCPM. 公式配布、commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5、2026-10-18参照。  https://github.com/THUNLP-AIPoet/CCPM"
+    ]
+  },
+  {
+    "page": 44,
+    "text": [
+      "形式別件数の内訳",
+      "Appendix: 2. 分割・重複・入力形式の補足",
+      "形式 | 学習 | 検証 | テスト | 合計",
+      "五言・一行 | 10,166 | 1,270 | 1,270 | 12,706",
+      "七言・一行 | 9,392 | 1,173 | 1,173 | 11,738",
+      "五言・二行 | 1,025 | 128 | 128 | 1,281",
+      "七言・二行 | 1,195 | 149 | 149 | 1,493",
+      "合計 | 21,778 | 2,720 | 2,720 | 27,218",
+      "[1] Li, Qi, Sun, Yi & Zhang (2021). CCPM: A Chinese Classical Poetry Matching Dataset. arXiv:2106.01979v1.  https://arxiv.org/abs/2106.01979"
+    ]
+  },
+  {
+    "page": 45,
+    "text": [
+      "正解位置は、学習・検証ともほぼ均等",
+      "Appendix: 2. 分割・重複・入力形式の補足",
+      "answer / 表示 | 学習 | 検証",
+      "0 / A | 5,324 | 709",
+      "1 / B | 5,455 | 677",
+      "2 / C | 5,452 | 661",
+      "3 / D | 5,547 | 673",
+      "公開テストにはanswerがない。候補順を維持し、0始まりの番号をA〜Dへ対応させた。",
+      "[1] THUNLP-AIPoet. CCPM. 公式配布、commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5、2026-10-18参照。  https://github.com/THUNLP-AIPoet/CCPM"
+    ]
+  },
+  {
+    "page": 46,
+    "text": [
+      "分割間の一致は、比較する単位で異なる",
+      "Appendix: 2. 分割・重複・入力形式の補足",
+      "組み合わせ | 共通の説明文 | 共通の説明＋四候補",
+      "学習 × 検証 | 65 | 0",
+      "学習 × 公開テスト | 82 | 1",
+      "検証 × 公開テスト | 11 | 0",
+      "全行の説明文と四候補を、表記を変えずに比較した共通要素数。説明＋候補の一致1件はtrain14,734行とtest_public1,020行。",
+      "[1] THUNLP-AIPoet. CCPM. 公式配布、commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5、2026-10-18参照。  https://github.com/THUNLP-AIPoet/CCPM"
+    ]
+  },
+  {
+    "page": 47,
+    "text": [
+      "配布文字列には、空の説明や特殊な表記もある",
+      "公開テスト2,026行のtranslationは空文字列で、四候補は残っている。正解が非公開のため、意図した説明や答えは補っていない。\n学習6,518行には「公曰：勿杀」という五言・七言に収まらない正解文字列がある。別の行には拡張漢字や文字コードを表すような文字列もあり、配布物を一律に標準漢字だけへ直していない。",
+      "Appendix: 2. 分割・重複・入力形式の補足",
+      "[1] THUNLP-AIPoet. CCPM. 公式配布、commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5、2026-10-18参照。  https://github.com/THUNLP-AIPoet/CCPM"
+    ]
+  },
+  {
+    "page": 48,
+    "text": [
+      "一つのJSONL行から四候補と参照位置を読む",
+      "Appendix: 2. 分割・重複・入力形式の補足",
+      "record = json.loads(line)\nmodern = record[\"translation\"]\nchoices = record[\"choices\"]\n# train / valid\nanswer_index = record[\"answer\"]  # 0, 1, 2, 3\nanswer_text = choices[answer_index]",
+      "CCPM配布の読み方。CLEVAの実際のpromptは、別途配布されるテンプレートで組み立てる。",
+      "[1] THUNLP-AIPoet. CCPM. 公式配布、commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5、2026-10-18参照。  https://github.com/THUNLP-AIPoet/CCPM"
+    ]
+  },
+  {
+    "page": 49,
+    "text": [
+      "候補の細かな語と、説明の意味を対応させる",
+      "実例11の候補A「云深不可知」とD「云深不知处」は、共通する語が多い。Aは「雲が深く、知りようがない」、Dは「雲が深く、居場所が分からない」と読める。\n現代語の説明には「不知道他到底在哪」（あの人がどこにいるのか分からない）とあり、場所を表す「处」との対応が判断の手掛かりになる。",
+      "Appendix: 2. 分割・重複・入力形式の補足",
+      "[1] THUNLP-AIPoet. CCPM. 公式配布、commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5、2026-10-18参照。  https://github.com/THUNLP-AIPoet/CCPM"
+    ]
+  },
+  {
+    "page": 50,
+    "text": [
+      "参考文献",
+      "Appendix: 3. 参考文献"
+    ]
+  },
+  {
+    "page": 51,
+    "text": [
+      "参考文献",
+      "Appendix: 3. 参考文献",
+      "CCPM: A Chinese Classical Poetry Matching Dataset\nWenhao Li, Fanchao Qi, Maosong Sun, Xiaoyuan Yi, Jiarui Zhang · 2021 · arXiv:2106.01979v1\n古典詩と現代語訳から四択問題を構成し、似た詩句を負例として検索する。BERT二方式の評価を報告する。\nhttps://arxiv.org/abs/2106.01979",
+      "CCPM — Official Dataset Repository\nTHUNLP-AIPoet · 2021 · commit e7db1a0dc1ac1ffdd0ec91f74793c29ae9c8efa5\n学習・検証・正解非公開テストのJSONLと技術報告、データ形式、正解率による評価方法を公開する。\nhttps://github.com/THUNLP-AIPoet/CCPM"
+    ]
+  },
+  {
+    "page": 52,
+    "text": [
+      "参考文献",
+      "Appendix: 3. 参考文献",
+      "CLEVA: Chinese Language Models EVAluation Platform\nYanyang Li et al. · 2023 · EMNLP: System Demonstrations\n中国語モデルの多様な能力を評価するプラットフォーム。CCPMを古典中国語理解の課題へ採用する。\nhttps://aclanthology.org/2023.emnlp-demo.17/",
+      "CLEVAClassicalChineseUnderstandingScenario / Converter\nStanford CRFM · HELM v0.4.0 · Python実装\n外部配布データとテンプレートを読み込み、現代語説明・候補・ラベルをHELMの入力と参照へ変換する。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py"
+    ]
+  },
+  {
+    "page": 53,
+    "text": [
+      "参考文献",
+      "Appendix: 3. 参考文献",
+      "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding\nJacob Devlin, Ming-Wei Chang, Kenton Lee, Kristina Toutanova · 2019 · NAACL-HLT\n双方向Transformerの事前学習と、文分類などへの微調整を提案する。\nhttps://aclanthology.org/N19-1423/",
+      "BERT-CCPoem\nZhipeng Guo, Jinyi Hu, Maosong Sun · 2020 · 公式実装\n古典詩コーパスで学習したモデルと表現を公開し、CCPMでは似た詩句の検索に利用される。\nhttps://github.com/THUNLP-AIPoet/BERT-CCPoem"
+    ]
+  },
+  {
+    "page": 54,
+    "text": [
+      "参考文献",
+      "Appendix: 3. 参考文献",
+      "run_specs_cleva_v1.conf\nStanford CRFM · HELM v0.4.0 · CLEVA設定\n古典中国語理解を含む課題とprompt IDを設定し、同課題には0〜5の六つのIDを登録する。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/presentation/run_specs_cleva_v1.conf"
+    ]
+  }
+]
