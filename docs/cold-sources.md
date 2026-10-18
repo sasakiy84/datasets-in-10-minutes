@@ -61,6 +61,11 @@ Classicのrun_specs8526とsuite索引の該当run0を`helm-index-check.json`に�
 
 独立レビュー最終承認：create_cnndmがp11の原文忠実性・全引用/正解・最終描画を再確認。変更はp11のみ、残59頁PNG不変。最終PPTX e9bc65df69a741752d906433c5fc4b0ae2ec10a83820c9ec4bc16f4751fb2677、PDF 979ebbb131436c71f114fdae422312ff0173be415fd1e86ae1ddbee6b1e66fb0。本文の少数字折返しを禁止条件として扱っていない。
 
+
+本文・図表題名/注記の不要なTable番号を9頁（16/18/23/24/25/26/52/53/54）から除去。数値・年・対象条件・原13例は保持。変更9頁を個別view_imageし、直前承認版の残51 PNGは全バイト不変。全監査0を再確認。元表番号は一次照合の根拠として本記録に保持。最新hashはhandoff.json。
+
+変更9頁の独立再承認：create_cnndm、未解決0。最終PPTX bcd6fd489b138d81b9c81f31847561c6f378fe54d0acb262da90a376b31c031f、PDF a29a00a09d68edf7af42e55e59717a7cf88ee9e60703a56ef1c3e8247c266db2。
+
 ## リポジトリの検証記録
 
 [原レコード・出典・実行条件](data-audits/cold.json)、[実際の校正対](skill-proofreading/cold.md)、[全ページ文言](skill-proofreading/cold/pages.jsonl)、[自己検査・独立レビュー](skill-proofreading/cold/review.json)。
