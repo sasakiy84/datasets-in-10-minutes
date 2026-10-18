@@ -1,0 +1,128 @@
+{
+  "slug": "synthetic-reasoning",
+  "source_version": "final 55-page handoff",
+  "review_complete": true,
+  "blocking_findings": [],
+  "findings": [
+    {
+      "severity": "user_requirement",
+      "pages": [
+        10,
+        11,
+        40,
+        41,
+        42,
+        43
+      ],
+      "finding": "自然言語例の全文と訳が15pt・不均等2列で同居可能。初版は実描画試験なしで別頁にしていた。",
+      "evidence": "coexist.py and coexist-{1,3,4}.png",
+      "recommendation": "成立3件を同居、原文全文・答え21.5pt・枠実glyph余白を保持。",
+      "status": "resolved and final rendering rechecked"
+    },
+    {
+      "severity": "minor",
+      "pages": [
+        8,
+        11,
+        34,
+        36,
+        39,
+        41,
+        43,
+        45,
+        47,
+        48
+      ],
+      "finding": "引用枠の可視下余白が上より4–5.33pt大きい。",
+      "evidence": "panel-visible-gaps.json",
+      "status": "resolved and final rendering rechecked"
+    }
+  ],
+  "factual_checks": [
+    "抽象版と自然言語版は独立の生成器であり同一問題の訳ではない",
+    "公式生成器をレビューコピーで再実行し55000記録および選定13例完全一致",
+    "v030とv040の両生成器はバイト一致",
+    "15stats原ファイルのhashと選定値の一致",
+    "release345実行・5設定各69実行・選定15scenario/adapter一致",
+    "test515/valid485、Llama1試行・davinci/OPT3試行、実提示数抽象5/自然3、prompt_truncated0",
+    "表の指標30値を百分率へ再計算してPDF文字と一致",
+    "quasiはASCII記号を消去、自然集合F1/IoUの公式関数を4説明例で独立実行一致",
+    "pattern test5000重複候補973・一意最長正解2826を再集計一致"
+  ],
+  "initial_individually_viewed_pages": [
+    2,
+    6,
+    8,
+    10,
+    11,
+    14,
+    16,
+    20,
+    21,
+    23,
+    24,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    47,
+    48,
+    49,
+    50,
+    51,
+    53,
+    57,
+    58
+  ],
+  "overview_viewed": true,
+  "final_artifact_hashes": {
+    "datasets-in-10-minutes-synthetic-reasoning.pptx": "a81abf6bbccae37beb008256e356fdd78fcf38d5e374f14ee8ffd17c4d9b13dc",
+    "datasets-in-10-minutes-synthetic-reasoning.pdf": "b68882ddbbd98b93c4a3520dd4521c57635452fc3ea18f824b9eb745d2ac0f7b"
+  },
+  "approved": true,
+  "remaining_issues": [],
+  "final_individually_rechecked_pages": [
+    6,
+    8,
+    10,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    44,
+    45
+  ],
+  "red_answer_runs_checked": 20,
+  "final_panel_gaps": {
+    "top_pt": [
+      6.67,
+      8.67
+    ],
+    "bottom_pt": [
+      6.0,
+      9.33
+    ],
+    "max_top_bottom_difference_pt": 1.34
+  },
+  "source_fetch": "independent-fetch.json",
+  "source_checks": "source-checks.json",
+  "release_checks": "release-and-values.json"
+}

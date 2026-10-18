@@ -42,8 +42,8 @@ GSM8KとHumanEvalは既存資料で対象データセットを紹介済み。MML
 |babi_qa|bAbI|作成済み|[PPTX](../slides/datasets-in-10-minutes-babi.pptx) / [PDF](../slides/datasets-in-10-minutes-babi.pdf)|
 |dyck_language|Dyck|作成済み|[PPTX](../slides/datasets-in-10-minutes-dyck.pptx) / [PDF](../slides/datasets-in-10-minutes-dyck.pdf)|
 |numeracy|Numerical reasoning|作成済み|[PPTX](../slides/datasets-in-10-minutes-numeracy.pptx) / [PDF](../slides/datasets-in-10-minutes-numeracy.pdf)|
-|synthetic_reasoning|Synthetic reasoning (abstract symbols)|未着手||
-|synthetic_reasoning_natural|Synthetic reasoning (natural language)|未着手||
+|synthetic_reasoning|Synthetic reasoning (abstract symbols)|作成済み|[PPTX](../slides/datasets-in-10-minutes-synthetic-reasoning.pptx) / [PDF](../slides/datasets-in-10-minutes-synthetic-reasoning.pdf)|
+|synthetic_reasoning_natural|Synthetic reasoning (natural language)|作成済み|[PPTX](../slides/datasets-in-10-minutes-synthetic-reasoning.pptx) / [PDF](../slides/datasets-in-10-minutes-synthetic-reasoning.pdf)|
 |gsm|GSM8K (Grade school math word problems)|作成済み|[PPTX](../slides/datasets-in-10-minutes-gsm8k.pptx)|
 |math_regular|MATH|未着手||
 |math_chain_of_thought|MATH (chain-of-thought)|未着手||

@@ -1,0 +1,327 @@
+[
+  {
+    "index": 6000,
+    "family": "abstract",
+    "task": "variable_substitution",
+    "random_seed": 42,
+    "input": {
+      "text": "Rules: * Y - * X Z | Substitutions: X by \" shark \" , Y by \" stork \" , Z by \" stork \""
+    },
+    "references": [
+      {
+        "output": {
+          "text": "* stork - * shark stork"
+        },
+        "tags": [
+          "correct"
+        ]
+      }
+    ],
+    "split": "test",
+    "id": "abstract-variable_substitution-seed42-index6000",
+    "source_file": "evidence/abstract-v040.py",
+    "source_sha256": "93c2062ba54004eafac2e85ae07ca73f8ee97a802498856201585270eb4200da",
+    "record_sha256": "9c0fa688d47923a65576a23fdaecfb11c196df304719e19bade67755da361c9e",
+    "role": "main"
+  },
+  {
+    "index": 6000,
+    "family": "abstract",
+    "task": "pattern_match",
+    "random_seed": 42,
+    "input": {
+      "text": "Rules: = Z + - X | - + = X Z | Z - X + = | + - = Z X | Result: = watermelon lion + - zebra"
+    },
+    "references": [
+      {
+        "output": {
+          "text": "= Z + - X"
+        },
+        "tags": [
+          "correct"
+        ]
+      }
+    ],
+    "split": "test",
+    "id": "abstract-pattern_match-seed42-index6000",
+    "source_file": "evidence/abstract-v040.py",
+    "source_sha256": "93c2062ba54004eafac2e85ae07ca73f8ee97a802498856201585270eb4200da",
+    "record_sha256": "7319079129ca0a7f088b6a4ffbdf1a8bd39823a58ad9000ffee61aa3e42cd803",
+    "role": "main"
+  },
+  {
+    "index": 6000,
+    "family": "natural",
+    "task": "hard",
+    "random_seed": 42,
+    "input": {
+      "text": "If Dan is young, then Dan is sad.\nIf Dan is scary, then Dan is hot.\nIf person is purple or small, then person is beautiful.\nIf Dan is clean, then Dan is green.\nIf Dan is bad, then Dan is soft.\nFact:\nDan is tiny and cool.\nThe following can be determined about Dan:"
+    },
+    "references": [
+      {
+        "output": {
+          "text": "Dan is beautiful."
+        },
+        "tags": [
+          "correct"
+        ]
+      }
+    ],
+    "split": "test",
+    "id": "natural-hard-seed42-index6000",
+    "source_file": "evidence/natural-v040.py",
+    "source_sha256": "d5bddedd6a4530d055de58b5efed1483a40248a3b8a9115a583176ddb60db2f4",
+    "record_sha256": "2860d676c8bd15752956eeeec509f53a6e84cc00fe0a34afddbe6348c9469962",
+    "role": "main"
+  },
+  {
+    "index": 6001,
+    "family": "abstract",
+    "task": "variable_substitution",
+    "random_seed": 42,
+    "input": {
+      "text": "Rules: X Z X = - - | Substitutions: X by \" grape apple \" , Z by \" penguin \""
+    },
+    "references": [
+      {
+        "output": {
+          "text": "grape apple penguin grape apple = - -"
+        },
+        "tags": [
+          "correct"
+        ]
+      }
+    ],
+    "split": "test",
+    "id": "abstract-variable_substitution-seed42-index6001",
+    "source_file": "evidence/abstract-v040.py",
+    "source_sha256": "93c2062ba54004eafac2e85ae07ca73f8ee97a802498856201585270eb4200da",
+    "record_sha256": "2d347270efc25ce494664f0e87fc5f65d5f08b3063679cc90c0d8decf5198180",
+    "role": "appendix"
+  },
+  {
+    "index": 6002,
+    "family": "abstract",
+    "task": "variable_substitution",
+    "random_seed": 42,
+    "input": {
+      "text": "Rules: X = Y X * | Substitutions: X by \" peach \" , Y by \" cobra eagle \""
+    },
+    "references": [
+      {
+        "output": {
+          "text": "peach = cobra eagle peach *"
+        },
+        "tags": [
+          "correct"
+        ]
+      }
+    ],
+    "split": "test",
+    "id": "abstract-variable_substitution-seed42-index6002",
+    "source_file": "evidence/abstract-v040.py",
+    "source_sha256": "93c2062ba54004eafac2e85ae07ca73f8ee97a802498856201585270eb4200da",
+    "record_sha256": "8d5da237b13fe5383378a17d57c32693072d46d5f20c7a47bf69d69c31f25d35",
+    "role": "appendix"
+  },
+  {
+    "index": 6001,
+    "family": "abstract",
+    "task": "pattern_match",
+    "random_seed": 42,
+    "input": {
+      "text": "Rules: + = X Y | Y X = + | + Y X = Y | Y X = + | Result: + horse cobra horse = horse"
+    },
+    "references": [
+      {
+        "output": {
+          "text": "+ Y X = Y"
+        },
+        "tags": [
+          "correct"
+        ]
+      }
+    ],
+    "split": "test",
+    "id": "abstract-pattern_match-seed42-index6001",
+    "source_file": "evidence/abstract-v040.py",
+    "source_sha256": "93c2062ba54004eafac2e85ae07ca73f8ee97a802498856201585270eb4200da",
+    "record_sha256": "509059c9e0bfc1bf6cea6378a3be54ec5c279169ee68308f860ab995e77f1087",
+    "role": "appendix"
+  },
+  {
+    "index": 6002,
+    "family": "abstract",
+    "task": "pattern_match",
+    "random_seed": 42,
+    "input": {
+      "text": "Rules: = Z Y = | Z = = Y | = Z Y = | = Y = Z Y | Result: = seal pear = lion seal pear"
+    },
+    "references": [
+      {
+        "output": {
+          "text": "= Y = Z Y"
+        },
+        "tags": [
+          "correct"
+        ]
+      }
+    ],
+    "split": "test",
+    "id": "abstract-pattern_match-seed42-index6002",
+    "source_file": "evidence/abstract-v040.py",
+    "source_sha256": "93c2062ba54004eafac2e85ae07ca73f8ee97a802498856201585270eb4200da",
+    "record_sha256": "a1bc4db748df82bdc6f3fe97a08939144baa3cb4553b34c18c45658381cd6228",
+    "role": "appendix"
+  },
+  {
+    "index": 6000,
+    "family": "abstract",
+    "task": "induction",
+    "random_seed": 42,
+    "input": {
+      "text": "Two results: * stork - * shark stork | * horse - * buffalo penguin horse"
+    },
+    "references": [
+      {
+        "output": {
+          "text": "Rule: * Y - * X Z"
+        },
+        "tags": [
+          "correct"
+        ]
+      }
+    ],
+    "split": "test",
+    "id": "abstract-induction-seed42-index6000",
+    "source_file": "evidence/abstract-v040.py",
+    "source_sha256": "93c2062ba54004eafac2e85ae07ca73f8ee97a802498856201585270eb4200da",
+    "record_sha256": "11013b20fff5b20644260c55b5d8c0b3c88d61f080ffcc8f4aca14c1dc085a3a",
+    "role": "appendix"
+  },
+  {
+    "index": 6001,
+    "family": "abstract",
+    "task": "induction",
+    "random_seed": 42,
+    "input": {
+      "text": "Two results: grape apple penguin grape apple = - - | pear shark eagle pear shark = - -"
+    },
+    "references": [
+      {
+        "output": {
+          "text": "Rule: X Z X = - -"
+        },
+        "tags": [
+          "correct"
+        ]
+      }
+    ],
+    "split": "test",
+    "id": "abstract-induction-seed42-index6001",
+    "source_file": "evidence/abstract-v040.py",
+    "source_sha256": "93c2062ba54004eafac2e85ae07ca73f8ee97a802498856201585270eb4200da",
+    "record_sha256": "a5544dafc02fbdea720ad4f3787d9b98b4ac787682631c6a3fa89f3c125cfc96",
+    "role": "appendix"
+  },
+  {
+    "index": 6000,
+    "family": "natural",
+    "task": "easy",
+    "random_seed": 42,
+    "input": {
+      "text": "If a dandelion is small, then the dandelion is good.\nIf a dandelion is strong, then the dandelion is hot.\nIf a dandelion is big and soft, then the dandelion is boring.\nIf a dandelion is red and scary, then the dandelion is old.\nIf a dandelion is clean or young, then the dandelion is purple.\nFact:\nThe dandelion is purple and boring.\nThe following can be determined about the dandelion:"
+    },
+    "references": [
+      {
+        "output": {
+          "text": "Nothing."
+        },
+        "tags": [
+          "correct"
+        ]
+      }
+    ],
+    "split": "test",
+    "id": "natural-easy-seed42-index6000",
+    "source_file": "evidence/natural-v040.py",
+    "source_sha256": "d5bddedd6a4530d055de58b5efed1483a40248a3b8a9115a583176ddb60db2f4",
+    "record_sha256": "5edcc00ecf0dde699cbd3bd6972971eaa167d405af1d269b5e564014bca55df3",
+    "role": "appendix"
+  },
+  {
+    "index": 6001,
+    "family": "natural",
+    "task": "easy",
+    "random_seed": 42,
+    "input": {
+      "text": "If a rose is hot, then the rose is blue.\nIf a rose is scary or small, then the rose is happy.\nIf a rose is smart, then the rose is red.\nIf a rose is slow or green, then the rose is old.\nIf a rose is bad, then the rose is cold.\nFact:\nThe rose is beautiful and hot.\nThe following can be determined about the rose:"
+    },
+    "references": [
+      {
+        "output": {
+          "text": "The rose is blue."
+        },
+        "tags": [
+          "correct"
+        ]
+      }
+    ],
+    "split": "test",
+    "id": "natural-easy-seed42-index6001",
+    "source_file": "evidence/natural-v040.py",
+    "source_sha256": "d5bddedd6a4530d055de58b5efed1483a40248a3b8a9115a583176ddb60db2f4",
+    "record_sha256": "026eda6a9dae0d227c9989ea2a84c5bffc5d0cea20349d971978694960a79dcd",
+    "role": "appendix"
+  },
+  {
+    "index": 6001,
+    "family": "natural",
+    "task": "hard",
+    "random_seed": 42,
+    "input": {
+      "text": "If a poppy is green and hot, then the poppy is cold.\nIf a poppy is blue, then the poppy is sad.\nIf a plant is red, then the plant is bad.\nIf a poppy is strong, then the poppy is old.\nIf a plant is small, then the plant is beautiful.\nFact:\nThe poppy is glad and sluggish.\nThe following can be determined about the poppy:"
+    },
+    "references": [
+      {
+        "output": {
+          "text": "Nothing."
+        },
+        "tags": [
+          "correct"
+        ]
+      }
+    ],
+    "split": "test",
+    "id": "natural-hard-seed42-index6001",
+    "source_file": "evidence/natural-v040.py",
+    "source_sha256": "d5bddedd6a4530d055de58b5efed1483a40248a3b8a9115a583176ddb60db2f4",
+    "record_sha256": "04b1f2cd533fe88486a0beac85cccbc8d4efbaaef8e1b5b79fee5ef6bc074008",
+    "role": "appendix"
+  },
+  {
+    "index": 6002,
+    "family": "natural",
+    "task": "hard",
+    "random_seed": 42,
+    "input": {
+      "text": "If a plant is green or slow, then the plant is small.\nIf a poppy is purple, then the poppy is boring.\nIf a poppy is big, then the poppy is scary.\nIf a poppy is strong and happy, then the poppy is soft.\nIf a plant is old, then the plant is red.\nFact:\nThe poppy is sad and antique.\nThe following can be determined about the poppy:"
+    },
+    "references": [
+      {
+        "output": {
+          "text": "The poppy is red."
+        },
+        "tags": [
+          "correct"
+        ]
+      }
+    ],
+    "split": "test",
+    "id": "natural-hard-seed42-index6002",
+    "source_file": "evidence/natural-v040.py",
+    "source_sha256": "d5bddedd6a4530d055de58b5efed1483a40248a3b8a9115a583176ddb60db2f4",
+    "record_sha256": "5d13c187dad337e925170b662850f76f421cfac259fe99291e2d07d2d60df42a",
+    "role": "appendix"
+  }
+]
