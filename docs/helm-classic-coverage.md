@@ -32,7 +32,7 @@ GSM8KとHumanEvalは既存資料で対象データセットを紹介済み。MML
 |imdb|IMDB|作成済み|[PPTX](../slides/datasets-in-10-minutes-imdb.pptx) / [PDF](../slides/datasets-in-10-minutes-imdb.pdf)|
 |raft|RAFT (Real-world Annotated Few-Shot)|作成済み|[PPTX](../slides/datasets-in-10-minutes-raft.pptx) / [PDF](../slides/datasets-in-10-minutes-raft.pdf)|
 |civil_comments|CivilComments|作成済み|[PPTX](../slides/datasets-in-10-minutes-civil-comments.pptx) / [PDF](../slides/datasets-in-10-minutes-civil-comments.pdf)|
-|ice|ICE (International Corpus of English)|未着手||
+|ice|ICE (International Corpus of English)|作成済み|[PPTX](../slides/datasets-in-10-minutes-ice.pptx) / [PDF](../slides/datasets-in-10-minutes-ice.pdf)|
 |the_pile|The Pile|未着手||
 |twitter_aae|TwitterAAE|未着手||
 |twitter_aae_aa|TwitterAAE (AA)|未着手||

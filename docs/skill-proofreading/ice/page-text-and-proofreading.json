@@ -1,0 +1,737 @@
+{
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "pages": [
+    {
+      "page": 1,
+      "title": "ICE",
+      "text": [
+        "ICE",
+        "International Corpus of English\n共通の設計で世界の英語を比較する",
+        "sasakiy84",
+        "datasets in 10 minutes (2026-10-18)"
+      ],
+      "review_mode": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、時制、原文と訳の対応をページごとに確認。"
+    },
+    {
+      "page": 2,
+      "title": "公式サイト",
+      "text": [
+        "公式サイト",
+        "International Corpus of English",
+        "[1] International Corpus of English. University of Zurich. 2026-10-18参照。  https://www.ice-corpora.uzh.ch/en.html"
+      ],
+      "review_mode": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、時制、原文と訳の対応をページごとに確認。"
+    },
+    {
+      "page": 3,
+      "title": "",
+      "text": [
+        "",
+        "世界の英語と実際のテキスト\n共通設計と収集・注釈\nHELMでの言語モデル評価\n利用の変化と入手方法",
+        "目次"
+      ],
+      "review_mode": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、時制、原文と訳の対応をページごとに確認。"
+    },
+    {
+      "page": 4,
+      "title": "世界の英語と実際のテキスト",
+      "text": [
+        "世界の英語と実際のテキスト",
+        "1. 世界の英語と実際のテキスト"
+      ],
+      "review_mode": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、時制、原文と訳の対応をページごとに確認。"
+    },
+    {
+      "page": 5,
+      "title": "英語の地域差を比べるためのコーパス",
+      "text": [
+        "英語の地域差を比べるためのコーパス",
+        "ICEは、各国・地域の英語を同じ構成で集め、語法や文法などを比較するためのコーパス群。1990年に始まった。\n標準設計は1地域につき約100万語。会話、講演、ニュース、手紙、学術文などを含む。\n質問と正解の組ではなく、実際に使われた話し言葉・書き言葉のテキストが基本単位になる。",
+        "1. 世界の英語と実際のテキスト",
+        "[1] International Corpus of English. University of Zurich. 2026-10-18参照。  https://www.ice-corpora.uzh.ch/en.html"
+      ],
+      "review_mode": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、時制、原文と訳の対応をページごとに確認。"
+    },
+    {
+      "page": 6,
+      "title": "HELMでは、本文に付けた確率を採点する",
+      "text": [
+        "HELMでは、本文に付けた確率を採点する",
+        "言語モデルにテキストを与え、各語・記号にどれだけ高い確率を付けるかを測る。自由に回答文を生成する設定ではない。\n以下は公開HELM実行のIndia入力と、公式コードが掲載するUSA例から選んだ短い抜粋。\n実際の評価はテキスト全体を対象にする。表示部分は、その入力の一部である。",
+        "1. 世界の英語と実際のテキスト",
+        "[1] Stanford CRFM, HELM ICEScenario. v0.3.0.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/ice_scenario.py"
+      ],
+      "review_mode": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、時制、原文と訳の対応をページごとに確認。"
+    },
+    {
+      "page": 7,
+      "title": "実例1：学校設立の背景を語る",
+      "text": [
+        "実例1：学校設立の背景を語る",
+        "1. 世界の英語と実際のテキスト",
+        "原文：連続した抜粋（空白を整形）",
+        "日本語訳",
+        "<$A> I will take, exactly ten minutes of yours, to brief you <,,> about our institution, Many people may not know, the background, under which this institution was born,",
+        "<$A>\n皆さんの時間をちょうど10分いただき、<,,> 私たちの学校についてご説明します。\nこの学校がどのような経緯で生まれたのか、ご存じない方も多いでしょう。",
+        "[1] HELM公開実行 v0.3.0, ICE India / OPT-175B. scenario_stateの実入力から抜粋。 id0 / 文字範囲 [0, 173]\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/runs/ice:subset=ind,model=together_opt-175b"
+      ],
+      "review_mode": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、時制、原文と訳の対応をページごとに確認。"
+    },
+    {
+      "page": 8,
+      "title": "書き起こしには話し方の痕跡が残る",
+      "text": [
+        "書き起こしには話し方の痕跡が残る",
+        "「<$A>」は話者を表す。「<,,>」は長い休止を表す転記記号。言いよどみや反復もテキストの一部になる。\n学校の成り立ちを説明するまとまった発話で、会話のやり取りとは異なる文章の展開が現れる。",
+        "1. 世界の英語と実際のテキスト",
+        "[1] Nelson (2002), Markup Manuals for Spoken and Written Texts. ICE.  https://www.ice-corpora.uzh.ch/en/manuals.html"
+      ],
+      "review_mode": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、時制、原文と訳の対応をページごとに確認。"
+    },
+    {
+      "page": 9,
+      "title": "実例2：出身地を尋ねる会話",
+      "text": [
+        "実例2：出身地を尋ねる会話",
+        "1. 世界の英語と実際のテキスト",
+        "原文：連続した抜粋（空白を整形）",
+        "日本語訳",
+        "<$A> Uhm, Mr Yadav, you told something about your native place na , <$B> Yeah <$A> Which is your native place, <$B> Native Place is uh, U P, Azamgarh,",
+        "<$A> ええと、ヤーダヴさん、出身地のことを何かお話しでしたね。\n<$B> はい。\n<$A> ご出身はどちらですか。\n<$B> 出身は、ええと、U Pのアーザムガルです。",
+        "[1] HELM公開実行 v0.3.0, ICE India / OPT-175B. scenario_stateの実入力から抜粋。 id11 / 文字範囲 [0, 162]\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/runs/ice:subset=ind,model=together_opt-175b"
+      ],
+      "review_mode": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、時制、原文と訳の対応をページごとに確認。"
+    },
+    {
+      "page": 10,
+      "title": "話者交替や地域の表現も入力になる",
+      "text": [
+        "話者交替や地域の表現も入力になる",
+        "この会話では、問いと短い応答が交互に続く。「uh」のような言いよどみや「na」のような表現も残る。\nU Pはインドのウッタル・プラデーシュ州。Azamgarhはその州の地名である。\nHELMは文法や地名の正誤を判定せず、記録されたテキストへの確率を採点する。",
+        "1. 世界の英語と実際のテキスト",
+        "[1] Stanford CRFM, HELM ICEScenario. v0.3.0.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/ice_scenario.py"
+      ],
+      "review_mode": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、時制、原文と訳の対応をページごとに確認。"
+    },
+    {
+      "page": 11,
+      "title": "実例3：米国造幣局の案内",
+      "text": [
+        "実例3：米国造幣局の案内",
+        "1. 世界の英語と実際のテキスト",
+        "原文：連続した抜粋（空白を整形）",
+        "日本語訳",
+        "The U.S. Mint: United States coins are made at four Mint facilities: Philadelphia, Denver, San Francisco, and West Point, NY. One easy way to start your collection is with the circulating coins you use daily - pennies, nickels, dimes, quarters and dollars.",
+        "米国造幣局\n米国の硬貨は、フィラデルフィア、デンバー、サンフランシスコ、ニューヨーク州ウェストポイントの4施設で作られています。収集を手軽に始める方法の一つは、毎日使う流通硬貨――1セント、5セント、10セント、25セント、1ドル――を集めることです。",
+        "[1] Stanford CRFM, HELM ICEScenario. v0.3.0. 公開docstringのICE-USA例\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/ice_scenario.py"
+      ],
+      "review_mode": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、時制、原文と訳の対応をページごとに確認。"
+    },
+    {
+      "page": 12,
+      "title": "話し言葉と書き言葉を同じ枠で比較",
+      "text": [
+        "話し言葉と書き言葉を同じ枠で比較",
+        "USAの例は硬貨収集の案内。文として整えられた書き言葉で、転記された会話とは形が異なる。\n標準設計には話し言葉300テキストと書き言葉200テキストがある。USAのHELM対象は書き言葉200件だけ。\n地域ごとの得点には、語法の差に加えて、収録ジャンルの構成も関わる。",
+        "1. 世界の英語と実際のテキスト",
+        "[1] International Corpus of English. Design of ICE Corpora.  https://www.ice-corpora.uzh.ch/en/design.html\n[2] HELM Classic v0.4.0, ICE. 公開実行はv0.3.0。  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/ice"
+      ],
+      "review_mode": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、時制、原文と訳の対応をページごとに確認。"
+    },
+    {
+      "page": 13,
+      "title": "共通設計と収集・注釈",
+      "text": [
+        "共通設計と収集・注釈",
+        "2. 共通設計と収集・注釈"
+      ],
+      "review_mode": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、時制、原文と訳の対応をページごとに確認。"
+    },
+    {
+      "page": 14,
+      "title": "同じ構成で集め、地域間の比較を支える",
+      "text": [
+        "同じ構成で集め、地域間の比較を支える",
+        "各チームが自国・地域の英語を収集する。公式サイトでは26の研究チームが参加している。\n各地域は約2,000語のテキスト500件で構成する。短い素材を組み合わせて1件にする場合もある。\nテキストの種類と注釈方式を共通化し、地域ごとの収集方法だけが比較を決めないように設計した。",
+        "2. 共通設計と収集・注釈",
+        "[1] International Corpus of English. University of Zurich. 2026-10-18参照。  https://www.ice-corpora.uzh.ch/en.html"
+      ],
+      "review_mode": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、時制、原文と訳の対応をページごとに確認。"
+    },
+    {
+      "page": 15,
+      "title": "標準設計：話し言葉60%、書き言葉40%",
+      "text": [
+        "標準設計：話し言葉60%、書き言葉40%",
+        "2. 共通設計と収集・注釈",
+        "区分",
+        "テキスト数",
+        "構成比",
+        "対話",
+        "180",
+        "36%",
+        "独話",
+        "120",
+        "24%",
+        "非刊行の文章",
+        "50",
+        "10%",
+        "刊行された文章",
+        "150",
+        "30%",
+        "1地域500テキストの標準構成。1件は約2,000語。",
+        "[1] International Corpus of English. Design of ICE Corpora.  https://www.ice-corpora.uzh.ch/en/design.html"
+      ],
+      "review_mode": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、時制、原文と訳の対応をページごとに確認。"
+    },
+    {
+      "page": 16,
+      "title": "話者・筆者には共通の採用条件がある",
+      "text": [
+        "話者・筆者には共通の採用条件がある",
+        "収録対象は1990年以降の英語。話者・筆者は18歳以上で、英語を教育言語とする教育を受けた人を対象にする。\nその国で生まれた人、または幼少時に移住し、その国で英語による教育を受けた人を採る。\n性別と年齢層には幅があるが、政治・法律・教育などの活動に参加する人の構成は人口全体と同じではない。",
+        "2. 共通設計と収集・注釈",
+        "[1] International Corpus of English. Design of ICE Corpora.  https://www.ice-corpora.uzh.ch/en/design.html"
+      ],
+      "review_mode": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、時制、原文と訳の対応をページごとに確認。"
+    },
+    {
+      "page": 17,
+      "title": "転記・注釈は用途と地域で異なる",
+      "text": [
+        "転記・注釈は用途と地域で異なる",
+        "話し言葉は正書法で書き起こし、休止、重なり、言い直し、話者交替などを記す。書き言葉は段落・見出し・組版などを記す。\nICE-GBでは品詞タグと構文木を付与し、構文木を専用ソフトICECUPで編集・修正した。\nICE-onlineのPENN・CLAWS品詞タグと依存構造は自動付与で、手作業での修正は行われていない。",
+        "2. 共通設計と収集・注釈",
+        "[1] International Corpus of English. Annotation.  https://www.ice-corpora.uzh.ch/en/annotate.html"
+      ],
+      "review_mode": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、時制、原文と訳の対応をページごとに確認。"
+    },
+    {
+      "page": 18,
+      "title": "HELMは注釈の多くを除き、本文を使う",
+      "text": [
+        "HELMは注釈の多くを除き、本文を使う",
+        "シナリオの前処理で見出し・段落・強調などのタグを外す。一部の非コーパス部分や削除部分は内容ごと除く。\n話者記号や、一部の休止記号などは残る。タグをすべて除去した均一な平文ではない。\n文書はtestとして登録し、参照回答の配列は空にする。学習・開発用の質問と正解には分けない。",
+        "2. 共通設計と収集・注釈",
+        "[1] Stanford CRFM, HELM ICEScenario. v0.3.0.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/ice_scenario.py"
+      ],
+      "review_mode": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、時制、原文と訳の対応をページごとに確認。"
+    },
+    {
+      "page": 19,
+      "title": "HELMでの言語モデル評価",
+      "text": [
+        "HELMでの言語モデル評価",
+        "3. HELMでの言語モデル評価"
+      ],
+      "review_mode": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、時制、原文と訳の対応をページごとに確認。"
+    },
+    {
+      "page": 20,
+      "title": "指標：本文に付けた確率を要約する",
+      "text": [
+        "指標：本文に付けた確率を要約する",
+        "perplexityは、本文のトークンに付けた負の平均対数確率を指数に戻した値。小さいほど、そのモデルが高い確率を付けたことを示す。\nHELMは文字列のUTF-8バイト数で正規化したbits per byteも報告する。これも小さいほどよい。\nモデルごとにトークン分割が異なるため、以下では共通のバイト単位による指標を使う。",
+        "3. HELMでの言語モデル評価",
+        "[1] Liang et al. (2023), Holistic Evaluation of Language Models. TMLR.  https://arxiv.org/abs/2211.09110"
+      ],
+      "review_mode": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、時制、原文と訳の対応をページごとに確認。"
+    },
+    {
+      "page": 21,
+      "title": "公開実行のbits per byte",
+      "text": [
+        "公開実行のbits per byte",
+        "3. HELMでの言語モデル評価",
+        "地域",
+        "OPT-175B",
+        "text-davinci-003",
+        "East Africa",
+        "0.661",
+        "0.764",
+        "Hong Kong",
+        "0.767",
+        "0.891",
+        "India",
+        "0.794",
+        "0.895",
+        "USA（書き言葉）",
+        "0.700",
+        "0.720",
+        "HELM Classic v0.4.0掲載、実行suite v0.3.0。各1試行、値は小さいほどよい。",
+        "[1] HELM Classic v0.4.0, ICE. 公開実行はv0.3.0。  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/ice"
+      ],
+      "review_mode": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、時制、原文と訳の対応をページごとに確認。"
+    },
+    {
+      "page": 22,
+      "title": "この比較は2023年の公開実行を表す",
+      "text": [
+        "この比較は2023年の公開実行を表す",
+        "OPT-175B（2022年）とtext-davinci-003（2022年）の二つの系列を示した。4地域ではOPTのbits per byteが小さい。\n評価件数はEast Africa 625件、Hong KongとIndiaが各500件、USAが200件。地域別に同じ件数ではない。\n表示版v0.4.0の公開日は2023-11-17。2026年のモデル性能順位を表す表ではない。",
+        "3. HELMでの言語モデル評価",
+        "[1] HELM Classic v0.4.0, ICE. 公開実行はv0.3.0。  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/ice"
+      ],
+      "review_mode": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、時制、原文と訳の対応をページごとに確認。"
+    },
+    {
+      "page": 23,
+      "title": "生成せず、長い入力を区切って確率を得る",
+      "text": [
+        "生成せず、長い入力を区切って確率を得る",
+        "公開runの設定はlanguage_modeling。提示例は0件、生成トークン数は0、最大評価件数は1,000件、試行数は1。\n一つの文書が長い場合は、モデルの入力長に合わせて複数のリクエストで評価する。\nIndiaの評価500件と、計算に使うリクエストの数は異なる。シナリオの本文には参照回答がない。",
+        "3. HELMでの言語モデル評価",
+        "[1] HELM Classic v0.4.0, ICE. 公開実行はv0.3.0。  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/ice"
+      ],
+      "review_mode": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、時制、原文と訳の対応をページごとに確認。"
+    },
+    {
+      "page": 24,
+      "title": "地域や性別による差を調べる入口になる",
+      "text": [
+        "地域や性別による差を調べる入口になる",
+        "HELMは地域に加え、利用可能なメタデータに基づくmale／femaleの条件も用意した。\n収録ジャンル、話題、話者の属性、残った転記記号などが同時に変わるため、得点差だけで地域英語への偏りの原因を特定できない。\n目的は、英語を一つの均質な集合として扱わず、条件を分けて言語モデルの振る舞いを調べることにある。",
+        "3. HELMでの言語モデル評価",
+        "[1] Liang et al. (2023), Holistic Evaluation of Language Models. TMLR.  https://arxiv.org/abs/2211.09110\n[2] Stanford CRFM, HELM ICEScenario. v0.3.0.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/ice_scenario.py"
+      ],
+      "review_mode": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、時制、原文と訳の対応をページごとに確認。"
+    },
+    {
+      "page": 25,
+      "title": "利用の変化と入手方法",
+      "text": [
+        "利用の変化と入手方法",
+        "4. 利用の変化と入手方法"
+      ],
+      "review_mode": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、時制、原文と訳の対応をページごとに確認。"
+    },
+    {
+      "page": 26,
+      "title": "比較言語学の資料から、モデル評価にも",
+      "text": [
+        "比較言語学の資料から、モデル評価にも",
+        "1990年に、世界の英語を共通設計で比較する計画として始まった。品詞・構文や談話の分析が主要な用途だった。\nHELMでは、複数地域の英語への言語モデルの適合度を測る資料として使う。\n2026-10-18の公式サイトにはUgandaやTrinidad and Tobagoの完成案内もあり、HELMの対象地域より活動範囲が広い。",
+        "4. 利用の変化と入手方法",
+        "[1] International Corpus of English. University of Zurich. 2026-10-18参照。  https://www.ice-corpora.uzh.ch/en.html"
+      ],
+      "review_mode": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、時制、原文と訳の対応をページごとに確認。"
+    },
+    {
+      "page": 27,
+      "title": "配布は地域ごとのライセンスに従う",
+      "text": [
+        "配布は地域ごとのライセンスに従う",
+        "Zurich配布のコーパスには学術ライセンスが必要。申請書を送り、教育機関のメールアドレスで資格を示す。\n公式サイトは非商用の学術研究用途に限定している。Great Britainなどは各編纂機関が配布する。\nHELMコードも自動取得を行わず、利用者が取得済みのファイルをrestricted/ice以下へ配置する実装になっている。",
+        "4. 利用の変化と入手方法",
+        "[1] International Corpus of English. Getting Access.  https://www.ice-corpora.uzh.ch/en/access.html"
+      ],
+      "review_mode": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、時制、原文と訳の対応をページごとに確認。"
+    },
+    {
+      "page": 28,
+      "title": "ICEは多様な英語を比較する基盤",
+      "text": [
+        "ICEは多様な英語を比較する基盤",
+        "共通のジャンル構成と採用条件により、世界の英語を比較するための基盤を作った。\nHELMは本文への確率を採点し、地域やメタデータの条件ごとに言語モデルを比較する。\n実際の利用では、地域、話し言葉・書き言葉の内訳、前処理、ライセンスをそろえて対象を選ぶ。",
+        "4. 利用の変化と入手方法",
+        "[1] International Corpus of English. Design of ICE Corpora.  https://www.ice-corpora.uzh.ch/en/design.html\n[2] Liang et al. (2023), Holistic Evaluation of Language Models. TMLR.  https://arxiv.org/abs/2211.09110"
+      ],
+      "review_mode": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、時制、原文と訳の対応をページごとに確認。"
+    },
+    {
+      "page": 29,
+      "title": "Appendix",
+      "text": [
+        "Appendix",
+        "Appendix"
+      ],
+      "review_mode": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、時制、原文と訳の対応をページごとに確認。"
+    },
+    {
+      "page": 30,
+      "title": "",
+      "text": [
+        "",
+        "追加の実例\n構成と実行条件の補足\n研究と参考文献",
+        "Appendix: 目次"
+      ],
+      "review_mode": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、時制、原文と訳の対応をページごとに確認。"
+    },
+    {
+      "page": 31,
+      "title": "実例4：インドボダイジュと送粉",
+      "text": [
+        "実例4：インドボダイジュと送粉",
+        "Appendix: 1. 追加の実例",
+        "原文：連続した抜粋（空白を整形）",
+        "日本語訳",
+        "COVER STORY POLLINATION : THE FOUNTAINHEAD OF LIFE THE peepal tree, Ficus religiosa , also known as ashwattha , is a sacred tree for most Hindus and is also revered by Buddhists. This tree, found so commonly all over India, is home for a species of wasp - - Blastophaga quadraticeps .",
+        "特集記事\n送粉：生命の源\nインドボダイジュ（Ficus religiosa）はashwatthaとも呼ばれ、多くのヒンドゥー教徒にとって神聖な木で、仏教徒にも尊ばれている。インド各地にごく普通に見られるこの木は、Blastophaga quadraticepsというハチのすみかになっている。",
+        "[1] HELM公開実行 v0.3.0, ICE India / OPT-175B. scenario_stateの実入力から抜粋。 id2 / 文字範囲 [0, 318]\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/runs/ice:subset=ind,model=together_opt-175b"
+      ],
+      "review_mode": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、時制、原文と訳の対応をページごとに確認。"
+    },
+    {
+      "page": 32,
+      "title": "実例5：ニュースの見出し",
+      "text": [
+        "実例5：ニュースの見出し",
+        "Appendix: 1. 追加の実例",
+        "原文：連続した抜粋（空白を整形）",
+        "日本語訳",
+        "<$A> Good morning The headlines, Several nations are for sending, food and medicines for foreign nationals in Iraq and Kuwait, India urges the U N Secretary General for urgent steps to provide relief to the refugees stranded at the Iraq-Jordan border,",
+        "<$A> おはようございます。主なニュースです。\n複数の国が、イラクとクウェートにいる外国人へ食料と医薬品を送ることに賛成しています。\nインドは国連事務総長に、イラクとヨルダンの国境で足止めされている難民を救援するため、緊急の措置を求めています。",
+        "[1] HELM公開実行 v0.3.0, ICE India / OPT-175B. scenario_stateの実入力から抜粋。 id1 / 文字範囲 [0, 259]\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/runs/ice:subset=ind,model=together_opt-175b"
+      ],
+      "review_mode": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、時制、原文と訳の対応をページごとに確認。"
+    },
+    {
+      "page": 33,
+      "title": "実例6：自動車工学の講義",
+      "text": [
+        "実例6：自動車工学の講義",
+        "Appendix: 1. 追加の実例",
+        "原文：連続した抜粋（空白を整形）",
+        "日本語訳",
+        "<$A> My name is Madhu Purohit an Automobile Engineer done my, masters in Motor Vehicle Technology from Germany,",
+        "<$A> 私はマドゥ・プロヒトです。自動車エンジニアで、ドイツで自動車技術の修士号を取りました。",
+        "[1] HELM公開実行 v0.3.0, ICE India / OPT-175B. scenario_stateの実入力から抜粋。 id4 / 文字範囲 [0, 120]\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/runs/ice:subset=ind,model=together_opt-175b"
+      ],
+      "review_mode": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、時制、原文と訳の対応をページごとに確認。"
+    },
+    {
+      "page": 34,
+      "title": "実例7：下院議員の紹介",
+      "text": [
+        "実例7：下院議員の紹介",
+        "Appendix: 1. 追加の実例",
+        "原文：連続した抜粋（空白を整形）",
+        "日本語訳",
+        "<$A> Good morning, Professor Savitri Laxmanan is a Congress-I member of parliament representing Mukundapuram of Kerala in the Lok Sabha , This is her first term as a member of parliament, Her entry into politics has been fairly recent,",
+        "<$A> おはようございます。サヴィトリ・ラクシュマナン教授は、ケーララ州のムクンダプラムを代表する国民会議派の下院議員です。議員を務めるのは今回が初めてで、政界入りしてからまだそれほどたっていません。",
+        "[1] HELM公開実行 v0.3.0, ICE India / OPT-175B. scenario_stateの実入力から抜粋。 id6 / 文字範囲 [0, 254]\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/runs/ice:subset=ind,model=together_opt-175b"
+      ],
+      "review_mode": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、時制、原文と訳の対応をページごとに確認。"
+    },
+    {
+      "page": 35,
+      "title": "実例8：宇宙と破局をめぐる記事",
+      "text": [
+        "実例8：宇宙と破局をめぐる記事",
+        "Appendix: 1. 追加の実例",
+        "原文：連続した抜粋（空白を整形）",
+        "日本語訳",
+        "SPACEWATCH KILLER STREAKERS FROM THE SKY ? ENVISIONING scenarios of the end of life on our planet is a favourite preoccupation of doomsday prophets. Nuclear war, natural disasters, attack from extra-terrestrial beings - - all these have been the subjects of science fiction stories.",
+        "宇宙ウォッチ\n空から来る殺人の光跡？\n地球上の生命が終わる筋書きを思い描くことは、終末を予言する人々が好んで取り組むことだ。核戦争、自然災害、地球外の存在による攻撃――これらはすべてSF作品の題材になってきた。",
+        "[1] HELM公開実行 v0.3.0, ICE India / OPT-175B. scenario_stateの実入力から抜粋。 id10 / 文字範囲 [0, 305]\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/runs/ice:subset=ind,model=together_opt-175b"
+      ],
+      "review_mode": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、時制、原文と訳の対応をページごとに確認。"
+    },
+    {
+      "page": 36,
+      "title": "実例9：税制と経済発展の論考",
+      "text": [
+        "実例9：税制と経済発展の論考",
+        "Appendix: 1. 追加の実例",
+        "原文：連続した抜粋（空白を整形）",
+        "日本語訳",
+        "Taxation Policies as an Aid to Economic Development JAL E. DASTUR * THE least that can be said is that we are today living in interesting times. It would not be untrue, or even an exaggeration, to say that no other period of 12 months in the whole history of our planet has seen such incredible changes as have taken place in the last 12 months. The Berlin Wall has been broken; the two Germanies have been united.",
+        "経済発展を支える税制\nJAL E. DASTUR *\n控えめに言っても、私たちは今、興味深い時代に生きている。地球の歴史のどの12か月を取っても、直近の12か月ほど信じ難い変化が起きた時期はない、と言っても誤りでも誇張でもないだろう。ベルリンの壁は崩れ、二つのドイツは統一された。",
+        "[1] HELM公開実行 v0.3.0, ICE India / OPT-175B. scenario_stateの実入力から抜粋。 id13 / 文字範囲 [0, 438]\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/runs/ice:subset=ind,model=together_opt-175b"
+      ],
+      "review_mode": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、時制、原文と訳の対応をページごとに確認。"
+    },
+    {
+      "page": 37,
+      "title": "実例10：法の支配をめぐる論考",
+      "text": [
+        "実例10：法の支配をめぐる論考",
+        "Appendix: 1. 追加の実例",
+        "原文：連続した抜粋（空白を整形）",
+        "日本語訳",
+        "RULE OF LAW AND THE JUDICIAL PROCESS : SOME EMERGING CONCERNS THERE ARE several factors in modern democracies which constantly threaten the civilised and civilising principle of Rule of Law. Lack of legal certainty, decline in the effectiveness of the law and inequality in the legal processes tend to erode the supremacy of the law in varying degrees.",
+        "法の支配と司法過程：新たな懸念\n現代の民主主義には、文明を支え育む「法の支配」の原則を絶えず脅かす要因がいくつもある。法的確実性の不足、法の実効性の低下、法的手続きの不平等が、程度の差はあれ法の優位を損なう傾向にある。",
+        "[1] HELM公開実行 v0.3.0, ICE India / OPT-175B. scenario_stateの実入力から抜粋。 id14 / 文字範囲 [0, 365]\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/runs/ice:subset=ind,model=together_opt-175b"
+      ],
+      "review_mode": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、時制、原文と訳の対応をページごとに確認。"
+    },
+    {
+      "page": 38,
+      "title": "実例11：食後の体調を話す会話",
+      "text": [
+        "実例11：食後の体調を話す会話",
+        "Appendix: 1. 追加の実例",
+        "原文：連続した抜粋（空白を整形）",
+        "日本語訳",
+        "<$A> Hello Chandrakala, how are you, <$B> Fine, And how are you You seem to be quite lethargic, <$A> Oh it is because, uh one of our friends here, invited me for this, uh lunch you know, Uh I had a puran poli , and perhaps it has its effect,",
+        "<$A> こんにちは、チャンドラカラ。お元気ですか。\n<$B> 元気です。あなたはどうですか。ずいぶんだるそうですね。\n<$A> それは、ええと、ここの友人に昼食へ招かれたからなんです。プラン・ポリを食べたので、そのせいかもしれません。",
+        "[1] HELM公開実行 v0.3.0, ICE India / OPT-175B. scenario_stateの実入力から抜粋。 id18 / 文字範囲 [0, 256]\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/runs/ice:subset=ind,model=together_opt-175b",
+        "プラン・ポリ：甘いあんを包んだ、インドの薄焼きパン。"
+      ],
+      "review_mode": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、時制、原文と訳の対応をページごとに確認。"
+    },
+    {
+      "page": 39,
+      "title": "実例12：国民所得の講演",
+      "text": [
+        "実例12：国民所得の講演",
+        "Appendix: 1. 追加の実例",
+        "原文：連続した抜粋（空白を整形）",
+        "日本語訳",
+        "<$A> Ah uhm, uh thank you very much, uh professor Kohli, spoke, so nice words about me, uh, I don't know how much I deserve them, Uhm, professor Kohli requested me to talk on, \" National income uh accounts \", Uhm, my purpose here was, to, make things very simple,",
+        "<$A> ああ、ええと、ありがとうございます。コーリ教授に素晴らしいお言葉をいただきました。私がどれほどそれに値するかは分かりませんが。\n教授から「国民所得勘定」について話すよう頼まれました。私の目的は、ごく分かりやすくお話しすることです。",
+        "[1] HELM公開実行 v0.3.0, ICE India / OPT-175B. scenario_stateの実入力から抜粋。 id22 / 文字範囲 [0, 277]\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/runs/ice:subset=ind,model=together_opt-175b"
+      ],
+      "review_mode": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、時制、原文と訳の対応をページごとに確認。"
+    },
+    {
+      "page": 40,
+      "title": "実例13：財政赤字についての社説",
+      "text": [
+        "実例13：財政赤字についての社説",
+        "Appendix: 1. 追加の実例",
+        "原文：連続した抜粋（空白を整形）",
+        "日本語訳",
+        "EDITORIAL <*> five blank lines</*> DISQUIETING FISCAL SCENARIO <*> four blank lines</*> IN its Report on Currency and Finance for 1989-90, the Reserve Bank of India has forecast a higher deficit in the current year and has called for adjustments to reduce the serious fiscal imbalance in order to foster growth with stability.",
+        "社説 <*> 空行5行</*>\n不穏な財政状況 <*> 空行4行</*>\nインド準備銀行は1989〜90年の通貨・金融報告で、今年度の赤字が拡大すると予測し、安定した成長を促すため、深刻な財政不均衡を減らす調整を求めた。",
+        "[1] HELM公開実行 v0.3.0, ICE India / OPT-175B. scenario_stateの実入力から抜粋。 id23 / 文字範囲 [0, 340]\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/runs/ice:subset=ind,model=together_opt-175b"
+      ],
+      "review_mode": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、時制、原文と訳の対応をページごとに確認。"
+    },
+    {
+      "page": 41,
+      "title": "話し言葉：対話180件の構成",
+      "text": [
+        "話し言葉：対話180件の構成",
+        "Appendix: 2. 構成と実行条件の補足",
+        "区分",
+        "内容",
+        "件数",
+        "私的対話",
+        "対面会話／電話",
+        "90／10",
+        "公的対話",
+        "授業／放送討論",
+        "20／20",
+        "公的対話",
+        "放送インタビュー／議会討論",
+        "10／10",
+        "公的対話",
+        "法廷尋問／商取引",
+        "10／10",
+        "[1] International Corpus of English. Design of ICE Corpora.  https://www.ice-corpora.uzh.ch/en/design.html"
+      ],
+      "review_mode": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、時制、原文と訳の対応をページごとに確認。"
+    },
+    {
+      "page": 42,
+      "title": "話し言葉：独話120件の構成",
+      "text": [
+        "話し言葉：独話120件の構成",
+        "Appendix: 2. 構成と実行条件の補足",
+        "区分",
+        "内容",
+        "件数",
+        "台本なし",
+        "実況／スピーチ",
+        "20／30",
+        "台本なし",
+        "実演／法的陳述",
+        "10／10",
+        "台本あり",
+        "放送ニュース／放送講話",
+        "20／20",
+        "台本あり",
+        "放送以外の講話",
+        "10",
+        "[1] International Corpus of English. Design of ICE Corpora.  https://www.ice-corpora.uzh.ch/en/design.html"
+      ],
+      "review_mode": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、時制、原文と訳の対応をページごとに確認。"
+    },
+    {
+      "page": 43,
+      "title": "書き言葉200件の構成",
+      "text": [
+        "書き言葉200件の構成",
+        "Appendix: 2. 構成と実行条件の補足",
+        "種類",
+        "テキスト数",
+        "学生の文章／手紙",
+        "20／30",
+        "学術文／一般向け解説",
+        "40／40",
+        "報道／説明・手引き",
+        "20／20",
+        "社説／創作",
+        "10／20",
+        "[1] International Corpus of English. Design of ICE Corpora.  https://www.ice-corpora.uzh.ch/en/design.html"
+      ],
+      "review_mode": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、時制、原文と訳の対応をページごとに確認。"
+    },
+    {
+      "page": 44,
+      "title": "シナリオの実装と説明文の違い",
+      "text": [
+        "シナリオの実装と説明文の違い",
+        "ICESubsetの列挙にはcan、ja、hk、ind、sin、phi、usa、ea、irlの9地域がある。説明文に残る「当初7地域」とは範囲が異なる。\n実際のフィルター引数はcategoryで、S、W、S1、S2、W1、W2などを受け付ける。説明文のsplit=\"written\"／\"spoken\"とは異なる。\nここでは公開runのscenario_specとadapter_spec、および実装を照合して条件を記録した。",
+        "Appendix: 2. 構成と実行条件の補足",
+        "[1] Stanford CRFM, HELM ICEScenario. v0.3.0.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/ice_scenario.py"
+      ],
+      "review_mode": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、時制、原文と訳の対応をページごとに確認。"
+    },
+    {
+      "page": 45,
+      "title": "性別条件はメタデータ形式にも依存する",
+      "text": [
+        "性別条件はメタデータ形式にも依存する",
+        "CAN、HK、IND、USAの4地域にメタデータ用の処理がある。指定しない地域の性別を推定して補うことはしない。\nIND／USAのHDR処理では、検出したgender値のすべてが指定条件に合う文書を採る。\nCAN／HKのXLS処理では所定の列のいずれかが一致すると選ぶため、説明文の「全員が同じ性別」という記述と実装は一致しない。",
+        "Appendix: 2. 構成と実行条件の補足",
+        "[1] Stanford CRFM, HELM ICEScenario. v0.3.0.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/ice_scenario.py"
+      ],
+      "review_mode": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、時制、原文と訳の対応をページごとに確認。"
+    },
+    {
+      "page": 46,
+      "title": "公開例の範囲と再現に必要な情報",
+      "text": [
+        "公開例の範囲と再現に必要な情報",
+        "Indiaの12件は、公開実行に含まれる500件から選んだ。run内のID、JSON位置、本文と抜粋のSHA-256を保存した。\nUSAの1件は公式HELMコードに掲載された書き言葉の抜粋で、元のファイル名は示されていない。\n公開runの入手可能性と、元コーパスの再配布ライセンスは別に扱い、資料には説明に必要な短い範囲を引用した。",
+        "Appendix: 2. 構成と実行条件の補足",
+        "[1] HELM公開実行 v0.3.0, ICE India / OPT-175B. scenario_stateの実入力から抜粋。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/runs/ice:subset=ind,model=together_opt-175b"
+      ],
+      "review_mode": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、時制、原文と訳の対応をページごとに確認。"
+    },
+    {
+      "page": 47,
+      "title": "参考文献",
+      "text": [
+        "参考文献",
+        "Appendix: 3. 研究と参考文献",
+        "International Corpus of English\nUniversity of Zurich／ICE teams. 1990年開始、公式プロジェクトサイト。\n地域別コーパスの目的、共通設計、参加チームと配布窓口をまとめる。\nhttps://www.ice-corpora.uzh.ch/en.html",
+        "Markup Manual for Spoken Texts\nGerald Nelson (2002). International Corpus of English.\n休止、話者交替、重なり、言い直しなどの転記規則と、必須・推奨・任意の注釈を定める。\nhttps://www.ice-corpora.uzh.ch/en/manuals.html"
+      ],
+      "review_mode": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、時制、原文と訳の対応をページごとに確認。"
+    },
+    {
+      "page": 48,
+      "title": "参考文献",
+      "text": [
+        "参考文献",
+        "Appendix: 3. 研究と参考文献",
+        "Markup Manual for Written Texts\nGerald Nelson (2002). International Corpus of English.\n見出し、段落、組版、引用、非コーパス部分などの記号化を規定する。\nhttps://www.ice-corpora.uzh.ch/en/manuals.html",
+        "Holistic Evaluation of Language Models\nPercy Liang et al. (2023). Transactions on Machine Learning Research.\n精度、頑健性、公平性などを共通の枠組みで評価するHELMを提案し、ICEを言語モデル評価に用いる。\nhttps://arxiv.org/abs/2211.09110"
+      ],
+      "review_mode": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、時制、原文と訳の対応をページごとに確認。"
+    },
+    {
+      "page": 49,
+      "title": "参考文献",
+      "text": [
+        "参考文献",
+        "Appendix: 3. 研究と参考文献",
+        "ICEScenario\nStanford CRFM (2023). HELM v0.3.0, Python implementation.\n地域別ファイルの読み込み、タグ前処理、カテゴリとメタデータの選別を実装する。\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/ice_scenario.py",
+        "HELM Classic: ICE\nStanford CRFM (2023). Classic v0.4.0, released 2023-11-17.\n公開runの地域・性別条件と、言語モデルへの確率に基づく評価値を掲載する。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/ice"
+      ],
+      "review_mode": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、時制、原文と訳の対応をページごとに確認。"
+    }
+  ]
+}
