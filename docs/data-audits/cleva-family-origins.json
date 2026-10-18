@@ -1,0 +1,192 @@
+{
+  "scope": "Primary-source follow-up; public original tasks are distinct from unavailable CLEVA translations/selections.",
+  "checked_date": "2026-10-18",
+  "inverse_scaling": {
+    "release": {
+      "url": "https://raw.githubusercontent.com/inverse-scaling/prize/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "bytes": 2098995,
+      "sha256": "85240e3fe11822fa3152bdb99e15c5956a8128632ad40fcf94b8e8a0119071b5"
+    },
+    "matches": {
+      "modus-tollens": {
+        "records": 1236,
+        "matches": [],
+        "similar_records_with_grammatical_mistakes": [
+          {
+            "line_1based": 609,
+            "record": {
+              "prompt": "Consider the following statements:\n1. If Julia is likes The Beatles, then Julia is a guitarist.\n2. Julia is not a guitarist.\nConclusion: Therefore, Julia is not likes The Beatles.\n\nQuestion: Based on statements 1. and 2., Is the conclusion correct?\n\nAnswer:",
+              "classes": "[' No', ' Yes']",
+              "answer_index": 1,
+              "round": 2,
+              "part": 3
+            }
+          },
+          {
+            "line_1based": 789,
+            "record": {
+              "prompt": "Consider the following facts:\n1. If Julia is likes The Beatles, then Julia is a guitarist.\n2. Julia is not a guitarist.\nConclusion: Therefore, Julia is not likes The Beatles.\n\nQuestion: Based on statements 1. and 2., is the conclusion valid?\n\nAnswer:",
+              "classes": "[' No', ' Yes']",
+              "answer_index": 1,
+              "round": 2,
+              "part": 3
+            }
+          }
+        ],
+        "paper_explanation_relation": "CLEVA Chinese/English paper example follows the logical content of line789; source English contains is likes / is not likes and differs grammatically. Do not report byte-identical translation."
+      },
+      "sig-figs": {
+        "records": 20897,
+        "matches": [
+          {
+            "line_1based": 8025,
+            "record": {
+              "prompt": "A chronograph with a precision of +/- 0.2 seconds takes a measurement of 11.1 seconds, and an analytical balance with a precision of +/- 0.001 grams reads 0.026 grams when measuring a mass. Using a calculator, you divide the two values and get the solution 426.923076923077. How can we express this solution to the correct number of significant figures?\r\nA. 430 seconds/gram\r\nB. 426.92 seconds/gram\r\nC. 426.9 seconds/gram\r\nAnswer:",
+              "classes": "[' A', ' B', ' C']",
+              "answer_index": 0,
+              "round": 2,
+              "part": 18
+            }
+          }
+        ]
+      },
+      "redefine": {
+        "records": 1244,
+        "matches": [
+          {
+            "line_1based": 1,
+            "record": {
+              "prompt": "View number as text. Do not perform computation. Q: What is the first digit of 50+47? A:",
+              "classes": "[' 9', ' 5']",
+              "answer_index": 1,
+              "round": 2,
+              "part": 1
+            }
+          },
+          {
+            "line_1based": 610,
+            "record": {
+              "prompt": "Redefine e as 48+12. Q: What is the first digit of e? A:",
+              "classes": "[' 6', ' 2']",
+              "answer_index": 0,
+              "round": 2,
+              "part": 1
+            }
+          }
+        ]
+      },
+      "pattern-matching-suppression": {
+        "records": 1428,
+        "matches": [
+          {
+            "line_1based": 1310,
+            "record": {
+              "prompt": "Generate a sequence of 6 symbols alternating between two symbols (o x) but ending unexpectedly.\no, x, o, x, o,",
+              "classes": "[' x', ' o']",
+              "answer_index": 1,
+              "round": 2,
+              "part": 1
+            }
+          }
+        ]
+      }
+    },
+    "license": "CC-BY-4.0 according to official data-release README",
+    "version_caveat": "Release preserves grammatical mistakes in Modus Tollens and excludes some earlier-round parts; paper explanation is not byte-identical."
+  },
+  "modified_arithmetic": {
+    "official_root": "https://github.com/google/BIG-bench/tree/main/bigbench/benchmark_tasks/modified_arithmetic",
+    "cleva_adoption": "HELM v0.4.0 cleva_scenario.py explicitly names this task for inductive reasoning and mathematical calculation.",
+    "matches": {
+      "three_digit_addition_plus_one": [
+        {
+          "index_0based": 78,
+          "record": {
+            "input": "In the following lines, the symbol -> represents a simple mathematical operation.\n142 + 414 -> 557\n512 + 372 -> 885\n565 + 885 -> 1451\n258 + 655 -> 914\n470 + 952 -> 1423\n970 + 11 ->",
+            "target": "982"
+          }
+        },
+        {
+          "index_0based": 361,
+          "record": {
+            "input": "In the following lines, the symbol -> represents a simple mathematical operation.\n88 + 653 -> 742\n202 + 820 -> 1023\n738 + 954 -> 1693\n333 + 221 -> 555\n40 + 707 -> 748\n67 + 987 ->",
+            "target": "1055"
+          }
+        }
+      ],
+      "three_digit_subtraction_plus_one": [
+        {
+          "index_0based": 208,
+          "record": {
+            "input": "In the following lines, the symbol -> represents a simple mathematical operation.\n672 - 713 -> -40\n935 - 927 -> 9\n241 - 864 -> -622\n1 - 224 -> -222\n800 - 744 -> 57\n972 - 925 ->",
+            "target": "48"
+          }
+        }
+      ],
+      "three_digit_addition_control": [
+        {
+          "index_0based": 524,
+          "record": {
+            "input": "In the following lines, the symbol -> represents a simple mathematical operation.\n633 + 649 -> 1282\n114 + 931 -> 1045\n673 + 712 -> 1385\n233 + 539 -> 772\n10 + 205 -> 215\n678 + 246 ->",
+            "target": "924"
+          }
+        },
+        {
+          "index_0based": 913,
+          "record": {
+            "input": "In the following lines, the symbol -> represents a simple mathematical operation.\n437 + 154 -> 591\n677 + 89 -> 766\n697 + 829 -> 1526\n357 + 173 -> 530\n216 + 906 -> 1122\n455 + 775 ->",
+            "target": "1230"
+          }
+        }
+      ]
+    },
+    "files": [
+      {
+        "local_name": "modified-three_digit_addition_control-task.json",
+        "bytes": 261412,
+        "sha256": "4c8dd16a505ff9c4ee46cc7724279e4915cbacc271b5e795c372902314cce29e",
+        "examples": 1000
+      },
+      {
+        "local_name": "modified-three_digit_addition_plus_one-task.json",
+        "bytes": 261468,
+        "sha256": "6a00efab3afba18edfc72d806cffcc905bbf74dac160492d852610d6c9c615b4",
+        "examples": 1000
+      },
+      {
+        "local_name": "modified-three_digit_subtraction_control-task.json",
+        "bytes": 260108,
+        "sha256": "5859cb40d72150fb8ddb03ff921b904a72d0e0d5f57a82bd54d35c7365bf2c38",
+        "examples": 1000
+      },
+      {
+        "local_name": "modified-three_digit_subtraction_plus_one-task.json",
+        "bytes": 260163,
+        "sha256": "3549a650ac79d23c29eb34d4b60a1fdd4762223f74709085a691e55d5d504fe3",
+        "examples": 1000
+      },
+      {
+        "local_name": "modified-two_digit_multiplication_control-task.json",
+        "bytes": 249919,
+        "sha256": "62450f9bf1df5ef579225f9cdf3b2b335a1be070fe68df58a4c39e68289405b1",
+        "examples": 1000
+      },
+      {
+        "local_name": "modified-two_digit_multiplication_plus_one-task.json",
+        "bytes": 249972,
+        "sha256": "f73c85acfa9c4c45e5eea39416e5c30f2ce2d28e37742ae8e5c60c8366dff030",
+        "examples": 1000
+      }
+    ]
+  },
+  "nlpcc2018": {
+    "formal_chapter": "https://doi.org/10.1007/978-3-319-99501-4_43",
+    "official_preview": "https://link.springer.com/chapter/10.1007/978-3-319-99501-4_43",
+    "abstract_subtasks": [
+      "Chinese KBQA",
+      "Chinese KBQG",
+      "English KBQU"
+    ],
+    "limits": "Only public abstract inspected; full chapter subscription-restricted. Original shared-task distribution not established. Existing NLPCC2016 datasets cannot replace 2018."
+  }
+}

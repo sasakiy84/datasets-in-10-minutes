@@ -46,21 +46,21 @@
 |---|---|---|---|
 |0|cleva|プラットフォーム|作成済み|
 |1|cluecorpus2020|CLUECorpus2020|未着手|
-|2|cluewsc2020|CLUEWSC / CLUEWSC2020|未着手|
+|2|cluewsc2020|CLUEWSC / CLUEWSC2020|制作中|
 |3|ccpm|CCPM|制作中|
 |4|chid|ChID|未着手|
 |5|ocnli|OCNLI|制作中|
 |6|math23k|Math23K|未着手|
-|7|cold|COLD|調査中|
+|7|cold|COLD|制作中|
 |8|cdial-bias|CDial-Bias|未着手|
-|9|chef|CHEF|未着手|
+|9|chef|CHEF|制作中|
 |10|c3|C3|作成済み|
 |11|nlpcc2018-qa|NLPCC 2018 Open Domain QA|未着手|
 |12|cmedqa2|cMedQA2|未着手|
 |13|csds|CSDS|未着手|
 |14|adgen|ADGEN / Shao2019 product advertising data|未着手|
 |15|pku-paraphrase-bank|PKU Paraphrase Bank|未着手|
-|16|crosswoz|CrossWOZ|未着手|
+|16|crosswoz|CrossWOZ|制作中|
 |17|wmt2020-enzh|WMT 2020 newstest2020 English–Chinese|未着手|
 |18|bustm|BUSTM (FewCLUE)|未着手|
 |19|afqmc|AFQMC (CLUE)|未着手|
@@ -69,3 +69,14 @@
 |22|ccl2020-humor|SPR / CCL2020 Humor Computation|未着手|
 
 既存5資料はCLEVAでの翻訳・設定差を追記する。BIG-bench／Inverse Scaling／物理概念の出典系列は元のタスク・生成法を追加確認する。出所不明の5系列は公開説明例と未取得条件を記録し、別のデータセットの例で代用しない。
+
+追加の原配布照合により、Modified ArithmeticとInverse Scalingの五つの元タスクを特定した。[照合記録](data-audits/cleva-family-origins.json)。翻訳時の修正や集合全体の一致は別途確認が必要。
+
+|順|対象|資料範囲|状態|
+|---|---|---|---|
+|23|modified-arithmetic|Modified Arithmetic|未着手|
+|24|sig-figs|Significant Figures|未着手|
+|25|redefine|Redefine|未着手|
+|26|pattern-matching-suppression|Pattern Matching Suppression|未着手|
+|27|modus-tollens|Modus Tollens|未着手|
+|28|neqa|NeQA|未着手|
