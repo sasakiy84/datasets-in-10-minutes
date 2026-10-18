@@ -1,0 +1,661 @@
+[
+  {
+    "page": 1,
+    "text": [
+      "CrossWOZ",
+      "A Large-Scale Chinese Cross-Domain\nTask-Oriented Dialogue Dataset\n北京の旅行案内で、領域をまたぐ対話を調べる",
+      "sasakiy84",
+      "datasets in 10 minutes (2026-10-18)"
+    ]
+  },
+  {
+    "page": 2,
+    "text": [
+      "公式リポジトリ：CrossWOZ",
+      "CrossWOZ",
+      "[1] Qi Zhu et al. CrossWOZ. 公式リポジトリ・README（2026-10-18取得）。  https://github.com/thu-coai/CrossWOZ"
+    ]
+  },
+  {
+    "page": 3,
+    "text": [
+      "",
+      "対話の履歴から、次の応答を読む\n目標・状態・DBのある対話\n構築時の評価と難しさ\nCLEVAでの利用と入手",
+      "目次"
+    ]
+  },
+  {
+    "page": 4,
+    "text": [
+      "1. 対話の履歴から、次の応答を読む",
+      "1. 対話の履歴から、次の応答を読む"
+    ]
+  },
+  {
+    "page": 5,
+    "text": [
+      "旅行の相談を、複数の領域へつなぐ",
+      "CrossWOZは、北京の旅行情報を尋ねる中国語のタスク指向対話を集めたデータセット。ホテル、レストラン、観光地、地下鉄、タクシーの5領域を扱う。\n旅行者役と案内役の人間が会話し、施設の条件や、選んだ施設の周辺、施設間の移動を順に決める。\n発話だけでなく、達成したい目標、会話中の状態、伝えた内容の注釈、検索用DBを持つ。",
+      "1. 対話の履歴から、次の応答を読む",
+      "[1] Zhu et al. (2020). CrossWOZ: A Large-Scale Chinese Cross-Domain Task-Oriented Dialogue Dataset. TACL 8:281–295.  https://aclanthology.org/2020.tacl-1.19/"
+    ]
+  },
+  {
+    "page": 6,
+    "text": [
+      "一つの応答を、直前までの全履歴と対応させる",
+      "13実例では、収録された一つのシステム応答を選び、それより前の全発話を入力として示す。表示範囲は元messages配列の位置で明記する。\n参照は人間の案内役が書いた応答。新しくモデルへ問い合わせた生成例ではない。選んだ応答より後の会話は、この入力単位に含めない。\n元の対話全体と注釈も保持し、次応答の生成と、目標・状態・対話行為を使う評価を結び付ける。",
+      "1. 対話の履歴から、次の応答を読む",
+      "[1] Qi Zhu et al. (2020). CrossWOZ公式配布データ。固定commit df82c9fd。\nhttps://github.com/thu-coai/CrossWOZ/tree/df82c9fdff91b9b130f2d6b89110d3870ba6260e/data/crosswoz"
+    ]
+  },
+  {
+    "page": 7,
+    "text": [
+      "実例1：ホテルの電話と評価",
+      "1. 対話の履歴から、次の応答を読む",
+      "test / 対話11732 / 全履歴 1発話 → 収録応答1発話",
+      "入力：ここまでの全履歴（原文）",
+      "利用者：你好，帮我查一下和颐酒店北京团结湖路店的电话是多少，评分高吗？",
+      "参照応答：和颐酒店北京团结湖路店的电话是010-65828088，评分4.4分。",
+      "対応する日本語訳",
+      "利用者：こんにちは。和頤ホテル北京団結湖路店の電話番号と、評価が高いかを調べてください。",
+      "参照応答：和頤ホテル北京団結湖路店は、電話010-65828088、評価4.4点です。",
+      "[1] Qi Zhu et al. (2020). CrossWOZ公式配布データ。固定commit df82c9fd。 test.json / dialogue 11732 / messages[0:1] → [1]。\nhttps://github.com/thu-coai/CrossWOZ/tree/df82c9fdff91b9b130f2d6b89110d3870ba6260e/data/crosswoz"
+    ]
+  },
+  {
+    "page": 8,
+    "text": [
+      "電話と評価を、同じ施設へ対応させる",
+      "実例1は、指定されたホテルの電話番号と評価を尋ねる。参照応答は両方を返し、対話行為にも「名称」「電話」「評価」が記録される。\n発話を読む課題では、言い回しの一致だけでなく、どの施設のどの項目を答えたかが重要になる。\n状態追跡では、会話で与えられた施設名などを、検索に使うスロットと値へ対応させる。",
+      "1. 対話の履歴から、次の応答を読む",
+      "[1] Zhu et al. (2020). CrossWOZ: A Large-Scale Chinese Cross-Domain Task-Oriented Dialogue Dataset. TACL 8:281–295.  https://aclanthology.org/2020.tacl-1.19/"
+    ]
+  },
+  {
+    "page": 9,
+    "text": [
+      "実例2：周辺の条件に合わないときの提案",
+      "1. 対話の履歴から、次の応答を読む",
+      "train / 対話7568 / 全履歴 5発話 → 収録応答1発話 ／ 原文は左→右",
+      "利用者：你好，帮我推荐一个评分在4.5分以上的餐馆吧，谢谢。\nシステム：为您推荐站点比萨(北大餐厅)。\n利用者：站点比萨(北大餐厅)的周边有啥可以休息的酒店吗？",
+      "システム：有很多，北京海润艾丽华酒店及服务公寓, 北京骏马国际酒店等。\n利用者：这些酒店中有价格在200-300元之间的并且评分在4.5分以上的吗？",
+      "参照応答：抱歉，没有，建议您去北京美第奇精选酒店，能符合您要求。",
+      "[1] Qi Zhu et al. (2020). CrossWOZ公式配布データ。固定commit df82c9fd。 train.json / dialogue 7568 / messages[0:5] → [5]。\nhttps://github.com/thu-coai/CrossWOZ/tree/df82c9fdff91b9b130f2d6b89110d3870ba6260e/data/crosswoz"
+    ]
+  },
+  {
+    "page": 10,
+    "text": [
+      "実例2：周辺の条件に合わないときの提案（訳）",
+      "1. 対話の履歴から、次の応答を読む",
+      "train / 対話7568 / 全履歴 5発話 → 収録応答1発話 ／ 訳は左→右",
+      "利用者：こんにちは。評価4.5点以上のレストランを一つ勧めてください。\nシステム：站点ピザ（北大餐庁）をお勧めします。\n利用者：その周辺に休めるホテルはありますか。",
+      "システム：たくさんあります。北京海潤艾麗華ホテル・サービスアパートメント、北京駿馬国際ホテルなどです。\n利用者：その中で、価格が200～300元、評価が4.5点以上のホテルはありますか。",
+      "参照応答：申し訳ありませんが、ありません。ご希望に合う北京メディチ精選ホテルをお勧めします。",
+      "[1] Qi Zhu et al. (2020). CrossWOZ公式配布データ。固定commit df82c9fd。 train.json / dialogue 7568 / messages[0:5] → [5]。\nhttps://github.com/thu-coai/CrossWOZ/tree/df82c9fdff91b9b130f2d6b89110d3870ba6260e/data/crosswoz"
+    ]
+  },
+  {
+    "page": 11,
+    "text": [
+      "応答の前後で、検索条件が変わる",
+      "1. 対話の履歴から、次の応答を読む",
+      "記録 | 実例2のホテル検索",
+      "最初の検索 | 価格200–300元、評価4.5点以上\n站点ピザの周辺",
+      "最後の検索 | 価格200–300元、評価4.5点以上\n周辺という条件を外す",
+      "選択した施設 | 北京美第奇精选酒店",
+      "sys_state_initとsys_stateの実値。候補なしを表すNoOfferと、代替ホテル名のInformが同じ応答に付く。",
+      "[1] Qi Zhu et al. (2020). CrossWOZ公式配布データ。固定commit df82c9fd。\nhttps://github.com/thu-coai/CrossWOZ/tree/df82c9fdff91b9b130f2d6b89110d3870ba6260e/data/crosswoz"
+    ]
+  },
+  {
+    "page": 12,
+    "text": [
+      "実例3：二つの施設をタクシーで結ぶ",
+      "1. 対話の履歴から、次の応答を読む",
+      "test / 対話10113 / 全履歴 5発話 → 収録応答1発話 ／ 原文は左→右",
+      "利用者：明天公司开会安排我们去北京丽景湾国际酒店，我想知道它是什么类型的酒店？评分多少？\nシステム：是豪华型的酒店，评分4.5分。\n利用者：哦。然后我和同事想找一家有武大郎烧饼这菜，并且人均消费是150-500元的餐馆，有好地方吗？",
+      "顺便把它的电话和周边景点提供给我，我来安排一下行程。\nシステム：为您推荐蓝海钟鼎楼食府(鲁谷店)，电话010-68639999，周边景点有欢乐水魔方水上乐园、石景山游乐园等。\n利用者：如果我想打一辆出租车从北京丽景湾国际酒店到蓝海钟鼎楼食府(鲁谷店)，能告诉我出租车的车型、车牌吗？",
+      "参照応答：车型#CX、车牌#CP。",
+      "[1] Qi Zhu et al. (2020). CrossWOZ公式配布データ。固定commit df82c9fd。 test.json / dialogue 10113 / messages[0:5] → [5]。\nhttps://github.com/thu-coai/CrossWOZ/tree/df82c9fdff91b9b130f2d6b89110d3870ba6260e/data/crosswoz"
+    ]
+  },
+  {
+    "page": 13,
+    "text": [
+      "実例3：二つの施設をタクシーで結ぶ（訳）",
+      "1. 対話の履歴から、次の応答を読む",
+      "test / 対話10113 / 全履歴 5発話 → 収録応答1発話 ／ 訳は左→右",
+      "利用者：明日の会社の会議で北京麗景湾国際ホテルへ行きます。どの種類のホテルですか。評価は何点ですか。\nシステム：豪華型ホテルで、評価は4.5点です。\n利用者：では、同僚と武大郎焼餅を食べられ、一人当たりの予算が150～500元のレストランへ行きたいです。電話番号と周辺の観光地も教えてください。",
+      "予定を立てます。\nシステム：藍海鐘鼎楼食府（魯谷店）をお勧めします。電話は010-68639999、周辺には歓楽水魔方水上楽園、石景山遊楽園などがあります。\n利用者：北京麗景湾国際ホテルから藍海鐘鼎楼食府（魯谷店）へタクシーで行く場合、車種とナンバーを教えてもらえますか。",
+      "参照応答：車種は#CX、ナンバーは#CPです。",
+      "[1] Qi Zhu et al. (2020). CrossWOZ公式配布データ。固定commit df82c9fd。 test.json / dialogue 10113 / messages[0:5] → [5]。\nhttps://github.com/thu-coai/CrossWOZ/tree/df82c9fdff91b9b130f2d6b89110d3870ba6260e/data/crosswoz"
+    ]
+  },
+  {
+    "page": 14,
+    "text": [
+      "タクシーは、施設間の関係を引き継ぐ",
+      "実例3では、先に選んだホテルとレストランが、タクシーの出発地と目的地になる。移動の要求は、それまでの会話に依存する。\n収録応答の#CXと#CPは、車種と車両番号のプレースホルダー。タクシーDBは固定テンプレートで、実車の配車情報ではない。\n同じ旅行相談でも、単独の施設検索と、施設間の関係を使う相談では必要な文脈が異なる。",
+      "1. 対話の履歴から、次の応答を読む",
+      "[1] Qi Zhu et al. CrossWOZ database / database.md. 固定commit df82c9fd。\nhttps://github.com/thu-coai/CrossWOZ/tree/df82c9fdff91b9b130f2d6b89110d3870ba6260e/data/crosswoz/database"
+    ]
+  },
+  {
+    "page": 15,
+    "text": [
+      "2. 目標・状態・DBのある対話",
+      "2. 目標・状態・DBのある対話"
+    ]
+  },
+  {
+    "page": 16,
+    "text": [
+      "6,012対話、101,626発話を収録",
+      "2. 目標・状態・DBのある対話",
+      "分割 | 対話 | 発話 | sys応答",
+      "train | 5,012 | 84,692 | 42,346",
+      "val | 500 | 8,458 | 4,229",
+      "test | 500 | 8,476 | 4,238",
+      "公式ZIPの全件再集計。発話は片側1回で数え、利用者とシステムの一往復は2発話。",
+      "[1] Qi Zhu et al. (2020). CrossWOZ公式配布データ。固定commit df82c9fd。\nhttps://github.com/thu-coai/CrossWOZ/tree/df82c9fdff91b9b130f2d6b89110d3870ba6260e/data/crosswoz"
+    ]
+  },
+  {
+    "page": 17,
+    "text": [
+      "対話は、二人の作業者が同期して作る",
+      "構築時には、北京の施設情報から旅行目標を作り、旅行者役と案内役が同時に接続する収集サイトで会話した。訓練を受けた90人が参加した。\n旅行者は、目標の項目を選んで発話し、回答を受けて状態を更新する。案内役はDBを検索して施設を選び、自然な言葉で返す。\n未完了の対話を除き、対話単位で学習・検証・テストへ無作為に分割した。発話ごとに分割する設計ではない。",
+      "2. 目標・状態・DBのある対話",
+      "[1] Zhu et al. (2020). CrossWOZ: A Large-Scale Chinese Cross-Domain Task-Oriented Dialogue Dataset. TACL 8:281–295.  https://aclanthology.org/2020.tacl-1.19/"
+    ]
+  },
+  {
+    "page": 18,
+    "text": [
+      "施設情報と交通のDBを用意する",
+      "2. 目標・状態・DBのある対話",
+      "DB | 配布レコード数 | 主な内容",
+      "観光地 | 465 | 料金・評価・周辺施設",
+      "レストラン | 951 | 料理・一人当たり予算・周辺施設",
+      "ホテル | 1,133 | 価格・種類・設備・周辺施設",
+      "地下鉄 | 2,549 | 各施設の最寄り駅情報",
+      "タクシー | 1テンプレート | #CX、#CP",
+      "固定配布を再集計。地下鉄の2,549は駅数ではなく、3種類の施設に対応する項目数。",
+      "[1] Qi Zhu et al. CrossWOZ database / database.md. 固定commit df82c9fd。\nhttps://github.com/thu-coai/CrossWOZ/tree/df82c9fdff91b9b130f2d6b89110d3870ba6260e/data/crosswoz/database"
+    ]
+  },
+  {
+    "page": 19,
+    "text": [
+      "目標の依存関係で、5種類に分ける",
+      "2. 目標・状態・DBのある対話",
+      "種類 | 目標の特徴 | train対話数",
+      "S | 施設の下位目標が一つ | 417",
+      "M | 独立した複数の施設目標 | 1,573",
+      "M+T | Mに地下鉄やタクシーを追加 | 691",
+      "CM | 他施設の周辺など、目標が依存 | 1,759",
+      "CM+T | CMに地下鉄やタクシーを追加 | 572",
+      "HARはhotel・attraction・restaurantの3領域。分割ファイルのtype値でも全5件数を照合した。",
+      "[1] Zhu et al. (2020). CrossWOZ: A Large-Scale Chinese Cross-Domain Task-Oriented Dialogue Dataset. TACL 8:281–295.  https://aclanthology.org/2020.tacl-1.19/"
+    ]
+  },
+  {
+    "page": 20,
+    "text": [
+      "目標には、条件と知りたい項目を持つ",
+      "goalは、下位目標ID、領域、スロット、値、すでに言及したかの印を並べた構造。価格や評価の条件と、名称・電話などの未回答項目を表す。\n領域をまたぐ目標では、前に選んだ施設の近くを探す指定や、id=1からid=2へ移動する指定を持つ。実際の施設名は会話の進行で決まる。\nuser_stateは会話中の目標の状態。回答された値を埋め、候補がなければ条件を変えることもできる。",
+      "2. 目標・状態・DBのある対話",
+      "[1] Qi Zhu et al. CrossWOZ. 公式リポジトリ・README（2026-10-18取得）。  https://github.com/thu-coai/CrossWOZ"
+    ]
+  },
+  {
+    "page": 21,
+    "text": [
+      "状態と、発話の役割を別々に記録する",
+      "案内役のsys_state_initは最初のDB検索、sys_stateは最後の検索。候補が見つからず条件を緩めた場合、両者は異なる。\ndialog_actは「意図・領域・スロット・値」の組。Inform、Request、Recommend、NoOffer、Select、Generalの6種類の意図を使う。\n人が記録した状態と発話の履歴から、規則と語句の照合で対話行為を付与した。一つの発話に複数の組が付く。",
+      "2. 目標・状態・DBのある対話",
+      "[1] Zhu et al. (2020). CrossWOZ: A Large-Scale Chinese Cross-Domain Task-Oriented Dialogue Dataset. TACL 8:281–295.  https://aclanthology.org/2020.tacl-1.19/"
+    ]
+  },
+  {
+    "page": 22,
+    "text": [
+      "50対話を、3人の専門家でも注釈した",
+      "2. 目標・状態・DBのある対話",
+      "比較 | 対話行為F1 | 状態正解率",
+      "専門家どうしの平均 | 94.59% | 93.55%",
+      "配布注釈と各専門家の平均 | 95.36% | 94.95%",
+      "各目標種10対話、合計50対話・806発話での品質確認。モデルの予測成績ではない。",
+      "[1] Zhu et al. (2020). CrossWOZ: A Large-Scale Chinese Cross-Domain Task-Oriented Dialogue Dataset. TACL 8:281–295.  https://aclanthology.org/2020.tacl-1.19/"
+    ]
+  },
+  {
+    "page": 23,
+    "text": [
+      "3. 構築時の評価と難しさ",
+      "3. 構築時の評価と難しさ"
+    ]
+  },
+  {
+    "page": 24,
+    "text": [
+      "対話の部品ごとに、出力を評価する",
+      "自然言語理解は発話から対話行為を取り出す。状態追跡は履歴から検索条件を更新し、対話方策は次のシステム行為を選ぶ。\n自然言語生成は、選んだ行為を発話にする。さらに利用者シミュレータと接続し、目標の項目を埋められるかを対話全体で測る。\n発話の生成だけでなく、状態・行為・目標が注釈されているため、どの段階で性能が落ちるかを調べられる。",
+      "3. 構築時の評価と難しさ",
+      "[1] Zhu et al. (2020). CrossWOZ: A Large-Scale Chinese Cross-Domain Task-Oriented Dialogue Dataset. TACL 8:281–295.  https://aclanthology.org/2020.tacl-1.19/"
+    ]
+  },
+  {
+    "page": 25,
+    "text": [
+      "領域間で依存する目標の状態追跡が難しい",
+      "3. 構築時の評価と難しさ",
+      "状態完全一致率（%）。test500対話・4,238応答。直前の正解状態と利用者の正解行為を与える。全値を固定実装で再現。",
+      "[1] Qi Zhu et al. CrossWOZ RuleDST / evaluate.py. 固定commit df82c9fd。\nhttps://github.com/thu-coai/CrossWOZ/blob/df82c9fdff91b9b130f2d6b89110d3870ba6260e/convlab2/dst/rule/crosswoz/evaluate.py"
+    ]
+  },
+  {
+    "page": 26,
+    "text": [
+      "入力条件と、採点単位を対応させる",
+      "3. 構築時の評価と難しさ",
+      "方式（2020） | 出力と評価条件 | 成績",
+      "BERTNLU | 文脈を使う対話行為F1 | 95.53%",
+      "BERTNLU\n文脈なし | 対話行為F1 | 91.85%",
+      "TRADE | 履歴文から状態を生成／状態完全一致 | 36.08%",
+      "SL policy | 対話行為F1／具体的な値も照合 | 44.92%",
+      "構築時のtest報告。RuleDSTは正解状態・正解行為を入力に使い、TRADEは履歴文から生成するため、入力条件が異なる。",
+      "[1] Zhu et al. (2020). CrossWOZ: A Large-Scale Chinese Cross-Domain Task-Oriented Dialogue Dataset. TACL 8:281–295.  https://aclanthology.org/2020.tacl-1.19/"
+    ]
+  },
+  {
+    "page": 27,
+    "text": [
+      "RuleDSTは、最初の検索状態を再現する",
+      "正解はsys_state_initで、selectedResultsを除いた全領域のスロット値が、すべて一致した発話を正解とする。候補を選んだ後のsys_stateは採点先ではない。\n固定実装を配布testへ適用すると、4,238応答中3,023応答が完全一致し、71.33%。5種類別の値も構築時の報告に一致した。\nここでは学習済みの生成モデルを新たに実行していない。再計算したのは、規則で状態を更新するRuleDSTである。",
+      "3. 構築時の評価と難しさ",
+      "[1] Qi Zhu et al. CrossWOZ RuleDST / evaluate.py. 固定commit df82c9fd。\nhttps://github.com/thu-coai/CrossWOZ/blob/df82c9fdff91b9b130f2d6b89110d3870ba6260e/convlab2/dst/rule/crosswoz/evaluate.py"
+    ]
+  },
+  {
+    "page": 28,
+    "text": [
+      "対話全体では、複雑な目標の完了率が下がる",
+      "3. 構築時の評価と難しさ",
+      "2020年の構成 | S | CM+T",
+      "対話行為で接続するDA Sim | 76.5% | 15.7%",
+      "自然言語＋TemplateNLG | 67.4% | 10.0%",
+      "自然言語＋SC-LSTM | 60.6% | 9.0%",
+      "各目標種1,000回のシミュレーション。全要求項目が値で埋まるとtask finishとする。返答内容の正しさを別に保証する成功率ではない。",
+      "[1] Zhu et al. (2020). CrossWOZ: A Large-Scale Chinese Cross-Domain Task-Oriented Dialogue Dataset. TACL 8:281–295.  https://aclanthology.org/2020.tacl-1.19/"
+    ]
+  },
+  {
+    "page": 29,
+    "text": [
+      "表現の一致と、目標の完了は別に測る",
+      "生成した文章の評価にはBLEUを使い、対話全体ではシミュレータの目標が埋まるかを測った。\nTemplateNLGはSC-LSTMより低いBLEUでも、自然言語による対話の完了率は高かった。理解器が学習データ由来の定型表現を扱いやすいことを、著者は一因として挙げている。\n収録応答、状態の正解、対話行為、目標の完了は、それぞれ異なる評価対象になる。",
+      "3. 構築時の評価と難しさ",
+      "[1] Zhu et al. (2020). CrossWOZ: A Large-Scale Chinese Cross-Domain Task-Oriented Dialogue Dataset. TACL 8:281–295.  https://aclanthology.org/2020.tacl-1.19/"
+    ]
+  },
+  {
+    "page": 30,
+    "text": [
+      "4. CLEVAでの利用と入手",
+      "4. CLEVAでの利用と入手"
+    ]
+  },
+  {
+    "page": 31,
+    "text": [
+      "CLEVAでは、履歴から応答を生成する",
+      "CLEVAは、CrossWOZをタスク指向対話の生成課題へ採用したと説明する。HELMのCLEVA実装は、各sys発話について、それ以前の全履歴と参照応答を一つのInstanceにする。\n固定設定はdialogue_generation、task_oriented、prompt_id 0～2、version v1。ここで取得したCrossWOZ原版と、CLEVAが選定・整形したv1集合は区別する。\nCLEVA v1の配布集合は取得できず、Classic v0.4.0の公開runも0件。原版全件の応答数を、CLEVAの評価件数として扱わない。",
+      "4. CLEVAでの利用と入手",
+      "[1] Stanford CRFM (2023). CLEVA dialogue generation scenario. HELM v0.4.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py"
+    ]
+  },
+  {
+    "page": 32,
+    "text": [
+      "HELMの説明例を、公式valへ照合した",
+      "4. CLEVAでの利用と入手",
+      "対象 | 確認した対応",
+      "HELMのホテル対話 | 公式val.json / dialogue12121\nmessages[0:9] → messages[9]",
+      "この資料の実例13 | 同じ履歴9発話と収録応答1発話",
+      "CLEVA論文のテレビ対話 | CrossWOZ原版との一致は未確認\n本資料の実例には使用しない",
+      "[1] Qi Zhu et al. (2020). CrossWOZ公式配布データ。固定commit df82c9fd。\nhttps://github.com/thu-coai/CrossWOZ/tree/df82c9fdff91b9b130f2d6b89110d3870ba6260e/data/crosswoz\n[2] Stanford CRFM (2023). CLEVA dialogue generation scenario. HELM v0.4.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py"
+    ]
+  },
+  {
+    "page": 33,
+    "text": [
+      "公式配布と、固定した実装を組み合わせる",
+      "公式リポジトリのdata/crosswozからtrain、val、testのZIPとDBを取得できる。各ZIP内は、対話IDをキーにしたJSON辞書である。\nこの資料では固定commitと各ファイルのSHAを保存し、対話・発話・下位目標・行為の件数を再集計した。\nリポジトリのライセンス表示はApache License 2.0。構築論文はCC BY 4.0で公開され、著者はデータやコードを使う場合の論文引用を求めている。",
+      "4. CLEVAでの利用と入手",
+      "[1] Qi Zhu et al. CrossWOZ. 公式リポジトリ・README（2026-10-18取得）。  https://github.com/thu-coai/CrossWOZ\n[2] 同梱：Apache2.0本文・帰属・13例の位置と改変表示。\nhttps://datasets-in-10-minutes.sasakiy84.net/assets/crosswoz-notices.zip"
+    ]
+  },
+  {
+    "page": 34,
+    "text": [
+      "文脈と状態を使う、領域横断の対話データ",
+      "CrossWOZは、5領域の旅行案内を6,012対話にまとめ、目標・状態・対話行為・施設DBを対応させた中国語データセットである。\n一つの施設の回答から、周辺の施設や施設間の移動へと条件がつながる。状態追跡の再計算でも、目標間に依存がある対話で完全一致率が低かった。\n原版では状態や行為の予測を評価し、CLEVA版では履歴から参照応答を生成する。それぞれで渡す情報と測る対象を明示して使う。",
+      "4. CLEVAでの利用と入手",
+      "[1] Zhu et al. (2020). CrossWOZ: A Large-Scale Chinese Cross-Domain Task-Oriented Dialogue Dataset. TACL 8:281–295.  https://aclanthology.org/2020.tacl-1.19/"
+    ]
+  },
+  {
+    "page": 35,
+    "text": [
+      "Appendix",
+      "Appendix"
+    ]
+  },
+  {
+    "page": 36,
+    "text": [
+      "",
+      "追加の実例\n形式・集計・再計算\n研究と参考文献",
+      "Appendix: 目次"
+    ]
+  },
+  {
+    "page": 37,
+    "text": [
+      "追加の実例",
+      "Appendix: 1. 追加の実例"
+    ]
+  },
+  {
+    "page": 38,
+    "text": [
+      "実例4：レストランの住所を尋ねる",
+      "Appendix: 1. 追加の実例",
+      "test / 対話118 / 全履歴 3発話 → 収録応答1発話",
+      "入力：ここまでの全履歴（原文）",
+      "利用者：我想吃生蚝，有评分在4分以上，人均消费50-100元的餐馆吗？\nシステム：推荐您去冰城串吧。\n利用者：地址在哪，电话是多少？",
+      "参照応答：地址在昌平镇南环路26-3底商，电话是01056279088。",
+      "対応する日本語訳",
+      "利用者：牡蠣を食べたいです。評価4点以上、一人当たり50～100元のレストランはありますか。\nシステム：氷城串バーをお勧めします。\n利用者：住所と電話番号は。",
+      "参照応答：住所は昌平鎮南環路26-3の路面店舗、電話は01056279088です。",
+      "[1] Qi Zhu et al. (2020). CrossWOZ公式配布データ。固定commit df82c9fd。 test.json / dialogue 118 / messages[0:3] → [3]。\nhttps://github.com/thu-coai/CrossWOZ/tree/df82c9fdff91b9b130f2d6b89110d3870ba6260e/data/crosswoz"
+    ]
+  },
+  {
+    "page": 39,
+    "text": [
+      "実例5：無料の観光地を探す",
+      "Appendix: 1. 追加の実例",
+      "test / 対話9693 / 全履歴 3発話 → 収録応答1発話",
+      "入力：ここまでの全履歴（原文）",
+      "利用者：你好，我想带女朋友去一个评分5分门票免费的景点游玩，给推荐一个吧。\nシステム：推荐您去养心殿游玩。\n利用者：这个景点的电话是多少啊？",
+      "参照応答：电话是010-85007422。",
+      "対応する日本語訳",
+      "利用者：こんにちは。恋人と、評価5点で入場無料の観光地へ行きたいので、一つ勧めてください。\nシステム：養心殿をお勧めします。\n利用者：その観光地の電話番号は。",
+      "参照応答：電話は010-85007422です。",
+      "[1] Qi Zhu et al. (2020). CrossWOZ公式配布データ。固定commit df82c9fd。 test.json / dialogue 9693 / messages[0:3] → [3]。\nhttps://github.com/thu-coai/CrossWOZ/tree/df82c9fdff91b9b130f2d6b89110d3870ba6260e/data/crosswoz"
+    ]
+  },
+  {
+    "page": 40,
+    "text": [
+      "実例6：ホテルのレンタカーサービス",
+      "Appendix: 1. 追加の実例",
+      "test / 対話10662 / 全履歴 3発話 → 収録応答1発話",
+      "入力：ここまでの全履歴（原文）",
+      "利用者：你好，给我找一个舒适型酒店吧，谢谢！\nシステム：北京香江戴斯酒店挺不错的，推荐给您！\n利用者：北京香江戴斯酒店提供租车服务吗？",
+      "参照応答：是的，酒店提供租车服务。",
+      "対応する日本語訳",
+      "利用者：こんにちは。コンフォート型ホテルを探してください。お願いします。\nシステム：北京香江デイズホテルがよいと思います。お勧めします。\n利用者：北京香江デイズホテルにはレンタカーサービスがありますか。",
+      "参照応答：はい、ホテルにはレンタカーサービスがあります。",
+      "[1] Qi Zhu et al. (2020). CrossWOZ公式配布データ。固定commit df82c9fd。 test.json / dialogue 10662 / messages[0:3] → [3]。\nhttps://github.com/thu-coai/CrossWOZ/tree/df82c9fdff91b9b130f2d6b89110d3870ba6260e/data/crosswoz"
+    ]
+  },
+  {
+    "page": 41,
+    "text": [
+      "実例7：観光地から別のホテル探しへ",
+      "Appendix: 1. 追加の実例",
+      "test / 対話10490 / 全履歴 3発話 → 収録応答1発話",
+      "入力：ここまでの全履歴（原文）",
+      "利用者：您好，我要去先声画廊看画展，请问它的电话和评分是多少呢？\nシステム：电话：010-59789888；暂时没有评分呢。\n利用者：好。然后我要找一家经济型的酒店住，请为我推荐一家，并告诉我价格是多少？",
+      "参照応答：为您推荐速8酒店(北京前门大栅栏店)，价格是228元。",
+      "[1] Qi Zhu et al. (2020). CrossWOZ公式配布データ。固定commit df82c9fd。 test.json / dialogue 10490 / messages[0:3] → [3]。\nhttps://github.com/thu-coai/CrossWOZ/tree/df82c9fdff91b9b130f2d6b89110d3870ba6260e/data/crosswoz"
+    ]
+  },
+  {
+    "page": 42,
+    "text": [
+      "実例7：観光地から別のホテル探しへ（訳）",
+      "Appendix: 1. 追加の実例",
+      "test / 対話10490 / 全履歴 3発話 → 収録応答1発話",
+      "入力：ここまでの全履歴（日本語訳）",
+      "利用者：こんにちは。先声画廊の展覧会へ行きます。電話番号と評価を教えてください。\nシステム：電話は010-59789888です。現在、評価はありません。\n利用者：では、経済型ホテルを一軒勧めて、価格も教えてください。",
+      "参照応答：スーパー8ホテル（北京前門大柵欄店）をお勧めします。228元です。",
+      "[1] Qi Zhu et al. (2020). CrossWOZ公式配布データ。固定commit df82c9fd。 test.json / dialogue 10490 / messages[0:3] → [3]。\nhttps://github.com/thu-coai/CrossWOZ/tree/df82c9fdff91b9b130f2d6b89110d3870ba6260e/data/crosswoz"
+    ]
+  },
+  {
+    "page": 43,
+    "text": [
+      "実例8：評価条件を緩めた提案",
+      "Appendix: 1. 追加の実例",
+      "train / 対話8781 / 全履歴 1発話 → 収録応答1発話",
+      "入力：ここまでの全履歴（原文）",
+      "利用者：你好，我想去一家评分4分以上的餐馆吃韭菜鸡蛋水饺这道菜，给我推荐一家餐馆用餐吧。",
+      "参照応答：抱歉，评分没有符合您要求的，推荐您去评分3分的百信东北农家菜骨头庄用餐。",
+      "対応する日本語訳",
+      "利用者：こんにちは。評価4点以上のレストランで、ニラと卵の水餃子を食べたいです。一軒勧めてください。",
+      "参照応答：申し訳ありませんが、その評価条件に合う店はありません。評価3点の百信東北農家菜骨頭荘をお勧めします。",
+      "[1] Qi Zhu et al. (2020). CrossWOZ公式配布データ。固定commit df82c9fd。 train.json / dialogue 8781 / messages[0:1] → [1]。\nhttps://github.com/thu-coai/CrossWOZ/tree/df82c9fdff91b9b130f2d6b89110d3870ba6260e/data/crosswoz"
+    ]
+  },
+  {
+    "page": 44,
+    "text": [
+      "実例9：価格条件を緩めた提案",
+      "Appendix: 1. 追加の実例",
+      "train / 対話9779 / 全履歴 1発話 → 収録応答1発話",
+      "入力：ここまでの全履歴（原文）",
+      "利用者：你好，我想找一家人均消费500-1000元的餐馆吃涮菜，给我推荐一家餐馆用餐吧。",
+      "参照応答：抱歉，消费价格没有符合您要求的，推荐您去人均消费75元的老北京铜锅涮肉用餐这道菜。",
+      "対応する日本語訳",
+      "利用者：こんにちは。一人当たり500～1,000元のレストランで、鍋料理（涮菜）を食べたいです。一軒勧めてください。",
+      "参照応答：申し訳ありませんが、その価格に合う店はありません。一人当たり75元の老北京銅鍋涮肉で、この料理を食べることをお勧めします。",
+      "[1] Qi Zhu et al. (2020). CrossWOZ公式配布データ。固定commit df82c9fd。 train.json / dialogue 9779 / messages[0:1] → [1]。\nhttps://github.com/thu-coai/CrossWOZ/tree/df82c9fdff91b9b130f2d6b89110d3870ba6260e/data/crosswoz"
+    ]
+  },
+  {
+    "page": 45,
+    "text": [
+      "実例10：ホテルと食事の間の地下鉄",
+      "Appendix: 1. 追加の実例",
+      "test / 対話10838 / 全履歴 5発話 → 収録応答1発話 ／ 原文は左→右",
+      "利用者：您好，明天老妈来看我，想找一家最低价格是200-300元的、提供wifi的酒店住下，帮我找一家，告诉我电话，看看周边有什么餐馆，我考虑一下。谢了。\nシステム：为您推荐维也纳3好酒店(北京南站洋桥店)，电话010-67586489，周边餐馆有一碗居老北京炸酱面(蒲芳路店)、瑞宾楼(丰台店)等等。\n利用者：好的。还得请老妈吃顿好的，",
+      "找一家人均消费是150-500元的、评分是4.5分以上的餐馆吧，最好周边有景点可以顺便玩玩，有个酒店累了直接可以去休息一下，帮我推荐一家吧。\nシステム：推荐带妈妈去大董(南新仓店)吧，周边景点有故宫、恭王府等；周边酒店有北京天伦王朝酒店、北京饭店等，很方便呢。\n利用者：我想乘地铁从维也纳3好酒店(北京南站洋桥店)到大董(南新仓店)，请告诉我这两个地方的地铁站分别是什么？",
+      "参照応答：维也纳3好酒店(北京南站洋桥店)地铁：角门东地铁站A口；大董(南新仓店)地铁：灯市口地铁站A口。",
+      "[1] Qi Zhu et al. (2020). CrossWOZ公式配布データ。固定commit df82c9fd。 test.json / dialogue 10838 / messages[0:5] → [5]。\nhttps://github.com/thu-coai/CrossWOZ/tree/df82c9fdff91b9b130f2d6b89110d3870ba6260e/data/crosswoz"
+    ]
+  },
+  {
+    "page": 46,
+    "text": [
+      "実例10：ホテルと食事の間の地下鉄（訳）",
+      "Appendix: 1. 追加の実例",
+      "test / 対話10838 / 全履歴 5発話 → 収録応答1発話 ／ 訳は左→右",
+      "利用者：こんにちは。明日、母が来るので、最低価格200～300元でWi-Fiのあるホテルを探しています。電話番号と周辺のレストランも教えてください。検討します。\nシステム：ウィーン3好ホテル（北京南駅洋橋店）をお勧めします。電話は010-67586489、周辺には一碗居老北京炸醤麺（蒲芳路店）、瑞賓楼（豊台店）などがあります。\n利用者：母と食事もしたいので、一人当たり150～500元、",
+      "評価4.5点以上のレストランを探してください。周辺に観光地があれば遊べますし、ホテルがあれば疲れたら休めます。\nシステム：大董（南新倉店）をお勧めします。周辺には故宮、恭王府などの観光地と、北京天倫王朝ホテル、北京飯店などがあり、便利です。\n利用者：ウィーン3好ホテル（北京南駅洋橋店）から大董（南新倉店）まで地下鉄で行きたいです。それぞれの最寄り駅を教えてください。",
+      "参照応答：ホテルの最寄りは角門東駅A出口、大董（南新倉店）の最寄りは灯市口駅A出口です。",
+      "[1] Qi Zhu et al. (2020). CrossWOZ公式配布データ。固定commit df82c9fd。 test.json / dialogue 10838 / messages[0:5] → [5]。\nhttps://github.com/thu-coai/CrossWOZ/tree/df82c9fdff91b9b130f2d6b89110d3870ba6260e/data/crosswoz"
+    ]
+  },
+  {
+    "page": 47,
+    "text": [
+      "実例11：設備・観光・移動を順に決める",
+      "Appendix: 1. 追加の実例",
+      "train / 対話8711 / 全履歴 9発話 → 収録応答1発話 ／ 原文は左→右",
+      "利用者：你好啊，我带父母来这里玩，想找个酒店，提供24小时热水和残疾人设施，评分是4.5分以上的。\nシステム：您好，帮您推荐北京鹏润国际大酒店和北京京仪大酒店。\n利用者：北京鹏润国际大酒店听说过，告诉我一下它的周边景点。\nシステム：有798艺术区，簋街小吃，雍和宫，国子监等。",
+      "利用者：恩，想找这样的附近景点，评分是4分以上，游玩的时长是0.5小时的。\nシステム：帮您查到地坛公园银杏大道。\n利用者：好，它的地址和门票是多少？\nシステム：地址是北京市东城区安定门外大街地坛公园内，门票免费。\n利用者：好的，从北京鹏润国际大酒店到地坛公园银杏大道，坐地的话，应该从哪站上车，哪站下车？",
+      "参照応答：三元桥地铁站C2口上地铁，北新桥地铁站A口出地铁。",
+      "[1] Qi Zhu et al. (2020). CrossWOZ公式配布データ。固定commit df82c9fd。 train.json / dialogue 8711 / messages[0:9] → [9]。\nhttps://github.com/thu-coai/CrossWOZ/tree/df82c9fdff91b9b130f2d6b89110d3870ba6260e/data/crosswoz"
+    ]
+  },
+  {
+    "page": 48,
+    "text": [
+      "実例11：設備・観光・移動を順に決める（訳）",
+      "Appendix: 1. 追加の実例",
+      "train / 対話8711 / 全履歴 9発話 → 収録応答1発話 ／ 訳は左→右",
+      "利用者：こんにちは。両親と旅行に来ました。24時間給湯とバリアフリー設備があり、評価4.5点以上のホテルを探しています。\nシステム：北京鵬潤国際ホテルと北京京儀ホテルをお勧めします。\n利用者：北京鵬潤国際ホテルは聞いたことがあります。周辺の観光地を教えてください。\nシステム：798芸術区、簋街の飲食街、雍和宮、国子監などがあります。\n利用者：その周辺で、",
+      "評価4点以上、見学時間が0.5時間の観光地を探したいです。\nシステム：地壇公園のイチョウ並木が見つかりました。\n利用者：住所と入場料を教えてください。\nシステム：住所は北京市東城区安定門外大街の地壇公園内で、入場無料です。\n利用者：北京鵬潤国際ホテルから地壇公園のイチョウ並木へ地下鉄で行くには、どの駅で乗り、どの駅で降りればよいですか。",
+      "参照応答：三元橋駅C2出口で乗り、北新橋駅A出口で降りてください。",
+      "[1] Qi Zhu et al. (2020). CrossWOZ公式配布データ。固定commit df82c9fd。 train.json / dialogue 8711 / messages[0:9] → [9]。\nhttps://github.com/thu-coai/CrossWOZ/tree/df82c9fdff91b9b130f2d6b89110d3870ba6260e/data/crosswoz"
+    ]
+  },
+  {
+    "page": 49,
+    "text": [
+      "実例12：近い施設には徒歩を提案する",
+      "Appendix: 1. 追加の実例",
+      "train / 対話7845 / 全履歴 9発話 → 収録応答1発話 ／ 原文は左→右",
+      "利用者：你好，请帮我推荐一个可游玩3天，门票是150-200元之间，最好评分是在4.5分以上的景点！\nシステム：北京欢乐谷挺不错的，门票195元！\n利用者：好的，玩完想找家酒店，附近有么？\nシステム：附近有北京龙鼎华鼎云酒店, 北京人卫酒店, 北京富力万丽酒店, 北京美豪富邦国际酒店,",
+      " 北京万达文华酒店。\n利用者：哪家是舒适型并且能宽带上网的啊？\nシステム：北京龙鼎华鼎云酒店符合您的要求。\n利用者：好的，那地址发我一下吧！\nシステム：地址是北京朝阳区潘家园东里18号。\n利用者：我想从北京欢乐谷坐地铁到北京龙鼎华鼎云酒店，两个地方最近的地铁站告诉我一下吧！",
+      "参照応答：景点和酒店离的非常近，不用坐地铁去，走着就可以了，最近的地铁口是劲松地铁站D口。",
+      "[1] Qi Zhu et al. (2020). CrossWOZ公式配布データ。固定commit df82c9fd。 train.json / dialogue 7845 / messages[0:9] → [9]。\nhttps://github.com/thu-coai/CrossWOZ/tree/df82c9fdff91b9b130f2d6b89110d3870ba6260e/data/crosswoz"
+    ]
+  },
+  {
+    "page": 50,
+    "text": [
+      "実例12：近い施設には徒歩を提案する（訳）",
+      "Appendix: 1. 追加の実例",
+      "train / 対話7845 / 全履歴 9発話 → 収録応答1発話 ／ 訳は左→右",
+      "利用者：こんにちは。3日間楽しめて、入場料が150～200元、できれば評価4.5点以上の観光地を勧めてください。\nシステム：北京歓楽谷がよいと思います。入場料は195元です。\n利用者：遊んだ後にホテルを探したいのですが、近くにありますか。\nシステム：北京龍鼎華鼎雲ホテル、北京人衛ホテル、北京富力万麗ホテル、北京美豪富邦国際ホテル、北京万達文華ホテルがあります。",
+      "利用者：コンフォート型でブロードバンド接続があるのはどれですか。\nシステム：北京龍鼎華鼎雲ホテルが条件に合います。\n利用者：では、住所を教えてください。\nシステム：住所は北京朝陽区潘家園東里18号です。\n利用者：北京歓楽谷から北京龍鼎華鼎雲ホテルへ地下鉄で行きたいです。両方の最寄り駅を教えてください。",
+      "参照応答：観光地とホテルはとても近いので、地下鉄に乗る必要はなく、歩いて行けます。最寄りの地下鉄入口は勁松駅D出口です。",
+      "[1] Qi Zhu et al. (2020). CrossWOZ公式配布データ。固定commit df82c9fd。 train.json / dialogue 7845 / messages[0:9] → [9]。\nhttps://github.com/thu-coai/CrossWOZ/tree/df82c9fdff91b9b130f2d6b89110d3870ba6260e/data/crosswoz"
+    ]
+  },
+  {
+    "page": 51,
+    "text": [
+      "実例13：HELMのホテル対話の原レコード",
+      "Appendix: 1. 追加の実例",
+      "val / 対話12121 / 全履歴 9発話 → 収録応答1発話 ／ 原文は左→右",
+      "利用者：你好，我想找一个价格是1000元以上，评分是4.5分以上的酒店，有什么好的地方给我推荐吗？\nシステム：给你推荐北京昆泰嘉华酒店，完全符合你的条件呢。\n利用者：是吗，该酒店是什么类型啊？\nシステム：豪华型酒店。\n利用者：好的，能帮我查一下它家是否提供商务中心吗？",
+      "システム：酒店提供商务中心的。\n利用者：太好了，定完酒店，我打算找个评分是4.5分以上，游玩时长是1小时 - 2小时，票价是200元以上的景点游玩，给我点建议好吗？\nシステム：乐多港奇幻乐园是个不错的去处，非常好玩的。\n利用者：好啊，就去乐多港奇幻乐园玩吧，景点周边有酒店吗？",
+      "参照応答：嗯，周边有一个如家快捷酒店(北京昌平鼓楼西街店)。",
+      "[1] Qi Zhu et al. (2020). CrossWOZ公式配布データ。固定commit df82c9fd。 val.json / dialogue 12121 / messages[0:9] → [9]。\nhttps://github.com/thu-coai/CrossWOZ/tree/df82c9fdff91b9b130f2d6b89110d3870ba6260e/data/crosswoz"
+    ]
+  },
+  {
+    "page": 52,
+    "text": [
+      "実例13：HELMのホテル対話の原レコード（訳）",
+      "Appendix: 1. 追加の実例",
+      "val / 対話12121 / 全履歴 9発話 → 収録応答1発話 ／ 訳は左→右",
+      "利用者：こんにちは。価格1,000元以上、評価4.5点以上のホテルを探しています。お勧めはありますか。\nシステム：北京昆泰嘉華ホテルをお勧めします。条件にぴったりです。\n利用者：そうですか。どの種類のホテルですか。\nシステム：豪華型ホテルです。\n利用者：ビジネスセンターがあるか調べてもらえますか。",
+      "システム：ホテルにはビジネスセンターがあります。\n利用者：よかったです。ホテルを決めた後、評価4.5点以上、見学時間1～2時間、入場料200元以上の観光地へ行きたいです。何か提案はありますか。\nシステム：楽多港奇幻楽園がよいと思います。とても楽しい場所です。\n利用者：では、そこへ行きます。その観光地の周辺にはホテルがありますか。",
+      "参照応答：はい、周辺にホームイン（北京昌平鼓楼西街店）が一軒あります。",
+      "[1] Qi Zhu et al. (2020). CrossWOZ公式配布データ。固定commit df82c9fd。 val.json / dialogue 12121 / messages[0:9] → [9]。\nhttps://github.com/thu-coai/CrossWOZ/tree/df82c9fdff91b9b130f2d6b89110d3870ba6260e/data/crosswoz"
+    ]
+  },
+  {
+    "page": 53,
+    "text": [
+      "形式・集計・再計算",
+      "Appendix: 2. 形式・集計・再計算"
+    ]
+  },
+  {
+    "page": 54,
+    "text": [
+      "原版の応答単位は、合計50,813件",
+      "Appendix: 2. 形式・集計・再計算",
+      "分割 | 利用者発話 | sys応答",
+      "train | 42,346 | 42,346",
+      "val | 4,229 | 4,229",
+      "test | 4,238 | 4,238",
+      "原版の全sys発話を、前方の全履歴＋次応答へ展開した場合の件数。CLEVA v1の実際の選定件数ではない。",
+      "[1] Qi Zhu et al. (2020). CrossWOZ公式配布データ。固定commit df82c9fd。\nhttps://github.com/thu-coai/CrossWOZ/tree/df82c9fdff91b9b130f2d6b89110d3870ba6260e/data/crosswoz"
+    ]
+  },
+  {
+    "page": 55,
+    "text": [
+      "完全一致は、状態全体を比較する",
+      "Appendix: 2. 形式・集計・再計算",
+      "目標種 | 正解応答数／対象数 | 完全一致率",
+      "S | 101 / 120 | 84.17%",
+      "M | 863 / 1,104 | 78.17%",
+      "M+T | 535 / 653 | 81.93%",
+      "CM | 1,106 / 1,745 | 63.38%",
+      "CM+T | 418 / 616 | 67.86%",
+      "全体 | 3,023 / 4,238 | 71.33%",
+      "[1] Qi Zhu et al. CrossWOZ RuleDST / evaluate.py. 固定commit df82c9fd。\nhttps://github.com/thu-coai/CrossWOZ/blob/df82c9fdff91b9b130f2d6b89110d3870ba6260e/convlab2/dst/rule/crosswoz/evaluate.py"
+    ]
+  },
+  {
+    "page": 56,
+    "text": [
+      "検索前後の差は、周辺条件に現れる",
+      "Appendix: 2. 形式・集計・再計算",
+      "sys_state_init[\"酒店\"][\"周边餐馆\"] = (\n    \"站点比萨(北大餐厅)\"\n)\nsys_state[\"酒店\"][\"周边餐馆\"] = \"\"\nsys_state[\"酒店\"][\"selectedResults\"] = [\n    \"北京美第奇精选酒店\"\n]",
+      "実例2の同じsys発話から、3項目の実値を表示。価格200–300元と評価4.5点以上は両検索に残る。",
+      "[1] Qi Zhu et al. (2020). CrossWOZ公式配布データ。固定commit df82c9fd。\nhttps://github.com/thu-coai/CrossWOZ/tree/df82c9fdff91b9b130f2d6b89110d3870ba6260e/data/crosswoz"
+    ]
+  },
+  {
+    "page": 57,
+    "text": [
+      "実例13の注釈は、観光地の周辺ホテル",
+      "Appendix: 2. 形式・集計・再計算",
+      "注釈要素 | 原データの値",
+      "意図 | Inform",
+      "領域 | 景点",
+      "スロット | 周边酒店",
+      "値 | 如家快捷酒店(北京昌平鼓楼西街店)",
+      "val12121 / messages[9].dialog_actの1組。ホテルという語を含む応答でも、観光地の周辺属性を答える行為として注釈される。",
+      "[1] Qi Zhu et al. (2020). CrossWOZ公式配布データ。固定commit df82c9fd。\nhttps://github.com/thu-coai/CrossWOZ/tree/df82c9fdff91b9b130f2d6b89110d3870ba6260e/data/crosswoz"
+    ]
+  },
+  {
+    "page": 58,
+    "text": [
+      "研究と参考文献",
+      "Appendix: 3. 研究と参考文献"
+    ]
+  },
+  {
+    "page": 59,
+    "text": [
+      "清華大学が、中国語の領域横断対話を公開した",
+      "第一著者はQi Zhu、最終著者はMinlie Huang。Kaili Huang、Zheng Zhang、Xiaoyan Zhuとともに、清華大学でデータとベースラインを構築した。\n2020年にTACLで公表し、状態追跡、対話方策、自然言語理解・生成、利用者シミュレーションの評価を報告した。\n公式リポジトリは、2021年に同期型の会話収集・注釈プラットフォームも公開している。",
+      "Appendix: 3. 研究と参考文献",
+      "[1] Zhu et al. (2020). CrossWOZ: A Large-Scale Chinese Cross-Domain Task-Oriented Dialogue Dataset. TACL 8:281–295.  https://aclanthology.org/2020.tacl-1.19/"
+    ]
+  },
+  {
+    "page": 60,
+    "text": [
+      "参考文献",
+      "Appendix: 3. 研究と参考文献",
+      "CrossWOZ: A Large-Scale Chinese Cross-Domain Task-Oriented Dialogue Dataset\nQi Zhu, Kaili Huang, Zheng Zhang, Xiaoyan Zhu, Minlie Huang (2020). TACL8:281–295.\n北京の旅行案内を人間同士で収集し、領域間の依存を持つ目標、状態・行為の注釈と部品別評価を提示する。\nhttps://aclanthology.org/2020.tacl-1.19/",
+      "CrossWOZ\nQi Zhu et al. 公式リポジトリ。固定commit df82c9fd。\n対話3分割、施設DB、状態追跡や方策・生成のコード、収集プラットフォームを配布する。\nhttps://github.com/thu-coai/CrossWOZ"
+    ]
+  },
+  {
+    "page": 61,
+    "text": [
+      "参考文献",
+      "Appendix: 3. 研究と参考文献",
+      "CLEVA: Chinese Language Models EVAluation Platform\nYanyang Li, Jianqiao Zhao et al. (2023). EMNLP System Demonstrations, pp.186–217.\n中国語評価の基盤を提案し、CrossWOZを対話生成の採用元として説明する。\nhttps://aclanthology.org/2023.emnlp-demo.17/",
+      "CLEVA Scenario and v1 Run Configuration\nStanford CRFM (2023). HELM v0.4.0.\n履歴からsys応答を作る変換、入力テンプレート、下位課題とプロンプトの固定設定を定める。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py"
+    ]
+  }
+]

@@ -1,0 +1,178 @@
+{
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "all_data_counts": {
+    "train": {
+      "dialogues": 5012,
+      "utterances": 84692,
+      "roles": {
+        "usr": 42346,
+        "sys": 42346
+      },
+      "types": {
+        "独立多领域": 1573,
+        "不独立多领域": 1759,
+        "独立多领域+交通": 691,
+        "单领域": 417,
+        "不独立多领域+交通": 572
+      }
+    },
+    "val": {
+      "dialogues": 500,
+      "utterances": 8458,
+      "roles": {
+        "usr": 4229,
+        "sys": 4229
+      },
+      "types": {
+        "不独立多领域": 168,
+        "独立多领域": 162,
+        "不独立多领域+交通": 63,
+        "独立多领域+交通": 68,
+        "单领域": 39
+      }
+    },
+    "test": {
+      "dialogues": 500,
+      "utterances": 8476,
+      "roles": {
+        "usr": 4238,
+        "sys": 4238
+      },
+      "types": {
+        "不独立多领域": 166,
+        "单领域": 35,
+        "独立多领域": 157,
+        "不独立多领域+交通": 58,
+        "独立多领域+交通": 84
+      }
+    }
+  },
+  "original_examples": [
+    {
+      "example": 1,
+      "official_split": "test",
+      "official_dialogue": "11732",
+      "history_utterances": 1,
+      "full_raw_history_native_match": true,
+      "response_native_match": true
+    },
+    {
+      "example": 2,
+      "official_split": "train",
+      "official_dialogue": "7568",
+      "history_utterances": 5,
+      "full_raw_history_native_match": true,
+      "response_native_match": true
+    },
+    {
+      "example": 3,
+      "official_split": "test",
+      "official_dialogue": "10113",
+      "history_utterances": 5,
+      "full_raw_history_native_match": true,
+      "response_native_match": true
+    },
+    {
+      "example": 4,
+      "official_split": "test",
+      "official_dialogue": "118",
+      "history_utterances": 3,
+      "full_raw_history_native_match": true,
+      "response_native_match": true
+    },
+    {
+      "example": 5,
+      "official_split": "test",
+      "official_dialogue": "9693",
+      "history_utterances": 3,
+      "full_raw_history_native_match": true,
+      "response_native_match": true
+    },
+    {
+      "example": 6,
+      "official_split": "test",
+      "official_dialogue": "10662",
+      "history_utterances": 3,
+      "full_raw_history_native_match": true,
+      "response_native_match": true
+    },
+    {
+      "example": 7,
+      "official_split": "test",
+      "official_dialogue": "10490",
+      "history_utterances": 3,
+      "full_raw_history_native_match": true,
+      "response_native_match": true
+    },
+    {
+      "example": 8,
+      "official_split": "train",
+      "official_dialogue": "8781",
+      "history_utterances": 1,
+      "full_raw_history_native_match": true,
+      "response_native_match": true
+    },
+    {
+      "example": 9,
+      "official_split": "train",
+      "official_dialogue": "9779",
+      "history_utterances": 1,
+      "full_raw_history_native_match": true,
+      "response_native_match": true
+    },
+    {
+      "example": 10,
+      "official_split": "test",
+      "official_dialogue": "10838",
+      "history_utterances": 5,
+      "full_raw_history_native_match": true,
+      "response_native_match": true
+    },
+    {
+      "example": 11,
+      "official_split": "train",
+      "official_dialogue": "8711",
+      "history_utterances": 9,
+      "full_raw_history_native_match": true,
+      "response_native_match": true
+    },
+    {
+      "example": 12,
+      "official_split": "train",
+      "official_dialogue": "7845",
+      "history_utterances": 9,
+      "full_raw_history_native_match": true,
+      "response_native_match": true
+    },
+    {
+      "example": 13,
+      "official_split": "val",
+      "official_dialogue": "12121",
+      "history_utterances": 9,
+      "full_raw_history_native_match": true,
+      "response_native_match": true
+    }
+  ],
+  "baseline_quote_changes": [
+    {
+      "old_page": 39,
+      "new_page": 38,
+      "before": "利用者：こんにちは。恋人と、評価5点で入場無料の観光地へ行きたいので、一つ勧めてください。\nシステム：養心殿をお勧めします。\n利用者：その観光地の電話番号は。",
+      "after": "利用者：こんにちは。彼女と、評価5点で入場無料の観光地へ行きたいので、一つ勧めてください。\nシステム：養心殿をお勧めします。\n利用者：その観光地の電話番号は。"
+    },
+    {
+      "old_page": 52,
+      "new_page": 51,
+      "before": "システム：ホテルにはビジネスセンターがあります。\n利用者：よかったです。ホテルを決めた後、評価4.5点以上、見学時間1～2時間、入場料200元以上の観光地へ行きたいです。何か提案はありますか。\nシステム：楽多港奇幻楽園がよいと思います。とても楽しい場所です。\n利用者：では、そこへ行きます。その観光地の周辺にはホテルがありますか。",
+      "after": "システム：ホテルにはビジネスセンターがあります。\n利用者：よかったです。ホテルを予約したら、評価4.5点以上、見学時間1～2時間、入場料200元以上の観光地へ行きたいです。何か提案はありますか。\nシステム：楽多港奇幻楽園がよいと思います。とても楽しい場所です。\n利用者：では、そこへ行きます。その観光地の周辺にはホテルがありますか。"
+    }
+  ],
+  "all_numeric_table_values_and_chart_preserved": true,
+  "practical_code_independently_executed": true,
+  "stdout": "你好，帮我查一下和颐酒店北京团结湖路店的电话是多少，评分高吗？\n和颐酒店北京团结湖路店的电话是010-65828088，评分4.4分。\n",
+  "notices_zip_sha256": "9e5ed2081350e43c8d949b6dd7f30fbef49dfe9277a4eed01decb8a97d585a97",
+  "notices_license_exact_original": true,
+  "historical_rule_dst_verification": "/workspace/artifacts/helm-parallel/review-crosswoz/content-checks.json",
+  "rule_dst_conditions_native_checked": "直前の正解状態+利用者正解対話行為、selectedResults除外、sys_state_init全項目一致、3023/4238。新規再実行はせず前回独立検証と照合。"
+}
