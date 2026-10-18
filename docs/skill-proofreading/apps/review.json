@@ -1,7 +1,7 @@
 {
   "dataset": "apps",
   "created_at": "2026-10-18T00:55:12+00:00",
-  "updated_at": "2026-10-18T10:52:08+09:00",
+  "updated_at": "2026-10-18T02:47:27+00:00",
   "model": "Codex (local skill application; no external generation API)",
   "review_mode": "skill_based_codex",
   "skill_path": ".agents/skills/japanese-slide-proofreading/SKILL.md",
@@ -72,43 +72,21 @@
     62,
     63,
     64,
-    65,
-    66,
-    67
+    65
   ],
   "all_pages_overview": true,
   "individual_visual_review_pages": [
-    1,
-    2,
-    3,
-    4,
-    6,
-    7,
     8,
     9,
     10,
     11,
     12,
     13,
-    14,
-    17,
-    18,
-    19,
-    21,
-    23,
-    24,
-    28,
-    29,
-    30,
-    31,
-    32,
-    33,
-    34,
     35,
     36,
     37,
     38,
-    39,
+    40,
     41,
     42,
     43,
@@ -125,114 +103,188 @@
     54,
     55,
     56,
-    57,
-    58,
-    59,
-    60,
-    61,
-    62,
-    63,
-    65,
-    66,
-    67
+    57
   ],
-  "visual_review_method": "全ページ一覧を確認し、引用・コード・表・参考文献・公式画面・グラフを1080×608の画像で個別に目視。最終変更ページは再描画して確認。",
+  "visual_review_method": "最終PDFを1080×608で1ページずつ目視。全ページ一覧で流れ・順序を確認。変更のないスライドはOOXMLが変更前と同一であることを照合。",
   "artifact_sha256": {
-    "pdf": "6ac86dddba1d88b03c3f9a2fcc22602eec891eb31e4f9115b898d040d23a8bff",
-    "pptx": "e72f26d4554c6b1186fea515ed441d063787c783754d7603d9fa8995f78e2383"
+    "pptx": "06c30c9cde67aec3c58271ddb3342aa56f85a80ccf4b0184f89fe85379da6418",
+    "pdf": "1789fd22d14b3f2dc0e4b2ec1b892d487bd8afa486e54defda7854458be94aec"
   },
   "wording_changes": 6,
   "layout_and_explanation_changes": [
     {
-      "page": 17,
-      "before": {
-        "widths": [
-          2.8,
-          1.8,
-          4.2
-        ],
-        "heights": [
-          0.46,
-          0.46,
-          0.7159722222222222,
-          0.46
-        ]
-      },
-      "after": {
-        "widths": [
-          2.0,
-          1.2,
-          5.6
-        ],
-        "heights": [
-          0.5,
-          0.55,
-          0.55,
-          0.55
-        ]
-      },
-      "reason": "実描画の折返しに合わせて、列幅と行高を確保した。"
+      "page": 8,
+      "old_pages": [
+        8,
+        9
+      ],
+      "new_pages": [
+        8,
+        9
+      ],
+      "reason": "原文の表示範囲を1枚にまとめることを優先。訳は併記できる場合に併記し、収まらなければ別ページ。原文そのものが長い場合のみ分割。"
     },
     {
-      "page": 17,
-      "reason": "件数列を広げ、trainの13問を1行で表示。行高も43.2ptを確保。"
+      "page": 10,
+      "old_pages": [
+        10,
+        11,
+        12,
+        13
+      ],
+      "new_pages": [
+        10,
+        11,
+        12,
+        13
+      ],
+      "reason": "原文の表示範囲を1枚にまとめることを優先。訳は併記できる場合に併記し、収まらなければ別ページ。原文そのものが長い場合のみ分割。"
     },
     {
-      "page": 65,
-      "shape": 4,
-      "reason": "参考文献の実描画の行高を含むよう、編集枠の高さを確保。描画位置と書式は保持。"
+      "page": 35,
+      "old_pages": [
+        35,
+        36,
+        37
+      ],
+      "new_pages": [
+        35,
+        36
+      ],
+      "reason": "原文の表示範囲を1枚にまとめることを優先。訳は併記できる場合に併記し、収まらなければ別ページ。原文そのものが長い場合のみ分割。"
     },
     {
-      "page": 66,
-      "shape": 4,
-      "reason": "参考文献の実描画の行高を含むよう、編集枠の高さを確保。描画位置と書式は保持。"
+      "page": 37,
+      "old_pages": [
+        38,
+        39
+      ],
+      "new_pages": [
+        37,
+        38
+      ],
+      "reason": "原文の表示範囲を1枚にまとめることを優先。訳は併記できる場合に併記し、収まらなければ別ページ。原文そのものが長い場合のみ分割。"
     },
     {
-      "page": 67,
-      "shape": 4,
-      "reason": "参考文献の実描画の行高を含むよう、編集枠の高さを確保。描画位置と書式は保持。"
+      "page": 40,
+      "old_pages": [
+        41,
+        42
+      ],
+      "new_pages": [
+        40,
+        41,
+        42
+      ],
+      "reason": "原文の表示範囲を1枚にまとめることを優先。訳は併記できる場合に併記し、収まらなければ別ページ。原文そのものが長い場合のみ分割。"
+    },
+    {
+      "page": 43,
+      "old_pages": [
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "new_pages": [
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "reason": "原文の表示範囲を1枚にまとめることを優先。訳は併記できる場合に併記し、収まらなければ別ページ。原文そのものが長い場合のみ分割。"
+    },
+    {
+      "page": 48,
+      "old_pages": [
+        48,
+        49,
+        50,
+        51,
+        52
+      ],
+      "new_pages": [
+        48,
+        49,
+        50,
+        51
+      ],
+      "reason": "原文の表示範囲を1枚にまとめることを優先。訳は併記できる場合に併記し、収まらなければ別ページ。原文そのものが長い場合のみ分割。"
+    },
+    {
+      "page": 52,
+      "old_pages": [
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59
+      ],
+      "new_pages": [
+        52,
+        53,
+        54,
+        55,
+        56,
+        57
+      ],
+      "reason": "原文の表示範囲を1枚にまとめることを優先。訳は併記できる場合に併記し、収まらなければ別ページ。原文そのものが長い場合のみ分割。"
     }
   ],
   "public_examples": 13,
   "main_examples": 3,
   "additional_examples": 10,
   "main_pages": 27,
-  "total_pages": 67,
+  "total_pages": 65,
   "reading_time": "本編約10分の黙読・流し読みを想定。実測はしていない。",
   "checks": {
     "package": {
-      "parsed_xml_parts": 169,
+      "parsed_xml_parts": 165,
       "integer_bullets": 108,
-      "hyperlinks": 56,
+      "hyperlinks": 54,
       "new_schema_errors": [],
       "baseline_schema_errors": 11,
       "package_integrity": "passed",
       "internal_relationship_targets": "passed",
       "unique_shape_ids": "passed",
       "schema_note": "標準XSDを変更せず確認。マスター由来の既存エラーと、整数buSzPctの百分率字句形式との差を分離。整数箇条書きサイズは25000–400000で別途検査。",
-      "pages": 67,
+      "pages": 65,
       "native_tables": 5,
       "native_charts": 1
     },
     "layout": {
-      "paragraphs_checked": 420,
+      "paragraphs_checked": 369,
       "table_cells_checked": 42,
       "issues": []
     },
     "text": {
-      "pages": 67,
+      "dataset": "apps",
+      "old_pages": 67,
+      "new_pages": 65,
+      "unchanged_slides_xml_identical": 37,
+      "original_and_translation_missing": [],
+      "glyph_missing": [],
+      "title_multiline": [],
+      "original_record_hashes_unchanged": true,
       "missing": [],
       "quote_missing": [],
-      "unique_examples": 13,
-      "all_original_paragraphs_and_translations_present": true,
-      "notes": false,
-      "unnecessary_original_paper_word": 0,
-      "extraction_note": "数式記号の別ブロックとfi合字のゼロ幅文字は、実際の文字・基線・座標を保って行順を復元。文字の削除による代用なし。"
+      "all_original_paragraphs_and_translations_present": true
     },
     "links": {
-      "native_url_only_runs": 56,
-      "pdf_link_rectangles": 56,
+      "native_url_only_runs": 54,
+      "pdf_link_rectangles": 54,
       "pdf_link_text_exactly_matches_url": true,
+      "issues": []
+    },
+    "answer_display": {
+      "standalone_answers": 0,
+      "answer_size_pt": 22,
+      "theme_color": "accent1",
+      "resolved_color": "B13731",
       "issues": []
     }
   },
@@ -281,6 +333,259 @@
           "issues": []
         }
       }
+    },
+    {
+      "dataset": "apps",
+      "created_at": "2026-10-18T00:55:12+00:00",
+      "updated_at": "2026-10-18T10:52:08+09:00",
+      "model": "Codex (local skill application; no external generation API)",
+      "review_mode": "skill_based_codex",
+      "skill_path": ".agents/skills/japanese-slide-proofreading/SKILL.md",
+      "skill_sha256": "0bc7bfa18092fe93750fcbf354d4e8306b5c38f014fb7fb3e6d29c6514fa9050",
+      "gemini_used": false,
+      "reviewed_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67
+      ],
+      "all_pages_overview": true,
+      "individual_visual_review_pages": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        17,
+        18,
+        19,
+        21,
+        23,
+        24,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        65,
+        66,
+        67
+      ],
+      "visual_review_method": "全ページ一覧を確認し、引用・コード・表・参考文献・公式画面・グラフを1080×608の画像で個別に目視。最終変更ページは再描画して確認。",
+      "artifact_sha256": {
+        "pdf": "6ac86dddba1d88b03c3f9a2fcc22602eec891eb31e4f9115b898d040d23a8bff",
+        "pptx": "e72f26d4554c6b1186fea515ed441d063787c783754d7603d9fa8995f78e2383"
+      },
+      "wording_changes": 6,
+      "layout_and_explanation_changes": [
+        {
+          "page": 17,
+          "before": {
+            "widths": [
+              2.8,
+              1.8,
+              4.2
+            ],
+            "heights": [
+              0.46,
+              0.46,
+              0.7159722222222222,
+              0.46
+            ]
+          },
+          "after": {
+            "widths": [
+              2.0,
+              1.2,
+              5.6
+            ],
+            "heights": [
+              0.5,
+              0.55,
+              0.55,
+              0.55
+            ]
+          },
+          "reason": "実描画の折返しに合わせて、列幅と行高を確保した。"
+        },
+        {
+          "page": 17,
+          "reason": "件数列を広げ、trainの13問を1行で表示。行高も43.2ptを確保。"
+        },
+        {
+          "page": 65,
+          "shape": 4,
+          "reason": "参考文献の実描画の行高を含むよう、編集枠の高さを確保。描画位置と書式は保持。"
+        },
+        {
+          "page": 66,
+          "shape": 4,
+          "reason": "参考文献の実描画の行高を含むよう、編集枠の高さを確保。描画位置と書式は保持。"
+        },
+        {
+          "page": 67,
+          "shape": 4,
+          "reason": "参考文献の実描画の行高を含むよう、編集枠の高さを確保。描画位置と書式は保持。"
+        }
+      ],
+      "public_examples": 13,
+      "main_examples": 3,
+      "additional_examples": 10,
+      "main_pages": 27,
+      "total_pages": 67,
+      "reading_time": "本編約10分の黙読・流し読みを想定。実測はしていない。",
+      "checks": {
+        "package": {
+          "parsed_xml_parts": 169,
+          "integer_bullets": 108,
+          "hyperlinks": 56,
+          "new_schema_errors": [],
+          "baseline_schema_errors": 11,
+          "package_integrity": "passed",
+          "internal_relationship_targets": "passed",
+          "unique_shape_ids": "passed",
+          "schema_note": "標準XSDを変更せず確認。マスター由来の既存エラーと、整数buSzPctの百分率字句形式との差を分離。整数箇条書きサイズは25000–400000で別途検査。",
+          "pages": 67,
+          "native_tables": 5,
+          "native_charts": 1
+        },
+        "layout": {
+          "paragraphs_checked": 420,
+          "table_cells_checked": 42,
+          "issues": []
+        },
+        "text": {
+          "pages": 67,
+          "missing": [],
+          "quote_missing": [],
+          "unique_examples": 13,
+          "all_original_paragraphs_and_translations_present": true,
+          "notes": false,
+          "unnecessary_original_paper_word": 0,
+          "extraction_note": "数式記号の別ブロックとfi合字のゼロ幅文字は、実際の文字・基線・座標を保って行順を復元。文字の削除による代用なし。"
+        },
+        "links": {
+          "native_url_only_runs": 56,
+          "pdf_link_rectangles": 56,
+          "pdf_link_text_exactly_matches_url": true,
+          "issues": []
+        }
+      },
+      "scope_notes": "train全5,000問、テストを持つ4,805問、fn_nameを持つ3,063問を集計した。13実例は問題文全文と訳を段落単位で対応させ、配布テストを各最大2件保持。解答コードは実行していない。id 323は引数の文字列に引用符自体を含むため問題文の例と入力内容が異なり、Falseを誤りと断定しない。id 2099の原文末尾の式は配布表記を保持し、訳では隣接項の差を示すと補足。every secondは2番目・4番目・6番目の1個おき。初期Top-1／Top-5とHELMの1候補、部分テスト平均と全テスト通過率を区別。MIT。",
+      "follow_up_reviews": [
+        {
+          "record": "answer-and-citation-review.json",
+          "checked_at": "2026-10-18T10:52:08+09:00",
+          "answer_display_changes": 0,
+          "citation_wording_changes": 1,
+          "changed_pages": [
+            21
+          ]
+        }
+      ],
+      "page_numbering": "原文優先の再構成より前",
+      "pages_snapshot": "pages-before-original-first.jsonl"
     }
   ],
   "follow_up_reviews": [
@@ -291,6 +596,43 @@
       "citation_wording_changes": 1,
       "changed_pages": [
         21
+      ]
+    },
+    {
+      "record": "original-first-review.json",
+      "checked_at": "2026-10-18T02:47:27+00:00",
+      "old_pages": 67,
+      "new_pages": 65,
+      "examples": 8,
+      "changed_pages": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        35,
+        36,
+        37,
+        38,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57
       ]
     }
   ]
