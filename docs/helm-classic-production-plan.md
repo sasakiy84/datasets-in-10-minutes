@@ -8,7 +8,7 @@
 |---|---|---|---|
 |1|narrativeqa|narrative_qa|作成済み|
 |2|naturalquestions|natural_qa_closedbook, natural_qa_openbook_longans|作成済み|
-|3|quac|quac|未着手|
+|3|quac|quac|作成済み|
 |4|msmarco|msmarco_regular, msmarco_trec|未着手|
 |5|cnn-dailymail|summarization_cnndm|未着手|
 |6|ice|ice|未着手|
