@@ -79,3 +79,7 @@ PPTXのZIP・内部参照、74 XMLパーツを検査。既知のbuSzPct整数表
 データカードはMITを指定する。引用元を実例ページへ対応させ、評価コードのMIT表記は既存の [simple-evals-MIT.txt](licenses/simple-evals-MIT.txt) で保持している。
 
 PC 1440px・モバイル390pxのブラウザーで、19件の表紙、MMMLUの略称・全角表記・正式名称の検索、複合フィルター、公開年ソート、タイトルの1行省略、PDF/PPTXリンク、JSON-LDを確認した。ブラウザーエラー・モバイルの横はみ出しは0件。公開用ファイルが検査済みのPPTX・PDFと同じbytesであることも確認した。
+
+## 2026-10-18：正解表示と出典表現の再確認
+
+正解の読みやすさ・個人の好みのえんじ色と、本文の図表番号を確認した。原文・訳・正解値・統計値・評価条件・ページ数を保持。Codexによるスキル適用、Gemini使用なし。[変更対と最終版の検査](skill-proofreading/mmmlu/answer-style-review.json)。
