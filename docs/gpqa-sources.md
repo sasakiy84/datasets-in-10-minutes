@@ -60,3 +60,7 @@ PresentationML、DrawingML、図表のパーツを、python-pptxのspecに収録
 PowerPointデスクトップでの開封と手動編集は未確認。
 
 2026-10-16の全資料見直しで、推測できる注意書きや重複した免責文を削除し、4ページを削除した。現在は本編38ページ＋Appendix49ページの計87ページ。詳細は[注意書きの見直し記録](slide-editorial-review.md)にまとめた。
+
+## 2026-10-18：正解表示と出典表現の再確認
+
+正解の読みやすさ・個人の好みのえんじ色と、本文の図表番号を確認した。原文・訳・正解値・統計値・評価条件・ページ数を保持。Codexによるスキル適用、Gemini使用なし。[変更対と最終版の検査](skill-proofreading/gpqa/answer-style-review.json)。

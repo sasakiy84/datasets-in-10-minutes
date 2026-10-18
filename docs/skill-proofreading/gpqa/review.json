@@ -590,5 +590,824 @@
     "page_review_file": "pages.jsonl",
     "prior_proposal_file": "prior-gemini-proposals.jsonl",
     "prior_trial_note": null
-  }
+  },
+  "revision_history": [
+    {
+      "dataset": "gpqa",
+      "model": "Codex (skill application; no external generation API)",
+      "review_mode": "skill_based_codex",
+      "reviewed_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87
+      ],
+      "request_count": 0,
+      "accepted_edits": [
+        {
+          "paragraph_index": 2,
+          "original": "この会話では、極性が似た化合物のスポットが重なり、分離しにくいことを指す。",
+          "revised": "この会話は、極性が似た化合物のスポットが重なり、分離しにくい状況を指している。",
+          "reason": "「この会話では……指す」という主述のねじれを解消し、「この会話は……状況を指している」と自然な文構造に改めました。",
+          "provenance": "cached_proposal_reassessed",
+          "page": 12
+        },
+        {
+          "paragraph_index": 0,
+          "original": "Diamondを選ぶ専門家の検証記録",
+          "revised": "Diamond選定における専門家の検証記録",
+          "reason": "「Diamondを選ぶ専門家」という修飾の曖昧さを解消し、Diamondサブセットの選定根拠となる検証記録であることを端正に表すため。",
+          "provenance": "cached_proposal_reassessed",
+          "page": 27
+        },
+        {
+          "paragraph_index": 2,
+          "original": "配布CSVでは、Diamondの198問すべてで最初の専門家検証が正解し、2回目の専門家検証は161問で正解している。",
+          "revised": "配布CSVでは、Diamondの198問すべてで最初の専門家検証が正解となり、2回目の専門家検証では161問が正解となっている。",
+          "reason": "「検証で正解し」の主語を整え、2回の検証結果を並列に述べる。",
+          "provenance": "cached_proposal_reassessed_and_revised",
+          "cached_proposal": "配布CSVでは、Diamondの198問すべてで最初の専門家検証で正解し、2回目の専門家検証では161問が正解している。",
+          "page": 27
+        },
+        {
+          "paragraph_index": 2,
+          "original": "各応答は一つの選択肢として採点され、792応答の平均正解率を求める。",
+          "revised": "各応答で選ばれた一つの選択肢を採点し、全792件の平均正解率を求める。",
+          "reason": "応答そのものを選択肢と呼ぶ曖昧さを除き、選択した候補を採点することを明確にする。",
+          "provenance": "cached_proposal_reassessed_and_revised",
+          "cached_proposal": "各応答は一つの選択肢として採点され、全792件の平均正解率を求める。",
+          "page": 34
+        },
+        {
+          "paragraph_index": 7,
+          "original": "公式READMEがHugging Face版にも案内している。",
+          "revised": "公式READMEでもHugging Face版が案内されている。",
+          "reason": "文書である「README」を主語にして「案内している」とする無生物主語の表現を改め、受身の「案内されている」にすることで自然な日本語にしました。",
+          "provenance": "cached_proposal_reassessed",
+          "page": 36
+        },
+        {
+          "paragraph_index": 4,
+          "original": "要旨：上向きと下向きの状態が重なった粒子について、指定された観測量の期待値を計算する。",
+          "revised": "要旨：上向きと下向きの重ね合わせ状態にある粒子について、指定された観測量の期待値を計算する。",
+          "reason": "量子力学の「superposition」に対して「状態が重なった」とする表現は日常語的でやや不自然なため、「重ね合わせ状態にある」とすることで学術用語として正確かつ自然な日本語になります。",
+          "provenance": "cached_proposal_reassessed",
+          "page": 52
+        },
+        {
+          "paragraph_index": 1,
+          "original": "同じ組成でも、質量が大きい岩石惑星では自分自身の重力による圧縮が強くなる。",
+          "revised": "同じ組成でも、質量が大きい岩石惑星では自分自身の重力による圧縮が強くなり、平均密度が高くなる。",
+          "reason": "設問の密度と説明の圧縮との関係を一文で結ぶ。問題文の同じ組成という条件は保持。",
+          "provenance": "skill_original",
+          "page": 64
+        },
+        {
+          "paragraph_index": 4,
+          "original": "要旨：0.02 MのCa–EDTA錯体と生成定数から、自由なカルシウムイオンの濃度を求める。",
+          "revised": "要旨：0.02 MのCa–EDTA錯体と生成定数から、遊離カルシウムイオンの濃度を求める。",
+          "reason": "化学平衡の文脈における「free calcium ion」の訳語として「自由なカルシウムイオン」は直訳的で不自然なため、一般的な学術表現である「遊離カルシウムイオン」に改める。",
+          "provenance": "cached_proposal_reassessed",
+          "page": 68
+        },
+        {
+          "paragraph_index": 2,
+          "original": "一つのピークに対応する官能基だけでなく、複数の測定条件を同時に満たす構造を選ぶ。配布正解はethyl 4-aminobenzoateである。",
+          "revised": "一つのピークに対応する官能基だけでなく、複数の測定結果を同時に満たす構造を選ぶ。配布正解はethyl 4-aminobenzoateである。",
+          "reason": "照合するのは測定条件でなく、前文で述べたIR・NMRの結果であるため語を正確にする。",
+          "provenance": "skill_original",
+          "page": 79
+        }
+      ],
+      "rejected_edits": [],
+      "structure_decisions": [
+        {
+          "proposal": "スライド内大見出し「公式配布ページ」はヘッダータイトル「GPQAの公式配布ページ」と内容が重複しているため、大見出しを削除してスクリーンショットの表示領域を拡大するか、リポジトリの概要や入手手順などの補足テキストへの変更を検討してください。",
+          "reason": "緑帯・章扉・通常タイトルは指定された共通マスターの構造を保持する。反復だけを理由に削除しない。",
+          "page": 2,
+          "decision": "見送り"
+        },
+        {
+          "proposal": "スライドタイトルを「問題の構成と評価仕様」や「問題の構成と評価方法」のように、出力・採点まで包含する文言への見直しを検討する。",
+          "reason": "入力だけでなく出力と採点も含む表の内容に合わせ、見出しを変更する。",
+          "page": 6,
+          "decision": "採用"
+        },
+        {
+          "proposal": "第1項のテキストボックス幅をわずかに広げるか文字間を詰めて、「る。」の1文字だけが3行目に改行される現象を解消する。",
+          "reason": "本文中の少数文字の折り返しや単語途中の改行は、既存の制作規則で許容。欠落・重なりがなければ、折り返しだけを理由にサイズや幅を変更しない。",
+          "page": 9,
+          "decision": "見送り"
+        },
+        {
+          "proposal": "「要旨」のテキストボックスの横幅を広げるか文字サイズを微調整し、1行で収めるか「会話は、」の後などで自然に改行されるようにレイアウトを調整する。",
+          "reason": "本文中の少数文字の折り返しや単語途中の改行は、既存の制作規則で許容。欠落・重なりがなければ、折り返しだけを理由にサイズや幅を変更しない。",
+          "page": 10,
+          "decision": "見送り"
+        },
+        {
+          "proposal": "本文の箇条書きを「物理」「化学」「生物」の3項目に分け、分野ごとに1項目ずつ並列させる構成にすることを検討してください。",
+          "reason": "3分野は既存の2段落で具体例と対応して説明されている。今回の校正では段落を増やすためだけの分割は行わない。",
+          "page": 17,
+          "decision": "見送り"
+        },
+        {
+          "proposal": "箇条書きのテキストボックス幅や余白をわずかに広げるか、フォントサイズを微調整して、行末の不自然な折り返し（1つ目の箇条書き末尾の「る。」の1文字孤立、および2つ目の「「正」と「解数」の泣き別れ）を解消することを推奨します。",
+          "reason": "本文中の少数文字の折り返しは既存の制作規則で許容されるため、折り返しだけを理由に文字を縮小したり強制改行を入れたりしない。最終描画では欠落・重なりを別途検証する。",
+          "page": 19,
+          "decision": "見送り",
+          "decision_rule": "project_body_wrapping_policy"
+        },
+        {
+          "proposal": "表の「モデル・年」「正解率」「評価条件」の3列の横幅・配置を均等に再調整し、「正解率」と「評価条件」の間に十分な余白を設ける。",
+          "reason": "実画像で列見出し・数値・条件の間隔を確認。文字の接触や欠落はなく、長い評価条件に必要な列幅を保持する。",
+          "page": 20,
+          "decision": "見送り"
+        },
+        {
+          "proposal": "横棒グラフの項目の並び順を、下から上ではなく上から「化学（93問）」「物理（86問）」「生物（19問）」の降順に並べ替えることを検討してください。",
+          "reason": "図の値とラベルの対応は明確。値・図の内容が変わらない並び順の好みだけでは既存グラフを変更しない。",
+          "page": 28,
+          "decision": "見送り"
+        },
+        {
+          "proposal": "説明文（段落2）の枠幅をわずかに広げるか、「前後の空白を除き、」の後で任意改行を入れ、「選択肢は含めない。」が1行に収まるように調整する。",
+          "reason": "本文中の少数文字の折り返しは既存規則で許容。欠落や重なりがない限り、折り返しだけを理由に書式を変えない。",
+          "page": 30,
+          "decision": "見送り"
+        },
+        {
+          "proposal": "スライドタイトルまたはグラフ注記に集計対象のサブセット名（Diamond、Main等）を明記する。",
+          "reason": "既存の集計記録stats.jsonでDiamond n=198を確認。対象名を見出しへ追加。",
+          "page": 30,
+          "decision": "採用"
+        },
+        {
+          "proposal": "「中央値：379.5文字 / 最短：80文字 / 最長：1,642文字」のように数値をカード型または箇条書きのキーバリュー形式で並べ、カウント定義（改行・数式を含む等）を補足として下に添えるレイアウトにすると、要約統計量が瞬時に把握しやすくなります。",
+          "reason": "本文中の少数文字の折り返しは既存の制作規則で許容されるため、折り返しだけを理由に文字を縮小したり強制改行を入れたりしない。最終描画では欠落・重なりを別途検証する。",
+          "page": 31,
+          "decision": "見送り",
+          "decision_rule": "project_body_wrapping_policy"
+        },
+        {
+          "proposal": "1つ目の箇条書き末尾の「る。」が単独で3行目に改行（ウィドウ）されているため、フォントサイズや枠幅、字間の微調整で2行内に収まるよう調整することを推奨します。",
+          "reason": "本文中の少数文字の折り返しは既存の制作規則で許容されるため、折り返しだけを理由に文字を縮小したり強制改行を入れたりしない。最終描画では欠落・重なりを別途検証する。",
+          "page": 35,
+          "decision": "見送り",
+          "decision_rule": "project_body_wrapping_policy"
+        },
+        {
+          "proposal": "箇条書きのフォントサイズをわずかに縮小するか、テキスト枠の幅を広げて、1つ目の箇条書き末尾の「る。」が1文字だけで改行されるのを解消する。",
+          "reason": "本文中の少数文字の折り返しは既存の制作規則で許容されるため、折り返しだけを理由に文字を縮小したり強制改行を入れたりしない。最終描画では欠落・重なりを別途検証する。",
+          "page": 48,
+          "decision": "見送り",
+          "decision_rule": "project_body_wrapping_policy"
+        },
+        {
+          "proposal": "タイトルに「比較範囲」とあるため、本文中の「現行3系列」が具体的にどのモデル・系列を指しているのか（対象範囲）を箇条書き等で簡潔に明記することを検討してください。",
+          "reason": "3系列の具体名と得点は本編の比較表にあり、ここでは出典・集約手順を説明する。",
+          "page": 50,
+          "decision": "見送り"
+        },
+        {
+          "proposal": "灰色の背景枠内にある英語原文において、2行目末尾の数式記号（「0.5|↑⟩+sqrt(3)/2|」と次行の「↓⟩」）が途中で改行されて分断されているため、テキストボックスの余白やフォントサイズを微調整して1行内に収めることを推奨します。",
+          "reason": "引用の数式内容を保ち、折返しだけを理由に縮小しない。欠落・重なりは描画で検証する。",
+          "page": 52,
+          "decision": "見送り"
+        },
+        {
+          "proposal": "「通常の方程式（マクスウェル方程式）」がどのように拡張されるのかを示す数式（例: $\\nabla \\cdot \\mathbf{B} = \\rho_m$ や $\\nabla \\times \\mathbf{E} = -\\frac{\\partial \\mathbf{B}}{\\partial t} - \\mathbf{j}_m$ など）を併記することを検討してください。",
+          "reason": "原文と選択肢で扱う式があり、解説に式を重複追加しない。",
+          "page": 57,
+          "decision": "見送り"
+        },
+        {
+          "proposal": "テキストボックスの幅をわずかに広げて1項目目の「ける。」の単語泣き別れ（ウィドウ）を解消するか、下部の広い余白を活用してエネルギーの導出式（Ex + Ey の具体的な数式）を追記することを推奨します。",
+          "reason": "本文中の少数文字の折り返しは既存の制作規則で許容されるため、折り返しだけを理由に文字を縮小したり強制改行を入れたりしない。最終描画では欠落・重なりを別途検証する。",
+          "page": 60,
+          "decision": "見送り",
+          "decision_rule": "project_body_wrapping_policy"
+        },
+        {
+          "proposal": "段落1に「圧縮が強くなり、平均密度が高くなる」という帰結を明記することを推奨します。",
+          "reason": "同じ組成での圧縮と密度の関係を解説に補う。",
+          "page": 64,
+          "decision": "採用"
+        },
+        {
+          "proposal": "前スライド（p.63「選択肢と正解：天体物理」）と1枚に統合するか、惑星モデルの補足図や数式を追加することを検討してください。",
+          "reason": "設問・選択肢・解説を分けたシリーズの読み順を維持し、余白を理由に統合・図追加をしない。",
+          "page": 64,
+          "decision": "見送り"
+        },
+        {
+          "proposal": "スライドタイトルを「選択肢と正解：分子生物学（ChIP-seqの偽ピーク）」のように具体化することを検討してください。",
+          "reason": "同じ設問の原文→選択肢→解説という連続ページで対象は明確。長い見出しへ重複しない。",
+          "page": 66,
+          "decision": "見送り"
+        }
+      ],
+      "structural_and_factual_actions": [
+        {
+          "type": "text_edit",
+          "page": 6,
+          "paragraph_index": 0,
+          "revised": "問題の構成と評価方法",
+          "review_page": 6,
+          "original": "一つの問題で与えられるもの",
+          "provenance": "prior_decision_reassessed_by_skill"
+        },
+        {
+          "type": "text_edit",
+          "page": 30,
+          "paragraph_index": 0,
+          "revised": "Diamondの質問文の長さの分布",
+          "review_page": 30,
+          "original": "質問文の長さの分布",
+          "provenance": "prior_decision_reassessed_by_skill"
+        }
+      ],
+      "fact_review": [
+        {
+          "paragraph_index": 3,
+          "question": "日付が「2026-10-16」となっていますが、発表年（例えば2024年など）の誤記ではありませんか？",
+          "reason": "未来の日付が記載されているため、意図した日付であるか確認が必要です。",
+          "page": 1,
+          "decision": "原文を保持",
+          "finding": "現在日は2026-10-17（日本時間）。既存の制作日・参照日2026-10-15〜17は未来日ではなく、指定どおり保持する。"
+        },
+        {
+          "paragraph_index": 2,
+          "question": "このグラフの集計対象はGPQA Diamond（198問）でしょうか。それともMain（448問）など別のセットでしょうか。",
+          "reason": "ヒストグラムの数値を合算すると 37 + 68 + 54 + 25 + 8 + 3 + 1 + 1 + 1 = 198問となり、GPQA Diamondの総問題数と一致します。次ページ（p.31）のタイトルが「Diamondの質問文の文字数」となっているため、本スライドのデータが意図通りのセットを集計したものか確認が必要です。",
+          "page": 30,
+          "decision": "集計対象を明記",
+          "finding": "/workspace/scratch/gpqa-slides/stats.jsonでDiamondのn=198を確認。グラフの度数合計とも一致。値は保持し見出しにDiamondを補う。"
+        },
+        {
+          "paragraph_index": 2,
+          "question": "「各応答は一つの選択肢として採点され」は、「各応答から選択肢（A〜D）を1つ抽出して正誤判定を行い」という意味でしょうか。",
+          "reason": "「応答が選択肢として採点される」という表現は、応答自体が選択肢なのか、応答テキストから選択肢を抽出して判定するのかがやや曖昧に伝わる可能性があります。",
+          "page": 34,
+          "decision": "明確化",
+          "finding": "各応答の選択した候補を正解と照合する意味を本文に反映し、198問×4回=792件という数え方を保持。"
+        }
+      ],
+      "accepted_moves": [],
+      "base_order": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87
+      ],
+      "prior_trial_changes": [],
+      "final_text_changes": [
+        {
+          "part": "ppt/slides/slide12.xml",
+          "paragraph_index": 2,
+          "original_page": 12,
+          "page": 12,
+          "original": "この会話では、極性が似た化合物のスポットが重なり、分離しにくいことを指す。",
+          "revised": "この会話は、極性が似た化合物のスポットが重なり、分離しにくい状況を指している。"
+        },
+        {
+          "part": "ppt/slides/slide29.xml",
+          "paragraph_index": 0,
+          "original_page": 27,
+          "page": 27,
+          "original": "Diamondを選ぶ専門家の検証記録",
+          "revised": "Diamond選定における専門家の検証記録"
+        },
+        {
+          "part": "ppt/slides/slide29.xml",
+          "paragraph_index": 2,
+          "original_page": 27,
+          "page": 27,
+          "original": "配布CSVでは、Diamondの198問すべてで最初の専門家検証が正解し、2回目の専門家検証は161問で正解している。",
+          "revised": "配布CSVでは、Diamondの198問すべてで最初の専門家検証が正解となり、2回目の専門家検証では161問が正解となっている。"
+        },
+        {
+          "part": "ppt/slides/slide36.xml",
+          "paragraph_index": 2,
+          "original_page": 34,
+          "page": 34,
+          "original": "各応答は一つの選択肢として採点され、792応答の平均正解率を求める。",
+          "revised": "各応答で選ばれた一つの選択肢を採点し、全792件の平均正解率を求める。"
+        },
+        {
+          "part": "ppt/slides/slide38.xml",
+          "paragraph_index": 7,
+          "original_page": 36,
+          "page": 36,
+          "original": "公式READMEがHugging Face版にも案内している。",
+          "revised": "公式READMEでもHugging Face版が案内されている。"
+        },
+        {
+          "part": "ppt/slides/slide56.xml",
+          "paragraph_index": 4,
+          "original_page": 52,
+          "page": 52,
+          "original": "要旨：上向きと下向きの状態が重なった粒子について、指定された観測量の期待値を計算する。",
+          "revised": "要旨：上向きと下向きの重ね合わせ状態にある粒子について、指定された観測量の期待値を計算する。"
+        },
+        {
+          "part": "ppt/slides/slide68.xml",
+          "paragraph_index": 1,
+          "original_page": 64,
+          "page": 64,
+          "original": "同じ組成でも、質量が大きい岩石惑星では自分自身の重力による圧縮が強くなる。",
+          "revised": "同じ組成でも、質量が大きい岩石惑星では自分自身の重力による圧縮が強くなり、平均密度が高くなる。"
+        },
+        {
+          "part": "ppt/slides/slide72.xml",
+          "paragraph_index": 4,
+          "original_page": 68,
+          "page": 68,
+          "original": "要旨：0.02 MのCa–EDTA錯体と生成定数から、自由なカルシウムイオンの濃度を求める。",
+          "revised": "要旨：0.02 MのCa–EDTA錯体と生成定数から、遊離カルシウムイオンの濃度を求める。"
+        },
+        {
+          "part": "ppt/slides/slide83.xml",
+          "paragraph_index": 2,
+          "original_page": 79,
+          "page": 79,
+          "original": "一つのピークに対応する官能基だけでなく、複数の測定条件を同時に満たす構造を選ぶ。配布正解はethyl 4-aminobenzoateである。",
+          "revised": "一つのピークに対応する官能基だけでなく、複数の測定結果を同時に満たす構造を選ぶ。配布正解はethyl 4-aminobenzoateである。"
+        },
+        {
+          "part": "ppt/slides/slide6.xml",
+          "paragraph_index": 0,
+          "original_page": 6,
+          "page": 6,
+          "original": "一つの問題で与えられるもの",
+          "revised": "問題の構成と評価方法"
+        },
+        {
+          "part": "ppt/slides/slide32.xml",
+          "paragraph_index": 0,
+          "original_page": 30,
+          "page": 30,
+          "original": "質問文の長さの分布",
+          "revised": "Diamondの質問文の長さの分布"
+        }
+      ],
+      "layout_adjustments": [],
+      "validation": {
+        "pages": 87,
+        "rendered_from_final_pptx": true,
+        "unchanged_original_pdf_retained": false,
+        "missing_revised_text": [],
+        "layout_flags": [],
+        "changed_pages": [
+          6,
+          12,
+          27,
+          30,
+          34,
+          36,
+          52,
+          64,
+          68,
+          79
+        ],
+        "pdf_page_count": "passed",
+        "zip_integrity": "passed",
+        "schema": {
+          "checked_parts": 104,
+          "new_non_lexical_errors": [],
+          "baseline_error_count": 144,
+          "final_error_count": 144,
+          "integer_bullet_domain_checks": 144,
+          "note": "標準XSDを変更せず照合。既存の整数形式buSzPctとXSDの百分率字句形式の差を区別し、Open XML BulletSizePercentageの25000–400000の範囲を別途検証。既存エラーと新規エラーを分離。"
+        },
+        "xml_parts_parsed": 211,
+        "internal_relationship_targets": "passed",
+        "package_integrity": "passed",
+        "table_cell_issues": [],
+        "table_cells_checked": 6,
+        "text_diff_matches_record": true,
+        "all_original_non_slide_parts_unchanged": true,
+        "masters_media_themes_unchanged": true,
+        "visual_review_complete": true,
+        "visual_review_scope": "全ページの一覧と変更ページの拡大描画を確認。本文・表・引用枠・出典・見出しを検査。最終調整後の描画も再確認。",
+        "unresolved_layout_flags": [],
+        "layout_flag_resolutions": []
+      },
+      "special_actions_applied": true,
+      "special_actions_details": [],
+      "review_method": "skill_based_codex",
+      "reviewer": "Codex",
+      "skill": {
+        "name": "japanese-slide-proofreading",
+        "version": "1.0",
+        "path": ".agents/skills/japanese-slide-proofreading/SKILL.md",
+        "sha256": "cc532134c9392242c6ca755e3c3bfbf6bb855791112d5b570967138da688b232"
+      },
+      "new_gemini_api_calls": 0,
+      "audit": {
+        "review_unit": "one page at a time, local text review and rendered change verification",
+        "reviewed_page_count": 87,
+        "cached_gemini_page_count": 73,
+        "pages_without_cached_gemini_proposals": 14,
+        "new_external_generation_api_calls": 0,
+        "source_pptx_sha256": "11badfaf0d66370b5672d956f06b2ae875c65387619590847f5099b486ffca23",
+        "base_pptx_sha256": "11badfaf0d66370b5672d956f06b2ae875c65387619590847f5099b486ffca23",
+        "final_pptx_sha256": "d16213375e35eaca4a7e9da841f720ce96956d12e20d7d7cfba25c6f260e64ca",
+        "final_pdf_sha256": "1fcca2e9468f57a732ff3bbe0ffe1b988e5889bd2512a2e12eb3d6fefcf90a22",
+        "date": "2026-10-17",
+        "page_review_file": "pages.jsonl",
+        "prior_proposal_file": "prior-gemini-proposals.jsonl",
+        "prior_trial_note": null
+      }
+    }
+  ],
+  "updated_at": "2026-10-18T03:04:49+00:00",
+  "artifact_sha256": {
+    "pdf": "7fd2312227faaea7741841d78152969ba0b061599531929adab004a21f099720",
+    "pptx": "c4c95fdc9b7217cd629295e4ee7d794243284db374c44f2abb842e03dfb15b4d"
+  },
+  "individual_visual_review_pages": [
+    8,
+    11,
+    15,
+    53,
+    56,
+    59,
+    63,
+    66,
+    69,
+    72,
+    75,
+    78,
+    81
+  ],
+  "visual_review_method": "変更した最終PDFページを1080×608の画像で個別に確認。枠の高さのみの調整は回答の描画座標の一致も確認。変更対象以外のネイティブ形状は変更前と同一。",
+  "checks": {
+    "content": {
+      "pages": 87,
+      "only_allowed_shapes_changed": true,
+      "answer_texts_and_all_other_dataset_texts_preserved": true,
+      "issues": [],
+      "answers": [
+        {
+          "page": 8,
+          "size": 21.0049991607666,
+          "color": "B13731",
+          "bbox": [
+            46.77199935913086,
+            297.536376953125,
+            171.3194580078125,
+            328.056640625
+          ]
+        },
+        {
+          "page": 11,
+          "size": 21.0049991607666,
+          "color": "B13731",
+          "bbox": [
+            46.77199935913086,
+            325.28839111328125,
+            172.15965270996094,
+            355.80865478515625
+          ]
+        },
+        {
+          "page": 15,
+          "size": 21.0049991607666,
+          "color": "B13731",
+          "bbox": [
+            46.77199935913086,
+            297.536376953125,
+            170.7523193359375,
+            328.056640625
+          ]
+        },
+        {
+          "page": 53,
+          "size": 21.0049991607666,
+          "color": "B13731",
+          "bbox": [
+            46.77199935913086,
+            297.536376953125,
+            170.2692108154297,
+            328.056640625
+          ]
+        },
+        {
+          "page": 56,
+          "size": 21.0049991607666,
+          "color": "B13731",
+          "bbox": [
+            46.77199935913086,
+            329.17138671875,
+            171.3194580078125,
+            359.691650390625
+          ]
+        },
+        {
+          "page": 59,
+          "size": 21.0049991607666,
+          "color": "B13731",
+          "bbox": [
+            46.77199935913086,
+            297.536376953125,
+            170.7523193359375,
+            328.056640625
+          ]
+        },
+        {
+          "page": 63,
+          "size": 21.0049991607666,
+          "color": "B13731",
+          "bbox": [
+            46.77199935913086,
+            297.536376953125,
+            170.2692108154297,
+            328.056640625
+          ]
+        },
+        {
+          "page": 66,
+          "size": 21.0049991607666,
+          "color": "B13731",
+          "bbox": [
+            46.77199935913086,
+            297.536376953125,
+            170.2692108154297,
+            328.056640625
+          ]
+        },
+        {
+          "page": 69,
+          "size": 21.0049991607666,
+          "color": "B13731",
+          "bbox": [
+            46.77199935913086,
+            297.536376953125,
+            170.2692108154297,
+            328.056640625
+          ]
+        },
+        {
+          "page": 72,
+          "size": 21.0049991607666,
+          "color": "B13731",
+          "bbox": [
+            46.77199935913086,
+            297.536376953125,
+            171.3194580078125,
+            328.056640625
+          ]
+        },
+        {
+          "page": 75,
+          "size": 21.0049991607666,
+          "color": "B13731",
+          "bbox": [
+            46.77199935913086,
+            297.536376953125,
+            172.15965270996094,
+            328.056640625
+          ]
+        },
+        {
+          "page": 78,
+          "size": 21.0049991607666,
+          "color": "B13731",
+          "bbox": [
+            46.77199935913086,
+            297.536376953125,
+            170.7523193359375,
+            328.056640625
+          ]
+        },
+        {
+          "page": 81,
+          "size": 21.0049991607666,
+          "color": "B13731",
+          "bbox": [
+            46.77199935913086,
+            297.536376953125,
+            170.2692108154297,
+            328.056640625
+          ]
+        }
+      ]
+    },
+    "package": {
+      "parsed_xml_parts": 211,
+      "integer_bullets": 144,
+      "hyperlinks": 78,
+      "new_schema_errors": [],
+      "baseline_schema_errors": 11,
+      "package_integrity": "passed",
+      "internal_relationship_targets": "passed",
+      "unique_shape_ids": "passed",
+      "schema_note": "標準XSDを変更せず確認。マスター由来の既存エラーと、整数buSzPctの百分率字句形式との差を分離。整数箇条書きサイズは25000–400000で別途検査。",
+      "pages": 87,
+      "native_tables": 28,
+      "native_charts": 2
+    },
+    "layout": {
+      "paragraphs_checked": 411,
+      "table_cells_checked": 203,
+      "issues": []
+    },
+    "links": {
+      "native_url_only_runs": 78,
+      "pdf_link_rectangles": 78,
+      "pdf_link_text_exactly_matches_url": true,
+      "pdf_link_character_centers_match_url": true,
+      "glyph_box_overhangs": [],
+      "shortened_url_labels": [],
+      "issues": []
+    }
+  },
+  "follow_up_reviews": [
+    {
+      "record": "answer-style-review.json",
+      "checked_at": "2026-10-18T03:04:49+00:00",
+      "changed_pages": [
+        8,
+        11,
+        15,
+        53,
+        56,
+        59,
+        63,
+        66,
+        69,
+        72,
+        75,
+        78,
+        81
+      ]
+    }
+  ]
 }
