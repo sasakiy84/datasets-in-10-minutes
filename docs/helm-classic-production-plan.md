@@ -80,3 +80,14 @@
 |26|pattern-matching-suppression|Pattern Matching Suppression|未着手|
 |27|modus-tollens|Modus Tollens|未着手|
 |28|neqa|NeQA|未着手|
+
+元コーパスが特定できない場合でも、CLEVAの論文・公式実装に説明例が公開された評価集合は、その公開範囲に絞って別資料にする。例の少なさと実評価集合の未取得を記録し、架空例や説明の繰り返しでページ数を増やさない。
+
+|順|対象|資料範囲|状態|
+|---|---|---|---|
+|29|cleva-opinion-mining|CLEVA：意見の対象抽出（公開説明例）|未着手|
+|30|cleva-pinyin|CLEVA：ピンイン変換（公開説明例）|未着手|
+|31|cleva-intent-understanding|CLEVA：意図理解（公開説明例）|未着手|
+|32|cleva-subject-knowledge|CLEVA：分野別知識（公開説明例）|未着手|
+|33|cleva-copyright-text|CLEVA：中国語文章の再現評価（公開説明例）|未着手|
+|34|cleva-conceptual-generalization|CLEVA：概念の一般化（公開説明例）|未着手|
