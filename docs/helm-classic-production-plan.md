@@ -7,7 +7,7 @@
 |順|対象|HELMシナリオ|状態|
 |---|---|---|---|
 |1|narrativeqa|narrative_qa|作成済み|
-|2|naturalquestions|natural_qa_closedbook, natural_qa_openbook_longans|未着手|
+|2|naturalquestions|natural_qa_closedbook, natural_qa_openbook_longans|作成済み|
 |3|quac|quac|未着手|
 |4|msmarco|msmarco_regular, msmarco_trec|未着手|
 |5|cnn-dailymail|summarization_cnndm|未着手|

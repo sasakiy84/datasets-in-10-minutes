@@ -18,8 +18,8 @@ GSM8KとHumanEvalは既存資料で対象データセットを紹介済み。MML
 |---|---|---|---|
 |boolq|BoolQ|作成済み|[PPTX](../slides/datasets-in-10-minutes-boolq.pptx) / [PDF](../slides/datasets-in-10-minutes-boolq.pdf)|
 |narrative_qa|NarrativeQA|作成済み|[PPTX](../slides/datasets-in-10-minutes-narrativeqa.pptx) / [PDF](../slides/datasets-in-10-minutes-narrativeqa.pdf)|
-|natural_qa_closedbook|NaturalQuestions (closed-book)|未着手||
-|natural_qa_openbook_longans|NaturalQuestions (open-book)|未着手||
+|natural_qa_closedbook|NaturalQuestions (closed-book)|作成済み|[PPTX](../slides/datasets-in-10-minutes-naturalquestions.pptx) / [PDF](../slides/datasets-in-10-minutes-naturalquestions.pdf)|
+|natural_qa_openbook_longans|NaturalQuestions (open-book)|作成済み|[PPTX](../slides/datasets-in-10-minutes-naturalquestions.pptx) / [PDF](../slides/datasets-in-10-minutes-naturalquestions.pdf)|
 |quac|QuAC (Question Answering in Context)|未着手||
 |hellaswag|HellaSwag|作成済み|[PPTX](../slides/datasets-in-10-minutes-hellaswag.pptx) / [PDF](../slides/datasets-in-10-minutes-hellaswag.pdf)|
 |openbookqa|OpenbookQA|作成済み|[PPTX](../slides/datasets-in-10-minutes-openbookqa.pptx) / [PDF](../slides/datasets-in-10-minutes-openbookqa.pdf)|
