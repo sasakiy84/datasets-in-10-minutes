@@ -1,0 +1,170 @@
+{
+  "all_data": {
+    "train": {
+      "dialogues": 5012,
+      "utterances": 84692,
+      "roles": {
+        "usr": 42346,
+        "sys": 42346
+      },
+      "types": {
+        "独立多领域": 1573,
+        "不独立多领域": 1759,
+        "独立多领域+交通": 691,
+        "单领域": 417,
+        "不独立多领域+交通": 572
+      }
+    },
+    "val": {
+      "dialogues": 500,
+      "utterances": 8458,
+      "roles": {
+        "usr": 4229,
+        "sys": 4229
+      },
+      "types": {
+        "不独立多领域": 168,
+        "独立多领域": 162,
+        "不独立多领域+交通": 63,
+        "独立多领域+交通": 68,
+        "单领域": 39
+      }
+    },
+    "test": {
+      "dialogues": 500,
+      "utterances": 8476,
+      "roles": {
+        "usr": 4238,
+        "sys": 4238
+      },
+      "types": {
+        "不独立多领域": 166,
+        "单领域": 35,
+        "独立多领域": 157,
+        "不独立多领域+交通": 58,
+        "独立多领域+交通": 84
+      }
+    }
+  },
+  "examples": [
+    {
+      "index": 1,
+      "id": "test/11732/sys1",
+      "complete_prior_history": 1,
+      "full_reference": true,
+      "record_sha256": "3d3bccc117fd54138945e1e094c1ac86398f851021fd16beeb783024c69ce2e4"
+    },
+    {
+      "index": 2,
+      "id": "train/7568/sys5",
+      "complete_prior_history": 5,
+      "full_reference": true,
+      "record_sha256": "bbe3f1a39fe83197c22b282ec553869764489f118aa1e226edb63d8951644a7c"
+    },
+    {
+      "index": 3,
+      "id": "test/10113/sys5",
+      "complete_prior_history": 5,
+      "full_reference": true,
+      "record_sha256": "8e9750404ff339ab8405b1e5057a254c75e6d92c89eb249b5bcd1e3df367844e"
+    },
+    {
+      "index": 4,
+      "id": "test/118/sys3",
+      "complete_prior_history": 3,
+      "full_reference": true,
+      "record_sha256": "2f077b2bcc51a253df966d35ea6c39859c046e75e7b54bdec705446aaa68f302"
+    },
+    {
+      "index": 5,
+      "id": "test/9693/sys3",
+      "complete_prior_history": 3,
+      "full_reference": true,
+      "record_sha256": "ef05a6a3bba78924ed29ce571374e9d13fe2360c24ff975770401a96fdd613dd"
+    },
+    {
+      "index": 6,
+      "id": "test/10662/sys3",
+      "complete_prior_history": 3,
+      "full_reference": true,
+      "record_sha256": "1c4a36393e0cbd1d1eff68bddbf67e3097fba2010a50b95a7810db7ca4f9ea04"
+    },
+    {
+      "index": 7,
+      "id": "test/10490/sys3",
+      "complete_prior_history": 3,
+      "full_reference": true,
+      "record_sha256": "0ba05ca33184aea1e269d3ae4736cc069db07aa31542102507216601aa52a372"
+    },
+    {
+      "index": 8,
+      "id": "train/8781/sys1",
+      "complete_prior_history": 1,
+      "full_reference": true,
+      "record_sha256": "c342b2fe14ac7a87277d137d9638038ffdd6652b0c0a76996ea5b0d2579142f9"
+    },
+    {
+      "index": 9,
+      "id": "train/9779/sys1",
+      "complete_prior_history": 1,
+      "full_reference": true,
+      "record_sha256": "d4c7ea00ec20e62a99c4a12c7e5729da65fc8945d7dca05682fc646c512a7ed8"
+    },
+    {
+      "index": 10,
+      "id": "test/10838/sys5",
+      "complete_prior_history": 5,
+      "full_reference": true,
+      "record_sha256": "f69d8cb1e43c8328d8c1147f8077faa7e45bced8d6bb88c6ff156d343c8687d1"
+    },
+    {
+      "index": 11,
+      "id": "train/8711/sys9",
+      "complete_prior_history": 9,
+      "full_reference": true,
+      "record_sha256": "472c9692e1dd2b11472281819fdb3908ff73a93a1760b4289c0d9b232bdafd5f"
+    },
+    {
+      "index": 12,
+      "id": "train/7845/sys9",
+      "complete_prior_history": 9,
+      "full_reference": true,
+      "record_sha256": "b42b2e28ac29205e422b3dcb62765a6ed175cff3d3395ea84c94d5bd9a9d786d"
+    },
+    {
+      "index": 13,
+      "id": "val/12121/sys9",
+      "complete_prior_history": 9,
+      "full_reference": true,
+      "record_sha256": "31410b91c7ab50888739ed3b2faf9c0cf13939ef0737074d6f052bcd10ab5b69"
+    }
+  ],
+  "rule_dst_correct_total": {
+    "不独立多领域": [
+      1106,
+      1745
+    ],
+    "ALL": [
+      3023,
+      4238
+    ],
+    "单领域": [
+      101,
+      120
+    ],
+    "独立多领域": [
+      863,
+      1104
+    ],
+    "不独立多领域+交通": [
+      418,
+      616
+    ],
+    "独立多领域+交通": [
+      535,
+      653
+    ]
+  },
+  "rule_input": "gold preceding user acts + previous gold sys_state; compares sys_state_init all slots without selectedResults",
+  "code_scope": "independently fetched original pinned code, empty package initializers, no model training"
+}
