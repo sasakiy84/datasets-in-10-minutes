@@ -1,0 +1,2678 @@
+{
+  "version_pairs": [
+    {
+      "country": "US",
+      "split": "train",
+      "n": 10178,
+      "same_question": 10178,
+      "same_correct_answer": 10178,
+      "four_option_subset_of_five": 10178
+    },
+    {
+      "country": "US",
+      "split": "dev",
+      "n": 1272,
+      "same_question": 1272,
+      "same_correct_answer": 1272,
+      "four_option_subset_of_five": 1272
+    },
+    {
+      "country": "US",
+      "split": "test",
+      "n": 1273,
+      "same_question": 1273,
+      "same_correct_answer": 1273,
+      "four_option_subset_of_five": 1273
+    },
+    {
+      "country": "Mainland",
+      "split": "train",
+      "n": 27400,
+      "same_question": 27400,
+      "same_correct_answer": 27400,
+      "four_option_subset_of_five": 27400
+    },
+    {
+      "country": "Mainland",
+      "split": "dev",
+      "n": 3425,
+      "same_question": 3425,
+      "same_correct_answer": 3425,
+      "four_option_subset_of_five": 3425
+    },
+    {
+      "country": "Mainland",
+      "split": "test",
+      "n": 3426,
+      "same_question": 3426,
+      "same_correct_answer": 3426,
+      "four_option_subset_of_five": 3426
+    }
+  ],
+  "public_run_specs_count": 0,
+  "public_suite_runs_count": 0,
+  "schema_group": {
+    "name": "med_qa",
+    "display_name": "MedQA",
+    "description": "MedQA is an open domain question answering dataset composed of questions from professional medical board exams ([Jin et al. 2020](https://arxiv.org/pdf/2009.13081.pdf)).",
+    "metric_groups": [
+      "accuracy",
+      "efficiency",
+      "general_information"
+    ],
+    "subgroups": [],
+    "subgroup_display_mode": "by_metric",
+    "subgroup_metric_groups_hidden": [],
+    "environment": {
+      "main_name": "quasi_exact_match",
+      "main_split": "test"
+    },
+    "category": "Scenarios",
+    "visibility": "all_groups",
+    "taxonomy": {
+      "task": "question answering",
+      "what": "n/a",
+      "when": "n/a",
+      "who": "n/a",
+      "language": "English"
+    },
+    "todo": false,
+    "adapter_keys_shown": [
+      "model_deployment",
+      "model"
+    ]
+  },
+  "native_tables": [
+    {
+      "page": 14,
+      "rows": [
+        [
+          "版",
+          "言語",
+          "問題数",
+          "HELM"
+        ],
+        [
+          "USMLE",
+          "英語",
+          "12,723",
+          "4択版を使用"
+        ],
+        [
+          "MCMLE",
+          "簡体字中国語",
+          "34,251",
+          "対象外"
+        ],
+        [
+          "TWMLE",
+          "繁体字中国語",
+          "14,123",
+          "対象外"
+        ]
+      ]
+    },
+    {
+      "page": 18,
+      "rows": [
+        [
+          "版",
+          "train",
+          "dev",
+          "test"
+        ],
+        [
+          "USMLE",
+          "10,178",
+          "1,272",
+          "1,273"
+        ],
+        [
+          "MCMLE",
+          "27,400",
+          "3,425",
+          "3,426"
+        ],
+        [
+          "TWMLE",
+          "11,298",
+          "1,412",
+          "1,413"
+        ]
+      ]
+    },
+    {
+      "page": 19,
+      "rows": [
+        [
+          "版",
+          "実例1の選択肢",
+          "正解"
+        ],
+        [
+          "通常の5択",
+          "A:0%　B:25%　C:50%\nD:75%　E:100%",
+          "E"
+        ],
+        [
+          "4_options",
+          "A:0%　B:25%\nC:50%　D:100%",
+          "D"
+        ]
+      ]
+    },
+    {
+      "page": 22,
+      "rows": [
+        [
+          "版",
+          "最良の方式",
+          "正解率"
+        ],
+        [
+          "USMLE",
+          "BioBERT-Large",
+          "36.7%"
+        ],
+        [
+          "MCMLE",
+          "RoBERTa-Large-wwm-ext",
+          "70.1%"
+        ],
+        [
+          "TWMLE",
+          "BioBERT-Large",
+          "42.0%"
+        ]
+      ]
+    },
+    {
+      "page": 25,
+      "rows": [
+        [
+          "確認対象",
+          "公開状態"
+        ],
+        [
+          "シナリオ定義",
+          "MedQAが登録されている"
+        ],
+        [
+          "表示上の主指標",
+          "quasi_exact_match / test"
+        ],
+        [
+          "run_specs・run suite索引",
+          "MedQAに該当するrunは0件"
+        ],
+        [
+          "モデル別の成績",
+          "この配布版には掲載値がない"
+        ]
+      ]
+    },
+    {
+      "page": 47,
+      "rows": [
+        [
+          "配布ファイル群",
+          "実測の選択肢数"
+        ],
+        [
+          "USのtrain/dev/test",
+          "全12,723問が5択"
+        ],
+        [
+          "US/4_optionsの3split",
+          "全12,723問が4択"
+        ],
+        [
+          "Mainlandの3split",
+          "全34,251問が5択"
+        ],
+        [
+          "Mainland/4_optionsの3split",
+          "全34,251問が4択"
+        ],
+        [
+          "Taiwanの3split",
+          "全14,123問が4択"
+        ]
+      ]
+    },
+    {
+      "page": 48,
+      "rows": [
+        [
+          "meta_info",
+          "train",
+          "dev",
+          "test"
+        ],
+        [
+          "step1",
+          "5,629",
+          "701",
+          "679"
+        ],
+        [
+          "step2&3",
+          "4,549",
+          "571",
+          "594"
+        ]
+      ]
+    },
+    {
+      "page": 50,
+      "rows": [
+        [
+          "項目",
+          "v0.3.0の設定・処理"
+        ],
+        [
+          "提示例の上限",
+          "max_train_instances=5"
+        ],
+        [
+          "生成",
+          "temperature=0、max_tokens=1"
+        ],
+        [
+          "要求の完了数",
+          "num_completions=1"
+        ],
+        [
+          "num_outputs=5の用途",
+          "top_k_per_token=5へ渡す"
+        ]
+      ]
+    }
+  ],
+  "native_chart_values": [
+    12723,
+    34251,
+    14123
+  ],
+  "split_count_cells_verified": 9,
+  "meta_info_cells_verified": 6,
+  "metric_input_tests": [
+    {
+      "prediction": "D",
+      "mapped": "100%",
+      "exact_match": 1,
+      "quasi_exact_match": 1
+    },
+    {
+      "prediction": " D ",
+      "mapped": "100%",
+      "exact_match": 1,
+      "quasi_exact_match": 1
+    },
+    {
+      "prediction": "d",
+      "mapped": null,
+      "exact_match": 0,
+      "quasi_exact_match": 0
+    },
+    {
+      "prediction": "D.",
+      "mapped": null,
+      "exact_match": 0,
+      "quasi_exact_match": 0
+    },
+    {
+      "prediction": "100%",
+      "mapped": null,
+      "exact_match": 0,
+      "quasi_exact_match": 0
+    }
+  ],
+  "metric_test_scope": "Controlled test strings, not published model predictions.",
+  "figure_reference_record": {
+    "test_index": 945,
+    "raw_record": {
+      "question": "The menses are 4 weeks overdue in a 23-year-old sexually active woman, thus she is scheduled for an ultrasound examination. The result is shown in the exhibit. What is the function of the structure marked with the green arrow?",
+      "answer": "Embryonic hematopoiesis",
+      "options": {
+        "A": "Removal of nitrogenous waste",
+        "B": "Embryonic hematopoiesis",
+        "C": "Production of amniotic fluid",
+        "D": "Gas exchange"
+      },
+      "meta_info": "step1",
+      "answer_idx": "B",
+      "metamap_phrases": [
+        "menses",
+        "4 weeks",
+        "23 year old sexually active woman",
+        "scheduled",
+        "ultrasound examination",
+        "result",
+        "shown",
+        "exhibit",
+        "function",
+        "structure marked",
+        "green arrow"
+      ]
+    }
+  },
+  "provenance_logs": {
+    "text-audit.json": {
+      "method": "native PPTX paragraphs/cells vs actual final PDF glyph text, clipped to each native shape/cell and spatially sorted",
+      "paragraphs": 467,
+      "cells": 97,
+      "issues": []
+    },
+    "data-audit.json": {
+      "version_pairs": [
+        {
+          "country": "US",
+          "split": "train",
+          "n": 10178,
+          "same_question": 10178,
+          "same_correct_answer": 10178,
+          "four_option_subset_of_five": 10178
+        },
+        {
+          "country": "US",
+          "split": "dev",
+          "n": 1272,
+          "same_question": 1272,
+          "same_correct_answer": 1272,
+          "four_option_subset_of_five": 1272
+        },
+        {
+          "country": "US",
+          "split": "test",
+          "n": 1273,
+          "same_question": 1273,
+          "same_correct_answer": 1273,
+          "four_option_subset_of_five": 1273
+        },
+        {
+          "country": "Mainland",
+          "split": "train",
+          "n": 27400,
+          "same_question": 27400,
+          "same_correct_answer": 27400,
+          "four_option_subset_of_five": 27400
+        },
+        {
+          "country": "Mainland",
+          "split": "dev",
+          "n": 3425,
+          "same_question": 3425,
+          "same_correct_answer": 3425,
+          "four_option_subset_of_five": 3425
+        },
+        {
+          "country": "Mainland",
+          "split": "test",
+          "n": 3426,
+          "same_question": 3426,
+          "same_correct_answer": 3426,
+          "four_option_subset_of_five": 3426
+        }
+      ],
+      "public_run_specs_count": 0,
+      "public_suite_runs_count": 0,
+      "schema_group": {
+        "name": "med_qa",
+        "display_name": "MedQA",
+        "description": "MedQA is an open domain question answering dataset composed of questions from professional medical board exams ([Jin et al. 2020](https://arxiv.org/pdf/2009.13081.pdf)).",
+        "metric_groups": [
+          "accuracy",
+          "efficiency",
+          "general_information"
+        ],
+        "subgroups": [],
+        "subgroup_display_mode": "by_metric",
+        "subgroup_metric_groups_hidden": [],
+        "environment": {
+          "main_name": "quasi_exact_match",
+          "main_split": "test"
+        },
+        "category": "Scenarios",
+        "visibility": "all_groups",
+        "taxonomy": {
+          "task": "question answering",
+          "what": "n/a",
+          "when": "n/a",
+          "who": "n/a",
+          "language": "English"
+        },
+        "todo": false,
+        "adapter_keys_shown": [
+          "model_deployment",
+          "model"
+        ]
+      },
+      "native_tables": [
+        {
+          "page": 14,
+          "rows": [
+            [
+              "版",
+              "言語",
+              "問題数",
+              "HELM"
+            ],
+            [
+              "USMLE",
+              "英語",
+              "12,723",
+              "4択版を使用"
+            ],
+            [
+              "MCMLE",
+              "簡体字中国語",
+              "34,251",
+              "対象外"
+            ],
+            [
+              "TWMLE",
+              "繁体字中国語",
+              "14,123",
+              "対象外"
+            ]
+          ]
+        },
+        {
+          "page": 18,
+          "rows": [
+            [
+              "版",
+              "train",
+              "dev",
+              "test"
+            ],
+            [
+              "USMLE",
+              "10,178",
+              "1,272",
+              "1,273"
+            ],
+            [
+              "MCMLE",
+              "27,400",
+              "3,425",
+              "3,426"
+            ],
+            [
+              "TWMLE",
+              "11,298",
+              "1,412",
+              "1,413"
+            ]
+          ]
+        },
+        {
+          "page": 19,
+          "rows": [
+            [
+              "版",
+              "実例1の選択肢",
+              "正解"
+            ],
+            [
+              "通常の5択",
+              "A:0%　B:25%　C:50%\nD:75%　E:100%",
+              "E"
+            ],
+            [
+              "4_options",
+              "A:0%　B:25%\nC:50%　D:100%",
+              "D"
+            ]
+          ]
+        },
+        {
+          "page": 22,
+          "rows": [
+            [
+              "版",
+              "最良の方式",
+              "正解率"
+            ],
+            [
+              "USMLE",
+              "BioBERT-Large",
+              "36.7%"
+            ],
+            [
+              "MCMLE",
+              "RoBERTa-Large-wwm-ext",
+              "70.1%"
+            ],
+            [
+              "TWMLE",
+              "BioBERT-Large",
+              "42.0%"
+            ]
+          ]
+        },
+        {
+          "page": 25,
+          "rows": [
+            [
+              "確認対象",
+              "公開状態"
+            ],
+            [
+              "シナリオ定義",
+              "MedQAが登録されている"
+            ],
+            [
+              "表示上の主指標",
+              "quasi_exact_match / test"
+            ],
+            [
+              "run_specs・run suite索引",
+              "MedQAに該当するrunは0件"
+            ],
+            [
+              "モデル別の成績",
+              "この配布版には掲載値がない"
+            ]
+          ]
+        },
+        {
+          "page": 47,
+          "rows": [
+            [
+              "配布ファイル群",
+              "実測の選択肢数"
+            ],
+            [
+              "USのtrain/dev/test",
+              "全12,723問が5択"
+            ],
+            [
+              "US/4_optionsの3split",
+              "全12,723問が4択"
+            ],
+            [
+              "Mainlandの3split",
+              "全34,251問が5択"
+            ],
+            [
+              "Mainland/4_optionsの3split",
+              "全34,251問が4択"
+            ],
+            [
+              "Taiwanの3split",
+              "全14,123問が4択"
+            ]
+          ]
+        },
+        {
+          "page": 48,
+          "rows": [
+            [
+              "meta_info",
+              "train",
+              "dev",
+              "test"
+            ],
+            [
+              "step1",
+              "5,629",
+              "701",
+              "679"
+            ],
+            [
+              "step2&3",
+              "4,549",
+              "571",
+              "594"
+            ]
+          ]
+        },
+        {
+          "page": 50,
+          "rows": [
+            [
+              "項目",
+              "v0.3.0の設定・処理"
+            ],
+            [
+              "提示例の上限",
+              "max_train_instances=5"
+            ],
+            [
+              "生成",
+              "temperature=0、max_tokens=1"
+            ],
+            [
+              "要求の完了数",
+              "num_completions=1"
+            ],
+            [
+              "num_outputs=5の用途",
+              "top_k_per_token=5へ渡す"
+            ]
+          ]
+        }
+      ],
+      "native_chart_values": [
+        12723,
+        34251,
+        14123
+      ],
+      "split_count_cells_verified": 9,
+      "meta_info_cells_verified": 6,
+      "metric_input_tests": [
+        {
+          "prediction": "D",
+          "mapped": "100%",
+          "exact_match": 1,
+          "quasi_exact_match": 1
+        },
+        {
+          "prediction": " D ",
+          "mapped": "100%",
+          "exact_match": 1,
+          "quasi_exact_match": 1
+        },
+        {
+          "prediction": "d",
+          "mapped": null,
+          "exact_match": 0,
+          "quasi_exact_match": 0
+        },
+        {
+          "prediction": "D.",
+          "mapped": null,
+          "exact_match": 0,
+          "quasi_exact_match": 0
+        },
+        {
+          "prediction": "100%",
+          "mapped": null,
+          "exact_match": 0,
+          "quasi_exact_match": 0
+        }
+      ],
+      "metric_test_scope": "Controlled test strings, not published model predictions.",
+      "figure_reference_record": {
+        "test_index": 945,
+        "raw_record": {
+          "question": "The menses are 4 weeks overdue in a 23-year-old sexually active woman, thus she is scheduled for an ultrasound examination. The result is shown in the exhibit. What is the function of the structure marked with the green arrow?",
+          "answer": "Embryonic hematopoiesis",
+          "options": {
+            "A": "Removal of nitrogenous waste",
+            "B": "Embryonic hematopoiesis",
+            "C": "Production of amniotic fluid",
+            "D": "Gas exchange"
+          },
+          "meta_info": "step1",
+          "answer_idx": "B",
+          "metamap_phrases": [
+            "menses",
+            "4 weeks",
+            "23 year old sexually active woman",
+            "scheduled",
+            "ultrasound examination",
+            "result",
+            "shown",
+            "exhibit",
+            "function",
+            "structure marked",
+            "green arrow"
+          ]
+        }
+      }
+    },
+    "scenario-audit.json": {
+      "total": 12723,
+      "splits": {
+        "train": 10178,
+        "valid": 1272,
+        "test": 1273
+      },
+      "all_four_choices": true,
+      "one_correct_tag": true,
+      "examples_verified": 13,
+      "answer_matches_correct_option_all": true,
+      "cleanup_count": 647,
+      "cleanup_examples": [
+        {
+          "split": "train",
+          "index": 10,
+          "letter": "D",
+          "before": "Sympathetic hyperactivity of levator palpebrae superioris\n\"",
+          "after": "Sympathetic hyperactivity of levator palpebrae superioris"
+        },
+        {
+          "split": "train",
+          "index": 14,
+          "letter": "D",
+          "before": "Incremental loss of functional residual capacity\n\"",
+          "after": "Incremental loss of functional residual capacity"
+        },
+        {
+          "split": "train",
+          "index": 56,
+          "letter": "D",
+          "before": "Coccidioides\n\"",
+          "after": "Coccidioides"
+        },
+        {
+          "split": "train",
+          "index": 90,
+          "letter": "D",
+          "before": "Antiseptic dressing\n\"",
+          "after": "Antiseptic dressing"
+        },
+        {
+          "split": "train",
+          "index": 140,
+          "letter": "D",
+          "before": "Urinary output\n\"",
+          "after": "Urinary output"
+        },
+        {
+          "split": "train",
+          "index": 148,
+          "letter": "D",
+          "before": "Schedule an ophthalmology consultation\n\"",
+          "after": "Schedule an ophthalmology consultation"
+        },
+        {
+          "split": "train",
+          "index": 192,
+          "letter": "D",
+          "before": "Testicular lymphoma\n\"",
+          "after": "Testicular lymphoma"
+        },
+        {
+          "split": "train",
+          "index": 199,
+          "letter": "D",
+          "before": "Age-related macular degeneration\n\"",
+          "after": "Age-related macular degeneration"
+        },
+        {
+          "split": "train",
+          "index": 261,
+          "letter": "D",
+          "before": "Squamous cell carcinoma\n\"",
+          "after": "Squamous cell carcinoma"
+        },
+        {
+          "split": "train",
+          "index": 273,
+          "letter": "D",
+          "before": "Diminished sensation of the anterior lateral thigh\n\"",
+          "after": "Diminished sensation of the anterior lateral thigh"
+        },
+        {
+          "split": "train",
+          "index": 279,
+          "letter": "D",
+          "before": "Aortic stenosis\n\"",
+          "after": "Aortic stenosis"
+        },
+        {
+          "split": "train",
+          "index": 280,
+          "letter": "D",
+          "before": "Basal cell carcinoma\n\"",
+          "after": "Basal cell carcinoma"
+        }
+      ],
+      "exact_question_overlap": {
+        "train/valid": 0,
+        "train/test": 0,
+        "valid/test": 0
+      }
+    },
+    "reference-frame-audit.json": [
+      {
+        "page": 51,
+        "shape": 4,
+        "before_height_pt": 125.92,
+        "after_height_pt": 147.5941375732422,
+        "actual_final_glyph_bottom": 254.1941375732422
+      },
+      {
+        "page": 51,
+        "shape": 5,
+        "before_height_pt": 105.4,
+        "after_height_pt": 105.4,
+        "actual_final_glyph_bottom": 349.8641662597656
+      },
+      {
+        "page": 52,
+        "shape": 4,
+        "before_height_pt": 105.4,
+        "after_height_pt": 122.99014892578126,
+        "actual_final_glyph_bottom": 229.59014892578125
+      },
+      {
+        "page": 52,
+        "shape": 5,
+        "before_height_pt": 117.37,
+        "after_height_pt": 123.02516723632812,
+        "actual_final_glyph_bottom": 353.2651672363281
+      },
+      {
+        "page": 53,
+        "shape": 4,
+        "before_height_pt": 85.45,
+        "after_height_pt": 99.09314575195313,
+        "actual_final_glyph_bottom": 205.69314575195312
+      },
+      {
+        "page": 53,
+        "shape": 5,
+        "before_height_pt": 85.45,
+        "after_height_pt": 99.09516235351563,
+        "actual_final_glyph_bottom": 309.3851623535156
+      }
+    ],
+    "package-audit.json": {
+      "parsed_xml_parts": 141,
+      "integer_bullets": 142,
+      "hyperlinks": 56,
+      "new_schema_errors": [],
+      "baseline_schema_errors": 11,
+      "package_integrity": "passed",
+      "internal_relationship_targets": "passed",
+      "unique_shape_ids": "passed",
+      "schema_note": "標準XSDを変更せず確認。マスター由来の既存エラーと、整数buSzPctの百分率字句形式との差を分離。整数箇条書きサイズは25000–400000で別途検査。",
+      "pages": 53,
+      "native_tables": 8,
+      "native_charts": 1
+    },
+    "layout-audit.json": {
+      "paragraphs_checked": 441,
+      "table_cells_checked": 86,
+      "issues": []
+    },
+    "manifest.json": [
+      {
+        "page": 1,
+        "title": "MedQA",
+        "section": "",
+        "kind": "cover"
+      },
+      {
+        "page": 2,
+        "title": "公式配布案内：MedQA",
+        "section": "MedQA",
+        "kind": "official-site",
+        "sources": [
+          "repo"
+        ]
+      },
+      {
+        "page": 3,
+        "title": "",
+        "section": "目次",
+        "kind": "toc"
+      },
+      {
+        "page": 4,
+        "title": "1. 医学の問題と実例",
+        "section": "1. 医学の問題と実例",
+        "kind": "divider"
+      },
+      {
+        "page": 5,
+        "title": "症状や医学知識から、最も適切な答えを選ぶ",
+        "section": "1. 医学の問題と実例",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ],
+        "body_text": [
+          "MedQAは、医師資格試験や模擬試験の問題を集めた多肢選択式のデータセット。患者の症状、機序、検査、治療などを問う。",
+          "質問と選択肢が入力で、正解は選択肢のうち一つ。症例の記述から複数の医学知識を結び付ける問題も含む。",
+          "ここでは全体の3言語版を紹介し、HELMが読む米国版の英語・4択データから実例を示す。"
+        ]
+      },
+      {
+        "page": 6,
+        "title": "質問・選択肢・正解を一つのレコードに持つ",
+        "section": "1. 医学の問題と実例",
+        "kind": "content",
+        "sources": [
+          "repo"
+        ],
+        "body_text": [
+          "questionは問題文、optionsは文字A〜Dと選択肢本文の対応。answer_idxが正解の文字、answerがその本文を表す。",
+          "実例では質問と全選択肢の原文を省略せず、日本語訳と並べる。正解は配布データの注釈を保つ。",
+          "本編3例と付録10例は、短い問題を中心に内容の違いが分かるよう選んだ。全体の問題分布を代表する標本ではない。"
+        ]
+      },
+      {
+        "page": 7,
+        "title": "実例1：血友病Aの遺伝を考える",
+        "section": "1. 医学の問題と実例",
+        "kind": "example",
+        "example_id": "US/4_options/test/267",
+        "language": "en/ja",
+        "sources": [
+          "paper"
+        ],
+        "original_text": "A 34-year-old male suffers from inherited hemophilia A. He and his wife have three unaffected daughters. What is the probability that the second daughter is a carrier of the disease?\n\nA. 0%\nB. 25%\nC. 50%\nD. 100%",
+        "translation": "34歳の男性は遺伝性血友病Aを患っている。妻との間には、発症していない娘が3人いる。2番目の娘がこの病気の保因者である確率はどれか。\n\nA. 0%\nB. 25%\nC. 50%\nD. 100%"
+      },
+      {
+        "page": 8,
+        "title": "数値の答えにも、医学の前提が必要になる",
+        "section": "1. 医学の問題と実例",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ],
+        "body_text": [
+          "実例1の正解はDの100%。血友病Aの遺伝様式を踏まえて、娘が保因者となる確率を選ぶ。",
+          "単純な計算問題のように見えても、病気、遺伝様式、性別と親子関係を読み取る必要がある。",
+          "選択肢の数値は0%、25%、50%、100%。4択版では、5択版にあった75%の誤答が取り除かれている。"
+        ]
+      },
+      {
+        "page": 9,
+        "title": "実例2：薬剤による検査値の変化",
+        "section": "1. 医学の問題と実例",
+        "kind": "example",
+        "example_id": "US/4_options/test/836",
+        "language": "en/ja",
+        "sources": [
+          "paper"
+        ],
+        "original_text": "A 72-year-old anthropologist with long-standing hypertension visits your office for a routine exam. You notice an abnormality on his laboratory results caused by his regimen of captopril and triamterene. What abnormality did you most likely find?\n\nA. Hyperkalemia\nB. Hypernatremia\nC. Thrombocytopenia\nD. Anemia",
+        "translation": "長年高血圧を患っている72歳の人類学者が定期診察に来た。カプトプリルとトリアムテレンの服用による検査値の異常が見つかった。最も考えられる異常はどれか。\n\nA. 高カリウム血症\nB. 高ナトリウム血症\nC. 血小板減少症\nD. 貧血"
+      },
+      {
+        "page": 10,
+        "title": "薬剤名と、起こり得る変化を結び付ける",
+        "section": "1. 医学の問題と実例",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ],
+        "body_text": [
+          "実例2は、カプトプリルとトリアムテレンを服用している患者の検査値を問う。注釈の正解は高カリウム血症。",
+          "年齢や職業だけで答えを選ぶのではなく、薬剤の組合せと選択肢の検査所見を結び付ける。",
+          "疾患名だけでなく、副作用、機序、検査、対応する処置まで、多様な形で医学知識を問える。"
+        ]
+      },
+      {
+        "page": 11,
+        "title": "実例3：放射線の作用を問う",
+        "section": "1. 医学の問題と実例",
+        "kind": "example",
+        "example_id": "US/4_options/test/50",
+        "language": "en/ja",
+        "sources": [
+          "paper"
+        ],
+        "original_text": "A 65-year-old male is treated for anal carcinoma with therapy including external beam radiation. How does radiation affect cancer cells?\n\nA. Induces the formation of thymidine dimers\nB. Induces the formation of disulfide bonds\nC. Induces deamination of cytosine\nD. Induces breaks in double-stranded DNA",
+        "translation": "65歳の男性が肛門癌に対し、外照射を含む治療を受けている。放射線は癌細胞にどのような作用を及ぼすか。\n\nA. チミジン二量体の形成を誘導する\nB. ジスルフィド結合の形成を誘導する\nC. シトシンの脱アミノ化を誘導する\nD. 二本鎖DNAの切断を誘導する"
+      },
+      {
+        "page": 12,
+        "title": "知識の直接照合から、症例の推論まで含む",
+        "section": "1. 医学の問題と実例",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ],
+        "body_text": [
+          "実例3は、放射線の作用として二本鎖DNAの切断を選ぶ。症例の背景と、細胞に起こる機序を対応させる。",
+          "構築時には、知識を直接問う問題と、複数の根拠を要する症例問題を人手で分類した。",
+          "米国版devから無作為抽出した100問では、症例に基づく第2の型が98%。この割合は全件への自動注釈ではない。"
+        ]
+      },
+      {
+        "page": 13,
+        "title": "2. 3言語の構成と作成方法",
+        "section": "2. 3言語の構成と作成方法",
+        "kind": "divider"
+      },
+      {
+        "page": 14,
+        "title": "3言語・3地域、合計61,097問",
+        "section": "2. 3言語の構成と作成方法",
+        "kind": "content",
+        "sources": [
+          "paper",
+          "code"
+        ]
+      },
+      {
+        "page": 15,
+        "title": "簡体字中国語版が最も多い",
+        "section": "2. 3言語の構成と作成方法",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ]
+      },
+      {
+        "page": 16,
+        "title": "公開されている試験・模擬問題を集めた",
+        "section": "2. 3言語の構成と作成方法",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ],
+        "body_text": [
+          "米国、中国本土、台湾の医師資格試験に関する問題を、公開Webサイトから収集した。実際の試験問題と模擬問題の両方を含む。",
+          "米国版の出所にはMedbullets、AMBOSS、Lecturioなどがある。台湾版は試験機関の公開問題を使う。",
+          "教科書の段落を知識源として別に用意し、検索した根拠を使って選択肢を解くOpenQAを設計した。"
+        ]
+      },
+      {
+        "page": 17,
+        "title": "4択版では、誤答を一つ減らしている",
+        "section": "2. 3言語の構成と作成方法",
+        "kind": "content",
+        "sources": [
+          "paper",
+          "code"
+        ],
+        "body_text": [
+          "USとMainlandの通常splitは5択。4_options版では誤答の一つを除き、正解1件と誤答3件にする。論文は選択肢順の並べ替えも説明している。",
+          "台湾版は4択。3版の論文実験は、いずれも4択で報告された。",
+          "HELMの実装はUS/4_optionsだけを読み、全レコードが4択であることを検査する。docstringの5択例とは区別する。"
+        ]
+      },
+      {
+        "page": 18,
+        "title": "公式splitは、およそ80：10：10",
+        "section": "2. 3言語の構成と作成方法",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ]
+      },
+      {
+        "page": 19,
+        "title": "同じ問題でも、正解の文字は変わる",
+        "section": "2. 3言語の構成と作成方法",
+        "kind": "content",
+        "sources": [
+          "repo"
+        ]
+      },
+      {
+        "page": 20,
+        "title": "3. 評価方法とHELMの範囲",
+        "section": "3. 評価方法とHELMの範囲",
+        "kind": "divider"
+      },
+      {
+        "page": 21,
+        "title": "構築時は、教科書を検索してから選択肢を解く",
+        "section": "3. 評価方法とHELMの範囲",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ],
+        "body_text": [
+          "論文のOpenQAは、質問・候補の答えと、教科書から抽出した文書集合を使う。検索器と読解モデルを組み合わせる。",
+          "英語の教科書18冊と簡体字中国語の教科書33冊を収集し、段落に分けた。台湾版の実験では問題を英語に翻訳して英語側の知識源を使う。",
+          "用意した教科書の根拠を検索できるかと、根拠から正しい選択肢を推論できるかの両方が成績に関わる。"
+        ]
+      },
+      {
+        "page": 22,
+        "title": "構築時の最良テスト正解率にも差がある",
+        "section": "3. 評価方法とHELMの範囲",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ]
+      },
+      {
+        "page": 23,
+        "title": "HELMは、選択肢を並べて文字を生成させる",
+        "section": "3. 評価方法とHELMの範囲",
+        "kind": "content",
+        "sources": [
+          "run",
+          "adapter"
+        ],
+        "body_text": [
+          "get_med_qa_specはmultiple_choice_jointを指定し、Question、A〜Dの候補、Answerを一つのプロンプトに並べる。",
+          "指示は「Give a letter answer among A, B, C or D.」。モデルが生成した文字を、その問題の選択肢本文へ対応付けて採点する。",
+          "この設定は教科書検索を組み込まない。構築時の検索＋読解方式とは、モデルに渡す情報が異なる。"
+        ]
+      },
+      {
+        "page": 24,
+        "title": "文字を本文へ写してから、一致を判定する",
+        "section": "3. 評価方法とHELMの範囲",
+        "kind": "content",
+        "sources": [
+          "metric",
+          "classic"
+        ],
+        "body_text": [
+          "正解がDの実例1では、出力Dを選択肢本文の100%へ写す。別の文字なら、その文字に対応する別の本文を比較する。",
+          "BasicMetricには完全一致と、大文字・小文字、句読点、冠詞、空白を正規化した一致などがある。Classicの表示設定はtestのquasi_exact_match。",
+          "生成文字の前後の空白は除くが、D.や100%を直接生成しても、文字から本文への写像には一致せず、正解扱いにならない。"
+        ]
+      },
+      {
+        "page": 25,
+        "title": "Classic v0.4.0の公開runは0件",
+        "section": "3. 評価方法とHELMの範囲",
+        "kind": "content",
+        "sources": [
+          "classic"
+        ]
+      },
+      {
+        "page": 26,
+        "title": "データの規模と、公開実行の有無を分けて読む",
+        "section": "3. 評価方法とHELMの範囲",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ],
+        "body_text": [
+          "米国版の4択データ12,723件は配布され、HELMの読込・採点設定も存在する。一方、このClassic配布版にモデル別の実行結果はない。",
+          "構築時の36.7%などを、HELMによるモデル成績として扱わない。評価方式とモデル、使用する根拠が異なる。",
+          "ここでの実例は公式データから取得した問題であり、公開モデルの予測例ではない。"
+        ]
+      },
+      {
+        "page": 27,
+        "title": "4. 入手と再現の手順",
+        "section": "4. 入手と再現の手順",
+        "kind": "divider"
+      },
+      {
+        "page": 28,
+        "title": "公式配布から、使う版とsplitを選ぶ",
+        "section": "4. 入手と再現の手順",
+        "kind": "content",
+        "sources": [
+          "repo",
+          "code"
+        ],
+        "body_text": [
+          "公式GitHubの案内からdata_clean.zipを取得する。質問と教科書を含むが、HELMが読むのはquestions/US/4_options内のJSONL。",
+          "phrases_no_exclude_train、dev、testの各ファイルを選ぶ。HELMではdevがvalidというsplit名になる。",
+          "質問、全候補、answer_idxを一組として保存する。版、ファイル、行番号、原レコードのハッシュを残すと照合しやすい。"
+        ]
+      },
+      {
+        "page": 29,
+        "title": "利用条件は、コードと収集した問題を区別する",
+        "section": "4. 入手と再現の手順",
+        "kind": "content",
+        "sources": [
+          "license",
+          "paper"
+        ],
+        "body_text": [
+          "公式リポジトリにはMIT Licenseがある。構築論文は、試験問題の利用と選択肢の加工についてfair useの考え方を説明する。",
+          "教科書や試験問題の第三者の権利まで、コードのライセンスだけで判断しない。出所、使う範囲、配布条件を確認する。",
+          "この資料では出典を付して選んだ13問を紹介する。教科書や質問全件のファイルは、資料の配布物には含めない。"
+        ]
+      },
+      {
+        "page": 30,
+        "title": "原レコードと読込処理を、同じ版で照合する",
+        "section": "4. 入手と再現の手順",
+        "kind": "content",
+        "sources": [
+          "code"
+        ],
+        "body_text": [
+          "取得した公式ZIPとコードにSHA-256を保存し、HELM v0.3.0の読込処理を実行した。全12,723件が4択で、各1件のcorrectタグを持つ。",
+          "全件でanswer_idxと正解本文の対応が一致した。13実例にも元ファイルの行とハッシュを保存した。",
+          "HELMは選択肢末尾の引用符と空白を整える。この資料の英語欄は元データを保持し、整形の前後は別記録に残した。"
+        ]
+      },
+      {
+        "page": 31,
+        "title": "文字情報の範囲と、評価できることを捉える",
+        "section": "4. 入手と再現の手順",
+        "kind": "content",
+        "sources": [
+          "repo"
+        ],
+        "body_text": [
+          "医学の知識を、症例の記述と選択肢に結び付けられるかを調べる。自由記述の診療記録や、実際の診療行動を採点するデータではない。",
+          "配布テキストには図への言及が残る問題もある。たとえばtest[945]は緑の矢印を指すが、JSONLには図が含まれない。",
+          "問題の出所や専門分野、言語、選択肢の版をそろえ、何を与えた状態の正解率なのかを記録する。"
+        ]
+      },
+      {
+        "page": 32,
+        "title": "医学知識の適用を、多肢選択で調べる",
+        "section": "4. 入手と再現の手順",
+        "kind": "content",
+        "sources": [
+          "paper",
+          "code"
+        ],
+        "body_text": [
+          "MedQAは英語・簡体字中国語・繁体字中国語の61,097問。資格試験と模擬問題から、知識の照合と症例に基づく推論を扱う。",
+          "HELMの範囲は米国版の英語・4択。文字を選択肢本文へ写して一致を採点し、教科書の検索はこの設定に含まれない。",
+          "配布データ、評価設定、構築時の成績、公開runを区別して使う。Classic v0.4.0には、このシナリオのモデル別成績はない。"
+        ]
+      },
+      {
+        "page": 33,
+        "title": "Appendix",
+        "section": "Appendix",
+        "kind": "divider"
+      },
+      {
+        "page": 34,
+        "title": "",
+        "section": "Appendix: 目次",
+        "kind": "toc"
+      },
+      {
+        "page": 35,
+        "title": "実例4：免疫グロブリンの役割",
+        "section": "Appendix: 1. 追加の実例",
+        "kind": "example",
+        "example_id": "US/4_options/test/996",
+        "language": "en/ja",
+        "sources": [
+          "paper"
+        ],
+        "original_text": "The only immunoglobulin found as a dimer has what primary function?\n\nA. Protect against invasive helminth infection\nB. Protect against viral infections\nC. Inhibiting bacterial adherance and colonization of mucous membranes\nD. Provides the most specific recognition to circulating antigens in the bloodstream",
+        "translation": "二量体として存在する唯一の免疫グロブリンの主な機能はどれか。\n\nA. 侵入性の蠕虫感染から防御する\nB. ウイルス感染から防御する\nC. 粘膜への細菌の付着と定着を阻害する\nD. 血中を循環する抗原を最も特異的に認識する"
+      },
+      {
+        "page": 36,
+        "title": "実例5：筋細胞の弛緩に必要な過程",
+        "section": "Appendix: 1. 追加の実例",
+        "kind": "example",
+        "example_id": "US/4_options/test/943",
+        "language": "en/ja",
+        "sources": [
+          "paper"
+        ],
+        "original_text": "A scientist observes a myocyte beating in cell culture. Which step is the most direct necessary component of relaxation for this cell?\n\nA. Influx of sodium ions\nB. Influx of calcium ions from the sacroplasmic reticulum\nC. Influx of calcium ions from outside the myocyte\nD. Efflux of calcium ions",
+        "translation": "研究者が細胞培養中で拍動する筋細胞を観察している。この細胞が弛緩するために最も直接必要な過程はどれか。\n\nA. ナトリウムイオンの流入\nB. 筋小胞体からのカルシウムイオンの流入\nC. 筋細胞外からのカルシウムイオンの流入\nD. カルシウムイオンの流出"
+      },
+      {
+        "page": 37,
+        "title": "実例6：診断の閾値と偽陰性",
+        "section": "Appendix: 1. 追加の実例",
+        "kind": "example",
+        "example_id": "US/4_options/test/481",
+        "language": "en/ja",
+        "sources": [
+          "paper"
+        ],
+        "original_text": "Current recommendations state that a single hemoglobin A1c value of greater than 6.5% is diagnostic of diabetes mellitus. If this 6.5% cut-off is to be increased to 7.0%, which of the following would be true?\n\nA. Increase in false negative test results\nB. Increase in false positive test results\nC. Decrease in true negative test results\nD. Increase in true positive test results",
+        "translation": "現行の推奨では、ヘモグロビンA1cが1回でも6.5%を超えれば糖尿病と診断するとされる。この閾値を6.5%から7.0%に上げた場合、正しいものはどれか。\n\nA. 偽陰性の検査結果が増える\nB. 偽陽性の検査結果が増える\nC. 真陰性の検査結果が減る\nD. 真陽性の検査結果が増える"
+      },
+      {
+        "page": 38,
+        "title": "実例7：皮膚の所見から診断を選ぶ",
+        "section": "Appendix: 1. 追加の実例",
+        "kind": "example",
+        "example_id": "US/4_options/test/225",
+        "language": "en/ja",
+        "sources": [
+          "paper"
+        ],
+        "original_text": "A 19-year-old Caucasian male presents to your office with hypopigmented skin. He undergoes a skin biopsy and is found to have an absence of melanocytes in the epidermis. Which of the following is the most likely diagnosis?\n\nA. Tinea versicolor\nB. Albinism\nC. Vitiligo\nD. Melanoma",
+        "translation": "19歳の白人男性が皮膚の色素減少を訴えて受診した。皮膚生検で、表皮にメラノサイトが存在しないことが分かった。最も考えられる診断はどれか。\n\nA. 癜風\nB. 白皮症\nC. 尋常性白斑\nD. 悪性黒色腫"
+      },
+      {
+        "page": 39,
+        "title": "実例8：症状と機能障害を結び付ける",
+        "section": "Appendix: 1. 追加の実例",
+        "kind": "example",
+        "example_id": "US/4_options/test/1070",
+        "language": "en/ja",
+        "sources": [
+          "paper"
+        ],
+        "original_text": "A 72-year-old Caucasian male presents to your office with dysphagia and halitosis. If this patient is also found to have cricopharyngeal muscle dysfunction, which of the following is the most likely cause of his presenting symptoms?\n\nA. Gastroesophageal reflux disease\nB. Esophageal candidiasis\nC. Meckel's diverticulum\nD. Zenker's diverticulum",
+        "translation": "72歳の白人男性が嚥下困難と口臭を訴えて受診した。輪状咽頭筋の機能障害も認められる場合、症状の原因として最も考えられるものはどれか。\n\nA. 胃食道逆流症\nB. 食道カンジダ症\nC. メッケル憩室\nD. ツェンカー憩室"
+      },
+      {
+        "page": 40,
+        "title": "実例9：作用機序から薬の種類を選ぶ",
+        "section": "Appendix: 1. 追加の実例",
+        "kind": "example",
+        "example_id": "US/4_options/test/765",
+        "language": "en/ja",
+        "sources": [
+          "paper"
+        ],
+        "original_text": "A 7-year-old boy is brought to your office with complaints of wheezing and dyspnea. Laboratory work reveals eosinophilia and positive skin tests for allergens. Which of the following types of drugs would be an effective treatment in this patient?\n\nA. Beta-2 antagonist\nB. Histone deacetylase inhibitor\nC. Muscarinic antagonist\nD. Anticoagulant",
+        "translation": "7歳の男児が喘鳴と呼吸困難を訴えて受診した。検査で好酸球増多とアレルゲンの皮膚試験陽性が認められた。この患者に有効な薬の種類はどれか。\n\nA. β2受容体拮抗薬\nB. ヒストン脱アセチル化酵素阻害薬\nC. ムスカリン受容体拮抗薬\nD. 抗凝固薬"
+      },
+      {
+        "page": 41,
+        "title": "実例10：過敏反応と関与する細胞",
+        "section": "Appendix: 1. 追加の実例",
+        "kind": "example",
+        "example_id": "US/4_options/test/840",
+        "language": "en/ja",
+        "sources": [
+          "paper"
+        ],
+        "original_text": "Candida is injected into the skin of a 38-year-old female patient. Forty-eight hours later, there is a 14 mm raised, slightly hardened area at the injection site. What type of hypersensitivity reaction has occurred and what cell type plays a role?\n\nA. Type I hypersensitivty; eosinophils\nB. Type IV hypersensitivity; mast cells\nC. Type III hypersensitivity; CD4+ T cells\nD. Type IV hypersensitivity; CD4+ T cells",
+        "translation": "38歳の女性の皮膚にカンジダを注射した。48時間後、注射部位に14 mmの隆起した、やや硬い領域が生じた。これは何型の過敏反応で、どの細胞が関与するか。\n\nA. I型過敏反応・好酸球\nB. IV型過敏反応・肥満細胞\nC. III型過敏反応・CD4陽性T細胞\nD. IV型過敏反応・CD4陽性T細胞"
+      },
+      {
+        "page": 42,
+        "title": "実例11：薬剤の有害作用を問う",
+        "section": "Appendix: 1. 追加の実例",
+        "kind": "example",
+        "example_id": "US/4_options/test/56",
+        "language": "en/ja",
+        "sources": [
+          "paper"
+        ],
+        "original_text": "An otherwise healthy 26-year-old man comes to the physician for medication counseling after recently being diagnosed with schizophrenia. Risperidone therapy is initiated. This patient is at increased risk for which of the following adverse effects?\n\nA. Agranulocytosis\nB. Shortened QT interval\nC. Gynecomastia\nD. Weight loss",
+        "translation": "ほかに健康上の問題がない26歳の男性が、最近統合失調症と診断され、薬の説明を受けるために受診した。リスペリドンによる治療を開始した場合、リスクが高まる有害作用はどれか。\n\nA. 無顆粒球症\nB. QT間隔の短縮\nC. 女性化乳房\nD. 体重減少"
+      },
+      {
+        "page": 43,
+        "title": "実例12：手術前の薬を選ぶ",
+        "section": "Appendix: 1. 追加の実例",
+        "kind": "example",
+        "example_id": "US/4_options/test/1226",
+        "language": "en/ja",
+        "sources": [
+          "paper"
+        ],
+        "original_text": "A 39-year-old woman, with a history of thyroidectomy and primary hyperparathyroidism presents for surgical evaluation for a right adrenal mass. Preoperatively, which of the following medications should she receive to prevent a hypertensive emergency intraoperatively?\n\nA. Atenolol\nB. Labetolol\nC. Nifedipine\nD. Phenoxybenzamine",
+        "translation": "甲状腺摘出と原発性副甲状腺機能亢進症の既往がある39歳の女性が、右副腎腫瘤の手術評価のために受診した。術中の高血圧緊急症を防ぐため、術前に投与すべき薬はどれか。\n\nA. アテノロール\nB. ラベタロール\nC. ニフェジピン\nD. フェノキシベンザミン"
+      },
+      {
+        "page": 44,
+        "title": "実例13：蛋白尿の特徴を問う",
+        "section": "Appendix: 1. 追加の実例",
+        "kind": "example",
+        "example_id": "US/4_options/test/574",
+        "language": "en/ja",
+        "sources": [
+          "paper"
+        ],
+        "original_text": "An 11-year-old boy presents to your office with pitting edema and proteinuria exceeding 3.5g in 24 hours. You suspect that this patient has experienced a loss of polyanions in his glomerular basement membranes. Which of the following findings would confirm your diagnosis?\n\nA. WBC casts in the urine\nB. Selective albuminuria\nC. Negatively birefringent crystals in the urine\nD. Bence-Jones proteinuria",
+        "translation": "11歳の男児に圧痕性浮腫と、24時間で3.5 gを超える蛋白尿がある。糸球体基底膜のポリアニオンの喪失が疑われる。この診断を裏付ける所見はどれか。\n\nA. 尿中の白血球円柱\nB. 選択的アルブミン尿\nC. 尿中の負の複屈折を示す結晶\nD. ベンス・ジョーンズ蛋白尿"
+      },
+      {
+        "page": 45,
+        "title": "1問のレコードに、正解の文字と本文を持つ",
+        "section": "Appendix: 2. データ形式と集計",
+        "kind": "code",
+        "sources": [
+          "repo"
+        ]
+      },
+      {
+        "page": 46,
+        "title": "識別子は、ファイルと行位置に対応させる",
+        "section": "Appendix: 2. データ形式と集計",
+        "kind": "content",
+        "sources": [
+          "repo"
+        ],
+        "body_text": [
+          "この資料のUS/4_options/test/267は、test配列の0始まり267番目、JSONLの268行目を指す。配布元が付けた固有IDではない。",
+          "13問はすべてtestから選んだ。原レコード全体をキー順でJSON化し、UTF-8のSHA-256を保存した。",
+          "医学用語の日本語訳は質問と全候補を対象とし、年齢・数量・薬剤・病態の条件と、正解の対応を保持した。"
+        ]
+      },
+      {
+        "page": 47,
+        "title": "選択肢数は、ファイル群ごとに異なる",
+        "section": "Appendix: 2. データ形式と集計",
+        "kind": "content",
+        "sources": [
+          "repo"
+        ]
+      },
+      {
+        "page": 48,
+        "title": "米国版のtestには、二つの試験区分がある",
+        "section": "Appendix: 2. データ形式と集計",
+        "kind": "content",
+        "sources": [
+          "repo"
+        ]
+      },
+      {
+        "page": 49,
+        "title": "HELMは、末尾の引用符と空白を整える",
+        "section": "Appendix: 2. データ形式と集計",
+        "kind": "content",
+        "sources": [
+          "code"
+        ],
+        "body_text": [
+          "選択肢本文にanswer.rstrip('\"').rstrip()を適用してReferenceを作る。正解は文字キーとanswer_idxの比較で付ける。",
+          "全50,892選択肢のうち647件が変化した。たとえばtrain[10]のDは末尾の改行と引用符が除かれる。",
+          "この処理は医学内容の書き換えではない。元データとHELM入力を別に保存し、どの処理で変わったかを追えるようにする。"
+        ]
+      },
+      {
+        "page": 50,
+        "title": "実行設定の既定値と、実際の要求を分ける",
+        "section": "Appendix: 2. データ形式と集計",
+        "kind": "content",
+        "sources": [
+          "run",
+          "adapter"
+        ]
+      },
+      {
+        "page": 51,
+        "title": "参考文献",
+        "section": "Appendix: 3. 研究と参考文献",
+        "kind": "references"
+      },
+      {
+        "page": 52,
+        "title": "参考文献",
+        "section": "Appendix: 3. 研究と参考文献",
+        "kind": "references"
+      },
+      {
+        "page": 53,
+        "title": "参考文献",
+        "section": "Appendix: 3. 研究と参考文献",
+        "kind": "references"
+      }
+    ],
+    "links-audit.json": {
+      "native_url_only_runs": 56,
+      "pdf_link_rectangles": 56,
+      "pdf_link_text_exactly_matches_url": true,
+      "pdf_link_character_centers_match_url": true,
+      "glyph_box_overhangs": [],
+      "shortened_url_labels": [],
+      "issues": []
+    },
+    "notes-audit.json": {
+      "notes": [],
+      "passed": true
+    },
+    "screenshot-log.json": {
+      "pages": [
+        {
+          "slug": "medqa",
+          "url": "https://github.com/jind11/MedQA",
+          "status": 200,
+          "title": "GitHub - jind11/MedQA: Code and data for MedQA · GitHub",
+          "css": 34,
+          "screenshot": "official-site.png",
+          "transport": "system-CA-verified urllib responses rendered in Chromium; persistent trust unchanged"
+        }
+      ],
+      "asset_failures": []
+    },
+    "example-display-audit.json": [
+      {
+        "page": 7,
+        "id": "US/4_options/test/267",
+        "original_question_and_all_options_on_one_slide": true,
+        "full_translation_match": true,
+        "source_answer_preserved": true,
+        "answer_22pt_bold_accent1": true
+      },
+      {
+        "page": 9,
+        "id": "US/4_options/test/836",
+        "original_question_and_all_options_on_one_slide": true,
+        "full_translation_match": true,
+        "source_answer_preserved": true,
+        "answer_22pt_bold_accent1": true
+      },
+      {
+        "page": 11,
+        "id": "US/4_options/test/50",
+        "original_question_and_all_options_on_one_slide": true,
+        "full_translation_match": true,
+        "source_answer_preserved": true,
+        "answer_22pt_bold_accent1": true
+      },
+      {
+        "page": 35,
+        "id": "US/4_options/test/996",
+        "original_question_and_all_options_on_one_slide": true,
+        "full_translation_match": true,
+        "source_answer_preserved": true,
+        "answer_22pt_bold_accent1": true
+      },
+      {
+        "page": 36,
+        "id": "US/4_options/test/943",
+        "original_question_and_all_options_on_one_slide": true,
+        "full_translation_match": true,
+        "source_answer_preserved": true,
+        "answer_22pt_bold_accent1": true
+      },
+      {
+        "page": 37,
+        "id": "US/4_options/test/481",
+        "original_question_and_all_options_on_one_slide": true,
+        "full_translation_match": true,
+        "source_answer_preserved": true,
+        "answer_22pt_bold_accent1": true
+      },
+      {
+        "page": 38,
+        "id": "US/4_options/test/225",
+        "original_question_and_all_options_on_one_slide": true,
+        "full_translation_match": true,
+        "source_answer_preserved": true,
+        "answer_22pt_bold_accent1": true
+      },
+      {
+        "page": 39,
+        "id": "US/4_options/test/1070",
+        "original_question_and_all_options_on_one_slide": true,
+        "full_translation_match": true,
+        "source_answer_preserved": true,
+        "answer_22pt_bold_accent1": true
+      },
+      {
+        "page": 40,
+        "id": "US/4_options/test/765",
+        "original_question_and_all_options_on_one_slide": true,
+        "full_translation_match": true,
+        "source_answer_preserved": true,
+        "answer_22pt_bold_accent1": true
+      },
+      {
+        "page": 41,
+        "id": "US/4_options/test/840",
+        "original_question_and_all_options_on_one_slide": true,
+        "full_translation_match": true,
+        "source_answer_preserved": true,
+        "answer_22pt_bold_accent1": true
+      },
+      {
+        "page": 42,
+        "id": "US/4_options/test/56",
+        "original_question_and_all_options_on_one_slide": true,
+        "full_translation_match": true,
+        "source_answer_preserved": true,
+        "answer_22pt_bold_accent1": true
+      },
+      {
+        "page": 43,
+        "id": "US/4_options/test/1226",
+        "original_question_and_all_options_on_one_slide": true,
+        "full_translation_match": true,
+        "source_answer_preserved": true,
+        "answer_22pt_bold_accent1": true
+      },
+      {
+        "page": 44,
+        "id": "US/4_options/test/574",
+        "original_question_and_all_options_on_one_slide": true,
+        "full_translation_match": true,
+        "source_answer_preserved": true,
+        "answer_22pt_bold_accent1": true
+      }
+    ],
+    "panel-ink-audit.json": [
+      {
+        "page": 7,
+        "gray_bounds_pixels": [
+          65,
+          230,
+          526,
+          457
+        ],
+        "visible_ink_y_pixels": [
+          241,
+          447
+        ],
+        "visible_top_gap_pt": 7.333333333333333,
+        "visible_bottom_gap_pt": 6.666666666666667,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 7,
+        "gray_bounds_pixels": [
+          551,
+          230,
+          1012,
+          456
+        ],
+        "visible_ink_y_pixels": [
+          241,
+          446
+        ],
+        "visible_top_gap_pt": 7.333333333333333,
+        "visible_bottom_gap_pt": 6.666666666666667,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 9,
+        "gray_bounds_pixels": [
+          65,
+          230,
+          526,
+          444
+        ],
+        "visible_ink_y_pixels": [
+          241,
+          433
+        ],
+        "visible_top_gap_pt": 7.333333333333333,
+        "visible_bottom_gap_pt": 7.333333333333333,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 9,
+        "gray_bounds_pixels": [
+          551,
+          230,
+          1012,
+          458
+        ],
+        "visible_ink_y_pixels": [
+          241,
+          448
+        ],
+        "visible_top_gap_pt": 7.333333333333333,
+        "visible_bottom_gap_pt": 6.666666666666667,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 11,
+        "gray_bounds_pixels": [
+          65,
+          230,
+          526,
+          451
+        ],
+        "visible_ink_y_pixels": [
+          240,
+          440
+        ],
+        "visible_top_gap_pt": 6.666666666666667,
+        "visible_bottom_gap_pt": 7.333333333333333,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 11,
+        "gray_bounds_pixels": [
+          551,
+          230,
+          1012,
+          458
+        ],
+        "visible_ink_y_pixels": [
+          240,
+          447
+        ],
+        "visible_top_gap_pt": 6.666666666666667,
+        "visible_bottom_gap_pt": 7.333333333333333,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 35,
+        "gray_bounds_pixels": [
+          65,
+          230,
+          526,
+          456
+        ],
+        "visible_ink_y_pixels": [
+          240,
+          445
+        ],
+        "visible_top_gap_pt": 6.666666666666667,
+        "visible_bottom_gap_pt": 7.333333333333333,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 35,
+        "gray_bounds_pixels": [
+          551,
+          230,
+          1012,
+          458
+        ],
+        "visible_ink_y_pixels": [
+          240,
+          447
+        ],
+        "visible_top_gap_pt": 6.666666666666667,
+        "visible_bottom_gap_pt": 7.333333333333333,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 36,
+        "gray_bounds_pixels": [
+          65,
+          230,
+          526,
+          457
+        ],
+        "visible_ink_y_pixels": [
+          241,
+          447
+        ],
+        "visible_top_gap_pt": 7.333333333333333,
+        "visible_bottom_gap_pt": 6.666666666666667,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 36,
+        "gray_bounds_pixels": [
+          551,
+          230,
+          1012,
+          448
+        ],
+        "visible_ink_y_pixels": [
+          240,
+          437
+        ],
+        "visible_top_gap_pt": 6.666666666666667,
+        "visible_bottom_gap_pt": 7.333333333333333,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 37,
+        "gray_bounds_pixels": [
+          65,
+          230,
+          526,
+          461
+        ],
+        "visible_ink_y_pixels": [
+          241,
+          451
+        ],
+        "visible_top_gap_pt": 7.333333333333333,
+        "visible_bottom_gap_pt": 6.666666666666667,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 37,
+        "gray_bounds_pixels": [
+          551,
+          230,
+          1012,
+          458
+        ],
+        "visible_ink_y_pixels": [
+          241,
+          448
+        ],
+        "visible_top_gap_pt": 7.333333333333333,
+        "visible_bottom_gap_pt": 6.666666666666667,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 38,
+        "gray_bounds_pixels": [
+          65,
+          230,
+          526,
+          457
+        ],
+        "visible_ink_y_pixels": [
+          241,
+          447
+        ],
+        "visible_top_gap_pt": 7.333333333333333,
+        "visible_bottom_gap_pt": 6.666666666666667,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 38,
+        "gray_bounds_pixels": [
+          551,
+          230,
+          1012,
+          458
+        ],
+        "visible_ink_y_pixels": [
+          241,
+          448
+        ],
+        "visible_top_gap_pt": 7.333333333333333,
+        "visible_bottom_gap_pt": 6.666666666666667,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 39,
+        "gray_bounds_pixels": [
+          65,
+          230,
+          526,
+          457
+        ],
+        "visible_ink_y_pixels": [
+          241,
+          447
+        ],
+        "visible_top_gap_pt": 7.333333333333333,
+        "visible_bottom_gap_pt": 6.666666666666667,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 39,
+        "gray_bounds_pixels": [
+          551,
+          230,
+          1012,
+          457
+        ],
+        "visible_ink_y_pixels": [
+          241,
+          447
+        ],
+        "visible_top_gap_pt": 7.333333333333333,
+        "visible_bottom_gap_pt": 6.666666666666667,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 40,
+        "gray_bounds_pixels": [
+          65,
+          230,
+          526,
+          451
+        ],
+        "visible_ink_y_pixels": [
+          240,
+          441
+        ],
+        "visible_top_gap_pt": 6.666666666666667,
+        "visible_bottom_gap_pt": 6.666666666666667,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 40,
+        "gray_bounds_pixels": [
+          551,
+          230,
+          1012,
+          458
+        ],
+        "visible_ink_y_pixels": [
+          241,
+          448
+        ],
+        "visible_top_gap_pt": 7.333333333333333,
+        "visible_bottom_gap_pt": 6.666666666666667,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 41,
+        "gray_bounds_pixels": [
+          65,
+          230,
+          526,
+          452
+        ],
+        "visible_ink_y_pixels": [
+          241,
+          441
+        ],
+        "visible_top_gap_pt": 7.333333333333333,
+        "visible_bottom_gap_pt": 7.333333333333333,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 41,
+        "gray_bounds_pixels": [
+          551,
+          230,
+          1012,
+          458
+        ],
+        "visible_ink_y_pixels": [
+          240,
+          447
+        ],
+        "visible_top_gap_pt": 6.666666666666667,
+        "visible_bottom_gap_pt": 7.333333333333333,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 42,
+        "gray_bounds_pixels": [
+          65,
+          230,
+          526,
+          448
+        ],
+        "visible_ink_y_pixels": [
+          241,
+          437
+        ],
+        "visible_top_gap_pt": 7.333333333333333,
+        "visible_bottom_gap_pt": 7.333333333333333,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 42,
+        "gray_bounds_pixels": [
+          551,
+          230,
+          1012,
+          455
+        ],
+        "visible_ink_y_pixels": [
+          240,
+          444
+        ],
+        "visible_top_gap_pt": 6.666666666666667,
+        "visible_bottom_gap_pt": 7.333333333333333,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 43,
+        "gray_bounds_pixels": [
+          65,
+          230,
+          526,
+          463
+        ],
+        "visible_ink_y_pixels": [
+          240,
+          453
+        ],
+        "visible_top_gap_pt": 6.666666666666667,
+        "visible_bottom_gap_pt": 6.666666666666667,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 43,
+        "gray_bounds_pixels": [
+          551,
+          230,
+          1012,
+          457
+        ],
+        "visible_ink_y_pixels": [
+          241,
+          447
+        ],
+        "visible_top_gap_pt": 7.333333333333333,
+        "visible_bottom_gap_pt": 6.666666666666667,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 44,
+        "gray_bounds_pixels": [
+          65,
+          230,
+          526,
+          463
+        ],
+        "visible_ink_y_pixels": [
+          240,
+          453
+        ],
+        "visible_top_gap_pt": 6.666666666666667,
+        "visible_bottom_gap_pt": 6.666666666666667,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 44,
+        "gray_bounds_pixels": [
+          551,
+          230,
+          1012,
+          458
+        ],
+        "visible_ink_y_pixels": [
+          241,
+          448
+        ],
+        "visible_top_gap_pt": 7.333333333333333,
+        "visible_bottom_gap_pt": 6.666666666666667,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 45,
+        "gray_bounds_pixels": [
+          65,
+          179,
+          1015,
+          358
+        ],
+        "visible_ink_y_pixels": [
+          190,
+          347
+        ],
+        "visible_top_gap_pt": 7.333333333333333,
+        "visible_bottom_gap_pt": 7.333333333333333,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      }
+    ],
+    "evidence/retrieval-log.json": [
+      {
+        "file": "scenario-v030.py",
+        "url": "https://raw.githubusercontent.com/stanford-crfm/helm/v0.3.0/src/helm/benchmark/scenarios/med_qa_scenario.py",
+        "status": 200,
+        "bytes": 4417,
+        "sha256": "474883333bb75344e76043a2ca39e53961c617086f389055c09e7e1e8b3678ff"
+      },
+      {
+        "file": "official-readme.md",
+        "url": "https://raw.githubusercontent.com/jind11/MedQA/master/README.md",
+        "status": 200,
+        "bytes": 4974,
+        "sha256": "793b8e2803e876ab59b3f68dded40a36eb63d0043e1adf49224f34fd8b608797"
+      },
+      {
+        "file": "official-tree.json",
+        "url": "https://api.github.com/repos/jind11/MedQA/git/trees/master?recursive=1",
+        "status": 200,
+        "bytes": 9679,
+        "sha256": "0fdb5550fa048ba5b94d2101dde152d84ab52ca7358de0146d7cc275418e318c"
+      },
+      {
+        "file": "paper.html",
+        "url": "https://arxiv.org/html/2009.13081",
+        "status": 200,
+        "bytes": 220713,
+        "sha256": "a9c034b24f07cd9cc7f5aa3b41868150f60b550c0df1677fa9df7fa0d197d42d"
+      },
+      {
+        "file": "paper.pdf",
+        "url": "https://arxiv.org/pdf/2009.13081",
+        "status": 200,
+        "bytes": 189006,
+        "sha256": "5e19522f21c0ab5c24cc0dacd3feaa5d4b7057391520075f2e521a271d062ee6"
+      },
+      {
+        "file": "repository-info.json",
+        "url": "https://api.github.com/repos/jind11/MedQA",
+        "status": 200,
+        "bytes": 4964,
+        "sha256": "3dfd213a058331ae6cd3064adfab49708a48e9572aa947070957cbcfefff3f98"
+      }
+    ],
+    "evidence/official-commit.json": {
+      "sha": "27b02f66aac217933c9648a06f82e9f720377925",
+      "node_id": "C_kwDOEdVDltoAKDI3YjAyZjY2YWFjMjE3OTMzYzk2NDhhMDZmODJlOWY3MjAzNzc5MjU",
+      "commit": {
+        "author": {
+          "name": "Di Jin",
+          "email": "jindi15@mit.edu",
+          "date": "2022-12-01T18:23:49Z"
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "date": "2022-12-01T18:23:49Z"
+        },
+        "message": "Merge pull request #8 from jind11/add-license-1\n\nCreate LICENSE",
+        "tree": {
+          "sha": "9a7651ec7932c2efddc7ec2c1429398bd93f97e1",
+          "url": "https://api.github.com/repos/jind11/MedQA/git/trees/9a7651ec7932c2efddc7ec2c1429398bd93f97e1"
+        },
+        "url": "https://api.github.com/repos/jind11/MedQA/git/commits/27b02f66aac217933c9648a06f82e9f720377925",
+        "comment_count": 0,
+        "verification": {
+          "verified": true,
+          "reason": "valid",
+          "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJjiPE1CRBK7hj4Ov3rIwAAYHwIACeTd4BVyWgRorwtWJT+7GtF\n92mz4XuCh2yXVQGlloorpnmsi5VBVWR+efsOBNyewB5SAIoziWYu36717mbO+RF+\ni73ZbyHbmhiM6UHMzMJmtaCnoxwmP/8k0rxB1nxQGRNv4N0drBk37Nn/Um9LrlxK\nXPftAGSEKQ7jqfr85bQWh7KRMY5FqhfI9wrff0IwkYA2y/PZpc+n1o7+zNvhE1AF\nRN5XFdB/S4k6dD2WtRZWKFQdTJVQyP0E2dtG5PvuEYcS+3KHDurAjmgZHDBE+K+a\n/2AbFJj3352QyjJRvKO2t4b/MNN3BjGWPxRWv0655K57HT46NYtglV3bwrjUy7k=\n=cNoi\n-----END PGP SIGNATURE-----\n",
+          "payload": "tree 9a7651ec7932c2efddc7ec2c1429398bd93f97e1\nparent 7fd26946e974654e2893d5933fbe1a3fa8f1962d\nparent ce028efd2172494a35818fb7cb011122f5c3b710\nauthor Di Jin <jindi15@mit.edu> 1669919029 -0800\ncommitter GitHub <noreply@github.com> 1669919029 -0800\n\nMerge pull request #8 from jind11/add-license-1\n\nCreate LICENSE",
+          "verified_at": "2024-01-16T19:59:59Z"
+        }
+      },
+      "url": "https://api.github.com/repos/jind11/MedQA/commits/27b02f66aac217933c9648a06f82e9f720377925",
+      "html_url": "https://github.com/jind11/MedQA/commit/27b02f66aac217933c9648a06f82e9f720377925",
+      "comments_url": "https://api.github.com/repos/jind11/MedQA/commits/27b02f66aac217933c9648a06f82e9f720377925/comments",
+      "author": {
+        "login": "jind11",
+        "id": 16600322,
+        "node_id": "MDQ6VXNlcjE2NjAwMzIy",
+        "avatar_url": "https://avatars.githubusercontent.com/u/16600322?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/jind11",
+        "html_url": "https://github.com/jind11",
+        "followers_url": "https://api.github.com/users/jind11/followers",
+        "following_url": "https://api.github.com/users/jind11/following{/other_user}",
+        "gists_url": "https://api.github.com/users/jind11/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/jind11/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/jind11/subscriptions",
+        "organizations_url": "https://api.github.com/users/jind11/orgs",
+        "repos_url": "https://api.github.com/users/jind11/repos",
+        "events_url": "https://api.github.com/users/jind11/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/jind11/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "web-flow",
+        "id": 19864447,
+        "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+        "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/web-flow",
+        "html_url": "https://github.com/web-flow",
+        "followers_url": "https://api.github.com/users/web-flow/followers",
+        "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+        "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+        "organizations_url": "https://api.github.com/users/web-flow/orgs",
+        "repos_url": "https://api.github.com/users/web-flow/repos",
+        "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/web-flow/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "7fd26946e974654e2893d5933fbe1a3fa8f1962d",
+          "url": "https://api.github.com/repos/jind11/MedQA/commits/7fd26946e974654e2893d5933fbe1a3fa8f1962d",
+          "html_url": "https://github.com/jind11/MedQA/commit/7fd26946e974654e2893d5933fbe1a3fa8f1962d"
+        },
+        {
+          "sha": "ce028efd2172494a35818fb7cb011122f5c3b710",
+          "url": "https://api.github.com/repos/jind11/MedQA/commits/ce028efd2172494a35818fb7cb011122f5c3b710",
+          "html_url": "https://github.com/jind11/MedQA/commit/ce028efd2172494a35818fb7cb011122f5c3b710"
+        }
+      ],
+      "stats": {
+        "total": 21,
+        "additions": 21,
+        "deletions": 0
+      },
+      "files": [
+        {
+          "sha": "fb9714a65b20ba28558895a56eb882f2d35d0a22",
+          "filename": "LICENSE",
+          "status": "added",
+          "additions": 21,
+          "deletions": 0,
+          "changes": 21,
+          "blob_url": "https://github.com/jind11/MedQA/blob/27b02f66aac217933c9648a06f82e9f720377925/LICENSE",
+          "raw_url": "https://github.com/jind11/MedQA/raw/27b02f66aac217933c9648a06f82e9f720377925/LICENSE",
+          "contents_url": "https://api.github.com/repos/jind11/MedQA/contents/LICENSE?ref=27b02f66aac217933c9648a06f82e9f720377925",
+          "patch": "@@ -0,0 +1,21 @@\n+MIT License\n+\n+Copyright (c) 2022 Di Jin\n+\n+Permission is hereby granted, free of charge, to any person obtaining a copy\n+of this software and associated documentation files (the \"Software\"), to deal\n+in the Software without restriction, including without limitation the rights\n+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\n+copies of the Software, and to permit persons to whom the Software is\n+furnished to do so, subject to the following conditions:\n+\n+The above copyright notice and this permission notice shall be included in all\n+copies or substantial portions of the Software.\n+\n+THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\n+SOFTWARE."
+        }
+      ]
+    },
+    "evidence/file-manifest.json": [
+      {
+        "file": "joint-adapter-v030.py",
+        "bytes": 3920,
+        "sha256": "ee84473d77452c388df2fe8d930e05249aa28ac25bf142cdfd758eb65deeb374"
+      },
+      {
+        "file": "archive-retrieval.json",
+        "bytes": 3867,
+        "sha256": "08537019e133a05e3b0ac6f55c8d8340e1a658e4b7c6cfb549098d61d3c468a4"
+      },
+      {
+        "file": "paper-v1.html",
+        "bytes": 220713,
+        "sha256": "a9c034b24f07cd9cc7f5aa3b41868150f60b550c0df1677fa9df7fa0d197d42d"
+      },
+      {
+        "file": "drive-response.html",
+        "bytes": 2462,
+        "sha256": "b610cc6a97a11ec2c3fb3a287a123e4580981d2ce9f663b858e2772eef88dcd3"
+      },
+      {
+        "file": "official-readme-pinned.md",
+        "bytes": 4974,
+        "sha256": "793b8e2803e876ab59b3f68dded40a36eb63d0043e1adf49224f34fd8b608797"
+      },
+      {
+        "file": "archive-members.json",
+        "bytes": 48451,
+        "sha256": "3009cc9dcb92b4681f470f3d7c6a8079741cef240ae54b8485438acc149d07e9"
+      },
+      {
+        "file": "paper.html.txt",
+        "bytes": 70241,
+        "sha256": "d63b3db3d585a96690721084cb37d38a424390dc55b981125cbef493db8c9b01"
+      },
+      {
+        "file": "pinned-sources.json",
+        "bytes": 895,
+        "sha256": "1bb7307c024eb84139adb96a7e8d7943244ff60f0e8bd041801e11b408d8ed5f"
+      },
+      {
+        "file": "scenario-v030.py",
+        "bytes": 4417,
+        "sha256": "474883333bb75344e76043a2ca39e53961c617086f389055c09e7e1e8b3678ff"
+      },
+      {
+        "file": "helm-scenario-instances.json",
+        "bytes": 16705543,
+        "sha256": "0526dfe169c1a1fda30425d6eac922989569e7382779721a1b1c4915c6f2bfb6"
+      },
+      {
+        "file": "repository-info.json",
+        "bytes": 4964,
+        "sha256": "3dfd213a058331ae6cd3064adfab49708a48e9572aa947070957cbcfefff3f98"
+      },
+      {
+        "file": "retrieval-log.json",
+        "bytes": 1397,
+        "sha256": "aee5d89e552db0375708e2d43160be07bab0f65336035141420f5d474e21c9ad"
+      },
+      {
+        "file": "paper.html",
+        "bytes": 220713,
+        "sha256": "a9c034b24f07cd9cc7f5aa3b41868150f60b550c0df1677fa9df7fa0d197d42d"
+      },
+      {
+        "file": "primary-tables.json",
+        "bytes": 12433,
+        "sha256": "c296d03d8220f88719a5c1237840370a2928a37721d3c62ab0eaa4c942db84b2"
+      },
+      {
+        "file": "run-specs-v0.3.0.py",
+        "bytes": 97948,
+        "sha256": "b8e73d208868cb4b971433e1aa321a817a7813852caa943347093de3c74062a9"
+      },
+      {
+        "file": "official-license-pinned",
+        "bytes": 1063,
+        "sha256": "8a35478f13bfaa114cd157592ba06b9a27db0f9767ac1cb9b36d435de6157378"
+      },
+      {
+        "file": "hf-metadata.json",
+        "bytes": 1268,
+        "sha256": "52fc6cb7d6fde902dd3b5347137e30cc52fe4f1f3664039c084cdb05faa0a588"
+      },
+      {
+        "file": "official-commit.json",
+        "bytes": 5887,
+        "sha256": "469a40e8bf2d7e2241f01f2700e2409d8dc2f80bf80e3cb0a135f05b1675ac86"
+      },
+      {
+        "file": "data_clean.zip",
+        "bytes": 131741885,
+        "sha256": "1c2ca8130b3d86d9a99a432ab9bef14f3bb9807bef20facd9ac86ba36960f629"
+      },
+      {
+        "file": "file-manifest.json",
+        "bytes": 12566,
+        "sha256": "75820e6e15b139b0b112ea315fe18222a47dfb07a7da371fcf799a99deb69dab"
+      },
+      {
+        "file": "paper.pdf",
+        "bytes": 189006,
+        "sha256": "5e19522f21c0ab5c24cc0dacd3feaa5d4b7057391520075f2e521a271d062ee6"
+      },
+      {
+        "file": "official-license",
+        "bytes": 1063,
+        "sha256": "8a35478f13bfaa114cd157592ba06b9a27db0f9767ac1cb9b36d435de6157378"
+      },
+      {
+        "file": "official-tree.json",
+        "bytes": 9679,
+        "sha256": "0fdb5550fa048ba5b94d2101dde152d84ab52ca7358de0146d7cc275418e318c"
+      },
+      {
+        "file": "basic-metrics-v0.3.0.py",
+        "bytes": 43000,
+        "sha256": "4e70d7cdbdac00c9568d9aada8408745ddb0cc2dc484ecc4f38492ba559f52a6"
+      },
+      {
+        "file": "official-readme.md",
+        "bytes": 4974,
+        "sha256": "793b8e2803e876ab59b3f68dded40a36eb63d0043e1adf49224f34fd8b608797"
+      },
+      {
+        "file": "questions/US/._train.jsonl",
+        "bytes": 234,
+        "sha256": "20835eb6e762bd9b243afabd3fc209283db4e4c43d7e937a9eeab8219ed94993"
+      },
+      {
+        "file": "questions/US/test.jsonl",
+        "bytes": 1325785,
+        "sha256": "cfa75cbcc53c29b023752b0a395ff49d8202121041392735ae44771a5ec734a3"
+      },
+      {
+        "file": "questions/US/train.jsonl",
+        "bytes": 10383621,
+        "sha256": "f51bf201539f9b451a589c4c3b9de1faaf0f89c6f6f32ea4b2b9377e04e9e356"
+      },
+      {
+        "file": "questions/US/._dev.jsonl",
+        "bytes": 178,
+        "sha256": "bf8c0f96cc926ee2da2810177302aff8dfb4a258eb197da90f1d01eae3414d36"
+      },
+      {
+        "file": "questions/US/dev.jsonl",
+        "bytes": 1298185,
+        "sha256": "6bdc019180ebf82908c5690b6266898341fee5fd3b807ed0201c39c93f3424c6"
+      },
+      {
+        "file": "questions/US/._US_qbank.jsonl",
+        "bytes": 178,
+        "sha256": "e7e3d9fbe58cfa4569e795adf17b3ca939d6e9f03dcf3ad172fca038ae34d472"
+      },
+      {
+        "file": "questions/US/._test.jsonl",
+        "bytes": 178,
+        "sha256": "f73619e68a142dc7bb63c95d0abe349971b6b8b7648f1843679ca051f9101980"
+      },
+      {
+        "file": "questions/US/US_qbank.jsonl",
+        "bytes": 14152256,
+        "sha256": "03d8102f23596c49659ebb92142334b2e473be216f63b183e15f04a3acc3a816"
+      },
+      {
+        "file": "questions/Taiwan/._train.jsonl",
+        "bytes": 178,
+        "sha256": "4125f99b57788ee23f4bc2f3c5aa5749db5350851b713613246c79dd5f18c974"
+      },
+      {
+        "file": "questions/Taiwan/test.jsonl",
+        "bytes": 681213,
+        "sha256": "931ca3c281a1a533af33a0fb6bc1b31f4082c229711f8c591a11d3f109ca5b1b"
+      },
+      {
+        "file": "questions/Taiwan/._taiwanese_qbank.jsonl",
+        "bytes": 178,
+        "sha256": "64f8b261192c6e135b27c7d475d70b388fd32d8f8423fc1ae4c8fd2dba540c33"
+      },
+      {
+        "file": "questions/Taiwan/train.jsonl",
+        "bytes": 5353352,
+        "sha256": "002fa8055b600def4cd5cb2a1797d99bf753c7bf045e93054d0d0f41eee29d55"
+      },
+      {
+        "file": "questions/Taiwan/._dev.jsonl",
+        "bytes": 178,
+        "sha256": "2f21b894173c957cff3736a22d4e6af6ce0e13234a6fa356265fbb7eeeec95b9"
+      },
+      {
+        "file": "questions/Taiwan/dev.jsonl",
+        "bytes": 671722,
+        "sha256": "eae56f5bd200e49f28bff8d4a18415fcb05b9c969e4e486eb6f5750958882322"
+      },
+      {
+        "file": "questions/Taiwan/taiwanese_qbank.jsonl",
+        "bytes": 5593562,
+        "sha256": "36ae9d9883753de7f75904962fe51c671f0ff544e2f9cab858f9887908e52c4a"
+      },
+      {
+        "file": "questions/Taiwan/._test.jsonl",
+        "bytes": 178,
+        "sha256": "db8d2aa43e69fd55992eafb52eb1565b4920ff0868f64b3e72392740dc098658"
+      },
+      {
+        "file": "questions/Mainland/._train.jsonl",
+        "bytes": 177,
+        "sha256": "efa53bca60da2376a275ccd37bf7f87a34fed350e641ad5738c702b0b3e6f22c"
+      },
+      {
+        "file": "questions/Mainland/test.jsonl",
+        "bytes": 1376169,
+        "sha256": "e7ed08182759549e040de51f65ee52fde3f6c5f73938a06a686710d495a11e7f"
+      },
+      {
+        "file": "questions/Mainland/train.jsonl",
+        "bytes": 10952738,
+        "sha256": "4b5b1d9cb93c3cc1b65250e8681f029c7df14a125aa8c29d9411d3c681b3633c"
+      },
+      {
+        "file": "questions/Mainland/._dev.jsonl",
+        "bytes": 178,
+        "sha256": "4ffcd004200a34c321aab0ee124d3958d68719f8dbc7b46e629aa93011490f7f"
+      },
+      {
+        "file": "questions/Mainland/dev.jsonl",
+        "bytes": 1375681,
+        "sha256": "001a3922e71da9e46ba96af0f4e1d1b36e0b5618ea2b5ab168446c954408dec9"
+      },
+      {
+        "file": "questions/Mainland/._chinese_qbank.jsonl",
+        "bytes": 178,
+        "sha256": "27c281a227f338b561aaa3858c819ec86ea884475283b51fba1c2b87efceeb7b"
+      },
+      {
+        "file": "questions/Mainland/chinese_qbank.jsonl",
+        "bytes": 11477855,
+        "sha256": "4fbaf89f73f385c016474f207843d2dfd8e757c31e3728a60c46c2a8fab94013"
+      },
+      {
+        "file": "questions/Mainland/._test.jsonl",
+        "bytes": 178,
+        "sha256": "dbd75084ce80bf601c32efc31a8780b74696e74f16eec1508c561681d93de5ae"
+      },
+      {
+        "file": "questions/US/4_options/._phrases_no_exclude_test.jsonl",
+        "bytes": 178,
+        "sha256": "6a746ee98c8c7d88d57707d74612af4f8b941f5a5be34d41257f70e0ea71c379"
+      },
+      {
+        "file": "questions/US/4_options/phrases_no_exclude_test.jsonl",
+        "bytes": 2075679,
+        "sha256": "c3b905ccfa66152dc25afbcb2c10e86c0bdb208824f0658fcdb2c040f60a2beb"
+      },
+      {
+        "file": "questions/US/4_options/phrases_no_exclude_dev.jsonl",
+        "bytes": 2024697,
+        "sha256": "774bbd90103af43badbe8d5294e336443573fc37b918763920b8fc3b3df581d9"
+      },
+      {
+        "file": "questions/US/4_options/phrases_no_exclude_train.jsonl",
+        "bytes": 16211077,
+        "sha256": "3a65baf760f17c395058d6699315a7ce8aa767c50cb193fea87ceb94dd790324"
+      },
+      {
+        "file": "questions/US/4_options/._phrases_no_exclude_train.jsonl",
+        "bytes": 178,
+        "sha256": "e9f2bbccf8d45dd9159bb6423e73d784f796b7d4132aad675d3ef5513376cd95"
+      },
+      {
+        "file": "questions/US/4_options/._phrases_no_exclude_dev.jsonl",
+        "bytes": 234,
+        "sha256": "142a7faef5c2890b12a29e8bb44dac525f298f0e3af0335325b27bf841436a6f"
+      },
+      {
+        "file": "questions/US/metamap_extracted_phrases/train/._phrases_train.jsonl",
+        "bytes": 178,
+        "sha256": "88803bd89534bf8197c5b13e1ce77aad61b2c9782897f92ec6f0185c911f2ab2"
+      },
+      {
+        "file": "questions/US/metamap_extracted_phrases/train/phrases_train.jsonl",
+        "bytes": 15891049,
+        "sha256": "08a0e213ceddddc1c245ee7abdef5846743fbd7a03fe7da82ca5403aa7773a76"
+      },
+      {
+        "file": "questions/US/metamap_extracted_phrases/dev/._phrases_dev.jsonl",
+        "bytes": 178,
+        "sha256": "ae8c20b7b4ce57d43afe06f4766236e5ae7339a43f2f702204125dc6efc31519"
+      },
+      {
+        "file": "questions/US/metamap_extracted_phrases/dev/phrases_dev.jsonl",
+        "bytes": 1983152,
+        "sha256": "4a1c10bc26a5ab7fc1bf83d885e75456e6af2d75df40dc26b689f04990eafc72"
+      },
+      {
+        "file": "questions/US/metamap_extracted_phrases/test/._phrases_test.jsonl",
+        "bytes": 177,
+        "sha256": "70d65e4d00aad92d2d3625510efcc878f53065ce14935cad6d680cd7de82ab12"
+      },
+      {
+        "file": "questions/US/metamap_extracted_phrases/test/phrases_test.jsonl",
+        "bytes": 2034364,
+        "sha256": "8dc2c84efeab43c8443d5629c58cca8d7a0cc69053a1b812fa2e9865d48c9a7a"
+      },
+      {
+        "file": "questions/Taiwan/tw_translated_jsonl/en/._dev-2en.jsonl",
+        "bytes": 178,
+        "sha256": "cc6ece84eec19c3bfbbcf3a2231a8360392576e4f23aeb240c501562979ff3a1"
+      },
+      {
+        "file": "questions/Taiwan/tw_translated_jsonl/en/dev-2en.jsonl",
+        "bytes": 766285,
+        "sha256": "82af3152ba93f1e659d8fb5b5f8ce775a12cdd770c8a93f004dca8db4068c236"
+      },
+      {
+        "file": "questions/Taiwan/tw_translated_jsonl/en/._train-2en.jsonl",
+        "bytes": 178,
+        "sha256": "46ee68371e601e281b96aa41e427cb37174abb5a9d483caaf03c8766f9a46b1c"
+      },
+      {
+        "file": "questions/Taiwan/tw_translated_jsonl/en/train-2en.jsonl",
+        "bytes": 6110689,
+        "sha256": "975afe6e2da623e26203b198eb7baefb99846937313a56ac7b41de874d3c6544"
+      },
+      {
+        "file": "questions/Taiwan/tw_translated_jsonl/en/._test-2en.jsonl",
+        "bytes": 178,
+        "sha256": "d1a80b8e9009a1184e0baa38119a4629d2821545074647cb4591e2187703697e"
+      },
+      {
+        "file": "questions/Taiwan/tw_translated_jsonl/en/test-2en.jsonl",
+        "bytes": 777234,
+        "sha256": "78569b87b0ac764dccf574b7c22b1c56abcab268ec12064e6181de1a6c5a5928"
+      },
+      {
+        "file": "questions/Taiwan/tw_translated_jsonl/zh/test-2zh.jsonl",
+        "bytes": 679474,
+        "sha256": "e4a58fd043fadb0306791c51825d4f6625db0eaa9ad549d4b1dc71ca875b04ad"
+      },
+      {
+        "file": "questions/Taiwan/tw_translated_jsonl/zh/dev-2zh.jsonl",
+        "bytes": 670129,
+        "sha256": "2d49f8a2b2e6bf891616fc7d0310300678a9933da759b60af9b0d066bf50def1"
+      },
+      {
+        "file": "questions/Taiwan/tw_translated_jsonl/zh/train-2zh.jsonl",
+        "bytes": 5339853,
+        "sha256": "47c4f0922fe48255421982f318d8bec1e375eaed5bec1ba4748003e8fa3b9315"
+      },
+      {
+        "file": "questions/Taiwan/tw_translated_jsonl/zh/._train-2zh.jsonl",
+        "bytes": 178,
+        "sha256": "f3c6ce7e2b0f750a8d43c4284bf2529ab27b211b2e98e7a25f4cbe173644a805"
+      },
+      {
+        "file": "questions/Taiwan/tw_translated_jsonl/zh/._test-2zh.jsonl",
+        "bytes": 178,
+        "sha256": "8c085ab71261bf7dab1f45fda2aedce497c129478001649658bb71f98b24d209"
+      },
+      {
+        "file": "questions/Taiwan/tw_translated_jsonl/zh/._dev-2zh.jsonl",
+        "bytes": 178,
+        "sha256": "ac10cf3dc86609e925b207a2dea9b0989ea9917fa5ea5e6e55908857e6ec2d4c"
+      },
+      {
+        "file": "questions/Mainland/4_options/._train.jsonl",
+        "bytes": 178,
+        "sha256": "1f00f26654d80db34bdea8ec7aef4db5cf84a7115479c056b365ffc4083334d7"
+      },
+      {
+        "file": "questions/Mainland/4_options/test.jsonl",
+        "bytes": 1276906,
+        "sha256": "cf6be9ccd1d51343993f70f5008d2a685568074f3c20e92bb2bfebafcedb68bf"
+      },
+      {
+        "file": "questions/Mainland/4_options/train.jsonl",
+        "bytes": 10152534,
+        "sha256": "a2e504b9cebed6e5394ae1c0f1d970feee557b8f7472804e49bd7e171cdde636"
+      },
+      {
+        "file": "questions/Mainland/4_options/._dev.jsonl",
+        "bytes": 234,
+        "sha256": "daf10176dbcac08369f8818750960eaac67eab4f19526bbc0bb52724159e107c"
+      },
+      {
+        "file": "questions/Mainland/4_options/dev.jsonl",
+        "bytes": 1276985,
+        "sha256": "34a72ca9484a6bc6f97a2e97849b09665ec5be1a06a150f6634fd81738cb2997"
+      },
+      {
+        "file": "questions/Mainland/4_options/._test.jsonl",
+        "bytes": 178,
+        "sha256": "851ab4e46b6f9546ddd64fd5d77c3c6ee915221b15bf1b0f4260011a057d80c2"
+      }
+    ]
+  },
+  "artifact_sha256": {
+    "pdf": "baa0316c1b7a161da4794271e0f72e2100df96ac5d1181c92a3931059de8fab0",
+    "pptx": "293733388ada28ea07fe4eb46aa854abb09f2c167ae00df727ad9e8b9d2bc338"
+  },
+  "independent_review": "../skill-proofreading/medqa/independent-review/",
+  "screenshot-log.json": {
+    "pages": [
+      {
+        "slug": "medqa",
+        "url": "https://github.com/jind11/MedQA",
+        "status": 200,
+        "title": "GitHub - jind11/MedQA: Code and data for MedQA · GitHub",
+        "css": 34,
+        "screenshot": "official-site.png",
+        "transport": "system-CA-verified urllib responses rendered in Chromium; persistent trust unchanged"
+      }
+    ],
+    "asset_failures": []
+  }
+}

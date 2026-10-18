@@ -52,7 +52,7 @@ GSM8KとHumanEvalは既存資料で対象データセットを紹介済み。MML
 |legalbench|LegalBench|作成済み|[PPTX](../slides/datasets-in-10-minutes-legalbench.pptx) / [PDF](../slides/datasets-in-10-minutes-legalbench.pdf)|
 |legal_support|LegalSupport|作成済み|[PPTX](../slides/datasets-in-10-minutes-legal-support.pptx) / [PDF](../slides/datasets-in-10-minutes-legal-support.pdf)|
 |lsat_qa|LSAT|作成済み|[PPTX](../slides/datasets-in-10-minutes-lsat.pptx) / [PDF](../slides/datasets-in-10-minutes-lsat.pdf)|
-|med_qa|MedQA|未着手||
+|med_qa|MedQA|作成済み|[PPTX](../slides/datasets-in-10-minutes-medqa.pptx) / [PDF](../slides/datasets-in-10-minutes-medqa.pdf)|
 |wmt_14|WMT 2014|作成済み|[PPTX](../slides/datasets-in-10-minutes-wmt14.pptx) / [PDF](../slides/datasets-in-10-minutes-wmt14.pdf)|
 |lextreme|LEXTREME|未着手||
 |lex_glue|LexGLUE|未着手||
