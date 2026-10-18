@@ -1,0 +1,683 @@
+[
+  {
+    "page": 1,
+    "title": "NarrativeQA",
+    "section": "",
+    "kind": "cover"
+  },
+  {
+    "page": 2,
+    "title": "公式配布ページ",
+    "section": "NarrativeQA",
+    "kind": "image",
+    "sources": [
+      "data"
+    ]
+  },
+  {
+    "page": 3,
+    "title": "",
+    "section": "目次",
+    "kind": "toc"
+  },
+  {
+    "page": 4,
+    "title": "物語の理解を問う実例",
+    "section": "1. 物語の理解を問う実例",
+    "kind": "divider"
+  },
+  {
+    "page": 5,
+    "title": "本や映画の物語について答える",
+    "section": "1. 物語の理解を問う実例",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "入力は物語と質問。登場人物の行動や出来事の理由を読み取り、短い回答を生成する。",
+      "物語全文を読む条件と、Wikipediaの要約を読む条件がある。HELMは要約を使う。",
+      "各質問に、人が書いた2つの参照回答が付いている。"
+    ]
+  },
+  {
+    "page": 6,
+    "title": "実例で示す入力の範囲",
+    "section": "1. 物語の理解を問う実例",
+    "kind": "content",
+    "sources": [
+      "data"
+    ],
+    "body_text": [
+      "以下の13例は、公開テスト集合の異なる13作品から選んだ。",
+      "画面には、質問の根拠を含む要約の連続した抜粋と、質問・参照回答の全文を示す。",
+      "HELMがモデルに渡すのは、抜粋前の要約全文と質問。"
+    ]
+  },
+  {
+    "page": 7,
+    "title": "実例1：旅の後で一人になる",
+    "section": "1. 物語の理解を問う実例",
+    "kind": "example",
+    "sources": [
+      "data"
+    ],
+    "example_index": 1,
+    "language": "en+ja",
+    "quoted_text": "Maskull, a man longing for adventures, accepts an invitation from Krag, an acquaintance of his friend Nightspore, to travel to Tormance after a seance. The three set off in a crystal ship from an abandoned observatory in Scotland but Maskull awakens to find himself alone on Tormance.\nQuestion: When Maskull wakes up in Tormance, how many of his friends are with him?",
+    "reference_text": "1. None\n2. None."
+  },
+  {
+    "page": 8,
+    "title": "出発時の人数と到着後の状態",
+    "section": "1. 物語の理解を問う実例",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "旅に出たのは3人だが、質問は「目を覚ましたとき」に一緒にいる友人の人数を尋ねている。",
+      "根拠は最後の alone。「一人でいる」から「友人は誰もいない」と言い換えて答える。"
+    ]
+  },
+  {
+    "page": 9,
+    "title": "実例2：意図と結果を区別する",
+    "section": "1. 物語の理解を問う実例",
+    "kind": "example",
+    "sources": [
+      "data"
+    ],
+    "example_index": 2,
+    "language": "en",
+    "quoted_text": "However, it soon becomes clear that the teenagers who play the game and lose are being imprisoned inside the virtual reality world by the central villain: \"Arcade\". It would seem that \"Arcade\" was once a little boy who was beaten to death by his mother, and the computer company felt it would be a good idea to use some of the boy's brain cells in order to make the game's villain more realistic. Instead, it made the game deadly.\nQuestion: Why did Vertigo/Tronics include the boy's brain cells into the game?",
+    "reference_text": "1. To make the villain character of the game more realistic.\n2. To make the Villian more realistic. "
+  },
+  {
+    "page": 10,
+    "title": "実例2：意図と結果を区別する（訳）",
+    "section": "1. 物語の理解を問う実例",
+    "kind": "translation",
+    "sources": [
+      "data"
+    ],
+    "example_index": 2,
+    "language": "ja"
+  },
+  {
+    "page": 11,
+    "title": "会社の目的と起きた結果を分ける",
+    "section": "1. 物語の理解を問う実例",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "脳細胞を使った目的は、悪役をより現実的にすること。",
+      "ゲームが命に関わるものになったのは、その結果。質問の why が何を尋ねているかを追う。"
+    ]
+  },
+  {
+    "page": 12,
+    "title": "実例3：二つの参照回答が食い違う",
+    "section": "1. 物語の理解を問う実例",
+    "kind": "example",
+    "sources": [
+      "data"
+    ],
+    "example_index": 3,
+    "language": "en",
+    "quoted_text": "Kitty's social activities start to affect Ashe's political career; she strains Ashe's relationship with Lord Parham, the prime minister, and also flirts with the dashing but unprincipled Geoffrey Cliffe. After their child dies, Kitty is left a physical wreck and goes with Ashe to Italy to try to recover her health. Kitty meets Cliffe in Italy and runs off with him, while Ashe is in England trying to suppress a salacious book Kitty has written.\nQuestion: WHERE DID KITTY BEGIN HER AFFAIR WITH GEOFFERY CLIFFE?",
+    "reference_text": "1. IN ITALY\n2. London"
+  },
+  {
+    "page": 13,
+    "title": "実例3：二つの参照回答が食い違う（訳）",
+    "section": "1. 物語の理解を問う実例",
+    "kind": "translation",
+    "sources": [
+      "data"
+    ],
+    "example_index": 3,
+    "language": "ja"
+  },
+  {
+    "page": 14,
+    "title": "二つの回答が一致するとは限らない",
+    "section": "1. 物語の理解を問う実例",
+    "kind": "content",
+    "sources": [
+      "data"
+    ],
+    "body_text": [
+      "参照回答は「イタリア」と「ロンドン」で食い違っている。",
+      "要約には、先にクリフと浮ついた関係になり、後でイタリアで駆け落ちしたとある。",
+      "「関係を始めた」時点の解釈が曖昧。2つの回答を集めることと、合意を取ることは違う。"
+    ]
+  },
+  {
+    "page": 15,
+    "title": "作成方法とデータの全体像",
+    "section": "2. 作成方法とデータの全体像",
+    "kind": "divider"
+  },
+  {
+    "page": 16,
+    "title": "そのまま抜き出すだけでは答えにくい",
+    "section": "2. 作成方法とデータの全体像",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "短い文章から答えの位置を選ぶ課題に対し、長い物語を理解して答える課題として作られた。",
+      "質問は要約を見て作り、回答は自分の言葉で書くよう求めた。",
+      "回答が連続した文字列として現れる割合は、要約で44.05%、物語全文で29.57%。"
+    ]
+  },
+  {
+    "page": 17,
+    "title": "作品と、その作品の要約をそろえる",
+    "section": "2. 作成方法とデータの全体像",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "書籍はProject Gutenberg、映画は脚本サイトなどから物語を集めた。",
+      "Wikipediaの要約を対応付け、人が同じ作品かどうかを確認した。",
+      "映画化作品・異なる公開年の作品・シリーズの別の作品を取り違えないように照合した。"
+    ]
+  },
+  {
+    "page": 18,
+    "title": "要約を読んで質問と最初の回答を書く",
+    "section": "2. 作成方法とデータの全体像",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "作業者に見せたのは要約。物語全文を読む人に尋ねるつもりで、1回の作業につき10問を作る。",
+      "回答は自分の言葉で書き、要約からのコピーを画面上で抑止した。",
+      "はい・いいえで答える質問や、作者・俳優に関する質問は避けるよう指示した。"
+    ]
+  },
+  {
+    "page": 19,
+    "title": "別の人が答えられるかを確かめる",
+    "section": "2. 作成方法とデータの全体像",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "別の作業者が、要約を読んで質問に答えられるかを判定し、独立した回答を追加した。",
+      "答えられないと判断された質問は2.3%。",
+      "同じ作品の質問を、学習・開発・テストの間にまたがらせず、作品ごとに分割した。"
+    ]
+  },
+  {
+    "page": 20,
+    "title": "1,572作品、46,765問",
+    "section": "2. 作成方法とデータの全体像",
+    "kind": "content",
+    "sources": [
+      "data"
+    ]
+  },
+  {
+    "page": 21,
+    "title": "書籍と映画がほぼ半数ずつ",
+    "section": "2. 作成方法とデータの全体像",
+    "kind": "content",
+    "sources": [
+      "data"
+    ]
+  },
+  {
+    "page": 22,
+    "title": "要約は数百語の文章",
+    "section": "2. 作成方法とデータの全体像",
+    "kind": "content",
+    "sources": [
+      "data"
+    ]
+  },
+  {
+    "page": 23,
+    "title": "物語全文は要約より大幅に長い",
+    "section": "2. 作成方法とデータの全体像",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ]
+  },
+  {
+    "page": 24,
+    "title": "採点とモデルの到達水準",
+    "section": "3. 採点とモデルの到達水準",
+    "kind": "divider"
+  },
+  {
+    "page": 25,
+    "title": "ROUGE-L：語の並びの重なりを測る",
+    "section": "3. 採点とモデルの到達水準",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "生成した回答と参照回答の、順序を保った語の共通部分を使って採点する。",
+      "異なる言い回しでも意味が近ければ必ず高得点になる、という指標ではない。",
+      "2018年の評価では、BLEU・METEOR・ROUGE-Lなどを併用した。"
+    ]
+  },
+  {
+    "page": 26,
+    "title": "2018年：要約から答える条件",
+    "section": "3. 採点とモデルの到達水準",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ]
+  },
+  {
+    "page": 27,
+    "title": "同じ範囲選択方式でも、全文は難しい",
+    "section": "3. 採点とモデルの到達水準",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ]
+  },
+  {
+    "page": 28,
+    "title": "HELMでは作品ごとに1問を使う",
+    "section": "3. 採点とモデルの到達水準",
+    "kind": "content",
+    "sources": [
+      "config"
+    ],
+    "body_text": [
+      "各作品に付いた質問から、固定乱数で1問を選ぶ。テストは355作品・355問。",
+      "入力は要約全文と質問。2つの参照回答を使い、自由生成した回答を採点する。",
+      "2023年の固定版を確認した。以下は最新モデルの順位ではなく、同版の記録。"
+    ]
+  },
+  {
+    "page": 29,
+    "title": "F1：回答中の語の重なりを測る",
+    "section": "3. 採点とモデルの到達水準",
+    "kind": "content",
+    "sources": [
+      "helm"
+    ],
+    "body_text": [
+      "適合率は生成した語のうち参照回答と重なる割合、再現率は参照回答の語を拾えた割合。",
+      "小文字化し、句読点・冠詞・余分な空白を除いて計算する。両者の調和平均をF1とする。",
+      "2つの参照回答のうち高い得点を使い、全問の平均を百分率で示す。完全一致（EM）も併記する。"
+    ]
+  },
+  {
+    "page": 30,
+    "title": "HELMの同じテスト集合で比較する",
+    "section": "3. 採点とモデルの到達水準",
+    "kind": "content",
+    "sources": [
+      "config"
+    ]
+  },
+  {
+    "page": 31,
+    "title": "最大5例でも、実際の提示例数は変わる",
+    "section": "3. 採点とモデルの到達水準",
+    "kind": "content",
+    "sources": [
+      "config"
+    ]
+  },
+  {
+    "page": 32,
+    "title": "得点から読み取れること",
+    "section": "3. 採点とモデルの到達水準",
+    "kind": "content",
+    "sources": [
+      "helm"
+    ],
+    "body_text": [
+      "同じ質問でも、F1と完全一致では値が大きく異なる。短い回答の表現の違いも効く。",
+      "要約を読む成績から、数万語の物語全文を理解できるとは判断できない。",
+      "作品をまたいだ分割でも、事前学習でその物語を見たかどうかまでは保証しない。"
+    ]
+  },
+  {
+    "page": 33,
+    "title": "利用の変化と入手方法",
+    "section": "4. 利用の変化と入手方法",
+    "kind": "divider"
+  },
+  {
+    "page": 34,
+    "title": "長文読解から、言語モデルの共通評価へ",
+    "section": "4. 利用の変化と入手方法",
+    "kind": "content",
+    "sources": [
+      "code"
+    ],
+    "body_text": [
+      "2018年には、物語全文を読んで答えることが中心の挑戦だった。要約条件も併せて評価した。",
+      "HELMでは要約入力の質問応答として、多様な言語モデルを共通の枠組みで比較する。",
+      "2026-10-18時点のHELM公開コードにも、要約と2つの回答を読む実装が残っている。"
+    ]
+  },
+  {
+    "page": 35,
+    "title": "3つのCSVを作品IDで結び付ける",
+    "section": "4. 利用の変化と入手方法",
+    "kind": "content",
+    "sources": [
+      "data"
+    ],
+    "body_text": [
+      "documents.csv：作品の種類、分割、原文・WikipediaのURL。",
+      "summaries.csv：Wikipedia要約と、その分かち書き済みの列。",
+      "qaps.csv：質問、2つの回答、分かち書き済みの列。document_idで対応させる。"
+    ]
+  },
+  {
+    "page": 36,
+    "title": "配布ファイルと権利の範囲",
+    "section": "4. 利用の変化と入手方法",
+    "kind": "content",
+    "sources": [
+      "license"
+    ],
+    "body_text": [
+      "取得した3つのCSVは合計約22.6 MB。物語本文のファイルは含まれない。",
+      "リポジトリのLICENSEはApache 2.0。Wikipedia要約はCC BY-SA 3.0で、各記事への出典表記がある。",
+      "物語全文は各URLから取得する仕組み。利用時は、要約と元の作品それぞれの条件を確かめる。"
+    ]
+  },
+  {
+    "page": 37,
+    "title": "物語の理解と回答表現を一緒に見る",
+    "section": "4. 利用の変化と入手方法",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "書籍・映画の1,572作品に、46,765問と2つずつの参照回答がある。",
+      "質問の意図、人物や出来事のつながりを読み取り、短く言い換えて答える。",
+      "入力が要約か物語全文かをそろえ、語の重なりの得点と回答の意味を併せて読む。"
+    ]
+  },
+  {
+    "page": 38,
+    "title": "Appendix",
+    "section": "Appendix",
+    "kind": "divider"
+  },
+  {
+    "page": 39,
+    "title": "",
+    "section": "Appendix: 目次",
+    "kind": "toc"
+  },
+  {
+    "page": 40,
+    "title": "追加の実例",
+    "section": "Appendix: 1. 追加の実例",
+    "kind": "divider"
+  },
+  {
+    "page": 41,
+    "title": "実例4：ジェイコブの仕事",
+    "section": "Appendix: 1. 追加の実例",
+    "kind": "example",
+    "sources": [
+      "data"
+    ],
+    "example_index": 4,
+    "language": "en+ja",
+    "quoted_text": "Her brother, Jacob, also goes to Nordrum farm to become a herdsman there.\nQuestion: Jacob goes to Nordrum farm to become what?",
+    "reference_text": "1. a herdsman\n2. a herdsman"
+  },
+  {
+    "page": 42,
+    "title": "実例5：姉妹が再会する場所",
+    "section": "Appendix: 1. 追加の実例",
+    "kind": "example",
+    "sources": [
+      "data"
+    ],
+    "example_index": 5,
+    "language": "en+ja",
+    "quoted_text": "The final part, \"What Life Is\", details how the two sisters are eventually reunited. Sophia returns to England and the house of her childhood, where Constance still lives.\nQuestion: Where do Sophia and Constance reunite?",
+    "reference_text": "1. In their old childhood home in England.\n2. England."
+  },
+  {
+    "page": 43,
+    "title": "実例6：社会階層の違い",
+    "section": "Appendix: 1. 追加の実例",
+    "kind": "example",
+    "sources": [
+      "data"
+    ],
+    "example_index": 6,
+    "language": "en",
+    "quoted_text": "The killer's identity is not as significant a revelation in the story as are the roles of the influential and secretive Frettlby family, and their secret: they have an illegitimate daughter living on the streets. The class divide between Melbourne's wealthy and less fortunate is addressed throughout the plot.\nQuestion: What significant differences of people in Melbourne is highlighted through the story?",
+    "reference_text": "1. The class divide between the wealthy and the poor.\n2. Wealth versus poverty"
+  },
+  {
+    "page": 44,
+    "title": "実例6：社会階層の違い（訳）",
+    "section": "Appendix: 1. 追加の実例",
+    "kind": "translation",
+    "sources": [
+      "data"
+    ],
+    "example_index": 6,
+    "language": "ja"
+  },
+  {
+    "page": 45,
+    "title": "実例7：病気から回復する",
+    "section": "Appendix: 1. 追加の実例",
+    "kind": "example",
+    "sources": [
+      "data"
+    ],
+    "example_index": 7,
+    "language": "en+ja",
+    "quoted_text": "Tancred falls ill, and is released at the instigation of Eva, who nurses him back to health.\nQuestion: What did Eva do with Tancred when he was released?",
+    "reference_text": "1. She nursed him back to health.\n2. After Tancred was released, Eva nurses him back to health."
+  },
+  {
+    "page": 46,
+    "title": "実例8：隠していた身分",
+    "section": "Appendix: 1. 追加の実例",
+    "kind": "example",
+    "sources": [
+      "data"
+    ],
+    "example_index": 8,
+    "language": "en",
+    "quoted_text": "Several years after her marriage, Émilie discovers that Maximilien is not a clothier at all, but in fact a Vicomte de Longueville who has become a Peer of France. The young man finally explains why he secretly tended a store: he did it in order to support his family, sacrificing himself for his sick sister and for his brother, who had departed the country.\nQuestion: What does Emilie find out several years after being married?",
+    "reference_text": "1. Maximilie is a Peer of France not a cloth merchant.\n2. Maximilien is not a clothier; he is a Vicomte de Longueville and a Peer of France."
+  },
+  {
+    "page": 47,
+    "title": "実例8：隠していた身分（訳）",
+    "section": "Appendix: 1. 追加の実例",
+    "kind": "translation",
+    "sources": [
+      "data"
+    ],
+    "example_index": 8,
+    "language": "ja"
+  },
+  {
+    "page": 48,
+    "title": "実例9：子どもたちへの脅し",
+    "section": "Appendix: 1. 追加の実例",
+    "kind": "example",
+    "sources": [
+      "data"
+    ],
+    "example_index": 9,
+    "language": "en+ja",
+    "quoted_text": "By such means, as the play's plot unfolds, the children are guaranteed new, credible lives. \"Act or die,\" he commands. But if they fail to perform the play to its conclusion, or if they rebel, they will be killed by jealous Hera.\nQuestion: Who will kill the children if they rebel ?",
+    "reference_text": "1. Jealous Hera will kill them.\n2. Hera"
+  },
+  {
+    "page": 49,
+    "title": "実例10：セッションを打ち切る理由",
+    "section": "Appendix: 1. 追加の実例",
+    "kind": "example",
+    "sources": [
+      "data"
+    ],
+    "example_index": 10,
+    "language": "en",
+    "quoted_text": "They begin their sessions, but soon it is clear that they are developing romantic feelings for each other. Cheryl's husband, who loves her deeply, fights to suppress his jealousy, at first withholding a love poem that Mark has sent by mail to Cheryl, which she eventually finds. After several attempts, Mark and Cheryl are able to have mutually satisfying sex, but decide to cut the sessions short on account of their burgeoning feelings.\nQuestion: Why do Mark and Cheryl stop their sessions?",
+    "reference_text": "1. They are becoming emotionally attached to one another. \n2. They are developing feelings for each other."
+  },
+  {
+    "page": 50,
+    "title": "実例10：セッションを打ち切る理由（訳）",
+    "section": "Appendix: 1. 追加の実例",
+    "kind": "translation",
+    "sources": [
+      "data"
+    ],
+    "example_index": 10,
+    "language": "ja"
+  },
+  {
+    "page": 51,
+    "title": "実例11：抜擢された理由",
+    "section": "Appendix: 1. 追加の実例",
+    "kind": "example",
+    "sources": [
+      "data"
+    ],
+    "example_index": 11,
+    "language": "en+ja",
+    "quoted_text": "Tom Grunick (Hurt), a local news anchorman who until recently was a sports anchorman, is likeable and telegenic, but lacks news experience and knows that he was only hired for his good looks and charm. He is attracted to Jane, although he is also intimidated by her skills and intensity.\nQuestion: Who got promoted mainly because of their good looks?",
+    "reference_text": "1. Tom\n2. Tom Grunick."
+  },
+  {
+    "page": 52,
+    "title": "実例12：悪役が狙う祝祭",
+    "section": "Appendix: 1. 追加の実例",
+    "kind": "example",
+    "sources": [
+      "data"
+    ],
+    "example_index": 12,
+    "language": "en",
+    "quoted_text": "Jews and African-Americans have enjoyed a tenuous peace with the White Christians over the previous few decades, because the current Santa (the son of the cruel Santa who stomped Mordechai's dreidel years earlier) has pursued a policy of inclusion and tolerance. This Santa is murdered and replaced by his son, Damian, who seeks to destroy Hanukkah and Kwanzaa thus reserving December for Christmas alone.\nQuestion: Which holidays did Damian want to destroy?",
+    "reference_text": "1. Kwanzaa and Hanukkah.\n2. Hanukkah and Kwanzaa"
+  },
+  {
+    "page": 53,
+    "title": "実例12：悪役が狙う祝祭（訳）",
+    "section": "Appendix: 1. 追加の実例",
+    "kind": "translation",
+    "sources": [
+      "data"
+    ],
+    "example_index": 12,
+    "language": "ja"
+  },
+  {
+    "page": 54,
+    "title": "実例13：助けを断った理由",
+    "section": "Appendix: 1. 追加の実例",
+    "kind": "example",
+    "sources": [
+      "data"
+    ],
+    "example_index": 13,
+    "language": "en+ja",
+    "quoted_text": "Gordon asks Ben for help. After Ben refuses to help because of his trust in the police, Gordon gets caught by the police as well and is tortured.\nQuestion: Why does Ben not agree to help Gordon?",
+    "reference_text": "1. Ben trusts the police too much to help.\n2. He trusts the police"
+  },
+  {
+    "page": 55,
+    "title": "統計と評価条件",
+    "section": "Appendix: 2. 統計と評価条件",
+    "kind": "divider"
+  },
+  {
+    "page": 56,
+    "title": "配布列を使った全件の長さ集計",
+    "section": "Appendix: 2. 統計と評価条件",
+    "kind": "content",
+    "sources": [
+      "data"
+    ]
+  },
+  {
+    "page": 57,
+    "title": "この資料の実例の選び方",
+    "section": "Appendix: 2. 統計と評価条件",
+    "kind": "content",
+    "sources": [
+      "data"
+    ],
+    "body_text": [
+      "本編3作品、追加10作品。書籍7作品・映画6作品から、質問と回答の性質が異なる例を選んだ。",
+      "質問と両方の参照回答は、配布の綴り・大文字・表記の揺れを含めて保持した。",
+      "要約の抜粋位置、要約全文、元のQAレコード、固定改訂とハッシュは検証記録に保存した。"
+    ]
+  },
+  {
+    "page": 58,
+    "title": "HELMの実行条件",
+    "section": "Appendix: 2. 統計と評価条件",
+    "kind": "content",
+    "sources": [
+      "config"
+    ],
+    "body_text": [
+      "Classic v0.4.0（2023-11-17）のcanonical実行。元の実行スイートはv0.3.0。",
+      "提示例は最大5例。OPT・davinciは3試行、Llama 2は1試行。",
+      "temperature 0、最大出力100トークン。表は未改変のtest指標で、摂動の結果とは分けている。"
+    ]
+  },
+  {
+    "page": 59,
+    "title": "研究と参考文献",
+    "section": "Appendix: 3. 研究と参考文献",
+    "kind": "divider"
+  },
+  {
+    "page": 60,
+    "title": "DeepMindとOxfordによる読解課題",
+    "section": "Appendix: 3. 研究と参考文献",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "第一著者はTomáš Kočiský、最終著者はEdward Grefenstette。DeepMindとUniversity of Oxfordの研究。",
+      "言語理解・質問応答の研究として、文章から回答範囲を抜き出すだけでない課題を提案した。",
+      "2017年にプレプリントを公開し、2018年にTACLで発表された。"
+    ]
+  },
+  {
+    "page": 61,
+    "title": "参考文献",
+    "section": "Appendix: 3. 研究と参考文献",
+    "kind": "references"
+  },
+  {
+    "page": 62,
+    "title": "参考文献",
+    "section": "Appendix: 3. 研究と参考文献",
+    "kind": "references"
+  }
+]
