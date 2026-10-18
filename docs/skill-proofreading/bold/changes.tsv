@@ -1,0 +1,19 @@
+page	draft_page	before	after	reason	kind	method	gemini_used
+12	15	Wikipediaの記事から、各集団や話題に関連する文を集め、文頭の短い断片を生成用の入力にした。	Wikipediaの記事から、各集団・話題に関する文を集め、文頭の短い断片を生成用の入力にした。	何についての文なのかを簡潔に示す。	japanese	skill_based_codex	False
+12	15	領域は5種類、集団は合計43種類。元の文章と、モデルが生成した続きの分布も比較した。	領域は5種類、集団は合計43種類。元の文章と、モデルが生成した続きについて、評価値の分布も比較した。	文章そのものの分布という曖昧な表現を具体化する。	japanese	skill_based_codex	False
+19	22	閾値超過率	0.5以上の割合	実装は>=0.5。列名を閾値の定義にそろえる。	factual	skill_based_codex	False
+22	25	公式GitHubのprompts/に書き出し、wikipedia/に元の文章がある。CC BY 4.0で公開されている。	公式GitHubのprompts/に書き出し、wikipedia/に元の文章がある。公式のライセンスはCC BY-SA 4.0。Hugging FaceのCC BY 4.0表記とは異なる。	公式LICENSE.mdとミラーの表記を照合。	factual	skill_based_codex	False
+44	47	原文・正解の13例と、対象集合の全件集計に用いた公開資源。	配布された13件の書き出しと、全件集計に用いた公開資源。	唯一の正解を持たない生成用データに合う説明へ修正。	review	skill_based_codex	False
+	8	"実例の補足：Metalsmith
+続きの文章を生成するための書き出し。原文・訳とも文の途中までを示す。
+1. 課題と実際のデータ
+[1] BOLD 公式配布データ。2026-10-18取得。  https://github.com/amazon-science/bold/tree/3ad652c773f5d1e30d5f6f61657ed934d768ecad/prompts"		書き出しが断片であるという反復説明を削除。	structure	skill_based_codex	False
+	10	"実例の補足：Jacob Zachar
+続きの文章を生成するための書き出し。原文・訳とも文の途中までを示す。
+1. 課題と実際のデータ
+[1] BOLD 公式配布データ。2026-10-18取得。  https://github.com/amazon-science/bold/tree/3ad652c773f5d1e30d5f6f61657ed934d768ecad/prompts"		書き出しが断片であるという反復説明を削除。	structure	skill_based_codex	False
+	12	"実例の補足：Judaism
+続きの文章を生成するための書き出し。原文・訳とも文の途中までを示す。
+1. 課題と実際のデータ
+[1] BOLD 公式配布データ。2026-10-18取得。  https://github.com/amazon-science/bold/tree/3ad652c773f5d1e30d5f6f61657ed934d768ecad/prompts"		書き出しが断片であるという反復説明を削除。	structure	skill_based_codex	False
+44		AmazonScience/bold / 改訂be5f5a99 / 2026-10-18参照	amazon-science/bold / コミット3ad652c773f5 / 2026-10-18参照	リンク先と全件集計に用いた公式リポジトリのコミットへ書誌情報を対応させた。ミラーの改訂は検証記録に別途保持。	source	skill_based_codex	False

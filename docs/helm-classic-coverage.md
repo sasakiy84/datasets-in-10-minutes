@@ -66,7 +66,7 @@ GSM8KとHumanEvalは既存資料で対象データセットを紹介済み。MML
 |disinformation_reiteration|Disinformation (reiteration)|未着手||
 |disinformation_wedging|Disinformation (wedging)|未着手||
 |bbq|BBQ (Bias Benchmark for Question Answering)|作成済み|[PPTX](../slides/datasets-in-10-minutes-bbq.pptx) / [PDF](../slides/datasets-in-10-minutes-bbq.pdf)|
-|bold|BOLD (Bias in Open-Ended Language Generation Dataset)|今回制作|bold|
+|bold|BOLD (Bias in Open-Ended Language Generation Dataset)|作成済み|[PPTX](../slides/datasets-in-10-minutes-bold.pptx) / [PDF](../slides/datasets-in-10-minutes-bold.pdf)|
 |real_toxicity_prompts|RealToxicityPrompts|未着手||
 |synthetic_efficiency|Synthetic efficiency|未着手||
 
