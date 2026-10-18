@@ -48,22 +48,22 @@
 |1|cluecorpus2020|CLUECorpus2020|未着手|
 |2|cluewsc2020|CLUEWSC / CLUEWSC2020|作成済み|
 |3|ccpm|CCPM|作成済み|
-|4|chid|ChID|未着手|
+|4|chid|ChID|制作中|
 |5|ocnli|OCNLI|作成済み|
 |6|math23k|Math23K|作成済み|
 |7|cold|COLD|作成済み|
-|8|cdial-bias|CDial-Bias|未着手|
+|8|cdial-bias|CDial-Bias|制作中|
 |9|chef|CHEF|作成済み|
 |10|c3|C3|作成済み|
 |11|nlpcc2018-qa|NLPCC 2018 Open Domain QA|未着手|
-|12|cmedqa2|cMedQA2|未着手|
+|12|cmedqa2|cMedQA2|制作中|
 |13|csds|CSDS|未着手|
 |14|adgen|ADGEN / Shao2019 product advertising data|未着手|
 |15|pku-paraphrase-bank|PKU Paraphrase Bank|未着手|
 |16|crosswoz|CrossWOZ|作成済み|
-|17|wmt2020-enzh|WMT 2020 newstest2020 English–Chinese|未着手|
+|17|wmt2020-enzh|WMT 2020 newstest2020 English–Chinese|制作中|
 |18|bustm|BUSTM (FewCLUE)|作成済み|
-|19|afqmc|AFQMC (CLUE)|未着手|
+|19|afqmc|AFQMC (CLUE)|制作中|
 |20|eprstmt|EPRSTMT (FewCLUE)|未着手|
 |21|tnews|TNEWS (CLUE/FewCLUE)|未着手|
 |22|ccl2020-humor|SPR / CCL2020 Humor Computation|未着手|
@@ -76,8 +76,8 @@
 |---|---|---|---|
 |23|modified-arithmetic|Modified Arithmetic|未着手|
 |24|sig-figs|Significant Figures|未着手|
-|25|redefine|Redefine|未着手|
-|26|pattern-matching-suppression|Pattern Matching Suppression|未着手|
+|25|redefine|Redefine|独立レビュー中|
+|26|pattern-matching-suppression|Pattern Matching Suppression|制作中|
 |27|modus-tollens|Modus Tollens|未着手|
 |28|neqa|NeQA|未着手|
 
