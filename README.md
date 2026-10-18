@@ -97,5 +97,6 @@ python -m http.server 8000 --directory _site
 |OpenBookQA|[PPTX](slides/datasets-in-10-minutes-openbookqa.pptx)|[PDF](slides/datasets-in-10-minutes-openbookqa.pdf)|
 |MMLU|[PPTX](slides/datasets-in-10-minutes-mmlu.pptx)|[PDF](slides/datasets-in-10-minutes-mmlu.pdf)|
 |bAbI|[PPTX](slides/datasets-in-10-minutes-babi.pptx)|[PDF](slides/datasets-in-10-minutes-babi.pdf)|
+|BLiMP|[PPTX](slides/datasets-in-10-minutes-blimp.pptx)|[PDF](slides/datasets-in-10-minutes-blimp.pdf)|
 
 [ユーザー指示の記録](docs/user-instructions.md)
