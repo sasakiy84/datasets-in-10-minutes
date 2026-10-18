@@ -91,3 +91,5 @@
 |32|cleva-subject-knowledge|CLEVA：分野別知識（公開説明例）|未着手|
 |33|cleva-copyright-text|CLEVA：中国語文章の再現評価（公開説明例）|未着手|
 |34|cleva-conceptual-generalization|CLEVA：概念の一般化（公開説明例）|未着手|
+
+[既存5資料の採用元対応とCLEVAでの変更点](cleva-existing-datasets.md)を記録した。元データの独立資料は既存のものを参照し、取得していない中国語版の評価集合や成績を取得済みとは扱わない。
