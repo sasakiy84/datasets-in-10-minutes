@@ -7,3 +7,5 @@ pages	scope	before	after	reason	review_mode
 31	language	評価する候補は、task_idとcompletionを持つJSON Linesとして保存する。completionには、promptの続きとなる関数本体を入れる。	候補は、task_idとcompletionを持つJSON Linesとして保存する。completionにはpromptに続く関数本体を入れる。	重複する語を減らし、修飾を簡潔化。	skill_based_codex
 31	language	生成コードの実行は隔離した環境で行う。公式READMEも、信頼できない生成コードの実行環境を分離するよう求めている。	公式READMEに従い、生成コードは隔離した環境で実行する。	出典に基づく同じ指示を一文に整理。	skill_based_codex
 51	deduplication	末尾側の最長の回文を探し、その前に残った接頭部を逆順にして末尾に付ける。		日本語訳に同じアルゴリズムを説明しているため、コード下の重複説明を削除。	skill_based_codex
+19		Chenら（2021）のTable 1。各指標には論文が選んだ生成温度を使う。12Bは約120億パラメータ。	各指標には論文が選んだ生成温度を使う。12Bは約120億パラメータ。	ページ下の文献表示で情報源を特定できるため、本文・補足の不要な図表番号を削除。評価条件・数値を保持。	citation_wording	skill_based_codex	False
+20		Qwen2.5-Coder報告Table 16のpass@1。HumanEval+はテストを拡充した同じ164問。	pass@1。HumanEval+はテストを拡充した同じ164問。	ページ下の文献表示で情報源を特定できるため、本文・補足の不要な図表番号を削除。評価条件・数値を保持。	citation_wording	skill_based_codex	False
