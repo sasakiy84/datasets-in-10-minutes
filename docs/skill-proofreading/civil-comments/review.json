@@ -1,7 +1,7 @@
 {
   "dataset": "civil-comments",
   "created_at": "2026-10-18T00:55:12+00:00",
-  "updated_at": "2026-10-18T00:55:12+00:00",
+  "updated_at": "2026-10-18T10:52:08+09:00",
   "model": "Codex (local skill application; no external generation API)",
   "review_mode": "skill_based_codex",
   "skill_path": ".agents/skills/japanese-slide-proofreading/SKILL.md",
@@ -92,8 +92,8 @@
   ],
   "visual_review_method": "全ページ一覧を確認し、引用・コード・表・参考文献・公式画面・グラフを1080×608の画像で個別に目視。最終変更ページは再描画して確認。",
   "artifact_sha256": {
-    "pptx": "91dbf304df558add7a529af1b2e7d5d7a571762cde321c9b5fada55f27b94a53",
-    "pdf": "677dd135b2ef428d03caddb8cac6f120f281da6ce0516fa100b5b912ce25d6b8"
+    "pdf": "0937b10783fd8264746739272346cbe6852d958d4305bd83f7eb6439e2bf12bb",
+    "pptx": "0e966ac29c870536b4f2827c611c0212a5a89c361fa1f87876f07add32c029fa"
   },
   "wording_changes": 5,
   "layout_and_explanation_changes": [
@@ -165,5 +165,62 @@
       "issues": []
     }
   },
-  "scope_notes": "実例と分布はGoogle配布版validation全97,320件。toxicityは有害と判断した注釈者の割合で、モデルの確信度ではない。0が68,725件、0より大きく0.5未満20,924件、0.5以上7,671件。現在のtrain 1,804,874件と論文1,804,875件の差の原因は推測しない。HELMはWILDS版448,000件の別条件。WILDS全ファイルは503で取得できず、公式コードと論文で構成・初期値を確認。HELM testは無害683＋有害82＝765件、validは209＋26＝235件。WILDS Table 15の平均と最悪集団の正解率を区別した。CC0。冒頭は内容を表示できた公式TFDSカタログの画面。"
+  "scope_notes": "実例と分布はGoogle配布版validation全97,320件。toxicityは有害と判断した注釈者の割合で、モデルの確信度ではない。0が68,725件、0より大きく0.5未満20,924件、0.5以上7,671件。現在のtrain 1,804,874件と論文1,804,875件の差の原因は推測しない。HELMはWILDS版448,000件の別条件。WILDS全ファイルは503で取得できず、公式コードと論文で構成・初期値を確認。HELM testは無害683＋有害82＝765件、validは209＋26＝235件。WILDS Table 15の平均と最悪集団の正解率を区別した。CC0。冒頭は内容を表示できた公式TFDSカタログの画面。",
+  "revision_history": [
+    {
+      "checked_at": "2026-10-18T00:55:12+00:00",
+      "artifact_sha256": {
+        "pptx": "91dbf304df558add7a529af1b2e7d5d7a571762cde321c9b5fada55f27b94a53",
+        "pdf": "677dd135b2ef428d03caddb8cac6f120f281da6ce0516fa100b5b912ce25d6b8"
+      },
+      "checks": {
+        "package": {
+          "parsed_xml_parts": 123,
+          "integer_bullets": 108,
+          "hyperlinks": 34,
+          "new_schema_errors": [],
+          "baseline_schema_errors": 11,
+          "package_integrity": "passed",
+          "internal_relationship_targets": "passed",
+          "unique_shape_ids": "passed",
+          "schema_note": "標準XSDを変更せず確認。マスター由来の既存エラーと、整数buSzPctの百分率字句形式との差を分離。整数箇条書きサイズは25000–400000で別途検査。",
+          "pages": 44,
+          "native_tables": 4,
+          "native_charts": 1
+        },
+        "layout": {
+          "paragraphs_checked": 225,
+          "table_cells_checked": 35,
+          "issues": []
+        },
+        "text": {
+          "pages": 44,
+          "missing": [],
+          "quote_missing": [],
+          "unique_examples": 13,
+          "all_original_paragraphs_and_translations_present": true,
+          "notes": false,
+          "unnecessary_original_paper_word": 0,
+          "extraction_note": "数式記号の別ブロックとfi合字のゼロ幅文字は、実際の文字・基線・座標を保って行順を復元。文字の削除による代用なし。"
+        },
+        "links": {
+          "native_url_only_runs": 34,
+          "pdf_link_rectangles": 34,
+          "pdf_link_text_exactly_matches_url": true,
+          "issues": []
+        }
+      }
+    }
+  ],
+  "follow_up_reviews": [
+    {
+      "record": "answer-and-citation-review.json",
+      "checked_at": "2026-10-18T10:52:08+09:00",
+      "answer_display_changes": 0,
+      "citation_wording_changes": 1,
+      "changed_pages": [
+        17
+      ]
+    }
+  ]
 }
