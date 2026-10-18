@@ -1,0 +1,740 @@
+{
+  "method": "skill_based_codex",
+  "review_mode": "skill_based_codex",
+  "gemini_used": false,
+  "pages": [
+    {
+      "page": 1,
+      "title": "Dyck Language",
+      "text": [
+        "Dyck Language",
+        "括弧の入れ子構造を補完する",
+        "sasakiy84",
+        "datasets in 10 minutes (2026-10-18)"
+      ],
+      "method": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、用語、時点、原文と日本語訳の意味対応を確認。"
+    },
+    {
+      "page": 2,
+      "title": "著者の公式実装",
+      "text": [
+        "著者の公式実装",
+        "Memory-Augmented Recurrent Neural Networks",
+        "[1] Suzgun et al. MARNNs Can Learn Generalized Dyck Languages. 著者の公式実装。  https://github.com/suzgunmirac/marnns"
+      ],
+      "method": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、用語、時点、原文と日本語訳の意味対応を確認。"
+    },
+    {
+      "page": 3,
+      "title": "",
+      "text": [
+        "",
+        "括弧列の補完と実例\nHELMの採点と公開成績\n生成方法とデータの構成\n研究での使われ方と入手",
+        "目次"
+      ],
+      "method": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、用語、時点、原文と日本語訳の意味対応を確認。"
+    },
+    {
+      "page": 4,
+      "title": "括弧列の補完と実例",
+      "text": [
+        "括弧列の補完と実例",
+        "1. 括弧列の補完と実例"
+      ],
+      "method": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、用語、時点、原文と日本語訳の意味対応を確認。"
+    },
+    {
+      "page": 5,
+      "title": "Dyck言語は、正しく対応する括弧の列",
+      "text": [
+        "Dyck言語は、正しく対応する括弧の列",
+        "Dyck-nは、n種類の括弧対を使い、開く括弧と閉じる括弧が正しく入れ子になる列の集合。\nHELMの公開設定は丸括弧( )、角括弧[ ]、波括弧{ }の3種類を使う。\n入力は閉じ括弧が欠けた列。開いたままの括弧を閉じる、最短の続きの列を生成する。",
+        "1. 括弧列の補完と実例",
+        "[1] HELM v0.3.0. DyckLanguageScenario.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/dyck_language_scenario.py"
+      ],
+      "method": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、用語、時点、原文と日本語訳の意味対応を確認。"
+    },
+    {
+      "page": 6,
+      "title": "数だけでなく、開いた順序を記憶する",
+      "text": [
+        "数だけでなく、開いた順序を記憶する",
+        "閉じる括弧の種類は、最後に開いたままの括弧で決まる。単に種類ごとの個数を数えるだけでは順序を復元できない。\nスタックは、最後に積んだ要素を最初に取り出す記憶の仕組み。開く括弧を積み、閉じるたびに対応を照合する。\n以下の実例は固定seedの公式HELM生成器から得た実データで、公開runの入力とも照合した。",
+        "1. 括弧列の補完と実例",
+        "[1] Suzgun et al. (2019). Memory-Augmented Recurrent Neural Networks Can Learn Generalized Dyck Languages. arXiv.  https://arxiv.org/abs/1911.03329\n[2] HELM v0.3.0、seed=42の生成器で再現し、公開text-davinci-003入力と全500件を照合。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/runs/dyck_language_np=3:model=openai_text-davinci-003"
+      ],
+      "method": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、用語、時点、原文と日本語訳の意味対応を確認。"
+    },
+    {
+      "page": 7,
+      "title": "実例1：3つの閉じ括弧で完成する",
+      "text": [
+        "実例1：3つの閉じ括弧で完成する",
+        "1. 括弧列の補完と実例",
+        "入力の全文／65記号。空白で区切り、表示上の改行だけを追加。",
+        "( [ ( ) ( { { ( ( { { } } ) ) } { [ ( { } (\n[ ] ) [ { } ] ) ] } } [ ( { ( ( [ [ [ [ [ ]\n] ] ] ] ) ) } ) ] { [ ] } { ( ( ) ) } ( )",
+        "正解：) ] )",
+        "開いたままの括弧を、内側から順に閉じる。",
+        "[1] HELM v0.3.0、seed=42の生成器で再現し、公開text-davinci-003入力と全500件を照合。 id3 / test / generator index 3\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/runs/dyck_language_np=3:model=openai_text-davinci-003"
+      ],
+      "method": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、用語、時点、原文と日本語訳の意味対応を確認。"
+    },
+    {
+      "page": 8,
+      "title": "実例2：括弧の種類と順序を保つ",
+      "text": [
+        "実例2：括弧の種類と順序を保つ",
+        "1. 括弧列の補完と実例",
+        "入力の全文／89記号。空白で区切り、表示上の改行だけを追加。",
+        "[ ] { [ ] ( { ( [ [ { } ] ] ) } ) [ ( [ ( ( [\n] { [ ( ) ( ) ] } ) ) ] [ { } ] ) { ( ( { [ (\n) ( { } [ { [ [ [ [ ( ( ) ( ) [ [ ] ] ) ] ] ]\n{ [ ] } ] } ] [ ( ) ] ) ] } ) [ [ ] ] )",
+        "正解：} ] }",
+        "開いたままの括弧を、内側から順に閉じる。",
+        "[1] HELM v0.3.0、seed=42の生成器で再現し、公開text-davinci-003入力と全500件を照合。 id4 / test / generator index 4\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/runs/dyck_language_np=3:model=openai_text-davinci-003"
+      ],
+      "method": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、用語、時点、原文と日本語訳の意味対応を確認。"
+    },
+    {
+      "page": 9,
+      "title": "実例3：長い列から必要な括弧を取り出す",
+      "text": [
+        "実例3：長い列から必要な括弧を取り出す",
+        "1. 括弧列の補完と実例",
+        "入力の全文／63記号。空白で区切り、表示上の改行だけを追加。",
+        "{ [ [ { ( { } ) } ] ] } [ ( { ( ( { ( { [\n( [ [ ( { ( ) } ) [ [ ] ] ] { ( [ ] [ ] )\n} ] [ { [ [ ] ] } ] ) ] } ) } ) ( ( ) ) )",
+        "正解：} ) ]",
+        "開いたままの括弧を、内側から順に閉じる。",
+        "[1] HELM v0.3.0、seed=42の生成器で再現し、公開text-davinci-003入力と全500件を照合。 id9 / test / generator index 9\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/runs/dyck_language_np=3:model=openai_text-davinci-003"
+      ],
+      "method": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、用語、時点、原文と日本語訳の意味対応を確認。"
+    },
+    {
+      "page": 10,
+      "title": "正解は、残ったスタックを逆順に閉じる列",
+      "text": [
+        "正解は、残ったスタックを逆順に閉じる列",
+        "実例1で開いたままなのは、外側から丸括弧、角括弧、丸括弧の順。内側から閉じる正解は「) ] )」。\n正解に開く括弧は含めない。対応する閉じ括弧だけを、残った数だけ出す。\n生成器は正解をスタックから計算する。人が注釈して複数の回答を集める課題ではない。",
+        "1. 括弧列の補完と実例",
+        "[1] HELM v0.3.0. DyckLanguageScenario.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/dyck_language_scenario.py"
+      ],
+      "method": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、用語、時点、原文と日本語訳の意味対応を確認。"
+    },
+    {
+      "page": 11,
+      "title": "HELMの採点と公開成績",
+      "text": [
+        "HELMの採点と公開成績",
+        "2. HELMの採点と公開成績"
+      ],
+      "method": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、用語、時点、原文と日本語訳の意味対応を確認。"
+    },
+    {
+      "page": 12,
+      "title": "英語の指示と3件の完成例を提示する",
+      "text": [
+        "英語の指示と3件の完成例を提示する",
+        "2. HELMの採点と公開成績",
+        "公開runの指示全文と日本語訳",
+        "Please complete the rest of the following Dyck sequences, making sure that the parentheses are closed properly.",
+        "以下のDyck列の残りを補完し、括弧が正しく閉じられるようにしてください。",
+        "[1] HELM v0.3.0、seed=42の生成器で再現し、公開text-davinci-003入力と全500件を照合。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/runs/dyck_language_np=3:model=openai_text-davinci-003"
+      ],
+      "method": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、用語、時点、原文と日本語訳の意味対応を確認。"
+    },
+    {
+      "page": 13,
+      "title": "公開指標は、最後の空白区切り要素を比べる",
+      "text": [
+        "公開指標は、最後の空白区切り要素を比べる",
+        "HELMの設定はexact_match_indicatorを指定する。実装は予測と正解を空白で分け、最後の要素だけを取り出して比較する。\n最後の要素が一致すれば1点、異なれば0点。500件の得点を平均する。\n正解列のすべてが合うかを測る、列全体の完全一致とは異なる。",
+        "2. HELMの採点と公開成績",
+        "[1] HELM v0.3.0. exact_match_indicator.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/metrics/basic_metrics.py"
+      ],
+      "method": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、用語、時点、原文と日本語訳の意味対応を確認。"
+    },
+    {
+      "page": 14,
+      "title": "余分な括弧があっても、末尾は一致する",
+      "text": [
+        "余分な括弧があっても、末尾は一致する",
+        "2. HELMの採点と公開成績",
+        "実例3の公開予測：text-davinci-003、試行0",
+        "正解： } ) ]",
+        "予測： ] } ) ]",
+        "最後の「]」は一致するため公開指標は1点。余分な「]」が先頭にあるため、列全体の完全一致は0点になる。",
+        "[1] HELM v0.3.0、seed=42の生成器で再現し、公開text-davinci-003入力と全500件を照合。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/runs/dyck_language_np=3:model=openai_text-davinci-003\n[2] HELM v0.3.0. exact_match_indicator. id9 / train_trial_index=0  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/metrics/basic_metrics.py"
+      ],
+      "method": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、用語、時点、原文と日本語訳の意味対応を確認。"
+    },
+    {
+      "page": 15,
+      "title": "HELMの公開得点：末尾要素の一致率",
+      "text": [
+        "HELMの公開得点：末尾要素の一致率",
+        "2. HELMの採点と公開成績",
+        "モデル",
+        "一致率",
+        "Anthropic-LM (2022)",
+        "84.87%",
+        "text-davinci-003 (2022)",
+        "75.07%",
+        "OPT-175B (2022)",
+        "49.40%",
+        "test 500件、各3試行の平均。Classic v0.4.0掲載、run suite v0.3.0。",
+        "[1] HELM Classic v0.4.0, Dyck Language. 公開run suite v0.3.0、括弧3種類。  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/dyck_language"
+      ],
+      "method": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、用語、時点、原文と日本語訳の意味対応を確認。"
+    },
+    {
+      "page": 16,
+      "title": "同じ公開出力を、列全体でも再採点する",
+      "text": [
+        "同じ公開出力を、列全体でも再採点する",
+        "2. HELMの採点と公開成績",
+        "text-davinci-003",
+        "末尾要素",
+        "列全体",
+        "試行0",
+        "73.2%",
+        "40.6%",
+        "試行1",
+        "76.0%",
+        "49.2%",
+        "試行2",
+        "76.0%",
+        "49.2%",
+        "3試行の平均",
+        "75.07%",
+        "46.33%",
+        "同じ1,500出力を再集計。列全体は前後の空白を除いた文字列を比較する。",
+        "[1] HELM v0.3.0、seed=42の生成器で再現し、公開text-davinci-003入力と全500件を照合。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/runs/dyck_language_np=3:model=openai_text-davinci-003"
+      ],
+      "method": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、用語、時点、原文と日本語訳の意味対応を確認。"
+    },
+    {
+      "page": 17,
+      "title": "指標の実装は末尾要素だけを取り出す",
+      "text": [
+        "指標の実装は末尾要素だけを取り出す",
+        "2. HELMの採点と公開成績",
+        "pred = pred.split(indicator)[-1].strip()\ngold = gold.split(indicator)[-1].strip()\nreturn exact_match(gold, pred)",
+        "indicatorの既定値は半角空白。最後の要素より前にある誤りは、この指標では採点しない。",
+        "[1] HELM v0.3.0. exact_match_indicator.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/metrics/basic_metrics.py"
+      ],
+      "method": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、用語、時点、原文と日本語訳の意味対応を確認。"
+    },
+    {
+      "page": 18,
+      "title": "測りたい能力に、採点を対応させる",
+      "text": [
+        "測りたい能力に、採点を対応させる",
+        "課題の目標は、開いた括弧を正しい順序ですべて閉じること。列全体の正しさは、出力の途中にある誤りや余分な括弧にも依存する。\n公開得点は末尾要素の一致率として解釈し、補完能力を調べるときは出力全体も照合する。\nこれらは2023年に公開されたHELMの実行結果であり、2026年のモデル順位ではない。",
+        "2. HELMの採点と公開成績",
+        "[1] HELM v0.3.0. exact_match_indicator.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/metrics/basic_metrics.py\n[2] HELM Classic v0.4.0, Dyck Language. 公開run suite v0.3.0、括弧3種類。  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/dyck_language"
+      ],
+      "method": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、用語、時点、原文と日本語訳の意味対応を確認。"
+    },
+    {
+      "page": 19,
+      "title": "生成方法とデータの構成",
+      "text": [
+        "生成方法とデータの構成",
+        "3. 生成方法とデータの構成"
+      ],
+      "method": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、用語、時点、原文と日本語訳の意味対応を確認。"
+    },
+    {
+      "page": 20,
+      "title": "確率的な文法で括弧列を生成する",
+      "text": [
+        "確率的な文法で括弧列を生成する",
+        "3. 生成方法とデータの構成",
+        "生成規則",
+        "確率",
+        "S → 開く括弧i S 閉じる括弧i",
+        "p/n（各種類）",
+        "S → S S",
+        "q",
+        "S → 空列",
+        "1 − p − q",
+        "HELMはn=3、p=0.5、q=0.25。入れ子と連結を繰り返す。",
+        "[1] HELM v0.3.0. DyckLanguageScenario.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/dyck_language_scenario.py"
+      ],
+      "method": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、用語、時点、原文と日本語訳の意味対応を確認。"
+    },
+    {
+      "page": 21,
+      "title": "完成列を作り、補完すべき短い列を求める",
+      "text": [
+        "完成列を作り、補完すべき短い列を求める",
+        "文法から完成した括弧列を生成し、指定した長さの範囲に入る候補を採る。\n完成列の後ろから走査し、残す入力を切り出す。切り落とす側には、対応済みの部分列が含まれる場合もある。\n最後に残した入力をスタックで読み直し、必要な閉じ括弧を計算する。正解の長さは1〜3記号になる。",
+        "3. 生成方法とデータの構成",
+        "[1] HELM v0.3.0. DyckLanguageScenario.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/dyck_language_scenario.py"
+      ],
+      "method": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、用語、時点、原文と日本語訳の意味対応を確認。"
+    },
+    {
+      "page": 22,
+      "title": "提示例3件と、評価例500件を作る",
+      "text": [
+        "提示例3件と、評価例500件を作る",
+        "3. 生成方法とデータの構成",
+        "設定",
+        "提示例用",
+        "評価用",
+        "件数",
+        "3",
+        "500",
+        "切り出す前の生成列長",
+        "4〜50記号",
+        "52〜100記号",
+        "正解の最大長",
+        "3記号",
+        "3記号",
+        "seed=42。入力文字列は集合内で重複させず、提示例用と評価用の重複も除く。",
+        "[1] HELM v0.3.0. DyckLanguageScenario.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/dyck_language_scenario.py"
+      ],
+      "method": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、用語、時点、原文と日本語訳の意味対応を確認。"
+    },
+    {
+      "page": 23,
+      "title": "正解の長さは1〜3記号に分かれる",
+      "text": [
+        "正解の長さは1〜3記号に分かれる",
+        "3. 生成方法とデータの構成",
+        "固定seedで生成した評価500件の全件集計。縦軸は件数。",
+        "[1] HELM v0.3.0、seed=42の生成器で再現し、公開text-davinci-003入力と全500件を照合。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/runs/dyck_language_np=3:model=openai_text-davinci-003"
+      ],
+      "method": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、用語、時点、原文と日本語訳の意味対応を確認。"
+    },
+    {
+      "page": 24,
+      "title": "評価入力は45〜99記号、中央値71記号",
+      "text": [
+        "評価入力は45〜99記号、中央値71記号",
+        "3. 生成方法とデータの構成",
+        "量",
+        "固定seedの500件",
+        "入力の最小／最大",
+        "45／99記号",
+        "入力の中央値",
+        "71記号",
+        "入力の平均",
+        "71.418記号",
+        "最大入れ子深さの最小／最大",
+        "6／30",
+        "空白で区切った括弧記号を数えた。生成列から切り出した後の入力を集計。",
+        "[1] HELM v0.3.0、seed=42の生成器で再現し、公開text-davinci-003入力と全500件を照合。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/runs/dyck_language_np=3:model=openai_text-davinci-003"
+      ],
+      "method": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、用語、時点、原文と日本語訳の意味対応を確認。"
+    },
+    {
+      "page": 25,
+      "title": "seedと実装を固定し、公開入力と照合する",
+      "text": [
+        "seedと実装を固定し、公開入力と照合する",
+        "公式シナリオはPythonのrandomとNumPyの乱数を、どちらも42で初期化する。\nv0.3.0の生成処理で503件を再現し、評価500件すべての入力と正解が公開runと一致することを確認した。\n各例には生成時の位置、ID、原レコードとSHA-256を保存した。閉じ括弧の正解は別のスタック処理でも全件検証した。",
+        "3. 生成方法とデータの構成",
+        "[1] HELM v0.3.0、seed=42の生成器で再現し、公開text-davinci-003入力と全500件を照合。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/runs/dyck_language_np=3:model=openai_text-davinci-003"
+      ],
+      "method": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、用語、時点、原文と日本語訳の意味対応を確認。"
+    },
+    {
+      "page": 26,
+      "title": "研究での使われ方と入手",
+      "text": [
+        "研究での使われ方と入手",
+        "4. 研究での使われ方と入手"
+      ],
+      "method": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、用語、時点、原文と日本語訳の意味対応を確認。"
+    },
+    {
+      "page": 27,
+      "title": "2019年の研究は、各時点の次記号を予測する",
+      "text": [
+        "2019年の研究は、各時点の次記号を予測する",
+        "Suzgunらは、外部メモリを持つ再帰型ニューラルネットが、入れ子構造を持つDyck言語を学べるか調べた。\n各時点で、それまでの列に続けられる記号の集合を予測する。全時点の予測が正しい列を成功と数えた。\nHELMの「末尾の閉じ括弧を生成する課題」とは、出力の形式も採点の単位も異なる。",
+        "4. 研究での使われ方と入手",
+        "[1] Suzgun et al. (2019). Memory-Augmented Recurrent Neural Networks Can Learn Generalized Dyck Languages. arXiv.  https://arxiv.org/abs/1911.03329"
+      ],
+      "method": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、用語、時点、原文と日本語訳の意味対応を確認。"
+    },
+    {
+      "page": 28,
+      "title": "Dyck-2の研究では、外部メモリが役立つ",
+      "text": [
+        "Dyck-2の研究では、外部メモリが役立つ",
+        "4. 研究での使われ方と入手",
+        "2019年の方式",
+        "テスト成功率の平均",
+        "Vanilla RNN",
+        "0.00%",
+        "Vanilla LSTM",
+        "1.39%",
+        "Stack-RNN + Softmax",
+        "99.99%",
+        "10回の実験。学習5,000列（2〜50記号）、テスト5,000列（52〜100記号）。",
+        "[1] Suzgun et al. (2019). Memory-Augmented Recurrent Neural Networks Can Learn Generalized Dyck Languages. arXiv.  https://arxiv.org/abs/1911.03329"
+      ],
+      "method": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、用語、時点、原文と日本語訳の意味対応を確認。"
+    },
+    {
+      "page": 29,
+      "title": "BIG-benchとHELMは、補完形式が異なる",
+      "text": [
+        "BIG-benchとHELMは、補完形式が異なる",
+        "4. 研究での使われ方と入手",
+        "対象",
+        "データと出力",
+        "BIG-bench",
+        "Dyck-4、固定1,000例、選択肢の得点で評価",
+        "HELMの公開設定",
+        "Dyck-3、seed固定、閉じ括弧列を生成",
+        "BIG-benchは選択肢を入力へ追記しない設定。HELMは独自の生成器を使う。",
+        "[1] BIG-bench. Dyck Language (2026-10-18取得)。  https://github.com/google/BIG-bench/tree/main/bigbench/benchmark_tasks/dyck_languages"
+      ],
+      "method": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、用語、時点、原文と日本語訳の意味対応を確認。"
+    },
+    {
+      "page": 30,
+      "title": "生成器と採点コードを一緒に選ぶ",
+      "text": [
+        "生成器と採点コードを一緒に選ぶ",
+        "HELM v0.3.0のDyckLanguageScenarioで、括弧の種類数、件数、長さ、seedを指定できる。生成時に外部データの取得は要らない。\n公式HELM実装のコードはApache License 2.0。元研究の実装と、HELMの生成・評価コードは別の配布物である。\n2026-10-18時点でも、著者の実装、BIG-benchの固定例、HELMの公開runを参照できる。",
+        "4. 研究での使われ方と入手",
+        "[1] HELM v0.3.0. DyckLanguageScenario.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/dyck_language_scenario.py\n[2] BIG-bench. Dyck Language (2026-10-18取得)。  https://github.com/google/BIG-bench/tree/main/bigbench/benchmark_tasks/dyck_languages"
+      ],
+      "method": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、用語、時点、原文と日本語訳の意味対応を確認。"
+    },
+    {
+      "page": 31,
+      "title": "括弧の順序を覚える課題と、採点の範囲",
+      "text": [
+        "括弧の順序を覚える課題と、採点の範囲",
+        "Dyck補完は、未完の括弧を内側から正しく閉じる課題。正解はスタックから一意に計算できる。\nHELMでは短い提示例から長い評価列へ移る。括弧列は固定seedと生成器で再現できる。\n公開指標が比べるのは末尾要素であり、列全体の補完の正しさは、同じ出力を列全体でも照合して捉える。",
+        "4. 研究での使われ方と入手",
+        "[1] HELM v0.3.0. DyckLanguageScenario.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/dyck_language_scenario.py\n[2] HELM v0.3.0. exact_match_indicator.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/metrics/basic_metrics.py"
+      ],
+      "method": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、用語、時点、原文と日本語訳の意味対応を確認。"
+    },
+    {
+      "page": 32,
+      "title": "Appendix",
+      "text": [
+        "Appendix",
+        "Appendix"
+      ],
+      "method": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、用語、時点、原文と日本語訳の意味対応を確認。"
+    },
+    {
+      "page": 33,
+      "title": "",
+      "text": [
+        "",
+        "追加の実例\n生成と採点の補足\n研究と参考文献",
+        "Appendix: 目次"
+      ],
+      "method": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、用語、時点、原文と日本語訳の意味対応を確認。"
+    },
+    {
+      "page": 34,
+      "title": "実例4：角括弧を一つ閉じる",
+      "text": [
+        "実例4：角括弧を一つ閉じる",
+        "Appendix: 1. 追加の実例",
+        "入力の全文／61記号。空白で区切り、表示上の改行だけを追加。",
+        "[ ( ( [ [ ( ( { ( ) } ) ) { } ] { } { [ [\n( ) ] ] } { [ [ [ [ ] ] ] ] } [ { { { { (\n{ [ { ( ) } ] } [ ] ) } } } } ] ] ) )",
+        "正解：]",
+        "予測：]",
+        "text-davinci-003の試行0：末尾要素の一致=1、列全体の一致=1。",
+        "[1] HELM v0.3.0、seed=42の生成器で再現し、公開text-davinci-003入力と全500件を照合。 id6 / test / generator index 6\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/runs/dyck_language_np=3:model=openai_text-davinci-003"
+      ],
+      "method": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、用語、時点、原文と日本語訳の意味対応を確認。"
+    },
+    {
+      "page": 35,
+      "title": "実例5：丸括弧を一つ閉じる",
+      "text": [
+        "実例5：丸括弧を一つ閉じる",
+        "Appendix: 1. 追加の実例",
+        "入力の全文／77記号。空白で区切り、表示上の改行だけを追加。",
+        "[ [ ] ] ( { } ) ( ( { { { { ( ( [ ( { }\n) [ { } ] ] ) ) } } ( ) [ { [ [ ] ] ( {\n[ ] } ) } ] [ { [ [ ] ] } ] [ { { } } ]\n{ { ( [ ] { ( ) } ) } } ( ) } } )",
+        "正解：)",
+        "予測：)",
+        "text-davinci-003の試行0：末尾要素の一致=1、列全体の一致=1。",
+        "[1] HELM v0.3.0、seed=42の生成器で再現し、公開text-davinci-003入力と全500件を照合。 id7 / test / generator index 7\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/runs/dyck_language_np=3:model=openai_text-davinci-003"
+      ],
+      "method": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、用語、時点、原文と日本語訳の意味対応を確認。"
+    },
+    {
+      "page": 36,
+      "title": "実例6：波括弧を一つ閉じる",
+      "text": [
+        "実例6：波括弧を一つ閉じる",
+        "Appendix: 1. 追加の実例",
+        "入力の全文／67記号。空白で区切り、表示上の改行だけを追加。",
+        "( ( ) ) { [ ] { ( ( ( { [ ( ( ) ) ] { [ { ( )\n} ] } [ [ ] ] ( ) [ [ { ( ( ( ( ( ) ) ) ) ) }\n] [ ] { ( ) } { { } } ] ( ( ) ) } ) ) ) }",
+        "正解：}",
+        "予測：}",
+        "text-davinci-003の試行0：末尾要素の一致=1、列全体の一致=1。",
+        "[1] HELM v0.3.0、seed=42の生成器で再現し、公開text-davinci-003入力と全500件を照合。 id8 / test / generator index 8\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/runs/dyck_language_np=3:model=openai_text-davinci-003"
+      ],
+      "method": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、用語、時点、原文と日本語訳の意味対応を確認。"
+    },
+    {
+      "page": 37,
+      "title": "実例7：98記号の入力を補う",
+      "text": [
+        "実例7：98記号の入力を補う",
+        "Appendix: 1. 追加の実例",
+        "入力の全文／98記号。空白で区切り、表示上の改行だけを追加。",
+        "( ) ( [ ] ) { } [ [ { { { ( ( ) ) } } [\n( { { } } ) ] } ] ] ( [ ] ) [ ] ( [ [ [\n{ { ( { [ { } ( ) ] } ) { [ [ ( ) ] ] }\n} { { { [ ( { [ [ [ { { { } } } ] ] ] {\n{ } } } ) { } ] } } } } ] ] { { } }",
+        "正解：] )",
+        "予測：) ]",
+        "text-davinci-003の試行0：末尾要素の一致=0、列全体の一致=0。",
+        "[1] HELM v0.3.0、seed=42の生成器で再現し、公開text-davinci-003入力と全500件を照合。 id10 / test / generator index 10\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/runs/dyck_language_np=3:model=openai_text-davinci-003"
+      ],
+      "method": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、用語、時点、原文と日本語訳の意味対応を確認。"
+    },
+    {
+      "page": 38,
+      "title": "実例8：三つの括弧を逆順に閉じる",
+      "text": [
+        "実例8：三つの括弧を逆順に閉じる",
+        "Appendix: 1. 追加の実例",
+        "入力の全文／53記号。空白で区切り、表示上の改行だけを追加。",
+        "{ ( { { [ { ( [ ] [ ] ) } ] } } ( [\n] [ [ [ ( ) ] ( [ [ ( ( ( [ [ ] { (\n) } ] ) ) ) ] [ ( ) ] ] ) ] ] ) [",
+        "正解：] ) }",
+        "予測：] ) } )",
+        "text-davinci-003の試行0：末尾要素の一致=0、列全体の一致=0。",
+        "[1] HELM v0.3.0、seed=42の生成器で再現し、公開text-davinci-003入力と全500件を照合。 id11 / test / generator index 11\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/runs/dyck_language_np=3:model=openai_text-davinci-003"
+      ],
+      "method": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、用語、時点、原文と日本語訳の意味対応を確認。"
+    },
+    {
+      "page": 39,
+      "title": "実例9：二つの括弧を閉じる",
+      "text": [
+        "実例9：二つの括弧を閉じる",
+        "Appendix: 1. 追加の実例",
+        "入力の全文／70記号。空白で区切り、表示上の改行だけを追加。",
+        "[ ( ( [ [ ] ] ( ) ) { ( [ [ { ( ) } ( ( [ ( { [\n[ ( { [ ( [ ( [ ( [ ] ) ] ) ( ) [ [ { { ( [ ] )\n} } ] ] ] ) ] } ) ] ] } ) ] ) ) ( ) ] ] ) }",
+        "正解：) ]",
+        "予測：) ]",
+        "text-davinci-003の試行0：末尾要素の一致=1、列全体の一致=1。",
+        "[1] HELM v0.3.0、seed=42の生成器で再現し、公開text-davinci-003入力と全500件を照合。 id12 / test / generator index 12\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/runs/dyck_language_np=3:model=openai_text-davinci-003"
+      ],
+      "method": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、用語、時点、原文と日本語訳の意味対応を確認。"
+    },
+    {
+      "page": 40,
+      "title": "実例10：同じ種類が離れて現れる",
+      "text": [
+        "実例10：同じ種類が離れて現れる",
+        "Appendix: 1. 追加の実例",
+        "入力の全文／91記号。空白で区切り、表示上の改行だけを追加。",
+        "{ { } [ ] ( ) } [ ( [ [ { [ ] } ] ] ) ] [ ( {\n( ( { { } } ) { } ) } ) [ { { { } } ( ( [ ( [\n( { ( ) } ) ] ) ] [ ( ) ] ) ) { [ { } ] { [ ]\n} { { } } } { } ( { } { [ ] } ( ) ) } ] ( [",
+        "正解：] ) ]",
+        "予測：] ) ]",
+        "text-davinci-003の試行0：末尾要素の一致=1、列全体の一致=1。",
+        "[1] HELM v0.3.0、seed=42の生成器で再現し、公開text-davinci-003入力と全500件を照合。 id13 / test / generator index 13\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/runs/dyck_language_np=3:model=openai_text-davinci-003"
+      ],
+      "method": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、用語、時点、原文と日本語訳の意味対応を確認。"
+    },
+    {
+      "page": 41,
+      "title": "実例11：49記号の入力を補う",
+      "text": [
+        "実例11：49記号の入力を補う",
+        "Appendix: 1. 追加の実例",
+        "入力の全文／49記号。空白で区切り、表示上の改行だけを追加。",
+        "[ ( { ( [ { [ ( { [ [ [ ( ) ] ] ]\n} ) ] } ] ) { ( ( ( { } ( ) ( ) (\n( [ ( ) ] ) ) ) ) [ ( ) ] ) }",
+        "正解：} ) ]",
+        "予測：} ) ]",
+        "text-davinci-003の試行0：末尾要素の一致=1、列全体の一致=1。",
+        "[1] HELM v0.3.0、seed=42の生成器で再現し、公開text-davinci-003入力と全500件を照合。 id14 / test / generator index 14\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/runs/dyck_language_np=3:model=openai_text-davinci-003"
+      ],
+      "method": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、用語、時点、原文と日本語訳の意味対応を確認。"
+    },
+    {
+      "page": 42,
+      "title": "実例12：複数の種類が重なる",
+      "text": [
+        "実例12：複数の種類が重なる",
+        "Appendix: 1. 追加の実例",
+        "入力の全文／89記号。空白で区切り、表示上の改行だけを追加。",
+        "[ { } ] [ ] ( { ( [ ] ) } [ ( { [ [ { [ ( [ [\n] ] ) { ( ) } { [ [ ] ] } ] } ] ] } ) ] ( ) )\n{ { [ ( { } ) ] } { } { [ ( ) ] } { } ( { { }\n( ) ( ( ) ) } ) [ { [ ( { [ ] } ) { } ]",
+        "正解：} ] }",
+        "予測：} ] ]",
+        "text-davinci-003の試行0：末尾要素の一致=0、列全体の一致=0。",
+        "[1] HELM v0.3.0、seed=42の生成器で再現し、公開text-davinci-003入力と全500件を照合。 id15 / test / generator index 15\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/runs/dyck_language_np=3:model=openai_text-davinci-003"
+      ],
+      "method": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、用語、時点、原文と日本語訳の意味対応を確認。"
+    },
+    {
+      "page": 43,
+      "title": "実例13：二つの閉じ括弧が必要",
+      "text": [
+        "実例13：二つの閉じ括弧が必要",
+        "Appendix: 1. 追加の実例",
+        "入力の全文／74記号。空白で区切り、表示上の改行だけを追加。",
+        "[ { ( { { { { } ( [ [ { } ] ] ) [ ] }\n} } ( ( ( ) ) ) ) { [ ] } [ [ ( [ ] (\n[ ( [ ] ) ] { { ( ( ) ) } } ) ) [ [ {\n} ] ] ] [ ( ) ( ) ] ( ( ) ) ] } (",
+        "正解：) ]",
+        "予測：) ) ]",
+        "text-davinci-003の試行0：末尾要素の一致=1、列全体の一致=0。",
+        "[1] HELM v0.3.0、seed=42の生成器で再現し、公開text-davinci-003入力と全500件を照合。 id16 / test / generator index 16\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/runs/dyck_language_np=3:model=openai_text-davinci-003"
+      ],
+      "method": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、用語、時点、原文と日本語訳の意味対応を確認。"
+    },
+    {
+      "page": 44,
+      "title": "公開プロンプトには完成した3列が先行する",
+      "text": [
+        "公開プロンプトには完成した3列が先行する",
+        "公開runの指示に続き、3件の提示例と、補完対象の入力が並ぶ。提示例では入力と正解の閉じ括弧が連続し、完成した列になる。\n公開設定はmax_train_instances=3、num_train_trials=3。確認した3モデルは平均提示例数3、prompt_truncated=0。\n生成は温度0、最大5トークン、改行で停止。括弧記号数と、モデルの生成トークン数は異なる。",
+        "Appendix: 2. 生成と採点の補足",
+        "[1] HELM Classic v0.4.0, Dyck Language. 公開run suite v0.3.0、括弧3種類。  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/dyck_language"
+      ],
+      "method": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、用語、時点、原文と日本語訳の意味対応を確認。"
+    },
+    {
+      "page": 45,
+      "title": "長さの設定値と、切り出した入力を区別する",
+      "text": [
+        "長さの設定値と、切り出した入力を区別する",
+        "評価用の生成列を52〜100記号としても、入力の最小値が52記号になるわけではない。\nget_inputは、後ろからの深さの合計が指定値に達する位置で列を切る。後ろにある対応済み部分列も切り落とすことがある。\nそのため、このseedでは入力が45〜99記号、正解が1〜3記号になった。値は公開入力との全件照合に基づく。",
+        "Appendix: 2. 生成と採点の補足",
+        "[1] HELM v0.3.0. DyckLanguageScenario.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/dyck_language_scenario.py"
+      ],
+      "method": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、用語、時点、原文と日本語訳の意味対応を確認。"
+    },
+    {
+      "page": 46,
+      "title": "公開成績と独自の再採点を分けて保存する",
+      "text": [
+        "公開成績と独自の再採点を分けて保存する",
+        "3モデルの末尾要素得点は、公開stats.jsonのtest・摂動なしを参照した。全て500件、3試行。\ntext-davinci-003の列全体得点は、公開scenario_state.jsonの1,500出力に、前後の空白を除く一致判定を適用した独自集計。\n公開指標の実装も同じ出力へ適用し、試行0が0.732、試行1・2が各0.760、平均0.750666…となることを再現した。",
+        "Appendix: 2. 生成と採点の補足",
+        "[1] HELM v0.3.0、seed=42の生成器で再現し、公開text-davinci-003入力と全500件を照合。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/runs/dyck_language_np=3:model=openai_text-davinci-003\n[2] HELM v0.3.0. exact_match_indicator.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/metrics/basic_metrics.py"
+      ],
+      "method": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、用語、時点、原文と日本語訳の意味対応を確認。"
+    },
+    {
+      "page": 47,
+      "title": "参考文献",
+      "text": [
+        "参考文献",
+        "Appendix: 3. 研究と参考文献",
+        "Memory-Augmented Recurrent Neural Networks Can Learn Generalized Dyck Languages\nMirac Suzgun, Sebastian Gehrmann, Yonatan Belinkov, Stuart M. Shieber (2019). arXiv:1911.03329.\n外部メモリを持つ再帰型モデルを提案し、Dyck言語や回文などで長い系列への汎化を調べる。\nhttps://arxiv.org/abs/1911.03329",
+        "Dyck Language\nMirac Suzgun et al. Google BIG-bench, task documentation (2026-10-18参照)。\n括弧列の欠けた末尾を選ぶ固定データと、生成文法や初期実験を掲載する。\nhttps://github.com/google/BIG-bench/tree/main/bigbench/benchmark_tasks/dyck_languages"
+      ],
+      "method": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、用語、時点、原文と日本語訳の意味対応を確認。"
+    },
+    {
+      "page": 48,
+      "title": "参考文献",
+      "text": [
+        "参考文献",
+        "Appendix: 3. 研究と参考文献",
+        "Holistic Evaluation of Language Models\nPercy Liang et al. (2023). Transactions on Machine Learning Research.\n多様なシナリオと指標でモデルを評価するHELMの枠組みを提案する。\nhttps://arxiv.org/abs/2211.09110",
+        "DyckLanguageScenario\nStanford CRFM (2023). HELM v0.3.0, Python implementation.\n確率的文法による括弧列生成、入力の切り出し、スタックによる正解計算を実装する。\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/dyck_language_scenario.py"
+      ],
+      "method": "skill_based_codex",
+      "japanese_checked": true,
+      "assessment": "主述、助詞、修飾、並列、用語、時点、原文と日本語訳の意味対応を確認。"
+    }
+  ]
+}
