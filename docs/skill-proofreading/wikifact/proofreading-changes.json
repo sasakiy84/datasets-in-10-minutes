@@ -1,0 +1,71 @@
+{
+  "method": "skill_based_codex",
+  "review_mode": "skill_based_codex",
+  "gemini_used": false,
+  "changes": [
+    {
+      "page": 10,
+      "before": "HELMの設定は1問当たり5候補の生成。",
+      "after": "HELMでは、1問当たり5候補を生成する設定を使う。",
+      "reason": "設定と操作の関係を述語でつなげる。",
+      "category": "japanese"
+    },
+    {
+      "page": 14,
+      "before": "主語または目的語にWikipediaページがない三つ組を除いた。",
+      "after": "主語か目的語のいずれかに対応するWikipediaページがない三つ組を除いた。",
+      "reason": "エンティティに対応するページの有無を示し、修飾関係を明確にする。",
+      "category": "japanese"
+    },
+    {
+      "page": 20,
+      "before": "取得した全7,462 testレコードにある出力は各1候補だった。",
+      "after": "取得した全7,462件のtestレコードには、それぞれ1候補の出力が含まれていた。",
+      "reason": "数量の単位と主述の対応を整える。",
+      "category": "japanese"
+    },
+    {
+      "page": 27,
+      "before": "HELMのコードはApache License 2.0。元の知識基盤や、加工されたWikiFact配布物の条件をコードのライセンスだけで判断しない。",
+      "after": "HELMの実装コードはApache License 2.0で公開される。元のWikidataと、加工されたWikiFact配布物の権利条件は、コードの条件とは別に確認する。",
+      "reason": "対象をコード・元データ・加工物へ明確に対応させる。",
+      "category": "japanese"
+    },
+    {
+      "page": 27,
+      "before": "WikiFact専用の包括的なライセンス表示は今回確認できなかった。Wikidataのライセンス文書への取得は403となったため、配布物全体への権利確認済みとは記載しない。",
+      "after": "今回取得したシナリオコードと論文では、WikiFactの加工済みデータ全体への専用ライセンス表示は確認できなかった。利用する配布物の条件は、配布元へ照会する必要がある。",
+      "reason": "制作手順の説明から、確認した利用条件と未確認の範囲へ直す。",
+      "category": "japanese"
+    },
+    {
+      "page": 28,
+      "before": "関係の平均、正規化した文字列一致、1候補と5候補を対応させると、公開成績の意味が定まる。",
+      "after": "各関係を同じ重みで平均する方法と、文字列の正規化、生成候補数をそろえて、公開成績を解釈する。",
+      "reason": "抽象的な対応関係を具体的な集約・照合・生成条件として説明する。",
+      "category": "japanese"
+    },
+    {
+      "page": 22,
+      "before": "候補数・試行数は前頁の条件。",
+      "after": "候補数は5／5／1、試行数は3／3／1。",
+      "reason": "条件の位置を変えるため、表注に具体的な値を保持。",
+      "category": "structure"
+    },
+    {
+      "page": 7,
+      "before": "トマス・N・スコルティア／フランク・M・ロビンソン",
+      "after": "Thomas N. Scortia\nFrank M. Robinson",
+      "reason": "日本語の定訳を未確認の作者名は原綴りで示し、二人を意味単位で改行する。",
+      "category": "translation"
+    }
+  ],
+  "independent_review_changes": [
+    {
+      "page": 17,
+      "before": "重複を除いて",
+      "after": "試行間の同一IDをまとめた",
+      "reason": "文字列一意数とID数を区別"
+    }
+  ]
+}

@@ -38,7 +38,7 @@ GSM8KとHumanEvalは既存資料で対象データセットを紹介済み。MML
 |twitter_aae_aa|TwitterAAE (AA)|作成済み|[PPTX](../slides/datasets-in-10-minutes-twitter-aae.pptx) / [PDF](../slides/datasets-in-10-minutes-twitter-aae.pdf)|
 |twitter_aae_white|TwitterAAE (white)|作成済み|[PPTX](../slides/datasets-in-10-minutes-twitter-aae.pptx) / [PDF](../slides/datasets-in-10-minutes-twitter-aae.pdf)|
 |blimp|BLiMP (The Benchmark of Linguistic Minimal Pairs for English)|作成済み|[PPTX](../slides/datasets-in-10-minutes-blimp.pptx) / [PDF](../slides/datasets-in-10-minutes-blimp.pdf)|
-|wikifact|WikiFact|未着手||
+|wikifact|WikiFact|作成済み|[PPTX](../slides/datasets-in-10-minutes-wikifact.pptx) / [PDF](../slides/datasets-in-10-minutes-wikifact.pdf)|
 |babi_qa|bAbI|作成済み|[PPTX](../slides/datasets-in-10-minutes-babi.pptx) / [PDF](../slides/datasets-in-10-minutes-babi.pdf)|
 |dyck_language|Dyck|未着手||
 |numeracy|Numerical reasoning|未着手||

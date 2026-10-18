@@ -1,0 +1,87 @@
+{
+  "status": "passed",
+  "reviewer": "create_msmarco",
+  "reviewed_artifact_hashes": {
+    "datasets-in-10-minutes-wikifact.pptx": "9983fb721b44ef170b6a2edf02dd2f8a8798e1411dcd0b1b9c80b00e6027ae67",
+    "datasets-in-10-minutes-wikifact.pdf": "1354f43e921b853828cf4643f9aa28bd9eba59e7e98d696a7a0d992936e8a05e"
+  },
+  "independent_checks": "checks.json",
+  "visual_review": {
+    "method": "individual view_image on every page; updated p17 re-viewed",
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52
+    ],
+    "critical_findings": []
+  },
+  "verified": [
+    "86 implemented relations versus 10 public relations; no claim of full 86-relation score",
+    "All 30 model/relation conditions independently recomputed from original request/result records; top1 sorted by total logprob, quasi normalization, any@5, equal relation macro aggregation match",
+    "Actual completions 5/5/1 with trials 3/3/1; Llama2 configured 5 but actual 1 on all 7462 test records",
+    "13 complete examples matched original records and hashes; translations, all references, candidate order and citations checked",
+    "Native PPTX package XML parsed with no new schema errors; final artifact hashes match handoff"
+  ],
+  "resolved_findings": [
+    {
+      "page": 17,
+      "finding": "7462 is distinct instance IDs across trials, while unique input strings are 7456 (author 849 and currency 845). Original wording implied text deduplication.",
+      "resolution": "p17 now says identical IDs consolidated across trials; sources.md and input-uniqueness.json explicitly distinguish ID and text counts. Benchmark denominator correctly unchanged.",
+      "verified": true
+    }
+  ],
+  "unresolved_findings": [],
+  "limitations": [
+    "Original CodaLab train/dev/test JSONLs unavailable (503); review verifies public 10-relation run records, not original full 86-relation corpus. This scope is explicit on p26.",
+    "Dedicated processed-data license unverified; p27 distinguishes code Apache2 from data rights."
+  ]
+}
