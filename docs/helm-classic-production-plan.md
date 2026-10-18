@@ -50,7 +50,7 @@
 |3|ccpm|CCPM|作成済み|
 |4|chid|ChID|未着手|
 |5|ocnli|OCNLI|作成済み|
-|6|math23k|Math23K|未着手|
+|6|math23k|Math23K|作成済み|
 |7|cold|COLD|作成済み|
 |8|cdial-bias|CDial-Bias|未着手|
 |9|chef|CHEF|作成済み|

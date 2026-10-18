@@ -1,0 +1,297 @@
+[
+  {
+    "page": 1,
+    "text": "Math23K\nChinese Math Word Problems\n中国語の文章題から、数と関係を式へ移す\nsasakiy84\ndatasets in 10 minutes (2026-10-18)",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 2,
+    "text": "2019年追試著者による、公式実装と配布\nMath23K\n\n[1] Xie & Sun. 2019年追試著者のmath_seq2tree実装。固定版d2310d08818e。 2017年の原配布そのものの画面ではない。\nhttps://github.com/ShichaoSun/math_seq2tree",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 3,
+    "text": "\n文章から、式と答えを求める\n2017年の収集と問題の表現\n分割と採点条件を読む\nCLEVAでの採用と配布の範囲\n目次",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 4,
+    "text": "文章から、式と答えを求める\n1. 文章から、式と答えを求める",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 5,
+    "text": "文章の数を拾い、求める量を式で表す\nMath23Kは、中国語の算数文章題から計算式を作り、数値の答えを求めるためのデータセット。\n入力は中国語の問題文。配布データには、計算式equationと答えansがある。元の研究は文章から式への写像を学習し、式を解いて答える。\n元論文は2017年。今回照合した生データと採点実装は、2019年の追試著者が配布した固定版である。\n1. 文章から、式と答えを求める\n[1] Wang, Liu & Shi (2017). Deep Neural Solver for Math Word Problems. EMNLP, 845–854.  https://aclanthology.org/D17-1088/\n[2] Xie & Sun. 2019年追試著者のmath_seq2tree実装。固定版d2310d08818e。  https://github.com/ShichaoSun/math_seq2tree",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 6,
+    "text": "数値の意味と、求める対象を対応させる\n同じ数が出てきても、総数・差・割合のどれを問うかで式は変わる。問題文の「より多い」「残り」「平均」などの関係を読む。\n式の演算順と単位も答えの一部。括弧、百分率、分数、整数で表す指示を落とさずに照合する。\n以下の3例は取得した公開問題の全文。中国語と日本語訳、計算式の読み、配布答えを並べる。\n1. 文章から、式と答えを求める\n[1] Math23K公開問題。2019年追試著者配布data/Math_23K.json、d2310d08818e。元設問の権利は出所に帰属。\nhttps://github.com/ShichaoSun/math_seq2tree/blob/master/data/Math_23K.json",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 7,
+    "text": "実例1：ニワトリがアヒルより多い羽数\n1. 文章から、式と答えを求める\n2019年著者配布 / id=19868 / original_text全文\n中国語原文（全文）\n日本語訳（全文）\n一个饲养场，养鸭1200只，养的鸡比养的鸭多(3/5)，养的鸡比鸭多多少只？\nある飼育場ではアヒルを1200羽飼っている。ニワトリはアヒルより3/5だけ多い。ニワトリはアヒルより何羽多いか。\n配布式の読み：x = 1200 × (3/5)\n正解：720羽\n[1] Math23K公開問題。2019年追試著者配布data/Math_23K.json、d2310d08818e。元設問の権利は出所に帰属。 id=19868、0起算行19867。\nhttps://github.com/ShichaoSun/math_seq2tree/blob/master/data/Math_23K.json",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 8,
+    "text": "多い羽数と、ニワトリの総数を分ける\nニワトリの総数ではなく、アヒルより多い羽数を問う。CLEVAの公開論文例と全文が一致する。\n1200 × 3/5 = 720羽が差になる。1200 + 720 = 1920羽はニワトリの総数で、この設問が尋ねる量とは異なる。\nCLEVAの論文公開例はこのid19868と一致する。似たアヒル・ニワトリの問題を、数値だけで同じ原票とみなさない。\n1. 文章から、式と答えを求める\n[1] Math23K公開問題。2019年追試著者配布data/Math_23K.json、d2310d08818e。元設問の権利は出所に帰属。\nhttps://github.com/ShichaoSun/math_seq2tree/blob/master/data/Math_23K.json\n[2] Li et al. (2023). CLEVA: Chinese Language Models EVAluation Platform. EMNLP System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 9,
+    "text": "実例2：積を引いてから、差を割る\n1. 文章から、式と答えを求める\n2019年著者配布 / id=6 / original_text全文\n中国語原文（全文）\n日本語訳（全文）\n10.6-0.4与5.5的积，所得的差除以2.1，商=？\n10.6から、0.4と5.5の積を引き、その差を2.1で割ると、商はいくつか。\n配布式の読み：x = (10.6 − 0.4 × 5.5) ÷ 2.1\n正解：4\n[1] Math23K公開問題。2019年追試著者配布data/Math_23K.json、d2310d08818e。元設問の権利は出所に帰属。 id=6、0起算行5。\nhttps://github.com/ShichaoSun/math_seq2tree/blob/master/data/Math_23K.json",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 10,
+    "text": "文章の順番を、括弧と演算順に変える\n0.4と5.5の積を先に求める。10.6から引いた差全体を、2.1で割る。\n0.4 × 5.5 = 2.2、10.6 − 2.2 = 8.4、8.4 ÷ 2.1 = 4。引く前に積を計算し、引いた結果を割る。\n式を左から機械的に読むだけでは足りない。文中の「積」「差」「商」が、計算のまとまりを指定している。\n1. 文章から、式と答えを求める\n[1] Math23K公開問題。2019年追試著者配布data/Math_23K.json、d2310d08818e。元設問の権利は出所に帰属。\nhttps://github.com/ShichaoSun/math_seq2tree/blob/master/data/Math_23K.json",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 11,
+    "text": "実例3：年利から、3年間の利息を求める\n1. 文章から、式と答えを求める\n2019年著者配布 / id=29 / original_text全文\n中国語原文（全文）\n日本語訳（全文）\n小明把1800元存入银行，定期整存整取3年．如果按年利率3.33%计算，到期后小明可得利息多少元．\n小明は1800元を銀行に預け、元金を一括して預け入れ、3年後にまとめて受け取る定期預金にした。年利3.33%とすると、満期にもらえる利息はいくらか。\n配布式の読み：x = 1800 × 3.33% × 3\n正解：179.82元\n[1] Math23K公開問題。2019年追試著者配布data/Math_23K.json、d2310d08818e。元設問の権利は出所に帰属。 id=29、0起算行28。\nhttps://github.com/ShichaoSun/math_seq2tree/blob/master/data/Math_23K.json",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 12,
+    "text": "百分率と年数から、利息だけを求める\n3.33%を0.0333に直す。配布式は元金に年利と年数を掛け、利息を求めている。\n1800 × 0.0333 × 3 = 179.82元。元金を足した1979.82元ではなく、問われた利息を答える。\n3.33%は0.0333として計算する。答えの10%と小数0.1は、同じ値を別の形式で表している。\n1. 文章から、式と答えを求める\n[1] Math23K公開問題。2019年追試著者配布data/Math_23K.json、d2310d08818e。元設問の権利は出所に帰属。\nhttps://github.com/ShichaoSun/math_seq2tree/blob/master/data/Math_23K.json",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 13,
+    "text": "2017年の収集と問題の表現\n2. 2017年の収集と問題の表現",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 14,
+    "text": "教育サイトの問題から、式と答えを抽出した\n2017年のWang・Liu・Shiは、中国語の教育サイトから6万件以上の問題を収集した。小学算数の文章題を対象とする。\n規則により問題文・式・答えを抽出し、適さない例を除いた。元論文は、1変数の線形な問題23,161件と2,187の式テンプレートを報告する。\n公開問題の収集元にある表現と、著者が作った変換・学習方法を分けて捉える。\n2. 2017年の収集と問題の表現\n[1] Wang, Liu & Shi (2017). Deep Neural Solver for Math Word Problems. EMNLP, 845–854.  https://aclanthology.org/D17-1088/",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 15,
+    "text": "論文の件数と、取得したファイルの件数\n2. 2017年の収集と問題の表現\n対象\n件数\n何を数えたか\n2017年論文\n23,161\n報告された問題数\n2019年追試論文\n23,161\n比較実験の記述\n取得した2019年配布\n23,162\n7行単位の原レコード\n取得版のID\n23,162\n異なるidの数\n2017年論文は23,161件を報告する。取得した2019年配布は23,162件で、1件の差の理由は確認できていない。\n[1] Wang, Liu & Shi (2017). Deep Neural Solver for Math Word Problems. EMNLP, 845–854.  https://aclanthology.org/D17-1088/\n[2] Xie & Sun. 2019年追試著者のmath_seq2tree実装。固定版d2310d08818e。  https://github.com/ShichaoSun/math_seq2tree",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 16,
+    "text": "数字を記号へ置き換えて、式の形を学ぶ\n2017年の方法は、問題文中の数字とその出現位置を対応付け、数字を記号へ置き換える。文章から式テンプレートを生成し、数字を戻して解く。\n数が出現しても、すべてが式に必要とは限らない。月や学年など、答えに使わない数も問題文に含まれる。\nSNIはsignificant number identification。式に使う数を識別し、式生成に不要な数を抑えるための仕組みである。\n2. 2017年の収集と問題の表現\n[1] Wang, Liu & Shi (2017). Deep Neural Solver for Math Word Problems. EMNLP, 845–854.  https://aclanthology.org/D17-1088/",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 17,
+    "text": "2019年実装は、配布済みの分かち書きを読む\n原ファイルはid・original_text・segmented_text・equation・ansを持つ。1レコードが7物理行で、通常のJSON配列や1行1JSONとは異なる。\n2019年実装はsegmented_textを空白で分割し、数字をNUMへ置き換える。式中の数をN0、N1…として、問題文の数値リストへ結び付ける。\n定数1や3.14のように、問題文からコピーする数とは別の値も出力語彙へ加える。今回の実データを公式関数に通して確認した。\n2. 2017年の収集と問題の表現\n[1] Xie & Sun. 2019年追試著者のmath_seq2tree実装。固定版d2310d08818e。  https://github.com/ShichaoSun/math_seq2tree",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 18,
+    "text": "分割と採点条件を読む\n3. 分割と採点条件を読む",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 19,
+    "text": "元論文は5分割交差検証で比較した\n2017年に報告された成績は5分割交差検証の平均正答率。各回で4分割を学習、残る1分割をテストに使った。\n同論文はretrieval、seq2seq、両者を組み合わせるhybridを比較する。SNIの有無も比較条件であり、別のモデル設定になる。\n論文の平均値を、今回の23,162件を新しいLLMへ入力して得た得点とは呼ばない。\n3. 分割と採点条件を読む\n[1] Wang, Liu & Shi (2017). Deep Neural Solver for Math Word Problems. EMNLP, 845–854.  https://aclanthology.org/D17-1088/",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 20,
+    "text": "2017年：Math23Kの平均正答率\n3. 分割と採点条件を読む\n方法\nSNIなし\nSNIあり\nRetrieval\n46.0%\n47.2%\nSeq2seq\n53.7%\n58.1%\nHybrid\n61.1%\n64.7%\n5分割交差検証。ZDCは42.1%。別データAlg514の値と混ぜない。\n[1] Wang, Liu & Shi (2017). Deep Neural Solver for Math Word Problems. EMNLP, 845–854.  https://aclanthology.org/D17-1088/",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 21,
+    "text": "2019年の追試は、式を木として生成する\nXie・SunのGTSは、求める量を目標として式木を上から分解し、完成した部分木を下から表現して次の生成に使う。\n2019年論文はMath23Kの5分割交差検証でGTS74.3%を報告する。Hybrid64.7%は比較対象であり、2017年著者の新しい再実行値とは説明しない。\n今回取得した公開コードは、この2019年の論文に対応する。元論文の全実験条件を同じものとして置き換えない。\n3. 分割と採点条件を読む\n[1] Xie & Sun (2019). A Goal-Driven Tree-Structured Neural Model for Math Word Problems. IJCAI, 5299–5305.  https://www.ijcai.org/proceedings/2019/736",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 22,
+    "text": "式の一致と、計算結果の一致を区別する\n式の文字列が異なっても、計算結果が許容誤差内で一致すれば、値に基づく評価では正解になる。\n2019年公開実装のvalue判定は、予測式と正解式を数値評価し、差が10⁻⁴未満かを見る。比較先はraw ansではなく、正解式の計算結果。\nequation判定は式トークン列の一致。一般的な代数式の記号的同値性を証明する採点ではない。\n3. 分割と採点条件を読む\n[1] Xie & Sun. compute_prefix_tree_result / compute_prefix_expression. math_seq2tree.  https://github.com/ShichaoSun/math_seq2tree/tree/master/src",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 23,
+    "text": "公開採点関数に、式の組を渡して確かめる\n3. 分割と採点条件を読む\n予測式／正解式\n値の判定\n式の一致\n2 × 3 ／ 3 ＋ 3\n正解\n不一致\n2 ＋ 3 ／ 2 ＋ 3\n正解\n一致\n2³ ／ 2 × (2 × 2)\n不正解\n不一致\n2019年固定実装を実行。3行目は累乗処理の実装上の制約を示す。同じ値なら常に認めると一般化しない。\n[1] Xie & Sun. compute_prefix_tree_result / compute_prefix_expression. math_seq2tree.  https://github.com/ShichaoSun/math_seq2tree/tree/master/src",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 24,
+    "text": "分割の手順と、学習時の乱数を分ける\n2019年run_seq2tree.pyは、配布順を連続した5区間へ分ける。23,162件では4,632件が4区間、最後が4,634件。分割前のシャッフルはない。\n学習バッチの作成にはrandom.shuffleを使うが、この公開スクリプトには乱数seedの固定が見当たらない。\n2017年論文の「5分割」という説明だけから、この2019年の各原票の所属まで同一だったとは断定しない。\n3. 分割と採点条件を読む\n[1] Xie & Sun. 2019年追試著者のmath_seq2tree実装。固定版d2310d08818e。  https://github.com/ShichaoSun/math_seq2tree",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 25,
+    "text": "CLEVAでの採用と配布の範囲\n4. CLEVAでの採用と配布の範囲",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 26,
+    "text": "CLEVAは、文章題をmath_word_problemへ採用\nCLEVAの正式論文はMath23K由来の中国語文章題を採用する。公開例のアヒル1200羽と3/5の問題は、取得版id19868に全文一致し、答えは720。\nHELMの説明例には、甲168の4倍を求める672の提示例と、読書量を求める406の評価側入力がある。原票はid14819とid15691。\n元問題・説明用の推論文・実際のモデル生成を区別する。コードのdocstringにある答えを、公開実行でモデルが生成した出力とは呼ばない。\n4. CLEVAでの採用と配布の範囲\n[1] Li et al. (2023). CLEVA: Chinese Language Models EVAluation Platform. EMNLP System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/\n[2] Stanford CRFM. HELM v0.4.0、CLEVAMathematicalReasoningScenario / Converter.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 27,
+    "text": "公開設定と、取得できた実行結果は別の証拠\nHELM v0.4.0の数学推論クラスは、CLEVA v1のmathematical_reasoning / math_word_problemを扱う。prompt_idは0〜2の3通り。入力はprompts.jsonの設定から作る。\n固定公開版8,526runにCLEVAの実行は0件。Math23Kの公開HELMモデル出力や得点を、この版から再採点することはできない。\nCLEVAが選んだ全原票・分割・提示文の完全版は取得できていない。元ファイルの23,162件を、そのままCLEVAの評価分母にしない。\n4. CLEVAでの採用と配布の範囲\n[1] Stanford CRFM. HELM v0.4.0、CLEVAMathematicalReasoningScenario / Converter.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py\n[2] Stanford CRFM. HELM Classic v0.4.0、2023-11-17固定公開版。  https://crfm.stanford.edu/helm/classic/v0.4.0/",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 28,
+    "text": "2017年の配布経路と、2019年の取得物を分ける\n2019年論文の脚注は、Tencent AI LabのDeep Neural Solverプロジェクト頁を案内する。2017年の保存ページにも題名・著者・元論文へのリンクがある。\n現在の同じURLはYuanbao関連のページを返す。HTTP200で応答しても、Math23Kの原ファイルが取得できたことにはならない。\n今回の原データは2019年追試著者の公式リポジトリから取得した固定版。2017年配布とのbyte同一性は確認できていない。\n4. CLEVAでの採用と配布の範囲\n[1] Tencent AI Lab. Deep Neural Solver project page、2017-08-30保存版。\nhttps://web.archive.org/web/20170830114828/http://ai.tencent.com:80/ailab/Deep_Neural_Solver_for_Math_Word_Problems.html\n[2] Xie & Sun. 2019年追試著者のmath_seq2tree実装。固定版d2310d08818e。  https://github.com/ShichaoSun/math_seq2tree",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 29,
+    "text": "出所を示し、データと実装の権利を分ける\n2019年公式リポジトリのLICENSEはGPL-3.0。コードの利用条件を、教育サイト由来の全設問の権利許諾へ自動的に広げない。\n2017年論文は教育サイトからの収集を説明する。元の問題文の著者や出所への帰属を保ち、原文の引用と日本語訳を区別して扱う。\n公開原文・配布式・配布ansと固定版の位置を対応付けて参照する。IDと問題文を確認し、同じ数字を含む別問題と区別する。\n4. CLEVAでの採用と配布の範囲\n[1] Wang, Liu & Shi (2017). Deep Neural Solver for Math Word Problems. EMNLP, 845–854.  https://aclanthology.org/D17-1088/\n[2] Xie & Sun. math_seq2tree LICENSE、GNU General Public License version 3.  https://github.com/ShichaoSun/math_seq2tree/blob/master/LICENSE",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 30,
+    "text": "文章・式・答えを、同じ問題として確認する\nMath23Kは、中国語の数量関係を式へ写し、答えを求める研究のための文章題データ。数の取り違え、演算順、割合、単位が理解を分ける。\n2017年の元論文、2019年配布と実装、CLEVAの後続利用は、出所・分割・採点条件を分けて読む。\n原文・配布式・配布ansを対応付け、百分率・分数・単位を保って計算を読む。正解式と予測式の比較では、式の形と数値の一致を区別する。\n4. CLEVAでの採用と配布の範囲\n[1] Wang, Liu & Shi (2017). Deep Neural Solver for Math Word Problems. EMNLP, 845–854.  https://aclanthology.org/D17-1088/\n[2] Xie & Sun. 2019年追試著者のmath_seq2tree実装。固定版d2310d08818e。  https://github.com/ShichaoSun/math_seq2tree",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 31,
+    "text": "Appendix\nAppendix",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 32,
+    "text": "\n追加の問題と単位\n原データ・式・採点の補足\n研究と参考文献\nAppendix: 目次",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 33,
+    "text": "追加の問題と単位\nAppendix: 1. 追加の問題と単位",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 34,
+    "text": "実例4：ある数の4倍を求める\nAppendix: 1. 追加の問題と単位\n2019年著者配布 / id=14819 / original_text全文\n中国語原文（全文）\n日本語訳（全文）\n甲数是168，乙数是甲数的4倍，乙数=？\n甲の数は168で、乙の数は甲の4倍である。乙の数はいくつか。\n配布式の読み：x = 168 × 4\n正解：672\n[1] Math23K公開問題。2019年追試著者配布data/Math_23K.json、d2310d08818e。元設問の権利は出所に帰属。 id=14819、0起算行14818。\nhttps://github.com/ShichaoSun/math_seq2tree/blob/master/data/Math_23K.json",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 35,
+    "text": "実例5：残りの読書量と、読んだ頁数\nAppendix: 1. 追加の問題と単位\n2019年著者配布 / id=15691 / original_text全文\n中国語原文（全文）\n日本語訳（全文）\n小方看一本书，已经看了136页，剩下的每天看15页，18天看完．这本书一共有多少页？\n小方は本を136頁読んだ。残りは毎日15頁ずつ読み、18日で読み終えた。この本は全部で何頁あるか。\n配布式の読み：x = 15 × 18 ＋ 136\n正解：406頁\n[1] Math23K公開問題。2019年追試著者配布data/Math_23K.json、d2310d08818e。元設問の権利は出所に帰属。 id=15691、0起算行15690。\nhttps://github.com/ShichaoSun/math_seq2tree/blob/master/data/Math_23K.json",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 36,
+    "text": "実例6：両端にも木を植えた道の長さ\nAppendix: 1. 追加の問題と単位\n2019年著者配布 / id=1 / original_text全文\n中国語原文（全文）\n日本語訳（全文）\n镇海雅乐学校二年级的小朋友到一条小路的一边植树．小朋友们每隔2米种一棵树（马路两头都种了树），最后发现一共种了11棵，这条小路长多少米． \n鎮海雅楽学校の2年生が、道の片側に木を植えた。2mごとに1本植え、道の両端にも木を植えたところ、全部で11本になった。この道は何mあるか。\n配布式の読み：x = (11 − 1) × 2\n正解：20m\n[1] Math23K公開問題。2019年追試著者配布data/Math_23K.json、d2310d08818e。元設問の権利は出所に帰属。 id=1、0起算行0。\nhttps://github.com/ShichaoSun/math_seq2tree/blob/master/data/Math_23K.json",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 37,
+    "text": "実例7：卒業と入学を差し引いた増加率\nAppendix: 1. 追加の問題と単位\n2019年著者配布 / id=7 / original_text全文\n中国語原文（全文）\n日本語訳（全文）\n象山学校原有学生700人，7月份毕业280人，9月份招入新生350人，这时象山学校的学生比原来增加百分之几？\n象山学校にはもともと生徒が700人いた。7月に280人が卒業し、9月に350人の新入生が入った。この時点の生徒数は、もとの人数より何%増えたか。\n配布式の読み：x = (350 − 280) ÷ 700\n正解：10%\n[1] Math23K公開問題。2019年追試著者配布data/Math_23K.json、d2310d08818e。元設問の権利は出所に帰属。 id=7、0起算行6。\nhttps://github.com/ShichaoSun/math_seq2tree/blob/master/data/Math_23K.json",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 38,
+    "text": "実例8：三つの果樹の本数を比でつなぐ\nAppendix: 1. 追加の問題と単位\n2019年著者配布 / id=10 / original_text全文\n中国語原文（全文）\n日本語訳（全文）\n一个果园的李树棵数是桃树的(7/8)，桃树棵数是梨树的(5/6)．已知李树有1680棵，梨树有多少棵？\nある果樹園では、スモモの木の本数はモモの木の7/8で、モモの木の本数はナシの木の5/6である。スモモの木が1680本のとき、ナシの木は何本か。\n配布式の読み：x = 1680 ÷ (7/8) ÷ (5/6)\n正解：2304本\n[1] Math23K公開問題。2019年追試著者配布data/Math_23K.json、d2310d08818e。元設問の権利は出所に帰属。 id=10、0起算行9。\nhttps://github.com/ShichaoSun/math_seq2tree/blob/master/data/Math_23K.json",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 39,
+    "text": "実例9：家庭の水道料金を、5人で分ける\nAppendix: 1. 追加の問題と単位\n2019年著者配布 / id=19 / original_text全文\n中国語原文（全文）\n日本語訳（全文）\n小芳家5月份用水量是16.5吨，每吨水的价格是2.1元，小芳家一共有5口人，平均每人应交多少水费？\n小芳の家は5月に水を16.5t使った。水1tの料金は2.1元で、家族は全部で5人いる。1人当たり、平均でいくら水道料金を負担すればよいか。\n配布式の読み：x = 16.5 × 2.1 ÷ 5\n正解：6.93元／人\n[1] Math23K公開問題。2019年追試著者配布data/Math_23K.json、d2310d08818e。元設問の権利は出所に帰属。 id=19、0起算行18。\nhttps://github.com/ShichaoSun/math_seq2tree/blob/master/data/Math_23K.json",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 40,
+    "text": "実例10：12%多い数から、もとの数へ戻す\nAppendix: 1. 追加の問題と単位\n2019年著者配布 / id=24 / original_text全文\n中国語原文（全文）\n日本語訳（全文）\n比一个数多12%的数是112，这个数=？\nある数より12%多い数は112である。このある数はいくつか。\n配布式の読み：x = 112 ÷ (1 ＋ 12%)\n正解：100\n[1] Math23K公開問題。2019年追試著者配布data/Math_23K.json、d2310d08818e。元設問の権利は出所に帰属。 id=24、0起算行23。\nhttps://github.com/ShichaoSun/math_seq2tree/blob/master/data/Math_23K.json",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 41,
+    "text": "実例11：二つの班の割合を合わせる\nAppendix: 1. 追加の問題と単位\n2019年著者配布 / id=32 / original_text全文\n中国語原文（全文）\n日本語訳（全文）\n一班开展课外活动，全班人数的(1/7)参加科技组，比参加阅读组的少占全班人数的(2/7)，参加这两个组的人数占全班人数的几分之几？\nあるクラスで課外活動を行っている。クラス全体の1/7が科学班に参加している。この割合は読書班の割合より、クラス全体の2/7だけ少ない。この2班の参加者を合わせると、全体の何分のいくつか。\n配布式の読み：x = (1/7) ＋ (2/7) ＋ (1/7)\n正解：4/7\n[1] Math23K公開問題。2019年追試著者配布data/Math_23K.json、d2310d08818e。元設問の権利は出所に帰属。 id=32、0起算行31。\nhttps://github.com/ShichaoSun/math_seq2tree/blob/master/data/Math_23K.json",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 42,
+    "text": "実例12：ひもを使った長さと、帯分数の答え\nAppendix: 1. 追加の問題と単位\n2019年著者配布 / id=294 / original_text全文\n中国語原文（全文）\n日本語訳（全文）\n一条绳子长4米，用去(1/4)米，还剩多少米．\n長さ4mのひもを1/4m使った。残りは何mか。\n配布式の読み：x = 4 − (1/4)\n正解：3と3/4m（3.75m）\n[1] Math23K公開問題。2019年追試著者配布data/Math_23K.json、d2310d08818e。元設問の権利は出所に帰属。 id=294、0起算行293。\nhttps://github.com/ShichaoSun/math_seq2tree/blob/master/data/Math_23K.json",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 43,
+    "text": "実例13：等間隔の木と、整数での表示\nAppendix: 1. 追加の問題と単位\n2019年著者配布 / id=19661 / original_text全文\n中国語原文（全文）\n日本語訳（全文）\n一条路的一边从头到尾共种了36棵树，每两棵树间隔5.6米，这条路长约多少米？（得数保留整数）\n道の片側に端から端まで36本の木を植え、木と木の間隔は5.6mとした。この道の長さは約何mか。（答えは整数に丸める）\n配布式の読み：x = (36 − 1) × 5.6\n正解：196m\n[1] Math23K公開問題。2019年追試著者配布data/Math_23K.json、d2310d08818e。元設問の権利は出所に帰属。 id=19661、0起算行19660。\nhttps://github.com/ShichaoSun/math_seq2tree/blob/master/data/Math_23K.json",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 44,
+    "text": "原データ・式・採点の補足\nAppendix: 2. 原データ・式・採点の補足",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 45,
+    "text": "13例の原票：IDと物理行を対応させる\nAppendix: 2. 原データ・式・採点の補足\n実例\nid\n0起算行\n先頭物理行\n1\n19868\n19867\n139070\n2\n6\n5\n36\n3\n29\n28\n197\n4\n14819\n14818\n103727\n5\n15691\n15690\n109831\n6\n1\n0\n1\n7\n7\n6\n43\n[1] Math23K公開問題。2019年追試著者配布data/Math_23K.json、d2310d08818e。元設問の権利は出所に帰属。\nhttps://github.com/ShichaoSun/math_seq2tree/blob/master/data/Math_23K.json",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 46,
+    "text": "13例の原票：追加例の原位置\nAppendix: 2. 原データ・式・採点の補足\n実例\nid\n0起算行\n先頭物理行\n8\n10\n9\n64\n9\n19\n18\n127\n10\n24\n23\n162\n11\n32\n31\n218\n12\n294\n293\n2052\n13\n19661\n19660\n137621\n[1] Math23K公開問題。2019年追試著者配布data/Math_23K.json、d2310d08818e。元設問の権利は出所に帰属。\nhttps://github.com/ShichaoSun/math_seq2tree/blob/master/data/Math_23K.json",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 47,
+    "text": "取得版の全件計算：式とansの数値を比較する\nAppendix: 2. 原データ・式・採点の補足\n確認結果\n件数\n解釈\n分数の厳密値が一致\n23,156\n式とansの数値整合\n数値が異なる\n5\n丸め等の原因は未断定\n自作解析器で解析不可\n1\n原文字列を保持\n計\n23,162\n2019年取得版\n独立した安全な算術解析器で全件確認。文意の正しさや全ラベル精度を保証する検査ではない。\n[1] Math23K公開問題。2019年追試著者配布data/Math_23K.json、d2310d08818e。元設問の権利は出所に帰属。\nhttps://github.com/ShichaoSun/math_seq2tree/blob/master/data/Math_23K.json",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 48,
+    "text": "数値が合わない例を、推測で修正しない\n数値差のあるidは4303・9718・9761・12495・22085。id17520は式または答えに自作解析器が扱えない形式がある。\nたとえばid9761は配布式の値が295/3、ansが98。問題文の意図を確認せずに、ansを書き換えたり誤りの原因を一つに決めたりしない。\nこの整合性検査は、予測モデルの採点ではない。公開採点実装は予測式と正解式を比較するため、raw ansの整合性検査とは別の量である。\nAppendix: 2. 原データ・式・採点の補足\n[1] Math23K公開問題。2019年追試著者配布data/Math_23K.json、d2310d08818e。元設問の権利は出所に帰属。\nhttps://github.com/ShichaoSun/math_seq2tree/blob/master/data/Math_23K.json\n[2] Xie & Sun. compute_prefix_tree_result / compute_prefix_expression. math_seq2tree.  https://github.com/ShichaoSun/math_seq2tree/tree/master/src",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 49,
+    "text": "数字を取り出す処理にも、固定版の前提がある\n2019年loaderは7行を結合してJSONとして読む。式に付く「千米/小时」を除く処理もある。元byteを保存し、加工後の値と区別する。\ntransfer_numは、分かち書き済みトークンから整数・小数・百分率・帯分数を取り出す。数字の表記法によって式への対応付けが変わりうる。\n全文字列を無制限にevalする再計算は行わず、独立検査では許可した算術演算を分数で評価した。公式コードの関数実行とは別の検査として扱う。\nAppendix: 2. 原データ・式・採点の補足\n[1] Xie & Sun. 2019年追試著者のmath_seq2tree実装。固定版d2310d08818e。  https://github.com/ShichaoSun/math_seq2tree",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 50,
+    "text": "配布ansの表記と、同じ値の読み方\nAppendix: 2. 原データ・式・採点の補足\n原ID\n配布ans\n日本語での答え\n7\n10%\n10%\n19\n6.93\n6.93元／人\n32\n((4)/(7))\n4/7\n294\n3((3)/(4))\n3と3/4m（3.75m）\n19661\n196\n196m\n単位は問題文から補って表示。raw ansは原データ記録にそのまま残す。\n[1] Math23K公開問題。2019年追試著者配布data/Math_23K.json、d2310d08818e。元設問の権利は出所に帰属。\nhttps://github.com/ShichaoSun/math_seq2tree/blob/master/data/Math_23K.json",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 51,
+    "text": "式評価の累乗処理には、実装上の制約がある\n固定版のprefix評価器は、累乗の指数に対する条件分岐に制約がある。異なる形の2³と2×(2×2)を渡すと、値の判定は偽になることを確認した。\n一方で式トークン列が完全一致する場合は、数値評価より先に一致として返す。実装の振る舞いと数学的な同値性を分けて説明する。\n13例の配布式は、公式の前処理・prefix変換・数値評価を通し、独立した厳密計算と一致することを確かめた。\nAppendix: 2. 原データ・式・採点の補足\n[1] Xie & Sun. compute_prefix_tree_result / compute_prefix_expression. math_seq2tree.  https://github.com/ShichaoSun/math_seq2tree/tree/master/src",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 52,
+    "text": "2019年：比較したモデル\nAppendix: 2. 原データ・式・採点の補足\n方法\n正答率\nHybrid（2017）\n64.7%\nEnsemble with EN\n68.4%\nGTS without Subtree Embedding\n70.0%\nGTS\n74.3%\n論文の5分割交差検証の報告値。今回コードを学習し直して得た値ではない。\n[1] Xie & Sun (2019). A Goal-Driven Tree-Structured Neural Model for Math Word Problems. IJCAI, 5299–5305.  https://www.ijcai.org/proceedings/2019/736",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 53,
+    "text": "似たアヒルの問題にも、別のIDと答えがある\nCLEVAの公開論文例はid19868：アヒル1200羽、ニワトリは3/5多く、多い羽数720を問う。\n取得版には、合計2100を問うid3183、480少ない問題のid6285、ガチョウ1000羽を含むid17744など、似た語の別問題がある。\n原文全文、問われた量、式、答え、IDをまとめて照合する。鳥の種類や1200などの数字が似ているだけでは同一問題としない。\nAppendix: 2. 原データ・式・採点の補足\n[1] Math23K公開問題。2019年追試著者配布data/Math_23K.json、d2310d08818e。元設問の権利は出所に帰属。\nhttps://github.com/ShichaoSun/math_seq2tree/blob/master/data/Math_23K.json",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 54,
+    "text": "研究と参考文献\nAppendix: 3. 研究と参考文献",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 55,
+    "text": "2017年の原研究と、2019年の追試の著者\n2017年のDeep Neural Solver for Math Word Problemsは、Tencent AI LabのYan Wang・Xiaojiang Liu・Shuming ShiによるEMNLP論文。Math23Kを導入し、seq2seqとhybridを提案した。\n2019年の追試はZhipeng Xie・Shichao SunによるIJCAI論文。目標に基づく式木生成を提案し、Math23Kを比較に用いた。両者は共同第一著者と記される。\nこの資料は取得できる原問題と実コードを基に、元データセットを独立して説明する。CLEVA全体の得点表の代わりにはしない。\nAppendix: 3. 研究と参考文献\n[1] Wang, Liu & Shi (2017). Deep Neural Solver for Math Word Problems. EMNLP, 845–854.  https://aclanthology.org/D17-1088/\n[2] Xie & Sun (2019). A Goal-Driven Tree-Structured Neural Model for Math Word Problems. IJCAI, 5299–5305.  https://www.ijcai.org/proceedings/2019/736",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 56,
+    "text": "参考文献\nAppendix: 3. 研究と参考文献\nDeep Neural Solver for Math Word Problems\nWang, Liu & Shi · 2017 · EMNLP 845–854\nMath23Kの収集、数値対応、SNIと5分割交差検証を報告する元論文。\nhttps://aclanthology.org/D17-1088/\nA Goal-Driven Tree-Structured Neural Model for Math Word Problems\nXie & Sun · 2019 · IJCAI 5299–5305\n式木を生成するGTSとMath23K比較実験を報告する追試論文。\nhttps://www.ijcai.org/proceedings/2019/736",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 57,
+    "text": "参考文献\nAppendix: 3. 研究と参考文献\nmath_seq2tree: official implementation and distribution\nShichaoSun · fixed commit d2310d08818e · GPL-3.0 repository\n今回照合した2019年著者配布の原問題・前処理・採点コード。\nhttps://github.com/ShichaoSun/math_seq2tree\nDeep Neural Solver: original project page\nTencent AI Lab · archived 2017-08-30\n2019年論文が示す元のプロジェクト経路。原ファイル同一性は未確定。\nhttps://web.archive.org/web/20170830114828/http://ai.tencent.com:80/ailab/Deep_Neural_Solver_for_Math_Word_Problems.html",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 58,
+    "text": "参考文献\nAppendix: 3. 研究と参考文献\nCLEVA: Chinese Language Models EVAluation Platform\nLi et al. · 2023 · EMNLP System Demonstrations 186–217\nMath23Kを採用し、アヒルとニワトリの実問題を公開例として示す。\nhttps://aclanthology.org/2023.emnlp-demo.17/\nCLEVAMathematicalReasoningScenario and Converter\nStanford CRFM · HELM v0.4.0\n説明例と、変換済みCLEVAデータを入力へ変換する実装。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 59,
+    "text": "参考文献\nAppendix: 3. 研究と参考文献\nCLEVA v1 run configuration\nStanford CRFM · HELM v0.4.0\nmathematical_reasoningのmath_word_problem設定。固定公開runの有無とは分けて扱う。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/presentation/run_specs_cleva_v1.conf\nHELM Classic v0.4.0 public release\nStanford CRFM · release 2023-11-17\n固定8,526runの一覧。CLEVA実行は含まれない。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/",
+    "Japanese_proofread": true
+  }
+]
