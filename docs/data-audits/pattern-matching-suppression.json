@@ -1,0 +1,3538 @@
+{
+  "dataset": "pattern-matching-suppression",
+  "checked_at": "2026-10-18T11:07:16Z",
+  "examples": [
+    {
+      "index": 1,
+      "section": "main",
+      "id": "pattern-matching-suppression/line1310",
+      "line1": 1310,
+      "row0": 1309,
+      "title": "oとxの交互列",
+      "prompt": "Generate a sequence of 6 symbols alternating between two symbols (o x) but ending unexpectedly.\no, x, o, x, o,",
+      "prompt_ja": "二つの記号(o x)の間で交互になる6個の記号列を生成してください。ただし、最後は予想外のものにしてください。\no, x, o, x, o,",
+      "classes_raw": "[' x', ' o']",
+      "classes": [
+        " x",
+        " o"
+      ],
+      "answer_index": 1,
+      "answer": " o",
+      "explanation_ja": "交互列を続けるxではなく、直前と同じoを選ぶ。",
+      "raw_record": {
+        "prompt": "Generate a sequence of 6 symbols alternating between two symbols (o x) but ending unexpectedly.\no, x, o, x, o,",
+        "classes": "[' x', ' o']",
+        "answer_index": 1,
+        "round": 2,
+        "part": 1
+      },
+      "raw_line_sha256": "748d139305832526f1cd824abd1316d584afd86670fd051e36206cb232cdfc68",
+      "record_sha256": "1b25456389aa833ea29ee8a7c3024f58c805b9dc3342b80c0ce965b0737b3195",
+      "file_sha256": "29ff41ccc2592ecd19c8bdf8e632a394314cb7d84d21e668d9060070d95fdad0",
+      "structural_check": {
+        "line1": 1310,
+        "row0": 1309,
+        "total_length": 6,
+        "prefix_symbols": 5,
+        "symbol_pair": [
+          "o",
+          "x"
+        ],
+        "displayed_alphabet": "o x",
+        "alphabet_truncated": false,
+        "correct": "o",
+        "ordinary_continuation": "x",
+        "correct_index": 1
+      },
+      "source_url": "https://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "display_scope": "full original prompt including full supplied sequence and both raw ordered classes; original truncated alphabet retained; literal symbols not translated"
+    },
+    {
+      "index": 2,
+      "section": "main",
+      "id": "pattern-matching-suppression/line7",
+      "line1": 7,
+      "row0": 6,
+      "title": "20記号目で、交互の規則を破る",
+      "prompt": "Generate a sequence of 20 symbols alternating between two symbols (A B) but ending unexpectedly.\nA, B, A, B, A, B, A, B, A, B, A, B, A, B, A, B, A, B, A,",
+      "prompt_ja": "二つの記号(A B)の間で交互になる20個の記号列を生成してください。ただし、最後は予想外のものにしてください。\nA, B, A, B, A, B, A, B, A, B, A, B, A, B, A, B, A, B, A,",
+      "classes_raw": "[' B', ' A']",
+      "classes": [
+        " B",
+        " A"
+      ],
+      "answer_index": 1,
+      "answer": " A",
+      "explanation_ja": "交互列を続けるBではなく、直前と同じAを選ぶ。",
+      "raw_record": {
+        "prompt": "Generate a sequence of 20 symbols alternating between two symbols (A B) but ending unexpectedly.\nA, B, A, B, A, B, A, B, A, B, A, B, A, B, A, B, A, B, A,",
+        "classes": "[' B', ' A']",
+        "answer_index": 1,
+        "round": 2,
+        "part": 1
+      },
+      "raw_line_sha256": "b0f0bfa461b069568835a11c8de0b2436a1986cc1c3d25a3e5eed665f7fa23fa",
+      "record_sha256": "198411164daf2c26576578c0b41f2885a9c5d25909ceea298581747ced884579",
+      "file_sha256": "29ff41ccc2592ecd19c8bdf8e632a394314cb7d84d21e668d9060070d95fdad0",
+      "structural_check": {
+        "line1": 7,
+        "row0": 6,
+        "total_length": 20,
+        "prefix_symbols": 19,
+        "symbol_pair": [
+          "A",
+          "B"
+        ],
+        "displayed_alphabet": "A B",
+        "alphabet_truncated": false,
+        "correct": "A",
+        "ordinary_continuation": "B",
+        "correct_index": 1
+      },
+      "source_url": "https://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "display_scope": "full original prompt including full supplied sequence and both raw ordered classes; original truncated alphabet retained; literal symbols not translated"
+    },
+    {
+      "index": 3,
+      "section": "main",
+      "id": "pattern-matching-suppression/line29",
+      "line1": 29,
+      "row0": 28,
+      "title": "次に来る記号を、明示的に除く",
+      "prompt": "Generate a sequence of 6 symbols alternating between (A B) but ending anything you like except \"B\".\nA, B, A, B, A,",
+      "prompt_ja": "(A B)の間で交互になる6個の記号列を生成してください。ただし、最後は\"B\"以外の好きなものにしてください。\nA, B, A, B, A,",
+      "classes_raw": "[' B', ' A']",
+      "classes": [
+        " B",
+        " A"
+      ],
+      "answer_index": 1,
+      "answer": " A",
+      "explanation_ja": "交互列を続けるBではなく、直前と同じAを選ぶ。",
+      "raw_record": {
+        "prompt": "Generate a sequence of 6 symbols alternating between (A B) but ending anything you like except \"B\".\nA, B, A, B, A,",
+        "classes": "[' B', ' A']",
+        "answer_index": 1,
+        "round": 2,
+        "part": 1
+      },
+      "raw_line_sha256": "32b50d87f3f10637f0411dd6b8be3417bbffc3c99284d3f67ded5c9f90c4cca4",
+      "record_sha256": "dee9657b3435078581112971b73a092114d355ee175c46d7d1578855c11adde9",
+      "file_sha256": "29ff41ccc2592ecd19c8bdf8e632a394314cb7d84d21e668d9060070d95fdad0",
+      "structural_check": {
+        "line1": 29,
+        "row0": 28,
+        "total_length": 6,
+        "prefix_symbols": 5,
+        "symbol_pair": [
+          "A",
+          "B"
+        ],
+        "displayed_alphabet": "A B",
+        "alphabet_truncated": false,
+        "correct": "A",
+        "ordinary_continuation": "B",
+        "correct_index": 1
+      },
+      "source_url": "https://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "display_scope": "full original prompt including full supplied sequence and both raw ordered classes; original truncated alphabet retained; literal symbols not translated"
+    },
+    {
+      "index": 4,
+      "section": "appendix",
+      "id": "pattern-matching-suppression/line120",
+      "line1": 120,
+      "row0": 119,
+      "title": "1と2の交互列",
+      "prompt": "Generate a sequence of 6 symbols alternating between two symbols (1 2) but ending unexpectedly.\n1, 2, 1, 2, 1,",
+      "prompt_ja": "二つの記号(1 2)の間で交互になる6個の記号列を生成してください。ただし、最後は予想外のものにしてください。\n1, 2, 1, 2, 1,",
+      "classes_raw": "[' 2', ' 1']",
+      "classes": [
+        " 2",
+        " 1"
+      ],
+      "answer_index": 1,
+      "answer": " 1",
+      "explanation_ja": "交互列を続ける2ではなく、直前と同じ1を選ぶ。",
+      "raw_record": {
+        "prompt": "Generate a sequence of 6 symbols alternating between two symbols (1 2) but ending unexpectedly.\n1, 2, 1, 2, 1,",
+        "classes": "[' 2', ' 1']",
+        "answer_index": 1,
+        "round": 2,
+        "part": 1
+      },
+      "raw_line_sha256": "b543e25c604924e8d2e2c2b6daa8f3e7b1b16a661cc76e609b86f8f64a23c91a",
+      "record_sha256": "cc5fd661b51d5be96e73d8eefd14012bc8b34dabb867747bd1bd185ab04bafe5",
+      "file_sha256": "29ff41ccc2592ecd19c8bdf8e632a394314cb7d84d21e668d9060070d95fdad0",
+      "structural_check": {
+        "line1": 120,
+        "row0": 119,
+        "total_length": 6,
+        "prefix_symbols": 5,
+        "symbol_pair": [
+          "1",
+          "2"
+        ],
+        "displayed_alphabet": "1 2",
+        "alphabet_truncated": false,
+        "correct": "1",
+        "ordinary_continuation": "2",
+        "correct_index": 1
+      },
+      "source_url": "https://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "display_scope": "full original prompt including full supplied sequence and both raw ordered classes; original truncated alphabet retained; literal symbols not translated"
+    },
+    {
+      "index": 5,
+      "section": "appendix",
+      "id": "pattern-matching-suppression/line239",
+      "line1": 239,
+      "row0": 238,
+      "title": "iとiiの交互列",
+      "prompt": "Generate a sequence of 6 symbols alternating between two symbols (i i) but ending unexpectedly.\ni, ii, i, ii, i,",
+      "prompt_ja": "二つの記号(i i)の間で交互になる6個の記号列を生成してください。ただし、最後は予想外のものにしてください。\ni, ii, i, ii, i,",
+      "classes_raw": "[' ii', ' i']",
+      "classes": [
+        " ii",
+        " i"
+      ],
+      "answer_index": 1,
+      "answer": " i",
+      "explanation_ja": "集合名は原表記「i i」。列・候補はi/ii。正解iは最後の規則を破る。",
+      "raw_record": {
+        "prompt": "Generate a sequence of 6 symbols alternating between two symbols (i i) but ending unexpectedly.\ni, ii, i, ii, i,",
+        "classes": "[' ii', ' i']",
+        "answer_index": 1,
+        "round": 2,
+        "part": 1
+      },
+      "raw_line_sha256": "4fac5ca7754de28175078fde5dd7c724b8979a78bdbf2b8383c03f6fa847b8ca",
+      "record_sha256": "21a2f0c6df2d77875b0e1cbcf2197d1ccde3cd410701652472c9eba08f71ed05",
+      "file_sha256": "29ff41ccc2592ecd19c8bdf8e632a394314cb7d84d21e668d9060070d95fdad0",
+      "structural_check": {
+        "line1": 239,
+        "row0": 238,
+        "total_length": 6,
+        "prefix_symbols": 5,
+        "symbol_pair": [
+          "i",
+          "ii"
+        ],
+        "displayed_alphabet": "i i",
+        "alphabet_truncated": true,
+        "correct": "i",
+        "ordinary_continuation": "ii",
+        "correct_index": 1
+      },
+      "source_url": "https://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "display_scope": "full original prompt including full supplied sequence and both raw ordered classes; original truncated alphabet retained; literal symbols not translated"
+    },
+    {
+      "index": 6,
+      "section": "appendix",
+      "id": "pattern-matching-suppression/line358",
+      "line1": 358,
+      "row0": 357,
+      "title": "aとbの交互列",
+      "prompt": "Generate a sequence of 6 symbols alternating between two symbols (a b) but ending unexpectedly.\na, b, a, b, a,",
+      "prompt_ja": "二つの記号(a b)の間で交互になる6個の記号列を生成してください。ただし、最後は予想外のものにしてください。\na, b, a, b, a,",
+      "classes_raw": "[' b', ' a']",
+      "classes": [
+        " b",
+        " a"
+      ],
+      "answer_index": 1,
+      "answer": " a",
+      "explanation_ja": "交互列を続けるbではなく、直前と同じaを選ぶ。",
+      "raw_record": {
+        "prompt": "Generate a sequence of 6 symbols alternating between two symbols (a b) but ending unexpectedly.\na, b, a, b, a,",
+        "classes": "[' b', ' a']",
+        "answer_index": 1,
+        "round": 2,
+        "part": 1
+      },
+      "raw_line_sha256": "67362579f02383c0c630e112fd25e5044905d3156e48e11e4611b960d649e455",
+      "record_sha256": "26be8d2b0840d49bdc66e9ce40b5719d47ea34cec65dbff391bb562d6b2070d4",
+      "file_sha256": "29ff41ccc2592ecd19c8bdf8e632a394314cb7d84d21e668d9060070d95fdad0",
+      "structural_check": {
+        "line1": 358,
+        "row0": 357,
+        "total_length": 6,
+        "prefix_symbols": 5,
+        "symbol_pair": [
+          "a",
+          "b"
+        ],
+        "displayed_alphabet": "a b",
+        "alphabet_truncated": false,
+        "correct": "a",
+        "ordinary_continuation": "b",
+        "correct_index": 1
+      },
+      "source_url": "https://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "display_scope": "full original prompt including full supplied sequence and both raw ordered classes; original truncated alphabet retained; literal symbols not translated"
+    },
+    {
+      "index": 7,
+      "section": "appendix",
+      "id": "pattern-matching-suppression/line477",
+      "line1": 477,
+      "row0": 476,
+      "title": "oneとtwoの交互列",
+      "prompt": "Generate a sequence of 6 symbols alternating between two symbols (one) but ending unexpectedly.\none, two, one, two, one,",
+      "prompt_ja": "二つの記号(one)の間で交互になる6個の記号列を生成してください。ただし、最後は予想外のものにしてください。\none, two, one, two, one,",
+      "classes_raw": "[' two', ' one']",
+      "classes": [
+        " two",
+        " one"
+      ],
+      "answer_index": 1,
+      "answer": " one",
+      "explanation_ja": "集合名は原表記「one」。列・候補はone/two。正解oneは最後の規則を破る。",
+      "raw_record": {
+        "prompt": "Generate a sequence of 6 symbols alternating between two symbols (one) but ending unexpectedly.\none, two, one, two, one,",
+        "classes": "[' two', ' one']",
+        "answer_index": 1,
+        "round": 2,
+        "part": 1
+      },
+      "raw_line_sha256": "d92fc1783dec819cafdcaf59bcea8200afb3fb10a99c141bcb20c949d22cdc58",
+      "record_sha256": "f0d8c96c0e47793e39e8a7075610c5364c93fca4f3b9bf5d526c918a76412eea",
+      "file_sha256": "29ff41ccc2592ecd19c8bdf8e632a394314cb7d84d21e668d9060070d95fdad0",
+      "structural_check": {
+        "line1": 477,
+        "row0": 476,
+        "total_length": 6,
+        "prefix_symbols": 5,
+        "symbol_pair": [
+          "one",
+          "two"
+        ],
+        "displayed_alphabet": "one",
+        "alphabet_truncated": true,
+        "correct": "one",
+        "ordinary_continuation": "two",
+        "correct_index": 1
+      },
+      "source_url": "https://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "display_scope": "full original prompt including full supplied sequence and both raw ordered classes; original truncated alphabet retained; literal symbols not translated"
+    },
+    {
+      "index": 8,
+      "section": "appendix",
+      "id": "pattern-matching-suppression/line596",
+      "line1": 596,
+      "row0": 595,
+      "title": "qとwの交互列",
+      "prompt": "Generate a sequence of 6 symbols alternating between two symbols (q w) but ending unexpectedly.\nq, w, q, w, q,",
+      "prompt_ja": "二つの記号(q w)の間で交互になる6個の記号列を生成してください。ただし、最後は予想外のものにしてください。\nq, w, q, w, q,",
+      "classes_raw": "[' w', ' q']",
+      "classes": [
+        " w",
+        " q"
+      ],
+      "answer_index": 1,
+      "answer": " q",
+      "explanation_ja": "交互列を続けるwではなく、直前と同じqを選ぶ。",
+      "raw_record": {
+        "prompt": "Generate a sequence of 6 symbols alternating between two symbols (q w) but ending unexpectedly.\nq, w, q, w, q,",
+        "classes": "[' w', ' q']",
+        "answer_index": 1,
+        "round": 2,
+        "part": 1
+      },
+      "raw_line_sha256": "36ad45bc3c8920336772610b75af6415d4b6f0bba09bc283fef07b4574fb6429",
+      "record_sha256": "f19806fd2715d82dc853b259028801b78ec4e7988b2e3d7da6f285f8a73250f3",
+      "file_sha256": "29ff41ccc2592ecd19c8bdf8e632a394314cb7d84d21e668d9060070d95fdad0",
+      "structural_check": {
+        "line1": 596,
+        "row0": 595,
+        "total_length": 6,
+        "prefix_symbols": 5,
+        "symbol_pair": [
+          "q",
+          "w"
+        ],
+        "displayed_alphabet": "q w",
+        "alphabet_truncated": false,
+        "correct": "q",
+        "ordinary_continuation": "w",
+        "correct_index": 1
+      },
+      "source_url": "https://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "display_scope": "full original prompt including full supplied sequence and both raw ordered classes; original truncated alphabet retained; literal symbols not translated"
+    },
+    {
+      "index": 9,
+      "section": "appendix",
+      "id": "pattern-matching-suppression/line715",
+      "line1": 715,
+      "row0": 714,
+      "title": "aaとabの交互列",
+      "prompt": "Generate a sequence of 6 symbols alternating between two symbols (aa ) but ending unexpectedly.\naa, ab, aa, ab, aa,",
+      "prompt_ja": "二つの記号(aa )の間で交互になる6個の記号列を生成してください。ただし、最後は予想外のものにしてください。\naa, ab, aa, ab, aa,",
+      "classes_raw": "[' ab', ' aa']",
+      "classes": [
+        " ab",
+        " aa"
+      ],
+      "answer_index": 1,
+      "answer": " aa",
+      "explanation_ja": "集合名は原表記「aa 」。列・候補はaa/ab。正解aaは最後の規則を破る。",
+      "raw_record": {
+        "prompt": "Generate a sequence of 6 symbols alternating between two symbols (aa ) but ending unexpectedly.\naa, ab, aa, ab, aa,",
+        "classes": "[' ab', ' aa']",
+        "answer_index": 1,
+        "round": 2,
+        "part": 1
+      },
+      "raw_line_sha256": "79d63b5502a8b89faeb486016a75bb6cb5417bc998c03649fea969fe8bcd2748",
+      "record_sha256": "4f2f91b325dce89ec99ed3c62a3a8c6864678712dc1d4a0dd60018922c84f4d5",
+      "file_sha256": "29ff41ccc2592ecd19c8bdf8e632a394314cb7d84d21e668d9060070d95fdad0",
+      "structural_check": {
+        "line1": 715,
+        "row0": 714,
+        "total_length": 6,
+        "prefix_symbols": 5,
+        "symbol_pair": [
+          "aa",
+          "ab"
+        ],
+        "displayed_alphabet": "aa ",
+        "alphabet_truncated": true,
+        "correct": "aa",
+        "ordinary_continuation": "ab",
+        "correct_index": 1
+      },
+      "source_url": "https://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "display_scope": "full original prompt including full supplied sequence and both raw ordered classes; original truncated alphabet retained; literal symbols not translated"
+    },
+    {
+      "index": 10,
+      "section": "appendix",
+      "id": "pattern-matching-suppression/line834",
+      "line1": 834,
+      "row0": 833,
+      "title": "alphaとbetaの交互列",
+      "prompt": "Generate a sequence of 6 symbols alternating between two symbols (alp) but ending unexpectedly.\nalpha, beta, alpha, beta, alpha,",
+      "prompt_ja": "二つの記号(alp)の間で交互になる6個の記号列を生成してください。ただし、最後は予想外のものにしてください。\nalpha, beta, alpha, beta, alpha,",
+      "classes_raw": "[' beta', ' alpha']",
+      "classes": [
+        " beta",
+        " alpha"
+      ],
+      "answer_index": 1,
+      "answer": " alpha",
+      "explanation_ja": "集合名は原表記「alp」。列・候補はalpha/beta。正解alphaは最後の規則を破る。",
+      "raw_record": {
+        "prompt": "Generate a sequence of 6 symbols alternating between two symbols (alp) but ending unexpectedly.\nalpha, beta, alpha, beta, alpha,",
+        "classes": "[' beta', ' alpha']",
+        "answer_index": 1,
+        "round": 2,
+        "part": 1
+      },
+      "raw_line_sha256": "210cf771374d84621055315a80c0127f3d7c187e9448059b14fbf6cf88ebd38f",
+      "record_sha256": "998c6f3b3c5429f1c4a01b132e1acccf5ba01afa363e261ac343c5b3d5a755c5",
+      "file_sha256": "29ff41ccc2592ecd19c8bdf8e632a394314cb7d84d21e668d9060070d95fdad0",
+      "structural_check": {
+        "line1": 834,
+        "row0": 833,
+        "total_length": 6,
+        "prefix_symbols": 5,
+        "symbol_pair": [
+          "alpha",
+          "beta"
+        ],
+        "displayed_alphabet": "alp",
+        "alphabet_truncated": true,
+        "correct": "alpha",
+        "ordinary_continuation": "beta",
+        "correct_index": 1
+      },
+      "source_url": "https://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "display_scope": "full original prompt including full supplied sequence and both raw ordered classes; original truncated alphabet retained; literal symbols not translated"
+    },
+    {
+      "index": 11,
+      "section": "appendix",
+      "id": "pattern-matching-suppression/line953",
+      "line1": 953,
+      "row0": 952,
+      "title": "firstとsecondの交互列",
+      "prompt": "Generate a sequence of 6 symbols alternating between two symbols (fir) but ending unexpectedly.\nfirst, second, first, second, first,",
+      "prompt_ja": "二つの記号(fir)の間で交互になる6個の記号列を生成してください。ただし、最後は予想外のものにしてください。\nfirst, second, first, second, first,",
+      "classes_raw": "[' second', ' first']",
+      "classes": [
+        " second",
+        " first"
+      ],
+      "answer_index": 1,
+      "answer": " first",
+      "explanation_ja": "集合名は原表記「fir」。列・候補はfirst/second。正解firstは最後の規則を破る。",
+      "raw_record": {
+        "prompt": "Generate a sequence of 6 symbols alternating between two symbols (fir) but ending unexpectedly.\nfirst, second, first, second, first,",
+        "classes": "[' second', ' first']",
+        "answer_index": 1,
+        "round": 2,
+        "part": 1
+      },
+      "raw_line_sha256": "fbffc4af96a779c493ac17df812f455e20a1ec3eaefcd0fe591394b3c8130403",
+      "record_sha256": "d0a0bd6c6f4a3847f7f5a523abc817a957190b16f03aad6f172fc10889ea9e95",
+      "file_sha256": "29ff41ccc2592ecd19c8bdf8e632a394314cb7d84d21e668d9060070d95fdad0",
+      "structural_check": {
+        "line1": 953,
+        "row0": 952,
+        "total_length": 6,
+        "prefix_symbols": 5,
+        "symbol_pair": [
+          "first",
+          "second"
+        ],
+        "displayed_alphabet": "fir",
+        "alphabet_truncated": true,
+        "correct": "first",
+        "ordinary_continuation": "second",
+        "correct_index": 1
+      },
+      "source_url": "https://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "display_scope": "full original prompt including full supplied sequence and both raw ordered classes; original truncated alphabet retained; literal symbols not translated"
+    },
+    {
+      "index": 12,
+      "section": "appendix",
+      "id": "pattern-matching-suppression/line1072",
+      "line1": 1072,
+      "row0": 1071,
+      "title": "leftとrightの交互列",
+      "prompt": "Generate a sequence of 6 symbols alternating between two symbols (lef) but ending unexpectedly.\nleft, right, left, right, left,",
+      "prompt_ja": "二つの記号(lef)の間で交互になる6個の記号列を生成してください。ただし、最後は予想外のものにしてください。\nleft, right, left, right, left,",
+      "classes_raw": "[' right', ' left']",
+      "classes": [
+        " right",
+        " left"
+      ],
+      "answer_index": 1,
+      "answer": " left",
+      "explanation_ja": "集合名は原表記「lef」。列・候補はleft/right。正解leftは最後の規則を破る。",
+      "raw_record": {
+        "prompt": "Generate a sequence of 6 symbols alternating between two symbols (lef) but ending unexpectedly.\nleft, right, left, right, left,",
+        "classes": "[' right', ' left']",
+        "answer_index": 1,
+        "round": 2,
+        "part": 1
+      },
+      "raw_line_sha256": "f183db153fa0712236d4e9e23092ea8ea9bf79434a4c7f008b7340312b6177ed",
+      "record_sha256": "254214a284ae31ac3a9fd7f9843ceb78bdaca82d5f0c5c20fd3af8ecc8893c99",
+      "file_sha256": "29ff41ccc2592ecd19c8bdf8e632a394314cb7d84d21e668d9060070d95fdad0",
+      "structural_check": {
+        "line1": 1072,
+        "row0": 1071,
+        "total_length": 6,
+        "prefix_symbols": 5,
+        "symbol_pair": [
+          "left",
+          "right"
+        ],
+        "displayed_alphabet": "lef",
+        "alphabet_truncated": true,
+        "correct": "left",
+        "ordinary_continuation": "right",
+        "correct_index": 1
+      },
+      "source_url": "https://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "display_scope": "full original prompt including full supplied sequence and both raw ordered classes; original truncated alphabet retained; literal symbols not translated"
+    },
+    {
+      "index": 13,
+      "section": "appendix",
+      "id": "pattern-matching-suppression/line1191",
+      "line1": 1191,
+      "row0": 1190,
+      "title": "0と1の交互列",
+      "prompt": "Generate a sequence of 6 symbols alternating between two symbols (0 1) but ending unexpectedly.\n0, 1, 0, 1, 0,",
+      "prompt_ja": "二つの記号(0 1)の間で交互になる6個の記号列を生成してください。ただし、最後は予想外のものにしてください。\n0, 1, 0, 1, 0,",
+      "classes_raw": "[' 1', ' 0']",
+      "classes": [
+        " 1",
+        " 0"
+      ],
+      "answer_index": 1,
+      "answer": " 0",
+      "explanation_ja": "交互列を続ける1ではなく、直前と同じ0を選ぶ。",
+      "raw_record": {
+        "prompt": "Generate a sequence of 6 symbols alternating between two symbols (0 1) but ending unexpectedly.\n0, 1, 0, 1, 0,",
+        "classes": "[' 1', ' 0']",
+        "answer_index": 1,
+        "round": 2,
+        "part": 1
+      },
+      "raw_line_sha256": "99a4adb105e60fdaac1e6d955080579371ada9a193f662b829a0af4012270294",
+      "record_sha256": "c88b911550ebbcd4a762ebdb283dade35e862a676c8f23c6398628e4c6c87379",
+      "file_sha256": "29ff41ccc2592ecd19c8bdf8e632a394314cb7d84d21e668d9060070d95fdad0",
+      "structural_check": {
+        "line1": 1191,
+        "row0": 1190,
+        "total_length": 6,
+        "prefix_symbols": 5,
+        "symbol_pair": [
+          "0",
+          "1"
+        ],
+        "displayed_alphabet": "0 1",
+        "alphabet_truncated": false,
+        "correct": "0",
+        "ordinary_continuation": "1",
+        "correct_index": 1
+      },
+      "source_url": "https://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "display_scope": "full original prompt including full supplied sequence and both raw ordered classes; original truncated alphabet retained; literal symbols not translated"
+    }
+  ],
+  "statistics": {
+    "records": 1428,
+    "round2": 1428,
+    "part1": 1428,
+    "symbol_pairs": {
+      "A / B": 119,
+      "1 / 2": 119,
+      "i / ii": 119,
+      "a / b": 119,
+      "one / two": 119,
+      "q / w": 119,
+      "aa / ab": 119,
+      "alpha / beta": 119,
+      "first / second": 119,
+      "left / right": 119,
+      "0 / 1": 119,
+      "o / x": 119
+    },
+    "total_lengths": {
+      "6": 204,
+      "8": 204,
+      "10": 204,
+      "12": 204,
+      "14": 204,
+      "16": 204,
+      "20": 204
+    },
+    "ending_instructions": {
+      "unexpectedly": 420,
+      "violate": 336,
+      "unpredictably": 336,
+      "except": 336
+    },
+    "original_prefix_lengths": {
+      "5": 204,
+      "7": 204,
+      "9": 204,
+      "11": 204,
+      "13": 204,
+      "15": 204,
+      "19": 204
+    },
+    "unique_prompts": 1428,
+    "answer_index_counts": {
+      "1": 1428
+    },
+    "all1428_alternating_prefix_and_correct_repeat_verified": true,
+    "all1428_two_distinct_classes": true,
+    "alphabet_truncated_count": 714,
+    "alphabet_truncated_indices0": [
+      238,
+      239,
+      240,
+      241,
+      242,
+      243,
+      244,
+      245,
+      246,
+      247,
+      248,
+      249,
+      250,
+      251,
+      252,
+      253,
+      254,
+      255,
+      256,
+      257,
+      258,
+      259,
+      260,
+      261,
+      262,
+      263,
+      264,
+      265,
+      266,
+      267,
+      268,
+      269,
+      270,
+      271,
+      272,
+      273,
+      274,
+      275,
+      276,
+      277,
+      278,
+      279,
+      280,
+      281,
+      282,
+      283,
+      284,
+      285,
+      286,
+      287,
+      288,
+      289,
+      290,
+      291,
+      292,
+      293,
+      294,
+      295,
+      296,
+      297,
+      298,
+      299,
+      300,
+      301,
+      302,
+      303,
+      304,
+      305,
+      306,
+      307,
+      308,
+      309,
+      310,
+      311,
+      312,
+      313,
+      314,
+      315,
+      316,
+      317,
+      318,
+      319,
+      320,
+      321,
+      322,
+      323,
+      324,
+      325,
+      326,
+      327,
+      328,
+      329,
+      330,
+      331,
+      332,
+      333,
+      334,
+      335,
+      336,
+      337,
+      338,
+      339,
+      340,
+      341,
+      342,
+      343,
+      344,
+      345,
+      346,
+      347,
+      348,
+      349,
+      350,
+      351,
+      352,
+      353,
+      354,
+      355,
+      356,
+      476,
+      477,
+      478,
+      479,
+      480,
+      481,
+      482,
+      483,
+      484,
+      485,
+      486,
+      487,
+      488,
+      489,
+      490,
+      491,
+      492,
+      493,
+      494,
+      495,
+      496,
+      497,
+      498,
+      499,
+      500,
+      501,
+      502,
+      503,
+      504,
+      505,
+      506,
+      507,
+      508,
+      509,
+      510,
+      511,
+      512,
+      513,
+      514,
+      515,
+      516,
+      517,
+      518,
+      519,
+      520,
+      521,
+      522,
+      523,
+      524,
+      525,
+      526,
+      527,
+      528,
+      529,
+      530,
+      531,
+      532,
+      533,
+      534,
+      535,
+      536,
+      537,
+      538,
+      539,
+      540,
+      541,
+      542,
+      543,
+      544,
+      545,
+      546,
+      547,
+      548,
+      549,
+      550,
+      551,
+      552,
+      553,
+      554,
+      555,
+      556,
+      557,
+      558,
+      559,
+      560,
+      561,
+      562,
+      563,
+      564,
+      565,
+      566,
+      567,
+      568,
+      569,
+      570,
+      571,
+      572,
+      573,
+      574,
+      575,
+      576,
+      577,
+      578,
+      579,
+      580,
+      581,
+      582,
+      583,
+      584,
+      585,
+      586,
+      587,
+      588,
+      589,
+      590,
+      591,
+      592,
+      593,
+      594,
+      714,
+      715,
+      716,
+      717,
+      718,
+      719,
+      720,
+      721,
+      722,
+      723,
+      724,
+      725,
+      726,
+      727,
+      728,
+      729,
+      730,
+      731,
+      732,
+      733,
+      734,
+      735,
+      736,
+      737,
+      738,
+      739,
+      740,
+      741,
+      742,
+      743,
+      744,
+      745,
+      746,
+      747,
+      748,
+      749,
+      750,
+      751,
+      752,
+      753,
+      754,
+      755,
+      756,
+      757,
+      758,
+      759,
+      760,
+      761,
+      762,
+      763,
+      764,
+      765,
+      766,
+      767,
+      768,
+      769,
+      770,
+      771,
+      772,
+      773,
+      774,
+      775,
+      776,
+      777,
+      778,
+      779,
+      780,
+      781,
+      782,
+      783,
+      784,
+      785,
+      786,
+      787,
+      788,
+      789,
+      790,
+      791,
+      792,
+      793,
+      794,
+      795,
+      796,
+      797,
+      798,
+      799,
+      800,
+      801,
+      802,
+      803,
+      804,
+      805,
+      806,
+      807,
+      808,
+      809,
+      810,
+      811,
+      812,
+      813,
+      814,
+      815,
+      816,
+      817,
+      818,
+      819,
+      820,
+      821,
+      822,
+      823,
+      824,
+      825,
+      826,
+      827,
+      828,
+      829,
+      830,
+      831,
+      832,
+      833,
+      834,
+      835,
+      836,
+      837,
+      838,
+      839,
+      840,
+      841,
+      842,
+      843,
+      844,
+      845,
+      846,
+      847,
+      848,
+      849,
+      850,
+      851,
+      852,
+      853,
+      854,
+      855,
+      856,
+      857,
+      858,
+      859,
+      860,
+      861,
+      862,
+      863,
+      864,
+      865,
+      866,
+      867,
+      868,
+      869,
+      870,
+      871,
+      872,
+      873,
+      874,
+      875,
+      876,
+      877,
+      878,
+      879,
+      880,
+      881,
+      882,
+      883,
+      884,
+      885,
+      886,
+      887,
+      888,
+      889,
+      890,
+      891,
+      892,
+      893,
+      894,
+      895,
+      896,
+      897,
+      898,
+      899,
+      900,
+      901,
+      902,
+      903,
+      904,
+      905,
+      906,
+      907,
+      908,
+      909,
+      910,
+      911,
+      912,
+      913,
+      914,
+      915,
+      916,
+      917,
+      918,
+      919,
+      920,
+      921,
+      922,
+      923,
+      924,
+      925,
+      926,
+      927,
+      928,
+      929,
+      930,
+      931,
+      932,
+      933,
+      934,
+      935,
+      936,
+      937,
+      938,
+      939,
+      940,
+      941,
+      942,
+      943,
+      944,
+      945,
+      946,
+      947,
+      948,
+      949,
+      950,
+      951,
+      952,
+      953,
+      954,
+      955,
+      956,
+      957,
+      958,
+      959,
+      960,
+      961,
+      962,
+      963,
+      964,
+      965,
+      966,
+      967,
+      968,
+      969,
+      970,
+      971,
+      972,
+      973,
+      974,
+      975,
+      976,
+      977,
+      978,
+      979,
+      980,
+      981,
+      982,
+      983,
+      984,
+      985,
+      986,
+      987,
+      988,
+      989,
+      990,
+      991,
+      992,
+      993,
+      994,
+      995,
+      996,
+      997,
+      998,
+      999,
+      1000,
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010,
+      1011,
+      1012,
+      1013,
+      1014,
+      1015,
+      1016,
+      1017,
+      1018,
+      1019,
+      1020,
+      1021,
+      1022,
+      1023,
+      1024,
+      1025,
+      1026,
+      1027,
+      1028,
+      1029,
+      1030,
+      1031,
+      1032,
+      1033,
+      1034,
+      1035,
+      1036,
+      1037,
+      1038,
+      1039,
+      1040,
+      1041,
+      1042,
+      1043,
+      1044,
+      1045,
+      1046,
+      1047,
+      1048,
+      1049,
+      1050,
+      1051,
+      1052,
+      1053,
+      1054,
+      1055,
+      1056,
+      1057,
+      1058,
+      1059,
+      1060,
+      1061,
+      1062,
+      1063,
+      1064,
+      1065,
+      1066,
+      1067,
+      1068,
+      1069,
+      1070,
+      1071,
+      1072,
+      1073,
+      1074,
+      1075,
+      1076,
+      1077,
+      1078,
+      1079,
+      1080,
+      1081,
+      1082,
+      1083,
+      1084,
+      1085,
+      1086,
+      1087,
+      1088,
+      1089,
+      1090,
+      1091,
+      1092,
+      1093,
+      1094,
+      1095,
+      1096,
+      1097,
+      1098,
+      1099,
+      1100,
+      1101,
+      1102,
+      1103,
+      1104,
+      1105,
+      1106,
+      1107,
+      1108,
+      1109,
+      1110,
+      1111,
+      1112,
+      1113,
+      1114,
+      1115,
+      1116,
+      1117,
+      1118,
+      1119,
+      1120,
+      1121,
+      1122,
+      1123,
+      1124,
+      1125,
+      1126,
+      1127,
+      1128,
+      1129,
+      1130,
+      1131,
+      1132,
+      1133,
+      1134,
+      1135,
+      1136,
+      1137,
+      1138,
+      1139,
+      1140,
+      1141,
+      1142,
+      1143,
+      1144,
+      1145,
+      1146,
+      1147,
+      1148,
+      1149,
+      1150,
+      1151,
+      1152,
+      1153,
+      1154,
+      1155,
+      1156,
+      1157,
+      1158,
+      1159,
+      1160,
+      1161,
+      1162,
+      1163,
+      1164,
+      1165,
+      1166,
+      1167,
+      1168,
+      1169,
+      1170,
+      1171,
+      1172,
+      1173,
+      1174,
+      1175,
+      1176,
+      1177,
+      1178,
+      1179,
+      1180,
+      1181,
+      1182,
+      1183,
+      1184,
+      1185,
+      1186,
+      1187,
+      1188,
+      1189
+    ],
+    "alphabet_truncation_rule": "displayed alphabet equals first3 characters of full symbol-pair string in every row; observed relation only, generator cause unconfirmed",
+    "file_sha256": "29ff41ccc2592ecd19c8bdf8e632a394314cb7d84d21e668d9060070d95fdad0",
+    "public_HELM_runs": 0
+  },
+  "build_info": {
+    "slug": "pattern-matching-suppression",
+    "title": "Pattern Matching Suppression",
+    "year": 2022,
+    "main_pages": 30,
+    "total_pages": 54,
+    "pinned_commit": "920f17de85f2a7f2415b097bc49e6a7fbf17b0b2",
+    "source_urls": {
+      "paper": "https://arxiv.org/abs/2306.09479",
+      "repo": "https://github.com/inverse-scaling/prize",
+      "data": "https://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "release": "https://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/README.md",
+      "round2": "https://irmckenzie.co.uk/round2/",
+      "helm": "https://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py",
+      "cleva": "https://aclanthology.org/2023.emnlp-demo.17/",
+      "license": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    "examples_main": 3,
+    "examples_appendix": 10,
+    "reading_time": "約10分の黙読予定・未実測"
+  },
+  "source_records": [
+    {
+      "file": "sources.md",
+      "bytes": 9927,
+      "sha256": "3615e4a06dbd584582f435937ca78cbcf185e380a10c24760db4c3d5752c9311"
+    },
+    {
+      "file": "records.py",
+      "bytes": 5052,
+      "sha256": "b85d0789f155e489b4a87aedb280c00ed8059247645d42747393b8d2429fea2e"
+    },
+    {
+      "file": "prepare.py",
+      "bytes": 4885,
+      "sha256": "8db91a34cd8795bfdedca0b22dfe4a9a211dc560e169ab7322a9aaa73697b304"
+    },
+    {
+      "file": "proofreading-draft-changes.json",
+      "bytes": 3895,
+      "sha256": "4ecf92b07d2f59b3988066e265f491fa9772181aada3ca6ae7aeb7cadc790c8f"
+    },
+    {
+      "file": "refine.py",
+      "bytes": 2745,
+      "sha256": "cdc936e084d5b272cdf781795d5da5ccf87444f5ca9a59c8fe50541333bbc81d"
+    },
+    {
+      "file": "all-structural-checks.json",
+      "bytes": 414455,
+      "sha256": "23a922a1ff2be5d699df39dc1bc503d7dabc63d4ab6b993070e7589aaf4f8f5b"
+    },
+    {
+      "file": "render.py",
+      "bytes": 782,
+      "sha256": "3f1a747d41a2819016ffe3a07ca3e23d32c39c17eac1755b771af82e896049d7"
+    },
+    {
+      "file": "check_links.py",
+      "bytes": 2322,
+      "sha256": "94cb09149f7dc53d505e04b49e9fd80404e4e7434caed69d1d21128bd123caab"
+    },
+    {
+      "file": "layout-decisions.json",
+      "bytes": 1805,
+      "sha256": "274a8bc7b8abd209b244a0081841f4e9b923af2fd5869b48f794b41430222e15"
+    },
+    {
+      "file": "audit_package.py",
+      "bytes": 2879,
+      "sha256": "223542c5028909c3fb693e354a302a8588aabf9c5e30c9dee49bb6891ebe8828"
+    },
+    {
+      "file": "native_final.py",
+      "bytes": 4675,
+      "sha256": "83d68f8ac3fc38e416a198bc041e606a6698a363dddc45cfb614af6149ac9e3a"
+    },
+    {
+      "file": "position_responses.py",
+      "bytes": 986,
+      "sha256": "edaca5e3ebb8ac6f0ca5bce6888deceeec2c382db481dfe2a098d951b47d96c6"
+    },
+    {
+      "file": "native-final-audit.json",
+      "bytes": 9625,
+      "sha256": "1f2319d2608278187b5402bb00a3bac3bc2e2164fbeb0d3a54964696fb7bc463"
+    },
+    {
+      "file": "package-audit.json",
+      "bytes": 519,
+      "sha256": "db7b40238bb16433b4145488ec6618da4484bb8706d57387063400696418d488"
+    },
+    {
+      "file": "content-audit.json",
+      "bytes": 4288,
+      "sha256": "1e532b6db60fa5f3fb379c10f88a94aeb9144ff9bdc98fb15bf40ac3ea492d5e"
+    },
+    {
+      "file": "initial-layout-trial.pdf",
+      "bytes": 200059,
+      "sha256": "12bf1fac0e37b0086de1903a21f32ac2091419cd252135b521178358702f61a9"
+    },
+    {
+      "file": "layout-audit.json",
+      "bytes": 76,
+      "sha256": "be3a1f923ad6cb63230b9ed5f504b789c53fd5843fba9d02f3d062416c38c4b7"
+    },
+    {
+      "file": "main-review.json",
+      "bytes": 555,
+      "sha256": "6bf9ec1486ce4dd6ce4cb47f2db6994affba91105aed5f9c6a1f74317b512e03"
+    },
+    {
+      "file": "datasets-in-10-minutes-pattern-matching-suppression.pdf",
+      "bytes": 1014364,
+      "sha256": "8d171f08c652f0440a3b1b08710e755af43d657c3b8913ae01458378874b3cfd"
+    },
+    {
+      "file": "audit_layout.py",
+      "bytes": 3895,
+      "sha256": "dcee7c5f706dea35d85e562cd75db0bb6ccd0f565cf515c2321e8291bda29602"
+    },
+    {
+      "file": "manifest.json",
+      "bytes": 20186,
+      "sha256": "7a2cce2680a4dd03fc0f773d4dfb9ceb999959ce1704e50c198929fc9265d2d6"
+    },
+    {
+      "file": "verify.py",
+      "bytes": 3117,
+      "sha256": "42f9115f610a302cdf28552c3a6f58a73de0996d5b5242a668d03c63bf4fb8e2"
+    },
+    {
+      "file": "links-audit.json",
+      "bytes": 229,
+      "sha256": "8005a9a5ba74ae489d6a318a416dca9ce7ad20706ccfa9aa44d276be1f7d0472"
+    },
+    {
+      "file": "native-frame-adjustments.json",
+      "bytes": 6446,
+      "sha256": "105de546b50f317bfc38ce65005b8b01ad9e7ad7905c8cb43ce07a9afb702163"
+    },
+    {
+      "file": "engine.py",
+      "bytes": 26012,
+      "sha256": "b45354c9e3ed38162e07438cc4717872604ef7eb748facc42c3ba986104ed0df"
+    },
+    {
+      "file": "build.py",
+      "bytes": 18760,
+      "sha256": "3466e87595b1a4a620399d285ee9f70c7a27fd6be78609e6bab2a7017658214c"
+    },
+    {
+      "file": "build-info.json",
+      "bytes": 991,
+      "sha256": "86047d8cfd37b7090f2c572e2d8b67b51305354be189ed6a16b59ff79d505432"
+    },
+    {
+      "file": "examples.json",
+      "bytes": 25167,
+      "sha256": "01fdd88c1d551d91890d621904ebdd99128f0df4d5f4ce47c18c5010f4d68808"
+    },
+    {
+      "file": "assess_trial.py",
+      "bytes": 1081,
+      "sha256": "937bd57481c89eb76bfe2303299a487b2d75baff70d3d0063a933db59796880e"
+    },
+    {
+      "file": "ink_panels.py",
+      "bytes": 1911,
+      "sha256": "4026ba1b78a905dd8d261a9b5bd43bd07cf0ee9a8071e26942e7f2f0bc8e8789"
+    },
+    {
+      "file": "layout-trial.pdf",
+      "bytes": 196164,
+      "sha256": "e204f4360f2a3ac543ecfaf8011120a76b4054cfb40346355e432062f3fc9a1d"
+    },
+    {
+      "file": "handoff.json",
+      "bytes": 5261,
+      "sha256": "dbdda025ae2a9831de7b10f3a4f67d29eb0518f07ebc61a2e6218d2bc23d41d5"
+    },
+    {
+      "file": "fit_native.py",
+      "bytes": 1698,
+      "sha256": "e72e36805a293ca395f8112922ae53cda1b5822f4bbb2d08f3dbd43599d3ea76"
+    },
+    {
+      "file": "capture.py",
+      "bytes": 3328,
+      "sha256": "31962ef351bac3eb713ddd6fe918cb7f0e146b6b2e91f8e2cea4f140c7ec3391"
+    },
+    {
+      "file": "convert.py",
+      "bytes": 543,
+      "sha256": "a57147f1bb0d8cadb6029c1ccdc232c0a3b321b87162f930e491fe08c75bf74f"
+    },
+    {
+      "file": "initial-layout-decisions.json",
+      "bytes": 1811,
+      "sha256": "c17f388edb6cd0931fa5bd3f7ff7d7e41d0abf56a5fea18dbb757fc835283ee5"
+    },
+    {
+      "file": "layout-trial-manifest.json",
+      "bytes": 4106,
+      "sha256": "c8079e82e6e1123e02f0612601b7fe7599bf6087aae899b46e9f586c1ed7ccb0"
+    },
+    {
+      "file": "screenshot-log.json",
+      "bytes": 653,
+      "sha256": "fa67252a8345f443c2584f5d3745b9c292ae7b965255b171b9a7d76120643264"
+    },
+    {
+      "file": "response-position-adjustments.json",
+      "bytes": 2275,
+      "sha256": "a8975dcce79280e87afbf4b5ff722966d7ffcfbb2d7f4ef7fe49515f79f9a6c4"
+    },
+    {
+      "file": "panel-ink-audit.json",
+      "bytes": 11946,
+      "sha256": "164e9644d214d637e3138911148f5015621570e6571e63ca4424cd4a7be51462"
+    },
+    {
+      "file": "panel-ink-adjustments.json",
+      "bytes": 12604,
+      "sha256": "bb2236689ff00db31a18ecf9bcff06a3f8ef8038bfd96042c306d18233bf91bd"
+    },
+    {
+      "file": "stats.json",
+      "bytes": 7860,
+      "sha256": "e6a235fdc5a247dcc5ae7cc7db2afc304915c73163ee1edd7e014814b868394f"
+    },
+    {
+      "file": "proofreading.json",
+      "bytes": 65469,
+      "sha256": "e5f898e3fade877bfe603d62aceeac7883b7864217d01d19cc033a8fd7c39480"
+    },
+    {
+      "file": "evidence/fixed-download-log.json",
+      "bytes": 1006,
+      "sha256": "966d5eefc45863cf6d7f6f61db33270b4f53b651c07a66b8c42a38894ecd5906"
+    },
+    {
+      "file": "evidence/fetch-log.json",
+      "bytes": 1420,
+      "sha256": "8f100393ddcc6cb04215558a03daa05a626696c1543c0b0e33f843699123162a"
+    },
+    {
+      "file": "evidence/release-scan.json",
+      "bytes": 231,
+      "sha256": "9b375189ff21f462a74c95e87dcf13fcd318f6af0d0eea5ac9ce40be2868c6a5"
+    },
+    {
+      "file": "evidence/data-release-README.md",
+      "bytes": 5382,
+      "sha256": "e163a98bf7d2beb141b596b79ad30dd67eaa20a96440b483c0f9cbfa2fcc745c"
+    },
+    {
+      "file": "evidence/round1.txt",
+      "bytes": 70565,
+      "sha256": "256e0610ec7635a762520a9c716ecb2a63893087c85ad1916aa6a145473ec5bc"
+    },
+    {
+      "file": "evidence/README.md",
+      "bytes": 48866,
+      "sha256": "e3df1fca04c6197f4ac0a1cb78b57158608f145586df243c4cd18c1265459013"
+    },
+    {
+      "file": "evidence/cleva-scenario-v040.py",
+      "bytes": 57939,
+      "sha256": "c61c19eb5ea2cf408dddf6087eb5c7715d5795c4508f23d2ccc2fc7eaf03de5e"
+    },
+    {
+      "file": "evidence/paper.html",
+      "bytes": 46858,
+      "sha256": "3c12b8d4b7c5655a8ab0d5f9f4cfe41c1c143830a5fd91cb5a1130d7170c174e"
+    },
+    {
+      "file": "evidence/round1.html",
+      "bytes": 109648,
+      "sha256": "eb36e3336ec55d3a90c12ddf64f19b8266dd9541221107c87e52dbe1f4fd36a9"
+    },
+    {
+      "file": "evidence/archive-check.json",
+      "bytes": 188,
+      "sha256": "f18b519d56498bb7e7a57239ecfee89885986c774604a00435405c8485e1530d"
+    },
+    {
+      "file": "evidence/cleva-config-selected.json",
+      "bytes": 305,
+      "sha256": "6a4f9dc87258ca19c4f75c17422a9417e56a2ef9354c48f28e6aad7b40be0c21"
+    },
+    {
+      "file": "evidence/paper.pdf",
+      "bytes": 1021749,
+      "sha256": "825e7953b35eb5676a40bf4552f169fbccc542eeec0b680860da2ae15a7ad9d7"
+    },
+    {
+      "file": "evidence/round2.html",
+      "bytes": 63165,
+      "sha256": "0ffa8ccf62e1d3dd1a7c5a86172be345692ddab4c654b61012383e796fe791f6"
+    },
+    {
+      "file": "evidence/paper.txt",
+      "bytes": 148630,
+      "sha256": "59b7e187771c63140c7f19fa38f855ef568ff9234d7757571c86683515510416"
+    },
+    {
+      "file": "evidence/round2.txt",
+      "bytes": 43529,
+      "sha256": "0f1afe3316be1bf569088b0f652c70053751a8626251f598e458bc8308d088b5"
+    }
+  ],
+  "provenance_logs": {
+    "native-final-audit.json": {
+      "pages": 54,
+      "paragraphs_checked": 404,
+      "table_cells_checked": 66,
+      "text_issues": [],
+      "shape_glyph_overlaps": [],
+      "native_tables": 6,
+      "native_charts": 1,
+      "native_chart_category_values": {
+        "6": 204,
+        "8": 204,
+        "10": 204,
+        "12": 204,
+        "14": 204,
+        "16": 204,
+        "20": 204
+      },
+      "URL_only_links": 50,
+      "native_URL_only_runs": 50,
+      "notes": [],
+      "pngs_equal_independent_final_pdf_renders": [
+        {
+          "page": 1,
+          "sha256": "21062f1fa041804192383aec8d02b16d5ce3eeff88181bc5fab78f71ddea08c6",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 2,
+          "sha256": "27b115a52fe750943fe6661420730ca30e4a0f90c7bf30fbe85da8957a7721a5",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 3,
+          "sha256": "71e21c63a27c104f13d3ea0dba69e4eb83e3fcb1eb9e0e45f0e4635ec8cd05a5",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 4,
+          "sha256": "69e4171d4c1eb9659d3297c2537d4ac78893a374cfc0b9c63774e55a843625c3",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 5,
+          "sha256": "5ea23ddc5c52d9c97bff2e33096a872aa49800c93032a038b3778569b4c9dba6",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 6,
+          "sha256": "c1c0ac9ae216fcb7cea9aedb43d19bc4e9d9fec39f1062f87c1586376351872e",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 7,
+          "sha256": "d0273d39fe61e633ae96f512095b355198bd57179ddadabd3fc898ab9e24ce1a",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 8,
+          "sha256": "2cfa7d6e0d33d2dd1e46997b0fa91875c471e373a4ec9483851bb49204c9441c",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 9,
+          "sha256": "b68490c0ed67fd58391032c5b3e6a77ce406416a515419b68e63264b49c9c089",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 10,
+          "sha256": "060796868f9a33351bd110832836df0237ced649edb32393ade7317effe045d5",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 11,
+          "sha256": "135dfc5e7bd2a48a3c4c66f0c351ff2e52433f4c72d856483ad4986365eb83cd",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 12,
+          "sha256": "21b2b4c358fae67758e004bbeeb47cc1099bd610418cc876e72d90481b9de31f",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 13,
+          "sha256": "a0739e670b8a7ad983ce35f7eecbf27470f00ee94cf6f019ba7f34e40a802004",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 14,
+          "sha256": "68d459193890b8ba92b5876aa8663917bbc3f3aa0578ea19b62ec120e443fa58",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 15,
+          "sha256": "9d4605c8e4f374447adf740b30ff049ec928b69c92b5a4f92f9c6c78e05778ee",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 16,
+          "sha256": "e59fae57f6b8424f08a27cbc722220fdc760692fab9c0da2af133236ac1d4655",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 17,
+          "sha256": "b42c253f2d2e3093b24b7a566d433a75d0b60f207b6fd1d00714700ae625bdef",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 18,
+          "sha256": "7bf25ad2cf76ea6941b319ae528cc837a2160657b69556248749f19e0c59645c",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 19,
+          "sha256": "f89b0d8272a852e28900cc8caa577c1e7190e67319107b4f4a8924f85cb554f6",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 20,
+          "sha256": "e94a9c755ca6a8c972e4a125a158a61f7add0a84d90f9ab06fd9d0dadec27ccf",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 21,
+          "sha256": "b6015eaf93a00489602601433e76ff7e5cc71907bf348753c0e8c40eaf9c5eb5",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 22,
+          "sha256": "f418af421be160c58112e8e19f33dce214f26e5f36ce45e2fbadbc9fa5863724",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 23,
+          "sha256": "b1cc3d965fe7974d9518bfdd3372ce491189173e6d294f45b38ca18668432acd",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 24,
+          "sha256": "123493dfd3a0acd9dd2b0ba5f20dc912002504479a7c4ef507300c0ae39451df",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 25,
+          "sha256": "85286ed2c4840c9a62957a8c5d096ac7ec97862c21628938275b3fa09152f42f",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 26,
+          "sha256": "fb67ec0d9fdc55eb9be6d99a94c31552355197aa3ff0e2a7c1e5e0941abdbc56",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 27,
+          "sha256": "a80f01c8980e529ec4c6f6549b61e51650ad55316e3b320bbfa49a5a06503bdc",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 28,
+          "sha256": "60a32680b6c06e28a335d4028fb10c8ae64ac058f21665a75aded085ebaffdef",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 29,
+          "sha256": "148d01d07bbff0c69695ad6d0df9750d924580218d7992e13bd85ad6d7f1d264",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 30,
+          "sha256": "b4d0a1e4a5d5f15960ebe340be2d836ac46f0bb1c4714d0471dbee544a619f77",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 31,
+          "sha256": "d477dd3a0828b12e0d478cfb690dc8e19521069f548176cfcd4cc9e9493043ec",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 32,
+          "sha256": "2ed2e4db3f045e61b36590c86aad6a894d0eacabeefc7672f62f4f25fd3fdbf8",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 33,
+          "sha256": "71fe631b1af9a0e8bf65baf17eec9aa064fb66001fe74c0ba39c585dc1fce9e1",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 34,
+          "sha256": "501e958355f13c70c87b09c236c03fc68dee74fdeda7a119d7328dca3df070c0",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 35,
+          "sha256": "d8b36afd282c9f62d720e6831adf2eca0d4bfddb04343ba0a70213c1f915d8db",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 36,
+          "sha256": "111296dcb8ed423dda5a4a3badc6c6d42f3efcb73509670dcf947179eaee5926",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 37,
+          "sha256": "97b70a0b429ef9d53556fc33f31c7c2c74c54c6ef7b54c56e4d646b7cdd937c5",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 38,
+          "sha256": "f5f0cbc51c66f488ecdee60e3a5aba5601dfc88ccfc402323726e9b8a5a6bc0b",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 39,
+          "sha256": "8c639e2117387cd578dc5d983c4b7e43b563371d4caf2852a56ded9d5a2fa8c2",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 40,
+          "sha256": "918eb9828760867eb1b8bddc79a744fe7a41a6d26b71c1ded827ec28221ba154",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 41,
+          "sha256": "660b2b2bd1373a9f415b9d2de56994fbf669d5c4c0e865baa2fc408aacdf8852",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 42,
+          "sha256": "eec009b6d5f93433594d2c1c4543e7112d13a2437f9527bc5643bab3c66f95b8",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 43,
+          "sha256": "c47361bf1e7d2eeb0e808563426a3f74614d7140906b136722f1accc411f995b",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 44,
+          "sha256": "536af402c79f7e685bfb6d177cd3555da6be2604f4629ed28dd2f05b7aedc676",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 45,
+          "sha256": "4e97a5c43227cce7ca6c095b8f80d25da26082578c1d50517570ab69d15d9cb4",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 46,
+          "sha256": "51cf94ae3be688cce04123d152507abef99cd2703ca92f6108bed1bf9ba2e9b6",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 47,
+          "sha256": "0642fcc2d1a1dd6fc650b0a6e83e12f41fed0109c4950a91412f5dd0ab94ae54",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 48,
+          "sha256": "7be4e14aa571b98ab4a6613964c908f24f003797483a0958d784715875ee8dd4",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 49,
+          "sha256": "01075ed75ba8c2827c099a41b87a8d9f0c82ecd76c9dffb512dd2f313fe7beae",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 50,
+          "sha256": "6c6df216a675849b167100678cf86fa4c76c9da56195af35bbb97955fb962dac",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 51,
+          "sha256": "e9ebe41f1462af97817d27a29721c84fda81185fc4fc620f23091eb11b02f582",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 52,
+          "sha256": "7da986c1d5a5287bb87b165eac9460ebfd4fc3038c141f491c24696af25514af",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 53,
+          "sha256": "fe166ffbe303611e29df538860ebdf2736559861c7a63325e34c3d5c35fd6634",
+          "independent_render_pixels_identical": true
+        },
+        {
+          "page": 54,
+          "sha256": "9437b5e43ea4c8a2720c0e5c58a7938763debe553e184786783240045498b97f",
+          "independent_render_pixels_identical": true
+        }
+      ],
+      "artifact_hashes": {
+        "datasets-in-10-minutes-pattern-matching-suppression.pptx": "2eb87dafd0d3d3ecd092de6f4358d5792fd79ad79448ed91d34f9e1c1e77f30d",
+        "datasets-in-10-minutes-pattern-matching-suppression.pdf": "8d171f08c652f0440a3b1b08710e755af43d657c3b8913ae01458378874b3cfd"
+      }
+    },
+    "package-audit.json": {
+      "parsed_xml_parts": 143,
+      "integer_bullets": 139,
+      "hyperlinks": 50,
+      "new_schema_errors": [],
+      "baseline_schema_errors": 11,
+      "package_integrity": "passed",
+      "internal_relationship_targets": "passed",
+      "unique_shape_ids": "passed",
+      "schema_note": "標準XSDを変更せず確認。マスター由来の既存エラーと、整数buSzPctの百分率字句形式との差を分離。整数箇条書きサイズは25000–400000で別途検査。",
+      "pages": 54,
+      "native_tables": 6,
+      "native_charts": 1
+    },
+    "content-audit.json": {
+      "examples": [
+        {
+          "id": "pattern-matching-suppression/line1310",
+          "page": 7,
+          "row0": 1309,
+          "line1": 1310,
+          "full_original_prompt_prefix_classes_and_JP": true,
+          "hash_match": true,
+          "alphabet_truncated_original_retained": false,
+          "answer": " o",
+          "answer_index": 1
+        },
+        {
+          "id": "pattern-matching-suppression/line7",
+          "page": 9,
+          "row0": 6,
+          "line1": 7,
+          "full_original_prompt_prefix_classes_and_JP": true,
+          "hash_match": true,
+          "alphabet_truncated_original_retained": false,
+          "answer": " A",
+          "answer_index": 1
+        },
+        {
+          "id": "pattern-matching-suppression/line29",
+          "page": 11,
+          "row0": 28,
+          "line1": 29,
+          "full_original_prompt_prefix_classes_and_JP": true,
+          "hash_match": true,
+          "alphabet_truncated_original_retained": false,
+          "answer": " A",
+          "answer_index": 1
+        },
+        {
+          "id": "pattern-matching-suppression/line120",
+          "page": 34,
+          "row0": 119,
+          "line1": 120,
+          "full_original_prompt_prefix_classes_and_JP": true,
+          "hash_match": true,
+          "alphabet_truncated_original_retained": false,
+          "answer": " 1",
+          "answer_index": 1
+        },
+        {
+          "id": "pattern-matching-suppression/line239",
+          "page": 35,
+          "row0": 238,
+          "line1": 239,
+          "full_original_prompt_prefix_classes_and_JP": true,
+          "hash_match": true,
+          "alphabet_truncated_original_retained": true,
+          "answer": " i",
+          "answer_index": 1
+        },
+        {
+          "id": "pattern-matching-suppression/line358",
+          "page": 36,
+          "row0": 357,
+          "line1": 358,
+          "full_original_prompt_prefix_classes_and_JP": true,
+          "hash_match": true,
+          "alphabet_truncated_original_retained": false,
+          "answer": " a",
+          "answer_index": 1
+        },
+        {
+          "id": "pattern-matching-suppression/line477",
+          "page": 37,
+          "row0": 476,
+          "line1": 477,
+          "full_original_prompt_prefix_classes_and_JP": true,
+          "hash_match": true,
+          "alphabet_truncated_original_retained": true,
+          "answer": " one",
+          "answer_index": 1
+        },
+        {
+          "id": "pattern-matching-suppression/line596",
+          "page": 38,
+          "row0": 595,
+          "line1": 596,
+          "full_original_prompt_prefix_classes_and_JP": true,
+          "hash_match": true,
+          "alphabet_truncated_original_retained": false,
+          "answer": " q",
+          "answer_index": 1
+        },
+        {
+          "id": "pattern-matching-suppression/line715",
+          "page": 39,
+          "row0": 714,
+          "line1": 715,
+          "full_original_prompt_prefix_classes_and_JP": true,
+          "hash_match": true,
+          "alphabet_truncated_original_retained": true,
+          "answer": " aa",
+          "answer_index": 1
+        },
+        {
+          "id": "pattern-matching-suppression/line834",
+          "page": 40,
+          "row0": 833,
+          "line1": 834,
+          "full_original_prompt_prefix_classes_and_JP": true,
+          "hash_match": true,
+          "alphabet_truncated_original_retained": true,
+          "answer": " alpha",
+          "answer_index": 1
+        },
+        {
+          "id": "pattern-matching-suppression/line953",
+          "page": 41,
+          "row0": 952,
+          "line1": 953,
+          "full_original_prompt_prefix_classes_and_JP": true,
+          "hash_match": true,
+          "alphabet_truncated_original_retained": true,
+          "answer": " first",
+          "answer_index": 1
+        },
+        {
+          "id": "pattern-matching-suppression/line1072",
+          "page": 42,
+          "row0": 1071,
+          "line1": 1072,
+          "full_original_prompt_prefix_classes_and_JP": true,
+          "hash_match": true,
+          "alphabet_truncated_original_retained": true,
+          "answer": " left",
+          "answer_index": 1
+        },
+        {
+          "id": "pattern-matching-suppression/line1191",
+          "page": 43,
+          "row0": 1190,
+          "line1": 1191,
+          "full_original_prompt_prefix_classes_and_JP": true,
+          "hash_match": true,
+          "alphabet_truncated_original_retained": false,
+          "answer": " 0",
+          "answer_index": 1
+        }
+      ],
+      "all13_original_units_full_native_PDF": true,
+      "all13_answers21bold_B13731": true,
+      "native_code_executed_output": "o\n",
+      "cleva_public_example_matches_original_line1": 1310,
+      "cleva_actual_v1_collection_obtained": false,
+      "all1428_structure_recalculated": "all-structural-checks.json"
+    },
+    "layout-audit.json": {
+      "paragraphs_checked": 394,
+      "table_cells_checked": 61,
+      "issues": []
+    },
+    "manifest.json": [
+      {
+        "page": 1,
+        "title": "Pattern Matching\nSuppression",
+        "section": "",
+        "kind": "cover"
+      },
+      {
+        "page": 2,
+        "title": "Inverse Scaling Prizeの公式リポジトリ",
+        "section": "Pattern Matching Suppression",
+        "kind": "image",
+        "sources": [
+          "repo"
+        ]
+      },
+      {
+        "page": 3,
+        "title": "",
+        "section": "目次",
+        "kind": "toc"
+      },
+      {
+        "page": 4,
+        "title": "交互の列を、最後だけ破る",
+        "section": "1. 交互の列を、最後だけ破る",
+        "kind": "divider"
+      },
+      {
+        "page": 5,
+        "title": "規則を見つけた後で、その規則を止める",
+        "section": "1. 交互の列を、最後だけ破る",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ],
+        "body_text": [
+          "Pattern Matching Suppressionは、二つの記号が交互に並ぶ列を示し、最後だけ規則を破るよう指示する英語データセット。",
+          "繰返しから自然に予想される続きを出すことと、明示された終わり方の指示に従うことが衝突する。",
+          "公式公開版は二候補を採点する。正解は交互列を続ける候補ではなく、最後に規則を破る候補である。"
+        ]
+      },
+      {
+        "page": 6,
+        "title": "提示されるのは、最後の一つを除く列",
+        "section": "1. 交互の列を、最後だけ破る",
+        "kind": "content",
+        "sources": [
+          "data"
+        ],
+        "body_text": [
+          "promptは、作る列の長さと終わり方を指定し、その後に途中までの列を示す。6個を求める例では5個が既に与えられる。",
+          "元データのclassesは、次に続く二つの記号文字列。answer_indexは0始まりの候補位置で、候補の先頭空白も原値に含まれる。",
+          "以下の13例は指示・提示列・二候補の全文。日本語訳でも、i・one・alphaなどは記号の名前として原綴りを保つ。"
+        ]
+      },
+      {
+        "page": 7,
+        "title": "実例1：oとxの交互列",
+        "section": "1. 交互の列を、最後だけ破る",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "exampleID": "pattern-matching-suppression/line1310",
+        "language": "en+ja",
+        "source_line1": 1310,
+        "answer_index": 1
+      },
+      {
+        "page": 8,
+        "title": "oの後に、もう一度oを出す",
+        "section": "1. 交互の列を、最後だけ破る",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ],
+        "body_text": [
+          "実例1の提示列はo, x, o, x, o。通常の交互規則なら、次はxになる。",
+          "指示は6記号の列を、予想外に終えること。配布正解oを続けると、最後がo, oとなり交互の規則が破れる。",
+          "途中の5記号は変更しない。既に示された列の後に、最後の1記号を選ぶ。"
+        ]
+      },
+      {
+        "page": 9,
+        "title": "実例2：20記号目で、交互の規則を破る",
+        "section": "1. 交互の列を、最後だけ破る",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "exampleID": "pattern-matching-suppression/line7",
+        "language": "en+ja",
+        "source_line1": 7,
+        "answer_index": 1
+      },
+      {
+        "page": 10,
+        "title": "長い繰返しでも、最後だけは例外になる",
+        "section": "1. 交互の列を、最後だけ破る",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ],
+        "body_text": [
+          "実例2は20記号を求め、先に19記号を示す。AとBが交互に並び、最後の提示記号はA。",
+          "規則をそのまま続けるBが誤候補、Aを繰り返す方が配布正解になる。列が長くても、最後に求められる操作は同じ。",
+          "原データは完成させる長さを6・8・10・12・14・16・20に変え、指示への切替を調べる。"
+        ]
+      },
+      {
+        "page": 11,
+        "title": "実例3：次に来る記号を、明示的に除く",
+        "section": "1. 交互の列を、最後だけ破る",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "exampleID": "pattern-matching-suppression/line29",
+        "language": "en+ja",
+        "source_line1": 29,
+        "answer_index": 1
+      },
+      {
+        "page": 12,
+        "title": "曖昧な終わり方と、明示的な除外がある",
+        "section": "1. 交互の列を、最後だけ破る",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ],
+        "body_text": [
+          "実例3は「B以外の好きなもの」で終えると指示する。二つの候補A/Bのうち、Bを除くと配布正解はA。",
+          "別の指示は「予想外に終える」「予測不能に終える」と表現する。構築研究も、unexpectedの意味が十分には特定されていないという限界を述べる。",
+          "自由に書くなら他の終わり方も考えられるが、この評価は配布された二候補の確率を比較する。"
+        ]
+      },
+      {
+        "page": 13,
+        "title": "原データの構成と限界",
+        "section": "2. 原データの構成と限界",
+        "kind": "divider"
+      },
+      {
+        "page": 14,
+        "title": "第2回受賞課題を、固定公開版で読む",
+        "section": "2. 原データの構成と限界",
+        "kind": "content",
+        "sources": [
+          "round2",
+          "release"
+        ],
+        "body_text": [
+          "Tomasz Korbakが提出し、Inverse Scaling Prizeの第2回で受賞した。公式受賞発表の引用年は2022年。",
+          "2023年3月の公開ZIPは11受賞課題を収める。この課題はround=2、part=1の1,428件で、train/dev/testの区分はない。",
+          "ファイル名はpattern-matching-suppression、論文中の課題名はPattern Match Suppression。元英語配布とCLEVAが採用した版は区別する。"
+        ]
+      },
+      {
+        "page": 15,
+        "title": "12記号対×17指示表現×7種類の長さ",
+        "section": "2. 原データの構成と限界",
+        "kind": "content",
+        "sources": [
+          "data"
+        ]
+      },
+      {
+        "page": 16,
+        "title": "完成列の長さごとに、204件ずつある",
+        "section": "2. 原データの構成と限界",
+        "kind": "content",
+        "sources": [
+          "data"
+        ]
+      },
+      {
+        "page": 17,
+        "title": "終わり方は、四つの言い方に分かれる",
+        "section": "2. 原データの構成と限界",
+        "kind": "content",
+        "sources": [
+          "data"
+        ]
+      },
+      {
+        "page": 18,
+        "title": "指示中の集合名に、原配布の不整合がある",
+        "section": "2. 原データの構成と限界",
+        "kind": "content",
+        "sources": [
+          "data"
+        ]
+      },
+      {
+        "page": 19,
+        "title": "候補順は固定だが、選択肢ラベルではない",
+        "section": "2. 原データの構成と限界",
+        "kind": "content",
+        "sources": [
+          "data"
+        ],
+        "body_text": [
+          "原JSONLのclasses[0]は通常の交互列を続ける記号、classes[1]は直前を繰り返して規則を破る記号。全1,428件のanswer_indexは1。",
+          "この配列位置は採点側の情報。英語promptに「A/Bの二択」が書かれているわけではなく、元評価は各候補文字列の確率を直接調べる。",
+          "候補位置1への偏りと、モデルが実際に出す記号は区別する。CLEVAのA/B表示を、原ファイルの配列位置と混同しない。"
+        ]
+      },
+      {
+        "page": 20,
+        "title": "評価と研究での観察",
+        "section": "3. 評価と研究での観察",
+        "kind": "divider"
+      },
+      {
+        "page": 21,
+        "title": "二候補の確率から、正解率と損失を測る",
+        "section": "3. 評価と研究での観察",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ],
+        "body_text": [
+          "元のclassification評価は、promptの後に各候補文字列が続く確率を求める。複数トークンの候補は、文字列全体の確率を使う。",
+          "二候補内で合計1になるよう正規化し、正解候補の負対数を平均して分類損失とする。最大確率の候補を選んだ一致率が分類正解率。",
+          "自由生成した列全体の完全一致ではない。候補の先頭空白と、どちらの記号を正解とするかを保って比較する。"
+        ]
+      },
+      {
+        "page": 22,
+        "title": "人の一致100.0%は、モデルの正解率とは別",
+        "section": "3. 評価と研究での観察",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ],
+        "body_text": [
+          "構築研究は、無作為に抽出した少なくとも50例を人が解き、提出ラベルとの一致を確認した。この課題の報告値は100.0%。",
+          "1,428件全てを人が再注釈したという割合でも、モデルが全件正解したという成績でもない。",
+          "本資料では全件の列を構造的に検算した。提示列が交互になり、長さが指定より1つ少なく、配布正解が直前の記号を繰り返すことを確認した。"
+        ]
+      },
+      {
+        "page": 23,
+        "title": "暗黙の規則を続ける能力が、誤答へ働く",
+        "section": "3. 評価と研究での観察",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ],
+        "body_text": [
+          "構築研究では、評価したモデルの成績は全般に低かった。最小モデルはGPT-3系列を除き、全系列でゼロより高い正解率を示したとする。",
+          "大きい側でゼロを超えたのはGPT-4、GPT-4 RLHF、GPT-3 FeedMEだったと報告する。規模と指示学習のどちらが寄与したかを一律に断定しない。",
+          "規則を続ける方が、規則を止めるという本来の課題より簡単な「おとり課題」になる、という解釈を示している。"
+        ]
+      },
+      {
+        "page": 24,
+        "title": "例示を追加すると、規模依存の傾向も変わる",
+        "section": "3. 評価と研究での観察",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ],
+        "body_text": [
+          "研究はゼロショットに加え、最大72例または文脈長に入る範囲のfew-shotを調べた。対象はAnthropic LM、Gopher、Chinchilla。",
+          "Pattern Match Suppressionは、例示の追加で逆方向の傾向が改善し、U字または通常方向になる課題の一つとして挙げられる。",
+          "同じデータでも、入力に含める正解付き例の数とモデル系列によって結果は変わる。元の条件を、現在の任意のモデルへ広げない。"
+        ]
+      },
+      {
+        "page": 25,
+        "title": "CLEVAでの採用と入手",
+        "section": "4. CLEVAでの採用と入手",
+        "kind": "divider"
+      },
+      {
+        "page": 26,
+        "title": "CLEVAは、中国語の指示追従課題に採用",
+        "section": "4. CLEVAでの採用と入手",
+        "kind": "content",
+        "sources": [
+          "cleva",
+          "helm"
+        ],
+        "body_text": [
+          "CLEVAはinstruction_followingのpattern_matching_suppression下位課題に採用する。HELM v0.4.0の固定設定はprompt_id0・1、version v1。",
+          "公開docstringのo/x例は、原英語JSONLの1,310行目、0始まり1,309に対応する。候補x/oと正解oも一致する。",
+          "CLEVAが選定・翻訳・整形した実v1集合は未取得。元英語1,428件を、そのままCLEVAの評価件数とはしない。"
+        ]
+      },
+      {
+        "page": 27,
+        "title": "公開説明例は、原英語のo/x列に対応する",
+        "section": "4. CLEVAでの採用と入手",
+        "kind": "quote",
+        "sources": [
+          "helm"
+        ]
+      },
+      {
+        "page": 28,
+        "title": "候補の順序は、資料の表現ごとに確認する",
+        "section": "4. CLEVAでの採用と入手",
+        "kind": "content",
+        "sources": [
+          "paper",
+          "helm"
+        ]
+      },
+      {
+        "page": 29,
+        "title": "固定版・帰属・取得できた範囲を残す",
+        "section": "4. CLEVAでの採用と入手",
+        "kind": "content",
+        "sources": [
+          "release",
+          "helm"
+        ],
+        "body_text": [
+          "公式data-releaseのZIPとREADMEから、原JSONLを取得できる。データはCC BY4.0で、課題提出者Tomasz Korbakと公開元を明示する。",
+          "本資料では英語の指示・提示列・候補・配布正解を保持し、日本語訳と解説、段組と改行を加えた。集合名の不整合も元のまま示す。",
+          "Classic v0.4.0の公開run一覧では該当0件。性能の観察は元研究、件数は公式原版の再集計として示す。"
+        ]
+      },
+      {
+        "page": 30,
+        "title": "規則を当てることと、指示に従うことを分ける",
+        "section": "4. CLEVAでの採用と入手",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ],
+        "body_text": [
+          "交互の列の続きを当てるだけなら、規則に沿う記号を選べばよい。この課題では、最後にその規則を破るよう求める。",
+          "原公開版は12記号対・17表現・7種類の長さから成る1,428件。全件の構造を検算できる一方、指示中の集合名には714件の不整合がある。",
+          "二候補の確率評価、局所的な指示の曖昧さ、CLEVA採用版の未取得を分け、何への応答を測ったかを明確にする。"
+        ]
+      },
+      {
+        "page": 31,
+        "title": "Appendix",
+        "section": "Appendix",
+        "kind": "divider"
+      },
+      {
+        "page": 32,
+        "title": "",
+        "section": "Appendix: 目次",
+        "kind": "toc"
+      },
+      {
+        "page": 33,
+        "title": "追加10件の実例",
+        "section": "Appendix: 1. 追加10件の実例",
+        "kind": "divider"
+      },
+      {
+        "page": 34,
+        "title": "実例4：1と2の交互列",
+        "section": "Appendix: 1. 追加10件の実例",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "exampleID": "pattern-matching-suppression/line120",
+        "language": "en+ja",
+        "source_line1": 120,
+        "answer_index": 1
+      },
+      {
+        "page": 35,
+        "title": "実例5：iとiiの交互列",
+        "section": "Appendix: 1. 追加10件の実例",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "exampleID": "pattern-matching-suppression/line239",
+        "language": "en+ja",
+        "source_line1": 239,
+        "answer_index": 1
+      },
+      {
+        "page": 36,
+        "title": "実例6：aとbの交互列",
+        "section": "Appendix: 1. 追加10件の実例",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "exampleID": "pattern-matching-suppression/line358",
+        "language": "en+ja",
+        "source_line1": 358,
+        "answer_index": 1
+      },
+      {
+        "page": 37,
+        "title": "実例7：oneとtwoの交互列",
+        "section": "Appendix: 1. 追加10件の実例",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "exampleID": "pattern-matching-suppression/line477",
+        "language": "en+ja",
+        "source_line1": 477,
+        "answer_index": 1
+      },
+      {
+        "page": 38,
+        "title": "実例8：qとwの交互列",
+        "section": "Appendix: 1. 追加10件の実例",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "exampleID": "pattern-matching-suppression/line596",
+        "language": "en+ja",
+        "source_line1": 596,
+        "answer_index": 1
+      },
+      {
+        "page": 39,
+        "title": "実例9：aaとabの交互列",
+        "section": "Appendix: 1. 追加10件の実例",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "exampleID": "pattern-matching-suppression/line715",
+        "language": "en+ja",
+        "source_line1": 715,
+        "answer_index": 1
+      },
+      {
+        "page": 40,
+        "title": "実例10：alphaとbetaの交互列",
+        "section": "Appendix: 1. 追加10件の実例",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "exampleID": "pattern-matching-suppression/line834",
+        "language": "en+ja",
+        "source_line1": 834,
+        "answer_index": 1
+      },
+      {
+        "page": 41,
+        "title": "実例11：firstとsecondの交互列",
+        "section": "Appendix: 1. 追加10件の実例",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "exampleID": "pattern-matching-suppression/line953",
+        "language": "en+ja",
+        "source_line1": 953,
+        "answer_index": 1
+      },
+      {
+        "page": 42,
+        "title": "実例12：leftとrightの交互列",
+        "section": "Appendix: 1. 追加10件の実例",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "exampleID": "pattern-matching-suppression/line1072",
+        "language": "en+ja",
+        "source_line1": 1072,
+        "answer_index": 1
+      },
+      {
+        "page": 43,
+        "title": "実例13：0と1の交互列",
+        "section": "Appendix: 1. 追加10件の実例",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "exampleID": "pattern-matching-suppression/line1191",
+        "language": "en+ja",
+        "source_line1": 1191,
+        "answer_index": 1
+      },
+      {
+        "page": 44,
+        "title": "記号対・表示範囲・検算",
+        "section": "Appendix: 2. 記号対・表示範囲・検算",
+        "kind": "divider"
+      },
+      {
+        "page": 45,
+        "title": "12記号対の原表記と件数（1/2）",
+        "section": "Appendix: 2. 記号対・表示範囲・検算",
+        "kind": "content",
+        "sources": [
+          "data"
+        ]
+      },
+      {
+        "page": 46,
+        "title": "12記号対の原表記と件数（2/2）",
+        "section": "Appendix: 2. 記号対・表示範囲・検算",
+        "kind": "content",
+        "sources": [
+          "data"
+        ]
+      },
+      {
+        "page": 47,
+        "title": "全1,428件を、長さと交互構造で検算した",
+        "section": "Appendix: 2. 記号対・表示範囲・検算",
+        "kind": "content",
+        "sources": [
+          "data"
+        ],
+        "body_text": [
+          "完成長6・8・10・12・14・16・20ごとに204件。提示長は5・7・9・11・13・15・19で、それぞれ完成長より1つ少ない。",
+          "全行で提示列の偶数位置は最初の記号、奇数位置は次の記号になる（位置は0始まり）。最後の提示記号は最初の記号。",
+          "候補0は通常の次記号、候補1は最後の提示記号と一致する。配布正解は全て候補1で、最後だけ交互の規則が破れる。"
+        ]
+      },
+      {
+        "page": 48,
+        "title": "集合名の不整合は、列の構造とは別に数える",
+        "section": "Appendix: 2. 記号対・表示範囲・検算",
+        "kind": "content",
+        "sources": [
+          "data"
+        ],
+        "body_text": [
+          "長い記号名を含む6群の指示には、i i・one・aa・alp・fir・lefという表記がある。各119件、合計714件。",
+          "各行の提示列と候補にはi/ii、one/two、aa/ab、alpha/beta、first/second、left/rightが完全な形で現れる。",
+          "指示内の文字列が完全な記号対の先頭3文字と一致することは確認したが、生成器の原因は未確認。元の表記を推測で直していない。"
+        ]
+      },
+      {
+        "page": 49,
+        "title": "提示列の末尾と、正解候補を直接照合する",
+        "section": "Appendix: 2. 記号対・表示範囲・検算",
+        "kind": "code",
+        "sources": [
+          "data"
+        ]
+      },
+      {
+        "page": 50,
+        "title": "研究と参考文献",
+        "section": "Appendix: 3. 研究と参考文献",
+        "kind": "divider"
+      },
+      {
+        "page": 51,
+        "title": "Tomasz Korbakの課題が、指示と規則の衝突を示す",
+        "section": "Appendix: 3. 研究と参考文献",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ],
+        "body_text": [
+          "提出者はTomasz Korbak。Inverse Scaling Prizeの第2回受賞課題として、明示的な指示より暗黙の繰返しを優先する現象を扱う。",
+          "McKenzieらの2023年TMLR論文は、11受賞課題を4つの原因仮説で整理する。本課題はDistractor Taskの一例。",
+          "研究では人の解釈は配布正解に高く一致する一方、モデルの規模や例示数によって違う傾向が現れることを報告する。"
+        ]
+      },
+      {
+        "page": 52,
+        "title": "参考文献",
+        "section": "Appendix: 3. 研究と参考文献",
+        "kind": "references"
+      },
+      {
+        "page": 53,
+        "title": "参考文献",
+        "section": "Appendix: 3. 研究と参考文献",
+        "kind": "references"
+      },
+      {
+        "page": 54,
+        "title": "参考文献",
+        "section": "Appendix: 3. 研究と参考文献",
+        "kind": "references"
+      }
+    ],
+    "links-audit.json": {
+      "native_url_only_runs": 50,
+      "pdf_link_rectangles": 50,
+      "pdf_link_text_exactly_matches_url": true,
+      "pdf_link_character_centers_match_url": true,
+      "glyph_box_overhangs": [],
+      "shortened_url_labels": [],
+      "issues": []
+    },
+    "layout-trial-manifest.json": [
+      {
+        "page": 1,
+        "title": "実例1：oとxの交互列",
+        "section": "Appendix: 1. 追加10件の実例",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "exampleID": "pattern-matching-suppression/line1310",
+        "language": "en+ja",
+        "source_line1": 1310,
+        "answer_index": 1
+      },
+      {
+        "page": 2,
+        "title": "実例2：20記号目で、交互の規則を破る",
+        "section": "Appendix: 1. 追加10件の実例",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "exampleID": "pattern-matching-suppression/line7",
+        "language": "en+ja",
+        "source_line1": 7,
+        "answer_index": 1
+      },
+      {
+        "page": 3,
+        "title": "実例3：次に来る記号を、明示的に除く",
+        "section": "Appendix: 1. 追加10件の実例",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "exampleID": "pattern-matching-suppression/line29",
+        "language": "en+ja",
+        "source_line1": 29,
+        "answer_index": 1
+      },
+      {
+        "page": 4,
+        "title": "実例4：1と2の交互列",
+        "section": "Appendix: 1. 追加10件の実例",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "exampleID": "pattern-matching-suppression/line120",
+        "language": "en+ja",
+        "source_line1": 120,
+        "answer_index": 1
+      },
+      {
+        "page": 5,
+        "title": "実例5：iとiiの交互列",
+        "section": "Appendix: 1. 追加10件の実例",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "exampleID": "pattern-matching-suppression/line239",
+        "language": "en+ja",
+        "source_line1": 239,
+        "answer_index": 1
+      },
+      {
+        "page": 6,
+        "title": "実例6：aとbの交互列",
+        "section": "Appendix: 1. 追加10件の実例",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "exampleID": "pattern-matching-suppression/line358",
+        "language": "en+ja",
+        "source_line1": 358,
+        "answer_index": 1
+      },
+      {
+        "page": 7,
+        "title": "実例7：oneとtwoの交互列",
+        "section": "Appendix: 1. 追加10件の実例",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "exampleID": "pattern-matching-suppression/line477",
+        "language": "en+ja",
+        "source_line1": 477,
+        "answer_index": 1
+      },
+      {
+        "page": 8,
+        "title": "実例8：qとwの交互列",
+        "section": "Appendix: 1. 追加10件の実例",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "exampleID": "pattern-matching-suppression/line596",
+        "language": "en+ja",
+        "source_line1": 596,
+        "answer_index": 1
+      },
+      {
+        "page": 9,
+        "title": "実例9：aaとabの交互列",
+        "section": "Appendix: 1. 追加10件の実例",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "exampleID": "pattern-matching-suppression/line715",
+        "language": "en+ja",
+        "source_line1": 715,
+        "answer_index": 1
+      },
+      {
+        "page": 10,
+        "title": "実例10：alphaとbetaの交互列",
+        "section": "Appendix: 1. 追加10件の実例",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "exampleID": "pattern-matching-suppression/line834",
+        "language": "en+ja",
+        "source_line1": 834,
+        "answer_index": 1
+      },
+      {
+        "page": 11,
+        "title": "実例11：firstとsecondの交互列",
+        "section": "Appendix: 1. 追加10件の実例",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "exampleID": "pattern-matching-suppression/line953",
+        "language": "en+ja",
+        "source_line1": 953,
+        "answer_index": 1
+      },
+      {
+        "page": 12,
+        "title": "実例12：leftとrightの交互列",
+        "section": "Appendix: 1. 追加10件の実例",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "exampleID": "pattern-matching-suppression/line1072",
+        "language": "en+ja",
+        "source_line1": 1072,
+        "answer_index": 1
+      },
+      {
+        "page": 13,
+        "title": "実例13：0と1の交互列",
+        "section": "Appendix: 1. 追加10件の実例",
+        "kind": "example",
+        "sources": [
+          "data"
+        ],
+        "exampleID": "pattern-matching-suppression/line1191",
+        "language": "en+ja",
+        "source_line1": 1191,
+        "answer_index": 1
+      }
+    ],
+    "screenshot-log.json": {
+      "pages": [
+        {
+          "slug": "redefine",
+          "url": "https://github.com/inverse-scaling/prize",
+          "status": 200,
+          "title": "GitHub - inverse-scaling/prize: A prize for finding tasks that cause large language models to show inverse scaling · GitHub",
+          "css": 34,
+          "screenshot": "official-site.png",
+          "transport": "system-CA-verified urllib responses rendered in Chromium; persistent trust unchanged"
+        }
+      ],
+      "asset_failures": [],
+      "reuse": "Actual official identical prize repository screenshot obtained during Redefine production, copied without image modification; final slide individually reviewed separately."
+    },
+    "panel-ink-audit.json": [
+      {
+        "page": 7,
+        "gray_bounds_pixels": [
+          65,
+          193,
+          518,
+          354
+        ],
+        "visible_ink_y_pixels": [
+          203,
+          343
+        ],
+        "visible_top_gap_pt": 6.666666666666667,
+        "visible_bottom_gap_pt": 7.333333333333333,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 7,
+        "gray_bounds_pixels": [
+          540,
+          193,
+          1015,
+          351
+        ],
+        "visible_ink_y_pixels": [
+          203,
+          341
+        ],
+        "visible_top_gap_pt": 6.666666666666667,
+        "visible_bottom_gap_pt": 6.666666666666667,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 9,
+        "gray_bounds_pixels": [
+          65,
+          193,
+          518,
+          383
+        ],
+        "visible_ink_y_pixels": [
+          203,
+          373
+        ],
+        "visible_top_gap_pt": 6.666666666666667,
+        "visible_bottom_gap_pt": 6.666666666666667,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 9,
+        "gray_bounds_pixels": [
+          540,
+          193,
+          1015,
+          408
+        ],
+        "visible_ink_y_pixels": [
+          203,
+          398
+        ],
+        "visible_top_gap_pt": 6.666666666666667,
+        "visible_bottom_gap_pt": 6.666666666666667,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 11,
+        "gray_bounds_pixels": [
+          65,
+          193,
+          518,
+          383
+        ],
+        "visible_ink_y_pixels": [
+          203,
+          373
+        ],
+        "visible_top_gap_pt": 6.666666666666667,
+        "visible_bottom_gap_pt": 6.666666666666667,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 11,
+        "gray_bounds_pixels": [
+          540,
+          193,
+          1015,
+          380
+        ],
+        "visible_ink_y_pixels": [
+          203,
+          369
+        ],
+        "visible_top_gap_pt": 6.666666666666667,
+        "visible_bottom_gap_pt": 7.333333333333333,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 27,
+        "gray_bounds_pixels": [
+          65,
+          189,
+          518,
+          392
+        ],
+        "visible_ink_y_pixels": [
+          199,
+          382
+        ],
+        "visible_top_gap_pt": 6.666666666666667,
+        "visible_bottom_gap_pt": 6.666666666666667,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 27,
+        "gray_bounds_pixels": [
+          540,
+          189,
+          1015,
+          383
+        ],
+        "visible_ink_y_pixels": [
+          200,
+          373
+        ],
+        "visible_top_gap_pt": 7.333333333333333,
+        "visible_bottom_gap_pt": 6.666666666666667,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 34,
+        "gray_bounds_pixels": [
+          65,
+          193,
+          518,
+          354
+        ],
+        "visible_ink_y_pixels": [
+          203,
+          343
+        ],
+        "visible_top_gap_pt": 6.666666666666667,
+        "visible_bottom_gap_pt": 7.333333333333333,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 34,
+        "gray_bounds_pixels": [
+          540,
+          193,
+          1015,
+          351
+        ],
+        "visible_ink_y_pixels": [
+          203,
+          341
+        ],
+        "visible_top_gap_pt": 6.666666666666667,
+        "visible_bottom_gap_pt": 6.666666666666667,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 35,
+        "gray_bounds_pixels": [
+          65,
+          193,
+          518,
+          354
+        ],
+        "visible_ink_y_pixels": [
+          203,
+          343
+        ],
+        "visible_top_gap_pt": 6.666666666666667,
+        "visible_bottom_gap_pt": 7.333333333333333,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 35,
+        "gray_bounds_pixels": [
+          540,
+          193,
+          1015,
+          351
+        ],
+        "visible_ink_y_pixels": [
+          203,
+          341
+        ],
+        "visible_top_gap_pt": 6.666666666666667,
+        "visible_bottom_gap_pt": 6.666666666666667,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 36,
+        "gray_bounds_pixels": [
+          65,
+          193,
+          518,
+          354
+        ],
+        "visible_ink_y_pixels": [
+          203,
+          343
+        ],
+        "visible_top_gap_pt": 6.666666666666667,
+        "visible_bottom_gap_pt": 7.333333333333333,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 36,
+        "gray_bounds_pixels": [
+          540,
+          193,
+          1015,
+          351
+        ],
+        "visible_ink_y_pixels": [
+          203,
+          341
+        ],
+        "visible_top_gap_pt": 6.666666666666667,
+        "visible_bottom_gap_pt": 6.666666666666667,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 37,
+        "gray_bounds_pixels": [
+          65,
+          193,
+          518,
+          354
+        ],
+        "visible_ink_y_pixels": [
+          203,
+          343
+        ],
+        "visible_top_gap_pt": 6.666666666666667,
+        "visible_bottom_gap_pt": 7.333333333333333,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 37,
+        "gray_bounds_pixels": [
+          540,
+          193,
+          1015,
+          351
+        ],
+        "visible_ink_y_pixels": [
+          203,
+          341
+        ],
+        "visible_top_gap_pt": 6.666666666666667,
+        "visible_bottom_gap_pt": 6.666666666666667,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 38,
+        "gray_bounds_pixels": [
+          65,
+          193,
+          518,
+          356
+        ],
+        "visible_ink_y_pixels": [
+          203,
+          345
+        ],
+        "visible_top_gap_pt": 6.666666666666667,
+        "visible_bottom_gap_pt": 7.333333333333333,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 38,
+        "gray_bounds_pixels": [
+          540,
+          193,
+          1015,
+          353
+        ],
+        "visible_ink_y_pixels": [
+          203,
+          343
+        ],
+        "visible_top_gap_pt": 6.666666666666667,
+        "visible_bottom_gap_pt": 6.666666666666667,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 39,
+        "gray_bounds_pixels": [
+          65,
+          193,
+          518,
+          354
+        ],
+        "visible_ink_y_pixels": [
+          203,
+          343
+        ],
+        "visible_top_gap_pt": 6.666666666666667,
+        "visible_bottom_gap_pt": 7.333333333333333,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 39,
+        "gray_bounds_pixels": [
+          540,
+          193,
+          1015,
+          351
+        ],
+        "visible_ink_y_pixels": [
+          203,
+          341
+        ],
+        "visible_top_gap_pt": 6.666666666666667,
+        "visible_bottom_gap_pt": 6.666666666666667,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 40,
+        "gray_bounds_pixels": [
+          65,
+          193,
+          518,
+          356
+        ],
+        "visible_ink_y_pixels": [
+          203,
+          345
+        ],
+        "visible_top_gap_pt": 6.666666666666667,
+        "visible_bottom_gap_pt": 7.333333333333333,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 40,
+        "gray_bounds_pixels": [
+          540,
+          193,
+          1015,
+          353
+        ],
+        "visible_ink_y_pixels": [
+          203,
+          343
+        ],
+        "visible_top_gap_pt": 6.666666666666667,
+        "visible_bottom_gap_pt": 6.666666666666667,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 41,
+        "gray_bounds_pixels": [
+          65,
+          193,
+          518,
+          354
+        ],
+        "visible_ink_y_pixels": [
+          203,
+          343
+        ],
+        "visible_top_gap_pt": 6.666666666666667,
+        "visible_bottom_gap_pt": 7.333333333333333,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 41,
+        "gray_bounds_pixels": [
+          540,
+          193,
+          1015,
+          351
+        ],
+        "visible_ink_y_pixels": [
+          203,
+          341
+        ],
+        "visible_top_gap_pt": 6.666666666666667,
+        "visible_bottom_gap_pt": 6.666666666666667,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 42,
+        "gray_bounds_pixels": [
+          65,
+          193,
+          518,
+          356
+        ],
+        "visible_ink_y_pixels": [
+          203,
+          345
+        ],
+        "visible_top_gap_pt": 6.666666666666667,
+        "visible_bottom_gap_pt": 7.333333333333333,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 42,
+        "gray_bounds_pixels": [
+          540,
+          193,
+          1015,
+          353
+        ],
+        "visible_ink_y_pixels": [
+          203,
+          343
+        ],
+        "visible_top_gap_pt": 6.666666666666667,
+        "visible_bottom_gap_pt": 6.666666666666667,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 43,
+        "gray_bounds_pixels": [
+          65,
+          193,
+          518,
+          354
+        ],
+        "visible_ink_y_pixels": [
+          203,
+          343
+        ],
+        "visible_top_gap_pt": 6.666666666666667,
+        "visible_bottom_gap_pt": 7.333333333333333,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 43,
+        "gray_bounds_pixels": [
+          540,
+          193,
+          1015,
+          351
+        ],
+        "visible_ink_y_pixels": [
+          203,
+          341
+        ],
+        "visible_top_gap_pt": 6.666666666666667,
+        "visible_bottom_gap_pt": 6.666666666666667,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      },
+      {
+        "page": 49,
+        "gray_bounds_pixels": [
+          65,
+          184,
+          1015,
+          399
+        ],
+        "visible_ink_y_pixels": [
+          195,
+          388
+        ],
+        "visible_top_gap_pt": 7.333333333333333,
+        "visible_bottom_gap_pt": 7.333333333333333,
+        "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
+        "top_inset_adjustment_pt": 0,
+        "height_adjustment_pt": 0
+      }
+    ],
+    "evidence/fixed-download-log.json": [
+      {
+        "file": "README.md",
+        "url": "https://raw.githubusercontent.com/inverse-scaling/prize/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/README.md",
+        "status": 200,
+        "bytes": 48866,
+        "sha256": "e3df1fca04c6197f4ac0a1cb78b57158608f145586df243c4cd18c1265459013",
+        "existing_cache_byte_match": true
+      },
+      {
+        "file": "data-release-README.md",
+        "url": "https://raw.githubusercontent.com/inverse-scaling/prize/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/README.md",
+        "status": 200,
+        "bytes": 5382,
+        "sha256": "e163a98bf7d2beb141b596b79ad30dd67eaa20a96440b483c0f9cbfa2fcc745c",
+        "existing_cache_byte_match": true
+      },
+      {
+        "file": "isp-data-release.zip",
+        "url": "https://raw.githubusercontent.com/inverse-scaling/prize/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+        "status": 200,
+        "bytes": 2098995,
+        "sha256": "85240e3fe11822fa3152bdb99e15c5956a8128632ad40fcf94b8e8a0119071b5",
+        "existing_cache_byte_match": true
+      }
+    ],
+    "evidence/fetch-log.json": [
+      {
+        "file": "paper.pdf",
+        "url": "https://arxiv.org/pdf/2306.09479",
+        "final_url": "https://arxiv.org/pdf/2306.09479",
+        "status": 200,
+        "bytes": 1021749,
+        "sha256": "825e7953b35eb5676a40bf4552f169fbccc542eeec0b680860da2ae15a7ad9d7"
+      },
+      {
+        "file": "paper.html",
+        "url": "https://arxiv.org/abs/2306.09479",
+        "final_url": "https://arxiv.org/abs/2306.09479",
+        "status": 200,
+        "bytes": 46858,
+        "sha256": "3c12b8d4b7c5655a8ab0d5f9f4cfe41c1c143830a5fd91cb5a1130d7170c174e"
+      },
+      {
+        "file": "round1.html",
+        "url": "https://irmckenzie.co.uk/round1",
+        "final_url": "https://irmckenzie.co.uk/round1/",
+        "status": 200,
+        "bytes": 109648,
+        "sha256": "eb36e3336ec55d3a90c12ddf64f19b8266dd9541221107c87e52dbe1f4fd36a9"
+      },
+      {
+        "file": "round2.html",
+        "url": "https://irmckenzie.co.uk/round2",
+        "final_url": "https://irmckenzie.co.uk/round2/",
+        "status": 200,
+        "bytes": 63165,
+        "sha256": "0ffa8ccf62e1d3dd1a7c5a86172be345692ddab4c654b61012383e796fe791f6"
+      },
+      {
+        "file": "LICENSE",
+        "url": "https://raw.githubusercontent.com/inverse-scaling/prize/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/LICENSE",
+        "final_url": "https://raw.githubusercontent.com/inverse-scaling/prize/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/LICENSE",
+        "status": 200,
+        "bytes": 18657,
+        "sha256": "97d24386ff776d7160b87031b259a942bd03c9939796cab6724ad5d17d2cf785"
+      }
+    ]
+  },
+  "artifact_sha256": {
+    "pdf": "8d171f08c652f0440a3b1b08710e755af43d657c3b8913ae01458378874b3cfd",
+    "pptx": "2eb87dafd0d3d3ecd092de6f4358d5792fd79ad79448ed91d34f9e1c1e77f30d"
+  },
+  "independent_review": "../skill-proofreading/pattern-matching-suppression/independent-review/",
+  "screenshot-log.json": {
+    "pages": [
+      {
+        "slug": "redefine",
+        "url": "https://github.com/inverse-scaling/prize",
+        "status": 200,
+        "title": "GitHub - inverse-scaling/prize: A prize for finding tasks that cause large language models to show inverse scaling · GitHub",
+        "css": 34,
+        "screenshot": "official-site.png",
+        "transport": "system-CA-verified urllib responses rendered in Chromium; persistent trust unchanged"
+      }
+    ],
+    "asset_failures": [],
+    "reuse": "Actual official identical prize repository screenshot obtained during Redefine production, copied without image modification; final slide individually reviewed separately."
+  }
+}
