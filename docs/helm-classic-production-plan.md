@@ -23,7 +23,7 @@
 |15|legal-support|legal_support|作成済み|
 |16|lsat|lsat_qa|作成済み|
 |17|medqa|med_qa|作成済み|
-|18|lextreme|lextreme|未着手|
+|18|lextreme|lextreme|作成済み|
 |19|lexglue|lex_glue|未着手|
 |20|billsum|billsum_legal_summarization|未着手|
 |21|multilexsum|multilexsum_legal_summarization|未着手|

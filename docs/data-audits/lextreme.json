@@ -1,0 +1,3164 @@
+{
+  "dataset": "lextreme",
+  "checked_at": "2026-10-18T08:07:56Z",
+  "examples": [
+    {
+      "index": 1,
+      "id": "german_argument_mining/test/line6",
+      "subset": "german_argument_mining",
+      "dataset": "german_argument_mining",
+      "task_type": "SLTC",
+      "language": "de",
+      "source_line_1based": 6,
+      "source_path": "/workspace/artifacts/helm-parallel/lextreme/evidence/german_argument_mining-test.jsonl",
+      "source_sha256": "19595a310f39fd1daa89f834930923ed19e3b01d04806d189c382eca70ecbb08",
+      "source_url": "https://huggingface.co/datasets/joelniklaus/german_argument_mining/resolve/576b52004ed78dd747c0f9858fa6dacc7e4196e2/test.jsonl",
+      "raw_line_sha256": "8f8167777f2d1dc55d3f5cc4bd231135a90543a80dcbeb5fdefc52f46229aa84",
+      "raw_record": {
+        "file_number": "3 Sa 760/15",
+        "input_sentence": "1. Der erstmals im Berufungsverfahren gestellte Antrag zu 3. ist zulässig .",
+        "label": "conclusion",
+        "context_before": [],
+        "context_after": [
+          [
+            "Es liegt keine Klageänderung i. S. d. § 533 ZPO vor , die der Einwilligung des Beklagten oder der Feststellung der Sachdienlichkeit durch das Gericht bedürfte .",
+            "subsumption"
+          ],
+          [
+            "Nach § 264 Nr. 2 ZPO ist es nicht als eine Klageänderung anzusehen , wenn ohne Änderung des Klagegrundes der Klageantrag in der Hauptsache erweitert wird .",
+            "definition"
+          ],
+          [
+            "Wird wie hier bei im Wesentlichen gleichbleibendem Klagegrund Zahlung statt Abrechnung / Zahlung des sich aus der Abrechnung ergebenden Guthabens verlangt , liegt eine nach § 264 Nr. 2 ZPO zulässige qualitative Änderung des Antrags vor ( vgl. Zöller / Greger , ZPO , 30. Aufl. 2014 , § 264 , Rn . 3 b m. w. N. ) .",
+            "subsumption"
+          ],
+          [
+            "Die ergänzende Darlegung der Nettovorteile ist gem. § 264 Nr. 1 ZPO unschädlich .",
+            "subsumption"
+          ]
+        ]
+      },
+      "input": "1. Der erstmals im Berufungsverfahren gestellte Antrag zu 3. ist zulässig .",
+      "answer": "conclusion",
+      "correct_references": [
+        "conclusion"
+      ],
+      "title_ja": "文の結論を識別する",
+      "translation": "1. 控訴審で初めて提出された第3の申立ては適法である。",
+      "answer_ja": "conclusion：結論",
+      "comment": "各文が判決の議論で果たす役割を分類する。",
+      "quote_scope": "entire mapped input field; NER tokens serialized per HELM; not entire metadata record",
+      "selection": "purposive; not representative random sample",
+      "helm_instance": {
+        "input": {
+          "text": "1. Der erstmals im Berufungsverfahren gestellte Antrag zu 3. ist zulässig ."
+        },
+        "references": [
+          {
+            "output": {
+              "text": "subsumption"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "definition"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "other"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "conclusion"
+            },
+            "tags": [
+              "correct"
+            ]
+          }
+        ],
+        "split": "test"
+      }
+    },
+    {
+      "index": 2,
+      "id": "online_terms_of_service_clause_topics/test/line1051",
+      "subset": "online_terms_of_service_clause_topics",
+      "dataset": "online_terms_of_service",
+      "task_type": "MLTC",
+      "language": "en",
+      "source_line_1based": 1051,
+      "source_path": "/workspace/artifacts/helm-parallel/lextreme/evidence/online_terms_of_service-test.jsonl",
+      "source_sha256": "e4471ea8b4293934013a7206fa16236cbe3a656e3807efa23e6d9ced690007cf",
+      "source_url": "https://huggingface.co/datasets/joelniklaus/online_terms_of_service/resolve/448c5caa985b8dafb275294f226120f41a7f8251/test.jsonl",
+      "raw_line_sha256": "df0137374cd8cb82ac6e17fa54dd329d6a930e569b6afbbcbbb53fb2d6aac83a",
+      "raw_record": {
+        "language": "en",
+        "company": "Weebly",
+        "line_number": 23,
+        "sentence": "By using the Service in any way, you agree to and accept these Terms, our Privacy Notice, and any other legal notices or guidelines posted on the Site.",
+        "unfairness_level": "potentially_unfair",
+        "a": false,
+        "ch": false,
+        "cr": false,
+        "j": false,
+        "law": false,
+        "ltd": false,
+        "ter": false,
+        "use": true,
+        "pinc": true,
+        "all_topics": [
+          "use",
+          "pinc"
+        ]
+      },
+      "input": "By using the Service in any way, you agree to and accept these Terms, our Privacy Notice, and any other legal notices or guidelines posted on the Site.",
+      "answer": "7, 8",
+      "correct_references": [
+        "7",
+        "8"
+      ],
+      "title_ja": "一つの条項に二つの話題を付ける",
+      "translation": "本サービスをどのように利用した場合も、本規約、当社のプライバシー通知、本サイト上のその他の法的通知・指針に同意し、受け入れるものとします。",
+      "answer_ja": "7：利用による契約成立／8：プライバシーを含む",
+      "comment": "複数ラベルを同時に認める。ラベルは実装の番号表現を示した。",
+      "quote_scope": "entire mapped input field; NER tokens serialized per HELM; not entire metadata record",
+      "selection": "purposive; not representative random sample",
+      "helm_instance": {
+        "input": {
+          "text": "By using the Service in any way, you agree to and accept these Terms, our Privacy Notice, and any other legal notices or guidelines posted on the Site."
+        },
+        "references": [
+          {
+            "output": {
+              "text": "2"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "7"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "8"
+            },
+            "tags": [
+              "correct"
+            ]
+          }
+        ],
+        "split": "test"
+      }
+    },
+    {
+      "index": 3,
+      "id": "legalnero/test/line4",
+      "subset": "legalnero",
+      "dataset": "legalnero",
+      "task_type": "NER",
+      "language": "ro",
+      "source_line_1based": 4,
+      "source_path": "/workspace/artifacts/helm-parallel/lextreme/evidence/legalnero-test.jsonl",
+      "source_sha256": "3c73ba1c9e453754d9efb64a6b94db9ffd0997a36dd4d16a7fcccd449c266513",
+      "source_url": "https://huggingface.co/datasets/joelniklaus/legalnero/resolve/a072e8508049097fc216fd26bdd89a89e47e1272/test.jsonl",
+      "raw_line_sha256": "b9aba5c2c39c8e69328a61c40f7f2fa89b10e574c35aa7159dbe5f3f68ddb98d",
+      "raw_record": {
+        "file_name": "mj_00000G2D85QU6Z5ZROF3P0JH7UKHIMOO",
+        "words": [
+          "MONITORUL",
+          "OFICIAL",
+          "nr.",
+          "959",
+          "din",
+          "28",
+          "noiembrie",
+          "2019"
+        ],
+        "ner": [
+          "O",
+          "O",
+          "O",
+          "O",
+          "B-TIME",
+          "I-TIME",
+          "I-TIME",
+          "I-TIME"
+        ]
+      },
+      "input": "\"MONITORUL\" \"OFICIAL\" \"nr.\" \"959\" \"din\" \"28\" \"noiembrie\" \"2019\"",
+      "answer": "\"O\" \"O\" \"O\" \"O\" \"B-TIME\" \"I-TIME\" \"I-TIME\" \"I-TIME\"",
+      "correct_references": [
+        "\"O\" \"O\" \"O\" \"O\" \"B-TIME\" \"I-TIME\" \"I-TIME\" \"I-TIME\""
+      ],
+      "title_ja": "日付に対応するトークンを見つける",
+      "translation": "官報 第959号、2019年11月28日付。",
+      "answer_ja": "TIME：時間表現",
+      "comment": "原注釈では「din」から日付末尾までが時間表現。Oは対象外を表す。",
+      "quote_scope": "entire mapped input field; NER tokens serialized per HELM; not entire metadata record",
+      "selection": "purposive; not representative random sample",
+      "helm_instance": {
+        "input": {
+          "text": "\"MONITORUL\" \"OFICIAL\" \"nr.\" \"959\" \"din\" \"28\" \"noiembrie\" \"2019\""
+        },
+        "references": [
+          {
+            "output": {
+              "text": "\"O\" \"O\" \"O\" \"O\" \"I-ORG\" \"I-ORG\" \"I-ORG\" \"I-ORG\""
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "\"O\" \"O\" \"O\" \"O\" \"B-LOC\" \"B-LOC\" \"B-LOC\" \"B-LOC\""
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "\"O\" \"O\" \"O\" \"O\" \"B-PER\" \"B-PER\" \"B-PER\" \"B-PER\""
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "\"O\" \"O\" \"O\" \"O\" \"I-PER\" \"I-PER\" \"I-PER\" \"I-PER\""
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "\"O\" \"O\" \"O\" \"O\" \"B-ORG\" \"B-ORG\" \"B-ORG\" \"B-ORG\""
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "\"O\" \"O\" \"O\" \"O\" \"I-LOC\" \"I-LOC\" \"I-LOC\" \"I-LOC\""
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "\"O\" \"O\" \"O\" \"O\" \"B-LEGAL\" \"B-LEGAL\" \"B-LEGAL\" \"B-LEGAL\""
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "\"O\" \"O\" \"O\" \"O\" \"I-LEGAL\" \"I-LEGAL\" \"I-LEGAL\" \"I-LEGAL\""
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "\"O\" \"O\" \"O\" \"O\" \"B-TIME\" \"I-TIME\" \"I-TIME\" \"I-TIME\""
+            },
+            "tags": [
+              "correct"
+            ]
+          }
+        ],
+        "split": "test"
+      }
+    },
+    {
+      "index": 4,
+      "id": "german_argument_mining/test/line75",
+      "subset": "german_argument_mining",
+      "dataset": "german_argument_mining",
+      "task_type": "SLTC",
+      "language": "de",
+      "source_line_1based": 75,
+      "source_path": "/workspace/artifacts/helm-parallel/lextreme/evidence/german_argument_mining-test.jsonl",
+      "source_sha256": "19595a310f39fd1daa89f834930923ed19e3b01d04806d189c382eca70ecbb08",
+      "source_url": "https://huggingface.co/datasets/joelniklaus/german_argument_mining/resolve/576b52004ed78dd747c0f9858fa6dacc7e4196e2/test.jsonl",
+      "raw_line_sha256": "e9894fb355be6671622fbb9e770d33b2933529b15c567b3972e981aa6c5d4927",
+      "raw_record": {
+        "file_number": "3 Sa 760/15",
+        "input_sentence": "Ob eine überraschende Klausel vorliegt , ist durch Auslegung zu ermitteln .",
+        "label": "definition",
+        "context_before": [
+          [
+            "aa )",
+            "other"
+          ],
+          [
+            "Nach § 305 c Abs. 1 BGB werden Bestimmungen in Allgemeinen Geschäftsbedingungen , die nach den Umständen , insbesondere nach dem äußeren Erscheinungsbild des Vertrags , so ungewöhnlich sind , dass der Vertragspartner des Verwenders mit ihnen nicht zu rechnen braucht , nicht Vertragsbestandteil .",
+            "definition"
+          ],
+          [
+            "Dies setzt eine objektiv ungewöhnliche Klausel voraus , mit der der Arbeitnehmer subjektiv nicht zu rechnen brauchte ( vgl. BAG , Urteil vom 16. 05. 2012 - 5 AZR 331/11 - NZA 2012 , 908 , Rn . 16 m. w. N. ) .",
+            "definition"
+          ],
+          [
+            "Zwischen den durch die Umstände bei Vertragsschluss begründeten Erwartungen und dem tatsächlichen Vertragsinhalt muss deshalb ein deutlicher Widerspruch bestehen ( vgl. BAG , Urteil vom 19. 02. 2014 - 5 AZR 920/12 - NJOZ 2014 , 992 , Rn . 17 ) .",
+            "definition"
+          ],
+          [
+            "Da sich das Überraschungsmoment auch aus dem Erscheinungsbild des Vertrags ergeben kann , ist es möglich , dass das Unterbringen einer Klausel an einer unerwarteten Stelle im Text sie als überraschend erscheinen lässt .",
+            "definition"
+          ],
+          [
+            "Das Überraschungsmoment ist umso eher zu bejahen , je belastender die Bestimmung ist .",
+            "definition"
+          ],
+          [
+            "Im Einzelfall muss der Verwender darauf besonders hinweisen oder die Klausel drucktechnisch hervorheben ( vgl. BAG , Urteil vom 19. 02. 2014 , a. a. O. ) .",
+            "definition"
+          ]
+        ],
+        "context_after": [
+          [
+            "Dabei sind die „ Gesamtumstände “ ( vgl. BAG , Urteil vom 23. 02. 2005 - 4 AZR 139/04 - BAGE 114 , 33 unter 4. b ) cc ) ( 2 ) der Gründe ) zu berücksichtigen , womit der Grad der Abweichung vom dispositiven Gesetzesrecht und die für den Geschäftskreis übliche Gestaltung , der Gang und Inhalt der Vertragsverhandlungen sowie der äußere Zuschnitt des Vertrags einzubeziehen sind ( vgl. BAG , Urteil vom 13. 07. 2005 - 10 AZR 532/04 - AP HBG § 74 Nr. 78 unter II . 1. b ) bb ) der Gründe ) .",
+            "definition"
+          ]
+        ]
+      },
+      "input": "Ob eine überraschende Klausel vorliegt , ist durch Auslegung zu ermitteln .",
+      "answer": "definition",
+      "correct_references": [
+        "definition"
+      ],
+      "title_ja": "一般的な法的判断基準を識別する",
+      "translation": "意外性のある条項が存在するかどうかは、解釈によって判断しなければならない。",
+      "answer_ja": "definition：定義・抽象的な判断基準",
+      "comment": "具体的事件への当てはめではなく、判断基準を述べる文。",
+      "quote_scope": "entire mapped input field; NER tokens serialized per HELM; not entire metadata record",
+      "selection": "purposive; not representative random sample",
+      "helm_instance": {
+        "input": {
+          "text": "Ob eine überraschende Klausel vorliegt , ist durch Auslegung zu ermitteln ."
+        },
+        "references": [
+          {
+            "output": {
+              "text": "other"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "subsumption"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "conclusion"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "definition"
+            },
+            "tags": [
+              "correct"
+            ]
+          }
+        ],
+        "split": "test"
+      }
+    },
+    {
+      "index": 5,
+      "id": "german_argument_mining/test/line10",
+      "subset": "german_argument_mining",
+      "dataset": "german_argument_mining",
+      "task_type": "SLTC",
+      "language": "de",
+      "source_line_1based": 10,
+      "source_path": "/workspace/artifacts/helm-parallel/lextreme/evidence/german_argument_mining-test.jsonl",
+      "source_sha256": "19595a310f39fd1daa89f834930923ed19e3b01d04806d189c382eca70ecbb08",
+      "source_url": "https://huggingface.co/datasets/joelniklaus/german_argument_mining/resolve/576b52004ed78dd747c0f9858fa6dacc7e4196e2/test.jsonl",
+      "raw_line_sha256": "8fd4879a34b7989ed69e420d0dfa20014911d0a916dba1dd41bbabed4f587753",
+      "raw_record": {
+        "file_number": "3 Sa 760/15",
+        "input_sentence": "Die ergänzende Darlegung der Nettovorteile ist gem. § 264 Nr. 1 ZPO unschädlich .",
+        "label": "subsumption",
+        "context_before": [
+          [
+            "1. Der erstmals im Berufungsverfahren gestellte Antrag zu 3. ist zulässig .",
+            "conclusion"
+          ],
+          [
+            "Es liegt keine Klageänderung i. S. d. § 533 ZPO vor , die der Einwilligung des Beklagten oder der Feststellung der Sachdienlichkeit durch das Gericht bedürfte .",
+            "subsumption"
+          ],
+          [
+            "Nach § 264 Nr. 2 ZPO ist es nicht als eine Klageänderung anzusehen , wenn ohne Änderung des Klagegrundes der Klageantrag in der Hauptsache erweitert wird .",
+            "definition"
+          ],
+          [
+            "Wird wie hier bei im Wesentlichen gleichbleibendem Klagegrund Zahlung statt Abrechnung / Zahlung des sich aus der Abrechnung ergebenden Guthabens verlangt , liegt eine nach § 264 Nr. 2 ZPO zulässige qualitative Änderung des Antrags vor ( vgl. Zöller / Greger , ZPO , 30. Aufl. 2014 , § 264 , Rn . 3 b m. w. N. ) .",
+            "subsumption"
+          ]
+        ],
+        "context_after": []
+      },
+      "input": "Die ergänzende Darlegung der Nettovorteile ist gem. § 264 Nr. 1 ZPO unschädlich .",
+      "answer": "subsumption",
+      "correct_references": [
+        "subsumption"
+      ],
+      "title_ja": "具体的な事件への当てはめを識別する",
+      "translation": "正味の利益についての補充的な説明は、民事訴訟法第264条第1号により支障を生じさせない。",
+      "answer_ja": "subsumption：具体的事実への当てはめ",
+      "comment": "データの文間スペースと略記を原文のまま保持した。",
+      "quote_scope": "entire mapped input field; NER tokens serialized per HELM; not entire metadata record",
+      "selection": "purposive; not representative random sample",
+      "helm_instance": {
+        "input": {
+          "text": "Die ergänzende Darlegung der Nettovorteile ist gem. § 264 Nr. 1 ZPO unschädlich ."
+        },
+        "references": [
+          {
+            "output": {
+              "text": "definition"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "other"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "conclusion"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "subsumption"
+            },
+            "tags": [
+              "correct"
+            ]
+          }
+        ],
+        "split": "test"
+      }
+    },
+    {
+      "index": 6,
+      "id": "online_terms_of_service_unfairness_levels/test/line60",
+      "subset": "online_terms_of_service_unfairness_levels",
+      "dataset": "online_terms_of_service",
+      "task_type": "SLTC",
+      "language": "de",
+      "source_line_1based": 60,
+      "source_path": "/workspace/artifacts/helm-parallel/lextreme/evidence/online_terms_of_service-test.jsonl",
+      "source_sha256": "e4471ea8b4293934013a7206fa16236cbe3a656e3807efa23e6d9ced690007cf",
+      "source_url": "https://huggingface.co/datasets/joelniklaus/online_terms_of_service/resolve/448c5caa985b8dafb275294f226120f41a7f8251/test.jsonl",
+      "raw_line_sha256": "f9eaaf2735f8b516d38cb6e8eb777486f45a63820adc619ae395eca1d41fa6ef",
+      "raw_record": {
+        "language": "de",
+        "company": "Weebly",
+        "line_number": 59,
+        "sentence": "Wir haften nicht für Verluste oder Schäden, die durch Ihre Verletzung dieser Sicherungspflicht entstehen.",
+        "unfairness_level": "potentially_unfair",
+        "a": false,
+        "ch": false,
+        "cr": false,
+        "j": false,
+        "law": false,
+        "ltd": true,
+        "ter": false,
+        "use": false,
+        "pinc": false,
+        "all_topics": [
+          "ltd"
+        ]
+      },
+      "input": "Wir haften nicht für Verluste oder Schäden, die durch Ihre Verletzung dieser Sicherungspflicht entstehen.",
+      "answer": "potentially_unfair",
+      "correct_references": [
+        "potentially_unfair"
+      ],
+      "title_ja": "ドイツ語の免責条項を分類する",
+      "translation": "この安全確保義務に対するあなたの違反によって生じる損失や損害について、当社は責任を負いません。",
+      "answer_ja": "potentially_unfair：不公正の可能性がある",
+      "comment": "ここでの答えはデータの注釈。現在の法的有効性を判定したものではない。",
+      "quote_scope": "entire mapped input field; NER tokens serialized per HELM; not entire metadata record",
+      "selection": "purposive; not representative random sample",
+      "helm_instance": {
+        "input": {
+          "text": "Wir haften nicht für Verluste oder Schäden, die durch Ihre Verletzung dieser Sicherungspflicht entstehen."
+        },
+        "references": [
+          {
+            "output": {
+              "text": "clearly_fair"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "clearly_unfair"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "potentially_unfair"
+            },
+            "tags": [
+              "correct"
+            ]
+          }
+        ],
+        "split": "test"
+      }
+    },
+    {
+      "index": 7,
+      "id": "online_terms_of_service_clause_topics/test/line2170",
+      "subset": "online_terms_of_service_clause_topics",
+      "dataset": "online_terms_of_service",
+      "task_type": "MLTC",
+      "language": "it",
+      "source_line_1based": 2170,
+      "source_path": "/workspace/artifacts/helm-parallel/lextreme/evidence/online_terms_of_service-test.jsonl",
+      "source_sha256": "e4471ea8b4293934013a7206fa16236cbe3a656e3807efa23e6d9ced690007cf",
+      "source_url": "https://huggingface.co/datasets/joelniklaus/online_terms_of_service/resolve/448c5caa985b8dafb275294f226120f41a7f8251/test.jsonl",
+      "raw_line_sha256": "6d083ac85f6e62c0b30d0bd437a6381985650c99497b8c14a00a4207a90e57b7",
+      "raw_record": {
+        "language": "it",
+        "company": "Weebly",
+        "line_number": 104,
+        "sentence": "Avremo altresì diritto a rimuovere ogni Contenuto che violi le presenti Condizioni o che, a nostra assoluta discrezione, riteniamo comunque non appropriato.",
+        "unfairness_level": "potentially_unfair",
+        "a": false,
+        "ch": false,
+        "cr": true,
+        "j": false,
+        "law": false,
+        "ltd": false,
+        "ter": false,
+        "use": false,
+        "pinc": false,
+        "all_topics": [
+          "cr"
+        ]
+      },
+      "input": "Avremo altresì diritto a rimuovere ogni Contenuto che violi le presenti Condizioni o che, a nostra assoluta discrezione, riteniamo comunque non appropriato.",
+      "answer": "2",
+      "correct_references": [
+        "2"
+      ],
+      "title_ja": "イタリア語の削除条項を分類する",
+      "translation": "当社はまた、本規約に違反する、または当社の単独の裁量によりその他の点で不適切と判断するあらゆるコンテンツを削除する権利を有します。",
+      "answer_ja": "2：コンテンツの削除",
+      "comment": "不公正さの程度ではなく、条項の話題を予測する設定。",
+      "quote_scope": "entire mapped input field; NER tokens serialized per HELM; not entire metadata record",
+      "selection": "purposive; not representative random sample",
+      "helm_instance": {
+        "input": {
+          "text": "Avremo altresì diritto a rimuovere ogni Contenuto che violi le presenti Condizioni o che, a nostra assoluta discrezione, riteniamo comunque non appropriato."
+        },
+        "references": [
+          {
+            "output": {
+              "text": "8"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "7"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "2"
+            },
+            "tags": [
+              "correct"
+            ]
+          }
+        ],
+        "split": "test"
+      }
+    },
+    {
+      "index": 8,
+      "id": "covid19_emergency_event/test/line10",
+      "subset": "covid19_emergency_event",
+      "dataset": "covid19_emergency_event",
+      "task_type": "MLTC",
+      "language": "fr",
+      "source_line_1based": 10,
+      "source_path": "/workspace/artifacts/helm-parallel/lextreme/evidence/covid19_emergency_event-test.jsonl",
+      "source_sha256": "1792a5b0103cbdd2a1d973cdb5ca5a881ec6505c2a9d7a8625b412bfb67ad69a",
+      "source_url": "https://huggingface.co/datasets/joelniklaus/covid19_emergency_event/resolve/bba0491bc1ba950369eafcceb1d522537b54ab2e/test.jsonl",
+      "raw_line_sha256": "781ff3e5c2eafeabdeab3e64ab566d5b4b78571fd21a2d6c1b8b28b909c391a1",
+      "raw_record": {
+        "language": "fr",
+        "country": "belgium",
+        "text": "Les leçons et activités sont suspendues dans l'enseignement maternel, primaire et secondaire.",
+        "event1": false,
+        "event2": false,
+        "event3": false,
+        "event4": true,
+        "event5": false,
+        "event6": false,
+        "event7": false,
+        "event8": false,
+        "all_events": [
+          "event4"
+        ]
+      },
+      "input": "Les leçons et activités sont suspendues dans l'enseignement maternel, primaire et secondaire.",
+      "answer": "3",
+      "correct_references": [
+        "3"
+      ],
+      "title_ja": "フランス語の学校閉鎖措置を読む",
+      "translation": "就学前教育、初等教育および中等教育では、授業と活動を停止する。",
+      "answer_ja": "3：閉鎖・ロックダウン",
+      "comment": "ベルギーの公開文書。出力は政策の是非ではなく措置の分類。",
+      "quote_scope": "entire mapped input field; NER tokens serialized per HELM; not entire metadata record",
+      "selection": "purposive; not representative random sample",
+      "helm_instance": {
+        "input": {
+          "text": "Les leçons et activités sont suspendues dans l'enseignement maternel, primaire et secondaire."
+        },
+        "references": [
+          {
+            "output": {
+              "text": "2"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "1"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "3"
+            },
+            "tags": [
+              "correct"
+            ]
+          }
+        ],
+        "split": "test"
+      }
+    },
+    {
+      "index": 9,
+      "id": "covid19_emergency_event/test/line304",
+      "subset": "covid19_emergency_event",
+      "dataset": "covid19_emergency_event",
+      "task_type": "MLTC",
+      "language": "nb",
+      "source_line_1based": 304,
+      "source_path": "/workspace/artifacts/helm-parallel/lextreme/evidence/covid19_emergency_event-test.jsonl",
+      "source_sha256": "1792a5b0103cbdd2a1d973cdb5ca5a881ec6505c2a9d7a8625b412bfb67ad69a",
+      "source_url": "https://huggingface.co/datasets/joelniklaus/covid19_emergency_event/resolve/bba0491bc1ba950369eafcceb1d522537b54ab2e/test.jsonl",
+      "raw_line_sha256": "c3638b6dc45ebbc0c72f0fa350f521e80cbca3be6de1e3de7178d544ddb32a28",
+      "raw_record": {
+        "language": "nb",
+        "country": "norway",
+        "text": "Dette innebærer også at treninger og annen organisert idrettsaktivitet kan gjennomføres for inntil 20 personer som holder minst én meter avstand.",
+        "event1": false,
+        "event2": false,
+        "event3": true,
+        "event4": false,
+        "event5": false,
+        "event6": false,
+        "event7": false,
+        "event8": false,
+        "all_events": [
+          "event3"
+        ]
+      },
+      "input": "Dette innebærer også at treninger og annen organisert idrettsaktivitet kan gjennomføres for inntil 20 personer som holder minst én meter avstand.",
+      "answer": "2",
+      "correct_references": [
+        "2"
+      ],
+      "title_ja": "ノルウェー語の人数制限を読む",
+      "translation": "これは、少なくとも1メートルの距離を保つ最大20人で、練習やその他の組織的なスポーツ活動を実施できることも意味する。",
+      "answer_ja": "2：日常生活上の自由の制限",
+      "comment": "原スイートの集計対象24 EU言語とは別に、C19にはノルウェー語も含まれる。",
+      "quote_scope": "entire mapped input field; NER tokens serialized per HELM; not entire metadata record",
+      "selection": "purposive; not representative random sample",
+      "helm_instance": {
+        "input": {
+          "text": "Dette innebærer også at treninger og annen organisert idrettsaktivitet kan gjennomføres for inntil 20 personer som holder minst én meter avstand."
+        },
+        "references": [
+          {
+            "output": {
+              "text": "3"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "1"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "2"
+            },
+            "tags": [
+              "correct"
+            ]
+          }
+        ],
+        "split": "test"
+      }
+    },
+    {
+      "index": 10,
+      "id": "covid19_emergency_event/test/line212",
+      "subset": "covid19_emergency_event",
+      "dataset": "covid19_emergency_event",
+      "task_type": "MLTC",
+      "language": "it",
+      "source_line_1based": 212,
+      "source_path": "/workspace/artifacts/helm-parallel/lextreme/evidence/covid19_emergency_event-test.jsonl",
+      "source_sha256": "1792a5b0103cbdd2a1d973cdb5ca5a881ec6505c2a9d7a8625b412bfb67ad69a",
+      "source_url": "https://huggingface.co/datasets/joelniklaus/covid19_emergency_event/resolve/bba0491bc1ba950369eafcceb1d522537b54ab2e/test.jsonl",
+      "raw_line_sha256": "1fc26dd12e03b9b89435d99be43da68dcc0a7b89085cf5b1e48911d129ad2ec5",
+      "raw_record": {
+        "language": "it",
+        "country": "italy",
+        "text": "obbligo di rimanere raggiungibile per le attività di sorveglianza;",
+        "event1": false,
+        "event2": true,
+        "event3": true,
+        "event4": false,
+        "event5": false,
+        "event6": false,
+        "event7": false,
+        "event8": false,
+        "all_events": [
+          "event2",
+          "event3"
+        ]
+      },
+      "input": "obbligo di rimanere raggiungibile per le attività di sorveglianza;",
+      "answer": "1, 2",
+      "correct_references": [
+        "1",
+        "2"
+      ],
+      "title_ja": "イタリア語の義務に複数ラベルを付ける",
+      "translation": "監視活動のために連絡が取れる状態を保つ義務。",
+      "answer_ja": "1：基本権・市民的自由の制限／2：日常生活上の自由の制限",
+      "comment": "原注釈の二つの措置ラベルを保持する。",
+      "quote_scope": "entire mapped input field; NER tokens serialized per HELM; not entire metadata record",
+      "selection": "purposive; not representative random sample",
+      "helm_instance": {
+        "input": {
+          "text": "obbligo di rimanere raggiungibile per le attività di sorveglianza;"
+        },
+        "references": [
+          {
+            "output": {
+              "text": "3"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "1"
+            },
+            "tags": [
+              "correct"
+            ]
+          },
+          {
+            "output": {
+              "text": "2"
+            },
+            "tags": [
+              "correct"
+            ]
+          }
+        ],
+        "split": "test"
+      }
+    },
+    {
+      "index": 11,
+      "id": "greek_legal_ner/test/line1",
+      "subset": "greek_legal_ner",
+      "dataset": "greek_legal_ner",
+      "task_type": "NER",
+      "language": "el",
+      "source_line_1based": 1,
+      "source_path": "/workspace/artifacts/helm-parallel/lextreme/evidence/greek_legal_ner-test.jsonl",
+      "source_sha256": "5ad0654caac860a9d6d3d7d7834f913afaafc6cc5506c379c50c3d86ef12d559",
+      "source_url": "https://huggingface.co/datasets/joelniklaus/greek_legal_ner/resolve/e2bc5fd22217fdaa0054bb0eadbad8401d94dd50/test.jsonl",
+      "raw_line_sha256": "ba1929b5163746c481013b23fcb5df92290106dcbcca4c7e12dab6180b3ed416",
+      "raw_record": {
+        "date": "25.09.2013",
+        "gazette": "A",
+        "words": [
+          "ΠΡΟΕΔΡΙΚΟ",
+          "ΔΙΑΤΑΓΜΑ",
+          "ΥΠ",
+          "’",
+          "ΑΡΙΘΜ",
+          ".",
+          "133"
+        ],
+        "ner": [
+          "B-LEG-REFS",
+          "I-LEG-REFS",
+          "I-LEG-REFS",
+          "I-LEG-REFS",
+          "I-LEG-REFS",
+          "I-LEG-REFS",
+          "I-LEG-REFS"
+        ]
+      },
+      "input": "\"ΠΡΟΕΔΡΙΚΟ\" \"ΔΙΑΤΑΓΜΑ\" \"ΥΠ\" \"’\" \"ΑΡΙΘΜ\" \".\" \"133\"",
+      "answer": "\"B-LEG-REFS\" \"I-LEG-REFS\" \"I-LEG-REFS\" \"I-LEG-REFS\" \"I-LEG-REFS\" \"I-LEG-REFS\" \"I-LEG-REFS\"",
+      "correct_references": [
+        "\"B-LEG-REFS\" \"I-LEG-REFS\" \"I-LEG-REFS\" \"I-LEG-REFS\" \"I-LEG-REFS\" \"I-LEG-REFS\" \"I-LEG-REFS\""
+      ],
+      "title_ja": "ギリシャ語の法令参照を見つける",
+      "translation": "大統領令 第133号。",
+      "answer_ja": "LEG-REFS：法令への参照",
+      "comment": "原注釈では7トークン全体が一つの法令参照。句読点も含む。",
+      "quote_scope": "entire mapped input field; NER tokens serialized per HELM; not entire metadata record",
+      "selection": "purposive; not representative random sample",
+      "helm_instance": {
+        "input": {
+          "text": "\"ΠΡΟΕΔΡΙΚΟ\" \"ΔΙΑΤΑΓΜΑ\" \"ΥΠ\" \"’\" \"ΑΡΙΘΜ\" \".\" \"133\""
+        },
+        "references": [
+          {
+            "output": {
+              "text": "\"B-FACILITY\" \"B-FACILITY\" \"B-FACILITY\" \"B-FACILITY\" \"B-FACILITY\" \"B-FACILITY\" \"B-FACILITY\""
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "\"B-LOCATION-NAT\" \"B-LOCATION-NAT\" \"B-LOCATION-NAT\" \"B-LOCATION-NAT\" \"B-LOCATION-NAT\" \"B-LOCATION-NAT\" \"B-LOCATION-NAT\""
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "\"I-PERSON\" \"I-PERSON\" \"I-PERSON\" \"I-PERSON\" \"I-PERSON\" \"I-PERSON\" \"I-PERSON\""
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "\"B-PERSON\" \"B-PERSON\" \"B-PERSON\" \"B-PERSON\" \"B-PERSON\" \"B-PERSON\" \"B-PERSON\""
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "\"I-LOCATION-NAT\" \"I-LOCATION-NAT\" \"I-LOCATION-NAT\" \"I-LOCATION-NAT\" \"I-LOCATION-NAT\" \"I-LOCATION-NAT\" \"I-LOCATION-NAT\""
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "\"I-LOCATION-UNK\" \"I-LOCATION-UNK\" \"I-LOCATION-UNK\" \"I-LOCATION-UNK\" \"I-LOCATION-UNK\" \"I-LOCATION-UNK\" \"I-LOCATION-UNK\""
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "\"I-PUBLIC-DOCS\" \"I-PUBLIC-DOCS\" \"I-PUBLIC-DOCS\" \"I-PUBLIC-DOCS\" \"I-PUBLIC-DOCS\" \"I-PUBLIC-DOCS\" \"I-PUBLIC-DOCS\""
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "\"B-GPE\" \"B-GPE\" \"B-GPE\" \"B-GPE\" \"B-GPE\" \"B-GPE\" \"B-GPE\""
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "\"I-FACILITY\" \"I-FACILITY\" \"I-FACILITY\" \"I-FACILITY\" \"I-FACILITY\" \"I-FACILITY\" \"I-FACILITY\""
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "\"I-GPE\" \"I-GPE\" \"I-GPE\" \"I-GPE\" \"I-GPE\" \"I-GPE\" \"I-GPE\""
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "\"B-PUBLIC-DOCS\" \"B-PUBLIC-DOCS\" \"B-PUBLIC-DOCS\" \"B-PUBLIC-DOCS\" \"B-PUBLIC-DOCS\" \"B-PUBLIC-DOCS\" \"B-PUBLIC-DOCS\""
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "\"B-ORG\" \"B-ORG\" \"B-ORG\" \"B-ORG\" \"B-ORG\" \"B-ORG\" \"B-ORG\""
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "\"I-ORG\" \"I-ORG\" \"I-ORG\" \"I-ORG\" \"I-ORG\" \"I-ORG\" \"I-ORG\""
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "\"B-LOCATION-UNK\" \"B-LOCATION-UNK\" \"B-LOCATION-UNK\" \"B-LOCATION-UNK\" \"B-LOCATION-UNK\" \"B-LOCATION-UNK\" \"B-LOCATION-UNK\""
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "\"B-LEG-REFS\" \"I-LEG-REFS\" \"I-LEG-REFS\" \"I-LEG-REFS\" \"I-LEG-REFS\" \"I-LEG-REFS\" \"I-LEG-REFS\""
+            },
+            "tags": [
+              "correct"
+            ]
+          }
+        ],
+        "split": "test"
+      }
+    },
+    {
+      "index": 12,
+      "id": "brazilian_court_decisions_judgment/test/line396",
+      "subset": "brazilian_court_decisions_judgment",
+      "dataset": "brazilian_court_decisions",
+      "task_type": "SLTC",
+      "language": "pt",
+      "source_line_1based": 396,
+      "source_path": "/workspace/artifacts/helm-parallel/lextreme/evidence/brazilian_court_decisions-test.jsonl",
+      "source_sha256": "43a9159188d08ab7ca947ee17314570c9ee6bf2656f8b2b5e40923e9e9cf701c",
+      "source_url": "https://huggingface.co/datasets/joelniklaus/brazilian_court_decisions/resolve/e937c2db8eab109cafc4f5279a396957d38251c5/test.jsonl",
+      "raw_line_sha256": "eefcdfd3dea26b1c3de175a0071052336c9a0490b609d2c75f24a447e7c2f86c",
+      "raw_record": {
+        "process_number": "0801581-59.2018.8.02.0000",
+        "orgao_julgador": "3ª Câmara Cível",
+        "publish_date": "12/03/2019",
+        "judge_relator": "Des. Celyrio Adamastor Tenório Accioly",
+        "ementa_text": "EMBARGOS DE DECLARAÇÃO. ALEGAÇÃO DE OMISSÃO NO JULGADO. HONORÁRIOS RECURSAIS. DESCABIMENTO. INEXISTÊNCIA DE VÍCIO. EMBARGOS DE DECLARAÇÃO CONHECIDOS E REJEITADOS.",
+        "decision_description": "EMBARGOS DE DECLARAÇÃO. ALEGAÇÃO DE OMISSÃO NO JULGADO. HONORÁRIOS RECURSAIS. DESCABIMENTO. INEXISTÊNCIA DE VÍCIO.",
+        "judgment_text": " EMBARGOS DE DECLARAÇÃO CONHECIDOS E REJEITADOS",
+        "judgment_label": "no",
+        "unanimity_text": "-2",
+        "unanimity_label": "not_determined"
+      },
+      "input": "EMBARGOS DE DECLARAÇÃO. ALEGAÇÃO DE OMISSÃO NO JULGADO. HONORÁRIOS RECURSAIS. DESCABIMENTO. INEXISTÊNCIA DE VÍCIO.",
+      "answer": "no",
+      "correct_references": [
+        "no"
+      ],
+      "title_ja": "ブラジルの異議申立ての結果を予測する",
+      "translation": "判決の明確化を求める異議申立て。判決に判断の欠落があるとの主張。上訴審の弁護士報酬。認められない。瑕疵は存在しない。",
+      "answer_ja": "no：申立てを退けた",
+      "comment": "入力はdecision_descriptionの全文。判決結果を含む別フィールドは入力に混ぜない。",
+      "quote_scope": "entire mapped input field; NER tokens serialized per HELM; not entire metadata record",
+      "selection": "purposive; not representative random sample",
+      "helm_instance": {
+        "input": {
+          "text": "EMBARGOS DE DECLARAÇÃO. ALEGAÇÃO DE OMISSÃO NO JULGADO. HONORÁRIOS RECURSAIS. DESCABIMENTO. INEXISTÊNCIA DE VÍCIO."
+        },
+        "references": [
+          {
+            "output": {
+              "text": "yes"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "partial"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "no"
+            },
+            "tags": [
+              "correct"
+            ]
+          }
+        ],
+        "split": "test"
+      }
+    },
+    {
+      "index": 13,
+      "id": "brazilian_court_decisions_unanimity/test/line325",
+      "subset": "brazilian_court_decisions_unanimity",
+      "dataset": "brazilian_court_decisions",
+      "task_type": "SLTC",
+      "language": "pt",
+      "source_line_1based": 325,
+      "source_path": "/workspace/artifacts/helm-parallel/lextreme/evidence/brazilian_court_decisions-test.jsonl",
+      "source_sha256": "43a9159188d08ab7ca947ee17314570c9ee6bf2656f8b2b5e40923e9e9cf701c",
+      "source_url": "https://huggingface.co/datasets/joelniklaus/brazilian_court_decisions/resolve/e937c2db8eab109cafc4f5279a396957d38251c5/test.jsonl",
+      "raw_line_sha256": "041ab9f5f0eb4efc800c8c45b711d204cf2b65ab56f6918fbb4456a71db8b776",
+      "raw_record": {
+        "process_number": "0700830-48.2017.8.02.0049",
+        "orgao_julgador": "2ª Câmara Cível",
+        "publish_date": "15/03/2019",
+        "judge_relator": "Des. Klever Rêgo Loureiro",
+        "ementa_text": "APELAÇÃO CÍVEL. JUSTIÇA GRATUITA. DECISÃO INTERLOCUTÓRIA DE INDEFERIMENTO QUE NÃO FOI IMPUGNADA NO PRAZO LEGAL. PRECLUSÃO. IMPOSSIBILIDADE DE REDISCUSSÃO EM SEDE DE APELAÇÃO. SENTENÇA MANTIDA. RECURSO CONHECIDO E NÃO PROVIDO. UNÂNIME.",
+        "decision_description": "APELAÇÃO CÍVEL. JUSTIÇA GRATUITA. DECISÃO INTERLOCUTÓRIA DE INDEFERIMENTO QUE NÃO FOI IMPUGNADA NO PRAZO LEGAL. PRECLUSÃO. IMPOSSIBILIDADE DE REDISCUSSÃO EM SEDE DE APELAÇÃO. SENTENÇA MANTIDA.",
+        "judgment_text": " RECURSO CONHECIDO E NÃO PROVIDO",
+        "judgment_label": "no",
+        "unanimity_text": " UNÂNIME",
+        "unanimity_label": "unanimity"
+      },
+      "input": "APELAÇÃO CÍVEL. JUSTIÇA GRATUITA. DECISÃO INTERLOCUTÓRIA DE INDEFERIMENTO QUE NÃO FOI IMPUGNADA NO PRAZO LEGAL. PRECLUSÃO. IMPOSSIBILIDADE DE REDISCUSSÃO EM SEDE DE APELAÇÃO. SENTENÇA MANTIDA.",
+      "answer": "unanimity",
+      "correct_references": [
+        "unanimity"
+      ],
+      "title_ja": "同じ裁判資料で全員一致を予測する",
+      "translation": "民事上訴。訴訟費用の免除。法定期間内に争われなかった却下の中間決定。失権。上訴段階で再び争うことはできない。原判決を維持する。",
+      "answer_ja": "unanimity：全員一致",
+      "comment": "判決の認容・棄却とは異なる予測対象。元レコードの全員一致ラベルを使う。",
+      "quote_scope": "entire mapped input field; NER tokens serialized per HELM; not entire metadata record",
+      "selection": "purposive; not representative random sample",
+      "helm_instance": {
+        "input": {
+          "text": "APELAÇÃO CÍVEL. JUSTIÇA GRATUITA. DECISÃO INTERLOCUTÓRIA DE INDEFERIMENTO QUE NÃO FOI IMPUGNADA NO PRAZO LEGAL. PRECLUSÃO. IMPOSSIBILIDADE DE REDISCUSSÃO EM SEDE DE APELAÇÃO. SENTENÇA MANTIDA."
+        },
+        "references": [
+          {
+            "output": {
+              "text": "not-unanimity"
+            },
+            "tags": []
+          },
+          {
+            "output": {
+              "text": "unanimity"
+            },
+            "tags": [
+              "correct"
+            ]
+          }
+        ],
+        "split": "test"
+      }
+    }
+  ],
+  "statistics": {
+    "benchmark": "HELM Classic",
+    "release": "v0.4.0",
+    "date": "2023-11-17",
+    "public_runs": 0,
+    "run_suite_mappings": 0,
+    "model_scores": [],
+    "implemented_subsets": {
+      "brazilian_court_decisions_judgment": "SingleLabelTextClassification",
+      "brazilian_court_decisions_unanimity": "SingleLabelTextClassification",
+      "german_argument_mining": "SingleLabelTextClassification",
+      "greek_legal_code_chapter": "SingleLabelTextClassification",
+      "greek_legal_code_subject": "SingleLabelTextClassification",
+      "greek_legal_code_volume": "SingleLabelTextClassification",
+      "swiss_judgment_prediction": "SingleLabelTextClassification",
+      "online_terms_of_service_unfairness_levels": "SingleLabelTextClassification",
+      "online_terms_of_service_clause_topics": "MultiLabelTextClassification",
+      "covid19_emergency_event": "MultiLabelTextClassification",
+      "multi_eurlex_level_1": "MultiLabelTextClassification",
+      "multi_eurlex_level_2": "MultiLabelTextClassification",
+      "multi_eurlex_level_3": "MultiLabelTextClassification",
+      "greek_legal_ner": "NamedEntityRecognition",
+      "legalnero": "NamedEntityRecognition",
+      "lener_br": "NamedEntityRecognition",
+      "mapa_coarse": "NamedEntityRecognition",
+      "mapa_fine": "NamedEntityRecognition"
+    },
+    "max_train_instances": {
+      "brazilian_court_decisions_judgment": 4,
+      "brazilian_court_decisions_unanimity": 4,
+      "german_argument_mining": 5,
+      "greek_legal_code_chapter": 1,
+      "greek_legal_code_subject": 1,
+      "greek_legal_code_volume": 1,
+      "swiss_judgment_prediction": 2,
+      "online_terms_of_service_unfairness_levels": 5,
+      "online_terms_of_service_clause_topics": 5,
+      "covid19_emergency_event": 5,
+      "multi_eurlex_level_1": 1,
+      "multi_eurlex_level_2": 1,
+      "multi_eurlex_level_3": 1,
+      "greek_legal_ner": 5,
+      "legalnero": 5,
+      "lener_br": 5,
+      "mapa_coarse": 5,
+      "mapa_fine": 5
+    },
+    "max_tokens": {
+      "brazilian_court_decisions_judgment": 5,
+      "brazilian_court_decisions_unanimity": 5,
+      "german_argument_mining": 5,
+      "greek_legal_code_chapter": 20,
+      "greek_legal_code_subject": 20,
+      "greek_legal_code_volume": 20,
+      "swiss_judgment_prediction": 5,
+      "online_terms_of_service_unfairness_levels": 10,
+      "online_terms_of_service_clause_topics": 10,
+      "covid19_emergency_event": 10,
+      "multi_eurlex_level_1": 10,
+      "multi_eurlex_level_2": 10,
+      "multi_eurlex_level_3": 10,
+      "greek_legal_ner": 430,
+      "legalnero": 788,
+      "lener_br": 338,
+      "mapa_coarse": 274,
+      "mapa_fine": 274
+    },
+    "original_suite": {
+      "datasets": 11,
+      "configurations": 18,
+      "SLTC": 8,
+      "MLTC": 5,
+      "NER": 5
+    },
+    "paper_aggregate_scores": [
+      {
+        "model": "MiniLM",
+        "dataset": 19.9,
+        "language": 18.1
+      },
+      {
+        "model": "DistilBERT",
+        "dataset": 43.2,
+        "language": 31.9
+      },
+      {
+        "model": "mDeBERTa v3",
+        "dataset": 44.1,
+        "language": 34.8
+      },
+      {
+        "model": "XLM-R base",
+        "dataset": 36.8,
+        "language": 19.7
+      },
+      {
+        "model": "XLM-R large",
+        "dataset": 48.5,
+        "language": 36.0
+      }
+    ],
+    "downloaded_test_sources": [
+      {
+        "dataset": "brazilian_court_decisions",
+        "test_records": 405,
+        "sha256": "43a9159188d08ab7ca947ee17314570c9ee6bf2656f8b2b5e40923e9e9cf701c"
+      },
+      {
+        "dataset": "covid19_emergency_event",
+        "test_records": 418,
+        "sha256": "1792a5b0103cbdd2a1d973cdb5ca5a881ec6505c2a9d7a8625b412bfb67ad69a"
+      },
+      {
+        "dataset": "german_argument_mining",
+        "test_records": 3078,
+        "sha256": "19595a310f39fd1daa89f834930923ed19e3b01d04806d189c382eca70ecbb08"
+      },
+      {
+        "dataset": "greek_legal_ner",
+        "test_records": 4017,
+        "sha256": "5ad0654caac860a9d6d3d7d7834f913afaafc6cc5506c379c50c3d86ef12d559"
+      },
+      {
+        "dataset": "legalnero",
+        "test_records": 907,
+        "sha256": "3c73ba1c9e453754d9efb64a6b94db9ffd0997a36dd4d16a7fcccd449c266513"
+      },
+      {
+        "dataset": "online_terms_of_service",
+        "test_records": 4297,
+        "sha256": "e4471ea8b4293934013a7206fa16236cbe3a656e3807efa23e6d9ced690007cf"
+      }
+    ],
+    "inventory_sha256": {
+      "helm-release-run_specs.json": "ef94fb6d3d234ef3193ed043b4a718cd75e0cf2aaf94f0439693cf46a4ff6f62",
+      "helm-release-runs_to_run_suites.json": "ac6eb84b2493b44ffc433f7899c562864fb37fa23e281c596dbc17551fe957fb",
+      "helm-release-schema.json": "ab2ea213329376e811ce41a422b8fc7b35329e2bed4e60c323ffd38b7ada2d2f"
+    },
+    "current_loader_configuration_count": 32,
+    "current_card_reported_configuration_count": 21,
+    "historical_loader_configuration_count": 18
+  },
+  "build_info": {
+    "slug": "lextreme",
+    "main_pages": 30,
+    "total_pages": 55,
+    "source_urls": {
+      "paper": "https://aclanthology.org/2023.findings-emnlp.200/",
+      "site": "https://huggingface.co/datasets/joelniklaus/lextreme",
+      "oldcard": "https://huggingface.co/datasets/joelniklaus/lextreme/tree/65f6046b8083",
+      "loader": "https://huggingface.co/datasets/joelniklaus/lextreme/blob/65f6046b8083/lextreme.py",
+      "code": "https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/lextreme_scenario.py",
+      "spec": "https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/run_specs.py",
+      "metric": "https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/metrics/classification_metrics.py",
+      "helm": "https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/lextreme",
+      "license": "https://github.com/stanford-crfm/helm/blob/v0.3.0/LICENSE",
+      "covid19_emergency_event": "https://huggingface.co/datasets/joelniklaus/covid19_emergency_event/tree/bba0491bc1ba",
+      "greek_legal_ner": "https://huggingface.co/datasets/joelniklaus/greek_legal_ner/tree/e2bc5fd22217",
+      "legalnero": "https://huggingface.co/datasets/joelniklaus/legalnero/tree/a072e8508049",
+      "german_argument_mining": "https://huggingface.co/datasets/joelniklaus/german_argument_mining/tree/576b52004ed7",
+      "brazilian_court_decisions": "https://huggingface.co/datasets/joelniklaus/brazilian_court_decisions/tree/e937c2db8eab",
+      "online_terms_of_service": "https://huggingface.co/datasets/joelniklaus/online_terms_of_service/tree/448c5caa985b"
+    },
+    "paper_version": "Findings EMNLP 2023 / 2023.findings-emnlp.200",
+    "data_loader_commit": "65f6046b8083",
+    "current_card_commit": "73271418f8710e672618fa05f727c9aee239c24b",
+    "helm": "v0.3.0 scenario; v0.4.0 published inventory",
+    "public_model_runs": 0,
+    "author": "sasakiy84"
+  },
+  "source_records": [
+    {
+      "file": "panel-fit.json",
+      "bytes": 11282,
+      "sha256": "d6f0e1d8b1b2cbf9da984bf1ebea4a4f7ae0913ec958fc9c31a723481a2f3e8b"
+    },
+    {
+      "file": "sources.md",
+      "bytes": 8054,
+      "sha256": "37c280565d9e56b531cd7617bffdea3b7e6bd4dbcb3542664d1d596c69c28662"
+    },
+    {
+      "file": "text-audit.json",
+      "bytes": 47,
+      "sha256": "06ee39b1fc6c95514f06f6a39e7bddb79788d469e9d568de255bee0479a1b86b"
+    },
+    {
+      "file": "records.py",
+      "bytes": 5487,
+      "sha256": "0b48c6ce04659a28967128af009ea09eb5a13c1449f1443f391bd180c6c221eb"
+    },
+    {
+      "file": "native-data-audit.json",
+      "bytes": 435,
+      "sha256": "829fa2d4cb4154628692db604c439b9cc5f6dd044f6b82d4857534d6d56caaf4"
+    },
+    {
+      "file": "raw-record-audit.json",
+      "bytes": 2650,
+      "sha256": "359b26ff33c08ebc0bb335c66ddaa90c34b75f7b07e0c9bda7bd9baf8d5ff7bd"
+    },
+    {
+      "file": "select_examples.py",
+      "bytes": 6085,
+      "sha256": "4534bb1553b390ac694d8024dac9465eaa6d53cfd0e626c1e432149d493280b6"
+    },
+    {
+      "file": "tighten_panels.py",
+      "bytes": 2110,
+      "sha256": "24e4e43eefcdc5c5f0db36ba91130d681a464ea239d1cd1b79824f2a8eea0296"
+    },
+    {
+      "file": "render.py",
+      "bytes": 782,
+      "sha256": "3f1a747d41a2819016ffe3a07ca3e23d32c39c17eac1755b771af82e896049d7"
+    },
+    {
+      "file": "examples-verification.json",
+      "bytes": 1829,
+      "sha256": "59b62fc13546909927fc8362412e64e83e6b1839696a9aa3178725651862f930"
+    },
+    {
+      "file": "datasets-in-10-minutes-lextreme.pdf",
+      "bytes": 1197048,
+      "sha256": "9c85a37f249bc4980fd509acf0cb6ba48fba0618ebe421663ae2fcd84db84c89"
+    },
+    {
+      "file": "check_links.py",
+      "bytes": 2322,
+      "sha256": "94cb09149f7dc53d505e04b49e9fd80404e4e7434caed69d1d21128bd123caab"
+    },
+    {
+      "file": "fetch.py",
+      "bytes": 1043,
+      "sha256": "79d10238c152dcb29c15d6505bed633550f190366f7ee3545425903619c7804e"
+    },
+    {
+      "file": "audit_package.py",
+      "bytes": 2879,
+      "sha256": "223542c5028909c3fb693e354a302a8588aabf9c5e30c9dee49bb6891ebe8828"
+    },
+    {
+      "file": "package-audit.json",
+      "bytes": 519,
+      "sha256": "6685ade97662fc99b97bdc3e337c8d2037ae0a63e5dbbcbe4f8fc2aa8afcc29f"
+    },
+    {
+      "file": "layout-audit.json",
+      "bytes": 77,
+      "sha256": "ed359660414763e89eeff29ff4eabfb1a61cf5d53cfd9f1f2b3857da5d168b46"
+    },
+    {
+      "file": "proofreading-changes.json",
+      "bytes": 4860,
+      "sha256": "1d3f16d45ac55525925b418096d0721813877701ba87f46b8fd55a3ef9e50d96"
+    },
+    {
+      "file": "viewed-pages.json",
+      "bytes": 877,
+      "sha256": "2271a81a0a06df7ce61301d918103467e0903621a854f306b46b5780ef89c905"
+    },
+    {
+      "file": "audit_layout.py",
+      "bytes": 3895,
+      "sha256": "dcee7c5f706dea35d85e562cd75db0bb6ccd0f565cf515c2321e8291bda29602"
+    },
+    {
+      "file": "page-review.json",
+      "bytes": 62613,
+      "sha256": "1667039f874f3386a5c8b966bb3b194fa395d067fbf428b5f4e5c7ac0302aeaa"
+    },
+    {
+      "file": "manifest.json",
+      "bytes": 25883,
+      "sha256": "01d41a69b0fcf2eafcd508c2f85edaec1a83475733708a617deb5b2159e713e6"
+    },
+    {
+      "file": "capture_sites.py",
+      "bytes": 3070,
+      "sha256": "ad9f538b470bf10879a30ab263d3204f72d774e5f4c46664bb0dd57de7bb7ed4"
+    },
+    {
+      "file": "links-audit.json",
+      "bytes": 3432,
+      "sha256": "2471c193bc0294c00fdf28f9b28fae7914b6a2d397414f059eb3aeeafbc166c9"
+    },
+    {
+      "file": "engine.py",
+      "bytes": 25953,
+      "sha256": "0091f78a2ec4b6c7961686a4a39c1ae7fb51a0f9501ae6b96b16b571b2afbfe4"
+    },
+    {
+      "file": "build.py",
+      "bytes": 24878,
+      "sha256": "ce0e7dfc34873c019caa70c128e855cc34409b29b80b41772059613e8908c5cc"
+    },
+    {
+      "file": "build-info.json",
+      "bytes": 1861,
+      "sha256": "37dcc1662d5f6d2415e89d1fd4747be9aaa56952787695ea207b7e33e78f2767"
+    },
+    {
+      "file": "examples.json",
+      "bytes": 40959,
+      "sha256": "1a2639307a64662e1931753b613629d86a247a5ddcd14022fa22b897e2cbdcc4"
+    },
+    {
+      "file": "notes-audit.json",
+      "bytes": 35,
+      "sha256": "ebd8b2da83dd5e3ebad039a34c755fceba9be0dafc886ef9e8545681be927f2c"
+    },
+    {
+      "file": "handoff.json",
+      "bytes": 2403,
+      "sha256": "2f608b59e1c566f9af1df03b54111b42fb1b95ef09342ce563d00ecb0e156f92"
+    },
+    {
+      "file": "convert.py",
+      "bytes": 523,
+      "sha256": "7885cc4790970424b4b6cc8b89aae3aaf47f15c87c50a7009a26c6c30d71411b"
+    },
+    {
+      "file": "verify_data.py",
+      "bytes": 4083,
+      "sha256": "e3dfe1e39f6c017d7b13f2a7cb137f5d1ac7cd178f72b9c1a581f82b7970484b"
+    },
+    {
+      "file": "screenshot-log.json",
+      "bytes": 402,
+      "sha256": "530fd9aa737b57b6d8e6c4fd51b3cb13860a0a51c18998661b4f64ef6fac8440"
+    },
+    {
+      "file": "independent-review-response.json",
+      "bytes": 1786,
+      "sha256": "72335d14cdd577a96272d2d56b3fc5944dd71dda5abb14a36a51c16693dbbe87"
+    },
+    {
+      "file": "update_paper_footers.py",
+      "bytes": 1410,
+      "sha256": "532655bbcd99edcee45814ab2317930e2c569c467c6a7dcd53d4fec1ed24ebcf"
+    },
+    {
+      "file": "stats.json",
+      "bytes": 4639,
+      "sha256": "42ddc967880db990b3e4b2377950c88c4695e7244167cf6fbd2ec78c03ff9451"
+    },
+    {
+      "file": "evidence/acl-paper.pdf",
+      "bytes": 2149705,
+      "sha256": "9c307b756bf562e4fea7bbd60dac35f3da9319de23e280cf69e90d77837faa92"
+    },
+    {
+      "file": "evidence/lener_br-api.json",
+      "bytes": 3179,
+      "sha256": "b31de0edc7a34499bf1ff90739b173d561bfad6abb5f6a9a0e1cf72cff82fb3c"
+    },
+    {
+      "file": "evidence/README-2023.md",
+      "bytes": 7714,
+      "sha256": "8f21d332d547d0e5b6126fb015c293af33a4464c05f5e7403b3f3224e0ab9966"
+    },
+    {
+      "file": "evidence/commits.json",
+      "bytes": 11802,
+      "sha256": "f993af4c42eb87bd69adfc8683c6441de230294b914269b4d5ba9845933a9d56"
+    },
+    {
+      "file": "evidence/loader-2023.py",
+      "bytes": 213748,
+      "sha256": "8280865875045bd3a7c44c55350410785967b829c84d2fedfbc895cfc7f80aad"
+    },
+    {
+      "file": "evidence/covid19_emergency_event-README.md",
+      "bytes": 10531,
+      "sha256": "57f544a6278d191072378bd1460e5cc65992d79b1913cf9fafce50903f61369b"
+    },
+    {
+      "file": "evidence/fetch-log.json",
+      "bytes": 8234,
+      "sha256": "b2cabe6e2b564a01fe8c4de251d4287e229e8d5401a1cffa9ca0ef87bc7cc3c1"
+    },
+    {
+      "file": "evidence/covid19_emergency_event-api.json",
+      "bytes": 2064,
+      "sha256": "2805daaaf056e08fb2bd25553dab3cfe3f33ff67cc3bc553928bd283e567a4ed"
+    },
+    {
+      "file": "evidence/acl.html",
+      "bytes": 42658,
+      "sha256": "6a8da92f75332bc38cf0c757d11d721c9d3e60501f8862ea677bf64a11a4072f"
+    },
+    {
+      "file": "evidence/loader.py",
+      "bytes": 222754,
+      "sha256": "f608b0f6e56732cf793ebc375b27d56845a8e4e700305160b5dfc7959adeb6d3"
+    },
+    {
+      "file": "evidence/greek_legal_ner-README.md",
+      "bytes": 9785,
+      "sha256": "a1fe23c7f6fe7b59c21b16a1e5eed541cd7698d3da27347fa581a178392d68d5"
+    },
+    {
+      "file": "evidence/scenario-main.py",
+      "bytes": 20843,
+      "sha256": "751e54508ca6b61dc9dd1227a0dc9bca0660d2b359fbcc30cd51e77ae4d33861"
+    },
+    {
+      "file": "evidence/greek_legal_ner-api.json",
+      "bytes": 1996,
+      "sha256": "e9ea9603e876b845d8e71dbb9d240de6116dcbaed0caacfc9a925543a6310027"
+    },
+    {
+      "file": "evidence/acl-paper.txt",
+      "bytes": 205372,
+      "sha256": "d410f65379a914626dfbbeb47d05313963dda8b148235ee441824db90f5524d4"
+    },
+    {
+      "file": "evidence/online_terms_of_service-README.md",
+      "bytes": 18314,
+      "sha256": "0f6044a6c789dda664a21e0a344338e4f9d66bb5ded4603e6664618ef5a4b27a"
+    },
+    {
+      "file": "evidence/acl-metadata.html",
+      "bytes": 11259,
+      "sha256": "c0d967f7acf774df5b8324d4ca5e4feda13082698e5035f8b8bc928ae9f8d913"
+    },
+    {
+      "file": "evidence/README.md",
+      "bytes": 7891,
+      "sha256": "bd3d2cb14b3dc42097280c7c514e5184437ee41e5ee5d66becefa148f1373d4c"
+    },
+    {
+      "file": "evidence/dataset-info.json",
+      "bytes": 2332,
+      "sha256": "978e04c6bed6135c87eb363308e5df8b3916897acf1bee2f47dcf3a4f5139798"
+    },
+    {
+      "file": "evidence/german_argument_mining-README.md",
+      "bytes": 11360,
+      "sha256": "aecdb2c86ebb27dabe712e0a66505eed3c78d6d1bfd56795a6f6204d0f587543"
+    },
+    {
+      "file": "evidence/brazilian_court_decisions-README.md",
+      "bytes": 10204,
+      "sha256": "c807fa4baaf8c6da57540d191e17630fa8196b268eb38c7b776126cb4dcad304"
+    },
+    {
+      "file": "evidence/brazilian_court_decisions-api.json",
+      "bytes": 1945,
+      "sha256": "5158dbdb043d32582b6a0a1b37f31d15967d96d3de7e5d22be04f8d05e9d5be2"
+    },
+    {
+      "file": "evidence/online_terms_of_service-api.json",
+      "bytes": 2098,
+      "sha256": "69ed6282e7386ee6cd1f4fa57256134400915da1296a2fe2a06ea19f26db4767"
+    },
+    {
+      "file": "evidence/run-specs-v0.3.0.py",
+      "bytes": 97948,
+      "sha256": "b8e73d208868cb4b971433e1aa321a817a7813852caa943347093de3c74062a9"
+    },
+    {
+      "file": "evidence/legalnero-README.md",
+      "bytes": 10644,
+      "sha256": "bcc9e1640826aa4a91acd013fee6257fedcd93659233c535ca90c4b6a04444fa"
+    },
+    {
+      "file": "evidence/configs-extracted.json",
+      "bytes": 207916,
+      "sha256": "10bf9548acbfe8698a55da7d088889c5af936cb7fa77a1c241821e92ee8c37e5"
+    },
+    {
+      "file": "evidence/paper.pdf",
+      "bytes": 2343555,
+      "sha256": "0571db28ff176922fb7e99eccbe7aafd0c70630287519582f5a13a00cc8fd107"
+    },
+    {
+      "file": "evidence/arxiv.html",
+      "bytes": 44429,
+      "sha256": "f8bcfa39b753896133f0bf8ce731a14b3dccbb5d06a2f9ea343bad236a921601"
+    },
+    {
+      "file": "evidence/classification.py",
+      "bytes": 5442,
+      "sha256": "a6063c053a07c3ad657cf4ecc045b60daf0be2b916261b613016155a79e0ceec"
+    },
+    {
+      "file": "evidence/acl-correct.html",
+      "bytes": 44551,
+      "sha256": "ffbedec23ca06c755c9888efb8073e7f312158792f3e4d71b0d537fbdfc3d58f"
+    },
+    {
+      "file": "evidence/paper.txt",
+      "bytes": 203956,
+      "sha256": "5129c63bea02a7214dfacd9aa221c5ab9905ec4224685fc3b80231176b442840"
+    },
+    {
+      "file": "evidence/legalnero-api.json",
+      "bytes": 1986,
+      "sha256": "a25fde6da5fc97f572fbf7b47755740c1f5f06645928501bc985002467b15c99"
+    },
+    {
+      "file": "evidence/acl-search.html",
+      "bytes": 11259,
+      "sha256": "c0d967f7acf774df5b8324d4ca5e4feda13082698e5035f8b8bc928ae9f8d913"
+    },
+    {
+      "file": "evidence/german_argument_mining-api.json",
+      "bytes": 2011,
+      "sha256": "2a06d2d92a88313e7ba1aef636fce37c4d7d5521b09ecd852a7637e4f358533b"
+    },
+    {
+      "file": "evidence/repo-readme.md",
+      "bytes": 42055,
+      "sha256": "b15a53ede3f4f82a092e098ff4ed1de8cb14aa75be5f03beeb110a8fed2e508c"
+    },
+    {
+      "file": "evidence/scenario-v0.3.0.py",
+      "bytes": 20396,
+      "sha256": "1c4a572dd2cbcb0a3ac9f5da185df3460c753e218f13620b9e9298b3d0e6b28c"
+    }
+  ],
+  "provenance_logs": {
+    "text-audit.json": {
+      "paragraphs_checked": 409,
+      "issues": []
+    },
+    "native-data-audit.json": {
+      "table_page": 20,
+      "source": "ACL paper Tables 5 and 6",
+      "ten_numeric_cells_match": true,
+      "values": [
+        [
+          "MiniLM",
+          "19.9",
+          "18.1"
+        ],
+        [
+          "DistilBERT",
+          "43.2",
+          "31.9"
+        ],
+        [
+          "mDeBERTa v3",
+          "44.1",
+          "34.8"
+        ],
+        [
+          "XLM-R base",
+          "36.8",
+          "19.7"
+        ],
+        [
+          "XLM-R large",
+          "48.5",
+          "36.0"
+        ]
+      ],
+      "native_tables": 9
+    },
+    "raw-record-audit.json": {
+      "examples": 13,
+      "main": 3,
+      "appendix": 10,
+      "languages": [
+        "de",
+        "el",
+        "en",
+        "fr",
+        "it",
+        "nb",
+        "pt",
+        "ro"
+      ],
+      "checks": [
+        {
+          "id": "german_argument_mining/test/line6",
+          "raw_file_and_line_sha256_match": true,
+          "full_record_match": true,
+          "official_transformation_match": true
+        },
+        {
+          "id": "online_terms_of_service_clause_topics/test/line1051",
+          "raw_file_and_line_sha256_match": true,
+          "full_record_match": true,
+          "official_transformation_match": true
+        },
+        {
+          "id": "legalnero/test/line4",
+          "raw_file_and_line_sha256_match": true,
+          "full_record_match": true,
+          "official_transformation_match": true
+        },
+        {
+          "id": "german_argument_mining/test/line75",
+          "raw_file_and_line_sha256_match": true,
+          "full_record_match": true,
+          "official_transformation_match": true
+        },
+        {
+          "id": "german_argument_mining/test/line10",
+          "raw_file_and_line_sha256_match": true,
+          "full_record_match": true,
+          "official_transformation_match": true
+        },
+        {
+          "id": "online_terms_of_service_unfairness_levels/test/line60",
+          "raw_file_and_line_sha256_match": true,
+          "full_record_match": true,
+          "official_transformation_match": true
+        },
+        {
+          "id": "online_terms_of_service_clause_topics/test/line2170",
+          "raw_file_and_line_sha256_match": true,
+          "full_record_match": true,
+          "official_transformation_match": true
+        },
+        {
+          "id": "covid19_emergency_event/test/line10",
+          "raw_file_and_line_sha256_match": true,
+          "full_record_match": true,
+          "official_transformation_match": true
+        },
+        {
+          "id": "covid19_emergency_event/test/line304",
+          "raw_file_and_line_sha256_match": true,
+          "full_record_match": true,
+          "official_transformation_match": true
+        },
+        {
+          "id": "covid19_emergency_event/test/line212",
+          "raw_file_and_line_sha256_match": true,
+          "full_record_match": true,
+          "official_transformation_match": true
+        },
+        {
+          "id": "greek_legal_ner/test/line1",
+          "raw_file_and_line_sha256_match": true,
+          "full_record_match": true,
+          "official_transformation_match": true
+        },
+        {
+          "id": "brazilian_court_decisions_judgment/test/line396",
+          "raw_file_and_line_sha256_match": true,
+          "full_record_match": true,
+          "official_transformation_match": true
+        },
+        {
+          "id": "brazilian_court_decisions_unanimity/test/line325",
+          "raw_file_and_line_sha256_match": true,
+          "full_record_match": true,
+          "official_transformation_match": true
+        }
+      ]
+    },
+    "package-audit.json": {
+      "parsed_xml_parts": 143,
+      "integer_bullets": 142,
+      "hyperlinks": 65,
+      "new_schema_errors": [],
+      "baseline_schema_errors": 11,
+      "package_integrity": "passed",
+      "internal_relationship_targets": "passed",
+      "unique_shape_ids": "passed",
+      "schema_note": "標準XSDを変更せず確認。マスター由来の既存エラーと、整数buSzPctの百分率字句形式との差を分離。整数箇条書きサイズは25000–400000で別途検査。",
+      "pages": 55,
+      "native_tables": 9,
+      "native_charts": 0
+    },
+    "layout-audit.json": {
+      "paragraphs_checked": 389,
+      "table_cells_checked": 148,
+      "issues": []
+    },
+    "manifest.json": [
+      {
+        "page": 1,
+        "title": "LEXTREME",
+        "section": "",
+        "kind": "cover"
+      },
+      {
+        "page": 2,
+        "title": "公式配布ページ：LEXTREME",
+        "section": "LEXTREME",
+        "kind": "image",
+        "sources": [
+          "site"
+        ]
+      },
+      {
+        "page": 3,
+        "title": "",
+        "section": "目次",
+        "kind": "toc"
+      },
+      {
+        "page": 4,
+        "title": "1. 法律文書の三つの読み取り方",
+        "section": "1. 法律文書の三つの読み取り方",
+        "kind": "divider"
+      },
+      {
+        "page": 5,
+        "title": "法律文書の理解を多言語で測る",
+        "section": "1. 法律文書の三つの読み取り方",
+        "kind": "content",
+        "sources": [
+          "paper",
+          "code"
+        ],
+        "body_text": [
+          "LEXTREMEは、法律文書の理解を多言語で測るためのデータセット群。既存の裁判例・法令・利用規約などを共通の形式にそろえている。",
+          "2023年のスイートは11データセットを18設定に分けて評価する。単一ラベル分類8設定、複数ラベル分類5設定、固有表現認識5設定からなる。",
+          "判決の結果、条項の話題、日付や法令名など、異なる粒度の情報を扱う。"
+        ]
+      },
+      {
+        "page": 6,
+        "title": "何を答えるかで三つに分かれる",
+        "section": "1. 法律文書の三つの読み取り方",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ]
+      },
+      {
+        "page": 7,
+        "title": "実例1：文の結論を識別する",
+        "section": "1. 法律文書の三つの読み取り方",
+        "kind": "example",
+        "sources": [
+          "german_argument_mining"
+        ],
+        "exampleID": "german_argument_mining/test/line6",
+        "example_index": 1,
+        "language": "de",
+        "quoted_text": "1. Der erstmals im Berufungsverfahren gestellte Antrag zu 3. ist zulässig .",
+        "answer_text": "conclusion",
+        "translated_text": "1. 控訴審で初めて提出された第3の申立ては適法である。"
+      },
+      {
+        "page": 8,
+        "title": "実例2：一つの条項に二つの話題を付ける",
+        "section": "1. 法律文書の三つの読み取り方",
+        "kind": "example",
+        "sources": [
+          "online_terms_of_service"
+        ],
+        "exampleID": "online_terms_of_service_clause_topics/test/line1051",
+        "example_index": 2,
+        "language": "en",
+        "quoted_text": "By using the Service in any way, you agree to and accept these Terms, our Privacy Notice, and any other legal notices or guidelines posted on the Site.",
+        "answer_text": "7, 8",
+        "translated_text": "本サービスをどのように利用した場合も、本規約、当社のプライバシー通知、本サイト上のその他の法的通知・指針に同意し、受け入れるものとします。"
+      },
+      {
+        "page": 9,
+        "title": "実例3：日付に対応するトークンを見つける",
+        "section": "1. 法律文書の三つの読み取り方",
+        "kind": "example",
+        "sources": [
+          "legalnero"
+        ],
+        "exampleID": "legalnero/test/line4",
+        "example_index": 3,
+        "language": "ro",
+        "quoted_text": "\"MONITORUL\" \"OFICIAL\" \"nr.\" \"959\" \"din\" \"28\" \"noiembrie\" \"2019\"",
+        "answer_text": "\"O\" \"O\" \"O\" \"O\" \"B-TIME\" \"I-TIME\" \"I-TIME\" \"I-TIME\"",
+        "translated_text": "官報 第959号、2019年11月28日付。"
+      },
+      {
+        "page": 10,
+        "title": "原語の位置とラベルを対応させる",
+        "section": "1. 法律文書の三つの読み取り方",
+        "kind": "content",
+        "sources": [
+          "code",
+          "legalnero"
+        ],
+        "body_text": [
+          "固有表現認識では、文全体に一つのラベルを付けず、トークンごとに種類を付ける。B-は開始、I-は継続、Oは対象外を表す。",
+          "実例3では「din」から日付の末尾までがTIMEと注釈されている。語の境界と注釈範囲を元データのまま示した。",
+          "訳は入力の意味を示し、原語のトークン列と正解ラベルは保持する。日本語訳へ機械的に同じBIO列を付け替えることはしない。"
+        ]
+      },
+      {
+        "page": 11,
+        "title": "2. データ・言語・法域を組み合わせる",
+        "section": "2. データ・言語・法域を組み合わせる",
+        "kind": "divider"
+      },
+      {
+        "page": 12,
+        "title": "既存データを選び、共通形式にそろえる",
+        "section": "2. データ・言語・法域を組み合わせる",
+        "kind": "content",
+        "sources": [
+          "paper",
+          "loader"
+        ],
+        "body_text": [
+          "法律NLPに関する108件の論文を調べ、公開・再配布の条件、注釈の作り方、法的課題との関係などに基づいて11データセットを選んだ。",
+          "元のラベルと入力を共通のinput・label・languageへ対応させる。内容を一つの新しい法域へ翻訳・統合したデータではない。",
+          "各データセットにtrain・validation・testを用意する。判決の認容と全員一致、法典の階層などを別の設定として扱う。"
+        ]
+      },
+      {
+        "page": 13,
+        "title": "分類で使う文書と予測対象",
+        "section": "2. データ・言語・法域を組み合わせる",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ]
+      },
+      {
+        "page": 14,
+        "title": "政策措置・EU法・固有表現も含む",
+        "section": "2. データ・言語・法域を組み合わせる",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ]
+      },
+      {
+        "page": 15,
+        "title": "言語と法域を別の軸として扱う",
+        "section": "2. データ・言語・法域を組み合わせる",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ],
+        "body_text": [
+          "一つの法域に複数の言語があり、同じ言語が複数の法域で使われる。スイスの判決はドイツ語・フランス語・イタリア語で扱う。",
+          "MultiEURLEXとMAPAは複数のEU公用語を扱う。英語だけを見てもスイート全体は評価できない。",
+          "言語別の総合集計は24 EU言語。C19の構成データにはノルウェー語もあるため、データ内の言語と総合集計対象を区別する。"
+        ]
+      },
+      {
+        "page": 16,
+        "title": "同じ文書を別の観点から分類する",
+        "section": "2. データ・言語・法域を組み合わせる",
+        "kind": "content",
+        "sources": [
+          "paper",
+          "loader"
+        ],
+        "body_text": [
+          "Greek Legal Codeはvolume・chapter・subjectの3段階のカテゴリを予測する。細かい階層ほどラベル候補が増える。",
+          "Online Terms of Serviceでは、不公正さの程度は単一ラベル、条項の話題は複数ラベルとなる。入力の出所が同じでも答え方は異なる。",
+          "各設定・言語・分割をそろえて比較する。設定数や多言語の翻訳を単純に足して「別の文書数」と数えない。"
+        ]
+      },
+      {
+        "page": 17,
+        "title": "3. 原スイートとHELMの評価条件",
+        "section": "3. 原スイートとHELMの評価条件",
+        "kind": "divider"
+      },
+      {
+        "page": 18,
+        "title": "原スイートはタスクごとに学習する",
+        "section": "3. 原スイートとHELMの評価条件",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ],
+        "body_text": [
+          "基準実験では、各設定でfine-tuningし、seed=1〜3の3試行を用いる。testのmacro-F1で評価し、平均とばらつきを報告する。",
+          "少数クラスへの偏りを抑えるため、単一ラベル分類ではGLCを除いてランダムな過剰サンプリングを用いる。",
+          "長い文書は128トークンの塊に分けて階層型モデルで処理する。評価条件はHELMの少数例プロンプトと異なる。"
+        ]
+      },
+      {
+        "page": 19,
+        "title": "データ別と、言語別の二方向で集約する",
+        "section": "3. 原スイートとHELMの評価条件",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ],
+        "body_text": [
+          "データ別では、設定内の言語、データセット内の設定、スイート内のデータセットの順に、調和平均を取る。",
+          "言語別では、各言語について設定とデータセットをまとめ、最後に言語間の調和平均を取る。",
+          "最終LEXTREME得点は、この二つの集約得点の調和平均。大きなデータセットだけが総合得点を左右しないようにする。法域別の総合集計は設けていない。"
+        ]
+      },
+      {
+        "page": 20,
+        "title": "原スイートの基準実験の集約得点",
+        "section": "3. 原スイートとHELMの評価条件",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ]
+      },
+      {
+        "page": 21,
+        "title": "HELMはラベルを生成する形へ変換する",
+        "section": "3. 原スイートとHELMの評価条件",
+        "kind": "content",
+        "sources": [
+          "code",
+          "spec"
+        ],
+        "body_text": [
+          "HELM v0.3.0は18設定を読み込み、英語の課題指示、Passage、Answerという形式でラベル文字列を生成させる。",
+          "設定別の最大提示例数は1〜5。長い法令・判決ほど少なく、NERでは5例を上限とする。実提示数は公開runがないため実測していない。",
+          "MultiEURLEXでは、そのレコードに存在する言語から一つを乱数で選ぶ。全言語を各文書について順番に評価する実装ではない。"
+        ]
+      },
+      {
+        "page": 22,
+        "title": "HELMの生成上限は課題ごとに異なる",
+        "section": "3. 原スイートとHELMの評価条件",
+        "kind": "content",
+        "sources": [
+          "code"
+        ]
+      },
+      {
+        "page": 23,
+        "title": "Classic v0.4.0の公開実行は0件",
+        "section": "3. 原スイートとHELMの評価条件",
+        "kind": "content",
+        "sources": [
+          "helm"
+        ]
+      },
+      {
+        "page": 24,
+        "title": "採点の登録も課題別に確かめる",
+        "section": "3. 原スイートとHELMの評価条件",
+        "kind": "content",
+        "sources": [
+          "spec",
+          "metric"
+        ],
+        "body_text": [
+          "分類ではclassification_macro_f1とclassification_micro_f1を計算する。複数ラベルの出力は「, 」で区切り、正規化したラベルの集合を比較する。",
+          "v0.3.0のrun specでは、NERに分類指標を追加していない。BasicMetricの正解一致指標リストも空で、NERの品質得点をこの定義だけから読み取れない。",
+          "公開実行が0件なので、モデル別の得点は掲載されていない。原スイートのNER macro-F1やfine-tuning得点と同じランキングがあるとは解釈しない。"
+        ]
+      },
+      {
+        "page": 25,
+        "title": "4. 入手方法と利用の範囲",
+        "section": "4. 入手方法と利用の範囲",
+        "kind": "divider"
+      },
+      {
+        "page": 26,
+        "title": "固定版のローダーと構成データを使う",
+        "section": "4. 入手方法と利用の範囲",
+        "kind": "code",
+        "sources": [
+          "loader"
+        ]
+      },
+      {
+        "page": 27,
+        "title": "公開実例は構成データから再取得した",
+        "section": "4. 入手方法と利用の範囲",
+        "kind": "content",
+        "sources": [
+          "loader",
+          "code"
+        ],
+        "body_text": [
+          "この資料の13例は、6つの構成データのtest JSONLから選んだ。HELMの公開モデル応答から採った例ではない。",
+          "各データのコミットID、ファイルSHA-256、行番号、原レコード全体を保存した。表示した入力と正解を公式変換処理で照合している。",
+          "8言語を含むが、全データ・全言語を代表する無作為標本ではない。入力フィールドは省略せず、原文と正解を同じページに置いた。"
+        ]
+      },
+      {
+        "page": 28,
+        "title": "スイートと構成データの権利を分ける",
+        "section": "4. 入手方法と利用の範囲",
+        "kind": "content",
+        "sources": [
+          "site",
+          "license"
+        ],
+        "body_text": [
+          "現在のLEXTREME配布カードはCC BY 4.0を表示する。構成データごとに権利条件が異なるため、配布物ごとに確認する。",
+          "例に使った構成データには、GAMのCC BY 4.0、C19のCC0、OTSのCC BY-NC 2.5、LegalNERoのCC BY-NC-ND 4.0、Greek Legal NERのCC BY-NC-SA 4.0がある。",
+          "本資料は出所を付けた短い例の引用と意味の訳を示す。コードのApache 2.0を、元文章の再配布条件に読み替えない。"
+        ]
+      },
+      {
+        "page": 29,
+        "title": "配布ページの更新とHELM実装を区別する",
+        "section": "4. 入手方法と利用の範囲",
+        "kind": "content",
+        "sources": [
+          "site",
+          "code"
+        ],
+        "body_text": [
+          "現在の配布カードは、ウクライナの裁判例3時期を追加した12データセット・21設定・25言語を案内している。",
+          "2023年の論文とHELM実装は11データセット・18設定。この資料の18設定には、追加されたウクライナの3設定を含めていない。",
+          "HELMのmain版も18設定。一方、現配布ローダーは32設定を登録しており、カードの21設定という概要とも一致しない。"
+        ]
+      },
+      {
+        "page": 30,
+        "title": "課題・言語・評価条件をそろえて読む",
+        "section": "4. 入手方法と利用の範囲",
+        "kind": "content",
+        "sources": [
+          "paper",
+          "helm"
+        ],
+        "body_text": [
+          "LEXTREMEは、法律文書の分類と固有表現認識を多言語で比べるスイート。法域、入力の長さ、ラベル数、答え方が構成データごとに異なる。",
+          "原スイートの集約得点はfine-tuning実験を多段の調和平均でまとめる。HELMは少数例から文字列を生成する別の評価条件を用意している。",
+          "Classicの公開runは0件。公式実装、構成データの原記録、採点方法の範囲を確かめて利用する。"
+        ]
+      },
+      {
+        "page": 31,
+        "title": "Appendix",
+        "section": "Appendix",
+        "kind": "divider"
+      },
+      {
+        "page": 32,
+        "title": "",
+        "section": "Appendix: 目次",
+        "kind": "toc"
+      },
+      {
+        "page": 33,
+        "title": "実例4：一般的な法的判断基準を識別する",
+        "section": "Appendix: 1. 追加の実例",
+        "kind": "example",
+        "sources": [
+          "german_argument_mining"
+        ],
+        "exampleID": "german_argument_mining/test/line75",
+        "example_index": 4,
+        "language": "de",
+        "quoted_text": "Ob eine überraschende Klausel vorliegt , ist durch Auslegung zu ermitteln .",
+        "answer_text": "definition",
+        "translated_text": "意外性のある条項が存在するかどうかは、解釈によって判断しなければならない。"
+      },
+      {
+        "page": 34,
+        "title": "実例5：具体的な事件への当てはめを識別する",
+        "section": "Appendix: 1. 追加の実例",
+        "kind": "example",
+        "sources": [
+          "german_argument_mining"
+        ],
+        "exampleID": "german_argument_mining/test/line10",
+        "example_index": 5,
+        "language": "de",
+        "quoted_text": "Die ergänzende Darlegung der Nettovorteile ist gem. § 264 Nr. 1 ZPO unschädlich .",
+        "answer_text": "subsumption",
+        "translated_text": "正味の利益についての補充的な説明は、民事訴訟法第264条第1号により支障を生じさせない。"
+      },
+      {
+        "page": 35,
+        "title": "実例6：ドイツ語の免責条項を分類する",
+        "section": "Appendix: 1. 追加の実例",
+        "kind": "example",
+        "sources": [
+          "online_terms_of_service"
+        ],
+        "exampleID": "online_terms_of_service_unfairness_levels/test/line60",
+        "example_index": 6,
+        "language": "de",
+        "quoted_text": "Wir haften nicht für Verluste oder Schäden, die durch Ihre Verletzung dieser Sicherungspflicht entstehen.",
+        "answer_text": "potentially_unfair",
+        "translated_text": "この安全確保義務に対するあなたの違反によって生じる損失や損害について、当社は責任を負いません。"
+      },
+      {
+        "page": 36,
+        "title": "実例7：イタリア語の削除条項を分類する",
+        "section": "Appendix: 1. 追加の実例",
+        "kind": "example",
+        "sources": [
+          "online_terms_of_service"
+        ],
+        "exampleID": "online_terms_of_service_clause_topics/test/line2170",
+        "example_index": 7,
+        "language": "it",
+        "quoted_text": "Avremo altresì diritto a rimuovere ogni Contenuto che violi le presenti Condizioni o che, a nostra assoluta discrezione, riteniamo comunque non appropriato.",
+        "answer_text": "2",
+        "translated_text": "当社はまた、本規約に違反する、または当社の単独の裁量によりその他の点で不適切と判断するあらゆるコンテンツを削除する権利を有します。"
+      },
+      {
+        "page": 37,
+        "title": "実例8：フランス語の学校閉鎖措置を読む",
+        "section": "Appendix: 1. 追加の実例",
+        "kind": "example",
+        "sources": [
+          "covid19_emergency_event"
+        ],
+        "exampleID": "covid19_emergency_event/test/line10",
+        "example_index": 8,
+        "language": "fr",
+        "quoted_text": "Les leçons et activités sont suspendues dans l'enseignement maternel, primaire et secondaire.",
+        "answer_text": "3",
+        "translated_text": "就学前教育、初等教育および中等教育では、授業と活動を停止する。"
+      },
+      {
+        "page": 38,
+        "title": "実例9：ノルウェー語の人数制限を読む",
+        "section": "Appendix: 1. 追加の実例",
+        "kind": "example",
+        "sources": [
+          "covid19_emergency_event"
+        ],
+        "exampleID": "covid19_emergency_event/test/line304",
+        "example_index": 9,
+        "language": "nb",
+        "quoted_text": "Dette innebærer også at treninger og annen organisert idrettsaktivitet kan gjennomføres for inntil 20 personer som holder minst én meter avstand.",
+        "answer_text": "2",
+        "translated_text": "これは、少なくとも1メートルの距離を保つ最大20人で、練習やその他の組織的なスポーツ活動を実施できることも意味する。"
+      },
+      {
+        "page": 39,
+        "title": "実例10：イタリア語の義務に複数ラベルを付ける",
+        "section": "Appendix: 1. 追加の実例",
+        "kind": "example",
+        "sources": [
+          "covid19_emergency_event"
+        ],
+        "exampleID": "covid19_emergency_event/test/line212",
+        "example_index": 10,
+        "language": "it",
+        "quoted_text": "obbligo di rimanere raggiungibile per le attività di sorveglianza;",
+        "answer_text": "1, 2",
+        "translated_text": "監視活動のために連絡が取れる状態を保つ義務。"
+      },
+      {
+        "page": 40,
+        "title": "実例11：ギリシャ語の法令参照を見つける",
+        "section": "Appendix: 1. 追加の実例",
+        "kind": "example",
+        "sources": [
+          "greek_legal_ner"
+        ],
+        "exampleID": "greek_legal_ner/test/line1",
+        "example_index": 11,
+        "language": "el",
+        "quoted_text": "\"ΠΡΟΕΔΡΙΚΟ\" \"ΔΙΑΤΑΓΜΑ\" \"ΥΠ\" \"’\" \"ΑΡΙΘΜ\" \".\" \"133\"",
+        "answer_text": "\"B-LEG-REFS\" \"I-LEG-REFS\" \"I-LEG-REFS\" \"I-LEG-REFS\" \"I-LEG-REFS\" \"I-LEG-REFS\" \"I-LEG-REFS\"",
+        "translated_text": "大統領令 第133号。"
+      },
+      {
+        "page": 41,
+        "title": "実例12：ブラジルの異議申立ての結果を予測する",
+        "section": "Appendix: 1. 追加の実例",
+        "kind": "example",
+        "sources": [
+          "brazilian_court_decisions"
+        ],
+        "exampleID": "brazilian_court_decisions_judgment/test/line396",
+        "example_index": 12,
+        "language": "pt",
+        "quoted_text": "EMBARGOS DE DECLARAÇÃO. ALEGAÇÃO DE OMISSÃO NO JULGADO. HONORÁRIOS RECURSAIS. DESCABIMENTO. INEXISTÊNCIA DE VÍCIO.",
+        "answer_text": "no",
+        "translated_text": "判決の明確化を求める異議申立て。判決に判断の欠落があるとの主張。上訴審の弁護士報酬。認められない。瑕疵は存在しない。"
+      },
+      {
+        "page": 42,
+        "title": "実例13：同じ裁判資料で全員一致を予測する",
+        "section": "Appendix: 1. 追加の実例",
+        "kind": "example",
+        "sources": [
+          "brazilian_court_decisions"
+        ],
+        "exampleID": "brazilian_court_decisions_unanimity/test/line325",
+        "example_index": 13,
+        "language": "pt",
+        "quoted_text": "APELAÇÃO CÍVEL. JUSTIÇA GRATUITA. DECISÃO INTERLOCUTÓRIA DE INDEFERIMENTO QUE NÃO FOI IMPUGNADA NO PRAZO LEGAL. PRECLUSÃO. IMPOSSIBILIDADE DE REDISCUSSÃO EM SEDE DE APELAÇÃO. SENTENÇA MANTIDA.",
+        "answer_text": "unanimity",
+        "translated_text": "民事上訴。訴訟費用の免除。法定期間内に争われなかった却下の中間決定。失権。上訴段階で再び争うことはできない。原判決を維持する。"
+      },
+      {
+        "page": 43,
+        "title": "代表的な分類設定の分割件数",
+        "section": "Appendix: 2. 構成と変換の詳細",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ]
+      },
+      {
+        "page": 44,
+        "title": "法令・固有表現の分割件数",
+        "section": "Appendix: 2. 構成と変換の詳細",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ]
+      },
+      {
+        "page": 45,
+        "title": "文書数を横断して単純加算しない",
+        "section": "Appendix: 2. 構成と変換の詳細",
+        "kind": "content",
+        "sources": [
+          "paper"
+        ],
+        "body_text": [
+          "MAPAは粗い・細かい両設定でtrain 27,823、validation 3,354、test 10,590。トークン化された単位を扱う。",
+          "同じ文書に対するラベル階層や言語別の翻訳があるため、設定別の件数を足すと、独立した法律文書数にはならない。",
+          "表示した分割件数は2023年の報告値。今回の取得値は、6つのtest JSONLの行数と区別してstats.jsonに保存した。"
+        ]
+      },
+      {
+        "page": 46,
+        "title": "NERの出力上限は注釈列の長さに依存",
+        "section": "Appendix: 2. 構成と変換の詳細",
+        "kind": "content",
+        "sources": [
+          "code"
+        ]
+      },
+      {
+        "page": 47,
+        "title": "文字列ラベルを整数番号へ変換する",
+        "section": "Appendix: 2. 構成と変換の詳細",
+        "kind": "content",
+        "sources": [
+          "loader",
+          "code"
+        ],
+        "body_text": [
+          "LEXTREMEローダーは、OTSの条項話題をa・ch・cr・j・law・ltd・ter・use・pincの順でClassLabelにする。",
+          "HELMは複数ラベルの整数を文字列へ変換する。そのため実例2のuse・pincは、正解「7, 8」になる。",
+          "C19もevent1〜event8を0〜7へ対応させる。原ラベル名の数字と、HELMの0始まりの番号を混同しない。"
+        ]
+      },
+      {
+        "page": 48,
+        "title": "NERでは引用符でトークンを区切る",
+        "section": "Appendix: 2. 構成と変換の詳細",
+        "kind": "content",
+        "sources": [
+          "code"
+        ],
+        "body_text": [
+          "入力のトークンと正解のBIOラベルは、それぞれ「\"token1\" \"token2\"」という形式の文字列にする。",
+          "誤答参照は非Oラベルを別の種類に置き換えて作り、シャッフル後に最大30件へ制限する。正解は元の注釈列をそのまま保持する。",
+          "参照候補の作成に使う乱数は42。MultiEURLEXの言語選択にも同じ乱数状態を使うため、設定と処理順を保存する。"
+        ]
+      },
+      {
+        "page": 49,
+        "title": "未注釈の文と不公正さを区別する",
+        "section": "Appendix: 2. 構成と変換の詳細",
+        "kind": "content",
+        "sources": [
+          "loader",
+          "code"
+        ],
+        "body_text": [
+          "OTSの原test JSONLは4,297行あるが、不公正さの分類に使うラベルは3種類で、untaggedの行をローダーが除外する。",
+          "同様にBCDの全員一致では、unanimityとnot-unanimityの2種類を使い、not_determinedを除外する。指示文に候補が書かれていても、読込対象とは限らない。",
+          "この資料は有効ラベルを持つ行を選んだ。複数ラベルが空の文の参照処理や、全18設定の実行成功までは検証していない。"
+        ]
+      },
+      {
+        "page": 50,
+        "title": "研究・構築・評価コードを公開する",
+        "section": "Appendix: 3. 研究と参考文献",
+        "kind": "content",
+        "sources": [
+          "paper",
+          "code"
+        ],
+        "body_text": [
+          "Joel Niklaus、Veton Matoshi、Pooja Rani、Andrea Galassi、Matthias Stürmer、Ilias Chalkidisが、多言語の法律ベンチマークとしてLEXTREMEを提案した。",
+          "既存の11データセットを選び、共通のローダーと、データ別・言語別の集約方法を用意した。論文にはモデル比較と構成データごとの結果がある。",
+          "HELMは同じデータを生成形式で扱うシナリオを別途実装している。データの構築と評価実装は別の貢献として区別する。"
+        ]
+      },
+      {
+        "page": 51,
+        "title": "参考文献",
+        "section": "Appendix: 3. 研究と参考文献",
+        "kind": "references"
+      },
+      {
+        "page": 52,
+        "title": "参考文献",
+        "section": "Appendix: 3. 研究と参考文献",
+        "kind": "references"
+      },
+      {
+        "page": 53,
+        "title": "参考文献",
+        "section": "Appendix: 3. 研究と参考文献",
+        "kind": "references"
+      },
+      {
+        "page": 54,
+        "title": "参考文献",
+        "section": "Appendix: 3. 研究と参考文献",
+        "kind": "references"
+      },
+      {
+        "page": 55,
+        "title": "参考文献",
+        "section": "Appendix: 3. 研究と参考文献",
+        "kind": "references"
+      }
+    ],
+    "links-audit.json": {
+      "native_url_only_runs": 65,
+      "pdf_link_rectangles": 65,
+      "pdf_link_text_exactly_matches_url": false,
+      "pdf_link_character_centers_match_url": true,
+      "glyph_box_overhangs": [
+        {
+          "page": 5,
+          "extracted_text": "https://aclanthology.org/2023.findings-emnlp.200/\n[2] Stanford CRFM. LEXTREMEScenario, HELM v0.3.0",
+          "uri": "https://aclanthology.org/2023.findings-emnlp.200/",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 10,
+          "extracted_text": "https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/lextreme_scenario.py\n 。  ",
+          "uri": "https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/lextreme_scenario.py",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 12,
+          "extracted_text": "https://aclanthology.org/2023.findings-emnlp.200/\n[2] LEXTREME loader, 2023-02-07 版（65f6046b808",
+          "uri": "https://aclanthology.org/2023.findings-emnlp.200/",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 16,
+          "extracted_text": "https://aclanthology.org/2023.findings-emnlp.200/\n[2] LEXTREME loader, 2023-02-07 版（65f6046b808",
+          "uri": "https://aclanthology.org/2023.findings-emnlp.200/",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 30,
+          "extracted_text": "https://aclanthology.org/2023.findings-emnlp.200/\n[2] Stanford CRFM. HELM Classic v0.4.0 （2023-11-1",
+          "uri": "https://aclanthology.org/2023.findings-emnlp.200/",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 50,
+          "extracted_text": "https://aclanthology.org/2023.findings-emnlp.200/\n[2] Stanford CRFM. LEXTREMEScenario, HELM v0.3.0",
+          "uri": "https://aclanthology.org/2023.findings-emnlp.200/",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        }
+      ],
+      "shortened_url_labels": [],
+      "issues": []
+    },
+    "notes-audit.json": {
+      "notes_slides": 0,
+      "passed": true
+    },
+    "screenshot-log.json": {
+      "pages": [
+        {
+          "slug": "lextreme",
+          "url": "https://huggingface.co/datasets/joelniklaus/lextreme",
+          "status": 200,
+          "title": "joelniklaus/lextreme · Datasets at Hugging Face",
+          "css": 4,
+          "screenshot": "official-site.png",
+          "transport": "system-CA-verified urllib responses rendered in Chromium; persistent trust unchanged"
+        }
+      ],
+      "asset_failures": []
+    },
+    "evidence/commits.json": [
+      {
+        "id": "73271418f8710e672618fa05f727c9aee239c24b",
+        "title": "Add Ukrainian court decisions judgment prediction subset (#16)",
+        "message": "\n\n\n- Add Ukrainian court decisions judgment prediction subset (9ce8fc6ff81bc0bef5f3006c2db387e2ded0380b)\n- Update sample count to 150K (full extraction) (74511d0909d2cabb749ece2e4e422d111838833d)\n- Update Ukrainian court decisions: 3 temporal epoch configs (bfcc1476fc1f92cfe2e64fd4afc52a5bd63e1725)\n- Update Ukrainian configs: use *_lextreme source configs (<=1000 val/test), remove text truncation (3bcc57d8588bf3d764211ba366034d01a4b01851)\n- Update LEXTREME dataset card: add Ukrainian (uk) language, Ukrainian Court Decisions task (f0cb2a6a5c6772cbee2e1bb7831b4d9872a45aff)\n\n\nCo-authored-by: san <vovkes222@users.noreply.huggingface.co>\nCo-authored-by: Volodymyr Ovcharov <overthelex@users.noreply.huggingface.co>\n",
+        "authors": [
+          {
+            "user": "joelniklaus",
+            "avatar": "https://cdn-avatars.huggingface.co/v1/production/uploads/1656078368144-5fae5f68b8423e1d80b8a988.jpeg"
+          },
+          {
+            "user": "vovkes222",
+            "avatar": "/avatars/0267eed392da02be38c6802c32c20b5e.svg"
+          },
+          {
+            "user": "overthelex",
+            "avatar": "https://cdn-avatars.huggingface.co/v1/production/uploads/6a04991c7d77b348feb75d73/3SHgBFJ-g-eLHdw06QERV.jpeg"
+          }
+        ],
+        "date": "2026-05-20T08:43:46.000Z"
+      },
+      {
+        "id": "8de79b42002a6e7ab7e713787f4c427d122a269f",
+        "title": "Adjust for law sub area (#15)",
+        "message": "\n\n\n- Adjust for law sub area (e05af48f5ce7fc52c0c8be1fb641f372d750c9d0)\n\n\nCo-authored-by: Visu <vr18@users.noreply.huggingface.co>\n",
+        "authors": [
+          {
+            "user": "Joelito",
+            "avatar": "/avatars/ee8305e2f633877bd1f01823e81f8928.svg"
+          },
+          {
+            "user": "vr18",
+            "avatar": "/avatars/5ec94c671ad99f673692ad80bac9a371.svg"
+          }
+        ],
+        "date": "2023-04-29T07:02:17.000Z"
+      },
+      {
+        "id": "917c6f89300315990560c402b200259b622654f0",
+        "title": "Update README.md",
+        "message": "",
+        "authors": [
+          {
+            "user": "Joelito",
+            "avatar": "/avatars/ee8305e2f633877bd1f01823e81f8928.svg"
+          }
+        ],
+        "date": "2023-04-03T01:19:15.000Z"
+      },
+      {
+        "id": "cf288ff46cf1d08ecf936e9cb3656f4aeb3f245b",
+        "title": "Fixing bugs (loading swiss_law_area and swiss_judgment_xl dataset) (#14)",
+        "message": "\n\n\n- Fixing bugs (loading swiss_law_area and swiss_judgment_xl dataset) (2b1e737b388afba5e7ed42c1802d14abecfa4d60)\n\n\nCo-authored-by: Visu <vr18@users.noreply.huggingface.co>\n",
+        "authors": [
+          {
+            "user": "Joelito",
+            "avatar": "/avatars/ee8305e2f633877bd1f01823e81f8928.svg"
+          },
+          {
+            "user": "vr18",
+            "avatar": "/avatars/5ec94c671ad99f673692ad80bac9a371.svg"
+          }
+        ],
+        "date": "2023-04-02T18:17:58.000Z"
+      },
+      {
+        "id": "b9e9b274ff25d1044e4a06b72d5d702be666fdd3",
+        "title": "Update lextreme.py (#13)",
+        "message": "\n\n\n- Update lextreme.py (dde262cf830c512718049f9449267c41a6859b17)\n\n\nCo-authored-by: Ronja Stern <Stern5497@users.noreply.huggingface.co>\n",
+        "authors": [
+          {
+            "user": "Joelito",
+            "avatar": "/avatars/ee8305e2f633877bd1f01823e81f8928.svg"
+          },
+          {
+            "user": "Stern5497",
+            "avatar": "/avatars/79824cc50f214947eac879294392418b.svg"
+          }
+        ],
+        "date": "2023-03-31T07:48:28.000Z"
+      },
+      {
+        "id": "e20c963737b9bdc2a11bbd06bf7bf5a39b2c2114",
+        "title": "added config name",
+        "message": "",
+        "authors": [
+          {
+            "user": "Joelito",
+            "avatar": "/avatars/ee8305e2f633877bd1f01823e81f8928.svg"
+          }
+        ],
+        "date": "2023-03-18T01:52:09.000Z"
+      },
+      {
+        "id": "1494558172550cd2355b7ed373578cfd56274dff",
+        "title": "fixed typo",
+        "message": "",
+        "authors": [
+          {
+            "user": "Joelito",
+            "avatar": "/avatars/ee8305e2f633877bd1f01823e81f8928.svg"
+          }
+        ],
+        "date": "2023-03-18T01:50:07.000Z"
+      },
+      {
+        "id": "0d7beae1d61ef952064c97ff95778819a538f099",
+        "title": "remove non-critical classes from datasets predicting the degree of criticality",
+        "message": "",
+        "authors": [
+          {
+            "user": "Joelito",
+            "avatar": "/avatars/ee8305e2f633877bd1f01823e81f8928.svg"
+          }
+        ],
+        "date": "2023-03-18T01:45:26.000Z"
+      },
+      {
+        "id": "ca4a319ffddafaaf07bd0ff2b615d088b9a88aa1",
+        "title": "Update lextreme.py",
+        "message": "",
+        "authors": [
+          {
+            "user": "Joelito",
+            "avatar": "/avatars/ee8305e2f633877bd1f01823e81f8928.svg"
+          }
+        ],
+        "date": "2023-03-18T01:40:26.000Z"
+      },
+      {
+        "id": "469467a5b3740d6253cfa8bbf61832b95220b827",
+        "title": "Add criticality prediction configs (#8)",
+        "message": "\n\n\n- Add criticality prediction configs (6f0b3ece7bdb4fd123f07a9e49d8053358116938)\n\n\nCo-authored-by: Ronja Stern <Stern5497@users.noreply.huggingface.co>\n",
+        "authors": [
+          {
+            "user": "Joelito",
+            "avatar": "/avatars/ee8305e2f633877bd1f01823e81f8928.svg"
+          },
+          {
+            "user": "Stern5497",
+            "avatar": "/avatars/79824cc50f214947eac879294392418b.svg"
+          }
+        ],
+        "date": "2023-03-17T15:24:18.000Z"
+      },
+      {
+        "id": "1a4cca7d557e8e2573774a71d206b99c8e7e9ca3",
+        "title": "Added Judgment Prediction Dataset for Turkish Court of Cassation (#5)",
+        "message": "\n\n\n- Added Judgment Prediction Dataset for Turkish Court of Cassation (41756ba5fe6759776a4ba68ef878c64dd56a04f8)\n\n\nCo-authored-by: Ceyhun Emre Öztürk <ceyhunemreozturk@users.noreply.huggingface.co>\n",
+        "authors": [
+          {
+            "user": "Joelito",
+            "avatar": "/avatars/ee8305e2f633877bd1f01823e81f8928.svg"
+          },
+          {
+            "user": "ceyhunemreozturk",
+            "avatar": "https://cdn-avatars.huggingface.co/v1/production/uploads/1676732474139-62e39aa643e02bbd6f4dc310.png"
+          }
+        ],
+        "date": "2023-03-09T08:36:54.000Z"
+      },
+      {
+        "id": "65f6046b8083eeaec73e0cb539d0bc18a7645970",
+        "title": "Merge branch 'main' of https://huggingface.co/datasets/joelito/lextreme into main",
+        "message": "\n",
+        "authors": [
+          {
+            "user": "joelniklaus",
+            "avatar": "https://cdn-avatars.huggingface.co/v1/production/uploads/1656078368144-5fae5f68b8423e1d80b8a988.jpeg"
+          }
+        ],
+        "date": "2023-02-07T00:02:21.000Z"
+      },
+      {
+        "id": "89c5abc27f5d44770227ea91af11511d356bdae4",
+        "title": "added information about how to contribute",
+        "message": "\n",
+        "authors": [
+          {
+            "user": "joelniklaus",
+            "avatar": "https://cdn-avatars.huggingface.co/v1/production/uploads/1656078368144-5fae5f68b8423e1d80b8a988.jpeg"
+          }
+        ],
+        "date": "2023-02-07T00:02:11.000Z"
+      },
+      {
+        "id": "5f180ea82756d7490ea12af543590ef7898707f9",
+        "title": "Update README.md (#4)",
+        "message": "\n\n\n- Update README.md (71c1c7961ff070e1917d46380600ae73f1b4f127)\n\n\nCo-authored-by: kapllan <kapllan@users.noreply.huggingface.co>\n",
+        "authors": [
+          {
+            "user": "Joelito",
+            "avatar": "/avatars/ee8305e2f633877bd1f01823e81f8928.svg"
+          },
+          {
+            "user": "kapllan",
+            "avatar": "https://cdn-avatars.huggingface.co/v1/production/uploads/1665497953261-noauth.png"
+          }
+        ],
+        "date": "2023-02-06T21:57:40.000Z"
+      },
+      {
+        "id": "6f63c28a8eeaa3be97e73bf161e69504ba11f6a4",
+        "title": "added lextreme citation",
+        "message": "\n",
+        "authors": [
+          {
+            "user": "joelniklaus",
+            "avatar": "https://cdn-avatars.huggingface.co/v1/production/uploads/1656078368144-5fae5f68b8423e1d80b8a988.jpeg"
+          }
+        ],
+        "date": "2023-02-03T00:06:46.000Z"
+      },
+      {
+        "id": "754488ccaf9c783dbd03b9a2210af119fa0b4799",
+        "title": "Fixed Bug for multi_eurlex",
+        "message": "\n",
+        "authors": [
+          {
+            "user": "joelniklaus",
+            "avatar": "https://cdn-avatars.huggingface.co/v1/production/uploads/1656078368144-5fae5f68b8423e1d80b8a988.jpeg"
+          }
+        ],
+        "date": "2023-01-22T20:10:31.000Z"
+      },
+      {
+        "id": "d8dcf6467e37532dc67ff988cef084c47ade989b",
+        "title": "Fixed Bug for multi_eurlex",
+        "message": "\n",
+        "authors": [
+          {
+            "user": "joelniklaus",
+            "avatar": "https://cdn-avatars.huggingface.co/v1/production/uploads/1656078368144-5fae5f68b8423e1d80b8a988.jpeg"
+          }
+        ],
+        "date": "2023-01-22T19:21:33.000Z"
+      },
+      {
+        "id": "4f61c9ccd6a09fc5ce65b22aeab1e2fca0778533",
+        "title": "Fixed Bug in loading script",
+        "message": "\n",
+        "authors": [
+          {
+            "user": "joelniklaus",
+            "avatar": "https://cdn-avatars.huggingface.co/v1/production/uploads/1656078368144-5fae5f68b8423e1d80b8a988.jpeg"
+          }
+        ],
+        "date": "2023-01-19T19:11:34.000Z"
+      },
+      {
+        "id": "7a2647abb9386ff73bdb4504844d1f080b02d810",
+        "title": "Fixed Bug for multi_eurlex",
+        "message": "\n",
+        "authors": [
+          {
+            "user": "joelniklaus",
+            "avatar": "https://cdn-avatars.huggingface.co/v1/production/uploads/1656078368144-5fae5f68b8423e1d80b8a988.jpeg"
+          }
+        ],
+        "date": "2023-01-19T18:15:07.000Z"
+      },
+      {
+        "id": "10f140287802f3f055c2aa0d84744de458b9b22b",
+        "title": "adapted data loader",
+        "message": "\n",
+        "authors": [
+          {
+            "user": "joelniklaus",
+            "avatar": "https://cdn-avatars.huggingface.co/v1/production/uploads/1656078368144-5fae5f68b8423e1d80b8a988.jpeg"
+          }
+        ],
+        "date": "2022-12-01T01:39:43.000Z"
+      },
+      {
+        "id": "46ede22cebd09d246895f7dcd84452d531c34f8f",
+        "title": "improved dataset card",
+        "message": "\n",
+        "authors": [
+          {
+            "user": "joelniklaus",
+            "avatar": "https://cdn-avatars.huggingface.co/v1/production/uploads/1656078368144-5fae5f68b8423e1d80b8a988.jpeg"
+          }
+        ],
+        "date": "2022-11-28T17:50:48.000Z"
+      },
+      {
+        "id": "50b36958fb66068b0f752a2f4a0bfdd27be9e4c1",
+        "title": "Fix task tags (#2)",
+        "message": "\n\n\n- Fix task tags (adf49cf0d0f1de2dfc58faf571a3bdba4e815e64)\n\n\nCo-authored-by: Albert Villanova <albertvillanova@users.noreply.huggingface.co>\n",
+        "authors": [
+          {
+            "user": "Joelito",
+            "avatar": "/avatars/ee8305e2f633877bd1f01823e81f8928.svg"
+          },
+          {
+            "user": "albertvillanova",
+            "avatar": "https://cdn-avatars.huggingface.co/v1/production/uploads/1606406298765-noauth.jpeg"
+          }
+        ],
+        "date": "2022-10-25T16:16:35.000Z"
+      },
+      {
+        "id": "5fdec1477fc399ac428d19105135ae5d794ceebf",
+        "title": "Fix task_ids (#1)",
+        "message": "\n\n\n- Fix task_ids (a1ab390cefdf7e4ae3ed30fd120b1755716a58a9)\n\n\nCo-authored-by: Albert Villanova <albertvillanova@users.noreply.huggingface.co>\n",
+        "authors": [
+          {
+            "user": "Joelito",
+            "avatar": "/avatars/ee8305e2f633877bd1f01823e81f8928.svg"
+          },
+          {
+            "user": "albertvillanova",
+            "avatar": "https://cdn-avatars.huggingface.co/v1/production/uploads/1606406298765-noauth.jpeg"
+          }
+        ],
+        "date": "2022-10-21T15:50:53.000Z"
+      },
+      {
+        "id": "b937e98f07fed8429748a4a251ffb2f7122a1b65",
+        "title": "adapted dataset card",
+        "message": "\n",
+        "authors": [
+          {
+            "user": "joelniklaus",
+            "avatar": "https://cdn-avatars.huggingface.co/v1/production/uploads/1656078368144-5fae5f68b8423e1d80b8a988.jpeg"
+          }
+        ],
+        "date": "2022-09-22T13:45:19.000Z"
+      },
+      {
+        "id": "c421b95fc91bfe39a7dca170b53e9a96e6c49492",
+        "title": "made fine grained labels upper case as well because of problems with seqeval otherwise",
+        "message": "\n",
+        "authors": [
+          {
+            "user": "joelniklaus",
+            "avatar": "https://cdn-avatars.huggingface.co/v1/production/uploads/1656078368144-5fae5f68b8423e1d80b8a988.jpeg"
+          }
+        ],
+        "date": "2022-09-22T07:47:44.000Z"
+      },
+      {
+        "id": "c225ea14ceb55a3a913e27dfa4383b487d8b97eb",
+        "title": "fixed comma problem",
+        "message": "\n",
+        "authors": [
+          {
+            "user": "joelniklaus",
+            "avatar": "https://cdn-avatars.huggingface.co/v1/production/uploads/1656078368144-5fae5f68b8423e1d80b8a988.jpeg"
+          }
+        ],
+        "date": "2022-09-21T08:00:38.000Z"
+      },
+      {
+        "id": "e880b8ad3773b913cb7fed064df302429a4afc8c",
+        "title": "updated NER labelsets",
+        "message": "\n",
+        "authors": [
+          {
+            "user": "joelniklaus",
+            "avatar": "https://cdn-avatars.huggingface.co/v1/production/uploads/1656078368144-5fae5f68b8423e1d80b8a988.jpeg"
+          }
+        ],
+        "date": "2022-09-16T13:08:45.000Z"
+      },
+      {
+        "id": "0b7dcdacf78f197017ac891df2d4ecb6c6afb6e8",
+        "title": "added language",
+        "message": "\n",
+        "authors": [
+          {
+            "user": "joelniklaus",
+            "avatar": "https://cdn-avatars.huggingface.co/v1/production/uploads/1656078368144-5fae5f68b8423e1d80b8a988.jpeg"
+          }
+        ],
+        "date": "2022-08-11T07:26:23.000Z"
+      },
+      {
+        "id": "a20fb29de05ac8b8af4be9dc023388ec1c6cdf9d",
+        "title": "fixed label classes of greek_legal_code_subject",
+        "message": "\n",
+        "authors": [
+          {
+            "user": "joelniklaus",
+            "avatar": "https://cdn-avatars.huggingface.co/v1/production/uploads/1656078368144-5fae5f68b8423e1d80b8a988.jpeg"
+          }
+        ],
+        "date": "2022-08-11T07:10:50.000Z"
+      },
+      {
+        "id": "e7e762dda2b2bc77d1640d24ea8bd32b3feb1dbe",
+        "title": "added task overview",
+        "message": "\n",
+        "authors": [
+          {
+            "user": "joelniklaus",
+            "avatar": "https://cdn-avatars.huggingface.co/v1/production/uploads/1656078368144-5fae5f68b8423e1d80b8a988.jpeg"
+          }
+        ],
+        "date": "2022-08-01T10:20:47.000Z"
+      },
+      {
+        "id": "adb2ec4fefa70e9507ce0bbcc191c2853c28ec99",
+        "title": "updated dataset card to conform with yaml",
+        "message": "\n",
+        "authors": [
+          {
+            "user": "joelniklaus",
+            "avatar": "https://cdn-avatars.huggingface.co/v1/production/uploads/1656078368144-5fae5f68b8423e1d80b8a988.jpeg"
+          }
+        ],
+        "date": "2022-08-01T08:46:47.000Z"
+      },
+      {
+        "id": "abdacc945d0baf2f254ef9918db09edc9f60af5f",
+        "title": "added first version of lextreme benchmark",
+        "message": "\n",
+        "authors": [
+          {
+            "user": "joelniklaus",
+            "avatar": "https://cdn-avatars.huggingface.co/v1/production/uploads/1656078368144-5fae5f68b8423e1d80b8a988.jpeg"
+          }
+        ],
+        "date": "2022-08-01T08:45:07.000Z"
+      },
+      {
+        "id": "a59253e42f7d577485b77df4f23a445585134f6a",
+        "title": "initial commit",
+        "message": "",
+        "authors": [
+          {
+            "user": "joelniklaus",
+            "avatar": "https://cdn-avatars.huggingface.co/v1/production/uploads/1656078368144-5fae5f68b8423e1d80b8a988.jpeg"
+          }
+        ],
+        "date": "2022-08-01T08:41:55.000Z"
+      }
+    ],
+    "evidence/fetch-log.json": [
+      {
+        "file": "README.md",
+        "url": "https://huggingface.co/datasets/joelito/lextreme/raw/main/README.md",
+        "bytes": 7891,
+        "sha256": "bd3d2cb14b3dc42097280c7c514e5184437ee41e5ee5d66becefa148f1373d4c"
+      },
+      {
+        "file": "dataset-info.json",
+        "url": "https://huggingface.co/api/datasets/joelito/lextreme",
+        "bytes": 2332,
+        "sha256": "978e04c6bed6135c87eb363308e5df8b3916897acf1bee2f47dcf3a4f5139798"
+      },
+      {
+        "file": "paper.pdf",
+        "url": "https://arxiv.org/pdf/2301.13126",
+        "bytes": 2343555,
+        "sha256": "0571db28ff176922fb7e99eccbe7aafd0c70630287519582f5a13a00cc8fd107"
+      },
+      {
+        "file": "scenario-main.py",
+        "url": "https://raw.githubusercontent.com/stanford-crfm/helm/main/src/helm/benchmark/scenarios/lextreme_scenario.py",
+        "bytes": 20843,
+        "sha256": "751e54508ca6b61dc9dd1227a0dc9bca0660d2b359fbcc30cd51e77ae4d33861"
+      },
+      {
+        "file": "run-specs-main.py",
+        "url": "https://raw.githubusercontent.com/stanford-crfm/helm/main/src/helm/benchmark/run_specs.py",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "file": "loader.py",
+        "url": "https://huggingface.co/datasets/joelniklaus/lextreme/raw/73271418f8710e672618fa05f727c9aee239c24b/lextreme.py",
+        "bytes": 222754,
+        "sha256": "f608b0f6e56732cf793ebc375b27d56845a8e4e700305160b5dfc7959adeb6d3"
+      },
+      {
+        "file": "commits.json",
+        "url": "https://huggingface.co/api/datasets/joelniklaus/lextreme/commits/main",
+        "bytes": 11802,
+        "sha256": "f993af4c42eb87bd69adfc8683c6441de230294b914269b4d5ba9845933a9d56"
+      },
+      {
+        "file": "repo-readme.md",
+        "url": "https://raw.githubusercontent.com/JoelNiklaus/LEXTREME/main/README.md",
+        "bytes": 42055,
+        "sha256": "b15a53ede3f4f82a092e098ff4ed1de8cb14aa75be5f03beeb110a8fed2e508c"
+      },
+      {
+        "file": "acl.html",
+        "url": "https://aclanthology.org/2023.findings-emnlp.257/",
+        "bytes": 42658,
+        "sha256": "6a8da92f75332bc38cf0c757d11d721c9d3e60501f8862ea677bf64a11a4072f"
+      },
+      {
+        "file": "configs.json",
+        "url": "https://datasets-server.huggingface.co/splits?dataset=joelito%2Flextreme",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "file": "german-rows.json",
+        "url": "https://datasets-server.huggingface.co/first-rows?dataset=joelito%2Flextreme&config=german_argument_mining&split=test",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "file": "acl-search.html",
+        "url": "https://aclanthology.org/search/?q=LEXTREME",
+        "bytes": 11259,
+        "sha256": "c0d967f7acf774df5b8324d4ca5e4feda13082698e5035f8b8bc928ae9f8d913"
+      },
+      {
+        "file": "loader-2023.py",
+        "url": "https://huggingface.co/datasets/joelniklaus/lextreme/raw/65f6046b8083/lextreme.py",
+        "bytes": 213748,
+        "sha256": "8280865875045bd3a7c44c55350410785967b829c84d2fedfbc895cfc7f80aad"
+      },
+      {
+        "file": "german_argument_mining-test.jsonl",
+        "url": "https://huggingface.co/datasets/joelniklaus/german_argument_mining/resolve/576b52004ed78dd747c0f9858fa6dacc7e4196e2/test.jsonl",
+        "bytes": 4263762,
+        "sha256": "19595a310f39fd1daa89f834930923ed19e3b01d04806d189c382eca70ecbb08"
+      },
+      {
+        "file": "german_argument_mining-README.md",
+        "url": "https://huggingface.co/datasets/joelniklaus/german_argument_mining/resolve/576b52004ed78dd747c0f9858fa6dacc7e4196e2/README.md",
+        "bytes": 11360,
+        "sha256": "aecdb2c86ebb27dabe712e0a66505eed3c78d6d1bfd56795a6f6204d0f587543"
+      },
+      {
+        "file": "online_terms_of_service-test.jsonl",
+        "url": "https://huggingface.co/datasets/joelniklaus/online_terms_of_service/resolve/448c5caa985b8dafb275294f226120f41a7f8251/test.jsonl",
+        "bytes": 1617521,
+        "sha256": "e4471ea8b4293934013a7206fa16236cbe3a656e3807efa23e6d9ced690007cf"
+      },
+      {
+        "file": "online_terms_of_service-README.md",
+        "url": "https://huggingface.co/datasets/joelniklaus/online_terms_of_service/resolve/448c5caa985b8dafb275294f226120f41a7f8251/README.md",
+        "bytes": 18314,
+        "sha256": "0f6044a6c789dda664a21e0a344338e4f9d66bb5ded4603e6664618ef5a4b27a"
+      },
+      {
+        "file": "covid19_emergency_event-test.jsonl",
+        "url": "https://huggingface.co/datasets/joelniklaus/covid19_emergency_event/resolve/bba0491bc1ba950369eafcceb1d522537b54ab2e/test.jsonl",
+        "bytes": 176847,
+        "sha256": "1792a5b0103cbdd2a1d973cdb5ca5a881ec6505c2a9d7a8625b412bfb67ad69a"
+      },
+      {
+        "file": "covid19_emergency_event-README.md",
+        "url": "https://huggingface.co/datasets/joelniklaus/covid19_emergency_event/resolve/bba0491bc1ba950369eafcceb1d522537b54ab2e/README.md",
+        "bytes": 10531,
+        "sha256": "57f544a6278d191072378bd1460e5cc65992d79b1913cf9fafce50903f61369b"
+      },
+      {
+        "file": "legalnero-test.jsonl",
+        "url": "https://huggingface.co/datasets/joelniklaus/legalnero/resolve/a072e8508049097fc216fd26bdd89a89e47e1272/test.jsonl",
+        "bytes": 414576,
+        "sha256": "3c73ba1c9e453754d9efb64a6b94db9ffd0997a36dd4d16a7fcccd449c266513"
+      },
+      {
+        "file": "legalnero-README.md",
+        "url": "https://huggingface.co/datasets/joelniklaus/legalnero/resolve/a072e8508049097fc216fd26bdd89a89e47e1272/README.md",
+        "bytes": 10644,
+        "sha256": "bcc9e1640826aa4a91acd013fee6257fedcd93659233c535ca90c4b6a04444fa"
+      },
+      {
+        "file": "greek_legal_ner-test.jsonl",
+        "url": "https://huggingface.co/datasets/joelniklaus/greek_legal_ner/resolve/e2bc5fd22217fdaa0054bb0eadbad8401d94dd50/test.jsonl",
+        "bytes": 2278020,
+        "sha256": "5ad0654caac860a9d6d3d7d7834f913afaafc6cc5506c379c50c3d86ef12d559"
+      },
+      {
+        "file": "greek_legal_ner-README.md",
+        "url": "https://huggingface.co/datasets/joelniklaus/greek_legal_ner/resolve/e2bc5fd22217fdaa0054bb0eadbad8401d94dd50/README.md",
+        "bytes": 9785,
+        "sha256": "a1fe23c7f6fe7b59c21b16a1e5eed541cd7698d3da27347fa581a178392d68d5"
+      },
+      {
+        "file": "brazilian_court_decisions-test.jsonl",
+        "url": "https://huggingface.co/datasets/joelniklaus/brazilian_court_decisions/resolve/e937c2db8eab109cafc4f5279a396957d38251c5/test.jsonl",
+        "bytes": 841330,
+        "sha256": "43a9159188d08ab7ca947ee17314570c9ee6bf2656f8b2b5e40923e9e9cf701c"
+      },
+      {
+        "file": "brazilian_court_decisions-README.md",
+        "url": "https://huggingface.co/datasets/joelniklaus/brazilian_court_decisions/resolve/e937c2db8eab109cafc4f5279a396957d38251c5/README.md",
+        "bytes": 10204,
+        "sha256": "c807fa4baaf8c6da57540d191e17630fa8196b268eb38c7b776126cb4dcad304"
+      },
+      {
+        "file": "classification.py",
+        "url": "https://raw.githubusercontent.com/stanford-crfm/helm/v0.3.0/src/helm/benchmark/metrics/classification_metrics.py",
+        "bytes": 5442,
+        "sha256": "a6063c053a07c3ad657cf4ecc045b60daf0be2b916261b613016155a79e0ceec"
+      },
+      {
+        "file": "README-2023.md",
+        "url": "https://huggingface.co/datasets/joelniklaus/lextreme/raw/65f6046b8083/README.md",
+        "bytes": 7714,
+        "sha256": "8f21d332d547d0e5b6126fb015c293af33a4464c05f5e7403b3f3224e0ab9966"
+      },
+      {
+        "file": "config.js",
+        "url": "https://crfm.stanford.edu/helm/classic/latest/config.js",
+        "bytes": 170,
+        "sha256": "f38307c5bcabae96f8b3a0190f0b37e48fc69190a33cce32878f775651222d87"
+      },
+      {
+        "file": "acl-metadata.html",
+        "url": "https://aclanthology.org/search/?q=%22LEXTREME%22",
+        "bytes": 11259,
+        "sha256": "c0d967f7acf774df5b8324d4ca5e4feda13082698e5035f8b8bc928ae9f8d913"
+      },
+      {
+        "file": "acl-paper.pdf",
+        "url": "https://aclanthology.org/2023.findings-emnlp.200.pdf",
+        "bytes": 2149705,
+        "sha256": "9c307b756bf562e4fea7bbd60dac35f3da9319de23e280cf69e90d77837faa92"
+      },
+      {
+        "file": "acl-correct.html",
+        "url": "https://aclanthology.org/2023.findings-emnlp.200/",
+        "bytes": 44551,
+        "sha256": "ffbedec23ca06c755c9888efb8073e7f312158792f3e4d71b0d537fbdfc3d58f"
+      },
+      {
+        "file": "scenario-v0.3.0.py",
+        "url": "https://raw.githubusercontent.com/stanford-crfm/helm/v0.3.0/src/helm/benchmark/scenarios/lextreme_scenario.py",
+        "bytes": 20396,
+        "sha256": "1c4a572dd2cbcb0a3ac9f5da185df3460c753e218f13620b9e9298b3d0e6b28c",
+        "cached_copy_reverified": true
+      },
+      {
+        "file": "run-specs-v0.3.0.py",
+        "url": "https://raw.githubusercontent.com/stanford-crfm/helm/v0.3.0/src/helm/benchmark/run_specs.py",
+        "bytes": 97948,
+        "sha256": "b8e73d208868cb4b971433e1aa321a817a7813852caa943347093de3c74062a9",
+        "cached_copy_reverified": true
+      }
+    ]
+  },
+  "artifact_sha256": {
+    "pdf": "9c85a37f249bc4980fd509acf0cb6ba48fba0618ebe421663ae2fcd84db84c89",
+    "pptx": "2dea3826e82f18fa4353ccc3fbcfda19ae752504a94c819444dbdb085ad57313"
+  },
+  "independent_review": "../skill-proofreading/lextreme/independent-review/",
+  "examples-verification.json": {
+    "method": "official v0.3.0 method bodies executed unchanged; dataset infrastructure stub returns 13 selected, class-encoded raw records; not model requests",
+    "checks": [
+      {
+        "id": "brazilian_court_decisions_judgment/test/line396",
+        "input_and_correct_refs_match_official_method": true
+      },
+      {
+        "id": "brazilian_court_decisions_unanimity/test/line325",
+        "input_and_correct_refs_match_official_method": true
+      },
+      {
+        "id": "covid19_emergency_event/test/line10",
+        "input_and_correct_refs_match_official_method": true
+      },
+      {
+        "id": "covid19_emergency_event/test/line304",
+        "input_and_correct_refs_match_official_method": true
+      },
+      {
+        "id": "covid19_emergency_event/test/line212",
+        "input_and_correct_refs_match_official_method": true
+      },
+      {
+        "id": "german_argument_mining/test/line6",
+        "input_and_correct_refs_match_official_method": true
+      },
+      {
+        "id": "german_argument_mining/test/line75",
+        "input_and_correct_refs_match_official_method": true
+      },
+      {
+        "id": "german_argument_mining/test/line10",
+        "input_and_correct_refs_match_official_method": true
+      },
+      {
+        "id": "greek_legal_ner/test/line1",
+        "input_and_correct_refs_match_official_method": true
+      },
+      {
+        "id": "legalnero/test/line4",
+        "input_and_correct_refs_match_official_method": true
+      },
+      {
+        "id": "online_terms_of_service_clause_topics/test/line1051",
+        "input_and_correct_refs_match_official_method": true
+      },
+      {
+        "id": "online_terms_of_service_clause_topics/test/line2170",
+        "input_and_correct_refs_match_official_method": true
+      },
+      {
+        "id": "online_terms_of_service_unfairness_levels/test/line60",
+        "input_and_correct_refs_match_official_method": true
+      }
+    ]
+  },
+  "screenshot-log.json": {
+    "pages": [
+      {
+        "slug": "lextreme",
+        "url": "https://huggingface.co/datasets/joelniklaus/lextreme",
+        "status": 200,
+        "title": "joelniklaus/lextreme · Datasets at Hugging Face",
+        "css": 4,
+        "screenshot": "official-site.png",
+        "transport": "system-CA-verified urllib responses rendered in Chromium; persistent trust unchanged"
+      }
+    ],
+    "asset_failures": []
+  }
+}

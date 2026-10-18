@@ -1,0 +1,510 @@
+{
+  "task_counts": {
+    "SingleLabelTextClassification": 8,
+    "MultiLabelTextClassification": 5,
+    "NamedEntityRecognition": 5
+  },
+  "specs": {
+    "brazilian_court_decisions_judgment": {
+      "name": "lextreme:subset=brazilian_court_decisions_judgment",
+      "scenario_spec": {
+        "class_name": "helm.benchmark.scenarios.lextreme_scenario.LEXTREMEScenario",
+        "args": {
+          "subset": "brazilian_court_decisions_judgment"
+        }
+      },
+      "adapter_spec": {
+        "instructions": "In this task, you are given the case description from a decision heard at the State Supreme Court of Alagoas (Brazil). Predict the judgment of the case (no: The appeal was denied, partial: For partially favourable decisions, yes: For fully favourable decisions)",
+        "input_noun": "Passage",
+        "output_noun": "Answer",
+        "max_tokens": 5,
+        "max_train_instances": 4,
+        "multi_label": false
+      },
+      "metric_specs": [
+        {
+          "basic_names": []
+        },
+        {
+          "classification_args": {}
+        }
+      ],
+      "groups": [
+        "lextreme"
+      ]
+    },
+    "brazilian_court_decisions_unanimity": {
+      "name": "lextreme:subset=brazilian_court_decisions_unanimity",
+      "scenario_spec": {
+        "class_name": "helm.benchmark.scenarios.lextreme_scenario.LEXTREMEScenario",
+        "args": {
+          "subset": "brazilian_court_decisions_unanimity"
+        }
+      },
+      "adapter_spec": {
+        "instructions": "In this task, you are given the case description from a decision heard at the State Supreme Court of Alagoas (Brazil). Predict the unanimity of the case (unanimity, not-unanimity, not_determined)",
+        "input_noun": "Passage",
+        "output_noun": "Answer",
+        "max_tokens": 5,
+        "max_train_instances": 4,
+        "multi_label": false
+      },
+      "metric_specs": [
+        {
+          "basic_names": []
+        },
+        {
+          "classification_args": {}
+        }
+      ],
+      "groups": [
+        "lextreme"
+      ]
+    },
+    "german_argument_mining": {
+      "name": "lextreme:subset=german_argument_mining",
+      "scenario_spec": {
+        "class_name": "helm.benchmark.scenarios.lextreme_scenario.LEXTREMEScenario",
+        "args": {
+          "subset": "german_argument_mining"
+        }
+      },
+      "adapter_spec": {
+        "instructions": "In this task, you are given sentences from German court decisions. Predict the major component of German Urteilsstil (conclusion: Overall result, definition: Abstract legal facts and consequences, subsumption: Determination sentence / Concrete facts, other: Anything else)",
+        "input_noun": "Passage",
+        "output_noun": "Answer",
+        "max_tokens": 5,
+        "max_train_instances": 5,
+        "multi_label": false
+      },
+      "metric_specs": [
+        {
+          "basic_names": []
+        },
+        {
+          "classification_args": {}
+        }
+      ],
+      "groups": [
+        "lextreme"
+      ]
+    },
+    "greek_legal_code_chapter": {
+      "name": "lextreme:subset=greek_legal_code_chapter",
+      "scenario_spec": {
+        "class_name": "helm.benchmark.scenarios.lextreme_scenario.LEXTREMEScenario",
+        "args": {
+          "subset": "greek_legal_code_chapter"
+        }
+      },
+      "adapter_spec": {
+        "instructions": "In this task, you are given a Greek legislative document. Predict the chapter level category of the 'Permanent Greek Legislation Code - Raptarchis (Ραπτάρχης)' the document belongs to.",
+        "input_noun": "Passage",
+        "output_noun": "Answer",
+        "max_tokens": 20,
+        "max_train_instances": 1,
+        "multi_label": false
+      },
+      "metric_specs": [
+        {
+          "basic_names": []
+        },
+        {
+          "classification_args": {}
+        }
+      ],
+      "groups": [
+        "lextreme"
+      ]
+    },
+    "greek_legal_code_subject": {
+      "name": "lextreme:subset=greek_legal_code_subject",
+      "scenario_spec": {
+        "class_name": "helm.benchmark.scenarios.lextreme_scenario.LEXTREMEScenario",
+        "args": {
+          "subset": "greek_legal_code_subject"
+        }
+      },
+      "adapter_spec": {
+        "instructions": "In this task, you are given a Greek legislative document. Predict the subject level category of the 'Permanent Greek Legislation Code - Raptarchis (Ραπτάρχης)' the document belongs to.",
+        "input_noun": "Passage",
+        "output_noun": "Answer",
+        "max_tokens": 20,
+        "max_train_instances": 1,
+        "multi_label": false
+      },
+      "metric_specs": [
+        {
+          "basic_names": []
+        },
+        {
+          "classification_args": {}
+        }
+      ],
+      "groups": [
+        "lextreme"
+      ]
+    },
+    "greek_legal_code_volume": {
+      "name": "lextreme:subset=greek_legal_code_volume",
+      "scenario_spec": {
+        "class_name": "helm.benchmark.scenarios.lextreme_scenario.LEXTREMEScenario",
+        "args": {
+          "subset": "greek_legal_code_volume"
+        }
+      },
+      "adapter_spec": {
+        "instructions": "In this task, you are given a Greek legislative document. Predict the volume level category of the 'Permanent Greek Legislation Code - Raptarchis (Ραπτάρχης)' the document belongs to.",
+        "input_noun": "Passage",
+        "output_noun": "Answer",
+        "max_tokens": 20,
+        "max_train_instances": 1,
+        "multi_label": false
+      },
+      "metric_specs": [
+        {
+          "basic_names": []
+        },
+        {
+          "classification_args": {}
+        }
+      ],
+      "groups": [
+        "lextreme"
+      ]
+    },
+    "swiss_judgment_prediction": {
+      "name": "lextreme:subset=swiss_judgment_prediction",
+      "scenario_spec": {
+        "class_name": "helm.benchmark.scenarios.lextreme_scenario.LEXTREMEScenario",
+        "args": {
+          "subset": "swiss_judgment_prediction"
+        }
+      },
+      "adapter_spec": {
+        "instructions": "In this task, you are given the facts description from a decision heard at the Swiss Federal Supreme Court. Predict the judgment of the case (approval: The appeal was approved, or dismissal: The appeal was denied)",
+        "input_noun": "Passage",
+        "output_noun": "Answer",
+        "max_tokens": 5,
+        "max_train_instances": 2,
+        "multi_label": false
+      },
+      "metric_specs": [
+        {
+          "basic_names": []
+        },
+        {
+          "classification_args": {}
+        }
+      ],
+      "groups": [
+        "lextreme"
+      ]
+    },
+    "online_terms_of_service_unfairness_levels": {
+      "name": "lextreme:subset=online_terms_of_service_unfairness_levels",
+      "scenario_spec": {
+        "class_name": "helm.benchmark.scenarios.lextreme_scenario.LEXTREMEScenario",
+        "args": {
+          "subset": "online_terms_of_service_unfairness_levels"
+        }
+      },
+      "adapter_spec": {
+        "instructions": "In this task, you are given a sentence from a Terms of Service (ToS) document. Predict the unfairness level of the sentence (potentially_unfair, clearly_unfair, clearly_fair, untagged)",
+        "input_noun": "Passage",
+        "output_noun": "Answer",
+        "max_tokens": 10,
+        "max_train_instances": 5,
+        "multi_label": false
+      },
+      "metric_specs": [
+        {
+          "basic_names": []
+        },
+        {
+          "classification_args": {}
+        }
+      ],
+      "groups": [
+        "lextreme"
+      ]
+    },
+    "online_terms_of_service_clause_topics": {
+      "name": "lextreme:subset=online_terms_of_service_clause_topics",
+      "scenario_spec": {
+        "class_name": "helm.benchmark.scenarios.lextreme_scenario.LEXTREMEScenario",
+        "args": {
+          "subset": "online_terms_of_service_clause_topics"
+        }
+      },
+      "adapter_spec": {
+        "instructions": "In this task, you are given a sentence from a Terms of Service (ToS) document. Predict the clause topics of the sentence out of the following: 0: Arbitration, 1: Unilateral change, 2: Content removal, 3: Jurisdiction, 4: Choice of law, 5: Limitation of liability, 6: Unilateral termination, 7: Contract by using, 8: Privacy included. If there is no label reply n/a, if there are multiple labels specify all of them separated by a comma.",
+        "input_noun": "Passage",
+        "output_noun": "Answer",
+        "max_tokens": 10,
+        "max_train_instances": 5,
+        "multi_label": true
+      },
+      "metric_specs": [
+        {
+          "basic_names": []
+        },
+        {
+          "classification_args": {
+            "delimiter": ", "
+          }
+        }
+      ],
+      "groups": [
+        "lextreme"
+      ]
+    },
+    "covid19_emergency_event": {
+      "name": "lextreme:subset=covid19_emergency_event",
+      "scenario_spec": {
+        "class_name": "helm.benchmark.scenarios.lextreme_scenario.LEXTREMEScenario",
+        "args": {
+          "subset": "covid19_emergency_event"
+        }
+      },
+      "adapter_spec": {
+        "instructions": "In this task, you are given a sentence from a European legislative document. Predict the applicable measurements against COVID-19 out of the following: 0: State of Emergency, 1: Restrictions of fundamental rights and civil liberties, 2: Restrictions of daily liberties, 3: Closures / lockdown, 4: Suspension of international cooperation and commitments, 5: Police mobilization, 6: Army mobilization, 7: Government oversight. If there is no label reply n/a, if there are multiple labels specify all of them separated by a comma.",
+        "input_noun": "Passage",
+        "output_noun": "Answer",
+        "max_tokens": 10,
+        "max_train_instances": 5,
+        "multi_label": true
+      },
+      "metric_specs": [
+        {
+          "basic_names": []
+        },
+        {
+          "classification_args": {
+            "delimiter": ", "
+          }
+        }
+      ],
+      "groups": [
+        "lextreme"
+      ]
+    },
+    "multi_eurlex_level_1": {
+      "name": "lextreme:subset=multi_eurlex_level_1",
+      "scenario_spec": {
+        "class_name": "helm.benchmark.scenarios.lextreme_scenario.LEXTREMEScenario",
+        "args": {
+          "subset": "multi_eurlex_level_1"
+        }
+      },
+      "adapter_spec": {
+        "instructions": "In this task, you are given a document from an EU law. Predict the level 1 concept in the EUROVOC taxonomy. If there is no label reply n/a, if there are multiple labels specify all of them separated by a comma.",
+        "input_noun": "Passage",
+        "output_noun": "Answer",
+        "max_tokens": 10,
+        "max_train_instances": 1,
+        "multi_label": true
+      },
+      "metric_specs": [
+        {
+          "basic_names": []
+        },
+        {
+          "classification_args": {
+            "delimiter": ", "
+          }
+        }
+      ],
+      "groups": [
+        "lextreme"
+      ]
+    },
+    "multi_eurlex_level_2": {
+      "name": "lextreme:subset=multi_eurlex_level_2",
+      "scenario_spec": {
+        "class_name": "helm.benchmark.scenarios.lextreme_scenario.LEXTREMEScenario",
+        "args": {
+          "subset": "multi_eurlex_level_2"
+        }
+      },
+      "adapter_spec": {
+        "instructions": "In this task, you are given a document from an EU law. Predict the level 2 concept in the EUROVOC taxonomy. If there is no label reply n/a, if there are multiple labels specify all of them separated by a comma.",
+        "input_noun": "Passage",
+        "output_noun": "Answer",
+        "max_tokens": 10,
+        "max_train_instances": 1,
+        "multi_label": true
+      },
+      "metric_specs": [
+        {
+          "basic_names": []
+        },
+        {
+          "classification_args": {
+            "delimiter": ", "
+          }
+        }
+      ],
+      "groups": [
+        "lextreme"
+      ]
+    },
+    "multi_eurlex_level_3": {
+      "name": "lextreme:subset=multi_eurlex_level_3",
+      "scenario_spec": {
+        "class_name": "helm.benchmark.scenarios.lextreme_scenario.LEXTREMEScenario",
+        "args": {
+          "subset": "multi_eurlex_level_3"
+        }
+      },
+      "adapter_spec": {
+        "instructions": "In this task, you are given a document from an EU law. Predict the level 3 concept in the EUROVOC taxonomy. If there is no label reply n/a, if there are multiple labels specify all of them separated by a comma.",
+        "input_noun": "Passage",
+        "output_noun": "Answer",
+        "max_tokens": 10,
+        "max_train_instances": 1,
+        "multi_label": true
+      },
+      "metric_specs": [
+        {
+          "basic_names": []
+        },
+        {
+          "classification_args": {
+            "delimiter": ", "
+          }
+        }
+      ],
+      "groups": [
+        "lextreme"
+      ]
+    },
+    "greek_legal_ner": {
+      "name": "lextreme:subset=greek_legal_ner",
+      "scenario_spec": {
+        "class_name": "helm.benchmark.scenarios.lextreme_scenario.LEXTREMEScenario",
+        "args": {
+          "subset": "greek_legal_ner"
+        }
+      },
+      "adapter_spec": {
+        "instructions": "In this task, you are given a sentence from Greek legislation. Predict the named entity type for each token out of the following: O, B-ORG, I-ORG, B-GPE, I-GPE, B-LEG-REFS, I-LEG-REFS, B-PUBLIC-DOCS, I-PUBLIC-DOCS, B-PERSON, I-PERSON, B-FACILITY, I-FACILITY, B-LOCATION-UNK, I-LOCATION-UNK, B-LOCATION-NAT, I-LOCATION-NAT",
+        "input_noun": "Passage",
+        "output_noun": "Answer",
+        "max_tokens": 430,
+        "max_train_instances": 5,
+        "multi_label": false
+      },
+      "metric_specs": [
+        {
+          "basic_names": []
+        }
+      ],
+      "groups": [
+        "lextreme"
+      ]
+    },
+    "legalnero": {
+      "name": "lextreme:subset=legalnero",
+      "scenario_spec": {
+        "class_name": "helm.benchmark.scenarios.lextreme_scenario.LEXTREMEScenario",
+        "args": {
+          "subset": "legalnero"
+        }
+      },
+      "adapter_spec": {
+        "instructions": "In this task, you are given a sentence from Romanian legislation. Predict the named entity type for each token out of the following: O, B-TIME, I-TIME, B-LEGAL, I-LEGAL, B-ORG, I-ORG, B-LOC, I-LOC, B-PER, I-PER",
+        "input_noun": "Passage",
+        "output_noun": "Answer",
+        "max_tokens": 788,
+        "max_train_instances": 5,
+        "multi_label": false
+      },
+      "metric_specs": [
+        {
+          "basic_names": []
+        }
+      ],
+      "groups": [
+        "lextreme"
+      ]
+    },
+    "lener_br": {
+      "name": "lextreme:subset=lener_br",
+      "scenario_spec": {
+        "class_name": "helm.benchmark.scenarios.lextreme_scenario.LEXTREMEScenario",
+        "args": {
+          "subset": "lener_br"
+        }
+      },
+      "adapter_spec": {
+        "instructions": "In this task, you are given a sentence from Brazilian legal documents (court decisions and legislation). Predict the named entity type for each token out of the following: O, B-ORGANIZACAO, I-ORGANIZACAO, B-PESSOA, I-PESSOA, B-TEMPO, I-TEMPO, B-LOCAL, I-LOCAL, B-LEGISLACAO, I-LEGISLACAO, B-JURISPRUDENCIA, I-JURISPRUDENCIA",
+        "input_noun": "Passage",
+        "output_noun": "Answer",
+        "max_tokens": 338,
+        "max_train_instances": 5,
+        "multi_label": false
+      },
+      "metric_specs": [
+        {
+          "basic_names": []
+        }
+      ],
+      "groups": [
+        "lextreme"
+      ]
+    },
+    "mapa_coarse": {
+      "name": "lextreme:subset=mapa_coarse",
+      "scenario_spec": {
+        "class_name": "helm.benchmark.scenarios.lextreme_scenario.LEXTREMEScenario",
+        "args": {
+          "subset": "mapa_coarse"
+        }
+      },
+      "adapter_spec": {
+        "instructions": "In this task, you are given a sentence from the EUR-Lex database. Predict the coarse grained named entity type for each token out of the following: O, B-ORGANISATION, I-ORGANISATION, B-ADDRESS, I-ADDRESS, B-DATE, I-DATE, B-PERSON, I-PERSON, B-AMOUNT, I-AMOUNT, B-TIME, I-TIME",
+        "input_noun": "Passage",
+        "output_noun": "Answer",
+        "max_tokens": 274,
+        "max_train_instances": 5,
+        "multi_label": false
+      },
+      "metric_specs": [
+        {
+          "basic_names": []
+        }
+      ],
+      "groups": [
+        "lextreme"
+      ]
+    },
+    "mapa_fine": {
+      "name": "lextreme:subset=mapa_fine",
+      "scenario_spec": {
+        "class_name": "helm.benchmark.scenarios.lextreme_scenario.LEXTREMEScenario",
+        "args": {
+          "subset": "mapa_fine"
+        }
+      },
+      "adapter_spec": {
+        "instructions": "In this task, you are given a sentence from the EUR-Lex database. Predict the fine grained named entity type for each token out of the following: O, B-BUILDING, I-BUILDING, B-CITY, I-CITY, B-COUNTRY, I-COUNTRY, B-PLACE, I-PLACE, B-TERRITORY, I-TERRITORY, I-UNIT, B-UNIT, B-VALUE, I-VALUE, B-YEAR, I-YEAR, B-STANDARD ABBREVIATION, I-STANDARD ABBREVIATION, B-MONTH, I-MONTH, B-DAY, I-DAY, B-AGE, I-AGE, B-ETHNIC CATEGORY, I-ETHNIC CATEGORY, B-FAMILY NAME, I-FAMILY NAME, B-INITIAL NAME, I-INITIAL NAME, B-MARITAL STATUS, I-MARITAL STATUS, B-PROFESSION, I-PROFESSION, B-ROLE, I-ROLE, B-NATIONALITY, I-NATIONALITY, B-TITLE, I-TITLE, B-URL, I-URL, B-TYPE, I-TYPE",
+        "input_noun": "Passage",
+        "output_noun": "Answer",
+        "max_tokens": 274,
+        "max_train_instances": 5,
+        "multi_label": false
+      },
+      "metric_specs": [
+        {
+          "basic_names": []
+        }
+      ],
+      "groups": [
+        "lextreme"
+      ]
+    }
+  },
+  "configurations": 18,
+  "ner_quality_metrics_registered": false
+}
