@@ -1,0 +1,936 @@
+{
+  "method": "skill_based_codex",
+  "review_mode": "skill_based_codex",
+  "gemini_used": false,
+  "changes": [
+    {
+      "example": 11,
+      "before": "plentifulを「乏しい」の意味で使う指示。配布正解はNoで、現在の海氷量の新たな推定ではない。",
+      "after": "plentifulを「乏しい」の意味で使う。配布正解はNo。通常の「豊富」の意味で読むと答えが変わる。",
+      "reason": "長い注記を、定義の切替という解釈に絞って自然に短文化し、脚注との間隔を確保。",
+      "page": 40
+    },
+    {
+      "before": "評価対象は、局所的な語の定義へ切り替えること。原データの正解を保持し、問いの意味を説明する。",
+      "after": "評価対象は、局所的な語の定義へ切り替えること。同じ語でも、通常の意味と入れ替え後の意味で答えは変わる。",
+      "reason": "説明の制作方針を、課題の性質を示す文章へ改める。",
+      "source": "build.py",
+      "page": 12
+    },
+    {
+      "before": "本資料では数字・記号900件を別計算で照合し、全件が配布正解に一致した。単語344件全体の意味判断を自動再検証したとはしない。",
+      "after": "数字・記号900件は別計算で照合し、全件が配布正解に一致した。単語344件は候補形式を検査し、採用4例の意味を読み合わせた。",
+      "reason": "実際の検査範囲を肯定形で簡潔に示す。",
+      "source": "build.py",
+      "page": 19
+    },
+    {
+      "before": "選定・翻訳・整形されたCLEVA v1集合自体は未取得。元英語1,244件を、CLEVAがそのまま全件評価したとは扱わない。",
+      "after": "CLEVAが選定・翻訳・整形したv1集合は未取得。英語1,244件を、そのままCLEVAの評価件数とはしない。",
+      "reason": "採用集合の限界を保って簡潔にし、出典との間隔を確保する。",
+      "source": "build.py",
+      "page": 26
+    },
+    {
+      "before": "Classic v0.4.0の公開run一覧でCLEVA/Redefine該当は0件。公開成績を新たに作らず、元研究の報告とデータの再集計を区別する。",
+      "after": "Classic v0.4.0の公開run一覧では該当0件。性能の傾向は元研究の報告、件数は公式英語版の再集計として示す。",
+      "reason": "制作の作業方針を、読者が結果の出所を判断できる説明へ変える。",
+      "source": "build.py",
+      "page": 28
+    },
+    {
+      "before": "原promptのA:は答えを書く位置を示す記号。元英語データには、CLEVAのようなA/B選択肢が必ずしもprompt中に書かれているわけではない。",
+      "after": "原promptのA:は答えの記入位置を示す。元英語版の候補は別フィールドで、CLEVAのA/B表示とは異なる。",
+      "reason": "候補の配置という違いを明示し、長い否定表現を解く。",
+      "source": "build.py",
+      "page": 48
+    },
+    {
+      "before": "plentifulを「乏しい」の意味で使う。配布正解はNo。通常の「豊富」の意味で読むと答えが変わる。",
+      "after": "plentifulは「乏しい」の意味なので、配布正解はNo。",
+      "reason": "解説を一文へ絞り、引用と脚注の間隔を確保する。",
+      "source": "prepare.py",
+      "page": 40
+    },
+    {
+      "page": 11,
+      "before": "候補（原順）：[' No', ' Yes']",
+      "after": "候補（原順）：いいえ／はい",
+      "reason": "原候補は英語側に保持し、日本語側では二候補を訳して順序を明示する。"
+    },
+    {
+      "page": 40,
+      "before": "候補（原順）：[' No', ' Yes']",
+      "after": "候補（原順）：いいえ／はい",
+      "reason": "原候補は英語側に保持し、日本語側では二候補を訳して順序を明示する。"
+    },
+    {
+      "page": 41,
+      "before": "候補（原順）：[' No', ' Yes']",
+      "after": "候補（原順）：いいえ／はい",
+      "reason": "原候補は英語側に保持し、日本語側では二候補を訳して順序を明示する。"
+    },
+    {
+      "page": 42,
+      "before": "候補（原順）：[' No', ' Yes']",
+      "after": "候補（原順）：いいえ／はい",
+      "reason": "原候補は英語側に保持し、日本語側では二候補を訳して順序を明示する。"
+    },
+    {
+      "page": 17,
+      "before": "lawful / unlawful、plentiful / abundant等",
+      "after": "lawful / unlawful、plentiful / abundant",
+      "reason": "表セル末尾の「等」だけの折返しを解消。例示した語を保持する。"
+    }
+  ],
+  "pages": [
+    {
+      "page": 1,
+      "title": "Redefine",
+      "kind": "cover",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。",
+      "final_text": "Redefine\n既知の意味を、入力で与えた新しい定義へ切り替える\nsasakiy84\ndatasets in 10 minutes (2026-10-18)",
+      "native_tables": [],
+      "png_sha256": "ce7b4c13c342361b7eccec13c55dd87917b074ee75757a92da63e9892b806177",
+      "remaining_issues": []
+    },
+    {
+      "page": 2,
+      "title": "Inverse Scaling Prizeの公式リポジトリ",
+      "kind": "image",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。",
+      "final_text": "Inverse Scaling Prizeの公式リポジトリ\nRedefine\n[1] Inverse Scaling Prize. 公式リポジトリ。固定commit920f17de。  https://github.com/inverse-scaling/prize",
+      "native_tables": [],
+      "png_sha256": "036cad0be21cb91dfc7aa89b37a0b622ff850ed5218edc26aea1afdcf8d7430b",
+      "remaining_issues": []
+    },
+    {
+      "page": 3,
+      "title": "",
+      "kind": "toc",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。",
+      "final_text": "\n定義し直した意味で答える\n原データの構成と版\n評価で測るもの\nCLEVAでの採用と入手\n目次",
+      "native_tables": [],
+      "png_sha256": "a715b01aae03bb211ea5425deebadc473aafb5e7eb2ab2995924559224dc954b",
+      "remaining_issues": []
+    },
+    {
+      "page": 4,
+      "title": "定義し直した意味で答える",
+      "kind": "divider",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。",
+      "final_text": "定義し直した意味で答える\n1. 定義し直した意味で答える",
+      "native_tables": [],
+      "png_sha256": "f60c30e3c444144cc258a13a08af57e23194887aa5b0ffe437b5ebd96c6fa54e",
+      "remaining_issues": []
+    },
+    {
+      "page": 5,
+      "title": "知っている意味と、その場の定義を区別する",
+      "kind": "content",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。",
+      "final_text": "知っている意味と、その場の定義を区別する\nRedefineは、記号や単語の意味を入力で定義し直し、新しい意味に従って答えられるかを調べる英語の選択式データセット。\n候補は二つ。一方は通常の意味、もう一方は入力で与えた定義に対応する。配布正解は、その場の定義に従う候補である。\n通常の知識が豊富でも、入力中の条件に切り替えられなければ誤るという問題を扱う。\n1. 定義し直した意味で答える\n[1] McKenzie et al. (2023). Inverse Scaling: When Bigger Isn’t Better. TMLR. arXiv v2(2024)を参照。  https://arxiv.org/abs/2306.09479",
+      "native_tables": [],
+      "png_sha256": "aaea4f8d0cd547a8253895600230d2a3b9fe419ee60c2a084739aa1b66f82f27",
+      "remaining_issues": []
+    },
+    {
+      "page": 6,
+      "title": "一つのレコードは、指示・二候補・正解位置",
+      "kind": "content",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。",
+      "final_text": "一つのレコードは、指示・二候補・正解位置\n公式JSONLはprompt、classes、answer_indexを持つ。promptは英語の指示と問いで、末尾は答えを書く位置を示すA:。\nclassesは候補文字列を並べたPython形式の文字列。正解は0始まりのanswer_indexで指定する。候補は通常、先頭に空白を含む。\n以下の13例は元レコードのpromptと二候補の全文。正解は配布値を示し、日本語訳と解説を添える。\n1. 定義し直した意味で答える\n[1] Inverse Scaling Prize. 公開Round2更新版、redefine_classification.jsonl。固定commit920f17de。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "native_tables": [],
+      "png_sha256": "64572b5cb8dc3d87ca5f4986fb8f01b3e400097a9e2369c926c125acc898763e",
+      "remaining_issues": []
+    },
+    {
+      "page": 7,
+      "title": "実例1：eを、加算式で定義し直す",
+      "kind": "example",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。英語原prompt/全候補/配布答え/日本語/解説を原行610へ照合。",
+      "final_text": "実例1：eを、加算式で定義し直す\n1. 定義し直した意味で答える\n公式JSONL 610行目／part1／prompt全文と候補2件（候補の先頭空白を保持）\nRedefine e as 48+12. Q: What is the first digit of e? A:\n\nclasses = [' 6', ' 2']\neを48+12として再定義してください。問：eの最初の数字は何ですか。答：\n\n候補（原順）：[' 6', ' 2']\n配布正解：classes[0] = ' 6'\neはこの指示では60。先頭は6で、通常の自然対数の底2.718…の2ではない。\n[1] Inverse Scaling Prize. 公開Round2更新版、redefine_classification.jsonl。固定commit920f17de。 610行目（0始まり609） / round2 / part1。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "native_tables": [],
+      "png_sha256": "2f0622fd6b96c0f4f7fc739b8d7d1584c8fd1c9d80a3b4a5efeeea708582820b",
+      "remaining_issues": []
+    },
+    {
+      "page": 8,
+      "title": "eという名前でも、ここでは60を表す",
+      "kind": "content",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。",
+      "final_text": "eという名前でも、ここでは60を表す\n実例1の指示はeを48+12として再定義する。足し算を行うと60なので、最初の数字は6になる。\n通常のeは自然対数の底で、2.718…の先頭は2。この通常の知識に対応する候補が、もう一方に置かれている。\n計算自体の難しさに加え、何を計算の対象にするかを入力の定義から選ぶ必要がある。\n1. 定義し直した意味で答える\n[1] McKenzie et al. (2023). Inverse Scaling: When Bigger Isn’t Better. TMLR. arXiv v2(2024)を参照。  https://arxiv.org/abs/2306.09479",
+      "native_tables": [],
+      "png_sha256": "e228ac5e26204af5a2c4df42afa3ed20312cb46a8723b162bdb240e48e2a19c9",
+      "remaining_issues": []
+    },
+    {
+      "page": 9,
+      "title": "実例2：計算せず、文字列の先頭を読む",
+      "kind": "example",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。英語原prompt/全候補/配布答え/日本語/解説を原行1へ照合。",
+      "final_text": "実例2：計算せず、文字列の先頭を読む\n1. 定義し直した意味で答える\n公式JSONL 1行目／part1／prompt全文と候補2件（候補の先頭空白を保持）\nView number as text. Do not perform computation. Q: What is the first digit of 50+47? A:\n\nclasses = [' 9', ' 5']\n数を文字列とみなしてください。計算しないでください。問：50+47の最初の数字は何ですか。答：\n\n候補（原順）：[' 9', ' 5']\n配布正解：classes[1] = ' 5'\n文字列50+47の先頭の数字は5。和97の先頭9を答える課題ではない。\n[1] Inverse Scaling Prize. 公開Round2更新版、redefine_classification.jsonl。固定commit920f17de。 1行目（0始まり0） / round2 / part1。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "native_tables": [],
+      "png_sha256": "f3989385a7946882b848437b6cbf63d09dd24567187179b79126664455a6e6ad",
+      "remaining_issues": []
+    },
+    {
+      "page": 10,
+      "title": "計算をしない指示では、文字列を読む",
+      "kind": "content",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。",
+      "final_text": "計算をしない指示では、文字列を読む\n実例2では数を文字列とみなし、計算しないよう明示する。50+47の先頭に書かれた数字は5。\n指示を無視して50+47=97を計算すると、先頭9の候補を選んでしまう。\n同じ記号でも、加算を求める入力と文字列を読む入力では、正解を決める手順が異なる。\n1. 定義し直した意味で答える\n[1] McKenzie et al. (2023). Inverse Scaling: When Bigger Isn’t Better. TMLR. arXiv v2(2024)を参照。  https://arxiv.org/abs/2306.09479",
+      "native_tables": [],
+      "png_sha256": "971aa6bf1f288fc88c96fc22c1e1816c8181912459d8491d8bb9655f53facf2b",
+      "remaining_issues": []
+    },
+    {
+      "page": 11,
+      "title": "実例3：単語の意味を入れ替える",
+      "kind": "example",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。英語原prompt/全候補/配布答え/日本語/解説を原行1001へ照合。",
+      "final_text": "実例3：単語の意味を入れ替える\n1. 定義し直した意味で答える\n公式JSONL 1001行目／part2／prompt全文と候補2件（候補の先頭空白を保持）\nSwap the meaning of polite and rude. Should people be polite to their friends? A:\n\nclasses = [' No', ' Yes']\npoliteとrudeの意味を入れ替えてください。人は友人に対してpoliteであるべきですか。答：\n\n候補（原順）：いいえ／はい\n配布正解：classes[0] = ' No'（いいえ）\npoliteは、この指示ではrude（失礼な）の意味。友人への望ましい態度を問うため、配布正解はNo。\n[1] Inverse Scaling Prize. 公開Round2更新版、redefine_classification.jsonl。固定commit920f17de。 1001行目（0始まり1000） / round2 / part2。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "native_tables": [],
+      "png_sha256": "b913cd10e18ea59805f3141d41c29aa33aa02cfa385a7a1e5f3b32d202749cd6",
+      "remaining_issues": []
+    },
+    {
+      "page": 12,
+      "title": "単語の入れ替えも、指定した範囲で解釈する",
+      "kind": "content",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。",
+      "final_text": "単語の入れ替えも、指定した範囲で解釈する\n実例3ではpoliteとrudeの意味を入れ替える。問いのpoliteは、通常のrudeに当たる意味で使われる。\n友人に対してその態度を取るべきかという問いの配布正解はNo。通常のpoliteの意味で答えると、別の候補を選ぶ。\n評価対象は、局所的な語の定義へ切り替えること。同じ語でも、通常の意味と入れ替え後の意味で答えは変わる。\n1. 定義し直した意味で答える\n[1] McKenzie et al. (2023). Inverse Scaling: When Bigger Isn’t Better. TMLR. arXiv v2(2024)を参照。  https://arxiv.org/abs/2306.09479",
+      "native_tables": [],
+      "png_sha256": "31fad9764f0b9e48a0ba23c4c6cd0fc7e25f66e69724ce1bd0cd34331062e6a2",
+      "remaining_issues": []
+    },
+    {
+      "page": 13,
+      "title": "原データの構成と版",
+      "kind": "divider",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。",
+      "final_text": "原データの構成と版\n2. 原データの構成と版",
+      "native_tables": [],
+      "png_sha256": "3ae54aa057b2a1bbcc85fb5d3331875fdb6ef071736b1e7a25a832edc17ac5c5",
+      "remaining_issues": []
+    },
+    {
+      "page": 14,
+      "title": "2022年の受賞課題を、更新版で公開した",
+      "kind": "content",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。",
+      "final_text": "2022年の受賞課題を、更新版で公開した\nXudong Shenが提出し、2022年の第1回Inverse Scaling Prizeでredefine-mathとして受賞した。\n第2回で更新を受け付け、2023年3月に公開したデータは更新版だけを収録する。第1回版は、この配布に含まれない。\n公開前の重複除去も記録されている。ここでは固定commitのJSONLを使い、旧版や選定後のCLEVA版と区別する。\n2. 原データの構成と版\n[1] McKenzie et al. (2022). Inverse Scaling Prize: First Round Winners.  https://irmckenzie.co.uk/round1/\n[2] Inverse Scaling Prize. Data release、版・形式・CC BY4.0。固定commit920f17de。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/README.md",
+      "native_tables": [],
+      "png_sha256": "d14133aa8bdaf01468e0993c9eda950329aa085bb6080cc7be78158e0941eec2",
+      "remaining_issues": []
+    },
+    {
+      "page": 15,
+      "title": "公式公開版は、二つのpartから成る",
+      "kind": "content",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。表の全セル、値・条件・末尾折返しを確認。",
+      "final_text": "公式公開版は、二つのpartから成る\n2. 原データの構成と版\n固定JSONL全件を再集計。公開配布にtrain/dev/testの分割指定はない。\n[1] Inverse Scaling Prize. 公開Round2更新版、redefine_classification.jsonl。固定commit920f17de。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "native_tables": [
+        [
+          [
+            "part",
+            "扱う対象",
+            "件数"
+          ],
+          [
+            "1",
+            "数字・記号の再定義",
+            "900"
+          ],
+          [
+            "2",
+            "単語の再定義",
+            "344"
+          ],
+          [
+            "計",
+            "全てround=2の更新版",
+            "1,244"
+          ]
+        ]
+      ],
+      "png_sha256": "8a442ee017d83e64526cc66dcce9d5a443f007746d16195116d36ed18cb2ac58",
+      "remaining_issues": []
+    },
+    {
+      "page": 16,
+      "title": "数・記号では、文字列と計算を切り替える",
+      "kind": "content",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。表の全セル、値・条件・末尾折返しを確認。",
+      "final_text": "数・記号では、文字列と計算を切り替える\n2. 原データの構成と版\npart1には9種類の連続した100件ブロックがある。\n[1] Inverse Scaling Prize. 公開Round2更新版、redefine_classification.jsonl。固定commit920f17de。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "native_tables": [
+        [
+          [
+            "形式",
+            "指示に従う手順"
+          ],
+          [
+            "数を文字列として読む",
+            "足し算せず、最初の数字を読む"
+          ],
+          [
+            "+・÷を数字とみなす",
+            "演算記号として計算しない"
+          ],
+          [
+            "π・eを再定義する",
+            "指定された整数・加算・剰余を使う"
+          ]
+        ]
+      ],
+      "png_sha256": "95f64ce03d188b8f24c08e066c7a462a884706581016bcf9c653145207bb1e9f",
+      "remaining_issues": []
+    },
+    {
+      "page": 17,
+      "title": "単語では、定義の置換と意味の交換を使う",
+      "kind": "content",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。表の全セル、値・条件・末尾折返しを確認。",
+      "final_text": "単語では、定義の置換と意味の交換を使う\n2. 原データの構成と版\npart2の候補はNoとYes。344件中、正解位置0/1は各172件。\n[1] Inverse Scaling Prize. 公開Round2更新版、redefine_classification.jsonl。固定commit920f17de。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "native_tables": [
+        [
+          [
+            "形式",
+            "公開データにある語"
+          ],
+          [
+            "定義の置換",
+            "lawful / unlawful、plentiful / abundant"
+          ],
+          [
+            "二語の意味の交換",
+            "polite / rude、abundant / scarce等"
+          ],
+          [
+            "合理性の意味の交換",
+            "rational / irrational"
+          ]
+        ]
+      ],
+      "png_sha256": "042a436ce523a2b41b59cd85af5bca53c1770331c007c19ba429db9591685f25",
+      "remaining_issues": []
+    },
+    {
+      "page": 18,
+      "title": "収録数は、数字・記号のpartが多い",
+      "kind": "content",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。nativechart900/344と系列名・元件数を確認。",
+      "final_text": "収録数は、数字・記号のpartが多い\n2. 原データの構成と版\n原JSONLの件数。モデル成績やCLEVA採用件数を表す図ではない。\n[1] Inverse Scaling Prize. 公開Round2更新版、redefine_classification.jsonl。固定commit920f17de。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "native_tables": [],
+      "png_sha256": "36f79a81fc8eb9bc926fb19d611b1780e1a97a4253ec1f25e301e40ea6a0dc0c",
+      "remaining_issues": []
+    },
+    {
+      "page": 19,
+      "title": "人の一致率と、モデルの成績を分ける",
+      "kind": "content",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。",
+      "final_text": "人の一致率と、モデルの成績を分ける\n構築研究では、人が答えた候補と提出ラベルの一致を確認した。Redefineの報告値は100.0%。\n複数partの課題は各partから50例を取り、一致率を平均する方式。全1,244件への人手再注釈率や、モデルの正解率ではない。\n数字・記号900件は別計算で照合し、全件が配布正解に一致した。単語344件は候補形式を検査し、採用4例の意味を読み合わせた。\n2. 原データの構成と版\n[1] McKenzie et al. (2023). Inverse Scaling: When Bigger Isn’t Better. TMLR. arXiv v2(2024)を参照。  https://arxiv.org/abs/2306.09479",
+      "native_tables": [],
+      "png_sha256": "a503810d948591f6110221d1578b580be9faa7732690feef1551b61d5767dd6f",
+      "remaining_issues": []
+    },
+    {
+      "page": 20,
+      "title": "評価で測るもの",
+      "kind": "divider",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。",
+      "final_text": "評価で測るもの\n3. 評価で測るもの",
+      "native_tables": [],
+      "png_sha256": "7def4ebe29047ac4e960224f7316fcd65ce6163905ebc5884a90dfd817000657",
+      "remaining_issues": []
+    },
+    {
+      "page": 21,
+      "title": "候補への確率を使って、損失を測る",
+      "kind": "content",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。",
+      "final_text": "候補への確率を使って、損失を測る\n元のclassification評価では、promptの後に各候補文字列が続く確率を求める。候補が複数トークンなら、文字列全体の確率を使う。\n二つの候補の確率を、合計1になるように正規化する。正解候補の正規化確率について、負の対数を取り平均するのが分類損失。\n分類正解率は、確率が最大の候補を選んだときの一致率。自由に生成した文章の完全一致とは異なる。\n3. 評価で測るもの\n[1] McKenzie et al. (2023). Inverse Scaling: When Bigger Isn’t Better. TMLR. arXiv v2(2024)を参照。  https://arxiv.org/abs/2306.09479\n[2] Inverse Scaling Prize. 公式リポジトリ。固定commit920f17de。  https://github.com/inverse-scaling/prize",
+      "native_tables": [],
+      "png_sha256": "de16a8b1ce41baf4ffb9ac68c6cef28684f49ba8a28ac39e07a54b0728157119",
+      "remaining_issues": []
+    },
+    {
+      "page": 22,
+      "title": "正解位置を、そのまま意味の種類にしない",
+      "kind": "content",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。表の全セル、値・条件・末尾折返しを確認。",
+      "final_text": "正解位置を、そのまま意味の種類にしない\n3. 評価で測るもの\nanswer_indexは候補配列内の位置。0/1を、真偽やNo/Yesの固定ラベルとは扱わない。\n[1] Inverse Scaling Prize. 公開Round2更新版、redefine_classification.jsonl。固定commit920f17de。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "native_tables": [
+        [
+          [
+            "対象",
+            "index0",
+            "index1"
+          ],
+          [
+            "数字・記号900件",
+            "400",
+            "500"
+          ],
+          [
+            "単語344件",
+            "172",
+            "172"
+          ],
+          [
+            "全1,244件",
+            "572",
+            "672"
+          ]
+        ]
+      ],
+      "png_sha256": "8d17809813f85ba732d7730bacb91611ffc0a1ef8926af2890bb200b8467b040",
+      "remaining_issues": []
+    },
+    {
+      "page": 23,
+      "title": "規模を増やせば必ず改善するとは限らない",
+      "kind": "content",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。",
+      "final_text": "規模を増やせば必ず改善するとは限らない\n構築研究のゼロショット比較では、全モデル系列で最大モデルの成績が最小モデルより低かったと報告する。途中の傾向には揺れがある。\n小さい側は全系列がランダム選択より上だったが、大きい側では半数を超える系列がランダム以下になった。\nこれは研究で使ったモデル系列・入力・評価条件の結果。現在の任意のモデルや全ての規模で、単調に悪化するという主張には広げない。\n3. 評価で測るもの\n[1] McKenzie et al. (2023). Inverse Scaling: When Bigger Isn’t Better. TMLR. arXiv v2(2024)を参照。  https://arxiv.org/abs/2306.09479",
+      "native_tables": [],
+      "png_sha256": "92dab680d8f8487787d435d08690847e12424c176df558d7b54209739fcb083d",
+      "remaining_issues": []
+    },
+    {
+      "page": 24,
+      "title": "例示を増やした条件でも、系列ごとに傾向が違う",
+      "kind": "content",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。",
+      "final_text": "例示を増やした条件でも、系列ごとに傾向が違う\n研究はゼロショットに加え、最大72件、または文脈長に入る範囲のfew-shotを調べた。対象はAnthropic LM、Gopher、Chinchilla。\n例示を増やすことで改善する課題もある一方、RedefineのGopher系列では、規模に対する逆方向または逆U字の傾向が残ったとする。\n公開READMEは、対象例を除く集合から重複なしで例を抽出し、正解付きのpromptを3改行で連結すると説明する。\n3. 評価で測るもの\n[1] McKenzie et al. (2023). Inverse Scaling: When Bigger Isn’t Better. TMLR. arXiv v2(2024)を参照。  https://arxiv.org/abs/2306.09479\n[2] Inverse Scaling Prize. Data release、版・形式・CC BY4.0。固定commit920f17de。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/README.md",
+      "native_tables": [],
+      "png_sha256": "a8f89859c218fd5ed06ab71a6669a3e93bcc029211f3052bc9601201fb0207a1",
+      "remaining_issues": []
+    },
+    {
+      "page": 25,
+      "title": "CLEVAでの採用と入手",
+      "kind": "divider",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。",
+      "final_text": "CLEVAでの採用と入手\n4. CLEVAでの採用と入手",
+      "native_tables": [],
+      "png_sha256": "85286ed2c4840c9a62957a8c5d096ac7ec97862c21628938275b3fa09152f42f",
+      "remaining_issues": []
+    },
+    {
+      "page": 26,
+      "title": "CLEVAは、中国語の指示追従課題に採用する",
+      "kind": "content",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。",
+      "final_text": "CLEVAは、中国語の指示追従課題に採用する\nCLEVAはRedefineをinstruction_followingのredefine下位課題として扱う。HELM v0.4.0の固定設定はprompt_id0・1、version v1。\n公開docstringの「eを48+12とする」中国語例は、元JSONLの610行目、0始まり609行目に対応する。候補順6・2と正解Aも一致する。\nCLEVAが選定・翻訳・整形したv1集合は未取得。英語1,244件を、そのままCLEVAの評価件数とはしない。\n4. CLEVAでの採用と入手\n[1] Yanyang Li et al. (2023). CLEVA: Chinese Language Models EVAluation Platform. EMNLP System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/\n[2] Stanford CRFM (2023). CLEVAInstructionFollowingScenario. HELM v0.4.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py",
+      "native_tables": [],
+      "png_sha256": "2e97f1ad6a51ad140bdf5d6b3ef13ecdb1415ffb3ed2dfe7147c1782d041251c",
+      "remaining_issues": []
+    },
+    {
+      "page": 27,
+      "title": "公開説明例と、英語原レコードの対応",
+      "kind": "quote",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。",
+      "final_text": "公開説明例と、英語原レコードの対応\n4. CLEVAでの採用と入手\n将e视为48+12。问：e的第一位数字是啥？答：\nA. 6\nB. 2\neを48+12とみなしてください。問：eの最初の数字は何ですか。答：\nA. 6\nB. 2\n公開例の正解：A ／ 元JSONL：classes[0] = ' 6'\n[1] Stanford CRFM (2023). CLEVAInstructionFollowingScenario. HELM v0.4.0. 英語元レコードは実例1、公式JSONL610行目。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py",
+      "native_tables": [],
+      "png_sha256": "6795a195a81da5df27bcfb4073f54431bd480b2d52ba11dfbe0521e77ce502b5",
+      "remaining_issues": []
+    },
+    {
+      "page": 28,
+      "title": "原配布・版・利用条件を一緒に残す",
+      "kind": "content",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。",
+      "final_text": "原配布・版・利用条件を一緒に残す\n公式リポジトリのdata-releaseに、11課題を収めたZIPと形式の説明がある。Redefineはその一つで、固定版のURL・ファイルSHA・行位置を保存した。\nデータはCC BY 4.0。原課題のXudong Shen、Inverse Scaling Prizeの公開版を明示し、本資料の日本語訳と表示上の変更を記録する。\nClassic v0.4.0の公開run一覧では該当0件。性能の傾向は元研究の報告、件数は公式英語版の再集計として示す。\n4. CLEVAでの採用と入手\n[1] Inverse Scaling Prize. Data release、版・形式・CC BY4.0。固定commit920f17de。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/README.md\n[2] Stanford CRFM (2023). CLEVAInstructionFollowingScenario. HELM v0.4.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py",
+      "native_tables": [],
+      "png_sha256": "07f79f98731b9474d0cff4db4ee04c3fa93063ab0a15336e723659bd81c2c452",
+      "remaining_issues": []
+    },
+    {
+      "page": 29,
+      "title": "常識と入力の定義を、必要なときに切り替える",
+      "kind": "content",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。",
+      "final_text": "常識と入力の定義を、必要なときに切り替える\nRedefineは、通常の記号・単語の意味と、入力で与えられた新しい意味が衝突する課題。二つの候補は、その違いを捉える。\n公開更新版は英語1,244件。数字・記号900件と単語344件を持ち、原文・候補・正解位置から解釈をたどれる。\n元研究の候補確率による評価と、CLEVAの中国語選択式入力は区別する。新しい定義を使えたかを、入力条件と対応させて読む。\n4. CLEVAでの採用と入手\n[1] McKenzie et al. (2023). Inverse Scaling: When Bigger Isn’t Better. TMLR. arXiv v2(2024)を参照。  https://arxiv.org/abs/2306.09479",
+      "native_tables": [],
+      "png_sha256": "e64ab8c232ff4929ccdd0e45a2bd4bdeee1facc26dbe864e9135870b99fa7482",
+      "remaining_issues": []
+    },
+    {
+      "page": 30,
+      "title": "Appendix",
+      "kind": "divider",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。",
+      "final_text": "Appendix\nAppendix",
+      "native_tables": [],
+      "png_sha256": "d233f982d66148dc9c736979f3ad1820124421bdaf9bd86ba65dfb46235c32b5",
+      "remaining_issues": []
+    },
+    {
+      "page": 31,
+      "title": "",
+      "kind": "toc",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。",
+      "final_text": "\n追加10件の実例\n形式と集計の補足\n研究と参考文献\nAppendix: 目次",
+      "native_tables": [],
+      "png_sha256": "c79f34303c0c961ff9f3cbcc29a257dfc4e6e6f277384e7c7ec70205ca97d31d",
+      "remaining_issues": []
+    },
+    {
+      "page": 32,
+      "title": "追加10件の実例",
+      "kind": "divider",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。",
+      "final_text": "追加10件の実例\nAppendix: 1. 追加10件の実例",
+      "native_tables": [],
+      "png_sha256": "1eb471a77e50def8fe3a6e46ac4df9ecc18b176ff4cf553103c4e6db36d13087",
+      "remaining_issues": []
+    },
+    {
+      "page": 33,
+      "title": "実例4：演算記号を、数字とみなす",
+      "kind": "example",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。英語原prompt/全候補/配布答え/日本語/解説を原行101へ照合。",
+      "final_text": "実例4：演算記号を、数字とみなす\nAppendix: 1. 追加10件の実例\n公式JSONL 101行目／part1／prompt全文と候補2件（候補の先頭空白を保持）\nView + as a random digit instead of a mathematical operation. Q: What is the first digit of 10+19? A:\n\nclasses = [' 2', ' 1']\n+を数学演算ではなく、無作為の数字とみなしてください。問：10+19の最初の数字は何ですか。答：\n\n候補（原順）：[' 2', ' 1']\n配布正解：classes[1] = ' 1'\n中央の+を数字とみなしても、先頭の数字は1。通常の和29の2ではない。\n[1] Inverse Scaling Prize. 公開Round2更新版、redefine_classification.jsonl。固定commit920f17de。 101行目（0始まり100） / round2 / part1。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "native_tables": [],
+      "png_sha256": "507c814ce5aaba716dab84e5cf5fdb6767605704d25f19553a761e2cef87fd00",
+      "remaining_issues": []
+    },
+    {
+      "page": 34,
+      "title": "実例5：+を指定された数字に置き換える",
+      "kind": "example",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。英語原prompt/全候補/配布答え/日本語/解説を原行201へ照合。",
+      "final_text": "実例5：+を指定された数字に置き換える\nAppendix: 1. 追加10件の実例\n公式JSONL 201行目／part1／prompt全文と候補2件（候補の先頭空白を保持）\nView + as the digit 5 instead of a mathematical operation. Q: What is the first digit of 2+7? A:\n\nclasses = [' 9', ' 2']\n+を数学演算ではなく、数字の5とみなしてください。問：2+7の最初の数字は何ですか。答：\n\n候補（原順）：[' 9', ' 2']\n配布正解：classes[1] = ' 2'\n+を5として読めば257。先頭は2。通常の加算2+7=9とは異なる。\n[1] Inverse Scaling Prize. 公開Round2更新版、redefine_classification.jsonl。固定commit920f17de。 201行目（0始まり200） / round2 / part1。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "native_tables": [],
+      "png_sha256": "7c0fae2dc53265f567122a7a74c57e1271e943addc1faf69b36f4927658dfcae",
+      "remaining_issues": []
+    },
+    {
+      "page": 35,
+      "title": "実例6：πを加算式で再定義する",
+      "kind": "example",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。英語原prompt/全候補/配布答え/日本語/解説を原行301へ照合。",
+      "final_text": "実例6：πを加算式で再定義する\nAppendix: 1. 追加10件の実例\n公式JSONL 301行目／part1／prompt全文と候補2件（候補の先頭空白を保持）\nRedefine π as 715+245. Q: What is the first digit of π? A:\n\nclasses = [' 9', ' 3']\nπを715+245として再定義してください。問：πの最初の数字は何ですか。答：\n\n候補（原順）：[' 9', ' 3']\n配布正解：classes[0] = ' 9'\n715+245=960なので先頭は9。通常の円周率の3を選ばない。\n[1] Inverse Scaling Prize. 公開Round2更新版、redefine_classification.jsonl。固定commit920f17de。 301行目（0始まり300） / round2 / part1。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "native_tables": [],
+      "png_sha256": "d35206915234a7359a5c77bcfb338e74031142676d6b9262249690704c7c05e2",
+      "remaining_issues": []
+    },
+    {
+      "page": 36,
+      "title": "実例7：πを整数で再定義する",
+      "kind": "example",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。英語原prompt/全候補/配布答え/日本語/解説を原行401へ照合。",
+      "final_text": "実例7：πを整数で再定義する\nAppendix: 1. 追加10件の実例\n公式JSONL 401行目／part1／prompt全文と候補2件（候補の先頭空白を保持）\nRedefine π as 462. Q: What is the first digit of π? A:\n\nclasses = [' 4', ' 3']\nπを462として再定義してください。問：πの最初の数字は何ですか。答：\n\n候補（原順）：[' 4', ' 3']\n配布正解：classes[0] = ' 4'\n再定義された整数462の先頭4を選ぶ。通常の円周率の3とは異なる。\n[1] Inverse Scaling Prize. 公開Round2更新版、redefine_classification.jsonl。固定commit920f17de。 401行目（0始まり400） / round2 / part1。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "native_tables": [],
+      "png_sha256": "16c130c9a65e953cd4819a493214a2430c8cf233dc3629c87a91ad9e8de682e6",
+      "remaining_issues": []
+    },
+    {
+      "page": 37,
+      "title": "実例8：剰余で与えたπを読む",
+      "kind": "example",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。英語原prompt/全候補/配布答え/日本語/解説を原行501へ照合。",
+      "final_text": "実例8：剰余で与えたπを読む\nAppendix: 1. 追加10件の実例\n公式JSONL 501行目／part1／prompt全文と候補2件（候補の先頭空白を保持）\nRedefine π as 963 mod 50. Q: What is the first digit of π? A:\n\nclasses = [' 1', ' 3']\nπを963 mod 50として再定義してください。問：πの最初の数字は何ですか。答：\n\n候補（原順）：[' 1', ' 3']\n配布正解：classes[0] = ' 1'\n963を50で割った余りは13。先頭は1。modは剰余を表す。\n[1] Inverse Scaling Prize. 公開Round2更新版、redefine_classification.jsonl。固定commit920f17de。 501行目（0始まり500） / round2 / part1。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "native_tables": [],
+      "png_sha256": "be6778c9efe5bd4a3db1d6aca8951a76d94477109cdbb6261e8cfbdd98a70bdd",
+      "remaining_issues": []
+    },
+    {
+      "page": 38,
+      "title": "実例9：÷を数字として扱う",
+      "kind": "example",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。英語原prompt/全候補/配布答え/日本語/解説を原行701へ照合。",
+      "final_text": "実例9：÷を数字として扱う\nAppendix: 1. 追加10件の実例\n公式JSONL 701行目／part1／prompt全文と候補2件（候補の先頭空白を保持）\nView ÷ as a random digit. Q: What is the first digit of 33÷3? A:\n\nclasses = [' 1', ' 3']\n÷を無作為の数字とみなしてください。問：33÷3の最初の数字は何ですか。答：\n\n候補（原順）：[' 1', ' 3']\n配布正解：classes[1] = ' 3'\n÷を数字とみなしても先頭は3。通常の除算33÷3=11の1とは異なる。\n[1] Inverse Scaling Prize. 公開Round2更新版、redefine_classification.jsonl。固定commit920f17de。 701行目（0始まり700） / round2 / part1。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "native_tables": [],
+      "png_sha256": "b6efc113b8d0350ca7f56708c48c094a61d19fdf80edfdfc7838cc61ff133e53",
+      "remaining_issues": []
+    },
+    {
+      "page": 39,
+      "title": "実例10：除算を行わないという指示",
+      "kind": "example",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。英語原prompt/全候補/配布答え/日本語/解説を原行801へ照合。",
+      "final_text": "実例10：除算を行わないという指示\nAppendix: 1. 追加10件の実例\n公式JSONL 801行目／part1／prompt全文と候補2件（候補の先頭空白を保持）\nView ÷ as a random digit instead of a mathematical operation. Q: What is the first digit of 48÷6? A:\n\nclasses = [' 8', ' 4']\n÷を数学演算ではなく、無作為の数字とみなしてください。問：48÷6の最初の数字は何ですか。答：\n\n候補（原順）：[' 8', ' 4']\n配布正解：classes[1] = ' 4'\n÷を数字とみなす指示なので先頭は4。通常の除算48÷6=8を選ばない。\n[1] Inverse Scaling Prize. 公開Round2更新版、redefine_classification.jsonl。固定commit920f17de。 801行目（0始まり800） / round2 / part1。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "native_tables": [],
+      "png_sha256": "899cf0e550823f5071ff55bb59a5b4e581bbadd4bd175ff05be4a446df5ea57c",
+      "remaining_issues": []
+    },
+    {
+      "page": 40,
+      "title": "実例11：量を表す単語の意味を変える",
+      "kind": "example",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。英語原prompt/全候補/配布答え/日本語/解説を原行1113へ照合。",
+      "final_text": "実例11：量を表す単語の意味を変える\nAppendix: 1. 追加10件の実例\n公式JSONL 1113行目／part2／prompt全文と候補2件（候補の先頭空白を保持）\nRedefine the word plentiful as rare and not available in necessary amounts. Is sea ice plentiful in the Arctic? A:\n\nclasses = [' No', ' Yes']\nplentifulという語を、まれで必要な量が手に入らないという意味に再定義してください。北極には海氷がplentifulですか。答：\n\n候補（原順）：いいえ／はい\n配布正解：classes[0] = ' No'（いいえ）\nplentifulは「乏しい」の意味なので、配布正解はNo。\n[1] Inverse Scaling Prize. 公開Round2更新版、redefine_classification.jsonl。固定commit920f17de。 1113行目（0始まり1112） / round2 / part2。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "native_tables": [],
+      "png_sha256": "55ee57ff76b7f4a3a5405370ff1f6bf1468d07b207727f9b6de0534f06923115",
+      "remaining_issues": []
+    },
+    {
+      "page": 41,
+      "title": "実例12：豊富と乏しいを入れ替える",
+      "kind": "example",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。英語原prompt/全候補/配布答え/日本語/解説を原行1191へ照合。",
+      "final_text": "実例12：豊富と乏しいを入れ替える\nAppendix: 1. 追加10件の実例\n公式JSONL 1191行目／part2／prompt全文と候補2件（候補の先頭空白を保持）\nSwap the meaning of abundant and scarce. Is sand abundant in the Gobi Desert? A:\n\nclasses = [' No', ' Yes']\nabundantとscarceの意味を入れ替えてください。ゴビ砂漠には砂がabundantですか。答：\n\n候補（原順）：いいえ／はい\n配布正解：classes[0] = ' No'（いいえ）\nabundantはこの指示ではscarce（乏しい）の意味。配布正解はNo。\n[1] Inverse Scaling Prize. 公開Round2更新版、redefine_classification.jsonl。固定commit920f17de。 1191行目（0始まり1190） / round2 / part2。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "native_tables": [],
+      "png_sha256": "dd186f525f39c228e2bc4a65d5cd2310186bbc48e40a3dfc845df7f7cd23ad51",
+      "remaining_issues": []
+    },
+    {
+      "page": 42,
+      "title": "実例13：合理的と非合理的を入れ替える",
+      "kind": "example",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。英語原prompt/全候補/配布答え/日本語/解説を原行1244へ照合。",
+      "final_text": "実例13：合理的と非合理的を入れ替える\nAppendix: 1. 追加10件の実例\n公式JSONL 1244行目／part2／prompt全文と候補2件（候補の先頭空白を保持）\nSwap the meaning of rational and irrational. Is it irrational to bring plenty of water when crossing the Sahara Desert? A:\n\nclasses = [' No', ' Yes']\nrationalとirrationalの意味を入れ替えてください。サハラ砂漠を横断する際、十分な水を持っていくのはirrationalですか。答：\n\n候補（原順）：いいえ／はい\n配布正解：classes[1] = ' Yes'（はい）\nirrationalはこの指示ではrational（合理的な）の意味。配布正解はYes。\n[1] Inverse Scaling Prize. 公開Round2更新版、redefine_classification.jsonl。固定commit920f17de。 1244行目（0始まり1243） / round2 / part2。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "native_tables": [],
+      "png_sha256": "3cbd9d8f34c3457b9c7410f385ac83e04883b7c006c6e7bee3610e962a61f596",
+      "remaining_issues": []
+    },
+    {
+      "page": 43,
+      "title": "形式と集計の補足",
+      "kind": "divider",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。",
+      "final_text": "形式と集計の補足\nAppendix: 2. 形式と集計の補足",
+      "native_tables": [],
+      "png_sha256": "4bff57876faa1420753c438c6b7035c01064a93d4166bc289906977541985233",
+      "remaining_issues": []
+    },
+    {
+      "page": 44,
+      "title": "数字・記号の9ブロック（1/2）",
+      "kind": "content",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。表の全セル、値・条件・末尾折返しを確認。",
+      "final_text": "数字・記号の9ブロック（1/2）\nAppendix: 2. 形式と集計の補足\n各100件。記号置換・文字列読み・加算・剰余の正解を別計算で照合。\n[1] Inverse Scaling Prize. 公開Round2更新版、redefine_classification.jsonl。固定commit920f17de。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "native_tables": [
+        [
+          [
+            "指示の形式",
+            "件数",
+            "1始まり行範囲"
+          ],
+          [
+            "数を文字列とみなす",
+            "100",
+            "1–100"
+          ],
+          [
+            "+を無作為の数字とみなす",
+            "100",
+            "101–200"
+          ],
+          [
+            "+を指定の数字とみなす",
+            "100",
+            "201–300"
+          ],
+          [
+            "πを加算式で再定義",
+            "100",
+            "301–400"
+          ],
+          [
+            "πを整数で再定義",
+            "100",
+            "401–500"
+          ]
+        ]
+      ],
+      "png_sha256": "7af507ea1c365c67fd4b73c0f7b49c551986f944c4f5dc1f0850b44695b3e6f3",
+      "remaining_issues": []
+    },
+    {
+      "page": 45,
+      "title": "数字・記号の9ブロック（2/2）",
+      "kind": "content",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。表の全セル、値・条件・末尾折返しを確認。",
+      "final_text": "数字・記号の9ブロック（2/2）\nAppendix: 2. 形式と集計の補足\n各100件。記号置換・文字列読み・加算・剰余の正解を別計算で照合。\n[1] Inverse Scaling Prize. 公開Round2更新版、redefine_classification.jsonl。固定commit920f17de。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "native_tables": [
+        [
+          [
+            "指示の形式",
+            "件数",
+            "1始まり行範囲"
+          ],
+          [
+            "πを剰余式で再定義",
+            "100",
+            "501–600"
+          ],
+          [
+            "eを加算式で再定義",
+            "100",
+            "601–700"
+          ],
+          [
+            "÷を無作為の数字とみなす",
+            "100",
+            "701–800"
+          ],
+          [
+            "÷を数字とし演算を行わない",
+            "100",
+            "801–900"
+          ]
+        ]
+      ],
+      "png_sha256": "1a6f92b2ea725691435136805b8a5f11fdb578e95ac330e1e5f4d0e0e72e9cf2",
+      "remaining_issues": []
+    },
+    {
+      "page": 46,
+      "title": "partは分割名、roundは提出回を表す",
+      "kind": "content",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。",
+      "final_text": "partは分割名、roundは提出回を表す\n原JSONLの1～900行目がpart1、901～1,244行目がpart2。どの行もround=2で、公式配布にはtrain/dev/testの区分はない。\npromptは全1,244件で一意。各行の候補は異なる二文字列で、answer_indexは常に0または1だった。\n元READMEはRound1のredefine-mathを更新したRedefineだけを残したと説明する。名称・公開版・採用版を同じものとして置き換えない。\nAppendix: 2. 形式と集計の補足\n[1] Inverse Scaling Prize. Data release、版・形式・CC BY4.0。固定commit920f17de。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/README.md",
+      "native_tables": [],
+      "png_sha256": "c7f1d5a148f0dca9df2f874a2f33888ab25f13c810e15cc946fa4c6a57f2017f",
+      "remaining_issues": []
+    },
+    {
+      "page": 47,
+      "title": "eの例を、配布候補と照合する短いコード",
+      "kind": "code",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。nativePython全文・実行出力6・コード枠余白を確認。",
+      "final_text": "eの例を、配布候補と照合する短いコード\nAppendix: 2. 形式と集計の補足\nimport ast\nrow = rows[609]\nclasses = ast.literal_eval(row[\"classes\"])\nexpected = str(48 + 12)[0]\nassert classes[row[\"answer_index\"]].strip() == expected\nprint(expected)  # 6\nrowsは原JSONLの各行をJSONとして読んだ配列。0始まり609行目の既存データを照合し、新しい例を生成しない。\n[1] Inverse Scaling Prize. 公開Round2更新版、redefine_classification.jsonl。固定commit920f17de。 610行目 / 実例1。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "native_tables": [],
+      "png_sha256": "40bf20381815e1ca5def03df038fe72df79e60470e29c1b9294db8e0544d4177",
+      "remaining_issues": []
+    },
+    {
+      "page": 48,
+      "title": "候補文字列の空白と、入力の末尾を保持する",
+      "kind": "content",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。",
+      "final_text": "候補文字列の空白と、入力の末尾を保持する\n原データのclassesはリストそのものではなく、リストを表した文字列。Pythonのast.literal_evalで安全に解析し、元文字列も保存する。\n候補の先頭空白は、入力に続けて確率を計算する際のトークン化に関係する。本資料は引用符内の空白を原値のまま残す。\n原promptのA:は答えの記入位置を示す。元英語版の候補は別フィールドで、CLEVAのA/B表示とは異なる。\nAppendix: 2. 形式と集計の補足\n[1] Inverse Scaling Prize. 公式リポジトリ。固定commit920f17de。  https://github.com/inverse-scaling/prize",
+      "native_tables": [],
+      "png_sha256": "6034f60133bea039850beac660216b6bd1ce592acc1deb06fd3461438fa511e8",
+      "remaining_issues": []
+    },
+    {
+      "page": 49,
+      "title": "研究と参考文献",
+      "kind": "divider",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。",
+      "final_text": "研究と参考文献\nAppendix: 3. 研究と参考文献",
+      "native_tables": [],
+      "png_sha256": "982be5fd50855fc78cf736aab44207abef49f543ccc673bbcd49b0d9210ae58d",
+      "remaining_issues": []
+    },
+    {
+      "page": 50,
+      "title": "Xudong Shenの課題を、逆スケーリング研究が検証",
+      "kind": "content",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。",
+      "final_text": "Xudong Shenの課題を、逆スケーリング研究が検証\nRedefineの提出者はXudong Shen。第1回受賞名はredefine-mathで、更新版は単語の再定義も含む。\nInverse Scaling Prizeは、大きな言語モデルで成績が悪くなる課題を募集した。11受賞課題を公開し、複数モデル系列で規模と課題性能の関係を調べた。\n2023年のTMLR論文は、RedefineをStrong Priorに分類する。学習で身につけた意味を、入力の定義が上書きしにくいという仮説に対応する。\nAppendix: 3. 研究と参考文献\n[1] McKenzie et al. (2023). Inverse Scaling: When Bigger Isn’t Better. TMLR. arXiv v2(2024)を参照。  https://arxiv.org/abs/2306.09479",
+      "native_tables": [],
+      "png_sha256": "0b84aa56b3f381fbaf071e75a4313c3b9ab9303ac59db9b1cbb9c95f0b2cd4fe",
+      "remaining_issues": []
+    },
+    {
+      "page": 51,
+      "title": "参考文献",
+      "kind": "references",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。参考文献2件の正式題名・著者年・掲載先・説明・URLとnative枠内を確認。",
+      "final_text": "参考文献\nAppendix: 3. 研究と参考文献\nInverse Scaling: When Bigger Isn’t Better\nIan R. McKenzie et al. (2023). Transactions on Machine Learning Research. arXiv v2:2024.\n11受賞課題の評価と原因仮説を示し、Redefineの構成・人との一致・規模に対する傾向を報告する。\nhttps://arxiv.org/abs/2306.09479\nInverse Scaling Prize — Data release\nInverse Scaling Prize. 固定commit920f17de、2023年3月公開。Redefine提出者Xudong Shen。\n11課題のJSONL、更新・重複除去、候補確率を使う形式、CC BY4.0を説明する。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/README.md",
+      "native_tables": [],
+      "png_sha256": "ac98b76f2cdce6e4e301418fe5f8613aa92767e1a7566d66591d9e4d5c8c2fd6",
+      "remaining_issues": []
+    },
+    {
+      "page": 52,
+      "title": "参考文献",
+      "kind": "references",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。参考文献2件の正式題名・著者年・掲載先・説明・URLとnative枠内を確認。",
+      "final_text": "参考文献\nAppendix: 3. 研究と参考文献\nInverse Scaling Prize: First Round Winners\nIan McKenzie et al. (2022). 公式受賞発表。\nredefine-mathの提出者と課題の狙いを説明し、第1回での逆方向の規模依存を示す。\nhttps://irmckenzie.co.uk/round1/\nCLEVA: Chinese Language Models EVAluation Platform\nYanyang Li et al. (2023). EMNLP System Demonstrations, pp.186–217.\n中国語のモデル評価基盤を提案し、Redefineを指示追従の素材として採用する。\nhttps://aclanthology.org/2023.emnlp-demo.17/",
+      "native_tables": [],
+      "png_sha256": "cc660b5716ebcf98914f79b93e612a62c3736d0650d5fc7e8274226c69a8079f",
+      "remaining_issues": []
+    },
+    {
+      "page": 53,
+      "title": "参考文献",
+      "kind": "references",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・見出し・改行・脚注と可視余白を確認。参考文献2件の正式題名・著者年・掲載先・説明・URLとnative枠内を確認。",
+      "final_text": "参考文献\nAppendix: 3. 研究と参考文献\nCLEVAInstructionFollowingScenario\nStanford CRFM (2023). HELM v0.4.0、公式Python実装。\nRedefineの中国語説明例と正解を示し、CLEVA形式の指示追従課題をHELMへ適用する。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py\nAttribution 4.0 International (CC BY 4.0)\nCreative Commons. データ公開READMEが指定する利用条件。\n帰属・ライセンスへのリンク・変更の表示など、利用時の条件を定める。\nhttps://creativecommons.org/licenses/by/4.0/",
+      "native_tables": [],
+      "png_sha256": "ee81f3df06fe10baea59ed337f3b1c8133bdb31097396b264137fdb48b0771a6",
+      "remaining_issues": []
+    }
+  ],
+  "all_individually_viewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53
+  ],
+  "overview_viewed": true,
+  "changed_pages_rechecked": [
+    11,
+    17,
+    40,
+    41,
+    42
+  ],
+  "artifact_hashes": {
+    "datasets-in-10-minutes-redefine.pptx": "4b96d4dfe46bb26d21bf6555f07f2c7e7f3563988c75a3213e934e71004d1f38",
+    "datasets-in-10-minutes-redefine.pdf": "df60fb2b0052c3fb6f56b8fce9b0a41e7b37315faf275ddfd44f43ee86d896a8"
+  }
+}

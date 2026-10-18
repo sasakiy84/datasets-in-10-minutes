@@ -76,7 +76,7 @@
 |---|---|---|---|
 |23|modified-arithmetic|Modified Arithmetic|未着手|
 |24|sig-figs|Significant Figures|未着手|
-|25|redefine|Redefine|独立レビュー中|
+|25|redefine|Redefine|作成済み|
 |26|pattern-matching-suppression|Pattern Matching Suppression|制作中|
 |27|modus-tollens|Modus Tollens|未着手|
 |28|neqa|NeQA|未着手|
