@@ -98,3 +98,25 @@
 [PPTX](../../slides/datasets-in-10-minutes-squad.pptx) / [PDF](../../slides/datasets-in-10-minutes-squad.pdf)
 
 [変更対TSV](squad/changes.tsv) / [校正・検証JSON](squad/review.json) / [全ページの確認記録](squad/pages.jsonl) / [参照した過去のGemini案](squad/prior-gemini-proposals.jsonl)
+
+## 2026-10-18：正解表示と本文の出典表現
+
+独立した正解は本文と同程度の大きさ・太字で示し、ユーザー個人の好みのえんじ色（accent1 / #B13731）を適用した。本文の不要な図表番号を省き、評価条件・原文・訳・正解値は保持した。Codexによるスキル適用、Gemini使用なし。[全変更対・個別確認ページ・検査とハッシュ](squad/answer-style-review.json)。
+
+|ページ|変更前|変更後|
+|---|---|---|
+|7|正解は Denver Broncos（[22.0] pt）|正解は Denver Broncos（[22.0] pt）|
+|8|正解は 1884（[22.0] pt）|正解は 1884（[22.0] pt）|
+|9|正解は external combustion（[22.0] pt）|正解は external combustion（[22.0] pt）|
+|10|正解は 回答不能（文章に根拠がない）（[22.0] pt）|正解は 回答不能（文章に根拠がない）（[22.0] pt）|
+|50|正解は 1968（[22.0] pt）|正解は 1968（[22.0] pt）|
+|51|正解は nine nations（[22.0] pt）|正解は nine nations（[22.0] pt）|
+|52|正解は itself（[22.0] pt）|正解は itself（[22.0] pt）|
+|53|正解は 30–60% of Europe's total population（[22.0] pt）|正解は 30–60% of Europe's total population（[22.0] pt）|
+|54|正解は Nobel Prize（[22.0] pt）|正解は Nobel Prize（[22.0] pt）|
+|55|正解は the Mongol Empire（[22.0] pt）|正解は the Mongol Empire（[22.0] pt）|
+|56|正解は to conduct photosynthesis（[22.0] pt）|正解は to conduct photosynthesis（[22.0] pt）|
+|57|正解は a private research university（[22.0] pt）|正解は a private research university（[22.0] pt）|
+|58|正解は 回答不能（文章に根拠がない）（[22.0] pt）|正解は 回答不能（文章に根拠がない）（[22.0] pt）|
+|59|正解は 回答不能（文章に根拠がない）（[22.0] pt）|正解は 回答不能（文章に根拠がない）（[22.0] pt）|
+|106|import json<br>from urllib.request import urlopen<br><br>base = "https://rajpurkar.github.io/SQuAD-explorer/dataset/"<br>for version in ("1.1", "2.0"):<br>    for split in ("train", "dev"):<br>        name = f"{split}-v{version}.json"<br>        with urlopen(base + name) as response:<br>            data = json.load(response)<br>        with open(name, "w", encoding="utf-8") as output:<br>            json.dump(data, output, ensure_ascii=False)|import json<br>from urllib.request import urlopen<br><br>base = "https://rajpurkar.github.io/SQuAD-explorer/dataset/"<br>for version in ("1.1", "2.0"):<br>    for split in ("train", "dev"):<br>        name = f"{split}-v{version}.json"<br>        with urlopen(base + name) as response:<br>            data = json.load(response)<br>        with open(name, "w", encoding="utf-8") as output:<br>            json.dump(data, output, ensure_ascii=False)|
