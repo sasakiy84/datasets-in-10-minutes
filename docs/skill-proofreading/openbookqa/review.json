@@ -1,7 +1,7 @@
 {
   "dataset": "openbookqa",
   "created_at": "2026-10-18T00:55:12+00:00",
-  "updated_at": "2026-10-18T10:52:08+09:00",
+  "updated_at": "2026-10-18T11:13:42+09:00",
   "model": "Codex (local skill application; no external generation API)",
   "review_mode": "skill_based_codex",
   "skill_path": ".agents/skills/japanese-slide-proofreading/SKILL.md",
@@ -109,8 +109,8 @@
   ],
   "visual_review_method": "全ページ一覧を確認し、引用・コード・表・参考文献・公式画面・グラフを1080×608の画像で個別に目視。最終変更ページは再描画して確認。",
   "artifact_sha256": {
-    "pdf": "47579e7e280190a83c682d8d6128f69339f3519e4a8c018f009fe540247beab6",
-    "pptx": "abd21a334beee7210771b6e5fc72ef0a9154fe3f2d01cdbc933b680e1fcadb7d"
+    "pdf": "7c1bc0cae18c09cd35d879bd4b5e18661729f7d51d3947c870c7785e3564b885",
+    "pptx": "3481976fcd8cb9bce733ac136e7f68ca5fb38069aa2ab0582f73be43d11fcd61"
   },
   "wording_changes": 4,
   "layout_and_explanation_changes": [
@@ -175,6 +175,39 @@
       "pdf_link_rectangles": 41,
       "pdf_link_text_exactly_matches_url": true,
       "issues": []
+    },
+    "answer_color": {
+      "dataset": "openbookqa",
+      "changed_pages": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45
+      ],
+      "only_answer_theme_color_changed": true,
+      "all_text_fonts_and_geometry_identical": true,
+      "other_shapes_identical": true,
+      "old_color": "2C9100",
+      "new_color": "B13731",
+      "theme_color": "accent1"
     }
   },
   "scope_notes": "additional版test全500問を集計。科学の事実fact1、設問、四つの候補と正解を保持した。初期評価は関連事実fと追加事実kの提示条件を区別した。HELMは事実を入力しない0-shot・1試行。humanScoreは5人中の正解者の割合（1.0は5人、0.8は4人）。公式GitHubのApache 2.0とミラーのunknownを区別した。AllenAI案内はHFへ転送されたため、冒頭は公式GitHubのREADME画面を用いた。",
@@ -222,6 +255,83 @@
           "issues": []
         }
       }
+    },
+    {
+      "checked_at": "2026-10-18T10:52:08+09:00",
+      "artifact_sha256": {
+        "pdf": "47579e7e280190a83c682d8d6128f69339f3519e4a8c018f009fe540247beab6",
+        "pptx": "abd21a334beee7210771b6e5fc72ef0a9154fe3f2d01cdbc933b680e1fcadb7d"
+      },
+      "checks": {
+        "package": {
+          "parsed_xml_parts": 139,
+          "integer_bullets": 106,
+          "hyperlinks": 41,
+          "new_schema_errors": [],
+          "baseline_schema_errors": 11,
+          "package_integrity": "passed",
+          "internal_relationship_targets": "passed",
+          "unique_shape_ids": "passed",
+          "schema_note": "標準XSDを変更せず確認。マスター由来の既存エラーと、整数buSzPctの百分率字句形式との差を分離。整数箇条書きサイズは25000–400000で別途検査。",
+          "pages": 52,
+          "native_tables": 5,
+          "native_charts": 1
+        },
+        "layout": {
+          "paragraphs_checked": 352,
+          "table_cells_checked": 38,
+          "issues": []
+        },
+        "text": {
+          "pages": 52,
+          "missing": [],
+          "quote_missing": [],
+          "unique_examples": 13,
+          "all_original_paragraphs_and_translations_present": true,
+          "notes": false,
+          "unnecessary_original_paper_word": 0,
+          "extraction_note": "数式記号の別ブロックとfi合字のゼロ幅文字は、実際の文字・基線・座標を保って行順を復元。文字の削除による代用なし。"
+        },
+        "links": {
+          "native_url_only_runs": 41,
+          "pdf_link_rectangles": 41,
+          "pdf_link_text_exactly_matches_url": true,
+          "issues": []
+        },
+        "answer_color": {
+          "dataset": "openbookqa",
+          "changed_pages": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45
+          ],
+          "only_answer_theme_color_changed": true,
+          "all_text_fonts_and_geometry_identical": true,
+          "other_shapes_identical": true,
+          "old_color": "2C9100",
+          "new_color": "B13731",
+          "theme_color": "accent1"
+        }
+      }
     }
   ],
   "follow_up_reviews": [
@@ -254,6 +364,13 @@
         44,
         45
       ]
+    },
+    {
+      "record": "answer-color-review.json",
+      "checked_at": "2026-10-18T11:13:42+09:00",
+      "answer_color_changes": 22,
+      "color": "B13731",
+      "theme_color": "accent1"
     }
   ]
 }
