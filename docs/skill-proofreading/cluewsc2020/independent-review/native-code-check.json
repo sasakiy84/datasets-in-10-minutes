@@ -1,0 +1,6 @@
+{
+  "page": 53,
+  "native_code": "import json\nwith open('train.json', encoding='utf-8') as f:\n    row = json.loads(f.readlines()[680])\nt = row['target']\nfor k in ('span1', 'span2'):\n    start = t[k + '_index']\n    span = t[k + '_text']\n    assert row['text'][start:start + len(span)] == span\nassert row['label'] == 'true'\nprint(t['span1_text'], t['span2_text'], row['label'])",
+  "executed_unmodified": true,
+  "stdout": "块状物 它们 true\n"
+}

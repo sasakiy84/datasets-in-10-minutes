@@ -46,7 +46,7 @@
 |---|---|---|---|
 |0|cleva|プラットフォーム|作成済み|
 |1|cluecorpus2020|CLUECorpus2020|未着手|
-|2|cluewsc2020|CLUEWSC / CLUEWSC2020|制作中|
+|2|cluewsc2020|CLUEWSC / CLUEWSC2020|作成済み|
 |3|ccpm|CCPM|作成済み|
 |4|chid|ChID|未着手|
 |5|ocnli|OCNLI|作成済み|
