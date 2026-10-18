@@ -1,0 +1,101 @@
+{
+  "reviewer": "/root/create_cnndm",
+  "target": "legalbench",
+  "approved": true,
+  "status": "passed",
+  "remaining_issues": [],
+  "findings": [
+    {
+      "id": "LEGAL-01",
+      "priority": "P3",
+      "pages": [
+        72,
+        74
+      ],
+      "issue": "長い識別子の末尾r/erが孤立した行へ折り返す",
+      "resolution": "該当2識別子を局所縮小し全文を1行に保持",
+      "status": "resolved",
+      "verification": "最終PNG2頁を個別view_imageで再確認"
+    }
+  ],
+  "content_checks": "content-checks.json",
+  "visual_review": {
+    "method": "actual individual view_image",
+    "important_pages": [
+      2,
+      7,
+      8,
+      11,
+      12,
+      16,
+      17,
+      18,
+      20,
+      26,
+      27,
+      28,
+      32,
+      33,
+      34,
+      40,
+      42,
+      44,
+      46,
+      48,
+      50,
+      52,
+      54,
+      55,
+      57,
+      59,
+      62,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      82,
+      83,
+      84
+    ],
+    "important_page_count": 44,
+    "overview": true,
+    "final_changed_pages_rechecked": [
+      72,
+      74
+    ],
+    "scope": "全13実例の原文・訳・参照ラベル、全9native表、全162識別子一覧14頁、公式画面、全参考文献、主要条件頁",
+    "other_body": "最終テキストを通読"
+  },
+  "independent_layout": {
+    "paragraphs_checked": 577,
+    "table_cells_checked": 89,
+    "issues": []
+  },
+  "independent_shape_overlap_issues": 0,
+  "final_artifacts": [
+    {
+      "path": "/workspace/artifacts/helm-parallel/legalbench/datasets-in-10-minutes-legalbench.pptx",
+      "bytes": 323770,
+      "sha256": "c7e6f95cba0caced90b9f0ca8c5373177161975ca52dfb44503789cc35b37f7a"
+    },
+    {
+      "path": "/workspace/artifacts/helm-parallel/legalbench/datasets-in-10-minutes-legalbench.pdf",
+      "bytes": 1258907,
+      "sha256": "58d82476e244f95bfee357cb80a247889ce62b3009722d0a1fa05946797b8bd3"
+    }
+  ],
+  "source_artifacts_modified": false,
+  "limitations": [
+    "新たに全testをダウンロードするレビューではない。固定TSV13件、公開run_specs、論文、CHANGELOG、保存一次資料を独立解析した。"
+  ]
+}

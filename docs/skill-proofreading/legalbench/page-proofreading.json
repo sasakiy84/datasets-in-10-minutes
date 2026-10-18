@@ -1,0 +1,2160 @@
+[
+  {
+    "page": 1,
+    "title": "LegalBench",
+    "section": "",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "LegalBench",
+      "A Collaboratively Built Benchmark for\nMeasuring Legal Reasoning in Large Language Models",
+      "法律の推論を162の課題で評価する",
+      "sasakiy84",
+      "datasets in 10 minutes (2026-10-18)"
+    ]
+  },
+  {
+    "page": 2,
+    "title": "公式サイト",
+    "section": "LegalBench",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "公式サイト",
+      "LegalBench",
+      "[1] LegalBench. 公式サイト。2026-10-18確認。  https://hazyresearch.stanford.edu/legalbench/"
+    ]
+  },
+  {
+    "page": 3,
+    "title": "",
+    "section": "目次",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "実例から見る法律課題",
+      "162課題の構成と作成方法",
+      "採点と2023年の到達水準",
+      "HELMでの範囲と現在の利用",
+      "目次"
+    ]
+  },
+  {
+    "page": 4,
+    "title": "実例から見る法律課題",
+    "section": "1. 実例から見る法律課題",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "実例から見る法律課題",
+      "1. 実例から見る法律課題"
+    ]
+  },
+  {
+    "page": 5,
+    "title": "一つの試験ではなく、法律課題の集合",
+    "section": "1. 実例から見る法律課題",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "一つの試験ではなく、法律課題の集合",
+      "LegalBenchは、英語の法律課題ごとに入力と参照出力をそろえたベンチマーク。法律家と研究者が共同で構築した。",
+      "商標、契約、証拠、裁判手続など、異なる分野の162課題を含む。課題によって、ラベル・用語・説明文など出力の形が変わる。",
+      "2023年に公開され、20モデルを評価した。以下では実例から、何を読み、何を答え、どう採点するかを見る。",
+      "1. 実例から見る法律課題",
+      "[1] Guha et al. (2023), LegalBench: A Collaboratively Built Benchmark for Measuring Legal Reasoning in Large Language Models. arXiv.",
+      "https://arxiv.org/abs/2308.11462"
+    ]
+  },
+  {
+    "page": 6,
+    "title": "実例は公開された提示例用の集合から選ぶ",
+    "section": "1. 実例から見る法律課題",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "実例は公開された提示例用の集合から選ぶ",
+      "本編3件と追加10件は、異なる13課題の公開trainレコードから1件ずつ選んだ。trainは主にプロンプトの提示例を作るための集合である。",
+      "原レコードの入力欄は全文を示す。課題の問いを添え、固定のルール説明や他の提示例は省いた。実際のプロンプトは、それらを組み合わせて作る。",
+      "参照ラベル・原レコード・提示テンプレート・固定改訂とハッシュを保存した。",
+      "1. 実例から見る法律課題",
+      "[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench"
+    ]
+  },
+  {
+    "page": 7,
+    "title": "商標は、語と商品の関係で分類する",
+    "section": "1. 実例から見る法律課題",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "商標は、語と商品の関係で分類する",
+      "1. 実例から見る法律課題",
+      "分類",
+      "語と商品の関係",
+      "generic",
+      "その商品そのものの一般名称",
+      "descriptive",
+      "商品の性質を直接表す",
+      "suggestive",
+      "性質を間接的に示唆する",
+      "arbitrary",
+      "商品と関係のない既存語",
+      "fanciful",
+      "新しく作った語",
+      "[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench"
+    ]
+  },
+  {
+    "page": 8,
+    "title": "実例1：パンの商標は何を表すか",
+    "section": "1. 実例から見る法律課題",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "実例1：パンの商標は何を表すか",
+      "1. 実例から見る法律課題",
+      "原入力・課題の問い",
+      "The mark \"Tasty\" for bread. What is the type of mark?",
+      "descriptive",
+      "日本語訳・課題",
+      "パンに使う商標「Tasty（おいしい）」。この商標はどの種類か。",
+      "descriptive（記述的）",
+      "[1] LegalBench. 公開trainレコードと参照回答。 abercrombie / train / index 1  https://github.com/HazyResearch/legalbench/tree/main/tasks"
+    ]
+  },
+  {
+    "page": 9,
+    "title": "同じ語でも、何の商品かで判断が変わる",
+    "section": "1. 実例から見る法律課題",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "同じ語でも、何の商品かで判断が変わる",
+      "Tastyはパンの性質を直接表す。一般名称でも、商品と無関係な既存語でもない。",
+      "abercrombieでは5分類の名前を出力する。長い説明を書くだけでは、要求されたラベルに一致しない。",
+      "1. 実例から見る法律課題",
+      "[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench"
+    ]
+  },
+  {
+    "page": 10,
+    "title": "伝聞の判定は、発言を使う目的も含む",
+    "section": "1. 実例から見る法律課題",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "伝聞の判定は、発言を使う目的も含む",
+      "hearsayでは、法廷外の発言を、その発言内容が真実だと示すために使う場合を伝聞とする。",
+      "入力には争点と、提出しようとする証拠がある。発言があったかだけでなく、何を立証するために使うかを判断する。",
+      "1. 実例から見る法律課題",
+      "[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench"
+    ]
+  },
+  {
+    "page": 11,
+    "title": "実例2：法廷外の発言を証拠にする",
+    "section": "1. 実例から見る法律課題",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "実例2：法廷外の発言を証拠にする",
+      "1. 実例から見る法律課題",
+      "原入力・課題の問い",
+      "On the issue of whether Rebecca was ill, the fact that Rebecca told Ronald that she was unwell. Is there hearsay?",
+      "Yes",
+      "日本語訳・課題",
+      "レベッカが病気だったかが争われている。レベッカがロナルドに、体調が悪かったと話したという事実。この証拠は伝聞に当たるか。",
+      "Yes（当たる）",
+      "[1] LegalBench. 公開trainレコードと参照回答。 hearsay / train / index 1  https://github.com/HazyResearch/legalbench/tree/main/tasks"
+    ]
+  },
+  {
+    "page": 12,
+    "title": "実例3：期限の規定は提訴権を与えるか",
+    "section": "1. 実例から見る法律課題",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "実例3：期限の規定は提訴権を与えるか",
+      "1. 実例から見る法律課題",
+      "原入力・課題の問い",
+      "Does the clause specify a private right of action?",
+      "Clause: Amendments to pleadings must be filed within 15 days of the filing of the initial pleading.",
+      "No",
+      "日本語訳・課題",
+      "訴答書面の修正は、最初の訴答書面を提出してから15日以内に提出しなければならない。この条項は私人の訴権を明記しているか。",
+      "No（明記しない）",
+      "[1] LegalBench. 公開trainレコードと参照回答。 proa / train / index 0  https://github.com/HazyResearch/legalbench/tree/main/tasks"
+    ]
+  },
+  {
+    "page": 13,
+    "title": "出力形式に合わせて、法律上の区別を読む",
+    "section": "1. 実例から見る法律課題",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "出力形式に合わせて、法律上の区別を読む",
+      "商標では分類名、伝聞と私人の訴権ではYes／Noが答えになる。入力の語だけでなく、問われた法律上の条件を対応させる。",
+      "proaの期限規定は15日という具体的な条件を持つが、私人が提訴できるという規定ではない。",
+      "同じ法律分野でも、結論を選ぶ課題と、その理由を説明する課題は採点方法が異なる。",
+      "1. 実例から見る法律課題",
+      "[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench"
+    ]
+  },
+  {
+    "page": 14,
+    "title": "162課題の構成と作成方法",
+    "section": "2. 162課題の構成と作成方法",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "162課題の構成と作成方法",
+      "2. 162課題の構成と作成方法"
+    ]
+  },
+  {
+    "page": 15,
+    "title": "法律家が、実務や教育の問いを持ち寄った",
+    "section": "2. 162課題の構成と作成方法",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "法律家が、実務や教育の問いを持ち寄った",
+      "40人の寄稿者が、実務で役立つ処理や、法律家が測る価値があると考える推論を課題にした。36のデータ源を利用した。",
+      "既存の注釈データを変換した課題と、法律の教科書・演習に着想を得て人手で作った課題がある。",
+      "判決、契約、合併契約、法令、日常的な法律相談など、文体も入力の長さも異なる。",
+      "2. 162課題の構成と作成方法",
+      "[1] Guha et al. (2023), LegalBench: A Collaboratively Built Benchmark for Measuring Legal Reasoning in Large Language Models. arXiv.",
+      "https://arxiv.org/abs/2308.11462"
+    ]
+  },
+  {
+    "page": 16,
+    "title": "六つの推論形式を区別する",
+    "section": "2. 162課題の構成と作成方法",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "六つの推論形式を区別する",
+      "2. 162課題の構成と作成方法",
+      "形式",
+      "モデルに求めること",
+      "争点の発見",
+      "事実が、どの法律上の問題を含むか見つける",
+      "法規範の想起",
+      "関連する法や判例についての知識を答える",
+      "法規範の適用",
+      "規範を事実に当てはめ、理由を説明する",
+      "[1] Guha et al. (2023), LegalBench: A Collaboratively Built Benchmark for Measuring Legal Reasoning in Large Language Models. arXiv.",
+      "https://arxiv.org/abs/2308.11462"
+    ]
+  },
+  {
+    "page": 17,
+    "title": "解釈や文章の役割も推論の対象にする",
+    "section": "2. 162課題の構成と作成方法",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "解釈や文章の役割も推論の対象にする",
+      "2. 162課題の構成と作成方法",
+      "形式",
+      "モデルに求めること",
+      "結論の導出",
+      "規範を事実に当てはめた結論を選ぶ",
+      "文書の解釈",
+      "契約や条文が、ある内容を含むか判断する",
+      "修辞的な理解",
+      "判決の段落の役割や、定義された用語を捉える",
+      "[1] Guha et al. (2023), LegalBench: A Collaboratively Built Benchmark for Measuring Legal Reasoning in Large Language Models. arXiv.",
+      "https://arxiv.org/abs/2308.11462"
+    ]
+  },
+  {
+    "page": 18,
+    "title": "公開コードは162課題を五つの群へ分ける",
+    "section": "2. 162課題の構成と作成方法",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "公開コードは162課題を五つの群へ分ける",
+      "2. 162課題の構成と作成方法",
+      "コード上の群",
+      "課題数",
+      "争点の発見",
+      "17",
+      "法規範の想起",
+      "5",
+      "結論の導出",
+      "12",
+      "文書の解釈",
+      "118",
+      "修辞的な理解",
+      "10",
+      "[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench"
+    ]
+  },
+  {
+    "page": 19,
+    "title": "理由を説明する評価は、別データとして足さない",
+    "section": "2. 162課題の構成と作成方法",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "理由を説明する評価は、別データとして足さない",
+      "固定したtasks.pyの五つの群は重複せず、合計162課題である。",
+      "12課題には、同じ入力に対して理由も説明させるapplication_promptがある。推論形式は六つでも、これを162課題に新しい12課題として加算しない。",
+      "論文の分類ごとの件数には節間の不一致がある。ここでは、取得したコードの明示的な課題一覧を集計した。",
+      "2. 162課題の構成と作成方法",
+      "[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench"
+    ]
+  },
+  {
+    "page": 20,
+    "title": "一つの元データが、多数の課題になる",
+    "section": "2. 162課題の構成と作成方法",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "一つの元データが、多数の課題になる",
+      "2. 162課題の構成と作成方法",
+      "元データ・系列",
+      "課題数",
+      "CUAD：契約条項の分類",
+      "38",
+      "MAUD：合併契約の理解",
+      "34",
+      "Learned Hands：法律相談",
+      "16",
+      "ContractNLI：秘密保持契約",
+      "14",
+      "Supply Chain Disclosure：企業開示",
+      "10",
+      "[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench"
+    ]
+  },
+  {
+    "page": 21,
+    "title": "系列名と課題名の単位をそろえる",
+    "section": "2. 162課題の構成と作成方法",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "系列名と課題名の単位をそろえる",
+      "OPP-115のプライバシーポリシー分類は9課題。そのほか41課題を合わせ、系列別の合計も162になる。",
+      "たとえばCUADは、契約の準拠法、監査権、競業避止などを、それぞれ別の入力・出力課題へ変換している。",
+      "LegalBenchは集合の名前、CUADなどは元データの名前、cuad_audit_rightsなどは個別課題の識別子である。",
+      "2. 162課題の構成と作成方法",
+      "[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench"
+    ]
+  },
+  {
+    "page": 22,
+    "title": "提示例用とテスト用を課題ごとに分ける",
+    "section": "2. 162課題の構成と作成方法",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "提示例用とテスト用を課題ごとに分ける",
+      "公開データは課題ごとにtrain.tsvとtest.tsvを持つ。trainは提示例の構築、testは採点に使う。入力欄やラベル欄は課題ごとに異なる。",
+      "abercrombieやhearsayは、種類ごとの問題を手で作り、各種類から1例を提示例用に選んだ。",
+      "rule_qaとscalrはゼロショット用で、trainに例がない。提示例がある課題と同じ条件にそろえて解釈しない。",
+      "2. 162課題の構成と作成方法",
+      "[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench"
+    ]
+  },
+  {
+    "page": 23,
+    "title": "採点と2023年の到達水準",
+    "section": "3. 採点と2023年の到達水準",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "採点と2023年の到達水準",
+      "3. 採点と2023年の到達水準"
+    ]
+  },
+  {
+    "page": 24,
+    "title": "分類では、各ラベルの正解率を均等に扱う",
+    "section": "3. 採点と2023年の到達水準",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "分類では、各ラベルの正解率を均等に扱う",
+      "分類の出力を小文字化し、句読点を除き、前後の空白を取り除いて参照ラベルと照合する。",
+      "ラベルごとの再現率を平均したbalanced accuracyを使う。多数派のラベルだけを答えて高得点になるのを抑える。",
+      "1問の一致・不一致と、集合全体でラベルごとに平均した得点を区別する。",
+      "3. 採点と2023年の到達水準",
+      "[1] LegalBench. 課題別の採点実装。  https://github.com/HazyResearch/legalbench/blob/main/evaluation.py"
+    ]
+  },
+  {
+    "page": 25,
+    "title": "抽出・複数回答・説明は採点が異なる",
+    "section": "3. 採点と2023年の到達水準",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "抽出・複数回答・説明は採点が異なる",
+      "definition_extractionは、語幹化も使って参照用語と照合する。successor_liabilityは、選んだ例外の集合をF1で採点する。",
+      "説明を求めるrule-applicationは、法律の訓練を受けた人が「結論の正しさ」と「理由付け」を別々に評価した。rule_qaも人が採点した。",
+      "課題の得点を平均する前に、何を正解とした指標かをそろえて読む。",
+      "3. 採点と2023年の到達水準",
+      "[1] Guha et al. (2023), LegalBench: A Collaboratively Built Benchmark for Measuring Legal Reasoning in Large Language Models. arXiv.",
+      "https://arxiv.org/abs/2308.11462"
+    ]
+  },
+  {
+    "page": 26,
+    "title": "2023年：争点・規範・結論の成績",
+    "section": "3. 採点と2023年の到達水準",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "2023年：争点・規範・結論の成績",
+      "3. 採点と2023年の到達水準",
+      "モデル",
+      "争点",
+      "規範",
+      "結論",
+      "GPT-4 (2023)",
+      "82.9",
+      "59.2",
+      "89.9",
+      "text-davinci-003 (2022)",
+      "60.9",
+      "46.3",
+      "78.0",
+      "Claude-1 v1.3 (2023)",
+      "58.1",
+      "57.7",
+      "79.5",
+      "Flan-T5-XXL (2022)",
+      "66.0",
+      "36.0",
+      "63.3",
+      "各推論群の課題得点の平均（%）。2023年5〜8月の評価。",
+      "[1] Guha et al. (2023), LegalBench: A Collaboratively Built Benchmark for Measuring Legal Reasoning in Large Language Models. arXiv.",
+      "https://arxiv.org/abs/2308.11462"
+    ]
+  },
+  {
+    "page": 27,
+    "title": "2023年：文書解釈と文章の役割",
+    "section": "3. 採点と2023年の到達水準",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "2023年：文書解釈と文章の役割",
+      "3. 採点と2023年の到達水準",
+      "モデル",
+      "解釈",
+      "修辞的理解",
+      "GPT-4 (2023)",
+      "75.2",
+      "79.4",
+      "text-davinci-003 (2022)",
+      "72.6",
+      "66.7",
+      "Claude-1 v1.3 (2023)",
+      "67.4",
+      "68.9",
+      "Flan-T5-XXL (2022)",
+      "64.4",
+      "70.7",
+      "同じ2023年評価の群別平均（%）。分類・抽出など課題別の指標を含む。",
+      "[1] Guha et al. (2023), LegalBench: A Collaboratively Built Benchmark for Measuring Legal Reasoning in Large Language Models. arXiv.",
+      "https://arxiv.org/abs/2308.11462"
+    ]
+  },
+  {
+    "page": 28,
+    "title": "理由付けは、正しい結論より得点が低い",
+    "section": "3. 採点と2023年の到達水準",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "理由付けは、正しい結論より得点が低い",
+      "3. 採点と2023年の到達水準",
+      "モデル",
+      "結論の正しさ",
+      "理由付け",
+      "GPT-4 (2023)",
+      "82.2",
+      "79.7",
+      "text-davinci-003 (2022)",
+      "58.5",
+      "44.2",
+      "Claude-1 v1.3 (2023)",
+      "61.4",
+      "59.0",
+      "rule-applicationの人手評価（%）。法律の訓練を受けた1人が採点。",
+      "[1] Guha et al. (2023), LegalBench: A Collaboratively Built Benchmark for Measuring Legal Reasoning in Large Language Models. arXiv.",
+      "https://arxiv.org/abs/2308.11462"
+    ]
+  },
+  {
+    "page": 29,
+    "title": "モデルとプロンプトの条件を対応させる",
+    "section": "3. 採点と2023年の到達水準",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "モデルとプロンプトの条件を対応させる",
+      "全体では20モデルを評価。GPT-3.5はtext-davinci-003、Claude-1はv1.3。課題別の指示と0〜8件の提示例を使い、温度は0とした。",
+      "Claudeには専用の提示例タグと、出力候補を明記する形式を使った。入力形式まで完全に同一ではない。",
+      "理由の説明を求める課題は3つの商用モデルだけを人手評価した。六つのdiversity課題は各30例、ほかは課題の全例を採点した。",
+      "3. 採点と2023年の到達水準",
+      "[1] Guha et al. (2023), LegalBench: A Collaboratively Built Benchmark for Measuring Legal Reasoning in Large Language Models. arXiv.",
+      "https://arxiv.org/abs/2308.11462"
+    ]
+  },
+  {
+    "page": 30,
+    "title": "得意な群の平均だけでは、個別課題は分からない",
+    "section": "3. 採点と2023年の到達水準",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "得意な群の平均だけでは、個別課題は分からない",
+      "GPT-4は広い群で高いが、法規範の想起ではClaude-1に近い。文書の解釈でも、長い企業開示や合併契約では得点が下がる。",
+      "同じ群に多数の契約課題があるため、群平均と、扱いたい分野・文書の個別成績を併せて見る。",
+      "この成績は2023年のモデル・データ・採点条件の記録である。",
+      "3. 採点と2023年の到達水準",
+      "[1] Guha et al. (2023), LegalBench: A Collaboratively Built Benchmark for Measuring Legal Reasoning in Large Language Models. arXiv.",
+      "https://arxiv.org/abs/2308.11462"
+    ]
+  },
+  {
+    "page": 31,
+    "title": "HELMでの範囲と現在の利用",
+    "section": "4. HELMでの範囲と現在の利用",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "HELMでの範囲と現在の利用",
+      "4. HELMでの範囲と現在の利用"
+    ]
+  },
+  {
+    "page": 32,
+    "title": "HELM Classicは五つの課題を実装する",
+    "section": "4. HELMでの範囲と現在の利用",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "HELM Classicは五つの課題を実装する",
+      "v0.4.0のLegalBench実装は、abercrombie、corporate_lobbying、international_citizenship_questions、function_of_decision_section、proaを受け付ける。",
+      "入力欄の順番、指示、ラベル欄を課題別設定から読み、参照回答を使って評価する。",
+      "Classic v0.4.0の公開run_specsではLegalBenchの実行は0件だった。以下に同版のモデル得点は置かない。",
+      "4. HELMでの範囲と現在の利用",
+      "[1] Stanford CRFM. HELM v0.4.0 LegalBench scenario.  https://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/legalbench_scenario.py"
+    ]
+  },
+  {
+    "page": 33,
+    "title": "実装の範囲と、公開実行の有無を分ける",
+    "section": "4. HELMでの範囲と現在の利用",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "実装の範囲と、公開実行の有無を分ける",
+      "LegalBench全162課題と、HELMが受け付ける5課題は範囲が異なる。LegalSupportは別のシナリオであり、LegalBenchの実行件数へ含めない。",
+      "現在のHELM実装にも同じ五つの課題が残り、データには固定のHugging Face改訂を指定している。",
+      "公式LegalBenchは、HELM Liteなどの評価基盤からの利用も案内している。",
+      "4. HELMでの範囲と現在の利用",
+      "[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench"
+    ]
+  },
+  {
+    "page": 34,
+    "title": "2026年に、一部の入力データが修正された",
+    "section": "4. HELMでの範囲と現在の利用",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "2026年に、一部の入力データが修正された",
+      "2026-03-29、MAUDの7課題で、問いと異なる箇所の文章を結び付けていた問題が修正された。",
+      "OPP-115の9課題は、短い注釈スパンから、文脈を含む段落全体を入力にする方式へ変更された。",
+      "2023年の公表成績と、修正後のデータで得た値は、同じ評価条件として並べない。",
+      "4. HELMでの範囲と現在の利用",
+      "[1] LegalBench. データ更新履歴。2026-03-29の修正。  https://github.com/HazyResearch/legalbench/blob/main/CHANGELOG.md"
+    ]
+  },
+  {
+    "page": 35,
+    "title": "課題ごとの出所と条件を確認して使う",
+    "section": "4. HELMでの範囲と現在の利用",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "課題ごとの出所と条件を確認して使う",
+      "公式サイトから課題の説明、プロンプト、Hugging Faceの公開データへ進める。各課題のREADMEに出所とライセンスがある。",
+      "13実例のうちdefinition_extractionはCC BY-SA 4.0。ほかの手作り課題などはCC BY 4.0だが、全162課題が同じライセンスではない。",
+      "課題名、データの改訂、提示例、採点コードを固定すると、モデル間や更新前後の比較を再現できる。",
+      "4. HELMでの範囲と現在の利用",
+      "[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench"
+    ]
+  },
+  {
+    "page": 36,
+    "title": "法律のどの推論を、どの出力で測るか",
+    "section": "4. HELMでの範囲と現在の利用",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "法律のどの推論を、どの出力で測るか",
+      "LegalBenchは、法律の多様な入力・出力を162課題へ分け、法律家とモデル研究者が共同で評価する基盤である。",
+      "ラベルを選ぶ結論、文書の解釈、用語の抽出、理由の説明を分けると、得点の意味が具体的になる。",
+      "集計する単位、課題別の採点、提示例と版を対応させて、扱いたい文書の能力を判断する。",
+      "4. HELMでの範囲と現在の利用",
+      "[1] Guha et al. (2023), LegalBench: A Collaboratively Built Benchmark for Measuring Legal Reasoning in Large Language Models. arXiv.",
+      "https://arxiv.org/abs/2308.11462"
+    ]
+  },
+  {
+    "page": 37,
+    "title": "Appendix",
+    "section": "Appendix",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "Appendix",
+      "Appendix"
+    ]
+  },
+  {
+    "page": 38,
+    "title": "",
+    "section": "Appendix: 目次",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "追加の実例",
+      "課題の一覧と評価の補足",
+      "研究と参考文献",
+      "Appendix: 目次"
+    ]
+  },
+  {
+    "page": 39,
+    "title": "追加の実例",
+    "section": "Appendix: 1. 追加の実例",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "追加の実例",
+      "Appendix: 1. 追加の実例"
+    ]
+  },
+  {
+    "page": 40,
+    "title": "実例4：定義される用語を取り出す",
+    "section": "Appendix: 1. 追加の実例",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "実例4：定義される用語を取り出す",
+      "Appendix: 1. 追加の実例",
+      "原入力・課題の問い",
+      "Sentence: \"But even petitioner concedes, with its preferred dictionary in hand, that the word “decision” can also mean *306 “something short of a statement of reasons explaining a determination.” ",
+      "decision",
+      "日本語訳・課題",
+      "「しかし、申立人でさえ、自ら好む辞書を手に、『decision』という語が、判断を説明する理由の記述に至らないものを意味することもあると認めている。」*306",
+      "定義されている用語を抽出する。",
+      "decision",
+      "[1] LegalBench. 公開trainレコードと参照回答。 definition_extraction / train / index 2  https://github.com/HazyResearch/legalbench/tree/main/tasks"
+    ]
+  },
+  {
+    "page": 41,
+    "title": "実例4の読み方",
+    "section": "Appendix: 1. 追加の実例",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "実例4の読み方",
+      "判決文で定義されている用語を抽出する。",
+      "引用文中のdecisionを取り出す。定義の内容全体を生成する課題ではない。",
+      "Appendix: 1. 追加の実例",
+      "[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench"
+    ]
+  },
+  {
+    "page": 42,
+    "title": "実例5：州が異なっても金額条件がある",
+    "section": "Appendix: 1. 追加の実例",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "実例5：州が異なっても金額条件がある",
+      "Appendix: 1. 追加の実例",
+      "原入力・課題の問い",
+      "Ava is from Alaska. Mia is from Missouri. Ava sues Mia for wrongful eviction for $61,000. Is there diversity jurisdiction?",
+      "No",
+      "日本語訳・課題",
+      "エイヴァはアラスカ州、ミアはミズーリ州の住民である。エイヴァは不当な立退きを理由に、ミアへ61,000ドルを請求して訴える。州籍相違による連邦裁判所の管轄はあるか。",
+      "No（ない）",
+      "[1] LegalBench. 公開trainレコードと参照回答。 diversity_1 / train / index 1  https://github.com/HazyResearch/legalbench/tree/main/tasks"
+    ]
+  },
+  {
+    "page": 43,
+    "title": "実例5の読み方",
+    "section": "Appendix: 1. 追加の実例",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "実例5の読み方",
+      "当事者の州と請求額から、州籍相違による管轄の有無を判定する。",
+      "提示ルールでは、原告・被告の州籍が完全に異なり、かつ請求額が75,000ドルを超える必要がある。61,000ドルは金額条件を満たさない。",
+      "Appendix: 1. 追加の実例",
+      "[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench"
+    ]
+  },
+  {
+    "page": 44,
+    "title": "実例6：国籍取得の居住条件を尋ねる",
+    "section": "Appendix: 1. 追加の実例",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "実例6：国籍取得の居住条件を尋ねる",
+      "Appendix: 1. 追加の実例",
+      "原入力・課題の問い",
+      "Answer the following questions considering the state of international law on January 1st, 2020.",
+      "Question: Consider the country of Bolivia. Does the country provide for period of residence in a residence-based acquisition? Answer Yes or No.",
+      "Yes",
+      "日本語訳・課題",
+      "2020年1月1日時点の法を前提とする。ボリビアを考える。居住に基づく国籍取得について、同国は居住期間の条件を定めているか。はい、または、いいえで答える。",
+      "Yes（定めている）",
+      "[1] LegalBench. 公開trainレコードと参照回答。 international_citizenship_questions / train / index 1  https://github.com/HazyResearch/legalbench/tree/main/tasks"
+    ]
+  },
+  {
+    "page": 45,
+    "title": "実例6の読み方",
+    "section": "Appendix: 1. 追加の実例",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "実例6の読み方",
+      "2020年1月1日時点の国際的な国籍法について答える。",
+      "条文が入力にない知識を問う例。資料の参照回答と、その後の法改正を区別して扱う。",
+      "Appendix: 1. 追加の実例",
+      "[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench"
+    ]
+  },
+  {
+    "page": 46,
+    "title": "実例7：判決末尾の文の役割を分類する",
+    "section": "Appendix: 1. 追加の実例",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "実例7：判決末尾の文の役割を分類する",
+      "Appendix: 1. 追加の実例",
+      "原入力・課題の問い",
+      "Text: For these reasons, we AFFIRM.",
+      "Decree",
+      "日本語訳・課題",
+      "これらの理由により、原判断を維持する。",
+      "この文の役割を分類する。",
+      "Decree（主文）",
+      "[1] LegalBench. 公開trainレコードと参照回答。 function_of_decision_section / train / index 6  https://github.com/HazyResearch/legalbench/tree/main/tasks"
+    ]
+  },
+  {
+    "page": 47,
+    "title": "実例7の読み方",
+    "section": "Appendix: 1. 追加の実例",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "実例7の読み方",
+      "段落を事実・手続・争点・法規範・分析・結論・主文の7種類へ分類する。",
+      "参照ラベルはDecree。理由を分析する段落ではなく、裁判所の処分を告げる文である。",
+      "Appendix: 1. 追加の実例",
+      "[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench"
+    ]
+  },
+  {
+    "page": 48,
+    "title": "実例8：引用文と判例名が対応するか",
+    "section": "Appendix: 1. 追加の実例",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "実例8：引用文と判例名が対応するか",
+      "Appendix: 1. 追加の実例",
+      "原入力・課題の問い",
+      "Text: [T]he law is settled that as a general matter the First Amendment prohibits government officials from subjecting an individual to retaliatory actions . . . for speaking out.",
+      "Citation: Feist v. La., Dep't of Justice, Off. of the Att'y Gen.",
+      "No",
+      "日本語訳・課題",
+      "「一般論として、表現を理由に公務員が個人へ報復的な措置を取ることは、合衆国憲法修正第1条が禁じているという法は確立している。」",
+      "候補判例：Feist v. La., Dep’t of Justice, Off. of the Att’y Gen.",
+      "この判例名は引用の出所として正しいか。",
+      "No（正しくない）",
+      "[1] LegalBench. 公開trainレコードと参照回答。 citation_prediction_classification / train / index 1  https://github.com/HazyResearch/legalbench/tree/main/tasks"
+    ]
+  },
+  {
+    "page": 49,
+    "title": "実例8の読み方",
+    "section": "Appendix: 1. 追加の実例",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "実例8の読み方",
+      "引用文の出所として示した判例名が正しいかを判定する。",
+      "自由な判例名の生成と、示された候補が正しいかという二値判定は別の課題になっている。",
+      "Appendix: 1. 追加の実例",
+      "[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench"
+    ]
+  },
+  {
+    "page": 50,
+    "title": "実例9：準拠法の条項と秘密保持",
+    "section": "Appendix: 1. 追加の実例",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "実例9：準拠法の条項と秘密保持",
+      "Appendix: 1. 追加の実例",
+      "原入力・課題の問い",
+      "Clause: This Agreement shall be governed by and construed in accordance with the laws of the State of California",
+      "Question: Does the clause waive confidentiality?",
+      "No",
+      "日本語訳・課題",
+      "本契約はカリフォルニア州法に準拠し、同法に従って解釈される。",
+      "質問：この条項は秘密保持義務を免除しているか。",
+      "No（免除していない）",
+      "[1] LegalBench. 公開trainレコードと参照回答。 contract_qa / train / index 4  https://github.com/HazyResearch/legalbench/tree/main/tasks"
+    ]
+  },
+  {
+    "page": 51,
+    "title": "実例9の読み方",
+    "section": "Appendix: 1. 追加の実例",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "実例9の読み方",
+      "条項と質問を読み、はい・いいえで答える。",
+      "準拠法を定める条項から、別の秘密保持義務の免除を読み込まない。",
+      "Appendix: 1. 追加の実例",
+      "[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench"
+    ]
+  },
+  {
+    "page": 52,
+    "title": "実例10：被告の住所地で訴える",
+    "section": "Appendix: 1. 追加の実例",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "実例10：被告の住所地で訴える",
+      "Appendix: 1. 追加の実例",
+      "原入力・課題の問い",
+      "Dustin is a repairman who lives in Arizona and repairs computers in California, Oregon, and Washington. While traveling to repair a computer in Washington, Dustin is involved in a car crash in Oregon with Laura, a citizen of Oregon. After the accident, Dustin returns to Arizona. Laura sues him in Arizona.  Is there personal jurisdiction?",
+      "Yes",
+      "日本語訳・課題",
+      "ダスティンはアリゾナ州に住む修理業者で、カリフォルニア、オレゴン、ワシントン各州でコンピューターを修理している。ワシントン州へ修理に向かう途中、オレゴン州で同州住民のローラと自動車事故を起こす。事故後、ダスティンはアリゾナ州へ戻る。ローラは同州で彼を訴える。人的管轄はあるか。",
+      "Yes（ある）",
+      "[1] LegalBench. 公開trainレコードと参照回答。 personal_jurisdiction / train / index 0  https://github.com/HazyResearch/legalbench/tree/main/tasks"
+    ]
+  },
+  {
+    "page": 53,
+    "title": "実例10の読み方",
+    "section": "Appendix: 1. 追加の実例",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "実例10の読み方",
+      "被告に対する人的管轄の有無を判定する。",
+      "課題に示すルールでは、被告が住所を置く州には、その被告に対する人的管轄がある。",
+      "Appendix: 1. 追加の実例",
+      "[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench"
+    ]
+  },
+  {
+    "page": 54,
+    "title": "実例11：資産を買った会社の責任",
+    "section": "Appendix: 1. 追加の実例",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "実例11：資産を買った会社の責任",
+      "Appendix: 1. 追加の実例",
+      "原入力・課題の問い（固定ルール説明・提示例は除く）",
+      "Facts: \"Mediocre Corp purchased all of Special Corp's assets. The purchase agreement provides for assumption of all of Special Corp's liabilities. Following the asset purchase, Special Corp dissolved. However, Mediocre Corp now holds itself out as Special Corp. Purchasers of Special Corp's speical television remote controls have alleged a mass tort under a theory of products liability and have brough suit against Mediocre Corp. \"",
+      "express agreement",
+      "[1] LegalBench. 公開trainレコードと参照回答。 successor_liability / train / index 2  https://github.com/HazyResearch/legalbench/tree/main/tasks"
+    ]
+  },
+  {
+    "page": 55,
+    "title": "実例11：資産を買った会社の責任（訳）",
+    "section": "Appendix: 1. 追加の実例",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "実例11：資産を買った会社の責任（訳）",
+      "Appendix: 1. 追加の実例",
+      "日本語訳・課題",
+      "ミディオカー社はスペシャル社の全資産を買い取った。売買契約では、スペシャル社の全責任を引き受けると定めている。資産売却後、スペシャル社は解散した。しかし、ミディオカー社は今や自社をスペシャル社として対外的に示している。スペシャル社の特殊なテレビ用リモコンの購入者らは、製造物責任を根拠に多数の被害を伴う不法行為を主張し、ミディオカー社を訴えた。どの例外が当たるか。",
+      "express agreement（明示の合意）",
+      "[1] LegalBench. 公開trainレコードと参照回答。 successor_liability / train / index 2  https://github.com/HazyResearch/legalbench/tree/main/tasks"
+    ]
+  },
+  {
+    "page": 56,
+    "title": "実例11の読み方",
+    "section": "Appendix: 1. 追加の実例",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "実例11の読み方",
+      "資産譲受人が売主の責任を負う例外を選ぶ。",
+      "参照回答は契約による責任の明示的な引受け。課題全体では複数の例外を答える例もあり、F1で採点する。",
+      "Appendix: 1. 追加の実例",
+      "[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench"
+    ]
+  },
+  {
+    "page": 57,
+    "title": "実例12：農場を売買する契約",
+    "section": "Appendix: 1. 追加の実例",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "実例12：農場を売買する契約",
+      "Appendix: 1. 追加の実例",
+      "原入力・課題の問い",
+      "Ava buys James' farm for $50,000. Is this contract governed by the UCC or the common law?",
+      "Common Law",
+      "日本語訳・課題",
+      "エイヴァはジェームズの農場を50,000ドルで買う。この契約に適用されるのはUCCか、コモン・ローか。",
+      "Common Law（コモン・ロー）",
+      "[1] LegalBench. 公開trainレコードと参照回答。 ucc_v_common_law / train / index 4  https://github.com/HazyResearch/legalbench/tree/main/tasks"
+    ]
+  },
+  {
+    "page": 58,
+    "title": "実例12の読み方",
+    "section": "Appendix: 1. 追加の実例",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "実例12の読み方",
+      "契約がUCCとコモン・ローのどちらに従うかを答える。",
+      "課題で示す区別では、動産売買をUCC、不動産とサービスの契約をコモン・ローで扱う。",
+      "Appendix: 1. 追加の実例",
+      "[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench"
+    ]
+  },
+  {
+    "page": 59,
+    "title": "実例13：告知した価格と請求額が異なる",
+    "section": "Appendix: 1. 追加の実例",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "実例13：告知した価格と請求額が異なる",
+      "Appendix: 1. 追加の実例",
+      "原入力・課題の問い",
+      "Acme Toys is a telemarketer subject to the Telemarketing Sales Rule. Acme Toys told a customer that its frisbees cost $10 each, when in fact the frisbees cost $12 each. The customer agreed to the sale and was charged $12. Is this a violation of the Telemarketing Sales Rule?",
+      "Yes",
+      "日本語訳・課題",
+      "アクミー・トイズ社は電話勧誘販売ルールの対象である。同社は客にフリスビー1枚が10ドルだと伝えたが、実際の価格は12ドルだった。客は売買に同意し、12ドルを請求された。これは電話勧誘販売ルールへの違反か。",
+      "Yes（違反）",
+      "[1] LegalBench. 公開trainレコードと参照回答。 telemarketing_sales_rule / train / index 0  https://github.com/HazyResearch/legalbench/tree/main/tasks"
+    ]
+  },
+  {
+    "page": 60,
+    "title": "実例13の読み方",
+    "section": "Appendix: 1. 追加の実例",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "実例13の読み方",
+      "電話勧誘販売ルールへの違反を判定する。",
+      "商品価格についての虚偽の説明を判定する。問われるルールの条文番号は16 C.F.R. § 310.3(a)(1)・(2)。",
+      "Appendix: 1. 追加の実例",
+      "[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench"
+    ]
+  },
+  {
+    "page": 61,
+    "title": "課題の一覧と評価の補足",
+    "section": "Appendix: 2. 課題の一覧と評価の補足",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "課題の一覧と評価の補足",
+      "Appendix: 2. 課題の一覧と評価の補足"
+    ]
+  },
+  {
+    "page": 62,
+    "title": "2023年の入力・出力形式の内訳",
+    "section": "Appendix: 2. 課題の一覧と評価の補足",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "2023年の入力・出力形式の内訳",
+      "Appendix: 2. 課題の一覧と評価の補足",
+      "形式",
+      "課題数",
+      "選択式",
+      "35",
+      "自由生成",
+      "7",
+      "二値分類",
+      "112",
+      "多クラス・複数ラベル",
+      "8",
+      "2023年の公表分類。合計162課題。推論形式の分類とは別の軸。",
+      "[1] Guha et al. (2023), LegalBench: A Collaboratively Built Benchmark for Measuring Legal Reasoning in Large Language Models. arXiv.",
+      "https://arxiv.org/abs/2308.11462"
+    ]
+  },
+  {
+    "page": 63,
+    "title": "ゼロショットと提示例の役割",
+    "section": "Appendix: 2. 課題の一覧と評価の補足",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "ゼロショットと提示例の役割",
+      "2023年評価では、課題ごとに0〜8件の提示例を選んだ。長い開示文書では、複数の提示例を入れられない場合がある。",
+      "分類・抽出は改行で出力を止めた。rule_qaと適用課題の大半は150トークン、diversity_jurisdiction_6は300トークンを生成した。",
+      "提示例用trainの少なさは、モデルの教師あり学習の規模を表すものではない。",
+      "Appendix: 2. 課題の一覧と評価の補足",
+      "[1] Guha et al. (2023), LegalBench: A Collaboratively Built Benchmark for Measuring Legal Reasoning in Large Language Models. arXiv.",
+      "https://arxiv.org/abs/2308.11462"
+    ]
+  },
+  {
+    "page": 64,
+    "title": "2023年の件数表記と、固定コードの集計",
+    "section": "Appendix: 2. 課題の一覧と評価の補足",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "2023年の件数表記と、固定コードの集計",
+      "論文本文の推論群別件数は、争点16／17、解釈119など、箇所によって値が異なる。",
+      "この資料の課題構成表は、GitHubの固定改訂b46bf4ffのTASKSと五つの群を照合した。162識別子が重複なく、いずれかの群に一度ずつ入る。",
+      "理由を説明する12のapplication_promptは、同じ入力を使う別の評価形式として扱った。",
+      "Appendix: 2. 課題の一覧と評価の補足",
+      "[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench"
+    ]
+  },
+  {
+    "page": 65,
+    "title": "公開162課題の識別子（1/14）",
+    "section": "Appendix: 2. 課題の一覧と評価の補足",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "公開162課題の識別子（1/14）",
+      "Appendix: 2. 課題の一覧と評価の補足",
+      "abercrombie",
+      "canada_tax_court_outcomes",
+      "citation_prediction_classification",
+      "citation_prediction_open",
+      "consumer_contracts_qa",
+      "contract_nli_confidentiality_of_agreement",
+      "contract_nli_explicit_identification",
+      "contract_nli_inclusion_of_verbally_conveyed_information",
+      "contract_nli_limited_use",
+      "contract_nli_no_licensing",
+      "contract_nli_notice_on_compelled_disclosure",
+      "contract_nli_permissible_acquirement_of_similar_information",
+      "[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench"
+    ]
+  },
+  {
+    "page": 66,
+    "title": "公開162課題の識別子（2/14）",
+    "section": "Appendix: 2. 課題の一覧と評価の補足",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "公開162課題の識別子（2/14）",
+      "Appendix: 2. 課題の一覧と評価の補足",
+      "contract_nli_permissible_copy",
+      "contract_nli_permissible_development_of_similar_information",
+      "contract_nli_permissible_post-agreement_possession",
+      "contract_nli_return_of_confidential_information",
+      "contract_nli_sharing_with_employees",
+      "contract_nli_sharing_with_third-parties",
+      "contract_nli_survival_of_obligations",
+      "contract_qa",
+      "corporate_lobbying",
+      "cuad_affiliate_license-licensee",
+      "cuad_affiliate_license-licensor",
+      "cuad_anti-assignment",
+      "[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench"
+    ]
+  },
+  {
+    "page": 67,
+    "title": "公開162課題の識別子（3/14）",
+    "section": "Appendix: 2. 課題の一覧と評価の補足",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "公開162課題の識別子（3/14）",
+      "Appendix: 2. 課題の一覧と評価の補足",
+      "cuad_audit_rights",
+      "cuad_cap_on_liability",
+      "cuad_change_of_control",
+      "cuad_competitive_restriction_exception",
+      "cuad_covenant_not_to_sue",
+      "cuad_effective_date",
+      "cuad_exclusivity",
+      "cuad_expiration_date",
+      "cuad_governing_law",
+      "cuad_insurance",
+      "cuad_ip_ownership_assignment",
+      "cuad_irrevocable_or_perpetual_license",
+      "[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench"
+    ]
+  },
+  {
+    "page": 68,
+    "title": "公開162課題の識別子（4/14）",
+    "section": "Appendix: 2. 課題の一覧と評価の補足",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "公開162課題の識別子（4/14）",
+      "Appendix: 2. 課題の一覧と評価の補足",
+      "cuad_joint_ip_ownership",
+      "cuad_license_grant",
+      "cuad_liquidated_damages",
+      "cuad_minimum_commitment",
+      "cuad_most_favored_nation",
+      "cuad_no-solicit_of_customers",
+      "cuad_no-solicit_of_employees",
+      "cuad_non-compete",
+      "cuad_non-disparagement",
+      "cuad_non-transferable_license",
+      "cuad_notice_period_to_terminate_renewal",
+      "cuad_post-termination_services",
+      "[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench"
+    ]
+  },
+  {
+    "page": 69,
+    "title": "公開162課題の識別子（5/14）",
+    "section": "Appendix: 2. 課題の一覧と評価の補足",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "公開162課題の識別子（5/14）",
+      "Appendix: 2. 課題の一覧と評価の補足",
+      "cuad_price_restrictions",
+      "cuad_renewal_term",
+      "cuad_revenue-profit_sharing",
+      "cuad_rofr-rofo-rofn",
+      "cuad_source_code_escrow",
+      "cuad_termination_for_convenience",
+      "cuad_third_party_beneficiary",
+      "cuad_uncapped_liability",
+      "cuad_unlimited-all-you-can-eat-license",
+      "cuad_volume_restriction",
+      "cuad_warranty_duration",
+      "definition_classification",
+      "[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench"
+    ]
+  },
+  {
+    "page": 70,
+    "title": "公開162課題の識別子（6/14）",
+    "section": "Appendix: 2. 課題の一覧と評価の補足",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "公開162課題の識別子（6/14）",
+      "Appendix: 2. 課題の一覧と評価の補足",
+      "definition_extraction",
+      "diversity_1",
+      "diversity_2",
+      "diversity_3",
+      "diversity_4",
+      "diversity_5",
+      "diversity_6",
+      "function_of_decision_section",
+      "hearsay",
+      "insurance_policy_interpretation",
+      "jcrew_blocker",
+      "international_citizenship_questions",
+      "[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench"
+    ]
+  },
+  {
+    "page": 71,
+    "title": "公開162課題の識別子（7/14）",
+    "section": "Appendix: 2. 課題の一覧と評価の補足",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "公開162課題の識別子（7/14）",
+      "Appendix: 2. 課題の一覧と評価の補足",
+      "nys_judicial_ethics",
+      "learned_hands_benefits",
+      "learned_hands_business",
+      "learned_hands_consumer",
+      "learned_hands_courts",
+      "learned_hands_crime",
+      "learned_hands_divorce",
+      "learned_hands_domestic_violence",
+      "learned_hands_education",
+      "learned_hands_employment",
+      "learned_hands_estates",
+      "learned_hands_family",
+      "[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench"
+    ]
+  },
+  {
+    "page": 72,
+    "title": "公開162課題の識別子（8/14）",
+    "section": "Appendix: 2. 課題の一覧と評価の補足",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "公開162課題の識別子（8/14）",
+      "Appendix: 2. 課題の一覧と評価の補足",
+      "learned_hands_health",
+      "learned_hands_housing",
+      "learned_hands_immigration",
+      "learned_hands_torts",
+      "learned_hands_traffic",
+      "legal_reasoning_causality",
+      "maud_ability_to_consummate_concept_is_subject_to_mae_carveouts",
+      "maud_financial_point_of_view_is_the_sole_consideration",
+      "maud_accuracy_of_fundamental_target_rws_bringdown_standard",
+      "maud_accuracy_of_target_general_rw_bringdown_timing_answer",
+      "maud_accuracy_of_target_capitalization_rw_(outstanding_shares)_bringdown_standard_answer",
+      "[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench"
+    ]
+  },
+  {
+    "page": 73,
+    "title": "公開162課題の識別子（9/14）",
+    "section": "Appendix: 2. 課題の一覧と評価の補足",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "公開162課題の識別子（9/14）",
+      "Appendix: 2. 課題の一覧と評価の補足",
+      "maud_additional_matching_rights_period_for_modifications_(cor)",
+      "maud_application_of_buyer_consent_requirement_(negative_interim_covenant)",
+      "maud_buyer_consent_requirement_(ordinary_course)",
+      "maud_change_in_law__subject_to_disproportionate_impact_modifier",
+      "maud_changes_in_gaap_or_other_accounting_principles__subject_to_disproportionate_impact_modifier",
+      "maud_cor_permitted_in_response_to_intervening_event",
+      "maud_cor_permitted_with_board_fiduciary_determination_only",
+      "maud_cor_standard_(intervening_event)",
+      "maud_cor_standard_(superior_offer)",
+      "maud_definition_contains_knowledge_requirement_-_answer",
+      "maud_definition_includes_asset_deals",
+      "[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench"
+    ]
+  },
+  {
+    "page": 74,
+    "title": "公開162課題の識別子（10/14）",
+    "section": "Appendix: 2. 課題の一覧と評価の補足",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "公開162課題の識別子（10/14）",
+      "Appendix: 2. 課題の一覧と評価の補足",
+      "maud_definition_includes_stock_deals",
+      "maud_fiduciary_exception__board_determination_standard",
+      "maud_fiduciary_exception_board_determination_trigger_(no_shop)",
+      "maud_fls_(mae)_standard",
+      "maud_general_economic_and_financial_conditions_subject_to_disproportionate_impact_modifier",
+      "maud_includes_consistent_with_past_practice",
+      "maud_initial_matching_rights_period_(cor)",
+      "maud_initial_matching_rights_period_(ftr)",
+      "maud_intervening_event_-_required_to_occur_after_signing_-_answer",
+      "maud_knowledge_definition",
+      "maud_liability_standard_for_no-shop_breach_by_target_non-do_representatives",
+      "[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench"
+    ]
+  },
+  {
+    "page": 75,
+    "title": "公開162課題の識別子（11/14）",
+    "section": "Appendix: 2. 課題の一覧と評価の補足",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "公開162課題の識別子（11/14）",
+      "Appendix: 2. 課題の一覧と評価の補足",
+      "maud_ordinary_course_efforts_standard",
+      "maud_pandemic_or_other_public_health_event__subject_to_disproportionate_impact_modifier",
+      "maud_pandemic_or_other_public_health_event_specific_reference_to_pandemic-related_governmental_responses_or_measures",
+      "maud_relational_language_(mae)_applies_to",
+      "maud_specific_performance",
+      "maud_tail_period_length",
+      "maud_type_of_consideration",
+      "opp115_data_retention",
+      "opp115_data_security",
+      "opp115_do_not_track",
+      "[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench"
+    ]
+  },
+  {
+    "page": 76,
+    "title": "公開162課題の識別子（12/14）",
+    "section": "Appendix: 2. 課題の一覧と評価の補足",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "公開162課題の識別子（12/14）",
+      "Appendix: 2. 課題の一覧と評価の補足",
+      "opp115_first_party_collection_use",
+      "opp115_international_and_specific_audiences",
+      "opp115_policy_change",
+      "opp115_third_party_sharing_collection",
+      "opp115_user_access,_edit_and_deletion",
+      "opp115_user_choice_control",
+      "oral_argument_question_purpose",
+      "overruling",
+      "personal_jurisdiction",
+      "privacy_policy_entailment",
+      "privacy_policy_qa",
+      "proa",
+      "[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench"
+    ]
+  },
+  {
+    "page": 77,
+    "title": "公開162課題の識別子（13/14）",
+    "section": "Appendix: 2. 課題の一覧と評価の補足",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "公開162課題の識別子（13/14）",
+      "Appendix: 2. 課題の一覧と評価の補足",
+      "rule_qa",
+      "scalr",
+      "ssla_company_defendants",
+      "ssla_individual_defendants",
+      "ssla_plaintiff",
+      "sara_entailment",
+      "sara_numeric",
+      "successor_liability",
+      "supply_chain_disclosure_best_practice_accountability",
+      "supply_chain_disclosure_best_practice_audits",
+      "supply_chain_disclosure_best_practice_certification",
+      "supply_chain_disclosure_best_practice_training",
+      "[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench"
+    ]
+  },
+  {
+    "page": 78,
+    "title": "公開162課題の識別子（14/14）",
+    "section": "Appendix: 2. 課題の一覧と評価の補足",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "公開162課題の識別子（14/14）",
+      "Appendix: 2. 課題の一覧と評価の補足",
+      "supply_chain_disclosure_best_practice_verification",
+      "supply_chain_disclosure_disclosed_accountability",
+      "supply_chain_disclosure_disclosed_audits",
+      "supply_chain_disclosure_disclosed_certification",
+      "supply_chain_disclosure_disclosed_training",
+      "supply_chain_disclosure_disclosed_verification",
+      "telemarketing_sales_rule",
+      "textualism_tool_dictionaries",
+      "textualism_tool_plain",
+      "ucc_v_common_law",
+      "unfair_tos",
+      "[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench"
+    ]
+  },
+  {
+    "page": 79,
+    "title": "入手容量と改訂を分けて記録する",
+    "section": "Appendix: 2. 課題の一覧と評価の補足",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "入手容量と改訂を分けて記録する",
+      "公式Hugging FaceのTSV一覧は、メタデータ上で計82,311,731 bytes（約82.3 MB）。今回、全テスト本文を取得して実測した値ではない。",
+      "GitHubには公開trainと一部修正済みtestがあり、同じ配布範囲ではない。今回の13例はGitHubの固定改訂から取得した。",
+      "原入力・ラベル・課題別のテンプレートとREADME、ファイルごとのSHA256を調査記録に保存した。",
+      "Appendix: 2. 課題の一覧と評価の補足",
+      "[1] LegalBench. nguha/legalbench公式公開配布。  https://huggingface.co/datasets/nguha/legalbench"
+    ]
+  },
+  {
+    "page": 80,
+    "title": "研究と参考文献",
+    "section": "Appendix: 3. 研究と参考文献",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "研究と参考文献",
+      "Appendix: 3. 研究と参考文献"
+    ]
+  },
+  {
+    "page": 81,
+    "title": "法学と機械学習の共同研究",
+    "section": "Appendix: 3. 研究と参考文献",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "法学と機械学習の共同研究",
+      "第一著者Neel Guhaらを中心に、Stanford Universityなどの法学者、法律実務家、機械学習研究者が参加した。",
+      "共通の法律推論の語彙を使い、法律家が作った課題を、言語モデルの評価として共有することを目指した。",
+      "2023年の論文は162課題と20モデルの評価を報告。公式サイトは40人の寄稿者を紹介している。",
+      "Appendix: 3. 研究と参考文献",
+      "[1] Guha et al. (2023), LegalBench: A Collaboratively Built Benchmark for Measuring Legal Reasoning in Large Language Models. arXiv.",
+      "https://arxiv.org/abs/2308.11462"
+    ]
+  },
+  {
+    "page": 82,
+    "title": "参考文献",
+    "section": "Appendix: 3. 研究と参考文献",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "参考文献",
+      "Appendix: 3. 研究と参考文献",
+      "LegalBench: A Collaboratively Built Benchmark for Measuring Legal Reasoning in Large Language Models",
+      "Guha et al. · 2023 · arXiv:2308.11462",
+      "六つの法律推論の整理、課題構築、20モデルの評価を報告する。",
+      "https://arxiv.org/abs/2308.11462",
+      "LegalBench",
+      "LegalBench contributors · 公式サイト",
+      "課題の仕様、寄稿者、参加方法と公開データを案内する。",
+      "https://hazyresearch.stanford.edu/legalbench/"
+    ]
+  },
+  {
+    "page": 83,
+    "title": "参考文献",
+    "section": "Appendix: 3. 研究と参考文献",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "参考文献",
+      "Appendix: 3. 研究と参考文献",
+      "LegalBench: Tasks, prompts, and evaluation",
+      "LegalBench contributors · 公式リポジトリ",
+      "課題ごとのREADME、提示例、プロンプトと採点実装を公開する。",
+      "https://github.com/HazyResearch/legalbench",
+      "LegalBench data changelog",
+      "LegalBench contributors · 2024–2026 · 更新履歴",
+      "MAUDとOPP-115の入力修正、ラベル修正などの変更内容を記録する。",
+      "https://github.com/HazyResearch/legalbench/blob/main/CHANGELOG.md"
+    ]
+  },
+  {
+    "page": 84,
+    "title": "参考文献",
+    "section": "Appendix: 3. 研究と参考文献",
+    "review_mode": "skill_based_codex",
+    "gemini_used": false,
+    "japanese_checked": [
+      "主述・助詞",
+      "修飾・並列・指示語",
+      "語義・法律用語",
+      "文体・時制",
+      "文のつながり",
+      "引用・訳・要約の区別と意味保持"
+    ],
+    "final_text": [
+      "参考文献",
+      "Appendix: 3. 研究と参考文献",
+      "Holistic Evaluation of Language Models",
+      "Liang et al. · 2023 · TMLR",
+      "課題・指標・モデルを共通条件で比較する評価基盤を提案する。",
+      "https://arxiv.org/abs/2211.09110",
+      "HELM LegalBench scenario",
+      "Stanford CRFM · v0.4.0 · 公開実装",
+      "五つのLegalBench課題の入力整形と、参照回答の読み込みを定義する。",
+      "https://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/legalbench_scenario.py"
+    ]
+  }
+]

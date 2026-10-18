@@ -1,0 +1,549 @@
+{
+  "slug": "legalbench",
+  "self_review_complete": true,
+  "independent_review_pending": false,
+  "pages": 84,
+  "main_pages": 36,
+  "examples": {
+    "main": 3,
+    "appendix": 10,
+    "source": "13 different task train TSV records; all full input records and labels/hash matched"
+  },
+  "all_page_proofreading": true,
+  "all_page_individual_visual_review": true,
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "notes": false,
+  "audits": {
+    "layout_issues": 0,
+    "missing_paragraphs": 0,
+    "new_schema_errors": 0,
+    "baseline_master_schema_errors": 11,
+    "integer_bullets": 172,
+    "native_tables": 9,
+    "url_only_runs": 76,
+    "pdf_links": 76,
+    "answer_runs_21pt_bold_B13731": 26,
+    "package_integrity": "passed"
+  },
+  "factual_checks": [
+    "162 disjoint identifiers in fixed tasks.py; six conceptual forms vs five code groups",
+    "12 application_prompt files reuse conclusion tasks",
+    "2023 scores Table2/3 with actual model names and prompting/manual scoring conditions",
+    "HELM Classic v0.4.0 implements 5 tasks but public run_specs has 0 LegalBench runs; LegalSupport separate",
+    "2026 MAUD and OPP115 input updates separated from 2023 results",
+    "HF TSV size metadata 82311731 bytes; not a full test download measurement"
+  ],
+  "remaining_issues": [],
+  "paths": {
+    "pptx": "/workspace/artifacts/helm-parallel/legalbench/datasets-in-10-minutes-legalbench.pptx",
+    "pdf": "/workspace/artifacts/helm-parallel/legalbench/datasets-in-10-minutes-legalbench.pdf",
+    "sources": "/workspace/artifacts/helm-parallel/legalbench/sources.md",
+    "examples": "/workspace/artifacts/helm-parallel/legalbench/examples.json",
+    "manifest": "/workspace/artifacts/helm-parallel/legalbench/manifest.json",
+    "build_info": "/workspace/artifacts/helm-parallel/legalbench/build-info.json",
+    "proofreading": "/workspace/artifacts/helm-parallel/legalbench/page-proofreading.json",
+    "proofreading_changes": "/workspace/artifacts/helm-parallel/legalbench/proofreading-changes.json",
+    "visual": "/workspace/artifacts/helm-parallel/legalbench/visual-inspection.json",
+    "text_audit": "/workspace/artifacts/helm-parallel/legalbench/text-audit.json"
+  },
+  "hashes": {
+    "datasets-in-10-minutes-legalbench.pptx": "c7e6f95cba0caced90b9f0ca8c5373177161975ca52dfb44503789cc35b37f7a",
+    "datasets-in-10-minutes-legalbench.pdf": "58d82476e244f95bfee357cb80a247889ce62b3009722d0a1fa05946797b8bd3"
+  },
+  "independent_review_fixes": {
+    "pages": [
+      72,
+      74
+    ],
+    "change": "長い識別子2件のみ14pt→13.5ptにし、末尾1–2文字の孤立行を解消。全文・162件を保持。",
+    "rechecked": "final PDF pages72/74 individually viewed; layout/package/text/links all pass"
+  },
+  "independent_review_approved": true,
+  "independent_review": "independent-review/",
+  "self_visual_review": {
+    "visual-inspection.json": {
+      "overview": "overview.png",
+      "overview_checked": true,
+      "individually_viewed_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84
+      ],
+      "method": "view_image of final PDF-rendered PNGs",
+      "findings": [],
+      "checked": [
+        "全84頁の日本語と余白",
+        "全13実例の原文・訳・正解",
+        "長い課題識別子の改行と欠落",
+        "結果表の数値・単位・モデル名",
+        "参考文献2件/頁",
+        "公式サイトの実スクリーンショット"
+      ],
+      "panel_visible_gaps_pt": [
+        6.6667,
+        7.3333
+      ],
+      "panel_count": 26,
+      "table_note_gap_pt": 12.54,
+      "final_changes_rechecked": [
+        72,
+        74
+      ]
+    }
+  },
+  "updated_at": "2026-10-18T07:40:04Z",
+  "artifact_sha256": {
+    "pdf": "58d82476e244f95bfee357cb80a247889ce62b3009722d0a1fa05946797b8bd3",
+    "pptx": "c7e6f95cba0caced90b9f0ca8c5373177161975ca52dfb44503789cc35b37f7a"
+  },
+  "checks": {
+    "layout": {
+      "paragraphs_checked": 577,
+      "table_cells_checked": 89,
+      "issues": []
+    },
+    "package": {
+      "parsed_xml_parts": 201,
+      "integer_bullets": 172,
+      "hyperlinks": 76,
+      "new_schema_errors": [],
+      "baseline_schema_errors": 11,
+      "package_integrity": "passed",
+      "internal_relationship_targets": "passed",
+      "unique_shape_ids": "passed",
+      "schema_note": "標準XSDを変更せず確認。マスター由来の既存エラーと、整数buSzPctの百分率字句形式との差を分離。整数箇条書きサイズは25000–400000で別途検査。",
+      "pages": 84,
+      "native_tables": 9,
+      "native_charts": 0
+    },
+    "text": {
+      "pages": 84,
+      "missing": [],
+      "source_examples": [
+        {
+          "example": 1,
+          "task": "abercrombie",
+          "split": "train",
+          "index": "1",
+          "raw_record": "matched",
+          "input_full_text": "matched",
+          "answer": "descriptive",
+          "hashes": "matched"
+        },
+        {
+          "example": 2,
+          "task": "hearsay",
+          "split": "train",
+          "index": "1",
+          "raw_record": "matched",
+          "input_full_text": "matched",
+          "answer": "Yes",
+          "hashes": "matched"
+        },
+        {
+          "example": 3,
+          "task": "proa",
+          "split": "train",
+          "index": "0",
+          "raw_record": "matched",
+          "input_full_text": "matched",
+          "answer": "No",
+          "hashes": "matched"
+        },
+        {
+          "example": 4,
+          "task": "definition_extraction",
+          "split": "train",
+          "index": "2",
+          "raw_record": "matched",
+          "input_full_text": "matched",
+          "answer": "decision",
+          "hashes": "matched"
+        },
+        {
+          "example": 5,
+          "task": "diversity_1",
+          "split": "train",
+          "index": "1",
+          "raw_record": "matched",
+          "input_full_text": "matched",
+          "answer": "No",
+          "hashes": "matched"
+        },
+        {
+          "example": 6,
+          "task": "international_citizenship_questions",
+          "split": "train",
+          "index": "1",
+          "raw_record": "matched",
+          "input_full_text": "matched",
+          "answer": "Yes",
+          "hashes": "matched"
+        },
+        {
+          "example": 7,
+          "task": "function_of_decision_section",
+          "split": "train",
+          "index": "6",
+          "raw_record": "matched",
+          "input_full_text": "matched",
+          "answer": "Decree",
+          "hashes": "matched"
+        },
+        {
+          "example": 8,
+          "task": "citation_prediction_classification",
+          "split": "train",
+          "index": "1",
+          "raw_record": "matched",
+          "input_full_text": "matched",
+          "answer": "No",
+          "hashes": "matched"
+        },
+        {
+          "example": 9,
+          "task": "contract_qa",
+          "split": "train",
+          "index": "4",
+          "raw_record": "matched",
+          "input_full_text": "matched",
+          "answer": "No",
+          "hashes": "matched"
+        },
+        {
+          "example": 10,
+          "task": "personal_jurisdiction",
+          "split": "train",
+          "index": "0",
+          "raw_record": "matched",
+          "input_full_text": "matched",
+          "answer": "Yes",
+          "hashes": "matched"
+        },
+        {
+          "example": 11,
+          "task": "successor_liability",
+          "split": "train",
+          "index": "2",
+          "raw_record": "matched",
+          "input_full_text": "matched",
+          "answer": "express agreement",
+          "hashes": "matched"
+        },
+        {
+          "example": 12,
+          "task": "ucc_v_common_law",
+          "split": "train",
+          "index": "4",
+          "raw_record": "matched",
+          "input_full_text": "matched",
+          "answer": "Common Law",
+          "hashes": "matched"
+        },
+        {
+          "example": 13,
+          "task": "telemarketing_sales_rule",
+          "split": "train",
+          "index": "0",
+          "raw_record": "matched",
+          "input_full_text": "matched",
+          "answer": "Yes",
+          "hashes": "matched"
+        }
+      ],
+      "answer_runs": [
+        {
+          "page": 8,
+          "text": "descriptive",
+          "size_pt": 21,
+          "bold": true,
+          "color": "B13731"
+        },
+        {
+          "page": 8,
+          "text": "descriptive（記述的）",
+          "size_pt": 21,
+          "bold": true,
+          "color": "B13731"
+        },
+        {
+          "page": 11,
+          "text": "Yes",
+          "size_pt": 21,
+          "bold": true,
+          "color": "B13731"
+        },
+        {
+          "page": 11,
+          "text": "Yes（当たる）",
+          "size_pt": 21,
+          "bold": true,
+          "color": "B13731"
+        },
+        {
+          "page": 12,
+          "text": "No",
+          "size_pt": 21,
+          "bold": true,
+          "color": "B13731"
+        },
+        {
+          "page": 12,
+          "text": "No（明記しない）",
+          "size_pt": 21,
+          "bold": true,
+          "color": "B13731"
+        },
+        {
+          "page": 40,
+          "text": "decision",
+          "size_pt": 21,
+          "bold": true,
+          "color": "B13731"
+        },
+        {
+          "page": 40,
+          "text": "decision",
+          "size_pt": 21,
+          "bold": true,
+          "color": "B13731"
+        },
+        {
+          "page": 42,
+          "text": "No",
+          "size_pt": 21,
+          "bold": true,
+          "color": "B13731"
+        },
+        {
+          "page": 42,
+          "text": "No（ない）",
+          "size_pt": 21,
+          "bold": true,
+          "color": "B13731"
+        },
+        {
+          "page": 44,
+          "text": "Yes",
+          "size_pt": 21,
+          "bold": true,
+          "color": "B13731"
+        },
+        {
+          "page": 44,
+          "text": "Yes（定めている）",
+          "size_pt": 21,
+          "bold": true,
+          "color": "B13731"
+        },
+        {
+          "page": 46,
+          "text": "Decree",
+          "size_pt": 21,
+          "bold": true,
+          "color": "B13731"
+        },
+        {
+          "page": 46,
+          "text": "Decree（主文）",
+          "size_pt": 21,
+          "bold": true,
+          "color": "B13731"
+        },
+        {
+          "page": 48,
+          "text": "No",
+          "size_pt": 21,
+          "bold": true,
+          "color": "B13731"
+        },
+        {
+          "page": 48,
+          "text": "No（正しくない）",
+          "size_pt": 21,
+          "bold": true,
+          "color": "B13731"
+        },
+        {
+          "page": 50,
+          "text": "No",
+          "size_pt": 21,
+          "bold": true,
+          "color": "B13731"
+        },
+        {
+          "page": 50,
+          "text": "No（免除していない）",
+          "size_pt": 21,
+          "bold": true,
+          "color": "B13731"
+        },
+        {
+          "page": 52,
+          "text": "Yes",
+          "size_pt": 21,
+          "bold": true,
+          "color": "B13731"
+        },
+        {
+          "page": 52,
+          "text": "Yes（ある）",
+          "size_pt": 21,
+          "bold": true,
+          "color": "B13731"
+        },
+        {
+          "page": 54,
+          "text": "express agreement",
+          "size_pt": 21,
+          "bold": true,
+          "color": "B13731"
+        },
+        {
+          "page": 55,
+          "text": "express agreement（明示の合意）",
+          "size_pt": 21,
+          "bold": true,
+          "color": "B13731"
+        },
+        {
+          "page": 57,
+          "text": "Common Law",
+          "size_pt": 21,
+          "bold": true,
+          "color": "B13731"
+        },
+        {
+          "page": 57,
+          "text": "Common Law（コモン・ロー）",
+          "size_pt": 21,
+          "bold": true,
+          "color": "B13731"
+        },
+        {
+          "page": 59,
+          "text": "Yes",
+          "size_pt": 21,
+          "bold": true,
+          "color": "B13731"
+        },
+        {
+          "page": 59,
+          "text": "Yes（違反）",
+          "size_pt": 21,
+          "bold": true,
+          "color": "B13731"
+        }
+      ],
+      "table_note_gaps": [
+        {
+          "page": 26,
+          "gap_pt": 12.54
+        },
+        {
+          "page": 27,
+          "gap_pt": 12.54
+        },
+        {
+          "page": 28,
+          "gap_pt": 12.54
+        },
+        {
+          "page": 62,
+          "gap_pt": 12.54
+        }
+      ]
+    },
+    "links": {
+      "native_url_only_runs": 76,
+      "pdf_link_rectangles": 76,
+      "pdf_link_text_exactly_matches_url": true,
+      "pdf_link_character_centers_match_url": true,
+      "glyph_box_overhangs": [],
+      "shortened_url_labels": [],
+      "issues": []
+    }
+  }
+}
