@@ -37,3 +37,35 @@
 |29|synthetic-efficiency|synthetic_efficiency|未着手|
 
 各資料で一次資料と公開実例を調べ、本編3例と追加10例を目安に選定。日本語校正スキルをページごとに適用し、原文・訳・参照回答・出典、全ページ描画、引用・表・参考文献の個別確認を終えてから、資料ごとにコミットする。Geminiは使わない。
+
+## CLEVA系列
+
+[採用元台帳](cleva-source-inventory.md)で31課題と公開元コーパスの対応を管理する。84データセット全件の復元はできていない。元データの紹介と、未取得のCLEVA選定・翻訳版を区別する。以下は元データの制作対象であり、84件を分解した一覧ではない。公開例が未確認の対象は一次配布の調査から始める。
+
+|順|対象|資料範囲|状態|
+|---|---|---|---|
+|0|cleva|プラットフォーム|独立レビュー中|
+|1|cluecorpus2020|CLUECorpus2020|未着手|
+|2|cluewsc2020|CLUEWSC / CLUEWSC2020|未着手|
+|3|ccpm|CCPM|制作中|
+|4|chid|ChID|未着手|
+|5|ocnli|OCNLI|制作中|
+|6|math23k|Math23K|未着手|
+|7|cold|COLD|調査中|
+|8|cdial-bias|CDial-Bias|未着手|
+|9|chef|CHEF|未着手|
+|10|c3|C3|制作中|
+|11|nlpcc2018-qa|NLPCC 2018 Open Domain QA|未着手|
+|12|cmedqa2|cMedQA2|未着手|
+|13|csds|CSDS|未着手|
+|14|adgen|ADGEN / Shao2019 product advertising data|未着手|
+|15|pku-paraphrase-bank|PKU Paraphrase Bank|未着手|
+|16|crosswoz|CrossWOZ|未着手|
+|17|wmt2020-enzh|WMT 2020 newstest2020 English–Chinese|未着手|
+|18|bustm|BUSTM (FewCLUE)|未着手|
+|19|afqmc|AFQMC (CLUE)|未着手|
+|20|eprstmt|EPRSTMT (FewCLUE)|未着手|
+|21|tnews|TNEWS (CLUE/FewCLUE)|未着手|
+|22|ccl2020-humor|SPR / CCL2020 Humor Computation|未着手|
+
+既存5資料はCLEVAでの翻訳・設定差を追記する。BIG-bench／Inverse Scaling／物理概念の出典系列は元のタスク・生成法を追加確認する。出所不明の5系列は公開説明例と未取得条件を記録し、別のデータセットの例で代用しない。

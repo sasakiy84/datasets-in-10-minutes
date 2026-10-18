@@ -243,8 +243,369 @@
     }
   ],
   "cleva": {
-    "status": "last",
+    "status": "in_progress",
     "platform_separate": true,
-    "individual_datasets": "公開事例と出所を確認して個別資料を制作。31タスク群をデータセット数に換算しない。"
+    "individual_datasets": "公開事例と出所を確認して個別資料を制作。31タスク群をデータセット数に換算しない。",
+    "source_inventory": "cleva-source-inventory.json",
+    "platform": {
+      "slug": "cleva",
+      "series": "cleva",
+      "status": "independent_review",
+      "scenarios": [
+        "cleva"
+      ]
+    },
+    "datasets": [
+      {
+        "slug": "cluecorpus2020",
+        "title": "CLUECorpus2020",
+        "series": "cleva",
+        "status": "planned",
+        "source_inventory_row": 0,
+        "cleva_tasks": [
+          "language_modeling"
+        ],
+        "public_source_state": "Official source identified; full corpus not downloaded in this investigation",
+        "scope": "Public source dataset; CLEVA selected/translated collection remains unavailable."
+      },
+      {
+        "slug": "cluewsc2020",
+        "title": "CLUEWSC / CLUEWSC2020",
+        "series": "cleva",
+        "status": "planned",
+        "source_inventory_row": 1,
+        "cleva_tasks": [
+          "coreference_resolution"
+        ],
+        "public_source_state": "Official CLUE ZIP downloaded; paper and HELM examples matched",
+        "scope": "Public source dataset; CLEVA selected/translated collection remains unavailable."
+      },
+      {
+        "slug": "ccpm",
+        "title": "CCPM",
+        "series": "cleva",
+        "status": "creating",
+        "source_inventory_row": 2,
+        "cleva_tasks": [
+          "classical_chinese_understanding"
+        ],
+        "public_source_state": "Official train and test_public JSONL downloaded; both paper and HELM examples matched",
+        "scope": "Public source dataset; CLEVA selected/translated collection remains unavailable."
+      },
+      {
+        "slug": "chid",
+        "title": "ChID",
+        "series": "cleva",
+        "status": "planned",
+        "source_inventory_row": 3,
+        "cleva_tasks": [
+          "cultural_knowledge"
+        ],
+        "public_source_state": "Official author repository and original/competition distribution links identified; raw data not fetched",
+        "scope": "Public source dataset; CLEVA selected/translated collection remains unavailable."
+      },
+      {
+        "slug": "ocnli",
+        "title": "OCNLI",
+        "series": "cleva",
+        "status": "creating",
+        "source_inventory_row": 4,
+        "cleva_tasks": [
+          "commonsense_reasoning"
+        ],
+        "public_source_state": "Official CLUE ZIP downloaded; paper premise+hypothesis+entailment matched",
+        "scope": "Public source dataset; CLEVA selected/translated collection remains unavailable."
+      },
+      {
+        "slug": "math23k",
+        "title": "Math23K",
+        "series": "cleva",
+        "status": "planned",
+        "source_inventory_row": 5,
+        "cleva_tasks": [
+          "mathematical_reasoning"
+        ],
+        "public_source_state": "Follow-up author implementation distribution downloaded; paper example and two HELM docstring examples matched",
+        "scope": "Public source dataset; CLEVA selected/translated collection remains unavailable."
+      },
+      {
+        "slug": "cold",
+        "title": "COLD",
+        "series": "cleva",
+        "status": "researching",
+        "source_inventory_row": 6,
+        "cleva_tasks": [
+          "toxicity_detection"
+        ],
+        "public_source_state": "Official three CSV splits downloaded; HELM input matched train CSV line242",
+        "scope": "Public source dataset; CLEVA selected/translated collection remains unavailable."
+      },
+      {
+        "slug": "cdial-bias",
+        "title": "CDial-Bias",
+        "series": "cleva",
+        "status": "planned",
+        "source_inventory_row": 7,
+        "cleva_tasks": [
+          "bias"
+        ],
+        "public_source_state": "Official README identifies public Hugging Face dataset; raw split not fetched",
+        "scope": "Public source dataset; CLEVA selected/translated collection remains unavailable."
+      },
+      {
+        "slug": "chef",
+        "title": "CHEF",
+        "series": "cleva",
+        "status": "planned",
+        "source_inventory_row": 8,
+        "cleva_tasks": [
+          "fact_checking"
+        ],
+        "public_source_state": "Official preprocessed Pipeline claim_gold.json downloaded; HELM Venus claim matched",
+        "scope": "Public source dataset; CLEVA selected/translated collection remains unavailable."
+      },
+      {
+        "slug": "c3",
+        "title": "C3",
+        "series": "cleva",
+        "status": "creating",
+        "source_inventory_row": 9,
+        "cleva_tasks": [
+          "reading_comprehension"
+        ],
+        "public_source_state": "Official CLUE ZIP downloaded; paper dialogue and HELM mixed-text question matched",
+        "scope": "Public source dataset; CLEVA selected/translated collection remains unavailable."
+      },
+      {
+        "slug": "nlpcc2018-qa",
+        "title": "NLPCC 2018 Open Domain QA",
+        "series": "cleva",
+        "status": "planned",
+        "source_inventory_row": 10,
+        "cleva_tasks": [
+          "closed_book_question_answering"
+        ],
+        "public_source_state": "Primary citation identifies 2018 shared task; a current original raw download not established",
+        "scope": "Public source dataset; CLEVA selected/translated collection remains unavailable."
+      },
+      {
+        "slug": "cmedqa2",
+        "title": "cMedQA2",
+        "series": "cleva",
+        "status": "planned",
+        "source_inventory_row": 11,
+        "cleva_tasks": [
+          "closed_book_question_answering"
+        ],
+        "public_source_state": "Official author repository has questions.zip/answers.zip/candidate split archives; raw data not fetched",
+        "scope": "Public source dataset; CLEVA selected/translated collection remains unavailable."
+      },
+      {
+        "slug": "csds",
+        "title": "CSDS",
+        "series": "cleva",
+        "status": "planned",
+        "source_inventory_row": 12,
+        "cleva_tasks": [
+          "summarization"
+        ],
+        "public_source_state": "Official README has public example image, schema documentation and Drive/Baidu links; raw archive not fetched",
+        "scope": "Public source dataset; CLEVA selected/translated collection remains unavailable."
+      },
+      {
+        "slug": "adgen",
+        "title": "ADGEN / Shao2019 product advertising data",
+        "series": "cleva",
+        "status": "planned",
+        "source_inventory_row": 13,
+        "cleva_tasks": [
+          "data_to_text_generation"
+        ],
+        "public_source_state": "Original paper footnote resolves author repo; README links original Drive archive data/data.jsonl and 119K pairs",
+        "scope": "Public source dataset; CLEVA selected/translated collection remains unavailable."
+      },
+      {
+        "slug": "pku-paraphrase-bank",
+        "title": "PKU Paraphrase Bank",
+        "series": "cleva",
+        "status": "planned",
+        "source_inventory_row": 14,
+        "cleva_tasks": [
+          "paraphrase_generation"
+        ],
+        "public_source_state": "Official repository exposes paraphrase_unorder.zip 47,367,792 bytes; README 509,832 pairs; archive not fetched",
+        "scope": "Public source dataset; CLEVA selected/translated collection remains unavailable."
+      },
+      {
+        "slug": "crosswoz",
+        "title": "CrossWOZ",
+        "series": "cleva",
+        "status": "planned",
+        "source_inventory_row": 15,
+        "cleva_tasks": [
+          "dialogue_generation"
+        ],
+        "public_source_state": "Official train/val/test ZIPs downloaded; HELM complete hotel conversation matched val dialogue12121",
+        "scope": "Public source dataset; CLEVA selected/translated collection remains unavailable."
+      },
+      {
+        "slug": "wmt2020-enzh",
+        "title": "WMT 2020 newstest2020 English–Chinese",
+        "series": "cleva",
+        "status": "planned",
+        "source_inventory_row": 16,
+        "cleva_tasks": [
+          "translation"
+        ],
+        "public_source_state": "Official 2020 source and reference files downloaded; all three public CLEVA examples exact source+reference pairs",
+        "scope": "Public source dataset; CLEVA selected/translated collection remains unavailable."
+      },
+      {
+        "slug": "bustm",
+        "title": "BUSTM (FewCLUE)",
+        "series": "cleva",
+        "status": "planned",
+        "source_inventory_row": 17,
+        "cleva_tasks": [
+          "paraphrase_identification"
+        ],
+        "public_source_state": "Official raw files downloaded; paper pair and HELM pair exact with labels",
+        "scope": "Public source dataset; CLEVA selected/translated collection remains unavailable."
+      },
+      {
+        "slug": "afqmc",
+        "title": "AFQMC (CLUE)",
+        "series": "cleva",
+        "status": "planned",
+        "source_inventory_row": 18,
+        "cleva_tasks": [
+          "paraphrase_identification"
+        ],
+        "public_source_state": "Official CLUE ZIP downloaded; HELM pair and label0 exact",
+        "scope": "Public source dataset; CLEVA selected/translated collection remains unavailable."
+      },
+      {
+        "slug": "eprstmt",
+        "title": "EPRSTMT (FewCLUE)",
+        "series": "cleva",
+        "status": "planned",
+        "source_inventory_row": 19,
+        "cleva_tasks": [
+          "sentiment_analysis"
+        ],
+        "public_source_state": "Official raw files downloaded; paper phone review negative and HELM mall review positive exact",
+        "scope": "Public source dataset; CLEVA selected/translated collection remains unavailable."
+      },
+      {
+        "slug": "tnews",
+        "title": "TNEWS (CLUE/FewCLUE)",
+        "series": "cleva",
+        "status": "planned",
+        "source_inventory_row": 20,
+        "cleva_tasks": [
+          "text_classification"
+        ],
+        "public_source_state": "Official CLUE TNEWS ZIP downloaded; paper education108 and HELM automotive107 exact",
+        "scope": "Public source dataset; CLEVA selected/translated collection remains unavailable."
+      },
+      {
+        "slug": "ccl2020-humor",
+        "title": "SPR / CCL2020 Humor Computation",
+        "series": "cleva",
+        "status": "planned",
+        "source_inventory_row": 21,
+        "cleva_tasks": [
+          "text_classification"
+        ],
+        "public_source_state": "Paper footnote official repo; raw train/dev ZIP and Chinese labeled CSV fetched; HELM example matched",
+        "scope": "Public source dataset; CLEVA selected/translated collection remains unavailable."
+      }
+    ],
+    "reuse_existing": [
+      {
+        "slug": "humaneval",
+        "source_inventory_row": 22,
+        "status": "annotation_pending"
+      },
+      {
+        "slug": "truthfulqa",
+        "source_inventory_row": 23,
+        "status": "annotation_pending"
+      },
+      {
+        "slug": "dyck",
+        "source_inventory_row": 24,
+        "status": "annotation_pending"
+      },
+      {
+        "slug": "synthetic-reasoning",
+        "source_inventory_row": 25,
+        "status": "annotation_pending"
+      },
+      {
+        "slug": "copyright-code",
+        "source_inventory_row": 26,
+        "status": "annotation_pending"
+      }
+    ],
+    "source_families_requiring_identification": [
+      {
+        "source_inventory_row": 27,
+        "name": "BIG-bench source family",
+        "status": "research_required"
+      },
+      {
+        "source_inventory_row": 28,
+        "name": "BIG-bench arithmetic source family",
+        "status": "research_required"
+      },
+      {
+        "source_inventory_row": 29,
+        "name": "Inverse Scaling source family",
+        "status": "research_required"
+      },
+      {
+        "source_inventory_row": 30,
+        "name": "Inverse Scaling deductive/commonsense source family",
+        "status": "research_required"
+      },
+      {
+        "source_inventory_row": 31,
+        "name": "Patel–Pavlick physical-concept synthesis",
+        "status": "research_required"
+      }
+    ],
+    "unavailable_collections": [
+      {
+        "source_inventory_row": 32,
+        "name": "Opinion target extraction: unidentified base",
+        "status": "original_records_unavailable",
+        "public_explanations": "Public paper movie example and HELM Xiamen example; no confirmed primary raw corpus"
+      },
+      {
+        "source_inventory_row": 33,
+        "name": "CLEVA pinyin data",
+        "status": "original_records_unavailable",
+        "public_explanations": "Only public explanation examples/metadata; original evaluation records unavailable"
+      },
+      {
+        "source_inventory_row": 34,
+        "name": "CLEVA intent data",
+        "status": "original_records_unavailable",
+        "public_explanations": "Only public explanation examples/metadata; original evaluation records unavailable"
+      },
+      {
+        "source_inventory_row": 35,
+        "name": "CLEVA subject knowledge collection",
+        "status": "original_records_unavailable",
+        "public_explanations": "Only public explanation examples/metadata; original evaluation records unavailable"
+      },
+      {
+        "source_inventory_row": 36,
+        "name": "CLEVA Chinese copyright text collection",
+        "status": "original_records_unavailable",
+        "public_explanations": "Only public explanation examples/metadata; original evaluation records unavailable"
+      }
+    ]
   }
 }
