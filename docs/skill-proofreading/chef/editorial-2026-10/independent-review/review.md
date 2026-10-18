@@ -1,0 +1,8 @@
+CHEF改訂版を独立承認。未解決0。
+
+65頁のbaselineとfindings、61頁の最終native全文を読み、61頁を個別に実描画確認。表・図・引用・コード・文献を拡大確認し、最終p27/28も確認。独立PDF再描画61画像が作者画像と完全一致。
+
+13原例の全文と訳・ラベル、表123数値セルとnative chartの保持、原10,000件の分割/根拠欠測、論文の注釈・評価条件を照合。実用コードも元train.jsonで実行。全399段落227セルのPDF対応、layout346段落204セル問題0、55URL-onlyリンク、新規XSD0、notes0。
+
+最終PPTX 0d3dcb8659b59beffd0bbc2a38bfdc4925a5e2be2ba85af0d17be59b5483bc56
+PDF 38654dfd030ba149b8467f24967ebaca1d475ca36d2bd482767c129146651ecc

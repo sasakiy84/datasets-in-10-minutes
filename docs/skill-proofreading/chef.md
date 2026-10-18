@@ -41,3 +41,8 @@ Geminiは使用していない。Codexが日本語校正スキルをページご
 |63|文書検索・根拠の選択・真偽の推論を一体で扱うことが、その後の中国語モデル評価へ引き継がれている。|根拠を伴う中国語の検証資源を整備した研究であり、CHEFの主張は後にCLEVAの事実確認課題にも採用された。|元の根拠付き設計そのものがCLEVAの公開入力に継承されたと読める表現を直す。|
 
 [全ページ文言](chef/pages.jsonl)・[自己検査・独立レビュー](chef/review.json)
+
+
+## 読者向けの説明・日本語の改訂（2026年10月）
+
+Geminiは使用せず、Codexがスキルで校正し、別担当が独立レビューした。削除・統合を含む[問題点と変更対](chef/editorial-2026-10/changes.md)、[旧ページとの対応](chef/editorial-2026-10/page-map.json)、[独立レビュー](chef/editorial-2026-10/independent-review/handoff.json)、[最終ページの全文](chef/pages.jsonl)。旧版の校正・検証記録は保持している。
