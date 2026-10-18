@@ -1,0 +1,71 @@
+{
+  "dataset": "truthfulqa",
+  "checked_at": "2026-10-18T03:04:49+00:00",
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "skills": [
+    ".agents/skills/master-guided-slides/SKILL.md",
+    ".agents/skills/dataset-introduction-slides/SKILL.md"
+  ],
+  "scope": "既存の残り33資料で、独立した正解表示の大きさ・個人の好みのえんじ色と、本文の不要な図表番号を点検。",
+  "color_preference": "ユーザー個人の好み。テーマaccent1 #B13731。",
+  "changes": [
+    {
+      "page": 20,
+      "shape": 3,
+      "kind": "citation_wording",
+      "before": "論文§4.1・Fig.4。質問への自由生成を人が評価した値で、選択式の正解率ではない。",
+      "after": "質問への自由生成を人が評価した値で、選択式の正解率ではない。",
+      "reason": "ページ下の文献表示で情報源を特定できるため、本文・補足の不要な図表番号を削除。評価条件・数値を保持。"
+    }
+  ],
+  "total_pages": 57,
+  "changed_pages": [
+    20
+  ],
+  "individual_visual_review_pages": [
+    20
+  ],
+  "visual_method": "変更した最終PDFページを1080×608の画像で個別に確認。枠の高さのみの調整は回答の描画座標の一致も確認。変更対象以外のネイティブ形状は変更前と同一。",
+  "checks": {
+    "content": {
+      "pages": 57,
+      "only_allowed_shapes_changed": true,
+      "answer_texts_and_all_other_dataset_texts_preserved": true,
+      "issues": [],
+      "answers": []
+    },
+    "package": {
+      "parsed_xml_parts": 149,
+      "integer_bullets": 127,
+      "hyperlinks": 46,
+      "new_schema_errors": [],
+      "baseline_schema_errors": 11,
+      "package_integrity": "passed",
+      "internal_relationship_targets": "passed",
+      "unique_shape_ids": "passed",
+      "schema_note": "標準XSDを変更せず確認。マスター由来の既存エラーと、整数buSzPctの百分率字句形式との差を分離。整数箇条書きサイズは25000–400000で別途検査。",
+      "pages": 57,
+      "native_tables": 13,
+      "native_charts": 1
+    },
+    "layout": {
+      "paragraphs_checked": 308,
+      "table_cells_checked": 106,
+      "issues": []
+    },
+    "links": {
+      "native_url_only_runs": 46,
+      "pdf_link_rectangles": 46,
+      "pdf_link_text_exactly_matches_url": true,
+      "pdf_link_character_centers_match_url": true,
+      "glyph_box_overhangs": [],
+      "shortened_url_labels": [],
+      "issues": []
+    }
+  },
+  "artifact_sha256": {
+    "pdf": "196abe3cbd917da0e8a744f91a62729be6af4a2be2e6957225faee444043b2c0",
+    "pptx": "6fcaf45e7730a6f9bdbdf8b2db1336552ad35c53263d3a3b5d7cfe70d5401791"
+  }
+}
