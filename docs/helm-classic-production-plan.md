@@ -52,7 +52,7 @@
 |5|ocnli|OCNLI|作成済み|
 |6|math23k|Math23K|作成済み|
 |7|cold|COLD|作成済み|
-|8|cdial-bias|CDial-Bias|制作中|
+|8|cdial-bias|CDial-Bias|作成済み|
 |9|chef|CHEF|作成済み|
 |10|c3|C3|作成済み|
 |11|nlpcc2018-qa|NLPCC 2018 Open Domain QA|未着手|
