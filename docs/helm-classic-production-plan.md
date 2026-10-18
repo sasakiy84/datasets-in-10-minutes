@@ -48,7 +48,7 @@
 |1|cluecorpus2020|CLUECorpus2020|未着手|
 |2|cluewsc2020|CLUEWSC / CLUEWSC2020|作成済み|
 |3|ccpm|CCPM|作成済み|
-|4|chid|ChID|制作中|
+|4|chid|ChID|作成済み|
 |5|ocnli|OCNLI|作成済み|
 |6|math23k|Math23K|作成済み|
 |7|cold|COLD|作成済み|

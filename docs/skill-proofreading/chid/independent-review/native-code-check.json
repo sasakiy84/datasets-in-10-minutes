@@ -1,0 +1,8 @@
+{
+  "code": "import json\nwith open(\"dev_data.txt\", encoding=\"utf-8\") as f:\n    row = json.loads(f.readlines()[9275])\npositions = [choices.index(gold)\n             for choices, gold in zip(row[\"candidates\"],\n                                      row[\"groundTruth\"])]\nassert positions == [1]",
+  "executed": true,
+  "assert_positions": [
+    1
+  ],
+  "source": "original/dev_data.txt:L9276"
+}
