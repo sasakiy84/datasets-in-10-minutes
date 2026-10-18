@@ -1,7 +1,7 @@
 {
   "dataset": "bbq",
   "created_at": "2026-10-18T00:55:12+00:00",
-  "updated_at": "2026-10-18T00:55:12+00:00",
+  "updated_at": "2026-10-18T10:52:08+09:00",
   "model": "Codex (local skill application; no external generation API)",
   "review_mode": "skill_based_codex",
   "skill_path": ".agents/skills/japanese-slide-proofreading/SKILL.md",
@@ -121,8 +121,8 @@
   ],
   "visual_review_method": "全ページ一覧を確認し、引用・コード・表・参考文献・公式画面・グラフを1080×608の画像で個別に目視。最終変更ページは再描画して確認。",
   "artifact_sha256": {
-    "pptx": "39290da304fcb196b6b735a48e3e4e1319900a1a07da1bcb093c35feb4118c29",
-    "pdf": "03964beab25368817a710b76476f76a3988adfe87bd536f77e5f33dfb66f65e5"
+    "pdf": "4bc9c8f7f51764ee09e918643358cd4bc80e213eee17a0ff25a68ffc06dfceaf",
+    "pptx": "d0e2805d106fb1200c3c785d4fa6eeb3018f69f29705190eff2667ec870e5a3c"
   },
   "wording_changes": 12,
   "layout_and_explanation_changes": [
@@ -375,5 +375,88 @@
       "issues": []
     }
   },
-  "scope_notes": "公式nyu-mll/BBQのコミットbea11bd97d79217245b5871acd247b9d6eb24598の11ファイルをGit blob SHA-1で照合した。全58,492件＝単一属性9分類31,372件＋交差属性2分類27,120件。曖昧／情報十分は各29,246件。同一テンプレートの条件対を含む13公開レコードであり、13種の独立テンプレートではない。三つの候補と不明という正解を保持。論文の曖昧条件バイアス式と、HELM v0.3.0が全体正解率を使う実装差をAppendixで説明。初期公開2021年、ACL Findings発表2022年。CC BY 4.0。"
+  "scope_notes": "公式nyu-mll/BBQのコミットbea11bd97d79217245b5871acd247b9d6eb24598の11ファイルをGit blob SHA-1で照合した。全58,492件＝単一属性9分類31,372件＋交差属性2分類27,120件。曖昧／情報十分は各29,246件。同一テンプレートの条件対を含む13公開レコードであり、13種の独立テンプレートではない。三つの候補と不明という正解を保持。論文の曖昧条件バイアス式と、HELM v0.3.0が全体正解率を使う実装差をAppendixで説明。初期公開2021年、ACL Findings発表2022年。CC BY 4.0。",
+  "revision_history": [
+    {
+      "checked_at": "2026-10-18T00:55:12+00:00",
+      "artifact_sha256": {
+        "pptx": "39290da304fcb196b6b735a48e3e4e1319900a1a07da1bcb093c35feb4118c29",
+        "pdf": "03964beab25368817a710b76476f76a3988adfe87bd536f77e5f33dfb66f65e5"
+      },
+      "checks": {
+        "package": {
+          "parsed_xml_parts": 153,
+          "integer_bullets": 110,
+          "hyperlinks": 48,
+          "new_schema_errors": [],
+          "baseline_schema_errors": 11,
+          "package_integrity": "passed",
+          "internal_relationship_targets": "passed",
+          "unique_shape_ids": "passed",
+          "schema_note": "標準XSDを変更せず確認。マスター由来の既存エラーと、整数buSzPctの百分率字句形式との差を分離。整数箇条書きサイズは25000–400000で別途検査。",
+          "pages": 59,
+          "native_tables": 6,
+          "native_charts": 1
+        },
+        "layout": {
+          "paragraphs_checked": 360,
+          "table_cells_checked": 55,
+          "issues": []
+        },
+        "text": {
+          "pages": 59,
+          "missing": [],
+          "quote_missing": [],
+          "unique_examples": 13,
+          "all_original_paragraphs_and_translations_present": true,
+          "notes": false,
+          "unnecessary_original_paper_word": 0,
+          "extraction_note": "数式記号の別ブロックとfi合字のゼロ幅文字は、実際の文字・基線・座標を保って行順を復元。文字の削除による代用なし。"
+        },
+        "links": {
+          "native_url_only_runs": 48,
+          "pdf_link_rectangles": 48,
+          "pdf_link_text_exactly_matches_url": true,
+          "issues": []
+        }
+      }
+    }
+  ],
+  "follow_up_reviews": [
+    {
+      "record": "answer-and-citation-review.json",
+      "checked_at": "2026-10-18T10:52:08+09:00",
+      "answer_display_changes": 26,
+      "citation_wording_changes": 1,
+      "changed_pages": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        20,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ]
+    }
+  ]
 }
