@@ -16,7 +16,7 @@
 |8|twitter-aae|twitter_aae, twitter_aae_aa, twitter_aae_white|作成済み|
 |9|wikifact|wikifact|作成済み|
 |10|dyck|dyck_language|作成済み|
-|11|numeracy|numeracy|未着手|
+|11|numeracy|numeracy|作成済み|
 |12|synthetic-reasoning|synthetic_reasoning, synthetic_reasoning_natural|未着手|
 |13|math|math_regular, math_chain_of_thought|未着手|
 |14|legalbench|legalbench|未着手|

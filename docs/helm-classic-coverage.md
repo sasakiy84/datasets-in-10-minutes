@@ -41,7 +41,7 @@ GSM8KとHumanEvalは既存資料で対象データセットを紹介済み。MML
 |wikifact|WikiFact|作成済み|[PPTX](../slides/datasets-in-10-minutes-wikifact.pptx) / [PDF](../slides/datasets-in-10-minutes-wikifact.pdf)|
 |babi_qa|bAbI|作成済み|[PPTX](../slides/datasets-in-10-minutes-babi.pptx) / [PDF](../slides/datasets-in-10-minutes-babi.pdf)|
 |dyck_language|Dyck|作成済み|[PPTX](../slides/datasets-in-10-minutes-dyck.pptx) / [PDF](../slides/datasets-in-10-minutes-dyck.pdf)|
-|numeracy|Numerical reasoning|未着手||
+|numeracy|Numerical reasoning|作成済み|[PPTX](../slides/datasets-in-10-minutes-numeracy.pptx) / [PDF](../slides/datasets-in-10-minutes-numeracy.pdf)|
 |synthetic_reasoning|Synthetic reasoning (abstract symbols)|未着手||
 |synthetic_reasoning_natural|Synthetic reasoning (natural language)|未着手||
 |gsm|GSM8K (Grade school math word problems)|作成済み|[PPTX](../slides/datasets-in-10-minutes-gsm8k.pptx)|
