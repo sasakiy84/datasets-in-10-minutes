@@ -20,7 +20,7 @@
 |12|synthetic-reasoning|synthetic_reasoning, synthetic_reasoning_natural|作成済み|
 |13|math|math_regular, math_chain_of_thought|作成済み|
 |14|legalbench|legalbench|作成済み|
-|15|legal-support|legal_support|未着手|
+|15|legal-support|legal_support|作成済み|
 |16|lsat|lsat_qa|未着手|
 |17|medqa|med_qa|未着手|
 |18|lextreme|lextreme|未着手|

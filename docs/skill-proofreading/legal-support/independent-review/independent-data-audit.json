@@ -1,0 +1,640 @@
+{
+  "status": "passed",
+  "corpus_rows": 20034,
+  "corpus": {
+    "train": {
+      "records": 13862,
+      "label_a": 6839,
+      "label_b": 7023,
+      "contexts": 3472,
+      "unordered_inputs": 5983,
+      "case_ids": 3246,
+      "identical_choices": 8
+    },
+    "dev": {
+      "records": 3125,
+      "label_a": 1556,
+      "label_b": 1569,
+      "contexts": 744,
+      "unordered_inputs": 1245,
+      "case_ids": 736,
+      "identical_choices": 0
+    },
+    "test": {
+      "records": 3047,
+      "label_a": 1535,
+      "label_b": 1512,
+      "contexts": 744,
+      "unordered_inputs": 1218,
+      "case_ids": 741,
+      "identical_choices": 1
+    }
+  },
+  "split_cross_checks": [
+    {
+      "splits": [
+        "train",
+        "dev"
+      ],
+      "common_case_ids": 83,
+      "common_unordered_inputs": 0
+    },
+    {
+      "splits": [
+        "train",
+        "test"
+      ],
+      "common_case_ids": 94,
+      "common_unordered_inputs": 0
+    },
+    {
+      "splits": [
+        "dev",
+        "test"
+      ],
+      "common_case_ids": 20,
+      "common_unordered_inputs": 0
+    }
+  ],
+  "examples": [
+    {
+      "index": 1,
+      "row": 566,
+      "hash_and_full_record_match": true,
+      "correct_choice": "B",
+      "signals": [
+        "but see",
+        "see"
+      ]
+    },
+    {
+      "index": 2,
+      "row": 499,
+      "hash_and_full_record_match": true,
+      "correct_choice": "A",
+      "signals": [
+        "see",
+        "see also"
+      ]
+    },
+    {
+      "index": 3,
+      "row": 240,
+      "hash_and_full_record_match": true,
+      "correct_choice": "B",
+      "signals": [
+        "cf.",
+        "see"
+      ]
+    },
+    {
+      "index": 4,
+      "row": 83,
+      "hash_and_full_record_match": true,
+      "correct_choice": "B",
+      "signals": [
+        "see also",
+        "see"
+      ]
+    },
+    {
+      "index": 5,
+      "row": 1583,
+      "hash_and_full_record_match": true,
+      "correct_choice": "B",
+      "signals": [
+        "see also",
+        "see"
+      ]
+    },
+    {
+      "index": 6,
+      "row": 26,
+      "hash_and_full_record_match": true,
+      "correct_choice": "B",
+      "signals": [
+        "see also",
+        "see"
+      ]
+    },
+    {
+      "index": 7,
+      "row": 851,
+      "hash_and_full_record_match": true,
+      "correct_choice": "B",
+      "signals": [
+        "see also",
+        "no signal"
+      ]
+    },
+    {
+      "index": 8,
+      "row": 1012,
+      "hash_and_full_record_match": true,
+      "correct_choice": "A",
+      "signals": [
+        "see",
+        "see also"
+      ]
+    },
+    {
+      "index": 9,
+      "row": 1240,
+      "hash_and_full_record_match": true,
+      "correct_choice": "B",
+      "signals": [
+        "see",
+        "no signal"
+      ]
+    },
+    {
+      "index": 10,
+      "row": 1623,
+      "hash_and_full_record_match": true,
+      "correct_choice": "A",
+      "signals": [
+        "see",
+        "see also"
+      ]
+    },
+    {
+      "index": 11,
+      "row": 1916,
+      "hash_and_full_record_match": true,
+      "correct_choice": "B",
+      "signals": [
+        "see also",
+        "see"
+      ]
+    },
+    {
+      "index": 12,
+      "row": 2311,
+      "hash_and_full_record_match": true,
+      "correct_choice": "A",
+      "signals": [
+        "see",
+        "see also"
+      ]
+    },
+    {
+      "index": 13,
+      "row": 1529,
+      "hash_and_full_record_match": true,
+      "correct_choice": "A",
+      "signals": [
+        "no signal",
+        "see also"
+      ]
+    }
+  ],
+  "public_input_count": 1000,
+  "public_output_count": 3000,
+  "public_splits": {
+    "valid": 511,
+    "test": 489
+  },
+  "actual_train_instance_counts": {
+    "3": 3000
+  },
+  "actual_prompt_truncated_counts": {
+    "false": 3000
+  },
+  "public_multiple_correct_instances": 0,
+  "model_conditions": [
+    {
+      "model": "meta/llama-2-70b",
+      "method": "multiple_choice_joint",
+      "train": 3,
+      "trials": 1,
+      "max_tokens": 1,
+      "temp": 0.0
+    },
+    {
+      "model": "openai/text-davinci-003",
+      "method": "multiple_choice_joint",
+      "train": 3,
+      "trials": 3,
+      "max_tokens": 5,
+      "temp": 0.0
+    },
+    {
+      "model": "together/opt-175b",
+      "method": "multiple_choice_joint",
+      "train": 3,
+      "trials": 3,
+      "max_tokens": 5,
+      "temp": 0.0
+    },
+    {
+      "model": "together/opt-175b",
+      "method": "multiple_choice_joint",
+      "train": 3,
+      "trials": 3,
+      "max_tokens": 5,
+      "temp": 0.0
+    },
+    {
+      "model": "together/opt-175b",
+      "method": "multiple_choice_separate_calibrated",
+      "train": 0,
+      "trials": 1,
+      "max_tokens": 0,
+      "temp": 0.0
+    },
+    {
+      "model": "together/opt-175b",
+      "method": "multiple_choice_separate_original",
+      "train": 0,
+      "trials": 1,
+      "max_tokens": 0,
+      "temp": 0.0
+    }
+  ],
+  "metrics": [
+    {
+      "model": "meta/llama-2-70b",
+      "method": "multiple_choice_joint",
+      "split": "valid",
+      "raw_mean": 0.5753424657534246,
+      "percent": "57.53",
+      "native_display_match": true
+    },
+    {
+      "model": "meta/llama-2-70b",
+      "method": "multiple_choice_joint",
+      "split": "test",
+      "raw_mean": 0.5848670756646217,
+      "percent": "58.49",
+      "native_display_match": true
+    },
+    {
+      "model": "openai/text-davinci-003",
+      "method": "multiple_choice_joint",
+      "split": "valid",
+      "raw_mean": 0.6542726679712981,
+      "percent": "65.43",
+      "independent_counts": [
+        {
+          "trial": 0,
+          "n": 511,
+          "correct": 325
+        },
+        {
+          "trial": 1,
+          "n": 511,
+          "correct": 343
+        },
+        {
+          "trial": 2,
+          "n": 511,
+          "correct": 335
+        }
+      ],
+      "recalculated_mean": 0.6542726679712981,
+      "matches": true,
+      "native_display_match": true
+    },
+    {
+      "model": "openai/text-davinci-003",
+      "method": "multiple_choice_joint",
+      "split": "test",
+      "raw_mean": 0.621676891615542,
+      "percent": "62.17",
+      "independent_counts": [
+        {
+          "trial": 0,
+          "n": 489,
+          "correct": 306
+        },
+        {
+          "trial": 1,
+          "n": 489,
+          "correct": 306
+        },
+        {
+          "trial": 2,
+          "n": 489,
+          "correct": 300
+        }
+      ],
+      "recalculated_mean": 0.621676891615542,
+      "matches": true,
+      "native_display_match": true
+    },
+    {
+      "model": "together/opt-175b",
+      "method": "multiple_choice_joint",
+      "split": "valid",
+      "raw_mean": 0.49902152641878667,
+      "percent": "49.90",
+      "native_display_match": true
+    },
+    {
+      "model": "together/opt-175b",
+      "method": "multiple_choice_joint",
+      "split": "test",
+      "raw_mean": 0.5316973415132924,
+      "percent": "53.17",
+      "native_display_match": true
+    },
+    {
+      "model": "together/opt-175b",
+      "method": "multiple_choice_joint",
+      "split": "valid",
+      "raw_mean": 0.49902152641878667,
+      "percent": "49.90",
+      "native_display_match": true
+    },
+    {
+      "model": "together/opt-175b",
+      "method": "multiple_choice_joint",
+      "split": "test",
+      "raw_mean": 0.5316973415132924,
+      "percent": "53.17",
+      "native_display_match": true
+    },
+    {
+      "model": "together/opt-175b",
+      "method": "multiple_choice_separate_calibrated",
+      "split": "valid",
+      "raw_mean": 0.5557729941291585,
+      "percent": "55.58"
+    },
+    {
+      "model": "together/opt-175b",
+      "method": "multiple_choice_separate_calibrated",
+      "split": "test",
+      "raw_mean": 0.556237218813906,
+      "percent": "55.62",
+      "native_display_match": true
+    },
+    {
+      "model": "together/opt-175b",
+      "method": "multiple_choice_separate_original",
+      "split": "valid",
+      "raw_mean": 0.5675146771037182,
+      "percent": "56.75"
+    },
+    {
+      "model": "together/opt-175b",
+      "method": "multiple_choice_separate_original",
+      "split": "test",
+      "raw_mean": 0.5664621676891616,
+      "percent": "56.65",
+      "native_display_match": true
+    }
+  ],
+  "native_tables": [
+    {
+      "page": 16,
+      "rows": [
+        [
+          "導入句の例",
+          "本文との関係"
+        ],
+        [
+          "see",
+          "主張を支える根拠として引用"
+        ],
+        [
+          "see also",
+          "追加の支持根拠として引用"
+        ],
+        [
+          "cf.",
+          "類似する点から支える根拠として引用"
+        ]
+      ]
+    },
+    {
+      "page": 18,
+      "rows": [
+        [
+          "集合",
+          "レコード数",
+          "正解A",
+          "正解B"
+        ],
+        [
+          "train",
+          "13,862",
+          "6,839",
+          "7,023"
+        ],
+        [
+          "dev",
+          "3,125",
+          "1,556",
+          "1,569"
+        ],
+        [
+          "test",
+          "3,047",
+          "1,535",
+          "1,512"
+        ]
+      ]
+    },
+    {
+      "page": 19,
+      "rows": [
+        [
+          "集合",
+          "レコード数",
+          "異なる主張の数"
+        ],
+        [
+          "train",
+          "13,862",
+          "3,472"
+        ],
+        [
+          "dev",
+          "3,125",
+          "744"
+        ],
+        [
+          "test",
+          "3,047",
+          "744"
+        ]
+      ]
+    },
+    {
+      "page": 24,
+      "rows": [
+        [
+          "元の集合",
+          "全件数",
+          "HELMの評価対象"
+        ],
+        [
+          "dev",
+          "3,125",
+          "511"
+        ],
+        [
+          "test",
+          "3,047",
+          "489"
+        ],
+        [
+          "合計",
+          "6,172",
+          "1,000"
+        ]
+      ]
+    },
+    {
+      "page": 25,
+      "rows": [
+        [
+          "モデル",
+          "正解率 (%)",
+          "試行数"
+        ],
+        [
+          "OPT-175B",
+          "53.17",
+          "3"
+        ],
+        [
+          "text-davinci-003",
+          "62.17",
+          "3"
+        ],
+        [
+          "Llama 2 70B",
+          "58.49",
+          "1"
+        ]
+      ]
+    },
+    {
+      "page": 26,
+      "rows": [
+        [
+          "モデル",
+          "正解率 (%)"
+        ],
+        [
+          "OPT-175B",
+          "49.90"
+        ],
+        [
+          "text-davinci-003",
+          "65.43"
+        ],
+        [
+          "Llama 2 70B",
+          "57.53"
+        ]
+      ]
+    },
+    {
+      "page": 54,
+      "rows": [
+        [
+          "集合",
+          "全レコード",
+          "一意の入力組"
+        ],
+        [
+          "train",
+          "13,862",
+          "5,983"
+        ],
+        [
+          "dev",
+          "3,125",
+          "1,245"
+        ],
+        [
+          "test",
+          "3,047",
+          "1,218"
+        ]
+      ]
+    },
+    {
+      "page": 55,
+      "rows": [
+        [
+          "集合の組",
+          "共通case_id",
+          "共通の入力組"
+        ],
+        [
+          "train / dev",
+          "83",
+          "0"
+        ],
+        [
+          "train / test",
+          "94",
+          "0"
+        ],
+        [
+          "dev / test",
+          "20",
+          "0"
+        ]
+      ]
+    },
+    {
+      "page": 57,
+      "rows": [
+        [
+          "方式",
+          "test正解率 (%)",
+          "提示例"
+        ],
+        [
+          "選択肢を並べて記号を生成",
+          "53.17",
+          "3例"
+        ],
+        [
+          "候補を別々に採点",
+          "56.65",
+          "0例"
+        ],
+        [
+          "候補を別々に採点・確率を補正",
+          "55.62",
+          "0例"
+        ]
+      ]
+    },
+    {
+      "page": 58,
+      "rows": [
+        [
+          "モデル",
+          "提示例",
+          "出力上限",
+          "試行"
+        ],
+        [
+          "OPT-175B",
+          "3例",
+          "5トークン",
+          "3"
+        ],
+        [
+          "text-davinci-003",
+          "3例",
+          "5トークン",
+          "3"
+        ],
+        [
+          "Llama 2 70B",
+          "3例",
+          "1トークン",
+          "1"
+        ]
+      ]
+    }
+  ]
+}

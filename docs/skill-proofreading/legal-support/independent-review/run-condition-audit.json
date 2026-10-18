@@ -1,0 +1,92 @@
+[
+  {
+    "run": "legal_support,method=multiple_choice_joint:model=meta_llama-2-70b",
+    "metrics": {
+      "valid": {
+        "num_instances": 511.0,
+        "num_train_instances": 3.0,
+        "prompt_truncated": 0.0
+      },
+      "test": {
+        "num_instances": 489.0,
+        "num_train_instances": 3.0,
+        "prompt_truncated": 0.0
+      }
+    }
+  },
+  {
+    "run": "legal_support,method=multiple_choice_joint:model=openai_text-davinci-003",
+    "metrics": {
+      "valid": {
+        "num_instances": 511.0,
+        "num_train_instances": 3.0,
+        "prompt_truncated": 0.0
+      },
+      "test": {
+        "num_instances": 489.0,
+        "num_train_instances": 3.0,
+        "prompt_truncated": 0.0
+      }
+    }
+  },
+  {
+    "run": "legal_support,method=multiple_choice_joint:model=together_opt-175b",
+    "metrics": {
+      "valid": {
+        "num_instances": 511.0,
+        "num_train_instances": 3.0,
+        "prompt_truncated": 0.0
+      },
+      "test": {
+        "num_instances": 489.0,
+        "num_train_instances": 3.0,
+        "prompt_truncated": 0.0
+      }
+    }
+  },
+  {
+    "run": "legal_support,method=multiple_choice_joint:model=together_opt-175b,groups=ablation_multiple_choice",
+    "metrics": {
+      "valid": {
+        "num_instances": 511.0,
+        "num_train_instances": 3.0,
+        "prompt_truncated": 0.0
+      },
+      "test": {
+        "num_instances": 489.0,
+        "num_train_instances": 3.0,
+        "prompt_truncated": 0.0
+      }
+    }
+  },
+  {
+    "run": "legal_support,method=multiple_choice_separate_calibrated:model=together_opt-175b,groups=ablation_multiple_choice",
+    "metrics": {
+      "valid": {
+        "num_instances": 511.0,
+        "num_train_instances": 0.0,
+        "prompt_truncated": 0.0
+      },
+      "test": {
+        "num_instances": 489.0,
+        "num_train_instances": 0.0,
+        "prompt_truncated": 0.0
+      }
+    }
+  },
+  {
+    "run": "legal_support,method=multiple_choice_separate_original:model=together_opt-175b,groups=ablation_multiple_choice",
+    "metrics": {
+      "valid": {
+        "num_instances": 511.0,
+        "num_train_instances": 0.0,
+        "prompt_truncated": 0.0
+      },
+      "test": {
+        "num_instances": 489.0,
+        "num_train_instances": 0.0,
+        "prompt_truncated": 0.0
+      }
+    }
+  }
+]
