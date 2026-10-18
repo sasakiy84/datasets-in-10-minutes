@@ -17,7 +17,7 @@ GSM8KとHumanEvalは既存資料で対象データセットを紹介済み。MML
 |シナリオ|表示名|状態|資料|
 |---|---|---|---|
 |boolq|BoolQ|作成済み|[PPTX](../slides/datasets-in-10-minutes-boolq.pptx) / [PDF](../slides/datasets-in-10-minutes-boolq.pdf)|
-|narrative_qa|NarrativeQA|未着手||
+|narrative_qa|NarrativeQA|作成済み|[PPTX](../slides/datasets-in-10-minutes-narrativeqa.pptx) / [PDF](../slides/datasets-in-10-minutes-narrativeqa.pdf)|
 |natural_qa_closedbook|NaturalQuestions (closed-book)|未着手||
 |natural_qa_openbook_longans|NaturalQuestions (open-book)|未着手||
 |quac|QuAC (Question Answering in Context)|未着手||
