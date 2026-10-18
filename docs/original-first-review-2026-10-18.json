@@ -1,0 +1,316 @@
+{
+  "checked_at": "2026-10-18T02:47:27+00:00",
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "scope": "JST 2026-10-17〜18に作成された29資料。Gitから復元した作成日時で抽出。",
+  "datasets": [
+    {
+      "dataset": "scicode",
+      "created_at": "2026-10-16T15:21:30Z",
+      "local_created_date": "2026-10-17",
+      "changed": false,
+      "reason": "表示対象の仕様抜粋は1枚にまとまっており、後続のコード例・解説は別の役割。"
+    },
+    {
+      "dataset": "mcp-atlas",
+      "created_at": "2026-10-16T15:47:06Z",
+      "local_created_date": "2026-10-17",
+      "changed": false,
+      "reason": "依頼の原文は1枚にまとまっている。後続は操作・解答の解説。"
+    },
+    {
+      "dataset": "swe-bench-pro",
+      "created_at": "2026-10-16T16:43:28Z",
+      "local_created_date": "2026-10-17",
+      "changed": false,
+      "reason": "表示対象の要件抜粋は1枚。コード差分は別の対象。"
+    },
+    {
+      "dataset": "simpleqa-verified",
+      "created_at": "2026-10-16T17:18:22Z",
+      "local_created_date": "2026-10-17",
+      "changed": false,
+      "reason": "各質問の原文・訳・正解を1枚で表示。"
+    },
+    {
+      "dataset": "mmmlu",
+      "created_at": "2026-10-16T17:55:11Z",
+      "local_created_date": "2026-10-17",
+      "changed": false,
+      "reason": "各言語の質問と全選択肢を1枚に表示。言語別の問題は別の実例。"
+    },
+    {
+      "dataset": "charxiv",
+      "created_at": "2026-10-16T20:11:01Z",
+      "local_created_date": "2026-10-17",
+      "changed": false,
+      "reason": "図と質問の組であり、訳の併記による原文の途中分割はない。"
+    },
+    {
+      "dataset": "global-piqa",
+      "created_at": "2026-10-16T21:11:14Z",
+      "local_created_date": "2026-10-17",
+      "changed": false,
+      "reason": "各言語の質問と選択肢を1枚で表示。日本語原文・英語の並行問題は区別している。"
+    },
+    {
+      "dataset": "mrcr-v2",
+      "created_at": "2026-10-16T21:33:56Z",
+      "local_created_date": "2026-10-17",
+      "changed": false,
+      "reason": "会話抜粋と最後の指示・参照応答は異なる役割の入力。訳の併記による途中分割はない。"
+    },
+    {
+      "dataset": "facts-grounding",
+      "created_at": "2026-10-16T21:48:03Z",
+      "local_created_date": "2026-10-17",
+      "changed": false,
+      "reason": "文書抜粋と質問・指示をそれぞれまとめて表示。文書と質問は役割が異なる。"
+    },
+    {
+      "dataset": "osworld-verified",
+      "created_at": "2026-10-16T22:09:11Z",
+      "local_created_date": "2026-10-17",
+      "changed": false,
+      "reason": "操作指示の原文と訳は1枚。画面は別の視覚資料。"
+    },
+    {
+      "dataset": "omnidocbench",
+      "created_at": "2026-10-16T22:25:40Z",
+      "local_created_date": "2026-10-17",
+      "changed": false,
+      "reason": "文書画像・構造認識の実例で、訳の併記による原文の途中分割はない。"
+    },
+    {
+      "dataset": "gsm8k",
+      "created_at": "2026-10-17T15:02:49Z",
+      "local_created_date": "2026-10-18",
+      "changed": false,
+      "reason": "各英語問題と訳はすでに1枚に統合済み。"
+    },
+    {
+      "dataset": "humaneval",
+      "created_at": "2026-10-17T15:03:19Z",
+      "local_created_date": "2026-10-18",
+      "changed": false,
+      "reason": "表示対象のdocstring抜粋と訳は1枚。コードとテストは別の役割。"
+    },
+    {
+      "dataset": "vqa-v2",
+      "created_at": "2026-10-17T15:03:43Z",
+      "local_created_date": "2026-10-18",
+      "changed": false,
+      "reason": "画像・質問・訳・正解は各1枚。"
+    },
+    {
+      "dataset": "boolq",
+      "created_at": "2026-10-17T16:28:56Z",
+      "local_created_date": "2026-10-18",
+      "changed": true,
+      "reason": "原文と訳の併記のために分割されていた実例を再構成。"
+    },
+    {
+      "dataset": "hellaswag",
+      "created_at": "2026-10-17T16:28:56Z",
+      "local_created_date": "2026-10-18",
+      "changed": true,
+      "reason": "原文と訳の併記のために分割されていた実例を再構成。"
+    },
+    {
+      "dataset": "truthfulqa",
+      "created_at": "2026-10-17T16:28:56Z",
+      "local_created_date": "2026-10-18",
+      "changed": true,
+      "reason": "原文と訳の併記のために分割されていた実例を再構成。"
+    },
+    {
+      "dataset": "imdb",
+      "created_at": "2026-10-17T16:28:56Z",
+      "local_created_date": "2026-10-18",
+      "changed": true,
+      "reason": "原文と訳の併記のために分割されていた実例を再構成。"
+    },
+    {
+      "dataset": "xsum",
+      "created_at": "2026-10-17T16:28:57Z",
+      "local_created_date": "2026-10-18",
+      "changed": true,
+      "reason": "原文と訳の併記のために分割されていた実例を再構成。"
+    },
+    {
+      "dataset": "openbookqa",
+      "created_at": "2026-10-18T00:55:39Z",
+      "local_created_date": "2026-10-18",
+      "changed": true,
+      "reason": "原文と訳の併記のために分割されていた実例を再構成。"
+    },
+    {
+      "dataset": "mmlu",
+      "created_at": "2026-10-18T00:55:39Z",
+      "local_created_date": "2026-10-18",
+      "changed": false,
+      "reason": "質問・全選択肢・訳・正解は各1枚。"
+    },
+    {
+      "dataset": "babi",
+      "created_at": "2026-10-18T00:55:39Z",
+      "local_created_date": "2026-10-18",
+      "changed": true,
+      "reason": "原文と訳の併記のために分割されていた実例を再構成。"
+    },
+    {
+      "dataset": "blimp",
+      "created_at": "2026-10-18T00:55:39Z",
+      "local_created_date": "2026-10-18",
+      "changed": false,
+      "reason": "各文対と訳は1枚。"
+    },
+    {
+      "dataset": "apps",
+      "created_at": "2026-10-18T00:55:40Z",
+      "local_created_date": "2026-10-18",
+      "changed": true,
+      "reason": "原文と訳の併記のために分割されていた実例を再構成。"
+    },
+    {
+      "dataset": "bbq",
+      "created_at": "2026-10-18T00:55:40Z",
+      "local_created_date": "2026-10-18",
+      "changed": true,
+      "reason": "原文と訳の併記のために分割されていた実例を再構成。"
+    },
+    {
+      "dataset": "bold",
+      "created_at": "2026-10-18T00:55:40Z",
+      "local_created_date": "2026-10-18",
+      "changed": false,
+      "reason": "プロンプトと訳は各1枚。"
+    },
+    {
+      "dataset": "raft",
+      "created_at": "2026-10-18T00:55:40Z",
+      "local_created_date": "2026-10-18",
+      "changed": true,
+      "reason": "原文と訳の併記のために分割されていた実例を再構成。"
+    },
+    {
+      "dataset": "civil-comments",
+      "created_at": "2026-10-18T00:55:40Z",
+      "local_created_date": "2026-10-18",
+      "changed": false,
+      "reason": "各コメントと訳は1枚。"
+    },
+    {
+      "dataset": "wmt14",
+      "created_at": "2026-10-18T00:55:40Z",
+      "local_created_date": "2026-10-18",
+      "changed": true,
+      "reason": "原文と訳の併記のために分割されていた実例を再構成。"
+    }
+  ],
+  "changes": [
+    {
+      "dataset": "openbookqa",
+      "old_pages": 52,
+      "new_pages": 47,
+      "changed_examples": 9,
+      "original_whole_one_page": 9,
+      "changed_pages": 13,
+      "record": "skill-proofreading/openbookqa/original-first-review.json"
+    },
+    {
+      "dataset": "boolq",
+      "old_pages": 60,
+      "new_pages": 53,
+      "changed_examples": 7,
+      "original_whole_one_page": 7,
+      "changed_pages": 7,
+      "record": "skill-proofreading/boolq/original-first-review.json"
+    },
+    {
+      "dataset": "hellaswag",
+      "old_pages": 69,
+      "new_pages": 59,
+      "changed_examples": 12,
+      "original_whole_one_page": 12,
+      "changed_pages": 21,
+      "record": "skill-proofreading/hellaswag/original-first-review.json"
+    },
+    {
+      "dataset": "truthfulqa",
+      "old_pages": 60,
+      "new_pages": 57,
+      "changed_examples": 3,
+      "original_whole_one_page": 3,
+      "changed_pages": 3,
+      "record": "skill-proofreading/truthfulqa/original-first-review.json"
+    },
+    {
+      "dataset": "imdb",
+      "old_pages": 53,
+      "new_pages": 53,
+      "changed_examples": 1,
+      "original_whole_one_page": 1,
+      "changed_pages": 2,
+      "record": "skill-proofreading/imdb/original-first-review.json"
+    },
+    {
+      "dataset": "xsum",
+      "old_pages": 78,
+      "new_pages": 69,
+      "changed_examples": 13,
+      "original_whole_one_page": 13,
+      "changed_pages": 26,
+      "record": "skill-proofreading/xsum/original-first-review.json"
+    },
+    {
+      "dataset": "babi",
+      "old_pages": 49,
+      "new_pages": 47,
+      "changed_examples": 3,
+      "original_whole_one_page": 3,
+      "changed_pages": 4,
+      "record": "skill-proofreading/babi/original-first-review.json"
+    },
+    {
+      "dataset": "apps",
+      "old_pages": 67,
+      "new_pages": 65,
+      "changed_examples": 8,
+      "original_whole_one_page": 4,
+      "changed_pages": 28,
+      "record": "skill-proofreading/apps/original-first-review.json"
+    },
+    {
+      "dataset": "bbq",
+      "old_pages": 59,
+      "new_pages": 49,
+      "changed_examples": 13,
+      "original_whole_one_page": 13,
+      "changed_pages": 16,
+      "record": "skill-proofreading/bbq/original-first-review.json"
+    },
+    {
+      "dataset": "raft",
+      "old_pages": 48,
+      "new_pages": 46,
+      "changed_examples": 2,
+      "original_whole_one_page": 2,
+      "changed_pages": 3,
+      "record": "skill-proofreading/raft/original-first-review.json"
+    },
+    {
+      "dataset": "wmt14",
+      "old_pages": 47,
+      "new_pages": 46,
+      "changed_examples": 1,
+      "original_whole_one_page": 1,
+      "changed_pages": 1,
+      "record": "skill-proofreading/wmt14/original-first-review.json"
+    }
+  ],
+  "total_changed_examples": 72,
+  "whole_original_examples": 68,
+  "changed_pages": 124,
+  "limitations": "変更ページは最終PDFの個別画像を目視。変更のないページは既存の確認記録とネイティブXML同一性を参照し、新たな全ページ個別目視とは区別。18資料は原文・訳の途中分割の有無をテキスト・配置から確認。"
+}
