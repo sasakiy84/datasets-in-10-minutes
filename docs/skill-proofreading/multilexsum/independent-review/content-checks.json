@@ -1,0 +1,176 @@
+{
+  "independent_counts": {
+    "train": {
+      "cases": 3177,
+      "summary/long": 3177,
+      "summary/short": 2210,
+      "summary/tiny": 1130
+    },
+    "dev": {
+      "cases": 454,
+      "summary/long": 454,
+      "summary/short": 312,
+      "summary/tiny": 161
+    },
+    "test": {
+      "cases": 908,
+      "summary/long": 908,
+      "summary/short": 616,
+      "summary/tiny": 312
+    }
+  },
+  "unique_cases": 4539,
+  "document_refs": 40119,
+  "distinct_document_ids": 40119,
+  "total_summaries": 9280,
+  "legacy_subset": {
+    "train": {
+      "train": 2205,
+      "test": 505,
+      "dev": 467
+    },
+    "dev": {
+      "train": 329,
+      "test": 63,
+      "dev": 62
+    },
+    "test": {
+      "train": 643,
+      "dev": 153,
+      "test": 112
+    }
+  },
+  "examples": [
+    {
+      "index": 1,
+      "case_id": "CJ-DC-0002",
+      "full_short": true,
+      "full_tiny": true,
+      "exact_raw_and_sha": true
+    },
+    {
+      "index": 2,
+      "case_id": "EE-KS-0025",
+      "full_short": true,
+      "full_tiny": true,
+      "exact_raw_and_sha": true
+    },
+    {
+      "index": 3,
+      "case_id": "PA-FL-0001",
+      "full_short": true,
+      "full_tiny": true,
+      "exact_raw_and_sha": true
+    },
+    {
+      "index": 4,
+      "case_id": "PN-PA-0023",
+      "full_short": true,
+      "full_tiny": true,
+      "exact_raw_and_sha": true
+    },
+    {
+      "index": 5,
+      "case_id": "IM-DC-0035",
+      "full_short": true,
+      "full_tiny": true,
+      "exact_raw_and_sha": true
+    },
+    {
+      "index": 6,
+      "case_id": "PN-OH-0010",
+      "full_short": true,
+      "full_tiny": true,
+      "exact_raw_and_sha": true
+    },
+    {
+      "index": 7,
+      "case_id": "EE-IN-0131",
+      "full_short": true,
+      "full_tiny": true,
+      "exact_raw_and_sha": true
+    },
+    {
+      "index": 8,
+      "case_id": "NS-DC-0106",
+      "full_short": true,
+      "full_tiny": true,
+      "exact_raw_and_sha": true
+    },
+    {
+      "index": 9,
+      "case_id": "NS-VA-0007",
+      "full_short": true,
+      "full_tiny": true,
+      "exact_raw_and_sha": true
+    },
+    {
+      "index": 10,
+      "case_id": "CJ-OK-0006",
+      "full_short": true,
+      "full_tiny": true,
+      "exact_raw_and_sha": true
+    },
+    {
+      "index": 11,
+      "case_id": "ED-DC-0007",
+      "full_short": true,
+      "full_tiny": true,
+      "exact_raw_and_sha": true
+    },
+    {
+      "index": 12,
+      "case_id": "IM-MD-0016",
+      "full_short": true,
+      "full_tiny": true,
+      "exact_raw_and_sha": true
+    },
+    {
+      "index": 13,
+      "case_id": "PN-CA-0053",
+      "full_short": true,
+      "full_tiny": true,
+      "exact_raw_and_sha": true
+    }
+  ],
+  "release_specs": 8526,
+  "matching_runs": 0,
+  "missing_sources_body_confirmed": true,
+  "eligible_short_to_tiny": {
+    "train": 1129,
+    "dev": 161,
+    "test": 312
+  },
+  "paper_results": {
+    "D_to_L/S/T_ROUGE2": {
+      "BART": [
+        23.78,
+        19.98,
+        8.19
+      ],
+      "LED16384": [
+        25.17,
+        22.08,
+        9.84
+      ],
+      "PRIMERA": [
+        27.32,
+        21.04,
+        9.26
+      ]
+    },
+    "L_to_S/T,S_to_T_ROUGE2": {
+      "PEGASUS": [
+        35.62,
+        14.44,
+        16.15
+      ],
+      "BART": [
+        37.02,
+        13.05,
+        15.2
+      ]
+    }
+  },
+  "verified_metric_basis": "Formal NeurIPS2022 Table3/Table4a: mean F1 on eligible test set. Human40newcases/2writers/180hours uses assisted snippets→BART→edits, 0.43 and R2=30.0 versus post-edited summaries, 87tokens=76%."
+}
