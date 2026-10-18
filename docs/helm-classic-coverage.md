@@ -25,8 +25,8 @@ GSM8KとHumanEvalは既存資料で対象データセットを紹介済み。MML
 |openbookqa|OpenbookQA|作成済み|[PPTX](../slides/datasets-in-10-minutes-openbookqa.pptx) / [PDF](../slides/datasets-in-10-minutes-openbookqa.pdf)|
 |truthful_qa|TruthfulQA|作成済み|[PPTX](../slides/datasets-in-10-minutes-truthfulqa.pptx) / [PDF](../slides/datasets-in-10-minutes-truthfulqa.pdf)|
 |mmlu|MMLU (Massive Multitask Language Understanding)|作成済み|[PPTX](../slides/datasets-in-10-minutes-mmlu.pptx) / [PDF](../slides/datasets-in-10-minutes-mmlu.pdf)|
-|msmarco_regular|MS MARCO (regular track)|未着手||
-|msmarco_trec|MS MARCO (TREC track)|未着手||
+|msmarco_regular|MS MARCO (regular track)|作成済み|[PPTX](../slides/datasets-in-10-minutes-msmarco.pptx) / [PDF](../slides/datasets-in-10-minutes-msmarco.pdf)|
+|msmarco_trec|MS MARCO (TREC track)|作成済み|[PPTX](../slides/datasets-in-10-minutes-msmarco.pptx) / [PDF](../slides/datasets-in-10-minutes-msmarco.pdf)|
 |summarization_cnndm|CNN/DailyMail|未着手||
 |summarization_xsum|XSUM|作成済み|[PPTX](../slides/datasets-in-10-minutes-xsum.pptx) / [PDF](../slides/datasets-in-10-minutes-xsum.pdf)|
 |imdb|IMDB|作成済み|[PPTX](../slides/datasets-in-10-minutes-imdb.pptx) / [PDF](../slides/datasets-in-10-minutes-imdb.pdf)|
