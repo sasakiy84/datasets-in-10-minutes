@@ -32,7 +32,7 @@
 |24|entity-matching|entity_matching|作成済み|
 |25|copyright-text|copyright_text|作成済み|
 |26|copyright-code|copyright_code|作成済み|
-|27|disinformation|disinformation_reiteration, disinformation_wedging|未着手|
+|27|disinformation|disinformation_reiteration, disinformation_wedging|作成済み|
 |28|realtoxicityprompts|real_toxicity_prompts|未着手|
 |29|synthetic-efficiency|synthetic_efficiency|未着手|
 

@@ -1,0 +1,174 @@
+{
+  "slug": "disinformation",
+  "status": "approved",
+  "unresolved_issues": [],
+  "total_pages": 76,
+  "main_pages": 34,
+  "final_artifacts": [
+    {
+      "path": "/workspace/artifacts/helm-parallel/disinformation/datasets-in-10-minutes-disinformation.pptx",
+      "bytes": 502549,
+      "sha256": "a9f61f64cfbefd35478f331a50cbe0b3a5c25ea5dec1f5230cc8344361203711"
+    },
+    {
+      "path": "/workspace/artifacts/helm-parallel/disinformation/datasets-in-10-minutes-disinformation.pdf",
+      "bytes": 1420430,
+      "sha256": "09920323848052eeae5c261983263bb3691c594abc9ebd62499377cb61fa4d27"
+    }
+  ],
+  "personally_viewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76
+  ],
+  "final_changed_page_rechecks": [
+    8,
+    25,
+    52,
+    53,
+    58
+  ],
+  "coexist_probe_personally_viewed": [
+    {
+      "example": 3,
+      "file": "evidence/coexist-probe/001.png"
+    },
+    {
+      "example": 11,
+      "file": "evidence/coexist-probe/003.png"
+    },
+    {
+      "example": 12,
+      "file": "evidence/coexist-probe/004.png"
+    }
+  ],
+  "visual_conclusion": "All 76 rendered pages individually examined. No clipped text, colliding columns, isolated URL letters or needless previous-page references observed. Failed 15pt uneven-column probes genuinely overflow for examples3/11/12; native final original/full translations separately preserve scope. Examples10/13 same-page15pt readable.",
+  "fixes": [
+    {
+      "pages": [
+        25,
+        53
+      ],
+      "issue": "address intended audienceを単なる集団への言及と読める",
+      "correction": "意図した対象集団に向けた内容か",
+      "origin": "predecessor create_pile"
+    },
+    {
+      "pages": [
+        52
+      ],
+      "issue": "Your vote won't count.の後続人口・州の文脈",
+      "correction": "あなたの一票に影響力はない。",
+      "origin": "predecessor create_pile"
+    },
+    {
+      "pages": [
+        8
+      ],
+      "issue": "after patient reports deathの報告主体が訳で曖昧",
+      "correction": "患者から死亡の報告があったことを受け、FDAが…",
+      "origin": "this reviewer"
+    },
+    {
+      "pages": [
+        58
+      ],
+      "issue": "created the heavens and imposed laws on the sun and the moonの動詞・目的語",
+      "correction": "天を創り、太陽と月に法則を課し、（それぞれの働きを定めた）方ではないか。",
+      "origin": "this reviewer"
+    }
+  ],
+  "content_evidence": [
+    "content-checks.json: 13 source JSONL records and canonical-record SHA256, public request/instance/output match, complete displayed EN/JP fields in native PPTX; counts and all33 model comparison aggregates independently match",
+    "metric-checks.json: historical v0.3.0 functions independently executed on215 requests1075 candidates,12 diversity aggregates match under1e-9; actual prompts not truncated,2vs0train examples,5candidates,temp0.7,100vs90tokens and stops independently asserted",
+    "Primary paper §8.5.1 and AppendixE5 directly read:3vs5raters unresolved;11minute pilot doubled22minutes/$5.50/$15hour confirmed; original261 headlines differs JSONL221slots, reason not asserted",
+    "CSET six skills confirmed; persuasion/social influence distinguished from generated-content evaluation; existing source references and model outputs not endorsed as factual or unique correct answers",
+    "Metric code directly read: human annotation stored lookup; selfBLEU0–100/higher overlap; entropy negative token logprob SUM then candidate mean,nats,not per-token; temperature/model-tokenizer limits explained",
+    "Rights attributed to original authors; restricted CSET release not treated as newly licensed public domain; no new generation API used"
+  ],
+  "predecessor_work": "create_pile independently acquired19 primary files; inherited network-checks/evidence preserve those byte comparisons. This reviewer did not claim personal re-download of all19.",
+  "technical": {
+    "layout": "475 paragraphs/77 cells,0issues",
+    "package": "187 XML parts,8 native tables/1native chart;0new XSD issues,11inherited master baseline",
+    "links": "68native URL-only runs and68PDF links exactly match",
+    "quote_panels": "49 measured actual glyph vs frame edges; top7.4429–8.5067pt,bottom7.4933–8.5571pt",
+    "hash": "Both final artifacts independently SHA256 match handoff"
+  },
+  "limitations": [
+    "Human annotation raw CodaLab file inaccessible503; saved human statistic weighted aggregation checked, not raw annotator re-scoring",
+    "Paper main/appendix annotator discrepancy3/5 and published261vsJSONL221headline discrepancy remain explicitly documented source limitations"
+  ]
+}

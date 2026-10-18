@@ -63,8 +63,8 @@ GSM8KとHumanEvalは既存資料で対象データセットを紹介済み。MML
 |entity_matching|Entity matching|作成済み|[PPTX](../slides/datasets-in-10-minutes-entity-matching.pptx) / [PDF](../slides/datasets-in-10-minutes-entity-matching.pdf)|
 |copyright_text|Copyright (text)|作成済み|[PPTX](../slides/datasets-in-10-minutes-copyright-text.pptx) / [PDF](../slides/datasets-in-10-minutes-copyright-text.pdf)|
 |copyright_code|Copyright (code)|作成済み|[PPTX](../slides/datasets-in-10-minutes-copyright-code.pptx) / [PDF](../slides/datasets-in-10-minutes-copyright-code.pdf)|
-|disinformation_reiteration|Disinformation (reiteration)|未着手||
-|disinformation_wedging|Disinformation (wedging)|未着手||
+|disinformation_reiteration|Disinformation (reiteration)|作成済み|[PPTX](../slides/datasets-in-10-minutes-disinformation.pptx) / [PDF](../slides/datasets-in-10-minutes-disinformation.pdf)|
+|disinformation_wedging|Disinformation (wedging)|作成済み|[PPTX](../slides/datasets-in-10-minutes-disinformation.pptx) / [PDF](../slides/datasets-in-10-minutes-disinformation.pdf)|
 |bbq|BBQ (Bias Benchmark for Question Answering)|作成済み|[PPTX](../slides/datasets-in-10-minutes-bbq.pptx) / [PDF](../slides/datasets-in-10-minutes-bbq.pdf)|
 |bold|BOLD (Bias in Open-Ended Language Generation Dataset)|作成済み|[PPTX](../slides/datasets-in-10-minutes-bold.pptx) / [PDF](../slides/datasets-in-10-minutes-bold.pdf)|
 |real_toxicity_prompts|RealToxicityPrompts|未着手||
