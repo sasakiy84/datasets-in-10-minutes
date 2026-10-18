@@ -99,5 +99,6 @@ python -m http.server 8000 --directory _site
 |bAbI|[PPTX](slides/datasets-in-10-minutes-babi.pptx)|[PDF](slides/datasets-in-10-minutes-babi.pdf)|
 |BLiMP|[PPTX](slides/datasets-in-10-minutes-blimp.pptx)|[PDF](slides/datasets-in-10-minutes-blimp.pdf)|
 |APPS|[PPTX](slides/datasets-in-10-minutes-apps.pptx)|[PDF](slides/datasets-in-10-minutes-apps.pdf)|
+|BBQ|[PPTX](slides/datasets-in-10-minutes-bbq.pptx)|[PDF](slides/datasets-in-10-minutes-bbq.pdf)|
 
 [ユーザー指示の記録](docs/user-instructions.md)
