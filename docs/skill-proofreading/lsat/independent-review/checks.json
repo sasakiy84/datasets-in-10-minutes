@@ -1,0 +1,196 @@
+{
+  "raw_splits": [
+    {
+      "split": "train",
+      "passages": 280,
+      "questions": 1630,
+      "unique_input_question_option_records": 1609,
+      "empty_tags2": 273,
+      "option_counts": {
+        "5": 1585,
+        "4": 45
+      }
+    },
+    {
+      "split": "valid",
+      "passages": 40,
+      "questions": 231,
+      "unique_input_question_option_records": 231,
+      "empty_tags2": 184,
+      "option_counts": {
+        "5": 231
+      }
+    },
+    {
+      "split": "test",
+      "passages": 40,
+      "questions": 230,
+      "unique_input_question_option_records": 230,
+      "empty_tags2": 182,
+      "option_counts": {
+        "5": 230
+      }
+    }
+  ],
+  "models": [
+    {
+      "model": "opt-175b",
+      "unique_valid_test_records": 461,
+      "trials": 3,
+      "trial_accuracies": {
+        "0": 0.19130434782608696,
+        "1": 0.22608695652173913,
+        "2": 0.24347826086956523
+      },
+      "mean_accuracy": 0.22028985507246376,
+      "published": 0.2202898550724638,
+      "outputs_recomputed": 690,
+      "adapter_max_tokens": 5,
+      "adapter_num_outputs": 1,
+      "actual_max_tokens": {
+        "1": 690
+      },
+      "actual_completions": {
+        "1": 690
+      },
+      "all_full_raw_inputs_options_and_gold_match": true
+    },
+    {
+      "model": "text-davinci-003",
+      "unique_valid_test_records": 461,
+      "trials": 3,
+      "trial_accuracies": {
+        "0": 0.22608695652173913,
+        "1": 0.23478260869565218,
+        "2": 0.2391304347826087
+      },
+      "mean_accuracy": 0.23333333333333334,
+      "published": 0.2333333333333333,
+      "outputs_recomputed": 690,
+      "adapter_max_tokens": 5,
+      "adapter_num_outputs": 1,
+      "actual_max_tokens": {
+        "1": 690
+      },
+      "actual_completions": {
+        "1": 690
+      },
+      "all_full_raw_inputs_options_and_gold_match": true
+    },
+    {
+      "model": "llama-2-70b",
+      "unique_valid_test_records": 461,
+      "trials": 1,
+      "trial_accuracies": {
+        "0": 0.23478260869565218
+      },
+      "mean_accuracy": 0.23478260869565218,
+      "published": 0.23478260869565218,
+      "outputs_recomputed": 230,
+      "adapter_max_tokens": 1,
+      "adapter_num_outputs": 5,
+      "actual_max_tokens": {
+        "1": 230
+      },
+      "actual_completions": {
+        "1": 230
+      },
+      "all_full_raw_inputs_options_and_gold_match": true
+    }
+  ],
+  "examples": [
+    {
+      "index": 1,
+      "raw_id": "201606_2-G_4_22",
+      "full_record_request_result_refs_and_sha_match": true
+    },
+    {
+      "index": 2,
+      "raw_id": "201310_3-G_2_10",
+      "full_record_request_result_refs_and_sha_match": true
+    },
+    {
+      "index": 3,
+      "raw_id": "200312_1-G_4_19",
+      "full_record_request_result_refs_and_sha_match": true
+    },
+    {
+      "index": 4,
+      "raw_id": "201510_3-G_1_6",
+      "full_record_request_result_refs_and_sha_match": true
+    },
+    {
+      "index": 5,
+      "raw_id": "201606_2-G_1_4",
+      "full_record_request_result_refs_and_sha_match": true
+    },
+    {
+      "index": 6,
+      "raw_id": "201212_4-G_4_20",
+      "full_record_request_result_refs_and_sha_match": true
+    },
+    {
+      "index": 7,
+      "raw_id": "200312_1-G_2_7",
+      "full_record_request_result_refs_and_sha_match": true
+    },
+    {
+      "index": 8,
+      "raw_id": "200010_3-G_3_13",
+      "full_record_request_result_refs_and_sha_match": true
+    },
+    {
+      "index": 9,
+      "raw_id": "200312_1-G_1_3",
+      "full_record_request_result_refs_and_sha_match": true
+    },
+    {
+      "index": 10,
+      "raw_id": "201612_3-G_1_2",
+      "full_record_request_result_refs_and_sha_match": true
+    },
+    {
+      "index": 11,
+      "raw_id": "201206_3-G_3_16",
+      "full_record_request_result_refs_and_sha_match": true
+    },
+    {
+      "index": 12,
+      "raw_id": "201110_2-G_4_19",
+      "full_record_request_result_refs_and_sha_match": true
+    },
+    {
+      "index": 13,
+      "raw_id": "200010_3-G_2_10",
+      "full_record_request_result_refs_and_sha_match": true
+    }
+  ],
+  "official_taxonomy_assert_failures": {
+    "train": 397,
+    "valid": 191,
+    "test": 183
+  },
+  "main_example_solvers": {
+    "example1_valid_orders": 10,
+    "Yoshida_possible_positions": [
+      4,
+      6
+    ],
+    "example2_valid_teams": 4,
+    "example3_unique_possible_sunset_lists": [
+      [],
+      [
+        "Jiang"
+      ],
+      [
+        "Lopez"
+      ]
+    ]
+  },
+  "package": {
+    "parsed_xml_parts": 157,
+    "integer_bullets": 115,
+    "hyperlinks": 59,
+    "new_schema_errors": []
+  }
+}

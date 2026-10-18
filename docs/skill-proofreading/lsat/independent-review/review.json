@@ -1,0 +1,152 @@
+{
+  "status": "passed",
+  "reviewer": "create_msmarco",
+  "reviewed_artifact_hashes": {
+    "datasets-in-10-minutes-lsat.pptx": "e5cb47c2fb4c989061252964c42b44bf606b296e0c11208dfc4b1b541cab4972",
+    "datasets-in-10-minutes-lsat.pdf": "c953eaa4e4d9db9ab5cfcb360ea23ae33048af6ef63b76cdd60b2029ed197429"
+  },
+  "individually_viewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62
+  ],
+  "changed_pages_verified": [
+    5,
+    6,
+    18,
+    21,
+    32,
+    56
+  ],
+  "source_checks": "checks.json",
+  "solver_checks": [
+    "checks.json",
+    "additional-solvers.json"
+  ],
+  "final_native_pdf_checks": "final-artifact-audit.json",
+  "findings": [
+    {
+      "issue": "Uniform max_tokens5→actual1 concealed Llama2 adapter1 and num_outputs5→actual1",
+      "resolution": "Model-specific p56 native table and sources corrected; six native cells independently checked.",
+      "status": "resolved"
+    },
+    {
+      "issue": "Current train includes45 four-option records; five-option description must be scoped to paper/eval examples",
+      "resolution": "p5/6/18/21/32 scope corrected, train45 exception explicit; sources and raw uniqueness recorded.",
+      "status": "resolved"
+    },
+    {
+      "issue": "Train contains21 duplicate content triples despite distinct IDs",
+      "resolution": "Sources record1630 raw records versus1609 unique text/question/options; no evaluation denominator changed.",
+      "status": "resolved"
+    }
+  ],
+  "verified": {
+    "raw_splits": [
+      {
+        "split": "train",
+        "passages": 280,
+        "questions": 1630,
+        "unique_input_question_option_records": 1609,
+        "empty_tags2": 273,
+        "option_counts": {
+          "5": 1585,
+          "4": 45
+        }
+      },
+      {
+        "split": "valid",
+        "passages": 40,
+        "questions": 231,
+        "unique_input_question_option_records": 231,
+        "empty_tags2": 184,
+        "option_counts": {
+          "5": 231
+        }
+      },
+      {
+        "split": "test",
+        "passages": 40,
+        "questions": 230,
+        "unique_input_question_option_records": 230,
+        "empty_tags2": 182,
+        "option_counts": {
+          "5": 230
+        }
+      }
+    ],
+    "public_eval_records_per_model": 461,
+    "public_test_outputs_recomputed": 1610,
+    "all13_full_raw_records_and_hashes_match": true,
+    "all13_correct_answers_independently_resolved": true,
+    "all26_original_translation_pages_checked": true,
+    "human_small_sample_scope_verified": true,
+    "taxonomy_assert_failures": {
+      "train": 397,
+      "valid": 191,
+      "test": 183
+    },
+    "native_package_new_schema_errors": 0,
+    "all62_pages_individually_viewed": true
+  },
+  "unresolved_findings": []
+}
