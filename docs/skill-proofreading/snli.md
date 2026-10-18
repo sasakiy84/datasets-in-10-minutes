@@ -82,3 +82,25 @@
 [PPTX](../../slides/datasets-in-10-minutes-snli.pptx) / [PDF](../../slides/datasets-in-10-minutes-snli.pdf)
 
 [変更対TSV](snli/changes.tsv) / [校正・検証JSON](snli/review.json) / [全ページの確認記録](snli/pages.jsonl) / [参照した過去のGemini案](snli/prior-gemini-proposals.jsonl)
+
+## 2026-10-18：正解表示と本文の出典表現
+
+独立した正解は本文と同程度の大きさ・太字で示し、ユーザー個人の好みのえんじ色（accent1 / #B13731）を適用した。本文の不要な図表番号を省き、評価条件・原文・訳・正解値は保持した。Codexによるスキル適用、Gemini使用なし。[全変更対・個別確認ページ・検査とハッシュ](snli/answer-style-review.json)。
+
+|ページ|変更前|変更後|
+|---|---|---|
+|6|正解は含意（[21.0] pt）|正解は含意（[21.0] pt）|
+|7|正解は中立（[21.0] pt）|正解は中立（[21.0] pt）|
+|8|正解は矛盾（[21.0] pt）|正解は矛盾（[21.0] pt）|
+|10|正解は矛盾（[21.0] pt）|正解は矛盾（[21.0] pt）|
+|44|正解は含意（[21.0] pt）|正解は含意（[21.0] pt）|
+|45|正解は中立（[21.0] pt）|正解は中立（[21.0] pt）|
+|46|正解は含意（[21.0] pt）|正解は含意（[21.0] pt）|
+|47|正解は中立（[21.0] pt）|正解は中立（[21.0] pt）|
+|48|正解は矛盾（[21.0] pt）|正解は矛盾（[21.0] pt）|
+|49|正解は中立（[21.0] pt）|正解は中立（[21.0] pt）|
+|50|正解は矛盾（[21.0] pt）|正解は矛盾（[21.0] pt）|
+|51|正解は含意（[21.0] pt）|正解は含意（[21.0] pt）|
+|52|正解は中立（[21.0] pt）|正解は中立（[21.0] pt）|
+|53|正解は中立（[21.0] pt）|正解は中立（[21.0] pt）|
+|66|import json<br>from urllib.request import urlretrieve<br>from zipfile import ZipFile<br><br>url = "https://nlp.stanford.edu/projects/snli/snli_1.0.zip"<br>urlretrieve(url, "snli_1.0.zip")<br>with ZipFile("snli_1.0.zip") as z:<br>    path = "snli_1.0/snli_1.0_test.jsonl"<br>    row = json.loads(next(z.open(path)))<br>print(row["pairID"], row["annotator_labels"])|import json<br>from urllib.request import urlretrieve<br>from zipfile import ZipFile<br><br>url = "https://nlp.stanford.edu/projects/snli/snli_1.0.zip"<br>urlretrieve(url, "snli_1.0.zip")<br>with ZipFile("snli_1.0.zip") as z:<br>    path = "snli_1.0/snli_1.0_test.jsonl"<br>    row = json.loads(next(z.open(path)))<br>print(row["pairID"], row["annotator_labels"])|
