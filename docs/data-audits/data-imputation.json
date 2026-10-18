@@ -1,0 +1,4093 @@
+{
+  "dataset": "data-imputation",
+  "checked_at": "2026-10-18T08:56:28Z",
+  "examples": [
+    {
+      "dataset": "Buy",
+      "split": "test",
+      "row_index": 433,
+      "source_file": "Buy.csv",
+      "source_sha256": "37d78c33f85b27e92be1d8ee1b863ba7107dfe369c6ca1dc7961c89b460dd47a",
+      "raw": {
+        "id": 205761272,
+        "name": "Sony Universal Remote Control - RM-EZ4",
+        "description": "TV, Cable Box - Universal Remote",
+        "manufacturer": "Sony",
+        "price": "$12.72"
+      },
+      "input": "name: Sony Universal Remote Control - RM-EZ4. description: TV, Cable Box - Universal Remote. price: $12.72. manufacturer?",
+      "answer": "Sony",
+      "impute_column": "manufacturer",
+      "helm_id": "id587",
+      "raw_line": "205761272,\"Sony Universal Remote Control - RM-EZ4\",\"TV, Cable Box - Universal Remote\",\"Sony\",$12.72\r\n",
+      "source_line": 435,
+      "index": 1,
+      "section": "main",
+      "prediction": " Sony",
+      "record": {
+        "instance": {
+          "input": {
+            "text": "name: Sony Universal Remote Control - RM-EZ4. description: TV, Cable Box - Universal Remote. price: $12.72. manufacturer?"
+          },
+          "references": [
+            {
+              "output": {
+                "text": "Sony"
+              },
+              "tags": [
+                "correct"
+              ]
+            }
+          ],
+          "split": "test",
+          "id": "id587"
+        },
+        "train_trial_index": 0,
+        "request": {
+          "model": "openai/text-davinci-003",
+          "embedding": false,
+          "temperature": 0.0,
+          "num_completions": 1,
+          "top_k_per_token": 1,
+          "max_tokens": 5,
+          "stop_sequences": [
+            "\n"
+          ],
+          "echo_prompt": false,
+          "top_p": 1,
+          "presence_penalty": 0,
+          "frequency_penalty": 0
+        },
+        "result": {
+          "success": true,
+          "embedding": [],
+          "completions": [
+            {
+              "text": " Sony",
+              "logprob": -0.00026087437,
+              "tokens": [
+                {
+                  "text": " Sony",
+                  "logprob": -0.00026087437,
+                  "top_logprobs": {
+                    " Sony": -0.00026087437
+                  }
+                }
+              ]
+            }
+          ],
+          "cached": true,
+          "request_time": 0.3195979595184326,
+          "request_datetime": 1669854715
+        },
+        "num_train_instances": 5,
+        "prompt_truncated": false,
+        "num_conditioning_tokens": 0
+      },
+      "record_source_file": "Buy-text-davinci-003-scenario_state.json",
+      "record_source_sha256": "17c914830f4add3eae5a1f7b78c699e97a2132303adc2e70059fcd05b55657a1",
+      "raw_line_sha256": "6d94b0068797e4b2be4b2e783e3a3a9bf3388dcee6562f3beee4c58b522a74a5",
+      "title_ja": "リモコンのメーカー",
+      "input_ja": "商品名：Sonyの汎用リモコン − RM-EZ4。説明：テレビ、ケーブルテレビ受信機用 − 汎用リモコン。価格：$12.72。メーカーは？",
+      "answer_ja": "Sony",
+      "raw_line_hash_encoding": "Exact UTF-8 file bytes including original line terminator; source_line is physical 1-based",
+      "prompt_tail": "name: Sony Universal Remote Control - RM-EZ4. description: TV, Cable Box - Universal Remote. price: $12.72. manufacturer?\nAnswer:",
+      "record_omissions": [
+        "request.prompt: full five-example prompt remains in local evidence public scenario_state; prompt_tail is the exact contiguous evaluation-instance suffix"
+      ]
+    },
+    {
+      "dataset": "Restaurant",
+      "split": "test",
+      "row_index": 844,
+      "source_file": "fz.arff",
+      "source_sha256": "a5307cb8edaae1239acf28c7c4a4c483cfd16a832c1a0da0a4ca1ebfd521584d",
+      "raw": {
+        "name": "kelly's on trinity",
+        "addr": " \"333 bush st.\"",
+        "city": " \"san francisco\"",
+        "phone": " \"415-362-4454\"",
+        "type": " \"californian\"",
+        "class": " '733'"
+      },
+      "input": "name: kelly's on trinity. addr: 333 bush st.. phone: 415-362-4454. type: californian. city?",
+      "answer": "san francisco",
+      "impute_column": "city",
+      "helm_id": "id781",
+      "raw_line": "\"kelly's on trinity\", \"333 bush st.\", \"san francisco\", \"415-362-4454\", \"californian\", '733'\n",
+      "source_line": 856,
+      "index": 2,
+      "section": "main",
+      "prediction": " san francisco",
+      "record": {
+        "instance": {
+          "input": {
+            "text": "name: kelly's on trinity. addr: 333 bush st.. phone: 415-362-4454. type: californian. city?"
+          },
+          "references": [
+            {
+              "output": {
+                "text": "san francisco"
+              },
+              "tags": [
+                "correct"
+              ]
+            }
+          ],
+          "split": "test",
+          "id": "id781"
+        },
+        "train_trial_index": 0,
+        "request": {
+          "model": "openai/text-davinci-003",
+          "embedding": false,
+          "temperature": 0.0,
+          "num_completions": 1,
+          "top_k_per_token": 1,
+          "max_tokens": 5,
+          "stop_sequences": [
+            "\n"
+          ],
+          "echo_prompt": false,
+          "top_p": 1,
+          "presence_penalty": 0,
+          "frequency_penalty": 0
+        },
+        "result": {
+          "success": true,
+          "embedding": [],
+          "completions": [
+            {
+              "text": " san francisco",
+              "logprob": -0.008266315526,
+              "tokens": [
+                {
+                  "text": " san",
+                  "logprob": -0.0027506188,
+                  "top_logprobs": {
+                    " san": -0.0027506188
+                  }
+                },
+                {
+                  "text": " franc",
+                  "logprob": -0.0055096652,
+                  "top_logprobs": {
+                    " franc": -0.0055096652
+                  }
+                },
+                {
+                  "text": "isco",
+                  "logprob": -6.031526e-06,
+                  "top_logprobs": {
+                    "isco": -6.031526e-06
+                  }
+                }
+              ]
+            }
+          ],
+          "cached": true,
+          "request_time": 0.2766072750091553,
+          "request_datetime": 1669854811
+        },
+        "num_train_instances": 5,
+        "prompt_truncated": false,
+        "num_conditioning_tokens": 0
+      },
+      "record_source_file": "Restaurant-text-davinci-003-scenario_state.json",
+      "record_source_sha256": "5436fe64ce9f9b4bf58b697d66f4f821a9b854bf56b5137aece28d9f55d5079c",
+      "raw_line_sha256": "f1db3c3feab956d8cbd2cbb81e8d5a3fd10264dc6b910f78c4c272cfbb5aef3f",
+      "title_ja": "住所と電話番号から都市を補う",
+      "input_ja": "店名：kelly’s on trinity。住所：333 bush st.。電話：415-362-4454。料理の種類：カリフォルニア料理。都市は？",
+      "answer_ja": "san francisco（サンフランシスコ）",
+      "raw_line_hash_encoding": "Exact UTF-8 file bytes including original line terminator; source_line is physical 1-based",
+      "prompt_tail": "name: kelly's on trinity. addr: 333 bush st.. phone: 415-362-4454. type: californian. city?\nAnswer:",
+      "record_omissions": [
+        "request.prompt: full five-example prompt remains in local evidence public scenario_state; prompt_tail is the exact contiguous evaluation-instance suffix"
+      ]
+    },
+    {
+      "dataset": "Buy",
+      "split": "test",
+      "row_index": 506,
+      "source_file": "Buy.csv",
+      "source_sha256": "37d78c33f85b27e92be1d8ee1b863ba7107dfe369c6ca1dc7961c89b460dd47a",
+      "raw": {
+        "id": 206808431,
+        "name": "Canon VIXIA HF100 High Definition Digital Camcorder - 2708B001",
+        "description": "Canon VIXIA HF100 High Definition Camcorder",
+        "manufacturer": "Canon Camcorders",
+        "price": "$529.00"
+      },
+      "input": "name: Canon VIXIA HF100 High Definition Digital Camcorder - 2708B001. description: Canon VIXIA HF100 High Definition Camcorder. price: $529.00. manufacturer?",
+      "answer": "Canon Camcorders",
+      "impute_column": "manufacturer",
+      "helm_id": "id586",
+      "raw_line": "206808431,\"Canon VIXIA HF100 High Definition Digital Camcorder - 2708B001\",\"Canon VIXIA HF100 High Definition Camcorder\",\"Canon Camcorders\",$529.00\r\n",
+      "source_line": 508,
+      "index": 3,
+      "section": "main",
+      "prediction": " Canon",
+      "record": {
+        "instance": {
+          "input": {
+            "text": "name: Canon VIXIA HF100 High Definition Digital Camcorder - 2708B001. description: Canon VIXIA HF100 High Definition Camcorder. price: $529.00. manufacturer?"
+          },
+          "references": [
+            {
+              "output": {
+                "text": "Canon Camcorders"
+              },
+              "tags": [
+                "correct"
+              ]
+            }
+          ],
+          "split": "test",
+          "id": "id586"
+        },
+        "train_trial_index": 0,
+        "request": {
+          "model": "openai/text-davinci-003",
+          "embedding": false,
+          "temperature": 0.0,
+          "num_completions": 1,
+          "top_k_per_token": 1,
+          "max_tokens": 5,
+          "stop_sequences": [
+            "\n"
+          ],
+          "echo_prompt": false,
+          "top_p": 1,
+          "presence_penalty": 0,
+          "frequency_penalty": 0
+        },
+        "result": {
+          "success": true,
+          "embedding": [],
+          "completions": [
+            {
+              "text": " Canon",
+              "logprob": -0.00014241754,
+              "tokens": [
+                {
+                  "text": " Canon",
+                  "logprob": -0.00014241754,
+                  "top_logprobs": {
+                    " Canon": -0.00014241754
+                  }
+                }
+              ]
+            }
+          ],
+          "cached": true,
+          "request_time": 0.4144260883331299,
+          "request_datetime": 1669854715
+        },
+        "num_train_instances": 5,
+        "prompt_truncated": false,
+        "num_conditioning_tokens": 0
+      },
+      "record_source_file": "Buy-text-davinci-003-scenario_state.json",
+      "record_source_sha256": "17c914830f4add3eae5a1f7b78c699e97a2132303adc2e70059fcd05b55657a1",
+      "raw_line_sha256": "19e44aa970bfc6549ce65ae6851f2154fd8ec73aae0ce9f5046d7c03d8b90ef0",
+      "title_ja": "正解には製品分野まで含まれる",
+      "input_ja": "商品名：Canon VIXIA HF100 高精細デジタルビデオカメラ − 2708B001。説明：Canon VIXIA HF100 高精細ビデオカメラ。価格：$529.00。メーカーは？",
+      "answer_ja": "Canon Camcorders",
+      "raw_line_hash_encoding": "Exact UTF-8 file bytes including original line terminator; source_line is physical 1-based",
+      "prompt_tail": "name: Canon VIXIA HF100 High Definition Digital Camcorder - 2708B001. description: Canon VIXIA HF100 High Definition Camcorder. price: $529.00. manufacturer?\nAnswer:",
+      "record_omissions": [
+        "request.prompt: full five-example prompt remains in local evidence public scenario_state; prompt_tail is the exact contiguous evaluation-instance suffix"
+      ]
+    },
+    {
+      "dataset": "Buy",
+      "split": "test",
+      "row_index": 216,
+      "source_file": "Buy.csv",
+      "source_sha256": "37d78c33f85b27e92be1d8ee1b863ba7107dfe369c6ca1dc7961c89b460dd47a",
+      "raw": {
+        "id": 203131635,
+        "name": "Griffin Elevator Desktop Stand for Portable Laptops - 1093-CURV2",
+        "description": "Aluminum",
+        "manufacturer": "Griffin",
+        "price": null
+      },
+      "input": "name: Griffin Elevator Desktop Stand for Portable Laptops - 1093-CURV2. description: Aluminum. price: nan. manufacturer?",
+      "answer": "Griffin",
+      "impute_column": "manufacturer",
+      "helm_id": "id588",
+      "raw_line": "203131635,\"Griffin Elevator Desktop Stand for Portable Laptops - 1093-CURV2\",\"Aluminum\",\"Griffin\",\r\n",
+      "source_line": 218,
+      "index": 4,
+      "section": "appendix",
+      "prediction": " Griffin",
+      "record": {
+        "instance": {
+          "input": {
+            "text": "name: Griffin Elevator Desktop Stand for Portable Laptops - 1093-CURV2. description: Aluminum. price: nan. manufacturer?"
+          },
+          "references": [
+            {
+              "output": {
+                "text": "Griffin"
+              },
+              "tags": [
+                "correct"
+              ]
+            }
+          ],
+          "split": "test",
+          "id": "id588"
+        },
+        "train_trial_index": 0,
+        "request": {
+          "model": "openai/text-davinci-003",
+          "embedding": false,
+          "temperature": 0.0,
+          "num_completions": 1,
+          "top_k_per_token": 1,
+          "max_tokens": 5,
+          "stop_sequences": [
+            "\n"
+          ],
+          "echo_prompt": false,
+          "top_p": 1,
+          "presence_penalty": 0,
+          "frequency_penalty": 0
+        },
+        "result": {
+          "success": true,
+          "embedding": [],
+          "completions": [
+            {
+              "text": " Griffin",
+              "logprob": -6.790459e-05,
+              "tokens": [
+                {
+                  "text": " Griffin",
+                  "logprob": -6.790459e-05,
+                  "top_logprobs": {
+                    " Griffin": -6.790459e-05
+                  }
+                }
+              ]
+            }
+          ],
+          "cached": true,
+          "request_time": 0.6822376251220703,
+          "request_datetime": 1669854715
+        },
+        "num_train_instances": 5,
+        "prompt_truncated": false,
+        "num_conditioning_tokens": 0
+      },
+      "record_source_file": "Buy-text-davinci-003-scenario_state.json",
+      "record_source_sha256": "17c914830f4add3eae5a1f7b78c699e97a2132303adc2e70059fcd05b55657a1",
+      "raw_line_sha256": "ac59b12256ed118708b56d7ea339289715042f170e871d17056907d95db6145d",
+      "title_ja": "価格が欠けたノートPC用スタンド",
+      "input_ja": "商品名：Griffin Elevator ノートPC用デスクトップスタンド − 1093-CURV2。説明：アルミニウム。価格：nan。メーカーは？",
+      "answer_ja": "Griffin",
+      "raw_line_hash_encoding": "Exact UTF-8 file bytes including original line terminator; source_line is physical 1-based",
+      "prompt_tail": "name: Griffin Elevator Desktop Stand for Portable Laptops - 1093-CURV2. description: Aluminum. price: nan. manufacturer?\nAnswer:",
+      "record_omissions": [
+        "request.prompt: full five-example prompt remains in local evidence public scenario_state; prompt_tail is the exact contiguous evaluation-instance suffix"
+      ]
+    },
+    {
+      "dataset": "Buy",
+      "split": "test",
+      "row_index": 899,
+      "source_file": "Buy.csv",
+      "source_sha256": "37d78c33f85b27e92be1d8ee1b863ba7107dfe369c6ca1dc7961c89b460dd47a",
+      "raw": {
+        "id": 208504407,
+        "name": "LG LG70 Series 52LG70 52' LCD TV",
+        "description": "LG 52LG70 - 52' Widescreen 1080p LCD HDTV - 120Hz - 15,000:1 Dynamic Contrast Ratio - 4ms Response Time",
+        "manufacturer": "LG Electronics",
+        "price": null
+      },
+      "input": "name: LG LG70 Series 52LG70 52' LCD TV. description: LG 52LG70 - 52' Widescreen 1080p LCD HDTV - 120Hz - 15,000:1 Dynamic Contrast Ratio - 4ms Response Time. price: nan. manufacturer?",
+      "answer": "LG Electronics",
+      "impute_column": "manufacturer",
+      "helm_id": "id589",
+      "raw_line": "208504407,\"LG LG70 Series 52LG70 52' LCD TV\",\"LG 52LG70 - 52' Widescreen 1080p LCD HDTV - 120Hz - 15,000:1 Dynamic Contrast Ratio - 4ms Response Time\",\"LG Electronics\",\r\n",
+      "source_line": 901,
+      "index": 5,
+      "section": "appendix",
+      "prediction": " LG",
+      "record": {
+        "instance": {
+          "input": {
+            "text": "name: LG LG70 Series 52LG70 52' LCD TV. description: LG 52LG70 - 52' Widescreen 1080p LCD HDTV - 120Hz - 15,000:1 Dynamic Contrast Ratio - 4ms Response Time. price: nan. manufacturer?"
+          },
+          "references": [
+            {
+              "output": {
+                "text": "LG Electronics"
+              },
+              "tags": [
+                "correct"
+              ]
+            }
+          ],
+          "split": "test",
+          "id": "id589"
+        },
+        "train_trial_index": 0,
+        "request": {
+          "model": "openai/text-davinci-003",
+          "embedding": false,
+          "temperature": 0.0,
+          "num_completions": 1,
+          "top_k_per_token": 1,
+          "max_tokens": 5,
+          "stop_sequences": [
+            "\n"
+          ],
+          "echo_prompt": false,
+          "top_p": 1,
+          "presence_penalty": 0,
+          "frequency_penalty": 0
+        },
+        "result": {
+          "success": true,
+          "embedding": [],
+          "completions": [
+            {
+              "text": " LG",
+              "logprob": -0.0002416799,
+              "tokens": [
+                {
+                  "text": " LG",
+                  "logprob": -0.0002416799,
+                  "top_logprobs": {
+                    " LG": -0.0002416799
+                  }
+                }
+              ]
+            }
+          ],
+          "cached": true,
+          "request_time": 0.6219735145568848,
+          "request_datetime": 1669854715
+        },
+        "num_train_instances": 5,
+        "prompt_truncated": false,
+        "num_conditioning_tokens": 0
+      },
+      "record_source_file": "Buy-text-davinci-003-scenario_state.json",
+      "record_source_sha256": "17c914830f4add3eae5a1f7b78c699e97a2132303adc2e70059fcd05b55657a1",
+      "raw_line_sha256": "11f4cda667c068457eb192c83294a61a75231478ba05664200c2bc2b5cd2afd1",
+      "title_ja": "ブランド名だけでは一致しない",
+      "input_ja": "商品名：LG LG70シリーズ 52LG70 52インチ液晶テレビ。説明：LG 52LG70 − 52インチ・ワイド画面・1080p液晶ハイビジョンテレビ − 120Hz − ダイナミックコントラスト比15,000:1 − 応答時間4ms。価格：nan。メーカーは？",
+      "answer_ja": "LG Electronics",
+      "raw_line_hash_encoding": "Exact UTF-8 file bytes including original line terminator; source_line is physical 1-based",
+      "prompt_tail": "name: LG LG70 Series 52LG70 52' LCD TV. description: LG 52LG70 - 52' Widescreen 1080p LCD HDTV - 120Hz - 15,000:1 Dynamic Contrast Ratio - 4ms Response Time. price: nan. manufacturer?\nAnswer:",
+      "record_omissions": [
+        "request.prompt: full five-example prompt remains in local evidence public scenario_state; prompt_tail is the exact contiguous evaluation-instance suffix"
+      ]
+    },
+    {
+      "dataset": "Buy",
+      "split": "test",
+      "row_index": 388,
+      "source_file": "Buy.csv",
+      "source_sha256": "37d78c33f85b27e92be1d8ee1b863ba7107dfe369c6ca1dc7961c89b460dd47a",
+      "raw": {
+        "id": 204937142,
+        "name": "LaCie Big Disk Extreme+ Hard Drive - 301199U",
+        "description": "LaCie Big Disk Extreme 1TB Hard Drive - Triple Interface (USB 2.0 & FireWire 400/800) External Hard Drive",
+        "manufacturer": "LACIE",
+        "price": null
+      },
+      "input": "name: LaCie Big Disk Extreme+ Hard Drive - 301199U. description: LaCie Big Disk Extreme 1TB Hard Drive - Triple Interface (USB 2.0 & FireWire 400/800) External Hard Drive. price: nan. manufacturer?",
+      "answer": "LACIE",
+      "impute_column": "manufacturer",
+      "helm_id": "id595",
+      "raw_line": "204937142,\"LaCie Big Disk Extreme+ Hard Drive - 301199U\",\"LaCie Big Disk Extreme 1TB Hard Drive - Triple Interface (USB 2.0 & FireWire 400/800) External Hard Drive\",\"LACIE\",\r\n",
+      "source_line": 390,
+      "index": 6,
+      "section": "appendix",
+      "prediction": " LaCie",
+      "record": {
+        "instance": {
+          "input": {
+            "text": "name: LaCie Big Disk Extreme+ Hard Drive - 301199U. description: LaCie Big Disk Extreme 1TB Hard Drive - Triple Interface (USB 2.0 & FireWire 400/800) External Hard Drive. price: nan. manufacturer?"
+          },
+          "references": [
+            {
+              "output": {
+                "text": "LACIE"
+              },
+              "tags": [
+                "correct"
+              ]
+            }
+          ],
+          "split": "test",
+          "id": "id595"
+        },
+        "train_trial_index": 0,
+        "request": {
+          "model": "openai/text-davinci-003",
+          "embedding": false,
+          "temperature": 0.0,
+          "num_completions": 1,
+          "top_k_per_token": 1,
+          "max_tokens": 5,
+          "stop_sequences": [
+            "\n"
+          ],
+          "echo_prompt": false,
+          "top_p": 1,
+          "presence_penalty": 0,
+          "frequency_penalty": 0
+        },
+        "result": {
+          "success": true,
+          "embedding": [],
+          "completions": [
+            {
+              "text": " LaCie",
+              "logprob": -0.00110051671694,
+              "tokens": [
+                {
+                  "text": " La",
+                  "logprob": -0.001093819,
+                  "top_logprobs": {
+                    " La": -0.001093819
+                  }
+                },
+                {
+                  "text": "C",
+                  "logprob": -6.6619094e-07,
+                  "top_logprobs": {
+                    "C": -6.6619094e-07
+                  }
+                },
+                {
+                  "text": "ie",
+                  "logprob": -6.031526e-06,
+                  "top_logprobs": {
+                    "ie": -6.031526e-06
+                  }
+                }
+              ]
+            }
+          ],
+          "cached": true,
+          "request_time": 0.3172950744628906,
+          "request_datetime": 1669854716
+        },
+        "num_train_instances": 5,
+        "prompt_truncated": false,
+        "num_conditioning_tokens": 0
+      },
+      "record_source_file": "Buy-text-davinci-003-scenario_state.json",
+      "record_source_sha256": "17c914830f4add3eae5a1f7b78c699e97a2132303adc2e70059fcd05b55657a1",
+      "raw_line_sha256": "9619c8d60f2531808f12add15ee0390e8df9fb556403f3f2c02f1275bc7b3e05",
+      "title_ja": "大文字と小文字の表記差",
+      "input_ja": "商品名：LaCie Big Disk Extreme+ ハードドライブ − 301199U。説明：LaCie Big Disk Extreme 1TBハードドライブ − 3種類の接続方式（USB 2.0、FireWire 400/800）を備える外付けハードドライブ。価格：nan。メーカーは？",
+      "answer_ja": "LACIE",
+      "raw_line_hash_encoding": "Exact UTF-8 file bytes including original line terminator; source_line is physical 1-based",
+      "prompt_tail": "name: LaCie Big Disk Extreme+ Hard Drive - 301199U. description: LaCie Big Disk Extreme 1TB Hard Drive - Triple Interface (USB 2.0 & FireWire 400/800) External Hard Drive. price: nan. manufacturer?\nAnswer:",
+      "record_omissions": [
+        "request.prompt: full five-example prompt remains in local evidence public scenario_state; prompt_tail is the exact contiguous evaluation-instance suffix"
+      ]
+    },
+    {
+      "dataset": "Buy",
+      "split": "test",
+      "row_index": 823,
+      "source_file": "Buy.csv",
+      "source_sha256": "37d78c33f85b27e92be1d8ee1b863ba7107dfe369c6ca1dc7961c89b460dd47a",
+      "raw": {
+        "id": 208226699,
+        "name": "Speck Products SeeThru Case for Apple 13' MacBook - MB13-ORG-SEE-V2",
+        "description": "Plastic - Orange",
+        "manufacturer": "Speck Products",
+        "price": null
+      },
+      "input": "name: Speck Products SeeThru Case for Apple 13' MacBook - MB13-ORG-SEE-V2. description: Plastic - Orange. price: nan. manufacturer?",
+      "answer": "Speck Products",
+      "impute_column": "manufacturer",
+      "helm_id": "id596",
+      "raw_line": "208226699,\"Speck Products SeeThru Case for Apple 13' MacBook - MB13-ORG-SEE-V2\",\"Plastic - Orange\",\"Speck Products\",\r\n",
+      "source_line": 825,
+      "index": 7,
+      "section": "appendix",
+      "prediction": " Speck Products",
+      "record": {
+        "instance": {
+          "input": {
+            "text": "name: Speck Products SeeThru Case for Apple 13' MacBook - MB13-ORG-SEE-V2. description: Plastic - Orange. price: nan. manufacturer?"
+          },
+          "references": [
+            {
+              "output": {
+                "text": "Speck Products"
+              },
+              "tags": [
+                "correct"
+              ]
+            }
+          ],
+          "split": "test",
+          "id": "id596"
+        },
+        "train_trial_index": 0,
+        "request": {
+          "model": "openai/text-davinci-003",
+          "embedding": false,
+          "temperature": 0.0,
+          "num_completions": 1,
+          "top_k_per_token": 1,
+          "max_tokens": 5,
+          "stop_sequences": [
+            "\n"
+          ],
+          "echo_prompt": false,
+          "top_p": 1,
+          "presence_penalty": 0,
+          "frequency_penalty": 0
+        },
+        "result": {
+          "success": true,
+          "embedding": [],
+          "completions": [
+            {
+              "text": " Speck Products",
+              "logprob": -0.00265872795632,
+              "tokens": [
+                {
+                  "text": " Spe",
+                  "logprob": -0.00038960468,
+                  "top_logprobs": {
+                    " Spe": -0.00038960468
+                  }
+                },
+                {
+                  "text": "ck",
+                  "logprob": -6.827632e-08,
+                  "top_logprobs": {
+                    "ck": -6.827632e-08
+                  }
+                },
+                {
+                  "text": " Products",
+                  "logprob": -0.002269055,
+                  "top_logprobs": {
+                    " Products": -0.002269055
+                  }
+                }
+              ]
+            }
+          ],
+          "cached": true,
+          "request_time": 0.8971574306488037,
+          "request_datetime": 1669854716
+        },
+        "num_train_instances": 5,
+        "prompt_truncated": false,
+        "num_conditioning_tokens": 0
+      },
+      "record_source_file": "Buy-text-davinci-003-scenario_state.json",
+      "record_source_sha256": "17c914830f4add3eae5a1f7b78c699e97a2132303adc2e70059fcd05b55657a1",
+      "raw_line_sha256": "8bf663a85b55ed0dbb438bd9b857f52f6750275aee00b18956d49d87bcb5363e",
+      "title_ja": "対応機器と、ケースのメーカー",
+      "input_ja": "商品名：Apple 13インチMacBook用 Speck Products SeeThruケース − MB13-ORG-SEE-V2。説明：プラスチック − オレンジ色。価格：nan。メーカーは？",
+      "answer_ja": "Speck Products",
+      "raw_line_hash_encoding": "Exact UTF-8 file bytes including original line terminator; source_line is physical 1-based",
+      "prompt_tail": "name: Speck Products SeeThru Case for Apple 13' MacBook - MB13-ORG-SEE-V2. description: Plastic - Orange. price: nan. manufacturer?\nAnswer:",
+      "record_omissions": [
+        "request.prompt: full five-example prompt remains in local evidence public scenario_state; prompt_tail is the exact contiguous evaluation-instance suffix"
+      ]
+    },
+    {
+      "dataset": "Restaurant",
+      "split": "test",
+      "row_index": 21,
+      "source_file": "fz.arff",
+      "source_sha256": "a5307cb8edaae1239acf28c7c4a4c483cfd16a832c1a0da0a4ca1ebfd521584d",
+      "raw": {
+        "name": "katsu",
+        "addr": " \"1972 hillhurst ave.\"",
+        "city": " \"los feliz\"",
+        "phone": " \"213-665-1891\"",
+        "type": " \"japanese\"",
+        "class": " '10'"
+      },
+      "input": "name: katsu. addr: 1972 hillhurst ave.. phone: 213-665-1891. type: japanese. city?",
+      "answer": "los feliz",
+      "impute_column": "city",
+      "helm_id": "id780",
+      "raw_line": "\"katsu\", \"1972 hillhurst ave.\", \"los feliz\", \"213-665-1891\", \"japanese\", '10'\n",
+      "source_line": 33,
+      "index": 8,
+      "section": "appendix",
+      "prediction": " los angeles",
+      "record": {
+        "instance": {
+          "input": {
+            "text": "name: katsu. addr: 1972 hillhurst ave.. phone: 213-665-1891. type: japanese. city?"
+          },
+          "references": [
+            {
+              "output": {
+                "text": "los feliz"
+              },
+              "tags": [
+                "correct"
+              ]
+            }
+          ],
+          "split": "test",
+          "id": "id780"
+        },
+        "train_trial_index": 0,
+        "request": {
+          "model": "openai/text-davinci-003",
+          "embedding": false,
+          "temperature": 0.0,
+          "num_completions": 1,
+          "top_k_per_token": 1,
+          "max_tokens": 5,
+          "stop_sequences": [
+            "\n"
+          ],
+          "echo_prompt": false,
+          "top_p": 1,
+          "presence_penalty": 0,
+          "frequency_penalty": 0
+        },
+        "result": {
+          "success": true,
+          "embedding": [],
+          "completions": [
+            {
+              "text": " los angeles",
+              "logprob": -0.00586962063804,
+              "tokens": [
+                {
+                  "text": " los",
+                  "logprob": -0.0056516607,
+                  "top_logprobs": {
+                    " los": -0.0056516607
+                  }
+                },
+                {
+                  "text": " angel",
+                  "logprob": -0.00021777152,
+                  "top_logprobs": {
+                    " angel": -0.00021777152
+                  }
+                },
+                {
+                  "text": "es",
+                  "logprob": -1.8841804e-07,
+                  "top_logprobs": {
+                    "es": -1.8841804e-07
+                  }
+                }
+              ]
+            }
+          ],
+          "cached": true,
+          "request_time": 0.5845870971679688,
+          "request_datetime": 1669854811
+        },
+        "num_train_instances": 5,
+        "prompt_truncated": false,
+        "num_conditioning_tokens": 0
+      },
+      "record_source_file": "Restaurant-text-davinci-003-scenario_state.json",
+      "record_source_sha256": "5436fe64ce9f9b4bf58b697d66f4f821a9b854bf56b5137aece28d9f55d5079c",
+      "raw_line_sha256": "39e125e5ba6e4221d9d350a4735dc426556ce86637e65b698e2c9cb427192f32",
+      "title_ja": "都市欄には地区名も入る",
+      "input_ja": "店名：katsu。住所：1972 hillhurst ave.。電話：213-665-1891。料理の種類：日本料理。都市は？",
+      "answer_ja": "los feliz（ロス・フェリズ）",
+      "raw_line_hash_encoding": "Exact UTF-8 file bytes including original line terminator; source_line is physical 1-based",
+      "prompt_tail": "name: katsu. addr: 1972 hillhurst ave.. phone: 213-665-1891. type: japanese. city?\nAnswer:",
+      "record_omissions": [
+        "request.prompt: full five-example prompt remains in local evidence public scenario_state; prompt_tail is the exact contiguous evaluation-instance suffix"
+      ]
+    },
+    {
+      "dataset": "Restaurant",
+      "split": "test",
+      "row_index": 658,
+      "source_file": "fz.arff",
+      "source_sha256": "a5307cb8edaae1239acf28c7c4a4c483cfd16a832c1a0da0a4ca1ebfd521584d",
+      "raw": {
+        "name": "cassell's",
+        "addr": " \"3266 w. sixth st.\"",
+        "city": " \"la\"",
+        "phone": " \"213-480-8668\"",
+        "type": " \"hamburgers\"",
+        "class": " '547'"
+      },
+      "input": "name: cassell's. addr: 3266 w. sixth st.. phone: 213-480-8668. type: hamburgers. city?",
+      "answer": "la",
+      "impute_column": "city",
+      "helm_id": "id782",
+      "raw_line": "\"cassell's\", \"3266 w. sixth st.\", \"la\", \"213-480-8668\", \"hamburgers\", '547'\n",
+      "source_line": 670,
+      "index": 9,
+      "section": "appendix",
+      "prediction": " los angeles",
+      "record": {
+        "instance": {
+          "input": {
+            "text": "name: cassell's. addr: 3266 w. sixth st.. phone: 213-480-8668. type: hamburgers. city?"
+          },
+          "references": [
+            {
+              "output": {
+                "text": "la"
+              },
+              "tags": [
+                "correct"
+              ]
+            }
+          ],
+          "split": "test",
+          "id": "id782"
+        },
+        "train_trial_index": 0,
+        "request": {
+          "model": "openai/text-davinci-003",
+          "embedding": false,
+          "temperature": 0.0,
+          "num_completions": 1,
+          "top_k_per_token": 1,
+          "max_tokens": 5,
+          "stop_sequences": [
+            "\n"
+          ],
+          "echo_prompt": false,
+          "top_p": 1,
+          "presence_penalty": 0,
+          "frequency_penalty": 0
+        },
+        "result": {
+          "success": true,
+          "embedding": [],
+          "completions": [
+            {
+              "text": " los angeles",
+              "logprob": -0.01192660015632,
+              "tokens": [
+                {
+                  "text": " los",
+                  "logprob": -0.011498587,
+                  "top_logprobs": {
+                    " los": -0.011498587
+                  }
+                },
+                {
+                  "text": " angel",
+                  "logprob": -0.00042794488,
+                  "top_logprobs": {
+                    " angel": -0.00042794488
+                  }
+                },
+                {
+                  "text": "es",
+                  "logprob": -6.827632e-08,
+                  "top_logprobs": {
+                    "es": -6.827632e-08
+                  }
+                }
+              ]
+            }
+          ],
+          "cached": true,
+          "request_time": 0.3334977626800537,
+          "request_datetime": 1669854811
+        },
+        "num_train_instances": 5,
+        "prompt_truncated": false,
+        "num_conditioning_tokens": 0
+      },
+      "record_source_file": "Restaurant-text-davinci-003-scenario_state.json",
+      "record_source_sha256": "5436fe64ce9f9b4bf58b697d66f4f821a9b854bf56b5137aece28d9f55d5079c",
+      "raw_line_sha256": "a0808a0b81a43e1cda59da63c8174b1fee5d5fea9cec54b86dad01e1940a7ca5",
+      "title_ja": "短縮表記laを正解として保持する",
+      "input_ja": "店名：cassell’s。住所：3266 w. sixth st.。電話：213-480-8668。料理の種類：ハンバーガー。都市は？",
+      "answer_ja": "la（ロサンゼルスの略記）",
+      "raw_line_hash_encoding": "Exact UTF-8 file bytes including original line terminator; source_line is physical 1-based",
+      "prompt_tail": "name: cassell's. addr: 3266 w. sixth st.. phone: 213-480-8668. type: hamburgers. city?\nAnswer:",
+      "record_omissions": [
+        "request.prompt: full five-example prompt remains in local evidence public scenario_state; prompt_tail is the exact contiguous evaluation-instance suffix"
+      ]
+    },
+    {
+      "dataset": "Restaurant",
+      "split": "test",
+      "row_index": 755,
+      "source_file": "fz.arff",
+      "source_sha256": "a5307cb8edaae1239acf28c7c4a4c483cfd16a832c1a0da0a4ca1ebfd521584d",
+      "raw": {
+        "name": "sylvia's",
+        "addr": " \"328 lenox ave.\"",
+        "city": " \"new york city\"",
+        "phone": " \"212-996-0660\"",
+        "type": " \"southern/soul\"",
+        "class": " '644'"
+      },
+      "input": "name: sylvia's. addr: 328 lenox ave.. phone: 212-996-0660. type: southern/soul. city?",
+      "answer": "new york city",
+      "impute_column": "city",
+      "helm_id": "id793",
+      "raw_line": "\"sylvia's\", \"328 lenox ave.\", \"new york city\", \"212-996-0660\", \"southern/soul\", '644'\n",
+      "source_line": 767,
+      "index": 10,
+      "section": "appendix",
+      "prediction": " new york",
+      "record": {
+        "instance": {
+          "input": {
+            "text": "name: sylvia's. addr: 328 lenox ave.. phone: 212-996-0660. type: southern/soul. city?"
+          },
+          "references": [
+            {
+              "output": {
+                "text": "new york city"
+              },
+              "tags": [
+                "correct"
+              ]
+            }
+          ],
+          "split": "test",
+          "id": "id793"
+        },
+        "train_trial_index": 0,
+        "request": {
+          "model": "openai/text-davinci-003",
+          "embedding": false,
+          "temperature": 0.0,
+          "num_completions": 1,
+          "top_k_per_token": 1,
+          "max_tokens": 5,
+          "stop_sequences": [
+            "\n"
+          ],
+          "echo_prompt": false,
+          "top_p": 1,
+          "presence_penalty": 0,
+          "frequency_penalty": 0
+        },
+        "result": {
+          "success": true,
+          "embedding": [],
+          "completions": [
+            {
+              "text": " new york",
+              "logprob": -0.00220356028632,
+              "tokens": [
+                {
+                  "text": " new",
+                  "logprob": -0.0021831545,
+                  "top_logprobs": {
+                    " new": -0.0021831545
+                  }
+                },
+                {
+                  "text": " y",
+                  "logprob": -2.033751e-05,
+                  "top_logprobs": {
+                    " y": -2.033751e-05
+                  }
+                },
+                {
+                  "text": "ork",
+                  "logprob": -6.827632e-08,
+                  "top_logprobs": {
+                    "ork": -6.827632e-08
+                  }
+                }
+              ]
+            }
+          ],
+          "cached": true,
+          "request_time": 0.7990889549255371,
+          "request_datetime": 1669854812
+        },
+        "num_train_instances": 5,
+        "prompt_truncated": false,
+        "num_conditioning_tokens": 0
+      },
+      "record_source_file": "Restaurant-text-davinci-003-scenario_state.json",
+      "record_source_sha256": "5436fe64ce9f9b4bf58b697d66f4f821a9b854bf56b5137aece28d9f55d5079c",
+      "raw_line_sha256": "ac5193b1728ee6cf258fcfb6a42074828af9636682b6319f321f03b86f4f0a5f",
+      "title_ja": "new yorkとnew york cityの違い",
+      "input_ja": "店名：sylvia’s。住所：328 lenox ave.。電話：212-996-0660。料理の種類：米国南部料理／ソウルフード。都市は？",
+      "answer_ja": "new york city（ニューヨーク市）",
+      "raw_line_hash_encoding": "Exact UTF-8 file bytes including original line terminator; source_line is physical 1-based",
+      "prompt_tail": "name: sylvia's. addr: 328 lenox ave.. phone: 212-996-0660. type: southern/soul. city?\nAnswer:",
+      "record_omissions": [
+        "request.prompt: full five-example prompt remains in local evidence public scenario_state; prompt_tail is the exact contiguous evaluation-instance suffix"
+      ]
+    },
+    {
+      "dataset": "Restaurant",
+      "split": "test",
+      "row_index": 807,
+      "source_file": "fz.arff",
+      "source_sha256": "a5307cb8edaae1239acf28c7c4a4c483cfd16a832c1a0da0a4ca1ebfd521584d",
+      "raw": {
+        "name": "house of chan",
+        "addr": " \"2469 cobb pkwy.\"",
+        "city": " \"smyrna\"",
+        "phone": " \"770-955-9444\"",
+        "type": " \"chinese\"",
+        "class": " '696'"
+      },
+      "input": "name: house of chan. addr: 2469 cobb pkwy.. phone: 770-955-9444. type: chinese. city?",
+      "answer": "smyrna",
+      "impute_column": "city",
+      "helm_id": "id796",
+      "raw_line": "\"house of chan\", \"2469 cobb pkwy.\", \"smyrna\", \"770-955-9444\", \"chinese\", '696'\n",
+      "source_line": 819,
+      "index": 11,
+      "section": "appendix",
+      "prediction": " atlanta",
+      "record": {
+        "instance": {
+          "input": {
+            "text": "name: house of chan. addr: 2469 cobb pkwy.. phone: 770-955-9444. type: chinese. city?"
+          },
+          "references": [
+            {
+              "output": {
+                "text": "smyrna"
+              },
+              "tags": [
+                "correct"
+              ]
+            }
+          ],
+          "split": "test",
+          "id": "id796"
+        },
+        "train_trial_index": 0,
+        "request": {
+          "model": "openai/text-davinci-003",
+          "embedding": false,
+          "temperature": 0.0,
+          "num_completions": 1,
+          "top_k_per_token": 1,
+          "max_tokens": 5,
+          "stop_sequences": [
+            "\n"
+          ],
+          "echo_prompt": false,
+          "top_p": 1,
+          "presence_penalty": 0,
+          "frequency_penalty": 0
+        },
+        "result": {
+          "success": true,
+          "embedding": [],
+          "completions": [
+            {
+              "text": " atlanta",
+              "logprob": -0.14552410051582,
+              "tokens": [
+                {
+                  "text": " at",
+                  "logprob": -0.14552277,
+                  "top_logprobs": {
+                    " at": -0.14552277
+                  }
+                },
+                {
+                  "text": "l",
+                  "logprob": -1.2622395e-06,
+                  "top_logprobs": {
+                    "l": -1.2622395e-06
+                  }
+                },
+                {
+                  "text": "anta",
+                  "logprob": -6.827632e-08,
+                  "top_logprobs": {
+                    "anta": -6.827632e-08
+                  }
+                }
+              ]
+            }
+          ],
+          "cached": true,
+          "request_time": 0.6637508869171143,
+          "request_datetime": 1669854813
+        },
+        "num_train_instances": 5,
+        "prompt_truncated": false,
+        "num_conditioning_tokens": 0
+      },
+      "record_source_file": "Restaurant-text-davinci-003-scenario_state.json",
+      "record_source_sha256": "5436fe64ce9f9b4bf58b697d66f4f821a9b854bf56b5137aece28d9f55d5079c",
+      "raw_line_sha256": "de8a08c21dae3e5be2739431767b43cc8ff05f977152177e9b28d36f2b1683ad",
+      "title_ja": "大都市周辺の別の都市",
+      "input_ja": "店名：house of chan。住所：2469 cobb pkwy.。電話：770-955-9444。料理の種類：中国料理。都市は？",
+      "answer_ja": "smyrna（スマーナ）",
+      "raw_line_hash_encoding": "Exact UTF-8 file bytes including original line terminator; source_line is physical 1-based",
+      "prompt_tail": "name: house of chan. addr: 2469 cobb pkwy.. phone: 770-955-9444. type: chinese. city?\nAnswer:",
+      "record_omissions": [
+        "request.prompt: full five-example prompt remains in local evidence public scenario_state; prompt_tail is the exact contiguous evaluation-instance suffix"
+      ]
+    },
+    {
+      "dataset": "Restaurant",
+      "split": "test",
+      "row_index": 778,
+      "source_file": "fz.arff",
+      "source_sha256": "a5307cb8edaae1239acf28c7c4a4c483cfd16a832c1a0da0a4ca1ebfd521584d",
+      "raw": {
+        "name": "morton's of chicago (las vegas)",
+        "addr": " \"3200 las vegas blvd. s.\"",
+        "city": " \"las vegas\"",
+        "phone": " \"702-893-0703\"",
+        "type": " \"steakhouses\"",
+        "class": " '667'"
+      },
+      "input": "name: morton's of chicago (las vegas). addr: 3200 las vegas blvd. s.. phone: 702-893-0703. type: steakhouses. city?",
+      "answer": "las vegas",
+      "impute_column": "city",
+      "helm_id": "id789",
+      "raw_line": "\"morton's of chicago (las vegas)\", \"3200 las vegas blvd. s.\", \"las vegas\", \"702-893-0703\", \"steakhouses\", '667'\n",
+      "source_line": 790,
+      "index": 12,
+      "section": "appendix",
+      "prediction": " las vegas",
+      "record": {
+        "instance": {
+          "input": {
+            "text": "name: morton's of chicago (las vegas). addr: 3200 las vegas blvd. s.. phone: 702-893-0703. type: steakhouses. city?"
+          },
+          "references": [
+            {
+              "output": {
+                "text": "las vegas"
+              },
+              "tags": [
+                "correct"
+              ]
+            }
+          ],
+          "split": "test",
+          "id": "id789"
+        },
+        "train_trial_index": 0,
+        "request": {
+          "model": "openai/text-davinci-003",
+          "embedding": false,
+          "temperature": 0.0,
+          "num_completions": 1,
+          "top_k_per_token": 1,
+          "max_tokens": 5,
+          "stop_sequences": [
+            "\n"
+          ],
+          "echo_prompt": false,
+          "top_p": 1,
+          "presence_penalty": 0,
+          "frequency_penalty": 0
+        },
+        "result": {
+          "success": true,
+          "embedding": [],
+          "completions": [
+            {
+              "text": " las vegas",
+              "logprob": -0.006566496974,
+              "tokens": [
+                {
+                  "text": " las",
+                  "logprob": -0.006460015,
+                  "top_logprobs": {
+                    " las": -0.006460015
+                  }
+                },
+                {
+                  "text": " ve",
+                  "logprob": -0.00010545909,
+                  "top_logprobs": {
+                    " ve": -0.00010545909
+                  }
+                },
+                {
+                  "text": "gas",
+                  "logprob": -1.022884e-06,
+                  "top_logprobs": {
+                    "gas": -1.022884e-06
+                  }
+                }
+              ]
+            }
+          ],
+          "cached": true,
+          "request_time": 0.9630551338195801,
+          "request_datetime": 1669854812
+        },
+        "num_train_instances": 5,
+        "prompt_truncated": false,
+        "num_conditioning_tokens": 0
+      },
+      "record_source_file": "Restaurant-text-davinci-003-scenario_state.json",
+      "record_source_sha256": "5436fe64ce9f9b4bf58b697d66f4f821a9b854bf56b5137aece28d9f55d5079c",
+      "raw_line_sha256": "051f84a909f01f7cebe55a5e97870acde1c3ff4148a3910dcff45273c24c85f8",
+      "title_ja": "店名にも所在地が現れる",
+      "input_ja": "店名：morton’s of chicago（las vegas）。住所：3200 las vegas blvd. s.。電話：702-893-0703。料理の種類：ステーキハウス。都市は？",
+      "answer_ja": "las vegas（ラスベガス）",
+      "raw_line_hash_encoding": "Exact UTF-8 file bytes including original line terminator; source_line is physical 1-based",
+      "prompt_tail": "name: morton's of chicago (las vegas). addr: 3200 las vegas blvd. s.. phone: 702-893-0703. type: steakhouses. city?\nAnswer:",
+      "record_omissions": [
+        "request.prompt: full five-example prompt remains in local evidence public scenario_state; prompt_tail is the exact contiguous evaluation-instance suffix"
+      ]
+    },
+    {
+      "dataset": "Restaurant",
+      "split": "test",
+      "row_index": 271,
+      "source_file": "fz.arff",
+      "source_sha256": "a5307cb8edaae1239acf28c7c4a4c483cfd16a832c1a0da0a4ca1ebfd521584d",
+      "raw": {
+        "name": "remi",
+        "addr": " \"3rd st. promenade\"",
+        "city": " \"santa monica\"",
+        "phone": " \"310/393-6545\"",
+        "type": " \"italian\"",
+        "class": " '159'"
+      },
+      "input": "name: remi. addr: 3rd st. promenade. phone: 310/393-6545. type: italian. city?",
+      "answer": "santa monica",
+      "impute_column": "city",
+      "helm_id": "id804",
+      "raw_line": "\"remi\", \"3rd st. promenade\", \"santa monica\", \"310/393-6545\", \"italian\", '159'\n",
+      "source_line": 283,
+      "index": 13,
+      "section": "appendix",
+      "prediction": " santa monica",
+      "record": {
+        "instance": {
+          "input": {
+            "text": "name: remi. addr: 3rd st. promenade. phone: 310/393-6545. type: italian. city?"
+          },
+          "references": [
+            {
+              "output": {
+                "text": "santa monica"
+              },
+              "tags": [
+                "correct"
+              ]
+            }
+          ],
+          "split": "test",
+          "id": "id804"
+        },
+        "train_trial_index": 0,
+        "request": {
+          "model": "openai/text-davinci-003",
+          "embedding": false,
+          "temperature": 0.0,
+          "num_completions": 1,
+          "top_k_per_token": 1,
+          "max_tokens": 5,
+          "stop_sequences": [
+            "\n"
+          ],
+          "echo_prompt": false,
+          "top_p": 1,
+          "presence_penalty": 0,
+          "frequency_penalty": 0
+        },
+        "result": {
+          "success": true,
+          "embedding": [],
+          "completions": [
+            {
+              "text": " santa monica",
+              "logprob": -0.048624507521999996,
+              "tokens": [
+                {
+                  "text": " s",
+                  "logprob": -0.045109853,
+                  "top_logprobs": {
+                    " s": -0.045109853
+                  }
+                },
+                {
+                  "text": "anta",
+                  "logprob": -1.5214344e-05,
+                  "top_logprobs": {
+                    "anta": -1.5214344e-05
+                  }
+                },
+                {
+                  "text": " mon",
+                  "logprob": -0.0034926934,
+                  "top_logprobs": {
+                    " mon": -0.0034926934
+                  }
+                },
+                {
+                  "text": "ica",
+                  "logprob": -6.746778e-06,
+                  "top_logprobs": {
+                    "ica": -6.746778e-06
+                  }
+                }
+              ]
+            }
+          ],
+          "cached": true,
+          "request_time": 0.6125478744506836,
+          "request_datetime": 1669854813
+        },
+        "num_train_instances": 5,
+        "prompt_truncated": false,
+        "num_conditioning_tokens": 0
+      },
+      "record_source_file": "Restaurant-text-davinci-003-scenario_state.json",
+      "record_source_sha256": "5436fe64ce9f9b4bf58b697d66f4f821a9b854bf56b5137aece28d9f55d5079c",
+      "raw_line_sha256": "4360a20b9e16e54b22d2d949c2466607a0b6fb76ab807753cd104fefde42c90b",
+      "title_ja": "サンタモニカのイタリア料理店",
+      "input_ja": "店名：remi。住所：3rd st. promenade。電話：310/393-6545。料理の種類：イタリア料理。都市は？",
+      "answer_ja": "santa monica（サンタモニカ）",
+      "raw_line_hash_encoding": "Exact UTF-8 file bytes including original line terminator; source_line is physical 1-based",
+      "prompt_tail": "name: remi. addr: 3rd st. promenade. phone: 310/393-6545. type: italian. city?\nAnswer:",
+      "record_omissions": [
+        "request.prompt: full five-example prompt remains in local evidence public scenario_state; prompt_tail is the exact contiguous evaluation-instance suffix"
+      ]
+    }
+  ],
+  "statistics": [
+    {
+      "dataset": "Buy",
+      "model": "opt-175b",
+      "metrics": {
+        "exact_match": 0.8205128205128206,
+        "quasi_exact_match": 0.8512820512820514,
+        "prefix_exact_match": 0.8205128205128206,
+        "quasi_prefix_exact_match": 0.8512820512820514
+      },
+      "trials": 3,
+      "test_per_trial": {
+        "0": 65,
+        "1": 65,
+        "2": 65
+      },
+      "trial_quasi": {
+        "0": 0.8307692307692308,
+        "1": 0.8615384615384616,
+        "2": 0.8615384615384616
+      },
+      "actual_examples": {
+        "5": 195
+      },
+      "truncated": 0,
+      "actual_max_tokens": {
+        "5": 195
+      },
+      "actual_num_completions": {
+        "1": 195
+      },
+      "adapter": {
+        "method": "generation",
+        "global_prefix": "",
+        "instructions": "What is the missing value?\n",
+        "input_prefix": "",
+        "input_suffix": "\n",
+        "reference_prefix": "A. ",
+        "reference_suffix": "\n",
+        "output_prefix": "Answer: ",
+        "output_suffix": "\n",
+        "instance_prefix": "\n",
+        "substitutions": [],
+        "max_train_instances": 5,
+        "max_eval_instances": 1000,
+        "num_outputs": 1,
+        "num_train_trials": 3,
+        "model": "together/opt-175b",
+        "temperature": 0.0,
+        "max_tokens": 5,
+        "stop_sequences": [
+          "\n"
+        ]
+      },
+      "all_inputs_and_labels_match": true
+    },
+    {
+      "dataset": "Buy",
+      "model": "text-davinci-003",
+      "metrics": {
+        "exact_match": 0.8256410256410257,
+        "quasi_exact_match": 0.8564102564102565,
+        "prefix_exact_match": 0.841025641025641,
+        "quasi_prefix_exact_match": 0.8717948717948718
+      },
+      "trials": 3,
+      "test_per_trial": {
+        "0": 65,
+        "1": 65,
+        "2": 65
+      },
+      "trial_quasi": {
+        "0": 0.8615384615384616,
+        "1": 0.8461538461538461,
+        "2": 0.8615384615384616
+      },
+      "actual_examples": {
+        "5": 195
+      },
+      "truncated": 0,
+      "actual_max_tokens": {
+        "5": 195
+      },
+      "actual_num_completions": {
+        "1": 195
+      },
+      "adapter": {
+        "method": "generation",
+        "global_prefix": "",
+        "instructions": "What is the missing value?\n",
+        "input_prefix": "",
+        "input_suffix": "\n",
+        "reference_prefix": "A. ",
+        "reference_suffix": "\n",
+        "output_prefix": "Answer: ",
+        "output_suffix": "\n",
+        "instance_prefix": "\n",
+        "substitutions": [],
+        "max_train_instances": 5,
+        "max_eval_instances": 1000,
+        "num_outputs": 1,
+        "num_train_trials": 3,
+        "model": "openai/text-davinci-003",
+        "temperature": 0.0,
+        "max_tokens": 5,
+        "stop_sequences": [
+          "\n"
+        ]
+      },
+      "all_inputs_and_labels_match": true
+    },
+    {
+      "dataset": "Buy",
+      "model": "llama-2-70b",
+      "metrics": {
+        "exact_match": 0.8307692307692308,
+        "quasi_exact_match": 0.8615384615384616,
+        "prefix_exact_match": 0.8307692307692308,
+        "quasi_prefix_exact_match": 0.8615384615384616
+      },
+      "trials": 1,
+      "test_per_trial": {
+        "0": 65
+      },
+      "trial_quasi": {
+        "0": 0.8615384615384616
+      },
+      "actual_examples": {
+        "5": 65
+      },
+      "truncated": 0,
+      "actual_max_tokens": {
+        "5": 65
+      },
+      "actual_num_completions": {
+        "1": 65
+      },
+      "adapter": {
+        "method": "generation",
+        "global_prefix": "",
+        "instructions": "What is the missing value?\n",
+        "input_prefix": "",
+        "input_suffix": "\n",
+        "reference_prefix": "A. ",
+        "reference_suffix": "\n",
+        "output_prefix": "Answer: ",
+        "output_suffix": "\n",
+        "instance_prefix": "\n",
+        "substitutions": [],
+        "max_train_instances": 5,
+        "max_eval_instances": 1000,
+        "num_outputs": 1,
+        "num_train_trials": 1,
+        "sample_train": true,
+        "model": "meta/llama-2-70b",
+        "temperature": 0.0,
+        "max_tokens": 5,
+        "stop_sequences": [
+          "\n"
+        ],
+        "multi_label": false
+      },
+      "all_inputs_and_labels_match": true
+    },
+    {
+      "dataset": "Restaurant",
+      "model": "opt-175b",
+      "metrics": {
+        "exact_match": 0.5930232558139535,
+        "quasi_exact_match": 0.5930232558139535,
+        "prefix_exact_match": 0.8875968992248063,
+        "quasi_prefix_exact_match": 0.8875968992248063
+      },
+      "trials": 3,
+      "test_per_trial": {
+        "0": 86,
+        "1": 86,
+        "2": 86
+      },
+      "trial_quasi": {
+        "0": 0.5930232558139535,
+        "1": 0.5930232558139535,
+        "2": 0.5930232558139535
+      },
+      "actual_examples": {
+        "5": 258
+      },
+      "truncated": 0,
+      "actual_max_tokens": {
+        "5": 258
+      },
+      "actual_num_completions": {
+        "1": 258
+      },
+      "adapter": {
+        "method": "generation",
+        "global_prefix": "",
+        "instructions": "What is the missing value?\n",
+        "input_prefix": "",
+        "input_suffix": "\n",
+        "reference_prefix": "A. ",
+        "reference_suffix": "\n",
+        "output_prefix": "Answer: ",
+        "output_suffix": "\n",
+        "instance_prefix": "\n",
+        "substitutions": [],
+        "max_train_instances": 5,
+        "max_eval_instances": 1000,
+        "num_outputs": 1,
+        "num_train_trials": 3,
+        "model": "together/opt-175b",
+        "temperature": 0.0,
+        "max_tokens": 5,
+        "stop_sequences": [
+          "\n"
+        ]
+      },
+      "all_inputs_and_labels_match": true
+    },
+    {
+      "dataset": "Restaurant",
+      "model": "text-davinci-003",
+      "metrics": {
+        "exact_match": 0.8100775193798451,
+        "quasi_exact_match": 0.8217054263565892,
+        "prefix_exact_match": 0.8100775193798451,
+        "quasi_prefix_exact_match": 0.8217054263565892
+      },
+      "trials": 3,
+      "test_per_trial": {
+        "0": 86,
+        "1": 86,
+        "2": 86
+      },
+      "trial_quasi": {
+        "0": 0.813953488372093,
+        "1": 0.8255813953488372,
+        "2": 0.8255813953488372
+      },
+      "actual_examples": {
+        "5": 258
+      },
+      "truncated": 0,
+      "actual_max_tokens": {
+        "5": 258
+      },
+      "actual_num_completions": {
+        "1": 258
+      },
+      "adapter": {
+        "method": "generation",
+        "global_prefix": "",
+        "instructions": "What is the missing value?\n",
+        "input_prefix": "",
+        "input_suffix": "\n",
+        "reference_prefix": "A. ",
+        "reference_suffix": "\n",
+        "output_prefix": "Answer: ",
+        "output_suffix": "\n",
+        "instance_prefix": "\n",
+        "substitutions": [],
+        "max_train_instances": 5,
+        "max_eval_instances": 1000,
+        "num_outputs": 1,
+        "num_train_trials": 3,
+        "model": "openai/text-davinci-003",
+        "temperature": 0.0,
+        "max_tokens": 5,
+        "stop_sequences": [
+          "\n"
+        ]
+      },
+      "all_inputs_and_labels_match": true
+    },
+    {
+      "dataset": "Restaurant",
+      "model": "llama-2-70b",
+      "metrics": {
+        "exact_match": 0.813953488372093,
+        "quasi_exact_match": 0.813953488372093,
+        "prefix_exact_match": 0.813953488372093,
+        "quasi_prefix_exact_match": 0.813953488372093
+      },
+      "trials": 1,
+      "test_per_trial": {
+        "0": 86
+      },
+      "trial_quasi": {
+        "0": 0.813953488372093
+      },
+      "actual_examples": {
+        "5": 86
+      },
+      "truncated": 0,
+      "actual_max_tokens": {
+        "5": 86
+      },
+      "actual_num_completions": {
+        "1": 86
+      },
+      "adapter": {
+        "method": "generation",
+        "global_prefix": "",
+        "instructions": "What is the missing value?\n",
+        "input_prefix": "",
+        "input_suffix": "\n",
+        "reference_prefix": "A. ",
+        "reference_suffix": "\n",
+        "output_prefix": "Answer: ",
+        "output_suffix": "\n",
+        "instance_prefix": "\n",
+        "substitutions": [],
+        "max_train_instances": 5,
+        "max_eval_instances": 1000,
+        "num_outputs": 1,
+        "num_train_trials": 1,
+        "sample_train": true,
+        "model": "meta/llama-2-70b",
+        "temperature": 0.0,
+        "max_tokens": 5,
+        "stop_sequences": [
+          "\n"
+        ],
+        "multi_label": false
+      },
+      "all_inputs_and_labels_match": true
+    }
+  ],
+  "build_info": {
+    "main_pages": 29,
+    "total_pages": 54,
+    "planned_reading_seconds": 600,
+    "time_measured": false,
+    "source_urls": {
+      "paper": [
+        "Mei et al. (2021). Capturing Semantics for Imputation with Pre-trained Language Models. IEEE ICDE, 61–72.",
+        "https://doi.org/10.1109/ICDE51399.2021.00013"
+      ],
+      "ipm": [
+        "Mei et al. (2021). Capturing Semantics for Imputation with Pre-trained Language Models — IPM公式実装。commit 583826e。",
+        "https://github.com/EliasMei/IPM"
+      ],
+      "buy": [
+        "Database Group, Universität Leipzig. Benchmark Datasets for Entity Resolution. CC BY 4.0、2026-10-18取得。",
+        "https://dbs.uni-leipzig.de/research/projects/benchmark-datasets-for-entity-resolution"
+      ],
+      "rest": [
+        "University of Texas at Austin. RIDDLE / Restaurant data (fz.arff). 2026-10-18取得。",
+        "https://www.cs.utexas.edu/users/ml/riddle/data/restaurant.tar.gz"
+      ],
+      "code": [
+        "Stanford CRFM. HELM v0.3.0, EntityDataImputationScenario. 2026-10-18取得。",
+        "https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/entity_data_imputation_scenario.py"
+      ],
+      "site": [
+        "Stanford CRFM. HELM Classic v0.4.0, Data imputation. 2023-11-17の固定版。2026-10-18参照。",
+        "https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/entity_data_imputation"
+      ],
+      "metric": [
+        "Stanford CRFM. HELM v0.3.0, BasicMetric / normalize_text・一致指標。",
+        "https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/metrics/basic_metrics.py"
+      ],
+      "helm": [
+        "Liang et al. (2023). Holistic Evaluation of Language Models. Transactions on Machine Learning Research.",
+        "https://arxiv.org/abs/2211.09110"
+      ]
+    },
+    "release": "Classic v0.4.0 (2023-11-17)",
+    "run_suite": "v0.3.0",
+    "gemini_used": false,
+    "data_tables": [
+      "Buy",
+      "Restaurant"
+    ],
+    "historical_scenario": "v0.3.0",
+    "source_ipm_commit": "583826e41205c04a48548673945213181085536c",
+    "source_archives_byte_match_helm_mirrors": true,
+    "original_paper_full_text_retrieved": false,
+    "scenario_year": 2022,
+    "ipm_research_year": 2021,
+    "abt_buy_source_year": 2010,
+    "restaurant_first_release_year": null,
+    "year_basis": "HELM arXiv2211.09110v1 (16 Nov2022), E.3.12"
+  },
+  "source_records": [
+    {
+      "file": "panel-fit.json",
+      "bytes": 7744,
+      "sha256": "e26172dd6b3b7c1552fffdbeb707581ed2f2f6f66573063ba3491dc0169861fa"
+    },
+    {
+      "file": "sources.md",
+      "bytes": 14262,
+      "sha256": "f0376a65db8729381bb9574fb4ecda2fea54af7a946b6a6797b8b51453c264f6"
+    },
+    {
+      "file": "text-audit.json",
+      "bytes": 397,
+      "sha256": "e9f0ae80f48ad1695b9359a61f823bbcdda85fe66f8ef03034f9a14db0ae9666"
+    },
+    {
+      "file": "records.py",
+      "bytes": 3813,
+      "sha256": "8b9b69f3b8c1761d4492b2b34b6bc9120118d92c649c45bde467011dc5780ff0"
+    },
+    {
+      "file": "proofread.py",
+      "bytes": 1821,
+      "sha256": "fd436bc3b2bfb026fad05f0750b8f5e5763a61f8613ba11316be2edf32873380"
+    },
+    {
+      "file": "prepare.py",
+      "bytes": 4640,
+      "sha256": "1143e591625d045f80bb1487f2eef9320f3585f2fb38dbf5bff6f7fb4e5d2b80"
+    },
+    {
+      "file": "supplementary-stats.json",
+      "bytes": 294,
+      "sha256": "19ad0743488d293d3248a446695985dcfa54a3dc2c25e813f72f20a01a9877b4"
+    },
+    {
+      "file": "fetch_runs.py",
+      "bytes": 1073,
+      "sha256": "ea23c4f42b21998b4d92a8a0df074f9e8ec37f8d6adf6320efcd65f5b897bca5"
+    },
+    {
+      "file": "visual-view-log.json",
+      "bytes": 6745,
+      "sha256": "69243f7aa0884846385cf6f53e025417e3764b6255162033e0ed484c6ec091f8"
+    },
+    {
+      "file": "render.py",
+      "bytes": 796,
+      "sha256": "1c88c1c63b3d7dcba3ceda9dadcc7e4df0199f9a46771634435a8114c211a259"
+    },
+    {
+      "file": "check_links.py",
+      "bytes": 2365,
+      "sha256": "5f58373382480f069e0663535e2603e8fda3f9ba85dffd50ca0a6e37c9c682a2"
+    },
+    {
+      "file": "fetch.py",
+      "bytes": 1454,
+      "sha256": "c8569b1fc7bc02c88e94220e3e4a1d912a49a8f5a12fd7a262efb2d5ac64f706"
+    },
+    {
+      "file": "version-check.json",
+      "bytes": 277,
+      "sha256": "37f0075f4764f01cac968713ece2405aaeb977395b79f017dd3e012924580ed9"
+    },
+    {
+      "file": "final-changed-pages.json",
+      "bytes": 100,
+      "sha256": "4bbdbe5aa8bf7f9ff420d1339cee75d111198d82e580da18ebaec0b01b598cb6"
+    },
+    {
+      "file": "audit_package.py",
+      "bytes": 2879,
+      "sha256": "223542c5028909c3fb693e354a302a8588aabf9c5e30c9dee49bb6891ebe8828"
+    },
+    {
+      "file": "package-audit.json",
+      "bytes": 520,
+      "sha256": "9309712e648142b7953127831b2ed4fb07d31f66b42a471a8d53e7f4286f4a93"
+    },
+    {
+      "file": "fit-panels.py",
+      "bytes": 1488,
+      "sha256": "2a64021b1557cad03119a1ae1fb0b9e5c9517d7355aa842ded2c0e9e2bb6fe24"
+    },
+    {
+      "file": "panel-ink-corrections.json",
+      "bytes": 16062,
+      "sha256": "8c73184ee008cbf5974d545de47c958856c302f4e1658844905d31e954f35799"
+    },
+    {
+      "file": "layout-audit.json",
+      "bytes": 77,
+      "sha256": "fb80a4a71efde467fd1b268719320fd4b40d9b195c49d5ae1b7209ad5790d36c"
+    },
+    {
+      "file": "proofreading-changes.json",
+      "bytes": 1372,
+      "sha256": "78a86ca858e0a7ca8106e2ca4b094181acf2a297cb90e1b937d0ab11c78e766f"
+    },
+    {
+      "file": "layout-changes.json",
+      "bytes": 1014,
+      "sha256": "7a0b15a114808c244febff2f6a41858d2ae3d0232043dbbcbe7e4e2d032fbb42"
+    },
+    {
+      "file": "audit_layout.py",
+      "bytes": 3895,
+      "sha256": "dcee7c5f706dea35d85e562cd75db0bb6ccd0f565cf515c2321e8291bda29602"
+    },
+    {
+      "file": "page-review.json",
+      "bytes": 99076,
+      "sha256": "980934a740026610d00fa1fe2a4a655bbba628319419e9bd51f77697be73a51c"
+    },
+    {
+      "file": "summary.json",
+      "bytes": 2400,
+      "sha256": "f096fc072e051ba304cf1ae9222082e0b658b472845634b867a737713283c41f"
+    },
+    {
+      "file": "shape_gaps.py",
+      "bytes": 1120,
+      "sha256": "6734764a22944699534a9f1ba3b9cde589db46bd88d17b2bffd27daa115f14ab"
+    },
+    {
+      "file": "manifest.json",
+      "bytes": 21379,
+      "sha256": "5abf4f5f306832b6dd53ecb4174cd8cb4e6b32b35f10dd8961fe9775f2d2c50a"
+    },
+    {
+      "file": "handoff_records.py",
+      "bytes": 7609,
+      "sha256": "6e8fb30d800ba2b839fab0d1fc6a30ab339618ae474a0505a89ab86a1f8e9dd7"
+    },
+    {
+      "file": "links-audit.json",
+      "bytes": 3858,
+      "sha256": "875cb04ed814ec5c16fc8626fa1d4ebe6d31d5c8f7368201b48c62f6996f4712"
+    },
+    {
+      "file": "engine.py",
+      "bytes": 25955,
+      "sha256": "2b9a0fe9bcfa907cf11cc876d8653d400a149b2ce30d3666690f7c949cd2460c"
+    },
+    {
+      "file": "build.py",
+      "bytes": 18879,
+      "sha256": "132fdbe4fd1ec48f17dad0b10f95ded13cd4adcd23a2ba5804cf91f4f16c591e"
+    },
+    {
+      "file": "build-info.json",
+      "bytes": 2301,
+      "sha256": "4b0267720c858066627faef52c9d0a78fcb47e8a1fd0211665cc15f338d81827"
+    },
+    {
+      "file": "examples.json",
+      "bytes": 48225,
+      "sha256": "ca64830b8523057285aeab1ecd6e1fe790da779bf3ac70235f558b88fbb6ce95"
+    },
+    {
+      "file": "metric-demonstration.json",
+      "bytes": 3180,
+      "sha256": "15a9896a123a5d7fc1a9f72a727fbfc8008a309926691c40a0597ea3d14a0cff"
+    },
+    {
+      "file": "visual-review.json",
+      "bytes": 27971,
+      "sha256": "51a5929ccf112d14f5da72e179a0e7b271d442f402011bae89adda14aa5579e4"
+    },
+    {
+      "file": "handoff.json",
+      "bytes": 7034,
+      "sha256": "06d425ef71b3952d7d696b9b8d1fc276592bbb20a3c5b6e39312fc8c564f4cd0"
+    },
+    {
+      "file": "input-and-score-audit.json",
+      "bytes": 5903,
+      "sha256": "580b8a27e294fdbd34e95273f8ce52d6f833454c6eecde938ccafc9bcb974a78"
+    },
+    {
+      "file": "capture.py",
+      "bytes": 3070,
+      "sha256": "cc4f0142cc94e69831558b073884c0d5d9c9d7a662a60e829c6d3734a93c39e8"
+    },
+    {
+      "file": "convert.py",
+      "bytes": 544,
+      "sha256": "c6a04808701db98499254d4cc709b9a368569b2aec2e8b14a338f2fb581718a3"
+    },
+    {
+      "file": "datasets-in-10-minutes-data-imputation.pdf",
+      "bytes": 995617,
+      "sha256": "12d38c09ae4b9aea047d5e60980777872fbc74af5782cc3c992ce6823e0d1cad"
+    },
+    {
+      "file": "verify_data.py",
+      "bytes": 4893,
+      "sha256": "015eac206d8776bde4bb75f382df804dfbdac24bb17117a29e30f11788229dad"
+    },
+    {
+      "file": "screenshot-log.json",
+      "bytes": 471,
+      "sha256": "5fa49ccedf736b04c606982a9f87117eba877eab159b6f7f50ffaa976695b979"
+    },
+    {
+      "file": "independent-shape-overlap.json",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "file": "translations.py",
+      "bytes": 3118,
+      "sha256": "3eeeae53b053f98e66d6c94f208cb113e7100fb1c97b62bd71d4b90d82e89e8b"
+    },
+    {
+      "file": "independent-review-response.json",
+      "bytes": 1364,
+      "sha256": "fa6552930b7a44b8fbcb7483794da84890727b96570ba4db4ef9b4582985fb94"
+    },
+    {
+      "file": "stats.json",
+      "bytes": 7878,
+      "sha256": "93d9fe11ce3a8814e65c2b1a08440c8eab1bc5eb26cfa9d80a5db0d87bb211ca"
+    },
+    {
+      "file": "balance-panels.py",
+      "bytes": 1575,
+      "sha256": "d47cfdc1910b924ba79b639b22c034ef22f367c3c121bd13b23feca714b041b1"
+    },
+    {
+      "file": "evidence/Restaurant-opt-175b-stats.json",
+      "bytes": 75243,
+      "sha256": "ec07c52287a2e97fb50f31ded07f893a2efd560253a346bfcb122c868782d3ae"
+    },
+    {
+      "file": "evidence/ipm-multi.py",
+      "bytes": 15571,
+      "sha256": "adbf671c2650539f44efc40382f30ff4e780412b279f57eb243a70a6e6ea2d9f"
+    },
+    {
+      "file": "evidence/ipm-repo.json",
+      "bytes": 4933,
+      "sha256": "457fc0bf96b848a57a70413f25069409c4e4af8829a8fdb24c0cf355ba407a25"
+    },
+    {
+      "file": "evidence/paper-search.html",
+      "bytes": 92835,
+      "sha256": "6ca05b139206ee1757e7b3d424ddf2cc0f1dcf57ba3261a22abd39c0a4c54958"
+    },
+    {
+      "file": "evidence/run-suite-map.json",
+      "bytes": 10909,
+      "sha256": "6ddb3db60621dd8c923ab33cf04e42cc2343d5aa3eca8ad6f1396e64dff32dda"
+    },
+    {
+      "file": "evidence/helm-run-specs.py",
+      "bytes": 97948,
+      "sha256": "b8e73d208868cb4b971433e1aa321a817a7813852caa943347093de3c74062a9"
+    },
+    {
+      "file": "evidence/Restaurant-llama-2-70b-scenario_state.json",
+      "bytes": 514639,
+      "sha256": "7f890049b2cfe24091f4bfefec978633ce28990f808eef5b88ae8b4406c498b2"
+    },
+    {
+      "file": "evidence/crossref-search.json",
+      "bytes": 186,
+      "sha256": "ce424f5f07b16fd5a702acc5bb8240552925fd9344e3c41e650d718d25530b79"
+    },
+    {
+      "file": "evidence/crossref-mei.json",
+      "bytes": 25423,
+      "sha256": "cf87c0ba6ddcac560df94f03b75fc645c08e3ab63959126a908293403aaa480e"
+    },
+    {
+      "file": "evidence/helm-paper-v1.txt",
+      "bytes": 797461,
+      "sha256": "a1c0a8aa4534d1046c046e0dbe39f419a885f2d84e82e1581e8ad95382735093"
+    },
+    {
+      "file": "evidence/ipm-commit.json",
+      "bytes": 5138,
+      "sha256": "b70d75d809d09c67fc1506c4fc53970304b64bbdeef7c2f3aba3182585274864"
+    },
+    {
+      "file": "evidence/ipm-representation.py",
+      "bytes": 4648,
+      "sha256": "aec8894c58238554ab1e177a662300abeb87d2214dc1ebf979a270eb1a6aa843"
+    },
+    {
+      "file": "evidence/Buy-llama-2-70b-scenario_state.json",
+      "bytes": 451208,
+      "sha256": "b28c8b2c09937c486d8a868d92163641905b6fd1a5dc6209acae0139ffca242d"
+    },
+    {
+      "file": "evidence/ipm-pinned-readme.md",
+      "bytes": 3154,
+      "sha256": "983e4207b6d40c8862580f762c2b1e1e4763359fcf68bdd1c2603856889cb8a0"
+    },
+    {
+      "file": "evidence/crossref-guess.json",
+      "bytes": 6423,
+      "sha256": "a4fbb8d912011dc71029d695ee111fcb1a755913b7455e770d05d7c4bd9257ad"
+    },
+    {
+      "file": "evidence/scenario-v030.py",
+      "bytes": 6399,
+      "sha256": "9f69a792649e4f39c4cbb4be195ba6aa90fd6eddbbc9cb5bb849ad810ac6f98d"
+    },
+    {
+      "file": "evidence/fetch-log.json",
+      "bytes": 2429,
+      "sha256": "6b3b14cc93c3dabcb5132510fd91cd3d5208b85971be3ae036f42ee4f68fcaaf"
+    },
+    {
+      "file": "evidence/helm-paper.txt",
+      "bytes": 803041,
+      "sha256": "3e592a3eb1c53909499db7ce668631da0199513a51561f1574ff48504aabd449"
+    },
+    {
+      "file": "evidence/paper-github-search.json",
+      "bytes": 4960,
+      "sha256": "86aeae396cb680e55eb5affb0d018504f420cf8028ab8821ef25812429a29a6c"
+    },
+    {
+      "file": "evidence/Restaurant-text-davinci-003-scenario_state.json",
+      "bytes": 1891071,
+      "sha256": "5436fe64ce9f9b4bf58b697d66f4f821a9b854bf56b5137aece28d9f55d5079c"
+    },
+    {
+      "file": "evidence/ipm-readme.md",
+      "bytes": 3154,
+      "sha256": "983e4207b6d40c8862580f762c2b1e1e4763359fcf68bdd1c2603856889cb8a0"
+    },
+    {
+      "file": "evidence/ipm-tree.json",
+      "bytes": 6160,
+      "sha256": "3182730aa393c0176d2c15bdea4b3421e8ca866184dea83e869fee8054fd391a"
+    },
+    {
+      "file": "evidence/Buy.csv",
+      "bytes": 129682,
+      "sha256": "37d78c33f85b27e92be1d8ee1b863ba7107dfe369c6ca1dc7961c89b460dd47a"
+    },
+    {
+      "file": "evidence/additional-fetch-log.json",
+      "bytes": 1464,
+      "sha256": "09f4c72cdb031770212ff1a13493a11b387455c54ecc00efb1cd4ce55430f4f4"
+    },
+    {
+      "file": "evidence/scenario-main.py",
+      "bytes": 7332,
+      "sha256": "d3726ee394a3bb6af803f3deab612c3b2839224f7d94c52ffba5fef9e8c1f5f9"
+    },
+    {
+      "file": "evidence/Buy-opt-175b-stats.json",
+      "bytes": 75567,
+      "sha256": "8699a93d950a49551a32d2cf05195ed50f7e88c00bcc14b27a63a9bd37a5520a"
+    },
+    {
+      "file": "evidence/helm-paper.pdf",
+      "bytes": 6045688,
+      "sha256": "30970bda8958a1a8adf6a0a82feef9728331840288b7d2b49368bac87fd25f18"
+    },
+    {
+      "file": "evidence/Restaurant-llama-2-70b-stats.json",
+      "bytes": 55826,
+      "sha256": "851615badb3e45f6ab140b86734d2241506fbe9f1e68cf0da0f8e9c7f0217512"
+    },
+    {
+      "file": "evidence/paper-correct-crossref.json",
+      "bytes": 8170,
+      "sha256": "371455d05e1cc077afceee8c2a2f4c65a1fdb854d4dcb35deff48b4a56cbbc27"
+    },
+    {
+      "file": "evidence/run-fetch-log.json",
+      "bytes": 4180,
+      "sha256": "7495037557707f658a1741150eed5a5912b34d450dc7888de51cc9eab266d40d"
+    },
+    {
+      "file": "evidence/ipm-data-loader.py",
+      "bytes": 3605,
+      "sha256": "8fd98060eeab333fc809e971f5f9c43063d3b78301120b4ea4cfc92ef1f47a77"
+    },
+    {
+      "file": "evidence/openalex.json",
+      "bytes": 17985,
+      "sha256": "88f579c482ff755ef94287c9388c2c38b82d865a2b07202d3605a7c0af9ea229"
+    },
+    {
+      "file": "evidence/scenario-v030-official.py",
+      "bytes": 6399,
+      "sha256": "9f69a792649e4f39c4cbb4be195ba6aa90fd6eddbbc9cb5bb849ad810ac6f98d"
+    },
+    {
+      "file": "evidence/paper-ieee.html",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "evidence/scenario-main-commit.json",
+      "bytes": 4403,
+      "sha256": "7499b4d812a4cda641b226ad264cd70c8cbb3e62a30de9ec8bd3968bc12f368e"
+    },
+    {
+      "file": "evidence/Buy-text-davinci-003-scenario_state.json",
+      "bytes": 1543384,
+      "sha256": "17c914830f4add3eae5a1f7b78c699e97a2132303adc2e70059fcd05b55657a1"
+    },
+    {
+      "file": "evidence/Buy-opt-175b-scenario_state.json",
+      "bytes": 1977091,
+      "sha256": "50ee10bb6ca850e0c5f92e5c58e0df28e23b39a0d911e582744769e9f72d80b8"
+    },
+    {
+      "file": "evidence/processed-rows.json",
+      "bytes": 979680,
+      "sha256": "0a2211a4c68ada487efb21aac9184762841f019f51bf5c6c8535305f3dbe9a51"
+    },
+    {
+      "file": "evidence/Abt.csv",
+      "bytes": 347525,
+      "sha256": "ed6dbe5ac508e2e27ec7f78948875d4f754b6753674c65ccda3bf903ddaa13ea"
+    },
+    {
+      "file": "evidence/buy-origin-publication.html",
+      "bytes": 27472,
+      "sha256": "441731b6f42b22312fe1fbf263a4337f7be7054731b62e826fe87f11d2a59beb"
+    },
+    {
+      "file": "evidence/leipzig-site.html",
+      "bytes": 76215,
+      "sha256": "0bfbe28e499a8357c0a9e942cfd842399b54427704d375a850fd34fc6bfb5da2"
+    },
+    {
+      "file": "evidence/Restaurant-text-davinci-003-stats.json",
+      "bytes": 67558,
+      "sha256": "7709776f9b4ac385759bfcba237e089b3b5e22fd974190c694920c9f26054c9e"
+    },
+    {
+      "file": "evidence/semantic.json",
+      "bytes": 292,
+      "sha256": "2a329747186fd8355b9498057a15d05367968bfb586f05533db00943c2fe5dd3"
+    },
+    {
+      "file": "evidence/basic-metrics.py",
+      "bytes": 43000,
+      "sha256": "4e70d7cdbdac00c9568d9aada8408745ddb0cc2dc484ecc4f38492ba559f52a6"
+    },
+    {
+      "file": "evidence/ddg.html",
+      "bytes": 14318,
+      "sha256": "b7bda51bd37ba0df9d75238a6c7855953cca8b011b8f803afbc76f3ebf59d2fa"
+    },
+    {
+      "file": "evidence/ipm-evaluation.py",
+      "bytes": 3667,
+      "sha256": "dab38068bb36a2b52cde61b414e5b16dfa6f1acabc5632389f3a83187d3d1bc8"
+    },
+    {
+      "file": "evidence/source-index.json",
+      "bytes": 6743,
+      "sha256": "e5ac17acfc13b66a70b7a4eab87a27bfa3fe724703e8d927b1d57dae6571182d"
+    },
+    {
+      "file": "evidence/file-manifest.json",
+      "bytes": 8917,
+      "sha256": "21daed42c5233155ef56977acbd0939078e220a90de1e2bd19157e7e051a8cf9"
+    },
+    {
+      "file": "evidence/test-record-list.txt",
+      "bytes": 22852,
+      "sha256": "fe1495ff19fe16318c6bfbace6de8c4c3b2bd43b9f9a58d0ba67daff5d227afc"
+    },
+    {
+      "file": "evidence/Restaurant-opt-175b-scenario_state.json",
+      "bytes": 2262056,
+      "sha256": "0ab54c57a79d68c2cf05f1df522049348cc5a918f2fcc0ac151ae05d5948e135"
+    },
+    {
+      "file": "evidence/Buy-text-davinci-003-stats.json",
+      "bytes": 67083,
+      "sha256": "718cfb07fc86a9848f205faed2b236e52d064366325627d4ddd5bcfb3e22e1bc"
+    },
+    {
+      "file": "evidence/run-specs.json",
+      "bytes": 418218,
+      "sha256": "3cf43b99874df440efaddcd2f700ad5965a185ae4ce16e6ae10c8cf99665bddc"
+    },
+    {
+      "file": "evidence/bing.html",
+      "bytes": 122653,
+      "sha256": "7516b8801af7aa6e7a9e79b893c96f1eff3e3873a3bffedcb636169b8fa1f9c6"
+    },
+    {
+      "file": "evidence/Buy-llama-2-70b-stats.json",
+      "bytes": 55811,
+      "sha256": "31e95bd6387140c88fa6345cbcb9094bbd44f3034ce7637b459855c102f7f284"
+    },
+    {
+      "file": "evidence/restaurant-readme.txt",
+      "bytes": 360,
+      "sha256": "3a48a9542bd11d8fd9f9bc39c5e98d823e2c5a93b87546225aa7560faeab5a3f"
+    },
+    {
+      "file": "evidence/selected-records-full.json",
+      "bytes": 33283,
+      "sha256": "b86385da7ae5639551c40022a8b1092f9f701f52d451eb75193cee9fcb932425"
+    }
+  ],
+  "provenance_logs": {
+    "text-audit.json": {
+      "pages": 54,
+      "native_paragraphs_all_found": true,
+      "missing": [],
+      "notes_present": false,
+      "example_pages_with_full_original_and_translation": [
+        7,
+        8,
+        9,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41
+      ],
+      "answers_21pt_bold_B13731": [
+        7,
+        8,
+        9,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41
+      ]
+    },
+    "visual-view-log.json": {
+      "overview_viewed": true,
+      "initial_individually_viewed_pages": [
+        {
+          "page": 1,
+          "image_sha256": "feade44f1c826d03770a8e0ac337f449007ed7efaf5edfe997d7da7304af29cb"
+        },
+        {
+          "page": 2,
+          "image_sha256": "6e209a6c9faad44d7fb8fc43c80d490bbe35b3d7d1c28c4ce88974d554b62b9e"
+        },
+        {
+          "page": 3,
+          "image_sha256": "588be58c6f90a7f90e060af070aa843e309d4987c419b19e27ffb54f7880a601"
+        },
+        {
+          "page": 4,
+          "image_sha256": "694f596d79642706b0a1c7619307a937ee42134f672eb608fec686062440b591"
+        },
+        {
+          "page": 5,
+          "image_sha256": "39de0e332151fa12f240f1cf55e96e3be6373c7410215af65302ed9c6195d3ea"
+        },
+        {
+          "page": 6,
+          "image_sha256": "b32fbcb775065d52f437e32972077e0385686915c4ee72ed062411143339d1a5"
+        },
+        {
+          "page": 7,
+          "image_sha256": "c1ef1e5ee01492f92008297495889471784c47b23a9ba9078de988fef9e874bf"
+        },
+        {
+          "page": 8,
+          "image_sha256": "dff6409373b1c82c3aecfe03400bb3142f5c6215d2df97bad2fa9a3cd50f7585"
+        },
+        {
+          "page": 9,
+          "image_sha256": "36980fd95e1b774090dde158cd892740bd50932e43c90851b6fae115c5a3b02a"
+        },
+        {
+          "page": 10,
+          "image_sha256": "e318f59b22b92d203dfed4030a4e059411011e23b97998a949167ff323d08980"
+        },
+        {
+          "page": 11,
+          "image_sha256": "5e0a15dad9de9a86df05d8f05f765bc5d88397711a7f7cecc10c290938371186"
+        },
+        {
+          "page": 12,
+          "image_sha256": "64d94a331b22e3fd0aa3e9041c4e3c52c05aa20fc3e51a1a713c2ccf96e017fe"
+        },
+        {
+          "page": 13,
+          "image_sha256": "cfd04568f51f6fba9369958ddcd32604593b37684933a363107487746881a4c7"
+        },
+        {
+          "page": 14,
+          "image_sha256": "3b8cc9078d31bac490109c59ac9a4bcecf0327b84489ff4778603230cb724ca4"
+        },
+        {
+          "page": 15,
+          "image_sha256": "5c0a8b1cec5ef144f52a60013cc6256421925e04ff7e3b4e2a993620f62a35e5"
+        },
+        {
+          "page": 16,
+          "image_sha256": "7b57103932007aac406dea29065d0a522e996a7663695a83e1c7f170a810c11d"
+        },
+        {
+          "page": 17,
+          "image_sha256": "c05cb93c59ac0f1f42065f1d170ed931b10bd0f546e9705de0d3ba5a145290fc"
+        },
+        {
+          "page": 18,
+          "image_sha256": "ac225b22c48118e4845673f93a10867e8c35e25a5cebf378340a96857b4a4617"
+        },
+        {
+          "page": 19,
+          "image_sha256": "64440c14f7729a64e0480b670ad5c965a832f4416465d54eaa5762a25fec23cd"
+        },
+        {
+          "page": 20,
+          "image_sha256": "5b9ae1990492dff8ba21a7d90bdd295766a97da0d34feb268221eec4740f6ab0"
+        },
+        {
+          "page": 21,
+          "image_sha256": "e31dc208d0f8ea3137a63d9cdf6ac4789b0b648ca9166ee39e4199377a376d7f"
+        },
+        {
+          "page": 22,
+          "image_sha256": "1205881bc29b7c89de0dec9daaeedf31473dc33d739b7c31d1351bc6111ca046"
+        },
+        {
+          "page": 23,
+          "image_sha256": "1da83e2d7b72f0bc695606c30762a4b53ea8825c4179ed0958c3ec900904df1d"
+        },
+        {
+          "page": 24,
+          "image_sha256": "b25c4102288b2c815f064f3c559ff17de0b68fecb06fb9c7f1685e5f8ef01c41"
+        },
+        {
+          "page": 25,
+          "image_sha256": "8965d2925811701f058668f7bb2e5ae213ac93442a44257ba585366ef1d23a46"
+        },
+        {
+          "page": 26,
+          "image_sha256": "be916f84f96813ad30b0e7db51d4152f5dcb2cdab2161685730f105a3ec67bec"
+        },
+        {
+          "page": 27,
+          "image_sha256": "608446bf28cf22579588cd404c893a072af51879d393d5f3d50add270c0bb765"
+        },
+        {
+          "page": 28,
+          "image_sha256": "eee4af596cbe1b632680563b1e52b1237b578ee2218b43e814827ab8e849dd32"
+        },
+        {
+          "page": 29,
+          "image_sha256": "4268c441c7af43604bc3675b64558fa3a9d660e2f7f86ab9658c5b054dc92d70"
+        },
+        {
+          "page": 30,
+          "image_sha256": "d233f982d66148dc9c736979f3ad1820124421bdaf9bd86ba65dfb46235c32b5"
+        },
+        {
+          "page": 31,
+          "image_sha256": "7a6ed107d7fc878a2ec8cdb87a08beeb9666186ba91b492e6941ba03df9c08c1"
+        },
+        {
+          "page": 32,
+          "image_sha256": "fa20a13047c0af1d7f86c8edcfb273e4dcf113f73db2ddaa298050e86c35a48a"
+        },
+        {
+          "page": 33,
+          "image_sha256": "99db7dd62947510454cc0785f7bbec85480c75e4432a7b1bcae92262b09f493e"
+        },
+        {
+          "page": 34,
+          "image_sha256": "c4306958b0552a076ba2a525392e033ef1e2b412505f190c9fb119e6914cda95"
+        },
+        {
+          "page": 35,
+          "image_sha256": "29a2525612909b177979ba6b6c5f81132ced6fea1f802626f502b3fb9834cd53"
+        },
+        {
+          "page": 36,
+          "image_sha256": "ecb54b09e5db910ebfa991924f0c842dec5fa1ac8b0437c071c0ceb9a215707a"
+        },
+        {
+          "page": 37,
+          "image_sha256": "cac2b7b0f8ad436e2d372f757169c9f397216532f87d2fa11e6221fbcd0e17bf"
+        },
+        {
+          "page": 38,
+          "image_sha256": "8aab476345575625f6809838d6c6fdcfd660d044ed0e15e784d445c081ea8c04"
+        },
+        {
+          "page": 39,
+          "image_sha256": "9709c6cabf5698e0816e83438dc40c0b93e92f0f666f9d800e6e649a752dd282"
+        },
+        {
+          "page": 40,
+          "image_sha256": "040b9febd6f70c16b81666ed0d8887994ae4038b8d4ab406d76dff8c10326bd3"
+        },
+        {
+          "page": 41,
+          "image_sha256": "b64d5148a0f339f23042b224f552336e4d364b1f9f37cb97a187004b20501bc4"
+        },
+        {
+          "page": 42,
+          "image_sha256": "db31650cfb639037d1fe65c1328ba948b39c1a3034b76ee85fe2d7be64e68f1f"
+        },
+        {
+          "page": 43,
+          "image_sha256": "b01c005d2365344a215b7c71f4778d8e1e666725805c32f716edf6c7f1011c86"
+        },
+        {
+          "page": 44,
+          "image_sha256": "b66164681d7f4340a0ba5476016544e96bc644b536248847fce0845a6df005b2"
+        },
+        {
+          "page": 45,
+          "image_sha256": "3ed7d67b7bc6ca43dcb569883076224c4d2c81de0e3b560fddd5941997df38f3"
+        },
+        {
+          "page": 46,
+          "image_sha256": "ccb957a3a0b28e897c90e560383ed9d091d9785c4a85a3c8b67f1a5629edf8ad"
+        },
+        {
+          "page": 47,
+          "image_sha256": "f334a396ad44dd41adab3d65a1663f2a4a95579c56565ef2879d0177d2fec962"
+        },
+        {
+          "page": 48,
+          "image_sha256": "15c4101078960c4fb92720c5b1dfd320bce17fdcba781693bd1297c34aea54e1"
+        },
+        {
+          "page": 49,
+          "image_sha256": "7195f10dee52e438fad6931d1c2f329a3b8f8cdb66e0bdf10625de679350f8d4"
+        },
+        {
+          "page": 50,
+          "image_sha256": "a8c6ce23717682b47612fbde297cccf7f5264eaf76b93285f287ed10903f7e60"
+        },
+        {
+          "page": 51,
+          "image_sha256": "2b05572915585f57e131c88487d84130371ea0c0e851b60659bd045cc29b34a2"
+        },
+        {
+          "page": 52,
+          "image_sha256": "ce1322db01e13b8939f91fb577c192b8379ef6073007796284f97f5faff6d8d9"
+        },
+        {
+          "page": 53,
+          "image_sha256": "c8c87018d854ce419e286733f9cf44b07dce53a1c05beb38b72964657cb18992"
+        }
+      ],
+      "pending_final_changed_pages": [],
+      "final_individually_rechecked_pages": [
+        6,
+        7,
+        8,
+        9,
+        13,
+        14,
+        16,
+        20,
+        23,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        46,
+        47,
+        50,
+        51,
+        52,
+        53,
+        54
+      ],
+      "final_overview_viewed": true
+    },
+    "package-audit.json": {
+      "parsed_xml_parts": 141,
+      "integer_bullets": 112,
+      "hyperlinks": 56,
+      "new_schema_errors": [],
+      "baseline_schema_errors": 11,
+      "package_integrity": "passed",
+      "internal_relationship_targets": "passed",
+      "unique_shape_ids": "passed",
+      "schema_note": "標準XSDを変更せず確認。マスター由来の既存エラーと、整数buSzPctの百分率字句形式との差を分離。整数箇条書きサイズは25000–400000で別途検査。",
+      "pages": 54,
+      "native_tables": 12,
+      "native_charts": 0
+    },
+    "layout-audit.json": {
+      "paragraphs_checked": 333,
+      "table_cells_checked": 122,
+      "issues": []
+    },
+    "manifest.json": [
+      {
+        "page": 1,
+        "title": "Data imputation",
+        "section": "",
+        "kind": "cover"
+      },
+      {
+        "page": 2,
+        "title": "補完研究IPMの公式実装",
+        "section": "Data imputation",
+        "kind": "image",
+        "sources": [
+          "ipm"
+        ]
+      },
+      {
+        "page": 3,
+        "title": "",
+        "section": "目次",
+        "kind": "toc"
+      },
+      {
+        "page": 4,
+        "title": "表の空欄を、一つの値で埋める",
+        "section": "1. 表の空欄を、一つの値で埋める",
+        "kind": "divider"
+      },
+      {
+        "page": 5,
+        "title": "一つの行から、隠した属性を復元する",
+        "section": "1. 表の空欄を、一つの値で埋める",
+        "kind": "content",
+        "sources": [
+          "code"
+        ],
+        "body_text": [
+          "データ補完は、表の空欄を他の属性から埋める処理。HELMのData imputationでは、値が分かっているセルを隠し、元の値を生成できるか測る。",
+          "対象は商品表Buyと飲食店表Restaurant。メーカーと都市をそれぞれ補う。正解候補の一覧は付けず、残りの属性を文章に直して入力する。"
+        ]
+      },
+      {
+        "page": 6,
+        "title": "対象は、商品と飲食店の二つの表",
+        "section": "1. 表の空欄を、一つの値で埋める",
+        "kind": "content",
+        "sources": [
+          "code"
+        ]
+      },
+      {
+        "page": 7,
+        "title": "実例1：リモコンのメーカー",
+        "section": "1. 表の空欄を、一つの値で埋める",
+        "kind": "example",
+        "sources": [
+          "buy"
+        ],
+        "example_index": 1,
+        "example_id": "Buy:row433",
+        "helm_id": "id587",
+        "language": "en+ja",
+        "quoted_text": "name: Sony Universal Remote Control - RM-EZ4. description: TV, Cable Box - Universal Remote. price: $12.72. manufacturer?",
+        "translated_text": "商品名：Sonyの汎用リモコン − RM-EZ4。説明：テレビ、ケーブルテレビ受信機用 − 汎用リモコン。価格：$12.72。メーカーは？",
+        "answer_text": "Sony"
+      },
+      {
+        "page": 8,
+        "title": "実例2：住所と電話番号から都市を補う",
+        "section": "1. 表の空欄を、一つの値で埋める",
+        "kind": "example",
+        "sources": [
+          "rest"
+        ],
+        "example_index": 2,
+        "example_id": "Restaurant:row844",
+        "helm_id": "id781",
+        "language": "en+ja",
+        "quoted_text": "name: kelly's on trinity. addr: 333 bush st.. phone: 415-362-4454. type: californian. city?",
+        "translated_text": "店名：kelly’s on trinity。住所：333 bush st.。電話：415-362-4454。料理の種類：カリフォルニア料理。都市は？",
+        "answer_text": "san francisco"
+      },
+      {
+        "page": 9,
+        "title": "実例3：正解には製品分野まで含まれる",
+        "section": "1. 表の空欄を、一つの値で埋める",
+        "kind": "example",
+        "sources": [
+          "buy"
+        ],
+        "example_index": 3,
+        "example_id": "Buy:row506",
+        "helm_id": "id586",
+        "language": "en+ja",
+        "quoted_text": "name: Canon VIXIA HF100 High Definition Digital Camcorder - 2708B001. description: Canon VIXIA HF100 High Definition Camcorder. price: $529.00. manufacturer?",
+        "translated_text": "商品名：Canon VIXIA HF100 高精細デジタルビデオカメラ − 2708B001。説明：Canon VIXIA HF100 高精細ビデオカメラ。価格：$529.00。メーカーは？",
+        "answer_text": "Canon Camcorders"
+      },
+      {
+        "page": 10,
+        "title": "同じ入力に対する、公開モデルの実出力",
+        "section": "1. 表の空欄を、一つの値で埋める",
+        "kind": "content",
+        "sources": [
+          "site"
+        ]
+      },
+      {
+        "page": 11,
+        "title": "二つの表と、欠損を作る手順",
+        "section": "2. 二つの表と、欠損を作る手順",
+        "kind": "divider"
+      },
+      {
+        "page": 12,
+        "title": "照合用の公開表を、補完課題へ転用した",
+        "section": "2. 二つの表と、欠損を作る手順",
+        "kind": "content",
+        "sources": [
+          "buy",
+          "rest"
+        ],
+        "body_text": [
+          "BuyはAbt-Buyの片側で、商品照合のために公開された表。HELMはBuy.csvだけを読み、Abt.csvや商品間の対応表は入力に使わない。",
+          "Restaurantは飲食店の照合用データ。HELMは電話番号を含むfz.arffを読み、同じ店を示すclass列を取り除く。都市以外の4属性を入力に残す。"
+        ]
+      },
+      {
+        "page": 13,
+        "title": "元の配布物と、HELMで使う範囲",
+        "section": "2. 二つの表と、欠損を作る手順",
+        "kind": "content",
+        "sources": [
+          "buy",
+          "rest"
+        ]
+      },
+      {
+        "page": 14,
+        "title": "Buyは、説明文がある651行を残す",
+        "section": "2. 二つの表と、欠損を作る手順",
+        "kind": "content",
+        "sources": [
+          "code"
+        ]
+      },
+      {
+        "page": 15,
+        "title": "Restaurantは、引用符と前後の空白を除く",
+        "section": "2. 二つの表と、欠損を作る手順",
+        "kind": "content",
+        "sources": [
+          "code"
+        ],
+        "body_text": [
+          "fz.arffから6列を読み、識別用のclass列を除く。各値に残った二重引用符と前後の空白を削除し、欠損行を除く。今回の配布では864行が全て残る。",
+          "名前・住所・都市の表記は元データを保つ。例えば都市欄にはnew yorkとnew york city、los angelesとlaが別の文字列として含まれる。"
+        ]
+      },
+      {
+        "page": 16,
+        "title": "行を乱択し、学習・開発・テストへ分ける",
+        "section": "2. 二つの表と、欠損を作る手順",
+        "kind": "content",
+        "sources": [
+          "code"
+        ]
+      },
+      {
+        "page": 17,
+        "title": "セル値は、改めて人手で付けた正解ではない",
+        "section": "2. 二つの表と、欠損を作る手順",
+        "kind": "content",
+        "sources": [
+          "code"
+        ],
+        "body_text": [
+          "元の表にあるmanufacturerまたはcityの値を保存し、その列を入力から外す。正解は、取り除いたセルの文字列。自然に発生した空欄へ新しい正解を注釈する手順ではない。",
+          "分割の単位は行。Restaurantのclassは分割条件に使われず、テスト86行中17行は同じclassの別行が学習表にもある。実際のプロンプトへは学習表から5例を選ぶ。"
+        ]
+      },
+      {
+        "page": 18,
+        "title": "HELMの提示条件と採点",
+        "section": "3. HELMの提示条件と採点",
+        "kind": "divider"
+      },
+      {
+        "page": 19,
+        "title": "5例を示し、値の文字列を生成させる",
+        "section": "3. HELMの提示条件と採点",
+        "kind": "content",
+        "sources": [
+          "site"
+        ],
+        "body_text": [
+          "標準条件はgeneration。指示は“What is the missing value?”。正解付きの学習例を5件示し、対象行の末尾をmanufacturer?またはcity?で終える。",
+          "モデルは“Answer:”に続く値を生成する。公開記録では、選んだ3モデルとも全テストで5例が入り、入力の切り詰めはなかった。"
+        ]
+      },
+      {
+        "page": 20,
+        "title": "実際の提示では、入力の後に答えが続く",
+        "section": "3. HELMの提示条件と採点",
+        "kind": "quote",
+        "sources": [
+          "site"
+        ],
+        "quoted_text": "name: Sony Universal Remote Control - RM-EZ4. description: TV, Cable Box - Universal Remote. price: $12.72. manufacturer?\nAnswer:"
+      },
+      {
+        "page": 21,
+        "title": "主指標は、表記を正規化した一致率",
+        "section": "3. HELMの提示条件と採点",
+        "kind": "content",
+        "sources": [
+          "metric"
+        ],
+        "body_text": [
+          "quasi_exact_match（準完全一致）は、正解と出力を小文字化し、ASCII句読記号、英語の冠詞a・an・the、余分な空白を除いて比較する。テスト行ごとの0／1を平均する。",
+          "別名や地域の包含関係を解釈する採点ではない。LACIEとLaCieは一致するが、Canon CamcordersとCanon、laとlos angelesは一致しない。"
+        ]
+      },
+      {
+        "page": 22,
+        "title": "テストの準完全一致率を表ごとに比較",
+        "section": "3. HELMの提示条件と採点",
+        "kind": "content",
+        "sources": [
+          "site"
+        ]
+      },
+      {
+        "page": 23,
+        "title": "一致指標を変えると、得点も変わる",
+        "section": "3. HELMの提示条件と採点",
+        "kind": "content",
+        "sources": [
+          "site",
+          "metric"
+        ]
+      },
+      {
+        "page": 24,
+        "title": "何が得点を左右するか",
+        "section": "4. 何が得点を左右するか",
+        "kind": "divider"
+      },
+      {
+        "page": 25,
+        "title": "商品名はメーカーの強い手掛かりになる",
+        "section": "4. 何が得点を左右するか",
+        "kind": "content",
+        "sources": [
+          "code",
+          "site"
+        ],
+        "body_text": [
+          "Buyの入力には、SonyやCanonなどのメーカー名が商品名や説明に現れる。メーカーを単に抜き出せる行もあり、価格がnanでも推定できる。",
+          "一方、正解は元セルの表記。Canon CamcordersやLG Electronicsのように、よく知られた短いブランド名だけでは一致しない値も含む。"
+        ]
+      },
+      {
+        "page": 26,
+        "title": "都市欄には、略記や地区名が混在する",
+        "section": "4. 何が得点を左右するか",
+        "kind": "content",
+        "sources": [
+          "rest",
+          "metric"
+        ],
+        "body_text": [
+          "Restaurantには住所と電話番号があり、所在地を推定する手掛かりになる。ただし正解のcity欄には、los felizのような地区名やlaのような略記も入る。",
+          "同じ地域を指すつもりの出力でも、元のセルと異なる文字列なら不一致になる。追加例では、new york city、smyrnaなどの実際の正解と予測を示す。"
+        ]
+      },
+      {
+        "page": 27,
+        "title": "IPMとHELMでは、回答の作り方が異なる",
+        "section": "4. 何が得点を左右するか",
+        "kind": "content",
+        "sources": [
+          "ipm",
+          "helm"
+        ],
+        "body_text": [
+          "MeiらのIPMは、事前学習言語モデルを補完に使う研究。IPM-Multiは属性値を分類し、IPM-Binaryは候補値ごとの適否を判定する。公式実装はモデルを追加学習する。",
+          "HELMはBuyとRestaurantを取り込み、5例を提示する共通の生成形式で比較する。IPMの分類候補の選択と、HELMの自由な文字列生成では、回答の作り方が異なる。"
+        ]
+      },
+      {
+        "page": 28,
+        "title": "入手元と利用条件を確認する",
+        "section": "4. 何が得点を左右するか",
+        "kind": "content",
+        "sources": [
+          "buy",
+          "rest"
+        ],
+        "body_text": [
+          "BuyはLeipzig大学の配布ページから取得でき、同ページはCC BY 4.0を示す。元のAbt-Buyは照合用で、HELMではBuy側だけを使う。",
+          "RestaurantはUT Austinの公開アーカイブから取得できる。添付READMEには独立した再配布ライセンスの表示がない。この資料では出典を付けて選定した実例を引用する。"
+        ]
+      },
+      {
+        "page": 29,
+        "title": "まとめ：空欄補完を、元セルとの一致で測る",
+        "section": "4. 何が得点を左右するか",
+        "kind": "content",
+        "sources": [
+          "site"
+        ],
+        "body_text": [
+          "BuyのメーカーとRestaurantの都市を、同じ行の残りの属性から生成する。元表のセルを隠して正解を作り、行単位の固定分割で比較する。",
+          "入力に残る商品名や電話番号が手掛かりになる一方、メーカー名の粒度や都市の略記が一致率を左右する。公開値を読む際は、対象の表と一致指標を合わせる。"
+        ]
+      },
+      {
+        "page": 30,
+        "title": "Appendix",
+        "section": "Appendix",
+        "kind": "divider"
+      },
+      {
+        "page": 31,
+        "title": "",
+        "section": "Appendix: 目次",
+        "kind": "toc"
+      },
+      {
+        "page": 32,
+        "title": "実例4：価格が欠けたノートPC用スタンド",
+        "section": "Appendix: 1. 追加の実例",
+        "kind": "example",
+        "sources": [
+          "buy"
+        ],
+        "example_index": 4,
+        "example_id": "Buy:row216",
+        "helm_id": "id588",
+        "language": "en+ja",
+        "quoted_text": "name: Griffin Elevator Desktop Stand for Portable Laptops - 1093-CURV2. description: Aluminum. price: nan. manufacturer?",
+        "translated_text": "商品名：Griffin Elevator ノートPC用デスクトップスタンド − 1093-CURV2。説明：アルミニウム。価格：nan。メーカーは？",
+        "answer_text": "Griffin"
+      },
+      {
+        "page": 33,
+        "title": "実例5：ブランド名だけでは一致しない",
+        "section": "Appendix: 1. 追加の実例",
+        "kind": "example",
+        "sources": [
+          "buy"
+        ],
+        "example_index": 5,
+        "example_id": "Buy:row899",
+        "helm_id": "id589",
+        "language": "en+ja",
+        "quoted_text": "name: LG LG70 Series 52LG70 52' LCD TV. description: LG 52LG70 - 52' Widescreen 1080p LCD HDTV - 120Hz - 15,000:1 Dynamic Contrast Ratio - 4ms Response Time. price: nan. manufacturer?",
+        "translated_text": "商品名：LG LG70シリーズ 52LG70 52インチ液晶テレビ。説明：LG 52LG70 − 52インチ・ワイド画面・1080p液晶ハイビジョンテレビ − 120Hz − ダイナミックコントラスト比15,000:1 − 応答時間4ms。価格：nan。メーカーは？",
+        "answer_text": "LG Electronics"
+      },
+      {
+        "page": 34,
+        "title": "実例6：大文字と小文字の表記差",
+        "section": "Appendix: 1. 追加の実例",
+        "kind": "example",
+        "sources": [
+          "buy"
+        ],
+        "example_index": 6,
+        "example_id": "Buy:row388",
+        "helm_id": "id595",
+        "language": "en+ja",
+        "quoted_text": "name: LaCie Big Disk Extreme+ Hard Drive - 301199U. description: LaCie Big Disk Extreme 1TB Hard Drive - Triple Interface (USB 2.0 & FireWire 400/800) External Hard Drive. price: nan. manufacturer?",
+        "translated_text": "商品名：LaCie Big Disk Extreme+ ハードドライブ − 301199U。説明：LaCie Big Disk Extreme 1TBハードドライブ − 3種類の接続方式（USB 2.0、FireWire 400/800）を備える外付けハードドライブ。価格：nan。メーカーは？",
+        "answer_text": "LACIE"
+      },
+      {
+        "page": 35,
+        "title": "実例7：対応機器と、ケースのメーカー",
+        "section": "Appendix: 1. 追加の実例",
+        "kind": "example",
+        "sources": [
+          "buy"
+        ],
+        "example_index": 7,
+        "example_id": "Buy:row823",
+        "helm_id": "id596",
+        "language": "en+ja",
+        "quoted_text": "name: Speck Products SeeThru Case for Apple 13' MacBook - MB13-ORG-SEE-V2. description: Plastic - Orange. price: nan. manufacturer?",
+        "translated_text": "商品名：Apple 13インチMacBook用 Speck Products SeeThruケース − MB13-ORG-SEE-V2。説明：プラスチック − オレンジ色。価格：nan。メーカーは？",
+        "answer_text": "Speck Products"
+      },
+      {
+        "page": 36,
+        "title": "実例8：都市欄には地区名も入る",
+        "section": "Appendix: 1. 追加の実例",
+        "kind": "example",
+        "sources": [
+          "rest"
+        ],
+        "example_index": 8,
+        "example_id": "Restaurant:row21",
+        "helm_id": "id780",
+        "language": "en+ja",
+        "quoted_text": "name: katsu. addr: 1972 hillhurst ave.. phone: 213-665-1891. type: japanese. city?",
+        "translated_text": "店名：katsu。住所：1972 hillhurst ave.。電話：213-665-1891。料理の種類：日本料理。都市は？",
+        "answer_text": "los feliz"
+      },
+      {
+        "page": 37,
+        "title": "実例9：短縮表記laを正解として保持する",
+        "section": "Appendix: 1. 追加の実例",
+        "kind": "example",
+        "sources": [
+          "rest"
+        ],
+        "example_index": 9,
+        "example_id": "Restaurant:row658",
+        "helm_id": "id782",
+        "language": "en+ja",
+        "quoted_text": "name: cassell's. addr: 3266 w. sixth st.. phone: 213-480-8668. type: hamburgers. city?",
+        "translated_text": "店名：cassell’s。住所：3266 w. sixth st.。電話：213-480-8668。料理の種類：ハンバーガー。都市は？",
+        "answer_text": "la"
+      },
+      {
+        "page": 38,
+        "title": "実例10：new yorkとnew york cityの違い",
+        "section": "Appendix: 1. 追加の実例",
+        "kind": "example",
+        "sources": [
+          "rest"
+        ],
+        "example_index": 10,
+        "example_id": "Restaurant:row755",
+        "helm_id": "id793",
+        "language": "en+ja",
+        "quoted_text": "name: sylvia's. addr: 328 lenox ave.. phone: 212-996-0660. type: southern/soul. city?",
+        "translated_text": "店名：sylvia’s。住所：328 lenox ave.。電話：212-996-0660。料理の種類：米国南部料理／ソウルフード。都市は？",
+        "answer_text": "new york city"
+      },
+      {
+        "page": 39,
+        "title": "実例11：大都市周辺の別の都市",
+        "section": "Appendix: 1. 追加の実例",
+        "kind": "example",
+        "sources": [
+          "rest"
+        ],
+        "example_index": 11,
+        "example_id": "Restaurant:row807",
+        "helm_id": "id796",
+        "language": "en+ja",
+        "quoted_text": "name: house of chan. addr: 2469 cobb pkwy.. phone: 770-955-9444. type: chinese. city?",
+        "translated_text": "店名：house of chan。住所：2469 cobb pkwy.。電話：770-955-9444。料理の種類：中国料理。都市は？",
+        "answer_text": "smyrna"
+      },
+      {
+        "page": 40,
+        "title": "実例12：店名にも所在地が現れる",
+        "section": "Appendix: 1. 追加の実例",
+        "kind": "example",
+        "sources": [
+          "rest"
+        ],
+        "example_index": 12,
+        "example_id": "Restaurant:row778",
+        "helm_id": "id789",
+        "language": "en+ja",
+        "quoted_text": "name: morton's of chicago (las vegas). addr: 3200 las vegas blvd. s.. phone: 702-893-0703. type: steakhouses. city?",
+        "translated_text": "店名：morton’s of chicago（las vegas）。住所：3200 las vegas blvd. s.。電話：702-893-0703。料理の種類：ステーキハウス。都市は？",
+        "answer_text": "las vegas"
+      },
+      {
+        "page": 41,
+        "title": "実例13：サンタモニカのイタリア料理店",
+        "section": "Appendix: 1. 追加の実例",
+        "kind": "example",
+        "sources": [
+          "rest"
+        ],
+        "example_index": 13,
+        "example_id": "Restaurant:row271",
+        "helm_id": "id804",
+        "language": "en+ja",
+        "quoted_text": "name: remi. addr: 3rd st. promenade. phone: 310/393-6545. type: italian. city?",
+        "translated_text": "店名：remi。住所：3rd st. promenade。電話：310/393-6545。料理の種類：イタリア料理。都市は？",
+        "answer_text": "santa monica"
+      },
+      {
+        "page": 42,
+        "title": "追加例で見る、正解と実際の生成文字列",
+        "section": "Appendix: 1. 追加の実例",
+        "kind": "content",
+        "sources": [
+          "site"
+        ]
+      },
+      {
+        "page": 43,
+        "title": "都市名・略記・地区名の一致を確かめる",
+        "section": "Appendix: 1. 追加の実例",
+        "kind": "content",
+        "sources": [
+          "site"
+        ]
+      },
+      {
+        "page": 44,
+        "title": "配布・実装・集計の補足",
+        "section": "Appendix: 2. 配布・実装・集計の補足",
+        "kind": "divider"
+      },
+      {
+        "page": 45,
+        "title": "公開実行の生成設定と、実送信値",
+        "section": "Appendix: 2. 配布・実装・集計の補足",
+        "kind": "content",
+        "sources": [
+          "site"
+        ]
+      },
+      {
+        "page": 46,
+        "title": "HELM本文の件数と、実装・公開入力の差",
+        "section": "Appendix: 2. 配布・実装・集計の補足",
+        "kind": "content",
+        "sources": [
+          "helm",
+          "code"
+        ]
+      },
+      {
+        "page": 47,
+        "title": "IPMの8データのうち、HELMは2表を使う",
+        "section": "Appendix: 2. 配布・実装・集計の補足",
+        "kind": "content",
+        "sources": [
+          "ipm"
+        ]
+      },
+      {
+        "page": 48,
+        "title": "13実例を、配布行と公開記録へ結び付けた",
+        "section": "Appendix: 2. 配布・実装・集計の補足",
+        "kind": "content",
+        "sources": [
+          "site"
+        ],
+        "body_text": [
+          "各例に元ファイル名、行位置、HELMのID、入力全文、元セルの正解、日本語訳、公開出力を保存した。元の行とファイルのSHA-256も記録した。",
+          "3モデルでは、Buyの開発117行・テスト65行と、Restaurantの開発156行・テスト86行を全件照合した。テストの全1,057出力を使い、4種類の一致指標を再計算した。"
+        ]
+      },
+      {
+        "page": 49,
+        "title": "参考文献",
+        "section": "Appendix: 3. 参考文献",
+        "kind": "divider"
+      },
+      {
+        "page": 50,
+        "title": "参考文献",
+        "section": "Appendix: 3. 参考文献",
+        "kind": "references"
+      },
+      {
+        "page": 51,
+        "title": "参考文献",
+        "section": "Appendix: 3. 参考文献",
+        "kind": "references"
+      },
+      {
+        "page": 52,
+        "title": "参考文献",
+        "section": "Appendix: 3. 参考文献",
+        "kind": "references"
+      },
+      {
+        "page": 53,
+        "title": "参考文献",
+        "section": "Appendix: 3. 参考文献",
+        "kind": "references"
+      },
+      {
+        "page": 54,
+        "title": "参考文献",
+        "section": "Appendix: 3. 参考文献",
+        "kind": "references"
+      }
+    ],
+    "links-audit.json": {
+      "native_url_only_runs": 56,
+      "pdf_link_rectangles": 56,
+      "pdf_link_text_exactly_matches_url": false,
+      "pdf_link_character_centers_match_url": true,
+      "glyph_box_overhangs": [
+        {
+          "page": 12,
+          "extracted_text": "https://dbs.uni-leipzig.de/research/projects/benchmark-datasets-for-entity-resolution\n[2] University of Texas at Austin. RIDDLE / Restaurant data (fz.arff). 2026-10-18 取得。  ",
+          "uri": "https://dbs.uni-leipzig.de/research/projects/benchmark-datasets-for-entity-resolution",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 13,
+          "extracted_text": "https://dbs.uni-leipzig.de/research/projects/benchmark-datasets-for-entity-resolution\n[2] University of Texas at Austin. RIDDLE / Restaurant data (fz.arff). 2026-10-18 取得。  ",
+          "uri": "https://dbs.uni-leipzig.de/research/projects/benchmark-datasets-for-entity-resolution",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 23,
+          "extracted_text": "https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/entity_data_imputation\n ・一致指標。",
+          "uri": "https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/entity_data_imputation",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 25,
+          "extracted_text": "https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/entity_data_imputation_scenario.py\n の固定版。 参照。",
+          "uri": "https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/entity_data_imputation_scenario.py",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 27,
+          "extracted_text": "https://github.com/EliasMei/IPM\n[2] Liang et al. (2023). Holistic Eva",
+          "uri": "https://github.com/EliasMei/IPM",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 28,
+          "extracted_text": "https://dbs.uni-leipzig.de/research/projects/benchmark-datasets-for-entity-resolution\n[2] University of Texas at Austin. RIDDLE / Restaurant data (fz.arff). 2026-10-18 取得。  ",
+          "uri": "https://dbs.uni-leipzig.de/research/projects/benchmark-datasets-for-entity-resolution",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        }
+      ],
+      "shortened_url_labels": [],
+      "issues": []
+    },
+    "input-and-score-audit.json": {
+      "official_scenario_replay": [
+        {
+          "dataset": "Buy",
+          "official_method_replay_rows": 651,
+          "splits": [
+            469,
+            117,
+            65
+          ],
+          "all_rows_splits_serialization_labels_equal": true
+        },
+        {
+          "dataset": "Restaurant",
+          "official_method_replay_rows": 864,
+          "splits": [
+            622,
+            156,
+            86
+          ],
+          "all_rows_splits_serialization_labels_equal": true
+        }
+      ],
+      "public_runs": [
+        {
+          "dataset": "Buy",
+          "model": "opt-175b",
+          "all_requests": 546,
+          "unique_valid_test_inputs": 182,
+          "all_inputs_labels_ids_exact": true,
+          "official_functions_recomputed": {
+            "exact_match": {
+              "recomputed": 0.8205128205128206,
+              "published": 0.8205128205128206
+            },
+            "quasi_exact_match": {
+              "recomputed": 0.8512820512820514,
+              "published": 0.8512820512820514
+            },
+            "prefix_exact_match": {
+              "recomputed": 0.8205128205128206,
+              "published": 0.8205128205128206
+            },
+            "quasi_prefix_exact_match": {
+              "recomputed": 0.8512820512820514,
+              "published": 0.8512820512820514
+            }
+          },
+          "test_outputs": 195,
+          "source_sha256": "50ee10bb6ca850e0c5f92e5c58e0df28e23b39a0d911e582744769e9f72d80b8"
+        },
+        {
+          "dataset": "Buy",
+          "model": "text-davinci-003",
+          "all_requests": 546,
+          "unique_valid_test_inputs": 182,
+          "all_inputs_labels_ids_exact": true,
+          "official_functions_recomputed": {
+            "exact_match": {
+              "recomputed": 0.8256410256410257,
+              "published": 0.8256410256410257
+            },
+            "quasi_exact_match": {
+              "recomputed": 0.8564102564102565,
+              "published": 0.8564102564102565
+            },
+            "prefix_exact_match": {
+              "recomputed": 0.841025641025641,
+              "published": 0.841025641025641
+            },
+            "quasi_prefix_exact_match": {
+              "recomputed": 0.8717948717948718,
+              "published": 0.8717948717948718
+            }
+          },
+          "test_outputs": 195,
+          "source_sha256": "17c914830f4add3eae5a1f7b78c699e97a2132303adc2e70059fcd05b55657a1"
+        },
+        {
+          "dataset": "Buy",
+          "model": "llama-2-70b",
+          "all_requests": 182,
+          "unique_valid_test_inputs": 182,
+          "all_inputs_labels_ids_exact": true,
+          "official_functions_recomputed": {
+            "exact_match": {
+              "recomputed": 0.8307692307692308,
+              "published": 0.8307692307692308
+            },
+            "quasi_exact_match": {
+              "recomputed": 0.8615384615384616,
+              "published": 0.8615384615384616
+            },
+            "prefix_exact_match": {
+              "recomputed": 0.8307692307692308,
+              "published": 0.8307692307692308
+            },
+            "quasi_prefix_exact_match": {
+              "recomputed": 0.8615384615384616,
+              "published": 0.8615384615384616
+            }
+          },
+          "test_outputs": 65,
+          "source_sha256": "b28c8b2c09937c486d8a868d92163641905b6fd1a5dc6209acae0139ffca242d"
+        },
+        {
+          "dataset": "Restaurant",
+          "model": "opt-175b",
+          "all_requests": 726,
+          "unique_valid_test_inputs": 242,
+          "all_inputs_labels_ids_exact": true,
+          "official_functions_recomputed": {
+            "exact_match": {
+              "recomputed": 0.5930232558139535,
+              "published": 0.5930232558139535
+            },
+            "quasi_exact_match": {
+              "recomputed": 0.5930232558139535,
+              "published": 0.5930232558139535
+            },
+            "prefix_exact_match": {
+              "recomputed": 0.8875968992248062,
+              "published": 0.8875968992248063
+            },
+            "quasi_prefix_exact_match": {
+              "recomputed": 0.8875968992248062,
+              "published": 0.8875968992248063
+            }
+          },
+          "test_outputs": 258,
+          "source_sha256": "0ab54c57a79d68c2cf05f1df522049348cc5a918f2fcc0ac151ae05d5948e135"
+        },
+        {
+          "dataset": "Restaurant",
+          "model": "text-davinci-003",
+          "all_requests": 726,
+          "unique_valid_test_inputs": 242,
+          "all_inputs_labels_ids_exact": true,
+          "official_functions_recomputed": {
+            "exact_match": {
+              "recomputed": 0.810077519379845,
+              "published": 0.8100775193798451
+            },
+            "quasi_exact_match": {
+              "recomputed": 0.8217054263565892,
+              "published": 0.8217054263565892
+            },
+            "prefix_exact_match": {
+              "recomputed": 0.810077519379845,
+              "published": 0.8100775193798451
+            },
+            "quasi_prefix_exact_match": {
+              "recomputed": 0.8217054263565892,
+              "published": 0.8217054263565892
+            }
+          },
+          "test_outputs": 258,
+          "source_sha256": "5436fe64ce9f9b4bf58b697d66f4f821a9b854bf56b5137aece28d9f55d5079c"
+        },
+        {
+          "dataset": "Restaurant",
+          "model": "llama-2-70b",
+          "all_requests": 242,
+          "unique_valid_test_inputs": 242,
+          "all_inputs_labels_ids_exact": true,
+          "official_functions_recomputed": {
+            "exact_match": {
+              "recomputed": 0.813953488372093,
+              "published": 0.813953488372093
+            },
+            "quasi_exact_match": {
+              "recomputed": 0.813953488372093,
+              "published": 0.813953488372093
+            },
+            "prefix_exact_match": {
+              "recomputed": 0.813953488372093,
+              "published": 0.813953488372093
+            },
+            "quasi_prefix_exact_match": {
+              "recomputed": 0.813953488372093,
+              "published": 0.813953488372093
+            }
+          },
+          "test_outputs": 86,
+          "source_sha256": "7f890049b2cfe24091f4bfefec978633ce28990f808eef5b88ae8b4406c498b2"
+        }
+      ],
+      "test_outputs": 1057,
+      "all_valid_test_requests": 2968,
+      "examples": {
+        "count": 13,
+        "main": 3,
+        "appendix": 10,
+        "all_original_lines_hashes_ids_and_labels_match": true
+      },
+      "original_and_helm_mirror_archives_byte_equal": {
+        "Buy": true,
+        "Restaurant": true
+      }
+    },
+    "screenshot-log.json": {
+      "pages": [
+        {
+          "slug": "data-imputation",
+          "url": "https://github.com/EliasMei/IPM",
+          "status": 200,
+          "title": "GitHub - EliasMei/IPM: Repo - Paper \"Capturing Semantics for Imputation with Pre-trained Language Models.\" [ICDE 2021] · GitHub",
+          "css": 34,
+          "screenshot": "official-site.png",
+          "transport": "system-CA-verified urllib responses rendered in Chromium; persistent trust unchanged"
+        }
+      ],
+      "asset_failures": []
+    },
+    "evidence/ipm-commit.json": {
+      "sha": "583826e41205c04a48548673945213181085536c",
+      "node_id": "C_kwDOFu2Ou9oAKDU4MzgyNmU0MTIwNWMwNGE0ODU0ODY3Mzk0NTIxMzE4MTA4NTUzNmM",
+      "commit": {
+        "author": {
+          "name": "Yinan Mei",
+          "email": "mayyinan@foxmail.com",
+          "date": "2022-03-13T03:13:51Z"
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "date": "2022-03-13T03:13:51Z"
+        },
+        "message": "Update README.md",
+        "tree": {
+          "sha": "c9fb5b673a1d1d9b3d4402782f48649a39609526",
+          "url": "https://api.github.com/repos/EliasMei/IPM/git/trees/c9fb5b673a1d1d9b3d4402782f48649a39609526"
+        },
+        "url": "https://api.github.com/repos/EliasMei/IPM/git/commits/583826e41205c04a48548673945213181085536c",
+        "comment_count": 0,
+        "verification": {
+          "verified": true,
+          "reason": "valid",
+          "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJiLWFvCRBK7hj4Ov3rIwAA+IQIAFGfhiJ5uhxU+Cn+vs7SePEH\n6U5LrNEKB5CFwuyvmbXOaSHrrOJdQPEM12iUcimU2GRZSTwLuW7rpzCwoZI81cuX\n3hXIjr4xeFLZW6l5cN+t/pG29ed2oWDdux8A4zxQn6U+l640UM4nRHqxM4NwdNZe\nPXzoOU5T5UJfh+/eHXr/63abKsKl7Cn3YofIbjbzTrfIIbIphNWQibIGXKkcYYgf\nEokTx60QWPq6IWluWu/RLWI/EDageZuvskFGCYD7A9PpEEWI3P4lHeeubNpoOxw5\nAZJ8CU9XgNQkCpT1Bsm73fYUXf8f4QlyJvFXNgy4r3xrb88l9dfiegYzwJvG1po=\n=xWfO\n-----END PGP SIGNATURE-----\n",
+          "payload": "tree c9fb5b673a1d1d9b3d4402782f48649a39609526\nparent 1a56d6bf6e223a98817bfdcb6ac690dd22e83583\nauthor Yinan Mei <mayyinan@foxmail.com> 1647141231 +0800\ncommitter GitHub <noreply@github.com> 1647141231 +0800\n\nUpdate README.md",
+          "verified_at": "2024-01-16T19:59:59Z"
+        }
+      },
+      "url": "https://api.github.com/repos/EliasMei/IPM/commits/583826e41205c04a48548673945213181085536c",
+      "html_url": "https://github.com/EliasMei/IPM/commit/583826e41205c04a48548673945213181085536c",
+      "comments_url": "https://api.github.com/repos/EliasMei/IPM/commits/583826e41205c04a48548673945213181085536c/comments",
+      "author": {
+        "login": "EliasMei",
+        "id": 17999922,
+        "node_id": "MDQ6VXNlcjE3OTk5OTIy",
+        "avatar_url": "https://avatars.githubusercontent.com/u/17999922?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/EliasMei",
+        "html_url": "https://github.com/EliasMei",
+        "followers_url": "https://api.github.com/users/EliasMei/followers",
+        "following_url": "https://api.github.com/users/EliasMei/following{/other_user}",
+        "gists_url": "https://api.github.com/users/EliasMei/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/EliasMei/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/EliasMei/subscriptions",
+        "organizations_url": "https://api.github.com/users/EliasMei/orgs",
+        "repos_url": "https://api.github.com/users/EliasMei/repos",
+        "events_url": "https://api.github.com/users/EliasMei/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/EliasMei/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "web-flow",
+        "id": 19864447,
+        "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+        "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/web-flow",
+        "html_url": "https://github.com/web-flow",
+        "followers_url": "https://api.github.com/users/web-flow/followers",
+        "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+        "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+        "organizations_url": "https://api.github.com/users/web-flow/orgs",
+        "repos_url": "https://api.github.com/users/web-flow/repos",
+        "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/web-flow/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "1a56d6bf6e223a98817bfdcb6ac690dd22e83583",
+          "url": "https://api.github.com/repos/EliasMei/IPM/commits/1a56d6bf6e223a98817bfdcb6ac690dd22e83583",
+          "html_url": "https://github.com/EliasMei/IPM/commit/1a56d6bf6e223a98817bfdcb6ac690dd22e83583"
+        }
+      ],
+      "stats": {
+        "total": 14,
+        "additions": 14,
+        "deletions": 0
+      },
+      "files": [
+        {
+          "sha": "a3df9e01110d3f331c4048fc65631d1a823de2f5",
+          "filename": "README.md",
+          "status": "modified",
+          "additions": 14,
+          "deletions": 0,
+          "changes": 14,
+          "blob_url": "https://github.com/EliasMei/IPM/blob/583826e41205c04a48548673945213181085536c/README.md",
+          "raw_url": "https://github.com/EliasMei/IPM/raw/583826e41205c04a48548673945213181085536c/README.md",
+          "contents_url": "https://api.github.com/repos/EliasMei/IPM/contents/README.md?ref=583826e41205c04a48548673945213181085536c",
+          "patch": "@@ -25,6 +25,20 @@ ATTR_DICT = {\n \n where `\"example\"` is the dataset name, `['category', 'brand']` is the list of to-impute categorical attributes names.\n \n+In our experiments, the to-impute attributes are as follows:\n+```\n+ATTR_DICT = {\n+    \"walmart\":[\"category\", \"brand\"],\n+    \"amazon\":[\"category\", \"brand\"],\n+    \"restaurant\":[\"city\"],\n+    \"buy\":[\"manufacturer\"],\n+    \"housing\":[\"region\", \"price\", \"sqfeet\", \"beds\", \"baths\", \"laundry_options\", \"parking_options\", \"lat\", \"long\", \"state\"],\n+    \"phone\":[\"brand\"],\n+    \"zomato\":[\"location\"],\n+    \"flipkart\":[\"brand\"]\n+}\n+```\n+\n To use IPM-Multi in the paper, run this command:\n \n ```"
+        }
+      ]
+    },
+    "evidence/fetch-log.json": [
+      {
+        "url": "https://dbs.uni-leipzig.de/file/Abt-Buy.zip",
+        "final_url": "https://dbs.uni-leipzig.de/files/datasets/Abt-Buy.zip",
+        "file": "Abt-Buy.zip",
+        "status": 200,
+        "bytes": 134745,
+        "sha256": "b9ff2937d97371b7a00b0a97033213bfbdee24e8f1a0718a41ea8364472a8ff8"
+      },
+      {
+        "url": "https://www.cs.utexas.edu/users/ml/riddle/data/restaurant.tar.gz",
+        "final_url": "https://www.cs.utexas.edu/~ml/riddle/data/restaurant.tar.gz",
+        "file": "restaurant.tar.gz",
+        "status": 200,
+        "bytes": 64684,
+        "sha256": "56f63bba9082c5991771012e4c48c62738209165d1262d216727f9037e1d40e0"
+      },
+      {
+        "url": "https://ieeexplore.ieee.org/document/9458712/",
+        "final_url": "https://ieeexplore.ieee.org/document/9458712/",
+        "file": "paper-ieee.html",
+        "status": 202,
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "url": "https://api.crossref.org/works/10.1109/ICDE51399.2021.00052",
+        "final_url": "https://api.crossref.org/works/10.1109/ICDE51399.2021.00052",
+        "file": "crossref-guess.json",
+        "status": 200,
+        "bytes": 6423,
+        "sha256": "a4fbb8d912011dc71029d695ee111fcb1a755913b7455e770d05d7c4bd9257ad"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/stanford-crfm/helm/v0.3.0/src/helm/benchmark/scenarios/entity_data_imputation_scenario.py",
+        "final_url": "https://raw.githubusercontent.com/stanford-crfm/helm/v0.3.0/src/helm/benchmark/scenarios/entity_data_imputation_scenario.py",
+        "file": "scenario-v030-official.py",
+        "status": 200,
+        "bytes": 6399,
+        "sha256": "9f69a792649e4f39c4cbb4be195ba6aa90fd6eddbbc9cb5bb849ad810ac6f98d"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/stanford-crfm/helm/main/src/helm/benchmark/scenarios/entity_data_imputation_scenario.py",
+        "final_url": "https://raw.githubusercontent.com/stanford-crfm/helm/main/src/helm/benchmark/scenarios/entity_data_imputation_scenario.py",
+        "file": "scenario-main.py",
+        "status": 200,
+        "bytes": 7332,
+        "sha256": "d3726ee394a3bb6af803f3deab612c3b2839224f7d94c52ffba5fef9e8c1f5f9"
+      },
+      {
+        "url": "https://api.crossref.org/works?query.bibliographic=9458712&rows=3",
+        "final_url": "https://api.crossref.org/works?query.bibliographic=9458712&rows=3",
+        "file": "crossref-search.json",
+        "status": 200,
+        "bytes": 186,
+        "sha256": "ce424f5f07b16fd5a702acc5bb8240552925fd9344e3c41e650d718d25530b79"
+      }
+    ],
+    "evidence/additional-fetch-log.json": [
+      {
+        "url": "https://dbs.uni-leipzig.de/research/publications/evaluation-of-entity-resolution-approaches-on-real-world-match-problems",
+        "final_url": "https://dbs.uni-leipzig.de/research/publications/evaluation-of-entity-resolution-approaches-on-real-world-match-problems",
+        "file": "buy-origin-publication.html",
+        "status": 200,
+        "bytes": 27472,
+        "sha256": "441731b6f42b22312fe1fbf263a4337f7be7054731b62e826fe87f11d2a59beb"
+      },
+      {
+        "url": "https://creativecommons.org/licenses/by/4.0/",
+        "file": "license-cc-by-4.html",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://api.github.com/repos/stanford-crfm/helm/commits?path=src/helm/benchmark/scenarios/entity_data_imputation_scenario.py&per_page=1",
+        "final_url": "https://api.github.com/repos/stanford-crfm/helm/commits?path=src/helm/benchmark/scenarios/entity_data_imputation_scenario.py&per_page=1",
+        "file": "scenario-main-commit.json",
+        "status": 200,
+        "bytes": 4403,
+        "sha256": "7499b4d812a4cda641b226ad264cd70c8cbb3e62a30de9ec8bd3968bc12f368e"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/EliasMei/IPM/583826e41205c04a48548673945213181085536c/README.md",
+        "final_url": "https://raw.githubusercontent.com/EliasMei/IPM/583826e41205c04a48548673945213181085536c/README.md",
+        "file": "ipm-pinned-readme.md",
+        "status": 200,
+        "bytes": 3154,
+        "sha256": "983e4207b6d40c8862580f762c2b1e1e4763359fcf68bdd1c2603856889cb8a0"
+      }
+    ],
+    "evidence/run-fetch-log.json": [
+      {
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/entity_data_imputation%3Adataset%3DBuy%2Cmodel%3Dmeta_llama-2-70b/stats.json",
+        "file": "Buy-llama-2-70b-stats.json",
+        "bytes": 55811,
+        "sha256": "31e95bd6387140c88fa6345cbcb9094bbd44f3034ce7637b459855c102f7f284"
+      },
+      {
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/entity_data_imputation%3Adataset%3DBuy%2Cmodel%3Dmeta_llama-2-70b/scenario_state.json",
+        "file": "Buy-llama-2-70b-scenario_state.json",
+        "bytes": 451208,
+        "sha256": "b28c8b2c09937c486d8a868d92163641905b6fd1a5dc6209acae0139ffca242d"
+      },
+      {
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/entity_data_imputation%3Adataset%3DBuy%2Cmodel%3Dopenai_text-davinci-003/stats.json",
+        "file": "Buy-text-davinci-003-stats.json",
+        "bytes": 67083,
+        "sha256": "718cfb07fc86a9848f205faed2b236e52d064366325627d4ddd5bcfb3e22e1bc"
+      },
+      {
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/entity_data_imputation%3Adataset%3DBuy%2Cmodel%3Dopenai_text-davinci-003/scenario_state.json",
+        "file": "Buy-text-davinci-003-scenario_state.json",
+        "bytes": 1543384,
+        "sha256": "17c914830f4add3eae5a1f7b78c699e97a2132303adc2e70059fcd05b55657a1"
+      },
+      {
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/entity_data_imputation%3Adataset%3DBuy%2Cmodel%3Dtogether_opt-175b/stats.json",
+        "file": "Buy-opt-175b-stats.json",
+        "bytes": 75567,
+        "sha256": "8699a93d950a49551a32d2cf05195ed50f7e88c00bcc14b27a63a9bd37a5520a"
+      },
+      {
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/entity_data_imputation%3Adataset%3DBuy%2Cmodel%3Dtogether_opt-175b/scenario_state.json",
+        "file": "Buy-opt-175b-scenario_state.json",
+        "bytes": 1977091,
+        "sha256": "50ee10bb6ca850e0c5f92e5c58e0df28e23b39a0d911e582744769e9f72d80b8"
+      },
+      {
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/entity_data_imputation%3Adataset%3DRestaurant%2Cmodel%3Dmeta_llama-2-70b/stats.json",
+        "file": "Restaurant-llama-2-70b-stats.json",
+        "bytes": 55826,
+        "sha256": "851615badb3e45f6ab140b86734d2241506fbe9f1e68cf0da0f8e9c7f0217512"
+      },
+      {
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/entity_data_imputation%3Adataset%3DRestaurant%2Cmodel%3Dmeta_llama-2-70b/scenario_state.json",
+        "file": "Restaurant-llama-2-70b-scenario_state.json",
+        "bytes": 514639,
+        "sha256": "7f890049b2cfe24091f4bfefec978633ce28990f808eef5b88ae8b4406c498b2"
+      },
+      {
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/entity_data_imputation%3Adataset%3DRestaurant%2Cmodel%3Dopenai_text-davinci-003/stats.json",
+        "file": "Restaurant-text-davinci-003-stats.json",
+        "bytes": 67558,
+        "sha256": "7709776f9b4ac385759bfcba237e089b3b5e22fd974190c694920c9f26054c9e"
+      },
+      {
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/entity_data_imputation%3Adataset%3DRestaurant%2Cmodel%3Dopenai_text-davinci-003/scenario_state.json",
+        "file": "Restaurant-text-davinci-003-scenario_state.json",
+        "bytes": 1891071,
+        "sha256": "5436fe64ce9f9b4bf58b697d66f4f821a9b854bf56b5137aece28d9f55d5079c"
+      },
+      {
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/entity_data_imputation%3Adataset%3DRestaurant%2Cmodel%3Dtogether_opt-175b/stats.json",
+        "file": "Restaurant-opt-175b-stats.json",
+        "bytes": 75243,
+        "sha256": "ec07c52287a2e97fb50f31ded07f893a2efd560253a346bfcb122c868782d3ae"
+      },
+      {
+        "url": "https://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/entity_data_imputation%3Adataset%3DRestaurant%2Cmodel%3Dtogether_opt-175b/scenario_state.json",
+        "file": "Restaurant-opt-175b-scenario_state.json",
+        "bytes": 2262056,
+        "sha256": "0ab54c57a79d68c2cf05f1df522049348cc5a918f2fcc0ac151ae05d5948e135"
+      }
+    ],
+    "evidence/scenario-main-commit.json": [
+      {
+        "sha": "4db8410f66b38360465220b7a93513b2ea606ea0",
+        "node_id": "C_kwDOGc6TD9oAKDRkYjg0MTBmNjZiMzgzNjA0NjUyMjBiN2E5MzUxM2IyZWE2MDZlYTA",
+        "commit": {
+          "author": {
+            "name": "Yifan Mai",
+            "email": "yifan@cs.stanford.edu",
+            "date": "2025-08-20T18:27:07Z"
+          },
+          "committer": {
+            "name": "GitHub",
+            "email": "noreply@github.com",
+            "date": "2025-08-20T18:27:07Z"
+          },
+          "message": "Add ScenarioMetadata for Classic, Instruct, SEA-HELM, Enterprise (#3815)",
+          "tree": {
+            "sha": "bc26c923b0c2bf598ba64c0998e0b7a4a2787842",
+            "url": "https://api.github.com/repos/stanford-crfm/helm/git/trees/bc26c923b0c2bf598ba64c0998e0b7a4a2787842"
+          },
+          "url": "https://api.github.com/repos/stanford-crfm/helm/git/commits/4db8410f66b38360465220b7a93513b2ea606ea0",
+          "comment_count": 0,
+          "verification": {
+            "verified": true,
+            "reason": "valid",
+            "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJophN7CRC1aQ7uu5UhlAAAvMkQAJHEcoGztmGprMXVNmNnBYvP\nzOq5XjuZJf+yPLjGnFQLcMy/A9g6IeMWmqx85DL+TB63UVSppWYqd07YyCI/VIwZ\n3KyjrN3fHvBq3usrXIQrow3kOEwTtcfupNSlua7MutTDu7QqZNClynLq69Y7n7NW\nKo6hczkKWv9zZsGeg+55TITamWONHoAcxGu2e5ghh9m7uH6T4wmaMWmrierXnjiM\npFp7YSEdZHO0Fa3RufD1WTboR15mYuxvIJA0n2yv4O73rqDUgZh/yFIt3NkVlOVL\n/9o6U7lIDv+GbwXs3KqxIpZeJsJZfpCLx8Iwd6jH+DlSTMH7YHne87tvGM1wO1h7\n14qZpyT0Lc9Z4CpNOzlJtRz01rxw2l0Rn2qgdSUqSgub4NW/IBpzkhaNFksMCpuW\nITABqHsC1mOh85Xu800CK3TonhKNJJFdGFITeYtQNrpOKwsXbFDTzJCIAh7aE9oh\ntztUDRjPwoFpRkO/PKOrVKvdzzS3LlI6JYWRDLmI4mkv1RPElRauxxvaKZMOJ4Mx\nfi5wQ/H0w+8BQqvop9TdRSQn0FVVUjA4onsg82RcfeFkYmuvW3W+BeXK0b96vmjo\n6M4xi8E15y5SpVyHbUAZwBAP9yD0SwBV1JWog3opzL2YP7u0Rq6PMz6gJsvnU5bp\nePsubsjkDqoP15Z8/5UR\n=X8V8\n-----END PGP SIGNATURE-----\n",
+            "payload": "tree bc26c923b0c2bf598ba64c0998e0b7a4a2787842\nparent bfa36d33e8b98b36b5f3a8c7d52b9a1b7162eae5\nauthor Yifan Mai <yifan@cs.stanford.edu> 1755714427 -0700\ncommitter GitHub <noreply@github.com> 1755714427 -0700\n\nAdd ScenarioMetadata for Classic, Instruct, SEA-HELM, Enterprise (#3815)\n\n",
+            "verified_at": "2025-08-20T18:27:07Z"
+          }
+        },
+        "url": "https://api.github.com/repos/stanford-crfm/helm/commits/4db8410f66b38360465220b7a93513b2ea606ea0",
+        "html_url": "https://github.com/stanford-crfm/helm/commit/4db8410f66b38360465220b7a93513b2ea606ea0",
+        "comments_url": "https://api.github.com/repos/stanford-crfm/helm/commits/4db8410f66b38360465220b7a93513b2ea606ea0/comments",
+        "author": {
+          "login": "yifanmai",
+          "id": 185227,
+          "node_id": "MDQ6VXNlcjE4NTIyNw==",
+          "avatar_url": "https://avatars.githubusercontent.com/u/185227?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/yifanmai",
+          "html_url": "https://github.com/yifanmai",
+          "followers_url": "https://api.github.com/users/yifanmai/followers",
+          "following_url": "https://api.github.com/users/yifanmai/following{/other_user}",
+          "gists_url": "https://api.github.com/users/yifanmai/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/yifanmai/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/yifanmai/subscriptions",
+          "organizations_url": "https://api.github.com/users/yifanmai/orgs",
+          "repos_url": "https://api.github.com/users/yifanmai/repos",
+          "events_url": "https://api.github.com/users/yifanmai/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/yifanmai/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "committer": {
+          "login": "web-flow",
+          "id": 19864447,
+          "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+          "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/web-flow",
+          "html_url": "https://github.com/web-flow",
+          "followers_url": "https://api.github.com/users/web-flow/followers",
+          "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+          "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+          "organizations_url": "https://api.github.com/users/web-flow/orgs",
+          "repos_url": "https://api.github.com/users/web-flow/repos",
+          "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/web-flow/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "parents": [
+          {
+            "sha": "bfa36d33e8b98b36b5f3a8c7d52b9a1b7162eae5",
+            "url": "https://api.github.com/repos/stanford-crfm/helm/commits/bfa36d33e8b98b36b5f3a8c7d52b9a1b7162eae5",
+            "html_url": "https://github.com/stanford-crfm/helm/commit/bfa36d33e8b98b36b5f3a8c7d52b9a1b7162eae5"
+          }
+        ]
+      }
+    ],
+    "evidence/file-manifest.json": [
+      {
+        "file": "Abt-Buy.zip",
+        "bytes": 134745,
+        "sha256": "b9ff2937d97371b7a00b0a97033213bfbdee24e8f1a0718a41ea8364472a8ff8"
+      },
+      {
+        "file": "Abt.csv",
+        "bytes": 347525,
+        "sha256": "ed6dbe5ac508e2e27ec7f78948875d4f754b6753674c65ccda3bf903ddaa13ea"
+      },
+      {
+        "file": "Buy-llama-2-70b-scenario_state.json",
+        "bytes": 451208,
+        "sha256": "b28c8b2c09937c486d8a868d92163641905b6fd1a5dc6209acae0139ffca242d"
+      },
+      {
+        "file": "Buy-llama-2-70b-stats.json",
+        "bytes": 55811,
+        "sha256": "31e95bd6387140c88fa6345cbcb9094bbd44f3034ce7637b459855c102f7f284"
+      },
+      {
+        "file": "Buy-opt-175b-scenario_state.json",
+        "bytes": 1977091,
+        "sha256": "50ee10bb6ca850e0c5f92e5c58e0df28e23b39a0d911e582744769e9f72d80b8"
+      },
+      {
+        "file": "Buy-opt-175b-stats.json",
+        "bytes": 75567,
+        "sha256": "8699a93d950a49551a32d2cf05195ed50f7e88c00bcc14b27a63a9bd37a5520a"
+      },
+      {
+        "file": "Buy-text-davinci-003-scenario_state.json",
+        "bytes": 1543384,
+        "sha256": "17c914830f4add3eae5a1f7b78c699e97a2132303adc2e70059fcd05b55657a1"
+      },
+      {
+        "file": "Buy-text-davinci-003-stats.json",
+        "bytes": 67083,
+        "sha256": "718cfb07fc86a9848f205faed2b236e52d064366325627d4ddd5bcfb3e22e1bc"
+      },
+      {
+        "file": "Buy.csv",
+        "bytes": 129682,
+        "sha256": "37d78c33f85b27e92be1d8ee1b863ba7107dfe369c6ca1dc7961c89b460dd47a"
+      },
+      {
+        "file": "Restaurant-llama-2-70b-scenario_state.json",
+        "bytes": 514639,
+        "sha256": "7f890049b2cfe24091f4bfefec978633ce28990f808eef5b88ae8b4406c498b2"
+      },
+      {
+        "file": "Restaurant-llama-2-70b-stats.json",
+        "bytes": 55826,
+        "sha256": "851615badb3e45f6ab140b86734d2241506fbe9f1e68cf0da0f8e9c7f0217512"
+      },
+      {
+        "file": "Restaurant-opt-175b-scenario_state.json",
+        "bytes": 2262056,
+        "sha256": "0ab54c57a79d68c2cf05f1df522049348cc5a918f2fcc0ac151ae05d5948e135"
+      },
+      {
+        "file": "Restaurant-opt-175b-stats.json",
+        "bytes": 75243,
+        "sha256": "ec07c52287a2e97fb50f31ded07f893a2efd560253a346bfcb122c868782d3ae"
+      },
+      {
+        "file": "Restaurant-text-davinci-003-scenario_state.json",
+        "bytes": 1891071,
+        "sha256": "5436fe64ce9f9b4bf58b697d66f4f821a9b854bf56b5137aece28d9f55d5079c"
+      },
+      {
+        "file": "Restaurant-text-davinci-003-stats.json",
+        "bytes": 67558,
+        "sha256": "7709776f9b4ac385759bfcba237e089b3b5e22fd974190c694920c9f26054c9e"
+      },
+      {
+        "file": "additional-fetch-log.json",
+        "bytes": 1464,
+        "sha256": "09f4c72cdb031770212ff1a13493a11b387455c54ecc00efb1cd4ce55430f4f4"
+      },
+      {
+        "file": "arxiv-search.xml",
+        "bytes": 770,
+        "sha256": "e986ff368abe463f9afcff9b21c1b08c61e6db95e49984de3e0fd736f1369fb2"
+      },
+      {
+        "file": "basic-metrics.py",
+        "bytes": 43000,
+        "sha256": "4e70d7cdbdac00c9568d9aada8408745ddb0cc2dc484ecc4f38492ba559f52a6"
+      },
+      {
+        "file": "bing.html",
+        "bytes": 122653,
+        "sha256": "7516b8801af7aa6e7a9e79b893c96f1eff3e3873a3bffedcb636169b8fa1f9c6"
+      },
+      {
+        "file": "buy-origin-publication.html",
+        "bytes": 27472,
+        "sha256": "441731b6f42b22312fe1fbf263a4337f7be7054731b62e826fe87f11d2a59beb"
+      },
+      {
+        "file": "crossref-guess.json",
+        "bytes": 6423,
+        "sha256": "a4fbb8d912011dc71029d695ee111fcb1a755913b7455e770d05d7c4bd9257ad"
+      },
+      {
+        "file": "crossref-mei.json",
+        "bytes": 25423,
+        "sha256": "cf87c0ba6ddcac560df94f03b75fc645c08e3ab63959126a908293403aaa480e"
+      },
+      {
+        "file": "crossref-search.json",
+        "bytes": 186,
+        "sha256": "ce424f5f07b16fd5a702acc5bb8240552925fd9344e3c41e650d718d25530b79"
+      },
+      {
+        "file": "ddg.html",
+        "bytes": 14318,
+        "sha256": "b7bda51bd37ba0df9d75238a6c7855953cca8b011b8f803afbc76f3ebf59d2fa"
+      },
+      {
+        "file": "fetch-log.json",
+        "bytes": 2429,
+        "sha256": "6b3b14cc93c3dabcb5132510fd91cd3d5208b85971be3ae036f42ee4f68fcaaf"
+      },
+      {
+        "file": "fz.arff",
+        "bytes": 83432,
+        "sha256": "a5307cb8edaae1239acf28c7c4a4c483cfd16a832c1a0da0a4ca1ebfd521584d"
+      },
+      {
+        "file": "helm-paper-v1.txt",
+        "bytes": 797461,
+        "sha256": "a1c0a8aa4534d1046c046e0dbe39f419a885f2d84e82e1581e8ad95382735093"
+      },
+      {
+        "file": "helm-paper.pdf",
+        "bytes": 6045688,
+        "sha256": "30970bda8958a1a8adf6a0a82feef9728331840288b7d2b49368bac87fd25f18"
+      },
+      {
+        "file": "helm-paper.txt",
+        "bytes": 803041,
+        "sha256": "3e592a3eb1c53909499db7ce668631da0199513a51561f1574ff48504aabd449"
+      },
+      {
+        "file": "helm-run-specs.py",
+        "bytes": 97948,
+        "sha256": "b8e73d208868cb4b971433e1aa321a817a7813852caa943347093de3c74062a9"
+      },
+      {
+        "file": "ipm-commit.json",
+        "bytes": 5138,
+        "sha256": "b70d75d809d09c67fc1506c4fc53970304b64bbdeef7c2f3aba3182585274864"
+      },
+      {
+        "file": "ipm-data-loader.py",
+        "bytes": 3605,
+        "sha256": "8fd98060eeab333fc809e971f5f9c43063d3b78301120b4ea4cfc92ef1f47a77"
+      },
+      {
+        "file": "ipm-evaluation.py",
+        "bytes": 3667,
+        "sha256": "dab38068bb36a2b52cde61b414e5b16dfa6f1acabc5632389f3a83187d3d1bc8"
+      },
+      {
+        "file": "ipm-multi.py",
+        "bytes": 15571,
+        "sha256": "adbf671c2650539f44efc40382f30ff4e780412b279f57eb243a70a6e6ea2d9f"
+      },
+      {
+        "file": "ipm-pinned-readme.md",
+        "bytes": 3154,
+        "sha256": "983e4207b6d40c8862580f762c2b1e1e4763359fcf68bdd1c2603856889cb8a0"
+      },
+      {
+        "file": "ipm-readme.md",
+        "bytes": 3154,
+        "sha256": "983e4207b6d40c8862580f762c2b1e1e4763359fcf68bdd1c2603856889cb8a0"
+      },
+      {
+        "file": "ipm-repo.json",
+        "bytes": 4933,
+        "sha256": "457fc0bf96b848a57a70413f25069409c4e4af8829a8fdb24c0cf355ba407a25"
+      },
+      {
+        "file": "ipm-representation.py",
+        "bytes": 4648,
+        "sha256": "aec8894c58238554ab1e177a662300abeb87d2214dc1ebf979a270eb1a6aa843"
+      },
+      {
+        "file": "ipm-tree.json",
+        "bytes": 6160,
+        "sha256": "3182730aa393c0176d2c15bdea4b3421e8ca866184dea83e869fee8054fd391a"
+      },
+      {
+        "file": "leipzig-site.html",
+        "bytes": 76215,
+        "sha256": "0bfbe28e499a8357c0a9e942cfd842399b54427704d375a850fd34fc6bfb5da2"
+      },
+      {
+        "file": "openalex.json",
+        "bytes": 17985,
+        "sha256": "88f579c482ff755ef94287c9388c2c38b82d865a2b07202d3605a7c0af9ea229"
+      },
+      {
+        "file": "paper-correct-crossref.json",
+        "bytes": 8170,
+        "sha256": "371455d05e1cc077afceee8c2a2f4c65a1fdb854d4dcb35deff48b4a56cbbc27"
+      },
+      {
+        "file": "paper-github-search.json",
+        "bytes": 4960,
+        "sha256": "86aeae396cb680e55eb5affb0d018504f420cf8028ab8821ef25812429a29a6c"
+      },
+      {
+        "file": "paper-ieee.html",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "file": "paper-search.html",
+        "bytes": 92835,
+        "sha256": "6ca05b139206ee1757e7b3d424ddf2cc0f1dcf57ba3261a22abd39c0a4c54958"
+      },
+      {
+        "file": "processed-rows.json",
+        "bytes": 979680,
+        "sha256": "0a2211a4c68ada487efb21aac9184762841f019f51bf5c6c8535305f3dbe9a51"
+      },
+      {
+        "file": "restaurant-readme.txt",
+        "bytes": 360,
+        "sha256": "3a48a9542bd11d8fd9f9bc39c5e98d823e2c5a93b87546225aa7560faeab5a3f"
+      },
+      {
+        "file": "restaurant.tar.gz",
+        "bytes": 64684,
+        "sha256": "56f63bba9082c5991771012e4c48c62738209165d1262d216727f9037e1d40e0"
+      },
+      {
+        "file": "run-fetch-log.json",
+        "bytes": 4180,
+        "sha256": "7495037557707f658a1741150eed5a5912b34d450dc7888de51cc9eab266d40d"
+      },
+      {
+        "file": "run-specs.json",
+        "bytes": 418218,
+        "sha256": "3cf43b99874df440efaddcd2f700ad5965a185ae4ce16e6ae10c8cf99665bddc"
+      },
+      {
+        "file": "run-suite-map.json",
+        "bytes": 10909,
+        "sha256": "6ddb3db60621dd8c923ab33cf04e42cc2343d5aa3eca8ad6f1396e64dff32dda"
+      },
+      {
+        "file": "scenario-main-commit.json",
+        "bytes": 4403,
+        "sha256": "7499b4d812a4cda641b226ad264cd70c8cbb3e62a30de9ec8bd3968bc12f368e"
+      },
+      {
+        "file": "scenario-main.py",
+        "bytes": 7332,
+        "sha256": "d3726ee394a3bb6af803f3deab612c3b2839224f7d94c52ffba5fef9e8c1f5f9"
+      },
+      {
+        "file": "scenario-v030-official.py",
+        "bytes": 6399,
+        "sha256": "9f69a792649e4f39c4cbb4be195ba6aa90fd6eddbbc9cb5bb849ad810ac6f98d"
+      },
+      {
+        "file": "scenario-v030.py",
+        "bytes": 6399,
+        "sha256": "9f69a792649e4f39c4cbb4be195ba6aa90fd6eddbbc9cb5bb849ad810ac6f98d"
+      },
+      {
+        "file": "selected-records-full.json",
+        "bytes": 33283,
+        "sha256": "b86385da7ae5639551c40022a8b1092f9f701f52d451eb75193cee9fcb932425"
+      },
+      {
+        "file": "semantic.json",
+        "bytes": 292,
+        "sha256": "2a329747186fd8355b9498057a15d05367968bfb586f05533db00943c2fe5dd3"
+      },
+      {
+        "file": "source-Buy.zip",
+        "bytes": 134745,
+        "sha256": "b9ff2937d97371b7a00b0a97033213bfbdee24e8f1a0718a41ea8364472a8ff8"
+      },
+      {
+        "file": "source-index.json",
+        "bytes": 6743,
+        "sha256": "e5ac17acfc13b66a70b7a4eab87a27bfa3fe724703e8d927b1d57dae6571182d"
+      },
+      {
+        "file": "source-restaurant.tar.gz",
+        "bytes": 64684,
+        "sha256": "56f63bba9082c5991771012e4c48c62738209165d1262d216727f9037e1d40e0"
+      },
+      {
+        "file": "test-record-list.txt",
+        "bytes": 22852,
+        "sha256": "fe1495ff19fe16318c6bfbace6de8c4c3b2bd43b9f9a58d0ba67daff5d227afc"
+      }
+    ]
+  },
+  "artifact_sha256": {
+    "pdf": "12d38c09ae4b9aea047d5e60980777872fbc74af5782cc3c992ce6823e0d1cad",
+    "pptx": "194521baaa9cfe9c7797d52eaccb449f814d838c1f2520bab28d08b80a8702be"
+  },
+  "independent_review": "../skill-proofreading/data-imputation/independent-review/",
+  "screenshot-log.json": {
+    "pages": [
+      {
+        "slug": "data-imputation",
+        "url": "https://github.com/EliasMei/IPM",
+        "status": 200,
+        "title": "GitHub - EliasMei/IPM: Repo - Paper \"Capturing Semantics for Imputation with Pre-trained Language Models.\" [ICDE 2021] · GitHub",
+        "css": 34,
+        "screenshot": "official-site.png",
+        "transport": "system-CA-verified urllib responses rendered in Chromium; persistent trust unchanged"
+      }
+    ],
+    "asset_failures": []
+  }
+}

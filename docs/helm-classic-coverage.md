@@ -59,7 +59,7 @@ GSM8KとHumanEvalは既存資料で対象データセットを紹介済み。MML
 |billsum_legal_summarization|BillSum|作成済み|[PPTX](../slides/datasets-in-10-minutes-billsum.pptx) / [PDF](../slides/datasets-in-10-minutes-billsum.pdf)|
 |multilexsum_legal_summarization|MultiLexSum|作成済み|[PPTX](../slides/datasets-in-10-minutes-multilexsum.pptx) / [PDF](../slides/datasets-in-10-minutes-multilexsum.pdf)|
 |eurlexsum_legal_summarization|EurLexSum|作成済み|[PPTX](../slides/datasets-in-10-minutes-eurlexsum.pptx) / [PDF](../slides/datasets-in-10-minutes-eurlexsum.pdf)|
-|entity_data_imputation|Data imputation|未着手||
+|entity_data_imputation|Data imputation|作成済み|[PPTX](../slides/datasets-in-10-minutes-data-imputation.pptx) / [PDF](../slides/datasets-in-10-minutes-data-imputation.pdf)|
 |entity_matching|Entity matching|未着手||
 |copyright_text|Copyright (text)|未着手||
 |copyright_code|Copyright (code)|未着手||
