@@ -1,0 +1,292 @@
+[
+  {
+    "page": 1,
+    "text": "EPRSTMT\nE-commerce Product Review Dataset for Sentiment Analysis\n短い商品レビューから、評価の向きを読む\nsasakiy84\ndatasets in 10 minutes (2026-10-18)",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 2,
+    "text": "EPRSTMTの公式配布ページ\nEPRSTMT\n\n[1] CLUE team. FewCLUE official README. 固定版62a02c6f31cf、EPRSTMTの定義・配布構造。 現在の公式画面。解析した原データは固定commit版。\nhttps://github.com/CLUEbenchmark/FewCLUE",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 3,
+    "text": "\n商品レビューの感情を読む\n作成の由来と、少数例の分割\n評価の分母と、実装で変わる入力\nCLEVAでの採用と利用条件\n目次",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 4,
+    "text": "商品レビューの感情を読む\n1. 商品レビューの感情を読む",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 5,
+    "text": "商品の品質より、レビューの評価を分類する\nEPRSTMTは、中国語の商品レビューを読み、投稿された評価が正面（肯定的）か負面（否定的）かを二つのラベルで表すデータセット。\nFewCLUEではEPR-sentimentとも呼ばれる。電子商取引の商品レビューを使う、単文の感情分析課題。\n出力はPositiveかNegative。星の数や、商品の故障原因、レビューが事実かどうかを答える課題ではない。\n1. 商品レビューの感情を読む\n[1] Xu et al. (2021). FewCLUE: A Chinese Few-shot Learning Evaluation Benchmark. arXiv:2107.07498v2.  https://arxiv.org/abs/2107.07498v2",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 6,
+    "text": "正面と負面は、配布された二つのラベル\n原データはid、sentence、labelを持つ。Positiveは正向、Negativeは負向と、公式READMEが定義する。\n配送の速さ、価格、音質、同梱品などへの評価が、一つのレビューで食い違うことがある。部分的な否定語と、レコード全体の配布ラベルを分けて読む。\n以下の13例では、レビューの中国語全文と日本語訳を同じページに置き、公開ラベルをそのまま示す。\n1. 商品レビューの感情を読む\n[1] CLUE team. FewCLUE official README. 固定版62a02c6f31cf、EPRSTMTの定義・配布構造。  https://github.com/CLUEbenchmark/FewCLUE",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 7,
+    "text": "実例1：通話中の雑音と、正規品への疑念\n1. 商品レビューの感情を読む\ntrain_4.json / 0起算行7 / ローカルID 7\n中国語原文（全文）\n日本語訳（全文）\n今天刚拿到手机，打电话时发现手机听筒有吱吱吱的杂声，不满意，真怀疑是不是正品\n今日、携帯電話を受け取りました。電話をかけると受話口からジージーという雑音がすることに気づきました。不満です。本当に正規品なのか疑ってしまいます。\n正解：負面（否定的） / Negative\n[1] ICIP Lab / CLUE team. EPRSTMT official public files via FewCLUE. 固定版62a02c6f31cf。原レビューの権利は出所に帰属。 train_4.json、0起算行7。\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/eprstmt",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 8,
+    "text": "雑音への不満から、正規品かを疑う\n不満と正規品への疑念を述べる。CLEVA論文の公開例と原文が一致する。\n受取直後の通話で、受話口から雑音がする。最後の疑いは投稿者の発言であり、正規品でないと確認した結果ではない。\n元ラベルNegativeは、レビューの否定的な評価を表す。CLEVAで引用された文も、元コーパスの1件として位置を特定できる。\n1. 商品レビューの感情を読む\n[1] ICIP Lab / CLUE team. EPRSTMT official public files via FewCLUE. 固定版62a02c6f31cf。原レビューの権利は出所に帰属。\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/eprstmt\n[2] Li et al. (2023). CLEVA: Chinese Language Models EVAluation Platform. EMNLP System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 9,
+    "text": "実例2：速さ・良さ・安さを繰り返す\n1. 商品レビューの感情を読む\ntrain_0.json / 0起算行29 / ローカルID 29\n中国語原文（全文）\n日本語訳（全文）\n商城就是快好省，快好省\nこのモールは本当に速くて、よくて、お得。速くて、よくて、お得。\n正解：正面（肯定的） / Positive\n[1] ICIP Lab / CLUE team. EPRSTMT official public files via FewCLUE. 固定版62a02c6f31cf。原レビューの権利は出所に帰属。 train_0.json、0起算行29。\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/eprstmt",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 10,
+    "text": "同じ短文でも、元データと選択肢付き課題は違う\n元のレコードはレビュー文とPositiveラベル。HELMの公開説明例は、「正面か負面か」と問い、A. 负面、B. 正面を選ばせる。\n公開説明例の正解Bは、原データのPositiveに対応する。ただし、全テンプレートやCLEVAの採用集合を取得できたわけではない。\nこの文はtrainの複数分割に現れる。同じレビューが別IDで現れても、異なる内容の例が増えたことにはならない。\n1. 商品レビューの感情を読む\n[1] Stanford CRFM. CLEVASentimentAnalysisScenario / Converter. HELM v0.4.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 11,
+    "text": "実例3：包装の傷より、試聴後の評価\n1. 商品レビューの感情を読む\ntrain_0.json / 0起算行23 / ローカルID 23\n中国語原文（全文）\n日本語訳（全文）\n外包装上有点磨损，试听后感觉不错\n外箱に少し擦れがありますが、試聴した感じはよいです。\n正解：正面（肯定的） / Positive\n[1] ICIP Lab / CLUE team. EPRSTMT official public files via FewCLUE. 固定版62a02c6f31cf。原レビューの権利は出所に帰属。 train_0.json、0起算行23。\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/eprstmt",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 12,
+    "text": "傷がある、という一節だけでは決めない\n一部に不満が含まれても、配布ラベルはPositive。単語一つの極性とレビュー全体を分ける。\n「外箱に少し擦れ」と「試聴した感じはよい」が同居する。全体のラベルはPositive。原文が示さない評価の重みを、後から数式で補わない。\n解釈が難しい例や、不満が並ぶPositiveも含まれる。配布ラベルを保持し、モデルの誤りと人手で再注釈した結果を混同しない。\n1. 商品レビューの感情を読む\n[1] ICIP Lab / CLUE team. EPRSTMT official public files via FewCLUE. 固定版62a02c6f31cf。原レビューの権利は出所に帰属。\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/eprstmt",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 13,
+    "text": "作成の由来と、少数例の分割\n2. 作成の由来と、少数例の分割",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 14,
+    "text": "ICIPの収集と、FewCLUEでの再構成を分ける\nFewCLUE論文は、北京師範大学のICIP Labが収集した商品レビューを、FewCLUE向けにフィルタ・検査・再構成したと説明する。\n原収集全体の規模、注釈者数、星評価からラベルを作ったかどうかは、確認した一次資料では特定できない。特定のECサイト名も推測しない。\n対象は、FewCLUE公式リポジトリの固定公開版。ICIPの元配布と同一の全コーパスだとは扱わない。\n2. 作成の由来と、少数例の分割\n[1] Xu et al. (2021). FewCLUE: A Chinese Few-shot Learning Evaluation Benchmark. arXiv:2107.07498v2.  https://arxiv.org/abs/2107.07498v2",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 15,
+    "text": "1組32件と、公開・非公開テストを区別する\n2. 作成の由来と、少数例の分割\n公開ファイル\n行数\n正解ラベル\ntrain_0〜4（各）\n32\nあり\ndev_0〜4（各）\n32\nあり\ntest_public.json\n610\nあり\ntest.json\n753\nなし\nunlabeled.json\n19,565\nなし\n5組のtrain/devと、一つずつのテスト。行数は固定公開ファイルを再集計。\n[1] ICIP Lab / CLUE team. EPRSTMT official public files via FewCLUE. 固定版62a02c6f31cf。原レビューの権利は出所に帰属。\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/eprstmt",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 16,
+    "text": "32件の中の、二つのラベルの内訳\n2. 作成の由来と、少数例の分割\n組\ntrain 正面 / 負面\ndev 正面 / 負面\n0\n17 / 15\n13 / 19\n1\n16 / 16\n16 / 16\n2\n18 / 14\n19 / 13\n3\n18 / 14\n14 / 18\n4\n15 / 17\n12 / 20\n各組は合計32件。各クラス32件ではなく、内訳も組ごとに異なる。\n[1] ICIP Lab / CLUE team. EPRSTMT official public files via FewCLUE. 固定版62a02c6f31cf。原レビューの権利は出所に帰属。\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/eprstmt",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 17,
+    "text": "集約版の160行は、160の異なる文ではない\n集約ファイルは160行だが、一意なレビュー文はtrainが131件、devが135件。同じ文が別の分割やIDで繰り返されても、独立した新しい用例とは数えない。\nREADMEはtrain_few_allとdev_few_allを「合併・重複除去した結果」と説明する。しかし固定ファイルは、ID以外を比較すると0〜4の各分割を順に連結した内容と完全一致する。\n集約版のIDは0〜159へ振り直される。IDが異なることと、レビュー文が異なることは同じではない。\n2. 作成の由来と、少数例の分割\n[1] CLUE team. FewCLUE official README. 固定版62a02c6f31cf、EPRSTMTの定義・配布構造。  https://github.com/CLUEbenchmark/FewCLUE\n[2] ICIP Lab / CLUE team. EPRSTMT official public files via FewCLUE. 固定版62a02c6f31cf。原レビューの権利は出所に帰属。\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/eprstmt",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 18,
+    "text": "同じ組のtrain/devと、別の組の共有を分ける\n同じ番号のtrain_iとdev_iを、Unicode文字列の完全一致で照合すると、同じレビュー文の共有は5組とも0件。\n一方、別番号のtrain同士やdev同士には同文がある。少数例の分割をまたぐ再出現と、同じ組内のtrain/devの共有を分けて読む。\n空白や句読点を消さずに数える。異なる文章を、意味が似ているという理由で重複扱いにしない。\n2. 作成の由来と、少数例の分割\n[1] ICIP Lab / CLUE team. EPRSTMT official public files via FewCLUE. 固定版62a02c6f31cf。原レビューの権利は出所に帰属。\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/eprstmt",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 19,
+    "text": "評価の分母と、実装で変わる入力\n3. 評価の分母と、実装で変わる入力",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 20,
+    "text": "基本指標は、正解ラベルとの一致率\n公式EFL baselineのcompute_metricsは、eprstmtに対してsimple_accuracyを呼ぶ。一致した予測数を、ラベル付き評価例数で割る。\nここで公式関数を実行できるのは公開testの610件。公開されていない753件の正解を仮定して、テスト成績を作らない。\n32件で学習するfew-shot設定と、大規模言語モデルの入力に何例を置くかというin-contextのshot数は別の条件。\n3. 評価の分母と、実装で変わる入力\n[1] CLUE team. compute_metrics / simple_accuracy. EFL baseline、固定版62a02c6f31cf。\nhttps://github.com/CLUEbenchmark/FewCLUE/blob/62a02c6f31cf32814cfe522f78ef088228840f8d/baselines/models_pytorch/EFL/metrics/clue_compute_metrics.py",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 21,
+    "text": "公開610件では、定数予測はどちらも50%\n3. 評価の分母と、実装で変わる入力\n定数予測\n一致 / 分母\nAccuracy\n全てNegative\n305 / 610\n50.00%\n全てPositive\n305 / 610\n50.00%\n配布正解を使った公式関数の再計算。訓練済みモデルや非公開testの成績ではない。\n[1] CLUE team. compute_metrics / simple_accuracy. EFL baseline、固定版62a02c6f31cf。\nhttps://github.com/CLUEbenchmark/FewCLUE/blob/62a02c6f31cf32814cfe522f78ef088228840f8d/baselines/models_pytorch/EFL/metrics/clue_compute_metrics.py",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 22,
+    "text": "2021年に報告された、EPRSTMTの成績\n3. 評価の分母と、実装で変わる入力\n方法\n報告値（%）\nFine-tuning / RoBERTa\n65.4\nZero-shot / RoBERTa\n85.2\nPET\n86.7\nP-tuning / RoBERTa\n88.3\nFewCLUE論文v2のEPRSTMT列。原論文の報告値を引用し、公開610件で再採点した値とは分ける。\n[1] Xu et al. (2021). FewCLUE: A Chinese Few-shot Learning Evaluation Benchmark. arXiv:2107.07498v2.  https://arxiv.org/abs/2107.07498v2",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 23,
+    "text": "人手90.0%も、モデルと同じ分母ではない\n論文の人手評価は、練習と討議を経た注釈者がtestの100件を読む手順。EPRSTMTの報告値は90.0%だが、全件に対するモデル値と分母をそろえた再採点ではない。\n論文では、注釈者はdevの30〜50件で練習し、正解と比べ、議論してからtestの100件を注釈する。EPRSTMTの原ラベル作成手順とは別の人手評価。\n元の個別予測や非公開正解を取得していないため、論文のモデル値・人手値をこの資料で再現したとは呼ばない。\n3. 評価の分母と、実装で変わる入力\n[1] Xu et al. (2021). FewCLUE: A Chinese Few-shot Learning Evaluation Benchmark. arXiv:2107.07498v2.  https://arxiv.org/abs/2107.07498v2",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 24,
+    "text": "ラベル語や文ペアへ変換しても、原例数は同じ\nPETの公開実装はNegativeを0、Positiveを1へ写し、「不」「很」というラベル語を使う。モデル入力のテンプレートは、原レビューそのものとは別の処理。\nEFLはレビューとラベル説明の文ペアを作り、entail / not_entailを学習する。変換後の文ペア数を、原コーパスのレビュー数と呼ばない。\ntest.jsonには正解ラベルがない。PETの読み込み関数が置く仮の0を、配布されたNegativeの正解とみなして採点しない。\n3. 評価の分母と、実装で変わる入力\n[1] CLUE team. PET baseline pet_eprstmt.py. ラベル語・読み込み・評価。固定版62a02c6f31cf。\nhttps://github.com/CLUEbenchmark/FewCLUE/blob/62a02c6f31cf32814cfe522f78ef088228840f8d/baselines/models_keras/pet/pet_eprstmt.py\n[2] CLUE team. EprstmtProcessor. EFL baseline、固定版62a02c6f31cf。\nhttps://github.com/CLUEbenchmark/FewCLUE/blob/62a02c6f31cf32814cfe522f78ef088228840f8d/baselines/models_pytorch/EFL/processors/efl_fewclue.py",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 25,
+    "text": "CLEVAでの採用と利用条件\n4. CLEVAでの採用と利用条件",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 26,
+    "text": "元の感情分類と、CLEVAでの利用範囲を分ける\nCLEVA論文は、感情分析にFewCLUEを採用し、通話中の雑音を訴えるレビューを公開例として示す。原データのtrain_4行7と全文・Negativeラベルが一致する。\nHELM v0.4.0の感情分析クラスは、モールを褒める別の公開例を示す。これは原データのtrain_0行29などと一致する。\n説明例の一致で確認できるのは、その原票との対応。CLEVAが使ったレビュー全件・選び方・実際の全入力は未取得のまま区別する。\n4. CLEVAでの採用と利用条件\n[1] Li et al. (2023). CLEVA: Chinese Language Models EVAluation Platform. EMNLP System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/\n[2] Stanford CRFM. CLEVASentimentAnalysisScenario / Converter. HELM v0.4.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 27,
+    "text": "設定6通りと、固定公開実行0件は別の情報\nHELMのCLEVA v1設定には、sentiment_analysisのprompt_idが0〜5の6通りある。設定の数を、実行済みの件数や採用レビュー数とは呼ばない。\nHELM Classic v0.4.0の固定公開run索引8,526件では、CLEVAの対象実行は0件。公開実行から生成結果やAccuracyを読み取ったとはしない。\n変換済みの集合を読み込むConverterがあり、入力やラベルの形は変換後のデータに依存する。公開説明例から全設定の候補順を決めつけない。\n4. CLEVAでの採用と利用条件\n[1] Stanford CRFM. CLEVA v1 run configuration. HELM v0.4.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/presentation/run_specs_cleva_v1.conf\n[2] Stanford CRFM. HELM Classic v0.4.0、2023-11-17固定公開版。  https://crfm.stanford.edu/helm/classic/v0.4.0/",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 28,
+    "text": "出所の表示と、再利用の条件を区別する\n収集元としてのICIP Lab、FewCLUEの作成・配布者、原レビューの権利者は同じとは限らない。引用は原文と訳を区別し、配布版と原位置を添えて参照する。\n確認した固定リポジトリには、EPRSTMTデータ全体への包括ライセンスを特定できなかった。公開ダウンロードできることだけで、無条件の再配布許諾とはしない。\nBERTコードのサブディレクトリにあるApache 2.0を、商品レビュー本文全体の許諾へ広げない。研究利用や再配布では、配布元の条件を個別に確認する。\n4. CLEVAでの採用と利用条件\n[1] CLUE team. FewCLUE official README. 固定版62a02c6f31cf、EPRSTMTの定義・配布構造。  https://github.com/CLUEbenchmark/FewCLUE",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 29,
+    "text": "公開版・原位置・評価範囲を併せて参照する\n固定commit、各JSONファイルのSHA-256、ファイル名と0起算行、原レコードのIDで、用例と公開版を特定する。IDだけでは異なる分割の文を特定できない。\n13例は全て独立したレビュー文。主な3例はCLEVA論文・HELM説明・公式READMEに対応し、追加10例は公開testから選んだ。\n公開テストの再計算、論文の報告値、HELMの設定、未取得のCLEVA採用集合は、それぞれ異なる根拠と分母として扱う。\n4. CLEVAでの採用と利用条件\n[1] ICIP Lab / CLUE team. EPRSTMT official public files via FewCLUE. 固定版62a02c6f31cf。原レビューの権利は出所に帰属。\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/eprstmt",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 30,
+    "text": "読むときに残したい、三つの区別\n短いレビューでも、複数の評価対象や皮肉が同居する。日本語訳で原文にない事情を補わず、配布ラベルを読み解く。\n32件の各分割、重複を含む160行の集約版、正解付き610件と正解非公開753件を混同しない。\n公式Accuracyの再計算と、2021年の研究報告値、CLEVA/HELMの採用情報を分けて利用する。\n4. CLEVAでの採用と利用条件\n[1] Xu et al. (2021). FewCLUE: A Chinese Few-shot Learning Evaluation Benchmark. arXiv:2107.07498v2.  https://arxiv.org/abs/2107.07498v2\n[2] ICIP Lab / CLUE team. EPRSTMT official public files via FewCLUE. 固定版62a02c6f31cf。原レビューの権利は出所に帰属。\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/eprstmt",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 31,
+    "text": "Appendix\nAppendix",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 32,
+    "text": "\n追加の原レビュー\n原位置・重複・実装の補足\n研究と参考文献\nAppendix: 目次",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 33,
+    "text": "追加の原レビュー\nAppendix: 1. 追加の原レビュー",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 34,
+    "text": "実例4：配送への皮肉を読む\nAppendix: 1. 追加の原レビュー\ntest_public.json / 0起算行0 / ローカルID 835\n中国語原文（全文）\n日本語訳（全文）\n呵呵了 这物流速度也是没谁了 同城网购竟然三天了还不到\nはは、この配送スピードには参りました。同じ市内のネット購入なのに、3日たってもまだ届きません。\n正解：負面（否定的） / Negative\n[1] ICIP Lab / CLUE team. EPRSTMT official public files via FewCLUE. 固定版62a02c6f31cf。原レビューの権利は出所に帰属。 test_public.json、0起算行0。\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/eprstmt",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 35,
+    "text": "実例5：短い肯定と、今後の試用\nAppendix: 1. 追加の原レビュー\ntest_public.json / 0起算行1 / ローカルID 59\n中国語原文（全文）\n日本語訳（全文）\n还不错，等试用一段时间再说\n悪くありません。しばらく使ってから、また評価します。\n正解：正面（肯定的） / Positive\n[1] ICIP Lab / CLUE team. EPRSTMT official public files via FewCLUE. 固定版62a02c6f31cf。原レビューの権利は出所に帰属。 test_public.json、0起算行1。\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/eprstmt",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 36,
+    "text": "実例6：使わなくても電池がなくなる\nAppendix: 1. 追加の原レビュー\ntest_public.json / 0起算行3 / ローカルID 65\n中国語原文（全文）\n日本語訳（全文）\n冲满电2天没用过就没电   客服说正常的\n満充電にして、2日間使っていないのに電池がなくなりました。カスタマーサービスは正常だと言っています。\n正解：負面（否定的） / Negative\n[1] ICIP Lab / CLUE team. EPRSTMT official public files via FewCLUE. 固定版62a02c6f31cf。原レビューの権利は出所に帰属。 test_public.json、0起算行3。\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/eprstmt",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 37,
+    "text": "実例7：高齢者にも使いやすい携帯電話\nAppendix: 1. 追加の原レビュー\ntest_public.json / 0起算行16 / ローカルID 303\n中国語原文（全文）\n日本語訳（全文）\n手机好用，声音大，手写流利，老人非常中意。\n携帯電話は使いやすく、音も大きく、手書き入力も滑らかです。高齢者がとても気に入っています。\n正解：正面（肯定的） / Positive\n[1] ICIP Lab / CLUE team. EPRSTMT official public files via FewCLUE. 固定版62a02c6f31cf。原レビューの権利は出所に帰属。 test_public.json、0起算行16。\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/eprstmt",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 38,
+    "text": "実例8：期待との差や痛みがあっても正面\nAppendix: 1. 追加の原レビュー\ntest_public.json / 0起算行7 / ローカルID 10\n中国語原文（全文）\n日本語訳（全文）\n耳机做工还行，音效的话没有想象中的那么好，可能需要煲机吧，耳机戴了一两个小时耳朵就有点疼\nイヤホンの作りはまあまあです。音は想像していたほどよくなく、慣らし運転が必要なのかもしれません。1、2時間着けると、耳が少し痛くなります。\n正解：正面（肯定的） / Positive\n[1] ICIP Lab / CLUE team. EPRSTMT official public files via FewCLUE. 固定版62a02c6f31cf。原レビューの権利は出所に帰属。 test_public.json、0起算行7。\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/eprstmt",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 39,
+    "text": "実例9：中国製品を応援しつつ、操作に戸惑う\nAppendix: 1. 追加の原レビュー\ntest_public.json / 0起算行12 / ローカルID 996\n中国語原文（全文）\n日本語訳（全文）\n支持国产，用起来挺好的，操作有点不习惯。\n中国製品を応援します。使い心地はよいですが、操作には少し慣れません。\n正解：正面（肯定的） / Positive\n[1] ICIP Lab / CLUE team. EPRSTMT official public files via FewCLUE. 固定版62a02c6f31cf。原レビューの権利は出所に帰属。 test_public.json、0起算行12。\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/eprstmt",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 40,
+    "text": "実例10：厚さが期待と合わない\nAppendix: 1. 追加の原レビュー\ntest_public.json / 0起算行18 / ローカルID 209\n中国語原文（全文）\n日本語訳（全文）\n太厚了，和期待值有差距.夏天揣口袋里绝对不和谐.看来只能应急用用了.\n厚すぎて、期待とは差があります。夏にポケットへ入れたら、どう見ても不格好です。どうやら非常用に使うしかなさそうです。\n正解：負面（否定的） / Negative\n[1] ICIP Lab / CLUE team. EPRSTMT official public files via FewCLUE. 固定版62a02c6f31cf。原レビューの権利は出所に帰属。 test_public.json、0起算行18。\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/eprstmt",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 41,
+    "text": "実例11：使って分かった複数の問題\nAppendix: 1. 追加の原レビュー\ntest_public.json / 0起算行22 / ローカルID 315\n中国語原文（全文）\n日本語訳（全文）\n用了几天，发现很多问题，无线网容易掉线，屏幕容易刮花，打开网页容易死掉，不值的买\n数日使って、多くの問題に気づきました。無線ネットワークは切れやすく、画面は傷つきやすく、ウェブページを開くとフリーズしやすいです。買う価値はありません。\n正解：負面（否定的） / Negative\n[1] ICIP Lab / CLUE team. EPRSTMT official public files via FewCLUE. 固定版62a02c6f31cf。原レビューの権利は出所に帰属。 test_public.json、0起算行22。\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/eprstmt",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 42,
+    "text": "実例12：イヤホンが見当たらず、気分が変わる\nAppendix: 1. 追加の原レビュー\ntest_public.json / 0起算行24 / ローカルID 1050\n中国語原文（全文）\n日本語訳（全文）\n收到手机的时候挺高兴的。 但是我找了半天都没有找到耳机，跟我想象的不太一样 心情立马不好了\n携帯電話が届いたときはうれしかったです。でも、しばらく探してもイヤホンが見つからず、想像していたものとは少し違いました。たちまち嫌な気分になりました。\n正解：負面（否定的） / Negative\n[1] ICIP Lab / CLUE team. EPRSTMT official public files via FewCLUE. 固定版62a02c6f31cf。原レビューの権利は出所に帰属。 test_public.json、0起算行24。\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/eprstmt",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 43,
+    "text": "実例13：イヤホンへの不満を含む正面ラベル\nAppendix: 1. 追加の原レビュー\ntest_public.json / 0起算行27 / ローカルID 994\n中国語原文（全文）\n日本語訳（全文）\n一分钱一分货嘛，毕竟价格在这里，也不错了，没送耳机，本人不高兴\n値段なりですよね。結局この価格ですし、悪くありません。イヤホンが付いてこなかったので、私は不満です。\n正解：正面（肯定的） / Positive\n[1] ICIP Lab / CLUE team. EPRSTMT official public files via FewCLUE. 固定版62a02c6f31cf。原レビューの権利は出所に帰属。 test_public.json、0起算行27。\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/eprstmt",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 44,
+    "text": "原位置・重複・実装の補足\nAppendix: 2. 原位置・重複・実装の補足",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 45,
+    "text": "13例のファイル・行位置・配布ラベル\nAppendix: 2. 原位置・重複・実装の補足\n例\n原ファイル\n0起算行\n原ラベル\n1\ntrain_4.json\n7\nNegative\n2\ntrain_0.json\n29\nPositive\n3\ntrain_0.json\n23\nPositive\n4\ntest_public.json\n0\nNegative\n5\ntest_public.json\n1\nPositive\n6\ntest_public.json\n3\nNegative\n7\ntest_public.json\n16\nPositive\nIDはファイル内の値。同文の別IDを区別する。\n[1] ICIP Lab / CLUE team. EPRSTMT official public files via FewCLUE. 固定版62a02c6f31cf。原レビューの権利は出所に帰属。\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/eprstmt",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 46,
+    "text": "13例のファイル・行位置・配布ラベル\nAppendix: 2. 原位置・重複・実装の補足\n例\n原ファイル\n0起算行\n原ラベル\n8\ntest_public.json\n7\nPositive\n9\ntest_public.json\n12\nPositive\n10\ntest_public.json\n18\nNegative\n11\ntest_public.json\n22\nNegative\n12\ntest_public.json\n24\nNegative\n13\ntest_public.json\n27\nPositive\nIDはファイル内の値。同文の別IDを区別する。\n[1] ICIP Lab / CLUE team. EPRSTMT official public files via FewCLUE. 固定版62a02c6f31cf。原レビューの権利は出所に帰属。\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/eprstmt",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 47,
+    "text": "READMEの説明と、集約ファイルの実内容\nAppendix: 2. 原位置・重複・実装の補足\n集約版\n行数\n一意な文\n重複分\ntrain_few_all.json\n160\n131\n29\ndev_few_all.json\n160\n135\n25\nIDを除く全項目が、0〜4の分割を順に連結した内容と一致。同文のラベル違いは集約版内0件。\n[1] ICIP Lab / CLUE team. EPRSTMT official public files via FewCLUE. 固定版62a02c6f31cf。原レビューの権利は出所に帰属。\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/eprstmt\n[2] CLUE team. FewCLUE official README. 固定版62a02c6f31cf、EPRSTMTの定義・配布構造。  https://github.com/CLUEbenchmark/FewCLUE",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 48,
+    "text": "無ラベル資料の行数と、同文の共有も分ける\nAppendix: 2. 原位置・重複・実装の補足\n照合対象\n一意な文・共有数\nunlabeled 全19,565行\n一意な文 18,744\ntrain集約版とunlabeled\n共有文 6\ndev集約版とunlabeled\n共有文 4\n公開testとunlabeled\n共有文 45\n非公開testとunlabeled\n共有文 47\n完全一致する文の共有数。無ラベル資料の利用は公式ルールで認められる。\n[1] ICIP Lab / CLUE team. EPRSTMT official public files via FewCLUE. 固定版62a02c6f31cf。原レビューの権利は出所に帰属。\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/eprstmt",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 49,
+    "text": "公開testの分母と、定数予測を確かめる\nAppendix: 2. 原位置・重複・実装の補足\nimport json\nrows = [json.loads(s) for s in open(\n    'datasets--eprstmt--test_public.json')]\nhits = sum(r['label'] == 'Negative' for r in rows)\nprint(hits, len(rows), hits / len(rows))\n出力は305、610、0.5。ラベルなしtest.jsonやunlabeled.jsonを分母に混ぜない。\n[1] ICIP Lab / CLUE team. EPRSTMT official public files via FewCLUE. 固定版62a02c6f31cf。原レビューの権利は出所に帰属。\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/eprstmt",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 50,
+    "text": "PETでは、正解がないファイルにも仮の0が入る\n公開実装のload_dataは、labelがあればPositiveを1、それ以外を0へ写す。label自体がない場合も0を入れる。\nこの関数を全15ファイルに実行すると、testの753件、unlabeledの19,565件が全て0になる。元ファイルのNegativeラベルを見つけた結果ではない。\n検証用にはdev_0〜4を結合する公開コードもある。どのbaselineを使うかで、学習・検証の入力範囲が異なるため、32件という課題説明だけから全実装の条件を決めない。\nAppendix: 2. 原位置・重複・実装の補足\n[1] CLUE team. PET baseline pet_eprstmt.py. ラベル語・読み込み・評価。固定版62a02c6f31cf。\nhttps://github.com/CLUEbenchmark/FewCLUE/blob/62a02c6f31cf32814cfe522f78ef088228840f8d/baselines/models_keras/pet/pet_eprstmt.py",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 51,
+    "text": "EFLの変換後ペア数は、原レビュー数ではない\nAppendix: 2. 原位置・重複・実装の補足\n元train\n原レビュー\n変換ペア（ratio=1）\ntrain_0\n32\n62\ntrain_1\n32\n64\ntrain_2\n32\n60\ntrain_3\n32\n60\ntrain_4\n32\n62\n公式処理の結果。原例に、少数クラス数を基準とする負の文ペアを加える。\n[1] CLUE team. EprstmtProcessor. EFL baseline、固定版62a02c6f31cf。\nhttps://github.com/CLUEbenchmark/FewCLUE/blob/62a02c6f31cf32814cfe522f78ef088228840f8d/baselines/models_pytorch/EFL/processors/efl_fewclue.py",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 52,
+    "text": "2021年：EPRSTMT列の追加報告値\nAppendix: 2. 原位置・重複・実装の補足\n方法\n報告値（%）\nLM-BFF\n85.6\nEFL\n84.9\nFine-tuning / ERNIE1.0\n66.5\nPET / ERNIE1.0\n84.0\nP-tuning / ERNIE1.0\n80.6\nEFL / ERNIE1.0\n76.7\nZero-shot / GPT系\n57.5\n論文の中心値のみ引用。括弧内の統計や試行数は推定しない。\n[1] Xu et al. (2021). FewCLUE: A Chinese Few-shot Learning Evaluation Benchmark. arXiv:2107.07498v2.  https://arxiv.org/abs/2107.07498v2",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 53,
+    "text": "研究と参考文献\nAppendix: 3. 研究と参考文献",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 54,
+    "text": "2021年の研究と、固定公開版の役割\nFewCLUE研究は、中国語の少数例学習を9課題で比較するベンチマーク。EPRSTMTはその単文感情分析課題であり、元レビュー収集全体の説明とは範囲が異なる。\nFewCLUE論文はarXivのプレプリントとして公開されている。参照版はv2（2021年9月29日）で、CLEVA書誌に示された2021年版との版情報を区別する。\n公開ファイルから確かめた件数・重複・ラベルと、論文に記された収集説明・成績を、それぞれの根拠に沿って利用する。\nAppendix: 3. 研究と参考文献\n[1] Xu et al. (2021). FewCLUE: A Chinese Few-shot Learning Evaluation Benchmark. arXiv:2107.07498v2.  https://arxiv.org/abs/2107.07498v2\n[2] CLUE team. FewCLUE official README. 固定版62a02c6f31cf、EPRSTMTの定義・配布構造。  https://github.com/CLUEbenchmark/FewCLUE",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 55,
+    "text": "参考文献\nAppendix: 3. 研究と参考文献\nFewCLUE: A Chinese Few-shot Learning Evaluation Benchmark\nLiang Xu, Xiaojing Lu, Chenyang Yuan, Xuanwei Zhang, Huilin Xu, Hu Yuan, Guoao Wei, Xiang Pan, Xin Tian, Libo Qin & Hai Hu · 2021 · arXiv:2107.07498v2\n中国語の少数例学習を9課題で比較し、EPRSTMTの由来・分割・報告成績を説明する。\nhttps://arxiv.org/abs/2107.07498v2\nFewCLUE: official repository and EPRSTMT files\nCLUE team · commit 62a02c6f31cf · README / 15 JSON files\n公開分割、原レビュー、二つの感情ラベル、baseline実装を配布する。\nhttps://github.com/CLUEbenchmark/FewCLUE",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 56,
+    "text": "参考文献\nAppendix: 3. 研究と参考文献\nFewCLUE EPRSTMT: PET baseline\nCLUE team · pet_eprstmt.py · commit 62a02c6f31cf\n原ラベル・仮値の読み込み、ラベル語、学習・検証入力の範囲を定めるPET実装。\nhttps://github.com/CLUEbenchmark/FewCLUE/blob/62a02c6f31cf/baselines/models_keras/pet/pet_eprstmt.py\nFewCLUE EFL: compute_metrics / simple_accuracy\nCLUE team · clue_compute_metrics.py · commit 62a02c6f31cf\neprstmtで呼び出されるAccuracyの公式計算関数。予測と正解の一致率を返す。\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf/baselines/models_pytorch/EFL/metrics",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 57,
+    "text": "参考文献\nAppendix: 3. 研究と参考文献\nCLEVA: Chinese Language Models EVAluation Platform\nLi et al. · 2023 · EMNLP System Demonstrations\n感情分析の採用元としてFewCLUEを挙げ、商品レビューの公開例を示す。\nhttps://aclanthology.org/2023.emnlp-demo.17/\nCLEVASentimentAnalysisScenario and Converter\nStanford CRFM · HELM v0.4.0\n元レビューに対応する説明例と選択肢・正解ターゲット、変換済み集合の読み込みを定義する。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py",
+    "Japanese_proofread": true
+  },
+  {
+    "page": 58,
+    "text": "参考文献\nAppendix: 3. 研究と参考文献\nCLEVA v1 run configuration\nStanford CRFM · HELM v0.4.0\nsentiment_analysisのprompt_id 0〜5を含む設定。実行結果の公開とは別の情報。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/presentation/run_specs_cleva_v1.conf\nHELM Classic v0.4.0: public run index\nStanford CRFM · release 2023-11-17\n固定公開8,526 runの索引。CLEVAの対象実行0件という公開範囲を示す。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/",
+    "Japanese_proofread": true
+  }
+]

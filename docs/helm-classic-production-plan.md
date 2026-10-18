@@ -64,7 +64,7 @@
 |17|wmt2020-enzh|WMT 2020 newstest2020 English–Chinese|作成済み|
 |18|bustm|BUSTM (FewCLUE)|作成済み|
 |19|afqmc|AFQMC (CLUE)|作成済み|
-|20|eprstmt|EPRSTMT (FewCLUE)|未着手|
+|20|eprstmt|EPRSTMT (FewCLUE)|作成済み|
 |21|tnews|TNEWS (CLUE/FewCLUE)|未着手|
 |22|ccl2020-humor|SPR / CCL2020 Humor Computation|未着手|
 
