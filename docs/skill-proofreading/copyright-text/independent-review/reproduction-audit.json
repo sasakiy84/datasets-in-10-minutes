@@ -1,0 +1,217 @@
+{
+  "method": "Independent C++ two-row dynamic-programming Levenshtein + official Treebank tokenization; independent formula/character truncation and normalization",
+  "all2997_generations_recomputed": true,
+  "all18_published_statistics_match": true,
+  "all_model_instance_sets_equal": true,
+  "runs": [
+    {
+      "file": "n_books_1000-extractions_per_book_1-prefix_length_125--openai_text-davinci-003--scenario_state.json",
+      "sha256": "a4d11f7ff174c863fb3669aba3cf3e06c738980858bb0d0e5efda2e3e84cec57",
+      "requests": 979,
+      "metrics": {
+        "longest_common_prefix_length": 0.006159832676686613,
+        "edit_distance": 0.8382429770321823,
+        "edit_similarity": 0.0006574741594573568
+      },
+      "prefix_word_distribution": {
+        "125": 907,
+        "126": 70,
+        "124": 1,
+        "123": 1
+      },
+      "empty_completions": 17,
+      "prompt_truncated": 0,
+      "prompt_exactly_input_count": 979,
+      "reference_chars_min": 8053,
+      "reference_chars_max": 12994,
+      "stripped_completion_chars_min": 0,
+      "stripped_completion_chars_max": 4826
+    },
+    {
+      "file": "n_books_1000-extractions_per_book_1-prefix_length_125--together_bloom--scenario_state.json",
+      "sha256": "c8fc95cdb8a154d9500b01989eac9716a2e0236839a0a13885be9d43dd91c86c",
+      "requests": 979,
+      "metrics": {
+        "longest_common_prefix_length": 0.004721241305510972,
+        "edit_distance": 6.94800152139008,
+        "edit_similarity": 0.0005065858165770769
+      },
+      "prefix_word_distribution": {
+        "125": 907,
+        "126": 70,
+        "124": 1,
+        "123": 1
+      },
+      "empty_completions": 0,
+      "prompt_truncated": 0,
+      "prompt_exactly_input_count": 979,
+      "reference_chars_min": 8053,
+      "reference_chars_max": 12994,
+      "stripped_completion_chars_min": 2047,
+      "stripped_completion_chars_max": 7314
+    },
+    {
+      "file": "n_books_1000-extractions_per_book_1-prefix_length_125--together_opt-175b--scenario_state.json",
+      "sha256": "d088278a3719afe2bcbd7ee907c92e643efe2b4e189a5b257503e686509091d3",
+      "requests": 979,
+      "metrics": {
+        "longest_common_prefix_length": 0.006061060038588133,
+        "edit_distance": 6.847691959049566,
+        "edit_similarity": 0.0005360486716017159
+      },
+      "prefix_word_distribution": {
+        "125": 907,
+        "126": 70,
+        "124": 1,
+        "123": 1
+      },
+      "empty_completions": 0,
+      "prompt_truncated": 1,
+      "prompt_exactly_input_count": 978,
+      "reference_chars_min": 8053,
+      "reference_chars_max": 12994,
+      "stripped_completion_chars_min": 102,
+      "stripped_completion_chars_max": 6008
+    },
+    {
+      "file": "popular_books-prefix_length_125.json--openai_text-davinci-003--scenario_state.json",
+      "sha256": "27a3ef2dae3f35eef2ddd1ba587255bb441438412c86f591b0bc34c7e234802a",
+      "requests": 20,
+      "metrics": {
+        "longest_common_prefix_length": 0.0648,
+        "edit_distance": 1.4860000000000002,
+        "edit_similarity": 0.0011237310941113483
+      },
+      "prefix_word_distribution": {
+        "125": 20
+      },
+      "empty_completions": 0,
+      "prompt_truncated": 0,
+      "prompt_exactly_input_count": 20,
+      "reference_chars_min": 9168,
+      "reference_chars_max": 10680,
+      "stripped_completion_chars_min": 67,
+      "stripped_completion_chars_max": 4630
+    },
+    {
+      "file": "popular_books-prefix_length_125.json--together_bloom--scenario_state.json",
+      "sha256": "49de0faef97db5199d834cc888823863e225f3d7166f8c83317ff4adac54404b",
+      "requests": 20,
+      "metrics": {
+        "longest_common_prefix_length": 0.006,
+        "edit_distance": 7.0032,
+        "edit_similarity": 0.0005424712865348321
+      },
+      "prefix_word_distribution": {
+        "125": 20
+      },
+      "empty_completions": 0,
+      "prompt_truncated": 0,
+      "prompt_exactly_input_count": 20,
+      "reference_chars_min": 9168,
+      "reference_chars_max": 10680,
+      "stripped_completion_chars_min": 3057,
+      "stripped_completion_chars_max": 5654
+    },
+    {
+      "file": "popular_books-prefix_length_125.json--together_opt-175b--scenario_state.json",
+      "sha256": "6dceedb89114bfdddb1918374f74ef831f775ab1243d47644fc95cf18805b5f3",
+      "requests": 20,
+      "metrics": {
+        "longest_common_prefix_length": 0.005200000000000001,
+        "edit_distance": 6.6932,
+        "edit_similarity": 0.0004684194399775262
+      },
+      "prefix_word_distribution": {
+        "125": 20
+      },
+      "empty_completions": 0,
+      "prompt_truncated": 0,
+      "prompt_exactly_input_count": 20,
+      "reference_chars_min": 9168,
+      "reference_chars_max": 10680,
+      "stripped_completion_chars_min": 958,
+      "stripped_completion_chars_max": 6611
+    }
+  ],
+  "examples": [
+    {
+      "index": 1,
+      "work_position": "popular-books/id3",
+      "total_quoted_unicode_characters": 61,
+      "all_spans_and_raw_hashes_match": true
+    },
+    {
+      "index": 2,
+      "work_position": "popular-books/id0",
+      "total_quoted_unicode_characters": 62,
+      "all_spans_and_raw_hashes_match": true
+    },
+    {
+      "index": 3,
+      "work_position": "popular-books/id10",
+      "total_quoted_unicode_characters": 71,
+      "all_spans_and_raw_hashes_match": true
+    },
+    {
+      "index": 4,
+      "work_position": "popular-books/id1",
+      "total_quoted_unicode_characters": 64,
+      "all_spans_and_raw_hashes_match": true
+    },
+    {
+      "index": 5,
+      "work_position": "popular-books/id5",
+      "total_quoted_unicode_characters": 81,
+      "all_spans_and_raw_hashes_match": true
+    },
+    {
+      "index": 6,
+      "work_position": "popular-books/id8",
+      "total_quoted_unicode_characters": 57,
+      "all_spans_and_raw_hashes_match": true
+    },
+    {
+      "index": 7,
+      "work_position": "popular-books/id9",
+      "total_quoted_unicode_characters": 59,
+      "all_spans_and_raw_hashes_match": true
+    },
+    {
+      "index": 8,
+      "work_position": "popular-books/id11",
+      "total_quoted_unicode_characters": 80,
+      "all_spans_and_raw_hashes_match": true
+    },
+    {
+      "index": 9,
+      "work_position": "popular-books/id12",
+      "total_quoted_unicode_characters": 83,
+      "all_spans_and_raw_hashes_match": true
+    },
+    {
+      "index": 10,
+      "work_position": "popular-books/id13",
+      "total_quoted_unicode_characters": 69,
+      "all_spans_and_raw_hashes_match": true
+    },
+    {
+      "index": 11,
+      "work_position": "popular-books/id15",
+      "total_quoted_unicode_characters": 74,
+      "all_spans_and_raw_hashes_match": true
+    },
+    {
+      "index": 12,
+      "work_position": "popular-books/id16",
+      "total_quoted_unicode_characters": 61,
+      "all_spans_and_raw_hashes_match": true
+    },
+    {
+      "index": 13,
+      "work_position": "popular-books/id17",
+      "total_quoted_unicode_characters": 50,
+      "all_spans_and_raw_hashes_match": true
+    }
+  ]
+}
