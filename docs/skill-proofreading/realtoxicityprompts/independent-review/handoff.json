@@ -1,0 +1,149 @@
+{
+  "dataset": "RealToxicityPrompts",
+  "reviewer": "create_cnndm",
+  "approved": true,
+  "remaining_issues": [],
+  "resolved_issues": [
+    {
+      "id": "RTP-01",
+      "page": 17,
+      "before": "評定者間一致88%",
+      "reason": "Paper footnote 6 compares human judgments with API toxicity scores; it does not identify this as inter-annotator agreement.",
+      "status": "resolved"
+    },
+    {
+      "id": "RTP-02",
+      "page": 51,
+      "before": "できることはあまり……",
+      "reason": "Explicitly retain not much negation while preserving the archived generation unfinished ending.",
+      "status": "resolved"
+    },
+    {
+      "id": "RTP-03",
+      "page": 44,
+      "before": "黒人のことなど気にかけていない",
+      "reason": "Archived original says do not like Black people; do not substitute the famous historical care-about wording.",
+      "status": "resolved"
+    }
+  ],
+  "pages": 62,
+  "main_pages": 33,
+  "visual": {
+    "all_individually_viewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62
+    ],
+    "overview_viewed": true,
+    "final_changed_pages_reviewed": [
+      17,
+      44,
+      51
+    ]
+  },
+  "primary_checks": [
+    "Independently fetched ACL paper, arXiv appendix, official README, historical HELM scenario/metric, remote HF revision/LFS metadata and five public run files",
+    "Remote raw file LFS SHA/size matches fixed 99,442-record JSONL and official archive extracted bytes",
+    "All13 raw examples/line hashes, complete prompt/original continuation, JP field boundaries checked",
+    "All1000 instance IDs reconstructed from seed0 shuffle; 5000 candidate slots/4997 nonempty/13 duplicate requests checked",
+    "Six archived per-instance toxicity aggregates independently recomputed, error below 3.1e-16",
+    "2020 paper tables and 25-candidate conditions distinguished from HELM 5-candidate one-trial conditions",
+    "Null scores, threshold denominator, duplicate text dictionary, 1199 archived challenging flags vs1225 paper retained without unsupported explanation"
+  ],
+  "native_checks": {
+    "tables": 9,
+    "score_labels": 19,
+    "quote_code_frames": 59,
+    "layout_paragraphs": 440,
+    "table_cells": 124,
+    "layout_issues": 0,
+    "new_xsd_errors": 0,
+    "URL_only_native_and_PDF": 62,
+    "notes": 0
+  },
+  "limits": [
+    "No new generation or Perspective scoring performed. Individual candidate toxicity attributes are absent in saved outputs; recheck reaggregates archived per-instance metrics.",
+    "Official archive equality relies on stored extracted bytes plus independent HF remote LFS SHA; full 3.7GB archive was not downloaded again."
+  ],
+  "final_artifacts": [
+    {
+      "path": "/workspace/artifacts/helm-parallel/realtoxicityprompts/datasets-in-10-minutes-realtoxicityprompts.pptx",
+      "bytes": 217588,
+      "sha256": "11382eb402dad391d0ce89d75aa3fff81fbee0e64fecd0ee39f04d153283bd67"
+    },
+    {
+      "path": "/workspace/artifacts/helm-parallel/realtoxicityprompts/datasets-in-10-minutes-realtoxicityprompts.pdf",
+      "bytes": 1242582,
+      "sha256": "26de0dc4277a1cb1201fb0de45ab114d2564770da2120ff3b25cede2929f6c86"
+    }
+  ],
+  "evidence": [
+    "content-checks.json",
+    "native-and-layout-checks.json",
+    "public-run-fetch-checks.json",
+    "fetch-log.json",
+    "artifacts/realtoxicityprompts/layout-audit.json",
+    "artifacts/realtoxicityprompts/package-audit.json",
+    "artifacts/realtoxicityprompts/links-audit.json",
+    "native-table-checks.json"
+  ]
+}

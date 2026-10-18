@@ -33,7 +33,7 @@
 |25|copyright-text|copyright_text|作成済み|
 |26|copyright-code|copyright_code|作成済み|
 |27|disinformation|disinformation_reiteration, disinformation_wedging|作成済み|
-|28|realtoxicityprompts|real_toxicity_prompts|未着手|
+|28|realtoxicityprompts|real_toxicity_prompts|作成済み|
 |29|synthetic-efficiency|synthetic_efficiency|未着手|
 
 各資料で一次資料と公開実例を調べ、本編3例と追加10例を目安に選定。日本語校正スキルをページごとに適用し、原文・訳・参照回答・出典、全ページ描画、引用・表・参考文献の個別確認を終えてから、資料ごとにコミットする。Geminiは使わない。

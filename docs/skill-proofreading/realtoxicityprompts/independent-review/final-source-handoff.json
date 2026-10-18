@@ -1,0 +1,66 @@
+{
+  "slug": "realtoxicityprompts",
+  "title": "RealToxicityPrompts",
+  "year": 2020,
+  "description": "英語ウェブ文の前半から生成される続きを毒性スコアで評価するデータセット。13原例と3公開生成例、2020年の25候補評価とHELMの5候補固定実行を解説。",
+  "modality": [
+    "text"
+  ],
+  "tasks": [
+    "text generation",
+    "toxicity evaluation"
+  ],
+  "main_pages": 33,
+  "total_pages": 62,
+  "main_examples": 3,
+  "appendix_examples": 10,
+  "original_text_scope": "All13 original prompts and original continuations full; all5 published completions for3main examples full with whitespace-only display normalization.",
+  "reading_time": "約10分予定・未実測",
+  "completed": [
+    "primary paper and official dataset research",
+    "official archive/HF prompt byte equality",
+    "13 raw records and translations",
+    "3 public model output sets,5 full candidates each",
+    "HELM42 specs and3 models public stats",
+    "1000 IDs/5000candidate slots and6 per-instance aggregates rechecked",
+    "62 individual page views; changed pages rechecked",
+    "native9tables/code/diagram",
+    "actual Japanese proofreading changes",
+    "layout/package/text/link/actual ink audits"
+  ],
+  "remaining_issues": [],
+  "independent_review_pending": true,
+  "independent_review_status": "ready",
+  "files": {
+    "pptx": "/workspace/artifacts/helm-parallel/realtoxicityprompts/datasets-in-10-minutes-realtoxicityprompts.pptx",
+    "pdf": "/workspace/artifacts/helm-parallel/realtoxicityprompts/datasets-in-10-minutes-realtoxicityprompts.pdf",
+    "manifest": "/workspace/artifacts/helm-parallel/realtoxicityprompts/manifest.json",
+    "examples": "/workspace/artifacts/helm-parallel/realtoxicityprompts/examples.json",
+    "stats": "/workspace/artifacts/helm-parallel/realtoxicityprompts/stats.json",
+    "sources": "/workspace/artifacts/helm-parallel/realtoxicityprompts/sources.md",
+    "proofreading": "/workspace/artifacts/helm-parallel/realtoxicityprompts/proofreading-changes.json",
+    "page_text": "/workspace/artifacts/helm-parallel/realtoxicityprompts/page-text-and-proofreading.json",
+    "visual": "/workspace/artifacts/helm-parallel/realtoxicityprompts/visual-inspection.json",
+    "overview": "/workspace/artifacts/helm-parallel/realtoxicityprompts/overview.png",
+    "layout_audit": "/workspace/artifacts/helm-parallel/realtoxicityprompts/layout-audit.json",
+    "package_audit": "/workspace/artifacts/helm-parallel/realtoxicityprompts/package-audit.json",
+    "links_audit": "/workspace/artifacts/helm-parallel/realtoxicityprompts/links-audit.json",
+    "text_audit": "/workspace/artifacts/helm-parallel/realtoxicityprompts/text-audit.json",
+    "example_audit": "/workspace/artifacts/helm-parallel/realtoxicityprompts/example-audit.json",
+    "HELM": "/workspace/artifacts/helm-parallel/realtoxicityprompts/helm-recheck.json",
+    "ink": "/workspace/artifacts/helm-parallel/realtoxicityprompts/panel-visible-gaps.json"
+  },
+  "final_artifacts": [
+    {
+      "path": "/workspace/artifacts/helm-parallel/realtoxicityprompts/datasets-in-10-minutes-realtoxicityprompts.pptx",
+      "bytes": 217588,
+      "sha256": "11382eb402dad391d0ce89d75aa3fff81fbee0e64fecd0ee39f04d153283bd67"
+    },
+    {
+      "path": "/workspace/artifacts/helm-parallel/realtoxicityprompts/datasets-in-10-minutes-realtoxicityprompts.pdf",
+      "bytes": 1242582,
+      "sha256": "26de0dc4277a1cb1201fb0de45ab114d2564770da2120ff3b25cede2929f6c86"
+    }
+  ],
+  "reproduction": "prepare.py -> build.py -> convert -> render -> ink_panels.py -> convert -> render -> audits -> records.py; manual visual review remains required"
+}
