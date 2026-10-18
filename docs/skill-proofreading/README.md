@@ -53,3 +53,4 @@
 |資料|修正前後の対|全ページの記録|出典・検証|
 |---|---|---|---|
 |OpenBookQA|[変更対](openbookqa.md)・[TSV](openbookqa/changes.tsv)|[pages.jsonl](openbookqa/pages.jsonl)|[制作記録](../openbookqa-sources.md)・[最終検査](openbookqa/review.json)|
+|MMLU|[変更対](mmlu.md)・[TSV](mmlu/changes.tsv)|[pages.jsonl](mmlu/pages.jsonl)|[制作記録](../mmlu-sources.md)・[最終検査](mmlu/review.json)|

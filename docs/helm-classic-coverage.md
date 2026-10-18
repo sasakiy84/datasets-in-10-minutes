@@ -24,7 +24,7 @@ GSM8KとHumanEvalは既存資料で対象データセットを紹介済み。MML
 |hellaswag|HellaSwag|作成済み|[PPTX](../slides/datasets-in-10-minutes-hellaswag.pptx) / [PDF](../slides/datasets-in-10-minutes-hellaswag.pdf)|
 |openbookqa|OpenbookQA|作成済み|[PPTX](../slides/datasets-in-10-minutes-openbookqa.pptx) / [PDF](../slides/datasets-in-10-minutes-openbookqa.pdf)|
 |truthful_qa|TruthfulQA|作成済み|[PPTX](../slides/datasets-in-10-minutes-truthfulqa.pptx) / [PDF](../slides/datasets-in-10-minutes-truthfulqa.pdf)|
-|mmlu|MMLU (Massive Multitask Language Understanding)|今回制作|mmlu|
+|mmlu|MMLU (Massive Multitask Language Understanding)|作成済み|[PPTX](../slides/datasets-in-10-minutes-mmlu.pptx) / [PDF](../slides/datasets-in-10-minutes-mmlu.pdf)|
 |msmarco_regular|MS MARCO (regular track)|未着手||
 |msmarco_trec|MS MARCO (TREC track)|未着手||
 |summarization_cnndm|CNN/DailyMail|未着手||
