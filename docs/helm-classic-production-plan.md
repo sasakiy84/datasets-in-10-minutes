@@ -27,7 +27,7 @@
 |19|lexglue|lex_glue|作成済み|
 |20|billsum|billsum_legal_summarization|作成済み|
 |21|multilexsum|multilexsum_legal_summarization|作成済み|
-|22|eurlexsum|eurlexsum_legal_summarization|未着手|
+|22|eurlexsum|eurlexsum_legal_summarization|作成済み|
 |23|data-imputation|entity_data_imputation|未着手|
 |24|entity-matching|entity_matching|未着手|
 |25|copyright-text|copyright_text|未着手|
