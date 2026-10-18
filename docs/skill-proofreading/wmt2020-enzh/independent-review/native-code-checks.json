@@ -1,0 +1,14 @@
+[
+  {
+    "page": 51,
+    "code": "import re, tarfile, html\nwith tarfile.open('test.tgz') as archive:\n    raw = archive.extractfile(\n        'sgm/newstest2020-enzh-src.en.sgm'\n    ).read().decode('utf-8')\nsegments = re.findall(r'<seg id=\"[^\"]+\">(.*?)</seg>', raw)\nprint(html.unescape(segments[910]))",
+    "output": "House rebukes Trump on border wall, but he plans veto\n",
+    "executed_unchanged_native_code": true
+  },
+  {
+    "page": 52,
+    "code": "import re, tarfile, html\nfrom sacrebleu.metrics import BLEU\ndef refs(name):\n    with tarfile.open('test.tgz') as t:\n        raw = t.extractfile(name).read().decode('utf-8')\n    return [html.unescape(s) for s in re.findall(\n        r'<seg id=\"[^\"]+\">(.*?)</seg>', raw)]\na = refs('sgm/newstest2020-enzh-ref.zh.sgm')\nb = refs('sgm/newstestB2020-enzh-ref.zh.sgm')\nmetric = BLEU(tokenize='zh', lowercase=False)\nprint(metric.corpus_score(a, [b]).score)\nprint(metric.get_signature())",
+    "output": "36.85247953081421\nnrefs:1|case:mixed|eff:no|tok:zh|smooth:exp|version:2.5.1\n",
+    "executed_unchanged_native_code": true
+  }
+]

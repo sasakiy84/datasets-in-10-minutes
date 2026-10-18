@@ -61,7 +61,7 @@
 |14|adgen|ADGEN / Shao2019 product advertising data|未着手|
 |15|pku-paraphrase-bank|PKU Paraphrase Bank|未着手|
 |16|crosswoz|CrossWOZ|作成済み|
-|17|wmt2020-enzh|WMT 2020 newstest2020 English–Chinese|制作中|
+|17|wmt2020-enzh|WMT 2020 newstest2020 English–Chinese|作成済み|
 |18|bustm|BUSTM (FewCLUE)|作成済み|
 |19|afqmc|AFQMC (CLUE)|作成済み|
 |20|eprstmt|EPRSTMT (FewCLUE)|未着手|
