@@ -56,3 +56,4 @@
 |MMLU|[変更対](mmlu.md)・[TSV](mmlu/changes.tsv)|[pages.jsonl](mmlu/pages.jsonl)|[制作記録](../mmlu-sources.md)・[最終検査](mmlu/review.json)|
 |bAbI|[変更対](babi.md)・[TSV](babi/changes.tsv)|[pages.jsonl](babi/pages.jsonl)|[制作記録](../babi-sources.md)・[最終検査](babi/review.json)|
 |BLiMP|[変更対](blimp.md)・[TSV](blimp/changes.tsv)|[pages.jsonl](blimp/pages.jsonl)|[制作記録](../blimp-sources.md)・[最終検査](blimp/review.json)|
+|APPS|[変更対](apps.md)・[TSV](apps/changes.tsv)|[pages.jsonl](apps/pages.jsonl)|[制作記録](../apps-sources.md)・[最終検査](apps/review.json)|
