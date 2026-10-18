@@ -62,7 +62,7 @@
 |15|pku-paraphrase-bank|PKU Paraphrase Bank|未着手|
 |16|crosswoz|CrossWOZ|作成済み|
 |17|wmt2020-enzh|WMT 2020 newstest2020 English–Chinese|未着手|
-|18|bustm|BUSTM (FewCLUE)|未着手|
+|18|bustm|BUSTM (FewCLUE)|作成済み|
 |19|afqmc|AFQMC (CLUE)|未着手|
 |20|eprstmt|EPRSTMT (FewCLUE)|未着手|
 |21|tnews|TNEWS (CLUE/FewCLUE)|未着手|
