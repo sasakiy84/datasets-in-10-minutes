@@ -34,3 +34,7 @@ OOXMLはマスター、レイアウト、表、内部参照、図形IDも検査�
 ## 2026-10-18：正解表示と出典表現の更新
 
 全ページを点検し、正解表示16か所、出典表現1か所を変更した。正解値、引用原文、訳、評価結果、ページ数、出典URLは保持した。図表番号の照合履歴は[変更対](skill-proofreading/babi/changes.tsv)に残し、スライド内では文献単位の出典にまとめた。詳細は[今回の点検記録](skill-proofreading/babi/answer-and-citation-review.json)。Geminiは使用していない。
+
+## 2026-10-18：正解表示の色
+
+ユーザー個人の好みに合わせ、正解表示16か所をテーマaccent1（#B13731、えんじ系の赤）に変更。文章・値・書体・大きさ・座標は旧版と一致。変更記録は[こちら](skill-proofreading/babi/answer-color-review.json)。
