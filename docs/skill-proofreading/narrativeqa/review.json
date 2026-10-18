@@ -1,7 +1,7 @@
 {
   "dataset": "narrativeqa",
-  "created_at": "2026-10-18T05:40:23Z",
-  "updated_at": "2026-10-18T05:40:23Z",
+  "created_at": "2026-10-18T05:46:22Z",
+  "updated_at": "2026-10-18T05:46:22Z",
   "review_mode": "skill_based_codex",
   "gemini_used": false,
   "skill_path": ".agents/skills/japanese-slide-proofreading/SKILL.md",
@@ -112,10 +112,13 @@
     65
   ],
   "final_changed_pages": [
+    31,
+    32,
     49,
     50,
     51,
     52,
+    61,
     64,
     65
   ],
@@ -207,6 +210,33 @@
       "gemini_used": false
     },
     {
+      "page": 31,
+      "before": "各値は3試行平均、単位は%。",
+      "after": "OPT・davinciは3試行平均、Llama 2は1試行。単位は%。",
+      "reason": "公開実行設定とstatsのcountを照合し、モデル別の試行数を反映。得点は変更しない。",
+      "kind": "内容照合",
+      "method": "skill_based_codex",
+      "gemini_used": false
+    },
+    {
+      "page": 32,
+      "before": "各実行のtest統計、3試行平均。",
+      "after": "test統計。OPT・davinciは3試行、Llama 2は1試行。",
+      "reason": "提示例数の平均に使った試行数をモデル別に示す。",
+      "kind": "内容照合",
+      "method": "skill_based_codex",
+      "gemini_used": false
+    },
+    {
+      "page": 61,
+      "before": "提示例を選ぶ3試行",
+      "after": "OPT・davinciは3試行、Llama 2は1試行",
+      "reason": "モデル別の実行条件へ訂正。",
+      "kind": "内容照合",
+      "method": "skill_based_codex",
+      "gemini_used": false
+    },
+    {
       "page": 64,
       "before": "参考文献3件を1件ずつp.64–66に掲載",
       "after": "p.64に論文2件、p.65に公式配布先1件を掲載",
@@ -269,8 +299,8 @@
     }
   },
   "artifact_sha256": {
-    "pptx": "e840ce97d662f326ac8461c321f2fe8ac630bc4330867b688e8f3bd23912a804",
-    "pdf": "511df7170e91ade52e08276f67c7c3d8d2a6fb8a294d6b9e4cd4f918e8342a91"
+    "pptx": "560fda059d2ade744df41b88269e7c537783e1ef0a2cb54cb42015b23be1f95f",
+    "pdf": "10dd544831a59b11059e522cc6cfb6a1d7144d2350dac746b358f5e6e69c586b"
   },
   "reading_time": "本編約10分の黙読・流し読みを想定。未実測。"
 }
