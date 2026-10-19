@@ -1,0 +1,981 @@
+[
+  {
+    "old_page": 6,
+    "shape_id": 2,
+    "before": "表示する抜粋と、要約の対象を区別する",
+    "after": "実例は、法案の一部と全文に対する参照要約",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 6
+  },
+  {
+    "old_page": 6,
+    "shape_id": 3,
+    "before": "本編3件と追加10件は、固定した公開test・ca_testから選んだ異なる法案。地域と、教育・融資・農業・保健などの内容を変えた。\n入力は意味の通る連続した範囲を抜粋し、各頁に入力全文の語数を示す。法案全文は検証記録に保存した。\n参照要約は法案全文に対する全文を載せる。抜粋だけから生成された要約や、今回のモデル出力ではない。",
+    "after": "本編3件と追加10件では、連邦議会とCalifornia州の13法案を取り上げる。教育・融資・農業・保健など、異なる分野の措置を比べる。\n法案本文からは、意味の通る連続した部分を抜粋する。各入力頁の語数は、抜粋元の法案全文の長さを表す。\n参照要約は、法案全文をもとに専門職が書いたもの。原文と日本語訳を全文で示す。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 6
+  },
+  {
+    "old_page": 14,
+    "shape_id": 3,
+    "before": "Californiaの参照要約は、現行法を説明してから、法案が変える点を述べることが多い。\n教員認可の実例では、既存の最低要件を背景として説明し、州外資格を使える手続きを続けて述べる。\n条文の中に現行法と新しい文言が混在するため、書かれた制度のすべてを法案による新設と解釈しない。",
+    "after": "Californiaの参照要約は、現行法を説明してから、法案が変える点を述べることが多い。\n教員認可の実例では、既存の最低要件を背景として説明し、州外資格を使える手続きを続けて述べる。\n要約では既存制度を背景に置き、法案が変更する措置を中心に伝える。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 14
+  },
+  {
+    "old_page": 18,
+    "shape_id": 3,
+    "before": "抜粋は免除の本則。参照要約は、別の条項にある濫用防止と義務復活の権限も含める。\n参照要約に含まれる情報が、本文のどこにあるかを確かめる。法案の一部だけを読むと、重要な例外や施行条件を落とすことがある。",
+    "after": "抜粋は免除の本則。参照要約は、別の条項にある濫用防止と義務復活の権限も含める。\n主要な措置に加え、その適用を制限する条件や、実施に必要な行政の権限までまとめる。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 18
+  },
+  {
+    "old_page": 23,
+    "shape_id": 2,
+    "before": "現在の配布本文でも、入力は長い",
+    "after": "法案本文は、参照要約より大幅に長い",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 23
+  },
+  {
+    "old_page": 23,
+    "shape_id": 5,
+    "before": "今回取得した4,506件の全件実測。空白で区切った語数。2019年の前処理済み本文の統計とは数え方が異なる。",
+    "after": "公開test・ca_testの全4,506法案を、空白区切りの語数で集計。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 23
+  },
+  {
+    "old_page": 27,
+    "shape_id": 3,
+    "before": "参照要約とのROUGE-2 precisionが0.1を超えるかを使い、本文の各文に学習用の二値ラベルを作る。\nDOCとSUMの予測を組み合わせ、重要度を高く、既に選んだ文との類似度を低くするMMRで選ぶ。\n出力は最大2,000文字。BillSumの配布ラベルは人が書いた要約であり、文ごとのラベルは学習時に計算する。",
+    "after": "参照要約との語の重なりを使い、本文の各文に重要度の学習用ラベルを作る。\nDOCとSUMの予測を組み合わせ、重要度を高く、既に選んだ文との類似度を低くするMMRで文を選ぶ。\n出力は最大2,000文字。配布される人手要約をもとに、文の選択を学ぶ。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 27
+  },
+  {
+    "old_page": 28,
+    "shape_id": 3,
+    "before": "ROUGEは、参照要約と生成要約が共有する語や語の並びを数える。\nROUGE-1は単語、ROUGE-2は連続2語、ROUGE-Lは最長共通部分列を使う。2019年の比較は適合率と再現率を合わせたF値。\n語を共有していても、金額・例外・義務の主体を取り違えることはある。法律上の変更点と事実の対応も読む。",
+    "after": "ROUGEは、参照要約と生成要約が共有する語や語の並びを数える。\nROUGE-1は単語、ROUGE-2は連続2語、ROUGE-Lは最長共通部分列を使う。2019年の比較は適合率と再現率を合わせたF値。\n語句の一致に加え、金額・例外・義務の主体など、法律上の変更点を正しく伝えているかも重要になる。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 28
+  },
+  {
+    "old_page": 31,
+    "shape_id": 3,
+    "before": "DOC＋SUMのROUGE-2は、USで23.83、Californiaで21.14。学習した議会の外でも、教師なしの手法より高い得点を得た。\nCaliforniaでは現行法の説明を含む要約があり、変更内容を中心に書く連邦議会と文体が異なる。\nこの比較は2019年の抽出型モデルの記録。新しい生成モデルの得点と直接同じ条件として扱わない。",
+    "after": "DOC＋SUMのROUGE-2は、USで23.83、Californiaで21.14。学習した議会の外でも、教師なしの手法より高い得点を得た。\nCaliforniaでは現行法の説明を含む要約があり、変更内容を中心に書く連邦議会と文体が異なる。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 31
+  },
+  {
+    "old_page": 33,
+    "shape_id": 2,
+    "before": "HELMは実装を持つが、固定公開実行はない",
+    "after": "HELMは、連邦議会の法案要約に対応する",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 33
+  },
+  {
+    "old_page": 33,
+    "shape_id": 3,
+    "before": "HELMの実装はUSのtrainとtestを読む。ca_testは読み込む分割に含まれない。\nHELM Classic v0.4.0の公開run_specs 8,526件を調べ、BillSumを含む法律要約シナリオの実行は0件だった。\nこの固定版には、BillSumのモデル得点や生成出力の公開記録がない。2019年の成績は、別の学習・評価条件で得られた値として読む。",
+    "after": "HELMの要約シナリオは、USのtrainとtestを読み込む。Californiaのca_testは対象外。\n本文は先頭2,048語までを入力とし、法案全文に対する参照要約で評価する。\nHELM Classic v0.4.0では、BillSumのモデル出力や得点は公開されていない。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 33
+  },
+  {
+    "old_page": 35,
+    "shape_id": 3,
+    "before": "公式リポジトリは、本文・前処理済み本文・要約・題名・bill_idを含むJSON Lines形式を案内する。2019-12-03の更新後のデータを使うよう告知している。\nHugging Faceの現在の配布はtext・summary・titleの3列。今回の実例はその固定改訂を取得した。\nデータカードはCC0-1.0を表示する。元の法案と要約の作成主体、取得版、分割も記録して扱う。",
+    "after": "公式リポジトリは、本文・前処理済み本文・要約・題名・bill_idを含むJSON Lines形式を案内する。2019-12-03の更新後のデータを使うよう告知している。\nHugging Faceではtext・summary・titleの3列を配布し、USのtrain・testとCaliforniaのca_testを選べる。\nデータカードのライセンス表示はCC0-1.0。元の法案と要約は、米議会・CRSまたはCalifornia議会・Legislative Counselが作成した。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 34
+  },
+  {
+    "old_page": 36,
+    "shape_id": 2,
+    "before": "固定した分割から、本文と参照要約を読む",
+    "after": "公開Parquetから、法案本文と参照要約を読む",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 35
+  },
+  {
+    "old_page": 36,
+    "shape_id": 4,
+    "before": "from datasets import load_dataset\ndata = load_dataset(\n    'FiscalNote/billsum',\n    revision='3d8510441c06a3d9dfb32eb0d7f80151730bcc4f',\n    split='ca_test',\n)\nprint(data[1059]['text'])\nprint(data[1059]['summary'])",
+    "after": "import pandas as pd\ndata = pd.read_parquet(\"ca_test.parquet\")\nprint(data.iloc[0][\"text\"])\nprint(data.iloc[0][\"summary\"])",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 35
+  },
+  {
+    "old_page": 36,
+    "shape_id": 5,
+    "before": "ca_testはCalifornia。USのtestとは異なる地域の評価集合。",
+    "after": "Hugging Faceから入手したca_testのParquetファイルを開き、最初の法案本文と参照要約を表示する。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 35
+  },
+  {
+    "old_page": 39,
+    "shape_id": 3,
+    "before": "追加の法案と参照要約\n実装・配布と採点の補足\n研究と参考文献",
+    "after": "追加の法案と参照要約\n本文の長さと入力範囲\n研究と参考文献",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 38
+  },
+  {
+    "old_page": 71,
+    "shape_id": 2,
+    "before": "実装・配布と採点の補足",
+    "after": "本文の長さと入力範囲",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 70
+  },
+  {
+    "old_page": 71,
+    "shape_id": 3,
+    "before": "Appendix: 2. 実装・配布と採点の補足",
+    "after": "Appendix: 2. 本文の長さと入力範囲",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 70
+  },
+  {
+    "old_page": 72,
+    "shape_id": 3,
+    "before": "Appendix: 2. 実装・配布と採点の補足",
+    "after": "Appendix: 2. 本文の長さと入力範囲",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 71
+  },
+  {
+    "old_page": 73,
+    "shape_id": 4,
+    "before": "Appendix: 2. 実装・配布と採点の補足",
+    "after": "Appendix: 2. 本文の長さと入力範囲",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 72
+  },
+  {
+    "old_page": 74,
+    "shape_id": 4,
+    "before": "Appendix: 2. 実装・配布と採点の補足",
+    "after": "Appendix: 2. 本文の長さと入力範囲",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": null
+  },
+  {
+    "old_page": 72,
+    "shape_id": 2,
+    "before": "本文と前処理済み本文の統計を区別する",
+    "after": "前処理済み本文と、公開本文の長さ",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 71
+  },
+  {
+    "old_page": 72,
+    "before": "今回のHF US test",
+    "after": "公開US testの本文",
+    "reason": "番号・検査用表現を自然な説明へ整理",
+    "action": "rewrite",
+    "new_page": 71
+  },
+  {
+    "old_page": 72,
+    "before": "今回のHF California",
+    "after": "公開Californiaの本文",
+    "reason": "番号・検査用表現を自然な説明へ整理",
+    "action": "rewrite",
+    "new_page": 71
+  },
+  {
+    "old_page": 72,
+    "shape_id": 5,
+    "before": "2019年は構造を簡略化した本文の統計。今回は配布textを空白区切りで数えた。",
+    "after": "上2行は2019年に報告された前処理済み本文、下2行は公開textを空白区切りで数えた値。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 71
+  },
+  {
+    "old_page": 73,
+    "shape_id": 2,
+    "before": "2,048語への切詰めは、全文評価と異なる",
+    "after": "本文を切り詰めると、末尾の条項が入力から外れる",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 72
+  },
+  {
+    "old_page": 73,
+    "shape_id": 3,
+    "before": "US testの362件、Californiaの268件が2,048語を超えた。これは今回の配布全件の長さから数えた値。\nHELMの既定実装が読むのはUSだけ。本文を切り詰めても、参照要約は全文に対するものを使う。\n末尾の重要な条項を落とす可能性は、モデルの生成能力とは別の入力条件になる。",
+    "after": "公開US testの362件、California ca_testの268件は、本文が2,048語を超える。\nHELMが対象とするUSでは、本文を先頭2,048語に切り詰め、法案全文に対する参照要約を使う。\n末尾の例外や施行条件も含めて要約するには、長い条文を読み取れる入力範囲が必要となる。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 72
+  },
+  {
+    "old_page": 2,
+    "shape_id": 5,
+    "before": "[1] FiscalNote. BillSum公式リポジトリ。2026-10-18参照。  https://github.com/FiscalNote/BillSum",
+    "after": "[1] FiscalNote. BillSum公式リポジトリ。https://github.com/FiscalNote/BillSum",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": 2
+  },
+  {
+    "old_page": 6,
+    "shape_id": 5,
+    "before": "[1] BillSum, FiscalNote/billsum. HF固定版。法案・要約の帰属は米議会/CRSまたはCalifornia議会/Legislative Counsel。\nhttps://huggingface.co/datasets/FiscalNote/billsum",
+    "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": 6
+  },
+  {
+    "old_page": 7,
+    "shape_id": 6,
+    "before": "[1] BillSum, FiscalNote/billsum. HF固定版。法案・要約の帰属は米議会/CRSまたはCalifornia議会/Legislative Counsel。 US test / row 1010\nhttps://huggingface.co/datasets/FiscalNote/billsum",
+    "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": 7
+  },
+  {
+    "old_page": 8,
+    "shape_id": 6,
+    "before": "[1] BillSum, FiscalNote/billsum. HF固定版。法案・要約の帰属は米議会/CRSまたはCalifornia議会/Legislative Counsel。 US test / row 1010\nhttps://huggingface.co/datasets/FiscalNote/billsum",
+    "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": 8
+  },
+  {
+    "old_page": 9,
+    "shape_id": 6,
+    "before": "[1] BillSum, FiscalNote/billsum. HF固定版。法案・要約の帰属は米議会/CRSまたはCalifornia議会/Legislative Counsel。 US test / row 1010\nhttps://huggingface.co/datasets/FiscalNote/billsum",
+    "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": 9
+  },
+  {
+    "old_page": 10,
+    "shape_id": 5,
+    "before": "[1] BillSum, FiscalNote/billsum. HF固定版。法案・要約の帰属は米議会/CRSまたはCalifornia議会/Legislative Counsel。\nhttps://huggingface.co/datasets/FiscalNote/billsum",
+    "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": 10
+  },
+  {
+    "old_page": 11,
+    "shape_id": 9,
+    "before": "[1] BillSum, FiscalNote/billsum. HF固定版。法案・要約の帰属は米議会/CRSまたはCalifornia議会/Legislative Counsel。 California ca_test / row 1059\nhttps://huggingface.co/datasets/FiscalNote/billsum",
+    "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": 11
+  },
+  {
+    "old_page": 12,
+    "shape_id": 6,
+    "before": "[1] BillSum, FiscalNote/billsum. HF固定版。法案・要約の帰属は米議会/CRSまたはCalifornia議会/Legislative Counsel。 California ca_test / row 1059\nhttps://huggingface.co/datasets/FiscalNote/billsum",
+    "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": 12
+  },
+  {
+    "old_page": 13,
+    "shape_id": 6,
+    "before": "[1] BillSum, FiscalNote/billsum. HF固定版。法案・要約の帰属は米議会/CRSまたはCalifornia議会/Legislative Counsel。 California ca_test / row 1059\nhttps://huggingface.co/datasets/FiscalNote/billsum",
+    "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": 13
+  },
+  {
+    "old_page": 15,
+    "shape_id": 9,
+    "before": "[1] BillSum, FiscalNote/billsum. HF固定版。法案・要約の帰属は米議会/CRSまたはCalifornia議会/Legislative Counsel。 US test / row 2363\nhttps://huggingface.co/datasets/FiscalNote/billsum",
+    "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": 15
+  },
+  {
+    "old_page": 16,
+    "shape_id": 6,
+    "before": "[1] BillSum, FiscalNote/billsum. HF固定版。法案・要約の帰属は米議会/CRSまたはCalifornia議会/Legislative Counsel。 US test / row 2363\nhttps://huggingface.co/datasets/FiscalNote/billsum",
+    "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": 16
+  },
+  {
+    "old_page": 17,
+    "shape_id": 6,
+    "before": "[1] BillSum, FiscalNote/billsum. HF固定版。法案・要約の帰属は米議会/CRSまたはCalifornia議会/Legislative Counsel。 US test / row 2363\nhttps://huggingface.co/datasets/FiscalNote/billsum",
+    "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": 17
+  },
+  {
+    "old_page": 18,
+    "shape_id": 5,
+    "before": "[1] BillSum, FiscalNote/billsum. HF固定版。法案・要約の帰属は米議会/CRSまたはCalifornia議会/Legislative Counsel。\nhttps://huggingface.co/datasets/FiscalNote/billsum",
+    "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": 18
+  },
+  {
+    "old_page": 23,
+    "shape_id": 6,
+    "before": "[1] BillSum, FiscalNote/billsum. HF固定版。法案・要約の帰属は米議会/CRSまたはCalifornia議会/Legislative Counsel。\nhttps://huggingface.co/datasets/FiscalNote/billsum",
+    "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": 23
+  },
+  {
+    "old_page": 24,
+    "shape_id": 6,
+    "before": "[1] BillSum, FiscalNote/billsum. HF固定版。法案・要約の帰属は米議会/CRSまたはCalifornia議会/Legislative Counsel。\nhttps://huggingface.co/datasets/FiscalNote/billsum",
+    "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": 24
+  },
+  {
+    "old_page": 33,
+    "shape_id": 5,
+    "before": "[1] HELM Classic v0.4.0. 2023-11-17固定公開版。BillSumのグループ定義と実行一覧。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/billsum_legal_summarization",
+    "after": "[1] HELM Classic v0.4.0. \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/billsum_legal_summarization",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": 33
+  },
+  {
+    "old_page": 35,
+    "shape_id": 5,
+    "before": "[1] FiscalNote. BillSum公式リポジトリ。2026-10-18参照。  https://github.com/FiscalNote/BillSum",
+    "after": "[1] FiscalNote. BillSum公式リポジトリ。https://github.com/FiscalNote/BillSum",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": 34
+  },
+  {
+    "old_page": 36,
+    "shape_id": 6,
+    "before": "[1] BillSum, FiscalNote/billsum. HF固定版。法案・要約の帰属は米議会/CRSまたはCalifornia議会/Legislative Counsel。\nhttps://huggingface.co/datasets/FiscalNote/billsum",
+    "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": 35
+  },
+  {
+    "old_page": 41,
+    "shape_id": 9,
+    "before": "[1] BillSum, FiscalNote/billsum. HF固定版。法案・要約の帰属は米議会/CRSまたはCalifornia議会/Legislative Counsel。 US test / row 1496\nhttps://huggingface.co/datasets/FiscalNote/billsum",
+    "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": 40
+  },
+  {
+    "old_page": 42,
+    "shape_id": 6,
+    "before": "[1] BillSum, FiscalNote/billsum. HF固定版。法案・要約の帰属は米議会/CRSまたはCalifornia議会/Legislative Counsel。 US test / row 1496\nhttps://huggingface.co/datasets/FiscalNote/billsum",
+    "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": 41
+  },
+  {
+    "old_page": 43,
+    "shape_id": 6,
+    "before": "[1] BillSum, FiscalNote/billsum. HF固定版。法案・要約の帰属は米議会/CRSまたはCalifornia議会/Legislative Counsel。 US test / row 1496\nhttps://huggingface.co/datasets/FiscalNote/billsum",
+    "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": 42
+  },
+  {
+    "old_page": 44,
+    "shape_id": 6,
+    "before": "[1] BillSum, FiscalNote/billsum. HF固定版。法案・要約の帰属は米議会/CRSまたはCalifornia議会/Legislative Counsel。 US test / row 732\nhttps://huggingface.co/datasets/FiscalNote/billsum",
+    "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": 43
+  },
+  {
+    "old_page": 45,
+    "shape_id": 6,
+    "before": "[1] BillSum, FiscalNote/billsum. HF固定版。法案・要約の帰属は米議会/CRSまたはCalifornia議会/Legislative Counsel。 US test / row 732\nhttps://huggingface.co/datasets/FiscalNote/billsum",
+    "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": 44
+  },
+  {
+    "old_page": 46,
+    "shape_id": 6,
+    "before": "[1] BillSum, FiscalNote/billsum. HF固定版。法案・要約の帰属は米議会/CRSまたはCalifornia議会/Legislative Counsel。 US test / row 732\nhttps://huggingface.co/datasets/FiscalNote/billsum",
+    "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": 45
+  },
+  {
+    "old_page": 47,
+    "shape_id": 6,
+    "before": "[1] BillSum, FiscalNote/billsum. HF固定版。法案・要約の帰属は米議会/CRSまたはCalifornia議会/Legislative Counsel。 US test / row 2931\nhttps://huggingface.co/datasets/FiscalNote/billsum",
+    "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": 46
+  },
+  {
+    "old_page": 48,
+    "shape_id": 6,
+    "before": "[1] BillSum, FiscalNote/billsum. HF固定版。法案・要約の帰属は米議会/CRSまたはCalifornia議会/Legislative Counsel。 US test / row 2931\nhttps://huggingface.co/datasets/FiscalNote/billsum",
+    "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": 47
+  },
+  {
+    "old_page": 49,
+    "shape_id": 6,
+    "before": "[1] BillSum, FiscalNote/billsum. HF固定版。法案・要約の帰属は米議会/CRSまたはCalifornia議会/Legislative Counsel。 US test / row 2931\nhttps://huggingface.co/datasets/FiscalNote/billsum",
+    "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": 48
+  },
+  {
+    "old_page": 50,
+    "shape_id": 9,
+    "before": "[1] BillSum, FiscalNote/billsum. HF固定版。法案・要約の帰属は米議会/CRSまたはCalifornia議会/Legislative Counsel。 US test / row 1401\nhttps://huggingface.co/datasets/FiscalNote/billsum",
+    "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": 49
+  },
+  {
+    "old_page": 51,
+    "shape_id": 6,
+    "before": "[1] BillSum, FiscalNote/billsum. HF固定版。法案・要約の帰属は米議会/CRSまたはCalifornia議会/Legislative Counsel。 US test / row 1401\nhttps://huggingface.co/datasets/FiscalNote/billsum",
+    "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": 50
+  },
+  {
+    "old_page": 52,
+    "shape_id": 6,
+    "before": "[1] BillSum, FiscalNote/billsum. HF固定版。法案・要約の帰属は米議会/CRSまたはCalifornia議会/Legislative Counsel。 US test / row 1401\nhttps://huggingface.co/datasets/FiscalNote/billsum",
+    "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": 51
+  },
+  {
+    "old_page": 53,
+    "shape_id": 9,
+    "before": "[1] BillSum, FiscalNote/billsum. HF固定版。法案・要約の帰属は米議会/CRSまたはCalifornia議会/Legislative Counsel。 US test / row 753\nhttps://huggingface.co/datasets/FiscalNote/billsum",
+    "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": 52
+  },
+  {
+    "old_page": 54,
+    "shape_id": 6,
+    "before": "[1] BillSum, FiscalNote/billsum. HF固定版。法案・要約の帰属は米議会/CRSまたはCalifornia議会/Legislative Counsel。 US test / row 753\nhttps://huggingface.co/datasets/FiscalNote/billsum",
+    "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": 53
+  },
+  {
+    "old_page": 55,
+    "shape_id": 6,
+    "before": "[1] BillSum, FiscalNote/billsum. HF固定版。法案・要約の帰属は米議会/CRSまたはCalifornia議会/Legislative Counsel。 US test / row 753\nhttps://huggingface.co/datasets/FiscalNote/billsum",
+    "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": 54
+  },
+  {
+    "old_page": 56,
+    "shape_id": 9,
+    "before": "[1] BillSum, FiscalNote/billsum. HF固定版。法案・要約の帰属は米議会/CRSまたはCalifornia議会/Legislative Counsel。 California ca_test / row 26\nhttps://huggingface.co/datasets/FiscalNote/billsum",
+    "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": 55
+  },
+  {
+    "old_page": 57,
+    "shape_id": 6,
+    "before": "[1] BillSum, FiscalNote/billsum. HF固定版。法案・要約の帰属は米議会/CRSまたはCalifornia議会/Legislative Counsel。 California ca_test / row 26\nhttps://huggingface.co/datasets/FiscalNote/billsum",
+    "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": 56
+  },
+  {
+    "old_page": 58,
+    "shape_id": 6,
+    "before": "[1] BillSum, FiscalNote/billsum. HF固定版。法案・要約の帰属は米議会/CRSまたはCalifornia議会/Legislative Counsel。 California ca_test / row 26\nhttps://huggingface.co/datasets/FiscalNote/billsum",
+    "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": 57
+  },
+  {
+    "old_page": 59,
+    "shape_id": 9,
+    "before": "[1] BillSum, FiscalNote/billsum. HF固定版。法案・要約の帰属は米議会/CRSまたはCalifornia議会/Legislative Counsel。 California ca_test / row 111\nhttps://huggingface.co/datasets/FiscalNote/billsum",
+    "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": 58
+  },
+  {
+    "old_page": 60,
+    "shape_id": 6,
+    "before": "[1] BillSum, FiscalNote/billsum. HF固定版。法案・要約の帰属は米議会/CRSまたはCalifornia議会/Legislative Counsel。 California ca_test / row 111\nhttps://huggingface.co/datasets/FiscalNote/billsum",
+    "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": 59
+  },
+  {
+    "old_page": 61,
+    "shape_id": 6,
+    "before": "[1] BillSum, FiscalNote/billsum. HF固定版。法案・要約の帰属は米議会/CRSまたはCalifornia議会/Legislative Counsel。 California ca_test / row 111\nhttps://huggingface.co/datasets/FiscalNote/billsum",
+    "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": 60
+  },
+  {
+    "old_page": 62,
+    "shape_id": 6,
+    "before": "[1] BillSum, FiscalNote/billsum. HF固定版。法案・要約の帰属は米議会/CRSまたはCalifornia議会/Legislative Counsel。 California ca_test / row 77\nhttps://huggingface.co/datasets/FiscalNote/billsum",
+    "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": 61
+  },
+  {
+    "old_page": 63,
+    "shape_id": 6,
+    "before": "[1] BillSum, FiscalNote/billsum. HF固定版。法案・要約の帰属は米議会/CRSまたはCalifornia議会/Legislative Counsel。 California ca_test / row 77\nhttps://huggingface.co/datasets/FiscalNote/billsum",
+    "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": 62
+  },
+  {
+    "old_page": 64,
+    "shape_id": 6,
+    "before": "[1] BillSum, FiscalNote/billsum. HF固定版。法案・要約の帰属は米議会/CRSまたはCalifornia議会/Legislative Counsel。 California ca_test / row 77\nhttps://huggingface.co/datasets/FiscalNote/billsum",
+    "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": 63
+  },
+  {
+    "old_page": 65,
+    "shape_id": 6,
+    "before": "[1] BillSum, FiscalNote/billsum. HF固定版。法案・要約の帰属は米議会/CRSまたはCalifornia議会/Legislative Counsel。 California ca_test / row 510\nhttps://huggingface.co/datasets/FiscalNote/billsum",
+    "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": 64
+  },
+  {
+    "old_page": 66,
+    "shape_id": 6,
+    "before": "[1] BillSum, FiscalNote/billsum. HF固定版。法案・要約の帰属は米議会/CRSまたはCalifornia議会/Legislative Counsel。 California ca_test / row 510\nhttps://huggingface.co/datasets/FiscalNote/billsum",
+    "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": 65
+  },
+  {
+    "old_page": 67,
+    "shape_id": 6,
+    "before": "[1] BillSum, FiscalNote/billsum. HF固定版。法案・要約の帰属は米議会/CRSまたはCalifornia議会/Legislative Counsel。 California ca_test / row 510\nhttps://huggingface.co/datasets/FiscalNote/billsum",
+    "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": 66
+  },
+  {
+    "old_page": 68,
+    "shape_id": 9,
+    "before": "[1] BillSum, FiscalNote/billsum. HF固定版。法案・要約の帰属は米議会/CRSまたはCalifornia議会/Legislative Counsel。 California ca_test / row 420\nhttps://huggingface.co/datasets/FiscalNote/billsum",
+    "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": 67
+  },
+  {
+    "old_page": 69,
+    "shape_id": 6,
+    "before": "[1] BillSum, FiscalNote/billsum. HF固定版。法案・要約の帰属は米議会/CRSまたはCalifornia議会/Legislative Counsel。 California ca_test / row 420\nhttps://huggingface.co/datasets/FiscalNote/billsum",
+    "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": 68
+  },
+  {
+    "old_page": 70,
+    "shape_id": 6,
+    "before": "[1] BillSum, FiscalNote/billsum. HF固定版。法案・要約の帰属は米議会/CRSまたはCalifornia議会/Legislative Counsel。 California ca_test / row 420\nhttps://huggingface.co/datasets/FiscalNote/billsum",
+    "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": 69
+  },
+  {
+    "old_page": 72,
+    "shape_id": 6,
+    "before": "[1] Kornilova and Eidelman (2019). BillSum: A Corpus for Automatic Summarization of US Legislation. New Frontiers in Summarization.\nhttps://aclanthology.org/D19-5406/\n[2] BillSum, FiscalNote/billsum. HF固定版。法案・要約の帰属は米議会/CRSまたはCalifornia議会/Legislative Counsel。\nhttps://huggingface.co/datasets/FiscalNote/billsum",
+    "after": "[1] Kornilova and Eidelman (2019). BillSum: A Corpus for Automatic Summarization of US Legislation. New Frontiers in Summarization.\nhttps://aclanthology.org/D19-5406/\n[2] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": 71
+  },
+  {
+    "old_page": 74,
+    "shape_id": 5,
+    "before": "[1] BillSum, FiscalNote/billsum. HF固定版。法案・要約の帰属は米議会/CRSまたはCalifornia議会/Legislative Counsel。\nhttps://huggingface.co/datasets/FiscalNote/billsum",
+    "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
+    "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
+    "action": "rewrite",
+    "new_page": null
+  },
+  {
+    "old_page": 36,
+    "shape_id": 4,
+    "action": "fit_code_visible_ink",
+    "before": "上7.87pt/下15.07pt",
+    "after": "上10pt/下10pt",
+    "reason": "nativeコードの実字形位置を保持してコード背景の上下余白を均等化",
+    "new_page": 35
+  },
+  {
+    "old_page": 50,
+    "shape_id": 8,
+    "action": "fit_quote_visible_ink",
+    "before": "上7.6pt/下9.07pt",
+    "after": "上7.6pt/下7.6pt",
+    "reason": "実字形位置を保持して引用背景下辺を1.47pt詰める",
+    "new_page": 49
+  },
+  {
+    "old_page": 53,
+    "shape_id": 2,
+    "before": "実例8：学生数を単位時間から数える",
+    "after": "実例8：履修単位数から学生数を算定する",
+    "reason": "単位時間とcredit-hoursの違いが分かる見出しへ",
+    "action": "rewrite",
+    "new_page": 52
+  },
+  {
+    "old_page": 65,
+    "shape_id": 2,
+    "before": "実例12：後見の権限と代理人の継続",
+    "after": "実例12：後見人の権限と弁護士の代理",
+    "reason": "代理人の継続という不自然な表現を具体化",
+    "action": "rewrite",
+    "new_page": 64
+  },
+  {
+    "old_page": 7,
+    "shape_id": 7,
+    "before": "（I）その教育課程について大学が請求する授業料と手数料の実質負担額。次のものを充当した後の額とする。（aa）授業料・手数料の免除または減額。（bb）授業料・手数料の支払いだけを目的として大学へ直接支給される奨学金その他の連邦・州・大学・雇用主による援助。ただし、ローンと1965年高等教育法第401条（b）の資金を除く。または、",
+    "after": "（I）その教育課程について教育機関が請求する授業料と手数料の実質負担額。次のものを充当した後の額とする。（aa）授業料・手数料の免除または減額。（bb）授業料・手数料の支払いだけを目的として教育機関へ直接支給される奨学金その他の連邦・州・教育機関・雇用主による援助。ただし、ローンと1965年高等教育法第401条（b）の資金を除く。または、",
+    "reason": "独立レビュー：教育機関の範囲と、必要かつ適切な措置の策定義務を原ENに合わせる",
+    "action": "rewrite",
+    "new_page": 7
+  },
+  {
+    "old_page": 9,
+    "shape_id": 5,
+    "before": "2011年退役軍人教育公平法。公立大学に通う、2001年9月11日以降の退役軍人向け教育支援の対象者について、退役軍人省（VA）による授業料・手数料の支払額の算定式を改める。次のうち大きい額を用いる計算方法を追加する。（1）免除・減額・奨学金等を充当した後の、州内居住者向け授業料の実質負担額。（2）2011年8月1日に始まる学年度は17,500ドル、それ以降は学部授業料の平均増加率に応じて増額した額。",
+    "after": "2011年退役軍人教育公平法。公立の高等教育機関に通う、2001年9月11日以降の退役軍人向け教育支援の対象者について、退役軍人省（VA）による授業料・手数料の支払額の算定式を改める。次のうち大きい額を用いる計算方法を追加する。（1）免除・減額・奨学金等を充当した後の、州内居住者向け授業料の実質負担額。（2）2011年8月1日に始まる学年度は17,500ドル、それ以降は学部授業料の平均増加率に応じて増額した額。",
+    "reason": "独立レビュー：教育機関の範囲と、必要かつ適切な措置の策定義務を原ENに合わせる",
+    "action": "rewrite",
+    "new_page": 9
+  },
+  {
+    "old_page": 17,
+    "shape_id": 5,
+    "before": "アンドリュー・プライア法、またはアンドリュー法。貸付真実法を改正し、民間教育ローンの借り手が死亡した場合、または完全かつ永続的な障害を負った場合に、借り手の遺産と連帯保証人の返済義務を免除する。消費者金融保護局（CFPB）局長に、免除での詐欺・濫用を防ぐ適切な措置を求める。公益を保護するため必要と局長が判断した場合に、返済義務を復活させる規則を定める権限も与える。",
+    "after": "アンドリュー・プライア法、またはアンドリュー法。貸付真実法を改正し、民間教育ローンの借り手が死亡した場合、または完全かつ永続的な障害を負った場合に、借り手の遺産と連帯保証人の返済義務を免除する。消費者金融保護局（CFPB）局長に、免除での詐欺・濫用を防ぐ必要かつ適切な措置を策定するよう求める。公益を保護するため必要と局長が判断した場合に、返済義務を復活させる規則を定める権限も与える。",
+    "reason": "独立レビュー：教育機関の範囲と、必要かつ適切な措置の策定義務を原ENに合わせる",
+    "action": "rewrite",
+    "new_page": 17
+  },
+  {
+    "old_page": 50,
+    "shape_id": 8,
+    "before": "（I）ある統計地域で、その年の生活費格差が125％を超えない場合、適用倍率は1とする。（II）（I）に当たらない統計地域では、適用倍率はその年の生活費格差とする。",
+    "after": "（I）ある統計地域で、その年の生活費比率が125％を超えない場合、適用倍率は1とする。（II）（I）に当たらない統計地域では、適用倍率はその年の生活費比率とする。",
+    "reason": "独立レビュー：生活費比率/単位数/基礎的支援/後見人と被後見人の主客を正確に表す",
+    "action": "rewrite",
+    "new_page": 49
+  },
+  {
+    "old_page": 53,
+    "shape_id": 8,
+    "before": "（ii）計算。各学年度の、部族が運営する中等教育後の職業・技術教育機関における先住民学生数は、（i）により確定した在籍先住民学生全員の履修単位時間の合計を12で割った値とする。",
+    "after": "（ii）計算。各学年度の、部族が運営する中等教育後の職業・技術教育機関における先住民学生数は、（i）により確定した在籍先住民学生全員の履修単位数（クレジットアワー）の合計を12で割った値とする。",
+    "reason": "独立レビュー：生活費比率/単位数/基礎的支援/後見人と被後見人の主客を正確に表す",
+    "action": "rewrite",
+    "new_page": 52
+  },
+  {
+    "old_page": 55,
+    "shape_id": 5,
+    "before": "1998年カール・D・パーキンズ職業・技術教育法を改正する。1978年部族運営大学支援法またはナバホ・コミュニティ・カレッジ法による連邦支援を受けていない、部族運営の中等教育後の職業・技術教育機関への補助金を対象とする。先住民学生への基礎的な教育・訓練の支援に関し、補助額の算定に不可欠な「先住民学生数」の定義を改める。",
+    "after": "1998年カール・D・パーキンズ職業・技術教育法を改正する。1978年部族運営大学支援法またはナバホ・コミュニティ・カレッジ法による連邦支援を受けていない、部族運営の中等教育後の職業・技術教育機関への補助金を対象とする。先住民学生の教育・訓練に対する基礎的支援に関し、補助額の算定に不可欠な「先住民学生数」の定義を改める。",
+    "reason": "独立レビュー：生活費比率/単位数/基礎的支援/後見人と被後見人の主客を正確に表す",
+    "action": "rewrite",
+    "new_page": 54
+  },
+  {
+    "old_page": 67,
+    "shape_id": 5,
+    "before": "現行法は、裁判所が被後見人に所定の認知症と機能障害があると認定した場合、後見人が所定の施錠された居住・看護施設への入所と、認知症のケア・治療に適した所定の薬の投与を認められると定める。この権限の申立てには、被後見人に弁護士を付けることなどが必要である。この法案は、裁判所がその権限を認めるか拒否する際、弁護士の任務を終えるか代理を継続させる命令を出すよう求める。",
+    "after": "現行法は、裁判所が被後見人に所定の認知症と機能障害があると認定した場合、後見人が被後見人を所定の施錠された居住施設または看護施設へ入所させ、認知症のケア・治療に適した所定の薬の投与を認めることができると定める。この権限の申立てには、被後見人に弁護士を付けることなどが必要である。この法案は、裁判所がその権限を認めるか拒否する際、弁護士の任務を終えるか代理を継続させる命令を出すよう求める。",
+    "reason": "独立レビュー：生活費比率/単位数/基礎的支援/後見人と被後見人の主客を正確に表す",
+    "action": "rewrite",
+    "new_page": 66
+  },
+  {
+    "old_page": 20,
+    "shape_id": 2,
+    "before": "連邦議会で学び、別の州議会へ試す",
+    "after": "連邦議会の法案で学習し、州議会の法案で試す",
+    "reason": "メインレビュー：主語と助詞が自然な学習・評価の説明へ",
+    "action": "rewrite",
+    "new_page": 20
+  },
+  {
+    "old_page": 11,
+    "shape_id": 8,
+    "before": "（f）（b）（1）に記載する資格または許可を持ち、生徒の母語で教科を教えることを認める有効な州外の資格・証明書を提示できる教員は、委員会へ申請書と手数料を提出することにより、この条に基づく認可を受ける資格を得ることができる。",
+    "after": "（f）（b）（1）に記載する資格または許可を持ち、生徒の母語で教科を教えることを認める有効な州外の資格・証明書を提示できる教員は、委員会へ申請書を提出し、手数料を納めることにより、この条に基づく認可を受ける資格を得ることができる。",
+    "reason": "メインレビュー：手数料は納付、2010年後は2011年以降と自然に表す",
+    "action": "rewrite",
+    "new_page": 11
+  },
+  {
+    "old_page": 13,
+    "shape_id": 5,
+    "before": "現行法では、最低要件を満たす場合、教員資格認定委員会が、英語力の限られた生徒に所定の教育サービスを提供する教員の認可を発行しなければならない。この法案は、所定のCalifornia州の資格・許可を持ち、生徒の母語で教科を教えることを認める有効な州外の資格・証明書を提示できる教員が、委員会への申請と手数料の提出により、その認可を受けられるようにする。",
+    "after": "現行法では、最低要件を満たす場合、教員資格認定委員会が、英語力の限られた生徒に所定の教育サービスを提供する教員の認可を発行しなければならない。この法案は、所定のCalifornia州の資格・許可を持ち、生徒の母語で教科を教えることを認める有効な州外の資格・証明書を提示できる教員が、委員会に申請して手数料を納めることで、その認可を受けられるようにする。",
+    "reason": "メインレビュー：手数料は納付、2010年後は2011年以降と自然に表す",
+    "action": "rewrite",
+    "new_page": 13
+  },
+  {
+    "old_page": 52,
+    "shape_id": 5,
+    "before": "2010年人的控除公平法。内国歳入法を改正し、2010年後の人的控除額について、大都市統計地域の生活費に応じた年次調整を求める。労働長官に、各大都市統計地域の生活費指数を算定・公表するよう指示する。",
+    "after": "2010年人的控除公平法。内国歳入法を改正し、2011年以降の人的控除額について、大都市統計地域の生活費に応じた年次調整を求める。労働長官に、各大都市統計地域の生活費指数を算定・公表するよう指示する。",
+    "reason": "メインレビュー：手数料は納付、2010年後は2011年以降と自然に表す",
+    "action": "rewrite",
+    "new_page": 51
+  },
+  {
+    "old_page": 78,
+    "shape_id": 5,
+    "before": "FiscalNote · 公式リポジトリ",
+    "after": "FiscalNote · n.d. · 公式リポジトリ（2026-10-18参照）",
+    "reason": "メインレビュー：Web文献に刊行年なしと実参照日を添える",
+    "action": "rewrite",
+    "new_page": 76
+  },
+  {
+    "old_page": 78,
+    "shape_id": 9,
+    "before": "BillSum contributors · Hugging Face Dataset Card",
+    "after": "BillSum contributors · n.d. · Hugging Face（2026-10-18参照）",
+    "reason": "メインレビュー：Web文献に刊行年なしと実参照日を添える",
+    "action": "rewrite",
+    "new_page": 76
+  },
+  {
+    "old_page": 7,
+    "shape_id": 7,
+    "action": "fit_revised_translation_ink",
+    "before": "上8.27pt/下25.07pt",
+    "after": "上下7pt",
+    "reason": "修正した日本語訳を実描画し、字形位置を保って引用背景を均等化",
+    "new_page": 7
+  },
+  {
+    "old_page": 9,
+    "shape_id": 5,
+    "action": "fit_revised_translation_ink",
+    "before": "上7.76pt/下32.24pt",
+    "after": "上下7pt",
+    "reason": "修正した日本語訳を実描画し、字形位置を保って引用背景を均等化",
+    "new_page": 9
+  },
+  {
+    "old_page": 17,
+    "shape_id": 5,
+    "action": "fit_revised_translation_ink",
+    "before": "上7.76pt/下32.24pt",
+    "after": "上下7pt",
+    "reason": "修正した日本語訳を実描画し、字形位置を保って引用背景を均等化",
+    "new_page": 17
+  },
+  {
+    "old_page": 50,
+    "shape_id": 8,
+    "action": "fit_revised_translation_ink",
+    "before": "上7.60pt/下29.60pt",
+    "after": "上下7pt",
+    "reason": "修正した日本語訳を実描画し、字形位置を保って引用背景を均等化",
+    "new_page": 49
+  },
+  {
+    "old_page": 53,
+    "shape_id": 8,
+    "action": "fit_revised_translation_ink",
+    "before": "上8.27pt/下29.73pt",
+    "after": "上下7pt",
+    "reason": "修正した日本語訳を実描画し、字形位置を保って引用背景を均等化",
+    "new_page": 52
+  },
+  {
+    "old_page": 55,
+    "shape_id": 5,
+    "action": "fit_revised_translation_ink",
+    "before": "上7.76pt/下30.91pt",
+    "after": "上下7pt",
+    "reason": "修正した日本語訳を実描画し、字形位置を保って引用背景を均等化",
+    "new_page": 54
+  },
+  {
+    "old_page": 67,
+    "shape_id": 5,
+    "action": "fit_revised_translation_ink",
+    "before": "上7.76pt/下30.24pt",
+    "after": "上下7pt",
+    "reason": "修正した日本語訳を実描画し、字形位置を保って引用背景を均等化",
+    "new_page": 66
+  },
+  {
+    "old_page": 11,
+    "shape_id": 8,
+    "action": "fit_revised_translation_ink",
+    "before": "上8.27pt/下28.40pt",
+    "after": "上下7pt",
+    "reason": "修正した日本語訳を実描画し、字形位置を保って引用背景を均等化",
+    "new_page": 11
+  },
+  {
+    "old_page": 13,
+    "shape_id": 5,
+    "action": "fit_revised_translation_ink",
+    "before": "上8.43pt/下28.24pt",
+    "after": "上下7pt",
+    "reason": "修正した日本語訳を実描画し、字形位置を保って引用背景を均等化",
+    "new_page": 13
+  },
+  {
+    "old_page": 52,
+    "shape_id": 5,
+    "action": "fit_revised_translation_ink",
+    "before": "上7.76pt/下28.24pt",
+    "after": "上下7pt",
+    "reason": "修正した日本語訳を実描画し、字形位置を保って引用背景を均等化",
+    "new_page": 51
+  },
+  {
+    "old_page": 34,
+    "action": "remove_slide",
+    "before": "HELMに定義された入力・生成条件\n4. HELMの範囲と現在の入手\n公開の既定設定。提示例数などの実測値は、公開実行がないため不明。\n[1] Stanford CRFM. HELM v0.4.0 run_specs.py, get_billsum_legal_summarization_spec.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/run_specs.py",
+    "before_tables": [
+      [
+        [
+          "設定",
+          "v0.4.0の既定値"
+        ],
+        [
+          "本文の切詰め",
+          "先頭2,048語（空白区切り）"
+        ],
+        [
+          "提示例の候補",
+          "trainの200〜800語の本文"
+        ],
+        [
+          "提示例数の上限",
+          "5"
+        ],
+        [
+          "出力",
+          "1候補 / temperature 0.3 / 最大1,024トークン"
+        ],
+        [
+          "停止 / 要約の文数",
+          "### / 文数指定なし"
+        ]
+      ]
+    ],
+    "after": "",
+    "reason": "既定の温度・提示例数・停止記号等の細かな再現設定。US対象/2048語切詰めは33頁に保持",
+    "new_page": null
+  },
+  {
+    "old_page": 74,
+    "action": "remove_slide",
+    "before": "取得した容量と、元の識別子を記録する\nUS testのParquetを15,797,079 bytes、Californiaを6,121,191 bytesで取得した。合計約21.9 MBで、学習集合はこの実測に含めない。\nHF配布の3列にはbill_idがない。実例のrowは固定ファイル内の位置であり、元の議会の法案番号ではない。\n全13件の本文全文、連続抜粋の文字位置、参照要約、訳、原行SHA256を保存した。\nAppendix: 2. 本文の長さと入力範囲\n[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
+    "before_tables": [],
+    "after": "",
+    "reason": "取得bytes・原行位置・SHA保存の制作監査",
+    "new_page": null
+  }
+]

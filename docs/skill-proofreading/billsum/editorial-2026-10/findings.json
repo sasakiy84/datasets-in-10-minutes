@@ -87,7 +87,7 @@
     "after": "HELMは、連邦議会の法案要約に対応する",
     "reason": "読者に必要な説明へ整理",
     "action": "rewrite",
-    "new_page": 33
+    "new_page": null
   },
   {
     "old_page": 33,
@@ -96,7 +96,7 @@
     "after": "HELMの要約シナリオは、USのtrainとtestを読み込む。Californiaのca_testは対象外。\n本文は先頭2,048語までを入力とし、法案全文に対する参照要約で評価する。\nHELM Classic v0.4.0では、BillSumのモデル出力や得点は公開されていない。",
     "reason": "読者に必要な説明へ整理",
     "action": "rewrite",
-    "new_page": 33
+    "new_page": null
   },
   {
     "old_page": 35,
@@ -105,7 +105,7 @@
     "after": "公式リポジトリは、本文・前処理済み本文・要約・題名・bill_idを含むJSON Lines形式を案内する。2019-12-03の更新後のデータを使うよう告知している。\nHugging Faceではtext・summary・titleの3列を配布し、USのtrain・testとCaliforniaのca_testを選べる。\nデータカードのライセンス表示はCC0-1.0。元の法案と要約は、米議会・CRSまたはCalifornia議会・Legislative Counselが作成した。",
     "reason": "読者に必要な説明へ整理",
     "action": "rewrite",
-    "new_page": 34
+    "new_page": 33
   },
   {
     "old_page": 36,
@@ -114,7 +114,7 @@
     "after": "公開Parquetから、法案本文と参照要約を読む",
     "reason": "読者に必要な説明へ整理",
     "action": "rewrite",
-    "new_page": 35
+    "new_page": 34
   },
   {
     "old_page": 36,
@@ -123,7 +123,7 @@
     "after": "import pandas as pd\ndata = pd.read_parquet(\"ca_test.parquet\")\nprint(data.iloc[0][\"text\"])\nprint(data.iloc[0][\"summary\"])",
     "reason": "読者に必要な説明へ整理",
     "action": "rewrite",
-    "new_page": 35
+    "new_page": 34
   },
   {
     "old_page": 36,
@@ -132,7 +132,7 @@
     "after": "Hugging Faceから入手したca_testのParquetファイルを開き、最初の法案本文と参照要約を表示する。",
     "reason": "読者に必要な説明へ整理",
     "action": "rewrite",
-    "new_page": 35
+    "new_page": 34
   },
   {
     "old_page": 39,
@@ -141,7 +141,7 @@
     "after": "追加の法案と参照要約\n本文の長さと入力範囲\n研究と参考文献",
     "reason": "読者に必要な説明へ整理",
     "action": "rewrite",
-    "new_page": 38
+    "new_page": 37
   },
   {
     "old_page": 71,
@@ -150,7 +150,7 @@
     "after": "本文の長さと入力範囲",
     "reason": "読者に必要な説明へ整理",
     "action": "rewrite",
-    "new_page": 70
+    "new_page": null
   },
   {
     "old_page": 71,
@@ -159,7 +159,7 @@
     "after": "Appendix: 2. 本文の長さと入力範囲",
     "reason": "読者に必要な説明へ整理",
     "action": "rewrite",
-    "new_page": 70
+    "new_page": null
   },
   {
     "old_page": 72,
@@ -168,7 +168,7 @@
     "after": "Appendix: 2. 本文の長さと入力範囲",
     "reason": "読者に必要な説明へ整理",
     "action": "rewrite",
-    "new_page": 71
+    "new_page": null
   },
   {
     "old_page": 73,
@@ -177,7 +177,7 @@
     "after": "Appendix: 2. 本文の長さと入力範囲",
     "reason": "読者に必要な説明へ整理",
     "action": "rewrite",
-    "new_page": 72
+    "new_page": null
   },
   {
     "old_page": 74,
@@ -195,7 +195,7 @@
     "after": "前処理済み本文と、公開本文の長さ",
     "reason": "読者に必要な説明へ整理",
     "action": "rewrite",
-    "new_page": 71
+    "new_page": null
   },
   {
     "old_page": 72,
@@ -203,7 +203,7 @@
     "after": "公開US testの本文",
     "reason": "番号・検査用表現を自然な説明へ整理",
     "action": "rewrite",
-    "new_page": 71
+    "new_page": null
   },
   {
     "old_page": 72,
@@ -211,7 +211,7 @@
     "after": "公開Californiaの本文",
     "reason": "番号・検査用表現を自然な説明へ整理",
     "action": "rewrite",
-    "new_page": 71
+    "new_page": null
   },
   {
     "old_page": 72,
@@ -220,7 +220,7 @@
     "after": "上2行は2019年に報告された前処理済み本文、下2行は公開textを空白区切りで数えた値。",
     "reason": "読者に必要な説明へ整理",
     "action": "rewrite",
-    "new_page": 71
+    "new_page": null
   },
   {
     "old_page": 73,
@@ -229,7 +229,7 @@
     "after": "本文を切り詰めると、末尾の条項が入力から外れる",
     "reason": "読者に必要な説明へ整理",
     "action": "rewrite",
-    "new_page": 72
+    "new_page": null
   },
   {
     "old_page": 73,
@@ -238,7 +238,7 @@
     "after": "公開US testの362件、California ca_testの268件は、本文が2,048語を超える。\nHELMが対象とするUSでは、本文を先頭2,048語に切り詰め、法案全文に対する参照要約を使う。\n末尾の例外や施行条件も含めて要約するには、長い条文を読み取れる入力範囲が必要となる。",
     "reason": "読者に必要な説明へ整理",
     "action": "rewrite",
-    "new_page": 72
+    "new_page": null
   },
   {
     "old_page": 2,
@@ -382,7 +382,7 @@
     "after": "[1] HELM Classic v0.4.0. \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/billsum_legal_summarization",
     "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
     "action": "rewrite",
-    "new_page": 33
+    "new_page": null
   },
   {
     "old_page": 35,
@@ -391,7 +391,7 @@
     "after": "[1] FiscalNote. BillSum公式リポジトリ。https://github.com/FiscalNote/BillSum",
     "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
     "action": "rewrite",
-    "new_page": 34
+    "new_page": 33
   },
   {
     "old_page": 36,
@@ -400,7 +400,7 @@
     "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
     "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
     "action": "rewrite",
-    "new_page": 35
+    "new_page": 34
   },
   {
     "old_page": 41,
@@ -409,7 +409,7 @@
     "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
     "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
     "action": "rewrite",
-    "new_page": 40
+    "new_page": 39
   },
   {
     "old_page": 42,
@@ -418,7 +418,7 @@
     "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
     "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
     "action": "rewrite",
-    "new_page": 41
+    "new_page": 40
   },
   {
     "old_page": 43,
@@ -427,7 +427,7 @@
     "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
     "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
     "action": "rewrite",
-    "new_page": 42
+    "new_page": 41
   },
   {
     "old_page": 44,
@@ -436,7 +436,7 @@
     "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
     "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
     "action": "rewrite",
-    "new_page": 43
+    "new_page": 42
   },
   {
     "old_page": 45,
@@ -445,7 +445,7 @@
     "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
     "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
     "action": "rewrite",
-    "new_page": 44
+    "new_page": 43
   },
   {
     "old_page": 46,
@@ -454,7 +454,7 @@
     "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
     "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
     "action": "rewrite",
-    "new_page": 45
+    "new_page": 44
   },
   {
     "old_page": 47,
@@ -463,7 +463,7 @@
     "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
     "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
     "action": "rewrite",
-    "new_page": 46
+    "new_page": 45
   },
   {
     "old_page": 48,
@@ -472,7 +472,7 @@
     "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
     "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
     "action": "rewrite",
-    "new_page": 47
+    "new_page": 46
   },
   {
     "old_page": 49,
@@ -481,7 +481,7 @@
     "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
     "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
     "action": "rewrite",
-    "new_page": 48
+    "new_page": 47
   },
   {
     "old_page": 50,
@@ -490,7 +490,7 @@
     "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
     "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
     "action": "rewrite",
-    "new_page": 49
+    "new_page": 48
   },
   {
     "old_page": 51,
@@ -499,7 +499,7 @@
     "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
     "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
     "action": "rewrite",
-    "new_page": 50
+    "new_page": 49
   },
   {
     "old_page": 52,
@@ -508,7 +508,7 @@
     "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
     "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
     "action": "rewrite",
-    "new_page": 51
+    "new_page": 50
   },
   {
     "old_page": 53,
@@ -517,7 +517,7 @@
     "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
     "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
     "action": "rewrite",
-    "new_page": 52
+    "new_page": 51
   },
   {
     "old_page": 54,
@@ -526,7 +526,7 @@
     "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
     "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
     "action": "rewrite",
-    "new_page": 53
+    "new_page": 52
   },
   {
     "old_page": 55,
@@ -535,7 +535,7 @@
     "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
     "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
     "action": "rewrite",
-    "new_page": 54
+    "new_page": 53
   },
   {
     "old_page": 56,
@@ -544,7 +544,7 @@
     "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
     "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
     "action": "rewrite",
-    "new_page": 55
+    "new_page": 54
   },
   {
     "old_page": 57,
@@ -553,7 +553,7 @@
     "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
     "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
     "action": "rewrite",
-    "new_page": 56
+    "new_page": 55
   },
   {
     "old_page": 58,
@@ -562,7 +562,7 @@
     "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
     "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
     "action": "rewrite",
-    "new_page": 57
+    "new_page": 56
   },
   {
     "old_page": 59,
@@ -571,7 +571,7 @@
     "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
     "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
     "action": "rewrite",
-    "new_page": 58
+    "new_page": 57
   },
   {
     "old_page": 60,
@@ -580,7 +580,7 @@
     "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
     "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
     "action": "rewrite",
-    "new_page": 59
+    "new_page": 58
   },
   {
     "old_page": 61,
@@ -589,7 +589,7 @@
     "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
     "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
     "action": "rewrite",
-    "new_page": 60
+    "new_page": 59
   },
   {
     "old_page": 62,
@@ -598,7 +598,7 @@
     "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
     "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
     "action": "rewrite",
-    "new_page": 61
+    "new_page": 60
   },
   {
     "old_page": 63,
@@ -607,7 +607,7 @@
     "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
     "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
     "action": "rewrite",
-    "new_page": 62
+    "new_page": 61
   },
   {
     "old_page": 64,
@@ -616,7 +616,7 @@
     "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
     "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
     "action": "rewrite",
-    "new_page": 63
+    "new_page": 62
   },
   {
     "old_page": 65,
@@ -625,7 +625,7 @@
     "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
     "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
     "action": "rewrite",
-    "new_page": 64
+    "new_page": 63
   },
   {
     "old_page": 66,
@@ -634,7 +634,7 @@
     "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
     "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
     "action": "rewrite",
-    "new_page": 65
+    "new_page": 64
   },
   {
     "old_page": 67,
@@ -643,7 +643,7 @@
     "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
     "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
     "action": "rewrite",
-    "new_page": 66
+    "new_page": 65
   },
   {
     "old_page": 68,
@@ -652,7 +652,7 @@
     "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
     "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
     "action": "rewrite",
-    "new_page": 67
+    "new_page": 66
   },
   {
     "old_page": 69,
@@ -661,7 +661,7 @@
     "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
     "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
     "action": "rewrite",
-    "new_page": 68
+    "new_page": 67
   },
   {
     "old_page": 70,
@@ -670,7 +670,7 @@
     "after": "[1] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
     "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
     "action": "rewrite",
-    "new_page": 69
+    "new_page": 68
   },
   {
     "old_page": 72,
@@ -679,7 +679,7 @@
     "after": "[1] Kornilova and Eidelman (2019). BillSum: A Corpus for Automatic Summarization of US Legislation. New Frontiers in Summarization.\nhttps://aclanthology.org/D19-5406/\n[2] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
     "reason": "固定版・原行番号・繰り返す帰属説明を検証記録へ移し、通常の引用に整理",
     "action": "rewrite",
-    "new_page": 71
+    "new_page": null
   },
   {
     "old_page": 74,
@@ -697,7 +697,7 @@
     "before": "上7.87pt/下15.07pt",
     "after": "上10pt/下10pt",
     "reason": "nativeコードの実字形位置を保持してコード背景の上下余白を均等化",
-    "new_page": 35
+    "new_page": 34
   },
   {
     "old_page": 50,
@@ -706,7 +706,7 @@
     "before": "上7.6pt/下9.07pt",
     "after": "上7.6pt/下7.6pt",
     "reason": "実字形位置を保持して引用背景下辺を1.47pt詰める",
-    "new_page": 49
+    "new_page": 48
   },
   {
     "old_page": 53,
@@ -715,7 +715,7 @@
     "after": "実例8：履修単位数から学生数を算定する",
     "reason": "単位時間とcredit-hoursの違いが分かる見出しへ",
     "action": "rewrite",
-    "new_page": 52
+    "new_page": 51
   },
   {
     "old_page": 65,
@@ -724,7 +724,7 @@
     "after": "実例12：後見人の権限と弁護士の代理",
     "reason": "代理人の継続という不自然な表現を具体化",
     "action": "rewrite",
-    "new_page": 64
+    "new_page": 63
   },
   {
     "old_page": 7,
@@ -760,7 +760,7 @@
     "after": "（I）ある統計地域で、その年の生活費比率が125％を超えない場合、適用倍率は1とする。（II）（I）に当たらない統計地域では、適用倍率はその年の生活費比率とする。",
     "reason": "独立レビュー：生活費比率/単位数/基礎的支援/後見人と被後見人の主客を正確に表す",
     "action": "rewrite",
-    "new_page": 49
+    "new_page": 48
   },
   {
     "old_page": 53,
@@ -769,7 +769,7 @@
     "after": "（ii）計算。各学年度の、部族が運営する中等教育後の職業・技術教育機関における先住民学生数は、（i）により確定した在籍先住民学生全員の履修単位数（クレジットアワー）の合計を12で割った値とする。",
     "reason": "独立レビュー：生活費比率/単位数/基礎的支援/後見人と被後見人の主客を正確に表す",
     "action": "rewrite",
-    "new_page": 52
+    "new_page": 51
   },
   {
     "old_page": 55,
@@ -778,7 +778,7 @@
     "after": "1998年カール・D・パーキンズ職業・技術教育法を改正する。1978年部族運営大学支援法またはナバホ・コミュニティ・カレッジ法による連邦支援を受けていない、部族運営の中等教育後の職業・技術教育機関への補助金を対象とする。先住民学生の教育・訓練に対する基礎的支援に関し、補助額の算定に不可欠な「先住民学生数」の定義を改める。",
     "reason": "独立レビュー：生活費比率/単位数/基礎的支援/後見人と被後見人の主客を正確に表す",
     "action": "rewrite",
-    "new_page": 54
+    "new_page": 53
   },
   {
     "old_page": 67,
@@ -787,7 +787,7 @@
     "after": "現行法は、裁判所が被後見人に所定の認知症と機能障害があると認定した場合、後見人が被後見人を所定の施錠された居住施設または看護施設へ入所させ、認知症のケア・治療に適した所定の薬の投与を認めることができると定める。この権限の申立てには、被後見人に弁護士を付けることなどが必要である。この法案は、裁判所がその権限を認めるか拒否する際、弁護士の任務を終えるか代理を継続させる命令を出すよう求める。",
     "reason": "独立レビュー：生活費比率/単位数/基礎的支援/後見人と被後見人の主客を正確に表す",
     "action": "rewrite",
-    "new_page": 66
+    "new_page": 65
   },
   {
     "old_page": 20,
@@ -823,7 +823,7 @@
     "after": "2010年人的控除公平法。内国歳入法を改正し、2011年以降の人的控除額について、大都市統計地域の生活費に応じた年次調整を求める。労働長官に、各大都市統計地域の生活費指数を算定・公表するよう指示する。",
     "reason": "メインレビュー：手数料は納付、2010年後は2011年以降と自然に表す",
     "action": "rewrite",
-    "new_page": 51
+    "new_page": 50
   },
   {
     "old_page": 78,
@@ -832,7 +832,7 @@
     "after": "FiscalNote · n.d. · 公式リポジトリ（2026-10-18参照）",
     "reason": "メインレビュー：Web文献に刊行年なしと実参照日を添える",
     "action": "rewrite",
-    "new_page": 76
+    "new_page": 72
   },
   {
     "old_page": 78,
@@ -841,7 +841,7 @@
     "after": "BillSum contributors · n.d. · Hugging Face（2026-10-18参照）",
     "reason": "メインレビュー：Web文献に刊行年なしと実参照日を添える",
     "action": "rewrite",
-    "new_page": 76
+    "new_page": 72
   },
   {
     "old_page": 7,
@@ -877,7 +877,7 @@
     "before": "上7.60pt/下29.60pt",
     "after": "上下7pt",
     "reason": "修正した日本語訳を実描画し、字形位置を保って引用背景を均等化",
-    "new_page": 49
+    "new_page": 48
   },
   {
     "old_page": 53,
@@ -886,7 +886,7 @@
     "before": "上8.27pt/下29.73pt",
     "after": "上下7pt",
     "reason": "修正した日本語訳を実描画し、字形位置を保って引用背景を均等化",
-    "new_page": 52
+    "new_page": 51
   },
   {
     "old_page": 55,
@@ -895,7 +895,7 @@
     "before": "上7.76pt/下30.91pt",
     "after": "上下7pt",
     "reason": "修正した日本語訳を実描画し、字形位置を保って引用背景を均等化",
-    "new_page": 54
+    "new_page": 53
   },
   {
     "old_page": 67,
@@ -904,7 +904,7 @@
     "before": "上7.76pt/下30.24pt",
     "after": "上下7pt",
     "reason": "修正した日本語訳を実描画し、字形位置を保って引用背景を均等化",
-    "new_page": 66
+    "new_page": 65
   },
   {
     "old_page": 11,
@@ -931,7 +931,7 @@
     "before": "上7.76pt/下28.24pt",
     "after": "上下7pt",
     "reason": "修正した日本語訳を実描画し、字形位置を保って引用背景を均等化",
-    "new_page": 51
+    "new_page": 50
   },
   {
     "old_page": 34,
@@ -976,6 +976,219 @@
     "before_tables": [],
     "after": "",
     "reason": "取得bytes・原行位置・SHA保存の制作監査",
+    "new_page": null
+  },
+  {
+    "old_page": 3,
+    "intermediate_page": 3,
+    "shape_id": 3,
+    "before": "法案をどう要約するか\n収集と二つの評価集合\n2019年の方法と成績\nHELMの範囲と現在の入手",
+    "after": "法案をどう要約するか\n収集と二つの評価集合\n2019年の方法と成績\n公開配布と利用条件",
+    "reason": "元データセットの目的・作成・評価・使い方を中心へ戻し、評価基盤固有の説明を外部記録へ移す",
+    "action": "dataset_focus_rewrite",
+    "new_page": 3
+  },
+  {
+    "old_page": 32,
+    "intermediate_page": 32,
+    "shape_id": 2,
+    "before": "HELMの範囲と現在の入手",
+    "after": "公開配布と利用条件",
+    "reason": "元データセットの目的・作成・評価・使い方を中心へ戻し、評価基盤固有の説明を外部記録へ移す",
+    "action": "dataset_focus_rewrite",
+    "new_page": 32
+  },
+  {
+    "old_page": 32,
+    "intermediate_page": 32,
+    "shape_id": 3,
+    "before": "4. HELMの範囲と現在の入手",
+    "after": "4. 公開配布と利用条件",
+    "reason": "元データセットの目的・作成・評価・使い方を中心へ戻し、評価基盤固有の説明を外部記録へ移す",
+    "action": "dataset_focus_rewrite",
+    "new_page": 32
+  },
+  {
+    "old_page": 33,
+    "intermediate_page": 33,
+    "shape_id": 4,
+    "before": "4. HELMの範囲と現在の入手",
+    "after": "4. 公開配布と利用条件",
+    "reason": "元データセットの目的・作成・評価・使い方を中心へ戻し、評価基盤固有の説明を外部記録へ移す",
+    "action": "dataset_focus_rewrite",
+    "new_page": null
+  },
+  {
+    "old_page": 35,
+    "intermediate_page": 34,
+    "shape_id": 4,
+    "before": "4. HELMの範囲と現在の入手",
+    "after": "4. 公開配布と利用条件",
+    "reason": "元データセットの目的・作成・評価・使い方を中心へ戻し、評価基盤固有の説明を外部記録へ移す",
+    "action": "dataset_focus_rewrite",
+    "new_page": 33
+  },
+  {
+    "old_page": 36,
+    "intermediate_page": 35,
+    "shape_id": 3,
+    "before": "4. HELMの範囲と現在の入手",
+    "after": "4. 公開配布と利用条件",
+    "reason": "元データセットの目的・作成・評価・使い方を中心へ戻し、評価基盤固有の説明を外部記録へ移す",
+    "action": "dataset_focus_rewrite",
+    "new_page": 34
+  },
+  {
+    "old_page": 37,
+    "intermediate_page": 36,
+    "shape_id": 4,
+    "before": "4. HELMの範囲と現在の入手",
+    "after": "4. 公開配布と利用条件",
+    "reason": "元データセットの目的・作成・評価・使い方を中心へ戻し、評価基盤固有の説明を外部記録へ移す",
+    "action": "dataset_focus_rewrite",
+    "new_page": 35
+  },
+  {
+    "old_page": 39,
+    "intermediate_page": 38,
+    "shape_id": 3,
+    "before": "追加の法案と参照要約\n本文の長さと入力範囲\n研究と参考文献",
+    "after": "追加の法案と参照要約\n研究と参考文献",
+    "reason": "元データセットの目的・作成・評価・使い方を中心へ戻し、評価基盤固有の説明を外部記録へ移す",
+    "action": "dataset_focus_rewrite",
+    "new_page": 37
+  },
+  {
+    "old_page": 75,
+    "intermediate_page": 73,
+    "shape_id": 3,
+    "before": "Appendix: 3. 研究と参考文献",
+    "after": "Appendix: 2. 研究と参考文献",
+    "reason": "元データセットの目的・作成・評価・使い方を中心へ戻し、評価基盤固有の説明を外部記録へ移す",
+    "action": "dataset_focus_rewrite",
+    "new_page": 69
+  },
+  {
+    "old_page": 76,
+    "intermediate_page": 74,
+    "shape_id": 4,
+    "before": "Appendix: 3. 研究と参考文献",
+    "after": "Appendix: 2. 研究と参考文献",
+    "reason": "元データセットの目的・作成・評価・使い方を中心へ戻し、評価基盤固有の説明を外部記録へ移す",
+    "action": "dataset_focus_rewrite",
+    "new_page": 70
+  },
+  {
+    "old_page": 77,
+    "intermediate_page": 75,
+    "shape_id": 3,
+    "before": "Appendix: 3. 研究と参考文献",
+    "after": "Appendix: 2. 研究と参考文献",
+    "reason": "元データセットの目的・作成・評価・使い方を中心へ戻し、評価基盤固有の説明を外部記録へ移す",
+    "action": "dataset_focus_rewrite",
+    "new_page": 71
+  },
+  {
+    "old_page": 78,
+    "intermediate_page": 76,
+    "shape_id": 3,
+    "before": "Appendix: 3. 研究と参考文献",
+    "after": "Appendix: 2. 研究と参考文献",
+    "reason": "元データセットの目的・作成・評価・使い方を中心へ戻し、評価基盤固有の説明を外部記録へ移す",
+    "action": "dataset_focus_rewrite",
+    "new_page": 72
+  },
+  {
+    "old_page": 79,
+    "intermediate_page": 77,
+    "shape_id": 3,
+    "before": "Appendix: 3. 研究と参考文献",
+    "after": "Appendix: 2. 研究と参考文献",
+    "reason": "元データセットの目的・作成・評価・使い方を中心へ戻し、評価基盤固有の説明を外部記録へ移す",
+    "action": "dataset_focus_rewrite",
+    "new_page": null
+  },
+  {
+    "old_page": 24,
+    "intermediate_page": 24,
+    "shape_id": 5,
+    "before": "US test 3,269件。入力全文を空白区切りで数えた独自集計。",
+    "after": "US test 3,269法案の本文を、空白区切りの語数で示す。",
+    "reason": "作業説明の独自集計という句を外し、図の対象と意味を示す",
+    "action": "dataset_focus_rewrite",
+    "new_page": 24
+  },
+  {
+    "old_page": 23,
+    "intermediate_page": 23,
+    "before": "取得した集合",
+    "after": "評価集合",
+    "reason": "取得作業でなく表の対象を表す自然な見出しへ",
+    "action": "table_header_rewrite",
+    "new_page": 23
+  },
+  {
+    "old_page": 24,
+    "intermediate_page": 24,
+    "before": "問題数",
+    "after": "法案数",
+    "reason": "法案本文の件数を示す図に系列名を合わせる。値・表示は保持",
+    "action": "chart_series_name",
+    "new_page": 24
+  },
+  {
+    "old_page": 35,
+    "intermediate_page": 34,
+    "shape_id": 5,
+    "before": "[1] FiscalNote. BillSum公式リポジトリ。https://github.com/FiscalNote/BillSum",
+    "after": "[1] FiscalNote. BillSum公式リポジトリ。https://github.com/FiscalNote/BillSum\n[2] FiscalNote. BillSumデータカード。https://huggingface.co/datasets/FiscalNote/billsum",
+    "reason": "CC0と公開3列の直接根拠となるデータカードを併記する",
+    "action": "dataset_focus_rewrite",
+    "new_page": 33
+  },
+  {
+    "old_page": 33,
+    "intermediate_page": 33,
+    "before": "HELMは、連邦議会の法案要約に対応する\nHELMの要約シナリオは、USのtrainとtestを読み込む。Californiaのca_testは対象外。\n本文は先頭2,048語までを入力とし、法案全文に対する参照要約で評価する。\nHELM Classic v0.4.0では、BillSumのモデル出力や得点は公開されていない。\n4. 公開配布と利用条件\n[1] HELM Classic v0.4.0. \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/billsum_legal_summarization",
+    "after": "",
+    "reason": "HELMの入力切詰め・評価範囲・得点非公開の説明は外部記録へ移す",
+    "action": "remove_framework_slide",
+    "new_page": null
+  },
+  {
+    "old_page": 73,
+    "intermediate_page": 72,
+    "before": "本文を切り詰めると、末尾の条項が入力から外れる\n公開US testの362件、California ca_testの268件は、本文が2,048語を超える。\nHELMが対象とするUSでは、本文を先頭2,048語に切り詰め、法案全文に対する参照要約を使う。\n末尾の例外や施行条件も含めて要約するには、長い条文を読み取れる入力範囲が必要となる。\nAppendix: 2. 本文の長さと入力範囲\n[1] Stanford CRFM. HELM v0.4.0 LegalSummarizationScenario.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/legal_summarization_scenario.py",
+    "after": "",
+    "reason": "HELM固有の2048語による切詰め説明を外部へ。元法案と要約の長さは他頁で保持",
+    "action": "remove_framework_slide",
+    "new_page": null
+  },
+  {
+    "old_page": 79,
+    "intermediate_page": 77,
+    "before": "参考文献\nAppendix: 2. 研究と参考文献\nHolistic Evaluation of Language Models\nPercy Liang et al. · 2023 · TMLR\n多数の課題・指標で言語モデルを比較するHELM評価基盤を説明する。\nhttps://arxiv.org/abs/2211.09110\nLegalSummarizationScenario\nStanford CRFM · HELM v0.4.0\nBillSumなどの分割選択、本文切詰め、参照要約の読み込みを実装する。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/legal_summarization_scenario.py",
+    "after": "",
+    "reason": "HELM評価基盤と入力変換実装の文献は外部記録へ移す",
+    "action": "remove_framework_slide",
+    "new_page": null
+  },
+  {
+    "old_page": 71,
+    "intermediate_page": 70,
+    "before": "本文の長さと入力範囲\nAppendix: 2. 本文の長さと入力範囲",
+    "after": "",
+    "reason": "長さの版間照合表だけを支える章扉を外す。公開本文の長さは本編23/24頁に保持",
+    "action": "remove_framework_slide",
+    "new_page": null
+  },
+  {
+    "old_page": 72,
+    "intermediate_page": 71,
+    "before": "前処理済み本文と、公開本文の長さ\nAppendix: 2. 本文の長さと入力範囲\n上2行は2019年に報告された前処理済み本文、下2行は公開textを空白区切りで数えた値。\n[1] Kornilova and Eidelman (2019). BillSum: A Corpus for Automatic Summarization of US Legislation. New Frontiers in Summarization.\nhttps://aclanthology.org/D19-5406/\n[2] FiscalNote. BillSum — Public Dataset.  https://huggingface.co/datasets/FiscalNote/billsum",
+    "after": "",
+    "reason": "原論文の前処理済み本文と今回の公開本文集計の細かな比較は外部記録へ。長さの特徴は本編に保持",
+    "action": "remove_framework_slide",
     "new_page": null
   }
 ]
