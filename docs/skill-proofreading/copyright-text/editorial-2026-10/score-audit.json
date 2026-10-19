@@ -1,0 +1,162 @@
+{
+  "method": "NLTK TreebankWordTokenizer and independent rapidfuzz Levenshtein; character cutoff before tokenization; best completion then prefix normalization",
+  "runs": 6,
+  "request_count": 2997,
+  "metrics_per_run": 3,
+  "all_published_values_match": true,
+  "runs_detail": [
+    {
+      "datatag": "n_books_1000-extractions_per_book_1-prefix_length_125",
+      "model": "openai_text-davinci-003",
+      "requests": 979,
+      "metrics": {
+        "longest_common_prefix_length": 0.006159832676686609,
+        "edit_distance": 0.8382429770321813,
+        "edit_similarity": 0.0006574741594573568
+      },
+      "prefix_word_count_distribution": {
+        "125": 907,
+        "126": 70,
+        "124": 1,
+        "123": 1
+      },
+      "reference_chars_min": 8053,
+      "reference_chars_max": 12994,
+      "completion_chars_min": 0,
+      "completion_chars_max": 4826,
+      "prompt_truncated": 0,
+      "num_train_trials": 1,
+      "completions_per_request": {
+        "1": 979
+      },
+      "official_statistics_match": true,
+      "scenario_state_sha256": "a4d11f7ff174c863fb3669aba3cf3e06c738980858bb0d0e5efda2e3e84cec57"
+    },
+    {
+      "datatag": "n_books_1000-extractions_per_book_1-prefix_length_125",
+      "model": "together_bloom",
+      "requests": 979,
+      "metrics": {
+        "longest_common_prefix_length": 0.004721241305510969,
+        "edit_distance": 6.948001521390077,
+        "edit_similarity": 0.0005065858165770769
+      },
+      "prefix_word_count_distribution": {
+        "125": 907,
+        "126": 70,
+        "124": 1,
+        "123": 1
+      },
+      "reference_chars_min": 8053,
+      "reference_chars_max": 12994,
+      "completion_chars_min": 2047,
+      "completion_chars_max": 7314,
+      "prompt_truncated": 0,
+      "num_train_trials": 1,
+      "completions_per_request": {
+        "1": 979
+      },
+      "official_statistics_match": true,
+      "scenario_state_sha256": "c8fc95cdb8a154d9500b01989eac9716a2e0236839a0a13885be9d43dd91c86c"
+    },
+    {
+      "datatag": "n_books_1000-extractions_per_book_1-prefix_length_125",
+      "model": "together_opt-175b",
+      "requests": 979,
+      "metrics": {
+        "longest_common_prefix_length": 0.006061060038588129,
+        "edit_distance": 6.847691959049573,
+        "edit_similarity": 0.0005360486716017164
+      },
+      "prefix_word_count_distribution": {
+        "125": 907,
+        "126": 70,
+        "124": 1,
+        "123": 1
+      },
+      "reference_chars_min": 8053,
+      "reference_chars_max": 12994,
+      "completion_chars_min": 102,
+      "completion_chars_max": 6008,
+      "prompt_truncated": 1,
+      "num_train_trials": 1,
+      "completions_per_request": {
+        "1": 979
+      },
+      "official_statistics_match": true,
+      "scenario_state_sha256": "d088278a3719afe2bcbd7ee907c92e643efe2b4e189a5b257503e686509091d3"
+    },
+    {
+      "datatag": "popular_books-prefix_length_125.json",
+      "model": "openai_text-davinci-003",
+      "requests": 20,
+      "metrics": {
+        "longest_common_prefix_length": 0.0648,
+        "edit_distance": 1.486,
+        "edit_similarity": 0.0011237310941113485
+      },
+      "prefix_word_count_distribution": {
+        "125": 20
+      },
+      "reference_chars_min": 9168,
+      "reference_chars_max": 10680,
+      "completion_chars_min": 67,
+      "completion_chars_max": 4630,
+      "prompt_truncated": 0,
+      "num_train_trials": 1,
+      "completions_per_request": {
+        "1": 20
+      },
+      "official_statistics_match": true,
+      "scenario_state_sha256": "27a3ef2dae3f35eef2ddd1ba587255bb441438412c86f591b0bc34c7e234802a"
+    },
+    {
+      "datatag": "popular_books-prefix_length_125.json",
+      "model": "together_bloom",
+      "requests": 20,
+      "metrics": {
+        "longest_common_prefix_length": 0.006,
+        "edit_distance": 7.0032,
+        "edit_similarity": 0.000542471286534832
+      },
+      "prefix_word_count_distribution": {
+        "125": 20
+      },
+      "reference_chars_min": 9168,
+      "reference_chars_max": 10680,
+      "completion_chars_min": 3057,
+      "completion_chars_max": 5654,
+      "prompt_truncated": 0,
+      "num_train_trials": 1,
+      "completions_per_request": {
+        "1": 20
+      },
+      "official_statistics_match": true,
+      "scenario_state_sha256": "49de0faef97db5199d834cc888823863e225f3d7166f8c83317ff4adac54404b"
+    },
+    {
+      "datatag": "popular_books-prefix_length_125.json",
+      "model": "together_opt-175b",
+      "requests": 20,
+      "metrics": {
+        "longest_common_prefix_length": 0.005200000000000001,
+        "edit_distance": 6.6932,
+        "edit_similarity": 0.0004684194399775262
+      },
+      "prefix_word_count_distribution": {
+        "125": 20
+      },
+      "reference_chars_min": 9168,
+      "reference_chars_max": 10680,
+      "completion_chars_min": 958,
+      "completion_chars_max": 6611,
+      "prompt_truncated": 0,
+      "num_train_trials": 1,
+      "completions_per_request": {
+        "1": 20
+      },
+      "official_statistics_match": true,
+      "scenario_state_sha256": "6dceedb89114bfdddb1918374f74ef831f775ab1243d47644fc95cf18805b5f3"
+    }
+  ]
+}

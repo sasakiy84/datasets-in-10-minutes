@@ -1,0 +1,58 @@
+{
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "original_creator": "Stanford CRFMの研究チーム（Liang, Bommasani, Leeら）",
+  "material_origin": "BookCorpus（Zhuら2015）由来と構築論文が説明する通常1000書籍・人気20書籍、特定作品デモ。元書籍の著作者/権利者と課題構築者は別。Homemade BookCorpusは公式出所リンクにあるが、公開入力の複製版同一性までは未確認。",
+  "first_public_release": "2022-11-16",
+  "publication_year": 2023,
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/abs/2211.09110v1",
+      "local_readonly": "/workspace/artifacts/helm-parallel/copyright-text/evidence/helm-paper-v1.txt",
+      "basis": "§5.4に再現課題と素材・抽出方法・1生成/入力の条件。通常1000冊+BooksCorpusからbestseller一覧にも載る20冊と明記"
+    },
+    {
+      "url": "https://arxiv.org/abs/2211.09110",
+      "local_readonly": "/workspace/artifacts/helm-parallel/copyright-text/evidence/helm-paper.txt",
+      "basis": "正式TMLR2023§5.4も同じBookCorpus/bestseller記述"
+    },
+    {
+      "url": "https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/copyright_scenario.py",
+      "basis": "CopyrightScenario: prefix→prefix_to_end構造、名目入力長、配布先と特定作品デモ"
+    },
+    {
+      "url": "https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/metrics/copyright_metrics.py",
+      "basis": "3指標、文字切取→語分割→入力語数で正規化"
+    },
+    {
+      "url": "https://arxiv.org/abs/1506.06724",
+      "basis": "BookCorpus作成研究2015"
+    },
+    {
+      "url": "https://github.com/soskek/bookcorpus",
+      "basis": "複製コードと原版の配布終了・収録差・利用条件"
+    }
+  ],
+  "HELM_relationship": "この対象はHELM研究で新規提案された評価課題であり、独立した既存の書籍データ全体と同一ではない。現行本文は実際の構築主体Stanford CRFMを明示し、採用基盤の一般解説/run索引/設定監査を除去。正式論文名・元実装の出典は正確に残す。",
+  "checked_final_pages": [
+    1,
+    4,
+    12,
+    13,
+    18,
+    21,
+    22,
+    23,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41
+  ],
+  "conclusion": "元書籍素材・課題構築・先行抽出攻撃・実際の参考成績の帰属を区別。人気20冊のBookCorpus出所は一次論文の主張として明示し、元book ID/複製版を独立確認したとは称さない。",
+  "final_hashes": {
+    "datasets-in-10-minutes-copyright-text.pptx": "7bf48fc0c607c5b6cc5cc1e3ec5272c856310626fd3683689f405f445cdb1ff3",
+    "datasets-in-10-minutes-copyright-text.pdf": "357d1030f0a2b300e192ad3c945452b0afbe6b06e23da531624e6dd88f70b409"
+  }
+}

@@ -14,3 +14,8 @@ Geminiは使用していない。Codexが日本語校正スキルをページご
 |42|…をするために|…をしようと|独立レビュー指摘：to get aは直前bothersに続く補語であり、目的を表す訳を避ける。参照・公開生成の両方へ反映し、後続内容は補わない。|
 
 [全ページ文言](copyright-text/pages.jsonl)・[自己検査・独立レビュー](copyright-text/review.json)
+
+
+## 読者向けの説明・日本語の改訂（2026年10月）
+
+Geminiは使用せず、Codexがスキルで校正し、別担当が独立レビューした。削除・統合を含む[問題点と変更対](copyright-text/editorial-2026-10/changes.md)、[旧ページとの対応](copyright-text/editorial-2026-10/page-map.json)、[独立レビュー](copyright-text/editorial-2026-10/independent-review/handoff.json)、[最終ページの全文](copyright-text/pages.jsonl)。旧版の校正・検証記録は保持している。
