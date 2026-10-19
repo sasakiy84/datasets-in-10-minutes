@@ -27,3 +27,8 @@ Geminiは使用していない。Codexが日本語校正スキルを1ページ�
 |7,9,10,13,14,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57|gray引用枠の可視字形上下余白に差があった。|PNG実画素を測定して可視字形の上・下各6.67–7.33ptへ調整。|設定marginやPDFフォントbboxを可視字形の余白と混同しない。|
 
 [独立レビューの根拠](naturalquestions/independent-review/review.json)・[改訂前の検査記録](naturalquestions/review-before-independent-review.json)
+
+
+## 読者向けの説明・日本語の改訂（2026年10月）
+
+Geminiは使用せず、Codexがスキルで校正し、別担当が独立レビューした。削除・統合を含む[問題点と変更対](naturalquestions/editorial-2026-10/changes.md)、[旧ページとの対応](naturalquestions/editorial-2026-10/page-map.json)、[独立レビュー](naturalquestions/editorial-2026-10/independent-review/handoff.json)、[最終ページの全文](naturalquestions/pages.jsonl)。旧版の校正・検証記録は保持している。

@@ -58,3 +58,8 @@ HELM Classic v0.4.0の質問のみ／正解long answerありの6実行を、v0.3
 作成者と別のサブエージェントが元の固定配布レコードと数値条件を独立照合。実例の原文・質問・参照回答を保持しつつ、幅と余白を調整して原文・訳の併記を追加した。全引用枠の可視字形上下余白は各6.67〜7.33pt。現在は本編36、全67ページ。改訂前の校正対・ページ番号は履歴として保存した。[独立レビュー](skill-proofreading/naturalquestions/independent-review/review.json)。
 
 最大出力長の旧記載100トークンは誤りで、全6実行のadapter_spec.max_tokens=300に訂正した。得点は変更していない。
+
+
+## 読者向け説明の改訂
+
+[日本語・情報量の問題点と修正](skill-proofreading/naturalquestions/editorial-2026-10/findings.json)。細かな再現条件・原レコードの照合情報は従来の検証記録に保持し、紹介スライドから整理した。
