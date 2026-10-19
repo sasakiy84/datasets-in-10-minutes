@@ -4,7 +4,8 @@
   "approved": true,
   "method": "skill_based_codex",
   "gemini_used": false,
-  "baseline_read": "all native pages through unchanged content plus full changed/deleted page comparison",
+  "scope": "最新ユーザー指示に基づく元データセット中心の再構成を独立確認",
+  "baseline_read": "元54頁と前承認47頁の検証履歴を保存。今回45頁の全native本文・表・訳と変更/削除記録を再通読。",
   "final_native_pages_read": [
     1,
     2,
@@ -50,11 +51,9 @@
     42,
     43,
     44,
-    45,
-    46,
-    47
+    45
   ],
-  "individually_viewed_pages": [
+  "final_individual_render_pages_viewed": [
     1,
     2,
     3,
@@ -99,121 +98,51 @@
     42,
     43,
     44,
-    45,
-    46,
-    47
-  ],
-  "final_rechecked_pages": [
-    31,
-    36,
-    40,
-    45,
-    46,
-    47
+    45
   ],
   "overview_viewed": true,
-  "findings": [
-    {
-      "page": 31,
-      "issue": "日本語の「様子が音を送る」という主述が不自然",
-      "before": "かすみが遠くの眺めを覆い、もの寂しい様子が寒々しい音を送る。",
-      "after": "かすみが遠くの眺めを覆い、寒々しい物音がもの寂しく響く。",
-      "status": "resolved"
-    },
-    {
-      "page": 36,
-      "issue": "寒蝉の直写を、時期が分かる日本語へ",
-      "before": "初秋の寒蝉が",
-      "after": "初秋の蝉が",
-      "status": "resolved"
-    },
-    {
-      "page": 40,
-      "issue": "見出しと同じ内容の表下注を反復",
-      "before": "四つの正解位置は、学習・検証のどちらでもほぼ同じ頻度で現れる。",
-      "after": "",
-      "status": "resolved"
-    },
-    {
-      "pages": [
-        45,
-        46,
-        47
-      ],
-      "issue": "参考文献URL5枠の高さ不足",
-      "action": "height18pt拡張、文字/位置/URL/書式保持",
-      "status": "resolved"
-    }
-  ],
-  "remaining_issues": [],
+  "independent_fresh_pdf_render": true,
   "final_hashes": {
-    "datasets-in-10-minutes-ccpm.pdf": "bfeca2aa493a9964b32a534c00a12614bf99ca4a400a3f1fdf03c6ceb0cdb7b7",
-    "datasets-in-10-minutes-ccpm.pptx": "d91ab06d9cf67b09a1e04897976a08379f71a29da11adbffa07023ee8803cc15"
+    "datasets-in-10-minutes-ccpm.pptx": "e5b4f85b63c75b6668f98ab80cef0c95088a8b1da9141189626dd8875dd2c0e1",
+    "datasets-in-10-minutes-ccpm.pdf": "f127f2e441e73a0fae169c8e1de9a005a80624729ab7697088bf0d4c4bcd1781"
   },
+  "resolved_issues_from_previous_revision": [
+    "実例7D/12訳",
+    "p40重複注",
+    "文献5native枠",
+    "章名自然化"
+  ],
+  "latest_scope_findings": [],
+  "preserved_conditions": [
+    "13原文全文/JP/全4候補/正解",
+    "test_public2720問は正解非公開(p15)",
+    "2021年BERT84.96/82.60と同テスト2720問",
+    "JSONL実コード実行",
+    "ライセンス未明示",
+    "候補組が異なる同一説明"
+  ],
   "checks": {
-    "full_source_questions": 27218,
-    "independent_examples": 13,
-    "original_chinese_all_choices_answers_preserved": true,
-    "test_labels_hidden": true,
-    "test_questions": 2720,
-    "baseline_accuracy_values": [
-      84.96,
-      82.6
-    ],
-    "native_code_executed": true,
-    "layout": {
-      "paragraphs_checked": 352,
-      "table_cells_checked": 48,
-      "issues": []
-    },
-    "package": {
-      "parsed_xml_parts": 127,
-      "integer_bullets": 110,
-      "hyperlinks": 42,
-      "new_schema_errors": [],
-      "baseline_schema_errors": 11,
-      "package_integrity": "passed",
-      "internal_relationship_targets": "passed",
-      "unique_shape_ids": "passed",
-      "schema_note": "標準XSDを変更せず確認。マスター由来の既存エラーと、整数buSzPctの百分率字句形式との差を分離。整数箇条書きサイズは25000–400000で別途検査。",
-      "pages": 47,
-      "native_tables": 5,
-      "native_charts": 0
-    },
-    "links": {
-      "native_url_only_runs": 42,
-      "pdf_link_rectangles": 42,
-      "pdf_link_text_exactly_matches_url": true,
-      "pdf_link_character_centers_match_url": true,
-      "glyph_box_overhangs": [],
-      "shortened_url_labels": [],
-      "issues": []
-    },
-    "notes": 0,
-    "final_png_diff": "height-only correction: all47 raster images byte-identical",
-    "native_all_frames": {
-      "native_paragraphs": 394,
+    "raw_examples": 13,
+    "all_distribution_rows_rechecked": 27218,
+    "test_labels_absent": 2720,
+    "native": {
+      "native_paragraphs": 377,
       "native_cells": 66,
       "frame_issues": [],
       "shape_glyph_overlaps": [],
-      "url_ranges_exact": 42
-    }
+      "url_ranges_exact": 38
+    },
+    "native_tables": 5,
+    "layout": "336段落48セル0",
+    "new_xsd_errors": 0,
+    "exact_url_ranges": 38,
+    "notes": 0,
+    "origin": "Liら2021年CCPM、HELM/CLEVAは後続利用であり本文から外部化。原作成者を混同していない。",
+    "framework_body_mentions": 0,
+    "empty_chapters": 0,
+    "quote_code_panels": 29,
+    "max_visible_padding_difference_pt": 1.333333333333334
   },
-  "conclusion": "読者が課題・作成方法・公開分割・評価・利用条件を把握できる説明へ改善され、監査の細部は資料外へ移された。必要な非公開ラベル・評価母集団・CLEVA公開範囲は保持。",
-  "chapter_label_final_recheck": {
-    "pages": [
-      3,
-      22,
-      23,
-      24,
-      25
-    ],
-    "native_text_change_only": "CLEVAでの後利用と公開配布 → CLEVAでの利用と公開配布",
-    "other_42_png_unchanged": true,
-    "actual_individual_views": true,
-    "native_frames": "394paragraphs66cells issues0",
-    "layout": "352paragraphs48cells issues0",
-    "newXSD": 0,
-    "exact_URLs": 42
-  }
+  "remaining_issues": [],
+  "previous_history": "pre-dataset-focus-review.json"
 }
