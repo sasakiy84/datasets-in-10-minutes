@@ -1,0 +1,645 @@
+[
+  {
+    "page": 1,
+    "text": [
+      "The Pile",
+      "An 800GB Dataset of Diverse Text\nfor Language Modeling\n22の文章集合からなる英語の事前学習コーパス",
+      "sasakiy84",
+      "datasets in 10 minutes (2026-10-18)"
+    ]
+  },
+  {
+    "page": 2,
+    "text": [
+      "公式リポジトリ",
+      "1. 多様な文章を次の語の予測へ",
+      "[1] EleutherAI. The Pile Replication Code.  https://github.com/EleutherAI/the-pile"
+    ]
+  },
+  {
+    "page": 3,
+    "text": [
+      "",
+      "多様な文章を次の語の予測へ\n22の構成要素と混合の設計\n学習効果とHELMでの評価\n研究利用と入手条件",
+      "目次"
+    ]
+  },
+  {
+    "page": 4,
+    "text": [
+      "1. 多様な文章を次の語の予測へ",
+      "1. 多様な文章を次の語の予測へ"
+    ]
+  },
+  {
+    "page": 5,
+    "text": [
+      "専門的な文章まで学習対象を広げる",
+      "The Pileは、Web、論文、書籍、コード、会話など22の構成要素を混ぜた、主に英語の事前学習用テキストである。\n幅広い分野の文章を使い、特定のWeb文体に偏らない言語モデルを目指した。Leo GaoらEleutherAIの共同研究として2020年末に公開された。\n質問に答えを付けた問題集ではない。文章に続くトークンを予測するために、文章自体を学習信号として使う。",
+      "1. 多様な文章を次の語の予測へ",
+      "[1] Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling.  https://arxiv.org/abs/2101.00027"
+    ]
+  },
+  {
+    "page": 6,
+    "text": [
+      "Webの告知文｜Pile-CC",
+      "1. 多様な文章を次の語の予測へ",
+      "公開10kサンプル / row 3 / 全文384字からの連続抜粋",
+      "日本語訳",
+      "話題：re:InventのMidnight Madness\n\nAmazonはAWS re:InventのMidnight Madnessイベントで新サービスを発表した。Amazon Sumerianは、開発者が仮想現実、拡張現実、3Dアプリケーションを簡単に構築できるようにする。",
+      "Webの告知では、サービス名と用途が続けて述べられる。",
+      "[1] Neel Nanda (2022). pile-10k: The first 10K elements of The Pile.  https://huggingface.co/datasets/NeelNanda/pile-10k",
+      "Topic: reinvent midnight madness\n\nAmazon announced a new service at the AWS re:Invent Midnight Madness event. Amazon Sumerian is a solution that aims to make it easier for developers to build virtual reality, augmented reality, and 3D applications."
+    ]
+  },
+  {
+    "page": 7,
+    "text": [
+      "コード由来の設定ファイル｜Github",
+      "1. 多様な文章を次の語の予測へ",
+      "公開10kサンプル / row 11 / 全文179字からの連続抜粋",
+      "{\n  \"fpsLimit\": 60,\n  \"preset\": \"basic\",\n  \"background\": {\n    \"color\": \"#0d47a1\",",
+      "日本語訳",
+      "fpsLimitは60、presetはbasic。backgroundのcolorは#0d47a1と指定されている。",
+      "Githubには自然文だけでなく、JSONの記号やキーも含まれる。",
+      "[1] Neel Nanda (2022). pile-10k: The first 10K elements of The Pile.  https://huggingface.co/datasets/NeelNanda/pile-10k"
+    ]
+  },
+  {
+    "page": 8,
+    "text": [
+      "医学論文の抄録｜PubMed Abstracts",
+      "1. 多様な文章を次の語の予測へ",
+      "公開10kサンプル / row 20 / 全文543字からの連続抜粋",
+      "Standardised protocol for primate faecal analysis.\nMacroscopic analysis of primate faeces as a way to study diet is well established, but lack of standardisation of methods may handicap comparative studies of the resulting data.",
+      "日本語訳",
+      "霊長類の糞便分析の標準化プロトコル。\n食性を調べる方法として霊長類の糞便を肉眼で分析することは確立しているが、手法が標準化されていないため、得られたデータの比較研究に支障が生じる可能性がある。",
+      "抄録では、専門用語を含む研究の記述を予測する。",
+      "[1] Neel Nanda (2022). pile-10k: The first 10K elements of The Pile.  https://huggingface.co/datasets/NeelNanda/pile-10k"
+    ]
+  },
+  {
+    "page": 9,
+    "text": [
+      "本文が、そのまま予測の対象になる",
+      "入力は文書のテキスト。モデルは直前までのトークンを条件に、次のトークンへ確率を割り当てる。JSONの括弧や句読点も対象となる。\n学習時には各位置の実際のトークンとの負の対数尤度を小さくする。評価時には、固定した保留文書へ与えた確率を集計する。\n前の3例は公開10kサンプルの本文抜粋で、HELMが選んだテスト文書ではない。HELMでは長い文書をモデルの文脈長に合わせて窓へ分け、本文の尤度を計算する。",
+      "1. 多様な文章を次の語の予測へ",
+      "[1] Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling.  https://arxiv.org/abs/2101.00027\n[2] Stanford CRFM. HELM v0.4.0: ThePileScenario.  https://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/the_pile_scenario.py"
+    ]
+  },
+  {
+    "page": 10,
+    "text": [
+      "2. 22の構成要素と混合の設計",
+      "2. 22の構成要素と混合の設計"
+    ]
+  },
+  {
+    "page": 11,
+    "text": [
+      "元の容量と、学習で読む量は異なる",
+      "2. 22の構成要素と混合の設計",
+      "量 | 定義 | 値",
+      "Raw size | 反復前の構成要素の合計 | 825.18 GiB",
+      "Effective size | 反復回数を掛けた合計 | 1,254.20 GiB",
+      "平均文書サイズ | 反復前の全体平均 | 5.91 KiB",
+      "いずれも保留集合を作る前の値。GiBは2³⁰ byte。重みは混合後のバイト比率である。",
+      "[1] Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling.  https://arxiv.org/abs/2101.00027"
+    ]
+  },
+  {
+    "page": 12,
+    "text": [
+      "文書の種類に合わせて収集・抽出する",
+      "Pile-CCはCommon Crawlから本文を抽出し、ナビゲーションなどの定型部分を抑える。OpenWebText2はRedditで共有された外部ページを用いる。\nArXivではLaTeXからテキストを作り、PubMed Centralでは論文全文を取り込む。特許は背景説明、NIHは研究助成の要約と、必要な部分を選ぶ。\n注釈者が正解ラベルを付ける方式ではない。構成要素別の抽出、フィルタ、整形の後に反復回数を設定し、文書を混合・シャッフルする。",
+      "2. 22の構成要素と混合の設計",
+      "[1] Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling.  https://arxiv.org/abs/2101.00027"
+    ]
+  },
+  {
+    "page": 13,
+    "text": [
+      "大きな容量と大きな混合比は一致しない",
+      "2. 22の構成要素と混合の設計",
+      "構成要素 | 元容量 GiB | 反復数 | 混合比 %",
+      "Pile-CC | 227.12 | 1.0 | 18.11",
+      "PubMed Central | 90.27 | 2.0 | 14.40",
+      "Books3 | 100.96 | 1.5 | 12.07",
+      "OpenWebText2 | 62.77 | 2.0 | 10.01",
+      "Wikipedia (en) | 6.38 | 3.0 | 1.53",
+      "混合比は反復後のバイト比率。Wikipediaは元容量の3倍を読む。",
+      "[1] Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling.  https://arxiv.org/abs/2101.00027"
+    ]
+  },
+  {
+    "page": 14,
+    "text": [
+      "文書単位の保留集合で分野別に評価する",
+      "混合用の文書から検証・テスト用の文書を取り分ける。データはJSON Lines形式で、各行にtextとmeta.pile_set_nameが含まれる。\n書籍やIRCログは長く、百科事典や抄録は短い。平均文書サイズは、Books3が538.36 KiB、Wikipediaが1.11 KiBと大きく異なる。\n長い文書をどう窓に分けるか、学習データの重複をどう除くかが評価結果に関わる。元のPileと重複除去版は、別の学習条件として区別する。",
+      "2. 22の構成要素と混合の設計",
+      "[1] Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling.  https://arxiv.org/abs/2101.00027"
+    ]
+  },
+  {
+    "page": 15,
+    "text": [
+      "3. 学習効果とHELMでの評価",
+      "3. 学習効果とHELMでの評価"
+    ]
+  },
+  {
+    "page": 16,
+    "text": [
+      "1バイト当たりの予測損失で比べる",
+      "Bits per byte（BPB）は、正解の文章へ割り当てた負の対数確率を、UTF-8のバイト数で割った値。小さいほど予測しやすかったことを示す。\nBPB = −Σ log₂ p（実際のトークン｜直前の文脈） / 採点対象のバイト数。文書ごとのBPBの単純平均ではなく、損失とバイト数を合算する。\nPerplexityはトークン数で正規化する。トークンの切り方が異なるモデル間では、BPBの方が比較しやすい。ただし、使える文脈長などの条件も結果に影響する。",
+      "3. 学習効果とHELMでの評価",
+      "[1] Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling.  https://arxiv.org/abs/2101.00027\n[2] Liang et al. (2023). Holistic Evaluation of Language Models. TMLR.  https://arxiv.org/abs/2211.09110"
+    ]
+  },
+  {
+    "page": 17,
+    "text": [
+      "40 GBの学習データで多分野へ汎化した",
+      "3. 学習効果とHELMでの評価",
+      "学習データ | Pile test BPB ↓ | WikiText PPL ↓ | LAMBADA % ↑",
+      "The Pile | 0.9433 | 5.59 | 50.1",
+      "CC-100 (en) | 1.3293 | 8.27 | 49.7",
+      "Raw CC | 1.1275 | 11.75 | 43.8",
+      "同じ1.3Bモデルを各データの約40 GBで学習。評価集合との13-gram重複を除去。LAMBADAは末尾の単語を当てる正解率。",
+      "[1] Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling.  https://arxiv.org/abs/2101.00027"
+    ]
+  },
+  {
+    "page": 18,
+    "text": [
+      "HELMは6分野のテスト本文を使う",
+      "HELM Classic v0.4.0の公開run仕様では、ArXiv、BookCorpus2、Enron Emails、Github、PubMed Central、Wikipedia (en)の6構成要素を評価する。\nテスト集合の構成要素別文書を読み、lm_perplexityのgroup0の索引で部分抽出する。BookCorpus2は文書数が少ないため、この10分割を行わない。\n採点はlanguage_modeling方式。学習例は0、試行は1、最大評価文書数は1,000。生成する回答はなく、max_tokensは0に設定される。",
+      "3. 学習効果とHELMでの評価",
+      "[1] Stanford CRFM. HELM v0.4.0: ThePileScenario.  https://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/the_pile_scenario.py"
+    ]
+  },
+  {
+    "page": 19,
+    "text": [
+      "HELMのBPBは分野ごとに傾向が異なる",
+      "3. 学習効果とHELMでの評価",
+      "モデル | ArXiv | Github | Wikipedia",
+      "text-davinci-003 (2022) | 0.5551 | 0.2045 | 0.5573",
+      "BLOOM (2022) | 0.5773 | 0.2689 | 0.5879",
+      "OPT-175B (2022) | 0.7296 | 0.4434 | 0.5522",
+      "Classic v0.4.0掲載、元run suite v0.3.0。各1試行。ArXivは238文書、他は各1,000文書。モデル別の文脈長・分割条件を含む結果。",
+      "[1] Liang et al. (2023). Holistic Evaluation of Language Models. TMLR.  https://arxiv.org/abs/2211.09110"
+    ]
+  },
+  {
+    "page": 20,
+    "text": [
+      "評価条件まで合わせて損失を読む",
+      "ArXivではtext-davinci-003のBPBが0.5551、BLOOMが0.5773。Githubでもtext-davinci-003が小さく、WikipediaではOPT-175Bが0.5522と最小だった。\nこれは2023年のHELM Classic公開実行の比較である。2026年時点のモデル順位を示す値ではない。\n同じテスト文書でもモデルの文脈窓とトークン化が異なる。今回の9実行のprompt_truncated平均はいずれも0だが、長文はアダプター内で複数の窓へ分割される。",
+      "3. 学習効果とHELMでの評価",
+      "[1] Liang et al. (2023). Holistic Evaluation of Language Models. TMLR.  https://arxiv.org/abs/2211.09110\n[2] Stanford CRFM. HELM v0.4.0: ThePileScenario.  https://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/the_pile_scenario.py"
+    ]
+  },
+  {
+    "page": 21,
+    "text": [
+      "4. 研究利用と入手条件",
+      "4. 研究利用と入手条件"
+    ]
+  },
+  {
+    "page": 22,
+    "text": [
+      "Pileは学習過程を調べる共通基盤にもなる",
+      "Pythiaは、70Mから12Bまで8サイズのモデルを、同じPileの文書順で学習した。各モデルの学習量は約300Bトークンである。\n標準Pile版に加え、約207Bトークンの重複除去版を使う系列も公開した。同じ約300Bトークンは、標準版で1周弱、重複除去版で約1.5周に当たる。\n学習途中のチェックポイントとデータ順を対応させ、知識の獲得、記憶、学習規模の影響を調べる。公式リポジトリは2025年の派生研究も案内している。",
+      "4. 研究利用と入手条件",
+      "[1] Biderman et al. (2023). Pythia: A Suite for Analyzing Large Language Models Across Training and Scaling. ICML.  https://arxiv.org/abs/2304.01373\n[2] EleutherAI. Pythia: Interpreting Transformers Across Time and Scale.  https://github.com/EleutherAI/pythia"
+    ]
+  },
+  {
+    "page": 23,
+    "text": [
+      "再構築コードと本文の権利を分けて確認する",
+      "公式GitHubは再構築・変種作成のコードを提供し、READMEから配布先を案内している。コードのMIT Licenseは、収録本文すべての利用許諾を意味しない。\n本文の出所は22通りあり、著作権、ライセンス、利用規約、本人の同意の扱いが異なる。書籍、字幕、コード、公開メールを一つの条件で扱うことはできない。\n特定の構成要素を除いた変種を作れるが、個別文書の権利を精密に判定できるメタデータは不足している。データカードと各元資料の条件を組み合わせて確認する。",
+      "4. 研究利用と入手条件",
+      "[1] EleutherAI. The Pile Replication Code.  https://github.com/EleutherAI/the-pile\n[2] Biderman et al. (2022). Datasheet for the Pile. arXiv.  https://arxiv.org/abs/2201.07311"
+    ]
+  },
+  {
+    "page": 24,
+    "text": [
+      "入手時には構成要素と分割を固定する",
+      "再現する対象が元のPileか、重複除去版か、構成要素を除いた変種かを決める。学習・検証・テストの分割とファイルのハッシュを保存する。\nHELM v0.4.0の実装はthe-eye.euのtest.jsonl.zstと、lm_perplexityの索引を参照する。配布URLや権利条件は取得時に再確認する。\n本資料の13例は、公開pile-10kの先頭100行だけを取得したもの。原文・連続した表示範囲・訳・行番号・ハッシュは付属のexamples.jsonに保存した。",
+      "4. 研究利用と入手条件",
+      "[1] Stanford CRFM. HELM v0.4.0: ThePileScenario.  https://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/the_pile_scenario.py\n[2] Neel Nanda (2022). pile-10k: The first 10K elements of The Pile.  https://huggingface.co/datasets/NeelNanda/pile-10k"
+    ]
+  },
+  {
+    "page": 25,
+    "text": [
+      "多分野の文章と、その混合条件が価値になる",
+      "The Pileは、22の出所から825.18 GiBのテキストを集め、反復回数を変えて約1,254.20 GiB相当を混合した英語の事前学習コーパスである。\n約40 GBにそろえた実験でも、Webだけの学習より幅広い分野の予測損失が改善した。HELMはその一部を、分野別の本文尤度評価に用いている。\n文書の種類、混合比、重複除去、評価時の文脈窓、出所ごとの利用条件を対応させると、得点と研究利用の意味を具体的に把握できる。",
+      "4. 研究利用と入手条件",
+      "[1] Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling.  https://arxiv.org/abs/2101.00027"
+    ]
+  },
+  {
+    "page": 26,
+    "text": [
+      "Appendix",
+      "Appendix"
+    ]
+  },
+  {
+    "page": 27,
+    "text": [
+      "",
+      "公開サンプルの追加例\n構成要素と評価条件\n制作機関と参考文献",
+      "Appendix: 目次"
+    ]
+  },
+  {
+    "page": 28,
+    "text": [
+      "投資記事｜OpenWebText2",
+      "Appendix: 1. 公開サンプルの追加例",
+      "公開10kサンプル / row 2 / 全文1235字からの連続抜粋",
+      "Article content\n\nHuman behavior has a tremendous impact on investing — more so than most realize — and one of our biggest weaknesses is the tendency to constantly compare and contrast ourselves to others.",
+      "日本語訳",
+      "記事本文\n\n人間の行動は、ほとんどの人が認識する以上に投資へ大きく影響する。私たちの大きな弱点の一つは、自分を常に他人と比べてしまう傾向だ。",
+      "OpenWebText2はRedditで共有された外部ページを収集した。",
+      "[1] Neel Nanda (2022). pile-10k: The first 10K elements of The Pile.  https://huggingface.co/datasets/NeelNanda/pile-10k"
+    ]
+  },
+  {
+    "page": 29,
+    "text": [
+      "物語についての質問｜StackExchange",
+      "Appendix: 1. 公開サンプルの追加例",
+      "公開10kサンプル / row 5 / 全文2016字からの連続抜粋",
+      "Q:\n\nWhy was Mundungus banned from the Hog's Head?",
+      "日本語訳",
+      "質問：\n\nマンダンガスはなぜホッグズ・ヘッドへの出入りを禁止されたのか。",
+      "StackExchangeのQ/Aも、この用途では本文の一部として扱う。",
+      "[1] Neel Nanda (2022). pile-10k: The first 10K elements of The Pile.  https://huggingface.co/datasets/NeelNanda/pile-10k"
+    ]
+  },
+  {
+    "page": 30,
+    "text": [
+      "百科事典の記事｜Wikipedia (en)",
+      "Appendix: 1. 公開サンプルの追加例",
+      "公開10kサンプル / row 10 / 全文2665字からの連続抜粋",
+      "Major League Baseball All-Century Team\n\nIn 1999, the Major League Baseball All-Century Team was chosen by popular vote of fans.",
+      "日本語訳",
+      "メジャーリーグ・ベースボールの20世紀オールセンチュリー・チーム\n\n1999年、このチームはファンの人気投票で選ばれた。",
+      "Wikipediaのタイトルと本文が一続きのテキストになる。",
+      "[1] Neel Nanda (2022). pile-10k: The first 10K elements of The Pile.  https://huggingface.co/datasets/NeelNanda/pile-10k"
+    ]
+  },
+  {
+    "page": 31,
+    "text": [
+      "特許の背景説明｜USPTO Backgrounds",
+      "Appendix: 1. 公開サンプルの追加例",
+      "公開10kサンプル / row 18 / 全文1711字からの連続抜粋",
+      "In general, absorbent articles should comfortably fit the body of a wearer. Most absorbent articles include an absorbent pad formed by an absorbent core contained in a wrap comprising a barrier tissue and/or a forming tissue.",
+      "日本語訳",
+      "一般に、吸収性製品は着用者の身体に快適にフィットする必要がある。多くの吸収性製品は、バリアティッシュや成形ティッシュからなる包材に収めた吸収体を含む吸収パッドを備える。",
+      "USPTO Backgroundsは、発明の背景を説明する特許文書の部分集合。",
+      "[1] Neel Nanda (2022). pile-10k: The first 10K elements of The Pile.  https://huggingface.co/datasets/NeelNanda/pile-10k"
+    ]
+  },
+  {
+    "page": 32,
+    "text": [
+      "医学論文の本文｜PubMed Central",
+      "Appendix: 1. 公開サンプルの追加例",
+      "公開10kサンプル / row 54 / 全文12919字からの連続抜粋",
+      "日本語訳",
+      "序論 {#sec1-1}\n============\n\nキメラ型抗TNFα抗体のインフリキシマブ（IFX）は、他のどの治療にも抵抗性を示すIBD患者のかなりの割合で、寛解の導入と維持に有効である。［参照1、2］",
+      "PMCの全文には、見出しや変換時の参照記法も残る。",
+      "[1] Neel Nanda (2022). pile-10k: The first 10K elements of The Pile.  https://huggingface.co/datasets/NeelNanda/pile-10k",
+      "Introduction {#sec1-1}\n============\n\nInfliximab (IFX), a chimeric anti-TNFα antibody, is effective in inducing and maintaining remission in a considerable proportion of IBD patients refractory to any other treatments \\[[@ref1],[@ref2]\\]."
+    ]
+  },
+  {
+    "page": 33,
+    "text": [
+      "業務メールの本文｜Enron Emails",
+      "Appendix: 1. 公開サンプルの追加例",
+      "公開10kサンプル / row 55 / 全文362字からの連続抜粋",
+      "Ben-\nThis is a lengthy info/doc request - please give me feedback on how best we\ncan close the loop.\n\nThanks\nSusan Flanagan",
+      "日本語訳",
+      "ベンへ\nこれは長文の情報・文書提供依頼です。どのように対応を完結させるのが最善か、ご意見をください。\n\nありがとう。\nスーザン・フラナガン",
+      "Enron Emailsは公開された業務メール。ここでは本文だけを抜粋する。",
+      "[1] Neel Nanda (2022). pile-10k: The first 10K elements of The Pile.  https://huggingface.co/datasets/NeelNanda/pile-10k"
+    ]
+  },
+  {
+    "page": 34,
+    "text": [
+      "ニュースの議論｜HackerNews",
+      "Appendix: 1. 公開サンプルの追加例",
+      "公開10kサンプル / row 63 / 全文2867字からの連続抜粋",
+      "日本語訳",
+      "Facebookが愛国者法の共同起草者を法務責任者に採用した — Jerry2\nhttps://boingboing.net/2019/04/22/mass-surveillance-r-us.html\n======",
+      "HackerNewsでは投稿タイトル、リンク、コメントの構造が現れる。",
+      "[1] Neel Nanda (2022). pile-10k: The first 10K elements of The Pile.  https://huggingface.co/datasets/NeelNanda/pile-10k",
+      "Facebook has hired the Patriot Act's co-author as a general counsel - Jerry2\nhttps://boingboing.net/2019/04/22/mass-surveillance-r-us.html\n======"
+    ]
+  },
+  {
+    "page": 35,
+    "text": [
+      "判決の短い記録｜FreeLaw",
+      "Appendix: 1. 公開サンプルの追加例",
+      "公開10kサンプル / row 70 / 全文155字からの連続抜粋",
+      "477 F.2d 598\nZukowskiv.State Bar Grievance Board, State Bar ofMichigan\n73-1072\nUNITED STATES COURT OF APPEALS Sixth Circuit\n4/18/73",
+      "日本語訳",
+      "477 F.2d 598\nZukowski対ミシガン州弁護士会懲戒委員会\n73-1072\n米国第6巡回区控訴裁判所\n1973年4月18日",
+      "FreeLawは判例。裁判所名、事件番号、処分のような定型表現もある。",
+      "[1] Neel Nanda (2022). pile-10k: The first 10K elements of The Pile.  https://huggingface.co/datasets/NeelNanda/pile-10k"
+    ]
+  },
+  {
+    "page": 36,
+    "text": [
+      "研究助成の要約｜NIH ExPorter",
+      "Appendix: 1. 公開サンプルの追加例",
+      "公開10kサンプル / row 74 / 全文4010字からの連続抜粋",
+      "Autosomal dominant polycystic kidney disease (ADPKD) is a common monoallelic disorder associated with progressive cyst development and resulting in end stage renal failure (ESRD) in 50% of patients by 60y.",
+      "日本語訳",
+      "常染色体優性多発性嚢胞腎（ADPKD）は、進行する嚢胞形成に関連する一般的な単一アレル性疾患であり、60歳までに患者の50%が末期腎不全（ESRD）に至る。",
+      "NIH ExPorterは研究助成の要約。医学論文とは文書の目的が異なる。",
+      "[1] Neel Nanda (2022). pile-10k: The first 10K elements of The Pile.  https://huggingface.co/datasets/NeelNanda/pile-10k"
+    ]
+  },
+  {
+    "page": 37,
+    "text": [
+      "スポーツ大会の記録｜Wikipedia (en)",
+      "Appendix: 1. 公開サンプルの追加例",
+      "公開10kサンプル / row 36 / 全文358字からの連続抜粋",
+      "2017 XIXO Ladies Open Hódmezővásárhely – Doubles\n\nLaura Pigossi and Nadia Podoroska were the defending champions, but both players chose not to participate.",
+      "日本語訳",
+      "2017 XIXO Ladies Open Hódmezővásárhely — ダブルス\n\n前年優勝者はLaura PigossiとNadia Podoroskaだったが、ともに出場しなかった。",
+      "同じWikipediaでも、人名や地名が本文の中心となる。",
+      "[1] Neel Nanda (2022). pile-10k: The first 10K elements of The Pile.  https://huggingface.co/datasets/NeelNanda/pile-10k"
+    ]
+  },
+  {
+    "page": 38,
+    "text": [
+      "22構成要素の容量と混合比（1/4）",
+      "Appendix: 2. 構成要素と評価条件",
+      "構成要素 | 元容量 GiB | 反復数 | 混合比 %",
+      "Pile-CC | 227.12 | 1.0 | 18.11",
+      "PubMed Central | 90.27 | 2.0 | 14.40",
+      "Books3 | 100.96 | 1.5 | 12.07",
+      "OpenWebText2 | 62.77 | 2.0 | 10.01",
+      "ArXiv | 56.21 | 2.0 | 8.96",
+      "Github | 95.16 | 1.0 | 7.59",
+      "[1] Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling.  https://arxiv.org/abs/2101.00027"
+    ]
+  },
+  {
+    "page": 39,
+    "text": [
+      "22構成要素の容量と混合比（2/4）",
+      "Appendix: 2. 構成要素と評価条件",
+      "構成要素 | 元容量 GiB | 反復数 | 混合比 %",
+      "FreeLaw | 51.15 | 1.5 | 6.12",
+      "StackExchange | 32.20 | 2.0 | 5.13",
+      "USPTO Backgrounds | 22.90 | 2.0 | 3.65",
+      "PubMed Abstracts | 19.26 | 2.0 | 3.07",
+      "Gutenberg (PG-19) | 10.88 | 2.5 | 2.17",
+      "OpenSubtitles | 12.98 | 1.5 | 1.55",
+      "[1] Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling.  https://arxiv.org/abs/2101.00027"
+    ]
+  },
+  {
+    "page": 40,
+    "text": [
+      "22構成要素の容量と混合比（3/4）",
+      "Appendix: 2. 構成要素と評価条件",
+      "構成要素 | 元容量 GiB | 反復数 | 混合比 %",
+      "Wikipedia (en) | 6.38 | 3.0 | 1.53",
+      "DM Mathematics | 7.75 | 2.0 | 1.24",
+      "Ubuntu IRC | 5.52 | 2.0 | 0.88",
+      "BookCorpus2 | 6.30 | 1.5 | 0.75",
+      "EuroParl | 4.59 | 2.0 | 0.73",
+      "HackerNews | 3.90 | 2.0 | 0.62",
+      "[1] Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling.  https://arxiv.org/abs/2101.00027"
+    ]
+  },
+  {
+    "page": 41,
+    "text": [
+      "22構成要素の容量と混合比（4/4）",
+      "Appendix: 2. 構成要素と評価条件",
+      "構成要素 | 元容量 GiB | 反復数 | 混合比 %",
+      "YoutubeSubtitles | 3.73 | 2.0 | 0.60",
+      "PhilPapers | 2.38 | 2.0 | 0.38",
+      "NIH ExPorter | 1.89 | 2.0 | 0.30",
+      "Enron Emails | 0.88 | 2.0 | 0.14",
+      "[1] Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling.  https://arxiv.org/abs/2101.00027"
+    ]
+  },
+  {
+    "page": 42,
+    "text": [
+      "構成要素が収録する文章（1/4）",
+      "Appendix: 2. 構成要素と評価条件",
+      "構成要素 | 収録内容",
+      "Pile-CC | Common CrawlのWeb本文",
+      "PubMed Central | 生物医学論文の全文",
+      "Books3 | 書籍の本文",
+      "OpenWebText2 | Redditで共有された外部ページ",
+      "ArXiv | LaTeXから抽出した学術論文",
+      "Github | 公開リポジトリのコード",
+      "[1] Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling.  https://arxiv.org/abs/2101.00027"
+    ]
+  },
+  {
+    "page": 43,
+    "text": [
+      "構成要素が収録する文章（2/4）",
+      "Appendix: 2. 構成要素と評価条件",
+      "構成要素 | 収録内容",
+      "FreeLaw | 裁判所の判決文",
+      "StackExchange | 分野別の質問と回答",
+      "USPTO Backgrounds | 米国特許の背景説明",
+      "PubMed Abstracts | 生物医学論文の抄録",
+      "Gutenberg (PG-19) | Project Gutenbergの古典書籍",
+      "OpenSubtitles | 映画・テレビ作品の字幕",
+      "[1] Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling.  https://arxiv.org/abs/2101.00027"
+    ]
+  },
+  {
+    "page": 44,
+    "text": [
+      "構成要素が収録する文章（3/4）",
+      "Appendix: 2. 構成要素と評価条件",
+      "構成要素 | 収録内容",
+      "Wikipedia (en) | 英語の百科事典記事",
+      "DM Mathematics | 生成器が作る数学の問題と答え",
+      "Ubuntu IRC | Ubuntuコミュニティのチャット",
+      "BookCorpus2 | オンラインの小説",
+      "EuroParl | 欧州議会の議事録",
+      "HackerNews | 技術ニュースとコメント",
+      "[1] Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling.  https://arxiv.org/abs/2101.00027"
+    ]
+  },
+  {
+    "page": 45,
+    "text": [
+      "構成要素が収録する文章（4/4）",
+      "Appendix: 2. 構成要素と評価条件",
+      "構成要素 | 収録内容",
+      "YoutubeSubtitles | YouTube動画の字幕",
+      "PhilPapers | 哲学分野の学術論文",
+      "NIH ExPorter | 米国NIHの研究助成要約",
+      "Enron Emails | 公開された企業の業務メール",
+      "[1] Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling.  https://arxiv.org/abs/2101.00027"
+    ]
+  },
+  {
+    "page": 46,
+    "text": [
+      "公開・規約・同意の分類：2020年（1/4）",
+      "Appendix: 2. 構成要素と評価条件",
+      "構成要素 | 公開 | 規約整合 | 著者同意",
+      "Pile-CC | ○ | ○ | —",
+      "PubMed Central | ○ | ○ | ○",
+      "Books3 | ○ | — | —",
+      "OpenWebText2 | ○ | — | —",
+      "ArXiv | ○ | ○ | ○",
+      "Github | ○ | ○ | —",
+      "[1] Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling. 構築者の整理：○は該当、—は該当すると判断されていない。\nhttps://arxiv.org/abs/2101.00027"
+    ]
+  },
+  {
+    "page": 47,
+    "text": [
+      "公開・規約・同意の分類：2020年（2/4）",
+      "Appendix: 2. 構成要素と評価条件",
+      "構成要素 | 公開 | 規約整合 | 著者同意",
+      "FreeLaw | ○ | ○ | ○",
+      "StackExchange | ○ | ○ | ○",
+      "USPTO Backgrounds | ○ | ○ | ○",
+      "PubMed Abstracts | ○ | ○ | ○",
+      "Gutenberg (PG-19) | ○ | ○ | —",
+      "OpenSubtitles | ○ | — | —",
+      "[1] Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling. 構築者の整理：○は該当、—は該当すると判断されていない。\nhttps://arxiv.org/abs/2101.00027"
+    ]
+  },
+  {
+    "page": 48,
+    "text": [
+      "公開・規約・同意の分類：2020年（3/4）",
+      "Appendix: 2. 構成要素と評価条件",
+      "構成要素 | 公開 | 規約整合 | 著者同意",
+      "Wikipedia (en) | ○ | ○ | ○",
+      "DM Mathematics | ○ | ○ | ○",
+      "Ubuntu IRC | ○ | ○ | ○",
+      "BookCorpus2 | ○ | — | —",
+      "EuroParl | ○ | ○ | ○",
+      "HackerNews | ○ | ○ | —",
+      "[1] Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling. 構築者の整理：○は該当、—は該当すると判断されていない。\nhttps://arxiv.org/abs/2101.00027"
+    ]
+  },
+  {
+    "page": 49,
+    "text": [
+      "公開・規約・同意の分類：2020年（4/4）",
+      "Appendix: 2. 構成要素と評価条件",
+      "構成要素 | 公開 | 規約整合 | 著者同意",
+      "YoutubeSubtitles | ○ | — | —",
+      "PhilPapers | ○ | ○ | ○",
+      "NIH ExPorter | ○ | ○ | ○",
+      "Enron Emails | ○ | ○ | —",
+      "[1] Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling. 構築者の整理：○は該当、—は該当すると判断されていない。\nhttps://arxiv.org/abs/2101.00027"
+    ]
+  },
+  {
+    "page": 50,
+    "text": [
+      "HELMは構成要素名で本文を分類する",
+      "ThePileScenarioは各行のmeta.pile_set_nameを読み、本文を構成要素別のCSVへキャッシュする。referencesは空のまま、本文をinputとしてtestに割り当てる。\n22構成要素を実装上は受け付けるが、Classic v0.4.0公開run仕様は6構成要素・168モデル実行分だった。実装の対応範囲と、公開結果の範囲は異なる。\ngroup0の索引は重複を除いて昇順にし、構成要素内の文書を選ぶ。Ubuntu IRC、BookCorpus2、PhilPapersは文書数が少ないため10分割の対象外である。",
+      "Appendix: 2. 構成要素と評価条件",
+      "[1] Stanford CRFM. HELM v0.4.0: ThePileScenario.  https://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/the_pile_scenario.py"
+    ]
+  },
+  {
+    "page": 51,
+    "text": [
+      "9実行の採点対象トークン数は異なる",
+      "Appendix: 2. 構成要素と評価条件",
+      "モデル | ArXiv | Github | Wikipedia",
+      "text-davinci-003 (2022) | 3508 | 1414 | 639",
+      "BLOOM (2022) | 1914 | 1031 | 576",
+      "OPT-175B (2022) | 1939 | 1267 | 598",
+      "各モデル要求の平均採点トークン数。文書数ではなく、文書を窓に分けた後の要求単位で集計される。",
+      "[1] Liang et al. (2023). Holistic Evaluation of Language Models. TMLR.  https://arxiv.org/abs/2211.09110"
+    ]
+  },
+  {
+    "page": 52,
+    "text": [
+      "公開・規約・著者の同意は別の軸である",
+      "構築時の整理では、インターネットで読めること、取得元の利用規約と整合すること、元の著者が利用に同意したことを別々に分類した。\nたとえばGithubは公開かつ規約整合と整理された一方、著者の同意は一律には認められていない。書籍や字幕には、公開されていても規約・同意の欄を満たさないものがある。\nこれは2020年の構築者による整理であり、個別のライセンス一覧ではない。ミラーの表記だけでなく、各本文の出所と条件を確かめる。",
+      "Appendix: 2. 構成要素と評価条件",
+      "[1] Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling.  https://arxiv.org/abs/2101.00027"
+    ]
+  },
+  {
+    "page": 53,
+    "text": [
+      "EleutherAIによる共同制作",
+      "Leo Gaoを第一著者、Connor Leahyを最終著者とする12名が、EleutherAIとして制作した。著者にはStella Biderman、Sid Black、Travis Hoppeらが含まれる。\n新たなWeb・学術データの収集と、既存の書籍・会話・論文データの統合を分担し、前処理と再構築コードを公開した。\nThe Pileはその後、GPT-NeoXやPythiaなどの学習基盤となった。Pythiaでは同一データ順と多数のチェックポイントを公開し、モデルの学習過程の比較へ役割を広げた。",
+      "Appendix: 3. 制作機関と参考文献",
+      "[1] Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling.  https://arxiv.org/abs/2101.00027\n[2] Biderman et al. (2023). Pythia: A Suite for Analyzing Large Language Models Across Training and Scaling. ICML.  https://arxiv.org/abs/2304.01373"
+    ]
+  },
+  {
+    "page": 54,
+    "text": [
+      "参考文献",
+      "Appendix: 3. 制作機関と参考文献",
+      "Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling. arXiv.",
+      "22種類のテキストを収集・混合する設計と、分野別の言語モデル評価、内容の統計・社会的影響を記述した。",
+      "https://arxiv.org/abs/2101.00027",
+      "Biderman et al. (2022). Datasheet for the Pile. arXiv.",
+      "構成、収集・処理方法、利用目的、配布、倫理的検討をデータシートの形式で整理した。",
+      "https://arxiv.org/abs/2201.07311"
+    ]
+  },
+  {
+    "page": 55,
+    "text": [
+      "参考文献",
+      "Appendix: 3. 制作機関と参考文献",
+      "Liang et al. (2023). Holistic Evaluation of Language Models. TMLR.",
+      "言語モデルを多様なシナリオと指標で横断評価する枠組み。The Pileは言語モデリング課題の一部となる。",
+      "https://arxiv.org/abs/2211.09110",
+      "Biderman et al. (2023). Pythia: A Suite for Analyzing Large Language Models Across Training and Scaling. ICML.",
+      "同じデータ順で異なる規模のモデルを学習し、途中のチェックポイントとともに学習過程の比較基盤を公開した。",
+      "https://arxiv.org/abs/2304.01373"
+    ]
+  },
+  {
+    "page": 56,
+    "text": [
+      "参考文献",
+      "Appendix: 3. 制作機関と参考文献",
+      "EleutherAI. The Pile Replication Code.",
+      "The Pileの再構築コード、各構成要素の収集実装、反復回数と容量表を公開する公式リポジトリ。",
+      "https://github.com/EleutherAI/the-pile",
+      "Neel Nanda (2022). pile-10k: The first 10K elements of The Pile.",
+      "The Pileの先頭10,000文書をデバッグ向けに公開したサンプル。本資料の実例はその先頭100行から抽出した。",
+      "https://huggingface.co/datasets/NeelNanda/pile-10k"
+    ]
+  }
+]

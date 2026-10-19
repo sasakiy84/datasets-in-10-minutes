@@ -1,0 +1,574 @@
+{
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "baseline_sha256": "9a0a259e18a128b5d3b2287e1702dd2df155aed0a24f7e542815692c4cbb2b68",
+  "findings": [
+    {
+      "old_page": 5,
+      "location": "shape 1",
+      "issue": "概要を理解する自然な説明に整理する",
+      "action": "rewrite",
+      "before": "The Pileは、Web、論文、書籍、コード、会話など22の構成要素を混ぜた、主に英語の事前学習用テキストである。\n幅広い分野の文章を使い、特定のWeb文体に偏らない言語モデルを目指した。Leo GaoらEleutherAIの共同研究として2020年末に公開された。\n質問に答えを付けた問題集ではない。文章に続くトークンを予測するために、文章自体を学習信号として使う。",
+      "after": "The Pileは、Web、論文、書籍、コード、会話など22の構成要素を混ぜた、主に英語の事前学習用テキストである。\nWeb以外の専門的な文章まで学習対象を広げ、幅広い分野で文章を予測できる言語モデルを目指した。Leo GaoらEleutherAIの共同研究として2020年末に公開された。\n文章に続くトークンを予測するために、本文そのものを学習信号として使う。",
+      "new_page": 5
+    },
+    {
+      "old_page": 9,
+      "location": "shape 1",
+      "issue": "概要を理解する自然な説明に整理する",
+      "action": "rewrite",
+      "before": "入力は文書のテキスト。モデルは直前までのトークンを条件に、次のトークンへ確率を割り当てる。JSONの括弧や句読点も対象となる。\n学習時には各位置の実際のトークンとの負の対数尤度を小さくする。評価時には、固定した保留文書へ与えた確率を集計する。\n前の3例は公開10kサンプルの本文抜粋で、HELMが選んだテスト文書ではない。HELMでは長い文書をモデルの文脈長に合わせて窓へ分け、本文の尤度を計算する。",
+      "after": "モデルは直前までのトークンを読み、次のトークンへ確率を割り当てる。トークンは単語の一部や記号を含む単位で、JSONの括弧や句読点も予測の対象になる。\n学習では、実際に続くトークンへ高い確率を与えるようにする。評価では、学習に使わずに残した文書へ、どれだけ高い確率を与えられるかを測る。\n前の3例は、内容の違いを示す公開サンプルの抜粋。HELMではテスト文書を使い、長い本文はモデルの文脈長に合わせて分割して採点する。",
+      "new_page": 9
+    },
+    {
+      "old_page": 11,
+      "location": "table row label",
+      "issue": "表セルのサイズ末尾1文字の折返しを、意味を保った短い項目名で解消",
+      "action": "rewrite",
+      "before": "平均文書サイズ",
+      "after": "文書の平均長",
+      "new_page": 11
+    },
+    {
+      "old_page": 11,
+      "location": "shape 3",
+      "issue": "保留集合を、用途が伝わる表現へ",
+      "action": "rewrite",
+      "before": "いずれも保留集合を作る前の値。GiBは2³⁰ byte。重みは混合後のバイト比率である。",
+      "after": "いずれも検証・テスト用の文書を取り分ける前の値。GiBは2³⁰ byte。重みは混合後のバイト比率である。",
+      "new_page": 11
+    },
+    {
+      "old_page": 12,
+      "location": "shape 1",
+      "issue": "概要を理解する自然な説明に整理する",
+      "action": "rewrite",
+      "before": "Pile-CCはCommon Crawlから本文を抽出し、ナビゲーションなどの定型部分を抑える。OpenWebText2はRedditで共有された外部ページを用いる。\nArXivではLaTeXからテキストを作り、PubMed Centralでは論文全文を取り込む。特許は背景説明、NIHは研究助成の要約と、必要な部分を選ぶ。\n注釈者が正解ラベルを付ける方式ではない。構成要素別の抽出、フィルタ、整形の後に反復回数を設定し、文書を混合・シャッフルする。",
+      "after": "Pile-CCはCommon Crawlから本文を抽出し、ナビゲーションなどの定型部分を抑える。OpenWebText2はRedditで共有された外部ページを用いる。\nArXivではLaTeXからテキストを作り、PubMed Centralでは論文全文を取り込む。特許は背景説明、NIHは研究助成の要約と、出所に合わせて収録部分を選ぶ。\n構成要素ごとに抽出・フィルタ・整形し、反復回数を設定した後、文書を混合・シャッフルする。",
+      "new_page": 12
+    },
+    {
+      "old_page": 14,
+      "location": "shape 1",
+      "issue": "概要を理解する自然な説明に整理する",
+      "action": "rewrite",
+      "before": "混合用の文書から検証・テスト用の文書を取り分ける。データはJSON Lines形式で、各行にtextとmeta.pile_set_nameが含まれる。\n書籍やIRCログは長く、百科事典や抄録は短い。平均文書サイズは、Books3が538.36 KiB、Wikipediaが1.11 KiBと大きく異なる。\n長い文書をどう窓に分けるか、学習データの重複をどう除くかが評価結果に関わる。元のPileと重複除去版は、別の学習条件として区別する。",
+      "after": "混合用の文書から検証・テスト用の文書を取り分ける。データは1行1文書のJSON Lines形式で、本文と構成要素名が含まれる。\n書籍やIRCログは長く、百科事典や抄録は短い。平均文書サイズは、Books3が538.36 KiB、Wikipediaが1.11 KiBと大きく異なる。\n長文の分割方法や、学習文との重複は評価結果に関わる。後には、元のPileから重複文書を除いたバージョンも作られた。",
+      "new_page": 14
+    },
+    {
+      "old_page": 14,
+      "location": "shape 0",
+      "issue": "未説明の保留集合を具体的な用途で示す",
+      "action": "rewrite",
+      "before": "文書単位の保留集合で分野別に評価する",
+      "after": "検証・テスト文書で分野別に評価する",
+      "new_page": 14
+    },
+    {
+      "old_page": 17,
+      "location": "shape 3",
+      "issue": "13-gramという処理の細部を外部化し、重複除去の意味と評価条件を保持",
+      "action": "rewrite",
+      "before": "同じ1.3Bモデルを各データの約40 GBで学習。評価集合との13-gram重複を除去。LAMBADAは末尾の単語を当てる正解率。",
+      "after": "同じ1.3Bモデルを各データの約40 GBで学習。評価集合と重複する学習データを除去。LAMBADAは末尾の単語を当てる正解率。",
+      "new_page": 17
+    },
+    {
+      "old_page": 18,
+      "location": "shape 0",
+      "issue": "run仕様ではなく課題を示す",
+      "action": "rewrite",
+      "before": "HELMは6分野のテスト本文を使う",
+      "after": "HELMでは6分野の文章の予測しやすさを測る",
+      "new_page": 18
+    },
+    {
+      "old_page": 18,
+      "location": "shape 1",
+      "issue": "main校正：10分割・提示例数・試行の細部を外部記録へ。実際の238/1000文書と文脈条件は次頁に保持",
+      "action": "rewrite",
+      "before": "HELM Classic v0.4.0の公開run仕様では、ArXiv、BookCorpus2、Enron Emails、Github、PubMed Central、Wikipedia (en)の6構成要素を評価する。\nテスト集合の構成要素別文書を読み、lm_perplexityのgroup0の索引で部分抽出する。BookCorpus2は文書数が少ないため、この10分割を行わない。\n採点はlanguage_modeling方式。学習例は0、試行は1、最大評価文書数は1,000。生成する回答はなく、max_tokensは0に設定される。",
+      "after": "HELM Classic v0.4.0では、ArXiv、BookCorpus2、Enron Emails、Github、PubMed Central、Wikipedia (en)の6構成要素を評価する。\nテスト文書から分野ごとに評価対象を選び、本文に与える確率を採点する。",
+      "new_page": 18
+    },
+    {
+      "old_page": 19,
+      "location": "shape 3",
+      "issue": "公開suite識別子を監査記録へ移し、結果の対象と条件を残す",
+      "action": "rewrite",
+      "before": "Classic v0.4.0掲載、元run suite v0.3.0。各1試行。ArXivは238文書、他は各1,000文書。モデル別の文脈長・分割条件を含む結果。",
+      "after": "HELM Classicで2023年に公開された結果。各1試行でArXivは238文書、他は各1,000文書。モデルごとの文脈長で本文を分割して採点した。",
+      "new_page": 19
+    },
+    {
+      "old_page": 20,
+      "location": "shape 1",
+      "issue": "2023年を前頁で示し、現在順位ではないという自明な注意とprompt_truncated監査値を削る",
+      "action": "rewrite",
+      "before": "ArXivではtext-davinci-003のBPBが0.5551、BLOOMが0.5773。Githubでもtext-davinci-003が小さく、WikipediaではOPT-175Bが0.5522と最小だった。\nこれは2023年のHELM Classic公開実行の比較である。2026年時点のモデル順位を示す値ではない。\n同じテスト文書でもモデルの文脈窓とトークン化が異なる。今回の9実行のprompt_truncated平均はいずれも0だが、長文はアダプター内で複数の窓へ分割される。",
+      "after": "ArXivではtext-davinci-003のBPBが0.5551、BLOOMが0.5773。Githubでもtext-davinci-003が小さく、WikipediaではOPT-175Bが0.5522と最小だった。\n同じテスト文書でも、モデルによってトークンの切り方や使える文脈長が異なる。長文を複数の窓に分けて採点するため、得点には文章の分野に加えて、こうした評価条件も影響する。",
+      "new_page": 20
+    },
+    {
+      "old_page": 22,
+      "location": "shape 1",
+      "issue": "概要を理解する自然な説明に整理する",
+      "action": "rewrite",
+      "before": "Pythiaは、70Mから12Bまで8サイズのモデルを、同じPileの文書順で学習した。各モデルの学習量は約300Bトークンである。\n標準Pile版に加え、約207Bトークンの重複除去版を使う系列も公開した。同じ約300Bトークンは、標準版で1周弱、重複除去版で約1.5周に当たる。\n学習途中のチェックポイントとデータ順を対応させ、知識の獲得、記憶、学習規模の影響を調べる。公式リポジトリは2025年の派生研究も案内している。",
+      "after": "Pythiaは、70Mから12Bまで8サイズのモデルを、同じPileの文書順で学習した。各モデルの学習量は約300Bトークンである。\n標準Pile版に加え、約207Bトークンの重複除去版を使う系列も公開した。約300Bトークンの学習は、標準版で1周弱、重複除去版で約1.5周に当たる。\n学習途中のチェックポイントとデータ順を公開し、知識の獲得や記憶、モデル規模が学習に与える影響を調べる基盤になった。",
+      "new_page": 22
+    },
+    {
+      "old_page": 23,
+      "location": "shape 0",
+      "issue": "確認の指示より、利用条件の具体的な違いを示す",
+      "action": "rewrite",
+      "before": "再構築コードと本文の権利を分けて確認する",
+      "after": "構成要素ごとに、本文の利用条件が異なる",
+      "new_page": 23
+    },
+    {
+      "old_page": 23,
+      "location": "shape 1",
+      "issue": "概要を理解する自然な説明に整理する",
+      "action": "rewrite",
+      "before": "公式GitHubは再構築・変種作成のコードを提供し、READMEから配布先を案内している。コードのMIT Licenseは、収録本文すべての利用許諾を意味しない。\n本文の出所は22通りあり、著作権、ライセンス、利用規約、本人の同意の扱いが異なる。書籍、字幕、コード、公開メールを一つの条件で扱うことはできない。\n特定の構成要素を除いた変種を作れるが、個別文書の権利を精密に判定できるメタデータは不足している。データカードと各元資料の条件を組み合わせて確認する。",
+      "after": "公式GitHubは再構築・変種作成のコードをMIT Licenseで提供する。収録本文の権利は、22の出所ごとに異なる。\n書籍、字幕、コード、公開メールなどには、それぞれの著作権、ライセンス、利用規約、本人の同意に関わる条件がある。\n特定の構成要素を除いたバージョンも作れるが、個別文書の権利を判定するためのメタデータは不足している。データカードと元資料の条件を確かめる必要がある。",
+      "new_page": 23
+    },
+    {
+      "old_page": 24,
+      "location": "shape 0",
+      "issue": "制作監査の指示を具体的な入手方法へ",
+      "action": "rewrite",
+      "before": "入手時には構成要素と分割を固定する",
+      "after": "公式コードと公開サンプルから内容を調べられる",
+      "new_page": 24
+    },
+    {
+      "old_page": 24,
+      "location": "shape 1",
+      "issue": "先頭100行の取得工程・行番号・hash・例監査ファイル名を外部化し、サンプルと評価用テストの用途を簡潔に説明",
+      "action": "rewrite",
+      "before": "再現する対象が元のPileか、重複除去版か、構成要素を除いた変種かを決める。学習・検証・テストの分割とファイルのハッシュを保存する。\nHELM v0.4.0の実装はthe-eye.euのtest.jsonl.zstと、lm_perplexityの索引を参照する。配布URLや権利条件は取得時に再確認する。\n本資料の13例は、公開pile-10kの先頭100行だけを取得したもの。原文・連続した表示範囲・訳・行番号・ハッシュは付属のexamples.jsonに保存した。",
+      "after": "公式リポジトリから、構成要素の収集コードや配布先をたどれる。再構築では、どの構成要素を何回使うかを設定する。\n内容を小さく試すには、先頭10,000文書を収めた公開サンプルpile-10kが使える。本資料の13例も、このサンプルから選んだ連続した抜粋である。\nHELMの言語モデリング評価には、元のPileのテスト集合を使う。標準版・重複除去版・構成要素を除いたバージョンでは、収録文書や学習条件が変わる。",
+      "new_page": 24
+    },
+    {
+      "old_page": 25,
+      "location": "shape 1",
+      "issue": "概要を理解する自然な説明に整理する",
+      "action": "rewrite",
+      "before": "The Pileは、22の出所から825.18 GiBのテキストを集め、反復回数を変えて約1,254.20 GiB相当を混合した英語の事前学習コーパスである。\n約40 GBにそろえた実験でも、Webだけの学習より幅広い分野の予測損失が改善した。HELMはその一部を、分野別の本文尤度評価に用いている。\n文書の種類、混合比、重複除去、評価時の文脈窓、出所ごとの利用条件を対応させると、得点と研究利用の意味を具体的に把握できる。",
+      "after": "The Pileは、22の出所から825.18 GiBのテキストを集め、反復回数を変えて約1,254.20 GiB相当を混合した英語の事前学習コーパスである。\n約40 GBにそろえた実験でも、Webだけの学習より幅広い分野の予測損失が改善した。HELMでは一部の構成要素を使い、本文に与える確率を分野別に評価している。\n多様な文章を混ぜる設計は、学習後の性能比較だけでなく、Pythiaのように学習過程を調べる研究にも使われている。",
+      "new_page": 25
+    },
+    {
+      "old_page": 6,
+      "location": "shape 2",
+      "issue": "各例のrow・全文字数という取得監査情報は別記録へ。表示が抜粋であることは保持",
+      "action": "rewrite",
+      "before": "公開10kサンプル / row 3 / 全文384字からの連続抜粋",
+      "after": "公開サンプルの本文から抜粋",
+      "new_page": 6
+    },
+    {
+      "old_page": 7,
+      "location": "shape 2",
+      "issue": "各例のrow・全文字数という取得監査情報は別記録へ。表示が抜粋であることは保持",
+      "action": "rewrite",
+      "before": "公開10kサンプル / row 11 / 全文179字からの連続抜粋",
+      "after": "公開サンプルの本文から抜粋",
+      "new_page": 7
+    },
+    {
+      "old_page": 8,
+      "location": "shape 2",
+      "issue": "各例のrow・全文字数という取得監査情報は別記録へ。表示が抜粋であることは保持",
+      "action": "rewrite",
+      "before": "公開10kサンプル / row 20 / 全文543字からの連続抜粋",
+      "after": "公開サンプルの本文から抜粋",
+      "new_page": 8
+    },
+    {
+      "old_page": 28,
+      "location": "shape 2",
+      "issue": "各例のrow・全文字数という取得監査情報は別記録へ。表示が抜粋であることは保持",
+      "action": "rewrite",
+      "before": "公開10kサンプル / row 2 / 全文1235字からの連続抜粋",
+      "after": "公開サンプルの本文から抜粋",
+      "new_page": 28
+    },
+    {
+      "old_page": 29,
+      "location": "shape 2",
+      "issue": "各例のrow・全文字数という取得監査情報は別記録へ。表示が抜粋であることは保持",
+      "action": "rewrite",
+      "before": "公開10kサンプル / row 5 / 全文2016字からの連続抜粋",
+      "after": "公開サンプルの本文から抜粋",
+      "new_page": 29
+    },
+    {
+      "old_page": 30,
+      "location": "shape 2",
+      "issue": "各例のrow・全文字数という取得監査情報は別記録へ。表示が抜粋であることは保持",
+      "action": "rewrite",
+      "before": "公開10kサンプル / row 10 / 全文2665字からの連続抜粋",
+      "after": "公開サンプルの本文から抜粋",
+      "new_page": 30
+    },
+    {
+      "old_page": 31,
+      "location": "shape 2",
+      "issue": "各例のrow・全文字数という取得監査情報は別記録へ。表示が抜粋であることは保持",
+      "action": "rewrite",
+      "before": "公開10kサンプル / row 18 / 全文1711字からの連続抜粋",
+      "after": "公開サンプルの本文から抜粋",
+      "new_page": 31
+    },
+    {
+      "old_page": 32,
+      "location": "shape 2",
+      "issue": "各例のrow・全文字数という取得監査情報は別記録へ。表示が抜粋であることは保持",
+      "action": "rewrite",
+      "before": "公開10kサンプル / row 54 / 全文12919字からの連続抜粋",
+      "after": "公開サンプルの本文から抜粋",
+      "new_page": 32
+    },
+    {
+      "old_page": 33,
+      "location": "shape 2",
+      "issue": "各例のrow・全文字数という取得監査情報は別記録へ。表示が抜粋であることは保持",
+      "action": "rewrite",
+      "before": "公開10kサンプル / row 55 / 全文362字からの連続抜粋",
+      "after": "公開サンプルの本文から抜粋",
+      "new_page": 33
+    },
+    {
+      "old_page": 34,
+      "location": "shape 2",
+      "issue": "各例のrow・全文字数という取得監査情報は別記録へ。表示が抜粋であることは保持",
+      "action": "rewrite",
+      "before": "公開10kサンプル / row 63 / 全文2867字からの連続抜粋",
+      "after": "公開サンプルの本文から抜粋",
+      "new_page": 34
+    },
+    {
+      "old_page": 35,
+      "location": "shape 2",
+      "issue": "各例のrow・全文字数という取得監査情報は別記録へ。表示が抜粋であることは保持",
+      "action": "rewrite",
+      "before": "公開10kサンプル / row 70 / 全文155字からの連続抜粋",
+      "after": "公開サンプルの本文から抜粋",
+      "new_page": 35
+    },
+    {
+      "old_page": 36,
+      "location": "shape 2",
+      "issue": "各例のrow・全文字数という取得監査情報は別記録へ。表示が抜粋であることは保持",
+      "action": "rewrite",
+      "before": "公開10kサンプル / row 74 / 全文4010字からの連続抜粋",
+      "after": "公開サンプルの本文から抜粋",
+      "new_page": 36
+    },
+    {
+      "old_page": 37,
+      "location": "shape 2",
+      "issue": "各例のrow・全文字数という取得監査情報は別記録へ。表示が抜粋であることは保持",
+      "action": "rewrite",
+      "before": "公開10kサンプル / row 36 / 全文358字からの連続抜粋",
+      "after": "公開サンプルの本文から抜粋",
+      "new_page": 37
+    },
+    {
+      "old_page": 6,
+      "location": "shape 4",
+      "issue": "独立校正：aimsの目標表現を断定へ変えずに訳す",
+      "action": "rewrite",
+      "before": "話題：re:InventのMidnight Madness\n\nAmazonはAWS re:InventのMidnight Madnessイベントで新サービスを発表した。Amazon Sumerianは、開発者が仮想現実、拡張現実、3Dアプリケーションを簡単に構築できるようにする。",
+      "after": "話題：re:InventのMidnight Madness\n\nAmazonはAWS re:InventのMidnight Madnessイベントで新サービスを発表した。Amazon Sumerianは、開発者が仮想現実、拡張現実、3Dアプリケーションを構築しやすくすることを目指したサービスだ。",
+      "new_page": 6
+    },
+    {
+      "old_page": 33,
+      "location": "shape 5",
+      "issue": "独立校正：close the loopを依頼への対応を終える意味で自然化",
+      "action": "rewrite",
+      "before": "ベンへ\nこれは長文の情報・文書提供依頼です。どのように対応を完結させるのが最善か、ご意見をください。\n\nありがとう。\nスーザン・フラナガン",
+      "after": "ベンへ\nこれは長文の情報・文書提供依頼です。この依頼への対応をどのように完了させるのがよいか、ご意見をください。\n\nありがとう。\nスーザン・フラナガン",
+      "new_page": 33
+    },
+    {
+      "old_page": 36,
+      "location": "shape 5",
+      "issue": "独立校正：commonを頻度の意味で自然に訳す",
+      "action": "rewrite",
+      "before": "常染色体優性多発性嚢胞腎（ADPKD）は、進行する嚢胞形成に関連する一般的な単一アレル性疾患であり、60歳までに患者の50%が末期腎不全（ESRD）に至る。",
+      "after": "常染色体優性多発性嚢胞腎（ADPKD）は、進行する嚢胞形成に関連する比較的よくみられる単一アレル性疾患であり、60歳までに患者の50%が末期腎不全（ESRD）に至る。",
+      "new_page": 36
+    },
+    {
+      "old_page": 37,
+      "location": "shape 5",
+      "issue": "独立校正：chose not to participateの選択を保つ",
+      "action": "rewrite",
+      "before": "2017 XIXO Ladies Open Hódmezővásárhely — ダブルス\n\n前年優勝者はLaura PigossiとNadia Podoroskaだったが、ともに出場しなかった。",
+      "after": "2017 XIXO Ladies Open Hódmezővásárhely — ダブルス\n\n前年優勝者はLaura PigossiとNadia Podoroskaだったが、ともに出場を見送った。",
+      "new_page": 37
+    },
+    {
+      "old_page": 33,
+      "location": "shape 6",
+      "issue": "ここでは抜粋するという繰返しより、構成要素の内容を述べる",
+      "action": "rewrite",
+      "before": "Enron Emailsは公開された業務メール。ここでは本文だけを抜粋する。",
+      "after": "Enron Emailsには、公開された企業の業務メールが収められている。",
+      "new_page": 33
+    },
+    {
+      "old_page": 50,
+      "location": "shape 0",
+      "issue": "キャッシュ・run数・索引順の監査を、実際の読み出し例へ",
+      "action": "rewrite",
+      "before": "HELMは構成要素名で本文を分類する",
+      "after": "JSONLから本文と構成要素名を読み出す",
+      "new_page": 50
+    },
+    {
+      "old_page": 50,
+      "location": "shape 1",
+      "issue": "原レコードの二つのフィールドを使う最小の読み出しコードにする",
+      "action": "rewrite",
+      "before": "ThePileScenarioは各行のmeta.pile_set_nameを読み、本文を構成要素別のCSVへキャッシュする。referencesは空のまま、本文をinputとしてtestに割り当てる。\n22構成要素を実装上は受け付けるが、Classic v0.4.0公開run仕様は6構成要素・168モデル実行分だった。実装の対応範囲と、公開結果の範囲は異なる。\ngroup0の索引は重複を除いて昇順にし、構成要素内の文書を選ぶ。Ubuntu IRC、BookCorpus2、PhilPapersは文書数が少ないため10分割の対象外である。",
+      "after": "import json\nwith open(\"sample.jsonl\", encoding=\"utf-8\") as f:\n    doc = json.loads(next(f))\nprint(doc[\"meta\"][\"pile_set_name\"])\nprint(doc[\"text\"])",
+      "new_page": 50
+    },
+    {
+      "old_page": 50,
+      "location": "record explanation",
+      "issue": "実コードと入力フィールドの意味を対応させる",
+      "action": "add",
+      "before": "",
+      "after": "sample.jsonlは、1行に1文書のJSONを収めたファイル。textが本文、meta.pile_set_nameが出所の構成要素名を表す。",
+      "new_page": 50
+    },
+    {
+      "old_page": 52,
+      "location": "shape 1",
+      "issue": "分類の意味と限界を本文で一度説明し、権利上必要な条件は保持",
+      "action": "rewrite",
+      "before": "構築時の整理では、インターネットで読めること、取得元の利用規約と整合すること、元の著者が利用に同意したことを別々に分類した。\nたとえばGithubは公開かつ規約整合と整理された一方、著者の同意は一律には認められていない。書籍や字幕には、公開されていても規約・同意の欄を満たさないものがある。\nこれは2020年の構築者による整理であり、個別のライセンス一覧ではない。ミラーの表記だけでなく、各本文の出所と条件を確かめる。",
+      "after": "2020年の構築時には、インターネットで読めること、取得元の利用規約と整合すること、元の著者が利用に同意したことを調べた。前の一覧は、そのときの構築者による分類である。\nGithubは公開かつ規約に整合すると整理された一方、著者の同意は一律には認められていない。書籍や字幕にも、公開されていても規約・同意の欄を満たさないものがある。\nこの分類は個別文書のライセンス一覧ではないため、利用時には本文の出所に応じた条件の確認が必要になる。",
+      "new_page": 51
+    },
+    {
+      "old_page": 46,
+      "location": "source",
+      "issue": "出典を通常の文献情報にし、分類凡例は表の説明へ移す",
+      "action": "rewrite",
+      "before": "[1] Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling. 構築者の整理：○は該当、—は該当すると判断されていない。\nhttps://arxiv.org/abs/2101.00027",
+      "after": "[1] Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling.\nhttps://arxiv.org/abs/2101.00027",
+      "new_page": 46
+    },
+    {
+      "old_page": 46,
+      "location": "classification legend",
+      "issue": "2020年当時の分類という重要条件と記号の意味を表の近くに置く",
+      "action": "add",
+      "before": "",
+      "after": "2020年の構築者による分類。○は該当、—は該当すると判断されていない。",
+      "new_page": 46
+    },
+    {
+      "old_page": 47,
+      "location": "source",
+      "issue": "出典を通常の文献情報にし、分類凡例は表の説明へ移す",
+      "action": "rewrite",
+      "before": "[1] Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling. 構築者の整理：○は該当、—は該当すると判断されていない。\nhttps://arxiv.org/abs/2101.00027",
+      "after": "[1] Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling.\nhttps://arxiv.org/abs/2101.00027",
+      "new_page": 47
+    },
+    {
+      "old_page": 47,
+      "location": "classification legend",
+      "issue": "2020年当時の分類という重要条件と記号の意味を表の近くに置く",
+      "action": "add",
+      "before": "",
+      "after": "2020年の構築者による分類。○は該当、—は該当すると判断されていない。",
+      "new_page": 47
+    },
+    {
+      "old_page": 48,
+      "location": "source",
+      "issue": "出典を通常の文献情報にし、分類凡例は表の説明へ移す",
+      "action": "rewrite",
+      "before": "[1] Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling. 構築者の整理：○は該当、—は該当すると判断されていない。\nhttps://arxiv.org/abs/2101.00027",
+      "after": "[1] Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling.\nhttps://arxiv.org/abs/2101.00027",
+      "new_page": 48
+    },
+    {
+      "old_page": 48,
+      "location": "classification legend",
+      "issue": "2020年当時の分類という重要条件と記号の意味を表の近くに置く",
+      "action": "add",
+      "before": "",
+      "after": "2020年の構築者による分類。○は該当、—は該当すると判断されていない。",
+      "new_page": 48
+    },
+    {
+      "old_page": 49,
+      "location": "source",
+      "issue": "出典を通常の文献情報にし、分類凡例は表の説明へ移す",
+      "action": "rewrite",
+      "before": "[1] Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling. 構築者の整理：○は該当、—は該当すると判断されていない。\nhttps://arxiv.org/abs/2101.00027",
+      "after": "[1] Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling.\nhttps://arxiv.org/abs/2101.00027",
+      "new_page": 49
+    },
+    {
+      "old_page": 49,
+      "location": "classification legend",
+      "issue": "2020年当時の分類という重要条件と記号の意味を表の近くに置く",
+      "action": "add",
+      "before": "",
+      "after": "2020年の構築者による分類。○は該当、—は該当すると判断されていない。",
+      "new_page": 49
+    },
+    {
+      "old_page": 56,
+      "location": "shape 6",
+      "issue": "資料制作時の先頭100行という取得範囲を外部化し、配布物の用途を説明",
+      "action": "rewrite",
+      "before": "The Pileの先頭10,000文書をデバッグ向けに公開したサンプル。本資料の実例はその先頭100行から抽出した。",
+      "after": "The Pileの先頭10,000文書を、デバッグ向けに公開した小規模サンプル。本文と構成要素名の形式を試せる。",
+      "new_page": 54
+    },
+    {
+      "old_page": 26,
+      "location": "Appendix title native height",
+      "issue": "独立レビュー：MIDDLE本文領域と字形位置を保持し、実字形下端2.26ptのnative枠外を解消",
+      "action": "resize",
+      "before": "46.08pt",
+      "after": "54.08pt",
+      "new_page": 26
+    },
+    {
+      "old_page": 54,
+      "location": "URL shape 4 top",
+      "issue": "説明とURLの実字形が近いため、内容を保持して6ptの間隔を加える",
+      "action": "move",
+      "before": "203.04pt",
+      "after": "209.04pt",
+      "new_page": 52
+    },
+    {
+      "old_page": 54,
+      "location": "URL shape 7 top",
+      "issue": "説明とURLの実字形が近いため、内容を保持して6ptの間隔を加える",
+      "action": "move",
+      "before": "321.84pt",
+      "after": "327.84pt",
+      "new_page": 52
+    },
+    {
+      "old_page": 55,
+      "location": "URL shape 4 top",
+      "issue": "説明とURLの実字形が近いため、内容を保持して6ptの間隔を加える",
+      "action": "move",
+      "before": "203.04pt",
+      "after": "209.04pt",
+      "new_page": 53
+    },
+    {
+      "old_page": 55,
+      "location": "URL shape 7 top",
+      "issue": "説明とURLの実字形が近いため、内容を保持して6ptの間隔を加える",
+      "action": "move",
+      "before": "321.84pt",
+      "after": "327.84pt",
+      "new_page": 53
+    },
+    {
+      "old_page": 56,
+      "location": "URL shape 4 top",
+      "issue": "説明とURLの実字形が近いため、内容を保持して6ptの間隔を加える",
+      "action": "move",
+      "before": "203.04pt",
+      "after": "209.04pt",
+      "new_page": 54
+    },
+    {
+      "old_page": 56,
+      "location": "URL shape 7 top",
+      "issue": "説明とURLの実字形が近いため、内容を保持して6ptの間隔を加える",
+      "action": "move",
+      "before": "321.84pt",
+      "after": "327.84pt",
+      "new_page": 54
+    },
+    {
+      "old_page": 51,
+      "location": "whole page",
+      "issue": "モデル要求単位の平均採点トークン数9セルは実装監査の細部。モデルごとの文脈長・分割条件は旧19/20に保持。",
+      "action": "delete_page",
+      "before": "9実行の採点対象トークン数は異なる\nAppendix: 2. 構成要素と評価条件\n各モデル要求の平均採点トークン数。文書数ではなく、文書を窓に分けた後の要求単位で集計される。\n[1] Liang et al. (2023). Holistic Evaluation of Language Models. TMLR.  https://arxiv.org/abs/2211.09110",
+      "after": "",
+      "new_page": null
+    },
+    {
+      "old_page": 53,
+      "location": "whole page",
+      "issue": "著者全員の列挙と後続利用の重複。共同制作は旧5、Pythiaの役割は旧22と参考文献に保持。",
+      "action": "delete_page",
+      "before": "EleutherAIによる共同制作\nLeo Gaoを第一著者、Connor Leahyを最終著者とする12名が、EleutherAIとして制作した。著者にはStella Biderman、Sid Black、Travis Hoppeらが含まれる。\n新たなWeb・学術データの収集と、既存の書籍・会話・論文データの統合を分担し、前処理と再構築コードを公開した。\nThe Pileはその後、GPT-NeoXやPythiaなどの学習基盤となった。Pythiaでは同一データ順と多数のチェックポイントを公開し、モデルの学習過程の比較へ役割を広げた。\nAppendix: 3. 制作機関と参考文献\n[1] Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling.  https://arxiv.org/abs/2101.00027\n[2] Biderman et al. (2023). Pythia: A Suite for Analyzing Large Language Models Across Training and Scaling. ICML.  https://arxiv.org/abs/2304.01373",
+      "after": "",
+      "new_page": null
+    },
+    {
+      "old_page": 27,
+      "location": "section label",
+      "issue": "重複する制作機関紹介の削除に目次・帯を合わせる",
+      "action": "rewrite",
+      "before": "制作機関と参考文献",
+      "after": "参考文献",
+      "new_page": 27
+    },
+    {
+      "old_page": 54,
+      "location": "section label",
+      "issue": "重複する制作機関紹介の削除に目次・帯を合わせる",
+      "action": "rewrite",
+      "before": "Appendix: 3. 制作機関と参考文献",
+      "after": "Appendix: 3. 参考文献",
+      "new_page": 52
+    },
+    {
+      "old_page": 55,
+      "location": "section label",
+      "issue": "重複する制作機関紹介の削除に目次・帯を合わせる",
+      "action": "rewrite",
+      "before": "Appendix: 3. 制作機関と参考文献",
+      "after": "Appendix: 3. 参考文献",
+      "new_page": 53
+    },
+    {
+      "old_page": 56,
+      "location": "section label",
+      "issue": "重複する制作機関紹介の削除に目次・帯を合わせる",
+      "action": "rewrite",
+      "before": "Appendix: 3. 制作機関と参考文献",
+      "after": "Appendix: 3. 参考文献",
+      "new_page": 54
+    },
+    {
+      "old_page": 50,
+      "new_page": 50,
+      "location": "code-frame geometry and paragraph formatting",
+      "action": "resize_and_reformat",
+      "issue": "本文枠から継承された箇条書きと余分な枠高を、実用コードに適した組版へ",
+      "before": "body placeholder at y115.2pt/h239.8pt; inherited bullets",
+      "after": "EBEDEB code frame y120.53pt/h119.67pt, DejaVu Sans Mono16pt, explicit buNone in schema order; visible gaps10/9.33pt"
+    }
+  ]
+}
