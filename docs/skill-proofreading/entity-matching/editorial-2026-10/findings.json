@@ -1,0 +1,1437 @@
+{
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "findings": [
+    {
+      "old_page": 8,
+      "shape": 0,
+      "before": "一致する名前と、食い違う度数を読む",
+      "after": "表記や一部の数値が違っても、同じビールを指す",
+      "reason": "読者に必要な内容を自然な日本語で説明する",
+      "action": "rewrite",
+      "new_page": 8
+    },
+    {
+      "old_page": 8,
+      "shape": 1,
+      "before": "醸造所名にCompanyが加わり、度数にも差があるが、配布ラベルは同じビール。\nAの名称Amber Waves Aleに対し、Bは醸造所名を含むCapitol City Amber Waves Ale。スタイルの粒度も異なる。\n正解は配布されたペアのラベルを使う。実例では、同じ商品をすべての属性の完全一致で定義していない。",
+      "after": "醸造所名にCompanyが加わり、度数にも差があるが、正解ラベルは同じビールを示す。\nAの名称Amber Waves Aleに対し、Bは醸造所名を含むCapitol City Amber Waves Ale。スタイルの粒度も異なる。\n名称、醸造所、スタイルなどを合わせて読む。すべての属性が完全に一致している必要はない。",
+      "reason": "読者に必要な内容を自然な日本語で説明する",
+      "action": "rewrite",
+      "new_page": 8
+    },
+    {
+      "old_page": 15,
+      "shape": 0,
+      "before": "研究23課題、公開13設定、HELM実行3対象",
+      "after": "研究の23課題から、13設定を公開した",
+      "reason": "読者に必要な内容を自然な日本語で説明する",
+      "action": "rewrite",
+      "new_page": 15
+    },
+    {
+      "old_page": 15,
+      "shape": 1,
+      "before": "2018年の研究は、構造化11、文章6、Dirty 6の計23課題で、教師ありの照合手法を比較した。\nDeepMatcherの公開一覧とHELMの実装は13設定。公開一覧は構造化7、文章2、Dirty 4である。\n固定Classic版の201実行はBeer、Abt-Buy、Dirty iTunes-Amazonの3対象。各対象に67モデル設定がある。",
+      "after": "2018年の研究は、構造化11、文章6、Dirty 6の計23課題で、教師ありの照合手法を比較した。\nDeepMatcherの公開一覧とHELMの実装は13設定。公開一覧は構造化7、文章2、Dirty 4である。\nHELM Classicの公開結果では、Beer、Abt-Buy、Dirty iTunes-Amazonの3対象を評価している。",
+      "reason": "読者に必要な内容を自然な日本語で説明する",
+      "action": "rewrite",
+      "new_page": 15
+    },
+    {
+      "old_page": 16,
+      "shape": 0,
+      "before": "候補ペアに、人手や既存正解を付ける",
+      "after": "候補ペアに、同じか別かの正解を付ける",
+      "reason": "読者に必要な内容を自然な日本語で説明する",
+      "action": "rewrite",
+      "new_page": 16
+    },
+    {
+      "old_page": 16,
+      "shape": 1,
+      "before": "Beerは2015年秋のUW–Madison授業で、BeerAdvocateとRateBeerを収集し、表へ抽出、候補生成、候補の無作為標本への同一／別の注釈を行った。\niTunes-Amazonも同じ手順。Abt-Buyなどは、既存の正解対応を使い、候補集合内の一致を正例、それ以外を負例にした。\nペアをtrain、validation、testへ3:1:1で分割する。作業者数や一致率は、ここで用いた公開説明に記載がない。",
+      "after": "Beerは2015年秋のUW–Madisonの授業で、BeerAdvocateとRateBeerから集めた情報を表にまとめた。比較候補を絞り、無作為に選んだ候補へ、同じか別かを人手で注釈した。\niTunes-Amazonも同じ手順。Abt-Buyなどは、既存の正解対応を使い、候補集合内の一致を正例、それ以外を負例にした。\nペアをtrain、validation、testへ3:1:1で分割する。",
+      "reason": "注釈手順を簡潔に示し、概要に不要な取得文献の調査報告を外部記録へ移す",
+      "action": "rewrite",
+      "new_page": 16
+    },
+    {
+      "old_page": 17,
+      "shape": 3,
+      "before": "各セルは全ペア数 / 正例数。元の配布CSVを全件集計。",
+      "after": "各セルは全ペア数／同じ実体を指す正例数。",
+      "reason": "全件集計という制作報告を省き、表の読み方を説明する",
+      "action": "rewrite",
+      "new_page": 17
+    },
+    {
+      "old_page": 19,
+      "shape": 0,
+      "before": "二つの表と、ラベル付き候補は別の件数",
+      "after": "元表の規模と、比較に使う属性",
+      "reason": "読者に必要な内容を自然な日本語で説明する",
+      "action": "rewrite",
+      "new_page": 18
+    },
+    {
+      "old_page": 20,
+      "shape": 0,
+      "before": "空欄と、別の欄へ移った値を区別する",
+      "after": "空欄でも、情報が別の欄に残ることがある",
+      "reason": "読者に必要な内容を自然な日本語で説明する",
+      "action": "rewrite",
+      "new_page": 19
+    },
+    {
+      "old_page": 19,
+      "shape": 3,
+      "before": "表A/Bは配布tableA.csvとtableB.csvの実測行数。候補ペア数は分割表に示す。",
+      "after": "表Aと表Bの規模。ラベルは、これらの表から選ばれた候補ペアに付いている。",
+      "reason": "実測行数という制作報告を、元表と候補ペアの関係の説明へ直す",
+      "action": "rewrite",
+      "new_page": 18
+    },
+    {
+      "old_page": 22,
+      "shape": 0,
+      "before": "正解率：YesかNoが参照と一致するか",
+      "after": "正解率は、Yes／Noの回答が正解と一致する割合",
+      "reason": "読者に必要な内容を自然な日本語で説明する",
+      "action": "rewrite",
+      "new_page": 21
+    },
+    {
+      "old_page": 22,
+      "shape": 1,
+      "before": "HELMは、生成した回答と配布ラベルの文字列を比較する。ここでは大文字小文字、句読点、空白を正規化するquasi exact matchを示す。\n9実行の全保存出力を再採点したところ、Yes/No以外の回答はなく、exact matchとprefix系の値も一致した。\ntest内のペアごとの0/1を平均し、OPTとdavinciは3試行を等重み平均する。Llama 2は1試行である。",
+      "after": "HELMは生成した回答と正解ラベルを比較する。準完全一致では、大文字・小文字、句読点や空白の表記差を正規化する。\n各テストペアの一致を1、不一致を0として平均する。OPT-175Bとtext-davinci-003は3試行の平均、Llama 2は1試行の結果である。",
+      "reason": "読者に必要な内容を自然な日本語で説明する",
+      "action": "rewrite",
+      "new_page": 21
+    },
+    {
+      "old_page": 23,
+      "shape": 0,
+      "before": "公開HELM実行のtest正解率",
+      "after": "HELM Classicでのテスト正解率",
+      "reason": "読者に必要な内容を自然な日本語で説明する",
+      "action": "rewrite",
+      "new_page": null
+    },
+    {
+      "old_page": 23,
+      "shape": 3,
+      "before": "OPT / davinciは3試行、Llama 2は1試行。各試行のtestは91 / 493 / 109ペア。",
+      "after": "2023年の公開結果。OPT-175Bとtext-davinci-003は3試行の平均、Llama 2は1試行。各試行のテストはBeer 91、Abt-Buy 493、Dirty音楽109ペア。",
+      "reason": "公開年・評価母集団・試行平均を自然に説明する",
+      "action": "rewrite",
+      "new_page": null
+    },
+    {
+      "old_page": 27,
+      "shape": 0,
+      "before": "公開保存実行で確認した条件",
+      "after": "5例を示し、YesかNoを生成させる",
+      "reason": "読者に必要な内容を自然な日本語で説明する",
+      "action": "rewrite",
+      "new_page": 23
+    },
+    {
+      "old_page": 27,
+      "shape": 1,
+      "before": "9実行すべてで、実際の提示例は5件、温度0、出力上限5トークン、生成1件、改行で停止する設定だった。入力の切り詰めは0件。\nvalidとtestを合わせて最大1,000ペアを評価する。BeerとDirty音楽は全valid/test、Abt-Buyはvalid 507とtest 493ペアを評価した。\nAbt-Buyの配布testは1,916ペア。成績表の493ペアはその部分集合で、3モデル間では入力と正解が一致した。",
+      "after": "正解付きの学習例を5件示し、二つのレコードが同じかを尋ねる。出力は5トークンまでで、改行すると停止する。\n開発用とテスト用を合わせて最大1,000ペアを評価する。BeerとDirty音楽は両方の全件、Abt-Buyは開発507とテスト493ペアを使う。\nAbt-Buyの配布テストは1,916ペアあるため、公開成績はその一部を評価した結果である。",
+      "reason": "読者に必要な内容を自然な日本語で説明する",
+      "action": "rewrite",
+      "new_page": 23
+    },
+    {
+      "old_page": 29,
+      "shape": 0,
+      "before": "配布一覧から、実装のファイル名を照合する",
+      "after": "公式一覧から、元表と候補ペアを入手する",
+      "reason": "読者に必要な内容を自然な日本語で説明する",
+      "action": "rewrite",
+      "new_page": 25
+    },
+    {
+      "old_page": 29,
+      "shape": 1,
+      "before": "公開一覧は元表、候補ペア、正解を含むzipへのリンクを持つ。3対象のzipを取得し、CSVと公開run入力を全件照合した。\nHELMの13設定のうち、FodorsとDBLP-Scholar系の3設定は、実装が作るzip名と配布先のzip名が異なった。取得時には公式一覧のリンクを使う。\n公開固定版は2023年の評価。今回確認した配布repoの最終commitは2021-06-13で、最新モデルの順位として扱わない。",
+      "after": "DeepMatcherの公式一覧から、二つの元表とラベル付き候補ペアをまとめたZIPを取得できる。\n一部のHELM実装では配布名とURL中の名前が異なる。Fodors-ZagatsとDBLP-Scholar系は、公式一覧のリンクから取得するとよい。",
+      "reason": "読者に必要な内容を自然な日本語で説明する",
+      "action": "rewrite",
+      "new_page": 25
+    },
+    {
+      "old_page": 30,
+      "shape": 1,
+      "before": "DeepMatcherのコードはBSD 3-Clause、HELMのコードはApache 2.0で公開されている。\nデータはBeerAdvocate、RateBeer、商品サイト、楽曲販売サイトなどに由来する。公開Datasets.mdと取得zipには、全データ共通の独立したライセンス文を確認できなかった。\nこの資料は出所・IDを添えた短いレコード引用を使う。再配布や業務利用には、元データと取得時点の利用条件を確認する。",
+      "after": "DeepMatcherのコードはBSD 3-Clause、HELMのコードはApache 2.0で公開されている。\nデータはBeerAdvocate、RateBeer、商品サイト、楽曲販売サイトなどに由来する。公開Datasets.mdと取得zipには、全データ共通の独立したライセンス文を確認できなかった。\n再配布や業務利用には、元データと取得時点の利用条件を確認する。",
+      "reason": "制作方針を省き、コードと元データそれぞれの利用条件を残す",
+      "action": "rewrite",
+      "new_page": 26
+    },
+    {
+      "old_page": 33,
+      "shape": 1,
+      "before": "追加の実例\n対象と再現条件\n研究と参考文献",
+      "after": "追加の実例\n収録データと評価の読み方\n研究と参考文献",
+      "reason": "工程を示す章名を、読者が学ぶ内容へ直す",
+      "action": "rewrite",
+      "new_page": 29
+    },
+    {
+      "old_page": 48,
+      "shape": 0,
+      "before": "対象と再現条件",
+      "after": "収録データと評価の読み方",
+      "reason": "工程を示す章名を、読者が学ぶ内容へ直す",
+      "action": "rewrite",
+      "new_page": 44
+    },
+    {
+      "old_page": 48,
+      "shape": 1,
+      "before": "Appendix: 2. 対象と再現条件",
+      "after": "Appendix: 2. 収録データと評価の読み方",
+      "reason": "工程を示す章名を、読者が学ぶ内容へ直す",
+      "action": "rewrite",
+      "new_page": 44
+    },
+    {
+      "old_page": 49,
+      "shape": 1,
+      "before": "Appendix: 2. 対象と再現条件",
+      "after": "Appendix: 2. 収録データと評価の読み方",
+      "reason": "工程を示す章名を、読者が学ぶ内容へ直す",
+      "action": "rewrite",
+      "new_page": 45
+    },
+    {
+      "old_page": 50,
+      "shape": 1,
+      "before": "Appendix: 2. 対象と再現条件",
+      "after": "Appendix: 2. 収録データと評価の読み方",
+      "reason": "工程を示す章名を、読者が学ぶ内容へ直す",
+      "action": "rewrite",
+      "new_page": 46
+    },
+    {
+      "old_page": 52,
+      "shape": 1,
+      "before": "Appendix: 2. 対象と再現条件",
+      "after": "Appendix: 2. 収録データと評価の読み方",
+      "reason": "工程を示す章名を、読者が学ぶ内容へ直す",
+      "action": "rewrite",
+      "new_page": null
+    },
+    {
+      "old_page": 53,
+      "shape": 1,
+      "before": "Appendix: 2. 対象と再現条件",
+      "after": "Appendix: 2. 収録データと評価の読み方",
+      "reason": "工程を示す章名を、読者が学ぶ内容へ直す",
+      "action": "rewrite",
+      "new_page": 47
+    },
+    {
+      "old_page": 46,
+      "shape": 0,
+      "before": "実例13：年の表記が異なるBillyの正例",
+      "after": "実例13：年の表記が異なる同じ曲",
+      "reason": "読者に必要な内容を自然な日本語で説明する",
+      "action": "rewrite",
+      "new_page": 42
+    },
+    {
+      "old_page": 47,
+      "shape": 0,
+      "before": "実例13：年の表記が異なるBillyの正例（訳）",
+      "after": "実例13：年の表記が異なる同じ曲（訳）",
+      "reason": "読者に必要な内容を自然な日本語で説明する",
+      "action": "rewrite",
+      "new_page": 43
+    },
+    {
+      "old_page": 49,
+      "shape": 0,
+      "before": "構造化の7データ設定",
+      "after": "構造化された7種類のデータ",
+      "reason": "読者に必要な内容を自然な日本語で説明する",
+      "action": "rewrite",
+      "new_page": 45
+    },
+    {
+      "old_page": 49,
+      "shape": 4,
+      "before": "公開一覧の値。DBLP-ScholarはHELMではDBLP_GoogleScholar。",
+      "after": "構造化データでは、各属性が決まった列に整理されている。",
+      "reason": "実装上の名前対照を外部へ移し、データの特徴を説明する",
+      "action": "rewrite",
+      "new_page": 45
+    },
+    {
+      "old_page": 50,
+      "shape": 0,
+      "before": "文章2設定とDirty 4設定",
+      "after": "文章2種類と、属性を移した4種類",
+      "reason": "読者に必要な内容を自然な日本語で説明する",
+      "action": "rewrite",
+      "new_page": 46
+    },
+    {
+      "old_page": 52,
+      "shape": 0,
+      "before": "Beer：Llama 2の91ペアを数える",
+      "after": "正解と見逃しの内訳を、Beerで見る",
+      "reason": "読者に必要な内容を自然な日本語で説明する",
+      "action": "rewrite",
+      "new_page": null
+    },
+    {
+      "old_page": 52,
+      "shape": 2,
+      "before": "配布ラベル",
+      "after": "正解",
+      "reason": "正解ラベルを読者になじみのある表記へ直す",
+      "action": "rewrite_table_label",
+      "new_page": null
+    },
+    {
+      "old_page": 53,
+      "shape": 0,
+      "before": "属性を列順に文章へ変換する",
+      "after": "候補ペアを読み、二つの元レコードを取り出す",
+      "reason": "読者に必要な内容を自然な日本語で説明する",
+      "action": "rewrite",
+      "new_page": 47
+    },
+    {
+      "old_page": 53,
+      "shape": 2,
+      "before": "A = \". \".join(f\"{col}: {row[col]}\" for col in columns)\n# id列を除外し、列順を保つ。空欄はnan。\ntext = f\"Product A is {A}. Product B is {B}.\"\ntext += \" Are A and B the same?\"\nanswer = \"Yes\" if label else \"No\"",
+      "after": "import pandas as pd\na = pd.read_csv(\"tableA.csv\").set_index(\"id\")\nb = pd.read_csv(\"tableB.csv\").set_index(\"id\")\npairs = pd.read_csv(\"test.csv\")\npair = pairs.iloc[0]\nprint(a.loc[pair[\"ltable_id\"]])\nprint(b.loc[pair[\"rtable_id\"]])\nprint(\"正解:\", \"Yes\" if pair[\"label\"] else \"No\")",
+      "reason": "元の疑似コードと全件照合報告を、実在CSVから一組を読む実用コードへ置き換える",
+      "action": "practical_code",
+      "new_page": 47
+    },
+    {
+      "old_page": 53,
+      "shape": 3,
+      "before": "説明用に変数名を短縮。検証では公式serialize_rowを変更せず実行し、9,800件の公開入力と正解を配布CSVへ照合した。",
+      "after": "BeerのZIPを展開し、exp_dataフォルダで実行する。test.csvの左右のIDで元表を引き、二つの記録と同一／別の正解を表示する。",
+      "reason": "前提ファイルと入力/正解の関係を説明する",
+      "action": "rewrite",
+      "new_page": 47
+    },
+    {
+      "old_page": 2,
+      "shape": 3,
+      "before": "[1] Mudgal & Li et al. DeepMatcher: Datasets for DeepMatcher paper. 固定commit a89ffe6、2026-10-18参照。\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "after": "[1] Mudgal & Li et al. Datasets for DeepMatcher paper.\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "reason": "出典を著者・年・資料名・URLに整理。固定版や照合位置は外部検証記録へ移す",
+      "action": "simplify_source",
+      "new_page": 2
+    },
+    {
+      "old_page": 5,
+      "shape": 3,
+      "before": "[1] Mudgal & Li et al. DeepMatcher: Datasets for DeepMatcher paper. 固定commit a89ffe6、2026-10-18参照。\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "after": "[1] Mudgal & Li et al. Datasets for DeepMatcher paper.\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "reason": "出典を著者・年・資料名・URLに整理。固定版や照合位置は外部検証記録へ移す",
+      "action": "simplify_source",
+      "new_page": 5
+    },
+    {
+      "old_page": 6,
+      "shape": 3,
+      "before": "[1] Stanford CRFM. EntityMatchingScenario. HELM v0.3.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/entity_matching_scenario.py",
+      "after": "[1] Stanford CRFM. HELM EntityMatchingScenario.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/entity_matching_scenario.py",
+      "reason": "出典を著者・年・資料名・URLに整理。固定版や照合位置は外部検証記録へ移す",
+      "action": "simplify_source",
+      "new_page": 6
+    },
+    {
+      "old_page": 7,
+      "shape": 8,
+      "before": "[1] Mudgal & Li et al. DeepMatcher: Datasets for DeepMatcher paper. 固定commit a89ffe6、2026-10-18参照。 Beer test pair row 29（0始まり）、A=563 / B=1177。\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "after": "[1] Mudgal & Li et al. Datasets for DeepMatcher paper.\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "reason": "出典を著者・年・資料名・URLに整理。固定版や照合位置は外部検証記録へ移す",
+      "action": "simplify_source",
+      "new_page": 7
+    },
+    {
+      "old_page": 8,
+      "shape": 3,
+      "before": "[1] Mudgal & Li et al. DeepMatcher: Datasets for DeepMatcher paper. 固定commit a89ffe6、2026-10-18参照。\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "after": "[1] Mudgal & Li et al. Datasets for DeepMatcher paper.\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "reason": "出典を著者・年・資料名・URLに整理。固定版や照合位置は外部検証記録へ移す",
+      "action": "simplify_source",
+      "new_page": 8
+    },
+    {
+      "old_page": 9,
+      "shape": 8,
+      "before": "[1] Mudgal & Li et al. DeepMatcher: Datasets for DeepMatcher paper. 固定commit a89ffe6、2026-10-18参照。 Abt_Buy test pair row 1849（0始まり）、A=658 / B=669。\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "after": "[1] Mudgal & Li et al. Datasets for DeepMatcher paper.\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "reason": "出典を著者・年・資料名・URLに整理。固定版や照合位置は外部検証記録へ移す",
+      "action": "simplify_source",
+      "new_page": 9
+    },
+    {
+      "old_page": 10,
+      "shape": 3,
+      "before": "[1] Stanford CRFM. EntityMatchingScenario. HELM v0.3.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/entity_matching_scenario.py",
+      "after": "[1] Stanford CRFM. HELM EntityMatchingScenario.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/entity_matching_scenario.py",
+      "reason": "出典を著者・年・資料名・URLに整理。固定版や照合位置は外部検証記録へ移す",
+      "action": "simplify_source",
+      "new_page": 10
+    },
+    {
+      "old_page": 11,
+      "shape": 5,
+      "before": "[1] Mudgal & Li et al. DeepMatcher: Datasets for DeepMatcher paper. 固定commit a89ffe6、2026-10-18参照。 Dirty_iTunes_Amazon test pair row 43（0始まり）、A=1413 / B=51590。\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "after": "[1] Mudgal & Li et al. Datasets for DeepMatcher paper.\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "reason": "出典を著者・年・資料名・URLに整理。固定版や照合位置は外部検証記録へ移す",
+      "action": "simplify_source",
+      "new_page": 11
+    },
+    {
+      "old_page": 12,
+      "shape": 5,
+      "before": "[1] Mudgal & Li et al. DeepMatcher: Datasets for DeepMatcher paper. 固定commit a89ffe6、2026-10-18参照。 Dirty_iTunes_Amazon test pair row 43（0始まり）、A=1413 / B=51590。\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "after": "[1] Mudgal & Li et al. Datasets for DeepMatcher paper.\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "reason": "出典を著者・年・資料名・URLに整理。固定版や照合位置は外部検証記録へ移す",
+      "action": "simplify_source",
+      "new_page": 12
+    },
+    {
+      "old_page": 13,
+      "shape": 3,
+      "before": "[1] Mudgal & Li et al. DeepMatcher: Datasets for DeepMatcher paper. 固定commit a89ffe6、2026-10-18参照。\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "after": "[1] Mudgal & Li et al. Datasets for DeepMatcher paper.\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "reason": "出典を著者・年・資料名・URLに整理。固定版や照合位置は外部検証記録へ移す",
+      "action": "simplify_source",
+      "new_page": 13
+    },
+    {
+      "old_page": 15,
+      "shape": 3,
+      "before": "[1] Mudgal et al. (2018). Deep Learning for Entity Matching: A Design Space Exploration. SIGMOD.  https://doi.org/10.1145/3183713.3196926\n[2] Stanford CRFM. HELM Classic v0.4.0（2023-11-17）。公開保存runの入力・出力・statsを再照合。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/entity_matching",
+      "after": "[1] Mudgal et al. (2018). Deep Learning for Entity Matching: A Design Space Exploration. SIGMOD.\nhttps://doi.org/10.1145/3183713.3196926\n[2] Stanford CRFM. HELM Classic — Entity matching.\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/entity_matching",
+      "reason": "出典を著者・年・資料名・URLに整理。固定版や照合位置は外部検証記録へ移す",
+      "action": "simplify_source",
+      "new_page": 15
+    },
+    {
+      "old_page": 16,
+      "shape": 3,
+      "before": "[1] Mudgal & Li et al. DeepMatcher: Datasets for DeepMatcher paper. 固定commit a89ffe6、2026-10-18参照。\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "after": "[1] Mudgal & Li et al. Datasets for DeepMatcher paper.\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "reason": "出典を著者・年・資料名・URLに整理。固定版や照合位置は外部検証記録へ移す",
+      "action": "simplify_source",
+      "new_page": 16
+    },
+    {
+      "old_page": 17,
+      "shape": 4,
+      "before": "[1] Mudgal & Li et al. DeepMatcher: Datasets for DeepMatcher paper. 固定commit a89ffe6、2026-10-18参照。\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "after": "[1] Mudgal & Li et al. Datasets for DeepMatcher paper.\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "reason": "出典を著者・年・資料名・URLに整理。固定版や照合位置は外部検証記録へ移す",
+      "action": "simplify_source",
+      "new_page": 17
+    },
+    {
+      "old_page": 18,
+      "shape": 3,
+      "before": "[1] Stanford CRFM. EntityMatchingScenario. HELM v0.3.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/entity_matching_scenario.py",
+      "after": "[1] Stanford CRFM. HELM EntityMatchingScenario.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/entity_matching_scenario.py",
+      "reason": "出典を著者・年・資料名・URLに整理。固定版や照合位置は外部検証記録へ移す",
+      "action": "simplify_source",
+      "new_page": null
+    },
+    {
+      "old_page": 19,
+      "shape": 4,
+      "before": "[1] Mudgal & Li et al. DeepMatcher: Datasets for DeepMatcher paper. 固定commit a89ffe6、2026-10-18参照。\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "after": "[1] Mudgal & Li et al. Datasets for DeepMatcher paper.\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "reason": "出典を著者・年・資料名・URLに整理。固定版や照合位置は外部検証記録へ移す",
+      "action": "simplify_source",
+      "new_page": 18
+    },
+    {
+      "old_page": 20,
+      "shape": 3,
+      "before": "[1] Mudgal & Li et al. DeepMatcher: Datasets for DeepMatcher paper. 固定commit a89ffe6、2026-10-18参照。\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md\n[2] Stanford CRFM. EntityMatchingScenario. HELM v0.3.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/entity_matching_scenario.py",
+      "after": "[1] Mudgal & Li et al. Datasets for DeepMatcher paper.\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md\n[2] Stanford CRFM. HELM EntityMatchingScenario.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/entity_matching_scenario.py",
+      "reason": "出典を著者・年・資料名・URLに整理。固定版や照合位置は外部検証記録へ移す",
+      "action": "simplify_source",
+      "new_page": 19
+    },
+    {
+      "old_page": 22,
+      "shape": 3,
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0（2023-11-17）。公開保存runの入力・出力・statsを再照合。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/entity_matching",
+      "after": "[1] Stanford CRFM. HELM Classic — Entity matching.\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/entity_matching",
+      "reason": "出典を著者・年・資料名・URLに整理。固定版や照合位置は外部検証記録へ移す",
+      "action": "simplify_source",
+      "new_page": 21
+    },
+    {
+      "old_page": 23,
+      "shape": 4,
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0（2023-11-17）。公開保存runの入力・出力・statsを再照合。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/entity_matching",
+      "after": "[1] Stanford CRFM. HELM Classic — Entity matching.\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/entity_matching",
+      "reason": "出典を著者・年・資料名・URLに整理。固定版や照合位置は外部検証記録へ移す",
+      "action": "simplify_source",
+      "new_page": null
+    },
+    {
+      "old_page": 24,
+      "shape": 4,
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0（2023-11-17）。公開保存runの入力・出力・statsを再照合。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/entity_matching",
+      "after": "[1] Stanford CRFM. HELM Classic — Entity matching.\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/entity_matching",
+      "reason": "出典を著者・年・資料名・URLに整理。固定版や照合位置は外部検証記録へ移す",
+      "action": "simplify_source",
+      "new_page": null
+    },
+    {
+      "old_page": 25,
+      "shape": 4,
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0（2023-11-17）。公開保存runの入力・出力・statsを再照合。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/entity_matching",
+      "after": "[1] Stanford CRFM. HELM Classic — Entity matching.\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/entity_matching",
+      "reason": "出典を著者・年・資料名・URLに整理。固定版や照合位置は外部検証記録へ移す",
+      "action": "simplify_source",
+      "new_page": null
+    },
+    {
+      "old_page": 26,
+      "shape": 4,
+      "before": "[1] Mudgal et al. (2018). Deep Learning for Entity Matching: A Design Space Exploration. SIGMOD.  https://doi.org/10.1145/3183713.3196926",
+      "after": "[1] Mudgal et al. (2018). Deep Learning for Entity Matching: A Design Space Exploration. SIGMOD.\nhttps://doi.org/10.1145/3183713.3196926",
+      "reason": "出典を著者・年・資料名・URLに整理。固定版や照合位置は外部検証記録へ移す",
+      "action": "simplify_source",
+      "new_page": 22
+    },
+    {
+      "old_page": 27,
+      "shape": 3,
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0（2023-11-17）。公開保存runの入力・出力・statsを再照合。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/entity_matching",
+      "after": "[1] Stanford CRFM. HELM Classic — Entity matching.\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/entity_matching",
+      "reason": "出典を著者・年・資料名・URLに整理。固定版や照合位置は外部検証記録へ移す",
+      "action": "simplify_source",
+      "new_page": 23
+    },
+    {
+      "old_page": 29,
+      "shape": 3,
+      "before": "[1] Mudgal & Li et al. DeepMatcher: Datasets for DeepMatcher paper. 固定commit a89ffe6、2026-10-18参照。\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "after": "[1] Mudgal & Li et al. Datasets for DeepMatcher paper.\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "reason": "出典を著者・年・資料名・URLに整理。固定版や照合位置は外部検証記録へ移す",
+      "action": "simplify_source",
+      "new_page": 25
+    },
+    {
+      "old_page": 30,
+      "shape": 3,
+      "before": "[1] Mudgal & Li et al. DeepMatcher: Datasets for DeepMatcher paper. 固定commit a89ffe6、2026-10-18参照。\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md\n[2] Mudgal & Li (2018). DeepMatcher LICENSE（BSD 3-Clause、コード）。  https://github.com/anhaidgroup/deepmatcher/blob/master/LICENSE",
+      "after": "[1] Mudgal & Li et al. Datasets for DeepMatcher paper.\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md\n[2] Mudgal & Li. DeepMatcher LICENSE（BSD 3-Clause、コード）.\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/LICENSE",
+      "reason": "出典を著者・年・資料名・URLに整理。固定版や照合位置は外部検証記録へ移す",
+      "action": "simplify_source",
+      "new_page": 26
+    },
+    {
+      "old_page": 31,
+      "shape": 3,
+      "before": "[1] Mudgal et al. (2018). Deep Learning for Entity Matching: A Design Space Exploration. SIGMOD.  https://doi.org/10.1145/3183713.3196926\n[2] Stanford CRFM. HELM Classic v0.4.0（2023-11-17）。公開保存runの入力・出力・statsを再照合。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/entity_matching",
+      "after": "[1] Mudgal et al. (2018). Deep Learning for Entity Matching: A Design Space Exploration. SIGMOD.\nhttps://doi.org/10.1145/3183713.3196926\n[2] Stanford CRFM. HELM Classic — Entity matching.\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/entity_matching",
+      "reason": "出典を著者・年・資料名・URLに整理。固定版や照合位置は外部検証記録へ移す",
+      "action": "simplify_source",
+      "new_page": 27
+    },
+    {
+      "old_page": 35,
+      "shape": 8,
+      "before": "[1] Mudgal & Li et al. DeepMatcher: Datasets for DeepMatcher paper. 固定commit a89ffe6、2026-10-18参照。 Beer test pair row 57（0始まり）、A=2494 / B=2565。\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "after": "[1] Mudgal & Li et al. Datasets for DeepMatcher paper.\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "reason": "出典を著者・年・資料名・URLに整理。固定版や照合位置は外部検証記録へ移す",
+      "action": "simplify_source",
+      "new_page": 31
+    },
+    {
+      "old_page": 36,
+      "shape": 8,
+      "before": "[1] Mudgal & Li et al. DeepMatcher: Datasets for DeepMatcher paper. 固定commit a89ffe6、2026-10-18参照。 Beer test pair row 88（0始まり）、A=4161 / B=2409。\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "after": "[1] Mudgal & Li et al. Datasets for DeepMatcher paper.\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "reason": "出典を著者・年・資料名・URLに整理。固定版や照合位置は外部検証記録へ移す",
+      "action": "simplify_source",
+      "new_page": 32
+    },
+    {
+      "old_page": 37,
+      "shape": 8,
+      "before": "[1] Mudgal & Li et al. DeepMatcher: Datasets for DeepMatcher paper. 固定commit a89ffe6、2026-10-18参照。 Beer test pair row 53（0始まり）、A=76 / B=2831。\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "after": "[1] Mudgal & Li et al. Datasets for DeepMatcher paper.\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "reason": "出典を著者・年・資料名・URLに整理。固定版や照合位置は外部検証記録へ移す",
+      "action": "simplify_source",
+      "new_page": 33
+    },
+    {
+      "old_page": 38,
+      "shape": 8,
+      "before": "[1] Mudgal & Li et al. DeepMatcher: Datasets for DeepMatcher paper. 固定commit a89ffe6、2026-10-18参照。 Abt_Buy test pair row 750（0始まり）、A=797 / B=259。\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "after": "[1] Mudgal & Li et al. Datasets for DeepMatcher paper.\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "reason": "出典を著者・年・資料名・URLに整理。固定版や照合位置は外部検証記録へ移す",
+      "action": "simplify_source",
+      "new_page": 34
+    },
+    {
+      "old_page": 39,
+      "shape": 8,
+      "before": "[1] Mudgal & Li et al. DeepMatcher: Datasets for DeepMatcher paper. 固定commit a89ffe6、2026-10-18参照。 Abt_Buy test pair row 1785（0始まり）、A=110 / B=84。\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "after": "[1] Mudgal & Li et al. Datasets for DeepMatcher paper.\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "reason": "出典を著者・年・資料名・URLに整理。固定版や照合位置は外部検証記録へ移す",
+      "action": "simplify_source",
+      "new_page": 35
+    },
+    {
+      "old_page": 40,
+      "shape": 8,
+      "before": "[1] Mudgal & Li et al. DeepMatcher: Datasets for DeepMatcher paper. 固定commit a89ffe6、2026-10-18参照。 Abt_Buy test pair row 1249（0始まり）、A=18 / B=211。\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "after": "[1] Mudgal & Li et al. Datasets for DeepMatcher paper.\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "reason": "出典を著者・年・資料名・URLに整理。固定版や照合位置は外部検証記録へ移す",
+      "action": "simplify_source",
+      "new_page": 36
+    },
+    {
+      "old_page": 41,
+      "shape": 8,
+      "before": "[1] Mudgal & Li et al. DeepMatcher: Datasets for DeepMatcher paper. 固定commit a89ffe6、2026-10-18参照。 Abt_Buy test pair row 516（0始まり）、A=421 / B=275。\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "after": "[1] Mudgal & Li et al. Datasets for DeepMatcher paper.\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "reason": "出典を著者・年・資料名・URLに整理。固定版や照合位置は外部検証記録へ移す",
+      "action": "simplify_source",
+      "new_page": 37
+    },
+    {
+      "old_page": 42,
+      "shape": 5,
+      "before": "[1] Mudgal & Li et al. DeepMatcher: Datasets for DeepMatcher paper. 固定commit a89ffe6、2026-10-18参照。 Dirty_iTunes_Amazon test pair row 95（0始まり）、A=6621 / B=784。\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "after": "[1] Mudgal & Li et al. Datasets for DeepMatcher paper.\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "reason": "出典を著者・年・資料名・URLに整理。固定版や照合位置は外部検証記録へ移す",
+      "action": "simplify_source",
+      "new_page": 38
+    },
+    {
+      "old_page": 43,
+      "shape": 5,
+      "before": "[1] Mudgal & Li et al. DeepMatcher: Datasets for DeepMatcher paper. 固定commit a89ffe6、2026-10-18参照。 Dirty_iTunes_Amazon test pair row 95（0始まり）、A=6621 / B=784。\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "after": "[1] Mudgal & Li et al. Datasets for DeepMatcher paper.\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "reason": "出典を著者・年・資料名・URLに整理。固定版や照合位置は外部検証記録へ移す",
+      "action": "simplify_source",
+      "new_page": 39
+    },
+    {
+      "old_page": 44,
+      "shape": 5,
+      "before": "[1] Mudgal & Li et al. DeepMatcher: Datasets for DeepMatcher paper. 固定commit a89ffe6、2026-10-18参照。 Dirty_iTunes_Amazon test pair row 32（0始まり）、A=1410 / B=51576。\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "after": "[1] Mudgal & Li et al. Datasets for DeepMatcher paper.\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "reason": "出典を著者・年・資料名・URLに整理。固定版や照合位置は外部検証記録へ移す",
+      "action": "simplify_source",
+      "new_page": 40
+    },
+    {
+      "old_page": 45,
+      "shape": 5,
+      "before": "[1] Mudgal & Li et al. DeepMatcher: Datasets for DeepMatcher paper. 固定commit a89ffe6、2026-10-18参照。 Dirty_iTunes_Amazon test pair row 32（0始まり）、A=1410 / B=51576。\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "after": "[1] Mudgal & Li et al. Datasets for DeepMatcher paper.\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "reason": "出典を著者・年・資料名・URLに整理。固定版や照合位置は外部検証記録へ移す",
+      "action": "simplify_source",
+      "new_page": 41
+    },
+    {
+      "old_page": 46,
+      "shape": 5,
+      "before": "[1] Mudgal & Li et al. DeepMatcher: Datasets for DeepMatcher paper. 固定commit a89ffe6、2026-10-18参照。 Dirty_iTunes_Amazon test pair row 76（0始まり）、A=4547 / B=26140。\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "after": "[1] Mudgal & Li et al. Datasets for DeepMatcher paper.\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "reason": "出典を著者・年・資料名・URLに整理。固定版や照合位置は外部検証記録へ移す",
+      "action": "simplify_source",
+      "new_page": 42
+    },
+    {
+      "old_page": 47,
+      "shape": 5,
+      "before": "[1] Mudgal & Li et al. DeepMatcher: Datasets for DeepMatcher paper. 固定commit a89ffe6、2026-10-18参照。 Dirty_iTunes_Amazon test pair row 76（0始まり）、A=4547 / B=26140。\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "after": "[1] Mudgal & Li et al. Datasets for DeepMatcher paper.\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "reason": "出典を著者・年・資料名・URLに整理。固定版や照合位置は外部検証記録へ移す",
+      "action": "simplify_source",
+      "new_page": 43
+    },
+    {
+      "old_page": 49,
+      "shape": 3,
+      "before": "[1] Mudgal & Li et al. DeepMatcher: Datasets for DeepMatcher paper. 固定commit a89ffe6、2026-10-18参照。\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "after": "[1] Mudgal & Li et al. Datasets for DeepMatcher paper.\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "reason": "出典を著者・年・資料名・URLに整理。固定版や照合位置は外部検証記録へ移す",
+      "action": "simplify_source",
+      "new_page": 45
+    },
+    {
+      "old_page": 50,
+      "shape": 3,
+      "before": "[1] Mudgal & Li et al. DeepMatcher: Datasets for DeepMatcher paper. 固定commit a89ffe6、2026-10-18参照。\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "after": "[1] Mudgal & Li et al. Datasets for DeepMatcher paper.\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "reason": "出典を著者・年・資料名・URLに整理。固定版や照合位置は外部検証記録へ移す",
+      "action": "simplify_source",
+      "new_page": 46
+    },
+    {
+      "old_page": 51,
+      "shape": 4,
+      "before": "[1] Mudgal & Li et al. DeepMatcher: Datasets for DeepMatcher paper. 固定commit a89ffe6、2026-10-18参照。\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "after": "[1] Mudgal & Li et al. Datasets for DeepMatcher paper.\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "reason": "出典を著者・年・資料名・URLに整理。固定版や照合位置は外部検証記録へ移す",
+      "action": "simplify_source",
+      "new_page": null
+    },
+    {
+      "old_page": 52,
+      "shape": 4,
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0（2023-11-17）。公開保存runの入力・出力・statsを再照合。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/entity_matching",
+      "after": "[1] Stanford CRFM. HELM Classic — Entity matching.\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/entity_matching",
+      "reason": "出典を著者・年・資料名・URLに整理。固定版や照合位置は外部検証記録へ移す",
+      "action": "simplify_source",
+      "new_page": null
+    },
+    {
+      "old_page": 53,
+      "shape": 4,
+      "before": "[1] Stanford CRFM. EntityMatchingScenario. HELM v0.3.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/entity_matching_scenario.py",
+      "after": "[1] Stanford CRFM. HELM EntityMatchingScenario.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/entity_matching_scenario.py",
+      "reason": "出典を著者・年・資料名・URLに整理。固定版や照合位置は外部検証記録へ移す",
+      "action": "simplify_source",
+      "new_page": 47
+    },
+    {
+      "old_page": 54,
+      "shape": 3,
+      "before": "[1] Stanford CRFM. Entity matching fixed random state. HELM v0.3.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/entity_matching_scenario_fixed_random_state.py",
+      "after": "[1] Stanford CRFM. HELM.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/entity_matching_scenario_fixed_random_state.py",
+      "reason": "出典を著者・年・資料名・URLに整理。固定版や照合位置は外部検証記録へ移す",
+      "action": "simplify_source",
+      "new_page": null
+    },
+    {
+      "old_page": 55,
+      "shape": 3,
+      "before": "[1] Stanford CRFM. EntityMatchingScenario. HELM v0.3.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/entity_matching_scenario.py\n[2] Mudgal & Li et al. DeepMatcher: Datasets for DeepMatcher paper. 固定commit a89ffe6、2026-10-18参照。\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "after": "[1] Stanford CRFM. HELM EntityMatchingScenario.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/entity_matching_scenario.py\n[2] Mudgal & Li et al. Datasets for DeepMatcher paper.\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "reason": "出典を著者・年・資料名・URLに整理。固定版や照合位置は外部検証記録へ移す",
+      "action": "simplify_source",
+      "new_page": null
+    },
+    {
+      "old_page": 57,
+      "shape": 3,
+      "before": "[1] Mudgal et al. (2018). Deep Learning for Entity Matching: A Design Space Exploration. SIGMOD.  https://doi.org/10.1145/3183713.3196926",
+      "after": "[1] Mudgal et al. (2018). Deep Learning for Entity Matching: A Design Space Exploration. SIGMOD.\nhttps://doi.org/10.1145/3183713.3196926",
+      "reason": "出典を著者・年・資料名・URLに整理。固定版や照合位置は外部検証記録へ移す",
+      "action": "simplify_source",
+      "new_page": 49
+    },
+    {
+      "old_page": 58,
+      "shape": 3,
+      "before": "Datasets for DeepMatcher paper\nDeepMatcher authors. GitHub. 固定commit a89ffe6（2021-06-13）。\n公開13設定の規模、候補生成、ラベル付け、Dirty変換と配布先を記載する。\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "after": "Datasets for DeepMatcher paper\nDeepMatcher authors. (n.d.). GitHub. 2026-10-18参照。\n公開13設定の規模、候補生成、ラベル付け、Dirty変換と配布先を記載する。\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "reason": "固定commitを外部へ移し、Web文献を公開年不明と実参照日で示す",
+      "action": "rewrite",
+      "new_page": 50
+    },
+    {
+      "old_page": 59,
+      "shape": 2,
+      "before": "EntityMatchingScenario and fixed random state\nStanford CRFM. HELM v0.3.0.\n13設定の登録、正負の学習抽出、属性の文章化、Yes/No参照、乱数状態を定義する。\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/entity_matching_scenario.py",
+      "after": "EntityMatchingScenario and fixed random state\nStanford CRFM. (n.d.). HELM v0.3.0. 2026-10-18参照。\n13設定の登録、正負の学習抽出、属性の文章化、Yes/No参照、乱数状態を定義する。\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/entity_matching_scenario.py",
+      "reason": "Web文献の公開年と参照日を整理する",
+      "action": "rewrite",
+      "new_page": 51
+    },
+    {
+      "old_page": 59,
+      "shape": 3,
+      "before": "HELM Classic — Entity matching\nStanford CRFM. v0.4.0（2023-11-17固定版）。\n3対象の保存実行と、モデル別・試行別の正解率、入力、生成出力を公開する。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/entity_matching",
+      "after": "HELM Classic — Entity matching\nStanford CRFM. (2023). v0.4.0. 2026-10-18参照。\n3対象の保存実行と、モデル別・試行別の正解率、入力、生成出力を公開する。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/entity_matching",
+      "reason": "文献のリリース年と実参照日を整理する",
+      "action": "rewrite",
+      "new_page": 51
+    },
+    {
+      "old_page": 59,
+      "shape": 2,
+      "before": "EntityMatchingScenario and fixed random state\nStanford CRFM. (n.d.). HELM v0.3.0. 2026-10-18参照。\n13設定の登録、正負の学習抽出、属性の文章化、Yes/No参照、乱数状態を定義する。\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/entity_matching_scenario.py",
+      "after": "EntityMatchingScenario\nStanford CRFM. (n.d.). HELM v0.3.0. 2026-10-18参照。\n13種類のデータを読み、学習例の正負をそろえ、二つのレコードとYes/Noの正解を作る。\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/entity_matching_scenario.py",
+      "reason": "読込コードの文献説明を、入力と正解を作る役割に絞る",
+      "action": "rewrite",
+      "new_page": 51
+    },
+    {
+      "old_page": 1,
+      "shape": 0,
+      "before": "71.1",
+      "after": "83.1",
+      "reason": "実字形までnative枠を拡張し本文位置を保つ",
+      "action": "native_frame",
+      "new_page": 1
+    },
+    {
+      "old_page": 1,
+      "shape": 1,
+      "before": "77.95",
+      "after": "89.95",
+      "reason": "実字形までnative枠を拡張し本文位置を保つ",
+      "action": "native_frame",
+      "new_page": 1
+    },
+    {
+      "old_page": 4,
+      "shape": 0,
+      "before": "46.08",
+      "after": "58.08",
+      "reason": "実字形までnative枠を拡張し本文位置を保つ",
+      "action": "native_frame",
+      "new_page": 4
+    },
+    {
+      "old_page": 14,
+      "shape": 0,
+      "before": "46.08",
+      "after": "58.08",
+      "reason": "実字形までnative枠を拡張し本文位置を保つ",
+      "action": "native_frame",
+      "new_page": 14
+    },
+    {
+      "old_page": 21,
+      "shape": 0,
+      "before": "46.08",
+      "after": "58.08",
+      "reason": "実字形までnative枠を拡張し本文位置を保つ",
+      "action": "native_frame",
+      "new_page": 20
+    },
+    {
+      "old_page": 28,
+      "shape": 0,
+      "before": "46.08",
+      "after": "58.08",
+      "reason": "実字形までnative枠を拡張し本文位置を保つ",
+      "action": "native_frame",
+      "new_page": 24
+    },
+    {
+      "old_page": 32,
+      "shape": 0,
+      "before": "46.08",
+      "after": "58.08",
+      "reason": "実字形までnative枠を拡張し本文位置を保つ",
+      "action": "native_frame",
+      "new_page": 28
+    },
+    {
+      "old_page": 48,
+      "shape": 0,
+      "before": "46.08",
+      "after": "58.08",
+      "reason": "実字形までnative枠を拡張し本文位置を保つ",
+      "action": "native_frame",
+      "new_page": 44
+    },
+    {
+      "old_page": 56,
+      "shape": 0,
+      "before": "46.08",
+      "after": "58.08",
+      "reason": "実字形までnative枠を拡張し本文位置を保つ",
+      "action": "native_frame",
+      "new_page": 48
+    },
+    {
+      "old_page": 58,
+      "shape": 2,
+      "before": "100.41",
+      "after": "115.42129211425781",
+      "reason": "参考文献全文をnative枠に収める",
+      "action": "native_frame",
+      "new_page": 50
+    },
+    {
+      "old_page": 58,
+      "shape": 3,
+      "before": "86.16",
+      "after": "98.33328857421876",
+      "reason": "参考文献全文をnative枠に収める",
+      "action": "native_frame",
+      "new_page": 50
+    },
+    {
+      "old_page": 59,
+      "shape": 2,
+      "before": "105.54",
+      "after": "121.60029296875",
+      "reason": "参考文献全文をnative枠に収める",
+      "action": "native_frame",
+      "new_page": 51
+    },
+    {
+      "old_page": 59,
+      "shape": 3,
+      "before": "86.16",
+      "after": "98.33430053710939",
+      "reason": "参考文献全文をnative枠に収める",
+      "action": "native_frame",
+      "new_page": 51
+    },
+    {
+      "old_page": 51,
+      "shape": null,
+      "before": "同じレコードは、別の分割にも現れる\nAppendix: 2. 対象と再現条件\n元CSVをIDで照合。ペアの重複は0だが、片側レコードは共有する。\n[1] Mudgal & Li et al. Datasets for DeepMatcher paper.\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "after": null,
+      "reason": "片側レコードの共有をIDごとに計数した細部は外部記録へ。未知実体だけの分割ではない条件は本編18で説明。",
+      "action": "move_to_external_audit",
+      "new_page": null
+    },
+    {
+      "old_page": 54,
+      "shape": null,
+      "before": "保存された状態で、同じ評価ペアを追跡する\nHELMの初期実行はNumPy乱数状態を0へ初期化していなかった。その後の実装は、データごとの保存乱数状態を読み込み、同じ抽出を再現する。\n保存状態のCodaLab URLは今回503を返した。乱数seed 0で同じペアを得たとは主張せず、公開scenario_stateに保存されたペア・提示例・出力を根拠とした。\n13実例は配布test CSVの原行、二つの表の原行、SHA256、公開runのinstance IDと対応する。\nAppendix: 2. 対象と再現条件\n[1] Stanford CRFM. HELM.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/entity_matching_scenario_fixed_random_state.py",
+      "after": null,
+      "reason": "乱数URLの応答/seed/照合ID/hashの制作監査を外部記録へ。",
+      "action": "move_to_external_audit",
+      "new_page": null
+    },
+    {
+      "old_page": 55,
+      "shape": null,
+      "before": "13設定の実装名と、配布zip名の相違\nFodors_Zagatsの実装はfodors_zagats_exp_data.zipを要求するが、公式一覧はfodors_zagat_exp_data.zip。\nDBLP_GoogleScholarの実装はdblp_googlescholar_exp_data.zipを要求するが、公式一覧はdblp_scholar_exp_data.zip。Dirty版も同じscholar名である。\n2026-10-18にHTTPSで13生成URLを確認し、この3件は404、他10件は200だった。CompanyはHEADのみで、全量を取得していない。\nAppendix: 2. 対象と再現条件\n[1] Stanford CRFM. HELM EntityMatchingScenario.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/entity_matching_scenario.py\n[2] Mudgal & Li et al. Datasets for DeepMatcher paper.\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "after": null,
+      "reason": "ZIP名差は入手方法29へ簡潔に統合し、HTTP確認結果の一覧は外部記録へ。",
+      "action": "move_to_external_audit",
+      "new_page": null
+    },
+    {
+      "old_page": 1,
+      "shape": 0,
+      "before": "Entity Matching",
+      "after": "DeepMatcher",
+      "reason": "一般課題名でなく実際に紹介する公開データの範囲を表紙へ",
+      "action": "dataset_focus_rewrite",
+      "new_page": 1
+    },
+    {
+      "old_page": 1,
+      "shape": 1,
+      "before": "レコードの同一実体判定\nDeepMatcherのデータとHELM Classicでの評価",
+      "after": "二つの記録が同じ実体を指すか\n構造化・文章・属性を移したデータで比べる",
+      "reason": "元の照合データの特徴へ副題をそろえる",
+      "action": "dataset_focus_rewrite",
+      "new_page": 1
+    },
+    {
+      "old_page": 3,
+      "shape": 1,
+      "before": "二つの記録が同じものを指すか\n三種類のデータと候補ペア\n正解率と実行条件\n入手方法と評価の使い方",
+      "after": "二つの記録が同じものを指すか\n三種類のデータと候補ペア\n同じ実体を見つける精度を測る\nデータの入手と使い方",
+      "reason": "元データの構築・原評価・利用を中心に目次を整理",
+      "action": "dataset_focus_rewrite",
+      "new_page": 3
+    },
+    {
+      "old_page": 5,
+      "shape": 1,
+      "before": "二つのレコードが同じ実体を指すかを判定する。対象は商品、楽曲、飲食店、論文、企業など。\n入力は二つのレコードの属性。出力は、同一ならYes、別ならNoという二値の回答である。\n同じ実体でも、名称や属性の表記が異なる。省略、価格差、欠測、別の欄へ移った情報も手掛かりになる。",
+      "after": "二つのレコードが同じ実体を指すかを判定する。対象は商品、楽曲、飲食店、論文、企業など。\n各ペアには、同じ実体を指すかという二値のラベルが付く。本資料では、同じならYes、別ならNoと表示する。\n同じ実体でも、名称や属性の表記が異なる。省略、価格差、空欄、別の欄へ移った情報も手掛かりになる。",
+      "reason": "元ペアのラベルと表示用Yes/Noを区別し、基盤の生成形式を前提にしない",
+      "action": "dataset_focus_rewrite",
+      "new_page": 5
+    },
+    {
+      "old_page": 6,
+      "shape": 1,
+      "before": "一般の名寄せでは、まず比較候補を絞るblockingを行い、その後で候補ペアを判定する。\nこのデータには、候補生成後の二レコードと、同一かどうかのラベルがある。HELMは与えられた各ペアに答える。\n表全体の全組合せを探索する処理は、ここで採点する範囲には含まれない。",
+      "after": "名寄せでは、まず比較する候補を絞る処理（blocking）を行い、その後で候補ペアを判定する。\nこのデータでは、あらかじめ絞った候補ペアに、同じ実体なら1、別なら0の正解を付けている。\n元表のIDから二つのレコードを取り出し、その属性を合わせて読むことで判定する。",
+      "reason": "候補生成済みデータという内容と使い方を肯定形で説明",
+      "action": "dataset_focus_rewrite",
+      "new_page": 6
+    },
+    {
+      "old_page": 6,
+      "shape": 3,
+      "before": "[1] Stanford CRFM. HELM EntityMatchingScenario.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/entity_matching_scenario.py",
+      "after": "[1] DeepMatcher authors. Datasets for DeepMatcher paper.\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "reason": "元の候補ペア作成資料を直接参照",
+      "action": "dataset_focus_rewrite",
+      "new_page": 6
+    },
+    {
+      "old_page": 8,
+      "shape": 1,
+      "before": "醸造所名にCompanyが加わり、度数にも差があるが、正解ラベルは同じビールを示す。\nAの名称Amber Waves Aleに対し、Bは醸造所名を含むCapitol City Amber Waves Ale。スタイルの粒度も異なる。\n名称、醸造所、スタイルなどを合わせて読む。すべての属性が完全に一致している必要はない。",
+      "after": "醸造所名にCompanyが加わり、度数にも差があるが、正解ラベルは同じビールを示す。\nAの名称Amber Waves Aleに対し、Bは醸造所名を含むCapitol City Amber Waves Ale。スタイルの表し方も異なる。\n名称、醸造所、スタイルなどを合わせて読む。すべての属性が完全に一致している必要はない。",
+      "reason": "意味を保ち専門語の省略を自然化",
+      "action": "dataset_focus_rewrite",
+      "new_page": 8
+    },
+    {
+      "old_page": 10,
+      "shape": 1,
+      "before": "ブランドやシリーズの一致だけでは足りない。1GBと8GB、型番の末尾も異なる。\nこのデータでは、製品の説明が長い文章として残る。名称と説明の両方を読み、同じシリーズ内の別製品を区別する。\npriceやdescriptionの空欄は、HELMの文字列ではnanとして現れる。",
+      "after": "ブランドやシリーズの一致だけでは足りない。1GBと8GB、型番の末尾も異なる。\nこのデータでは、製品の説明が長い文章として残る。名称と説明の両方を読み、同じシリーズ内の別製品を区別する。\n本資料の文章化した例では、priceやdescriptionの空欄をnanと表す。",
+      "reason": "元の空欄と表示方法を説明し、基盤への言及を外す",
+      "action": "dataset_focus_rewrite",
+      "new_page": 10
+    },
+    {
+      "old_page": 10,
+      "shape": 3,
+      "before": "[1] Stanford CRFM. HELM EntityMatchingScenario.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/entity_matching_scenario.py",
+      "after": "[1] DeepMatcher authors. Datasets for DeepMatcher paper.\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "reason": "比較するレコードの元配布を直接参照",
+      "action": "dataset_focus_rewrite",
+      "new_page": 10
+    },
+    {
+      "old_page": 15,
+      "shape": 1,
+      "before": "2018年の研究は、構造化11、文章6、Dirty 6の計23課題で、教師ありの照合手法を比較した。\nDeepMatcherの公開一覧とHELMの実装は13設定。公開一覧は構造化7、文章2、Dirty 4である。\nHELM Classicの公開結果では、Beer、Abt-Buy、Dirty iTunes-Amazonの3対象を評価している。",
+      "after": "2018年の研究は、構造化11、文章6、Dirty 6の計23課題で、教師ありの照合手法を比較した。\n公式一覧は、そのうち構造化7、文章2、Dirty 4の計13設定を公開する。\n本資料はBeer、Abt-Buy、Dirty iTunes-Amazonの3対象を例に、各形式で照合するときの手掛かりを見る。",
+      "reason": "原研究23課題と公開13設定、13実例の3対象という範囲を分ける",
+      "action": "dataset_focus_rewrite",
+      "new_page": 15
+    },
+    {
+      "old_page": 15,
+      "shape": 3,
+      "before": "[1] Mudgal et al. (2018). Deep Learning for Entity Matching: A Design Space Exploration. SIGMOD.\nhttps://doi.org/10.1145/3183713.3196926\n[2] Stanford CRFM. HELM Classic — Entity matching.\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/entity_matching",
+      "after": "[1] Mudgal et al. (2018). Deep Learning for Entity Matching: A Design Space Exploration. SIGMOD.\nhttps://doi.org/10.1145/3183713.3196926\n[2] DeepMatcher authors. Datasets for DeepMatcher paper.\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "reason": "原研究とデータ配布を出典へ",
+      "action": "dataset_focus_rewrite",
+      "new_page": 15
+    },
+    {
+      "old_page": 20,
+      "shape": 1,
+      "before": "Abt-Buyの表Bは1,092行。そのうちdescriptionは441行、priceは502行が空欄。表Aのpriceも1,081行中663行が空欄である。\nDirty iTunes-Amazonの表Bは55,923行。Artist_Nameの27,950行が空欄だが、値がSong_Nameへ移動している場合がある。\npandasで読み込んだ空欄はnanになる。Beerの度数欄の「-」は文字列として保持され、空欄とは扱いが異なる。",
+      "after": "Abt-Buyの表Bは1,092行。そのうちdescriptionは441行、priceは502行が空欄。表Aのpriceも1,081行中663行が空欄である。\nDirty iTunes-Amazonの表Bは55,923行。Artist_Nameの27,950行が空欄だが、値がSong_Nameへ移動している場合がある。\n本資料の入力例では空欄をnanと表示する。Beerの度数欄の「-」は、文字として記録されている。",
+      "reason": "元表の空欄と例での表示を自然に説明",
+      "action": "dataset_focus_rewrite",
+      "new_page": 19
+    },
+    {
+      "old_page": 20,
+      "shape": 3,
+      "before": "[1] Mudgal & Li et al. Datasets for DeepMatcher paper.\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md\n[2] Stanford CRFM. HELM EntityMatchingScenario.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/entity_matching_scenario.py",
+      "after": "[1] DeepMatcher authors. Datasets for DeepMatcher paper.\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "reason": "元配布の属性と空欄の状態を直接参照",
+      "action": "dataset_focus_rewrite",
+      "new_page": 19
+    },
+    {
+      "old_page": 22,
+      "shape": 0,
+      "before": "正解率は、Yes／Noの回答が正解と一致する割合",
+      "after": "同じ実体のペアに、適合率と再現率を使う",
+      "reason": "元の照合評価を理解できる見出しへ",
+      "action": "dataset_focus_rewrite",
+      "new_page": 21
+    },
+    {
+      "old_page": 22,
+      "shape": 1,
+      "before": "HELMは生成した回答と正解ラベルを比較する。準完全一致では、大文字・小文字、句読点や空白の表記差を正規化する。\n各テストペアの一致を1、不一致を0として平均する。OPT-175Bとtext-davinci-003は3試行の平均、Llama 2は1試行の結果である。",
+      "after": "同じだと判定したペアのうち、実際に同じだった割合が適合率。実際に同じペアのうち、見つけられた割合が再現率である。\nF1は、この二つの調和平均。見つけたペアの正確さと、見逃しの少なさをまとめる。\n別の実体を指すペアが多いので、全体の正解率だけでなく、同じペアをどれだけ拾えたかも見る。",
+      "reason": "基盤の準完全一致・試行数を外部化し、正例F1と正解率の意味ある違いを残す",
+      "action": "dataset_focus_rewrite",
+      "new_page": 21
+    },
+    {
+      "old_page": 22,
+      "shape": 3,
+      "before": "[1] Stanford CRFM. HELM Classic — Entity matching.\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/entity_matching",
+      "after": "[1] Mudgal et al. (2018). Deep Learning for Entity Matching: A Design Space Exploration. SIGMOD.\nhttps://doi.org/10.1145/3183713.3196926",
+      "reason": "元論文の教師あり照合評価を出典へ",
+      "action": "dataset_focus_rewrite",
+      "new_page": 21
+    },
+    {
+      "old_page": 26,
+      "shape": 3,
+      "before": "ペアを3:1:1に分割して学習・調整・test。正例の適合率と再現率の調和平均（%）。HELMの正解率とは指標・学習条件が異なる。",
+      "after": "2018年の教師あり学習でのF1（%）。学習・開発・テストを3:1:1へ分割。実例で扱う3対象の値。",
+      "reason": "原評価の意味と対象範囲を明示し、基盤間比較を外部化",
+      "action": "dataset_focus_rewrite",
+      "new_page": 22
+    },
+    {
+      "old_page": 27,
+      "shape": 0,
+      "before": "5例を示し、YesかNoを生成させる",
+      "after": "学習・開発・テストの役割を分けて使う",
+      "reason": "元データの実際の利用手順へ",
+      "action": "dataset_focus_rewrite",
+      "new_page": 23
+    },
+    {
+      "old_page": 27,
+      "shape": 1,
+      "before": "正解付きの学習例を5件示し、二つのレコードが同じかを尋ねる。出力は5トークンまでで、改行すると停止する。\n開発用とテスト用を合わせて最大1,000ペアを評価する。BeerとDirty音楽は両方の全件、Abt-Buyは開発507とテスト493ペアを使う。\nAbt-Buyの配布テストは1,916ペアあるため、公開成績はその一部を評価した結果である。",
+      "after": "trainで照合モデルを学習し、validationで調整、testで最後の性能を測る。\n分割は候補ペア単位。同じ商品や楽曲が、別の相手とのペアとして複数の分割へ現れる場合がある。\n未知の実体だけへの性能を調べるときは、元表のIDを使って分割を設計する。",
+      "reason": "5例提示/5token/最大1000という固有条件を外部化し、分割の重要な性質を利用説明へ",
+      "action": "dataset_focus_rewrite",
+      "new_page": 23
+    },
+    {
+      "old_page": 27,
+      "shape": 3,
+      "before": "[1] Stanford CRFM. HELM Classic — Entity matching.\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/entity_matching",
+      "after": "[1] DeepMatcher authors. Datasets for DeepMatcher paper.\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "reason": "元の分割と候補ペアを直接参照",
+      "action": "dataset_focus_rewrite",
+      "new_page": 23
+    },
+    {
+      "old_page": 29,
+      "shape": 1,
+      "before": "DeepMatcherの公式一覧から、二つの元表とラベル付き候補ペアをまとめたZIPを取得できる。\n一部のHELM実装では配布名とURL中の名前が異なる。Fodors-ZagatsとDBLP-Scholar系は、公式一覧のリンクから取得するとよい。",
+      "after": "DeepMatcherの公式一覧から、二つの元表とラベル付き候補ペアをまとめたZIPを取得できる。\nZIPには、元表のtableA.csv・tableB.csvと、train.csv・valid.csv・test.csvの候補ペアが含まれる。ペアの左右のIDを使い、対応する元レコードを取り出せる。",
+      "reason": "実装URL名の差という監査情報を外部化し、原配布の実用情報へ",
+      "action": "dataset_focus_rewrite",
+      "new_page": 25
+    },
+    {
+      "old_page": 30,
+      "shape": 1,
+      "before": "DeepMatcherのコードはBSD 3-Clause、HELMのコードはApache 2.0で公開されている。\nデータはBeerAdvocate、RateBeer、商品サイト、楽曲販売サイトなどに由来する。公開Datasets.mdと取得zipには、全データ共通の独立したライセンス文を確認できなかった。\n再配布や業務利用には、元データと取得時点の利用条件を確認する。",
+      "after": "DeepMatcherのコードはBSD 3-Clauseで公開されている。\nデータはBeerAdvocate、RateBeer、商品サイト、楽曲販売サイトなどに由来する。公開Datasets.mdと取得ZIPには、全データ共通の独立したライセンス文を確認できなかった。\n再配布や業務利用には、元データと取得時点の利用条件を確認する。",
+      "reason": "不要な別基盤コードのライセンスを外部化し元配布と権利を保持",
+      "action": "dataset_focus_rewrite",
+      "new_page": 26
+    },
+    {
+      "old_page": 31,
+      "shape": 1,
+      "before": "Entity Matchingは、候補ペアの二レコードを同一実体へ対応付ける課題。DeepMatcherは構造化、文章、属性移動という違いを比較するデータを公開した。\nHELMは属性を文章化し、5件の提示例からYes/Noを生成させる。負例比、評価するペア、試行ごとの提示例をそろえて成績を読む。\n型番や容量が違う負例、表記や一部属性が食い違う正例を含め、文字列の重なりだけでは決まらない照合を評価できる。",
+      "after": "Entity Matchingは、候補ペアの二レコードを同じ実体へ対応付ける課題。DeepMatcherは構造化、文章、属性移動という違いを比較するデータを公開した。\n元表と候補ペアが分かれているので、同じペアと正解を使って、異なる照合手法を比べられる。\n型番や容量が違う負例、表記や一部属性が食い違う正例を含め、文字列の重なりだけでは決まらない照合を評価できる。",
+      "reason": "元データの価値と利用へ要約をそろえる",
+      "action": "dataset_focus_rewrite",
+      "new_page": 27
+    },
+    {
+      "old_page": 31,
+      "shape": 3,
+      "before": "[1] Mudgal et al. (2018). Deep Learning for Entity Matching: A Design Space Exploration. SIGMOD.\nhttps://doi.org/10.1145/3183713.3196926\n[2] Stanford CRFM. HELM Classic — Entity matching.\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/entity_matching",
+      "after": "[1] Mudgal et al. (2018). Deep Learning for Entity Matching: A Design Space Exploration. SIGMOD.\nhttps://doi.org/10.1145/3183713.3196926\n[2] DeepMatcher authors. Datasets for DeepMatcher paper.\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "reason": "元研究とデータ配布を出典へ",
+      "action": "dataset_focus_rewrite",
+      "new_page": 27
+    },
+    {
+      "old_page": 53,
+      "shape": 4,
+      "before": "[1] Stanford CRFM. HELM EntityMatchingScenario.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/entity_matching_scenario.py",
+      "after": "[1] DeepMatcher authors. Datasets for DeepMatcher paper.\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "reason": "実CSVコードの元配布へ直接到達できる出典へ",
+      "action": "dataset_focus_rewrite",
+      "new_page": 47
+    },
+    {
+      "old_page": 57,
+      "shape": 0,
+      "before": "深層学習の得意な照合条件を比較した研究",
+      "after": "文章や属性の乱れで、深層学習の強みを調べた",
+      "reason": "著者の分担でなく研究がデータで示した内容へ",
+      "action": "dataset_focus_rewrite",
+      "new_page": 49
+    },
+    {
+      "old_page": 57,
+      "shape": 1,
+      "before": "Sidharth MudgalとHan Liらは、Wisconsin–Madison、Johnson Controls、WalmartLabs、Facebookの研究者と2018年SIGMODで発表した。\nSIF、RNN、Attention、Hybridと、特徴量を設計するMagellanを23課題で比較。構造化データでは優位が限られ、文章やDirtyで改善を報告した。\nHELMは同じ公開候補ペアを言語モデルの生成課題へ変換する。2018年の教師ありF1と、2023年の少数例提示の正解率は異なる設定である。",
+      "after": "Mudgal、Liらは2018年、データの構造や属性の乱れが、照合手法の性能にどう関わるかを23課題で比較した。\nDeepMatcherの深層モデルは、属性の文章から特徴を学ぶ。比較したMagellanは、人が設計した特徴量を使う手法である。\n構造化データでは深層学習の優位が限られ、長い文章や、属性を別の欄へ移したDirtyデータでは改善が報告された。",
+      "reason": "元研究の目的・比較方法・発見にまとめる",
+      "action": "dataset_focus_rewrite",
+      "new_page": 49
+    },
+    {
+      "old_page": 59,
+      "shape": 2,
+      "before": "EntityMatchingScenario\nStanford CRFM. (n.d.). HELM v0.3.0. 2026-10-18参照。\n13種類のデータを読み、学習例の正負をそろえ、二つのレコードとYes/Noの正解を作る。\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/entity_matching_scenario.py",
+      "after": "DeepMatcher\nDeepMatcher authors (n.d.). 公式リポジトリ。2026-10-18参照。\n照合モデルの学習・評価コードと、公開データの一覧や利用例を提供する。\nhttps://github.com/anhaidgroup/deepmatcher",
+      "reason": "不要な基盤実装文献を外部化し、元の照合モデルの実装を文献へ",
+      "action": "dataset_focus_rewrite",
+      "new_page": 51
+    },
+    {
+      "old_page": 59,
+      "shape": 3,
+      "before": "HELM Classic — Entity matching\nStanford CRFM. (2023). v0.4.0. 2026-10-18参照。\n3対象の保存実行と、モデル別・試行別の正解率、入力、生成出力を公開する。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/entity_matching",
+      "after": "DeepMatcher LICENSE\nDeepMatcher authors (n.d.). BSD 3-Clause。2026-10-18参照。\n実装コードの再利用・再配布に必要な著作権表示などの条件を示す。\nhttps://github.com/anhaidgroup/deepmatcher/blob/master/LICENSE",
+      "reason": "不要な基盤成績文献を外部化し、元実装の権利を文献へ",
+      "action": "dataset_focus_rewrite",
+      "new_page": 51
+    },
+    {
+      "old_page": 21,
+      "shape": 0,
+      "before": "正解率と実行条件",
+      "after": "同じ実体を見つける精度を測る",
+      "reason": "原データと原評価・実利用へ章題をそろえる",
+      "action": "dataset_focus_rewrite",
+      "new_page": 20
+    },
+    {
+      "old_page": 21,
+      "shape": 1,
+      "before": "3. 正解率と実行条件",
+      "after": "3. 同じ実体を見つける精度を測る",
+      "reason": "原データと原評価・実利用へ章題をそろえる",
+      "action": "dataset_focus_rewrite",
+      "new_page": 20
+    },
+    {
+      "old_page": 22,
+      "shape": 2,
+      "before": "3. 正解率と実行条件",
+      "after": "3. 同じ実体を見つける精度を測る",
+      "reason": "原データと原評価・実利用へ章題をそろえる",
+      "action": "dataset_focus_rewrite",
+      "new_page": 21
+    },
+    {
+      "old_page": 23,
+      "shape": 1,
+      "before": "3. 正解率と実行条件",
+      "after": "3. 同じ実体を見つける精度を測る",
+      "reason": "原データと原評価・実利用へ章題をそろえる",
+      "action": "dataset_focus_rewrite",
+      "new_page": null
+    },
+    {
+      "old_page": 24,
+      "shape": 1,
+      "before": "3. 正解率と実行条件",
+      "after": "3. 同じ実体を見つける精度を測る",
+      "reason": "原データと原評価・実利用へ章題をそろえる",
+      "action": "dataset_focus_rewrite",
+      "new_page": null
+    },
+    {
+      "old_page": 25,
+      "shape": 1,
+      "before": "3. 正解率と実行条件",
+      "after": "3. 同じ実体を見つける精度を測る",
+      "reason": "原データと原評価・実利用へ章題をそろえる",
+      "action": "dataset_focus_rewrite",
+      "new_page": null
+    },
+    {
+      "old_page": 26,
+      "shape": 1,
+      "before": "3. 正解率と実行条件",
+      "after": "3. 同じ実体を見つける精度を測る",
+      "reason": "原データと原評価・実利用へ章題をそろえる",
+      "action": "dataset_focus_rewrite",
+      "new_page": 22
+    },
+    {
+      "old_page": 27,
+      "shape": 2,
+      "before": "3. 正解率と実行条件",
+      "after": "3. 同じ実体を見つける精度を測る",
+      "reason": "原データと原評価・実利用へ章題をそろえる",
+      "action": "dataset_focus_rewrite",
+      "new_page": 23
+    },
+    {
+      "old_page": 28,
+      "shape": 0,
+      "before": "入手方法と評価の使い方",
+      "after": "データの入手と使い方",
+      "reason": "原データと原評価・実利用へ章題をそろえる",
+      "action": "dataset_focus_rewrite",
+      "new_page": 24
+    },
+    {
+      "old_page": 28,
+      "shape": 1,
+      "before": "4. 入手方法と評価の使い方",
+      "after": "4. データの入手と使い方",
+      "reason": "原データと原評価・実利用へ章題をそろえる",
+      "action": "dataset_focus_rewrite",
+      "new_page": 24
+    },
+    {
+      "old_page": 29,
+      "shape": 2,
+      "before": "4. 入手方法と評価の使い方",
+      "after": "4. データの入手と使い方",
+      "reason": "原データと原評価・実利用へ章題をそろえる",
+      "action": "dataset_focus_rewrite",
+      "new_page": 25
+    },
+    {
+      "old_page": 30,
+      "shape": 2,
+      "before": "4. 入手方法と評価の使い方",
+      "after": "4. データの入手と使い方",
+      "reason": "原データと原評価・実利用へ章題をそろえる",
+      "action": "dataset_focus_rewrite",
+      "new_page": 26
+    },
+    {
+      "old_page": 31,
+      "shape": 2,
+      "before": "4. 入手方法と評価の使い方",
+      "after": "4. データの入手と使い方",
+      "reason": "原データと原評価・実利用へ章題をそろえる",
+      "action": "dataset_focus_rewrite",
+      "new_page": 27
+    },
+    {
+      "old_page": 33,
+      "shape": 1,
+      "before": "追加の実例\n収録データと評価の読み方\n研究と参考文献",
+      "after": "追加の実例\n収録データと読み込み方\n研究と参考文献",
+      "reason": "原データと原評価・実利用へ章題をそろえる",
+      "action": "dataset_focus_rewrite",
+      "new_page": 29
+    },
+    {
+      "old_page": 48,
+      "shape": 0,
+      "before": "収録データと評価の読み方",
+      "after": "収録データと読み込み方",
+      "reason": "原データと原評価・実利用へ章題をそろえる",
+      "action": "dataset_focus_rewrite",
+      "new_page": 44
+    },
+    {
+      "old_page": 48,
+      "shape": 1,
+      "before": "Appendix: 2. 収録データと評価の読み方",
+      "after": "Appendix: 2. 収録データと読み込み方",
+      "reason": "原データと原評価・実利用へ章題をそろえる",
+      "action": "dataset_focus_rewrite",
+      "new_page": 44
+    },
+    {
+      "old_page": 49,
+      "shape": 1,
+      "before": "Appendix: 2. 収録データと評価の読み方",
+      "after": "Appendix: 2. 収録データと読み込み方",
+      "reason": "原データと原評価・実利用へ章題をそろえる",
+      "action": "dataset_focus_rewrite",
+      "new_page": 45
+    },
+    {
+      "old_page": 50,
+      "shape": 1,
+      "before": "Appendix: 2. 収録データと評価の読み方",
+      "after": "Appendix: 2. 収録データと読み込み方",
+      "reason": "原データと原評価・実利用へ章題をそろえる",
+      "action": "dataset_focus_rewrite",
+      "new_page": 46
+    },
+    {
+      "old_page": 52,
+      "shape": 1,
+      "before": "Appendix: 2. 収録データと評価の読み方",
+      "after": "Appendix: 2. 収録データと読み込み方",
+      "reason": "原データと原評価・実利用へ章題をそろえる",
+      "action": "dataset_focus_rewrite",
+      "new_page": null
+    },
+    {
+      "old_page": 53,
+      "shape": 1,
+      "before": "Appendix: 2. 収録データと評価の読み方",
+      "after": "Appendix: 2. 収録データと読み込み方",
+      "reason": "原データと原評価・実利用へ章題をそろえる",
+      "action": "dataset_focus_rewrite",
+      "new_page": 47
+    },
+    {
+      "old_page": 18,
+      "shape": null,
+      "before": "学習プールだけ、正負を同数へそろえる\n学習ペアの正例と負例を同数にする。HELMは負例を正例数まで間引き、正例も同数抽出する。\n元のtrainから、Beerは80、Abt-Buyは1,232、Dirty iTunes-Amazonは156ペアになる。この中から提示例を選ぶ。\nvalidとtestの正負比は変更しない。同じ片側レコードが分割間で再登場するため、未知の実体だけで評価する分割ではない。\n2. 三種類のデータと候補ペア\n[1] Stanford CRFM. HELM EntityMatchingScenario.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/entity_matching_scenario.py",
+      "after": null,
+      "reason": "基盤固有の正負サンプリング・特定モデル/試行成績・実出力行列を外部記録へ。原配布ペア・原研究F1・指標の意味は保持。",
+      "action": "move_to_external_platform_record",
+      "new_page": null
+    },
+    {
+      "old_page": 23,
+      "shape": null,
+      "before": "HELM Classicでのテスト正解率\n3. 同じ実体を見つける精度を測る\n2023年の公開結果。OPT-175Bとtext-davinci-003は3試行の平均、Llama 2は1試行。各試行のテストはBeer 91、Abt-Buy 493、Dirty音楽109ペア。\n[1] Stanford CRFM. HELM Classic — Entity matching.\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/entity_matching",
+      "after": null,
+      "reason": "基盤固有の正負サンプリング・特定モデル/試行成績・実出力行列を外部記録へ。原配布ペア・原研究F1・指標の意味は保持。",
+      "action": "move_to_external_platform_record",
+      "new_page": null
+    },
+    {
+      "old_page": 24,
+      "shape": null,
+      "before": "常にNoと答えた場合との比較\n3. 同じ実体を見つける精度を測る\n正例が少ない集合では、常にNoと答えても正解率が高くなる。\n[1] Stanford CRFM. HELM Classic — Entity matching.\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/entity_matching",
+      "after": null,
+      "reason": "基盤固有の正負サンプリング・特定モデル/試行成績・実出力行列を外部記録へ。原配布ペア・原研究F1・指標の意味は保持。",
+      "action": "move_to_external_platform_record",
+      "new_page": null
+    },
+    {
+      "old_page": 25,
+      "shape": null,
+      "before": "OPTは提示例の試行ごとに挙動が変わる\n3. 同じ実体を見つける精度を測る\n試行1は3対象とも全ペアへYesと回答。温度は0だが、提示する学習例が試行間で異なる。\n[1] Stanford CRFM. HELM Classic — Entity matching.\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/entity_matching",
+      "after": null,
+      "reason": "基盤固有の正負サンプリング・特定モデル/試行成績・実出力行列を外部記録へ。原配布ペア・原研究F1・指標の意味は保持。",
+      "action": "move_to_external_platform_record",
+      "new_page": null
+    },
+    {
+      "old_page": 52,
+      "shape": null,
+      "before": "正解と見逃しの内訳を、Beerで見る\nAppendix: 2. 収録データと読み込み方\n正解84 / 91 = 92.31%。正例の再現率は11 / 14。正解率だけではこの内訳は表れない。\n[1] Stanford CRFM. HELM Classic — Entity matching.\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/entity_matching",
+      "after": null,
+      "reason": "基盤固有の正負サンプリング・特定モデル/試行成績・実出力行列を外部記録へ。原配布ペア・原研究F1・指標の意味は保持。",
+      "action": "move_to_external_platform_record",
+      "new_page": null
+    },
+    {
+      "old_page": 50,
+      "new_page": 45,
+      "shape": 6,
+      "before": "native top344.88pt height15.84pt",
+      "after": "top340.88pt height23.84pt; margins top/bottom each+4pt",
+      "reason": "実字形が枠上へ2.88pt出たため、文字と実効本文位置を保って枠を拡張",
+      "action": "native_frame_expansion"
+    },
+    {
+      "old_page": 50,
+      "new_page": 45,
+      "shape": 4,
+      "before": "table top 118.8pt",
+      "after": "table top 105.84pt",
+      "reason": "表下罫線と説明文へ12pt以上の余白を確保。内容・値・説明位置は保持。",
+      "action": "table_move_up"
+    },
+    {
+      "old_page": 39,
+      "new_page": 35,
+      "shape": 0,
+      "before": "実例8：対応プリンターが同じインク",
+      "after": "実例8：対応機種が一部共通するインク",
+      "reason": "対応プリンターは一部共通だが、Bだけにip1600もある。意味を精密化。",
+      "action": "title_precision"
+    }
+  ]
+}

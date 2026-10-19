@@ -1,0 +1,45 @@
+{
+  "slug": "entity-matching",
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "status": "confirmed",
+  "creator": "DeepMatcherのデータ公開者（Mudgal, Liら）。Beer/iTunesはUW–Madison授業の収集・注釈、Abt-Buyなどは既存公開正解を利用。",
+  "primary": [
+    {
+      "url": "https://doi.org/10.1145/3183713.3196926",
+      "section": "2018 SIGMOD論文のdatasets/実験",
+      "evidence": "23課題で教師ありEntity Matchingを比較。"
+    },
+    {
+      "url": "https://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md",
+      "section": "dataset creation / data types",
+      "evidence": "Beer/iTunesの収集・ブロッキング・注釈、既存集合の正解対応、構造化/文章/Dirtyと13配布を説明。"
+    },
+    {
+      "url": "https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/entity_matching_scenario.py",
+      "section": "read_tables / read_blocked_pairs / serialize_row",
+      "evidence": "DeepMatcherの既存CSVを読み正負学習例を揃え、属性を文章へ変換。"
+    }
+  ],
+  "helm_relation": "HELMがDeepMatcher既存データを採用し、候補ペアをYes/No生成として評価。元の候補ペアの作成主体とは別である。",
+  "slides": [
+    5,
+    15,
+    16,
+    22,
+    25,
+    26,
+    27,
+    49,
+    50,
+    51
+  ],
+  "conclusion": "元のDeepMatcher研究・公開データを中心に再構成し、採用先の説明・設定・モデル成績を本文から外部化した。13実例の属性文章化は既存表示を保持。",
+  "year": 2018,
+  "year_scope": "DeepMatcher研究・評価用データの公表年。Beer等の元表が初公開された年とは同一視しない。",
+  "catalog_title": "エンティティ照合（DeepMatcherデータ）",
+  "final_hashes": {
+    "datasets-in-10-minutes-entity-matching.pptx": "64a223d376099b6fc4c717ebd1d4e32fb6e06b1ce708e95d4177ca9b393d18ae",
+    "datasets-in-10-minutes-entity-matching.pdf": "fff63a243345d870aaa1f9b08461c373cc59b536dcc6fee0337977f11655fe9a"
+  }
+}

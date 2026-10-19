@@ -1,0 +1,251 @@
+{
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "source_datasets": {
+    "Beer": {
+      "tableA": 4345,
+      "tableB": 3000,
+      "attributes": 4,
+      "splits": {
+        "train": [
+          268,
+          40
+        ],
+        "valid": [
+          91,
+          14
+        ],
+        "test": [
+          91,
+          14
+        ]
+      },
+      "missingA": {
+        "Beer_Name": 0,
+        "Brew_Factory_Name": 0,
+        "Style": 0,
+        "ABV": 0
+      },
+      "missingB": {
+        "Beer_Name": 0,
+        "Brew_Factory_Name": 0,
+        "Style": 0,
+        "ABV": 0
+      }
+    },
+    "Abt_Buy": {
+      "tableA": 1081,
+      "tableB": 1092,
+      "attributes": 3,
+      "splits": {
+        "train": [
+          5743,
+          616
+        ],
+        "valid": [
+          1916,
+          206
+        ],
+        "test": [
+          1916,
+          206
+        ]
+      },
+      "missingA": {
+        "name": 0,
+        "description": 0,
+        "price": 663
+      },
+      "missingB": {
+        "name": 0,
+        "description": 441,
+        "price": 502
+      }
+    },
+    "Dirty_iTunes_Amazon": {
+      "tableA": 6907,
+      "tableB": 55923,
+      "attributes": 8,
+      "splits": {
+        "train": [
+          321,
+          78
+        ],
+        "valid": [
+          109,
+          27
+        ],
+        "test": [
+          109,
+          27
+        ]
+      },
+      "missingA": {
+        "Song_Name": 0,
+        "Artist_Name": 3486,
+        "Album_Name": 3469,
+        "Genre": 3462,
+        "Price": 3451,
+        "CopyRight": 3407,
+        "Time": 3452,
+        "Released": 3690
+      },
+      "missingB": {
+        "Song_Name": 0,
+        "Artist_Name": 27950,
+        "Album_Name": 28064,
+        "Genre": 27864,
+        "Price": 28006,
+        "CopyRight": 27922,
+        "Time": 27948,
+        "Released": 31455
+      }
+    }
+  },
+  "raw13_examples": [
+    {
+      "index": 1,
+      "dataset": "Beer",
+      "pair_row": 29,
+      "source_A": 563,
+      "source_B": 1177,
+      "raw_label": 1,
+      "full_EN_JP_and_YesNo": true
+    },
+    {
+      "index": 2,
+      "dataset": "Abt_Buy",
+      "pair_row": 1849,
+      "source_A": 658,
+      "source_B": 669,
+      "raw_label": 0,
+      "full_EN_JP_and_YesNo": true
+    },
+    {
+      "index": 3,
+      "dataset": "Dirty_iTunes_Amazon",
+      "pair_row": 43,
+      "source_A": 1413,
+      "source_B": 51590,
+      "raw_label": 1,
+      "full_EN_JP_and_YesNo": true
+    },
+    {
+      "index": 4,
+      "dataset": "Beer",
+      "pair_row": 57,
+      "source_A": 2494,
+      "source_B": 2565,
+      "raw_label": 0,
+      "full_EN_JP_and_YesNo": true
+    },
+    {
+      "index": 5,
+      "dataset": "Beer",
+      "pair_row": 88,
+      "source_A": 4161,
+      "source_B": 2409,
+      "raw_label": 1,
+      "full_EN_JP_and_YesNo": true
+    },
+    {
+      "index": 6,
+      "dataset": "Beer",
+      "pair_row": 53,
+      "source_A": 76,
+      "source_B": 2831,
+      "raw_label": 0,
+      "full_EN_JP_and_YesNo": true
+    },
+    {
+      "index": 7,
+      "dataset": "Abt_Buy",
+      "pair_row": 750,
+      "source_A": 797,
+      "source_B": 259,
+      "raw_label": 1,
+      "full_EN_JP_and_YesNo": true
+    },
+    {
+      "index": 8,
+      "dataset": "Abt_Buy",
+      "pair_row": 1785,
+      "source_A": 110,
+      "source_B": 84,
+      "raw_label": 0,
+      "full_EN_JP_and_YesNo": true
+    },
+    {
+      "index": 9,
+      "dataset": "Abt_Buy",
+      "pair_row": 1249,
+      "source_A": 18,
+      "source_B": 211,
+      "raw_label": 1,
+      "full_EN_JP_and_YesNo": true
+    },
+    {
+      "index": 10,
+      "dataset": "Abt_Buy",
+      "pair_row": 516,
+      "source_A": 421,
+      "source_B": 275,
+      "raw_label": 0,
+      "full_EN_JP_and_YesNo": true
+    },
+    {
+      "index": 11,
+      "dataset": "Dirty_iTunes_Amazon",
+      "pair_row": 95,
+      "source_A": 6621,
+      "source_B": 784,
+      "raw_label": 0,
+      "full_EN_JP_and_YesNo": true
+    },
+    {
+      "index": 12,
+      "dataset": "Dirty_iTunes_Amazon",
+      "pair_row": 32,
+      "source_A": 1410,
+      "source_B": 51576,
+      "raw_label": 0,
+      "full_EN_JP_and_YesNo": true
+    },
+    {
+      "index": 13,
+      "dataset": "Dirty_iTunes_Amazon",
+      "pair_row": 76,
+      "source_A": 4547,
+      "source_B": 26140,
+      "raw_label": 1,
+      "full_EN_JP_and_YesNo": true
+    }
+  ],
+  "original_quote_answer_shapes_exact": 43,
+  "answer21boldB13731_pages": [
+    7,
+    9,
+    11,
+    12,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43
+  ],
+  "all5_native_tables_checked": true,
+  "public13_numeric_rows_match_official_list": true,
+  "original_paper6_F1_values_match": true,
+  "practical_code_executed": true,
+  "notes": 0,
+  "all51_PNG_independent_exact": true,
+  "source_paths_read_only": true
+}
