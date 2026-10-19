@@ -1,0 +1,626 @@
+[
+  {
+    "page": 1,
+    "text": [
+      "cMedQA2",
+      "Chinese Medical Question Answer Selection\n医療相談の質問に対応する回答を選ぶ",
+      "sasakiy84",
+      "datasets in 10 minutes (2026-10-18)"
+    ]
+  },
+  {
+    "page": 2,
+    "text": [
+      "cMedQA2の公式公開リポジトリ",
+      "cMedQA2",
+      "[1] Zhang et al. cMedQA2 official data repository. commit 85feb927.  https://github.com/zhangsheng93/cMedQA2"
+    ]
+  },
+  {
+    "page": 3,
+    "text": [
+      "",
+      "質問と候補回答を読む\n配布ファイルと評価集合\n回答選択と後続評価\n利用条件と再現範囲",
+      "目次"
+    ]
+  },
+  {
+    "page": 4,
+    "text": [
+      "質問に対応する回答を、候補から選ぶ",
+      "1. 質問と候補回答を読む"
+    ]
+  },
+  {
+    "page": 5,
+    "text": [
+      "cMedQA2は、医療相談の回答選択データ",
+      "中国語の医療相談を扱うcMedQA v2.0。質問と複数の候補回答を読み、元の質問に対応する回答を選ぶためのデータである。\n2018年の研究は、医療質問と回答の意味的な相互作用を学習するモデルを提案した。医学試験の選択肢問題を集めたMedQAとは別のデータセット。\nここでは公式配布の質問・回答・候補関係を検証する。対応する回答というラベルは、回答内容の医学的な正確さや安全性を別途審査した結果ではない。",
+      "1. 質問と候補回答を読む",
+      "[1] Zhang et al. (2018). Multi-Scale Attentive Interaction Networks for Chinese Medical Question Answer Selection. Public abstract / DOAJ.\nhttps://doaj.org/article/653d2813e83142db84670b2bb19a9b00\n[2] Zhang et al. cMedQA2 official data repository. commit 85feb927.  https://github.com/zhangsheng93/cMedQA2"
+    ]
+  },
+  {
+    "page": 6,
+    "text": [
+      "質問IDと回答IDを、候補ファイルで結ぶ",
+      "1. 質問と候補回答を読む",
+      "質問",
+      "question_id\ncontent",
+      "回答",
+      "ans_id\nquestion_id / content",
+      "候補",
+      "質問ID＋回答ID\n正負または比較組",
+      "dev/testでは、回答のquestion_idが評価中の質問IDと一致するとlabel=1。別の質問への回答はlabel=0。この対応を全80万候補で確認した。",
+      "[1] Zhang et al. cMedQA2 official question/answer/candidate files. commit 85feb927.\nhttps://github.com/zhangsheng93/cMedQA2/tree/85feb9278c3ae552c591205cbf3e828368c91f8f"
+    ]
+  },
+  {
+    "page": 7,
+    "text": [
+      "実例1：超音波検査についての公開説明例",
+      "1. 質問と候補回答を読む",
+      "train / question_id=24731702 / ans_id=11064",
+      "中国語原文（全文）",
+      "質問：不是说做b超对宝宝不好吗？那怀孕检查是不？不是说做b超对宝宝不好吗？那怀孕检查是不是越少越好。无麻烦解答，谢谢。\n候補回答：B超属于超声波经常检查是不好的而且也没有必要经常检查的一般怀孕两个月检查一下怀孕五个月检查一下快出生时在检查就可以还有就是不舒服检查就可以的",
+      "日本語訳（全文）",
+      "質問：超音波検査は赤ちゃんによくないという話ではないのですか？ それなら妊娠中の検査は、ということですか？ 超音波検査は赤ちゃんによくないという話ではないのですか？ それなら妊娠中の検査は少ないほどよいのですか。お手数ですが、ご回答をお願いします。\n候補回答：超音波検査は超音波を使います。頻繁に検査するのはよくなく、その必要もありません。一般に妊娠2か月のときに1回、5か月のときに1回、出産間近にもう1回検査すればよく、あとは具合が悪いときに検査すればよいです。",
+      "配布ラベル：対応する回答（1）",
+      "[1] Zhang et al. cMedQA2 official question/answer/candidate files. commit 85feb927. Candidate row 0 (0-based).\nhttps://github.com/zhangsheng93/cMedQA2/tree/85feb9278c3ae552c591205cbf3e828368c91f8f"
+    ]
+  },
+  {
+    "page": 8,
+    "text": [
+      "同じ公開例でも、課題の聞き方が変わる",
+      "実例1は、HELM v0.4.0の医療subtaskの公開説明例と同じ質問・回答である。公式train候補の最初の組に含まれる。\nHELMの説明例は「医師は患者の質問に正しく答えたか」と尋ね、A＝否、B＝是、Target Bを示す。自由に診療回答を書く形式ではない。\n元データから確かめられるのは、回答ID11064が質問ID24731702に属すること。公開説明の言い回しを、独立した医学的妥当性の検証と読み替えない。",
+      "1. 質問と候補回答を読む",
+      "[1] Zhang et al. cMedQA2 official question/answer/candidate files. commit 85feb927.\nhttps://github.com/zhangsheng93/cMedQA2/tree/85feb9278c3ae552c591205cbf3e828368c91f8f\n[2] Stanford CRFM. CLEVAClosedBookQuestionAnsweringScenario / Converter. HELM v0.4.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py"
+    ]
+  },
+  {
+    "page": 9,
+    "text": [
+      "実例2：風邪と予防接種の質問",
+      "1. 質問と候補回答を読む",
+      "test / question_id=4002896 / ans_id=148636",
+      "中国語原文（全文）",
+      "質問：儿童感冒能否打预防针，（咳嗽，流鼻涕）\n候補回答：朋友，这种情况最好是不要打，等感冒好后再注射",
+      "日本語訳（全文）",
+      "質問：子どもは風邪のときに予防接種を受けられますか。（咳、鼻水）\n候補回答：ご相談者さん、この場合は受けないほうがよく、風邪が治ってから接種してください。",
+      "配布ラベル：対応する回答（1）",
+      "[1] Zhang et al. cMedQA2 official question/answer/candidate files. commit 85feb927. Candidate row 40800 (0-based).\nhttps://github.com/zhangsheng93/cMedQA2/tree/85feb9278c3ae552c591205cbf3e828368c91f8f"
+    ]
+  },
+  {
+    "page": 10,
+    "text": [
+      "正例は、元の質問に付いた回答",
+      "実例2では、風邪の子どもの予防接種に関する質問と、その質問IDに属する回答が組になっている。配布ラベルは1。\nここで表示するのは質問全文と選んだ回答1件の全文。testでは同じ質問に100候補があり、この1件だけで評価入力全体を示したわけではない。\n翻訳は原文の助言をそのまま伝える。回答を改善したり、現在の診療上の推奨へ書き換えたりしない。",
+      "1. 質問と候補回答を読む",
+      "[1] Zhang et al. cMedQA2 official question/answer/candidate files. commit 85feb927.\nhttps://github.com/zhangsheng93/cMedQA2/tree/85feb9278c3ae552c591205cbf3e828368c91f8f"
+    ]
+  },
+  {
+    "page": 11,
+    "text": [
+      "実例3：同じ咳の話題でも、別の質問への回答",
+      "1. 質問と候補回答を読む",
+      "dev / question_id=33850817 / ans_id=125372",
+      "中国語原文（全文）",
+      "質問：用生姜红糖水可以治疗咳嗽吗？没有经过检问能否喝红糖姜水\n候補回答：对于气管炎和咽喉炎引起咳嗽，最好先就医做一个肺部常规检查，确定具体的情况，再就医使用药物进行治理",
+      "日本語訳（全文）",
+      "質問：ショウガ入り黒砂糖湯で咳を治せますか？ 検査は受けていませんが、黒砂糖入りショウガ湯を飲んでもよいですか。\n候補回答：気管支炎や咽喉炎による咳については、まず受診して肺の一般的な検査をし、具体的な状態を確かめてから、医療機関で薬による治療を受けるのがよいです。",
+      "配布ラベル：別の質問への回答（0）",
+      "[1] Zhang et al. cMedQA2 official question/answer/candidate files. commit 85feb927. Candidate row 16854 (0-based).\nhttps://github.com/zhangsheng93/cMedQA2/tree/85feb9278c3ae552c591205cbf3e828368c91f8f"
+    ]
+  },
+  {
+    "page": 12,
+    "text": [
+      "話題が近くても、元の対応は異なる",
+      "実例3の質問と候補は、いずれも咳を扱う。しかし候補回答の所有する質問IDは36883628で、表示した質問33850817とは異なる。\nそのため配布はlabel=0。医学用語の一致だけで正例と決められない一方、この負例が医学的に誤った助言だとまでは結論できない。\n元質問との対応を学ぶ課題と、回答の有用性・医学的な正確さ・患者への適切さを判定する課題を分ける。",
+      "1. 質問と候補回答を読む",
+      "[1] Zhang et al. cMedQA2 official question/answer/candidate files. commit 85feb927.\nhttps://github.com/zhangsheng93/cMedQA2/tree/85feb9278c3ae552c591205cbf3e828368c91f8f"
+    ]
+  },
+  {
+    "page": 13,
+    "text": [
+      "候補の作りと、配布範囲を読む",
+      "2. 配布ファイルと評価集合"
+    ]
+  },
+  {
+    "page": 14,
+    "text": [
+      "元データは、オンライン医療相談に由来",
+      "研究の公開要旨は、利用者が資格を持つ医師へ質問するオンライン医療コミュニティを背景に、Chinese medical question answer selectionを扱うと説明する。\n公式READMEはv2.0への更新・拡張と、匿名化済みで個人情報を含めないという配布者の説明を記す。個別回答を再診断したという説明ではない。\n今回、論文本文の配布先はHTTP418等で取得できなかった。本文の実験表や詳細な収集条件を、要旨やデータの見た目から推測して補わない。",
+      "2. 配布ファイルと評価集合",
+      "[1] Zhang et al. (2018). Multi-Scale Attentive Interaction Networks for Chinese Medical Question Answer Selection. Public abstract / DOAJ.\nhttps://doaj.org/article/653d2813e83142db84670b2bb19a9b00\n[2] Zhang et al. cMedQA2 official data repository. commit 85feb927.  https://github.com/zhangsheng93/cMedQA2"
+    ]
+  },
+  {
+    "page": 15,
+    "text": [
+      "候補に使われる108,000問と203,569回答",
+      "2. 配布ファイルと評価集合",
+      "区分 | 質問数 | 正例の回答ID数",
+      "train | 100,000 | 188,490",
+      "dev | 4,000 | 7,527",
+      "test | 4,000 | 7,552",
+      "合計 | 108,000 | 203,569",
+      "候補ファイルを全件結合した実数。公式READMEの表と一致する。",
+      "[1] Zhang et al. cMedQA2 official question/answer/candidate files. commit 85feb927.\nhttps://github.com/zhangsheng93/cMedQA2/tree/85feb9278c3ae552c591205cbf3e828368c91f8f"
+    ]
+  },
+  {
+    "page": 16,
+    "text": [
+      "質問・回答の生ファイルは、より広いプール",
+      "2. 配布ファイルと評価集合",
+      "範囲 | 質問行 | 回答行",
+      "生ファイル全体 | 120,000 | 226,266",
+      "候補の正例に使用 | 108,000 | 203,569",
+      "上の正例範囲に未使用 | 12,000 | 22,697",
+      "未使用は「候補に一切出ない」という意味ではない。負例は、より広い回答プールを参照する。",
+      "[1] Zhang et al. cMedQA2 official question/answer/candidate files. commit 85feb927.\nhttps://github.com/zhangsheng93/cMedQA2/tree/85feb9278c3ae552c591205cbf3e828368c91f8f"
+    ]
+  },
+  {
+    "page": 17,
+    "text": [
+      "学習は50組、dev/testは100候補",
+      "2. 配布ファイルと評価集合",
+      "区分 | 1行の内容 | 総行数",
+      "train | 質問・正例回答・負例回答 | 5,000,000",
+      "dev | 質問・候補回答・cnt・label | 400,000",
+      "test | 質問・候補回答・cnt・label | 400,000",
+      "全質問でtrainは50行、dev/testは100行。学習の50行を「50候補」と同一視しない。",
+      "[1] Zhang et al. cMedQA2 official question/answer/candidate files. commit 85feb927.\nhttps://github.com/zhangsheng93/cMedQA2/tree/85feb9278c3ae552c591205cbf3e828368c91f8f"
+    ]
+  },
+  {
+    "page": 18,
+    "text": [
+      "正例は複数あり、負例の出所も共有する",
+      "testの1問あたり正例回答は1〜41件、devは1〜19件。単一正解の4択・5択試験とは違い、100候補の中に複数の正例があり得る。\n学習の正例IDは188,490件だが、学習質問に属する生回答は188,783件。293件は学習の正例候補に現れない。生成手順や欠落理由は未確認。\n負例は同じ質問以外の回答。学習の負例IDの集合は全226,266回答に達し、dev/testの質問に属する回答も含む。正例の質問分割と回答プールの分離を混同しない。",
+      "2. 配布ファイルと評価集合",
+      "[1] Zhang et al. cMedQA2 official question/answer/candidate files. commit 85feb927.\nhttps://github.com/zhangsheng93/cMedQA2/tree/85feb9278c3ae552c591205cbf3e828368c91f8f"
+    ]
+  },
+  {
+    "page": 19,
+    "text": [
+      "testの約59％は、正例が1件",
+      "2. 配布ファイルと評価集合",
+      "100候補中の正例数で4,000問を集計。複数の正例がある質問は1,650問。",
+      "[1] Zhang et al. cMedQA2 official question/answer/candidate files. commit 85feb927.\nhttps://github.com/zhangsheng93/cMedQA2/tree/85feb9278c3ae552c591205cbf3e828368c91f8f"
+    ]
+  },
+  {
+    "page": 20,
+    "text": [
+      "質問IDの分割と、同文の重複は別",
+      "2. 配布ファイルと評価集合",
+      "区分の組 | 共通質問ID | 共通質問文",
+      "train–dev | 0 | 35",
+      "train–test | 0 | 46",
+      "dev–test | 0 | 1",
+      "contentの完全一致による文字列集合の共通数。異なるIDの同文があるが、経緯や原因は未確認。",
+      "[1] Zhang et al. cMedQA2 official question/answer/candidate files. commit 85feb927.\nhttps://github.com/zhangsheng93/cMedQA2/tree/85feb9278c3ae552c591205cbf3e828368c91f8f"
+    ]
+  },
+  {
+    "page": 21,
+    "text": [
+      "回答の選択と、候補の分類を分ける",
+      "3. 回答選択と後続評価"
+    ]
+  },
+  {
+    "page": 22,
+    "text": [
+      "比較する指標は、選択の単位に合わせる",
+      "回答選択では、質問ごとに候補へスコアを付け、対応する回答を上位に置く。候補1件ごとの正負分類と、質問ごとの順位付けは評価単位が異なる。\nたとえば最上位が正例かを見る指標は、100候補を並べた結果を質問単位で数える。候補全体の正答率だけでは、よい回答を選べたか分からない。\nここでの指標説明は課題の違いを示すもの。未取得の2018年本文の正式な実験設定や値を再現したという主張ではない。",
+      "3. 回答選択と後続評価",
+      "[1] Zhang et al. cMedQA2 official question/answer/candidate files. commit 85feb927.\nhttps://github.com/zhangsheng93/cMedQA2/tree/85feb9278c3ae552c591205cbf3e828368c91f8f\n[2] Zhang et al. (2018). Multi-Scale Attentive Interaction Networks for Chinese Medical Question Answer Selection. Public abstract / DOAJ.\nhttps://doaj.org/article/653d2813e83142db84670b2bb19a9b00"
+    ]
+  },
+  {
+    "page": 23,
+    "text": [
+      "すべて負例でも、候補単位では98.112％",
+      "3. 回答選択と後続評価",
+      "testの候補 | 件数 | 割合",
+      "対応する回答 label=1 | 7,552 | 1.888％",
+      "別の質問への回答 label=0 | 392,448 | 98.112％",
+      "全候補 | 400,000 | 100％",
+      "全候補を0とした正答率を算術的に示す。公開モデルの得点ではなく、正例回答を選べたことも意味しない。",
+      "[1] Zhang et al. cMedQA2 official question/answer/candidate files. commit 85feb927.\nhttps://github.com/zhangsheng93/cMedQA2/tree/85feb9278c3ae552c591205cbf3e828368c91f8f"
+    ]
+  },
+  {
+    "page": 24,
+    "text": [
+      "2018年のモデルは、質問と回答の相互作用を扱う",
+      "公開要旨は、複数の粒度で医療文の意味を抽出する深い多尺度ネットワークを説明する。\nshortcut connectionsでネットワークの劣化を抑え、attentive interactionで質問と回答の関連を捉える構成である。\n要旨は既存モデルを上回ると述べるが、今回、実験表を取得して数値を確かめていない。具体的な成績、学習率、試行数を補っていない。",
+      "3. 回答選択と後続評価",
+      "[1] Zhang et al. (2018). Multi-Scale Attentive Interaction Networks for Chinese Medical Question Answer Selection. Public abstract / DOAJ.\nhttps://doaj.org/article/653d2813e83142db84670b2bb19a9b00"
+    ]
+  },
+  {
+    "page": 25,
+    "text": [
+      "元データ・論文の総称・公開実装を分ける",
+      "3. 回答選択と後続評価",
+      "対象 | 確認できた形式",
+      "元cMedQA2 | 質問に対応する候補回答の選択",
+      "CLEVA論文のClosed-Book QA節 | 総称として質問への回答とexact matchを説明",
+      "HELM v0.4.0の医療説明例 | 患者＋医師回答、A否/B是、Target B",
+      "総称の説明だけで医療subtaskを自由生成と断定しない。未取得の変換済み実集合は別の範囲。",
+      "[1] Li et al. (2023). CLEVA: Chinese Language Models EVAluation Platform. EMNLP System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/\n[2] Stanford CRFM. CLEVAClosedBookQuestionAnsweringScenario / Converter. HELM v0.4.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py"
+    ]
+  },
+  {
+    "page": 26,
+    "text": [
+      "設定6件と、公開実行0件は別の事実",
+      "固定したHELM v0.4.0設定には、closed_book_question_answering / medical_question_answeringのprompt_id 0〜5がある。\nClassic v0.4.0の公開run 8,526件では、この対象とCLEVAの公開実行は0件。設定があることを、結果や順位が公開されていることと同一視しない。\n変換済みtrain/test、全プロンプト、infer_paramsは通常TLSで取得できなかった。実提示例数、温度、出力数、切詰め、モデル別得点は確定していない。",
+      "3. 回答選択と後続評価",
+      "[1] Stanford CRFM. CLEVA v1 run configuration. HELM v0.4.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/presentation/run_specs_cleva_v1.conf\n[2] Stanford CRFM. HELM Classic v0.4.0, release 2023-11-17.  https://crfm.stanford.edu/helm/classic/v0.4.0/"
+    ]
+  },
+  {
+    "page": 27,
+    "text": [
+      "利用条件と、確認できた範囲",
+      "4. 利用条件と再現範囲"
+    ]
+  },
+  {
+    "page": 28,
+    "text": [
+      "非商用研究の条件と、配布文言を残す",
+      "READMEはnon-commercial researchとして利用可能と明記する。公開データだから無条件に利用・再配布できるという説明にはしない。\n同じリポジトリのLICENSEはGNU GPL v3。READMEのデータ利用条件とLICENSEの適用関係を、根拠なく「コードだけGPL」などと限定しない。\n質問・候補回答の原文を再利用する際は、配布元への帰属と非商用研究の条件を確認する。引用した中国語と日本語訳、説明を区別して扱う。",
+      "4. 利用条件と再現範囲",
+      "[1] Zhang et al. cMedQA2 official data repository. commit 85feb927.  https://github.com/zhangsheng93/cMedQA2\n[2] cMedQA2 README: non-commercial research; repository LICENSE: GPL-3.0.\nhttps://github.com/zhangsheng93/cMedQA2/blob/85feb9278c3ae552c591205cbf3e828368c91f8f/LICENSE"
+    ]
+  },
+  {
+    "page": 29,
+    "text": [
+      "原票は、IDと候補行を組にして参照する",
+      "固定commit、ZIPと展開ファイルのSHA-256、質問・回答IDと候補の行位置を併せ、原票と配布版を特定する。\n13例は正例6件・負例7件。全文の質問と選択した候補回答を原語と日本語で対応させ、候補ラベルは再判定せず保持する。\n公開実行0件と、変換済み集合の未取得という範囲を踏まえる。実データ集計とHELM説明例の出所を分け、原データと未取得のCLEVA集合を代用で接続しない。",
+      "4. 利用条件と再現範囲",
+      "[1] Zhang et al. cMedQA2 official question/answer/candidate files. commit 85feb927.\nhttps://github.com/zhangsheng93/cMedQA2/tree/85feb9278c3ae552c591205cbf3e828368c91f8f"
+    ]
+  },
+  {
+    "page": 30,
+    "text": [
+      "読むときに残したい3つの区別",
+      "cMedQA2は、医療相談の質問に対応する回答を選ぶデータ。医学試験のMedQAや、医学的妥当性の独立審査とは異なる。\n元の100候補の選択、HELM公開例のA/B二択、CLEVA論文のClosed-Book QAという総称は、主張の対象と版を分けて読む。\n公開データの大きさだけでなく、正例の複数性、広い負例プール、文字列の重複、利用条件を合わせて扱う。",
+      "4. 利用条件と再現範囲",
+      "[1] Zhang et al. cMedQA2 official data repository. commit 85feb927.  https://github.com/zhangsheng93/cMedQA2\n[2] Stanford CRFM. CLEVAClosedBookQuestionAnsweringScenario / Converter. HELM v0.4.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py"
+    ]
+  },
+  {
+    "page": 31,
+    "text": [
+      "Appendix",
+      "Appendix"
+    ]
+  },
+  {
+    "page": 32,
+    "text": [
+      "",
+      "追加の原例\n原位置と集計\n出典と参考文献",
+      "Appendix: 目次"
+    ]
+  },
+  {
+    "page": 33,
+    "text": [
+      "追加の原例",
+      "Appendix: 1. 追加の原例"
+    ]
+  },
+  {
+    "page": 34,
+    "text": [
+      "実例4：立ち上がるときのめまい",
+      "Appendix: 1. 追加の原例",
+      "test / question_id=52018550 / ans_id=41534",
+      "中国語原文（全文）",
+      "質問：有时站起来或者起床会觉得眼睛一片白，头晕，正常吗？\n候補回答：考虑是脑供血不足，低血压或贫血引起的，到医院检查明确一下，查明病因对症治疗，避免劳累情绪激动。",
+      "日本語訳（全文）",
+      "質問：立ち上がったり起床したりすると、目の前が真っ白になり、めまいがすることがあります。正常ですか？\n候補回答：脳への血流不足、低血圧、貧血が原因と考えられます。病院で検査して原因を明らかにし、症状に応じた治療を受け、疲労や感情の高ぶりを避けてください。",
+      "配布ラベル：対応する回答（1）",
+      "[1] Zhang et al. cMedQA2 official question/answer/candidate files. commit 85feb927. Candidate row 38500 (0-based).\nhttps://github.com/zhangsheng93/cMedQA2/tree/85feb9278c3ae552c591205cbf3e828368c91f8f"
+    ]
+  },
+  {
+    "page": 35,
+    "text": [
+      "実例5：片耳が突然聞こえない",
+      "Appendix: 1. 追加の原例",
+      "test / question_id=55320019 / ans_id=213726",
+      "中国語原文（全文）",
+      "質問：有一个耳朵突然听不见声音怎么回事就是听不到\n候補回答：要是没有什么咽喉炎症之类的疾病，而且长时间症状不缓解的话，最好到医院去检查一下，有病的话尽早治疗",
+      "日本語訳（全文）",
+      "質問：片方の耳が突然聞こえなくなりました。どういうことでしょうか。とにかく聞こえません。\n候補回答：咽喉の炎症などの病気がなく、症状が長い間よくならないなら、病院で検査を受けるのがよいです。病気があれば早く治療してください。",
+      "配布ラベル：対応する回答（1）",
+      "[1] Zhang et al. cMedQA2 official question/answer/candidate files. commit 85feb927. Candidate row 46701 (0-based).\nhttps://github.com/zhangsheng93/cMedQA2/tree/85feb9278c3ae552c591205cbf3e828368c91f8f"
+    ]
+  },
+  {
+    "page": 36,
+    "text": [
+      "実例6：全身のだるさとめまい",
+      "Appendix: 1. 追加の原例",
+      "test / question_id=9475392 / ans_id=52869",
+      "中国語原文（全文）",
+      "質問：经常全身无力，头晕眼花，蹲下容易眼花头晕，手心出虚汗是什么\n候補回答：首先检查血压和血常规看，另外和颈椎病，心肌缺血都有关系，总之需要结合临床症状检查看看",
+      "日本語訳（全文）",
+      "質問：いつも全身に力が入らず、めまいがします。しゃがむと目がくらみやすく、手のひらに冷や汗をかきます。何でしょうか。\n候補回答：まず血圧と血算を調べてください。頸椎の病気や心筋虚血とも関係します。いずれにせよ、臨床症状と合わせて検査する必要があります。",
+      "配布ラベル：対応する回答（1）",
+      "[1] Zhang et al. cMedQA2 official question/answer/candidate files. commit 85feb927. Candidate row 100500 (0-based).\nhttps://github.com/zhangsheng93/cMedQA2/tree/85feb9278c3ae552c591205cbf3e828368c91f8f"
+    ]
+  },
+  {
+    "page": 37,
+    "text": [
+      "実例7：咳と胸の不快感",
+      "Appendix: 1. 追加の原例",
+      "test / question_id=7708770 / ans_id=16361",
+      "中国語原文（全文）",
+      "質問：全部症状：咳嗽、胸部不适发病时间及原因：半月前治疗情况：好转\n候補回答：做个细菌培养检查看看，选择敏感抗生素输液治疗",
+      "日本語訳（全文）",
+      "質問：症状全体：咳、胸の不快感。発症時期と原因：半月前。治療状況：改善。\n候補回答：細菌培養検査を受け、感受性のある抗菌薬を選んで点滴治療をしてください。",
+      "配布ラベル：対応する回答（1）",
+      "[1] Zhang et al. cMedQA2 official question/answer/candidate files. commit 85feb927. Candidate row 32000 (0-based).\nhttps://github.com/zhangsheng93/cMedQA2/tree/85feb9278c3ae552c591205cbf3e828368c91f8f"
+    ]
+  },
+  {
+    "page": 38,
+    "text": [
+      "実例8：皮膚の話題が重なる負例",
+      "Appendix: 1. 追加の原例",
+      "dev / question_id=30009232 / ans_id=219054",
+      "中国語原文（全文）",
+      "質問：手背皮肤下长不痛不痒硬疙瘩\n候補回答：做好个人卫生，结合皮肤科医生，看下具体情况。",
+      "日本語訳（全文）",
+      "質問：手の甲の皮膚の下に、痛くもかゆくもない硬いしこりができました。\n候補回答：身の回りを清潔にし、皮膚科の医師と具体的な状態を確認してください。",
+      "配布ラベル：別の質問への回答（0）",
+      "[1] Zhang et al. cMedQA2 official question/answer/candidate files. commit 85feb927. Candidate row 55942 (0-based).\nhttps://github.com/zhangsheng93/cMedQA2/tree/85feb9278c3ae552c591205cbf3e828368c91f8f"
+    ]
+  },
+  {
+    "page": 39,
+    "text": [
+      "実例9：乳児の風邪と一般的な回答",
+      "Appendix: 1. 追加の原例",
+      "dev / question_id=52891402 / ans_id=25076",
+      "中国語原文（全文）",
+      "質問：五个月的宝宝感冒了吃什么药鼻塞，嗓子有痰\n候補回答：这个情况主要是因为感冒的原因导致的。积极进行治疗是可以好的。",
+      "日本語訳（全文）",
+      "質問：生後5か月の赤ちゃんが風邪をひきました。どんな薬を飲ませればよいですか。鼻詰まりがあり、喉に痰があります。\n候補回答：この状態は主に風邪によるものです。積極的に治療すればよくなります。",
+      "配布ラベル：別の質問への回答（0）",
+      "[1] Zhang et al. cMedQA2 official question/answer/candidate files. commit 85feb927. Candidate row 34676 (0-based).\nhttps://github.com/zhangsheng93/cMedQA2/tree/85feb9278c3ae552c591205cbf3e828368c91f8f"
+    ]
+  },
+  {
+    "page": 40,
+    "text": [
+      "実例10：歯の症状と口臭の回答",
+      "Appendix: 1. 追加の原例",
+      "dev / question_id=10571842 / ans_id=143632",
+      "中国語原文（全文）",
+      "質問：全部症状：牙齿酸软畏寒浑身无力发病时间及原因近来一周左右治疗情况\n候補回答：口臭的原因主要是由于胃肠功能减弱引起的，建议去医院口腔科检查，如果是由牙科病症引起的，消除疾病口臭症状自然会消失",
+      "日本語訳（全文）",
+      "質問：症状全体：歯がうずいて力が入らず、寒気がして全身に力が入りません。発症時期と原因：この1週間ほど。治療状況。\n候補回答：口臭は主に胃腸機能の低下によって起こります。病院の口腔科で検査を受け、歯科の病気が原因なら、その病気を治せば口臭も自然になくなります。",
+      "配布ラベル：別の質問への回答（0）",
+      "[1] Zhang et al. cMedQA2 official question/answer/candidate files. commit 85feb927. Candidate row 19928 (0-based).\nhttps://github.com/zhangsheng93/cMedQA2/tree/85feb9278c3ae552c591205cbf3e828368c91f8f"
+    ]
+  },
+  {
+    "page": 41,
+    "text": [
+      "実例11：頭痛の話題が重なる負例",
+      "Appendix: 1. 追加の原例",
+      "dev / question_id=33449817 / ans_id=155770",
+      "中国語原文（全文）",
+      "質問：感冒引起头痛牙痛恶心感冒引起头痛牙痛恶心做过脑磁共振，脑电图，ct都正常\n候補回答：上述症状头痛呕吐首先考虑是由于脑膜炎引起的症状，不要大意，需要到当地医院做脑电图检查",
+      "日本語訳（全文）",
+      "質問：風邪による頭痛、歯痛、吐き気。風邪による頭痛、歯痛、吐き気。脳のMRI、脳波、CTはいずれも正常でした。\n候補回答：上記の頭痛と嘔吐は、まず髄膜炎による症状を考えます。軽く見ず、地元の病院で脳波検査を受ける必要があります。",
+      "配布ラベル：別の質問への回答（0）",
+      "[1] Zhang et al. cMedQA2 official question/answer/candidate files. commit 85feb927. Candidate row 27734 (0-based).\nhttps://github.com/zhangsheng93/cMedQA2/tree/85feb9278c3ae552c591205cbf3e828368c91f8f"
+    ]
+  },
+  {
+    "page": 42,
+    "text": [
+      "実例12：血圧の記載があっても別の回答",
+      "Appendix: 1. 追加の原例",
+      "dev / question_id=8858166 / ans_id=63133",
+      "中国語原文（全文）",
+      "質問：肾衰2年，一直透析，服用降压药，血压平时在80/120左右，暂时无不适症状。\n候補回答：及时的检查脑部的CT看看排除一下脑血管疾病的情况，另外和高血压，颈椎病。都有关系",
+      "日本語訳（全文）",
+      "質問：腎不全で2年間、ずっと透析を受けています。降圧薬を服用し、普段の血圧は80/120前後で、今のところ不調はありません。\n候補回答：早めに脳のCT検査を受け、脳血管疾患を除外してください。高血圧や頸椎の病気とも関係します。",
+      "配布ラベル：別の質問への回答（0）",
+      "[1] Zhang et al. cMedQA2 official question/answer/candidate files. commit 85feb927. Candidate row 40493 (0-based).\nhttps://github.com/zhangsheng93/cMedQA2/tree/85feb9278c3ae552c591205cbf3e828368c91f8f"
+    ]
+  },
+  {
+    "page": 43,
+    "text": [
+      "実例13：回答欄にも症状説明が入る",
+      "Appendix: 1. 追加の原例",
+      "dev / question_id=7579538 / ans_id=52595",
+      "中国語原文（全文）",
+      "質問：查出说是贫血孩子老烧还有咳嗽\n候補回答：孩子的体质一直很是健壮，前几天感冒了，我也没有拿着当回事，孩子还出现了咳嗽的症状，我就是自己在家给他喂了药物",
+      "日本語訳（全文）",
+      "質問：貧血だと診断されました。子どもはよく熱を出し、咳もあります。\n候補回答：子どもはいつもはとても丈夫です。数日前に風邪をひきましたが、私は気に留めていませんでした。咳も出てきたので、家で自分で薬を飲ませました。",
+      "配布ラベル：別の質問への回答（0）",
+      "[1] Zhang et al. cMedQA2 official question/answer/candidate files. commit 85feb927. Candidate row 32480 (0-based).\nhttps://github.com/zhangsheng93/cMedQA2/tree/85feb9278c3ae552c591205cbf3e828368c91f8f"
+    ]
+  },
+  {
+    "page": 44,
+    "text": [
+      "原位置と集計",
+      "Appendix: 2. 原位置と集計"
+    ]
+  },
+  {
+    "page": 45,
+    "text": [
+      "13例の質問ID・回答ID・候補位置",
+      "Appendix: 2. 原位置と集計",
+      "例 | 区分 | 質問ID / 回答ID | 候補行",
+      "1 | train | 24731702 / 11064 | 0",
+      "2 | test | 4002896 / 148636 | 40800",
+      "3 | dev | 33850817 / 125372 | 16854",
+      "4 | test | 52018550 / 41534 | 38500",
+      "5 | test | 55320019 / 213726 | 46701",
+      "6 | test | 9475392 / 52869 | 100500",
+      "7 | test | 7708770 / 16361 | 32000",
+      "候補行はheaderを除く0起算。",
+      "[1] Zhang et al. cMedQA2 official question/answer/candidate files. commit 85feb927.\nhttps://github.com/zhangsheng93/cMedQA2/tree/85feb9278c3ae552c591205cbf3e828368c91f8f"
+    ]
+  },
+  {
+    "page": 46,
+    "text": [
+      "13例の質問ID・回答ID・候補位置",
+      "Appendix: 2. 原位置と集計",
+      "例 | 区分 | 質問ID / 回答ID | 候補行",
+      "8 | dev | 30009232 / 219054 | 55942",
+      "9 | dev | 52891402 / 25076 | 34676",
+      "10 | dev | 10571842 / 143632 | 19928",
+      "11 | dev | 33449817 / 155770 | 27734",
+      "12 | dev | 8858166 / 63133 | 40493",
+      "13 | dev | 7579538 / 52595 | 32480",
+      "候補行はheaderを除く0起算。",
+      "[1] Zhang et al. cMedQA2 official question/answer/candidate files. commit 85feb927.\nhttps://github.com/zhangsheng93/cMedQA2/tree/85feb9278c3ae552c591205cbf3e828368c91f8f"
+    ]
+  },
+  {
+    "page": 47,
+    "text": [
+      "全レコードを結合して確認した対応",
+      "Appendix: 2. 原位置と集計",
+      "検査対象 | 結果",
+      "質問ID・回答ID | 120,000 / 226,266件で一意",
+      "学習5,000,000組 | 正例は同じ質問、負例は別の質問",
+      "dev/test 800,000候補 | label=1と回答の所有質問ID一致が同値",
+      "dev/testのcnt | 各問で0〜99が順に揃う",
+      "cntは配布内の順番。予測スコアやモデルが付けた順位として扱わない。",
+      "[1] Zhang et al. cMedQA2 official question/answer/candidate files. commit 85feb927.\nhttps://github.com/zhangsheng93/cMedQA2/tree/85feb9278c3ae552c591205cbf3e828368c91f8f"
+    ]
+  },
+  {
+    "page": 48,
+    "text": [
+      "配布の順番を、そのまま予測順位にしない",
+      "dev/testは、各質問の正例候補が先頭に並び、その後に負例が続く。全80万行で、負例の後から正例が再び出る例はなかった。\ncntは0〜99の順であり、モデルのスコアではない。ファイル順をそのまま予測順位として、上位精度が高いと報告してはいけない。\n同じ質問内の回答ID重複はdevで89回、testで91回。100行という候補数と、異なる回答IDが100個あることも同じではない。",
+      "Appendix: 2. 原位置と集計",
+      "[1] Zhang et al. cMedQA2 official question/answer/candidate files. commit 85feb927.\nhttps://github.com/zhangsheng93/cMedQA2/tree/85feb9278c3ae552c591205cbf3e828368c91f8f"
+    ]
+  },
+  {
+    "page": 49,
+    "text": [
+      "平均文字数は、公式表と実測を分けて保存",
+      "Appendix: 2. 原位置と集計",
+      "区分 | 質問：実測 / 表 | 回答：実測 / 表",
+      "train | 47.94 / 48 | 100.74 / 101",
+      "dev | 48.46 / 49 | 100.48 / 101",
+      "test | 48.81 / 49 | 99.60 / 100",
+      "Python len(content)の平均とREADMEの整数表記。質問は区分の質問ID、回答は正例候補の一意IDで集計。",
+      "[1] Zhang et al. cMedQA2 official question/answer/candidate files. commit 85feb927.\nhttps://github.com/zhangsheng93/cMedQA2/tree/85feb9278c3ae552c591205cbf3e828368c91f8f"
+    ]
+  },
+  {
+    "page": 50,
+    "text": [
+      "学習に出ない正例IDと、未使用の質問",
+      "生回答のうち、学習質問に属する188,783件から、学習の正例候補に現れる188,490件を引くと293件。元データに存在しない回答ではない。\n生質問のうち12,000件はtrain/dev/testの質問IDに含まれない。この質問群に属する回答は22,404件で、負例プールに含まれる。\n候補の正例に未使用の22,697回答は、22,404＋293で一致する。READMEの108,000問・203,569回答を生ファイル全行数と呼ばない。",
+      "Appendix: 2. 原位置と集計",
+      "[1] Zhang et al. cMedQA2 official question/answer/candidate files. commit 85feb927.\nhttps://github.com/zhangsheng93/cMedQA2/tree/85feb9278c3ae552c591205cbf3e828368c91f8f"
+    ]
+  },
+  {
+    "page": 51,
+    "text": [
+      "結合と採点範囲を再現する",
+      "Appendix: 2. 原位置と集計",
+      "q = question[question_id]\na = answer[ans_id]\npaired = (a['question_id'] == question_id)\nassert paired == (label == 1)\n# dev / test: 100 candidate rows per question",
+      "これは公開候補の対応を検証するコード。医療助言の正確さを判定するコードではない。",
+      "[1] Zhang et al. cMedQA2 official question/answer/candidate files. commit 85feb927.\nhttps://github.com/zhangsheng93/cMedQA2/tree/85feb9278c3ae552c591205cbf3e828368c91f8f"
+    ]
+  },
+  {
+    "page": 52,
+    "text": [
+      "出典と参考文献",
+      "Appendix: 3. 出典と参考文献"
+    ]
+  },
+  {
+    "page": 53,
+    "text": [
+      "確認できた一次資料と、取得できなかった本文",
+      "公式リポジトリの固定版、全5 ZIP、READMEとLICENSE、HELMの固定コードと設定を取得した。\n2018年論文の正式題名・著者・掲載先・DOIはCrossrefとDOAJで照合し、公開要旨を読んだ。IEEEの本文配布URLはHTTP418、説明ページは空応答となった。\n本文が未取得のため、実験表・数値・詳細な前処理やデータ収集条件は未確認として残す。要旨のモデル説明とデータ実測を、本文の再現結果と混同しない。",
+      "Appendix: 3. 出典と参考文献",
+      "[1] Zhang et al. (2018). Multi-Scale Attentive Interaction Networks for Chinese Medical Question Answer Selection. IEEE Access 6, 74061–74071.\nhttps://doi.org/10.1109/ACCESS.2018.2883637\n[2] Zhang et al. (2018). Multi-Scale Attentive Interaction Networks for Chinese Medical Question Answer Selection. Public abstract / DOAJ.\nhttps://doaj.org/article/653d2813e83142db84670b2bb19a9b00"
+    ]
+  },
+  {
+    "page": 54,
+    "text": [
+      "参考文献",
+      "Appendix: 3. 出典と参考文献",
+      "Multi-Scale Attentive Interaction Networks for Chinese Medical Question Answer Selection",
+      "Sheng Zhang, Xin Zhang, Hui Wang, Lixiang Guo & Shanshan Liu · 2018 · IEEE Access 6:74061–74071",
+      "医療質問と回答の相互作用を捉える多尺度ネットワークと、拡張したcMedQA v2.0を扱う。",
+      "https://doi.org/10.1109/ACCESS.2018.2883637",
+      "cMedQA2: official repository and data",
+      "zhangsheng93/cMedQA2 · commit 85feb927 · README / 5 ZIP archives",
+      "質問、回答、学習比較組、dev/test候補と、非商用研究の条件を公開する。",
+      "https://github.com/zhangsheng93/cMedQA2"
+    ]
+  },
+  {
+    "page": 55,
+    "text": [
+      "参考文献",
+      "Appendix: 3. 出典と参考文献",
+      "CLEVA: Chinese Language Models EVAluation Platform",
+      "Li et al. · 2023 · EMNLP System Demonstrations",
+      "Closed-Book QAの採用元としてZhang et al. (2018)を挙げ、総称の課題と評価を説明する。",
+      "https://aclanthology.org/2023.emnlp-demo.17/",
+      "CLEVAClosedBookQuestionAnsweringScenario and Converter",
+      "Stanford CRFM · HELM v0.4.0",
+      "医療相談の二択公開例、候補と正解タグ、変換済み集合の読込方法を定義する。",
+      "https://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py"
+    ]
+  },
+  {
+    "page": 56,
+    "text": [
+      "参考文献",
+      "Appendix: 3. 出典と参考文献",
+      "CLEVA v1 run configuration",
+      "Stanford CRFM · HELM v0.4.0",
+      "medical_question_answeringのprompt_id 0〜5を含む設定。実行結果や全プロンプト本文は別の資料。",
+      "https://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/presentation/run_specs_cleva_v1.conf",
+      "HELM Classic v0.4.0 public run index",
+      "Stanford CRFM · release 2023-11-17",
+      "公開8,526 runの検索ではcMedQA2/CLEVAの対象実行は0件。",
+      "https://crfm.stanford.edu/helm/classic/v0.4.0/"
+    ]
+  }
+]

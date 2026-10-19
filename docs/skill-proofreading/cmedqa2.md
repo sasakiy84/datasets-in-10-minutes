@@ -16,3 +16,8 @@ Geminiは使用していない。Codexが日本語校正スキルをページご
 |29|実データの再集計、HELM説明例との対応、公開実行0、取得に失敗したURLを記録する。原データと未取得のCLEVA集合を代用で接続しない。|公開実行0件と、変換済み集合の未取得という範囲を踏まえる。実データ集計とHELM説明例の出所を分け、原データと未取得のCLEVA集合を代用で接続しない。|独立レビュー：制作・保存過程の説明を、読者の原票参照と再利用の説明へ置換。出所・条件・実行範囲を保持。|
 
 [全ページ文言](cmedqa2/pages.jsonl)・[自己検査・独立レビュー](cmedqa2/review.json)
+
+
+## 読者向けの説明・日本語の改訂（2026年10月）
+
+Geminiは使用せず、Codexがスキルで校正し、別担当が独立レビューした。削除・統合を含む[問題点と変更対](cmedqa2/editorial-2026-10/changes.md)、[旧ページとの対応](cmedqa2/editorial-2026-10/page-map.json)、[独立レビュー](cmedqa2/editorial-2026-10/independent-review/handoff.json)、[最終ページの全文](cmedqa2/pages.jsonl)。旧版の校正・検証記録は保持している。

@@ -1,0 +1,188 @@
+{
+  "formal_paper": {
+    "title": "Multi-Scale Attentive Interaction Networks for Chinese Medical Question Answer Selection",
+    "doi": "10.1109/ACCESS.2018.2883637",
+    "pages": "74061–74071",
+    "publication_date": "2018-11-27",
+    "archive_url": "https://web.archive.org/web/20240411233424id_/https://ieeexplore.ieee.org/ielx7/6287639/8274985/08548603.pdf",
+    "sha256": "e44d592321438fa7c8d61a9b22a585f520fb1e65989e33889979a151fe4c6019"
+  },
+  "model_acc1_percent": [
+    [
+      "biGRU",
+      68.9,
+      68.7
+    ],
+    [
+      "CNN",
+      67.6,
+      67.8
+    ],
+    [
+      "Multi-Scale CNNs",
+      70.0,
+      70.9
+    ],
+    [
+      "biGRU+CNN",
+      69.5,
+      70.0
+    ],
+    [
+      "CNN+biGRU",
+      67.9,
+      67.7
+    ],
+    [
+      "biGRU+biGRU",
+      68.4,
+      68.7
+    ],
+    [
+      "Multi-Level Composite CNNs",
+      70.4,
+      70.1
+    ],
+    [
+      "biGRU+2CNNs",
+      70.2,
+      70.3
+    ],
+    [
+      "biGRU+shortcuts+CNN",
+      70.8,
+      71.4
+    ],
+    [
+      "biGRU+shortcuts+biGRU",
+      70.7,
+      71.4
+    ],
+    [
+      "biGRU+CNN+interact",
+      70.1,
+      71.1
+    ],
+    [
+      "biGRU+2CNNs+interact",
+      71.7,
+      70.9
+    ],
+    [
+      "biGRU+shortcuts+CNN+interact",
+      70.9,
+      71.2
+    ],
+    [
+      "biGRU+shortcuts+2CNNs+interact",
+      72.1,
+      72.1
+    ],
+    [
+      "biGRU+shortcuts+3CNNs+interact",
+      72.3,
+      71.6
+    ]
+  ],
+  "ablation": {
+    "base": 72.1,
+    "rows": [
+      [
+        "shortcuts",
+        -0.7
+      ],
+      [
+        "CNN",
+        -0.9
+      ],
+      [
+        "interact",
+        -1.2
+      ],
+      [
+        "shortcuts + CNN",
+        -1.0
+      ],
+      [
+        "shortcuts + interact",
+        -1.8
+      ],
+      [
+        "shortcuts + CNN + interact",
+        -2.1
+      ],
+      [
+        "shortcuts + 2CNNs + interact",
+        -3.4
+      ]
+    ]
+  },
+  "embedding_comparison": [
+    [
+      "Word",
+      "Multi-Scale CNNs",
+      54.1,
+      55.4,
+      67.1,
+      68.6
+    ],
+    [
+      "Word",
+      "Multi-Level Composite CNNs",
+      56.3,
+      58.3,
+      67.4,
+      67.4
+    ],
+    [
+      "Word",
+      "Multi-Scale Attentive Interaction Networks",
+      null,
+      null,
+      68.9,
+      69.2
+    ],
+    [
+      "Character",
+      "Multi-Scale CNNs",
+      65.4,
+      64.8,
+      70.0,
+      70.9
+    ],
+    [
+      "Character",
+      "Multi-Level Composite CNNs",
+      65.6,
+      66.2,
+      70.4,
+      70.1
+    ],
+    [
+      "Character",
+      "Multi-Scale Attentive Interaction Networks",
+      66.1,
+      67.1,
+      72.1,
+      72.1
+    ]
+  ],
+  "experimental_conditions": {
+    "character_dim": 300,
+    "character_vocabulary": 4067,
+    "update_embeddings": false,
+    "max_question_and_answer_length": 200,
+    "oov": "zero vectors",
+    "short": "zero padding",
+    "long": "truncation",
+    "word_segmenter": "ICTCLAS (pynlpir)",
+    "biGRU_output": 300,
+    "biGRU_each_direction": 150,
+    "one_scale_CNN_output": 500,
+    "margin": 0.1,
+    "optimizer": "Adagrad",
+    "batch_size": 256,
+    "initial_learning_rate": 0.01
+  },
+  "provenance": "Manually transcribed and individually visually checked official IEEE PDF printed pages74067–74068. Reported results, not new runs. Repetition count/tie rule unconfirmed."
+}
