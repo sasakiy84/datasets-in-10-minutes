@@ -1,0 +1,184 @@
+{
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "full_six_original_files_recounted": {
+    "data-c3-d-train.json": {
+      "documents": 4885,
+      "questions": 5856
+    },
+    "data-c3-d-dev.json": {
+      "documents": 1628,
+      "questions": 1825
+    },
+    "data-c3-d-test.json": {
+      "documents": 1627,
+      "questions": 1890
+    },
+    "data-c3-m-train.json": {
+      "documents": 3138,
+      "questions": 6013
+    },
+    "data-c3-m-dev.json": {
+      "documents": 1046,
+      "questions": 1991
+    },
+    "data-c3-m-test.json": {
+      "documents": 1045,
+      "questions": 2002
+    }
+  },
+  "candidate_count_distribution": {
+    "4": 16294,
+    "3": 2389,
+    "2": 894
+  },
+  "original_examples": [
+    {
+      "example": 1,
+      "source_file": "data-c3-d-train.json",
+      "document_id": "37-153",
+      "all_document_question_choices_original_and_JP_retained": true,
+      "correct_candidate": "B"
+    },
+    {
+      "example": 2,
+      "source_file": "data-c3-m-dev.json",
+      "document_id": "11-67",
+      "all_document_question_choices_original_and_JP_retained": true,
+      "correct_candidate": "C"
+    },
+    {
+      "example": 3,
+      "source_file": "data-c3-m-test.json",
+      "document_id": "9-120",
+      "all_document_question_choices_original_and_JP_retained": true,
+      "correct_candidate": "B"
+    },
+    {
+      "example": 4,
+      "source_file": "data-c3-d-dev.json",
+      "document_id": "11-30",
+      "all_document_question_choices_original_and_JP_retained": true,
+      "correct_candidate": "D"
+    },
+    {
+      "example": 5,
+      "source_file": "data-c3-d-dev.json",
+      "document_id": "11-57",
+      "all_document_question_choices_original_and_JP_retained": true,
+      "correct_candidate": "B"
+    },
+    {
+      "example": 6,
+      "source_file": "data-c3-d-dev.json",
+      "document_id": "17-3",
+      "all_document_question_choices_original_and_JP_retained": true,
+      "correct_candidate": "C"
+    },
+    {
+      "example": 7,
+      "source_file": "data-c3-d-dev.json",
+      "document_id": "28-8",
+      "all_document_question_choices_original_and_JP_retained": true,
+      "correct_candidate": "A"
+    },
+    {
+      "example": 8,
+      "source_file": "data-c3-d-dev.json",
+      "document_id": "37-120",
+      "all_document_question_choices_original_and_JP_retained": true,
+      "correct_candidate": "C"
+    },
+    {
+      "example": 9,
+      "source_file": "data-c3-m-dev.json",
+      "document_id": "8-707",
+      "all_document_question_choices_original_and_JP_retained": true,
+      "correct_candidate": "B"
+    },
+    {
+      "example": 10,
+      "source_file": "data-c3-m-dev.json",
+      "document_id": "8-160",
+      "all_document_question_choices_original_and_JP_retained": true,
+      "correct_candidate": "A"
+    },
+    {
+      "example": 11,
+      "source_file": "data-c3-m-dev.json",
+      "document_id": "9-269",
+      "all_document_question_choices_original_and_JP_retained": true,
+      "correct_candidate": "C"
+    },
+    {
+      "example": 12,
+      "source_file": "data-c3-m-dev.json",
+      "document_id": "11-14",
+      "all_document_question_choices_original_and_JP_retained": true,
+      "correct_candidate": "B"
+    },
+    {
+      "example": 13,
+      "source_file": "data-c3-m-test.json",
+      "document_id": "8-255",
+      "all_document_question_choices_original_and_JP_retained": true,
+      "correct_candidate": "A"
+    }
+  ],
+  "baseline_quote_deltas": [
+    {
+      "old_page": 36,
+      "new_page": 34,
+      "before": "男：今から今晩の席を予約できますか？\n女：はい。お名前は？何名様ですか？\n男：張と申します。2名です。6時半ごろ着きますので、窓際の席をお願いします。\n女：承知しました。遅くとも7時までのお取り置きですので、早めにお越しください。\n質問：男性は何をしていますか？\nA. 救急外来を受診している\nB. 領収書を発行している\nC. 集まりを企画している\nD. 席を予約している",
+      "after": "男：今から今晩の席を予約できますか？\n女：はい。お名前は？何名様ですか？\n男：張と申します。2名です。6時半ごろ着きますので、窓際の席をお願いします。\n女：承知しました。お席を確保できるのは7時までです。早めにお越しください。\n質問：男性は何をしていますか？\nA. 救急外来を受診している\nB. 領収書を発行している\nC. 集まりを企画している\nD. 席を予約している"
+    },
+    {
+      "old_page": 40,
+      "new_page": 38,
+      "before": "女：昨日の公演を見に行ったそうね。どうだった？\n男：まあ普通かな。半分見たところで帰ったよ。\n質問：男性は公演をどう思っていますか？\nA. よくない\nB. とてもよい\nC. 特によい",
+      "after": "女：昨日の公演を見に行ったそうね。どうだった？\n男：まあ普通かな。半分見たところで帰ったよ。\n質問：男性は公演をどう思っていますか？\nA. よくない\nB. とてもよい\nC. 非常によい"
+    },
+    {
+      "old_page": 42,
+      "new_page": 40,
+      "before": "男：よし、そこに立って、笑って。あれ、急に撮れなくなったぞ？\n女：さっきは普通に使えていたのに、急に壊れたんじゃないでしょうね？\n男：ああ、電池切れのはずだ。予備の電池は持ってきた？\n女：持っていないけど、バッグに充電器がある。どこかで充電しようか。\n質問：会話から何が分かりますか？\nA. 電池を買いに行きたい\nB. 男性は写真を撮るのが嫌い\nC. カメラの電池が切れた\nD. 女性はあまりうれしくない",
+      "after": "男：よし、そこに立って、笑って。あれ、急に撮れなくなったぞ？\n女：さっきは普通に使えていたのに、急に壊れたんじゃないでしょうね？\n男：ああ、たぶん電池切れだ。予備の電池は持ってきた？\n女：持っていないけど、バッグに充電器がある。どこかで充電しようか。\n質問：会話から何が分かりますか？\nA. 電池を買いに行きたい\nB. 男性は写真を撮るのが嫌い\nC. カメラの電池が切れた\nD. 女性はあまりうれしくない"
+    }
+  ],
+  "native_result_chart_unchanged": true,
+  "split_length_knowledge_and_candidate_tables_unchanged": true,
+  "answers21to22boldB13731_pages": [
+    6,
+    7,
+    9,
+    10,
+    12,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "notes": 0,
+  "practical_code_executed": true,
+  "practical_code_stdout": "女：听说你儿子跟你的关系不是很好?\n男：说实话我不是一个好父亲，因为忙，没时间管他，我们之间几乎没有沟通。因为我，他也有很大的压力。\n男的和儿子的关系为什么不好?\n['儿子态度不好', '双方缺少交流', '儿子工作很忙', '父亲压力太大']\n双方缺少交流\n",
+  "material_conditions_retained": [
+    "2019initialrelease/2020TACLformal",
+    "19577questions/13369documents",
+    "2–4choices1answer",
+    "600knowledgeannotations and overlapping categories",
+    "human test300 Mixed150 Dialogue150, vs3892 modeltest",
+    "BERT fine-tuning and longest-input truncation",
+    "CLUE1.0test3892/1.1test1625,no public answers",
+    "CLEVA selection/inference scope unconfirmed",
+    "noncommercial research only"
+  ]
+}

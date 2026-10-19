@@ -3,8 +3,8 @@
   "created_at": "2026-10-18T09:31:59Z",
   "review_mode": "skill_based_codex",
   "gemini_used": false,
-  "main_pages": 30,
-  "total_pages": 57,
+  "main_pages": 28,
+  "total_pages": 54,
   "self_visual_review": {
     "visual-review.json": {
       "method": "skill_based_codex",
@@ -76,6 +76,7 @@
         64,
         65
       ],
+      "prior_approved_pages": 57,
       "final_pages_individually_viewed": [
         1,
         2,
@@ -130,72 +131,68 @@
         51,
         52,
         53,
-        54,
-        55,
-        56,
-        57
+        54
       ],
-      "changed_page_rechecks": [
+      "final_changed_page_rechecks": [
         3,
-        21,
-        22,
-        23,
-        24,
-        25,
+        5,
+        8,
         26,
         27,
         28,
-        29,
-        30,
-        47,
-        48,
-        49,
-        52
+        54
       ],
-      "actual_issues_fixed": [
-        "章扉の1字だけの2行目を短い具体的な見出しへ",
-        "補足表の増行を解答理由を保持して簡潔に",
-        "コード灰枠の上下実glyph余白を調整"
+      "previous_pages_removed": [
+        27,
+        28,
+        57
+      ],
+      "independent_original_examples": 13,
+      "all_original_CN_JP_choices_answers_retained": true,
+      "surviving_8_native_tables_and_chart_fully_unchanged": true,
+      "all54_independent_pdf_png_exact": true,
+      "meaningful_conditions": [
+        "19577問/13369文書/2–4候補/正解1",
+        "600知識注釈/重複する分類",
+        "元論文の正答率/モデル全3892と人300の対象差",
+        "長い入力の切詰め",
+        "全6 JSON/テスト含む全問に正解/非商用研究限定"
       ],
       "unresolved": [],
-      "final_changed_page_rechecks": [
-        1,
-        17,
-        22,
-        40,
-        54,
-        56
-      ]
+      "final_hashes": {
+        "pptx": "74baf43aa6ee457c52905be41ad3b1923af66155d496a20638a26590206bfc5d",
+        "pdf": "3491be3b8c585a375d4e1efdd9ee01a3f5b12fb829ae32ae3934bf1b3f53b050"
+      }
     }
   },
-  "updated_at": "2026-10-19T07:48:23+00:00",
+  "updated_at": "2026-10-19T09:32:04+00:00",
   "artifact_sha256": {
-    "pptx": "9b617efcd68d32d22d78ac680a0263b0aa01ce22be47dbde17f83045379ea24e",
-    "pdf": "65220a7a2eae94d46fee8bf013671715402c4bd9c8a1bf637400cad4cb912dc5"
+    "pptx": "74baf43aa6ee457c52905be41ad3b1923af66155d496a20638a26590206bfc5d",
+    "pdf": "3491be3b8c585a375d4e1efdd9ee01a3f5b12fb829ae32ae3934bf1b3f53b050"
   },
   "checks": {
     "layout-audit.json": {
-      "paragraphs_checked": 398,
-      "table_cells_checked": 89,
+      "paragraphs_checked": 375,
+      "table_cells_checked": 80,
       "issues": []
     },
     "package-audit.json": {
-      "parsed_xml_parts": 149,
-      "integer_bullets": 126,
-      "hyperlinks": 55,
+      "parsed_xml_parts": 143,
+      "integer_bullets": 122,
+      "hyperlinks": 48,
       "new_schema_errors": [],
       "baseline_schema_errors": 11,
       "package_integrity": "passed",
       "internal_relationship_targets": "passed",
       "unique_shape_ids": "passed",
       "schema_note": "標準XSDを変更せず確認。マスター由来の既存エラーと、整数buSzPctの百分率字句形式との差を分離。整数箇条書きサイズは25000–400000で別途検査。",
-      "pages": 57,
-      "native_tables": 9,
+      "pages": 54,
+      "native_tables": 8,
       "native_charts": 1
     },
     "links-audit.json": {
-      "native_url_only_runs": 55,
-      "pdf_link_rectangles": 55,
+      "native_url_only_runs": 48,
+      "pdf_link_rectangles": 48,
       "pdf_link_text_exactly_matches_url": true,
       "pdf_link_character_centers_match_url": true,
       "glyph_box_overhangs": [],
@@ -332,19 +329,19 @@
       "baseline_quote_deltas": [
         {
           "old_page": 36,
-          "new_page": 34,
+          "new_page": 32,
           "before": "男：今から今晩の席を予約できますか？\n女：はい。お名前は？何名様ですか？\n男：張と申します。2名です。6時半ごろ着きますので、窓際の席をお願いします。\n女：承知しました。遅くとも7時までのお取り置きですので、早めにお越しください。\n質問：男性は何をしていますか？\nA. 救急外来を受診している\nB. 領収書を発行している\nC. 集まりを企画している\nD. 席を予約している",
           "after": "男：今から今晩の席を予約できますか？\n女：はい。お名前は？何名様ですか？\n男：張と申します。2名です。6時半ごろ着きますので、窓際の席をお願いします。\n女：承知しました。お席を確保できるのは7時までです。早めにお越しください。\n質問：男性は何をしていますか？\nA. 救急外来を受診している\nB. 領収書を発行している\nC. 集まりを企画している\nD. 席を予約している"
         },
         {
           "old_page": 40,
-          "new_page": 38,
+          "new_page": 36,
           "before": "女：昨日の公演を見に行ったそうね。どうだった？\n男：まあ普通かな。半分見たところで帰ったよ。\n質問：男性は公演をどう思っていますか？\nA. よくない\nB. とてもよい\nC. 特によい",
           "after": "女：昨日の公演を見に行ったそうね。どうだった？\n男：まあ普通かな。半分見たところで帰ったよ。\n質問：男性は公演をどう思っていますか？\nA. よくない\nB. とてもよい\nC. 非常によい"
         },
         {
           "old_page": 42,
-          "new_page": 40,
+          "new_page": 38,
           "before": "男：よし、そこに立って、笑って。あれ、急に撮れなくなったぞ？\n女：さっきは普通に使えていたのに、急に壊れたんじゃないでしょうね？\n男：ああ、電池切れのはずだ。予備の電池は持ってきた？\n女：持っていないけど、バッグに充電器がある。どこかで充電しようか。\n質問：会話から何が分かりますか？\nA. 電池を買いに行きたい\nB. 男性は写真を撮るのが嫌い\nC. カメラの電池が切れた\nD. 女性はあまりうれしくない",
           "after": "男：よし、そこに立って、笑って。あれ、急に撮れなくなったぞ？\n女：さっきは普通に使えていたのに、急に壊れたんじゃないでしょうね？\n男：ああ、たぶん電池切れだ。予備の電池は持ってきた？\n女：持っていないけど、バッグに充電器がある。どこかで充電しようか。\n質問：会話から何が分かりますか？\nA. 電池を買いに行きたい\nB. 男性は写真を撮るのが嫌い\nC. カメラの電池が切れた\nD. 女性はあまりうれしくない"
         }
@@ -357,6 +354,8 @@
         9,
         10,
         12,
+        32,
+        33,
         34,
         35,
         36,
@@ -367,9 +366,7 @@
         41,
         42,
         43,
-        44,
-        45,
-        46
+        44
       ],
       "notes": 0,
       "practical_code_executed": true,
@@ -381,8 +378,6 @@
         "600knowledgeannotations and overlapping categories",
         "human test300 Mixed150 Dialogue150, vs3892 modeltest",
         "BERT fine-tuning and longest-input truncation",
-        "CLUE1.0test3892/1.1test1625,no public answers",
-        "CLEVA selection/inference scope unconfirmed",
         "noncommercial research only"
       ]
     }
@@ -404,6 +399,25 @@
       "previous_pages": 65,
       "total_pages": 57,
       "main_pages": 30,
+      "record_directory": "editorial-2026-10/",
+      "independent_review": "editorial-2026-10/independent-review/",
+      "main_check": "editorial-2026-10/main-review.json"
+    },
+    {
+      "checked_at": "2026-10-19T09:32:04+00:00",
+      "method": "skill_based_codex",
+      "gemini_used": false,
+      "baseline_artifact_sha256": {
+        "pptx": "71b9f819023eb19155d3bd3f83060c543a2196c871b726cf5ddc7fb40c5cdaef",
+        "pdf": "ee25a73956b9c74828e2539c20e8cea3f96d4c7ec95847ce5cdec2f6af00dae6"
+      },
+      "artifact_sha256": {
+        "pptx": "74baf43aa6ee457c52905be41ad3b1923af66155d496a20638a26590206bfc5d",
+        "pdf": "3491be3b8c585a375d4e1efdd9ee01a3f5b12fb829ae32ae3934bf1b3f53b050"
+      },
+      "previous_pages": 65,
+      "total_pages": 54,
+      "main_pages": 28,
       "record_directory": "editorial-2026-10/",
       "independent_review": "editorial-2026-10/independent-review/",
       "main_check": "editorial-2026-10/main-review.json"
