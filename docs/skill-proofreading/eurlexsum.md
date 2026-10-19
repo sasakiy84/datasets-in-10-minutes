@@ -15,3 +15,8 @@ Geminiは使用していない。Codexが日本語校正スキルをページご
 |41|実例6：読みやすい形式の著作物を交換する：入力（訳）|実例6：読書を助ける複製物の交換：入力（訳）|題名の（訳）が独立した2行目となる重なりを解消し、同じ実例の題名も統一する。|
 
 [全ページ文言](eurlexsum/pages.jsonl)・[自己検査・独立レビュー](eurlexsum/review.json)
+
+
+## 読者向けの説明・日本語の改訂（2026年10月）
+
+Geminiは使用せず、Codexがスキルで校正し、別担当が独立レビューした。削除・統合を含む[問題点と変更対](eurlexsum/editorial-2026-10/changes.md)、[旧ページとの対応](eurlexsum/editorial-2026-10/page-map.json)、[独立レビュー](eurlexsum/editorial-2026-10/independent-review/handoff.json)、[最終ページの全文](eurlexsum/pages.jsonl)。旧版の校正・検証記録は保持している。

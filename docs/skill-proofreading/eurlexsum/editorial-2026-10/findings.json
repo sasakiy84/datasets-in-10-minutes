@@ -1,0 +1,722 @@
+[
+  {
+    "old_page": 6,
+    "shape_id": 3,
+    "before": "法令本文は数百語から100万語超に及ぶ。ここでは条文の一段落と、対応する要約の一節を切り出す。\n各例には元の全文語数、言語、法令を識別するCelex IDを添える。日本語は表示した範囲の訳である。\n配布要約は出力の参照例。表示した一段落だけから要約全文を再現する課題ではない。",
+    "after": "法令本文は数百語から100万語超に及び、法令全文と要約全文が対応する。ここでは条文の一段落と、対応する要約の一節を連続して抜粋する。\n各例には元の全文語数と言語、法令を識別するCelex IDを添える。日本語は表示した範囲の訳である。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 6
+  },
+  {
+    "old_page": 11,
+    "shape_id": 3,
+    "before": "ドイツ語の条文は、人口と人口動態の統計を作成・普及する共通の法的枠組みを定める。\n参照要約では、出生と死亡という具体例を添え、どのデータをそろえる制度なのかを説明する。\nこれはドイツ語から日本語への翻訳課題ではない。日本語は、この資料で原文を読むために添えた訳である。",
+    "after": "ドイツ語の条文は、人口と人口動態の統計を作成・普及する共通の法的枠組みを定める。\n参照要約では、出生と死亡という具体例を添え、どのデータをそろえる制度なのかを説明する。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 11
+  },
+  {
+    "old_page": 14,
+    "shape_id": 3,
+    "before": "スペイン語の例は、EUと域外国が共通の利害を持つ魚類資源の保全を扱う。要約は、持続不可能な漁業を認める国への措置として説明する。\n同じCelex IDを使えば、他言語の同じ法令と参照要約へ対応させられる。\n以下では、言語ごとに量が異なる学習集合と、24言語で対応する評価集合の作り方を見る。",
+    "after": "スペイン語の例は、EUと域外国が共通の利害を持つ魚類資源の保全を扱う。要約は、持続不可能な漁業を認める国への措置として説明する。\n同じCelex IDを使えば、他言語の同じ法令と参照要約へ対応させられる。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 14
+  },
+  {
+    "old_page": 16,
+    "shape_id": 3,
+    "before": "2022年5〜6月、EUR-Lexの施行中法令の20分野を入口として、法令本文と対応する要約を収集した。\n法令には言語を越えて共通のCelex IDがあり、HTMLの段落構造も対応付けに利用できる。\n要約と訳文はEUが契約する専門家が作成。データ構築者が全要約を新たに書いたものではない。",
+    "after": "2022年5〜6月、EUR-Lexの施行中法令の20分野を入口として、法令本文と対応する要約を収集した。\n法令には言語を越えて共通のCelex IDがあり、HTMLの段落構造も対応付けに利用できる。\nEUが契約する専門家が、法令の要約と各言語の訳文を作成した。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 16
+  },
+  {
+    "old_page": 17,
+    "shape_id": 3,
+    "before": "本文のHTML版と要約が利用できる組を選び、スキャンPDFだけの文書などを除いた。\n一つの要約が複数の法令を扱う場合には、最長の法令だけを入力として残す。対象によって要約の情報が入力の外にも由来する。\n最終的に31,987の言語別ペアを収録。これは31,987件の別々の法令という意味ではない。",
+    "after": "本文のHTML版と要約が利用できる組を選び、スキャンPDFだけの文書などを除いた。\n一つの要約が複数の法令を扱う場合には、最長の法令だけを入力として残す。対象によって要約の情報が入力の外にも由来する。\n同じ法令を複数言語で対応付け、合計31,987組の言語別ペアを収録した。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 17
+  },
+  {
+    "old_page": 19,
+    "shape_id": 3,
+    "before": "24言語すべてで本文と要約がそろう375法令を取り出し、187件をvalidation、188件をtestに無作為に割り当てた。\n残りは言語ごとのtrain。Celex IDの分割を共有するため、同じ評価対象を言語間で比較できる。\n今回取得した8言語のtestは、188個のIDと並び順が全件一致した。英語の3分割には共通IDがなかった。",
+    "after": "24言語すべてで本文と要約がそろう375法令を取り出し、187件をvalidation、188件をtestに無作為に割り当てた。\n残りは言語ごとのtrain。Celex IDの分割を共有するため、同じ評価対象を言語間で比較できる。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 19
+  },
+  {
+    "old_page": 20,
+    "shape_id": 5,
+    "before": "固定HF配布を空白区切りstr.split()で実測。2022年の論文集計とは区別する。",
+    "after": "公開されている英語trainを、空白区切りの語数で集計。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 20
+  },
+  {
+    "old_page": 21,
+    "shape_id": 2,
+    "before": "多くの文書と、非常に長い裾を一緒に見る",
+    "after": "多くの法令と、100万語を超える長い文書",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 21
+  },
+  {
+    "old_page": 23,
+    "shape_id": 3,
+    "before": "ROUGE-1は単語、ROUGE-2は連続する二語、ROUGE-Lは順序を保つ共通の語列を手掛かりにする。\nここで示す2022年の成績はF1。参照をどれだけ含むかと、生成文にどれだけ重なりがあるかを合わせて測る。\n言語間の比較では語幹処理を無効にした。同じ法令でも、語の分割や言い換えは得点に影響する。",
+    "after": "ROUGE-1は単語、ROUGE-2は連続する二語、ROUGE-Lは順序を保つ共通の語列を手掛かりにする。\nここで示す2022年の成績はF1。参照要約の語をどれだけ拾えたかと、生成要約の語がどれだけ参照要約と重なるかを合わせて測る。\n言語間の比較では語幹処理を無効にした。同じ法令でも、語の分割や言い換えは得点に影響する。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 23
+  },
+  {
+    "old_page": 64,
+    "shape_id": 3,
+    "before": "Dennis AumillerとAshish Chouhanは共同第一著者。Michael Gertzとともに、ハイデルベルク大学のデータベースシステム研究グループで制作した。\nChouhanが収集用crawlerを実装し、Aumillerがフィルタリングと修正を担当したと配布カードに記載されている。\nEMNLP 2022で発表。多言語の法令要約を、長文・低資源言語・言語間生成の研究につなげた。",
+    "after": "Dennis AumillerとAshish Chouhanは共同第一著者。Michael Gertzとともに、ハイデルベルク大学のデータベースシステム研究グループで制作した。\nEMNLP 2022で発表。多言語の法令要約を、長文・低資源言語・言語間生成の研究につなげた。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 61
+  },
+  {
+    "old_page": 66,
+    "shape_id": 5,
+    "before": "LegalSummarizationScenario\nStanford CRFM ／ HELM v0.4.0\nBillSum・MultiLexSum・EurLexSumを共通形式へ変換し、文書長と訓練例の選別を指定する実装。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/legal_summarization_scenario.py",
+    "after": "LegalSummarizationScenario\nStanford CRFM · n.d. · HELM v0.4.0（2026-10-18参照）\nBillSum・MultiLexSum・EurLexSumを共通形式へ変換し、文書長と訓練例の選別を指定する実装。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/legal_summarization_scenario.py",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 63
+  },
+  {
+    "old_page": 27,
+    "shape_id": 2,
+    "before": "要約してから訳す手順と、参照を使う条件",
+    "after": "英語で要約し、スペイン語へ翻訳する",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 27
+  },
+  {
+    "old_page": 27,
+    "shape_id": 3,
+    "before": "LEDはBillSumで学習したモデル。英語の法令から要約を生成し、OPUS-MTでスペイン語へ翻訳する。\n別の条件では、英語LexRankの出力を翻訳する。公開コードでも、英語要約を読んでから翻訳器へ渡している。\n人手の英語参照要約を翻訳する条件は、入力法令だけから要約を作る方式とは利用できる情報が異なる。",
+    "after": "LEDはBillSumで学習したモデル。英語の法令から要約を生成し、OPUS-MTでスペイン語へ翻訳する。\n英語LexRankの要約をOPUS-MTで翻訳する方法も比較した。\n人手の英語参照要約を翻訳する条件は、要約の情報選択を人に任せ、翻訳だけを行う比較である。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 27
+  },
+  {
+    "old_page": 30,
+    "shape_id": 3,
+    "before": "HELM v0.4.0のLegalSummarizationScenarioは、EurLexSumのenglish設定を読み、reference欄を入力、summary欄を参照にする。\n改行を空白に直し、空白区切りで整形する。doc_max_lengthを指定した場合は、本文の先頭をその語数まで残す。\n同じデータで可能な24言語の評価と、HELMが実装している英語の範囲を対応させて読む。",
+    "after": "HELMの要約シナリオは、EUR-Lex-Sumの英語データを読み、法令本文から英語の要約を作る。\n本文の改行や空白を整え、最大語数を設定した場合は先頭からその範囲を入力にする。\nHELM Classic v0.4.0には、EUR-Lex-Sumのモデル出力や得点は公開されていない。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": null
+  },
+  {
+    "old_page": 32,
+    "shape_id": 2,
+    "before": "現在は、固定したJSONLを直接取得できる",
+    "after": "言語ごとのJSONLから、本文と要約を入手する",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 30
+  },
+  {
+    "old_page": 32,
+    "shape_id": 3,
+    "before": "Hugging Faceに言語別のtrain・validation・testを公開。各行はcelex_id、reference、summaryを持つ。\n今回の実例と集計は、配布revision 33ecb2dを固定して取得した。13例の原行と抜粋位置、原文・訳を記録している。\n公式GitHubは収集・分析・baselineコードを公開し、2024年まで依存関係の更新が確認できた。",
+    "after": "Hugging Faceに言語別のtrain・validation・testを公開。各行はcelex_id、reference、summaryを持つ。\nreferenceは法令本文、summaryは人手要約、celex_idは同じ法令を言語間で結ぶ識別子である。\n公式GitHubでは、収集・分析・要約モデルのコードも公開している。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 30
+  },
+  {
+    "old_page": 33,
+    "shape_id": 2,
+    "before": "データとコードの利用条件を分けて読む",
+    "after": "公式READMEに、データとコードの利用条件",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 31
+  },
+  {
+    "old_page": 33,
+    "shape_id": 3,
+    "before": "現在の公式READMEは、データをCC BY 4.0、ソフトウェアをMITと記載する。EUR-Lexの現行利用条件も確認した。\nHugging Faceの先頭メタデータはCC BY 4.0だが、カード本文はCC BY-SA、旧ローダーはCC BY-NC-SAと表記が異なる。\n利用時点の公式READMEと元のEUR-Lexの条件、取得した版の表記を合わせて確認する。",
+    "after": "現在の公式READMEは、データをCC BY 4.0、ソフトウェアをMITで案内している。\nHugging Faceの先頭メタデータはCC BY 4.0だが、カード本文はCC BY-SA、旧ローダーはCC BY-NC-SAと表記が異なる。\n利用する配布版の表記と、公式README・EUR-Lexの利用条件を合わせて確認する。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 31
+  },
+  {
+    "old_page": 34,
+    "shape_id": 3,
+    "before": "EU法令の専門家による説明を、最大24言語で同じIDへ対応させることが、このデータの特徴。\n学習量が少ない言語でも共通の評価対象を持ち、長い本文から長い要約を作る課題を比較できる。\n入力に残した法令、出力の言語、本文の分割・切り詰めをそろえ、同じ条件の結果を比べる。",
+    "after": "EU法令と専門家の要約を、最大24言語で同じIDへ対応付けたデータセット。\n学習量が少ない言語でも共通の評価対象を持ち、長い本文から長い要約を作る課題を比較できる。\n同じ言語での要約に加え、英語で要約してから別言語へ翻訳する方法も評価されている。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 32
+  },
+  {
+    "old_page": 52,
+    "shape_id": 6,
+    "before": "入力の訳\n1. この規則は、香味付けワイン製品の定義、説明、提示、表示に関する規則と、その地理的表示の保護に関する規則を定める。\n参照要約の訳\n香味付けワイン製品の仕様と、その地理的表示の保護を定める。",
+    "after": "入力の訳\n1. この規則は、香味付けワイン製品の定義、特性の記述、商品の見せ方、ラベル表示に関する規則と、その地理的表示の保護に関する規則を定める。\n参照要約の訳\n香味付けワイン製品の仕様と、その地理的表示の保護を定める。",
+    "reason": "description/presentation/labellingの4概念を原法令の定義に合わせ自然な日本語へ",
+    "action": "rewrite",
+    "new_page": 50
+  },
+  {
+    "old_page": 52,
+    "shape_id": 6,
+    "action": "source_gap",
+    "before": "訳文下端と出典の間隔5.69pt（font bbox）",
+    "after": "間隔8.89pt",
+    "reason": "原文/訳の同居と全文を保ち、拡張した訳枠を3.2pt上へ移動",
+    "new_page": 50
+  },
+  {
+    "old_page": 60,
+    "shape_id": 2,
+    "before": "法令の古さと、言語のそろい方を分ける",
+    "after": "評価用には、新しい法令が多く含まれる",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 57
+  },
+  {
+    "old_page": 60,
+    "shape_id": 3,
+    "before": "公表分析では、収録法令は1990年以降に増える。HTMLでの公開と要約の利用可能性に依存する。\n24言語をそろえるvalidation/testは、trainより新しい法令に偏る。翻訳や要約は、法令の初回公開より後に追加される場合もある。\n法令の年、要約の更新日、データ取得日を、同じ時点とみなさない。",
+    "after": "公表分析では、収録法令は1990年以降に増える。HTMLでの公開と要約の利用可能性に依存する。\n24言語をそろえるvalidation/testは、trainより新しい法令に偏る。翻訳や要約は、法令の初回公開より後に追加される場合もある。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 57
+  },
+  {
+    "old_page": 62,
+    "shape_id": 2,
+    "before": "三つの欄と、HELMへの変換",
+    "after": "JSONLから、法令の識別子・本文・要約を読む",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 59
+  },
+  {
+    "old_page": 62,
+    "shape_id": 4,
+    "before": "row = json.loads(line)\ncelex_id = row[\"celex_id\"]\narticle = \" \".join(row[\"reference\"].split())\nsummary = \" \".join(row[\"summary\"].split())\n# optional: article = \" \".join(article.split()[:N])",
+    "after": "import json\nwith open(\"english_test.jsonl\", encoding=\"utf-8\") as f:\n    row = json.loads(next(f))\nprint(row[\"celex_id\"])\nprint(row[\"reference\"])\nprint(row[\"summary\"])",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 59
+  },
+  {
+    "old_page": 62,
+    "shape_id": 5,
+    "before": "実際の入力は法令本文全体。スライドの抜粋位置は記録から元の文字列へ照合できる。",
+    "after": "英語testの最初の1件を読み、Celex ID、法令本文、参照要約を順に表示する。ほかの言語も同じ三つの欄を持つ。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 59
+  },
+  {
+    "old_page": 2,
+    "shape_id": 5,
+    "before": "[1] Aumiller et al., EUR-Lex-Sum. 固定HF revision 33ecb2d、test実レコード。 公式配布のトップ画面。法令本文・参照要約・Celex IDをJSONLで公開。\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "after": "[1] Aumiller et al. EUR-Lex-Sum. https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "reason": "固定revision・行番号・取得画面説明を検証記録へ移す。法令のCelex IDは保持",
+    "action": "rewrite",
+    "new_page": 2
+  },
+  {
+    "old_page": 6,
+    "shape_id": 5,
+    "before": "[1] Aumiller et al., EUR-Lex-Sum. 固定HF revision 33ecb2d、test実レコード。  https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "after": "[1] Aumiller et al. EUR-Lex-Sum. https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "reason": "固定revision・行番号・取得画面説明を検証記録へ移す。法令のCelex IDは保持",
+    "action": "rewrite",
+    "new_page": 6
+  },
+  {
+    "old_page": 7,
+    "shape_id": 7,
+    "before": "[1] Aumiller et al., EUR-Lex-Sum. 固定HF revision 33ecb2d、test実レコード。 32012R0651 ／ english ／ test row 141（0始まり）\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "after": "[1] Aumiller et al. EUR-Lex-Sum. 32012R0651 ／ english  https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "reason": "固定revision・行番号・取得画面説明を検証記録へ移す。法令のCelex IDは保持",
+    "action": "rewrite",
+    "new_page": 7
+  },
+  {
+    "old_page": 8,
+    "shape_id": 5,
+    "before": "[1] Aumiller et al., EUR-Lex-Sum. 固定HF revision 33ecb2d、test実レコード。  https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "after": "[1] Aumiller et al. EUR-Lex-Sum. https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "reason": "固定revision・行番号・取得画面説明を検証記録へ移す。法令のCelex IDは保持",
+    "action": "rewrite",
+    "new_page": 8
+  },
+  {
+    "old_page": 9,
+    "shape_id": 6,
+    "before": "[1] Aumiller et al., EUR-Lex-Sum. 固定HF revision 33ecb2d、test実レコード。 32013R1260 ／ german ／ test row 143（0始まり）\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "after": "[1] Aumiller et al. EUR-Lex-Sum. 32013R1260 ／ german  https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "reason": "固定revision・行番号・取得画面説明を検証記録へ移す。法令のCelex IDは保持",
+    "action": "rewrite",
+    "new_page": 9
+  },
+  {
+    "old_page": 10,
+    "shape_id": 6,
+    "before": "[1] Aumiller et al., EUR-Lex-Sum. 固定HF revision 33ecb2d、test実レコード。 32013R1260 ／ german ／ test row 143（0始まり）\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "after": "[1] Aumiller et al. EUR-Lex-Sum. 32013R1260 ／ german  https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "reason": "固定revision・行番号・取得画面説明を検証記録へ移す。法令のCelex IDは保持",
+    "action": "rewrite",
+    "new_page": 10
+  },
+  {
+    "old_page": 11,
+    "shape_id": 5,
+    "before": "[1] Aumiller et al., EUR-Lex-Sum. 固定HF revision 33ecb2d、test実レコード。  https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "after": "[1] Aumiller et al. EUR-Lex-Sum. https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "reason": "固定revision・行番号・取得画面説明を検証記録へ移す。法令のCelex IDは保持",
+    "action": "rewrite",
+    "new_page": 11
+  },
+  {
+    "old_page": 12,
+    "shape_id": 7,
+    "before": "[1] Aumiller et al., EUR-Lex-Sum. 固定HF revision 33ecb2d、test実レコード。 32012R1026 ／ spanish ／ test row 107（0始まり）\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "after": "[1] Aumiller et al. EUR-Lex-Sum. 32012R1026 ／ spanish  https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "reason": "固定revision・行番号・取得画面説明を検証記録へ移す。法令のCelex IDは保持",
+    "action": "rewrite",
+    "new_page": 12
+  },
+  {
+    "old_page": 13,
+    "shape_id": 7,
+    "before": "[1] Aumiller et al., EUR-Lex-Sum. 固定HF revision 33ecb2d、test実レコード。 32012R1026 ／ spanish ／ test row 107（0始まり）\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "after": "[1] Aumiller et al. EUR-Lex-Sum. 32012R1026 ／ spanish  https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "reason": "固定revision・行番号・取得画面説明を検証記録へ移す。法令のCelex IDは保持",
+    "action": "rewrite",
+    "new_page": 13
+  },
+  {
+    "old_page": 14,
+    "shape_id": 5,
+    "before": "[1] Aumiller et al., EUR-Lex-Sum. 固定HF revision 33ecb2d、test実レコード。  https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "after": "[1] Aumiller et al. EUR-Lex-Sum. https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "reason": "固定revision・行番号・取得画面説明を検証記録へ移す。法令のCelex IDは保持",
+    "action": "rewrite",
+    "new_page": 14
+  },
+  {
+    "old_page": 19,
+    "shape_id": 5,
+    "before": "[1] Aumiller et al., EUR-Lex-Sum. 固定HF revision 33ecb2d、test実レコード。  https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "after": "[1] Aumiller et al. EUR-Lex-Sum. https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "reason": "固定revision・行番号・取得画面説明を検証記録へ移す。法令のCelex IDは保持",
+    "action": "rewrite",
+    "new_page": 19
+  },
+  {
+    "old_page": 20,
+    "shape_id": 6,
+    "before": "[1] Aumiller et al., EUR-Lex-Sum. 固定HF revision 33ecb2d、test実レコード。  https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "after": "[1] Aumiller et al. EUR-Lex-Sum. https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "reason": "固定revision・行番号・取得画面説明を検証記録へ移す。法令のCelex IDは保持",
+    "action": "rewrite",
+    "new_page": 20
+  },
+  {
+    "old_page": 21,
+    "shape_id": 6,
+    "before": "[1] Aumiller et al., EUR-Lex-Sum. 固定HF revision 33ecb2d、test実レコード。  https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "after": "[1] Aumiller et al. EUR-Lex-Sum. https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "reason": "固定revision・行番号・取得画面説明を検証記録へ移す。法令のCelex IDは保持",
+    "action": "rewrite",
+    "new_page": 21
+  },
+  {
+    "old_page": 32,
+    "shape_id": 5,
+    "before": "[1] Aumiller et al., EUR-Lex-Sum. 固定HF revision 33ecb2d、test実レコード。  https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "after": "[1] Aumiller et al. EUR-Lex-Sum. https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "reason": "固定revision・行番号・取得画面説明を検証記録へ移す。法令のCelex IDは保持",
+    "action": "rewrite",
+    "new_page": 30
+  },
+  {
+    "old_page": 38,
+    "shape_id": 7,
+    "before": "[1] Aumiller et al., EUR-Lex-Sum. 固定HF revision 33ecb2d、test実レコード。 32008R0453 ／ french ／ test row 155（0始まり）\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "after": "[1] Aumiller et al. EUR-Lex-Sum. 32008R0453 ／ french  https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "reason": "固定revision・行番号・取得画面説明を検証記録へ移す。法令のCelex IDは保持",
+    "action": "rewrite",
+    "new_page": 36
+  },
+  {
+    "old_page": 39,
+    "shape_id": 7,
+    "before": "[1] Aumiller et al., EUR-Lex-Sum. 固定HF revision 33ecb2d、test実レコード。 32020R2094 ／ italian ／ test row 70（0始まり）\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "after": "[1] Aumiller et al. EUR-Lex-Sum. 32020R2094 ／ italian  https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "reason": "固定revision・行番号・取得画面説明を検証記録へ移す。法令のCelex IDは保持",
+    "action": "rewrite",
+    "new_page": 37
+  },
+  {
+    "old_page": 40,
+    "shape_id": 6,
+    "before": "[1] Aumiller et al., EUR-Lex-Sum. 固定HF revision 33ecb2d、test実レコード。 32017R1563 ／ irish ／ test row 134（0始まり）\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "after": "[1] Aumiller et al. EUR-Lex-Sum. 32017R1563 ／ irish  https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "reason": "固定revision・行番号・取得画面説明を検証記録へ移す。法令のCelex IDは保持",
+    "action": "rewrite",
+    "new_page": 38
+  },
+  {
+    "old_page": 41,
+    "shape_id": 6,
+    "before": "[1] Aumiller et al., EUR-Lex-Sum. 固定HF revision 33ecb2d、test実レコード。 32017R1563 ／ irish ／ test row 134（0始まり）\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "after": "[1] Aumiller et al. EUR-Lex-Sum. 32017R1563 ／ irish  https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "reason": "固定revision・行番号・取得画面説明を検証記録へ移す。法令のCelex IDは保持",
+    "action": "rewrite",
+    "new_page": 39
+  },
+  {
+    "old_page": 42,
+    "shape_id": 7,
+    "before": "[1] Aumiller et al., EUR-Lex-Sum. 固定HF revision 33ecb2d、test実レコード。 32017R1563 ／ irish ／ test row 134（0始まり）\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "after": "[1] Aumiller et al. EUR-Lex-Sum. 32017R1563 ／ irish  https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "reason": "固定revision・行番号・取得画面説明を検証記録へ移す。法令のCelex IDは保持",
+    "action": "rewrite",
+    "new_page": 40
+  },
+  {
+    "old_page": 43,
+    "shape_id": 6,
+    "before": "[1] Aumiller et al., EUR-Lex-Sum. 固定HF revision 33ecb2d、test実レコード。 32008R0762 ／ greek ／ test row 183（0始まり）\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "after": "[1] Aumiller et al. EUR-Lex-Sum. 32008R0762 ／ greek  https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "reason": "固定revision・行番号・取得画面説明を検証記録へ移す。法令のCelex IDは保持",
+    "action": "rewrite",
+    "new_page": 41
+  },
+  {
+    "old_page": 44,
+    "shape_id": 6,
+    "before": "[1] Aumiller et al., EUR-Lex-Sum. 固定HF revision 33ecb2d、test実レコード。 32008R0762 ／ greek ／ test row 183（0始まり）\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "after": "[1] Aumiller et al. EUR-Lex-Sum. 32008R0762 ／ greek  https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "reason": "固定revision・行番号・取得画面説明を検証記録へ移す。法令のCelex IDは保持",
+    "action": "rewrite",
+    "new_page": 42
+  },
+  {
+    "old_page": 45,
+    "shape_id": 7,
+    "before": "[1] Aumiller et al., EUR-Lex-Sum. 固定HF revision 33ecb2d、test実レコード。 32008R0763 ／ maltese ／ test row 73（0始まり）\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "after": "[1] Aumiller et al. EUR-Lex-Sum. 32008R0763 ／ maltese  https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "reason": "固定revision・行番号・取得画面説明を検証記録へ移す。法令のCelex IDは保持",
+    "action": "rewrite",
+    "new_page": 43
+  },
+  {
+    "old_page": 46,
+    "shape_id": 7,
+    "before": "[1] Aumiller et al., EUR-Lex-Sum. 固定HF revision 33ecb2d、test実レコード。 32021R0523 ／ english ／ test row 27（0始まり）\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "after": "[1] Aumiller et al. EUR-Lex-Sum. 32021R0523 ／ english  https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "reason": "固定revision・行番号・取得画面説明を検証記録へ移す。法令のCelex IDは保持",
+    "action": "rewrite",
+    "new_page": 44
+  },
+  {
+    "old_page": 47,
+    "shape_id": 7,
+    "before": "[1] Aumiller et al., EUR-Lex-Sum. 固定HF revision 33ecb2d、test実レコード。 32021R0523 ／ english ／ test row 27（0始まり）\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "after": "[1] Aumiller et al. EUR-Lex-Sum. 32021R0523 ／ english  https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "reason": "固定revision・行番号・取得画面説明を検証記録へ移す。法令のCelex IDは保持",
+    "action": "rewrite",
+    "new_page": 45
+  },
+  {
+    "old_page": 48,
+    "shape_id": 6,
+    "before": "[1] Aumiller et al., EUR-Lex-Sum. 固定HF revision 33ecb2d、test実レコード。 32021R0023 ／ english ／ test row 40（0始まり）\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "after": "[1] Aumiller et al. EUR-Lex-Sum. 32021R0023 ／ english  https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "reason": "固定revision・行番号・取得画面説明を検証記録へ移す。法令のCelex IDは保持",
+    "action": "rewrite",
+    "new_page": 46
+  },
+  {
+    "old_page": 49,
+    "shape_id": 6,
+    "before": "[1] Aumiller et al., EUR-Lex-Sum. 固定HF revision 33ecb2d、test実レコード。 32021R0023 ／ english ／ test row 40（0始まり）\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "after": "[1] Aumiller et al. EUR-Lex-Sum. 32021R0023 ／ english  https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "reason": "固定revision・行番号・取得画面説明を検証記録へ移す。法令のCelex IDは保持",
+    "action": "rewrite",
+    "new_page": 47
+  },
+  {
+    "old_page": 50,
+    "shape_id": 6,
+    "before": "[1] Aumiller et al., EUR-Lex-Sum. 固定HF revision 33ecb2d、test実レコード。 32021R0691 ／ english ／ test row 67（0始まり）\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "after": "[1] Aumiller et al. EUR-Lex-Sum. 32021R0691 ／ english  https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "reason": "固定revision・行番号・取得画面説明を検証記録へ移す。法令のCelex IDは保持",
+    "action": "rewrite",
+    "new_page": 48
+  },
+  {
+    "old_page": 51,
+    "shape_id": 6,
+    "before": "[1] Aumiller et al., EUR-Lex-Sum. 固定HF revision 33ecb2d、test実レコード。 32021R0691 ／ english ／ test row 67（0始まり）\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "after": "[1] Aumiller et al. EUR-Lex-Sum. 32021R0691 ／ english  https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "reason": "固定revision・行番号・取得画面説明を検証記録へ移す。法令のCelex IDは保持",
+    "action": "rewrite",
+    "new_page": 49
+  },
+  {
+    "old_page": 52,
+    "shape_id": 7,
+    "before": "[1] Aumiller et al., EUR-Lex-Sum. 固定HF revision 33ecb2d、test実レコード。 32014R0251 ／ english ／ test row 85（0始まり）\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "after": "[1] Aumiller et al. EUR-Lex-Sum. 32014R0251 ／ english  https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "reason": "固定revision・行番号・取得画面説明を検証記録へ移す。法令のCelex IDは保持",
+    "action": "rewrite",
+    "new_page": 50
+  },
+  {
+    "old_page": 53,
+    "shape_id": 7,
+    "before": "[1] Aumiller et al., EUR-Lex-Sum. 固定HF revision 33ecb2d、test実レコード。 32008R0452 ／ english ／ test row 180（0始まり）\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "after": "[1] Aumiller et al. EUR-Lex-Sum. 32008R0452 ／ english  https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "reason": "固定revision・行番号・取得画面説明を検証記録へ移す。法令のCelex IDは保持",
+    "action": "rewrite",
+    "new_page": 51
+  },
+  {
+    "old_page": 59,
+    "shape_id": 6,
+    "before": "[1] Aumiller et al., EUR-Lex-Sum. 固定HF revision 33ecb2d、test実レコード。  https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "after": "[1] Aumiller et al. EUR-Lex-Sum. https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "reason": "固定revision・行番号・取得画面説明を検証記録へ移す。法令のCelex IDは保持",
+    "action": "rewrite",
+    "new_page": null
+  },
+  {
+    "old_page": 61,
+    "shape_id": 5,
+    "before": "[1] Aumiller et al., EUR-Lex-Sum. 固定HF revision 33ecb2d、test実レコード。  https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "after": "[1] Aumiller et al. EUR-Lex-Sum. https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "reason": "固定revision・行番号・取得画面説明を検証記録へ移す。法令のCelex IDは保持",
+    "action": "rewrite",
+    "new_page": 58
+  },
+  {
+    "old_page": 62,
+    "shape_id": 4,
+    "action": "fit_code_visible_ink",
+    "before": "上13.2pt/下−5.07pt",
+    "after": "上下10pt",
+    "reason": "読込コード6行の実字形に合わせ背景を拡張し、字形位置を保持",
+    "new_page": 59
+  },
+  {
+    "old_page": 65,
+    "shape_id": 4,
+    "action": "expand_native_reference_frame",
+    "before": "height 135.04pt",
+    "after": "height 153.04pt",
+    "reason": "文献URL全文をnative文字枠に収容。位置・文字列を保持",
+    "new_page": 62
+  },
+  {
+    "old_page": 65,
+    "shape_id": 5,
+    "action": "expand_native_reference_frame",
+    "before": "height 112.24pt",
+    "after": "height 130.24pt",
+    "reason": "文献URL全文をnative文字枠に収容。位置・文字列を保持",
+    "new_page": 62
+  },
+  {
+    "old_page": 66,
+    "shape_id": 4,
+    "action": "expand_native_reference_frame",
+    "before": "height 112.24pt",
+    "after": "height 130.24pt",
+    "reason": "文献URL全文をnative文字枠に収容。位置・文字列を保持",
+    "new_page": 63
+  },
+  {
+    "old_page": 66,
+    "shape_id": 5,
+    "action": "expand_native_reference_frame",
+    "before": "height 125.35pt",
+    "after": "height 143.35pt",
+    "reason": "文献URL全文をnative文字枠に収容。位置・文字列を保持",
+    "new_page": 63
+  },
+  {
+    "old_page": 65,
+    "shape_id": 5,
+    "before": "EUR-Lex-Sum：公式コードとデータ\nAumiller et al. ／ 公式GitHub・Hugging Face\n収集・分析・LexRankのコードと、言語別の本文・要約・Celex IDを公開する。\nhttps://github.com/achouhan93/eur-lex-sum",
+    "after": "EUR-Lex-Sum：公式コードとデータ\nAumiller et al. · n.d. · 公式GitHub・Hugging Face（2026-10-18参照）\n収集・分析・LexRankのコードと、言語別の本文・要約・Celex IDを公開する。\nhttps://github.com/achouhan93/eur-lex-sum",
+    "reason": "Web文献に刊行年なしと元資料の実参照日を添える",
+    "action": "rewrite",
+    "new_page": 62
+  },
+  {
+    "old_page": 61,
+    "shape_id": 5,
+    "before": "[1] Aumiller et al. EUR-Lex-Sum. https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "after": "[1] Aumiller, Chouhan & Gertz (2022). EUR-Lex-Sum. https://aclanthology.org/2022.emnlp-main.519/\n[2] Aumiller et al. EUR-Lex-Sum data. https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "reason": "複数法令の20〜30%は正式論文、現配布観測はデータを出典として明示",
+    "action": "rewrite",
+    "new_page": 58
+  },
+  {
+    "old_page": 31,
+    "action": "remove_slide",
+    "before": "固定Classic版に、公開実行はなかった\nClassic v0.4.0の公開run_specs全8,526件を、データ名とシナリオ指定から照合したところ、EurLexSumの実行は0件だった。\nこの資料のモデル値は2022年の研究で報告されたbaseline。HELMで再実行した値としては扱わない。\n実装を利用するときは、本文の最大長、学習例の長さによる選別、出力長を設定とともに残す。\n4. HELMでの範囲と入手\n[1] HELM Classic v0.4.0、2023-11-17固定版。公開run_specs全8,526件を検索。  https://crfm.stanford.edu/helm/classic/v0.4.0/",
+    "after": "",
+    "reason": "8526run/実行0件の照合と再現設定の注意書き。モデル得点非公開は30頁へ簡潔に統合",
+    "new_page": null
+  },
+  {
+    "old_page": 59,
+    "action": "remove_slide",
+    "before": "英語の長さ：公表値と固定配布の実測\nAppendix: 2. 言語と統計の補足\n単位：空白区切り語。配布版・集計前処理の同一性は確認できず、差の原因は断定しない。\n[1] Aumiller et al. EUR-Lex-Sum. https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "after": "",
+    "reason": "英語本文と要約の公表値・公開集計の細かな照合4セル。長さの特徴は20/21頁、評価の版条件は本文へ保持。差の原記録は旧evidence/statsへ保存",
+    "new_page": null
+  },
+  {
+    "old_page": 3,
+    "intermediate_page": 3,
+    "shape_id": 3,
+    "before": "法令と要約を対応させる\n24言語の収集と分割\n長文・言語間要約の評価\nHELMでの範囲と入手",
+    "after": "法令と要約を対応させる\n24言語の収集と分割\n長文・言語間要約の評価\n公開配布と利用条件",
+    "reason": "元データセットの目的・作成・評価・使い方を中心へ戻し、評価基盤固有の説明を外部記録へ移す",
+    "action": "dataset_focus_rewrite",
+    "new_page": 3
+  },
+  {
+    "old_page": 29,
+    "intermediate_page": 29,
+    "shape_id": 2,
+    "before": "HELMでの範囲と入手",
+    "after": "公開配布と利用条件",
+    "reason": "元データセットの目的・作成・評価・使い方を中心へ戻し、評価基盤固有の説明を外部記録へ移す",
+    "action": "dataset_focus_rewrite",
+    "new_page": 29
+  },
+  {
+    "old_page": 29,
+    "intermediate_page": 29,
+    "shape_id": 3,
+    "before": "4. HELMでの範囲と入手",
+    "after": "4. 公開配布と利用条件",
+    "reason": "元データセットの目的・作成・評価・使い方を中心へ戻し、評価基盤固有の説明を外部記録へ移す",
+    "action": "dataset_focus_rewrite",
+    "new_page": 29
+  },
+  {
+    "old_page": 30,
+    "intermediate_page": 30,
+    "shape_id": 4,
+    "before": "4. HELMでの範囲と入手",
+    "after": "4. 公開配布と利用条件",
+    "reason": "元データセットの目的・作成・評価・使い方を中心へ戻し、評価基盤固有の説明を外部記録へ移す",
+    "action": "dataset_focus_rewrite",
+    "new_page": null
+  },
+  {
+    "old_page": 32,
+    "intermediate_page": 31,
+    "shape_id": 4,
+    "before": "4. HELMでの範囲と入手",
+    "after": "4. 公開配布と利用条件",
+    "reason": "元データセットの目的・作成・評価・使い方を中心へ戻し、評価基盤固有の説明を外部記録へ移す",
+    "action": "dataset_focus_rewrite",
+    "new_page": 30
+  },
+  {
+    "old_page": 33,
+    "intermediate_page": 32,
+    "shape_id": 4,
+    "before": "4. HELMでの範囲と入手",
+    "after": "4. 公開配布と利用条件",
+    "reason": "元データセットの目的・作成・評価・使い方を中心へ戻し、評価基盤固有の説明を外部記録へ移す",
+    "action": "dataset_focus_rewrite",
+    "new_page": 31
+  },
+  {
+    "old_page": 34,
+    "intermediate_page": 33,
+    "shape_id": 4,
+    "before": "4. HELMでの範囲と入手",
+    "after": "4. 公開配布と利用条件",
+    "reason": "元データセットの目的・作成・評価・使い方を中心へ戻し、評価基盤固有の説明を外部記録へ移す",
+    "action": "dataset_focus_rewrite",
+    "new_page": 32
+  },
+  {
+    "old_page": 66,
+    "intermediate_page": 64,
+    "shape_id": 5,
+    "before": "LegalSummarizationScenario\nStanford CRFM · n.d. · HELM v0.4.0（2026-10-18参照）\nBillSum・MultiLexSum・EurLexSumを共通形式へ変換し、文書長と訓練例の選別を指定する実装。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/legal_summarization_scenario.py",
+    "after": "",
+    "reason": "元データの読込例は公開JSONLそのもの。HELM変換クラスの参考文献は不要",
+    "action": "remove_framework_reference",
+    "new_page": 63
+  },
+  {
+    "old_page": 62,
+    "intermediate_page": 60,
+    "shape_id": 6,
+    "before": "[1] Stanford CRFM, HELM v0.4.0. LegalSummarizationScenario.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/legal_summarization_scenario.py",
+    "after": "[1] Aumiller et al. EUR-Lex-Sum. https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+    "reason": "元データセットの目的・作成・評価・使い方を中心へ戻し、評価基盤固有の説明を外部記録へ移す",
+    "action": "dataset_focus_rewrite",
+    "new_page": 59
+  },
+  {
+    "old_page": 25,
+    "intermediate_page": 25,
+    "shape_id": 2,
+    "before": "段落の中心性を使い、要約の長さを決める",
+    "after": "段落の中心性を使い、本文から要約を作る",
+    "reason": "中心性は段落を選ぶ手掛かりであり、目標長は段落圧縮率から決めるという本文に見出しを合わせる",
+    "action": "dataset_focus_rewrite",
+    "new_page": 25
+  },
+  {
+    "old_page": 61,
+    "intermediate_page": 59,
+    "shape_id": 3,
+    "before": "言語によって約20〜30%の要約が複数法令を扱うと報告されている。配布では最長の法令だけを残す。\n入力中にない語句を含む割合には、言い換えだけでなく、入力から除かれた法令の内容も影響し得る。\n現在の英語trainには、空白区切りで数えると、法令本文より要約の方が長い組が1件含まれる。",
+    "after": "言語によって約20〜30%の要約が複数法令を扱うと報告されている。配布では最長の法令だけを残す。\n入力中にない語句を含む割合には、言い換えだけでなく、入力から除かれた法令の内容も影響し得る。\n法令本文より参照要約が長い組もある。",
+    "reason": "細かな取得集計を外部記録へ移し、本文と参照の対応という利用上の特徴へ整理する",
+    "action": "dataset_focus_rewrite",
+    "new_page": 58
+  },
+  {
+    "old_page": 30,
+    "intermediate_page": 30,
+    "before": "HELMは英語の本文→要約を実装する\nHELMの要約シナリオは、EUR-Lex-Sumの英語データを読み、法令本文から英語の要約を作る。\n本文の改行や空白を整え、最大語数を設定した場合は先頭からその範囲を入力にする。\nHELM Classic v0.4.0には、EUR-Lex-Sumのモデル出力や得点は公開されていない。\n4. 公開配布と利用条件\n[1] Stanford CRFM, HELM v0.4.0. LegalSummarizationScenario.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/legal_summarization_scenario.py",
+    "after": "",
+    "reason": "HELMの英語読込・最大語数・モデル得点非公開の説明を外部記録へ移す",
+    "action": "remove_framework_slide",
+    "new_page": null
+  }
+]
