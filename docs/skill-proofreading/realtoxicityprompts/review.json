@@ -3,12 +3,15 @@
   "created_at": "2026-10-18T09:22:52Z",
   "review_mode": "skill_based_codex",
   "gemini_used": false,
-  "main_pages": 33,
-  "total_pages": 62,
+  "main_pages": 27,
+  "total_pages": 55,
   "self_visual_review": {
-    "visual-inspection.json": {
-      "method": "Codex view_image at1080x608 and overview",
-      "initial_all_pages_individually_viewed": [
+    "visual-review.json": {
+      "method": "skill_based_codex",
+      "gemini_used": false,
+      "baseline_all62_native_pages_read": true,
+      "final_all55_native_pages_read": true,
+      "final_pages_individually_viewed": [
         1,
         2,
         3,
@@ -63,102 +66,282 @@
         52,
         53,
         54,
-        55,
-        56,
-        57,
-        58,
-        59,
-        60,
-        61,
-        62
+        55
       ],
-      "final_changed_pages_rechecked": [
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        17,
+      "changed_page_rechecks": [
+        1,
+        5,
+        14,
+        22,
         25,
         26,
-        28,
-        29,
-        31,
-        37,
-        40,
-        44,
+        33,
+        34,
         48,
         49,
-        50,
-        51,
-        54,
-        55,
-        60,
-        61,
-        62
-      ],
-      "independent_review_changed_pages_rechecked": [
-        17,
-        44,
-        51
+        50
       ],
       "overview_viewed": true,
-      "checks": [
-        "全13原例の原文・訳同居",
-        "3公開実出力の全5候補と訳",
-        "9native表・図・コード",
-        "全参考文献各2件",
-        "引用上下の実glyph余白",
-        "最終行とスコア・出典の間隔",
-        "公式repo画面のCSS・フォント",
-        "長いURLの文字範囲"
+      "all55_final_PNG_equal_PDF": true,
+      "actual_fixes": [
+        "表紙Title1/Subtitle2とAppendix扉はheight/margin_bottom各+8ptで字形を枠へ収容",
+        "単純な抽出フローの細かな改行を自然な3段落本文へ",
+        "短縮コード枠の下43.47pt余白を8.4ptへ",
+        "毒性低減の見出しを1行へ短くし、表と重ならないように修正",
+        "世代差の訳を自然化し、4行を収める引用枠を実字形下端+8.04ptへ拡張",
+        "宗教表現の権利を信仰を表明する権利へ精密化",
+        "引用番号2件目[2]と欠測の直接出典を修正"
       ],
-      "remaining_issues": []
+      "unresolved": [],
+      "final_hashes": {
+        "pptx": "f8f19d50f0dc8bd52bcf97920896dc22d0c2c3a14e267de8e900e8295f7965ef",
+        "pdf": "721083a7c5f159ef70cc0a3d6ad41aca01b83cf4b4d3d72e5857933adbff6ec5"
+      }
     }
   },
-  "updated_at": "2026-10-18T09:22:52Z",
+  "updated_at": "2026-10-19T10:30:58+00:00",
   "artifact_sha256": {
-    "pdf": "26de0dc4277a1cb1201fb0de45ab114d2564770da2120ff3b25cede2929f6c86",
-    "pptx": "11382eb402dad391d0ce89d75aa3fff81fbee0e64fecd0ee39f04d153283bd67"
+    "pptx": "f8f19d50f0dc8bd52bcf97920896dc22d0c2c3a14e267de8e900e8295f7965ef",
+    "pdf": "721083a7c5f159ef70cc0a3d6ad41aca01b83cf4b4d3d72e5857933adbff6ec5"
   },
   "checks": {
-    "layout": {
-      "paragraphs_checked": 440,
-      "table_cells_checked": 124,
+    "layout-audit.json": {
+      "paragraphs_checked": 390,
+      "table_cells_checked": 82,
       "issues": []
     },
-    "package": {
-      "parsed_xml_parts": 157,
-      "integer_bullets": 136,
-      "hyperlinks": 62,
+    "package-audit.json": {
+      "parsed_xml_parts": 143,
+      "integer_bullets": 125,
+      "hyperlinks": 52,
       "new_schema_errors": [],
       "baseline_schema_errors": 11,
       "package_integrity": "passed",
       "internal_relationship_targets": "passed",
       "unique_shape_ids": "passed",
       "schema_note": "標準XSDを変更せず確認。マスター由来の既存エラーと、整数buSzPctの百分率字句形式との差を分離。整数箇条書きサイズは25000–400000で別途検査。",
-      "pages": 62,
-      "native_tables": 9,
+      "pages": 55,
+      "native_tables": 6,
       "native_charts": 0
     },
-    "text": {
-      "pages": 62,
-      "paragraphs_checked": 440,
-      "table_cells_checked": 124,
-      "issues": [],
-      "replacement_characters": 0,
-      "notes_slides": 0
-    },
-    "links": {
-      "native_url_only_runs": 62,
-      "pdf_link_rectangles": 62,
+    "links-audit.json": {
+      "native_url_only_runs": 52,
+      "pdf_link_rectangles": 52,
       "pdf_link_text_exactly_matches_url": true,
       "pdf_link_character_centers_match_url": true,
       "glyph_box_overhangs": [],
       "shortened_url_labels": [],
       "issues": []
+    },
+    "content-checks.json": {
+      "method": "skill_based_codex",
+      "gemini_used": false,
+      "source_counts": {
+        "records": 99442,
+        "null_prompt": 426,
+        "null_continuation": 550,
+        "challenging": 1199,
+        "toxic": 21744,
+        "non_toxic": 77272
+      },
+      "prompt_score_quarters": [
+        59633,
+        17639,
+        11152,
+        10592
+      ],
+      "examples13": [
+        {
+          "example": 1,
+          "source_row": 50312,
+          "source_line_sha256": "a6accb5937dd4dd25a1fefd3b0be872a3d025e4cf3fbc04dfb593a462be7b025",
+          "raw_full_prompt_continuation_JP": true,
+          "public_completions": 5
+        },
+        {
+          "example": 2,
+          "source_row": 60898,
+          "source_line_sha256": "b4cd92468496f5e62ee3e8bf2b5b72299062be90d4c0ecc190312a25e48e127b",
+          "raw_full_prompt_continuation_JP": true,
+          "public_completions": 5
+        },
+        {
+          "example": 3,
+          "source_row": 54281,
+          "source_line_sha256": "999c8862ecf7bf8d4ad7919f5a8a6350fdf8cd02db6a5c1d447eecc02535ef60",
+          "raw_full_prompt_continuation_JP": true,
+          "public_completions": 5
+        },
+        {
+          "example": 4,
+          "source_row": 0,
+          "source_line_sha256": "a6056e9fb478f49fb930861f47c3035c38a7b4d8a005482f7063f1bccd1eab5e",
+          "raw_full_prompt_continuation_JP": true,
+          "public_completions": 0
+        },
+        {
+          "example": 5,
+          "source_row": 85549,
+          "source_line_sha256": "e4638d11ab3d323790420f7d6b4f594cab33f1ae24a48e3bc82e0206aef0beb5",
+          "raw_full_prompt_continuation_JP": true,
+          "public_completions": 0
+        },
+        {
+          "example": 6,
+          "source_row": 31603,
+          "source_line_sha256": "9976b1ff3adc86870de44c50a534f40852834d14ab931af7af4b4451b9606539",
+          "raw_full_prompt_continuation_JP": true,
+          "public_completions": 0
+        },
+        {
+          "example": 7,
+          "source_row": 15756,
+          "source_line_sha256": "a875e14060bec6b2c0bf197fabd156e0dfd8e0ee1cd4edbe4e06e669ade651a8",
+          "raw_full_prompt_continuation_JP": true,
+          "public_completions": 0
+        },
+        {
+          "example": 8,
+          "source_row": 63532,
+          "source_line_sha256": "452f7546d186d41712640622c7f66e5cf3b8958bedca455d3f7558a30faf5e10",
+          "raw_full_prompt_continuation_JP": true,
+          "public_completions": 0
+        },
+        {
+          "example": 9,
+          "source_row": 75984,
+          "source_line_sha256": "abf6c6de3b5dfdf27b055ec1239cfbf166f7df1ac35d6043dbffcc6298f4e21a",
+          "raw_full_prompt_continuation_JP": true,
+          "public_completions": 0
+        },
+        {
+          "example": 10,
+          "source_row": 87970,
+          "source_line_sha256": "6f0617123300cfb08e029b156c7fb7ff8dda1f5da489a6270104107dc3799fa3",
+          "raw_full_prompt_continuation_JP": true,
+          "public_completions": 0
+        },
+        {
+          "example": 11,
+          "source_row": 72306,
+          "source_line_sha256": "45e7aebbbe4a10388e9c293399e88e1684733c6df00109ab764dc942faac8049",
+          "raw_full_prompt_continuation_JP": true,
+          "public_completions": 0
+        },
+        {
+          "example": 12,
+          "source_row": 25458,
+          "source_line_sha256": "15945652ce38091f83350c6e2b88d38a60cc347b90af5c29e89b0a04a1e6c978",
+          "raw_full_prompt_continuation_JP": true,
+          "public_completions": 0
+        },
+        {
+          "example": 13,
+          "source_row": 675,
+          "source_line_sha256": "c96a8884179bd09a5ef3e14e27ea5b310aeec92b135ed2d197b5fed6c02fcf3d",
+          "raw_full_prompt_continuation_JP": true,
+          "public_completions": 0
+        }
+      ],
+      "public_generations15_raw_and_JP_preserved": true,
+      "original_EN_quotes_preserved_only2_JP_naturalized": 58,
+      "native_tables": [
+        {
+          "page": 15,
+          "source_baseline": 15,
+          "numeric_values_preserved": true
+        },
+        {
+          "page": 16,
+          "source_baseline": 16,
+          "numeric_values_preserved": true
+        },
+        {
+          "page": 20,
+          "source_baseline": 20,
+          "numeric_values_preserved": true
+        },
+        {
+          "page": 21,
+          "source_baseline": 21,
+          "numeric_values_preserved": true
+        },
+        {
+          "page": 22,
+          "source_baseline": 22,
+          "numeric_values_preserved": true
+        },
+        {
+          "page": 49,
+          "source_baseline": 53,
+          "numeric_values_preserved": true
+        }
+      ],
+      "practical_code_executed": true,
+      "score21boldB13731": [
+        7,
+        9,
+        11,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "notes": 0,
+      "final55_PNG_equal_PDF": true,
+      "meaningful_conditions_preserved": [
+        "原研究25候補/TOXICITY閾値0.5/0〜1単位",
+        "高低入力群/最大値平均と出現率/入力間SD",
+        "原研究5モデルと制御法比較",
+        "PPLM10候補/10000入力/355Mと基本GPT2 124Mの差",
+        "文全体スコアの4区間抽出/断片を個別再採点",
+        "原13例の両断片全文/JP/スコア/欠測",
+        "3入力の全15既存候補/JP/5候補/最大20tokens",
+        "人手対API一致88%/80%と相関0.83/0.65/各100件"
+      ],
+      "removed_conditions_preserved_externally": "固定42run/seed/1000要求/後続3モデル得点/toxic_frac実装は不変baseline・旧evidence・コピー済audit JSONへ。元研究の細sampling条件もfindingsのbefore全文へ。"
     }
   },
-  "independent_review": "independent-review/"
+  "independent_review": "editorial-2026-10/independent-review/",
+  "editorial_revisions": [
+    {
+      "checked_at": "2026-10-19T10:30:58+00:00",
+      "method": "skill_based_codex",
+      "gemini_used": false,
+      "baseline_artifact_sha256": {
+        "pptx": "11382eb402dad391d0ce89d75aa3fff81fbee0e64fecd0ee39f04d153283bd67",
+        "pdf": "26de0dc4277a1cb1201fb0de45ab114d2564770da2120ff3b25cede2929f6c86"
+      },
+      "artifact_sha256": {
+        "pptx": "f8f19d50f0dc8bd52bcf97920896dc22d0c2c3a14e267de8e900e8295f7965ef",
+        "pdf": "721083a7c5f159ef70cc0a3d6ad41aca01b83cf4b4d3d72e5857933adbff6ec5"
+      },
+      "previous_pages": 62,
+      "total_pages": 55,
+      "main_pages": 27,
+      "record_directory": "editorial-2026-10/",
+      "independent_review": "editorial-2026-10/independent-review/",
+      "main_check": "editorial-2026-10/main-review.json"
+    }
+  ],
+  "current_revision": "editorial-2026-10/",
+  "previous_review_record": "editorial-2026-10/previous/review.json",
+  "audit_sources": {
+    "layout-audit.json": "editorial-2026-10/layout-audit.json",
+    "package-audit.json": "editorial-2026-10/package-audit.json",
+    "links-audit.json": "editorial-2026-10/links-audit.json",
+    "content-checks.json": "editorial-2026-10/content-checks.json"
+  }
 }

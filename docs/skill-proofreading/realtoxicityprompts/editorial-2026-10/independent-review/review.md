@@ -1,0 +1,9 @@
+# RealToxicityPrompts 改訂独立レビュー
+
+承認。未解決事項なし。
+
+原62頁とfindings、最終55頁のnativeを読み、全55頁とoverviewを個別に実描画で確認した。元13入力/元continuation/日本語、3入力の既存15生成と訳、原論文の構築・評価・毒性低減、nullと分母、帰属・権利条件を照合した。全原99442行と公開state/集計を独立再計算し、全native/枠/URL/構造/最終hash検査にも合格。基盤条件と監査を外部へ移し、原研究中心という最新方針に対応している。
+
+PPTX f8f19d50f0dc8bd52bcf97920896dc22d0c2c3a14e267de8e900e8295f7965ef
+
+PDF 721083a7c5f159ef70cc0a3d6ad41aca01b83cf4b4d3d72e5857933adbff6ec5

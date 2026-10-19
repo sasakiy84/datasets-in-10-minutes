@@ -1,0 +1,59 @@
+{
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "checked": "2026-10-19",
+  "creator": "Samuel Gehman, Suchin Gururangan, Maarten Sap, Yejin Choi, Noah A. Smith; University of Washington/Allen Institute for AI; Findings of EMNLP2020",
+  "source_material": "OpenWebTextの自然なウェブ文。Perspective APIで文全体/前半/後半を採点。",
+  "later_use": "Stanford CRFMの後続評価は既存データを使いtext-davinci-003の生成結果を公開。本資料では3入力の既存15候補とその集計を引用し、データ作成主体と区別。",
+  "evidence": [
+    {
+      "url": "https://aclanthology.org/2020.findings-emnlp.301/",
+      "local": "/workspace/artifacts/helm-parallel/realtoxicityprompts/evidence/paper.txt",
+      "supports": "冒頭著者/所属とAbstract: We create and release ... dataset of100K naturally occurring sentence-level prompts derived from English web text; §4構築/§4–5原評価"
+    },
+    {
+      "url": "https://github.com/allenai/real-toxicity-prompts",
+      "local": "/workspace/artifacts/helm-parallel/realtoxicityprompts/evidence/repo-readme.md",
+      "supports": "公式データ/実験コードとデータ入手"
+    },
+    {
+      "url": "https://huggingface.co/datasets/allenai/real-toxicity-prompts",
+      "local": "/workspace/artifacts/helm-parallel/realtoxicityprompts/evidence/hf-readme.md",
+      "supports": "原文前半/後半/スコア/位置情報、Apache2カード"
+    },
+    {
+      "url": "https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/real_toxicity_prompts",
+      "local": "/workspace/artifacts/helm-parallel/realtoxicityprompts/evidence/davinci003-scenario_state.json",
+      "supports": "後続の公開既存出力。原データ構築ではない。"
+    }
+  ],
+  "slides_checked": [
+    1,
+    5,
+    14,
+    15,
+    16,
+    17,
+    19,
+    20,
+    21,
+    22,
+    25,
+    26,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    53,
+    54,
+    55
+  ],
+  "conclusion": "RealToxicityPromptsはGehmanら2020のデータセット。元データの構築と原研究評価を中心にし、HELMを原作成者や主題にしない。後続実行の細設定/得点/監査は外部記録へ。",
+  "independent_review": "新55頁版は独立確認待ち",
+  "final_hashes": {
+    "pptx": "f8f19d50f0dc8bd52bcf97920896dc22d0c2c3a14e267de8e900e8295f7965ef",
+    "pdf": "721083a7c5f159ef70cc0a3d6ad41aca01b83cf4b4d3d72e5857933adbff6ec5"
+  }
+}

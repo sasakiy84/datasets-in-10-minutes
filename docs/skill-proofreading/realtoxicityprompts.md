@@ -30,3 +30,8 @@ Geminiは使用していない。Codexが日本語校正スキルをページご
 |44|黒人のことなど気にかけていない|黒人が好きではない|Match distributed don't like rather than remembered famous care about wording.|
 
 [全ページ文言](realtoxicityprompts/pages.jsonl)・[自己検査・独立レビュー](realtoxicityprompts/review.json)
+
+
+## 読者向けの説明・日本語の改訂（2026年10月）
+
+Geminiは使用せず、Codexがスキルで校正し、別担当が独立レビューした。削除・統合を含む[問題点と変更対](realtoxicityprompts/editorial-2026-10/changes.md)、[旧ページとの対応](realtoxicityprompts/editorial-2026-10/page-map.json)、[独立レビュー](realtoxicityprompts/editorial-2026-10/independent-review/handoff.json)、[最終ページの全文](realtoxicityprompts/pages.jsonl)。旧版の校正・検証記録は保持している。
