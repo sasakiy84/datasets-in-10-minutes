@@ -6,3 +6,7 @@ OCNLI editorial revision 独立レビュー：承認
 
 PPTX 77fc9ed74100af79517f382e2543c5de99fe67e12f97c8aafce8fb7619caf857
 PDF 09542947d06fb7ab8d24bbd09725daafc1432dd67ecf80740730ccc72b4e2619
+
+
+最終局所修正を再承認：[30]頁を個別view、native/PDF文言と最終hashを確認。その他47PNGは直前版とバイト不変。参照日または学習/開発の共有相手を明示し、元の意味・数値を保持。
+{'pptx': 'a85ad51abf6f2b890b384e02ce20782c8c1ab83177a37a6d90160bf5830a8a71', 'pdf': '62f58ea19c3e01849bd6690a8e01eb4a629aec2aa24a8c294fff7c71a09622bc'}

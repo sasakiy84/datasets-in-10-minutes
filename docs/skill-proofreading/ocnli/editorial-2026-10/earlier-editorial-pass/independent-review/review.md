@@ -1,0 +1,8 @@
+OCNLI editorial revision 独立レビュー：承認
+
+57頁の旧native・findings・削除頁、最終51頁のnative/個別画像/overviewを通読・目視。13件の前提・仮説と日本語、元ラベル、CLEVAの全選択肢と正解、6native表、実データ6ファイルと公開ZIPを独立照合した。原資料の意味、数値、否定、比較、義務、出典と権利条件を保持。細かな監査・実装条件は外部化され、学習集合の選び方や多数決不成立の扱いは読者向けに説明されている。追加必須修正・未解決なし。
+
+最終layout310段落66セル、全文389段落70セル、全260native text_frame4側、47URL、package新規XSD0を独立再検査。最終PDFを独立raster化した51PNGは作者版と全件一致。コードは元dev先頭レコードで実行し一致。
+
+PPTX 77fc9ed74100af79517f382e2543c5de99fe67e12f97c8aafce8fb7619caf857
+PDF 09542947d06fb7ab8d24bbd09725daafc1432dd67ecf80740730ccc72b4e2619

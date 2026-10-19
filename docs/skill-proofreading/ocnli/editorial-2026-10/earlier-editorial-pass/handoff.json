@@ -1,0 +1,270 @@
+{
+  "slug": "ocnli",
+  "title": "OCNLI",
+  "description": "中国語の前提と仮説の関係を、含意・矛盾・中立で判定するデータ。13例で推論の手掛かりを読み、作成方法と評価、公開版の違いを説明する。",
+  "year": 2020,
+  "main_pages": 32,
+  "total_pages": 51,
+  "files": {
+    "pptx": "/workspace/artifacts/helm-editorial-revision/ocnli/datasets-in-10-minutes-ocnli.pptx",
+    "pdf": "/workspace/artifacts/helm-editorial-revision/ocnli/datasets-in-10-minutes-ocnli.pdf"
+  },
+  "final_hashes": {
+    "pptx": "77fc9ed74100af79517f382e2543c5de99fe67e12f97c8aafce8fb7619caf857",
+    "pdf": "09542947d06fb7ab8d24bbd09725daafc1432dd67ecf80740730ccc72b4e2619"
+  },
+  "sha256": {
+    "pptx": "77fc9ed74100af79517f382e2543c5de99fe67e12f97c8aafce8fb7619caf857",
+    "pdf": "09542947d06fb7ab8d24bbd09725daafc1432dd67ecf80740730ccc72b4e2619"
+  },
+  "status": "independent_review_passed",
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "created_at": "2026-10-18T09:59:30Z",
+  "modified_at": "2026-10-19T08:13:17.235107+00:00",
+  "baseline": "/workspace/artifacts/helm-editorial-revision/baseline/ocnli",
+  "findings": "/workspace/artifacts/helm-editorial-revision/ocnli/findings.json",
+  "page_map": "/workspace/artifacts/helm-editorial-revision/ocnli/page-map.json",
+  "native_pages": "/workspace/artifacts/helm-editorial-revision/ocnli/pages.jsonl",
+  "reviewer": "create_msmarco",
+  "independent_review": {
+    "status": "passed",
+    "approved": true,
+    "remaining_issues": [],
+    "path": "/workspace/artifacts/helm-editorial-revision/review-ocnli/handoff.json",
+    "approved_at": "2026-10-19T08:15:26.154991+00:00"
+  },
+  "self_checks": [
+    "content-checks.json",
+    "layout-audit.json",
+    "all-text-frame-audit.json",
+    "links-audit.json",
+    "package-audit.json",
+    "visual-inspection.json"
+  ],
+  "audits": {
+    "layout-audit.json": {
+      "paragraphs_checked": 310,
+      "table_cells_checked": 66,
+      "issues": []
+    },
+    "links-audit.json": {
+      "native_url_only_runs": 47,
+      "pdf_link_rectangles": 47,
+      "pdf_link_text_exactly_matches_url": true,
+      "pdf_link_character_centers_match_url": true,
+      "glyph_box_overhangs": [],
+      "shortened_url_labels": [],
+      "issues": []
+    },
+    "package-audit.json": {
+      "parsed_xml_parts": 135,
+      "integer_bullets": 134,
+      "hyperlinks": 47,
+      "new_schema_errors": [],
+      "baseline_schema_errors": 11,
+      "package_integrity": "passed",
+      "internal_relationship_targets": "passed",
+      "unique_shape_ids": "passed",
+      "schema_note": "標準XSDを変更せず確認。マスター由来の既存エラーと、整数buSzPctの百分率字句形式との差を分離。整数箇条書きサイズは25000–400000で別途検査。",
+      "pages": 51,
+      "native_tables": 6,
+      "native_charts": 0
+    },
+    "all-text-frame-audit.json": {
+      "method": "native_frame_pdf_text_match_and_visible_png_ink_bbox",
+      "frames": 260,
+      "paragraphs": 389,
+      "bottom_tolerance_pt": 0.75,
+      "other_edges_tolerance_pt": 2.5,
+      "candidates": []
+    },
+    "panel-visible-gaps.json": {
+      "count": 29,
+      "panels": [
+        {
+          "page": 7,
+          "shape": 6,
+          "top_pt": 8.133333333333354,
+          "bottom_pt": 7.866640419947515
+        },
+        {
+          "page": 7,
+          "shape": 7,
+          "top_pt": 8.133333333333354,
+          "bottom_pt": 7.866640419947515
+        },
+        {
+          "page": 9,
+          "shape": 6,
+          "top_pt": 7.466666666666669,
+          "bottom_pt": 7.866587926509226
+        },
+        {
+          "page": 9,
+          "shape": 7,
+          "top_pt": 7.466666666666669,
+          "bottom_pt": 7.866640419947487
+        },
+        {
+          "page": 11,
+          "shape": 6,
+          "top_pt": 8.133333333333354,
+          "bottom_pt": 7.866666666666646
+        },
+        {
+          "page": 11,
+          "shape": 7,
+          "top_pt": 7.466666666666669,
+          "bottom_pt": 7.8666141732282995
+        },
+        {
+          "page": 29,
+          "shape": 6,
+          "top_pt": 8.133333333333354,
+          "bottom_pt": 7.8666141732282995
+        },
+        {
+          "page": 29,
+          "shape": 7,
+          "top_pt": 8.133333333333354,
+          "bottom_pt": 8.533280839894985
+        },
+        {
+          "page": 31,
+          "shape": 4,
+          "top_pt": 7.866666666666674,
+          "bottom_pt": 8.133254593175849
+        },
+        {
+          "page": 36,
+          "shape": 6,
+          "top_pt": 8.133333333333354,
+          "bottom_pt": 7.866666666666646
+        },
+        {
+          "page": 36,
+          "shape": 7,
+          "top_pt": 7.466666666666669,
+          "bottom_pt": 7.8666141732282995
+        },
+        {
+          "page": 37,
+          "shape": 6,
+          "top_pt": 8.133333333333354,
+          "bottom_pt": 7.866640419947515
+        },
+        {
+          "page": 37,
+          "shape": 7,
+          "top_pt": 8.133333333333354,
+          "bottom_pt": 7.866666666666646
+        },
+        {
+          "page": 38,
+          "shape": 6,
+          "top_pt": 8.133333333333354,
+          "bottom_pt": 7.866666666666646
+        },
+        {
+          "page": 38,
+          "shape": 7,
+          "top_pt": 7.466666666666669,
+          "bottom_pt": 7.8666141732282995
+        },
+        {
+          "page": 39,
+          "shape": 6,
+          "top_pt": 7.466666666666669,
+          "bottom_pt": 7.866587926509226
+        },
+        {
+          "page": 39,
+          "shape": 7,
+          "top_pt": 7.466666666666669,
+          "bottom_pt": 7.866640419947487
+        },
+        {
+          "page": 40,
+          "shape": 6,
+          "top_pt": 8.133333333333354,
+          "bottom_pt": 7.866666666666646
+        },
+        {
+          "page": 40,
+          "shape": 7,
+          "top_pt": 8.133333333333354,
+          "bottom_pt": 8.0
+        },
+        {
+          "page": 41,
+          "shape": 6,
+          "top_pt": 7.466666666666669,
+          "bottom_pt": 7.8666141732282995
+        },
+        {
+          "page": 41,
+          "shape": 7,
+          "top_pt": 7.466666666666669,
+          "bottom_pt": 7.866640419947487
+        },
+        {
+          "page": 42,
+          "shape": 6,
+          "top_pt": 8.133333333333354,
+          "bottom_pt": 7.866640419947515
+        },
+        {
+          "page": 42,
+          "shape": 7,
+          "top_pt": 7.466666666666669,
+          "bottom_pt": 7.866587926509226
+        },
+        {
+          "page": 43,
+          "shape": 6,
+          "top_pt": 8.133333333333354,
+          "bottom_pt": 7.866666666666646
+        },
+        {
+          "page": 43,
+          "shape": 7,
+          "top_pt": 7.466666666666669,
+          "bottom_pt": 7.8666141732282995
+        },
+        {
+          "page": 44,
+          "shape": 6,
+          "top_pt": 8.133333333333354,
+          "bottom_pt": 7.866640419947515
+        },
+        {
+          "page": 44,
+          "shape": 7,
+          "top_pt": 7.466666666666669,
+          "bottom_pt": 7.866587926509226
+        },
+        {
+          "page": 45,
+          "shape": 6,
+          "top_pt": 8.13333333333334,
+          "bottom_pt": 7.866614173228356
+        },
+        {
+          "page": 45,
+          "shape": 7,
+          "top_pt": 8.13333333333334,
+          "bottom_pt": 7.866614173228356
+        }
+      ],
+      "top_range": [
+        7.466666666666669,
+        8.133333333333354
+      ],
+      "bottom_range": [
+        7.866587926509226,
+        8.533280839894985
+      ]
+    }
+  }
+}

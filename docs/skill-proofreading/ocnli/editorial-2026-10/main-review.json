@@ -3,10 +3,10 @@
   "method": "skill_based_codex",
   "gemini_used": false,
   "artifact_sha256": {
-    "pptx": "77fc9ed74100af79517f382e2543c5de99fe67e12f97c8aafce8fb7619caf857",
-    "pdf": "09542947d06fb7ab8d24bbd09725daafc1432dd67ecf80740730ccc72b4e2619"
+    "pptx": "a85ad51abf6f2b890b384e02ce20782c8c1ab83177a37a6d90160bf5830a8a71",
+    "pdf": "62f58ea19c3e01849bd6690a8e01eb4a629aec2aa24a8c294fff7c71a09622bc"
   },
-  "initial_native_text_read_pages": [
+  "current_native_text_read_pages": [
     1,
     2,
     3,
@@ -54,31 +54,103 @@
     45,
     46,
     47,
-    48,
-    49,
-    50,
-    51
+    48
   ],
   "actual_individually_viewed_pages": [
-    7,
-    9,
-    15,
-    17,
-    18,
-    24,
-    29,
-    31,
-    40
+    23,
+    43
   ],
-  "checks": {
-    "all13_chinese_japanese_examples_and_cleva_example_read": true,
-    "all_native_table_values_read": true,
-    "label_ambiguity_and_human_vs_model_evaluation_populations_preserved": true,
-    "source_vs_cleva_and_train_overlap_explained": true
-  },
-  "findings": "全51頁の本文・表を読み、代表8頁を個別描画確認。含意・矛盾・中立、作成条件と手掛かり、50k/30kの前提重複、非公開testラベル、CLEVAの公開設問を分けて自然に説明。145人の母語話者と再注釈・多数決は重要なので保持し、作成1ペアと再注釈の細かな報酬額だけ外部記録へ移すよう依頼。 最終p18の描画で報酬額だけの外部化と重要条件の維持を再確認。",
   "remaining_issues": [],
-  "final_recheck_pages": [
-    18
-  ]
+  "dataset_centered_review": {
+    "quality_prompt": 116,
+    "approved": true,
+    "full_native_text_read": true,
+    "origin_verified": true,
+    "selection_platform_sections_removed": true,
+    "finding": "中国語から構築した自然言語推論、注釈・収集方法、5文体、50k/30k前提重複と2020年評価、利用条件を中心に構成。13原問・訳・ラベル、元評価の条件と表を保持。 最終局所修正のnative本文を確認し、学習用と開発用の前提共有の説明を明示した。"
+  },
+  "earlier_main_review": {
+    "reviewer": "main",
+    "method": "skill_based_codex",
+    "gemini_used": false,
+    "artifact_sha256": {
+      "pptx": "77fc9ed74100af79517f382e2543c5de99fe67e12f97c8aafce8fb7619caf857",
+      "pdf": "09542947d06fb7ab8d24bbd09725daafc1432dd67ecf80740730ccc72b4e2619"
+    },
+    "initial_native_text_read_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51
+    ],
+    "actual_individually_viewed_pages": [
+      7,
+      9,
+      15,
+      17,
+      18,
+      24,
+      29,
+      31,
+      40
+    ],
+    "checks": {
+      "all13_chinese_japanese_examples_and_cleva_example_read": true,
+      "all_native_table_values_read": true,
+      "label_ambiguity_and_human_vs_model_evaluation_populations_preserved": true,
+      "source_vs_cleva_and_train_overlap_explained": true
+    },
+    "findings": "全51頁の本文・表を読み、代表8頁を個別描画確認。含意・矛盾・中立、作成条件と手掛かり、50k/30kの前提重複、非公開testラベル、CLEVAの公開設問を分けて自然に説明。145人の母語話者と再注釈・多数決は重要なので保持し、作成1ペアと再注釈の細かな報酬額だけ外部記録へ移すよう依頼。 最終p18の描画で報酬額だけの外部化と重要条件の維持を再確認。",
+    "remaining_issues": [],
+    "final_recheck_pages": [
+      18
+    ]
+  }
 }
