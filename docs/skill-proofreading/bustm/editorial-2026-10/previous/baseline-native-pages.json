@@ -1,0 +1,601 @@
+[
+  {
+    "page": 1,
+    "text": [
+      "BUSTM",
+      "OPPO XiaoBu Dialogue Short Text Matching Dataset\n小布助手の短い発話から、意味の一致を判定する",
+      "sasakiy84",
+      "datasets in 10 minutes (2026-10-18)"
+    ]
+  },
+  {
+    "page": 2,
+    "text": [
+      "公式公開元：OPPO小布助手のBUSTM",
+      "BUSTM",
+      "[1] OPPO XiaoBu Conversational-AI Center (2021). BUSTM: OPPO XiaoBu Dialogue Short Text Matching Dataset.  https://github.com/xiaobu-coai/BUSTM"
+    ]
+  },
+  {
+    "page": 3,
+    "text": [
+      "",
+      "二つの発話が同じ意味かを判定する\n少数の学習例と複数の分割\n正解率と2021年の到達水準\nCLEVAでの利用と公開範囲",
+      "目次"
+    ]
+  },
+  {
+    "page": 4,
+    "text": [
+      "二つの発話が同じ意味かを判定する",
+      "1. 二つの発話が同じ意味かを判定する"
+    ]
+  },
+  {
+    "page": 5,
+    "text": [
+      "入力は二つの発話、答えは「同じ意味」かどうか",
+      "BUSTMは、OPPOの音声アシスタント「小布助手」で使う短文の意味照合データ。口語の二つの発話を読み、意味が一致するなら1、一致しないなら0を返す。\n同じ操作の言い換えを見分けることは、利用者の意図を認識するために役立つ。話題や語句が似ているだけでは、同じ依頼・質問とは限らない。",
+      "1. 二つの発話が同じ意味かを判定する",
+      "[1] OPPO XiaoBu Conversational-AI Center (2021). BUSTM: OPPO XiaoBu Dialogue Short Text Matching Dataset.  https://github.com/xiaobu-coai/BUSTM"
+    ]
+  },
+  {
+    "page": 6,
+    "text": [
+      "実例1：言い方が違っても、怒りっぽさを尋ねる",
+      "1. 二つの発話が同じ意味かを判定する",
+      "中国語原文：二つの発話",
+      "日本語訳",
+      "1. 你的火气大吗\n\n2. 你火气大不大",
+      "1. あなたは怒りっぽい？\n\n2. あなたは怒りっぽいの？",
+      "正解：1（意味が一致する）",
+      "語尾や語順が違っても、問う内容は同じ。",
+      "[1] CLUE team. FewCLUE / BUSTM 公式配布、commit 62a02c6f31cf32814cfe522f78ef088228840f8d、2026-10-18参照。 train_few_all.json:36行 / id=35\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/bustm"
+    ]
+  },
+  {
+    "page": 7,
+    "text": [
+      "実例2：「歌って」と「曲を流して」を分ける",
+      "1. 二つの発話が同じ意味かを判定する",
+      "中国語原文：二つの発話",
+      "日本語訳",
+      "1. 给我唱首歌吧\n\n2. 放首歌给我们听听",
+      "1. 私に歌を1曲歌って。\n\n2. 私たちに曲を1曲流して。",
+      "正解：0（意味が一致しない）",
+      "歌う動作と、音楽を再生する動作の違い。",
+      "[1] CLUE team. FewCLUE / BUSTM 公式配布、commit 62a02c6f31cf32814cfe522f78ef088228840f8d、2026-10-18参照。 test_public.json:11行 / id=479\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/bustm"
+    ]
+  },
+  {
+    "page": 8,
+    "text": [
+      "実例3：通話中に画面が暗くなる",
+      "1. 二つの発話が同じ意味かを判定する",
+      "中国語原文：二つの発話",
+      "日本語訳",
+      "1. 通话时黑屏黑屏\n\n2. 手机通话时黑屏",
+      "1. 通話中に画面が真っ暗、真っ暗。\n\n2. 携帯電話で通話中に画面が真っ暗になる。",
+      "正解：1（意味が一致する）",
+      "繰り返しや言い換えがあっても、同じ症状を伝える。",
+      "[1] CLUE team. FewCLUE / BUSTM 公式配布、commit 62a02c6f31cf32814cfe522f78ef088228840f8d、2026-10-18参照。 test_public.json:17行 / id=2363\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/bustm"
+    ]
+  },
+  {
+    "page": 9,
+    "text": [
+      "同じ話題でも、求める動作や時間を見分ける",
+      "「歌ってほしい」と「曲を流してほしい」は、音楽の話でも求める動作が違う。「けがをしそう」と「すでにけがをした」では、出来事が起きたかどうかが変わる。\n入力には語順の崩れ、繰り返し、短い名詞句もある。文法の整った文だけを比較する課題とは異なり、口語の意図を短い文字列から読み取る。",
+      "1. 二つの発話が同じ意味かを判定する",
+      "[1] CLUE team. FewCLUE / BUSTM 公式配布、commit 62a02c6f31cf32814cfe522f78ef088228840f8d、2026-10-18参照。\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/bustm"
+    ]
+  },
+  {
+    "page": 10,
+    "text": [
+      "少数の学習例と複数の分割",
+      "2. 少数の学習例と複数の分割"
+    ]
+  },
+  {
+    "page": 11,
+    "text": [
+      "元の会話サービスから、少数例の評価へ",
+      "2. 少数の学習例と複数の分割",
+      "",
+      "小布助手",
+      "発話の意味を照合し\n意図認識に利用",
+      "→",
+      "",
+      "BUSTM",
+      "口語の短い発話を\n二つずつ組にする",
+      "→",
+      "",
+      "FewCLUE",
+      "32件の学習例で\n意味の一致を学ぶ",
+      "スマートフォンやIoT機器への依頼・質問を含む。意図のカテゴリ名を出すのではなく、二つの発話が同じ意味かを二値で判定する。",
+      "[1] OPPO XiaoBu Conversational-AI Center (2021). BUSTM: OPPO XiaoBu Dialogue Short Text Matching Dataset.  https://github.com/xiaobu-coai/BUSTM"
+    ]
+  },
+  {
+    "page": 12,
+    "text": [
+      "32件の学習例で、意味の対応を学べるかを調べる",
+      "教師ありデータを大量に用意しにくい実務上の課題を受け、OPPOは2021年にBUSTMを公開した。FewCLUEは中国語の少数例学習を比べる九つの課題の一つに採用した。\nFewCLUEでは、ラベルが三種類以下の課題に合計32件の学習例を用意する。BUSTMの32件は各ラベル32件ではなく、二つのラベルを合わせた件数。",
+      "2. 少数の学習例と複数の分割",
+      "[1] OPPO XiaoBu Conversational-AI Center (2021). BUSTM: OPPO XiaoBu Dialogue Short Text Matching Dataset.  https://github.com/xiaobu-coai/BUSTM\n[2] Xu et al. (2021). FewCLUE: A Chinese Few-shot Learning Evaluation Benchmark. arXiv:2107.07498v2.  https://arxiv.org/abs/2107.07498"
+    ]
+  },
+  {
+    "page": 13,
+    "text": [
+      "学習・開発は32件、評価は千件単位",
+      "2. 少数の学習例と複数の分割",
+      "ファイル群 | レコード数 | 正解ラベル",
+      "train_0〜4 | 各32（5組） | あり",
+      "dev_0〜4 | 各32（5組） | あり",
+      "test_public | 1,772 | あり",
+      "test | 2,000 | なし",
+      "unlabeled | 4,251 | なし",
+      "train_few_allとdev_few_allは各160行。五つの小集合をまとめた配布で、それぞれ異なる発話対は156種類。",
+      "[1] Xu et al. (2021). FewCLUE: A Chinese Few-shot Learning Evaluation Benchmark. arXiv:2107.07498v2.  https://arxiv.org/abs/2107.07498\n[2] CLUE team. FewCLUE / BUSTM 公式配布、commit 62a02c6f31cf32814cfe522f78ef088228840f8d、2026-10-18参照。\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/bustm"
+    ]
+  },
+  {
+    "page": 14,
+    "text": [
+      "公開テストと、提出用テストを使い分ける",
+      "test_public.jsonは正解を含み、研究用の実験に使える。test.jsonは入力のみで、2021年のコンテストでは予測結果を提出して評価を受ける集合だった。\n複数の学習・開発組を用意することで、少数の例の選ばれ方による揺れを調べる。コンテスト第2段階では0〜4とallの六つの学習条件ごとにtestへの予測を提出する。",
+      "2. 少数の学習例と複数の分割",
+      "[1] CLUE team. FewCLUE README、公式の実験・提出・配布条件。\nhttps://github.com/CLUEbenchmark/FewCLUE/blob/62a02c6f31cf32814cfe522f78ef088228840f8d/README.md"
+    ]
+  },
+  {
+    "page": 15,
+    "text": [
+      "一行に二つの発話と文字列の正解を持つ",
+      "2. 少数の学習例と複数の分割",
+      "{\n  \"id\": 35,\n  \"sentence1\": \"你的火气大吗\",\n  \"sentence2\": \"你火气大不大\",\n  \"label\": \"1\"\n}",
+      "train_few_all.jsonの36行。labelは文字列の\"0\"または\"1\"。testとunlabeledにはlabel欄がない。idはファイルをまたいで一意とは限らない。",
+      "[1] CLUE team. FewCLUE / BUSTM 公式配布、commit 62a02c6f31cf32814cfe522f78ef088228840f8d、2026-10-18参照。\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/bustm"
+    ]
+  },
+  {
+    "page": 16,
+    "text": [
+      "公開テストは、二つのラベルが同数",
+      "2. 少数の学習例と複数の分割",
+      "集合 | 0：不一致 | 1：一致 | 計",
+      "train_few_all | 90 | 70 | 160",
+      "dev_few_all | 82 | 78 | 160",
+      "test_public | 886 | 886 | 1,772",
+      "固定版の全レコードを集計。学習の5組は、それぞれ必ず16対16になるわけではない。",
+      "[1] CLUE team. FewCLUE / BUSTM 公式配布、commit 62a02c6f31cf32814cfe522f78ef088228840f8d、2026-10-18参照。\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/bustm"
+    ]
+  },
+  {
+    "page": 17,
+    "text": [
+      "正解率と2021年の到達水準",
+      "3. 正解率と2021年の到達水準"
+    ]
+  },
+  {
+    "page": 18,
+    "text": [
+      "Accuracyは、配布ラベルと一致した対の割合",
+      "二つの発話から0または1を予測し、正解ラベルと一致した件数を評価件数で割る。test_publicの1,772対では、いつも同じラベルを出すだけなら886対が正しく、正解率は50%。\n意味が近く見える対にも、配布ラベルが0の例がある。正解率を再現するときは元のラベルを使い、解釈だけで正解を付け替えない。",
+      "3. 正解率と2021年の到達水準",
+      "[1] Xu et al. (2021). FewCLUE: A Chinese Few-shot Learning Evaluation Benchmark. arXiv:2107.07498v2.  https://arxiv.org/abs/2107.07498\n[2] CLUE team. FewCLUE / BUSTM 公式配布、commit 62a02c6f31cf32814cfe522f78ef088228840f8d、2026-10-18参照。\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/bustm"
+    ]
+  },
+  {
+    "page": 19,
+    "text": [
+      "少数例のEFLは71.8%、直接微調整は60.7%",
+      "3. 正解率と2021年の到達水準",
+      "2021年の方式 | BUSTM Accuracy (%)",
+      "一定ラベル（Majority） | 50.0",
+      "RoBERTa・ゼロショット | 50.6",
+      "RoBERTa・直接微調整 | 60.7",
+      "PET | 56.0",
+      "P-tuning・RoBERTa | 60.9",
+      "EFL | 71.8",
+      "2021年の公開テスト正解率。学習する方式は少数例を使う。",
+      "[1] Xu et al. (2021). FewCLUE: A Chinese Few-shot Learning Evaluation Benchmark. arXiv:2107.07498v2.  https://arxiv.org/abs/2107.07498\n[2] CLUE team. FewCLUE README、公式の実験・提出・配布条件。\nhttps://github.com/CLUEbenchmark/FewCLUE/blob/62a02c6f31cf32814cfe522f78ef088228840f8d/README.md"
+    ]
+  },
+  {
+    "page": 20,
+    "text": [
+      "予測の形式を変えて、少数例を生かす",
+      "PETは二つの発話の関係を穴埋め形式に直し、同じ意味かを表す語を予測する。P-tuningは、学習可能なプロンプト表現を加えてモデルを適応させる。\nEFLは各課題を含意判定へ直す方式。中国語へ翻訳した自然言語推論データCMNLIで先に学習し、その後に少数例で微調整する。追加学習の条件も含めて結果を読む。",
+      "3. 正解率と2021年の到達水準",
+      "[1] Xu et al. (2021). FewCLUE: A Chinese Few-shot Learning Evaluation Benchmark. arXiv:2107.07498v2.  https://arxiv.org/abs/2107.07498"
+    ]
+  },
+  {
+    "page": 21,
+    "text": [
+      "基盤モデルが変わると、方式ごとの結果も変わる",
+      "3. 正解率と2021年の到達水準",
+      "方式（2021年） | RoBERTa | ERNIE 1.0",
+      "直接微調整 | 60.7 | 60.4",
+      "PET | 56.0 | 58.4",
+      "P-tuning | 60.9 | 60.8",
+      "EFL | 71.8 | 54.6",
+      "BUSTM Accuracy (%)。RoBERTa側はchinese_roberta_wwm_extを基盤に使う。異なる基盤で、同じ手法が常に同じ改善を生むとは限らない。",
+      "[1] Xu et al. (2021). FewCLUE: A Chinese Few-shot Learning Evaluation Benchmark. arXiv:2107.07498v2.  https://arxiv.org/abs/2107.07498"
+    ]
+  },
+  {
+    "page": 22,
+    "text": [
+      "人間評価は88%、各注釈者が100問を解く",
+      "新しく加えた課題の人間評価では、まず開発例30〜50件を解き、正解と比べて議論する。その後、各注釈者がテスト例100件を解く手順を用いた。BUSTMの公表正解率は88%。\n人間評価の100問という単位は、モデルを評価する公開テスト全件とは異なる。少数例学習の性能を、人間の意味判断の到達水準と比較するための結果。",
+      "3. 正解率と2021年の到達水準",
+      "[1] Xu et al. (2021). FewCLUE: A Chinese Few-shot Learning Evaluation Benchmark. arXiv:2107.07498v2.  https://arxiv.org/abs/2107.07498"
+    ]
+  },
+  {
+    "page": 23,
+    "text": [
+      "公式PET実装は「相／不」を予測する",
+      "3. 正解率と2021年の到達水準",
+      "入力：sentence1 + \"和\" + sentence2 + \"意思[MASK]同\"\n\nlabel = \"1\"  →  \"相\"  →  意思相同（同じ意味）\nlabel = \"0\"  →  \"不\"  →  意思不同（異なる意味）",
+      "PET実装はtrainの指定組で学習し、dev_few_allの正解率でモデルを選び、test_publicで評価する。",
+      "[1] CLUE team. pet_bustm.py、BUSTM向け穴埋め形式・ラベル・採点の実装。\nhttps://github.com/CLUEbenchmark/FewCLUE/blob/main/baselines/models_keras/pet/pet_bustm.py"
+    ]
+  },
+  {
+    "page": 24,
+    "text": [
+      "CLEVAでの利用と公開範囲",
+      "4. CLEVAでの利用と公開範囲"
+    ]
+  },
+  {
+    "page": 25,
+    "text": [
+      "CLEVAは、短い発話の言い換え判定へ採用した",
+      "2023年のCLEVAは、CLUEとFewCLUEの発話対を二択形式に直し、同じことを述べているかを正解率で評価する。短い発話の下位課題short_utteranceとしてBUSTMを扱う。\n公開論文の掲載例は、実例1の「怒りっぽいか」を尋ねる二つの発話と一致する。元データではtrain_few_allの36行、train_1の4行にある。",
+      "4. CLEVAでの利用と公開範囲",
+      "[1] Li et al. (2023). CLEVA: Chinese Language Models EVAluation Platform. EMNLP: System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/"
+    ]
+  },
+  {
+    "page": 26,
+    "text": [
+      "HELMには実装があり、公開実行は0件",
+      "HELM v0.4.0のCLEVAParaphraseIdentificationScenarioは、実例4の「好きかどうか」を尋ねる対を掲載する。元ラベル0は、二択のA「不是」（いいえ）へ対応する。\nshort_utteranceにはprompt_id 0〜5の六つの設定がある。Classic v0.4.0公開run_specs全8,526件にはCLEVA実行がなく、実際の得点や提示例数、生成条件は確認できない。",
+      "4. CLEVAでの利用と公開範囲",
+      "[1] Stanford CRFM. CLEVAParaphraseIdentificationScenario / Converter. HELM v0.4.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py"
+    ]
+  },
+  {
+    "page": 27,
+    "text": [
+      "元の配布と、CLEVAの採用集合は別の範囲",
+      "4. CLEVAでの利用と公開範囲",
+      "対象 | 公開・確認できた範囲",
+      "BUSTM元データ | 公式が案内するFewCLUEの15ファイル",
+      "CLEVA論文 | 言い換え判定の定義と、元データに一致する掲載例",
+      "HELM実装・設定 | 入力変換、二択の説明例、六つのprompt ID",
+      "CLEVA全採用集合 | 外部評価ZIPは未取得。元配布との同一性は未確認。",
+      "[1] Li et al. (2023). CLEVA: Chinese Language Models EVAluation Platform. EMNLP: System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/\n[2] Stanford CRFM. CLEVAParaphraseIdentificationScenario / Converter. HELM v0.4.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py"
+    ]
+  },
+  {
+    "page": 28,
+    "text": [
+      "配布元は明確だが、利用許諾は確定していない",
+      "OPPOの公式リポジトリはFewCLUEのBUSTM配布を案内し、2021年のデータセット引用を示す。元の発話はアシスタント利用に由来する。\n取得したOPPOの固定ツリーにライセンスファイルはない。FewCLUEの固定READMEでもLicense欄は「追加中」となっている。公開されていることと、再配布や商用利用の許諾を同じものとして扱わない。",
+      "4. CLEVAでの利用と公開範囲",
+      "[1] OPPO XiaoBu Conversational-AI Center (2021). BUSTM: OPPO XiaoBu Dialogue Short Text Matching Dataset.  https://github.com/xiaobu-coai/BUSTM\n[2] CLUE team. FewCLUE README、公式の実験・提出・配布条件。\nhttps://github.com/CLUEbenchmark/FewCLUE/blob/62a02c6f31cf32814cfe522f78ef088228840f8d/README.md"
+    ]
+  },
+  {
+    "page": 29,
+    "text": [
+      "まとめ：口語の意味を、少数例で照合する",
+      "BUSTMは小布助手に由来する短い中国語発話対の二値判定データ。言い換え、異なる操作、時点や欲求の違いを扱い、学習・開発を各32件から始める。\nFewCLUEの公開テストは1,772件で、EFLの公表正解率は71.8%、人間評価は88%。CLEVAでの後利用を含め、正解付き元配布・提出用入力・未取得の採用集合を区別する。",
+      "4. CLEVAでの利用と公開範囲",
+      "[1] Xu et al. (2021). FewCLUE: A Chinese Few-shot Learning Evaluation Benchmark. arXiv:2107.07498v2.  https://arxiv.org/abs/2107.07498\n[2] Li et al. (2023). CLEVA: Chinese Language Models EVAluation Platform. EMNLP: System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/"
+    ]
+  },
+  {
+    "page": 30,
+    "text": [
+      "Appendix",
+      "Appendix"
+    ]
+  },
+  {
+    "page": 31,
+    "text": [
+      "",
+      "追加10対の原文と日本語訳\n全ファイル・重複・形式の補足\n参考文献",
+      "Appendix: 目次"
+    ]
+  },
+  {
+    "page": 32,
+    "text": [
+      "実例4：語句が近い対でも、配布ラベルを読む",
+      "Appendix: 1. 追加10対の原文と日本語訳",
+      "中国語原文：二つの発話",
+      "日本語訳",
+      "1. 我喜欢你那你喜欢我吗\n\n2. 你喜欢我不我也喜欢你",
+      "1. 私はあなたが好き。あなたは私が好き？\n\n2. 私のことが好き？私もあなたが好き。",
+      "正解：0（意味が一致しない）",
+      "二つの発話は近いが、配布ラベルは0。追加の対話文脈や注釈理由は配布されていない。",
+      "[1] CLUE team. FewCLUE / BUSTM 公式配布、commit 62a02c6f31cf32814cfe522f78ef088228840f8d、2026-10-18参照。 train_0.json:3行 / id=2\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/bustm"
+    ]
+  },
+  {
+    "page": 33,
+    "text": [
+      "実例5：音声アシスタントを替えたい",
+      "Appendix: 1. 追加10対の原文と日本語訳",
+      "中国語原文：二つの発話",
+      "日本語訳",
+      "1. 请求换一个语音助手\n\n2. 能不能换一个语音助手？",
+      "1. 音声アシスタントの変更をお願いします。\n\n2. 音声アシスタントを変更できる？",
+      "正解：1（意味が一致する）",
+      "依頼の表し方が変わっても、求める操作は同じ。",
+      "[1] CLUE team. FewCLUE / BUSTM 公式配布、commit 62a02c6f31cf32814cfe522f78ef088228840f8d、2026-10-18参照。 test_public.json:19行 / id=408\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/bustm"
+    ]
+  },
+  {
+    "page": 34,
+    "text": [
+      "実例6：音声で答えてほしい",
+      "Appendix: 1. 追加10対の原文と日本語訳",
+      "中国語原文：二つの発話",
+      "日本語訳",
+      "1. 用语音来回答我你可以吗\n\n2. 你可以用语音回答我吗",
+      "1. 音声で答えてもらえますか。\n\n2. 音声で答えてくれますか。",
+      "正解：1（意味が一致する）",
+      "語順が違う、音声による応答の依頼。",
+      "[1] CLUE team. FewCLUE / BUSTM 公式配布、commit 62a02c6f31cf32814cfe522f78ef088228840f8d、2026-10-18参照。 test_public.json:26行 / id=2274\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/bustm"
+    ]
+  },
+  {
+    "page": 35,
+    "text": [
+      "実例7：同じ単位換算でも、問う量は違う",
+      "Appendix: 1. 追加10対の原文と日本語訳",
+      "中国語原文：二つの発話",
+      "日本語訳",
+      "1. 六十平方千米等于多少公顷\n\n2. 一吨等于多少千克",
+      "1. 60平方キロメートルは何ヘクタール？\n\n2. 1トンは何キログラム？",
+      "正解：0（意味が一致しない）",
+      "換算という話題だけでは、同じ内容の問いにならない。",
+      "[1] CLUE team. FewCLUE / BUSTM 公式配布、commit 62a02c6f31cf32814cfe522f78ef088228840f8d、2026-10-18参照。 test_public.json:20行 / id=1336\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/bustm"
+    ]
+  },
+  {
+    "page": 36,
+    "text": [
+      "実例8：これからと、すでに起きたこと",
+      "Appendix: 1. 追加10対の原文と日本語訳",
+      "中国語原文：二つの発話",
+      "日本語訳",
+      "1. 我刚要受伤\n\n2. 我已经受伤了",
+      "1. 私は今にもけがをしそうだ。\n\n2. 私はもうけがをしている。",
+      "正解：0（意味が一致しない）",
+      "けがが起きる前と、起きた後の違い。",
+      "[1] CLUE team. FewCLUE / BUSTM 公式配布、commit 62a02c6f31cf32814cfe522f78ef088228840f8d、2026-10-18参照。 test_public.json:33行 / id=2126\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/bustm"
+    ]
+  },
+  {
+    "page": 37,
+    "text": [
+      "実例9：好みと、そのときの欲求",
+      "Appendix: 1. 追加10対の原文と日本語訳",
+      "中国語原文：二つの発話",
+      "日本語訳",
+      "1. 我爱吃苹果\n\n2. 我想吃苹果",
+      "1. 私はリンゴを食べるのが好きだ。\n\n2. 私はリンゴを食べたい。",
+      "正解：0（意味が一致しない）",
+      "食べるのが好きなことと、食べたいという欲求は同じ意味ではない。",
+      "[1] CLUE team. FewCLUE / BUSTM 公式配布、commit 62a02c6f31cf32814cfe522f78ef088228840f8d、2026-10-18参照。 test_public.json:41行 / id=68\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/bustm"
+    ]
+  },
+  {
+    "page": 38,
+    "text": [
+      "実例10：連絡先の復元と、重複",
+      "Appendix: 1. 追加10対の原文と日本語訳",
+      "中国語原文：二つの発話",
+      "日本語訳",
+      "1. 手机联系人恢复\n\n2. 手机重复联系人",
+      "1. 携帯電話の連絡先を復元する。\n\n2. 携帯電話の連絡先が重複している。",
+      "正解：0（意味が一致しない）",
+      "同じ連絡先という語を含んでも、問題と操作が異なる。",
+      "[1] CLUE team. FewCLUE / BUSTM 公式配布、commit 62a02c6f31cf32814cfe522f78ef088228840f8d、2026-10-18参照。 test_public.json:54行 / id=2380\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/bustm"
+    ]
+  },
+  {
+    "page": 39,
+    "text": [
+      "実例11：ボタンを特定する問いか、名詞句か",
+      "Appendix: 1. 追加10対の原文と日本語訳",
+      "中国語原文：二つの発話",
+      "日本語訳",
+      "1. 下面三个按钮，哪一个是菜单键\n\n2. 下面那三个按钮",
+      "1. 下の三つのボタンのうち、どれがメニューボタン？\n\n2. 下のあの三つのボタン。",
+      "正解：0（意味が一致しない）",
+      "同じボタンを指しても、名詞句だけではメニューボタンを尋ねたことにならない。",
+      "[1] CLUE team. FewCLUE / BUSTM 公式配布、commit 62a02c6f31cf32814cfe522f78ef088228840f8d、2026-10-18参照。 test_public.json:53行 / id=2470\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/bustm"
+    ]
+  },
+  {
+    "page": 40,
+    "text": [
+      "実例12：崩れた語順を読み取る",
+      "Appendix: 1. 追加10対の原文と日本語訳",
+      "中国語原文：二つの発話",
+      "日本語訳",
+      "1. 聊什么你想和我\n\n2. 你想和我聊些什么",
+      "1. 何を話したいの、私と。\n\n2. 私と何を話したいの？",
+      "正解：1（意味が一致する）",
+      "口語的に崩れた語順も収録されている。",
+      "[1] CLUE team. FewCLUE / BUSTM 公式配布、commit 62a02c6f31cf32814cfe522f78ef088228840f8d、2026-10-18参照。 test_public.json:12行 / id=510\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/bustm"
+    ]
+  },
+  {
+    "page": 41,
+    "text": [
+      "実例13：表現そのものと、その意味を尋ねる",
+      "Appendix: 1. 追加10対の原文と日本語訳",
+      "中国語原文：二つの発話",
+      "日本語訳",
+      "1. 阿伟死了\n\n2. 阿伟死了是什么梗",
+      "1. 「アーウェイが死んだ」。\n\n2. 「アーウェイが死んだ」とは、どういうネットのネタ？",
+      "正解：0（意味が一致しない）",
+      "同じ語句の使用と、その語句についての質問を分ける。",
+      "[1] CLUE team. FewCLUE / BUSTM 公式配布、commit 62a02c6f31cf32814cfe522f78ef088228840f8d、2026-10-18参照。 train_0.json:20行 / id=19\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/bustm"
+    ]
+  },
+  {
+    "page": 42,
+    "text": [
+      "全ファイル・重複・形式の補足",
+      "Appendix: 2. 全ファイル・重複・形式の補足"
+    ]
+  },
+  {
+    "page": 43,
+    "text": [
+      "学習の五つの小集合は各32行",
+      "Appendix: 2. 全ファイル・重複・形式の補足",
+      "ファイル | 0：不一致 | 1：一致",
+      "train_0.json | 16 | 16",
+      "train_1.json | 18 | 14",
+      "train_2.json | 21 | 11",
+      "train_3.json | 18 | 14",
+      "train_4.json | 17 | 15",
+      "各ファイル32行・32種類。小集合のラベル比率は組ごとに異なる。",
+      "[1] CLUE team. FewCLUE / BUSTM 公式配布、commit 62a02c6f31cf32814cfe522f78ef088228840f8d、2026-10-18参照。\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/bustm"
+    ]
+  },
+  {
+    "page": 44,
+    "text": [
+      "開発の五つの小集合は各32行",
+      "Appendix: 2. 全ファイル・重複・形式の補足",
+      "ファイル | 0：不一致 | 1：一致",
+      "dev_0.json | 15 | 17",
+      "dev_1.json | 16 | 16",
+      "dev_2.json | 18 | 14",
+      "dev_3.json | 14 | 18",
+      "dev_4.json | 19 | 13",
+      "各ファイル32行・32種類。小集合のラベル比率は組ごとに異なる。",
+      "[1] CLUE team. FewCLUE / BUSTM 公式配布、commit 62a02c6f31cf32814cfe522f78ef088228840f8d、2026-10-18参照。\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/bustm"
+    ]
+  },
+  {
+    "page": 45,
+    "text": [
+      "集約・評価・未ラベルの五つのファイル",
+      "Appendix: 2. 全ファイル・重複・形式の補足",
+      "ファイル | 行数 | 発話対の種類数",
+      "train_few_all.json | 160 | 156",
+      "dev_few_all.json | 160 | 156",
+      "test_public.json | 1,772 | 1,772",
+      "test.json | 2,000 | 2,000",
+      "unlabeled.json | 4,251 | 4,251",
+      "「種類」はsentence1とsentence2を順序付きで比較した数。train/devの集約は、五つの小集合を重複込みでつないだ内容と一致。",
+      "[1] CLUE team. FewCLUE / BUSTM 公式配布、commit 62a02c6f31cf32814cfe522f78ef088228840f8d、2026-10-18参照。\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/bustm"
+    ]
+  },
+  {
+    "page": 46,
+    "text": [
+      "集約内の重複と、集合間の一致を区別する",
+      "train_few_allとdev_few_allは各160行で、同一の順序付き発話対をまとめると各156種類になる。複数の小集合で選ばれた同じ対を、独立した新しい問題とは数えない。\ntrain_few_all、dev_few_all、test_public、test、unlabeledの全10組み合わせで、順序付き発話対の文字列完全一致は0だった。意味が近い表現まで分割間に存在しないことを示す検査ではない。",
+      "Appendix: 2. 全ファイル・重複・形式の補足",
+      "[1] CLUE team. FewCLUE / BUSTM 公式配布、commit 62a02c6f31cf32814cfe522f78ef088228840f8d、2026-10-18参照。\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/bustm"
+    ]
+  },
+  {
+    "page": 47,
+    "text": [
+      "公開テストの発話は、1件あたり平均7.37文字",
+      "Appendix: 2. 全ファイル・重複・形式の補足",
+      "対象 | 最短 | 最長 | 平均",
+      "train_few_all | 3 | 15 | 7.33",
+      "dev_few_all | 4 | 18 | 7.38",
+      "test_public | 2 | 25 | 7.37",
+      "test | 3 | 26 | 7.4",
+      "unlabeled | 2 | 29 | 7.44",
+      "二つの発話を別々に数えたUnicode文字数。空白・句読点を含み、トークン数とは異なる。",
+      "[1] CLUE team. FewCLUE / BUSTM 公式配布、commit 62a02c6f31cf32814cfe522f78ef088228840f8d、2026-10-18参照。\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/bustm"
+    ]
+  },
+  {
+    "page": 48,
+    "text": [
+      "HELMの説明例は、近い表現でも正解A",
+      "Appendix: 2. 全ファイル・重複・形式の補足",
+      "下面这两个句子表达的意思是相同的吗？\n1. 我喜欢你那你喜欢我吗\n2. 你喜欢我不我也喜欢你\nA. 不是\nB. 是\n答：",
+      "次の二つの文は同じ意味を表している？\n1. 私はあなたが好き。あなたは私が好き？\n2. 私のことが好き？私もあなたが好き。\nA. いいえ\nB. はい\n答え：",
+      "正解：A（いいえ）",
+      "[1] Stanford CRFM. CLEVAParaphraseIdentificationScenario / Converter. HELM v0.4.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py"
+    ]
+  },
+  {
+    "page": 49,
+    "text": [
+      "正解理由が付かない対は、文脈を補わずに読む",
+      "実例4の二つの発話は、どちらも好意と相手への問いを含む。しかし、配布ラベルは0で、追加の対話履歴や個別の注釈理由は含まれていない。\nこの資料では元ラベルを保持し、なぜ0になったかを推測で説明しない。ラベルの解釈や品質を調べる場合にも、元の発話対と正解を参照できる形が必要になる。",
+      "Appendix: 2. 全ファイル・重複・形式の補足",
+      "[1] CLUE team. FewCLUE / BUSTM 公式配布、commit 62a02c6f31cf32814cfe522f78ef088228840f8d、2026-10-18参照。\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/bustm"
+    ]
+  },
+  {
+    "page": 50,
+    "text": [
+      "参考文献",
+      "Appendix: 3. 参考文献"
+    ]
+  },
+  {
+    "page": 51,
+    "text": [
+      "参考文献",
+      "Appendix: 3. 参考文献",
+      "BUSTM: OPPO XiaoBu Dialogue Short Text Matching Dataset\nOPPO XiaoBu Conversational-AI Center · 2021 · 公式公開\nスマートフォンとIoT機器向けアシスタントの短文意味照合データ。FewCLUE配布へのリンクと引用方法を示す。\nhttps://github.com/xiaobu-coai/BUSTM",
+      "FewCLUE: A Chinese Few-shot Learning Evaluation Benchmark\nLiang Xu, Xiaojing Lu, Chenyang Yuan, Xuanwei Zhang, Huilin Xu, Hu Yuan, Guoao Wei, Xiang Pan, Xin Tian, Libo Qin, Hai Hu · 2021 · arXiv:2107.07498v2\n中国語の九つの少数例学習課題と、直接微調整・穴埋め形式・含意判定などの比較を報告する。\nhttps://arxiv.org/abs/2107.07498"
+    ]
+  },
+  {
+    "page": 52,
+    "text": [
+      "参考文献",
+      "Appendix: 3. 参考文献",
+      "FewCLUE — Official Dataset Distribution\nCLUE team · 固定commit 62a02c6f31cf32814cfe522f78ef088228840f8d\n32件ずつの学習・開発組、公開正解付きテスト、提出用入力、未ラベル対をJSONL形式で公開する。\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/bustm",
+      "FewCLUE — README and Evaluation Protocol\nCLUE team · 2021年の実験・コンテスト条件\n公開テストと提出用テストの役割、複数学習条件の提出、人間評価とモデル比較、ライセンス欄を示す。\nhttps://github.com/CLUEbenchmark/FewCLUE/blob/62a02c6f31cf32814cfe522f78ef088228840f8d/README.md"
+    ]
+  },
+  {
+    "page": 53,
+    "text": [
+      "参考文献",
+      "Appendix: 3. 参考文献",
+      "CLEVA: Chinese Language Models EVAluation Platform\nYanyang Li et al. · 2023 · EMNLP: System Demonstrations\n中国語モデルを多様な課題で評価するプラットフォーム。短い発話対の言い換え判定に元データを採用する。\nhttps://aclanthology.org/2023.emnlp-demo.17/",
+      "CLEVAParaphraseIdentificationScenario / Converter\nStanford CRFM · HELM v0.4.0 · Python実装\n二つの発話を二択形式へ変換する課題。外部データ・テンプレートの読込と、正解参照の変換を実装する。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py"
+    ]
+  },
+  {
+    "page": 54,
+    "text": [
+      "参考文献",
+      "Appendix: 3. 参考文献",
+      "pet_bustm.py\nCLUE team · FewCLUE公式実装\n発話対を穴埋め文に変え、「相」「不」のラベル語を予測する。学習・開発・公開テストの読込と採点を実装する。\nhttps://github.com/CLUEbenchmark/FewCLUE/blob/main/baselines/models_keras/pet/pet_bustm.py",
+      "run_specs_cleva_v1.conf\nStanford CRFM · HELM v0.4.0 · CLEVA設定\n短い発話対の下位課題short_utteranceについて、0〜5の六つのprompt IDを登録する。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/presentation/run_specs_cleva_v1.conf"
+    ]
+  }
+]
