@@ -1,0 +1,1122 @@
+{
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "findings": [
+    {
+      "old_page": 3,
+      "location": "Text Placeholder 2",
+      "before": "記号列と自然言語の実例\n生成器と固定seedの設計\n採点方法とモデルの到達水準\n研究上の位置付けと再現方法",
+      "after": "記号列と自然言語の実例\n生成方法と問題の構成\n答えの形式と問題の特徴\n先行研究と公開生成器",
+      "reason": "基盤の固定seed/モデル成績/再現監査の目次を、課題自体の概要と使い方へ",
+      "action": "rewrite",
+      "new_page": 2
+    },
+    {
+      "old_page": 4,
+      "location": "Title 1",
+      "before": "1. 記号列と自然言語の実例",
+      "after": "記号列と自然言語の実例",
+      "reason": "章番号は帯に示し、扉は内容の見出しへ",
+      "action": "rewrite",
+      "new_page": 3
+    },
+    {
+      "old_page": 5,
+      "location": "Text Placeholder 2",
+      "before": "HELMが作った小さな合成課題で、記号列の照合、変数の置換、規則の帰納を評価する。外部の事実知識をほとんど使わずに解けるよう設計された。\n自然言語版は、条件文の規則と1つの事実から、新たに導ける属性を答える。easyとhardを用意し、hardでは上位カテゴリや語の言い換えも扱う。\n抽象版と自然言語版は別の生成器である。同じ問題を英語へ直訳した組ではなく、推論の基本操作を異なる形式で試す。",
+      "after": "Stanford CRFM研究チームが2022年に設計した、推論の基本操作を調べる合成課題。抽象版は記号列の照合・変数置換・規則の帰納を扱う。\n自然言語版は、条件文の規則と一つの事実から新しい属性を導く。easyとhardがあり、hardは上位カテゴリや語の言い換えも使う。\n二つの版は別の生成器で作る。それぞれの形式で、規則を読み取って適用できるかを調べる。",
+      "reason": "元の設計主体を一度示し、合成課題を主題にする。直訳対ではないという否定反復は整理",
+      "action": "rewrite",
+      "new_page": 4
+    },
+    {
+      "old_page": 7,
+      "location": "Text Placeholder 2",
+      "before": "実例1ではXがshark、YとZがstorkに対応する。規則列にある変数をすべて置換し、順番と記号を保って出力する。\n+、-、*、=はこの課題では文字列を作る記号である。計算式として正しいかを判定したり、数値を計算したりする課題ではない。\n一つの変数に1語だけでなく2語の文字列を割り当てる例もある。変数の反復位置と、置換する文字列の範囲を対応させる。",
+      "after": "実例1ではXがshark、YとZがstorkに対応する。規則列にある変数をすべて置換し、順番と記号を保って出力する。\n+、-、*、=は、文字列を組み立てるための記号として使う。\n一つの変数に1語だけでなく2語の文字列を割り当てる例もある。変数の反復位置と、置換する文字列の範囲を対応させる。",
+      "reason": "計算式ではないという禁止的説明の反復を、記号の実際の役割へ",
+      "action": "rewrite",
+      "new_page": 6
+    },
+    {
+      "old_page": 12,
+      "location": "Title 1",
+      "before": "2. 生成器と固定seedの設計",
+      "after": "生成方法と問題の構成",
+      "reason": "内部のseed設計より、問題をどう作るかへ",
+      "action": "rewrite",
+      "new_page": 11
+    },
+    {
+      "old_page": 15,
+      "location": "Title 1",
+      "before": "各設定を固定seedで11,000例ずつ生成する",
+      "after": "既定では、設定ごとに11,000問を作る",
+      "reason": "固定配布データではなく、生成器の既定規模と明示",
+      "action": "rewrite",
+      "new_page": 14
+    },
+    {
+      "old_page": 15,
+      "location": "split table",
+      "before": "分割 | 生成順のindex | 件数\ntrain | 0〜999 | 1,000\nvalid | 1,000〜5,999 | 5,000\ntest | 6,000〜10,999 | 5,000",
+      "after": "分割 | 件数\ntrain | 1,000\nvalid | 5,000\ntest | 5,000",
+      "reason": "train/valid/testと件数は保持し、生成順indexの列を外部記録へ",
+      "action": "remove_column",
+      "new_page": 14
+    },
+    {
+      "old_page": 15,
+      "location": "TextBox 4",
+      "before": "既定seedは42。抽象3課題と自然言語2難度を別々に生成する。同じseedでも設定が異なれば、同じ問題の対にはならない。",
+      "after": "置換・照合・帰納と、自然言語easy/hardをそれぞれ生成する。問題数と乱数の種は指定できる。",
+      "reason": "生成器の利用可能な設定を示し、index照合や直訳対ではないという注意を整理",
+      "action": "rewrite",
+      "new_page": 14
+    },
+    {
+      "old_page": 16,
+      "location": "Text Placeholder 2",
+      "before": "抽象版は、規則列への置換処理から正解を作る。自然言語版は、事実が各規則の条件を満たすかを調べ、その帰結の集合から正解文を作る。\n人が問題文と正解を一件ずつ書く方式ではない。乱数seed、生成器のバージョン、モード、生成順のindexを固定すれば、同じ入力と参照正解を再生成できる。\n本資料の13例は、v0.4.0の公式生成器をseed42で実行したtestの問題全文と参照正解である。HELMのモデル入力には、問題に指示と提示例が加わる。",
+      "after": "抽象版は、規則列への置換処理から正解を作る。自然言語版は、事実が各規則の条件を満たすか調べ、その帰結をまとめて正解文を作る。\n短い語彙表と文型を使い、規則や事実を機械的に組み合わせて多数の問題を作れる。\n同じ乱数seedで生成器を初期化すると、同じ入力と正解を再生成できる。",
+      "reason": "機械的な構築と再利用を説明し、人手ではないという自明な否定/全13例index/モデル入力の説明を外部化",
+      "action": "rewrite",
+      "new_page": 15
+    },
+    {
+      "old_page": 17,
+      "location": "Title 1",
+      "before": "3. 採点方法とモデルの到達水準",
+      "after": "答えの形式と問題の特徴",
+      "reason": "基盤の公開モデル到達水準から、データの答え方へ",
+      "action": "rewrite",
+      "new_page": 16
+    },
+    {
+      "old_page": 18,
+      "location": "Title 1",
+      "before": "抽象版の主指標は、正規化後の文字列一致",
+      "after": "課題ごとに、求める出力の形が変わる",
+      "reason": "実装固有の句読点除去と主指標の説明は外部へ",
+      "action": "rewrite",
+      "new_page": 17
+    },
+    {
+      "old_page": 18,
+      "location": "Text Placeholder 2",
+      "before": "Classic v0.4.0の抽象版の主指標はquasi_exact_match。小文字化し、句読点・英語の冠詞・余分な空白を除いてから、参照正解と一致するかを0/1で採点する。\nこの句読点除去では+、-、*、=も消える。したがって、主指標の正解率は記号まで正しく再現した割合とは異なる。\n記号を保った厳密一致exact_matchも公開されている。次の2表では、同じモデル・同じtestについて、正規化後の一致と厳密一致を分けて示す。",
+      "after": "置換では、記号を保った置換後の文字列を答える。照合では候補の規則列そのもの、帰納ではRule:に続く規則列を出力する。\n自然言語版は、事実から新たに導ける属性をまとめる。複数ならandで結び、新たな帰結がなければNothing.と答える。",
+      "reason": "正規化や候補別の小数計算ではなく、元問題が求める出力を説明",
+      "action": "rewrite",
+      "new_page": 17
+    },
+    {
+      "old_page": 24,
+      "location": "Title 1",
+      "before": "規則の適用と、採点・生成の癖を分けて読む",
+      "after": "候補の重複や、変数名も問題の特徴になる",
+      "reason": "採点の癖を分けて読むというメタ指示を、具体的な問題の性質へ",
+      "action": "rewrite",
+      "new_page": 20
+    },
+    {
+      "old_page": 24,
+      "location": "Text Placeholder 2",
+      "before": "置換は高得点でも、規則の帰納では低い一致率が残る。帰納の参照正解は生成器が選んだ変数名で、名前を入れ替えた同値な規則を同一視しない。\n照合の妨害候補は、重複を除いた変数集合から作られる。正解列で変数が反復すると正解だけが長くなり、長さから候補を絞れる例が生まれる。\n自然言語版が測るのは、定義した語彙対応と1段の条件適用である。世界の事実を判断する課題や、長い証明の構築とは対象が異なる。",
+      "after": "帰納問題の参照正解は、生成器が付けた変数名を使う。同じ置換関係でも、変数名を入れ替えると表記が変わる。\n照合候補には、同じ規則列が重なることや、正解だけが長くなることがある。こうした生成方法から、推論以外の手掛かりが生まれる。\n自然言語版は、定めた語彙対応と1段の条件適用を扱う。",
+      "reason": "モデルの得点解説・内部変数集合の作り方・禁止的な範囲説明を整理し、利用に意味のある曖昧さ/手掛かりを保持",
+      "action": "rewrite",
+      "new_page": 20
+    },
+    {
+      "old_page": 25,
+      "location": "Title 1",
+      "before": "4. 研究上の位置付けと再現方法",
+      "after": "先行研究と公開生成器",
+      "reason": "再現作業の手順より、着想と利用を説明",
+      "action": "rewrite",
+      "new_page": 21
+    },
+    {
+      "old_page": 26,
+      "location": "Title 1",
+      "before": "LIMEと自然言語の規則推論を、HELMへ取り込む",
+      "after": "記号操作と、自然言語の規則推論を合成する",
+      "reason": "評価基盤への取込みではなく、課題設計の着想へ",
+      "action": "rewrite",
+      "new_page": 22
+    },
+    {
+      "old_page": 26,
+      "location": "Text Placeholder 2",
+      "before": "LIME（2021）は、合成した演繹・帰納・仮説推論の課題で事前学習し、数学的推論に役立つ帰納バイアスを学ばせる研究である。HELMの抽象課題は、この基本操作の考え方に着想を得た。\nClarkら（2020）は、自然言語で書いた規則と事実から結論を導く研究を行った。HELMの自然言語版は、その考え方を簡単な語と文型で実装した。\n本資料はHELMの生成器と評価結果を扱う。LIMEの事前学習データや、先行研究の規則推論課題の全体とは範囲が異なる。",
+      "after": "LIME（2021）は、合成した演繹・帰納・仮説推論の課題で事前学習し、数学的推論に役立つ帰納バイアスを学ばせる研究。基本操作を合成する発想が、抽象版の出発点となった。\nClarkら（2020）は、自然言語で書いた規則と事実から結論を導く研究を行った。自然言語版は、その考え方を短い語彙と文型で実装した。",
+      "reason": "元研究・着想・対象の実装を区別し、基盤一般の紹介や本資料の制作範囲説明を削除",
+      "action": "rewrite",
+      "new_page": 22
+    },
+    {
+      "old_page": 27,
+      "location": "Title 1",
+      "before": "バージョンとseedを固定し、課題別に再現する",
+      "after": "公開生成器で、課題や難度を選ぶ",
+      "reason": "版/index照合ではなく、実際に生成するときの選択へ",
+      "action": "rewrite",
+      "new_page": 23
+    },
+    {
+      "old_page": 27,
+      "location": "Text Placeholder 2",
+      "before": "公式配布元はStanford CRFMのHELMリポジトリ。抽象版はSyntheticReasoningScenario、自然言語版はSRNScenarioの実装を使う。\n再現時にはタグv0.4.0、seed42、抽象版のmodeまたは自然言語版のdifficultyを指定する。生成順で分割が決まり、testの最初の例は全体index6000となる。\n2026-10-18時点で公式実装とClassic v0.4.0の公開結果を取得した。コードはApache-2.0。短い語彙表とテンプレートから生成する。",
+      "after": "抽象版はSyntheticReasoningScenarioで、置換・照合・帰納のモードを選ぶ。自然言語版はSRNScenarioで、easyまたはhardを選べる。\nどちらも短い語彙表とテンプレートから、問題文と正解を生成する。コードはApache-2.0で公開されている。\n乱数seedを変えると、同じ形式で異なる規則や事実を持つ問題を作れる。",
+      "reason": "取得日/固定index/公開run照合を外部化し、生成器の入手と利用条件を説明",
+      "action": "rewrite",
+      "new_page": 23
+    },
+    {
+      "old_page": 28,
+      "location": "Title 1",
+      "before": "何を推論し、何を一致と呼ぶかを対応させる",
+      "after": "短い規則と事実で、推論の基本操作を試す",
+      "reason": "何を一致と呼ぶかという基盤設定のまとめを、元課題の目的へ",
+      "action": "rewrite",
+      "new_page": 24
+    },
+    {
+      "old_page": 28,
+      "location": "Text Placeholder 2",
+      "before": "Synthetic Reasoningは、短い記号列の照合・置換・帰納と、自然言語の1段の規則適用を、再生成可能な課題として用意する。\n抽象版は文字列一致、自然言語版は属性集合の比較で採点する。正規化の有無、変数名、出力の主語をどう扱うかが、得点の意味を変える。\n生成器のバージョンとseedだけでなく、提示例数、出力上限、評価集合、試行数と指標を合わせることで、モデルの得意・不得意を具体的に比較できる。",
+      "after": "Synthetic Reasoningは、短い記号列の照合・置換・帰納と、自然言語の1段の規則適用を扱う。\n抽象版は規則や置換後の文字列、自然言語版は新たに導ける属性を答える。与えられる情報が変わると、必要な操作も変わる。\n語彙と文型が定められているため、形式や難度をそろえ、多数の問題で基本操作を調べられる。",
+      "reason": "提示/上限/試行数の実行比較を外部へ。課題の設計・出力・用途を具体的に再提示",
+      "action": "rewrite",
+      "new_page": 24
+    },
+    {
+      "old_page": 30,
+      "location": "Text Placeholder 2",
+      "before": "追加の生成例\n採点と生成の詳細\n制作・関連研究と参考文献",
+      "after": "追加の生成例\n語彙と生成の補足\n関連研究と参考文献",
+      "reason": "不要な採点監査・制作分担を目次からも整理",
+      "action": "rewrite",
+      "new_page": 26
+    },
+    {
+      "old_page": 43,
+      "location": "Title 1",
+      "before": "採点と生成の詳細",
+      "after": "語彙と生成の補足",
+      "reason": "候補別採点の詳細を外し、残るデータの特徴へ",
+      "action": "rewrite",
+      "new_page": 39
+    },
+    {
+      "old_page": 48,
+      "location": "Title 1",
+      "before": "Nothing.の比率は生成結果から数える",
+      "after": "新しい属性を導けない問題も含まれる",
+      "reason": "取得集計の工程より、Nothingという出力の意味へ",
+      "action": "rewrite",
+      "new_page": 40
+    },
+    {
+      "old_page": 48,
+      "location": "TextBox 4",
+      "before": "seed42、train/valid/testの合計。帰結が空のときに再抽選する処理を含むため、空の答えの割合は出力を数えて求めた。",
+      "after": "既定設定で作った各11,000問を集計。規則を適用しても新しい属性が得られなければ、答えはNothing.となる。",
+      "reason": "再抽選という内部処理を外部化し、空答えの性質と規模を保持",
+      "action": "rewrite",
+      "new_page": 40
+    },
+    {
+      "old_page": 49,
+      "location": "Title 1",
+      "before": "自然言語版は、語彙表で具体語を対応させる",
+      "after": "hardは、具体語と一般語を対応させる",
+      "reason": "語彙表という設計と実際の推論操作をつなげる",
+      "action": "rewrite",
+      "new_page": 41
+    },
+    {
+      "old_page": 49,
+      "location": "Text Placeholder 2",
+      "before": "一般属性25種の下に、big→huge / giant、small→tiny / little、old→ancient / antiqueなどの語を登録する。hardの事実は、この具体語で表現される。\n規則で使う属性は一般語である。正解の属性も一般語で出力され、採点時に同義語を別途まとめる処理はない。\nmediumは公式実装の説明に登場するが、Classic v0.4.0の公開run仕様はeasyとhardを使う。本資料もこの2設定を対象とする。",
+      "after": "一般属性25種に、big→huge / giant、small→tiny / little、old→ancient / antiqueなどの語を対応させる。hardの事実には、こうした具体語を使う。\n規則と正解には一般語を使う。入力の言い換えを一般属性へ対応させることが、hardの推論に含まれる。",
+      "reason": "mediumという説明内名称と公開run仕様の照合、採点時同義語処理という基盤詳細を外部へ",
+      "action": "rewrite",
+      "new_page": 41
+    },
+    {
+      "old_page": 50,
+      "location": "Title 1",
+      "before": "公式クラスを固定seedで初期化する",
+      "after": "問題を生成し、入力と正解を取り出す",
+      "reason": "クラス/seedの初期化だけで終わらず、実際の1件の使い方へ",
+      "action": "rewrite",
+      "new_page": 42
+    },
+    {
+      "old_page": 50,
+      "location": "code-frame",
+      "before": "from helm.benchmark.scenarios import (\n    synthetic_reasoning_scenario as sym,\n    synthetic_reasoning_natural_scenario as nl,\n)\na = sym.SyntheticReasoningScenario(\n    mode=\"variable_substitution\", random_seed=42\n)\nexample = a.get_instances(\"unused\")[6000]",
+      "after": "from helm.benchmark.scenarios import (\n    synthetic_reasoning_scenario as sym,\n)\ntask = sym.SyntheticReasoningScenario(\n    \"variable_substitution\", random_seed=42)\nexample = task.get_instances(\"\")[6000]\nprint(example.input.text)\nprint(example.references[0].output.text)",
+      "reason": "未使用の自然言語importを除き、生成した問題の入力と正解を表示する最小コードへ",
+      "action": "rewrite",
+      "new_page": 42
+    },
+    {
+      "old_page": 50,
+      "location": "TextBox 4",
+      "before": "HELM v0.4.0を使う。index6000は、生成順で最初のtest例。",
+      "after": "公開実装を入れたPythonで実行する。変数置換問題を生成し、先頭のtest例の入力と正解を表示する。",
+      "reason": "内部indexの位置照合説明を、実行して得られる内容へ",
+      "action": "rewrite",
+      "new_page": 42
+    },
+    {
+      "old_page": 54,
+      "location": "TextBox 4",
+      "before": "複数のシナリオと指標を用いて汎用言語モデルを評価する。抽象・自然言語の合成推論課題も、この評価枠組みに含まれる。",
+      "after": "記号列の操作と、自然言語での1段の規則適用を評価する合成課題を提示する。",
+      "reason": "正式出典の紹介も、基盤全体ではなく対象の貢献へ",
+      "action": "rewrite",
+      "new_page": 43
+    },
+    {
+      "old_page": 55,
+      "location": "TextBox 6",
+      "before": "Stanford CRFM. HELM v0.4.0 公式生成器。",
+      "after": "Stanford CRFM (n.d.). Synthetic Reasoning 公開生成器。参照2026-10-19。",
+      "reason": "Web実装の書誌を公開年不明/実参照日へ統一",
+      "action": "rewrite",
+      "new_page": 44
+    },
+    {
+      "old_page": 55,
+      "location": "TextBox 7",
+      "before": "抽象版と自然言語版の生成器、課題の設定、採点実装を含む固定タグの公式コード。",
+      "after": "抽象版の3課題と自然言語easy/hardを生成する。短い語彙と規則から、問題文と正解を作る。",
+      "reason": "基盤の設定/採点実装一般の解説を、原生成器の機能へ",
+      "action": "rewrite",
+      "new_page": 44
+    },
+    {
+      "old_page": 20,
+      "location": "Title 1",
+      "before": "抽象版：記号を含めた厳密一致率",
+      "after": "抽象版：記号を含む文字列の一致率",
+      "reason": "難しさを示す代表性能を本文に保持",
+      "action": "rewrite",
+      "new_page": 18
+    },
+    {
+      "old_page": 20,
+      "location": "TextBox 4",
+      "before": "同じtest 515例。exact_matchは前後の空白だけを除く。OPTの置換は正規化後25.24%に対し、厳密一致では1.94%。",
+      "after": "2023年公開の成績。各課題のtest 515問で、記号を含む文字列の一致を採点する。text-davinci-003・OPTは3試行、Llama 2は1試行。3モデルとも、置換より帰納で低い。",
+      "reason": "年・評価対象・指標・集計条件を短く示し、正規化版との細かな比較は外部へ",
+      "action": "rewrite",
+      "new_page": 18
+    },
+    {
+      "old_page": 22,
+      "location": "Title 1",
+      "before": "自然言語版：属性集合F1",
+      "after": "自然言語版：導いた属性集合のF1",
+      "reason": "属性集合を当てる課題の代表性能を保持",
+      "action": "rewrite",
+      "new_page": 19
+    },
+    {
+      "old_page": 22,
+      "location": "TextBox 4",
+      "before": "test 515例の例ごとのF1を平均し、100倍して表示。text-davinci-003・OPTは3試行、Llama 2は1試行。",
+      "after": "2023年公開の成績。各難度のtest 515問で、属性の過不足を測るF1を、各問で求め平均する。text-davinci-003・OPTは3試行、Llama 2は1試行。hardでは全モデルで低下する。",
+      "reason": "属性集合の一致をprecision/recallの釣合いで測る代表結果。IoU・細部は外部へ",
+      "action": "rewrite",
+      "new_page": 19
+    },
+    {
+      "old_page": 38,
+      "location": "quote-frame",
+      "before": "タンポポが小さければ、そのタンポポはよい。\nタンポポが強ければ、そのタンポポは熱い。\nタンポポが大きく、かつ柔らかいなら、そのタンポポは退屈。\nタンポポが赤く、かつ恐ろしいなら、そのタンポポは古い。\nタンポポが清潔であるか、または若いなら、そのタンポポは紫色。\n事実：\nそのタンポポは紫色で、退屈。\nそのタンポポについて何が導けるか。",
+      "after": "タンポポが小さければ、そのタンポポはよい。\nタンポポが強ければ、そのタンポポは熱い。\nタンポポが大きく、かつ柔らかいなら、そのタンポポは退屈なものだ。\nタンポポが赤く、かつ恐ろしいなら、そのタンポポは古い。\nタンポポが清潔であるか、または若いなら、そのタンポポは紫色。\n事実：\nそのタンポポは紫色で、退屈なものだ。\nそのタンポポについて何が導けるか。",
+      "reason": "boringの属性をbored（退屈している）と読ませない自然な述語へ",
+      "action": "rewrite",
+      "new_page": 34
+    },
+    {
+      "old_page": 42,
+      "location": "quote-frame",
+      "before": "植物が緑色であるか、または遅いなら、その植物は小さい。\nケシが紫色なら、そのケシは退屈。\nケシが大きければ、そのケシは恐ろしい。\nケシが強く、かつ幸せなら、そのケシは柔らかい。\n植物が古ければ、その植物は赤い。\n事実：\nそのケシは悲しく、古い。\nそのケシについて何が導けるか。",
+      "after": "植物が緑色であるか、または遅いなら、その植物は小さい。\nケシが紫色なら、そのケシは退屈なものだ。\nケシが大きければ、そのケシは恐ろしい。\nケシが強く、かつ幸せなら、そのケシは柔らかい。\n植物が古ければ、その植物は赤い。\n事実：\nそのケシは悲しく、古い。\nそのケシについて何が導けるか。",
+      "reason": "boringの属性をbored（退屈している）と読ませない自然な述語へ",
+      "action": "rewrite",
+      "new_page": 38
+    },
+    {
+      "old_page": 12,
+      "location": "Title 2",
+      "before": "2. 生成器と固定seedの設計",
+      "after": "2. 生成方法と問題の構成",
+      "reason": "目次・章扉・帯を最終内容へ同期",
+      "action": "rewrite",
+      "new_page": 11
+    },
+    {
+      "old_page": 13,
+      "location": "Title 2",
+      "before": "2. 生成器と固定seedの設計",
+      "after": "2. 生成方法と問題の構成",
+      "reason": "目次・章扉・帯を最終内容へ同期",
+      "action": "rewrite",
+      "new_page": 12
+    },
+    {
+      "old_page": 14,
+      "location": "Title 3",
+      "before": "2. 生成器と固定seedの設計",
+      "after": "2. 生成方法と問題の構成",
+      "reason": "目次・章扉・帯を最終内容へ同期",
+      "action": "rewrite",
+      "new_page": 13
+    },
+    {
+      "old_page": 15,
+      "location": "Title 2",
+      "before": "2. 生成器と固定seedの設計",
+      "after": "2. 生成方法と問題の構成",
+      "reason": "目次・章扉・帯を最終内容へ同期",
+      "action": "rewrite",
+      "new_page": 14
+    },
+    {
+      "old_page": 16,
+      "location": "Title 3",
+      "before": "2. 生成器と固定seedの設計",
+      "after": "2. 生成方法と問題の構成",
+      "reason": "目次・章扉・帯を最終内容へ同期",
+      "action": "rewrite",
+      "new_page": 15
+    },
+    {
+      "old_page": 17,
+      "location": "Title 2",
+      "before": "3. 採点方法とモデルの到達水準",
+      "after": "3. 答えの形式と問題の特徴",
+      "reason": "目次・章扉・帯を最終内容へ同期",
+      "action": "rewrite",
+      "new_page": 16
+    },
+    {
+      "old_page": 18,
+      "location": "Title 3",
+      "before": "3. 採点方法とモデルの到達水準",
+      "after": "3. 答えの形式と問題の特徴",
+      "reason": "目次・章扉・帯を最終内容へ同期",
+      "action": "rewrite",
+      "new_page": 17
+    },
+    {
+      "old_page": 20,
+      "location": "Title 2",
+      "before": "3. 採点方法とモデルの到達水準",
+      "after": "3. 答えの形式と問題の特徴",
+      "reason": "目次・章扉・帯を最終内容へ同期",
+      "action": "rewrite",
+      "new_page": 18
+    },
+    {
+      "old_page": 22,
+      "location": "Title 2",
+      "before": "3. 採点方法とモデルの到達水準",
+      "after": "3. 答えの形式と問題の特徴",
+      "reason": "目次・章扉・帯を最終内容へ同期",
+      "action": "rewrite",
+      "new_page": 19
+    },
+    {
+      "old_page": 24,
+      "location": "Title 3",
+      "before": "3. 採点方法とモデルの到達水準",
+      "after": "3. 答えの形式と問題の特徴",
+      "reason": "目次・章扉・帯を最終内容へ同期",
+      "action": "rewrite",
+      "new_page": 20
+    },
+    {
+      "old_page": 25,
+      "location": "Title 2",
+      "before": "4. 研究上の位置付けと再現方法",
+      "after": "4. 先行研究と公開生成器",
+      "reason": "目次・章扉・帯を最終内容へ同期",
+      "action": "rewrite",
+      "new_page": 21
+    },
+    {
+      "old_page": 26,
+      "location": "Title 3",
+      "before": "4. 研究上の位置付けと再現方法",
+      "after": "4. 先行研究と公開生成器",
+      "reason": "目次・章扉・帯を最終内容へ同期",
+      "action": "rewrite",
+      "new_page": 22
+    },
+    {
+      "old_page": 27,
+      "location": "Title 3",
+      "before": "4. 研究上の位置付けと再現方法",
+      "after": "4. 先行研究と公開生成器",
+      "reason": "目次・章扉・帯を最終内容へ同期",
+      "action": "rewrite",
+      "new_page": 23
+    },
+    {
+      "old_page": 28,
+      "location": "Title 3",
+      "before": "4. 研究上の位置付けと再現方法",
+      "after": "4. 先行研究と公開生成器",
+      "reason": "目次・章扉・帯を最終内容へ同期",
+      "action": "rewrite",
+      "new_page": 24
+    },
+    {
+      "old_page": 43,
+      "location": "Title 2",
+      "before": "Appendix: 2. 採点と生成の詳細",
+      "after": "Appendix: 2. 語彙と生成の補足",
+      "reason": "目次・章扉・帯を最終内容へ同期",
+      "action": "rewrite",
+      "new_page": 39
+    },
+    {
+      "old_page": 48,
+      "location": "Title 2",
+      "before": "Appendix: 2. 採点と生成の詳細",
+      "after": "Appendix: 2. 語彙と生成の補足",
+      "reason": "目次・章扉・帯を最終内容へ同期",
+      "action": "rewrite",
+      "new_page": 40
+    },
+    {
+      "old_page": 49,
+      "location": "Title 3",
+      "before": "Appendix: 2. 採点と生成の詳細",
+      "after": "Appendix: 2. 語彙と生成の補足",
+      "reason": "目次・章扉・帯を最終内容へ同期",
+      "action": "rewrite",
+      "new_page": 41
+    },
+    {
+      "old_page": 50,
+      "location": "Title 2",
+      "before": "Appendix: 2. 採点と生成の詳細",
+      "after": "Appendix: 2. 語彙と生成の補足",
+      "reason": "目次・章扉・帯を最終内容へ同期",
+      "action": "rewrite",
+      "new_page": 42
+    },
+    {
+      "old_page": 54,
+      "location": "Title 2",
+      "before": "Appendix: 3. 制作・関連研究と参考文献",
+      "after": "Appendix: 3. 関連研究と参考文献",
+      "reason": "目次・章扉・帯を最終内容へ同期",
+      "action": "rewrite",
+      "new_page": 43
+    },
+    {
+      "old_page": 55,
+      "location": "Title 2",
+      "before": "Appendix: 3. 制作・関連研究と参考文献",
+      "after": "Appendix: 3. 関連研究と参考文献",
+      "reason": "目次・章扉・帯を最終内容へ同期",
+      "action": "rewrite",
+      "new_page": 44
+    },
+    {
+      "old_page": 6,
+      "location": "TextBox 3",
+      "before": "公式生成器 / seed 42 / test index 0 / 問題全文",
+      "after": "問題（全文）",
+      "reason": "seed/生成順/indexと表示工程を外部化し、原文・訳の範囲だけを示す",
+      "action": "rewrite",
+      "new_page": 5
+    },
+    {
+      "old_page": 8,
+      "location": "TextBox 3",
+      "before": "公式生成器 / seed 42 / test index 0 / 問題全文",
+      "after": "問題（全文）",
+      "reason": "seed/生成順/indexと表示工程を外部化し、原文・訳の範囲だけを示す",
+      "action": "rewrite",
+      "new_page": 7
+    },
+    {
+      "old_page": 10,
+      "location": "TextBox 3",
+      "before": "公式生成器 / seed 42 / test index 0 / 問題全文・日本語訳",
+      "after": "問題（全文）と日本語訳",
+      "reason": "seed/生成順/indexと表示工程を外部化し、原文・訳の範囲だけを示す",
+      "action": "rewrite",
+      "new_page": 9
+    },
+    {
+      "old_page": 31,
+      "location": "TextBox 3",
+      "before": "公式生成器 / seed 42 / test index 1 / 問題全文",
+      "after": "問題（全文）",
+      "reason": "seed/生成順/indexと表示工程を外部化し、原文・訳の範囲だけを示す",
+      "action": "rewrite",
+      "new_page": 27
+    },
+    {
+      "old_page": 32,
+      "location": "TextBox 3",
+      "before": "公式生成器 / seed 42 / test index 2 / 問題全文",
+      "after": "問題（全文）",
+      "reason": "seed/生成順/indexと表示工程を外部化し、原文・訳の範囲だけを示す",
+      "action": "rewrite",
+      "new_page": 28
+    },
+    {
+      "old_page": 33,
+      "location": "TextBox 3",
+      "before": "公式生成器 / seed 42 / test index 1 / 問題全文",
+      "after": "問題（全文）",
+      "reason": "seed/生成順/indexと表示工程を外部化し、原文・訳の範囲だけを示す",
+      "action": "rewrite",
+      "new_page": 29
+    },
+    {
+      "old_page": 34,
+      "location": "TextBox 3",
+      "before": "公式生成器 / seed 42 / test index 2 / 問題全文",
+      "after": "問題（全文）",
+      "reason": "seed/生成順/indexと表示工程を外部化し、原文・訳の範囲だけを示す",
+      "action": "rewrite",
+      "new_page": 30
+    },
+    {
+      "old_page": 35,
+      "location": "TextBox 3",
+      "before": "公式生成器 / seed 42 / test index 0 / 問題全文",
+      "after": "問題（全文）",
+      "reason": "seed/生成順/indexと表示工程を外部化し、原文・訳の範囲だけを示す",
+      "action": "rewrite",
+      "new_page": 31
+    },
+    {
+      "old_page": 36,
+      "location": "TextBox 3",
+      "before": "公式生成器 / seed 42 / test index 1 / 問題全文",
+      "after": "問題（全文）",
+      "reason": "seed/生成順/indexと表示工程を外部化し、原文・訳の範囲だけを示す",
+      "action": "rewrite",
+      "new_page": 32
+    },
+    {
+      "old_page": 37,
+      "location": "TextBox 3",
+      "before": "公式生成器 / seed 42 / test index 0 / 問題全文",
+      "after": "問題（全文）",
+      "reason": "seed/生成順/indexと表示工程を外部化し、原文・訳の範囲だけを示す",
+      "action": "rewrite",
+      "new_page": 33
+    },
+    {
+      "old_page": 38,
+      "location": "TextBox 3",
+      "before": "問題全文の日本語訳 / 同じseed・index",
+      "after": "問題（全文）の日本語訳",
+      "reason": "seed/生成順/indexと表示工程を外部化し、原文・訳の範囲だけを示す",
+      "action": "rewrite",
+      "new_page": 34
+    },
+    {
+      "old_page": 39,
+      "location": "TextBox 3",
+      "before": "公式生成器 / seed 42 / test index 1 / 問題全文・日本語訳",
+      "after": "問題（全文）と日本語訳",
+      "reason": "seed/生成順/indexと表示工程を外部化し、原文・訳の範囲だけを示す",
+      "action": "rewrite",
+      "new_page": 35
+    },
+    {
+      "old_page": 40,
+      "location": "TextBox 3",
+      "before": "公式生成器 / seed 42 / test index 1 / 問題全文・日本語訳",
+      "after": "問題（全文）と日本語訳",
+      "reason": "seed/生成順/indexと表示工程を外部化し、原文・訳の範囲だけを示す",
+      "action": "rewrite",
+      "new_page": 36
+    },
+    {
+      "old_page": 41,
+      "location": "TextBox 3",
+      "before": "公式生成器 / seed 42 / test index 2 / 問題全文",
+      "after": "問題（全文）",
+      "reason": "seed/生成順/indexと表示工程を外部化し、原文・訳の範囲だけを示す",
+      "action": "rewrite",
+      "new_page": 37
+    },
+    {
+      "old_page": 42,
+      "location": "TextBox 3",
+      "before": "問題全文の日本語訳 / 同じseed・index",
+      "after": "問題（全文）の日本語訳",
+      "reason": "seed/生成順/indexと表示工程を外部化し、原文・訳の範囲だけを示す",
+      "action": "rewrite",
+      "new_page": 38
+    },
+    {
+      "old_page": 6,
+      "location": "sources",
+      "before": "[1] Stanford CRFM. HELM v0.4.0 公式生成器。 変数置換 / index 6000  https://github.com/stanford-crfm/helm/tree/v0.4.0",
+      "after": "[1] Stanford CRFM. SyntheticReasoningScenario — 記号列の合成課題。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/synthetic_reasoning_scenario.py",
+      "reason": "正式資料名/原URLを保ち、基盤名反復・固定seed/原位置/全件照合を外部へ",
+      "action": "rewrite",
+      "new_page": 5
+    },
+    {
+      "old_page": 7,
+      "location": "sources",
+      "before": "[1] Stanford CRFM. SyntheticReasoningScenario, HELM v0.4.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/synthetic_reasoning_scenario.py",
+      "after": "[1] Stanford CRFM. SyntheticReasoningScenario — 記号列の合成課題。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/synthetic_reasoning_scenario.py",
+      "reason": "正式資料名/原URLを保ち、基盤名反復・固定seed/原位置/全件照合を外部へ",
+      "action": "rewrite",
+      "new_page": 6
+    },
+    {
+      "old_page": 8,
+      "location": "sources",
+      "before": "[1] Stanford CRFM. HELM v0.4.0 公式生成器。 規則の照合 / index 6000  https://github.com/stanford-crfm/helm/tree/v0.4.0",
+      "after": "[1] Stanford CRFM. SyntheticReasoningScenario — 記号列の合成課題。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/synthetic_reasoning_scenario.py",
+      "reason": "正式資料名/原URLを保ち、基盤名反復・固定seed/原位置/全件照合を外部へ",
+      "action": "rewrite",
+      "new_page": 7
+    },
+    {
+      "old_page": 9,
+      "location": "sources",
+      "before": "[1] Stanford CRFM. SyntheticReasoningScenario, HELM v0.4.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/synthetic_reasoning_scenario.py",
+      "after": "[1] Stanford CRFM. SyntheticReasoningScenario — 記号列の合成課題。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/synthetic_reasoning_scenario.py",
+      "reason": "正式資料名/原URLを保ち、基盤名反復・固定seed/原位置/全件照合を外部へ",
+      "action": "rewrite",
+      "new_page": 8
+    },
+    {
+      "old_page": 13,
+      "location": "sources",
+      "before": "[1] Stanford CRFM. SyntheticReasoningScenario, HELM v0.4.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/synthetic_reasoning_scenario.py",
+      "after": "[1] Stanford CRFM. SyntheticReasoningScenario — 記号列の合成課題。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/synthetic_reasoning_scenario.py",
+      "reason": "正式資料名/原URLを保ち、基盤名反復・固定seed/原位置/全件照合を外部へ",
+      "action": "rewrite",
+      "new_page": 12
+    },
+    {
+      "old_page": 31,
+      "location": "sources",
+      "before": "[1] Stanford CRFM. HELM v0.4.0 公式生成器。 変数置換 / index 6001  https://github.com/stanford-crfm/helm/tree/v0.4.0",
+      "after": "[1] Stanford CRFM. SyntheticReasoningScenario — 記号列の合成課題。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/synthetic_reasoning_scenario.py",
+      "reason": "正式資料名/原URLを保ち、基盤名反復・固定seed/原位置/全件照合を外部へ",
+      "action": "rewrite",
+      "new_page": 27
+    },
+    {
+      "old_page": 32,
+      "location": "sources",
+      "before": "[1] Stanford CRFM. HELM v0.4.0 公式生成器。 変数置換 / index 6002  https://github.com/stanford-crfm/helm/tree/v0.4.0",
+      "after": "[1] Stanford CRFM. SyntheticReasoningScenario — 記号列の合成課題。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/synthetic_reasoning_scenario.py",
+      "reason": "正式資料名/原URLを保ち、基盤名反復・固定seed/原位置/全件照合を外部へ",
+      "action": "rewrite",
+      "new_page": 28
+    },
+    {
+      "old_page": 33,
+      "location": "sources",
+      "before": "[1] Stanford CRFM. HELM v0.4.0 公式生成器。 規則の照合 / index 6001  https://github.com/stanford-crfm/helm/tree/v0.4.0",
+      "after": "[1] Stanford CRFM. SyntheticReasoningScenario — 記号列の合成課題。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/synthetic_reasoning_scenario.py",
+      "reason": "正式資料名/原URLを保ち、基盤名反復・固定seed/原位置/全件照合を外部へ",
+      "action": "rewrite",
+      "new_page": 29
+    },
+    {
+      "old_page": 34,
+      "location": "sources",
+      "before": "[1] Stanford CRFM. HELM v0.4.0 公式生成器。 規則の照合 / index 6002  https://github.com/stanford-crfm/helm/tree/v0.4.0",
+      "after": "[1] Stanford CRFM. SyntheticReasoningScenario — 記号列の合成課題。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/synthetic_reasoning_scenario.py",
+      "reason": "正式資料名/原URLを保ち、基盤名反復・固定seed/原位置/全件照合を外部へ",
+      "action": "rewrite",
+      "new_page": 30
+    },
+    {
+      "old_page": 35,
+      "location": "sources",
+      "before": "[1] Stanford CRFM. HELM v0.4.0 公式生成器。 規則の帰納 / index 6000  https://github.com/stanford-crfm/helm/tree/v0.4.0",
+      "after": "[1] Stanford CRFM. SyntheticReasoningScenario — 記号列の合成課題。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/synthetic_reasoning_scenario.py",
+      "reason": "正式資料名/原URLを保ち、基盤名反復・固定seed/原位置/全件照合を外部へ",
+      "action": "rewrite",
+      "new_page": 31
+    },
+    {
+      "old_page": 36,
+      "location": "sources",
+      "before": "[1] Stanford CRFM. HELM v0.4.0 公式生成器。 規則の帰納 / index 6001  https://github.com/stanford-crfm/helm/tree/v0.4.0",
+      "after": "[1] Stanford CRFM. SyntheticReasoningScenario — 記号列の合成課題。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/synthetic_reasoning_scenario.py",
+      "reason": "正式資料名/原URLを保ち、基盤名反復・固定seed/原位置/全件照合を外部へ",
+      "action": "rewrite",
+      "new_page": 32
+    },
+    {
+      "old_page": 50,
+      "location": "sources",
+      "before": "[1] Stanford CRFM. HELM v0.4.0 公式生成器。  https://github.com/stanford-crfm/helm/tree/v0.4.0",
+      "after": "[1] Stanford CRFM. SyntheticReasoningScenario — 記号列の合成課題。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/synthetic_reasoning_scenario.py",
+      "reason": "正式資料名/原URLを保ち、基盤名反復・固定seed/原位置/全件照合を外部へ",
+      "action": "rewrite",
+      "new_page": 42
+    },
+    {
+      "old_page": 10,
+      "location": "sources",
+      "before": "[1] Stanford CRFM. HELM v0.4.0 公式生成器。 自然言語・hard / index 6000  https://github.com/stanford-crfm/helm/tree/v0.4.0",
+      "after": "[1] Stanford CRFM. SRNScenario — 自然言語の合成課題。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/synthetic_reasoning_natural_scenario.py",
+      "reason": "正式資料名/原URLを保ち、基盤名反復・固定seed/原位置/全件照合を外部へ",
+      "action": "rewrite",
+      "new_page": 9
+    },
+    {
+      "old_page": 11,
+      "location": "sources",
+      "before": "[1] Stanford CRFM. SRNScenario, HELM v0.4.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/synthetic_reasoning_natural_scenario.py",
+      "after": "[1] Stanford CRFM. SRNScenario — 自然言語の合成課題。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/synthetic_reasoning_natural_scenario.py",
+      "reason": "正式資料名/原URLを保ち、基盤名反復・固定seed/原位置/全件照合を外部へ",
+      "action": "rewrite",
+      "new_page": 10
+    },
+    {
+      "old_page": 14,
+      "location": "sources",
+      "before": "[1] Stanford CRFM. SRNScenario, HELM v0.4.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/synthetic_reasoning_natural_scenario.py",
+      "after": "[1] Stanford CRFM. SRNScenario — 自然言語の合成課題。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/synthetic_reasoning_natural_scenario.py",
+      "reason": "正式資料名/原URLを保ち、基盤名反復・固定seed/原位置/全件照合を外部へ",
+      "action": "rewrite",
+      "new_page": 13
+    },
+    {
+      "old_page": 37,
+      "location": "sources",
+      "before": "[1] Stanford CRFM. HELM v0.4.0 公式生成器。 自然言語・easy / index 6000  https://github.com/stanford-crfm/helm/tree/v0.4.0",
+      "after": "[1] Stanford CRFM. SRNScenario — 自然言語の合成課題。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/synthetic_reasoning_natural_scenario.py",
+      "reason": "正式資料名/原URLを保ち、基盤名反復・固定seed/原位置/全件照合を外部へ",
+      "action": "rewrite",
+      "new_page": 33
+    },
+    {
+      "old_page": 38,
+      "location": "sources",
+      "before": "[1] Stanford CRFM. HELM v0.4.0 公式生成器。 自然言語・easy / index 6000  https://github.com/stanford-crfm/helm/tree/v0.4.0",
+      "after": "[1] Stanford CRFM. SRNScenario — 自然言語の合成課題。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/synthetic_reasoning_natural_scenario.py",
+      "reason": "正式資料名/原URLを保ち、基盤名反復・固定seed/原位置/全件照合を外部へ",
+      "action": "rewrite",
+      "new_page": 34
+    },
+    {
+      "old_page": 39,
+      "location": "sources",
+      "before": "[1] Stanford CRFM. HELM v0.4.0 公式生成器。 自然言語・easy / index 6001  https://github.com/stanford-crfm/helm/tree/v0.4.0",
+      "after": "[1] Stanford CRFM. SRNScenario — 自然言語の合成課題。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/synthetic_reasoning_natural_scenario.py",
+      "reason": "正式資料名/原URLを保ち、基盤名反復・固定seed/原位置/全件照合を外部へ",
+      "action": "rewrite",
+      "new_page": 35
+    },
+    {
+      "old_page": 40,
+      "location": "sources",
+      "before": "[1] Stanford CRFM. HELM v0.4.0 公式生成器。 自然言語・hard / index 6001  https://github.com/stanford-crfm/helm/tree/v0.4.0",
+      "after": "[1] Stanford CRFM. SRNScenario — 自然言語の合成課題。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/synthetic_reasoning_natural_scenario.py",
+      "reason": "正式資料名/原URLを保ち、基盤名反復・固定seed/原位置/全件照合を外部へ",
+      "action": "rewrite",
+      "new_page": 36
+    },
+    {
+      "old_page": 41,
+      "location": "sources",
+      "before": "[1] Stanford CRFM. HELM v0.4.0 公式生成器。 自然言語・hard / index 6002  https://github.com/stanford-crfm/helm/tree/v0.4.0",
+      "after": "[1] Stanford CRFM. SRNScenario — 自然言語の合成課題。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/synthetic_reasoning_natural_scenario.py",
+      "reason": "正式資料名/原URLを保ち、基盤名反復・固定seed/原位置/全件照合を外部へ",
+      "action": "rewrite",
+      "new_page": 37
+    },
+    {
+      "old_page": 42,
+      "location": "sources",
+      "before": "[1] Stanford CRFM. HELM v0.4.0 公式生成器。 自然言語・hard / index 6002  https://github.com/stanford-crfm/helm/tree/v0.4.0",
+      "after": "[1] Stanford CRFM. SRNScenario — 自然言語の合成課題。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/synthetic_reasoning_natural_scenario.py",
+      "reason": "正式資料名/原URLを保ち、基盤名反復・固定seed/原位置/全件照合を外部へ",
+      "action": "rewrite",
+      "new_page": 38
+    },
+    {
+      "old_page": 48,
+      "location": "sources",
+      "before": "[1] Stanford CRFM. SRNScenario, HELM v0.4.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/synthetic_reasoning_natural_scenario.py",
+      "after": "[1] Stanford CRFM. SRNScenario — 自然言語の合成課題。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/synthetic_reasoning_natural_scenario.py",
+      "reason": "正式資料名/原URLを保ち、基盤名反復・固定seed/原位置/全件照合を外部へ",
+      "action": "rewrite",
+      "new_page": 40
+    },
+    {
+      "old_page": 49,
+      "location": "sources",
+      "before": "[1] Stanford CRFM. SRNScenario, HELM v0.4.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/synthetic_reasoning_natural_scenario.py",
+      "after": "[1] Stanford CRFM. SRNScenario — 自然言語の合成課題。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/synthetic_reasoning_natural_scenario.py",
+      "reason": "正式資料名/原URLを保ち、基盤名反復・固定seed/原位置/全件照合を外部へ",
+      "action": "rewrite",
+      "new_page": 41
+    },
+    {
+      "old_page": 16,
+      "location": "sources",
+      "before": "[1] Stanford CRFM. HELM v0.4.0 公式生成器。  https://github.com/stanford-crfm/helm/tree/v0.4.0",
+      "after": "[1] Stanford CRFM. SyntheticReasoningScenario — 記号列の合成課題。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/synthetic_reasoning_scenario.py\n[2] Stanford CRFM. SRNScenario — 自然言語の合成課題。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/synthetic_reasoning_natural_scenario.py",
+      "reason": "正式資料名/原URLを保ち、基盤名反復・固定seed/原位置/全件照合を外部へ",
+      "action": "rewrite",
+      "new_page": 15
+    },
+    {
+      "old_page": 18,
+      "location": "sources",
+      "before": "[1] Stanford CRFM. BasicMetric, HELM v0.4.0.  https://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/metrics/basic_metrics.py",
+      "after": "[1] Stanford CRFM. SyntheticReasoningScenario — 記号列の合成課題。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/synthetic_reasoning_scenario.py\n[2] Stanford CRFM. SRNScenario — 自然言語の合成課題。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/synthetic_reasoning_natural_scenario.py",
+      "reason": "正式資料名/原URLを保ち、基盤名反復・固定seed/原位置/全件照合を外部へ",
+      "action": "rewrite",
+      "new_page": 17
+    },
+    {
+      "old_page": 24,
+      "location": "sources",
+      "before": "[1] Stanford CRFM. SyntheticReasoningScenario, HELM v0.4.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/synthetic_reasoning_scenario.py\n[2] Stanford CRFM. SRNScenario, HELM v0.4.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/synthetic_reasoning_natural_scenario.py",
+      "after": "[1] Stanford CRFM. SyntheticReasoningScenario — 記号列の合成課題。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/synthetic_reasoning_scenario.py\n[2] Stanford CRFM. SRNScenario — 自然言語の合成課題。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/synthetic_reasoning_natural_scenario.py",
+      "reason": "正式資料名/原URLを保ち、基盤名反復・固定seed/原位置/全件照合を外部へ",
+      "action": "rewrite",
+      "new_page": 20
+    },
+    {
+      "old_page": 27,
+      "location": "sources",
+      "before": "[1] Stanford CRFM. HELM v0.4.0 公式生成器。  https://github.com/stanford-crfm/helm/tree/v0.4.0",
+      "after": "[1] Stanford CRFM. SyntheticReasoningScenario — 記号列の合成課題。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/synthetic_reasoning_scenario.py\n[2] Stanford CRFM. SRNScenario — 自然言語の合成課題。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/synthetic_reasoning_natural_scenario.py",
+      "reason": "正式資料名/原URLを保ち、基盤名反復・固定seed/原位置/全件照合を外部へ",
+      "action": "rewrite",
+      "new_page": 23
+    },
+    {
+      "old_page": 15,
+      "location": "sources",
+      "before": "[1] Stanford CRFM. HELM v0.4.0 公式生成器。  https://github.com/stanford-crfm/helm/tree/v0.4.0",
+      "after": "[1] Stanford CRFM. Synthetic Reasoning — 公開生成器。\nhttps://github.com/stanford-crfm/helm/tree/v0.4.0",
+      "reason": "正式資料名/原URLを保ち、基盤名反復・固定seed/原位置/全件照合を外部へ",
+      "action": "rewrite",
+      "new_page": 14
+    },
+    {
+      "old_page": 5,
+      "location": "sources",
+      "before": "[1] Liang et al. (2023). Holistic Evaluation of Language Models. TMLR.  https://arxiv.org/abs/2211.09110\n[2] Stanford CRFM. HELM v0.4.0 公式生成器。  https://github.com/stanford-crfm/helm/tree/v0.4.0",
+      "after": "[1] Liang et al. (2023). Holistic Evaluation of Language Models. TMLR.\nhttps://arxiv.org/abs/2211.09110\n[2] Stanford CRFM. Synthetic Reasoning — 公開生成器。\nhttps://github.com/stanford-crfm/helm/tree/v0.4.0",
+      "reason": "正式資料名/原URLを保ち、基盤名反復・固定seed/原位置/全件照合を外部へ",
+      "action": "rewrite",
+      "new_page": 4
+    },
+    {
+      "old_page": 20,
+      "location": "sources",
+      "before": "[1] Liang et al. (2023). Holistic Evaluation of Language Models. TMLR.  https://arxiv.org/abs/2211.09110",
+      "after": "[1] Stanford CRFM (2023). 公開成績（2023年11月公開版）。\nhttps://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/synthetic_reasoning%3Amode%3Dinduction%2Cmodel%3Dmeta_llama-2-70b/stats.json",
+      "reason": "論文からの転記ではないため、実際に集計した公開成績へ直接出典を差し替える",
+      "action": "rewrite",
+      "new_page": 18
+    },
+    {
+      "old_page": 22,
+      "location": "sources",
+      "before": "[1] Liang et al. (2023). Holistic Evaluation of Language Models. TMLR.  https://arxiv.org/abs/2211.09110",
+      "after": "[1] Stanford CRFM (2023). 公開成績（2023年11月公開版）。\nhttps://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/synthetic_reasoning_natural%3Adifficulty%3Dhard%2Cmodel%3Dmeta_llama-2-70b/stats.json",
+      "reason": "論文からの転記ではないため、実際に集計した公開成績へ直接出典を差し替える",
+      "action": "rewrite",
+      "new_page": 19
+    },
+    {
+      "old_page": 54,
+      "location": "TextBox 5",
+      "before": "URL top −6pt",
+      "after": "URL top +6pt",
+      "reason": "説明のdescenderとURLの字形が重ならない間隔へ",
+      "action": "move",
+      "new_page": 43
+    },
+    {
+      "old_page": 54,
+      "location": "TextBox 8",
+      "before": "URL top −6pt",
+      "after": "URL top +6pt",
+      "reason": "説明のdescenderとURLの字形が重ならない間隔へ",
+      "action": "move",
+      "new_page": 43
+    },
+    {
+      "old_page": 55,
+      "location": "TextBox 5",
+      "before": "URL top −6pt",
+      "after": "URL top +6pt",
+      "reason": "説明のdescenderとURLの字形が重ならない間隔へ",
+      "action": "move",
+      "new_page": 44
+    },
+    {
+      "old_page": 55,
+      "location": "TextBox 8",
+      "before": "URL top −6pt",
+      "after": "URL top +6pt",
+      "reason": "説明のdescenderとURLの字形が重ならない間隔へ",
+      "action": "move",
+      "new_page": 44
+    },
+    {
+      "old_page": 1,
+      "location": "Title 1",
+      "before": "71.1",
+      "after": "79.1",
+      "reason": "表紙の微小字形下端をnative枠内へ。heightと下margin同量で文字位置保持",
+      "action": "resize",
+      "new_page": 1
+    },
+    {
+      "old_page": 1,
+      "location": "Subtitle 2",
+      "before": "77.95",
+      "after": "85.95",
+      "reason": "表紙の微小字形下端をnative枠内へ。heightと下margin同量で文字位置保持",
+      "action": "resize",
+      "new_page": 1
+    },
+    {
+      "old_page": 50,
+      "location": "TextBox 4",
+      "before": "36.0",
+      "after": "44.0",
+      "reason": "コード下の2行説明をnative枠へ収める",
+      "action": "resize",
+      "new_page": 42
+    },
+    {
+      "old_page": 29,
+      "location": "Appendix native frame",
+      "before": "46.08",
+      "after": "54.08",
+      "reason": "章扉の実字形をnative枠へ収め、位置は保持",
+      "action": "resize",
+      "new_page": 25
+    },
+    {
+      "old_page": 2,
+      "location": "whole page",
+      "before": "公式リポジトリ（v0.4.0）\n1. 記号列と自然言語の実例\n[1] Stanford CRFM. Holistic Evaluation of Language Models.  https://github.com/stanford-crfm/helm/tree/v0.4.0",
+      "after": "",
+      "reason": "評価基盤全体のrepo画面は元合成課題の理解に不要。原生成器URLは本文と文献へ保持。",
+      "action": "delete_page",
+      "new_page": null
+    },
+    {
+      "old_page": 19,
+      "location": "whole page",
+      "before": "抽象版：正規化後の一致率\n3. 採点方法とモデルの到達水準\ntest 515例。text-davinci-003・OPTは3試行平均、Llama 2は1試行。Classic v0.4.0、元run suite v0.3.0。\n[1] Liang et al. (2023). Holistic Evaluation of Language Models. TMLR.  https://arxiv.org/abs/2211.09110",
+      "after": "",
+      "reason": "基盤固有の3モデル正規化得点表は外部記録へ。",
+      "action": "delete_page",
+      "new_page": null
+    },
+    {
+      "old_page": 21,
+      "location": "whole page",
+      "before": "自然言語版は、導いた属性の集合を採点する\n自然言語版の主指標は属性集合のF1。出力のisより後をandで分け、ピリオドを除いて集合にする。予測と正解で重なる属性数からF1を求める。\n正解が{red, happy}、予測が{red}なら、集合F1は2/3、積集合を和集合で割るIoUは1/2。集合が完全一致する割合も別に集計される。\n主語は属性集合へ含まれない。Nothing.は空集合として扱い、正解・予測がともに空なら1点。HELMの説明にはIoUも登場するが、v0.4.0の主指標はF1である。\n3. 採点方法とモデルの到達水準\n[1] Stanford CRFM. BasicMetric, HELM v0.4.0.  https://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/metrics/basic_metrics.py",
+      "after": "",
+      "reason": "属性集合のparser/I o U小数例/基盤主指標の照合は外部へ。自然言語の答え方は旧14/18へ。",
+      "action": "delete_page",
+      "new_page": null
+    },
+    {
+      "old_page": 23,
+      "location": "whole page",
+      "before": "提示例と出力条件も、形式に合わせて変わる\n3. 採点方法とモデルの到達水準\n各試行は最大1,000例：valid 485 + test 515。比較した15実行は、実提示数5/3、prompt_truncated=0。\n[1] Stanford CRFM. HELM v0.4.0 公式生成器。  https://github.com/stanford-crfm/helm/tree/v0.4.0",
+      "after": "",
+      "reason": "提示例/出力長/温度/候補/停止/valid485+test515/試行の設定表は外部へ。",
+      "action": "delete_page",
+      "new_page": null
+    },
+    {
+      "old_page": 44,
+      "location": "whole page",
+      "before": "正規化すると、異なる記号列も一致する\nAppendix: 2. 採点と生成の詳細\n採点方法の説明例：実例1の正解を使い、比較用の予測を置く\n参照正解：* stork - * shark stork\n比較する予測：+ stork = + shark stork\n正規化後はいずれも stork shark stork\nquasi_exact_match = 1 / exact_match = 0\n[1] Stanford CRFM. BasicMetric, HELM v0.4.0.  https://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/metrics/basic_metrics.py",
+      "after": "",
+      "reason": "架空の比較予測による正規化の採点計算は監査記録へ。13真正原例は保持。",
+      "action": "delete_page",
+      "new_page": null
+    },
+    {
+      "old_page": 45,
+      "location": "whole page",
+      "before": "属性集合では、主語を比較しない\nAppendix: 2. 採点と生成の詳細\n採点方法の説明例：実例3の正解を使い、比較用の予測を置く\n参照正解：Dan is beautiful.\n比較する予測：Alice is beautiful.\n両方から属性集合 {beautiful} を取り出す。\n属性集合F1 = 1 / 文字列の厳密一致 = 0\n[1] Stanford CRFM. BasicMetric, HELM v0.4.0.  https://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/metrics/basic_metrics.py",
+      "after": "",
+      "reason": "架空の主語置換予測の採点計算は監査記録へ。",
+      "action": "delete_page",
+      "new_page": null
+    },
+    {
+      "old_page": 46,
+      "location": "whole page",
+      "before": "自然言語版：属性集合IoU\nAppendix: 2. 採点と生成の詳細\ntest 515例。F1と同じ予測を使う。text-davinci-003・OPTは3試行平均、Llama 2は1試行。\n[1] Liang et al. (2023). Holistic Evaluation of Language Models. TMLR.  https://arxiv.org/abs/2211.09110",
+      "after": "",
+      "reason": "基盤モデル別IoU値は外部記録へ。",
+      "action": "delete_page",
+      "new_page": null
+    },
+    {
+      "old_page": 47,
+      "location": "whole page",
+      "before": "照合候補の構造をtest全件で数える\nAppendix: 2. 採点と生成の詳細\nv0.4.0公式生成器の出力を独自集計。長さは空白で区切った要素数。正解と同じ候補文字列は1種類として扱う。\n[1] Stanford CRFM. SyntheticReasoningScenario, HELM v0.4.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/synthetic_reasoning_scenario.py",
+      "after": "",
+      "reason": "候補の微小な件数と内部構造の全件集計は外部へ。重複/長さの意味は旧24へ保持。",
+      "action": "delete_page",
+      "new_page": null
+    },
+    {
+      "old_page": 51,
+      "location": "whole page",
+      "before": "生成器の初期化と乱数系列を固定する\n抽象版はNumPyのRandomStateをインスタンスの初期化時に作る。同じオブジェクトでget_instancesを繰り返すと乱数の位置が進むため、再生成には同じseedで新たに初期化する。\n自然言語版はget_instancesの開始時にPython random.seedを設定する。呼出しごとに同じseedから生成を始める。\n本資料は各モード・難度を新規に初期化した。入力・正解・モード・seed・indexと、未改変の公式ソースのSHA-256を原記録に保存した。\nAppendix: 2. 採点と生成の詳細\n[1] Stanford CRFM. HELM v0.4.0 公式生成器。  https://github.com/stanford-crfm/helm/tree/v0.4.0",
+      "after": "",
+      "reason": "乱数系列の内部状態/再生成工程/源SHA保存は監査記録へ。",
+      "action": "delete_page",
+      "new_page": null
+    },
+    {
+      "old_page": 52,
+      "location": "whole page",
+      "before": "HELMの範囲と公開実行を対応させる\nClassic v0.4.0の公開run仕様は、抽象3課題と自然言語2難度に各69実行、合計345実行を含む。比較表には3系列のモデルから計15実行を選んだ。\n元run suiteはすべてv0.3.0。15実行の評価対象は各試行valid485 + test515で、本文の表はtest515だけを使う。\nLlama 2 70Bは各1試行、text-davinci-003とOPT-175Bは各3試行。\nAppendix: 2. 採点と生成の詳細\n[1] Liang et al. (2023). Holistic Evaluation of Language Models. TMLR.  https://arxiv.org/abs/2211.09110",
+      "after": "",
+      "reason": "345公開run/15選定実行/分割485515と試行数の照合は外部へ。",
+      "action": "delete_page",
+      "new_page": null
+    },
+    {
+      "old_page": 53,
+      "location": "whole page",
+      "before": "HELMの制作と、先行研究の役割\nHELMはStanford CRFMのPercy Liangらによる評価基盤で、2022年に公開され、2023年にTMLRへ掲載された。Synthetic Reasoningの生成器と結果も、その基盤の一部として公開された。\nHELMの貢献者一覧には、Eric ZelikmanとQian Huangが合成推論シナリオを実装したことが記されている。\nLIMEの第一著者Yuhuai Wuらは合成課題での事前学習を研究し、Clark、Tafjord、Richardsonは自然言語による規則推論を研究した。これらはHELMの課題設計の出発点となった。\nAppendix: 3. 制作・関連研究と参考文献\n[1] Liang et al. (2023). Holistic Evaluation of Language Models. TMLR.  https://arxiv.org/abs/2211.09110\n[2] Wu et al. (2021). LIME: Learning Inductive Bias for Primitives of Mathematical Reasoning. ICML.  https://proceedings.mlr.press/v139/wu21c.html",
+      "after": "",
+      "reason": "評価基盤の制作過程と個人別実装分担は外部へ。設計主体は旧5に一度、先行着想は旧26へ。",
+      "action": "delete_page",
+      "new_page": null
+    }
+  ]
+}

@@ -17,3 +17,8 @@ Geminiは使用していない。Codexが日本語校正スキルをページご
 |42|植物が緑色、または遅いなら、植物は小さい。<br>ケシが紫色なら、ケシは退屈。<br>ケシが大きいなら、ケシは恐ろしい。<br>ケシが強い、かつ幸せなら、ケシは柔らかい。<br>植物が古いなら、植物は赤い。<br>事実：<br>ケシは悲しい、かつ古い。<br>ケシについて、次のことが導ける：|植物が緑色であるか、または遅いなら、その植物は小さい。<br>ケシが紫色なら、そのケシは退屈。<br>ケシが大きければ、そのケシは恐ろしい。<br>ケシが強く、かつ幸せなら、そのケシは柔らかい。<br>植物が古ければ、その植物は赤い。<br>事実：<br>そのケシは悲しく、古い。<br>そのケシについて何が導けるか。|条件節と並列する形容詞の活用を整え、論理的なand/orを保持した。|
 
 [全ページ文言](synthetic-reasoning/pages.jsonl)・[自己検査・独立レビュー](synthetic-reasoning/review.json)
+
+
+## 読者向けの説明・日本語の改訂（2026年10月）
+
+Geminiは使用せず、Codexがスキルで校正し、別担当が独立レビューした。削除・統合を含む[問題点と変更対](synthetic-reasoning/editorial-2026-10/changes.md)、[旧ページとの対応](synthetic-reasoning/editorial-2026-10/page-map.json)、[独立レビュー](synthetic-reasoning/editorial-2026-10/independent-review/handoff.json)、[最終ページの全文](synthetic-reasoning/pages.jsonl)。旧版の校正・検証記録は保持している。

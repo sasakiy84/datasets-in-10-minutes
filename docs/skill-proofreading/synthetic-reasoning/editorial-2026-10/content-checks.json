@@ -1,0 +1,177 @@
+{
+  "status": "passed",
+  "original_records_13_exactly_regenerated": true,
+  "full_original_translation_answer_page_checks": [
+    {
+      "old_page": 6,
+      "page": 5,
+      "all_full_original_and_answer_exact_JP_only_boring_polish": true
+    },
+    {
+      "old_page": 8,
+      "page": 7,
+      "all_full_original_and_answer_exact_JP_only_boring_polish": true
+    },
+    {
+      "old_page": 10,
+      "page": 9,
+      "all_full_original_and_answer_exact_JP_only_boring_polish": true
+    },
+    {
+      "old_page": 31,
+      "page": 27,
+      "all_full_original_and_answer_exact_JP_only_boring_polish": true
+    },
+    {
+      "old_page": 32,
+      "page": 28,
+      "all_full_original_and_answer_exact_JP_only_boring_polish": true
+    },
+    {
+      "old_page": 33,
+      "page": 29,
+      "all_full_original_and_answer_exact_JP_only_boring_polish": true
+    },
+    {
+      "old_page": 34,
+      "page": 30,
+      "all_full_original_and_answer_exact_JP_only_boring_polish": true
+    },
+    {
+      "old_page": 35,
+      "page": 31,
+      "all_full_original_and_answer_exact_JP_only_boring_polish": true
+    },
+    {
+      "old_page": 36,
+      "page": 32,
+      "all_full_original_and_answer_exact_JP_only_boring_polish": true
+    },
+    {
+      "old_page": 37,
+      "page": 33,
+      "all_full_original_and_answer_exact_JP_only_boring_polish": true
+    },
+    {
+      "old_page": 38,
+      "page": 34,
+      "all_full_original_and_answer_exact_JP_only_boring_polish": true
+    },
+    {
+      "old_page": 39,
+      "page": 35,
+      "all_full_original_and_answer_exact_JP_only_boring_polish": true
+    },
+    {
+      "old_page": 40,
+      "page": 36,
+      "all_full_original_and_answer_exact_JP_only_boring_polish": true
+    },
+    {
+      "old_page": 41,
+      "page": 37,
+      "all_full_original_and_answer_exact_JP_only_boring_polish": true
+    },
+    {
+      "old_page": 42,
+      "page": 38,
+      "all_full_original_and_answer_exact_JP_only_boring_polish": true
+    }
+  ],
+  "abstract_answers_independently_verified": [
+    {
+      "id": "abstract-variable_substitution-seed42-index6000",
+      "gold_verified": true
+    },
+    {
+      "id": "abstract-pattern_match-seed42-index6000",
+      "gold_verified": true
+    },
+    {
+      "id": "abstract-variable_substitution-seed42-index6001",
+      "gold_verified": true
+    },
+    {
+      "id": "abstract-variable_substitution-seed42-index6002",
+      "gold_verified": true
+    },
+    {
+      "id": "abstract-pattern_match-seed42-index6001",
+      "gold_verified": true
+    },
+    {
+      "id": "abstract-pattern_match-seed42-index6002",
+      "gold_verified": true
+    },
+    {
+      "id": "abstract-induction-seed42-index6000",
+      "gold_verified": true
+    },
+    {
+      "id": "abstract-induction-seed42-index6001",
+      "gold_verified": true
+    }
+  ],
+  "natural_answers_independently_derived": {
+    "natural-hard-seed42-index6000": [
+      "Dan is beautiful.",
+      "tiny→small, Dan→person、smallがor条件を満たす。"
+    ],
+    "natural-easy-seed42-index6000": [
+      "Nothing.",
+      "事実purple/boringはどの規則の条件も満たさない。"
+    ],
+    "natural-easy-seed42-index6001": [
+      "The rose is blue.",
+      "事実hotからblueを導く。他の条件は満たさない。"
+    ],
+    "natural-hard-seed42-index6001": [
+      "Nothing.",
+      "glad→happy/sluggish→slowの事実は、5規則の条件を満たさない。"
+    ],
+    "natural-hard-seed42-index6002": [
+      "The poppy is red.",
+      "antique→old、poppy→plantにより、plant old→redが適用される。"
+    ]
+  },
+  "all_55000_official_generated_records_counted": 55000,
+  "split_counts": {
+    "variable_substitution": {
+      "train": 1000,
+      "valid": 5000,
+      "test": 5000
+    },
+    "pattern_match": {
+      "train": 1000,
+      "valid": 5000,
+      "test": 5000
+    },
+    "induction": {
+      "train": 1000,
+      "valid": 5000,
+      "test": 5000
+    },
+    "easy": {
+      "train": 1000,
+      "valid": 5000,
+      "test": 5000
+    },
+    "hard": {
+      "train": 1000,
+      "valid": 5000,
+      "test": 5000
+    }
+  },
+  "nothing_counts": {
+    "variable_substitution": 0,
+    "pattern_match": 0,
+    "induction": 0,
+    "easy": 1899,
+    "hard": 1910
+  },
+  "native_tables_preserved_except_removed_index_column": true,
+  "visible_code_executed": true,
+  "code_execution_note": "未改変の公式生成器を読込。依存のScenarioデータ型だけ同形dataclassで提供し、公開API importをその同じモジュールへ接続して実行。生成処理は変更なし。",
+  "source_and_version": "v0.4.0 / seed42; ソースSHAは各原レコードと一致",
+  "examples_coexist": "全原文/JP/答えの配置を維持。JP3述語のboring自然化だけを許容。既存coexist-verificationの幅/15pt試験と別頁条件を継承。"
+}

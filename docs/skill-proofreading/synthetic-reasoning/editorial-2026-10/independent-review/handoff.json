@@ -1,0 +1,101 @@
+{
+  "slug": "synthetic-reasoning",
+  "approved": true,
+  "status": "independent_review_passed",
+  "reviewer": "create_ice",
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "total_pages": 44,
+  "main_pages": 24,
+  "final_hashes": {
+    "datasets-in-10-minutes-synthetic-reasoning.pptx": "80488626a06349c6386fe1f6209a584f8b8be94f05359e61958a0476238bf7f6",
+    "datasets-in-10-minutes-synthetic-reasoning.pdf": "84cd1086d8a22af61d583ce86084f908a3bb0a6c9c340e0f4baea1e1275c33be"
+  },
+  "individual_pages_viewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44
+  ],
+  "overview_viewed": true,
+  "final_changed_pages_reviewed_again": [
+    34,
+    38
+  ],
+  "remaining_issues": [],
+  "resolved_findings": [
+    {
+      "pages": [
+        34,
+        38
+      ],
+      "issue": "boringが退屈している状態とも読める3述語",
+      "resolution": "退屈なものだへ。原EN/5規則/事実/正解は保持"
+    }
+  ],
+  "checks": {
+    "reader_focus": "元の抽象3操作と自然言語1段推論を主題とし、構築/入出力/語彙/利用/着想を説明。代表性能2表は主担当の明示方針で保持。",
+    "baseline_and_findings": "固定55頁baseline、全変更記録、削除11頁の本文と最終44頁を確認。",
+    "primary_sources": "独立GET22件：2公式生成器/metrics/Apache/LIME/Clark/元研究/15公開stats。元研究§5 reasoningとAppendix E3を読直し、独自作成と先行研究からの着想を確認。",
+    "generation": "独立取得した未改変コードで55,000件を生成。作者の全生成行と一致、別の文字列テンプレート照合/置換/条件適用で全55,000正解を検算。",
+    "examples": "13原レコードを完全再生成。原文/JP/正解全shapeを固定baselineに照合し、boring3述語以外不変。全JP意味通読。",
+    "scores": "15値を独立GETしたstatsから厳密一致/F1の正しいkeyで再計算、test515と試行3/3/1一致。",
+    "tables_and_code": "5表の全セルは生成順index列除去以外不変。native公開コードを未改変の独立取得生成器へ接続し実行。framework dataclassのみ代替、全パッケージ導入試験は主張しない。",
+    "native": "373段落/58セル欠落0・字形接触0、223frameの0.75pt候補0。layout347/52=0、XSD新規0/notes0。",
+    "links": "43native URL-only runs/43URI groups/45PDF矩形。2長URLの折返しを文字中心で連結して完全一致。",
+    "render": "全44頁をMuPDFで個別目視、最終34/38再目視。他42頁は初回PNGと不変。独立Poppler再描画全44頁が作者最終PNGと実画素完全一致。",
+    "panels": "19引用/コード枠を実画素検査。",
+    "rights": "公式コードApache2.0、元研究と着想研究の帰属を正確に保持。"
+  },
+  "evidence_files": [
+    "content-checks.json",
+    "code-table-checks.json",
+    "independent-fetch.json",
+    "native-final-audit.json",
+    "all-text-frame-audit.json",
+    "layout-audit.json",
+    "package-audit.json",
+    "render-comparison.json",
+    "panel-ink-audit.json"
+  ]
+}

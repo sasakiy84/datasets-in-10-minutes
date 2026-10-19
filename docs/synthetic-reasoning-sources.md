@@ -68,3 +68,8 @@ seed42のpattern_match test5000例を全件集計。候補文字列に重複が�
 ## リポジトリの検証記録
 
 [原レコード・出典・実行条件](data-audits/synthetic-reasoning.json)、[実際の校正対](skill-proofreading/synthetic-reasoning.md)、[全ページ文言](skill-proofreading/synthetic-reasoning/pages.jsonl)、[自己検査・独立レビュー](skill-proofreading/synthetic-reasoning/review.json)。
+
+
+## 読者向け説明の改訂
+
+[日本語・情報量の問題点と修正](skill-proofreading/synthetic-reasoning/editorial-2026-10/findings.json)。細かな再現条件・原レコードの照合情報は従来の検証記録に保持し、紹介スライドから整理した。

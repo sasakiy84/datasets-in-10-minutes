@@ -1,0 +1,266 @@
+{
+  "slug": "synthetic-reasoning",
+  "comparison": "Exact native text, full table cells, chart categories and series; no visual-inspection claim",
+  "previous_pptx_sha256": "2f0ad56acec1e5a95e319c7abf4632a5f8efcf470d18e001081ba423aa0fc2e7",
+  "current_pptx_sha256": "80488626a06349c6386fe1f6209a584f8b8be94f05359e61958a0476238bf7f6",
+  "previous_page_count": 42,
+  "current_page_count": 44,
+  "unchanged_pages": [
+    {
+      "current_page": 1,
+      "previous_pages": [
+        1
+      ]
+    },
+    {
+      "current_page": 2,
+      "previous_pages": [
+        2
+      ]
+    },
+    {
+      "current_page": 3,
+      "previous_pages": [
+        3
+      ]
+    },
+    {
+      "current_page": 4,
+      "previous_pages": [
+        4
+      ]
+    },
+    {
+      "current_page": 5,
+      "previous_pages": [
+        5
+      ]
+    },
+    {
+      "current_page": 6,
+      "previous_pages": [
+        6
+      ]
+    },
+    {
+      "current_page": 7,
+      "previous_pages": [
+        7
+      ]
+    },
+    {
+      "current_page": 8,
+      "previous_pages": [
+        8
+      ]
+    },
+    {
+      "current_page": 9,
+      "previous_pages": [
+        9
+      ]
+    },
+    {
+      "current_page": 10,
+      "previous_pages": [
+        10
+      ]
+    },
+    {
+      "current_page": 11,
+      "previous_pages": [
+        11
+      ]
+    },
+    {
+      "current_page": 12,
+      "previous_pages": [
+        12
+      ]
+    },
+    {
+      "current_page": 13,
+      "previous_pages": [
+        13
+      ]
+    },
+    {
+      "current_page": 15,
+      "previous_pages": [
+        15
+      ]
+    },
+    {
+      "current_page": 16,
+      "previous_pages": [
+        16
+      ]
+    },
+    {
+      "current_page": 17,
+      "previous_pages": [
+        17
+      ]
+    },
+    {
+      "current_page": 20,
+      "previous_pages": [
+        18
+      ]
+    },
+    {
+      "current_page": 21,
+      "previous_pages": [
+        19
+      ]
+    },
+    {
+      "current_page": 22,
+      "previous_pages": [
+        20
+      ]
+    },
+    {
+      "current_page": 23,
+      "previous_pages": [
+        21
+      ]
+    },
+    {
+      "current_page": 24,
+      "previous_pages": [
+        22
+      ]
+    },
+    {
+      "current_page": 25,
+      "previous_pages": [
+        23
+      ]
+    },
+    {
+      "current_page": 26,
+      "previous_pages": [
+        24
+      ]
+    },
+    {
+      "current_page": 27,
+      "previous_pages": [
+        25
+      ]
+    },
+    {
+      "current_page": 28,
+      "previous_pages": [
+        26
+      ]
+    },
+    {
+      "current_page": 29,
+      "previous_pages": [
+        27
+      ]
+    },
+    {
+      "current_page": 30,
+      "previous_pages": [
+        28
+      ]
+    },
+    {
+      "current_page": 31,
+      "previous_pages": [
+        29
+      ]
+    },
+    {
+      "current_page": 32,
+      "previous_pages": [
+        30
+      ]
+    },
+    {
+      "current_page": 33,
+      "previous_pages": [
+        31
+      ]
+    },
+    {
+      "current_page": 35,
+      "previous_pages": [
+        33
+      ]
+    },
+    {
+      "current_page": 36,
+      "previous_pages": [
+        34
+      ]
+    },
+    {
+      "current_page": 37,
+      "previous_pages": [
+        35
+      ]
+    },
+    {
+      "current_page": 39,
+      "previous_pages": [
+        37
+      ]
+    },
+    {
+      "current_page": 40,
+      "previous_pages": [
+        38
+      ]
+    },
+    {
+      "current_page": 41,
+      "previous_pages": [
+        39
+      ]
+    },
+    {
+      "current_page": 42,
+      "previous_pages": [
+        40
+      ]
+    },
+    {
+      "current_page": 43,
+      "previous_pages": [
+        41
+      ]
+    },
+    {
+      "current_page": 44,
+      "previous_pages": [
+        42
+      ]
+    }
+  ],
+  "changed_pages": [
+    {
+      "page": 14,
+      "text": "既定では、設定ごとに11,000問を作る\n2. 生成方法と問題の構成\n分割 | 件数\ntrain | 1,000\nvalid | 5,000\ntest | 5,000\n置換・照合・帰納と、自然言語easy/hardをそれぞれ生成する。問題数と乱数の種は指定できる。\n[1] Stanford CRFM. Synthetic Reasoning — 公開生成器。\nhttps://github.com/stanford-crfm/helm/tree/v0.4.0"
+    },
+    {
+      "page": 18,
+      "text": "抽象版：記号を含む文字列の一致率\n3. 答えの形式と問題の特徴\nモデル | 置換 % | 照合 % | 帰納 %\ntext-davinci-003 (2022) | 95.02 | 32.30 | 11.07\nOPT-175B (2022) | 1.94 | 25.37 | 0.00\nLlama 2 70B (2023) | 83.50 | 35.53 | 7.57\n2023年公開の成績。各課題のtest 515問で、記号を含む文字列の一致を採点する。text-davinci-003・OPTは3試行、Llama 2は1試行。3モデルとも、置換より帰納で低い。\n[1] Stanford CRFM (2023). 公開成績（2023年11月公開版）。\nhttps://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/synthetic_reasoning%3Amode%3Dinduction%2Cmodel%3Dmeta_llama-2-70b/stats.json"
+    },
+    {
+      "page": 19,
+      "text": "自然言語版：導いた属性集合のF1\n3. 答えの形式と問題の特徴\nモデル | easy % | hard %\ntext-davinci-003 (2022) | 82.58 | 64.13\nOPT-175B (2022) | 36.05 | 13.53\nLlama 2 70B (2023) | 49.97 | 44.40\n2023年公開の成績。各難度のtest 515問で、属性の過不足を測るF1を、各問で求め平均する。text-davinci-003・OPTは3試行、Llama 2は1試行。hardでは全モデルで低下する。\n[1] Stanford CRFM (2023). 公開成績（2023年11月公開版）。\nhttps://storage.googleapis.com/crfm-helm-public/classic/benchmark_output/runs/v0.3.0/synthetic_reasoning_natural%3Adifficulty%3Dhard%2Cmodel%3Dmeta_llama-2-70b/stats.json"
+    },
+    {
+      "page": 34,
+      "text": "実例10：自然言語・easy（訳）\nAppendix: 1. 追加の生成例\n問題（全文）の日本語訳\nタンポポが小さければ、そのタンポポはよい。\nタンポポが強ければ、そのタンポポは熱い。\nタンポポが大きく、かつ柔らかいなら、そのタンポポは退屈なものだ。\nタンポポが赤く、かつ恐ろしいなら、そのタンポポは古い。\nタンポポが清潔であるか、または若いなら、そのタンポポは紫色。\n事実：\nそのタンポポは紫色で、退屈なものだ。\nそのタンポポについて何が導けるか。\n正解：新たに導ける属性はない。\n[1] Stanford CRFM. SRNScenario — 自然言語の合成課題。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/synthetic_reasoning_natural_scenario.py"
+    },
+    {
+      "page": 38,
+      "text": "実例13：自然言語・hard（訳）\nAppendix: 1. 追加の生成例\n問題（全文）の日本語訳\n植物が緑色であるか、または遅いなら、その植物は小さい。\nケシが紫色なら、そのケシは退屈なものだ。\nケシが大きければ、そのケシは恐ろしい。\nケシが強く、かつ幸せなら、そのケシは柔らかい。\n植物が古ければ、その植物は赤い。\n事実：\nそのケシは悲しく、古い。\nそのケシについて何が導けるか。\n正解：ケシは赤い。\n[1] Stanford CRFM. SRNScenario — 自然言語の合成課題。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/synthetic_reasoning_natural_scenario.py"
+    }
+  ]
+}

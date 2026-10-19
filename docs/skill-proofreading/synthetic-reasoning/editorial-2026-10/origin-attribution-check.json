@@ -1,0 +1,60 @@
+{
+  "slug": "synthetic-reasoning",
+  "status": "confirmed_current_dataset_focus",
+  "reviewed_on": "2026-10-19",
+  "creator": "Stanford CRFM研究チーム（2022）。元研究の合成推論課題として設計し、公開コードで生成する。固定配布データではない。",
+  "prior_research": [
+    "Wu et al.2021 LIME：合成した基本推論操作からの事前学習という着想。",
+    "Clark et al.2020：自然言語の規則と事実を使う推論という着想。"
+  ],
+  "task": "抽象版は記号列の置換・照合・帰納。自然言語版はeasy/hardで1段の規則適用。別々の生成器であり逐語訳対ではない。",
+  "platform_relation": "HELM研究による新設計という出自は正式論文で確認。本文は課題自体を主題にし、研究チーム名はp4で一度。基盤の一般解説/実行索引/監査は外部化。代表結果2頁は課題の難しさを理解する情報として保持。",
+  "primary_evidence": [
+    {
+      "url": "https://arxiv.org/abs/2211.09110",
+      "local": "evidence/helm-paper.txt",
+      "section": "reasoning §5.3 / Appendix E.3.1/E.3.2",
+      "claim": "抽象操作と自然言語規則の合成課題を設計、先行研究から着想。"
+    },
+    {
+      "url": "https://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/synthetic_reasoning_scenario.py",
+      "local": "evidence/abstract-v040.py",
+      "claim": "3モードの公開生成器・規則/置換/正解を機械的生成。"
+    },
+    {
+      "url": "https://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/synthetic_reasoning_natural_scenario.py",
+      "local": "evidence/natural-v040.py",
+      "claim": "easy/hardの別生成器、同義語とカテゴリ、1段の適用、Nothing。"
+    },
+    {
+      "url": "https://proceedings.mlr.press/v139/wu21c.html",
+      "claim": "LIME2021は先行研究であり、対象の生成器そのものとは区別。"
+    },
+    {
+      "url": "https://arxiv.org/abs/2002.05867",
+      "claim": "Clark/Tafjord/Richardson2020は自然言語推論の先行研究。"
+    }
+  ],
+  "slide_pages": [
+    4,
+    12,
+    13,
+    14,
+    15,
+    18,
+    19,
+    22,
+    23,
+    40,
+    41,
+    42,
+    43,
+    44
+  ],
+  "total_pages": 44,
+  "final_hashes": {
+    "datasets-in-10-minutes-synthetic-reasoning.pptx": "80488626a06349c6386fe1f6209a584f8b8be94f05359e61958a0476238bf7f6",
+    "datasets-in-10-minutes-synthetic-reasoning.pdf": "84cd1086d8a22af61d583ce86084f908a3bb0a6c9c340e0f4baea1e1275c33be"
+  },
+  "conclusion": "新設計した合成推論課題を正しく説明し、先行研究/原生成器/公開成績を区別。課題を固定配布データや抽象版の自然言語訳と同一視しない。"
+}
