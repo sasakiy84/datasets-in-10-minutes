@@ -1,0 +1,3172 @@
+{
+  "slug": "cold",
+  "title": "COLD",
+  "description": "中国語のソーシャルメディア発言が攻撃的かどうかを判定するデータセット。13例を通じ、二値と詳細分類、収集・注釈、検出器の評価を説明する。",
+  "year": 2022,
+  "main_pages": 25,
+  "total_pages": 46,
+  "status": "independent_review_passed",
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "files": {
+    "pptx": {
+      "path": "/workspace/artifacts/helm-editorial-revision/cold/datasets-in-10-minutes-cold.pptx",
+      "sha256": "50b987e18f1e0f35034fda14bfced75db4a4ffd45e0c8d06a306162e2b9249c0"
+    },
+    "pdf": {
+      "path": "/workspace/artifacts/helm-editorial-revision/cold/datasets-in-10-minutes-cold.pdf",
+      "sha256": "f58e7114a5c6653974272235d4080bd1adda489d19f89fc9405c95c22c635437"
+    }
+  },
+  "final_hashes": {
+    "pptx": "50b987e18f1e0f35034fda14bfced75db4a4ffd45e0c8d06a306162e2b9249c0",
+    "pdf": "f58e7114a5c6653974272235d4080bd1adda489d19f89fc9405c95c22c635437"
+  },
+  "baseline_hashes": {
+    "pptx": "bcd6fd489b138d81b9c81f31847561c6f378fe54d0acb262da90a376b31c031f",
+    "pdf": "a29a00a09d68edf7af42e55e59717a7cf88ee9e60703a56ef1c3e8247c266db2"
+  },
+  "findings": "findings.json",
+  "page_map": "page-map.json",
+  "full_text": "pages.jsonl",
+  "audits": {
+    "layout-audit.json": {
+      "paragraphs_checked": 257,
+      "table_cells_checked": 96,
+      "issues": []
+    },
+    "text-audit.json": {
+      "paragraphs_checked": 273,
+      "cells_checked": 117,
+      "issues": []
+    },
+    "package-audit.json": {
+      "parsed_xml_parts": 127,
+      "integer_bullets": 114,
+      "hyperlinks": 39,
+      "new_schema_errors": [],
+      "baseline_schema_errors": 11,
+      "package_integrity": "passed",
+      "internal_relationship_targets": "passed",
+      "unique_shape_ids": "passed",
+      "schema_note": "標準XSDを変更せず確認。マスター由来の既存エラーと、整数buSzPctの百分率字句形式との差を分離。整数箇条書きサイズは25000–400000で別途検査。",
+      "pages": 46,
+      "native_tables": 7,
+      "native_charts": 1
+    },
+    "links-audit.json": {
+      "native_url_only_runs": 39,
+      "pdf_link_rectangles": 39,
+      "pdf_link_text_exactly_matches_url": true,
+      "pdf_link_character_centers_match_url": true,
+      "glyph_box_overhangs": [],
+      "shortened_url_labels": [],
+      "issues": []
+    },
+    "all-native-frame-checks.json": {
+      "paragraphs": 273,
+      "method": "All native text_frame paragraphs matched to final PDF; fontbbox candidates measured against actual dark glyph pixels of final 1.5x PNG.",
+      "raster_coordinate_tolerance_pt": 0.6666666666666666,
+      "font_bbox_candidates": [
+        {
+          "page": 1,
+          "name": "Title 1",
+          "text": "COLD",
+          "font_bbox": [
+            286.9800109863281,
+            131.48716735839844,
+            432.99603271484375,
+            205.03517150878906
+          ],
+          "frame": [
+            43.2,
+            128.94700787401575,
+            633.6,
+            71.1
+          ],
+          "actual_bottom_gap_pt": 10.047007874015748,
+          "actual_right_gap_pt": 246.80000000000007,
+          "actual_top_gap_pt": 21.052992125984247,
+          "actual_left_gap_pt": 246.13333333333333
+        },
+        {
+          "page": 2,
+          "name": "Title 1",
+          "text": "COLDの公式公開リポジトリ",
+          "font_bbox": [
+            36.849998474121094,
+            50.058204650878906,
+            398.8089904785156,
+            90.75092315673828
+          ],
+          "frame": [
+            36.863937007874014,
+            51.191968503937005,
+            646.2,
+            48.52795275590551
+          ],
+          "actual_bottom_gap_pt": 14.386587926509193,
+          "actual_right_gap_pt": 289.73060367454076,
+          "actual_top_gap_pt": 7.474698162729659,
+          "actual_left_gap_pt": 1.80272965879265
+        },
+        {
+          "page": 2,
+          "name": "sources",
+          "text": "[1] Deng et al. (n.d.). COLDataset. GitHub.  https://github.com/thu-coai/COLDataset",
+          "font_bbox": [
+            39.599998474121094,
+            372.0837707519531,
+            355.95269775390625,
+            383.1255187988281
+          ],
+          "frame": [
+            39.6,
+            374.4,
+            644.3999212598425,
+            41.76
+          ],
+          "actual_bottom_gap_pt": 33.49333333333328,
+          "actual_right_gap_pt": 328.6665879265092,
+          "actual_top_gap_pt": 0.26666666666670835,
+          "actual_left_gap_pt": 1.0666666666666629
+        },
+        {
+          "page": 3,
+          "name": "Text Placeholder 2",
+          "text": "中国語の攻撃的発言を分類する",
+          "font_bbox": [
+            86.4000015258789,
+            126.81360626220703,
+            506.27398681640625,
+            170.24057006835938
+          ],
+          "frame": [
+            50.4,
+            131.01582677165354,
+            619.2,
+            185.99992125984252
+          ],
+          "actual_bottom_gap_pt": 153.01574803149606,
+          "actual_right_gap_pt": 166.93333333333334,
+          "actual_top_gap_pt": 4.984173228346464,
+          "actual_left_gap_pt": 38.26666666666667
+        },
+        {
+          "page": 4,
+          "name": "Title 1",
+          "text": "中国語の攻撃的発言を分類する",
+          "font_bbox": [
+            108.0,
+            195.2451629638672,
+            612.0,
+            247.37315368652344
+          ],
+          "frame": [
+            43.2,
+            197.39173228346456,
+            633.6,
+            46.08
+          ],
+          "actual_bottom_gap_pt": 2.8050656167979184,
+          "actual_right_gap_pt": 69.4666666666667,
+          "actual_top_gap_pt": 9.274934383202094,
+          "actual_left_gap_pt": 68.13333333333333
+        },
+        {
+          "page": 5,
+          "name": "Title 1",
+          "text": "発言を読み、攻撃的かどうかを判定する",
+          "font_bbox": [
+            36.849998474121094,
+            50.058204650878906,
+            540.1739501953125,
+            90.61089324951172
+          ],
+          "frame": [
+            36.863937007874014,
+            51.191968503937005,
+            646.2,
+            48.52795275590551
+          ],
+          "actual_bottom_gap_pt": 14.386587926509193,
+          "actual_right_gap_pt": 146.39727034120745,
+          "actual_top_gap_pt": 7.474698162729659,
+          "actual_left_gap_pt": 1.1360629921259857
+        },
+        {
+          "page": 5,
+          "name": "sources",
+          "text": "[1] Deng et al. (2022). COLD: A Benchmark for Chinese Offensive Language Detection. EMNLP, 11580–11599.  https://aclanthology.org/2022.emnlp-main.796/",
+          "font_bbox": [
+            39.599998474121094,
+            372.0837707519531,
+            637.8324584960938,
+            383.1255187988281
+          ],
+          "frame": [
+            39.6,
+            374.4,
+            644.3999212598425,
+            41.76
+          ],
+          "actual_bottom_gap_pt": 33.49333333333328,
+          "actual_right_gap_pt": 46.66658792650912,
+          "actual_top_gap_pt": 0.26666666666670835,
+          "actual_left_gap_pt": 1.0666666666666629
+        },
+        {
+          "page": 6,
+          "name": "Title 1",
+          "text": "実例1：地名を含む食事の勧め",
+          "font_bbox": [
+            36.849998474121094,
+            50.058204650878906,
+            429.7919921875,
+            90.75092315673828
+          ],
+          "frame": [
+            36.863937007874014,
+            51.191968503937005,
+            646.2,
+            48.52795275590551
+          ],
+          "actual_bottom_gap_pt": 14.386587926509193,
+          "actual_right_gap_pt": 255.06393700787407,
+          "actual_top_gap_pt": 7.474698162729659,
+          "actual_left_gap_pt": 1.80272965879265
+        },
+        {
+          "page": 6,
+          "name": "TextBox 4",
+          "text": "中国語原文（全文）",
+          "font_bbox": [
+            43.172000885009766,
+            121.55860900878906,
+            151.0430145263672,
+            138.9215850830078
+          ],
+          "frame": [
+            43.2,
+            123.84,
+            309.6,
+            15.84
+          ],
+          "actual_bottom_gap_pt": 3.680000000000007,
+          "actual_right_gap_pt": 210.13333333333335,
+          "actual_top_gap_pt": 1.4933333333333252,
+          "actual_left_gap_pt": 1.4666666666666615
+        },
+        {
+          "page": 6,
+          "name": "TextBox 6",
+          "text": "日本語訳（全文）",
+          "font_bbox": [
+            367.1719970703125,
+            121.55860900878906,
+            463.0639953613281,
+            138.9215850830078
+          ],
+          "frame": [
+            367.2,
+            123.84,
+            309.6,
+            15.84
+          ],
+          "actual_bottom_gap_pt": 3.680000000000007,
+          "actual_right_gap_pt": 222.13333333333327,
+          "actual_top_gap_pt": 1.4933333333333252,
+          "actual_left_gap_pt": 2.1333333333333258
+        },
+        {
+          "page": 6,
+          "name": "TextBox 8",
+          "text": "正解：非攻撃的（0）",
+          "font_bbox": [
+            46.77199935913086,
+            219.73324584960938,
+            262.68701171875,
+            250.95384216308594
+          ],
+          "frame": [
+            46.8,
+            223.84,
+            626.3999212598425,
+            30.96
+          ],
+          "actual_bottom_gap_pt": 8.133333333333354,
+          "actual_right_gap_pt": 424.5332545931758,
+          "actual_top_gap_pt": 2.826666666666654,
+          "actual_left_gap_pt": 1.2000000000000028
+        },
+        {
+          "page": 6,
+          "name": "sources",
+          "text": "[1] Deng et al. (n.d.). COLDataset: Chinese offensive language data. GitHub.  https://github.com/thu-coai/COLDataset/tree/main/COLDataset",
+          "font_bbox": [
+            39.599998474121094,
+            372.0837707519531,
+            574.03369140625,
+            383.1255187988281
+          ],
+          "frame": [
+            39.6,
+            374.4,
+            644.3999212598425,
+            41.76
+          ],
+          "actual_bottom_gap_pt": 33.49333333333328,
+          "actual_right_gap_pt": 110.66658792650912,
+          "actual_top_gap_pt": 0.26666666666670835,
+          "actual_left_gap_pt": 1.0666666666666629
+        },
+        {
+          "page": 7,
+          "name": "Title 1",
+          "text": "実例2：偏見を批判する文と、攻撃的ラベル",
+          "font_bbox": [
+            36.849998474121094,
+            50.058204650878906,
+            596.4556274414062,
+            90.75092315673828
+          ],
+          "frame": [
+            36.863937007874014,
+            51.191968503937005,
+            646.2,
+            48.52795275590551
+          ],
+          "actual_bottom_gap_pt": 14.386587926509193,
+          "actual_right_gap_pt": 87.7306036745407,
+          "actual_top_gap_pt": 7.474698162729659,
+          "actual_left_gap_pt": 1.80272965879265
+        },
+        {
+          "page": 7,
+          "name": "TextBox 4",
+          "text": "中国語原文（全文）",
+          "font_bbox": [
+            43.172000885009766,
+            121.55860900878906,
+            151.0430145263672,
+            138.9215850830078
+          ],
+          "frame": [
+            43.2,
+            123.84,
+            309.6,
+            15.84
+          ],
+          "actual_bottom_gap_pt": 3.680000000000007,
+          "actual_right_gap_pt": 210.13333333333335,
+          "actual_top_gap_pt": 1.4933333333333252,
+          "actual_left_gap_pt": 1.4666666666666615
+        },
+        {
+          "page": 7,
+          "name": "TextBox 6",
+          "text": "日本語訳（全文）",
+          "font_bbox": [
+            367.1719970703125,
+            121.55860900878906,
+            463.0639953613281,
+            138.9215850830078
+          ],
+          "frame": [
+            367.2,
+            123.84,
+            309.6,
+            15.84
+          ],
+          "actual_bottom_gap_pt": 3.680000000000007,
+          "actual_right_gap_pt": 222.13333333333327,
+          "actual_top_gap_pt": 1.4933333333333252,
+          "actual_left_gap_pt": 2.1333333333333258
+        },
+        {
+          "page": 7,
+          "name": "TextBox 8",
+          "text": "正解：攻撃的（1） ／ 個人への攻撃（1）",
+          "font_bbox": [
+            46.77199935913086,
+            262.3952331542969,
+            466.86700439453125,
+            293.6158447265625
+          ],
+          "frame": [
+            46.8,
+            266.50661417322834,
+            626.3999212598425,
+            30.96
+          ],
+          "actual_bottom_gap_pt": 8.133280839895008,
+          "actual_right_gap_pt": 220.53325459317574,
+          "actual_top_gap_pt": 2.8267191601049717,
+          "actual_left_gap_pt": 1.2000000000000028
+        },
+        {
+          "page": 7,
+          "name": "sources",
+          "text": "[1] Deng et al. (n.d.). COLDataset: Chinese offensive language data. GitHub.  https://github.com/thu-coai/COLDataset/tree/main/COLDataset",
+          "font_bbox": [
+            39.599998474121094,
+            372.0837707519531,
+            574.03369140625,
+            383.1255187988281
+          ],
+          "frame": [
+            39.6,
+            374.4,
+            644.3999212598425,
+            41.76
+          ],
+          "actual_bottom_gap_pt": 33.49333333333328,
+          "actual_right_gap_pt": 110.66658792650912,
+          "actual_top_gap_pt": 0.26666666666670835,
+          "actual_left_gap_pt": 1.0666666666666629
+        },
+        {
+          "page": 8,
+          "name": "Title 1",
+          "text": "実例3：地域全体への決めつけに反対する発言",
+          "font_bbox": [
+            36.849998474121094,
+            50.058204650878906,
+            625.5258178710938,
+            90.75092315673828
+          ],
+          "frame": [
+            36.863937007874014,
+            51.191968503937005,
+            646.2,
+            48.52795275590551
+          ],
+          "actual_bottom_gap_pt": 14.386587926509193,
+          "actual_right_gap_pt": 58.397270341207445,
+          "actual_top_gap_pt": 7.474698162729659,
+          "actual_left_gap_pt": 1.80272965879265
+        },
+        {
+          "page": 8,
+          "name": "TextBox 4",
+          "text": "中国語原文（全文）",
+          "font_bbox": [
+            43.172000885009766,
+            121.55860900878906,
+            151.0430145263672,
+            138.9215850830078
+          ],
+          "frame": [
+            43.2,
+            123.84,
+            309.6,
+            15.84
+          ],
+          "actual_bottom_gap_pt": 3.680000000000007,
+          "actual_right_gap_pt": 210.13333333333335,
+          "actual_top_gap_pt": 1.4933333333333252,
+          "actual_left_gap_pt": 1.4666666666666615
+        },
+        {
+          "page": 8,
+          "name": "TextBox 6",
+          "text": "日本語訳（全文）",
+          "font_bbox": [
+            367.1719970703125,
+            121.55860900878906,
+            463.0639953613281,
+            138.9215850830078
+          ],
+          "frame": [
+            367.2,
+            123.84,
+            309.6,
+            15.84
+          ],
+          "actual_bottom_gap_pt": 3.680000000000007,
+          "actual_right_gap_pt": 222.13333333333327,
+          "actual_top_gap_pt": 1.4933333333333252,
+          "actual_left_gap_pt": 2.1333333333333258
+        },
+        {
+          "page": 8,
+          "name": "TextBox 8",
+          "text": "正解：非攻撃的（0） ／ 偏見への反対（3）",
+          "font_bbox": [
+            46.77199935913086,
+            240.39825439453125,
+            488.3529968261719,
+            271.6188659667969
+          ],
+          "frame": [
+            46.8,
+            244.50661417322834,
+            626.3999212598425,
+            30.96
+          ],
+          "actual_bottom_gap_pt": 8.133280839895008,
+          "actual_right_gap_pt": 199.19992125984243,
+          "actual_top_gap_pt": 2.826719160105,
+          "actual_left_gap_pt": 1.2000000000000028
+        },
+        {
+          "page": 8,
+          "name": "sources",
+          "text": "[1] Deng et al. (n.d.). COLDataset: Chinese offensive language data. GitHub.  https://github.com/thu-coai/COLDataset/tree/main/COLDataset",
+          "font_bbox": [
+            39.599998474121094,
+            372.0837707519531,
+            574.03369140625,
+            383.1255187988281
+          ],
+          "frame": [
+            39.6,
+            374.4,
+            644.3999212598425,
+            41.76
+          ],
+          "actual_bottom_gap_pt": 33.49333333333328,
+          "actual_right_gap_pt": 110.66658792650912,
+          "actual_top_gap_pt": 0.26666666666670835,
+          "actual_left_gap_pt": 1.0666666666666629
+        },
+        {
+          "page": 9,
+          "name": "Title 1",
+          "text": "偏見を批判する発言にも、判断の違いが表れる",
+          "font_bbox": [
+            36.849998474121094,
+            50.058204650878906,
+            623.211669921875,
+            90.61089324951172
+          ],
+          "frame": [
+            36.863937007874014,
+            51.191968503937005,
+            646.2,
+            48.52795275590551
+          ],
+          "actual_bottom_gap_pt": 14.386587926509193,
+          "actual_right_gap_pt": 63.063937007874074,
+          "actual_top_gap_pt": 7.474698162729659,
+          "actual_left_gap_pt": 0.4693963254593214
+        },
+        {
+          "page": 9,
+          "name": "sources",
+          "text": "[1] Deng et al. (n.d.). COLDataset: Chinese offensive language data. GitHub.  https://github.com/thu-coai/COLDataset/tree/main/COLDataset",
+          "font_bbox": [
+            39.599998474121094,
+            372.0837707519531,
+            574.03369140625,
+            383.1255187988281
+          ],
+          "frame": [
+            39.6,
+            374.4,
+            644.3999212598425,
+            41.76
+          ],
+          "actual_bottom_gap_pt": 33.49333333333328,
+          "actual_right_gap_pt": 110.66658792650912,
+          "actual_top_gap_pt": 0.26666666666670835,
+          "actual_left_gap_pt": 1.0666666666666629
+        },
+        {
+          "page": 10,
+          "name": "Title 1",
+          "text": "収集と注釈、データの構成",
+          "font_bbox": [
+            144.0,
+            195.2451629638672,
+            576.0,
+            247.37315368652344
+          ],
+          "frame": [
+            43.2,
+            197.39173228346456,
+            633.6,
+            46.08
+          ],
+          "actual_bottom_gap_pt": 2.8050656167979184,
+          "actual_right_gap_pt": 102.13333333333344,
+          "actual_top_gap_pt": 8.608267716535437,
+          "actual_left_gap_pt": 101.46666666666665
+        },
+        {
+          "page": 11,
+          "name": "Title 1",
+          "text": "人種・性別・地域の話題から発言を集める",
+          "font_bbox": [
+            36.849998474121094,
+            50.058204650878906,
+            568.1239013671875,
+            90.61089324951172
+          ],
+          "frame": [
+            36.863937007874014,
+            51.191968503937005,
+            646.2,
+            48.52795275590551
+          ],
+          "actual_bottom_gap_pt": 14.386587926509193,
+          "actual_right_gap_pt": 118.39727034120745,
+          "actual_top_gap_pt": 7.474698162729659,
+          "actual_left_gap_pt": 1.1360629921259857
+        },
+        {
+          "page": 11,
+          "name": "sources",
+          "text": "[1] Deng et al. (2022). COLD: A Benchmark for Chinese Offensive Language Detection. EMNLP, 11580–11599.  https://aclanthology.org/2022.emnlp-main.796/",
+          "font_bbox": [
+            39.599998474121094,
+            372.0837707519531,
+            637.8324584960938,
+            383.1255187988281
+          ],
+          "frame": [
+            39.6,
+            374.4,
+            644.3999212598425,
+            41.76
+          ],
+          "actual_bottom_gap_pt": 33.49333333333328,
+          "actual_right_gap_pt": 46.66658792650912,
+          "actual_top_gap_pt": 0.26666666666670835,
+          "actual_left_gap_pt": 1.0666666666666629
+        },
+        {
+          "page": 12,
+          "name": "Title 1",
+          "text": "学習用は反復的に作成し、テストは3人で注釈",
+          "font_bbox": [
+            36.849998474121094,
+            50.058204650878906,
+            625.5218505859375,
+            90.75092315673828
+          ],
+          "frame": [
+            36.863937007874014,
+            51.191968503937005,
+            646.2,
+            48.52795275590551
+          ],
+          "actual_bottom_gap_pt": 14.386587926509193,
+          "actual_right_gap_pt": 58.397270341207445,
+          "actual_top_gap_pt": 7.474698162729659,
+          "actual_left_gap_pt": 1.80272965879265
+        },
+        {
+          "page": 12,
+          "name": "sources",
+          "text": "[1] Deng et al. (2022). COLD: A Benchmark for Chinese Offensive Language Detection. EMNLP, 11580–11599.  https://aclanthology.org/2022.emnlp-main.796/",
+          "font_bbox": [
+            39.599998474121094,
+            372.0837707519531,
+            637.8324584960938,
+            383.1255187988281
+          ],
+          "frame": [
+            39.6,
+            374.4,
+            644.3999212598425,
+            41.76
+          ],
+          "actual_bottom_gap_pt": 33.49333333333328,
+          "actual_right_gap_pt": 46.66658792650912,
+          "actual_top_gap_pt": 0.26666666666670835,
+          "actual_left_gap_pt": 1.0666666666666629
+        },
+        {
+          "page": 13,
+          "name": "Title 1",
+          "text": "学習・開発・テストに37,480件の発言を公開",
+          "font_bbox": [
+            36.849998474121094,
+            50.058204650878906,
+            613.5888671875,
+            90.75092315673828
+          ],
+          "frame": [
+            36.863937007874014,
+            51.191968503937005,
+            646.2,
+            48.52795275590551
+          ],
+          "actual_bottom_gap_pt": 13.05325459317585,
+          "actual_right_gap_pt": 71.7306036745407,
+          "actual_top_gap_pt": 7.474698162729659,
+          "actual_left_gap_pt": 1.80272965879265
+        },
+        {
+          "page": 13,
+          "name": "TextBox 4",
+          "text": "trainは学習、devは設定の調整、testは最終評価に使う。",
+          "font_bbox": [
+            46.77199935913086,
+            296.936767578125,
+            515.3289794921875,
+            322.3497314453125
+          ],
+          "frame": [
+            46.8,
+            300.24,
+            626.3999212598425,
+            51.84
+          ],
+          "actual_bottom_gap_pt": 33.413333333333355,
+          "actual_right_gap_pt": 169.19992125984243,
+          "actual_top_gap_pt": 2.4266666666666765,
+          "actual_left_gap_pt": 0.5333333333333385
+        },
+        {
+          "page": 13,
+          "name": "sources",
+          "text": "[1] Deng et al. (n.d.). COLDataset: Chinese offensive language data. GitHub.  https://github.com/thu-coai/COLDataset/tree/main/COLDataset",
+          "font_bbox": [
+            39.599998474121094,
+            372.0837707519531,
+            574.03369140625,
+            383.1255187988281
+          ],
+          "frame": [
+            39.6,
+            374.4,
+            644.3999212598425,
+            41.76
+          ],
+          "actual_bottom_gap_pt": 33.49333333333328,
+          "actual_right_gap_pt": 110.66658792650912,
+          "actual_top_gap_pt": 0.26666666666670835,
+          "actual_left_gap_pt": 1.0666666666666629
+        },
+        {
+          "page": 14,
+          "name": "Title 1",
+          "text": "テストでは、攻撃対象と偏見への反対も分類",
+          "font_bbox": [
+            36.849998474121094,
+            50.058204650878906,
+            596.0738525390625,
+            90.61089324951172
+          ],
+          "frame": [
+            36.863937007874014,
+            51.191968503937005,
+            646.2,
+            48.52795275590551
+          ],
+          "actual_bottom_gap_pt": 14.386587926509193,
+          "actual_right_gap_pt": 87.7306036745407,
+          "actual_top_gap_pt": 7.474698162729659,
+          "actual_left_gap_pt": 2.4693963254593214
+        },
+        {
+          "page": 14,
+          "name": "TextBox 4",
+          "text": "4分類はテスト用の5,323件に付く。学習用・開発用は二値ラベルを持つ。",
+          "font_bbox": [
+            46.77199935913086,
+            296.936767578125,
+            638.4856567382812,
+            322.3497314453125
+          ],
+          "frame": [
+            46.8,
+            300.24,
+            626.3999212598425,
+            51.84
+          ],
+          "actual_bottom_gap_pt": 32.74666666666673,
+          "actual_right_gap_pt": 45.866587926509055,
+          "actual_top_gap_pt": 2.4266666666666765,
+          "actual_left_gap_pt": -0.13333333333333286
+        },
+        {
+          "page": 14,
+          "name": "sources",
+          "text": "[1] Deng et al. (n.d.). COLDataset: Chinese offensive language data. GitHub.  https://github.com/thu-coai/COLDataset/tree/main/COLDataset",
+          "font_bbox": [
+            39.599998474121094,
+            372.0837707519531,
+            574.03369140625,
+            383.1255187988281
+          ],
+          "frame": [
+            39.6,
+            374.4,
+            644.3999212598425,
+            41.76
+          ],
+          "actual_bottom_gap_pt": 33.49333333333328,
+          "actual_right_gap_pt": 110.66658792650912,
+          "actual_top_gap_pt": 0.26666666666670835,
+          "actual_left_gap_pt": 1.0666666666666629
+        },
+        {
+          "page": 15,
+          "name": "Title 1",
+          "text": "発言は平均約49文字、同文の重複も含む",
+          "font_bbox": [
+            36.849998474121094,
+            50.058204650878906,
+            557.6060180664062,
+            90.75092315673828
+          ],
+          "frame": [
+            36.863937007874014,
+            51.191968503937005,
+            646.2,
+            48.52795275590551
+          ],
+          "actual_bottom_gap_pt": 14.386587926509193,
+          "actual_right_gap_pt": 127.06393700787407,
+          "actual_top_gap_pt": 7.474698162729659,
+          "actual_left_gap_pt": 1.1360629921259857
+        },
+        {
+          "page": 15,
+          "name": "sources",
+          "text": "[1] Deng et al. (2022). COLD: A Benchmark for Chinese Offensive Language Detection. EMNLP, 11580–11599.  https://aclanthology.org/2022.emnlp-main.796/",
+          "font_bbox": [
+            39.599998474121094,
+            367.7747802734375,
+            637.8324584960938,
+            378.8165283203125
+          ],
+          "frame": [
+            39.6,
+            370.08,
+            644.3999212598425,
+            41.76
+          ],
+          "actual_bottom_gap_pt": 33.17333333333329,
+          "actual_right_gap_pt": 46.66658792650912,
+          "actual_top_gap_pt": 0.5866666666667015,
+          "actual_left_gap_pt": 1.0666666666666629
+        },
+        {
+          "page": 16,
+          "name": "Title 1",
+          "text": "検出方法と評価結果",
+          "font_bbox": [
+            198.0,
+            195.2451629638672,
+            522.0,
+            247.37315368652344
+          ],
+          "frame": [
+            43.2,
+            197.39173228346456,
+            633.6,
+            46.08
+          ],
+          "actual_bottom_gap_pt": 2.8050656167979184,
+          "actual_right_gap_pt": 156.13333333333344,
+          "actual_top_gap_pt": 9.274934383202094,
+          "actual_left_gap_pt": 155.46666666666664
+        },
+        {
+          "page": 17,
+          "name": "Title 1",
+          "text": "正答率とF1で、検出の性能を測る",
+          "font_bbox": [
+            36.849998474121094,
+            50.058204650878906,
+            471.98480224609375,
+            90.75092315673828
+          ],
+          "frame": [
+            36.863937007874014,
+            51.191968503937005,
+            646.2,
+            48.52795275590551
+          ],
+          "actual_bottom_gap_pt": 14.386587926509193,
+          "actual_right_gap_pt": 214.3972703412074,
+          "actual_top_gap_pt": 7.474698162729659,
+          "actual_left_gap_pt": 1.1360629921259857
+        },
+        {
+          "page": 17,
+          "name": "sources",
+          "text": "[1] Deng et al. (2022). COLD: A Benchmark for Chinese Offensive Language Detection. EMNLP, 11580–11599.  https://aclanthology.org/2022.emnlp-main.796/",
+          "font_bbox": [
+            39.599998474121094,
+            372.0837707519531,
+            637.8324584960938,
+            383.1255187988281
+          ],
+          "frame": [
+            39.6,
+            374.4,
+            644.3999212598425,
+            41.76
+          ],
+          "actual_bottom_gap_pt": 33.49333333333328,
+          "actual_right_gap_pt": 46.66658792650912,
+          "actual_top_gap_pt": 0.26666666666670835,
+          "actual_left_gap_pt": 1.0666666666666629
+        },
+        {
+          "page": 18,
+          "name": "Title 1",
+          "text": "2022年のCOLDDetectorは、正答率81%",
+          "font_bbox": [
+            36.849998474121094,
+            50.058204650878906,
+            578.7902221679688,
+            90.75092315673828
+          ],
+          "frame": [
+            36.863937007874014,
+            51.191968503937005,
+            646.2,
+            48.52795275590551
+          ],
+          "actual_bottom_gap_pt": 14.386587926509193,
+          "actual_right_gap_pt": 105.06393700787407,
+          "actual_top_gap_pt": 7.474698162729659,
+          "actual_left_gap_pt": 1.1360629921259857
+        },
+        {
+          "page": 18,
+          "name": "TextBox 4",
+          "text": "2022年論文で報告された、テスト用データの二値正答率。",
+          "font_bbox": [
+            46.77199935913086,
+            305.9797668457031,
+            510.8438720703125,
+            331.3927307128906
+          ],
+          "frame": [
+            46.8,
+            308.16,
+            626.3999212598425,
+            39.6
+          ],
+          "actual_bottom_gap_pt": 20.426666666666733,
+          "actual_right_gap_pt": 173.8665879265091,
+          "actual_top_gap_pt": 3.1733333333332894,
+          "actual_left_gap_pt": 0.5333333333333385
+        },
+        {
+          "page": 18,
+          "name": "sources",
+          "text": "[1] Deng et al. (2022). COLD: A Benchmark for Chinese Offensive Language Detection. EMNLP, 11580–11599.  https://aclanthology.org/2022.emnlp-main.796/",
+          "font_bbox": [
+            39.599998474121094,
+            372.0837707519531,
+            637.8324584960938,
+            383.1255187988281
+          ],
+          "frame": [
+            39.6,
+            374.4,
+            644.3999212598425,
+            41.76
+          ],
+          "actual_bottom_gap_pt": 33.49333333333328,
+          "actual_right_gap_pt": 46.66658792650912,
+          "actual_top_gap_pt": 0.26666666666670835,
+          "actual_left_gap_pt": 1.0666666666666629
+        },
+        {
+          "page": 19,
+          "name": "Title 1",
+          "text": "偏見への反対は、検出器にも難しい",
+          "font_bbox": [
+            36.849998474121094,
+            50.058204650878906,
+            484.2459716796875,
+            90.61089324951172
+          ],
+          "frame": [
+            36.863937007874014,
+            51.191968503937005,
+            646.2,
+            48.52795275590551
+          ],
+          "actual_bottom_gap_pt": 14.386587926509193,
+          "actual_right_gap_pt": 200.3972703412074,
+          "actual_top_gap_pt": 7.474698162729659,
+          "actual_left_gap_pt": 0.4693963254593214
+        },
+        {
+          "page": 19,
+          "name": "TextBox 4",
+          "text": "2022年の類型別正答率。COLDDetectorの全体の正答率は81.06%。",
+          "font_bbox": [
+            46.77199935913086,
+            296.936767578125,
+            600.3209838867188,
+            322.3497314453125
+          ],
+          "frame": [
+            46.8,
+            300.24,
+            626.3999212598425,
+            51.84
+          ],
+          "actual_bottom_gap_pt": 33.413333333333355,
+          "actual_right_gap_pt": 84.5332545931758,
+          "actual_top_gap_pt": 2.4266666666666765,
+          "actual_left_gap_pt": 0.5333333333333385
+        },
+        {
+          "page": 19,
+          "name": "sources",
+          "text": "[1] Deng et al. (2022). COLD: A Benchmark for Chinese Offensive Language Detection. EMNLP, 11580–11599.  https://aclanthology.org/2022.emnlp-main.796/",
+          "font_bbox": [
+            39.599998474121094,
+            372.0837707519531,
+            637.8324584960938,
+            383.1255187988281
+          ],
+          "frame": [
+            39.6,
+            374.4,
+            644.3999212598425,
+            41.76
+          ],
+          "actual_bottom_gap_pt": 33.49333333333328,
+          "actual_right_gap_pt": 46.66658792650912,
+          "actual_top_gap_pt": 0.26666666666670835,
+          "actual_left_gap_pt": 1.0666666666666629
+        },
+        {
+          "page": 20,
+          "name": "Title 1",
+          "text": "検出器は、生成文の攻撃性の分析にも使う",
+          "font_bbox": [
+            36.849998474121094,
+            50.058204650878906,
+            568.1239013671875,
+            90.61089324951172
+          ],
+          "frame": [
+            36.863937007874014,
+            51.191968503937005,
+            646.2,
+            48.52795275590551
+          ],
+          "actual_bottom_gap_pt": 14.386587926509193,
+          "actual_right_gap_pt": 119.7306036745407,
+          "actual_top_gap_pt": 7.474698162729659,
+          "actual_left_gap_pt": 1.1360629921259857
+        },
+        {
+          "page": 20,
+          "name": "sources",
+          "text": "[1] Deng et al. (2022). COLD: A Benchmark for Chinese Offensive Language Detection. EMNLP, 11580–11599.  https://aclanthology.org/2022.emnlp-main.796/",
+          "font_bbox": [
+            39.599998474121094,
+            372.0837707519531,
+            637.8324584960938,
+            383.1255187988281
+          ],
+          "frame": [
+            39.6,
+            374.4,
+            644.3999212598425,
+            41.76
+          ],
+          "actual_bottom_gap_pt": 33.49333333333328,
+          "actual_right_gap_pt": 46.66658792650912,
+          "actual_top_gap_pt": 0.26666666666670835,
+          "actual_left_gap_pt": 1.0666666666666629
+        },
+        {
+          "page": 21,
+          "name": "Title 1",
+          "text": "入手方法とCLEVAでの利用",
+          "font_bbox": [
+            134.24899291992188,
+            195.2451629638672,
+            585.7509765625,
+            247.55316162109375
+          ],
+          "frame": [
+            43.2,
+            197.39173228346456,
+            633.6,
+            46.08
+          ],
+          "actual_bottom_gap_pt": 2.8050656167979184,
+          "actual_right_gap_pt": 94.13333333333344,
+          "actual_top_gap_pt": 9.274934383202094,
+          "actual_left_gap_pt": 92.13333333333334
+        },
+        {
+          "page": 22,
+          "name": "Title 1",
+          "text": "CLEVAでは、発言を二つの選択肢で分類する",
+          "font_bbox": [
+            36.849998474121094,
+            50.058204650878906,
+            604.5488891601562,
+            90.75092315673828
+          ],
+          "frame": [
+            36.863937007874014,
+            51.191968503937005,
+            646.2,
+            48.52795275590551
+          ],
+          "actual_bottom_gap_pt": 14.386587926509193,
+          "actual_right_gap_pt": 81.7306036745407,
+          "actual_top_gap_pt": 7.474698162729659,
+          "actual_left_gap_pt": 1.80272965879265
+        },
+        {
+          "page": 22,
+          "name": "TextBox 3",
+          "text": "公開されている中国語の設問",
+          "font_bbox": [
+            43.172000885009766,
+            102.82160949707031,
+            198.64727783203125,
+            120.18457794189453
+          ],
+          "frame": [
+            43.2,
+            105.12,
+            309.6,
+            15.84
+          ],
+          "actual_bottom_gap_pt": 3.6266666666666794,
+          "actual_right_gap_pt": 155.46666666666667,
+          "actual_top_gap_pt": 1.5466666666666669,
+          "actual_left_gap_pt": 0.7999999999999972
+        },
+        {
+          "page": 22,
+          "name": "TextBox 5",
+          "text": "日本語訳",
+          "font_bbox": [
+            367.1719970703125,
+            102.82160949707031,
+            415.1239929199219,
+            120.18457794189453
+          ],
+          "frame": [
+            367.2,
+            105.12,
+            309.6,
+            15.84
+          ],
+          "actual_bottom_gap_pt": 3.6266666666666794,
+          "actual_right_gap_pt": 262.13333333333327,
+          "actual_top_gap_pt": 1.5466666666666669,
+          "actual_left_gap_pt": 2.1333333333333258
+        },
+        {
+          "page": 22,
+          "name": "TextBox 7",
+          "text": "正解：A（非攻撃的）",
+          "font_bbox": [
+            46.77199935913086,
+            329.3772277832031,
+            265.1466064453125,
+            360.59783935546875
+          ],
+          "frame": [
+            46.8,
+            333.50661417322834,
+            626.3999212598425,
+            25.92
+          ],
+          "actual_bottom_gap_pt": 3.4266141732283586,
+          "actual_right_gap_pt": 422.5332545931758,
+          "actual_top_gap_pt": 2.4933858267716573,
+          "actual_left_gap_pt": 1.2000000000000028
+        },
+        {
+          "page": 22,
+          "name": "sources",
+          "text": "[1] Stanford CRFM (n.d.). CLEVAToxicityDetectionScenario. HELM.",
+          "font_bbox": [
+            39.599998474121094,
+            373.5287780761719,
+            284.48822021484375,
+            384.5705261230469
+          ],
+          "frame": [
+            39.6,
+            374.4,
+            644.3999212598425,
+            41.76
+          ],
+          "actual_bottom_gap_pt": 32.15999999999997,
+          "actual_right_gap_pt": 399.9999212598425,
+          "actual_top_gap_pt": 1.6000000000000227,
+          "actual_left_gap_pt": 1.0666666666666629
+        },
+        {
+          "page": 23,
+          "name": "Title 1",
+          "text": "公式リポジトリから、データと検出器を入手",
+          "font_bbox": [
+            36.849998474121094,
+            50.058204650878906,
+            596.0738525390625,
+            90.61089324951172
+          ],
+          "frame": [
+            36.863937007874014,
+            51.191968503937005,
+            646.2,
+            48.52795275590551
+          ],
+          "actual_bottom_gap_pt": 14.386587926509193,
+          "actual_right_gap_pt": 88.39727034120745,
+          "actual_top_gap_pt": 7.474698162729659,
+          "actual_left_gap_pt": 1.80272965879265
+        },
+        {
+          "page": 23,
+          "name": "sources",
+          "text": "[1] Deng et al. (n.d.). COLDataset. GitHub.  https://github.com/thu-coai/COLDataset",
+          "font_bbox": [
+            39.599998474121094,
+            367.7747802734375,
+            355.95269775390625,
+            378.8165283203125
+          ],
+          "frame": [
+            39.6,
+            370.08,
+            644.3999212598425,
+            41.76
+          ],
+          "actual_bottom_gap_pt": 33.17333333333329,
+          "actual_right_gap_pt": 328.6665879265092,
+          "actual_top_gap_pt": 0.5866666666667015,
+          "actual_left_gap_pt": 1.0666666666666629
+        },
+        {
+          "page": 24,
+          "name": "Title 1",
+          "text": "CSVから、発言と正解ラベルを読む",
+          "font_bbox": [
+            36.849998474121094,
+            50.058204650878906,
+            486.5699768066406,
+            90.75092315673828
+          ],
+          "frame": [
+            36.863937007874014,
+            51.191968503937005,
+            646.2,
+            48.52795275590551
+          ],
+          "actual_bottom_gap_pt": 14.386587926509193,
+          "actual_right_gap_pt": 197.73060367454076,
+          "actual_top_gap_pt": 7.474698162729659,
+          "actual_left_gap_pt": 1.80272965879265
+        },
+        {
+          "page": 24,
+          "name": "TextBox 4",
+          "text": "TEXTが発言の本文、labelが0（非攻撃的）または1（攻撃的）。先頭の発言1件を読み、その正解ラベルを表示する。",
+          "font_bbox": [
+            46.77199935913086,
+            272.2400817871094,
+            654.4600830078125,
+            325.1019592285156
+          ],
+          "frame": [
+            46.8,
+            275.6867716535433,
+            626.3999212598425,
+            51.91992125984252
+          ],
+          "actual_bottom_gap_pt": 6.940026246719128,
+          "actual_right_gap_pt": 31.866587926509055,
+          "actual_top_gap_pt": 2.3132283464566967,
+          "actual_left_gap_pt": -0.13333333333333286
+        },
+        {
+          "page": 24,
+          "name": "sources",
+          "text": "[1] Deng et al. (n.d.). COLDataset: Chinese offensive language data. GitHub.  https://github.com/thu-coai/COLDataset/tree/main/COLDataset",
+          "font_bbox": [
+            39.599998474121094,
+            372.0837707519531,
+            574.03369140625,
+            383.1255187988281
+          ],
+          "frame": [
+            39.6,
+            374.4,
+            644.3999212598425,
+            41.76
+          ],
+          "actual_bottom_gap_pt": 33.49333333333328,
+          "actual_right_gap_pt": 110.66658792650912,
+          "actual_top_gap_pt": 0.26666666666670835,
+          "actual_left_gap_pt": 1.0666666666666629
+        },
+        {
+          "page": 25,
+          "name": "Title 1",
+          "text": "発言の文脈を捉え、中国語の攻撃性を検出する",
+          "font_bbox": [
+            36.849998474121094,
+            50.058204650878906,
+            624.0518188476562,
+            90.61089324951172
+          ],
+          "frame": [
+            36.863937007874014,
+            51.191968503937005,
+            646.2,
+            48.52795275590551
+          ],
+          "actual_bottom_gap_pt": 14.386587926509193,
+          "actual_right_gap_pt": 62.397270341207445,
+          "actual_top_gap_pt": 7.474698162729659,
+          "actual_left_gap_pt": 1.1360629921259857
+        },
+        {
+          "page": 25,
+          "name": "sources",
+          "text": "[1] Deng et al. (2022). COLD: A Benchmark for Chinese Offensive Language Detection. EMNLP, 11580–11599.  https://aclanthology.org/2022.emnlp-main.796/",
+          "font_bbox": [
+            39.599998474121094,
+            372.0837707519531,
+            637.8324584960938,
+            383.1255187988281
+          ],
+          "frame": [
+            39.6,
+            374.4,
+            644.3999212598425,
+            41.76
+          ],
+          "actual_bottom_gap_pt": 33.49333333333328,
+          "actual_right_gap_pt": 46.66658792650912,
+          "actual_top_gap_pt": 0.26666666666670835,
+          "actual_left_gap_pt": 1.0666666666666629
+        },
+        {
+          "page": 27,
+          "name": "Text Placeholder 2",
+          "text": "追加の発言例",
+          "font_bbox": [
+            86.4000015258789,
+            151.10659790039062,
+            266.34600830078125,
+            194.5335693359375
+          ],
+          "frame": [
+            50.4,
+            155.31582677165355,
+            619.2,
+            137.4
+          ],
+          "actual_bottom_gap_pt": 104.0491601049869,
+          "actual_right_gap_pt": 404.93333333333334,
+          "actual_top_gap_pt": 5.3508398950131095,
+          "actual_left_gap_pt": 36.93333333333333
+        },
+        {
+          "page": 28,
+          "name": "Title 1",
+          "text": "追加の発言例",
+          "font_bbox": [
+            252.0,
+            195.2451629638672,
+            468.0,
+            247.37315368652344
+          ],
+          "frame": [
+            43.2,
+            197.39173228346456,
+            633.6,
+            46.08
+          ],
+          "actual_bottom_gap_pt": 2.8050656167979184,
+          "actual_right_gap_pt": 210.80000000000007,
+          "actual_top_gap_pt": 9.274934383202094,
+          "actual_left_gap_pt": 209.46666666666664
+        },
+        {
+          "page": 29,
+          "name": "Title 1",
+          "text": "実例4：受験の数値と出身地",
+          "font_bbox": [
+            36.849998474121094,
+            50.058204650878906,
+            401.84197998046875,
+            90.75092315673828
+          ],
+          "frame": [
+            36.863937007874014,
+            51.191968503937005,
+            646.2,
+            48.52795275590551
+          ],
+          "actual_bottom_gap_pt": 14.386587926509193,
+          "actual_right_gap_pt": 281.73060367454076,
+          "actual_top_gap_pt": 7.474698162729659,
+          "actual_left_gap_pt": 1.80272965879265
+        },
+        {
+          "page": 29,
+          "name": "TextBox 4",
+          "text": "中国語原文（全文）",
+          "font_bbox": [
+            43.172000885009766,
+            121.55860900878906,
+            151.0430145263672,
+            138.9215850830078
+          ],
+          "frame": [
+            43.2,
+            123.84,
+            309.6,
+            15.84
+          ],
+          "actual_bottom_gap_pt": 3.680000000000007,
+          "actual_right_gap_pt": 210.13333333333335,
+          "actual_top_gap_pt": 1.4933333333333252,
+          "actual_left_gap_pt": 1.4666666666666615
+        },
+        {
+          "page": 29,
+          "name": "TextBox 6",
+          "text": "日本語訳（全文）",
+          "font_bbox": [
+            367.1719970703125,
+            121.55860900878906,
+            463.0639953613281,
+            138.9215850830078
+          ],
+          "frame": [
+            367.2,
+            123.84,
+            309.6,
+            15.84
+          ],
+          "actual_bottom_gap_pt": 3.680000000000007,
+          "actual_right_gap_pt": 222.13333333333327,
+          "actual_top_gap_pt": 1.4933333333333252,
+          "actual_left_gap_pt": 2.1333333333333258
+        },
+        {
+          "page": 29,
+          "name": "TextBox 8",
+          "text": "正解：非攻撃的（0） ／ その他の非攻撃的（0）",
+          "font_bbox": [
+            46.77199935913086,
+            219.05325317382812,
+            531.2979736328125,
+            250.2738494873047
+          ],
+          "frame": [
+            46.8,
+            223.1733070866142,
+            626.3999212598425,
+            30.96
+          ],
+          "actual_bottom_gap_pt": 8.133307086614195,
+          "actual_right_gap_pt": 156.5332545931758,
+          "actual_top_gap_pt": 2.8266929133858127,
+          "actual_left_gap_pt": 1.2000000000000028
+        },
+        {
+          "page": 29,
+          "name": "sources",
+          "text": "[1] Deng et al. (n.d.). COLDataset: Chinese offensive language data. GitHub.  https://github.com/thu-coai/COLDataset/tree/main/COLDataset",
+          "font_bbox": [
+            39.599998474121094,
+            372.0837707519531,
+            574.03369140625,
+            383.1255187988281
+          ],
+          "frame": [
+            39.6,
+            374.4,
+            644.3999212598425,
+            41.76
+          ],
+          "actual_bottom_gap_pt": 33.49333333333328,
+          "actual_right_gap_pt": 110.66658792650912,
+          "actual_top_gap_pt": 0.26666666666670835,
+          "actual_left_gap_pt": 1.0666666666666629
+        },
+        {
+          "page": 30,
+          "name": "Title 1",
+          "text": "実例5：食文化と出身地を述べる",
+          "font_bbox": [
+            36.849998474121094,
+            50.058204650878906,
+            457.7699890136719,
+            90.75092315673828
+          ],
+          "frame": [
+            36.863937007874014,
+            51.191968503937005,
+            646.2,
+            48.52795275590551
+          ],
+          "actual_bottom_gap_pt": 14.386587926509193,
+          "actual_right_gap_pt": 229.06393700787407,
+          "actual_top_gap_pt": 7.474698162729659,
+          "actual_left_gap_pt": 1.80272965879265
+        },
+        {
+          "page": 30,
+          "name": "TextBox 4",
+          "text": "中国語原文（全文）",
+          "font_bbox": [
+            43.172000885009766,
+            121.55860900878906,
+            151.0430145263672,
+            138.9215850830078
+          ],
+          "frame": [
+            43.2,
+            123.84,
+            309.6,
+            15.84
+          ],
+          "actual_bottom_gap_pt": 3.680000000000007,
+          "actual_right_gap_pt": 210.13333333333335,
+          "actual_top_gap_pt": 1.4933333333333252,
+          "actual_left_gap_pt": 1.4666666666666615
+        },
+        {
+          "page": 30,
+          "name": "TextBox 6",
+          "text": "日本語訳（全文）",
+          "font_bbox": [
+            367.1719970703125,
+            121.55860900878906,
+            463.0639953613281,
+            138.9215850830078
+          ],
+          "frame": [
+            367.2,
+            123.84,
+            309.6,
+            15.84
+          ],
+          "actual_bottom_gap_pt": 3.680000000000007,
+          "actual_right_gap_pt": 222.13333333333327,
+          "actual_top_gap_pt": 1.4933333333333252,
+          "actual_left_gap_pt": 2.1333333333333258
+        },
+        {
+          "page": 30,
+          "name": "TextBox 8",
+          "text": "正解：非攻撃的（0） ／ その他の非攻撃的（0）",
+          "font_bbox": [
+            46.77199935913086,
+            199.06924438476562,
+            531.2979736328125,
+            230.2898406982422
+          ],
+          "frame": [
+            46.8,
+            203.1733070866142,
+            626.3999212598425,
+            30.96
+          ],
+          "actual_bottom_gap_pt": 8.133307086614195,
+          "actual_right_gap_pt": 156.5332545931758,
+          "actual_top_gap_pt": 2.8266929133858127,
+          "actual_left_gap_pt": 1.2000000000000028
+        },
+        {
+          "page": 30,
+          "name": "sources",
+          "text": "[1] Deng et al. (n.d.). COLDataset: Chinese offensive language data. GitHub.  https://github.com/thu-coai/COLDataset/tree/main/COLDataset",
+          "font_bbox": [
+            39.599998474121094,
+            372.0837707519531,
+            574.03369140625,
+            383.1255187988281
+          ],
+          "frame": [
+            39.6,
+            374.4,
+            644.3999212598425,
+            41.76
+          ],
+          "actual_bottom_gap_pt": 33.49333333333328,
+          "actual_right_gap_pt": 110.66658792650912,
+          "actual_top_gap_pt": 0.26666666666670835,
+          "actual_left_gap_pt": 1.0666666666666629
+        },
+        {
+          "page": 31,
+          "name": "Title 1",
+          "text": "実例6：外国人全体への条件付き評価",
+          "font_bbox": [
+            36.849998474121094,
+            50.058204650878906,
+            513.6699829101562,
+            90.75092315673828
+          ],
+          "frame": [
+            36.863937007874014,
+            51.191968503937005,
+            646.2,
+            48.52795275590551
+          ],
+          "actual_bottom_gap_pt": 14.386587926509193,
+          "actual_right_gap_pt": 170.39727034120745,
+          "actual_top_gap_pt": 7.474698162729659,
+          "actual_left_gap_pt": 1.80272965879265
+        },
+        {
+          "page": 31,
+          "name": "TextBox 4",
+          "text": "中国語原文（全文）",
+          "font_bbox": [
+            43.172000885009766,
+            121.55860900878906,
+            151.0430145263672,
+            138.9215850830078
+          ],
+          "frame": [
+            43.2,
+            123.84,
+            309.6,
+            15.84
+          ],
+          "actual_bottom_gap_pt": 3.680000000000007,
+          "actual_right_gap_pt": 210.13333333333335,
+          "actual_top_gap_pt": 1.4933333333333252,
+          "actual_left_gap_pt": 1.4666666666666615
+        },
+        {
+          "page": 31,
+          "name": "TextBox 6",
+          "text": "日本語訳（全文）",
+          "font_bbox": [
+            367.1719970703125,
+            121.55860900878906,
+            463.0639953613281,
+            138.9215850830078
+          ],
+          "frame": [
+            367.2,
+            123.84,
+            309.6,
+            15.84
+          ],
+          "actual_bottom_gap_pt": 3.680000000000007,
+          "actual_right_gap_pt": 222.13333333333327,
+          "actual_top_gap_pt": 1.4933333333333252,
+          "actual_left_gap_pt": 2.1333333333333258
+        },
+        {
+          "page": 31,
+          "name": "TextBox 8",
+          "text": "正解：攻撃的（1） ／ 集団への攻撃（2）",
+          "font_bbox": [
+            46.77199935913086,
+            199.72125244140625,
+            466.86700439453125,
+            230.9418487548828
+          ],
+          "frame": [
+            46.8,
+            203.84,
+            626.3999212598425,
+            30.96
+          ],
+          "actual_bottom_gap_pt": 8.133333333333354,
+          "actual_right_gap_pt": 220.53325459317574,
+          "actual_top_gap_pt": 2.826666666666654,
+          "actual_left_gap_pt": 1.2000000000000028
+        },
+        {
+          "page": 31,
+          "name": "sources",
+          "text": "[1] Deng et al. (n.d.). COLDataset: Chinese offensive language data. GitHub.  https://github.com/thu-coai/COLDataset/tree/main/COLDataset",
+          "font_bbox": [
+            39.599998474121094,
+            372.0837707519531,
+            574.03369140625,
+            383.1255187988281
+          ],
+          "frame": [
+            39.6,
+            374.4,
+            644.3999212598425,
+            41.76
+          ],
+          "actual_bottom_gap_pt": 33.49333333333328,
+          "actual_right_gap_pt": 110.66658792650912,
+          "actual_top_gap_pt": 0.26666666666670835,
+          "actual_left_gap_pt": 1.0666666666666629
+        },
+        {
+          "page": 31,
+          "name": "TextBox 10",
+          "text": "原文末尾の「机智」は、「機転が利く」の意。",
+          "font_bbox": [
+            46.77199935913086,
+            333.6221923828125,
+            372.1189880371094,
+            356.07489013671875
+          ],
+          "frame": [
+            46.8,
+            336.24,
+            626.3999212598425,
+            22.76496062992126
+          ],
+          "actual_bottom_gap_pt": 6.338293963254557,
+          "actual_right_gap_pt": 311.1999212598424,
+          "actual_top_gap_pt": 1.759999999999991,
+          "actual_left_gap_pt": 0.5333333333333385
+        },
+        {
+          "page": 32,
+          "name": "Title 1",
+          "text": "実例7：男性の集団を指す侮辱",
+          "font_bbox": [
+            36.849998474121094,
+            50.058204650878906,
+            429.7919921875,
+            90.75092315673828
+          ],
+          "frame": [
+            36.863937007874014,
+            51.191968503937005,
+            646.2,
+            48.52795275590551
+          ],
+          "actual_bottom_gap_pt": 14.386587926509193,
+          "actual_right_gap_pt": 254.3972703412074,
+          "actual_top_gap_pt": 7.474698162729659,
+          "actual_left_gap_pt": 1.80272965879265
+        },
+        {
+          "page": 32,
+          "name": "TextBox 4",
+          "text": "中国語原文（全文）",
+          "font_bbox": [
+            43.172000885009766,
+            121.55860900878906,
+            151.0430145263672,
+            138.9215850830078
+          ],
+          "frame": [
+            43.2,
+            123.84,
+            309.6,
+            15.84
+          ],
+          "actual_bottom_gap_pt": 3.680000000000007,
+          "actual_right_gap_pt": 210.13333333333335,
+          "actual_top_gap_pt": 1.4933333333333252,
+          "actual_left_gap_pt": 1.4666666666666615
+        },
+        {
+          "page": 32,
+          "name": "TextBox 6",
+          "text": "日本語訳（全文）",
+          "font_bbox": [
+            367.1719970703125,
+            121.55860900878906,
+            463.0639953613281,
+            138.9215850830078
+          ],
+          "frame": [
+            367.2,
+            123.84,
+            309.6,
+            15.84
+          ],
+          "actual_bottom_gap_pt": 3.680000000000007,
+          "actual_right_gap_pt": 222.13333333333327,
+          "actual_top_gap_pt": 1.4933333333333252,
+          "actual_left_gap_pt": 2.1333333333333258
+        },
+        {
+          "page": 32,
+          "name": "TextBox 8",
+          "text": "正解：攻撃的（1） ／ 集団への攻撃（2）",
+          "font_bbox": [
+            46.77199935913086,
+            219.73324584960938,
+            466.86700439453125,
+            250.95384216308594
+          ],
+          "frame": [
+            46.8,
+            223.84,
+            626.3999212598425,
+            30.96
+          ],
+          "actual_bottom_gap_pt": 8.133333333333354,
+          "actual_right_gap_pt": 220.53325459317574,
+          "actual_top_gap_pt": 2.826666666666654,
+          "actual_left_gap_pt": 1.2000000000000028
+        },
+        {
+          "page": 32,
+          "name": "sources",
+          "text": "[1] Deng et al. (n.d.). COLDataset: Chinese offensive language data. GitHub.  https://github.com/thu-coai/COLDataset/tree/main/COLDataset",
+          "font_bbox": [
+            39.599998474121094,
+            372.0837707519531,
+            574.03369140625,
+            383.1255187988281
+          ],
+          "frame": [
+            39.6,
+            374.4,
+            644.3999212598425,
+            41.76
+          ],
+          "actual_bottom_gap_pt": 33.49333333333328,
+          "actual_right_gap_pt": 110.66658792650912,
+          "actual_top_gap_pt": 0.26666666666670835,
+          "actual_left_gap_pt": 1.0666666666666629
+        },
+        {
+          "page": 33,
+          "name": "Title 1",
+          "text": "実例8：否定の表現を含む集団攻撃",
+          "font_bbox": [
+            36.849998474121094,
+            50.058204650878906,
+            485.7200012207031,
+            90.75092315673828
+          ],
+          "frame": [
+            36.863937007874014,
+            51.191968503937005,
+            646.2,
+            48.52795275590551
+          ],
+          "actual_bottom_gap_pt": 14.386587926509193,
+          "actual_right_gap_pt": 198.3972703412074,
+          "actual_top_gap_pt": 7.474698162729659,
+          "actual_left_gap_pt": 1.80272965879265
+        },
+        {
+          "page": 33,
+          "name": "TextBox 4",
+          "text": "中国語原文（全文）",
+          "font_bbox": [
+            43.172000885009766,
+            121.55860900878906,
+            151.0430145263672,
+            138.9215850830078
+          ],
+          "frame": [
+            43.2,
+            123.84,
+            309.6,
+            15.84
+          ],
+          "actual_bottom_gap_pt": 3.680000000000007,
+          "actual_right_gap_pt": 210.13333333333335,
+          "actual_top_gap_pt": 1.4933333333333252,
+          "actual_left_gap_pt": 1.4666666666666615
+        },
+        {
+          "page": 33,
+          "name": "TextBox 6",
+          "text": "日本語訳（全文）",
+          "font_bbox": [
+            367.1719970703125,
+            121.55860900878906,
+            463.0639953613281,
+            138.9215850830078
+          ],
+          "frame": [
+            367.2,
+            123.84,
+            309.6,
+            15.84
+          ],
+          "actual_bottom_gap_pt": 3.680000000000007,
+          "actual_right_gap_pt": 222.13333333333327,
+          "actual_top_gap_pt": 1.4933333333333252,
+          "actual_left_gap_pt": 2.1333333333333258
+        },
+        {
+          "page": 33,
+          "name": "TextBox 8",
+          "text": "正解：攻撃的（1） ／ 集団への攻撃（2）",
+          "font_bbox": [
+            46.77199935913086,
+            219.73324584960938,
+            466.86700439453125,
+            250.95384216308594
+          ],
+          "frame": [
+            46.8,
+            223.84,
+            626.3999212598425,
+            30.96
+          ],
+          "actual_bottom_gap_pt": 8.133333333333354,
+          "actual_right_gap_pt": 220.53325459317574,
+          "actual_top_gap_pt": 2.826666666666654,
+          "actual_left_gap_pt": 1.2000000000000028
+        },
+        {
+          "page": 33,
+          "name": "sources",
+          "text": "[1] Deng et al. (n.d.). COLDataset: Chinese offensive language data. GitHub.  https://github.com/thu-coai/COLDataset/tree/main/COLDataset",
+          "font_bbox": [
+            39.599998474121094,
+            372.0837707519531,
+            574.03369140625,
+            383.1255187988281
+          ],
+          "frame": [
+            39.6,
+            374.4,
+            644.3999212598425,
+            41.76
+          ],
+          "actual_bottom_gap_pt": 33.49333333333328,
+          "actual_right_gap_pt": 110.66658792650912,
+          "actual_top_gap_pt": 0.26666666666670835,
+          "actual_left_gap_pt": 1.0666666666666629
+        },
+        {
+          "page": 34,
+          "name": "Title 1",
+          "text": "実例9：個人を評する短文",
+          "font_bbox": [
+            36.849998474121094,
+            50.058204650878906,
+            373.8639831542969,
+            90.75092315673828
+          ],
+          "frame": [
+            36.863937007874014,
+            51.191968503937005,
+            646.2,
+            48.52795275590551
+          ],
+          "actual_bottom_gap_pt": 14.386587926509193,
+          "actual_right_gap_pt": 310.3972703412074,
+          "actual_top_gap_pt": 7.474698162729659,
+          "actual_left_gap_pt": 1.80272965879265
+        },
+        {
+          "page": 34,
+          "name": "TextBox 4",
+          "text": "中国語原文（全文）",
+          "font_bbox": [
+            43.172000885009766,
+            121.55860900878906,
+            151.0430145263672,
+            138.9215850830078
+          ],
+          "frame": [
+            43.2,
+            123.84,
+            309.6,
+            15.84
+          ],
+          "actual_bottom_gap_pt": 3.680000000000007,
+          "actual_right_gap_pt": 210.13333333333335,
+          "actual_top_gap_pt": 1.4933333333333252,
+          "actual_left_gap_pt": 1.4666666666666615
+        },
+        {
+          "page": 34,
+          "name": "TextBox 6",
+          "text": "日本語訳（全文）",
+          "font_bbox": [
+            367.1719970703125,
+            121.55860900878906,
+            463.0639953613281,
+            138.9215850830078
+          ],
+          "frame": [
+            367.2,
+            123.84,
+            309.6,
+            15.84
+          ],
+          "actual_bottom_gap_pt": 3.680000000000007,
+          "actual_right_gap_pt": 222.13333333333327,
+          "actual_top_gap_pt": 1.4933333333333252,
+          "actual_left_gap_pt": 2.1333333333333258
+        },
+        {
+          "page": 34,
+          "name": "TextBox 8",
+          "text": "正解：攻撃的（1） ／ 個人への攻撃（1）",
+          "font_bbox": [
+            46.77199935913086,
+            219.73324584960938,
+            466.86700439453125,
+            250.95384216308594
+          ],
+          "frame": [
+            46.8,
+            223.84,
+            626.3999212598425,
+            30.96
+          ],
+          "actual_bottom_gap_pt": 8.133333333333354,
+          "actual_right_gap_pt": 220.53325459317574,
+          "actual_top_gap_pt": 2.826666666666654,
+          "actual_left_gap_pt": 1.2000000000000028
+        },
+        {
+          "page": 34,
+          "name": "sources",
+          "text": "[1] Deng et al. (n.d.). COLDataset: Chinese offensive language data. GitHub.  https://github.com/thu-coai/COLDataset/tree/main/COLDataset",
+          "font_bbox": [
+            39.599998474121094,
+            372.0837707519531,
+            574.03369140625,
+            383.1255187988281
+          ],
+          "frame": [
+            39.6,
+            374.4,
+            644.3999212598425,
+            41.76
+          ],
+          "actual_bottom_gap_pt": 33.49333333333328,
+          "actual_right_gap_pt": 110.66658792650912,
+          "actual_top_gap_pt": 0.26666666666670835,
+          "actual_left_gap_pt": 1.0666666666666629
+        },
+        {
+          "page": 35,
+          "name": "Title 1",
+          "text": "実例10：皮肉による人物評価",
+          "font_bbox": [
+            36.849998474121094,
+            50.058204650878906,
+            416.9888000488281,
+            90.75092315673828
+          ],
+          "frame": [
+            36.863937007874014,
+            51.191968503937005,
+            646.2,
+            48.52795275590551
+          ],
+          "actual_bottom_gap_pt": 14.386587926509193,
+          "actual_right_gap_pt": 267.0639370078741,
+          "actual_top_gap_pt": 7.474698162729659,
+          "actual_left_gap_pt": 1.80272965879265
+        },
+        {
+          "page": 35,
+          "name": "TextBox 4",
+          "text": "中国語原文（全文）",
+          "font_bbox": [
+            43.172000885009766,
+            121.55860900878906,
+            151.0430145263672,
+            138.9215850830078
+          ],
+          "frame": [
+            43.2,
+            123.84,
+            309.6,
+            15.84
+          ],
+          "actual_bottom_gap_pt": 3.680000000000007,
+          "actual_right_gap_pt": 210.13333333333335,
+          "actual_top_gap_pt": 1.4933333333333252,
+          "actual_left_gap_pt": 1.4666666666666615
+        },
+        {
+          "page": 35,
+          "name": "TextBox 6",
+          "text": "日本語訳（全文）",
+          "font_bbox": [
+            367.1719970703125,
+            121.55860900878906,
+            463.0639953613281,
+            138.9215850830078
+          ],
+          "frame": [
+            367.2,
+            123.84,
+            309.6,
+            15.84
+          ],
+          "actual_bottom_gap_pt": 3.680000000000007,
+          "actual_right_gap_pt": 222.13333333333327,
+          "actual_top_gap_pt": 1.4933333333333252,
+          "actual_left_gap_pt": 2.1333333333333258
+        },
+        {
+          "page": 35,
+          "name": "TextBox 8",
+          "text": "正解：攻撃的（1） ／ 個人への攻撃（1）",
+          "font_bbox": [
+            46.77199935913086,
+            219.73324584960938,
+            466.86700439453125,
+            250.95384216308594
+          ],
+          "frame": [
+            46.8,
+            223.84,
+            626.3999212598425,
+            30.96
+          ],
+          "actual_bottom_gap_pt": 8.133333333333354,
+          "actual_right_gap_pt": 220.53325459317574,
+          "actual_top_gap_pt": 2.826666666666654,
+          "actual_left_gap_pt": 1.2000000000000028
+        },
+        {
+          "page": 35,
+          "name": "sources",
+          "text": "[1] Deng et al. (n.d.). COLDataset: Chinese offensive language data. GitHub.  https://github.com/thu-coai/COLDataset/tree/main/COLDataset",
+          "font_bbox": [
+            39.599998474121094,
+            372.0837707519531,
+            574.03369140625,
+            383.1255187988281
+          ],
+          "frame": [
+            39.6,
+            374.4,
+            644.3999212598425,
+            41.76
+          ],
+          "actual_bottom_gap_pt": 33.49333333333328,
+          "actual_right_gap_pt": 110.66658792650912,
+          "actual_top_gap_pt": 0.26666666666670835,
+          "actual_left_gap_pt": 1.0666666666666629
+        },
+        {
+          "page": 36,
+          "name": "Title 1",
+          "text": "実例11：男女差と歴史的な差別への言及",
+          "font_bbox": [
+            36.849998474121094,
+            50.058204650878906,
+            557.6349487304688,
+            90.75092315673828
+          ],
+          "frame": [
+            36.863937007874014,
+            51.191968503937005,
+            646.2,
+            48.52795275590551
+          ],
+          "actual_bottom_gap_pt": 14.386587926509193,
+          "actual_right_gap_pt": 126.39727034120745,
+          "actual_top_gap_pt": 7.474698162729659,
+          "actual_left_gap_pt": 1.80272965879265
+        },
+        {
+          "page": 36,
+          "name": "TextBox 4",
+          "text": "中国語原文（全文）",
+          "font_bbox": [
+            43.172000885009766,
+            121.55860900878906,
+            151.0430145263672,
+            138.9215850830078
+          ],
+          "frame": [
+            43.2,
+            123.84,
+            309.6,
+            15.84
+          ],
+          "actual_bottom_gap_pt": 3.680000000000007,
+          "actual_right_gap_pt": 210.13333333333335,
+          "actual_top_gap_pt": 1.4933333333333252,
+          "actual_left_gap_pt": 1.4666666666666615
+        },
+        {
+          "page": 36,
+          "name": "TextBox 6",
+          "text": "日本語訳（全文）",
+          "font_bbox": [
+            367.1719970703125,
+            121.55860900878906,
+            463.0639953613281,
+            138.9215850830078
+          ],
+          "frame": [
+            367.2,
+            123.84,
+            309.6,
+            15.84
+          ],
+          "actual_bottom_gap_pt": 3.680000000000007,
+          "actual_right_gap_pt": 222.13333333333327,
+          "actual_top_gap_pt": 1.4933333333333252,
+          "actual_left_gap_pt": 2.1333333333333258
+        },
+        {
+          "page": 36,
+          "name": "TextBox 8",
+          "text": "正解：非攻撃的（0） ／ 偏見への反対（3）",
+          "font_bbox": [
+            46.77199935913086,
+            241.05023193359375,
+            488.3529968261719,
+            272.2708435058594
+          ],
+          "frame": [
+            46.8,
+            245.1733070866142,
+            626.3999212598425,
+            30.96
+          ],
+          "actual_bottom_gap_pt": 8.133307086614195,
+          "actual_right_gap_pt": 199.19992125984243,
+          "actual_top_gap_pt": 2.8266929133858127,
+          "actual_left_gap_pt": 1.2000000000000028
+        },
+        {
+          "page": 36,
+          "name": "sources",
+          "text": "[1] Deng et al. (n.d.). COLDataset: Chinese offensive language data. GitHub.  https://github.com/thu-coai/COLDataset/tree/main/COLDataset",
+          "font_bbox": [
+            39.599998474121094,
+            372.0837707519531,
+            574.03369140625,
+            383.1255187988281
+          ],
+          "frame": [
+            39.6,
+            374.4,
+            644.3999212598425,
+            41.76
+          ],
+          "actual_bottom_gap_pt": 33.49333333333328,
+          "actual_right_gap_pt": 110.66658792650912,
+          "actual_top_gap_pt": 0.26666666666670835,
+          "actual_left_gap_pt": 1.0666666666666629
+        },
+        {
+          "page": 37,
+          "name": "Title 1",
+          "text": "実例12：被害を防ぐための通報",
+          "font_bbox": [
+            36.849998474121094,
+            50.058204650878906,
+            445.77899169921875,
+            90.75092315673828
+          ],
+          "frame": [
+            36.863937007874014,
+            51.191968503937005,
+            646.2,
+            48.52795275590551
+          ],
+          "actual_bottom_gap_pt": 14.386587926509193,
+          "actual_right_gap_pt": 238.3972703412074,
+          "actual_top_gap_pt": 7.474698162729659,
+          "actual_left_gap_pt": 1.80272965879265
+        },
+        {
+          "page": 37,
+          "name": "TextBox 4",
+          "text": "中国語原文（全文）",
+          "font_bbox": [
+            43.172000885009766,
+            121.55860900878906,
+            151.0430145263672,
+            138.9215850830078
+          ],
+          "frame": [
+            43.2,
+            123.84,
+            309.6,
+            15.84
+          ],
+          "actual_bottom_gap_pt": 3.680000000000007,
+          "actual_right_gap_pt": 210.13333333333335,
+          "actual_top_gap_pt": 1.4933333333333252,
+          "actual_left_gap_pt": 1.4666666666666615
+        },
+        {
+          "page": 37,
+          "name": "TextBox 6",
+          "text": "日本語訳（全文）",
+          "font_bbox": [
+            367.1719970703125,
+            121.55860900878906,
+            463.0639953613281,
+            138.9215850830078
+          ],
+          "frame": [
+            367.2,
+            123.84,
+            309.6,
+            15.84
+          ],
+          "actual_bottom_gap_pt": 3.680000000000007,
+          "actual_right_gap_pt": 222.13333333333327,
+          "actual_top_gap_pt": 1.4933333333333252,
+          "actual_left_gap_pt": 2.1333333333333258
+        },
+        {
+          "page": 37,
+          "name": "TextBox 8",
+          "text": "正解：非攻撃的（0） ／ 偏見への反対（3）",
+          "font_bbox": [
+            46.77199935913086,
+            240.39825439453125,
+            488.3529968261719,
+            271.6188659667969
+          ],
+          "frame": [
+            46.8,
+            244.50661417322834,
+            626.3999212598425,
+            30.96
+          ],
+          "actual_bottom_gap_pt": 8.133280839895008,
+          "actual_right_gap_pt": 199.19992125984243,
+          "actual_top_gap_pt": 2.826719160105,
+          "actual_left_gap_pt": 1.2000000000000028
+        },
+        {
+          "page": 37,
+          "name": "sources",
+          "text": "[1] Deng et al. (n.d.). COLDataset: Chinese offensive language data. GitHub.  https://github.com/thu-coai/COLDataset/tree/main/COLDataset",
+          "font_bbox": [
+            39.599998474121094,
+            372.0837707519531,
+            574.03369140625,
+            383.1255187988281
+          ],
+          "frame": [
+            39.6,
+            374.4,
+            644.3999212598425,
+            41.76
+          ],
+          "actual_bottom_gap_pt": 33.49333333333328,
+          "actual_right_gap_pt": 110.66658792650912,
+          "actual_top_gap_pt": 0.26666666666670835,
+          "actual_left_gap_pt": 1.0666666666666629
+        },
+        {
+          "page": 38,
+          "name": "Title 1",
+          "text": "実例13：「直男癌」と「直男」への言及",
+          "font_bbox": [
+            36.849998474121094,
+            50.058204650878906,
+            557.6349487304688,
+            90.75092315673828
+          ],
+          "frame": [
+            36.863937007874014,
+            51.191968503937005,
+            646.2,
+            48.52795275590551
+          ],
+          "actual_bottom_gap_pt": 14.386587926509193,
+          "actual_right_gap_pt": 126.39727034120745,
+          "actual_top_gap_pt": 7.474698162729659,
+          "actual_left_gap_pt": 1.80272965879265
+        },
+        {
+          "page": 38,
+          "name": "TextBox 4",
+          "text": "中国語原文（全文）",
+          "font_bbox": [
+            43.172000885009766,
+            121.55860900878906,
+            151.0430145263672,
+            138.9215850830078
+          ],
+          "frame": [
+            43.2,
+            123.84,
+            309.6,
+            15.84
+          ],
+          "actual_bottom_gap_pt": 3.680000000000007,
+          "actual_right_gap_pt": 210.13333333333335,
+          "actual_top_gap_pt": 1.4933333333333252,
+          "actual_left_gap_pt": 1.4666666666666615
+        },
+        {
+          "page": 38,
+          "name": "TextBox 6",
+          "text": "日本語訳（全文）",
+          "font_bbox": [
+            367.1719970703125,
+            121.55860900878906,
+            463.0639953613281,
+            138.9215850830078
+          ],
+          "frame": [
+            367.2,
+            123.84,
+            309.6,
+            15.84
+          ],
+          "actual_bottom_gap_pt": 3.680000000000007,
+          "actual_right_gap_pt": 222.13333333333327,
+          "actual_top_gap_pt": 1.4933333333333252,
+          "actual_left_gap_pt": 2.1333333333333258
+        },
+        {
+          "page": 38,
+          "name": "TextBox 8",
+          "text": "正解：攻撃的（1） ／ 集団への攻撃（2）",
+          "font_bbox": [
+            46.77199935913086,
+            241.05023193359375,
+            466.86700439453125,
+            272.2708435058594
+          ],
+          "frame": [
+            46.8,
+            245.1733070866142,
+            626.3999212598425,
+            30.96
+          ],
+          "actual_bottom_gap_pt": 8.133307086614195,
+          "actual_right_gap_pt": 220.53325459317574,
+          "actual_top_gap_pt": 2.8266929133858127,
+          "actual_left_gap_pt": 1.2000000000000028
+        },
+        {
+          "page": 38,
+          "name": "sources",
+          "text": "[1] Deng et al. (n.d.). COLDataset: Chinese offensive language data. GitHub.  https://github.com/thu-coai/COLDataset/tree/main/COLDataset",
+          "font_bbox": [
+            39.599998474121094,
+            372.0837707519531,
+            574.03369140625,
+            383.1255187988281
+          ],
+          "frame": [
+            39.6,
+            374.4,
+            644.3999212598425,
+            41.76
+          ],
+          "actual_bottom_gap_pt": 33.49333333333328,
+          "actual_right_gap_pt": 110.66658792650912,
+          "actual_top_gap_pt": 0.26666666666670835,
+          "actual_left_gap_pt": 1.0666666666666629
+        },
+        {
+          "page": 38,
+          "name": "TextBox 10",
+          "text": "「直男癌」は、女性蔑視的な男性への蔑称。「直男」は異性愛の男性を指す。",
+          "font_bbox": [
+            46.77199935913086,
+            333.6221923828125,
+            587.4353637695312,
+            356.07489013671875
+          ],
+          "frame": [
+            46.8,
+            336.24,
+            626.3999212598425,
+            22.76496062992126
+          ],
+          "actual_bottom_gap_pt": 6.338293963254557,
+          "actual_right_gap_pt": 95.86658792650906,
+          "actual_top_gap_pt": 1.759999999999991,
+          "actual_left_gap_pt": 9.866666666666667
+        },
+        {
+          "page": 39,
+          "name": "Title 1",
+          "text": "データと評価の補足",
+          "font_bbox": [
+            198.0,
+            195.2451629638672,
+            522.0,
+            247.37315368652344
+          ],
+          "frame": [
+            43.2,
+            197.39173228346456,
+            633.6,
+            46.08
+          ],
+          "actual_bottom_gap_pt": 2.8050656167979184,
+          "actual_right_gap_pt": 156.13333333333344,
+          "actual_top_gap_pt": 8.608267716535437,
+          "actual_left_gap_pt": 157.46666666666664
+        },
+        {
+          "page": 40,
+          "name": "Title 1",
+          "text": "地域・性別・人種の話題と、テストの4分類",
+          "font_bbox": [
+            36.849998474121094,
+            50.058204650878906,
+            596.4379272460938,
+            90.75092315673828
+          ],
+          "frame": [
+            36.863937007874014,
+            51.191968503937005,
+            646.2,
+            48.52795275590551
+          ],
+          "actual_bottom_gap_pt": 14.386587926509193,
+          "actual_right_gap_pt": 87.7306036745407,
+          "actual_top_gap_pt": 7.474698162729659,
+          "actual_left_gap_pt": 1.1360629921259857
+        },
+        {
+          "page": 40,
+          "name": "TextBox 4",
+          "text": "topicは話題の分類。収集時のキーワードは複数の群に重なることもあるが、CSVのtopic欄は1種類を示す。",
+          "font_bbox": [
+            46.77199935913086,
+            296.936767578125,
+            650.9869995117188,
+            342.81573486328125
+          ],
+          "frame": [
+            46.8,
+            300.24,
+            626.3999212598425,
+            51.84
+          ],
+          "actual_bottom_gap_pt": 10.080000000000041,
+          "actual_right_gap_pt": 33.866587926509055,
+          "actual_top_gap_pt": 2.4266666666666765,
+          "actual_left_gap_pt": 0.5333333333333385
+        },
+        {
+          "page": 40,
+          "name": "sources",
+          "text": "[1] Deng et al. (n.d.). COLDataset: Chinese offensive language data. GitHub.  https://github.com/thu-coai/COLDataset/tree/main/COLDataset",
+          "font_bbox": [
+            39.599998474121094,
+            372.0837707519531,
+            574.03369140625,
+            383.1255187988281
+          ],
+          "frame": [
+            39.6,
+            374.4,
+            644.3999212598425,
+            41.76
+          ],
+          "actual_bottom_gap_pt": 33.49333333333328,
+          "actual_right_gap_pt": 110.66658792650912,
+          "actual_top_gap_pt": 0.26666666666670835,
+          "actual_left_gap_pt": 1.0666666666666629
+        },
+        {
+          "page": 41,
+          "name": "Title 1",
+          "text": "開発用ファイルには、二種類のsplit値がある",
+          "font_bbox": [
+            36.849998474121094,
+            50.058204650878906,
+            614.1268920898438,
+            90.75092315673828
+          ],
+          "frame": [
+            36.863937007874014,
+            51.191968503937005,
+            646.2,
+            48.52795275590551
+          ],
+          "actual_bottom_gap_pt": 10.386587926509193,
+          "actual_right_gap_pt": 72.39727034120745,
+          "actual_top_gap_pt": 7.474698162729659,
+          "actual_left_gap_pt": 2.4693963254593214
+        },
+        {
+          "page": 41,
+          "name": "TextBox 4",
+          "text": "ファイル名と内部のsplit欄が一致しない行が、dev.csvに含まれる。",
+          "font_bbox": [
+            46.77199935913086,
+            263.7997741699219,
+            594.4549560546875,
+            289.2127380371094
+          ],
+          "frame": [
+            46.8,
+            267.12,
+            626.3999212598425,
+            51.84
+          ],
+          "actual_bottom_gap_pt": 30.960000000000036,
+          "actual_right_gap_pt": 89.86658792650906,
+          "actual_top_gap_pt": 2.21333333333331,
+          "actual_left_gap_pt": 2.5333333333333385
+        },
+        {
+          "page": 41,
+          "name": "sources",
+          "text": "[1] Deng et al. (n.d.). COLDataset: Chinese offensive language data. GitHub.  https://github.com/thu-coai/COLDataset/tree/main/COLDataset",
+          "font_bbox": [
+            39.599998474121094,
+            372.0837707519531,
+            574.03369140625,
+            383.1255187988281
+          ],
+          "frame": [
+            39.6,
+            374.4,
+            644.3999212598425,
+            41.76
+          ],
+          "actual_bottom_gap_pt": 33.49333333333328,
+          "actual_right_gap_pt": 110.66658792650912,
+          "actual_top_gap_pt": 0.26666666666670835,
+          "actual_left_gap_pt": 1.0666666666666629
+        },
+        {
+          "page": 42,
+          "name": "Title 1",
+          "text": "分割間で同じ発言文が共有される",
+          "font_bbox": [
+            36.849998474121094,
+            50.058204650878906,
+            456.29595947265625,
+            90.61089324951172
+          ],
+          "frame": [
+            36.863937007874014,
+            51.191968503937005,
+            646.2,
+            48.52795275590551
+          ],
+          "actual_bottom_gap_pt": 14.386587926509193,
+          "actual_right_gap_pt": 230.3972703412074,
+          "actual_top_gap_pt": 7.474698162729659,
+          "actual_left_gap_pt": 0.4693963254593214
+        },
+        {
+          "page": 42,
+          "name": "TextBox 4",
+          "text": "空白や句読点を含め、同じ発言文を数えたもの。",
+          "font_bbox": [
+            46.77199935913086,
+            296.936767578125,
+            431.5869140625,
+            322.26226806640625
+          ],
+          "frame": [
+            46.8,
+            300.24,
+            626.3999212598425,
+            51.84
+          ],
+          "actual_bottom_gap_pt": 33.413333333333355,
+          "actual_right_gap_pt": 253.19992125984243,
+          "actual_top_gap_pt": 2.4266666666666765,
+          "actual_left_gap_pt": 0.5333333333333385
+        },
+        {
+          "page": 42,
+          "name": "sources",
+          "text": "[1] Deng et al. (n.d.). COLDataset: Chinese offensive language data. GitHub.  https://github.com/thu-coai/COLDataset/tree/main/COLDataset",
+          "font_bbox": [
+            39.599998474121094,
+            372.0837707519531,
+            574.03369140625,
+            383.1255187988281
+          ],
+          "frame": [
+            39.6,
+            374.4,
+            644.3999212598425,
+            41.76
+          ],
+          "actual_bottom_gap_pt": 33.49333333333328,
+          "actual_right_gap_pt": 110.66658792650912,
+          "actual_top_gap_pt": 0.26666666666670835,
+          "actual_left_gap_pt": 1.0666666666666629
+        },
+        {
+          "page": 43,
+          "name": "Title 1",
+          "text": "正答率とmacro F1の報告値",
+          "font_bbox": [
+            36.849998474121094,
+            50.058204650878906,
+            400.4510192871094,
+            90.75092315673828
+          ],
+          "frame": [
+            36.863937007874014,
+            51.191968503937005,
+            646.2,
+            48.52795275590551
+          ],
+          "actual_bottom_gap_pt": 14.386587926509193,
+          "actual_right_gap_pt": 283.73060367454076,
+          "actual_top_gap_pt": 7.474698162729659,
+          "actual_left_gap_pt": 1.1360629921259857
+        },
+        {
+          "page": 43,
+          "name": "TextBox 4",
+          "text": "2022年論文で報告された、二値分類の正答率とmacro F1。",
+          "font_bbox": [
+            46.77199935913086,
+            331.1797790527344,
+            525.572021484375,
+            356.5927429199219
+          ],
+          "frame": [
+            46.8,
+            334.4899212598425,
+            626.3999212598425,
+            51.84
+          ],
+          "actual_bottom_gap_pt": 33.66325459317585,
+          "actual_right_gap_pt": 159.19992125984243,
+          "actual_top_gap_pt": 2.176745406824182,
+          "actual_left_gap_pt": 0.5333333333333385
+        },
+        {
+          "page": 43,
+          "name": "sources",
+          "text": "[1] Deng et al. (2022). COLD: A Benchmark for Chinese Offensive Language Detection. EMNLP, 11580–11599.  https://aclanthology.org/2022.emnlp-main.796/",
+          "font_bbox": [
+            39.599998474121094,
+            372.0837707519531,
+            637.8324584960938,
+            383.1255187988281
+          ],
+          "frame": [
+            39.6,
+            374.4,
+            644.3999212598425,
+            41.76
+          ],
+          "actual_bottom_gap_pt": 33.49333333333328,
+          "actual_right_gap_pt": 46.66658792650912,
+          "actual_top_gap_pt": 0.26666666666670835,
+          "actual_left_gap_pt": 1.0666666666666629
+        },
+        {
+          "page": 44,
+          "name": "Title 1",
+          "text": "参考文献",
+          "font_bbox": [
+            288.0,
+            195.2451629638672,
+            432.0,
+            247.37315368652344
+          ],
+          "frame": [
+            43.2,
+            197.39173228346456,
+            633.6,
+            46.08
+          ],
+          "actual_bottom_gap_pt": 2.8050656167979184,
+          "actual_right_gap_pt": 245.46666666666675,
+          "actual_top_gap_pt": 9.274934383202094,
+          "actual_left_gap_pt": 245.4666666666667
+        },
+        {
+          "page": 45,
+          "name": "Title 1",
+          "text": "参考文献",
+          "font_bbox": [
+            36.849998474121094,
+            50.058204650878906,
+            148.7339630126953,
+            90.61089324951172
+          ],
+          "frame": [
+            36.863937007874014,
+            51.191968503937005,
+            646.2,
+            48.52795275590551
+          ],
+          "actual_bottom_gap_pt": 14.386587926509193,
+          "actual_right_gap_pt": 535.0639370078741,
+          "actual_top_gap_pt": 7.474698162729659,
+          "actual_left_gap_pt": 0.4693963254593214
+        },
+        {
+          "page": 45,
+          "name": "TextBox 3",
+          "text": "COLD: A Benchmark for Chinese Offensive Language Detection",
+          "font_bbox": [
+            43.172000885009766,
+            104.06515502929688,
+            604.3401489257812,
+            128.58116149902344
+          ],
+          "frame": [
+            43.2,
+            105.84,
+            633.6,
+            39.6
+          ],
+          "actual_bottom_gap_pt": 17.439999999999998,
+          "actual_right_gap_pt": 73.4666666666667,
+          "actual_top_gap_pt": 3.493333333333325,
+          "actual_left_gap_pt": 0.7999999999999972
+        },
+        {
+          "page": 45,
+          "name": "TextBox 4",
+          "text": "Deng, Zhou, Sun, Zheng, Mi, Meng & Huang · 2022 · EMNLP 11580–11599",
+          "font_bbox": [
+            43.172000885009766,
+            149.90541076660156,
+            488.26556396484375,
+            167.6263885498047
+          ],
+          "frame": [
+            43.2,
+            151.2,
+            633.6,
+            30.24
+          ],
+          "actual_bottom_gap_pt": 14.106666666666655,
+          "actual_right_gap_pt": 189.46666666666675,
+          "actual_top_gap_pt": 2.8000000000000114,
+          "actual_left_gap_pt": 1.4666666666666615
+        },
+        {
+          "page": 45,
+          "name": "TextBox 5",
+          "text": "中国語データ、検出器、生成モデル分析を報告する正式論文。",
+          "font_bbox": [
+            43.172000885009766,
+            175.8441619873047,
+            546.60498046875,
+            201.90817260742188
+          ],
+          "frame": [
+            43.2,
+            179.28,
+            633.6,
+            46.08
+          ],
+          "actual_bottom_gap_pt": 27.360000000000014,
+          "actual_right_gap_pt": 142.13333333333344,
+          "actual_top_gap_pt": 2.0533333333333417,
+          "actual_left_gap_pt": 2.133333333333333
+        },
+        {
+          "page": 45,
+          "name": "TextBox 6",
+          "text": "https://aclanthology.org/2022.emnlp-main.796/",
+          "font_bbox": [
+            43.172000885009766,
+            221.52703857421875,
+            300.06439208984375,
+            237.20228576660156
+          ],
+          "frame": [
+            43.2,
+            224.64,
+            633.6,
+            19.44
+          ],
+          "actual_bottom_gap_pt": 7.413333333333327,
+          "actual_right_gap_pt": 377.46666666666675,
+          "actual_top_gap_pt": 0.6933333333333564,
+          "actual_left_gap_pt": 0.7999999999999972
+        },
+        {
+          "page": 45,
+          "name": "TextBox 7",
+          "text": "COLDataset: official repository and data",
+          "font_bbox": [
+            43.172000885009766,
+            250.92816162109375,
+            401.10205078125,
+            275.44415283203125
+          ],
+          "frame": [
+            43.2,
+            252.72,
+            633.6,
+            39.6
+          ],
+          "actual_bottom_gap_pt": 17.653333333333308,
+          "actual_right_gap_pt": 276.80000000000007,
+          "actual_top_gap_pt": 3.280000000000001,
+          "actual_left_gap_pt": 0.7999999999999972
+        },
+        {
+          "page": 45,
+          "name": "TextBox 8",
+          "text": "thu-coai / Deng et al. · n.d. · GitHub",
+          "font_bbox": [
+            43.172000885009766,
+            296.79742431640625,
+            256.3963317871094,
+            314.5184020996094
+          ],
+          "frame": [
+            43.2,
+            298.07992125984254,
+            633.6,
+            30.24
+          ],
+          "actual_bottom_gap_pt": 14.319921259842545,
+          "actual_right_gap_pt": 421.4666666666667,
+          "actual_top_gap_pt": 2.58674540682415,
+          "actual_left_gap_pt": 0.13333333333333286
+        },
+        {
+          "page": 45,
+          "name": "TextBox 9",
+          "text": "公式3 CSV、二値と詳細ラベルの説明、検出モデルへのリンクを公開する。",
+          "font_bbox": [
+            43.172000885009766,
+            322.7071533203125,
+            656.8159790039062,
+            348.86114501953125
+          ],
+          "frame": [
+            43.2,
+            326.1599212598425,
+            633.6,
+            46.08
+          ],
+          "actual_bottom_gap_pt": 27.573254593175818,
+          "actual_right_gap_pt": 32.13333333333344,
+          "actual_top_gap_pt": 1.8400787401574803,
+          "actual_left_gap_pt": 1.4666666666666615
+        },
+        {
+          "page": 45,
+          "name": "TextBox 10",
+          "text": "https://github.com/thu-coai/COLDataset",
+          "font_bbox": [
+            43.172000885009766,
+            368.3900451660156,
+            260.9798583984375,
+            384.0653076171875
+          ],
+          "frame": [
+            43.2,
+            371.52,
+            633.6,
+            19.44
+          ],
+          "actual_bottom_gap_pt": 7.626666666666665,
+          "actual_right_gap_pt": 416.1333333333334,
+          "actual_top_gap_pt": 0.4800000000000182,
+          "actual_left_gap_pt": 0.7999999999999972
+        },
+        {
+          "page": 46,
+          "name": "Title 1",
+          "text": "参考文献",
+          "font_bbox": [
+            36.849998474121094,
+            50.058204650878906,
+            148.7339630126953,
+            90.61089324951172
+          ],
+          "frame": [
+            36.863937007874014,
+            51.191968503937005,
+            646.2,
+            48.52795275590551
+          ],
+          "actual_bottom_gap_pt": 14.386587926509193,
+          "actual_right_gap_pt": 535.0639370078741,
+          "actual_top_gap_pt": 7.474698162729659,
+          "actual_left_gap_pt": 0.4693963254593214
+        },
+        {
+          "page": 46,
+          "name": "TextBox 3",
+          "text": "CLEVA: Chinese Language Models EVAluation Platform",
+          "font_bbox": [
+            43.172000885009766,
+            104.06515502929688,
+            527.1200561523438,
+            128.58116149902344
+          ],
+          "frame": [
+            43.2,
+            105.84,
+            633.6,
+            39.6
+          ],
+          "actual_bottom_gap_pt": 17.439999999999998,
+          "actual_right_gap_pt": 150.80000000000007,
+          "actual_top_gap_pt": 3.493333333333325,
+          "actual_left_gap_pt": 0.7999999999999972
+        },
+        {
+          "page": 46,
+          "name": "TextBox 4",
+          "text": "Li et al. · 2023 · EMNLP System Demonstrations",
+          "font_bbox": [
+            43.172000885009766,
+            149.90541076660156,
+            328.6854553222656,
+            167.6263885498047
+          ],
+          "frame": [
+            43.2,
+            151.2,
+            633.6,
+            30.24
+          ],
+          "actual_bottom_gap_pt": 14.106666666666655,
+          "actual_right_gap_pt": 348.80000000000007,
+          "actual_top_gap_pt": 2.8000000000000114,
+          "actual_left_gap_pt": 1.4666666666666615
+        },
+        {
+          "page": 46,
+          "name": "TextBox 5",
+          "text": "中国語モデルを多様な課題で評価する枠組み。COLDを使った攻撃的な発言の分類も扱う。",
+          "font_bbox": [
+            43.172000885009766,
+            175.8441619873047,
+            675.4390258789062,
+            222.9701690673828
+          ],
+          "frame": [
+            43.2,
+            179.28,
+            633.6,
+            46.08
+          ],
+          "actual_bottom_gap_pt": 6.026666666666671,
+          "actual_right_gap_pt": 2.800000000000068,
+          "actual_top_gap_pt": 2.0533333333333417,
+          "actual_left_gap_pt": 0.7999999999999972
+        },
+        {
+          "page": 46,
+          "name": "TextBox 6",
+          "text": "https://aclanthology.org/2023.emnlp-demo.17/",
+          "font_bbox": [
+            43.172000885009766,
+            221.52703857421875,
+            297.4748840332031,
+            237.20228576660156
+          ],
+          "frame": [
+            43.2,
+            224.64,
+            633.6,
+            19.44
+          ],
+          "actual_bottom_gap_pt": 7.413333333333327,
+          "actual_right_gap_pt": 380.1333333333334,
+          "actual_top_gap_pt": 0.6933333333333564,
+          "actual_left_gap_pt": 0.7999999999999972
+        },
+        {
+          "page": 46,
+          "name": "TextBox 7",
+          "text": "CLEVAToxicityDetectionScenario and Converter",
+          "font_bbox": [
+            43.172000885009766,
+            250.92816162109375,
+            463.83197021484375,
+            275.44415283203125
+          ],
+          "frame": [
+            43.2,
+            252.72,
+            633.6,
+            39.6
+          ],
+          "actual_bottom_gap_pt": 17.653333333333308,
+          "actual_right_gap_pt": 213.46666666666675,
+          "actual_top_gap_pt": 3.280000000000001,
+          "actual_left_gap_pt": 0.7999999999999972
+        },
+        {
+          "page": 46,
+          "name": "TextBox 8",
+          "text": "Stanford CRFM · HELM v0.4.0",
+          "font_bbox": [
+            43.172000885009766,
+            296.79742431640625,
+            218.52125549316406,
+            314.5184020996094
+          ],
+          "frame": [
+            43.2,
+            298.07992125984254,
+            633.6,
+            30.24
+          ],
+          "actual_bottom_gap_pt": 17.65325459317586,
+          "actual_right_gap_pt": 458.80000000000007,
+          "actual_top_gap_pt": 2.58674540682415,
+          "actual_left_gap_pt": 0.7999999999999972
+        },
+        {
+          "page": 46,
+          "name": "TextBox 9",
+          "text": "発言を二択で分類する公開設問例と、評価データの読み込み方法を示す実装。",
+          "font_bbox": [
+            43.172000885009766,
+            322.7071533203125,
+            672.4349975585938,
+            348.7711486816406
+          ],
+          "frame": [
+            43.2,
+            326.1599212598425,
+            633.6,
+            46.08
+          ],
+          "actual_bottom_gap_pt": 27.573254593175818,
+          "actual_right_gap_pt": 16.13333333333344,
+          "actual_top_gap_pt": 1.8400787401574803,
+          "actual_left_gap_pt": 0.7999999999999972
+        },
+        {
+          "page": 46,
+          "name": "TextBox 10",
+          "text": "https://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py",
+          "font_bbox": [
+            43.172000885009766,
+            368.3900451660156,
+            590.4135131835938,
+            384.0653076171875
+          ],
+          "frame": [
+            43.2,
+            371.52,
+            633.6,
+            19.44
+          ],
+          "actual_bottom_gap_pt": 7.626666666666665,
+          "actual_right_gap_pt": 86.80000000000007,
+          "actual_top_gap_pt": 0.4800000000000182,
+          "actual_left_gap_pt": 0.7999999999999972
+        }
+      ],
+      "issues": []
+    }
+  },
+  "independent_review": {
+    "status": "passed",
+    "approved": true,
+    "reviewer": "create_twitter",
+    "path": "../review-cold/handoff.json",
+    "final_hashes": {
+      "pptx": "50b987e18f1e0f35034fda14bfced75db4a4ffd45e0c8d06a306162e2b9249c0",
+      "pdf": "f58e7114a5c6653974272235d4080bd1adda489d19f89fc9405c95c22c635437"
+    }
+  }
+}

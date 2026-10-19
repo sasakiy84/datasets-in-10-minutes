@@ -39,3 +39,8 @@ Geminiは使用していない。Codexが日本語校正スキルをページご
 |53|Table2の平均文字数は全体48.77、offensive53.69、non-offensive44.20という論文報告。この資料の生TEXT長はPython lenで別に保存し、未確認の前処理差を断定しない。|報告された平均文字数は全体48.77、offensive53.69、non-offensive44.20という論文報告。この資料の生TEXT長はPython lenで別に保存し、未確認の前処理差を断定しない。|本文の不要な表番号のみ除去し、モデル/重み/予測未取得/平均文字数の対象・数値を保持。|
 
 [全ページ文言](cold/pages.jsonl)・[自己検査・独立レビュー](cold/review.json)
+
+
+## 読者向けの説明・日本語の改訂（2026年10月）
+
+Geminiは使用せず、Codexがスキルで校正し、別担当が独立レビューした。削除・統合を含む[問題点と変更対](cold/editorial-2026-10/changes.md)、[旧ページとの対応](cold/editorial-2026-10/page-map.json)、[独立レビュー](cold/editorial-2026-10/independent-review/handoff.json)、[最終ページの全文](cold/pages.jsonl)。旧版の校正・検証記録は保持している。
