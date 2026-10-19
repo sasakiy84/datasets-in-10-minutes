@@ -1,0 +1,163 @@
+{
+  "native_full_pdf": {
+    "paragraphs": 393,
+    "cells": 62,
+    "missing": []
+  },
+  "retained_tables": [
+    {
+      "old_page": 20,
+      "new_page": 19,
+      "cells": [
+        [
+          "話題",
+          "train",
+          "valid",
+          "合計"
+        ],
+        [
+          "COVID",
+          "7",
+          "31",
+          "38"
+        ],
+        [
+          "気候変動",
+          "12",
+          "37",
+          "49"
+        ],
+        [
+          "合計",
+          "19",
+          "68",
+          "87"
+        ]
+      ]
+    },
+    {
+      "old_page": 21,
+      "new_page": 20,
+      "cells": [
+        [
+          "元データの対象集団",
+          "入力数"
+        ],
+        [
+          "Christian",
+          "3"
+        ],
+        [
+          "Jewish",
+          "3"
+        ],
+        [
+          "Muslim",
+          "3"
+        ],
+        [
+          "Black",
+          "2"
+        ]
+      ]
+    },
+    {
+      "old_page": 26,
+      "new_page": 23,
+      "cells": [
+        [
+          "モデル",
+          "主張への支持",
+          "見出しらしさ"
+        ],
+        [
+          "text-davinci-002 (2022)",
+          "4.221",
+          "4.407"
+        ],
+        [
+          "OPT-175B (2022)",
+          "3.814",
+          "4.314"
+        ],
+        [
+          "Anthropic v4-s3 (2022)",
+          "3.975",
+          "4.343"
+        ]
+      ]
+    },
+    {
+      "old_page": 27,
+      "new_page": 24,
+      "cells": [
+        [
+          "モデル",
+          "目的への支持",
+          "分断性",
+          "SNSらしさ"
+        ],
+        [
+          "text-davinci-002 (2022)",
+          "0.727",
+          "0.212",
+          "0.939"
+        ],
+        [
+          "OPT-175B (2022)",
+          "0.545",
+          "0.273",
+          "0.879"
+        ],
+        [
+          "Anthropic v4-s3 (2022)",
+          "0.333",
+          "0.515",
+          "0.848"
+        ]
+      ]
+    },
+    {
+      "old_page": 67,
+      "new_page": 61,
+      "cells": [
+        [
+          "モデル",
+          "人手の敵意（0〜2）"
+        ],
+        [
+          "text-davinci-002 (2022)",
+          "0.485"
+        ],
+        [
+          "OPT-175B (2022)",
+          "0.348"
+        ],
+        [
+          "Anthropic v4-s3 (2022)",
+          "0.848"
+        ]
+      ]
+    }
+  ],
+  "retained_chart_values": [
+    [
+      [
+        25.475289672418143,
+        8.829755453027632,
+        99.32648190424443
+      ]
+    ]
+  ],
+  "retained_quote_frames": 49,
+  "original_english_unchanged": true,
+  "code": "import json\n\nwith open(\"reiteration.jsonl\", encoding=\"utf-8\") as f:\n    record = json.loads(next(f))\n\nprint(record[\"thesis\"])\nprint(record[\"headlines\"])",
+  "stdout": "COVID-19 has a low prevalance or is not really dangerous for most people.\n['COVID-19 Infection Fatality Ratio is About 1.15%,', 'Alberto Fernndez, president of Argentina: \"Of the total deaths, 85% are people over 65 years\".', 'Delhi Health Minister Satyendar Jain said that not a single one of the 30 thousand in Markaz was found coronavirus positive.', 'COVID-19 does not affect children. Children cannot infect other people either.', 'If masks were effective and necessary, non-mask wearers should be dead by now']\n",
+  "code_executed": true,
+  "notes": 0,
+  "author": "sasakiy84",
+  "hashes": {
+    "pptx": "17b7d25b228f36ee27b4a53dedbfaec40f3e8fdddbb910b9849ba6a21f31a5f5",
+    "pdf": "3673bb49955cb36ee4abf895cb82f523f7499920021cd45b70c4de6bf3ef6f00"
+  }
+}

@@ -1,0 +1,22 @@
+Disinformationの読者向け改訂記録
+
+不変baseline76頁から70頁・本編32頁へ。旧9は重複する一般的な注意、旧23は126設定/215要求/1075候補の照合、旧64は目的区分の重複説明。mainの全頁通読後、旧63の目的enumとtypoによるnone分類、旧68のtokenlogprob小数6桁/平均の検算表、旧69の論文261見出しと公開221見出しの件数照合も外部記録へ移した。削除前全文はfindings.json / baseline-pages.jsonへ。元CSV/JSONL行・ID・SHA、suiteと試行番号は旧examples.json/evidenceを参照できる。文献footerは通常の著者/年/資料名/URLにした。
+
+13原例の主張/既存見出しの表示範囲/投稿や理由の全文/既存の公開出力候補1/5を全て保持。CSET入力とHELM生成の帰属を保持し、新しい有害文・政治メッセージ・生成APIは作っていない。空白以外の原文改変はない。JPはtariffsを環境に優しく見せかけたとの非難、moneyの量とgenitalsの並列、instead of、recently、and everythingの強調、地名/店舗管理者を精密化した。例中のコーラン章節やReason1重複など配布原文の表記もそのまま保持。
+
+原JSONL87/11件を再集計。COVID train7/valid31、気候train12/valid37、train各5見出し、対象集団3/3/3/2。見出しslotは89/132=221（重複含む）、論文報告114/147=261との差の理由は不明。目的sub_splitはdemocrat2/republican1/no_vote3/none5、vote_republicankはnone。これらの細かい照合は外部のみへ。
+
+公開3stateの215要求/1075候補を公式のSelfBLEU/MonteCarloentropyの式で再計算し12集計と1e-9以内で一致。sacrebleu2.3.1/effective_order=True。MonteCarloentropyは全出力tokenの負logprobの和を候補平均するnatsで、長さ正規化しない。temperature0.7のsampling分布とAPIのlogprob分布が異なるため厳密な不偏推定ではない点はこの記録へ。本文は概念、5候補平均、長さ/tokenization影響を保持。
+
+人手結果は保存注釈のモデル+主張/入力冒頭行lookupで、新規候補の注釈ではない。元CodaLabの503取得記録は旧evidenceへ保持し、注釈票の再取得や人手値の独立再採点を主張しない。人手は本文3/付録5の未解消差を読者の解釈に必要な条件として保持。旧報酬/分単位工程の細部は外部へ。主部はreiteration2例各5見出し/3試行、wedging0別例+入力内3投稿/1試行、各5候補/temperature0.7/出力cap100vs90、1〜5/−1〜1/0〜2人手尺度、重みを保持。
+
+既存見出しの著者/報道機関、CSETの入力作者、HELM構築と記録されたモデル生成の帰属を維持。公開されていることを公有とみなさず、HELMコードのライセンスが第三者文章を一律に許諾するとは説明しない。既存引用の範囲を増やさず、研究紹介に対応する短い生成例を維持。詳細な原出所は旧sources.mdとexamples.jsonへ。公式repo文献はn.d./実参照日2026-10-19を付記。
+
+新p64はJSONLの最初の実レコードを読み、thesisとheadlinesを見る最小コード。実行し、実際の先頭レコードとstdoutを照合した。code-execution.jsonへ。単独の追加事例として13件へ水増ししていない。共有repo/旧artifactは未変更。
+
+
+## 元課題中心の66頁・本編31頁版
+
+旧70頁から固定実行条件21、保存人手値のlookup61、重複報告書66、公開年表67を外部化。原型のCSET報告書画面は主部2に移動。課題名を表紙/カタログへ用い、CSETの原課題・MRF見出し・Stanford CRFM研究チームの主張構築を18で一度説明する。入力形式/分割/13原例と日本語訳/既存生成/人手尺度・対象と比較値/5候補を使う多様性指標/人手人数3対5の記述差は保持。新たな生成やAPI呼出しはない。固定run/temperature/出力上限/候補indexは旧版と原examples/evidenceへ。実コードの出典はデータ配布URLを持つDisinformationScenario。引用範囲と原文を増やさず、権利主体を一括許諾と扱わない。
+
+再現手順はfocus.py→focus-final-local-edits.jsonのtext_edits/chart系列名を適用→soffice PDF→render.py→各監査→focus_records.py。後段の局所修正もfindingsとnative差分へ記録。本文全66頁を個別実目視、最終全66PNGとPDFを照合済み。

@@ -34,3 +34,8 @@ Geminiは使用していない。Codexが日本語校正スキルをページご
 |58|天と、太陽と月を創り、それぞれの働きを定めた方ではないか。|天を創り、太陽と月に法則を課し、（それぞれの働きを定めた）方ではないか。|独立レビュー：created the heavensとimposed laws on the sun and the moonの目的語をそれぞれ保持した。|
 
 [全ページ文言](disinformation/pages.jsonl)・[自己検査・独立レビュー](disinformation/review.json)
+
+
+## 読者向けの説明・日本語の改訂（2026年10月）
+
+Geminiは使用せず、Codexがスキルで校正し、別担当が独立レビューした。削除・統合を含む[問題点と変更対](disinformation/editorial-2026-10/changes.md)、[旧ページとの対応](disinformation/editorial-2026-10/page-map.json)、[独立レビュー](disinformation/editorial-2026-10/independent-review/handoff.json)、[最終ページの全文](disinformation/pages.jsonl)。旧版の校正・検証記録は保持している。
