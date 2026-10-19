@@ -31,3 +31,8 @@ Geminiは使用していない。Codexが日本語校正スキルをページご
 |21|公開データには条件文、設問、5選択肢、A〜Eの正解、|公開データには条件文、設問、選択肢、正解ラベル、|現在配布全体を5択と断定しない。学習4択45・開発テスト全5択を同頁へ追記。|
 
 [全ページ文言](lsat/pages.jsonl)・[自己検査・独立レビュー](lsat/review.json)
+
+
+## 読者向けの説明・日本語の改訂（2026年10月）
+
+Geminiは使用せず、Codexがスキルで校正し、別担当が独立レビューした。削除・統合を含む[問題点と変更対](lsat/editorial-2026-10/changes.md)、[旧ページとの対応](lsat/editorial-2026-10/page-map.json)、[独立レビュー](lsat/editorial-2026-10/independent-review/handoff.json)、[最終ページの全文](lsat/pages.jsonl)。旧版の校正・検証記録は保持している。
