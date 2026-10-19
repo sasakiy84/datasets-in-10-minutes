@@ -1,0 +1,873 @@
+[
+  {
+    "old_page": 5,
+    "shape_id": 3,
+    "before": "ChIDは、中国語の成語を選ぶ穴埋め読解データ。成語は、短い形に意味が凝縮された慣用表現で、このデータでは四字の成語を対象とする。\n文章内の成語を空欄記号に置き換え、各空欄の七候補から、もとの成語を選ぶ。原論文版の例に加え、後にFewCLUEやCLEVAで使われた公開例も示す。",
+    "after": "ChIDは、中国語の成語を選ぶ穴埋め読解データ。成語は、短い形に意味が凝縮された慣用表現で、このデータでは四字の成語を対象とする。\n文章内の成語を空欄記号に置き換え、もとの成語を選ぶ。原論文版では、各空欄に七つの候補が付く。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 5
+  },
+  {
+    "old_page": 11,
+    "action": "replace_diagram_with_list",
+    "before": "語彙→文章→空欄→七候補の直列の箱と矢印",
+    "after": "表記を整え、学習に十分な出現頻度のある四字成語3,848種類を選ぶ。\nニュース・小説・エッセイから文章を集め、長さや成語の頻度を調整して空欄を作る。\n正解に、意味の似た成語三つと無作為の成語三つを加え、七択問題にする。候補選びには人手による意味関係の調査も用いた。",
+    "reason": "単純な手順を読める説明にする",
+    "new_page": 11
+  },
+  {
+    "old_page": 12,
+    "shape_id": 3,
+    "before": "成語辞典の23,000件超から四字の表現を残し、事前学習済みの単語ベクトルを持たない語を除いた。同じ意味で一字や語順だけが違う表記は、辞典の参照関係を使ってそろえる。\nコーパスで20回未満しか現れない語も除き、3,848成語の語彙を作った。これは候補に使う語彙の種類数で、文章数や問題数ではない。",
+    "after": "成語辞典の23,000件超から四字の表現を残し、事前学習済みの単語ベクトルを持たない語を除いた。同じ意味で一字や語順だけが違う表記は、辞典の参照関係を使ってそろえる。\nコーパスで20回未満しか現れない語も除き、候補に使う3,848種類の成語を選んだ。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 12
+  },
+  {
+    "old_page": 15,
+    "shape_id": 5,
+    "before": "作者が案内する配布全件と一致。RanとSimはTestと同じ文章の候補違いで、独立文章数へ加えない。",
+    "after": "RanとSimは、Testと同じ文章で候補だけを変えた評価集合。Ranは無作為の候補、Simは似た候補が中心。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 15
+  },
+  {
+    "old_page": 16,
+    "shape_id": 5,
+    "before": "語数はJiebaによる分かち書きの集計。配布には集合間で同じcontentもあり、領域の区分だけで文章の完全非重複を意味しない。",
+    "after": "語数は、Jiebaによる分かち書きで数えた値。Outの文章は、領域内の文章より長く、空欄も多い。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 16
+  },
+  {
+    "old_page": 18,
+    "shape_id": 3,
+    "before": "空欄ごとに一つの候補を予測し、正解した空欄数を、評価した空欄数で割る。複数空欄の文章では、文章内のすべてが正しいかという指標とは異なる。\n原論文版は各空欄が七択。各候補を等確率に選ぶ場合の期待正解率は約14.29%。モデルは文章の文脈を使い、もとの成語を選ぶ。",
+    "after": "空欄ごとに一つの候補を予測し、正解した空欄数を、評価した空欄数で割る。複数の空欄がある文章も、一つずつ採点する。\n原論文版は各空欄が七択。各候補を等確率に選ぶ場合の期待正解率は約14.29%。モデルは文章の文脈を使い、もとの成語を選ぶ。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 18
+  },
+  {
+    "old_page": 24,
+    "action": "remove_repeated_note",
+    "before": "後利用の掲載例が元のどの版と一致するかを確認し、各配布の件数や評価条件をそのまま引き継がない。",
+    "after": "",
+    "reason": "直上の比較表と同じ内容の反復を除く",
+    "new_page": 23
+  },
+  {
+    "old_page": 25,
+    "shape_id": 2,
+    "before": "CLUE版は、群・文章・空欄を分けて数える",
+    "after": "CLUE版では、複数の文章が十候補を共有する",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 24
+  },
+  {
+    "old_page": 25,
+    "shape_id": 5,
+    "before": "公開ZIP全件。train/devの正解は別JSON、両testの正解は同ZIPにない。devは作者案内のコンテスト版と入力・正解が一致。",
+    "after": "学習・開発の正解は別のJSONに入っている。公開ZIPには、test 1.0とtest 1.1の正解は含まれない。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 24
+  },
+  {
+    "old_page": 26,
+    "shape_id": 5,
+    "before": "各allは五つの小集合の質問をまとめた202種類で、42×5の210行ではない。全問は一空欄・七候補。",
+    "after": "学習・開発の集約版は、五つの小集合を合わせ、重複を除いた各202問。一つの空欄と七候補を持つ。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 25
+  },
+  {
+    "old_page": 27,
+    "shape_id": 2,
+    "before": "CLEVA掲載例は、FewCLUE配布と一致する",
+    "after": "CLEVAは、成語の穴埋めで文化知識を評価する",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 26
+  },
+  {
+    "old_page": 27,
+    "shape_id": 3,
+    "before": "実例2は、FewCLUE train_2の20行と本文・七候補・正解が対応する。CLEVA紙面は、その候補から「足智多谋」「语无伦次」「绣花枕头」の三つを載せ、正解Aを示す。\n実例3は、HELMのCLEVACulturalKnowledgeScenarioにある映画の例と七候補・正解Dが一致する。FewCLUE train_3の21行にあり、原論文版の同一行への対応は確認できていない。",
+    "after": "CLEVAは、中国語モデルの文化知識を調べる課題として、ChIDの成語の穴埋めを用いる。公開論文の例は実例2と同じ文章で、「足智多谋」「语无伦次」「绣花枕头」の三候補から正解Aを選ぶ。\nHELMにも同課題の実装があり、実例3の映画の文章を七候補で示している。いずれの例もFewCLUEの公開問題に含まれる。\nCLEVAで評価に使った問題の総数は、公開説明には記されていない。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 26
+  },
+  {
+    "old_page": 29,
+    "shape_id": 2,
+    "before": "作者の配布を引用し、元文章の出所も区別する",
+    "after": "公式配布を入手し、ChID論文を引用して利用する",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 27
+  },
+  {
+    "old_page": 29,
+    "shape_id": 3,
+    "before": "作者の公式GitHubは、原論文版とコンテスト版の配布を案内し、利用時にChID論文の引用を求める。固定リポジトリにはApache License 2.0がある。\n素材にはニュースや文学作品が含まれる。リポジトリのライセンスと元文章の出所・権利を区別し、引用する文章・候補・版を特定して利用する。",
+    "after": "作者の公式GitHubは、原論文版とコンテスト版の配布を案内し、利用時にChID論文の引用を求める。リポジトリのライセンスはApache License 2.0。\n素材にはニュースや文学作品が含まれる。元文章の権利や引用条件は、作品・配布元の情報を確認する。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 27
+  },
+  {
+    "old_page": 30,
+    "shape_id": 3,
+    "before": "ChID原論文版は580,807文章・728,713空欄で、正解に似た候補を含む七択を作る。成語全体の意味と、近義語の使い分けを測る読解課題。\nARはTestで72.4%、候補を似た語に寄せたSimで66.2%。後利用では候補の共有単位や数が変わり、原版、CLUE、FewCLUE、CLEVAの条件を対応させる必要がある。",
+    "after": "ChID原論文版は580,807文章・728,713空欄で、正解に似た候補を含む七択を作る。成語全体の意味と、近義語の使い分けを測る読解課題。\n2019年のARの正解率はTestで72.4%、似た候補が中心のSimで66.2%。後に、十候補を共有するCLUE版や少数例学習のFewCLUE版が公開され、CLEVAの文化知識の評価にも用いられた。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 28
+  },
+  {
+    "old_page": 38,
+    "shape_id": 2,
+    "before": "実例9：無線通信の問題を根本から解く",
+    "after": "実例9：無線通信の問題を一度で解決する",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 36
+  },
+  {
+    "old_page": 32,
+    "shape_id": 3,
+    "before": "追加10問の原文と日本語訳\n分割・入力・候補選びの補足\n参考文献",
+    "after": "追加10問の原文と日本語訳\n入力の読み方と候補選び\n参考文献",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 30
+  },
+  {
+    "old_page": 45,
+    "shape_id": 2,
+    "before": "分割・入力・候補選びの補足",
+    "after": "入力の読み方と候補選び",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 43
+  },
+  {
+    "old_page": 45,
+    "shape_id": 3,
+    "before": "Appendix: 2. 分割・入力・候補選びの補足",
+    "after": "Appendix: 2. 入力の読み方と候補選び",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 43
+  },
+  {
+    "old_page": 46,
+    "shape_id": 3,
+    "before": "Appendix: 2. 分割・入力・候補選びの補足",
+    "after": "Appendix: 2. 入力の読み方と候補選び",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": null
+  },
+  {
+    "old_page": 47,
+    "shape_id": 3,
+    "before": "Appendix: 2. 分割・入力・候補選びの補足",
+    "after": "Appendix: 2. 入力の読み方と候補選び",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": null
+  },
+  {
+    "old_page": 48,
+    "shape_id": 4,
+    "before": "Appendix: 2. 分割・入力・候補選びの補足",
+    "after": "Appendix: 2. 入力の読み方と候補選び",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 44
+  },
+  {
+    "old_page": 49,
+    "shape_id": 4,
+    "before": "Appendix: 2. 分割・入力・候補選びの補足",
+    "after": "Appendix: 2. 入力の読み方と候補選び",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 45
+  },
+  {
+    "old_page": 50,
+    "shape_id": 3,
+    "before": "Appendix: 2. 分割・入力・候補選びの補足",
+    "after": "Appendix: 2. 入力の読み方と候補選び",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 46
+  },
+  {
+    "old_page": 51,
+    "shape_id": 3,
+    "before": "Appendix: 2. 分割・入力・候補選びの補足",
+    "after": "Appendix: 2. 入力の読み方と候補選び",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 47
+  },
+  {
+    "old_page": 48,
+    "shape_id": 2,
+    "before": "分割内にも同文があり、短い文脈の例も残る",
+    "after": "一部の文章は重複し、文脈が欠ける例もある",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 44
+  },
+  {
+    "old_page": 48,
+    "shape_id": 3,
+    "before": "Trainは520,711行に対し、異なるcontentは519,218種類。Devは20,000行に19,997種類、Outは20,096行に20,085種類ある。行数をすべて独立文章の種類数とは扱わない。\nDevにはcontentが空欄記号だけの行が一つある。配布の正解を保持することと、表示された文脈だけで一意に解けることは異なる。文章の長さや候補を確認して読む。",
+    "after": "学習とTestには、同じ文章が110種類含まれる。学習とOutにも1,829種類が共通する。候補の組は異なる場合がある。\n開発集合には、文章が空欄記号だけになっている問題が1問ある。候補は付いているが、選ぶ手掛かりとなる文脈が欠けている。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 44
+  },
+  {
+    "old_page": 50,
+    "shape_id": 2,
+    "before": "原行から、空欄ごとの正解位置を復元する",
+    "after": "JSONLから文章・候補・正解の成語を読み出す",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 46
+  },
+  {
+    "old_page": 50,
+    "shape_id": 4,
+    "before": "import json\nwith open(\"dev_data.txt\", encoding=\"utf-8\") as f:\n    row = json.loads(f.readlines()[9275])\npositions = [choices.index(gold)\n             for choices, gold in zip(row[\"candidates\"],\n                                      row[\"groundTruth\"])]\nassert positions == [1]",
+    "after": "import json\nwith open(\"dev_data.txt\", encoding=\"utf-8\") as f:\n    example = json.loads(next(f))\nprint(example[\"content\"])\nfor choices, gold in zip(example[\"candidates\"],\n                         example[\"groundTruth\"]):\n    print(\"候補:\", choices, \"正解:\", gold)",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 46
+  },
+  {
+    "old_page": 50,
+    "shape_id": 5,
+    "before": "実例1の原版Dev 9,276行。位置1は0起算で、表示上のBに対応する。rawには問題IDの欄がない。",
+    "after": "原論文版は1行に1文章のJSONを収める。candidatesとgroundTruthは、文章中の空欄の順に並ぶ。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 46
+  },
+  {
+    "old_page": 51,
+    "shape_id": 5,
+    "before": "0起算の番号と表示A〜Jを対応させる。公開テストの正解の有無も各配布で異なる。",
+    "after": "候補の番号は0から始まる。原版は正解の成語そのものを、CLUEとFewCLUEは候補の番号を保存する。",
+    "reason": "読者に必要な説明へ整理",
+    "action": "rewrite",
+    "new_page": 47
+  },
+  {
+    "old_page": 2,
+    "shape_id": 5,
+    "before": "[1] Zheng, Huang & Sun. ChID-Dataset、公式公開リポジトリ、固定commit 0836ebf72cbe7d2da832021b02ff08f627de885d。\nhttps://github.com/chujiezheng/ChID-Dataset",
+    "after": "[1] Zheng, Huang & Sun (2019). ChID-Dataset.  https://github.com/chujiezheng/ChID-Dataset",
+    "reason": "コミット・原行番号等の監査情報は外部記録へ移す",
+    "action": "rewrite",
+    "new_page": 2
+  },
+  {
+    "old_page": 6,
+    "shape_id": 8,
+    "before": "[1] Zheng, Huang & Sun (2019). ChID: A Large-scale Chinese IDiom Dataset for Cloze Test. 作者が案内する原版配布。 dev_data.txt:9276行\nhttps://huggingface.co/datasets/thu-coai/chid/tree/47ad8022d369233bea2f4a8112268f9a9a039a43/original",
+    "after": "[1] Zheng, Huang & Sun (2019). ChID — Original Data Distribution.  https://huggingface.co/datasets/thu-coai/chid/tree/main/original",
+    "reason": "コミット・原行番号等の監査情報は外部記録へ移す",
+    "action": "rewrite",
+    "new_page": 6
+  },
+  {
+    "old_page": 7,
+    "shape_id": 8,
+    "before": "[1] CLUE team. FewCLUE / ChID、固定commit 62a02c6f31cf32814cfe522f78ef088228840f8d。 train_2.json:20行\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/chid",
+    "after": "[1] CLUE team (2021). FewCLUE — ChID.  https://github.com/CLUEbenchmark/FewCLUE/tree/main/datasets/chid",
+    "reason": "コミット・原行番号等の監査情報は外部記録へ移す",
+    "action": "rewrite",
+    "new_page": 7
+  },
+  {
+    "old_page": 8,
+    "shape_id": 8,
+    "before": "[1] CLUE team. FewCLUE / ChID、固定commit 62a02c6f31cf32814cfe522f78ef088228840f8d。 train_3.json:21行\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/chid",
+    "after": "[1] CLUE team (2021). FewCLUE — ChID.  https://github.com/CLUEbenchmark/FewCLUE/tree/main/datasets/chid",
+    "reason": "コミット・原行番号等の監査情報は外部記録へ移す",
+    "action": "rewrite",
+    "new_page": 8
+  },
+  {
+    "old_page": 15,
+    "shape_id": 6,
+    "before": "[1] Zheng, Huang & Sun (2019). ChID: A Large-scale Chinese IDiom Dataset for Cloze Test. ACL, pp.778–787.  https://aclanthology.org/P19-1075/\n[2] Zheng, Huang & Sun (2019). ChID: A Large-scale Chinese IDiom Dataset for Cloze Test. 作者が案内する原版配布。\nhttps://huggingface.co/datasets/thu-coai/chid/tree/47ad8022d369233bea2f4a8112268f9a9a039a43/original",
+    "after": "[1] Zheng, Huang & Sun (2019). ChID: A Large-scale Chinese IDiom Dataset for Cloze Test. ACL, pp.778–787.  https://aclanthology.org/P19-1075/\n[2] Zheng, Huang & Sun (2019). ChID — Original Data Distribution.  https://huggingface.co/datasets/thu-coai/chid/tree/main/original",
+    "reason": "コミット・原行番号等の監査情報は外部記録へ移す",
+    "action": "rewrite",
+    "new_page": 15
+  },
+  {
+    "old_page": 24,
+    "shape_id": 6,
+    "before": "[1] Zheng, Huang & Sun. ChID-Adapt、コンテスト向けの問題形式と公式配布。\nhttps://github.com/chujiezheng/ChID-Dataset/blob/0836ebf72cbe7d2da832021b02ff08f627de885d/Competition/README.md\n[2] Li et al. (2023). CLEVA: Chinese Language Models EVAluation Platform. EMNLP: System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/",
+    "after": "[1] Zheng, Huang & Sun (2019). ChID-Adapt.  https://github.com/chujiezheng/ChID-Dataset/blob/master/Competition/README.md\n[2] Li et al. (2023). CLEVA: Chinese Language Models EVAluation Platform. EMNLP: System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/",
+    "reason": "コミット・原行番号等の監査情報は外部記録へ移す",
+    "action": "rewrite",
+    "new_page": 23
+  },
+  {
+    "old_page": 26,
+    "shape_id": 6,
+    "before": "[1] Xu et al. (2021). FewCLUE: A Chinese Few-shot Learning Evaluation Benchmark. arXiv:2107.07498v2.  https://arxiv.org/abs/2107.07498\n[2] CLUE team. FewCLUE / ChID、固定commit 62a02c6f31cf32814cfe522f78ef088228840f8d。\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/chid",
+    "after": "[1] Xu et al. (2021). FewCLUE: A Chinese Few-shot Learning Evaluation Benchmark. arXiv:2107.07498v2.  https://arxiv.org/abs/2107.07498\n[2] CLUE team (2021). FewCLUE — ChID.  https://github.com/CLUEbenchmark/FewCLUE/tree/main/datasets/chid",
+    "reason": "コミット・原行番号等の監査情報は外部記録へ移す",
+    "action": "rewrite",
+    "new_page": 25
+  },
+  {
+    "old_page": 29,
+    "shape_id": 5,
+    "before": "[1] Zheng, Huang & Sun. ChID-Dataset、公式公開リポジトリ、固定commit 0836ebf72cbe7d2da832021b02ff08f627de885d。\nhttps://github.com/chujiezheng/ChID-Dataset\n[2] ChID-Dataset. Apache License 2.0、固定リポジトリのLICENSE。\nhttps://github.com/chujiezheng/ChID-Dataset/blob/0836ebf72cbe7d2da832021b02ff08f627de885d/LICENSE",
+    "after": "[1] Zheng, Huang & Sun (2019). ChID-Dataset.  https://github.com/chujiezheng/ChID-Dataset\n[2] ChID-Dataset. Apache License 2.0.  https://github.com/chujiezheng/ChID-Dataset/blob/master/LICENSE",
+    "reason": "コミット・原行番号等の監査情報は外部記録へ移す",
+    "action": "rewrite",
+    "new_page": 27
+  },
+  {
+    "old_page": 33,
+    "shape_id": 8,
+    "before": "[1] Zheng, Huang & Sun (2019). ChID: A Large-scale Chinese IDiom Dataset for Cloze Test. 作者が案内する原版配布。 dev_data.txt:903行\nhttps://huggingface.co/datasets/thu-coai/chid/tree/47ad8022d369233bea2f4a8112268f9a9a039a43/original",
+    "after": "[1] Zheng, Huang & Sun (2019). ChID — Original Data Distribution.  https://huggingface.co/datasets/thu-coai/chid/tree/main/original",
+    "reason": "コミット・原行番号等の監査情報は外部記録へ移す",
+    "action": "rewrite",
+    "new_page": 31
+  },
+  {
+    "old_page": 34,
+    "shape_id": 8,
+    "before": "[1] Zheng, Huang & Sun (2019). ChID: A Large-scale Chinese IDiom Dataset for Cloze Test. 作者が案内する原版配布。 dev_data.txt:1046行\nhttps://huggingface.co/datasets/thu-coai/chid/tree/47ad8022d369233bea2f4a8112268f9a9a039a43/original",
+    "after": "[1] Zheng, Huang & Sun (2019). ChID — Original Data Distribution.  https://huggingface.co/datasets/thu-coai/chid/tree/main/original",
+    "reason": "コミット・原行番号等の監査情報は外部記録へ移す",
+    "action": "rewrite",
+    "new_page": 32
+  },
+  {
+    "old_page": 35,
+    "shape_id": 8,
+    "before": "[1] Zheng, Huang & Sun (2019). ChID: A Large-scale Chinese IDiom Dataset for Cloze Test. 作者が案内する原版配布。 test_data.txt:231行\nhttps://huggingface.co/datasets/thu-coai/chid/tree/47ad8022d369233bea2f4a8112268f9a9a039a43/original",
+    "after": "[1] Zheng, Huang & Sun (2019). ChID — Original Data Distribution.  https://huggingface.co/datasets/thu-coai/chid/tree/main/original",
+    "reason": "コミット・原行番号等の監査情報は外部記録へ移す",
+    "action": "rewrite",
+    "new_page": 33
+  },
+  {
+    "old_page": 36,
+    "shape_id": 8,
+    "before": "[1] Zheng, Huang & Sun (2019). ChID: A Large-scale Chinese IDiom Dataset for Cloze Test. 作者が案内する原版配布。 test_data.txt:239行\nhttps://huggingface.co/datasets/thu-coai/chid/tree/47ad8022d369233bea2f4a8112268f9a9a039a43/original",
+    "after": "[1] Zheng, Huang & Sun (2019). ChID — Original Data Distribution.  https://huggingface.co/datasets/thu-coai/chid/tree/main/original",
+    "reason": "コミット・原行番号等の監査情報は外部記録へ移す",
+    "action": "rewrite",
+    "new_page": 34
+  },
+  {
+    "old_page": 37,
+    "shape_id": 8,
+    "before": "[1] Zheng, Huang & Sun (2019). ChID: A Large-scale Chinese IDiom Dataset for Cloze Test. 作者が案内する原版配布。 test_data.txt:249行\nhttps://huggingface.co/datasets/thu-coai/chid/tree/47ad8022d369233bea2f4a8112268f9a9a039a43/original",
+    "after": "[1] Zheng, Huang & Sun (2019). ChID — Original Data Distribution.  https://huggingface.co/datasets/thu-coai/chid/tree/main/original",
+    "reason": "コミット・原行番号等の監査情報は外部記録へ移す",
+    "action": "rewrite",
+    "new_page": 35
+  },
+  {
+    "old_page": 38,
+    "shape_id": 8,
+    "before": "[1] Zheng, Huang & Sun (2019). ChID: A Large-scale Chinese IDiom Dataset for Cloze Test. 作者が案内する原版配布。 test_data.txt:380行\nhttps://huggingface.co/datasets/thu-coai/chid/tree/47ad8022d369233bea2f4a8112268f9a9a039a43/original",
+    "after": "[1] Zheng, Huang & Sun (2019). ChID — Original Data Distribution.  https://huggingface.co/datasets/thu-coai/chid/tree/main/original",
+    "reason": "コミット・原行番号等の監査情報は外部記録へ移す",
+    "action": "rewrite",
+    "new_page": 36
+  },
+  {
+    "old_page": 39,
+    "shape_id": 8,
+    "before": "[1] Zheng, Huang & Sun (2019). ChID: A Large-scale Chinese IDiom Dataset for Cloze Test. 作者が案内する原版配布。 dev_data.txt:3707行\nhttps://huggingface.co/datasets/thu-coai/chid/tree/47ad8022d369233bea2f4a8112268f9a9a039a43/original",
+    "after": "[1] Zheng, Huang & Sun (2019). ChID — Original Data Distribution.  https://huggingface.co/datasets/thu-coai/chid/tree/main/original",
+    "reason": "コミット・原行番号等の監査情報は外部記録へ移す",
+    "action": "rewrite",
+    "new_page": 37
+  },
+  {
+    "old_page": 40,
+    "shape_id": 8,
+    "before": "[1] Zheng, Huang & Sun (2019). ChID: A Large-scale Chinese IDiom Dataset for Cloze Test. 作者が案内する原版配布。 dev_data.txt:3707行\nhttps://huggingface.co/datasets/thu-coai/chid/tree/47ad8022d369233bea2f4a8112268f9a9a039a43/original",
+    "after": "[1] Zheng, Huang & Sun (2019). ChID — Original Data Distribution.  https://huggingface.co/datasets/thu-coai/chid/tree/main/original",
+    "reason": "コミット・原行番号等の監査情報は外部記録へ移す",
+    "action": "rewrite",
+    "new_page": 38
+  },
+  {
+    "old_page": 41,
+    "shape_id": 8,
+    "before": "[1] Zheng, Huang & Sun (2019). ChID: A Large-scale Chinese IDiom Dataset for Cloze Test. 作者が案内する原版配布。 test_out_data.txt:4288行\nhttps://huggingface.co/datasets/thu-coai/chid/tree/47ad8022d369233bea2f4a8112268f9a9a039a43/original",
+    "after": "[1] Zheng, Huang & Sun (2019). ChID — Original Data Distribution.  https://huggingface.co/datasets/thu-coai/chid/tree/main/original",
+    "reason": "コミット・原行番号等の監査情報は外部記録へ移す",
+    "action": "rewrite",
+    "new_page": 39
+  },
+  {
+    "old_page": 42,
+    "shape_id": 8,
+    "before": "[1] Zheng, Huang & Sun (2019). ChID: A Large-scale Chinese IDiom Dataset for Cloze Test. 作者が案内する原版配布。 test_out_data.txt:3060行\nhttps://huggingface.co/datasets/thu-coai/chid/tree/47ad8022d369233bea2f4a8112268f9a9a039a43/original",
+    "after": "[1] Zheng, Huang & Sun (2019). ChID — Original Data Distribution.  https://huggingface.co/datasets/thu-coai/chid/tree/main/original",
+    "reason": "コミット・原行番号等の監査情報は外部記録へ移す",
+    "action": "rewrite",
+    "new_page": 40
+  },
+  {
+    "old_page": 43,
+    "shape_id": 8,
+    "before": "[1] Zheng, Huang & Sun (2019). ChID: A Large-scale Chinese IDiom Dataset for Cloze Test. 作者が案内する原版配布。 test_out_data.txt:1900行\nhttps://huggingface.co/datasets/thu-coai/chid/tree/47ad8022d369233bea2f4a8112268f9a9a039a43/original",
+    "after": "[1] Zheng, Huang & Sun (2019). ChID — Original Data Distribution.  https://huggingface.co/datasets/thu-coai/chid/tree/main/original",
+    "reason": "コミット・原行番号等の監査情報は外部記録へ移す",
+    "action": "rewrite",
+    "new_page": 41
+  },
+  {
+    "old_page": 44,
+    "shape_id": 8,
+    "before": "[1] Zheng, Huang & Sun (2019). ChID: A Large-scale Chinese IDiom Dataset for Cloze Test. 作者が案内する原版配布。 test_out_data.txt:1900行\nhttps://huggingface.co/datasets/thu-coai/chid/tree/47ad8022d369233bea2f4a8112268f9a9a039a43/original",
+    "after": "[1] Zheng, Huang & Sun (2019). ChID — Original Data Distribution.  https://huggingface.co/datasets/thu-coai/chid/tree/main/original",
+    "reason": "コミット・原行番号等の監査情報は外部記録へ移す",
+    "action": "rewrite",
+    "new_page": 42
+  },
+  {
+    "old_page": 46,
+    "shape_id": 6,
+    "before": "[1] Zheng, Huang & Sun (2019). ChID: A Large-scale Chinese IDiom Dataset for Cloze Test. 作者が案内する原版配布。\nhttps://huggingface.co/datasets/thu-coai/chid/tree/47ad8022d369233bea2f4a8112268f9a9a039a43/original",
+    "after": "[1] Zheng, Huang & Sun (2019). ChID — Original Data Distribution.  https://huggingface.co/datasets/thu-coai/chid/tree/main/original",
+    "reason": "コミット・原行番号等の監査情報は外部記録へ移す",
+    "action": "rewrite",
+    "new_page": null
+  },
+  {
+    "old_page": 47,
+    "shape_id": 6,
+    "before": "[1] Zheng, Huang & Sun (2019). ChID: A Large-scale Chinese IDiom Dataset for Cloze Test. 作者が案内する原版配布。\nhttps://huggingface.co/datasets/thu-coai/chid/tree/47ad8022d369233bea2f4a8112268f9a9a039a43/original",
+    "after": "[1] Zheng, Huang & Sun (2019). ChID — Original Data Distribution.  https://huggingface.co/datasets/thu-coai/chid/tree/main/original",
+    "reason": "コミット・原行番号等の監査情報は外部記録へ移す",
+    "action": "rewrite",
+    "new_page": null
+  },
+  {
+    "old_page": 48,
+    "shape_id": 5,
+    "before": "[1] Zheng, Huang & Sun (2019). ChID: A Large-scale Chinese IDiom Dataset for Cloze Test. 作者が案内する原版配布。\nhttps://huggingface.co/datasets/thu-coai/chid/tree/47ad8022d369233bea2f4a8112268f9a9a039a43/original",
+    "after": "[1] Zheng, Huang & Sun (2019). ChID — Original Data Distribution.  https://huggingface.co/datasets/thu-coai/chid/tree/main/original",
+    "reason": "コミット・原行番号等の監査情報は外部記録へ移す",
+    "action": "rewrite",
+    "new_page": 44
+  },
+  {
+    "old_page": 50,
+    "shape_id": 6,
+    "before": "[1] Zheng, Huang & Sun (2019). ChID: A Large-scale Chinese IDiom Dataset for Cloze Test. 作者が案内する原版配布。\nhttps://huggingface.co/datasets/thu-coai/chid/tree/47ad8022d369233bea2f4a8112268f9a9a039a43/original",
+    "after": "[1] Zheng, Huang & Sun (2019). ChID — Original Data Distribution.  https://huggingface.co/datasets/thu-coai/chid/tree/main/original",
+    "reason": "コミット・原行番号等の監査情報は外部記録へ移す",
+    "action": "rewrite",
+    "new_page": 46
+  },
+  {
+    "old_page": 51,
+    "shape_id": 6,
+    "before": "[1] Zheng, Huang & Sun (2019). ChID: A Large-scale Chinese IDiom Dataset for Cloze Test. 作者が案内する原版配布。\nhttps://huggingface.co/datasets/thu-coai/chid/tree/47ad8022d369233bea2f4a8112268f9a9a039a43/original\n[2] CLUE team. ChID公式公開ZIP、原配布READMEのCLUE 1.0 / 1.1。  https://storage.googleapis.com/cluebenchmark/tasks/chid_public.zip",
+    "after": "[1] Zheng, Huang & Sun (2019). ChID — Original Data Distribution.  https://huggingface.co/datasets/thu-coai/chid/tree/main/original\n[2] CLUE team. ChID公式公開ZIP、原配布READMEのCLUE 1.0 / 1.1。  https://storage.googleapis.com/cluebenchmark/tasks/chid_public.zip",
+    "reason": "コミット・原行番号等の監査情報は外部記録へ移す",
+    "action": "rewrite",
+    "new_page": 47
+  },
+  {
+    "old_page": 53,
+    "shape_id": 5,
+    "before": "ChID-Dataset\nChujie Zheng, Minlie Huang, Aixin Sun · 公式リポジトリ · fixed 0836ebf72cbe7d2da832021b02ff08f627de885d\n原論文版とコンテスト版の形式、配布へのリンク、ベースライン実装、更新履歴と引用方法を公開する。\nhttps://github.com/chujiezheng/ChID-Dataset",
+    "after": "ChID-Dataset\nChujie Zheng, Minlie Huang, Aixin Sun · 公式リポジトリ\n原論文版とコンテスト版の形式、配布へのリンク、ベースライン実装、更新履歴と引用方法を公開する。\nhttps://github.com/chujiezheng/ChID-Dataset",
+    "reason": "固定ハッシュと制作上の注意を出典記録へ移す",
+    "action": "rewrite",
+    "new_page": 49
+  },
+  {
+    "old_page": 54,
+    "shape_id": 4,
+    "before": "ChID — Original Data Distribution\nthu-coai · 作者が案内する配布 · fixed 47ad8022d369233bea2f4a8112268f9a9a039a43\n学習・開発・Test・Outと、同じTestの候補を変えたRan/Simを、正解付きの行形式で公開する。\nhttps://huggingface.co/datasets/thu-coai/chid/tree/47ad8022d369233bea2f4a8112268f9a9a039a43/original",
+    "after": "ChID — Original Data Distribution\nthu-coai · 作者が案内する配布\n学習・開発・Test・Outと、同じTestの候補を変えたRan/Simを、正解付きの行形式で公開する。\nhttps://huggingface.co/datasets/thu-coai/chid/tree/main/original",
+    "reason": "固定ハッシュと制作上の注意を出典記録へ移す",
+    "action": "rewrite",
+    "new_page": 50
+  },
+  {
+    "old_page": 54,
+    "shape_id": 5,
+    "before": "ChID-Adapt — Competition Data\nChujie Zheng et al. · 2019年コンテスト向け公式説明\n複数文章が十候補を共有し、文脈間の比較を利用して空欄を埋める形式。データとRNN/BERTベースラインを案内する。\nhttps://github.com/chujiezheng/ChID-Dataset/blob/0836ebf72cbe7d2da832021b02ff08f627de885d/Competition/README.md",
+    "after": "ChID-Adapt — Competition Data\nChujie Zheng et al. · 2019年コンテスト向け公式説明\n複数文章が十候補を共有し、文脈間の比較を利用して空欄を埋める形式。データとRNN/BERTベースラインを案内する。\nhttps://github.com/chujiezheng/ChID-Dataset/blob/master/Competition/README.md",
+    "reason": "固定ハッシュと制作上の注意を出典記録へ移す",
+    "action": "rewrite",
+    "new_page": 50
+  },
+  {
+    "old_page": 56,
+    "shape_id": 5,
+    "before": "FewCLUE — ChID Data\nCLUE team · fixed 62a02c6f31cf32814cfe522f78ef088228840f8d\n一空欄・七候補の15ファイル。CLEVA紙面とHELM説明に一致する公開問題を含む。\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/62a02c6f31cf32814cfe522f78ef088228840f8d/datasets/chid",
+    "after": "FewCLUE — ChID Data\nCLUE team\n一空欄・七候補の15ファイル。CLEVA紙面とHELM説明に一致する公開問題を含む。\nhttps://github.com/CLUEbenchmark/FewCLUE/tree/main/datasets/chid",
+    "reason": "固定ハッシュと制作上の注意を出典記録へ移す",
+    "action": "rewrite",
+    "new_page": 52
+  },
+  {
+    "old_page": 58,
+    "shape_id": 5,
+    "before": "Apache License, Version 2.0\nChID-Dataset · 固定リポジトリのLICENSE\nリポジトリに含まれる利用許諾条件。素材となったニュース・文学文章の出所と、引用する配布版も区別する。\nhttps://github.com/chujiezheng/ChID-Dataset/blob/0836ebf72cbe7d2da832021b02ff08f627de885d/LICENSE",
+    "after": "Apache License, Version 2.0\nChID-Dataset · LICENSE\nリポジトリの利用許諾条件を示す。\nhttps://github.com/chujiezheng/ChID-Dataset/blob/master/LICENSE",
+    "reason": "固定ハッシュと制作上の注意を出典記録へ移す",
+    "action": "rewrite",
+    "new_page": 54
+  },
+  {
+    "old_page": 58,
+    "action": "remove_configuration_reference",
+    "before": "run_specs_cleva_v1.conf\nStanford CRFM · HELM v0.4.0 · CLEVA設定\ncultural_knowledge / idiomに対し、0〜5の六つのprompt IDを登録する。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/presentation/run_specs_cleva_v1.conf",
+    "after": "",
+    "reason": "prompt ID設定だけの監査用文献を外部記録へ移す",
+    "new_page": 54
+  },
+  {
+    "old_page": 53,
+    "shape_id": 4,
+    "action": "expand_native_reference_frame",
+    "before": "height 105.970 pt",
+    "after": "height 123.970 pt",
+    "reason": "独立レビュー：文献URL全文がnative文字枠内に収まる高さへ。位置・本文・URL・書式は保持",
+    "new_page": 49
+  },
+  {
+    "old_page": 54,
+    "shape_id": 4,
+    "action": "expand_native_reference_frame",
+    "before": "height 105.970 pt",
+    "after": "height 123.970 pt",
+    "reason": "独立レビュー：文献URL全文がnative文字枠内に収まる高さへ。位置・本文・URL・書式は保持",
+    "new_page": 50
+  },
+  {
+    "old_page": 55,
+    "shape_id": 4,
+    "action": "expand_native_reference_frame",
+    "before": "height 105.970 pt",
+    "after": "height 123.970 pt",
+    "reason": "独立レビュー：文献URL全文がnative文字枠内に収まる高さへ。位置・本文・URL・書式は保持",
+    "new_page": 51
+  },
+  {
+    "old_page": 55,
+    "shape_id": 5,
+    "action": "expand_native_reference_frame",
+    "before": "height 105.970 pt",
+    "after": "height 123.970 pt",
+    "reason": "独立レビュー：文献URL全文がnative文字枠内に収まる高さへ。位置・本文・URL・書式は保持",
+    "new_page": 51
+  },
+  {
+    "old_page": 56,
+    "shape_id": 4,
+    "action": "expand_native_reference_frame",
+    "before": "height 105.970 pt",
+    "after": "height 123.970 pt",
+    "reason": "独立レビュー：文献URL全文がnative文字枠内に収まる高さへ。位置・本文・URL・書式は保持",
+    "new_page": 52
+  },
+  {
+    "old_page": 56,
+    "shape_id": 5,
+    "action": "expand_native_reference_frame",
+    "before": "height 105.970 pt",
+    "after": "height 123.970 pt",
+    "reason": "独立レビュー：文献URL全文がnative文字枠内に収まる高さへ。位置・本文・URL・書式は保持",
+    "new_page": 52
+  },
+  {
+    "old_page": 57,
+    "shape_id": 4,
+    "action": "expand_native_reference_frame",
+    "before": "height 105.970 pt",
+    "after": "height 123.970 pt",
+    "reason": "独立レビュー：文献URL全文がnative文字枠内に収まる高さへ。位置・本文・URL・書式は保持",
+    "new_page": 53
+  },
+  {
+    "old_page": 57,
+    "shape_id": 5,
+    "action": "expand_native_reference_frame",
+    "before": "height 105.970 pt",
+    "after": "height 123.970 pt",
+    "reason": "独立レビュー：文献URL全文がnative文字枠内に収まる高さへ。位置・本文・URL・書式は保持",
+    "new_page": 53
+  },
+  {
+    "old_page": 1,
+    "shape_id": 3,
+    "before": "Chinese IDiom Dataset for Cloze Test\n文脈と近義語の違いから、中国語の成語を選ぶ",
+    "after": "Chinese IDiom Dataset for Cloze Test\n文脈と類義語の違いから、中国語の成語を選ぶ",
+    "reason": "メインレビュー：日本語の章名・類義語・まとめを自然な表現へ",
+    "action": "rewrite",
+    "new_page": 1
+  },
+  {
+    "old_page": 3,
+    "shape_id": 3,
+    "before": "文章に合う成語を、候補から選ぶ\n成語の語彙・文章・候補の作り方\n空欄ごとの正解率と候補の難しさ\n原版と後利用の形式・範囲",
+    "after": "文章に合う成語を、候補から選ぶ\n成語の語彙・文章・候補の作り方\n空欄ごとの正解率と候補の難しさ\n配布形式の違いとCLEVAでの利用",
+    "reason": "メインレビュー：日本語の章名・類義語・まとめを自然な表現へ",
+    "action": "rewrite",
+    "new_page": 3
+  },
+  {
+    "old_page": 23,
+    "shape_id": 2,
+    "before": "原版と後利用の形式・範囲",
+    "after": "配布形式の違いとCLEVAでの利用",
+    "reason": "メインレビュー：日本語の章名・類義語・まとめを自然な表現へ",
+    "action": "rewrite",
+    "new_page": 22
+  },
+  {
+    "old_page": 23,
+    "shape_id": 3,
+    "before": "4. 原版と後利用の形式・範囲",
+    "after": "4. 配布形式の違いとCLEVAでの利用",
+    "reason": "メインレビュー：日本語の章名・類義語・まとめを自然な表現へ",
+    "action": "rewrite",
+    "new_page": 22
+  },
+  {
+    "old_page": 24,
+    "shape_id": 3,
+    "before": "4. 原版と後利用の形式・範囲",
+    "after": "4. 配布形式の違いとCLEVAでの利用",
+    "reason": "メインレビュー：日本語の章名・類義語・まとめを自然な表現へ",
+    "action": "rewrite",
+    "new_page": 23
+  },
+  {
+    "old_page": 25,
+    "shape_id": 3,
+    "before": "4. 原版と後利用の形式・範囲",
+    "after": "4. 配布形式の違いとCLEVAでの利用",
+    "reason": "メインレビュー：日本語の章名・類義語・まとめを自然な表現へ",
+    "action": "rewrite",
+    "new_page": 24
+  },
+  {
+    "old_page": 26,
+    "shape_id": 3,
+    "before": "4. 原版と後利用の形式・範囲",
+    "after": "4. 配布形式の違いとCLEVAでの利用",
+    "reason": "メインレビュー：日本語の章名・類義語・まとめを自然な表現へ",
+    "action": "rewrite",
+    "new_page": 25
+  },
+  {
+    "old_page": 27,
+    "shape_id": 4,
+    "before": "4. 原版と後利用の形式・範囲",
+    "after": "4. 配布形式の違いとCLEVAでの利用",
+    "reason": "メインレビュー：日本語の章名・類義語・まとめを自然な表現へ",
+    "action": "rewrite",
+    "new_page": 26
+  },
+  {
+    "old_page": 28,
+    "shape_id": 4,
+    "before": "4. 原版と後利用の形式・範囲",
+    "after": "4. 配布形式の違いとCLEVAでの利用",
+    "reason": "メインレビュー：日本語の章名・類義語・まとめを自然な表現へ",
+    "action": "rewrite",
+    "new_page": null
+  },
+  {
+    "old_page": 29,
+    "shape_id": 4,
+    "before": "4. 原版と後利用の形式・範囲",
+    "after": "4. 配布形式の違いとCLEVAでの利用",
+    "reason": "メインレビュー：日本語の章名・類義語・まとめを自然な表現へ",
+    "action": "rewrite",
+    "new_page": 27
+  },
+  {
+    "old_page": 30,
+    "shape_id": 2,
+    "before": "まとめ：成語の意味を、文脈へ対応させる",
+    "after": "まとめ：文脈に合う成語を選ぶ",
+    "reason": "メインレビュー：日本語の章名・類義語・まとめを自然な表現へ",
+    "action": "rewrite",
+    "new_page": 28
+  },
+  {
+    "old_page": 30,
+    "shape_id": 3,
+    "before": "ChID原論文版は580,807文章・728,713空欄で、正解に似た候補を含む七択を作る。成語全体の意味と、近義語の使い分けを測る読解課題。\n2019年のARの正解率はTestで72.4%、似た候補が中心のSimで66.2%。後に、十候補を共有するCLUE版や少数例学習のFewCLUE版が公開され、CLEVAの文化知識の評価にも用いられた。",
+    "after": "ChID原論文版は580,807文章・728,713空欄で、正解に似た候補を含む七択を作る。成語全体の意味と、類義語の使い分けを測る読解課題。\n2019年のARの正解率はTestで72.4%、似た候補が中心のSimで66.2%。後に、十候補を共有するCLUE版や少数例学習のFewCLUE版が公開され、CLEVAの文化知識の評価にも用いられた。",
+    "reason": "メインレビュー：日本語の章名・類義語・まとめを自然な表現へ",
+    "action": "rewrite",
+    "new_page": 28
+  },
+  {
+    "old_page": 30,
+    "shape_id": 4,
+    "before": "4. 原版と後利用の形式・範囲",
+    "after": "4. 配布形式の違いとCLEVAでの利用",
+    "reason": "メインレビュー：日本語の章名・類義語・まとめを自然な表現へ",
+    "action": "rewrite",
+    "new_page": 28
+  },
+  {
+    "old_page": 22,
+    "action": "remove_slide",
+    "before": "学習は開発集合の改善が止まるまで続ける\n3. 空欄ごとの正解率と候補の難しさ\n単語ベクトルのdropoutは0.5、勾配ノルムは5でクリップ。生成モデルへの少数例提示とは別の学習条件。\n[1] Zheng, Huang & Sun (2019). ChID: A Large-scale Chinese IDiom Dataset for Cloze Test. ACL, pp.778–787.  https://aclanthology.org/P19-1075/",
+    "before_tables": [
+      [
+        [
+          "設定",
+          "2019年の実験条件"
+        ],
+        [
+          "分かち書き・語彙",
+          "Jieba、単語語彙100,000"
+        ],
+        [
+          "単語・成語ベクトル",
+          "200次元、事前学習済み表現で初期化"
+        ],
+        [
+          "RNNの隠れユニット",
+          "100"
+        ],
+        [
+          "最適化・バッチ",
+          "Adam、学習率0.001、32例"
+        ],
+        [
+          "停止条件",
+          "Devの正解率が1 epoch改善しなければ停止"
+        ]
+      ]
+    ],
+    "after": "",
+    "reason": "学習率・隠れユニット・dropout等の再現設定を外部記録へ移す",
+    "new_page": null
+  },
+  {
+    "old_page": 28,
+    "action": "remove_slide",
+    "before": "六つの設定はあるが、CLEVAの公開実行は0件\nHELM v0.4.0のcultural_knowledge / idiomにはprompt_id 0〜5がある。外部のデータとテンプレートから入力・候補・正解参照を作る実装が用意されている。\nClassic v0.4.0の公開run_specs 8,526件にはCLEVA実行がない。全採用集合・テンプレート・推論パラメータは未取得で、実際の得点や提示例数は元データの条件から補わない。\n4. 配布形式の違いとCLEVAでの利用\n[1] Stanford CRFM. CLEVACulturalKnowledgeScenario / Converter. HELM v0.4.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py\n[2] Stanford CRFM. run_specs_cleva_v1.conf. HELM v0.4.0、cultural_knowledge / idiom設定。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/presentation/run_specs_cleva_v1.conf",
+    "before_tables": [],
+    "after": "",
+    "reason": "公開run数・prompt ID・取得状況の制作監査",
+    "new_page": null
+  },
+  {
+    "old_page": 46,
+    "action": "remove_slide",
+    "before": "文章あたり一つの空欄が、全体の約8割\nAppendix: 2. 入力の読み方と候補選び\n配布全行を集計。一空欄・複数空欄は文章数の内訳、最後の列は正解に現れる成語の種類数。\n[1] Zheng, Huang & Sun (2019). ChID — Original Data Distribution.  https://huggingface.co/datasets/thu-coai/chid/tree/main/original",
+    "before_tables": [
+      [
+        [
+          "集合",
+          "一空欄の文章",
+          "複数空欄の文章",
+          "成語の種類"
+        ],
+        [
+          "Train",
+          "418,838",
+          "101,873",
+          "3,848"
+        ],
+        [
+          "Dev",
+          "16,130",
+          "3,870",
+          "3,458"
+        ],
+        [
+          "Test",
+          "16,163",
+          "3,837",
+          "3,502"
+        ],
+        [
+          "Out",
+          "13,001",
+          "7,095",
+          "3,626"
+        ]
+      ]
+    ],
+    "after": "",
+    "reason": "分割別の細かな空欄内訳。一文章に複数空欄がある点は実例・本編に保持",
+    "new_page": null
+  },
+  {
+    "old_page": 47,
+    "action": "remove_slide",
+    "before": "同じcontentが、集合間に含まれる\nAppendix: 2. 入力の読み方と候補選び\n文章を表記どおり比較。候補まで同一の問題数ではなく、作品・作者の共有を網羅する検査でもない。\n[1] Zheng, Huang & Sun (2019). ChID — Original Data Distribution.  https://huggingface.co/datasets/thu-coai/chid/tree/main/original",
+    "before_tables": [
+      [
+        [
+          "組み合わせ",
+          "共通するcontentの種類"
+        ],
+        [
+          "Train × Dev",
+          "106"
+        ],
+        [
+          "Train × Test",
+          "110"
+        ],
+        [
+          "Train × Out",
+          "1,829"
+        ],
+        [
+          "Dev × Test",
+          "1"
+        ],
+        [
+          "Dev × Out",
+          "60"
+        ],
+        [
+          "Test × Out",
+          "85"
+        ]
+      ]
+    ],
+    "after": "",
+    "reason": "集合間の文字列共通件数表。学習とTestの重複110種類は48頁に保持",
+    "new_page": null
+  }
+]

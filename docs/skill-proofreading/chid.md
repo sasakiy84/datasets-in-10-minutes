@@ -22,3 +22,8 @@ Geminiは使用していない。Codexが日本語校正スキルをページご
 |11|正解・似た語・<br>無作為の語で七択|正解・類似語と<br>無作為の語で<br>七候補を作成|処理図のラベルを意味のまとまりで読める名詞句へ整える。|
 
 [全ページ文言](chid/pages.jsonl)・[自己検査・独立レビュー](chid/review.json)
+
+
+## 読者向けの説明・日本語の改訂（2026年10月）
+
+Geminiは使用せず、Codexがスキルで校正し、別担当が独立レビューした。削除・統合を含む[問題点と変更対](chid/editorial-2026-10/changes.md)、[旧ページとの対応](chid/editorial-2026-10/page-map.json)、[独立レビュー](chid/editorial-2026-10/independent-review/handoff.json)、[最終ページの全文](chid/pages.jsonl)。旧版の校正・検証記録は保持している。
