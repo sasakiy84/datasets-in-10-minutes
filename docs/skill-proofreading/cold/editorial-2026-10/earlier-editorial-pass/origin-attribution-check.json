@@ -1,0 +1,74 @@
+{
+  "creator": "Jiawen Deng, Jingyan Zhou, Hao Sun, Chujie Zheng, Fei Mi, Helen Meng, Minlie Huang（Tsinghua University / The Chinese University of Hong Kong / Huawei Noah’s Ark Lab）",
+  "origin": "DengらのEMNLP2022独立研究がCOLDベンチマーク、COLDataset、COLDDetectorを提案した。HELM/CLEVAが新たにCOLDコーパスを作成したものではない。",
+  "primary_url": "https://aclanthology.org/2022.emnlp-main.796/",
+  "primary_file": {
+    "path": "/workspace/artifacts/helm-parallel/cold/evidence/paper.pdf",
+    "sha256": "0f88f15ffa1400ffe55ffb1883eda2ddad3b91eee438842b49afbaf3970c6bba"
+  },
+  "primary_pages": [
+    1
+  ],
+  "evidence_quote": "we propose a benchmark – COLD for Chinese offensive language analysis, including a Chinese Offensive Language Dataset – COLDataset and a baseline detector – COLDDetector",
+  "adopter": "CLEVAが既存COLDからデータをsampleし攻撃性二択判定へ採用。HELMのCLEVAToxicityDetectionScenarioがCLEVAの変換済み課題を実装。現在の資料の2022年検出成績はDengらの論文値で、HELMモデル成績ではない。",
+  "secondary_url": "https://aclanthology.org/2023.emnlp-demo.17/",
+  "secondary_file": {
+    "path": "/workspace/artifacts/helm-parallel/cold/evidence/cleva-paper.pdf",
+    "sha256": "49412cfeff8d70fd6cae8a77d6d63e4298a51481f05b5e0847e24f9561900fd8"
+  },
+  "secondary_page": 18,
+  "secondary_quote": "We sample data from COLD (Deng et al., 2022) and choose accuracy as the metric.",
+  "code_url": "https://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py",
+  "code_file": {
+    "path": "/workspace/artifacts/helm-parallel/cold/evidence/cleva-scenario.py",
+    "sha256": "c61c19eb5ea2cf408dddf6087eb5c7715d5795c4508f23d2ccc2fc7eaf03de5e"
+  },
+  "slides": [
+    5,
+    11,
+    12,
+    18,
+    19,
+    20,
+    22,
+    23,
+    25,
+    43,
+    45,
+    46
+  ],
+  "conclusion": "誤帰属なし。元ベンチマーク/元検出器の報告値と、CLEVAによる既存発言の採用・HELM公開設問例を分離している。",
+  "slug": "cold",
+  "checked_at": "2026-10-19",
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "artifact_changes_required": false,
+  "artifact_hashes": {
+    "pptx": "50b987e18f1e0f35034fda14bfced75db4a4ffd45e0c8d06a306162e2b9249c0",
+    "pdf": "f58e7114a5c6653974272235d4080bd1adda489d19f89fc9405c95c22c635437"
+  },
+  "current_native_evidence": {
+    "5": "発言を読み、攻撃的かどうかを判定する\nCOLDは、中国語の攻撃的な言葉を検出するためのベンチマーク。発言を集めたCOLDatasetと、それを学習して分類するCOLDDetectorが提案された。\n入力は中国語の発言で、侮辱、差別、脅しなどを含むかどうかを判定する。非攻撃的なら0、攻撃的なら1というラベルが付く。\nテスト用データでは、個人への攻撃、集団への攻撃、偏見への反対、その他の非攻撃的な発言という4分類も示される。\n1. 中国語の攻撃的発言を分類する\n[1] Deng et al. (2022). COLD: A Benchmark for Chinese Offensive Language Detection. EMNLP, 11580–11599.  https://aclanthology.org/2022.emnlp-main.796/",
+    "11": "人種・性別・地域の話題から発言を集める\nZhihuやWeiboなどの中国語ソーシャルメディアから、キーワード検索と、関連する話題へのコメント収集を組み合わせた。\n人種・性別・地域の偏見に関する話題を対象とする。検索語だけでは見つけにくい表現も、話題へのコメントから集める。\n偏見に関する話題を中心に収集しているため、データ内の攻撃的な発言の割合は、インターネット全体の割合とは異なる。\n2. 収集と注釈、データの構成\n[1] Deng et al. (2022). COLD: A Benchmark for Chinese Offensive Language Detection. EMNLP, 11580–11599.  https://aclanthology.org/2022.emnlp-main.796/",
+    "12": "学習用は反復的に作成し、テストは3人で注釈\n学習用データは、500件の手動注釈から分類器を作り、分類器が付けたスコアの範囲ごとに候補を集める。データと分類器を更新する作業を6ラウンド行った。\n各範囲の約10%を人が確認し、予測精度が90%以上なら採用する。届かなければ、その範囲の全候補を人が再注釈した。\nテストでは各発言を3人が判定し、多数決で正解を決める。中国語母語話者17人が参加し、注釈者間の一致度Fleiss κは、二値分類で0.819、4分類で0.757だった。\n2. 収集と注釈、データの構成\n[1] Deng et al. (2022). COLD: A Benchmark for Chinese Offensive Language Detection. EMNLP, 11580–11599.  https://aclanthology.org/2022.emnlp-main.796/",
+    "18": "2022年のCOLDDetectorは、正答率81%\n3. 検出方法と評価結果\n2022年論文で報告された、テスト用データの二値正答率。\n[1] Deng et al. (2022). COLD: A Benchmark for Chinese Offensive Language Detection. EMNLP, 11580–11599.  https://aclanthology.org/2022.emnlp-main.796/",
+    "19": "偏見への反対は、検出器にも難しい\n3. 検出方法と評価結果\n2022年の類型別正答率。COLDDetectorの全体の正答率は81.06%。\n[1] Deng et al. (2022). COLD: A Benchmark for Chinese Offensive Language Detection. EMNLP, 11580–11599.  https://aclanthology.org/2022.emnlp-main.796/",
+    "20": "検出器は、生成文の攻撃性の分析にも使う\nCOLDDetectorは、中国語の事前学習モデルbert-base-chineseを、攻撃的・非攻撃的の二値分類に向けて微調整した検出器である。\n研究では、この検出器で中国語生成モデルの出力も分析した。生成された文章を分類することで、どのような入力条件で攻撃的な文が出やすいかを調べる。\n公式リポジトリはデータとともに、利用できる検出モデルへのリンクも公開している。\n3. 検出方法と評価結果\n[1] Deng et al. (2022). COLD: A Benchmark for Chinese Offensive Language Detection. EMNLP, 11580–11599.  https://aclanthology.org/2022.emnlp-main.796/",
+    "22": "CLEVAでは、発言を二つの選択肢で分類する\n4. 入手方法とCLEVAでの利用\n公開されている中国語の設問\n判断给定文本是否属于冒犯性言论。\n\n文本: 建议楼主有时间找家新疆馆子尝尝\nA. 非冒犯\nB. 冒犯\n答案:\n日本語訳\n次の文章が攻撃的な発言に当たるか判定してください。\n\n文章：投稿者さん、時間があれば、新疆料理の店を探して食べてみてください。\nA. 非攻撃的\nB. 攻撃的\n答え：\n正解：A（非攻撃的）\n[1] Stanford CRFM (n.d.). CLEVAToxicityDetectionScenario. HELM.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py",
+    "23": "公式リポジトリから、データと検出器を入手\nCOLDatasetの公式GitHubリポジトリで、学習用・開発用・テスト用のCSVと、検出モデルへのリンクが公開されている。リポジトリのライセンスはApache License 2.0である。\nCLEVAでもCOLD由来の発言を二択の攻撃性判定に利用している。評価対象の全発言や抽出方法の詳細は、公開資料では明らかになっていない。\n4. 入手方法とCLEVAでの利用\n[1] Deng et al. (n.d.). COLDataset. GitHub.  https://github.com/thu-coai/COLDataset\n[2] Li et al. (2023). CLEVA: Chinese Language Models EVAluation Platform. EMNLP System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/",
+    "25": "発言の文脈を捉え、中国語の攻撃性を検出する\nCOLDatasetは、中国語の攻撃的な発言を分類するためのデータ。ソーシャルメディアの人種・性別・地域に関する話題から集めた37,480件を公開している。\n非攻撃的・攻撃的の二値に加え、テストでは攻撃対象と偏見への反対も分類する。批判や皮肉、差別に反対する表現など、文脈を踏まえた解釈が必要になる。\nCOLDDetectorの学習・評価や、CLEVAでの選択式評価に使われ、中国語生成モデルの攻撃的な出力を調べる研究にも利用されている。\n4. 入手方法とCLEVAでの利用\n[1] Deng et al. (2022). COLD: A Benchmark for Chinese Offensive Language Detection. EMNLP, 11580–11599.  https://aclanthology.org/2022.emnlp-main.796/",
+    "43": "正答率とmacro F1の報告値\nAppendix: 2. データと評価の補足\n2022年論文で報告された、二値分類の正答率とmacro F1。\n[1] Deng et al. (2022). COLD: A Benchmark for Chinese Offensive Language Detection. EMNLP, 11580–11599.  https://aclanthology.org/2022.emnlp-main.796/",
+    "45": "参考文献\nAppendix: 3. 参考文献\nCOLD: A Benchmark for Chinese Offensive Language Detection\nDeng, Zhou, Sun, Zheng, Mi, Meng & Huang · 2022 · EMNLP 11580–11599\n中国語データ、検出器、生成モデル分析を報告する正式論文。\nhttps://aclanthology.org/2022.emnlp-main.796/\nCOLDataset: official repository and data\nthu-coai / Deng et al. · n.d. · GitHub\n公式3 CSV、二値と詳細ラベルの説明、検出モデルへのリンクを公開する。\nhttps://github.com/thu-coai/COLDataset",
+    "46": "参考文献\nAppendix: 3. 参考文献\nCLEVA: Chinese Language Models EVAluation Platform\nLi et al. · 2023 · EMNLP System Demonstrations\n中国語モデルを多様な課題で評価する枠組み。COLDを使った攻撃的な発言の分類も扱う。\nhttps://aclanthology.org/2023.emnlp-demo.17/\nCLEVAToxicityDetectionScenario and Converter\nStanford CRFM · HELM v0.4.0\n発言を二択で分類する公開設問例と、評価データの読み込み方法を示す実装。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py"
+  },
+  "original_data_not_created_by_HELM": true,
+  "public_adapted_evaluation_coverage_not_assumed": true,
+  "status": "verified_no_misattribution",
+  "evidence_quote_normalized_for_typographic_linebreaks": true,
+  "independent_review": {
+    "status": "passed",
+    "approved": true,
+    "reviewer": "create_twitter",
+    "path": "../review-cold/origin-attribution-check.json"
+  }
+}

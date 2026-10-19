@@ -27,25 +27,25 @@
     5,
     11,
     12,
+    13,
+    14,
+    17,
     18,
     19,
     20,
     22,
-    23,
-    25,
-    43,
-    45,
-    46
+    24,
+    44
   ],
-  "conclusion": "誤帰属なし。元ベンチマーク/元検出器の報告値と、CLEVAによる既存発言の採用・HELM公開設問例を分離している。",
+  "conclusion": "COLDataset and COLDDetector were created by Deng and coauthors. The current reader deck explains their original collection, annotation, detector evaluation and use. Evaluation-platform adoption and converted prompt are external history.",
   "slug": "cold",
   "checked_at": "2026-10-19",
   "method": "skill_based_codex",
   "gemini_used": false,
   "artifact_changes_required": false,
   "artifact_hashes": {
-    "pptx": "50b987e18f1e0f35034fda14bfced75db4a4ffd45e0c8d06a306162e2b9249c0",
-    "pdf": "f58e7114a5c6653974272235d4080bd1adda489d19f89fc9405c95c22c635437"
+    "pptx": "d3c8f8560ce14194e4ae472620a2ddffa23841d1f444329752bd96d71293dc5d",
+    "pdf": "7f36ab92f5fa125cfed9dfa79e3bf08664964aeeba5560b85e5ea93ecf4588c0"
   },
   "current_native_evidence": {
     "5": "発言を読み、攻撃的かどうかを判定する\nCOLDは、中国語の攻撃的な言葉を検出するためのベンチマーク。発言を集めたCOLDatasetと、それを学習して分類するCOLDDetectorが提案された。\n入力は中国語の発言で、侮辱、差別、脅しなどを含むかどうかを判定する。非攻撃的なら0、攻撃的なら1というラベルが付く。\nテスト用データでは、個人への攻撃、集団への攻撃、偏見への反対、その他の非攻撃的な発言という4分類も示される。\n1. 中国語の攻撃的発言を分類する\n[1] Deng et al. (2022). COLD: A Benchmark for Chinese Offensive Language Detection. EMNLP, 11580–11599.  https://aclanthology.org/2022.emnlp-main.796/",
@@ -70,5 +70,10 @@
     "approved": true,
     "reviewer": "create_twitter",
     "path": "../review-cold/origin-attribution-check.json"
-  }
+  },
+  "final_hashes": {
+    "pptx": "d3c8f8560ce14194e4ae472620a2ddffa23841d1f444329752bd96d71293dc5d",
+    "pdf": "7f36ab92f5fa125cfed9dfa79e3bf08664964aeeba5560b85e5ea93ecf4588c0"
+  },
+  "latest_original_dataset_focus": "Adoption/altered binary prompt outside reader deck; original2022 COLDataset/COLDDetector and original evaluation remain."
 }

@@ -2,12 +2,11 @@
   "reviewer": "main",
   "method": "skill_based_codex",
   "gemini_used": false,
-  "checked_at": "2026-10-19T07:57:30.268920+00:00",
   "artifact_sha256": {
-    "pptx": "50b987e18f1e0f35034fda14bfced75db4a4ffd45e0c8d06a306162e2b9249c0",
-    "pdf": "f58e7114a5c6653974272235d4080bd1adda489d19f89fc9405c95c22c635437"
+    "pptx": "d3c8f8560ce14194e4ae472620a2ddffa23841d1f444329752bd96d71293dc5d",
+    "pdf": "7f36ab92f5fa125cfed9dfa79e3bf08664964aeeba5560b85e5ea93ecf4588c0"
   },
-  "initial_native_text_read_pages": [
+  "current_native_text_read_pages": [
     1,
     2,
     3,
@@ -51,35 +50,104 @@
     41,
     42,
     43,
-    44,
-    45,
-    46
+    44
   ],
   "actual_individually_viewed_pages": [
     7,
-    8,
-    12,
-    13,
-    18,
-    20,
-    24,
-    34,
-    38,
-    41,
-    43,
-    46
+    18
   ],
-  "checks": {
-    "all13_chinese_japanese_examples_and_labels_read": true,
-    "ambiguous_source_labels_preserved": true,
-    "binary_vs_detailed_labels_explained": true,
-    "fine_hyperparameters_removed": true,
-    "meaningful_annotation_method_and_file_split_inconsistency_preserved": true
-  },
-  "findings": "全46頁本文・表を読み、代表10頁描画を確認。攻撃的か否かと攻撃対象・偏見への反対を整理。ラベルと読者の判断が異なり得る実例を保持し、同文のラベル不一致も簡潔に説明。学習ハイパーパラメータは外部に移し、実際にCSVを読む例を提示。p8訳とp20助詞の局所修正を依頼。 p8は一人から地域全体への一般化を自然な訳にし、p20は二値分類に向けて微調整したと修正。最終2頁の描画を確認。",
   "remaining_issues": [],
-  "final_recheck_pages": [
-    8,
-    20
-  ]
+  "dataset_centered_review": {
+    "quality_prompt": 116,
+    "approved": true,
+    "full_native_text_read": true,
+    "selection_platform_sections_removed": true,
+    "origin_verified": true,
+    "finding": "COLDatasetとCOLDDetectorの目的、収集/注釈、二値と詳細4分類、原研究の検出性能と実データ利用を中心に再構成。44頁の全native本文・7表・原評価グラフ値、13全原文/訳/ラベルを通読。地名や性別の語だけでは分類が決まらない点、偏見への反対と個人批判の重なり、同文の分割共有/異ラベルを保持。"
+  },
+  "earlier_main_review": {
+    "reviewer": "main",
+    "method": "skill_based_codex",
+    "gemini_used": false,
+    "checked_at": "2026-10-19T07:57:30.268920+00:00",
+    "artifact_sha256": {
+      "pptx": "50b987e18f1e0f35034fda14bfced75db4a4ffd45e0c8d06a306162e2b9249c0",
+      "pdf": "f58e7114a5c6653974272235d4080bd1adda489d19f89fc9405c95c22c635437"
+    },
+    "initial_native_text_read_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "actual_individually_viewed_pages": [
+      7,
+      8,
+      12,
+      13,
+      18,
+      20,
+      24,
+      34,
+      38,
+      41,
+      43,
+      46
+    ],
+    "checks": {
+      "all13_chinese_japanese_examples_and_labels_read": true,
+      "ambiguous_source_labels_preserved": true,
+      "binary_vs_detailed_labels_explained": true,
+      "fine_hyperparameters_removed": true,
+      "meaningful_annotation_method_and_file_split_inconsistency_preserved": true
+    },
+    "findings": "全46頁本文・表を読み、代表10頁描画を確認。攻撃的か否かと攻撃対象・偏見への反対を整理。ラベルと読者の判断が異なり得る実例を保持し、同文のラベル不一致も簡潔に説明。学習ハイパーパラメータは外部に移し、実際にCSVを読む例を提示。p8訳とp20助詞の局所修正を依頼。 p8は一人から地域全体への一般化を自然な訳にし、p20は二値分類に向けて微調整したと修正。最終2頁の描画を確認。",
+    "remaining_issues": [],
+    "final_recheck_pages": [
+      8,
+      20
+    ]
+  }
 }
