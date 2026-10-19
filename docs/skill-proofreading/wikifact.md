@@ -14,3 +14,8 @@ Geminiは使用していない。Codexが日本語校正スキルをページご
 |7|トマス・N・スコルティア／フランク・M・ロビンソン|Thomas N. Scortia<br>Frank M. Robinson|日本語の定訳を未確認の作者名は原綴りで示し、二人を意味単位で改行する。|
 
 [全ページ文言](wikifact/pages.jsonl)・[自己検査・独立レビュー](wikifact/review.json)
+
+
+## 読者向けの説明・日本語の改訂（2026年10月）
+
+Geminiは使用せず、Codexがスキルで校正し、別担当が独立レビューした。削除・統合を含む[問題点と変更対](wikifact/editorial-2026-10/changes.md)、[旧ページとの対応](wikifact/editorial-2026-10/page-map.json)、[独立レビュー](wikifact/editorial-2026-10/independent-review/handoff.json)、[最終ページの全文](wikifact/pages.jsonl)。旧版の校正・検証記録は保持している。
