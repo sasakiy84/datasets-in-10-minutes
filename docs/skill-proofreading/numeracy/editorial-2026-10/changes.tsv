@@ -1,0 +1,351 @@
+"old_page"	"new_page"	"location"	"reason"	"before"	"after"
+"1"	"1"	"shape 1"	"評価プラットフォーム名でなく、何を推論する課題かを表紙に示す"	"HELMの多項式帰納シナリオ
+入出力の例から数の規則を推測する"	"多項式の規則推論
+入出力の例から、未知の値を予測する"
+"5"	"4"	"shape 1"	"元研究の作成主体を一度自然に示し、固定配布文章集でなく生成課題として定義"	"Numeracyは、HELMで導入された人工生成の数値推論課題。入力と出力の組から式を推測する。
+モデルには数値の組を示し、新しい入力に対応する値を出力させる。式そのものは入力に書かない。
+ここでは、公開コードv0.3.0の生成器をseed=0で実行し、生成された実際のレコードを使う。"	"Numeracyは、入力と出力の数値の組から多項式の規則を推測し、新しい入力に対応する値を答える人工生成課題である。
+Stanford CRFMを中心とする研究チームが2022年に設計した。公開生成器で式の係数と入力点を選び、学習用・評価用の数値を作る。
+モデルには数値の対応を見せる。式そのものは示さず、新しい入力に対する数値を予測させる。"
+"6"	"5"	"shape 0"	"訓練レコード/プロンプトの内部語より入力出力の意味を説明"	"訓練レコードをプロンプトの例に使う"	"数値の対応を見せ、別の入力の答えを尋ねる"
+"6"	"5"	"shape 1"	"1試行や内部adapterの設定を外部化。表示範囲/100組/正解の意味を保持"	"数値の対応を見せるtrainと、予測対象にするtestを生成する。関数を推測するための例をプロンプトに示す。
+standard／exampleの設定では、訓練例は最大100件、評価は100件、1試行。
+以下のページには、訓練100件の連続した冒頭4〜6件と、test入力1件の全文を示す。"	"学習用の数値の組と、予測対象にする評価用の入力を生成する。モデルは、提示された入出力例を手掛かりに規則を推測する。
+次の実例では、学習用100組から抜粋した4〜6組と、評価用の入力1件を示す。各例の正解は、生成時に保存された式から計算できる。"
+"8"	"7"	"shape 1"	"参照メタデータの保存という工程を、規則推論の意味へ"	"この生成例の参照式はy=4x+4。x=15なら、4×15+4=64になる。
+入力として渡すのは、−82→−324、70→284などの値の組で、参照式は採点・検証用のメタデータに保存される。
+数字の並びから規則を推測し、新しい点へ適用することを測る。"	"この例を生成した式はy=4x+4。x=15なら、4×15+4=64になる。
+モデルに見せるのは、−82→−324、70→284などの数値の対応である。例の間で共通する規則を見つけ、新しい入力へ適用する。"
+"12"	"11"	"shape 1"	"文字列形式を繰り返す説明を、変数を増やした推論の意味へ"	"この例はz=4x+4y+1。x=6、y=7を代入すると53になる。
+入力の文字列は「6, 7」、正解の文字列は「53」。モデルは出力する数値だけを生成する。
+二つの変数を持つ一次式と、二次式までの4種類を用意している。"	"この例を生成した式はz=4x+4y+1。x=6、y=7を代入すると53になる。
+一つの入力が二つの値を持つため、xとyが出力にどう影響するかを、数値の組から推測する。
+一次・二次、1変数・2変数を組み合わせた4種類の式を用意している。"
+"15"	"14"	"shape 1"	"乱数初期化の細部より、規則と数値の組を作る設計へ"	"各関数型に係数の範囲を決め、PythonとNumPyの乱数を同じseedで初期化する。
+最高次数、変数の数、非ゼロの定数項を満たす式ができるまで抽選する。
+生成した式に入力点を代入し、出力の整数値と、参照式・関数型をレコードへ保存する。"	"式の種類ごとに、整数の係数を選ぶ範囲を決める。必要な次数と変数の数を持ち、定数項が0でない式を作る。
+式に整数の入力点を代入し、対応する出力を計算する。学習用と評価用は同じ式から作る。
+係数を固定した式で試す方法と、範囲内から係数を抽選して別の式を作る方法がある。"
+"16"	"15"	"shape 1"	"overlapの内部引数名を外し、入力領域と分割条件の意味を保持"	"linearは−100〜100、parabolaは0〜200の整数を使う。二次式の入力は非負にしている。
+planeはx・yが−10〜10、paraboloidは0〜20。さらに2変数ではx≤yの点だけを残す。
+overlap=Trueは訓練とtestの入力範囲を共通にする設定。訓練用と評価用の点は重複しない。"	"公開生成器の標準設定では、linearは−100〜100、parabolaは0〜200の整数を使う。二次式の入力は非負にしている。
+planeは二つの変数が−10〜10、paraboloidは0〜20の整数を使う。どちらもxがy以下となる点を選ぶ。
+学習用と評価用を同じ領域から選び、同じ入力点が両方に入らないようにする。"
+"17"	"16"	"shape 5"	"seed/modeの監査ラベルを外部化し、散布図の対象を自然に説明"	"plane／standard／seed=0。訓練100点、test 100点。候補は231点。"	"planeの生成例。学習100点、評価100点を、231候補点から選ぶ。"
+"19"	"17"	"shape 3"	"TODOや4型実行照合の工程を外部化。利用上の未実装条件は簡潔に保持"	"各型・seed=0を実行して確認。function内の生成処理はTODOとreturn []が残る。"	"公開生成器v0.3.0。functionモードの生成処理は未実装である。"
+"21"	"19"	"shape 1"	"HELMの指標キー/文字正規化/整数変換の細部を外部化し、正答率と数値誤差の意味へ"	"既定ではexact_match、正規化してから比べるquasi_exact_match、絶対誤差を測るabsolute_value_differenceを使う。
+exact_matchは正解文字列と一致すれば1、違えば0。absolute_value_differenceは、整数として解釈した予測値と正解値の差の絶対値。
+入力ごとの値を集計する。絶対誤差は小さいほどよく、完全に一致する予測なら0になる。"	"予測した整数が正解と一致する割合で、規則を正しく適用できたかを見る。数値としてどれほど近いかは、予測値と正解値の差の絶対値で測れる。
+絶対誤差 = |予測値 − 正解値|
+実例1の正解64に対して65を出力すると、一致せず、絶対誤差は1になる。出力の大きさが式ごとに異なるため、式の種類や入力範囲と合わせて評価する。"
+"21"	"19"	"shape 0"	"内部metric名でなく数値予測の評価を説明"	"正解の文字列と数値のずれを採点する"	"正答率と、予測値のずれで評価する"
+"28"	"21"	"shape 0"	"切り分けるという読者への指示を、実験で変えられる条件へ"	"規則の推測と適用を切り分けて調べる"	"例の数や入力範囲を変えて、推論を調べる"
+"28"	"21"	"shape 1"	"対象の使い方を具体的に示し、実行監査ではなく実験設計へつなげる"	"一つの式に多くの入出力例を与え、未知の入力点へ適用できるかを調べる。
+入力範囲、係数範囲、訓練例の数、表示順序を固定すると、数値の規則への適合を比較する評価を組める。
+答えの規模によって、同じ割合のずれでも絶対誤差が変わる。関数型と出力範囲も結果と対応させる。"	"一つの式について、学習用の例を何組見せれば、新しい入力に正しく答えられるかを調べられる。
+係数の範囲、入力の範囲、例の数や並び順を決めると、モデルを同じ条件で比較できる。
+1変数から2変数へ、一次式から二次式へと、規則の形を変えて推論の違いを見ることもできる。"
+"29"	"22"	"shape 2"	"200件の長さを確認するだけのコードを、実際の入力と正解を読む生成例へ"	"scenario = NumeracyScenario(
+    relation_type=""linear"",
+    mode=""standard"", seed=0
+)
+records = scenario.get_instances(""output"")
+len(records)  # 200"	"task = NumeracyScenario(
+    relation_type=""linear"", mode=""standard"", seed=0
+)
+records = task.get_instances(""output"")
+example = next(r for r in records if r.split == ""test"")
+print(example.input.text)
+print(example.references[0].output.text)"
+"29"	"22"	"shape 3"	"プラットフォーム名でなく、実行前提とコードの役割を説明"	"HELM v0.3.0のNumeracyScenarioを読み込んだ後の例。train 100件とtest 100件が返る。"	"公開生成器のNumeracyScenarioを読み込んだ後の例。学習用・評価用の数値を作り、最初の評価入力と正解を表示する。"
+"31"	"23"	"shape 1"	"固定文章データではないという重ねた否定を外し、生成器の利用方法と再現条件を簡潔に示す"	"HELMのコードはApache License 2.0で公開されている。Numeracyの入力と正解は、このコードが人工的に生成する。
+人が書いた問題文や既存Web文章のコレクションをダウンロードする課題ではない。
+公式リポジトリのv0.3.0を選び、生成器と採点実装を同じバージョンでそろえて使う。"	"公開生成器はApache License 2.0で提供される。式の種類、係数を選ぶ方法、乱数のseedを指定して、数値の組と正解を作れる。
+同じ数値を再現するときは、生成器のバージョンと実行環境も記録する。ここで示す実例はv0.3.0の生成器を使っている。"
+"32"	"24"	"shape 1"	"公開run有無/指標実装の細部を外し、課題の目的と使い方をまとめる"	"Numeracyは、一次・二次、1変数・2変数の多項式を使い、例から規則を推測して新しい入力へ適用する課題。
+既定の採点には文字列一致と絶対誤差があり、整数として読めない出力の扱いも得点に影響する。
+Classic v0.4.0には公開モデル成績がない。動作するexample／standardの生成器から、条件を固定して評価を組み立てられる。"	"Numeracyは、多項式から作った入出力の例を見せ、未知の入力に対応する数値を予測させる課題である。
+一次・二次、1変数・2変数の式を使い、既知の計算式を直接与えずに、数の対応から規則を見つけられるかを調べる。
+生成器の条件をそろえることで、正答率や数値誤差を使った比較実験を組み立てられる。"
+"48"	"38"	"shape 1"	"独自IDやメタデータ混入禁止文を外し、実レコードを読むための構造を説明"	"referencesの先頭は数値の正解で、correctタグが付く。次にsolutionタグの参照式、classタグの関数型が入る。
+モデルの入力はinput.textにある整数の列。採点と検証に使う参照式は、通常の入出力例の文章に混ぜない。
+実例のIDは、関数型・モード・seed・test配列内の位置を組み合わせた、この資料での識別子。"	"生成した各問題には、入力の整数列と、数値の正解が含まれる。参照式と式の種類も、正解を確かめるために保存される。
+入力はinput.text、参照はreferencesに入る。correctタグは数値の正解、solutionは参照式、classは式の種類を表す。"
+"7"	"6"	"shape 3"	"先頭/連続の照合手順は外部記録へ。学習用の母集団と表示数を簡潔に保持"	"原データ：訓練100件の先頭4件（連続）"	"学習用100組から4組を抜粋"
+"7"	"6"	"shape 2"	"seed/配列位置/内部modeの監査ラベルを外部記録へ"	"linear / mode=standard / seed=0 / test[0]"	"式の種類：linear"
+"7"	"6"	"shape 5"	"testレコードという実装語を自然なラベルへ"	"予測対象：testレコードの入力（全文）"	"予測する入力"
+"7"	"6"	"shape 9"	"参照メタデータ/入力に含めないという反復を具体的な役割へ"	"参照メタデータ（入力には含めない）"	"正解の計算に使う式"
+"9"	"8"	"shape 3"	"先頭/連続の照合手順は外部記録へ。学習用の母集団と表示数を簡潔に保持"	"原データ：訓練100件の先頭4件（連続）"	"学習用100組から4組を抜粋"
+"9"	"8"	"shape 2"	"seed/配列位置/内部modeの監査ラベルを外部記録へ"	"parabola / mode=standard / seed=0 / test[0]"	"式の種類：parabola"
+"9"	"8"	"shape 5"	"testレコードという実装語を自然なラベルへ"	"予測対象：testレコードの入力（全文）"	"予測する入力"
+"9"	"8"	"shape 9"	"参照メタデータ/入力に含めないという反復を具体的な役割へ"	"参照メタデータ（入力には含めない）"	"正解の計算に使う式"
+"11"	"10"	"shape 3"	"先頭/連続の照合手順は外部記録へ。学習用の母集団と表示数を簡潔に保持"	"原データ：訓練100件の先頭6件（連続）"	"学習用100組から6組を抜粋"
+"11"	"10"	"shape 2"	"seed/配列位置/内部modeの監査ラベルを外部記録へ"	"plane / mode=standard / seed=0 / test[0]"	"式の種類：plane"
+"11"	"10"	"shape 5"	"testレコードという実装語を自然なラベルへ"	"予測対象：testレコードの入力（全文）"	"予測する入力"
+"11"	"10"	"shape 9"	"参照メタデータ/入力に含めないという反復を具体的な役割へ"	"参照メタデータ（入力には含めない）"	"正解の計算に使う式"
+"35"	"27"	"shape 3"	"先頭/連続の照合手順は外部記録へ。学習用の母集団と表示数を簡潔に保持"	"原データ：訓練100件の先頭6件（連続）"	"学習用100組から6組を抜粋"
+"35"	"27"	"shape 2"	"seed/配列位置/内部modeの監査ラベルを外部記録へ"	"paraboloid / mode=standard / seed=0 / test[0]"	"式の種類：paraboloid"
+"35"	"27"	"shape 5"	"testレコードという実装語を自然なラベルへ"	"予測対象：testレコードの入力（全文）"	"予測する入力"
+"35"	"27"	"shape 9"	"参照メタデータ/入力に含めないという反復を具体的な役割へ"	"参照メタデータ（入力には含めない）"	"正解の計算に使う式"
+"36"	"28"	"shape 3"	"先頭/連続の照合手順は外部記録へ。学習用の母集団と表示数を簡潔に保持"	"原データ：訓練100件の先頭4件（連続）"	"学習用100組から4組を抜粋"
+"36"	"28"	"shape 2"	"seed/配列位置/内部modeの監査ラベルを外部記録へ"	"linear / mode=example / seed=0 / test[0]"	"式の種類：linear"
+"36"	"28"	"shape 5"	"testレコードという実装語を自然なラベルへ"	"予測対象：testレコードの入力（全文）"	"予測する入力"
+"36"	"28"	"shape 9"	"参照メタデータ/入力に含めないという反復を具体的な役割へ"	"参照メタデータ（入力には含めない）"	"正解の計算に使う式"
+"37"	"29"	"shape 3"	"先頭/連続の照合手順は外部記録へ。学習用の母集団と表示数を簡潔に保持"	"原データ：訓練100件の先頭4件（連続）"	"学習用100組から4組を抜粋"
+"37"	"29"	"shape 2"	"seed/配列位置/内部modeの監査ラベルを外部記録へ"	"parabola / mode=example / seed=0 / test[0]"	"式の種類：parabola"
+"37"	"29"	"shape 5"	"testレコードという実装語を自然なラベルへ"	"予測対象：testレコードの入力（全文）"	"予測する入力"
+"37"	"29"	"shape 9"	"参照メタデータ/入力に含めないという反復を具体的な役割へ"	"参照メタデータ（入力には含めない）"	"正解の計算に使う式"
+"38"	"30"	"shape 3"	"先頭/連続の照合手順は外部記録へ。学習用の母集団と表示数を簡潔に保持"	"原データ：訓練100件の先頭6件（連続）"	"学習用100組から6組を抜粋"
+"38"	"30"	"shape 2"	"seed/配列位置/内部modeの監査ラベルを外部記録へ"	"plane / mode=example / seed=0 / test[0]"	"式の種類：plane"
+"38"	"30"	"shape 5"	"testレコードという実装語を自然なラベルへ"	"予測対象：testレコードの入力（全文）"	"予測する入力"
+"38"	"30"	"shape 9"	"参照メタデータ/入力に含めないという反復を具体的な役割へ"	"参照メタデータ（入力には含めない）"	"正解の計算に使う式"
+"39"	"31"	"shape 3"	"先頭/連続の照合手順は外部記録へ。学習用の母集団と表示数を簡潔に保持"	"原データ：訓練100件の先頭6件（連続）"	"学習用100組から6組を抜粋"
+"39"	"31"	"shape 2"	"seed/配列位置/内部modeの監査ラベルを外部記録へ"	"paraboloid / mode=example / seed=0 / test[0]"	"式の種類：paraboloid"
+"39"	"31"	"shape 5"	"testレコードという実装語を自然なラベルへ"	"予測対象：testレコードの入力（全文）"	"予測する入力"
+"39"	"31"	"shape 9"	"参照メタデータ/入力に含めないという反復を具体的な役割へ"	"参照メタデータ（入力には含めない）"	"正解の計算に使う式"
+"40"	"32"	"shape 3"	"先頭/連続の照合手順は外部記録へ。学習用の母集団と表示数を簡潔に保持"	"原データ：訓練100件の先頭4件（連続）"	"学習用100組から4組を抜粋"
+"40"	"32"	"shape 2"	"seed/配列位置/内部modeの監査ラベルを外部記録へ"	"linear / mode=standard / seed=0 / test[1]"	"式の種類：linear"
+"40"	"32"	"shape 5"	"testレコードという実装語を自然なラベルへ"	"予測対象：testレコードの入力（全文）"	"予測する入力"
+"40"	"32"	"shape 9"	"参照メタデータ/入力に含めないという反復を具体的な役割へ"	"参照メタデータ（入力には含めない）"	"正解の計算に使う式"
+"41"	"33"	"shape 3"	"先頭/連続の照合手順は外部記録へ。学習用の母集団と表示数を簡潔に保持"	"原データ：訓練100件の先頭4件（連続）"	"学習用100組から4組を抜粋"
+"41"	"33"	"shape 2"	"seed/配列位置/内部modeの監査ラベルを外部記録へ"	"parabola / mode=standard / seed=0 / test[1]"	"式の種類：parabola"
+"41"	"33"	"shape 5"	"testレコードという実装語を自然なラベルへ"	"予測対象：testレコードの入力（全文）"	"予測する入力"
+"41"	"33"	"shape 9"	"参照メタデータ/入力に含めないという反復を具体的な役割へ"	"参照メタデータ（入力には含めない）"	"正解の計算に使う式"
+"42"	"34"	"shape 3"	"先頭/連続の照合手順は外部記録へ。学習用の母集団と表示数を簡潔に保持"	"原データ：訓練100件の先頭6件（連続）"	"学習用100組から6組を抜粋"
+"42"	"34"	"shape 2"	"seed/配列位置/内部modeの監査ラベルを外部記録へ"	"plane / mode=standard / seed=0 / test[1]"	"式の種類：plane"
+"42"	"34"	"shape 5"	"testレコードという実装語を自然なラベルへ"	"予測対象：testレコードの入力（全文）"	"予測する入力"
+"42"	"34"	"shape 9"	"参照メタデータ/入力に含めないという反復を具体的な役割へ"	"参照メタデータ（入力には含めない）"	"正解の計算に使う式"
+"43"	"35"	"shape 3"	"先頭/連続の照合手順は外部記録へ。学習用の母集団と表示数を簡潔に保持"	"原データ：訓練100件の先頭6件（連続）"	"学習用100組から6組を抜粋"
+"43"	"35"	"shape 2"	"seed/配列位置/内部modeの監査ラベルを外部記録へ"	"paraboloid / mode=standard / seed=0 / test[1]"	"式の種類：paraboloid"
+"43"	"35"	"shape 5"	"testレコードという実装語を自然なラベルへ"	"予測対象：testレコードの入力（全文）"	"予測する入力"
+"43"	"35"	"shape 9"	"参照メタデータ/入力に含めないという反復を具体的な役割へ"	"参照メタデータ（入力には含めない）"	"正解の計算に使う式"
+"44"	"36"	"shape 3"	"先頭/連続の照合手順は外部記録へ。学習用の母集団と表示数を簡潔に保持"	"原データ：訓練100件の先頭4件（連続）"	"学習用100組から4組を抜粋"
+"44"	"36"	"shape 2"	"seed/配列位置/内部modeの監査ラベルを外部記録へ"	"linear / mode=standard / seed=0 / test[2]"	"式の種類：linear"
+"44"	"36"	"shape 5"	"testレコードという実装語を自然なラベルへ"	"予測対象：testレコードの入力（全文）"	"予測する入力"
+"44"	"36"	"shape 9"	"参照メタデータ/入力に含めないという反復を具体的な役割へ"	"参照メタデータ（入力には含めない）"	"正解の計算に使う式"
+"5"	"4"	"footer"	"出典は通常の文献・コード情報とし、プラットフォーム名の反復と実行環境監査を外部化"	"[1] Liang et al. (2023). Holistic Evaluation of Language Models. TMLR.  https://arxiv.org/abs/2211.09110
+[2] Stanford CRFM. NumeracyScenario, HELM v0.3.0.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"	"[1] Liang et al. (2023). Holistic Evaluation of Language Models. TMLR.  https://arxiv.org/abs/2211.09110
+[2] Stanford CRFM. NumeracyScenario（v0.3.0）。  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"
+"6"	"5"	"footer"	"出典は通常の文献・コード情報とし、プラットフォーム名の反復と実行環境監査を外部化"	"[1] Stanford CRFM. NumeracyScenario, HELM v0.3.0.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py
+[2] Stanford CRFM. get_numeracy_spec, HELM v0.3.0.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/run_specs.py"	"[1] Stanford CRFM. NumeracyScenario（v0.3.0）。  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py
+[2] Stanford CRFM. get_numeracy_spec（v0.3.0）。  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/run_specs.py"
+"7"	"6"	"footer"	"出典は通常の文献・コード情報とし、プラットフォーム名の反復と実行環境監査を外部化"	"[1] HELM v0.3.0の公式生成器をseed=0で実行。Python 3.12 / NumPy 2.3.5。
+https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"	"[1] Stanford CRFM. NumeracyScenario（v0.3.0）。 
+https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"
+"8"	"7"	"footer"	"出典は通常の文献・コード情報とし、プラットフォーム名の反復と実行環境監査を外部化"	"[1] HELM v0.3.0の公式生成器をseed=0で実行。Python 3.12 / NumPy 2.3.5。
+https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"	"[1] Stanford CRFM. NumeracyScenario（v0.3.0）。 
+https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"
+"9"	"8"	"footer"	"出典は通常の文献・コード情報とし、プラットフォーム名の反復と実行環境監査を外部化"	"[1] HELM v0.3.0の公式生成器をseed=0で実行。Python 3.12 / NumPy 2.3.5。
+https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"	"[1] Stanford CRFM. NumeracyScenario（v0.3.0）。 
+https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"
+"10"	"9"	"footer"	"出典は通常の文献・コード情報とし、プラットフォーム名の反復と実行環境監査を外部化"	"[1] HELM v0.3.0の公式生成器をseed=0で実行。Python 3.12 / NumPy 2.3.5。
+https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"	"[1] Stanford CRFM. NumeracyScenario（v0.3.0）。 
+https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"
+"11"	"10"	"footer"	"出典は通常の文献・コード情報とし、プラットフォーム名の反復と実行環境監査を外部化"	"[1] HELM v0.3.0の公式生成器をseed=0で実行。Python 3.12 / NumPy 2.3.5。
+https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"	"[1] Stanford CRFM. NumeracyScenario（v0.3.0）。 
+https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"
+"12"	"11"	"footer"	"出典は通常の文献・コード情報とし、プラットフォーム名の反復と実行環境監査を外部化"	"[1] HELM v0.3.0の公式生成器をseed=0で実行。Python 3.12 / NumPy 2.3.5。
+https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"	"[1] Stanford CRFM. NumeracyScenario（v0.3.0）。 
+https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"
+"14"	"13"	"footer"	"出典は通常の文献・コード情報とし、プラットフォーム名の反復と実行環境監査を外部化"	"[1] Stanford CRFM. NumeracyScenario, HELM v0.3.0.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"	"[1] Stanford CRFM. NumeracyScenario（v0.3.0）。  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"
+"15"	"14"	"footer"	"出典は通常の文献・コード情報とし、プラットフォーム名の反復と実行環境監査を外部化"	"[1] Stanford CRFM. NumeracyScenario, HELM v0.3.0.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"	"[1] Stanford CRFM. NumeracyScenario（v0.3.0）。  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"
+"16"	"15"	"footer"	"出典は通常の文献・コード情報とし、プラットフォーム名の反復と実行環境監査を外部化"	"[1] Stanford CRFM. NumeracyScenario, HELM v0.3.0.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"	"[1] Stanford CRFM. NumeracyScenario（v0.3.0）。  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"
+"17"	"16"	"footer"	"出典は通常の文献・コード情報とし、プラットフォーム名の反復と実行環境監査を外部化"	"[1] HELM v0.3.0の公式生成器をseed=0で実行。Python 3.12 / NumPy 2.3.5。
+https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"	"[1] Stanford CRFM. NumeracyScenario（v0.3.0）。 
+https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"
+"19"	"17"	"footer"	"出典は通常の文献・コード情報とし、プラットフォーム名の反復と実行環境監査を外部化"	"[1] Stanford CRFM. NumeracyScenario, HELM v0.3.0.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"	"[1] Stanford CRFM. NumeracyScenario（v0.3.0）。  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"
+"21"	"19"	"footer"	"出典は通常の文献・コード情報とし、プラットフォーム名の反復と実行環境監査を外部化"	"[1] Stanford CRFM. get_numeracy_spec, HELM v0.3.0.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/run_specs.py
+[2] Stanford CRFM. BasicMetric, HELM v0.3.0.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/metrics/basic_metrics.py"	"[1] Stanford CRFM. get_numeracy_spec（v0.3.0）。  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/run_specs.py
+[2] Stanford CRFM. BasicMetric（v0.3.0）。  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/metrics/basic_metrics.py"
+"28"	"21"	"footer"	"出典は通常の文献・コード情報とし、プラットフォーム名の反復と実行環境監査を外部化"	"[1] Liang et al. (2023). Holistic Evaluation of Language Models. TMLR.  https://arxiv.org/abs/2211.09110
+[2] Stanford CRFM. NumeracyScenario, HELM v0.3.0.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"	"[1] Liang et al. (2023). Holistic Evaluation of Language Models. TMLR.  https://arxiv.org/abs/2211.09110
+[2] Stanford CRFM. NumeracyScenario（v0.3.0）。  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"
+"29"	"22"	"footer"	"出典は通常の文献・コード情報とし、プラットフォーム名の反復と実行環境監査を外部化"	"[1] Stanford CRFM. NumeracyScenario, HELM v0.3.0.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"	"[1] Stanford CRFM. NumeracyScenario（v0.3.0）。  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"
+"31"	"23"	"footer"	"出典は通常の文献・コード情報とし、プラットフォーム名の反復と実行環境監査を外部化"	"[1] Stanford CRFM. NumeracyScenario, HELM v0.3.0.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py
+[2] Stanford CRFM. HELM v0.3.0, Apache License 2.0.  https://github.com/stanford-crfm/helm/blob/v0.3.0/LICENSE"	"[1] Stanford CRFM. NumeracyScenario（v0.3.0）。  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py
+[2] Stanford CRFM. Apache License 2.0。  https://github.com/stanford-crfm/helm/blob/v0.3.0/LICENSE"
+"32"	"24"	"footer"	"出典は通常の文献・コード情報とし、プラットフォーム名の反復と実行環境監査を外部化"	"[1] Stanford CRFM. NumeracyScenario, HELM v0.3.0.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py
+[2] Stanford CRFM. HELM Classic v0.4.0 (2023-11-17).  https://crfm.stanford.edu/helm/classic/v0.4.0/"	"[1] Stanford CRFM. NumeracyScenario（v0.3.0）。  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py
+[2] Stanford CRFM. HELM Classic v0.4.0 (2023-11-17).  https://crfm.stanford.edu/helm/classic/v0.4.0/"
+"35"	"27"	"footer"	"出典は通常の文献・コード情報とし、プラットフォーム名の反復と実行環境監査を外部化"	"[1] HELM v0.3.0の公式生成器をseed=0で実行。Python 3.12 / NumPy 2.3.5。
+https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"	"[1] Stanford CRFM. NumeracyScenario（v0.3.0）。 
+https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"
+"36"	"28"	"footer"	"出典は通常の文献・コード情報とし、プラットフォーム名の反復と実行環境監査を外部化"	"[1] HELM v0.3.0の公式生成器をseed=0で実行。Python 3.12 / NumPy 2.3.5。
+https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"	"[1] Stanford CRFM. NumeracyScenario（v0.3.0）。 
+https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"
+"37"	"29"	"footer"	"出典は通常の文献・コード情報とし、プラットフォーム名の反復と実行環境監査を外部化"	"[1] HELM v0.3.0の公式生成器をseed=0で実行。Python 3.12 / NumPy 2.3.5。
+https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"	"[1] Stanford CRFM. NumeracyScenario（v0.3.0）。 
+https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"
+"38"	"30"	"footer"	"出典は通常の文献・コード情報とし、プラットフォーム名の反復と実行環境監査を外部化"	"[1] HELM v0.3.0の公式生成器をseed=0で実行。Python 3.12 / NumPy 2.3.5。
+https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"	"[1] Stanford CRFM. NumeracyScenario（v0.3.0）。 
+https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"
+"39"	"31"	"footer"	"出典は通常の文献・コード情報とし、プラットフォーム名の反復と実行環境監査を外部化"	"[1] HELM v0.3.0の公式生成器をseed=0で実行。Python 3.12 / NumPy 2.3.5。
+https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"	"[1] Stanford CRFM. NumeracyScenario（v0.3.0）。 
+https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"
+"40"	"32"	"footer"	"出典は通常の文献・コード情報とし、プラットフォーム名の反復と実行環境監査を外部化"	"[1] HELM v0.3.0の公式生成器をseed=0で実行。Python 3.12 / NumPy 2.3.5。
+https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"	"[1] Stanford CRFM. NumeracyScenario（v0.3.0）。 
+https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"
+"41"	"33"	"footer"	"出典は通常の文献・コード情報とし、プラットフォーム名の反復と実行環境監査を外部化"	"[1] HELM v0.3.0の公式生成器をseed=0で実行。Python 3.12 / NumPy 2.3.5。
+https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"	"[1] Stanford CRFM. NumeracyScenario（v0.3.0）。 
+https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"
+"42"	"34"	"footer"	"出典は通常の文献・コード情報とし、プラットフォーム名の反復と実行環境監査を外部化"	"[1] HELM v0.3.0の公式生成器をseed=0で実行。Python 3.12 / NumPy 2.3.5。
+https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"	"[1] Stanford CRFM. NumeracyScenario（v0.3.0）。 
+https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"
+"43"	"35"	"footer"	"出典は通常の文献・コード情報とし、プラットフォーム名の反復と実行環境監査を外部化"	"[1] HELM v0.3.0の公式生成器をseed=0で実行。Python 3.12 / NumPy 2.3.5。
+https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"	"[1] Stanford CRFM. NumeracyScenario（v0.3.0）。 
+https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"
+"44"	"36"	"footer"	"出典は通常の文献・コード情報とし、プラットフォーム名の反復と実行環境監査を外部化"	"[1] HELM v0.3.0の公式生成器をseed=0で実行。Python 3.12 / NumPy 2.3.5。
+https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"	"[1] Stanford CRFM. NumeracyScenario（v0.3.0）。 
+https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"
+"45"	"37"	"footer"	"出典は通常の文献・コード情報とし、プラットフォーム名の反復と実行環境監査を外部化"	"[1] Stanford CRFM. NumeracyScenario, HELM v0.3.0.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"	"[1] Stanford CRFM. NumeracyScenario（v0.3.0）。  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"
+"48"	"38"	"footer"	"出典は通常の文献・コード情報とし、プラットフォーム名の反復と実行環境監査を外部化"	"[1] Stanford CRFM. NumeracyScenario, HELM v0.3.0.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"	"[1] Stanford CRFM. NumeracyScenario（v0.3.0）。  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"
+"32"	"24"	"irrelevant result footer"	"本文から外した公開runの出典も外部化"	"[2] Stanford CRFM. HELM Classic v0.4.0 (2023-11-17).  https://crfm.stanford.edu/helm/classic/v0.4.0/"	""
+"51"	"39"	"generator bibliography metadata"	"Web文献の著者年・バージョン・実参照日を統一"	"Stanford CRFM (2023). HELM v0.3.0, Python implementation."	"Stanford CRFM (n.d.). NumeracyScenario v0.3.0（2026-10-18参照）。"
+"51"	"39"	"文献 1: Holistic Evaluation of Language Models height"	"URLまでnative編集枠に収める"	"105.54"	"123.54"
+"51"	"39"	"文献 2: NumeracyScenario height"	"URLまでnative編集枠に収める"	"105.54"	"123.54"
+"3"	"2"	"section label"	"課題中心の内容へ章名/目次/帯を対応"	"数値の採点と公開実行"	"予測値と正解を比べる"
+"3"	"2"	"section label"	"課題中心の内容へ章名/目次/帯を対応"	"再現方法と利用の範囲"	"生成器を使って試す"
+"20"	"18"	"section label"	"課題中心の内容へ章名/目次/帯を対応"	"3. 数値の採点と公開実行"	"3. 予測値と正解を比べる"
+"20"	"18"	"section label"	"課題中心の内容へ章名/目次/帯を対応"	"3. 数値の採点と公開実行"	"3. 予測値と正解を比べる"
+"21"	"19"	"section label"	"課題中心の内容へ章名/目次/帯を対応"	"3. 数値の採点と公開実行"	"3. 予測値と正解を比べる"
+"27"	"20"	"section label"	"課題中心の内容へ章名/目次/帯を対応"	"4. 再現方法と利用の範囲"	"4. 生成器を使って試す"
+"27"	"20"	"section label"	"課題中心の内容へ章名/目次/帯を対応"	"4. 再現方法と利用の範囲"	"4. 生成器を使って試す"
+"28"	"21"	"section label"	"課題中心の内容へ章名/目次/帯を対応"	"4. 再現方法と利用の範囲"	"4. 生成器を使って試す"
+"29"	"22"	"section label"	"課題中心の内容へ章名/目次/帯を対応"	"4. 再現方法と利用の範囲"	"4. 生成器を使って試す"
+"31"	"23"	"section label"	"課題中心の内容へ章名/目次/帯を対応"	"4. 再現方法と利用の範囲"	"4. 生成器を使って試す"
+"32"	"24"	"section label"	"課題中心の内容へ章名/目次/帯を対応"	"4. 再現方法と利用の範囲"	"4. 生成器を使って試す"
+"34"	"26"	"section label"	"課題中心の内容へ章名/目次/帯を対応"	"生成と採点の詳細"	"式とデータ形式の補足"
+"45"	"37"	"section label"	"課題中心の内容へ章名/目次/帯を対応"	"Appendix: 2. 生成と採点の詳細"	"Appendix: 2. 式とデータ形式の補足"
+"48"	"38"	"section label"	"課題中心の内容へ章名/目次/帯を対応"	"Appendix: 2. 生成と採点の詳細"	"Appendix: 2. 式とデータ形式の補足"
+"33"	"25"	"Appendix title height"	"MIDDLE字形位置を保持してnative枠を広げる"	"46.08"	"54.08"
+"2"	""	"whole page"	"HELM Classic一般画面は多項式課題の概要に不要。生成器の直接URLを参考文献と各頁へ保持。"	"公式サイト：HELM Classic
+HELM Classic
+[1] Stanford CRFM. HELM Classic v0.4.0 (2023-11-17).  https://crfm.stanford.edu/helm/classic/v0.4.0/"	""
+"18"	""	"whole page"	"1600件の生成/再計算の制作監査は外部記録へ。100学習/100評価と入力領域は16/19へ保持。"	"100点を見せ、別の100点で確かめる
+各関数について、訓練用とtest用に異なる100点ずつを選ぶ。1変数では201候補点、2変数ではx≤yを満たす231候補点がある。
+今回は各型でseed=0を使い、exampleとstandardの8組、計1,600レコードを生成した。
+全1,600件の正解を参照式へ別途代入して再計算し、生成器の出力と一致することを確認した。
+2. 多項式と入力点を生成する
+[1] HELM v0.3.0の公式生成器をseed=0で実行。Python 3.12 / NumPy 2.3.5。
+https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"	""
+"22"	""	"whole page"	"特定metricの句読点除去/整数変換4例は実装監査。一般的な正答率と絶対誤差は21へ。"	"同じ正解64に対する出力の採点
+3. 数値の採点と公開実行
+出力 | 完全一致 | 正規化後の一致 | 絶対誤差
+64 | 1 | 1 | 0
+65 | 0 | 0 | 1
+64.0 | 0 | 0 | 64
+-64 | 0 | 1 | 128
+正規化後の一致はquasi_exact_match。符号も句読点として除かれ、-64と64が一致する。
+[1] Stanford CRFM. BasicMetric, HELM v0.3.0.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/metrics/basic_metrics.py"	""
+"23"	""	"whole page"	"errorを0として扱う実装の細部は外部監査記録へ。"	"整数として読めない出力の扱い
+absolute_value_differenceの実装では、整数として解釈できない出力は、0として採点される。
+たとえば正解が0のとき、出力がerrorでも絶対誤差は0になる。exact_matchは0で、正解文字列とは一致しない。
+数値のずれと出力形式を合わせて確認できるよう、exact matchと実際の出力を併せて保存する。
+3. 数値の採点と公開実行
+[1] Stanford CRFM. BasicMetric, HELM v0.3.0.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/metrics/basic_metrics.py"	""
+"24"	""	"whole page"	"任意ソルバーの幾何距離は中心的な数値予測の解説に不要な実装詳細。"	"曲線・曲面からの距離も定義される
+run_solver=Trueなら、予測した点から参照曲線・曲面までの最短距離と、整数として読めた出力の割合を追加できる。
+実例1で65を予測すると、点(15, 65)は直線y=4x+4から1/√17、約0.243だけ離れる。
+これは任意の追加指標。既定の指標は数値の絶対誤差であり、Classicの表示設定でも主指標になっている。
+3. 数値の採点と公開実行
+[1] Stanford CRFM. get_numeracy_spec, HELM v0.3.0.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/run_specs.py
+[2] Stanford CRFM. DistanceMetric, HELM v0.3.0.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/metrics/numeracy_metrics.py"	""
+"25"	""	"whole page"	"公開run索引0件の確認表は対象リスト由来の監査であり、課題概要から外部化。"	"Classic v0.4.0の公開実行は0件
+3. 数値の採点と公開実行
+確認した対象 | 公開内容
+シナリオ定義 | numeracyが登録されている
+主指標 | absolute_value_difference / test
+公開run_specs | 該当runは0件
+モデル別の成績 | 掲載された値はない
+2026-10-18にlatest設定とv0.4.0の配布JSONを確認した。
+[1] Stanford CRFM. HELM Classic v0.4.0 (2023-11-17).  https://crfm.stanford.edu/helm/classic/v0.4.0/"	""
+"26"	""	"whole page"	"run0/未生成function/未実行モデルという注意の反復。function未実装は19に簡潔に保持。"	"生成できる設定と公開成績を区別する
+公開runは0件だった。0点というモデル成績が記録されているのではない。
+v0.3.0のexample／standardはレコードを生成する一方、既定のfunctionは空のリストを返す。
+この資料では、動作する生成器の出力と採点実装を説明する。未実行のモデル得点を補っていない。
+3. 数値の採点と公開実行
+[1] Stanford CRFM. NumeracyScenario, HELM v0.3.0.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py
+[2] Stanford CRFM. HELM Classic v0.4.0 (2023-11-17).  https://crfm.stanford.edu/helm/classic/v0.4.0/"	""
+"30"	""	"whole page"	"SHA/実行環境/実例位置の監査。生成器のバージョン・seed再現条件は31へ保持。"	"再現にはバージョンと乱数を保存する
+再現にはseedに加えて実行環境も保存する。ここではPython 3.12、NumPy 2.3.5、SymPy 1.14.0で公式の生成処理を実行した。
+seed、関数型、モードに加え、overlap=True、sort_vals=Falseを固定した。
+公式ソースのSHA-256、全生成レコード、13実例の位置とハッシュを保存した。
+4. 再現方法と利用の範囲
+[1] HELM v0.3.0の公式生成器をseed=0で実行。Python 3.12 / NumPy 2.3.5。
+https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"	""
+"46"	""	"whole page"	"axis-alignedコメントと係数実装の照合は外部監査。交差項xyの存在は実例4の原式と45係数表に保持。"	"2変数の二次式には交差項も現れる
+v0.3.0の係数範囲では、paraboloidのxyの係数は0または1。xとyに関する一次項は0に固定される。
+standard／seed=0の参照式はz=2x²+xy+y²+4となり、交差項xyを含む。
+コードのコメントにはaxis-alignedのみとあるが、実際の係数範囲と生成結果には交差項がある。
+Appendix: 2. 生成と採点の詳細
+[1] Stanford CRFM. NumeracyScenario, HELM v0.3.0.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"	""
+"47"	""	"whole page"	"単一seedの全生成件数の出力極値は対象全体の分布ではなく細かな制作集計。原数値は外部記録へ。"	"seed=0のstandard出力の範囲
+Appendix: 2. 生成と採点の詳細
+型 | train＋testの最小値 | 最大値
+linear | -396 | 404
+parabola | 1 | 80,201
+plane | -79 | 81
+paraboloid | 4 | 1,604
+各型の200件を実測した範囲。係数と入力点の全組み合わせの極値ではない。
+[1] HELM v0.3.0の公式生成器をseed=0で実行。Python 3.12 / NumPy 2.3.5。
+https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"	""
+"49"	""	"whole page"	"未実装functionとTODO/1000関数を重ねて警告する頁。19の利用条件に集約。"	"functionモードは生成処理が止まっている
+functionは、問題ごとに式を抽選し直す設計として説明される。MODE_INFOには訓練・評価の関数を各1,000個とする設定がある。
+しかしv0.3.0のgenerate_datasetsはTODOとともに空リストを返す。4型をseed=0で実行して、いずれも0件だった。
+設定上の1,000関数と、実際に生成・公開評価された件数を同じ数量として扱わない。
+Appendix: 2. 生成と採点の詳細
+[1] Stanford CRFM. NumeracyScenario, HELM v0.3.0.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py"	""
+"50"	""	"whole page"	"同名データ/論文とコードの名称対応の監査を外部出自記録へ。表紙/定義で多項式課題と明示。"	"Numeracy-600Kは別の自然言語データ
+Numeracy-600Kは、ニュース見出しや市況コメントに現れる数値の大きさを扱う、2019年の別データセット。
+HELMのNumeracyは、人工生成した入出力の組から多項式の値を推測する。質問・文章や利用する指標が異なる。
+HELMの論文では数値関係を推測する課題をnumeracy_predictionと呼び、公開コードではnumeracyとして実装している。
+Appendix: 2. 生成と採点の詳細
+[1] Chen, Huang, Takamura & Chen (2019). Numeracy-600K. ACL.  https://aclanthology.org/P19-1635/
+[2] Liang et al. (2023). Holistic Evaluation of Language Models. TMLR.  https://arxiv.org/abs/2211.09110"	""
+"52"	""	"whole page"	"run_spec/BasicMetric実装の細部の2文献は外部監査へ。元研究と公開生成器を保持。"	"参考文献
+Appendix: 3. 研究と参考文献
+get_numeracy_spec
+Stanford CRFM (2023). HELM v0.3.0, run_specs.py.
+モード別の提示例数、評価件数、生成方法と既定・任意の指標を設定する。
+https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/run_specs.py
+BasicMetric: absolute_value_difference
+Stanford CRFM (2023). HELM v0.3.0, basic_metrics.py.
+出力の整数変換と絶対誤差、文字列一致などの基本的な採点処理を実装する。
+https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/metrics/basic_metrics.py"	""
+"53"	""	"whole page"	"任意ソルバーと同名別データの文献は多項式課題の概要に不要、外部記録へ。"	"参考文献
+Appendix: 3. 研究と参考文献
+DistanceMetric
+Stanford CRFM (2023). HELM v0.3.0, numeracy_metrics.py.
+予測点と曲線・曲面の最短距離、および整数として読める出力の割合を計算する。
+https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/metrics/numeracy_metrics.py
+Numeracy-600K: Learning Numeracy for Detecting Exaggerated Information in Market Comments
+Chung-Chi Chen, Hen-Hsen Huang, Hiroya Takamura, Hsin-Hsi Chen (2019). ACL.
+ニュース見出しと市況コメントの数値を集め、数の大きさの理解と誇張表現の検出を扱う。
+https://aclanthology.org/P19-1635/"	""
+"7"	"6"	"code background 6"	"字形位置を保ち、数値と実用コードの背景実余白を上下12ptへ整える"	"top=154.80,height=133.89,margin=5.00"	"top=156.80,height=133.22,margin=3.00"
+"7"	"6"	"code background 8"	"字形位置を保ち、数値と実用コードの背景実余白を上下12ptへ整える"	"top=154.80,height=42.65,margin=5.00"	"top=154.80,height=39.32,margin=5.00"
+"9"	"8"	"code background 6"	"字形位置を保ち、数値と実用コードの背景実余白を上下12ptへ整える"	"top=154.80,height=133.89,margin=5.00"	"top=156.80,height=133.22,margin=3.00"
+"9"	"8"	"code background 8"	"字形位置を保ち、数値と実用コードの背景実余白を上下12ptへ整える"	"top=154.80,height=42.65,margin=5.00"	"top=154.80,height=39.32,margin=5.00"
+"11"	"10"	"code background 6"	"字形位置を保ち、数値と実用コードの背景実余白を上下12ptへ整える"	"top=154.80,height=181.48,margin=5.00"	"top=156.80,height=180.81,margin=3.00"
+"11"	"10"	"code background 8"	"字形位置を保ち、数値と実用コードの背景実余白を上下12ptへ整える"	"top=154.80,height=42.65,margin=5.00"	"top=154.80,height=43.32,margin=5.00"
+"29"	"22"	"code background 4"	"字形位置を保ち、数値と実用コードの背景実余白を上下12ptへ整える"	"top=121.00,height=157.00,margin=5.00"	"top=119.00,height=157.67,margin=7.00"
+"35"	"27"	"code background 6"	"字形位置を保ち、数値と実用コードの背景実余白を上下12ptへ整える"	"top=154.80,height=181.48,margin=5.00"	"top=156.80,height=180.81,margin=3.00"
+"35"	"27"	"code background 8"	"字形位置を保ち、数値と実用コードの背景実余白を上下12ptへ整える"	"top=154.80,height=42.65,margin=5.00"	"top=154.80,height=43.32,margin=5.00"
+"36"	"28"	"code background 6"	"字形位置を保ち、数値と実用コードの背景実余白を上下12ptへ整える"	"top=154.80,height=133.89,margin=5.00"	"top=156.80,height=133.22,margin=3.00"
+"36"	"28"	"code background 8"	"字形位置を保ち、数値と実用コードの背景実余白を上下12ptへ整える"	"top=154.80,height=42.65,margin=5.00"	"top=154.80,height=39.32,margin=5.00"
+"37"	"29"	"code background 6"	"字形位置を保ち、数値と実用コードの背景実余白を上下12ptへ整える"	"top=154.80,height=133.89,margin=5.00"	"top=156.80,height=133.22,margin=3.00"
+"37"	"29"	"code background 8"	"字形位置を保ち、数値と実用コードの背景実余白を上下12ptへ整える"	"top=154.80,height=42.65,margin=5.00"	"top=154.80,height=39.32,margin=5.00"
+"38"	"30"	"code background 6"	"字形位置を保ち、数値と実用コードの背景実余白を上下12ptへ整える"	"top=154.80,height=181.48,margin=5.00"	"top=156.80,height=180.81,margin=3.00"
+"38"	"30"	"code background 8"	"字形位置を保ち、数値と実用コードの背景実余白を上下12ptへ整える"	"top=154.80,height=42.65,margin=5.00"	"top=154.80,height=43.32,margin=5.00"
+"39"	"31"	"code background 6"	"字形位置を保ち、数値と実用コードの背景実余白を上下12ptへ整える"	"top=154.80,height=181.48,margin=5.00"	"top=156.80,height=180.81,margin=3.00"
+"39"	"31"	"code background 8"	"字形位置を保ち、数値と実用コードの背景実余白を上下12ptへ整える"	"top=154.80,height=42.65,margin=5.00"	"top=154.80,height=43.32,margin=5.00"
+"40"	"32"	"code background 6"	"字形位置を保ち、数値と実用コードの背景実余白を上下12ptへ整える"	"top=154.80,height=133.89,margin=5.00"	"top=156.80,height=133.22,margin=3.00"
+"40"	"32"	"code background 8"	"字形位置を保ち、数値と実用コードの背景実余白を上下12ptへ整える"	"top=154.80,height=42.65,margin=5.00"	"top=154.80,height=39.32,margin=5.00"
+"41"	"33"	"code background 6"	"字形位置を保ち、数値と実用コードの背景実余白を上下12ptへ整える"	"top=154.80,height=133.89,margin=5.00"	"top=156.80,height=133.22,margin=3.00"
+"41"	"33"	"code background 8"	"字形位置を保ち、数値と実用コードの背景実余白を上下12ptへ整える"	"top=154.80,height=42.65,margin=5.00"	"top=154.80,height=39.32,margin=5.00"
+"42"	"34"	"code background 6"	"字形位置を保ち、数値と実用コードの背景実余白を上下12ptへ整える"	"top=154.80,height=181.48,margin=5.00"	"top=156.80,height=180.81,margin=3.00"
+"42"	"34"	"code background 8"	"字形位置を保ち、数値と実用コードの背景実余白を上下12ptへ整える"	"top=154.80,height=42.65,margin=5.00"	"top=154.80,height=43.32,margin=5.00"
+"43"	"35"	"code background 6"	"字形位置を保ち、数値と実用コードの背景実余白を上下12ptへ整える"	"top=154.80,height=181.48,margin=5.00"	"top=156.80,height=180.81,margin=3.00"
+"43"	"35"	"code background 8"	"字形位置を保ち、数値と実用コードの背景実余白を上下12ptへ整える"	"top=154.80,height=42.65,margin=5.00"	"top=154.80,height=43.32,margin=5.00"
+"44"	"36"	"code background 6"	"字形位置を保ち、数値と実用コードの背景実余白を上下12ptへ整える"	"top=154.80,height=133.89,margin=5.00"	"top=156.80,height=133.22,margin=3.00"
+"44"	"36"	"code background 8"	"字形位置を保ち、数値と実用コードの背景実余白を上下12ptへ整える"	"top=154.80,height=42.65,margin=5.00"	"top=154.80,height=39.32,margin=5.00"

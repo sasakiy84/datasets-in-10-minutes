@@ -14,3 +14,8 @@ Geminiは使用していない。Codexが日本語校正スキルをページご
 |30|同じseedは環境も保存する必要がある|再現にはseedに加えて実行環境も保存する|主述・助詞・修飾関係を自然にし、対象と数量条件を保持。|
 
 [全ページ文言](numeracy/pages.jsonl)・[自己検査・独立レビュー](numeracy/review.json)
+
+
+## 読者向けの説明・日本語の改訂（2026年10月）
+
+Geminiは使用せず、Codexがスキルで校正し、別担当が独立レビューした。削除・統合を含む[問題点と変更対](numeracy/editorial-2026-10/changes.md)、[旧ページとの対応](numeracy/editorial-2026-10/page-map.json)、[独立レビュー](numeracy/editorial-2026-10/independent-review/handoff.json)、[最終ページの全文](numeracy/pages.jsonl)。旧版の校正・検証記録は保持している。

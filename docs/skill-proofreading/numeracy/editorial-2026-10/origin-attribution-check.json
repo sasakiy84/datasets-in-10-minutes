@@ -1,0 +1,47 @@
+{
+  "method": "primary_source_check",
+  "checked_at": "2026-10-19T09:10:58.844746+00:00",
+  "original_task": "入出力例から多項式の規則を推論する人工生成課題",
+  "creator": "Stanford CRFMを中心とするHELM研究チーム",
+  "year": 2022,
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/abs/2211.09110",
+      "local": "evidence/helm-paper.txt",
+      "location": "5.3.1; printed p38",
+      "evidence": "For function regression, we design and implement numeracy_prediction",
+      "supports": "本資料の課題はこの研究で設計された。"
+    },
+    {
+      "url": "https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py",
+      "local": "evidence/numeracy-v0.3.0.py",
+      "evidence": "NumeracyScenario; description polynomial induction",
+      "supports": "固定配布コーパスではなく式・入力点を生成する。"
+    },
+    {
+      "url": "https://aclanthology.org/P19-1635/",
+      "local": "evidence/numeracy600k.txt",
+      "supports": "Chenら2019年のNumeracy-600KはReuters由来の数値理解データであり、この多項式生成課題とは別。"
+    }
+  ],
+  "HELM_relationship": "課題の作成元。独立の既存Numeracy-600Kを採用したものではない。",
+  "slide_locations": {
+    "definition_and_creator": 4,
+    "generator_design": [
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "evaluation": 19,
+    "practical_use": [
+      21,
+      22,
+      23
+    ],
+    "references": 39
+  },
+  "conclusion": "出自のHELM帰属は一次資料で支持。ただし資料の主題を多項式の規則推論へ変更し、プラットフォーム説明・run索引・細かな採点処理は外部記録に保存。",
+  "catalog_title": "Numeracy（多項式の規則推論）"
+}

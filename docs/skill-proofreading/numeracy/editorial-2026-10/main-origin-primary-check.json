@@ -1,0 +1,33 @@
+{
+  "reviewer": "main",
+  "method": "primary_source_reading",
+  "gemini_used": false,
+  "sources": [
+    {
+      "url": "https://arxiv.org/abs/2211.09110",
+      "section": "5.3.1 Ampliative Reasoning",
+      "printed_page": 38,
+      "quote": "For function regression, we design and implement numeracy_prediction, which requires the model to perform symbolic regression given a few examples and apply the number relationship (e.g. linear) to a new input."
+    },
+    {
+      "url": "https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/numeracy_scenario.py",
+      "code": "NumeracyScenario",
+      "description": "polynomial induction"
+    },
+    {
+      "url": "https://aclanthology.org/P19-1635/",
+      "title": "Numeracy-600K: Learning Numeracy for Detecting Exaggerated Information in Market Comments",
+      "authors": "Chung-Chi Chen, Hen-Hsen Huang, Hiroya Takamura, Hsin-Hsi Chen",
+      "year": 2019,
+      "finding": "文中の数値の桁・大きさを予測する独立データセット。多項式入出力から規則を推測するHELM課題とは別。"
+    }
+  ],
+  "conclusion": "現Numeracy資料の多項式帰納課題は、Stanford CRFMを中心とする研究チームによる設計・実装であることを一次資料が支持する。市場コメント由来のNumeracy-600Kとは別。最新指示116に従い、題名・カタログではNumeracy（多項式の規則推論）と対象を明示し、データの生成・実例・推論・利用を中心に構成する。採用基盤の解説を主題にしない。",
+  "remaining_checks": [],
+  "quality_prompt": 116,
+  "independent_origin_and_final_artifact_approval": "review-numeracy/handoff.json",
+  "artifact_sha256": {
+    "pptx": "d95ef18bcaeebf49401a97552f64f01e4e7b72a51a1a7d547f258a90aca624d2",
+    "pdf": "98fa4b8fdc40cd0640fecbd8cf3de0029362a65dcc8d7dd1fcd61f6cb63b7701"
+  }
+}
