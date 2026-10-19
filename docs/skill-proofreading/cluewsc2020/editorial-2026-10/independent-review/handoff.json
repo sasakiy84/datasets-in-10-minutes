@@ -5,20 +5,41 @@
   "method": "skill_based_codex",
   "gemini_used": false,
   "reviewer": "create_ice",
-  "creator": "create_pile",
-  "baseline_pages": 60,
-  "final_pages": 53,
-  "main_pages": 26,
-  "individual_pages_viewed": [
+  "total_pages": 49,
+  "main_pages": 24,
+  "final_hashes": {
+    "datasets-in-10-minutes-cluewsc2020.pdf": "d1c04ef11c3bdeecd48272155953aee62ba0ac572e09887992d7f8ef224ac45b",
+    "datasets-in-10-minutes-cluewsc2020.pptx": "7ff919557f0ddbccd0cb858938eae88ac3db25f1999479e0054e9126902998ec"
+  },
+  "review_mode": "前回53頁全個別目視と一次照合を継承した差分レビュー",
+  "previous_review": "/workspace/artifacts/helm-editorial-revision/review-cluewsc2020/versions/reader-v1-approved/handoff.json",
+  "pages_individually_viewed_this_revision": [
+    3,
+    5,
+    7,
+    9,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49
+  ],
+  "overview_viewed": true,
+  "XML_identical_except_page_number": [
     1,
     2,
-    3,
     4,
-    5,
     6,
-    7,
     8,
-    9,
     10,
     11,
     12,
@@ -27,13 +48,8 @@
     15,
     16,
     17,
-    18,
     19,
     20,
-    21,
-    22,
-    23,
-    24,
     25,
     26,
     27,
@@ -53,104 +69,27 @@
     41,
     42,
     43,
-    44,
-    45,
-    46,
     47,
     48,
-    49,
-    50,
-    51,
-    52,
-    53
+    49
   ],
-  "final_changed_pages_rechecked": [
-    6,
-    8,
-    33,
-    36,
-    48
+  "XML_identical_body_pixels_different_pages": [
+    20
   ],
-  "overview_viewed": true,
-  "all_final_native_body_tables_footers_and_translations_read": true,
-  "baseline_and_findings_read": true,
-  "issues": [
-    {
-      "page": 48,
-      "kind": "native_frame",
-      "before": "説明枠height24.48pt、実字形下端が枠の下へ14.31pt",
-      "after": "height43pt、bottom313pt内に実字形bottom308.79ptを収めた",
-      "resolved": true
-    },
-    {
-      "page": 6,
-      "kind": "translation",
-      "before": "盆に入れて冷ます",
-      "after": "ボウルに入れて冷ます",
-      "resolved": true,
-      "origin": "main"
-    },
-    {
-      "page": 8,
-      "kind": "translation",
-      "before": "以前所属していた教研室のある准教授",
-      "after": "以前所属していた教育・研究部門の准教授",
-      "resolved": true,
-      "origin": "main"
-    },
-    {
-      "page": 33,
-      "kind": "translation",
-      "before": "外の部屋",
-      "after": "外側の部屋",
-      "resolved": true
-    },
-    {
-      "page": 36,
-      "kind": "translation",
-      "before": "少平と蘭香の勉学を必ず支え切ろう",
-      "after": "少平と蘭香が学業を終えるまで、必ず支えよう",
-      "resolved": true
-    }
-  ],
+  "XML_identical_and_body_pixels_identical_count": 36,
+  "all49_fresh_poppler_match_author": true,
+  "all_raw_records": 4412,
+  "target_spans_checked": 8824,
+  "examples_checked": 13,
+  "native_tables": 8,
+  "native_chart": 1,
+  "native_paragraphs": 339,
+  "native_cells": 113,
+  "frame_issues": [],
+  "shape_glyph_overlaps": [],
+  "URL_exact": 44,
+  "new_XSD_issues": 0,
+  "notes": 0,
   "remaining_issues": [],
-  "primary_sources": [
-    "independent-fetch.json",
-    "public.zip",
-    "paper.pdf",
-    "paper.txt"
-  ],
-  "checks": {
-    "full_real_examples": 13,
-    "raw_originals_exact": true,
-    "labels_and_spans_exact": true,
-    "source_counts_and_split_updates": true,
-    "paper_model_values_and_human_conditions": true,
-    "displayed_code_executed": true,
-    "native_paragraphs": 378,
-    "native_cells": 113,
-    "frame_issues": 0,
-    "overlaps": 0,
-    "layout_paragraphs": 351,
-    "layout_cells": 84,
-    "layout_issues": 0,
-    "new_xsd_errors": 0,
-    "url_exact": 55,
-    "native_tables": 8,
-    "native_charts": 1,
-    "answers": "13 answers,21.5pt,bold,B13731",
-    "notes": 0,
-    "all_author_pngs_match_final_pdf_in_fresh_poppler": true
-  },
-  "final_hashes": {
-    "datasets-in-10-minutes-cluewsc2020.pptx": "ef217589fe221d292e0669cce7dfca026cec346d6f13ed0ec9a33af15929e694",
-    "datasets-in-10-minutes-cluewsc2020.pdf": "d698b96e3ffe30ab2b88c512e129e9fd17dfebd7774b8aa8e10cb1d947e0201c"
-  },
-  "notes": [
-    "監査の行位置/ID/集合の再計算・禁止文を削り、入力・指示関係・評価・入手へ説明を整理。",
-    "原文13件・指定箇所・全正解、CLUEWSC固有の1244/304/2574/290とラベル・文章数を独立照合。",
-    "2020年モデル値は旧test290問、人98%は100問3人多数決、各3回微調整で開発最良を選ぶ条件を正式論文へ照合。",
-    "副教授を准教授と訳す修正は原CNを保ち、CLEVA本文のassociate professorとも整合。",
-    "最初の独立通読で盆/教研室の直写を許容した判断を、main指摘で修正。4訳を最終版で原意味と再照合した。"
-  ]
+  "conclusion": "CLUEチームによる元データの目的・構築・13中国語全文例/JP・元評価・利用条件・実読込コードが主題となり、他基盤への採用/変換/成績設定を外部化。意味と重要条件の保持、最終44/45の年付き評価表題を確認。新たな指摘なし。"
 }

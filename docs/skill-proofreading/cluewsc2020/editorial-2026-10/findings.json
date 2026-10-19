@@ -112,31 +112,13 @@
       "new_page": 20
     },
     {
-      "old_page": 22,
-      "location": "shape 0",
-      "issue": "曖昧な区別指示を、実際のモデル選択条件へ",
-      "action": "rewrite",
-      "before": "学習の反復と、プロンプトの違いを分ける",
-      "after": "モデルは3回微調整し、開発成績で選ぶ",
-      "new_page": 21
-    },
-    {
-      "old_page": 22,
-      "location": "shape 1",
-      "issue": "制作上の注意を、課題を理解する自然な説明へ置き換える",
-      "action": "rewrite",
-      "before": "各モデルを3回微調整し、その中で開発成績が最良のモデルのテスト値を報告した。チェックポイントは早期停止で選び、ハイパーパラメータも開発データで調整した。\nこれは、生成モデルにプロンプトを与えて答えさせるCLEVAの評価とは異なる。3回の微調整を、3種類のプロンプトや3候補の生成と読み替えない。\n公式リポジトリの開発精度と、正式論文のテスト精度も評価対象が違う。ここでは正式論文のテスト値を歴史的な比較として示した。",
-      "after": "各モデルを3回微調整し、開発データで最も良い成績を出したモデルのテスト値を報告した。\nこの結果は、教師あり学習で指示関係を判定するモデルの歴史的な比較。後にCLEVAでは、生成モデルにプロンプトを与えて答えさせる課題としても利用された。",
-      "new_page": 21
-    },
-    {
       "old_page": 23,
       "location": "shape 0",
       "issue": "区別という作業指示を利用の変遷へ",
       "action": "rewrite",
       "before": "採用先と、元の公開データを分ける",
       "after": "中国語の指示関係を、モデル評価へ",
-      "new_page": 22
+      "new_page": 21
     },
     {
       "old_page": 24,
@@ -145,16 +127,7 @@
       "action": "rewrite",
       "before": "元のWinograd Schema Challengeは、曖昧な代名詞を解く課題。語を一つか二つ変えると、指す対象が入れ替わる文の対を重視した。\nCLUEWSC2020は中国語の文学作品から文章を選び、指定された二箇所の同一指示を二値で判定する。元WSCの英語問題をそのまま翻訳した集合ではない。\n公開の各行が、語を少し変えた最小対になっているとは限らない。作品の文脈、動作、常識を読む自然な文章として扱う。",
       "after": "Winograd Schema Challenge（2012年）は、常識を使って曖昧な代名詞を解く課題。語を一つか二つ変えると、指す対象が入れ替わる文の対を重視した。\nCLUEWSC2020は、中国語の文学作品から自然な文章を選び、指定された名詞句と代名詞が同じ対象を指すかを二値で判定する。\n語を置き換えた文の対に限らず、作品中の動作や会話、常識を手掛かりに、文章内の人物や物の関係を読む。",
-      "new_page": 23
-    },
-    {
-      "old_page": 25,
-      "location": "shape 1",
-      "issue": "制作上の注意を、課題を理解する自然な説明へ置き換える",
-      "action": "rewrite",
-      "before": "CLEVAの論文は、共参照解決にCLUEWSCから抽出したデータを使うと記す。紙面例は本資料の実例2と、文章・対象組・否定の正解が一致する。\nHELM v0.4.0のCLEVACoreferenceResolutionScenarioは、実例1の塊と「它们」を「不是／是」の二候補で示す。\nただし、CLEVAが選んだ全問題と変換済みファイルは今回取得できていない。元CLUEの全件数や分割を、CLEVAの実行件数と同一視しない。",
-      "after": "CLEVAは、CLUEWSCから抽出した問題を共参照解決の評価に使う。論文に掲載された例が、本資料の実例2に当たる。\nHELMのCLEVA実装では、プロンプトに文章と問いを組み込み、回答候補を用意する。実例1は「不是／是」の二候補を使う説明例として載っている。\nCLEVAで選定された全問題や推論条件の詳細は確認できないため、ここでは元のCLUEWSC2020の構成と、公開されている利用方法を紹介する。",
-      "new_page": 24
+      "new_page": 22
     },
     {
       "old_page": 27,
@@ -163,7 +136,7 @@
       "action": "rewrite",
       "before": "公開ZIPは読めるが、権利条件は別に確認する",
       "after": "公開データの入手先と、文章の利用条件",
-      "new_page": 25
+      "new_page": 23
     },
     {
       "old_page": 27,
@@ -172,7 +145,7 @@
       "action": "rewrite",
       "before": "公式リポジトリから、公開ZIPへ到達できる。提供文の全文と指定箇所を読み出せるが、テストには正解ラベルが含まれない。\n固定した課題リポジトリにはREADMEのみがあり、データ専用の利用許諾は見当たらない。関連するコードのライセンスを、文学作品の文章へ拡張しない。\nここでは識別可能な13件の短い提供文を示す。配布データ全体や元の文学作品を、無条件に再配布できるとは述べない。",
       "after": "公式リポジトリから公開ZIPをダウンロードできる。学習・開発データは正解付きで、テストデータの正解は非公開。\n課題リポジトリには、データ専用の利用許諾が明記されていない。文章は文学作品に由来するため、再利用や再配布の際には、データ提供者の条件と元の文章の権利を確認する必要がある。",
-      "new_page": 25
+      "new_page": 23
     },
     {
       "old_page": 28,
@@ -181,7 +154,7 @@
       "action": "rewrite",
       "before": "小さな対象組から、文章全体の役割を読む",
       "after": "文学作品の文脈で、代名詞の指示対象を判定",
-      "new_page": 26
+      "new_page": 24
     },
     {
       "old_page": 28,
@@ -190,7 +163,7 @@
       "action": "rewrite",
       "before": "入力は文章と二つの指定箇所。true/falseは、その二つが同じ対象を指すかを表す。語の距離や性・数だけでは決まらない問題も含む。\n2020年の構築時評価、後のテスト更新、CLEVAへの採用を分けることで、件数と正答率の意味がはっきりする。\n原データの位置と指示語の位置を保てば、どの文章のどの対象組を解いた結果なのかを追跡できる。",
       "after": "CLUEWSC2020は、中国語の自然な文章で、指定された名詞句と代名詞が同じ対象を指すかを問うデータセット。\n文学作品に現れる人物や物の関係を読み、性・数だけでなく、動作や談話の流れも手掛かりにする。\n構築時のテストでは最良モデルの正答率が81.38％、100問の人手評価は多数決で98％だった。中国語理解の課題として、CLUEからCLEVAへと利用が広がった。",
-      "new_page": 26
+      "new_page": 24
     },
     {
       "old_page": 30,
@@ -199,7 +172,7 @@
       "action": "rewrite",
       "before": "追加の公開実例\n版・原位置・実装\n研究と参考文献",
       "after": "追加の公開実例\nデータの読み方と評価値\n研究と参考文献",
-      "new_page": 28
+      "new_page": 26
     },
     {
       "old_page": 35,
@@ -208,7 +181,7 @@
       "action": "rewrite",
       "before": "実例7：父親と同僚を区別する",
       "after": "実例7：発見の経緯を話している父親",
-      "new_page": 33
+      "new_page": 31
     },
     {
       "old_page": 36,
@@ -217,7 +190,7 @@
       "action": "rewrite",
       "before": "実例8：薬と小麦粉の袋を区別する",
       "after": "実例8：縛り付けたのは、小麦粉の袋",
-      "new_page": 34
+      "new_page": 32
     },
     {
       "old_page": 42,
@@ -226,7 +199,7 @@
       "action": "rewrite",
       "before": "説明は本資料による。原文は各実例頁に省略せず示す。",
       "after": "",
-      "new_page": 40
+      "new_page": 38
     },
     {
       "old_page": 42,
@@ -235,7 +208,7 @@
       "action": "rewrite",
       "before": "自宅に招いたのは同業者で、招かれたのはドイツへ行った副教授。二人の役割を区別する。",
       "after": "自宅に招いたのは同業者で、招かれたのはドイツへ行った副教授。「他」は副教授を指す。",
-      "new_page": 40
+      "new_page": 38
     },
     {
       "old_page": 42,
@@ -244,7 +217,7 @@
       "action": "rewrite",
       "before": "田舎くさい性質が残る対象は服。人を表す代名詞と、物を表す代名詞を区別する。",
       "after": "田舎くさい性質が残る対象は服。「它」は物を表す代名詞。",
-      "new_page": 40
+      "new_page": 38
     },
     {
       "old_page": 43,
@@ -253,7 +226,7 @@
       "action": "rewrite",
       "before": "説明は本資料による。原文は各実例頁に省略せず示す。",
       "after": "",
-      "new_page": 41
+      "new_page": 39
     },
     {
       "old_page": 43,
@@ -262,7 +235,7 @@
       "action": "rewrite",
       "before": "年齢の説明の後、父親が発見の経緯を話す。近くの男性名だけで判定しない。",
       "after": "年齢の説明の後、父親が発見の経緯を話す。「他」は父親を指す。",
-      "new_page": 41
+      "new_page": 39
     },
     {
       "old_page": 44,
@@ -271,7 +244,7 @@
       "action": "rewrite",
       "before": "説明は本資料による。原文は各実例頁に省略せず示す。",
       "after": "",
-      "new_page": 42
+      "new_page": 40
     },
     {
       "old_page": 45,
@@ -280,7 +253,7 @@
       "action": "rewrite",
       "before": "版・原位置・実装",
       "after": "データの読み方と評価値",
-      "new_page": 43
+      "new_page": 41
     },
     {
       "old_page": 45,
@@ -289,7 +262,7 @@
       "action": "rewrite",
       "before": "Appendix: 2. 版・原位置・実装",
       "after": "Appendix: 2. データの読み方と評価値",
-      "new_page": 43
+      "new_page": 41
     },
     {
       "old_page": 48,
@@ -298,7 +271,7 @@
       "action": "rewrite",
       "before": "文章が同じでも、対象が違えば別の行",
       "after": "同じ文章で、候補を変えると正解も変わる",
-      "new_page": 44
+      "new_page": 42
     },
     {
       "old_page": 48,
@@ -307,7 +280,7 @@
       "action": "rewrite",
       "before": "同じ文章の行を、13件の独立文章の数へ重複計上していない。",
       "after": "実例2では「副教授」、実例1では「块状物」を候補にするとtrueになる。候補の名詞句も、問題を構成する入力の一部。",
-      "new_page": 44
+      "new_page": 42
     },
     {
       "old_page": 48,
@@ -316,7 +289,7 @@
       "action": "rewrite",
       "before": "元位置",
       "after": "文章",
-      "new_page": 44
+      "new_page": 42
     },
     {
       "old_page": 48,
@@ -325,7 +298,7 @@
       "action": "rewrite",
       "before": "train / 345",
       "after": "実例2",
-      "new_page": 44
+      "new_page": 42
     },
     {
       "old_page": 48,
@@ -334,7 +307,7 @@
       "action": "rewrite",
       "before": "train / 346",
       "after": "実例2",
-      "new_page": 44
+      "new_page": 42
     },
     {
       "old_page": 48,
@@ -343,7 +316,7 @@
       "action": "rewrite",
       "before": "train / 347",
       "after": "実例2",
-      "new_page": 44
+      "new_page": 42
     },
     {
       "old_page": 48,
@@ -352,7 +325,7 @@
       "action": "rewrite",
       "before": "train / 681",
       "after": "実例1",
-      "new_page": 44
+      "new_page": 42
     },
     {
       "old_page": 48,
@@ -361,7 +334,7 @@
       "action": "rewrite",
       "before": "train / 682",
       "after": "実例1",
-      "new_page": 44
+      "new_page": 42
     },
     {
       "old_page": 49,
@@ -370,7 +343,7 @@
       "action": "rewrite",
       "before": "文字位置は、UTF-8のバイト位置ではない",
       "after": "指定箇所は、文字位置と語句で表す",
-      "new_page": 45
+      "new_page": 43
     },
     {
       "old_page": 49,
@@ -379,7 +352,7 @@
       "action": "rewrite",
       "before": "targetのspan1_indexとspan2_indexは0起算の文字位置。指定された位置から文字数分を切り出すと、各spanの文字列に一致する。\n同じ代名詞が複数回現れる文章では、文字列の検索だけでは指定箇所を確定できない。本資料では位置に従って一箇所だけ色を付けた。\n現在の新テストには、候補名詞句が代名詞より後にある行も464件ある。すべての候補が代名詞より前にあるとは仮定しない。",
       "after": "targetは、名詞句と代名詞それぞれの文字位置と語句を持つ。span1_indexとspan2_indexは、文章の先頭を0とする文字位置。\n同じ代名詞が文中に繰り返されても、この位置によって、どの箇所が判定対象かが分かる。\n候補の名詞句が代名詞より後ろにある問題も含む。前後の文脈を読み、指定された二箇所の関係を判断する。",
-      "new_page": 45
+      "new_page": 43
     },
     {
       "old_page": 51,
@@ -388,7 +361,7 @@
       "action": "rewrite",
       "before": "2020年の旧test 290問。現在の公開testや、CLEVAの公開runによる値ではない。",
       "after": "2020年のテスト290問に対する正答率。3回の微調整から、開発成績が最良のモデルを選択。",
-      "new_page": 46
+      "new_page": 44
     },
     {
       "old_page": 52,
@@ -397,7 +370,7 @@
       "action": "rewrite",
       "before": "2020年の旧test 290問。現在の公開testや、CLEVAの公開runによる値ではない。",
       "after": "2020年のテスト290問に対する正答率。3回の微調整から、開発成績が最良のモデルを選択。",
-      "new_page": 47
+      "new_page": 45
     },
     {
       "old_page": 53,
@@ -406,7 +379,7 @@
       "action": "rewrite",
       "before": "ラベルを保って、公開の一行を読む",
       "after": "学習データの一問を読み込む",
-      "new_page": 48
+      "new_page": 46
     },
     {
       "old_page": 53,
@@ -415,7 +388,7 @@
       "action": "rewrite",
       "before": "import json\nwith open('train.json', encoding='utf-8') as f:\n    row = json.loads(f.readlines()[680])\nt = row['target']\nfor k in ('span1', 'span2'):\n    start = t[k + '_index']\n    span = t[k + '_text']\n    assert row['text'][start:start + len(span)] == span\nassert row['label'] == 'true'\nprint(t['span1_text'], t['span2_text'], row['label'])",
       "after": "import json\nwith open('train.json', encoding='utf-8') as f:\n    row = json.loads(next(f))\nprint(row['text'])\ntarget = row['target']\nprint(target['span1_text'], target['span2_text'])\nprint(row['label'])",
-      "new_page": 48
+      "new_page": 46
     },
     {
       "old_page": 53,
@@ -424,7 +397,7 @@
       "action": "resize",
       "before": "24.48pt",
       "after": "43pt",
-      "new_page": 48
+      "new_page": 46
     },
     {
       "old_page": 53,
@@ -433,7 +406,7 @@
       "action": "rewrite",
       "before": "拡張子は.jsonだが、各行が独立したJSON。上の680は0起算。",
       "after": "拡張子は.jsonだが、中身は1行1問のJSON。文章・二つの指定語句・正解を読み出せる。",
-      "new_page": 48
+      "new_page": 46
     },
     {
       "old_page": 16,
@@ -514,7 +487,7 @@
       "action": "rewrite",
       "before": "dev.json / 行3 / idx 3　　緑：候補の名詞句　青：指定された代名詞",
       "after": "緑：候補の名詞句／青：指定された代名詞",
-      "new_page": 30
+      "new_page": 28
     },
     {
       "old_page": 32,
@@ -523,7 +496,7 @@
       "action": "rewrite",
       "before": "中国語：配布text全文と指定span",
       "after": "中国語：文章全文と指定された語句",
-      "new_page": 30
+      "new_page": 28
     },
     {
       "old_page": 33,
@@ -532,7 +505,7 @@
       "action": "rewrite",
       "before": "dev.json / 行14 / idx 14　　緑：候補の名詞句　青：指定された代名詞",
       "after": "緑：候補の名詞句／青：指定された代名詞",
-      "new_page": 31
+      "new_page": 29
     },
     {
       "old_page": 33,
@@ -541,7 +514,7 @@
       "action": "rewrite",
       "before": "中国語：配布text全文と指定span",
       "after": "中国語：文章全文と指定された語句",
-      "new_page": 31
+      "new_page": 29
     },
     {
       "old_page": 34,
@@ -550,7 +523,7 @@
       "action": "rewrite",
       "before": "dev.json / 行16 / idx 16　　緑：候補の名詞句　青：指定された代名詞",
       "after": "緑：候補の名詞句／青：指定された代名詞",
-      "new_page": 32
+      "new_page": 30
     },
     {
       "old_page": 34,
@@ -559,7 +532,7 @@
       "action": "rewrite",
       "before": "中国語：配布text全文と指定span",
       "after": "中国語：文章全文と指定された語句",
-      "new_page": 32
+      "new_page": 30
     },
     {
       "old_page": 35,
@@ -568,7 +541,7 @@
       "action": "rewrite",
       "before": "train.json / 行37 / idx 294　　緑：候補の名詞句　青：指定された代名詞",
       "after": "緑：候補の名詞句／青：指定された代名詞",
-      "new_page": 33
+      "new_page": 31
     },
     {
       "old_page": 35,
@@ -577,7 +550,7 @@
       "action": "rewrite",
       "before": "中国語：配布text全文と指定span",
       "after": "中国語：文章全文と指定された語句",
-      "new_page": 33
+      "new_page": 31
     },
     {
       "old_page": 36,
@@ -586,7 +559,7 @@
       "action": "rewrite",
       "before": "dev.json / 行37 / idx 37　　緑：候補の名詞句　青：指定された代名詞",
       "after": "緑：候補の名詞句／青：指定された代名詞",
-      "new_page": 34
+      "new_page": 32
     },
     {
       "old_page": 36,
@@ -595,7 +568,7 @@
       "action": "rewrite",
       "before": "中国語：配布text全文と指定span",
       "after": "中国語：文章全文と指定された語句",
-      "new_page": 34
+      "new_page": 32
     },
     {
       "old_page": 37,
@@ -604,7 +577,7 @@
       "action": "rewrite",
       "before": "dev.json / 行40 / idx 40　　緑：候補の名詞句　青：指定された代名詞",
       "after": "緑：候補の名詞句／青：指定された代名詞",
-      "new_page": 35
+      "new_page": 33
     },
     {
       "old_page": 37,
@@ -613,7 +586,7 @@
       "action": "rewrite",
       "before": "中国語：配布text全文と指定span",
       "after": "中国語：文章全文と指定された語句",
-      "new_page": 35
+      "new_page": 33
     },
     {
       "old_page": 38,
@@ -622,7 +595,7 @@
       "action": "rewrite",
       "before": "dev.json / 行44 / idx 44　　緑：候補の名詞句　青：指定された代名詞",
       "after": "緑：候補の名詞句／青：指定された代名詞",
-      "new_page": 36
+      "new_page": 34
     },
     {
       "old_page": 38,
@@ -631,7 +604,7 @@
       "action": "rewrite",
       "before": "中国語：配布text全文と指定span",
       "after": "中国語：文章全文と指定された語句",
-      "new_page": 36
+      "new_page": 34
     },
     {
       "old_page": 39,
@@ -640,7 +613,7 @@
       "action": "rewrite",
       "before": "dev.json / 行61 / idx 166　　緑：候補の名詞句　青：指定された代名詞",
       "after": "緑：候補の名詞句／青：指定された代名詞",
-      "new_page": 37
+      "new_page": 35
     },
     {
       "old_page": 39,
@@ -649,7 +622,7 @@
       "action": "rewrite",
       "before": "中国語：配布text全文と指定span",
       "after": "中国語：文章全文と指定された語句",
-      "new_page": 37
+      "new_page": 35
     },
     {
       "old_page": 40,
@@ -658,7 +631,7 @@
       "action": "rewrite",
       "before": "dev.json / 行81 / idx 186　　緑：候補の名詞句　青：指定された代名詞",
       "after": "緑：候補の名詞句／青：指定された代名詞",
-      "new_page": 38
+      "new_page": 36
     },
     {
       "old_page": 40,
@@ -667,7 +640,7 @@
       "action": "rewrite",
       "before": "中国語：配布text全文と指定span",
       "after": "中国語：文章全文と指定された語句",
-      "new_page": 38
+      "new_page": 36
     },
     {
       "old_page": 41,
@@ -676,7 +649,7 @@
       "action": "rewrite",
       "before": "train.json / 行698 / idx 42　　緑：候補の名詞句　青：指定された代名詞",
       "after": "緑：候補の名詞句／青：指定された代名詞",
-      "new_page": 39
+      "new_page": 37
     },
     {
       "old_page": 41,
@@ -685,7 +658,7 @@
       "action": "rewrite",
       "before": "中国語：配布text全文と指定span",
       "after": "中国語：文章全文と指定された語句",
-      "new_page": 39
+      "new_page": 37
     },
     {
       "old_page": 2,
@@ -796,22 +769,13 @@
       "new_page": 16
     },
     {
-      "old_page": 22,
-      "location": "source or section label",
-      "issue": "通常の出典と読者向けの章名に整理",
-      "action": "rewrite",
-      "before": "[2] CLUE team. CLUEWSC2020: data format and task description.",
-      "after": "[2] CLUE team. CLUEWSC2020: WSC Winograd模式挑战中文版，中文指代消解任务.",
-      "new_page": 21
-    },
-    {
       "old_page": 27,
       "location": "source or section label",
       "issue": "通常の出典と読者向けの章名に整理",
       "action": "rewrite",
       "before": "[1] CLUE team. CLUEWSC2020: data format and task description.",
       "after": "[1] CLUE team. CLUEWSC2020: WSC Winograd模式挑战中文版，中文指代消解任务.",
-      "new_page": 25
+      "new_page": 23
     },
     {
       "old_page": 27,
@@ -820,7 +784,7 @@
       "action": "rewrite",
       "before": "[2] CLUEbenchmark. cluewsc2020_public.zip; README dated 2021-08-29.",
       "after": "[2] CLUEbenchmark. CLUEWSC2020 public data; test update 2021-08-29.",
-      "new_page": 25
+      "new_page": 23
     },
     {
       "old_page": 32,
@@ -829,7 +793,7 @@
       "action": "rewrite",
       "before": "[1] CLUEbenchmark. CLUEWSC2020 / dev.json / line 3 / idx 3.",
       "after": "[1] CLUEbenchmark. CLUEWSC2020 public data.",
-      "new_page": 30
+      "new_page": 28
     },
     {
       "old_page": 33,
@@ -838,7 +802,7 @@
       "action": "rewrite",
       "before": "[1] CLUEbenchmark. CLUEWSC2020 / dev.json / line 14 / idx 14.",
       "after": "[1] CLUEbenchmark. CLUEWSC2020 public data.",
-      "new_page": 31
+      "new_page": 29
     },
     {
       "old_page": 34,
@@ -847,7 +811,7 @@
       "action": "rewrite",
       "before": "[1] CLUEbenchmark. CLUEWSC2020 / dev.json / line 16 / idx 16.",
       "after": "[1] CLUEbenchmark. CLUEWSC2020 public data.",
-      "new_page": 32
+      "new_page": 30
     },
     {
       "old_page": 35,
@@ -856,7 +820,7 @@
       "action": "rewrite",
       "before": "[1] CLUEbenchmark. CLUEWSC2020 / train.json / line 37 / idx 294.",
       "after": "[1] CLUEbenchmark. CLUEWSC2020 public data.",
-      "new_page": 33
+      "new_page": 31
     },
     {
       "old_page": 36,
@@ -865,7 +829,7 @@
       "action": "rewrite",
       "before": "[1] CLUEbenchmark. CLUEWSC2020 / dev.json / line 37 / idx 37.",
       "after": "[1] CLUEbenchmark. CLUEWSC2020 public data.",
-      "new_page": 34
+      "new_page": 32
     },
     {
       "old_page": 37,
@@ -874,7 +838,7 @@
       "action": "rewrite",
       "before": "[1] CLUEbenchmark. CLUEWSC2020 / dev.json / line 40 / idx 40.",
       "after": "[1] CLUEbenchmark. CLUEWSC2020 public data.",
-      "new_page": 35
+      "new_page": 33
     },
     {
       "old_page": 38,
@@ -883,7 +847,7 @@
       "action": "rewrite",
       "before": "[1] CLUEbenchmark. CLUEWSC2020 / dev.json / line 44 / idx 44.",
       "after": "[1] CLUEbenchmark. CLUEWSC2020 public data.",
-      "new_page": 36
+      "new_page": 34
     },
     {
       "old_page": 39,
@@ -892,7 +856,7 @@
       "action": "rewrite",
       "before": "[1] CLUEbenchmark. CLUEWSC2020 / dev.json / line 61 / idx 166.",
       "after": "[1] CLUEbenchmark. CLUEWSC2020 public data.",
-      "new_page": 37
+      "new_page": 35
     },
     {
       "old_page": 40,
@@ -901,7 +865,7 @@
       "action": "rewrite",
       "before": "[1] CLUEbenchmark. CLUEWSC2020 / dev.json / line 81 / idx 186.",
       "after": "[1] CLUEbenchmark. CLUEWSC2020 public data.",
-      "new_page": 38
+      "new_page": 36
     },
     {
       "old_page": 41,
@@ -910,7 +874,7 @@
       "action": "rewrite",
       "before": "[1] CLUEbenchmark. CLUEWSC2020 / train.json / line 698 / idx 42.",
       "after": "[1] CLUEbenchmark. CLUEWSC2020 public data.",
-      "new_page": 39
+      "new_page": 37
     },
     {
       "old_page": 42,
@@ -919,7 +883,7 @@
       "action": "rewrite",
       "before": "[1] CLUEbenchmark. cluewsc2020_public.zip; README dated 2021-08-29.",
       "after": "[1] CLUEbenchmark. CLUEWSC2020 public data; test update 2021-08-29.",
-      "new_page": 40
+      "new_page": 38
     },
     {
       "old_page": 43,
@@ -928,7 +892,7 @@
       "action": "rewrite",
       "before": "[1] CLUEbenchmark. cluewsc2020_public.zip; README dated 2021-08-29.",
       "after": "[1] CLUEbenchmark. CLUEWSC2020 public data; test update 2021-08-29.",
-      "new_page": 41
+      "new_page": 39
     },
     {
       "old_page": 44,
@@ -937,6 +901,15 @@
       "action": "rewrite",
       "before": "[1] CLUEbenchmark. cluewsc2020_public.zip; README dated 2021-08-29.",
       "after": "[1] CLUEbenchmark. CLUEWSC2020 public data; test update 2021-08-29.",
+      "new_page": 40
+    },
+    {
+      "old_page": 48,
+      "location": "source or section label",
+      "issue": "通常の出典と読者向けの章名に整理",
+      "action": "rewrite",
+      "before": "Appendix: 2. 版・原位置・実装",
+      "after": "Appendix: 2. データの読み方と評価値",
       "new_page": 42
     },
     {
@@ -944,18 +917,9 @@
       "location": "source or section label",
       "issue": "通常の出典と読者向けの章名に整理",
       "action": "rewrite",
-      "before": "Appendix: 2. 版・原位置・実装",
-      "after": "Appendix: 2. データの読み方と評価値",
-      "new_page": 44
-    },
-    {
-      "old_page": 48,
-      "location": "source or section label",
-      "issue": "通常の出典と読者向けの章名に整理",
-      "action": "rewrite",
       "before": "[1] CLUEbenchmark. cluewsc2020_public.zip; README dated 2021-08-29.",
       "after": "[1] CLUEbenchmark. CLUEWSC2020 public data; test update 2021-08-29.",
-      "new_page": 44
+      "new_page": 42
     },
     {
       "old_page": 49,
@@ -964,7 +928,7 @@
       "action": "rewrite",
       "before": "Appendix: 2. 版・原位置・実装",
       "after": "Appendix: 2. データの読み方と評価値",
-      "new_page": 45
+      "new_page": 43
     },
     {
       "old_page": 49,
@@ -973,7 +937,7 @@
       "action": "rewrite",
       "before": "[1] CLUEbenchmark. cluewsc2020_public.zip; README dated 2021-08-29.",
       "after": "[1] CLUEbenchmark. CLUEWSC2020 public data; test update 2021-08-29.",
-      "new_page": 45
+      "new_page": 43
     },
     {
       "old_page": 51,
@@ -982,7 +946,7 @@
       "action": "rewrite",
       "before": "Appendix: 2. 版・原位置・実装",
       "after": "Appendix: 2. データの読み方と評価値",
-      "new_page": 46
+      "new_page": 44
     },
     {
       "old_page": 52,
@@ -991,7 +955,7 @@
       "action": "rewrite",
       "before": "Appendix: 2. 版・原位置・実装",
       "after": "Appendix: 2. データの読み方と評価値",
-      "new_page": 47
+      "new_page": 45
     },
     {
       "old_page": 53,
@@ -1000,7 +964,7 @@
       "action": "rewrite",
       "before": "Appendix: 2. 版・原位置・実装",
       "after": "Appendix: 2. データの読み方と評価値",
-      "new_page": 48
+      "new_page": 46
     },
     {
       "old_page": 53,
@@ -1009,7 +973,7 @@
       "action": "rewrite",
       "before": "[1] CLUEbenchmark. CLUEWSC2020 / train.json / line 681 / idx 25.",
       "after": "[1] CLUEbenchmark. CLUEWSC2020 public data.",
-      "new_page": 48
+      "new_page": 46
     },
     {
       "old_page": 8,
@@ -1063,7 +1027,7 @@
       "action": "rewrite",
       "before": "自宅に招いたのは同業者で、招かれたのはドイツへ行った副教授。「他」は副教授を指す。",
       "after": "自宅に招いたのは同業者で、招かれたのはドイツへ行った准教授。「他」は准教授を指す。",
-      "new_page": 40
+      "new_page": 38
     },
     {
       "old_page": 48,
@@ -1072,7 +1036,7 @@
       "action": "rewrite",
       "before": "実例2では「副教授」、実例1では「块状物」を候補にするとtrueになる。候補の名詞句も、問題を構成する入力の一部。",
       "after": "実例2では「准教授」、実例1では「块状物」を候補にするとtrueになる。候補の名詞句も、問題を構成する入力の一部。",
-      "new_page": 44
+      "new_page": 42
     },
     {
       "old_page": 6,
@@ -1099,7 +1063,7 @@
       "action": "rewrite",
       "before": "父の楊金彪と、転轍係の同僚の郝強生が外の部屋に座っていた。そのとき父はまだ21歳で、彼は顔の汗を拭きながら、私を見つけた経緯を詳しく話した。\n\n候補の名詞句：私の父\n指定された代名詞：彼",
       "after": "父の楊金彪と、転轍係の同僚の郝強生が外側の部屋に座っていた。そのとき父はまだ21歳で、彼は顔の汗を拭きながら、私を見つけた経緯を詳しく話した。\n\n候補の名詞句：私の父\n指定された代名詞：彼",
-      "new_page": 33
+      "new_page": 31
     },
     {
       "old_page": 38,
@@ -1108,7 +1072,223 @@
       "action": "rewrite",
       "before": "私が戻ったら二人で働いて、少平と蘭香の勉学を必ず支え切ろう。二人に力があって、どこの学校に受かろうと、私たちは彼らをそこへ通わせよう。\n\n候補の名詞句：少平と蘭香\n指定された代名詞：彼ら",
       "after": "私が戻ったら二人で働いて、少平と蘭香が学業を終えるまで、必ず支えよう。二人に力があって、どこの学校に受かろうと、私たちは彼らをそこへ通わせよう。\n\n候補の名詞句：少平と蘭香\n指定された代名詞：彼ら",
-      "new_page": 36
+      "new_page": 34
+    },
+    {
+      "old_page": 5,
+      "location": "shape 1",
+      "issue": "課題と元作成者・初出年を説明し、後の評価基盤への採用紹介を外部化",
+      "action": "rewrite",
+      "before": "CLUEWSC2020は、中国語の文章と、指定された名詞句・代名詞を入力にする二値分類のデータ。二つが同じ対象を指すならtrue、違えばfalse。\n登場人物や物が何をしているかを読み、代名詞が指す対象を判断する。語の位置だけでなく、動作の対象や話し手の意図が手掛かりになる。\n2020年にCLUEの新しい指示関係課題として公開され、後にCLEVAの共参照解決にも採用された。",
+      "after": "CLUEWSC2020は、中国語の文章と、指定された名詞句・代名詞を入力にする二値分類のデータ。二つが同じ対象を指すならtrue、違えばfalse。\n登場人物や物が何をしているかを読み、代名詞が指す対象を判断する。語の位置だけでなく、動作の対象や話し手の意図が手掛かりになる。\nCLUEチームが2020年に公開した、中国語の自然な文脈で指示関係を調べる課題である。",
+      "new_page": 5
+    },
+    {
+      "old_page": 7,
+      "location": "shape 1",
+      "issue": "実例の意味を説明し、プラットフォーム実装の説明例との照合記録を外部化",
+      "action": "rewrite",
+      "before": "すくい上げて冷ます対象は、煮汁の中にできた塊。「它们」は複数の塊を指すので、答えはtrueになる。\n「煮汁」と「塊」の両方が出てくる文章で、代名詞と動作の対象を結び付ける問題になっている。\nこの問題は、HELMにあるCLEVAの共参照解決シナリオでも説明例に使われている。",
+      "after": "すくい上げて冷ます対象は、煮汁の中にできた塊。「它们」は複数の塊を指すので、答えはtrueになる。\n「煮汁」と「塊」の両方が出てくる文章で、代名詞と動作の対象を結び付ける問題になっている。",
+      "new_page": 7
+    },
+    {
+      "old_page": 9,
+      "location": "shape 1",
+      "issue": "登場人物と判定理由に集中し、CLEVA紙面一致という調査結果を外部化",
+      "action": "rewrite",
+      "before": "自宅に招いたのは同業者で、招かれたのはドイツへ行った准教授。「他」が指す准教授と、候補の同業者は別人なのでfalseになる。\n蒋盈波、准教授、同業者という複数の人物が出てくる。誰が誰を招いたかを、文の主語が変わっても追う必要がある。\nCLEVAの論文でも、この文章と二つの指定箇所が共参照解決の例に使われている。",
+      "after": "自宅に招いたのは同業者で、招かれたのはドイツへ行った准教授。「他」が指す准教授と、候補の同業者は別人なのでfalseになる。\n蒋盈波、准教授、同業者という複数の人物が出てくる。誰が誰を招いたかを、文の主語が変わっても追う必要がある。",
+      "new_page": 9
+    },
+    {
+      "old_page": 19,
+      "location": "shape 1",
+      "issue": "元研究の評価対象と現在の分割という意味ある条件を保持し、後続基盤の採点説明を外部化",
+      "action": "rewrite",
+      "before": "正答率は、予測したtrue/falseが正解ラベルと一致した問題の割合。指定された名詞句と代名詞が、同じ対象を指すかを評価する。\n次のモデル性能は、構築時の2020年テスト290問に対する報告値。現在公開されているテストは2,574問に更新されている。\nCLEVAの共参照解決でも正答率を用い、言語モデルがプロンプトへ答える形で評価する。",
+      "after": "正答率は、予測したtrue/falseが正解ラベルと一致した問題の割合。指定された名詞句と代名詞が、同じ対象を指すかを評価する。\n次のモデル性能は、構築時の2020年テスト290問に対する報告値。現在公開されているテストは2,574問に更新されている。",
+      "new_page": 18
+    },
+    {
+      "old_page": 23,
+      "location": "shape 0",
+      "issue": "採用基盤ではなく元データの特徴と使い方を章題へ",
+      "action": "rewrite",
+      "before": "中国語の指示関係を、モデル評価へ",
+      "after": "4. 課題の特徴と利用条件",
+      "new_page": 21
+    },
+    {
+      "old_page": 28,
+      "location": "shape 1",
+      "issue": "元データの構成・能力・評価をまとめ、基盤への利用の広がりは外部記録へ",
+      "action": "rewrite",
+      "before": "CLUEWSC2020は、中国語の自然な文章で、指定された名詞句と代名詞が同じ対象を指すかを問うデータセット。\n文学作品に現れる人物や物の関係を読み、性・数だけでなく、動作や談話の流れも手掛かりにする。\n構築時のテストでは最良モデルの正答率が81.38％、100問の人手評価は多数決で98％だった。中国語理解の課題として、CLUEからCLEVAへと利用が広がった。",
+      "after": "CLUEWSC2020は、中国語の自然な文章で、指定された名詞句と代名詞が同じ対象を指すかを問うデータセット。\n文学作品に現れる人物や物の関係を読み、性・数だけでなく、動作や談話の流れも手掛かりにする。\n構築時のテストでは最良モデルの正答率が81.38％、100問の人手評価は多数決で98％だった。文章と指定された二つの語句を合わせて、中国語の文脈理解を調べる。",
+      "new_page": 24
+    },
+    {
+      "old_page": 53,
+      "location": "code background top",
+      "issue": "字形位置と枠高を保持し、実画素上7.33/下11.33ptを上下9.33ptへ整える",
+      "action": "resize",
+      "before": "top=120.96pt,margin_top=4.29pt",
+      "after": "top=118.96pt,margin_top=6.29pt",
+      "new_page": 46
+    },
+    {
+      "old_page": 51,
+      "location": "shape 3",
+      "issue": "微調整の反復回数という細部を外部化し、対象テストとモデル選択条件を保持",
+      "action": "rewrite",
+      "before": "2020年のテスト290問に対する正答率。3回の微調整から、開発成績が最良のモデルを選択。",
+      "after": "2020年のテスト290問に対する正答率。開発成績に基づいて選んだモデルを評価。",
+      "new_page": 44
+    },
+    {
+      "old_page": 52,
+      "location": "shape 3",
+      "issue": "微調整の反復回数という細部を外部化し、対象テストとモデル選択条件を保持",
+      "action": "rewrite",
+      "before": "2020年のテスト290問に対する正答率。3回の微調整から、開発成績が最良のモデルを選択。",
+      "after": "2020年のテスト290問に対する正答率。開発成績に基づいて選んだモデルを評価。",
+      "new_page": 45
+    },
+    {
+      "old_page": 51,
+      "location": "shape 0",
+      "issue": "正式論文という刊行上の説明より、年/表内容/2頁の対応を見出しへ示す",
+      "action": "rewrite",
+      "before": "正式論文で報告された9モデルの精度",
+      "after": "2020年：モデル別のテスト正答率（1/2）",
+      "new_page": 44
+    },
+    {
+      "old_page": 52,
+      "location": "shape 0",
+      "issue": "正式論文という刊行上の説明より、年/表内容/2頁の対応を見出しへ示す",
+      "action": "rewrite",
+      "before": "正式論文で報告された9モデルの精度",
+      "after": "2020年：モデル別のテスト正答率（2/2）",
+      "new_page": 45
+    },
+    {
+      "old_page": 5,
+      "location": "source",
+      "issue": "外した後続評価基盤の文献も本文から外し、元配布/原著出典を保持",
+      "action": "rewrite",
+      "before": "[1] CLUE team. CLUEWSC2020: WSC Winograd模式挑战中文版，中文指代消解任务.\nhttps://github.com/CLUEbenchmark/CLUEWSC2020/blob/446646278671444c79a67e7434b3a1d1d1cbbe88/README.md\n[2] Li et al. (2023). CLEVA: Chinese Language Models EVAluation Platform. EMNLP System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/",
+      "after": "[1] CLUE team. CLUEWSC2020: WSC Winograd模式挑战中文版，中文指代消解任务.\nhttps://github.com/CLUEbenchmark/CLUEWSC2020/blob/446646278671444c79a67e7434b3a1d1d1cbbe88/README.md",
+      "new_page": 5
+    },
+    {
+      "old_page": 7,
+      "location": "source",
+      "issue": "外した後続評価基盤の文献も本文から外し、元配布/原著出典を保持",
+      "action": "rewrite",
+      "before": "[1] CLUEbenchmark. CLUEWSC2020 public data.  https://storage.googleapis.com/cluebenchmark/tasks/cluewsc2020_public.zip\n[2] Stanford CRFM. CLEVACoreferenceResolutionScenario / Converter. HELM v0.4.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py",
+      "after": "[1] CLUEbenchmark. CLUEWSC2020 public data.  https://storage.googleapis.com/cluebenchmark/tasks/cluewsc2020_public.zip",
+      "new_page": 7
+    },
+    {
+      "old_page": 9,
+      "location": "source",
+      "issue": "外した後続評価基盤の文献も本文から外し、元配布/原著出典を保持",
+      "action": "rewrite",
+      "before": "[1] CLUEbenchmark. CLUEWSC2020 public data.  https://storage.googleapis.com/cluebenchmark/tasks/cluewsc2020_public.zip\n[2] Li et al. (2023). CLEVA: Chinese Language Models EVAluation Platform. EMNLP System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/",
+      "after": "[1] CLUEbenchmark. CLUEWSC2020 public data.  https://storage.googleapis.com/cluebenchmark/tasks/cluewsc2020_public.zip",
+      "new_page": 9
+    },
+    {
+      "old_page": 19,
+      "location": "source",
+      "issue": "外した後続評価基盤の文献も本文から外し、元配布/原著出典を保持",
+      "action": "rewrite",
+      "before": "[1] Xu et al. (2020). CLUE: A Chinese Language Understanding Evaluation Benchmark. COLING, pp.4762–4772.  https://aclanthology.org/2020.coling-main.419/\n[2] Li et al. (2023). CLEVA: Chinese Language Models EVAluation Platform. EMNLP System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/",
+      "after": "[1] Xu et al. (2020). CLUE: A Chinese Language Understanding Evaluation Benchmark. COLING, pp.4762–4772.  https://aclanthology.org/2020.coling-main.419/",
+      "new_page": 18
+    },
+    {
+      "old_page": 3,
+      "location": "section label",
+      "issue": "課題中心の章構成に目次と帯を合わせる",
+      "action": "rewrite",
+      "before": "CLUEとCLEVAでの利用",
+      "after": "課題の特徴と利用条件",
+      "new_page": 3
+    },
+    {
+      "old_page": 23,
+      "location": "section label",
+      "issue": "課題中心の章構成に目次と帯を合わせる",
+      "action": "rewrite",
+      "before": "4. CLUEとCLEVAでの利用",
+      "after": "4. 課題の特徴と利用条件",
+      "new_page": 21
+    },
+    {
+      "old_page": 24,
+      "location": "section label",
+      "issue": "課題中心の章構成に目次と帯を合わせる",
+      "action": "rewrite",
+      "before": "4. CLUEとCLEVAでの利用",
+      "after": "4. 課題の特徴と利用条件",
+      "new_page": 22
+    },
+    {
+      "old_page": 27,
+      "location": "section label",
+      "issue": "課題中心の章構成に目次と帯を合わせる",
+      "action": "rewrite",
+      "before": "4. CLUEとCLEVAでの利用",
+      "after": "4. 課題の特徴と利用条件",
+      "new_page": 23
+    },
+    {
+      "old_page": 28,
+      "location": "section label",
+      "issue": "課題中心の章構成に目次と帯を合わせる",
+      "action": "rewrite",
+      "before": "4. CLUEとCLEVAでの利用",
+      "after": "4. 課題の特徴と利用条件",
+      "new_page": 24
+    },
+    {
+      "old_page": 22,
+      "location": "whole page",
+      "issue": "モデルの反復微調整設定と後続プロンプト評価の違いは細かな実行解説のため外部記録へ。開発成績で選択した条件は評価表へ保持。",
+      "action": "delete_page",
+      "before": "学習の反復と、プロンプトの違いを分ける\n各モデルを3回微調整し、その中で開発成績が最良のモデルのテスト値を報告した。チェックポイントは早期停止で選び、ハイパーパラメータも開発データで調整した。\nこれは、生成モデルにプロンプトを与えて答えさせるCLEVAの評価とは異なる。3回の微調整を、3種類のプロンプトや3候補の生成と読み替えない。\n公式リポジトリの開発精度と、正式論文のテスト精度も評価対象が違う。ここでは正式論文のテスト値を歴史的な比較として示した。\n3. 評価と歴史的な性能\n[1] Xu et al. (2020). CLUE: A Chinese Language Understanding Evaluation Benchmark. COLING, pp.4762–4772.  https://aclanthology.org/2020.coling-main.419/\n[2] CLUE team. CLUEWSC2020: data format and task description.\nhttps://github.com/CLUEbenchmark/CLUEWSC2020/blob/446646278671444c79a67e7434b3a1d1d1cbbe88/README.md",
+      "after": "",
+      "new_page": null
+    },
+    {
+      "old_page": 25,
+      "location": "whole page",
+      "issue": "CLEVA採用とHELM変換例の照合は元課題理解に不要な基盤説明として外部化。",
+      "action": "delete_page",
+      "before": "CLEVAは、CLUEWSCから問題を採用\nCLEVAの論文は、共参照解決にCLUEWSCから抽出したデータを使うと記す。紙面例は本資料の実例2と、文章・対象組・否定の正解が一致する。\nHELM v0.4.0のCLEVACoreferenceResolutionScenarioは、実例1の塊と「它们」を「不是／是」の二候補で示す。\nただし、CLEVAが選んだ全問題と変換済みファイルは今回取得できていない。元CLUEの全件数や分割を、CLEVAの実行件数と同一視しない。\n4. CLUEとCLEVAでの利用\n[1] Li et al. (2023). CLEVA: Chinese Language Models EVAluation Platform. EMNLP System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/\n[2] Stanford CRFM. CLEVACoreferenceResolutionScenario / Converter. HELM v0.4.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py",
+      "after": "",
+      "new_page": null
+    },
+    {
+      "old_page": 57,
+      "location": "whole page",
+      "issue": "基盤/後利用を重ねる紹介頁。元CLUE作成主体と2020年公開は旧5に保持。",
+      "action": "delete_page",
+      "before": "中国語の言語理解を、共通の基盤で測る\nCLUEチームは、Liang Xu、Hai Hu、Xuanwei Zhangらによる共同プロジェクト。COLING 2020では9種類の中国語理解課題と事前学習モデルの比較を示した。\nCLUEWSC2020はそのうち、指定された代名詞の指示対象を判定する課題。英語中心の評価基盤を補い、中国語の自然な文脈で理解を測る位置付けを持つ。\n元WSCの発想、CLUEでの中国語データ整備、CLEVAでの言語モデル評価という、異なる段階の取り組みがつながっている。\nAppendix: 3. 研究と参考文献\n[1] Xu et al. (2020). CLUE: A Chinese Language Understanding Evaluation Benchmark. COLING, pp.4762–4772.  https://aclanthology.org/2020.coling-main.419/",
+      "after": "",
+      "new_page": null
+    },
+    {
+      "old_page": 60,
+      "location": "whole page",
+      "issue": "外した評価基盤論文/変換実装の参考文献を調査記録へ保持。",
+      "action": "delete_page",
+      "before": "参考文献\nAppendix: 3. 研究と参考文献\nCLEVA: Chinese Language Models EVAluation Platform\nLi et al. · 2023 · EMNLP System Demonstrations\n中国語モデルの多面的評価基盤。付録B.1.1でCLUEWSCの採用と共参照例を示す。\nhttps://aclanthology.org/2023.emnlp-demo.17/\nCLEVACoreferenceResolutionScenario and Converter\nStanford CRFM · 2023 · HELM v0.4.0 implementation\nテンプレートから入力と参照を作る。塊と代名詞の一致を問う中国語の例を含む。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py",
+      "after": "",
+      "new_page": null
     },
     {
       "old_page": 14,
