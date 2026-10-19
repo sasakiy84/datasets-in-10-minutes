@@ -30,3 +30,8 @@ Geminiは使用していない。Codexが日本語校正スキルをページご
 |65|前頁の入力抜粋の日本語訳|入力の日本語訳|独立レビュー：ページ位置に依存する見出しを省いた。|
 
 [全ページ文言](billsum/pages.jsonl)・[自己検査・独立レビュー](billsum/review.json)
+
+
+## 読者向けの説明・日本語の改訂（2026年10月）
+
+Geminiは使用せず、Codexがスキルで校正し、別担当が独立レビューした。削除・統合を含む[問題点と変更対](billsum/editorial-2026-10/changes.md)、[旧ページとの対応](billsum/editorial-2026-10/page-map.json)、[独立レビュー](billsum/editorial-2026-10/independent-review/handoff.json)、[最終ページの全文](billsum/pages.jsonl)。旧版の校正・検証記録は保持している。

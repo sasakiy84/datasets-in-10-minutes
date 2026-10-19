@@ -58,3 +58,8 @@ master-guided-slides、dataset-introduction-slides、japanese-proofreadingスキ
 ## リポジトリの検証記録
 
 [原レコード・出典・実行条件](data-audits/billsum.json)、[実際の校正対](skill-proofreading/billsum.md)、[全ページ文言](skill-proofreading/billsum/pages.jsonl)、[自己検査・独立レビュー](skill-proofreading/billsum/review.json)。
+
+
+## 読者向け説明の改訂
+
+[日本語・情報量の問題点と修正](skill-proofreading/billsum/editorial-2026-10/findings.json)。細かな再現条件・原レコードの照合情報は従来の検証記録に保持し、紹介スライドから整理した。
