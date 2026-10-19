@@ -17,3 +17,8 @@ Geminiは使用していない。Codexが日本語校正スキルをページご
 ||三つの粒度の専門家要約を構築し、複数文書・要約圧縮の実験と人手評価を報告する。|三粒度の専門家要約を構築し、複数文書・要約圧縮の実験と人手評価を報告する。|内容を保ち、紹介文の最後の1字だけが次行になるのを避ける。|
 
 [全ページ文言](multilexsum/pages.jsonl)・[自己検査・独立レビュー](multilexsum/review.json)
+
+
+## 読者向けの説明・日本語の改訂（2026年10月）
+
+Geminiは使用せず、Codexがスキルで校正し、別担当が独立レビューした。削除・統合を含む[問題点と変更対](multilexsum/editorial-2026-10/changes.md)、[旧ページとの対応](multilexsum/editorial-2026-10/page-map.json)、[独立レビュー](multilexsum/editorial-2026-10/independent-review/handoff.json)、[最終ページの全文](multilexsum/pages.jsonl)。旧版の校正・検証記録は保持している。
