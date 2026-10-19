@@ -21,3 +21,8 @@ Geminiは使用していない。Codexが日本語校正スキルをページご
 |53|この資料はAFQMCを独立して扱い、CLEVA採用は後続の利用として説明する。別の短文意味照合データを混ぜて件数を増やさない。|AFQMCと他の短文意味照合データは、出所・分割・ラベルの基準を分けて読む。CLEVA採用版も、元AFQMCの全件とは別の集合として扱う。|制作過程の説明を、利用者がデータ集合を区別する説明に改めた。|
 
 [全ページ文言](afqmc/pages.jsonl)・[自己検査・独立レビュー](afqmc/review.json)
+
+
+## 読者向けの説明・日本語の改訂（2026年10月）
+
+Geminiは使用せず、Codexがスキルで校正し、別担当が独立レビューした。削除・統合を含む[問題点と変更対](afqmc/editorial-2026-10/changes.md)、[旧ページとの対応](afqmc/editorial-2026-10/page-map.json)、[独立レビュー](afqmc/editorial-2026-10/independent-review/handoff.json)、[最終ページの全文](afqmc/pages.jsonl)。旧版の校正・検証記録は保持している。

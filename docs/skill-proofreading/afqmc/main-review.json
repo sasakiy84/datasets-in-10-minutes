@@ -1,27 +1,71 @@
 {
   "reviewer": "main",
-  "checked_at": "2026-10-18T10:40:55.608146+00:00",
-  "actual_individually_viewed_pages": [
-    7,
-    9,
-    11
-  ],
-  "findings": "3原例の二文全文とJP同居、異なる入力の識別、配布二値ラベル、えんじ色の大きな答え、表題と余白を確認。独立レビューの代用ではない。",
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "checked_at": "2026-10-19T07:26:32.768509+00:00",
   "artifact_sha256": {
-    "pptx": "4235b1ec09f91fd84c74c90847b1aa96d5adb970687ea820db9eb7d46e5d03cc",
-    "pdf": "6dd727b31a0a8c2e7f88505d8de012041cc721c63df8d716daeeeac97a49b881"
+    "pptx": "f8f2e7a93fb23b91fe1f6692c5410eb8f80d99fa408eccbd5261cf3485d942bc",
+    "pdf": "eff7718feb8b89ee8ae6fd3d1c67614a458ab4acf6836212785e0f41d5be3479"
   },
-  "revision_checks": [
-    {
-      "checked_at": "2026-10-18T10:58:58.525954+00:00",
-      "actual_individually_viewed_pages": [
-        53
-      ],
-      "findings": "作成過程の説明を読者向けの研究紹介へ直したこと、原大会由来とCLUE配布・CLEVA利用の違い、分割seed未確認の条件を保持したことを確認。",
-      "artifact_sha256": {
-        "pptx": "b4da041af020e96f0173d68dfefead547a9b67eca795f70a8bf255818a413afb",
-        "pdf": "13d6845ae82985603c21ce98308b772ab7e7ecf72b0a140ad233e46918e2caf3"
-      }
-    }
-  ]
+  "native_text_read_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41
+  ],
+  "actual_individually_viewed_pages": [
+    5,
+    9,
+    13,
+    17,
+    18,
+    20,
+    22,
+    40
+  ],
+  "checks": {
+    "all13_chinese_japanese_pairs_read": true,
+    "service_role_glosses_have_official_source": true,
+    "hidden_test_labels_and_human_sample_size_clear": true,
+    "p18_redundant_inference_removed": true
+  },
+  "findings": "全41頁native文言と代表8頁描画を確認。金融サービス名に簡潔な説明を補い、二つの質問で対象・操作・条件がどう異なるかを具体的に示す。正解率、人間評価100件とテスト全体の違い、利用条件の不明点を保持。本文は原票照合の監査から、実用の読込と意味照合の説明へ整理。全頁独立レビューは別担当。",
+  "remaining_issues": []
 }
