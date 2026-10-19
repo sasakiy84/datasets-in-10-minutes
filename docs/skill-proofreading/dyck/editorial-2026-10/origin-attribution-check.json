@@ -1,0 +1,54 @@
+{
+  "slug": "dyck",
+  "status": "confirmed_current_dataset_focus",
+  "method": "primary_source_attribution_review",
+  "reviewed_on": "2026-10-19",
+  "original_task": "Dyck形式言語の括弧の対応を使う構造推論。形式言語そのものを2019年や2022年の研究チームが発明したとは説明しない。",
+  "prior_neural_study": "Suzgun/Gehrmann/Belinkov/Shieber2019の次記号集合予測。",
+  "public_fixed_variant": "BIG-benchのDyck-4固定1000問・multiple_choice_grade",
+  "illustrated_generator": "Stanford CRFM研究チームのDyckLanguageScenario。種類数/問題数/長さ/seedを指定し、スタックで正解を計算。HELMの公開実装を使うが、基盤の紹介は主題にしない。",
+  "year_basis": "2022は紹介する公開補完生成器の同年実体を指す。形式言語の成立年・2019年研究・2023年公開モデル出力とは異なる。",
+  "evidence": [
+    {
+      "url": "https://arxiv.org/abs/1911.03329",
+      "section": "§4.1/§5.1/原著実験表",
+      "local": "evidence/paper.txt",
+      "claim": "次記号集合予測と全時点での成功。Dyck2の5000/5000列・10実験、RNN0.00/LSTM1.39/Stack99.99。"
+    },
+    {
+      "url": "https://github.com/google/BIG-bench/tree/main/bigbench/benchmark_tasks/dyck_languages",
+      "local": "evidence/bigbench-task.json",
+      "claim": "1000問・Dyck4・選択式"
+    },
+    {
+      "url": "https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/dyck_language_scenario.py",
+      "local": "evidence/scenario-v030.py",
+      "quote": "In this version of the task, however, we are allowing the user to specify the sizes and lengths of the training and test sets, as well as the types/numbers of parenthesis-pairs used.",
+      "claim": "先行研究とBIG-benchを参照した可変の生成器。固定配布集合ではない。"
+    },
+    {
+      "url": "https://github.com/stanford-crfm/helm/blob/c2ee966d79df97f5005d4352b13ddc1730c1f02f/src/helm/benchmark/scenarios/dyck_language_scenario.py",
+      "local": "evidence/scenario-earliest-confirmed-2022.py",
+      "claim": "2022年11月16日の固定コードに実体。年の一次根拠。"
+    }
+  ],
+  "slide_pages": [
+    2,
+    5,
+    16,
+    17,
+    18,
+    22,
+    23,
+    24,
+    25,
+    39,
+    40
+  ],
+  "total_pages": 40,
+  "final_hashes": {
+    "datasets-in-10-minutes-dyck.pptx": "1939e0f490170f93283aa1fe5cd5da731ff348dba85d6914de1d3609576409cc",
+    "datasets-in-10-minutes-dyck.pdf": "a92bfae068122d6a008323969d14913d540298ff8745ad6ebaf032932516f414"
+  },
+  "conclusion": "元の構造推論課題を主題とし、2019研究・BIG-bench固定版・公開生成器という実在する使い方を説明。生成器を固定配布データと同一視せず、13入力/正解/既存予測の出所は維持。基盤固有の採点・成績・監査は外部化。"
+}
