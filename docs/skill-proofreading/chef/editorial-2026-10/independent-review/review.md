@@ -6,3 +6,5 @@ CHEF改訂版を独立承認。未解決0。
 
 最終PPTX 0d3dcb8659b59beffd0bbc2a38bfdc4925a5e2be2ba85af0d17be59b5483bc56
 PDF 38654dfd030ba149b8467f24967ebaca1d475ca36d2bd482767c129146651ecc
+
+最終native枠修正再承認：p1 Subtitle2/p31 Title1のheightとmargin_bottom各8ptのみ。全文・shape位置・全61PNG byte不変、両頁実再view。最終PPTX 5fb63d3f5d14e38f6493a3d39e907a90cce31cd5a3eef3a92306fa55410f4e75 / PDF 24db11580ef34f37076e14b47f065f3622f57ff3d09346ed7537a9cb2bb89d46。
