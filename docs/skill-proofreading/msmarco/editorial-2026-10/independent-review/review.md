@@ -1,15 +1,13 @@
-# MS MARCO 読者向け改訂・独立承認
+# MS MARCO 元データ中心版・独立再承認
 
-旧61頁と新49頁の全native本文/表/出典、findings/page-mapを通読。新49頁を最終PDFから独立描画し、各頁を個別に拡大確認した。49PNGは作者の最終画像と全bytes一致。残件0で承認。
+旧承認49頁と新43頁の全native/表/出典と差分・削除6頁を読解し、新43頁をPDFから独立描画して全頁個別view。元の検索質問/文章・ランキング/構築・入手を中心に、固有評価基盤のYes/No変換・変更候補集合・12得点と細設定を外部化した。単なる呼称置換ではない。残件0。
 
-13実例の完全な英語質問/文章と日本語訳を読み比べ、元JSONのID/原文/参照タグ/元ファイルSHAを独立検証。意味・否定・数値・単位と元ラベルを保持。regularの疎な判定、卸売質問と小売文章のずれ、TREC0–3の意味、2/3正例、候補のqrels和集合と上位30限定を一次実装・正式論文へ照合。学習提示2質問と通常4組は保存adapter_specとsample prompt/get_train_instanceを確認。
+13全文原記録ENJP・元ラベルは以前にSHA/参照タグ/原JSONを一次照合済み。今回全exampleオブジェクトと保持quote-frameが旧承認版と完全一致し、原文と訳も再読。元研究の4教師ありMRR値を保持。これまでの一次検証と旧承認記録はbefore-dataset-focusへ保存。2016Microsoftの構築、v1文章コレクション、2019TRECの段階判定、MRR/NDCG、正解非公開test・公開dev6980/TREC43、非商用研究条件は自然に説明されている。
 
-6公開statsから12セルを小数第4位へ再算出し3試行を確認。教師あり4値はNogueira等2020本文のMRR@10表を照合。4native表はbaselineと全セル一致。原ranking_metricsのobject_to_score_binary_rankingをAST抽出して実行しYes/No/その他とlogprobの順位を独立確認。原公式READMEの件数/配布・公式非商用研究条件と権利範囲も確認。全884万文章の再取得やモデル再実行はしていない。
+現在の独立native279段落28セルclip0/layout268段落19セル0/40URL全文位置完全一致/XSD新規0/2native表。全43頁に欠落・重なりなし、通常の本文少数字行は許容。
 
-独立layout305段落43セル0、全native clip316段落52セル0、新XSD0・50URL文字中心一致、notes0。26引用枠は実PNGの黒字形を別測定し上下差2pt以内。全頁に欠落/重なりなし。普通の本文の短い末尾行は許容。
-
-最終hash：
+最終hash
 {
-  "pptx": "e3057566624c27ba537f91b7872c10c1fb3c166740e05986121a6115c0d23dbf",
-  "pdf": "38e63cf791657c738d7c473baf687afbf026e234c8d8dc904519f3767ff0a827"
+  "pptx": "d5fc3e842fdeac84343fc8db35a005ef4c811e48fc0ab053c6ae0b88c7ccfe09",
+  "pdf": "585ecacacafb8712d1fa4b656d90193817744a455cee3b389da8eaa7891bbd5a"
 }

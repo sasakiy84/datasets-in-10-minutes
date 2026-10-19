@@ -21,55 +21,73 @@
     "sha256": "e434d6483ba29d75689a551361fc0e8a35cb89f092786e1b7bd4ef6fb4803503"
   },
   "slides": [
-    1,
     5,
-    12,
-    16,
-    17,
     18,
+    19,
     20,
-    22,
+    21,
     23,
+    24,
     25,
     26,
-    29,
-    47,
-    48
+    41,
+    42,
+    43
   ],
-  "conclusion": "誤帰属なし。Microsoftの元データ、TREC判定、HELMによる二値判定への適応と候補条件、2020年教師あり報告値を別々に説明している。",
+  "conclusion": "Microsoft research created MS MARCO from Bing search questions, web passages and human answers. TREC2019 adds independent graded relevance judgments. The reader deck now centers on this dataset and its original retrieval use and evaluation; suite adaptation,12experiment scores and processing details are externalized.",
   "slug": "msmarco",
   "checked_at": "2026-10-19",
   "method": "skill_based_codex",
   "gemini_used": false,
   "artifact_changes_required": false,
   "artifact_hashes": {
-    "pptx": "e3057566624c27ba537f91b7872c10c1fb3c166740e05986121a6115c0d23dbf",
-    "pdf": "38e63cf791657c738d7c473baf687afbf026e234c8d8dc904519f3767ff0a827"
+    "pptx": "d5fc3e842fdeac84343fc8db35a005ef4c811e48fc0ab053c6ae0b88c7ccfe09",
+    "pdf": "585ecacacafb8712d1fa4b656d90193817744a455cee3b389da8eaa7891bbd5a"
   },
-  "current_native_evidence": {
-    "1": "MS MARCO\nMicrosoft MAchine Reading COmprehension\n検索質問に答える文章を上位に並べる\nsasakiy84\ndatasets in 10 minutes (2026-10-19)",
-    "5": "検索質問に答える文章を上位に並べる\nBingで実際に使われた質問と、Webから集めた文章を対応させたデータセット群。2016年に読解・質問応答用として登場した。\n文章検索（passage ranking）では、約884万件の文章から、質問に関連する文章を上位に並べる。ここでは、この課題のregularとTREC 2019を扱う。\nHELMでは質問と候補の文章を1組ずつ読み、答えを含むかをYes／Noで判定する。その出力と確からしさから順位を作る。\n1. 検索質問と関連する文章\n[1] Bajaj et al. (2016). MS MARCO: A Human Generated MAchine Reading COmprehension Dataset.  https://arxiv.org/abs/1611.09268\n[2] Stanford CRFM. HELM: MS MARCO passage ranking.  https://github.com/stanford-crfm/helm/tree/v0.3.0/src/helm/benchmark",
-    "12": "TRECでは関連の強さを4段階で付ける\nTREC 2019 Deep Learning Trackは、同じ文章コレクションに対して、評価担当者が多くの候補を判定した。\n関連度0は非関連、1は質問に関連するが答えを含まない、2は高度に関連、3は完全に関連。\nHELMでは、Yes／Noの学習例と二値の指標には2・3を正例として使い、NDCGには元の段階的な値を使う。\n1. 検索質問と関連する文章\n[1] Craswell et al. (2020). Overview of the TREC 2019 Deep Learning Track.  https://arxiv.org/abs/2003.07820\n[2] Stanford CRFM. HELM: MS MARCO passage ranking.  https://github.com/stanford-crfm/helm/tree/v0.3.0/src/helm/benchmark",
-    "16": "HELMは検索候補に判定済みの文章を加える\nHELMは前処理済みの文章コレクションを使う。qrelsは質問・文章IDと関連度を記録した判定ファイルである。\n候補は、検索手法BM25の上位30件と、qrelsに含まれる全文章の和集合。通常の指標は、この候補全体の順位を採点する。\n「topk=30」付きの指標は、候補をBM25の上位30件に限定する。モデルには、2つの訓練質問から正例・負例を1件ずつ、通常4組の判定例を示す。\n2. 順位の採点とHELMの成績\n[1] Stanford CRFM. HELM: MS MARCO passage ranking.  https://github.com/stanford-crfm/helm/tree/v0.3.0/src/helm/benchmark",
-    "17": "HELM regular：RR@10で比較\n2. 順位の採点とHELMの成績\n検証用1,000質問、各3試行の平均。2023年のHELM Classic公開結果。\n[1] Stanford CRFM (2023). HELM Classic: MS MARCO.  https://crfm.stanford.edu/helm/classic/v0.4.0/",
-    "18": "HELM TREC：NDCG@10で比較\n2. 順位の採点とHELMの成績\nTREC 2019の43質問、各3試行の平均。関連度判定済み文章を含む候補集合を使用。\n[1] Stanford CRFM (2023). HELM Classic: MS MARCO.  https://crfm.stanford.edu/helm/classic/v0.4.0/",
-    "20": "Bingの検索質問から人が回答を書く\n匿名化した実際のBing検索ログから、質問として使える英語の検索語を集めた。\n検索結果から得た文章を人が読み、回答を書く。人が回答を書く際に選んだ文章を、関連する文章として使った。\nその後、重複する文章を除いて約884万件のコレクションを作り、BM25で各質問の候補を取得した。\n3. データの成立と構成\n[1] Bajaj et al. (2016). MS MARCO: A Human Generated MAchine Reading COmprehension Dataset.  https://arxiv.org/abs/1611.09268\n[2] Microsoft. MS MARCO Passage Ranking.  https://github.com/microsoft/MSMARCO-Passage-Ranking",
-    "22": "同じ名称の下に複数の課題がある\n質問応答では、提示された文章から自然言語の答えを作る。well-formed answerでは、文として整った回答も扱う。\npassage rankingは短い文章を、document rankingはWeb文書を検索する。文書版は本文の単位やコレクションが異なる。\nこの資料の実例とHELMの結果は、v1のpassage rankingに対応する。\n3. データの成立と構成\n[1] Microsoft. MS MARCO.  https://microsoft.github.io/msmarco/\n[2] Microsoft. MS MARCO Passage Ranking.  https://github.com/microsoft/MSMARCO-Passage-Ranking",
-    "23": "regularは疎な判定、TRECは段階的な判定を使う\nregularは、質問応答の回答作成で使った文章から関連ラベルを得る。候補の全文章を網羅的に判定したわけではない。\nTRECは、参加システムの出力を集めたプールなどに対し、評価担当者が関連度0〜3を付ける。\nHELMのregularは公開dev.small、TRECは2019年の公開判定を使う。質問数、判定の密度、指標が異なるため、それぞれの条件でモデルを比べる。\n3. データの成立と構成\n[1] Microsoft. MS MARCO Passage Ranking.  https://github.com/microsoft/MSMARCO-Passage-Ranking\n[2] Craswell et al. (2020). Overview of the TREC 2019 Deep Learning Track.  https://arxiv.org/abs/2003.07820",
-    "25": "教師あり再ランキングの代表的な成績\n4. 検索研究での利用と入手\n2020年報告。BM25の候補を、MS MARCOで学習したモデルが再ランキング。\n[1] Nogueira, Jiang & Lin (2020). Document Ranking with a Pretrained Sequence-to-Sequence Model.  https://arxiv.org/abs/2003.06713",
-    "26": "質問と文章をまとめて読むモデルの学習に使う\nBERTを使うcross-encoderは、質問と文章をまとめて読み、関連度を予測する。T5を使う方式は、関連／非関連を表す文字列を生成する。\nこれらはMS MARCOでモデルの重みを学習する。HELMは例をプロンプトに示す方式で、学習方法と候補集合が異なる。\nSentence Transformersでは、MS MARCOの質問と正例・負例を使ったcross-encoderの学習例を公開している。\n4. 検索研究での利用と入手\n[1] Nogueira, Jiang & Lin (2020). Document Ranking with a Pretrained Sequence-to-Sequence Model.  https://arxiv.org/abs/2003.06713\n[2] Sentence Transformers. MS MARCO cross-encoder training example (accessed 2026-10-18).\nhttps://github.com/huggingface/sentence-transformers/tree/master/examples/cross_encoder/training/ms_marco",
-    "29": "実際の検索質問で、文章の探し方を評価する\nMS MARCOは、実際の検索質問とWebの文章を結び付け、質問応答から大規模な文章検索へ発展した。\nregularは多数の質問と疎な関連判定、TREC 2019は少数の質問と段階的な判定を提供する。\n検索モデルの学習や再ランキングに使われ、HELMでは文章ごとのYes／No判定を文章の順位へ変換して評価する。\n4. 検索研究での利用と入手\n[1] Microsoft. MS MARCO Passage Ranking.  https://github.com/microsoft/MSMARCO-Passage-Ranking\n[2] Stanford CRFM (2023). HELM Classic: MS MARCO.  https://crfm.stanford.edu/helm/classic/v0.4.0/",
-    "47": "参考文献\nAppendix: 3. 参考文献\nMS MARCO: A Human Generated MAchine Reading COmprehension Dataset\nPayal Bajaj et al. (2016). arXiv:1611.09268.\n実際の検索質問、検索結果の文章、人が書いた回答からなる読解データセットを報告する。\nhttps://arxiv.org/abs/1611.09268\nOverview of the TREC 2019 Deep Learning Track\nNick Craswell, Bhaskar Mitra, Emine Yilmaz, Daniel Campos, Ellen M. Voorhees (2020). TREC 2019 Proceedings.\n文章・文書検索の共通評価、関連度判定、参加システムの結果をまとめる。\nhttps://arxiv.org/abs/2003.07820",
-    "48": "参考文献\nAppendix: 3. 参考文献\nDocument Ranking with a Pretrained Sequence-to-Sequence Model\nRodrigo Nogueira, Zhiying Jiang, Jimmy Lin (2020). Findings of EMNLP 2020.\nT5で関連性を表す文字列を生成し、BM25の候補を再ランキングする方法を示す。\nhttps://arxiv.org/abs/2003.06713\nHolistic Evaluation of Language Models\nPercy Liang et al. (2023). Transactions on Machine Learning Research.\n共通の適応法と複数の指標で言語モデルを評価する枠組みHELMを示す。\nhttps://arxiv.org/abs/2211.09110"
-  },
+  "current_native_evidence": [
+    {
+      "page": 5,
+      "title": "検索質問に答える文章を上位に並べる"
+    },
+    {
+      "page": 18,
+      "title": "Bingの検索質問から人が回答を書く"
+    },
+    {
+      "page": 19,
+      "title": "文章検索用コレクションと質問の規模"
+    },
+    {
+      "page": 20,
+      "title": "同じ名称の下に複数の課題がある"
+    },
+    {
+      "page": 21,
+      "title": "通常の文章検索は疎な判定、TRECは段階的な判定"
+    },
+    {
+      "page": 41,
+      "title": "参考文献"
+    },
+    {
+      "page": 42,
+      "title": "参考文献"
+    },
+    {
+      "page": 43,
+      "title": "参考文献"
+    }
+  ],
   "original_data_not_created_by_HELM": true,
   "public_adapted_evaluation_coverage_not_assumed": true,
   "status": "verified_no_misattribution",
   "evidence_quote_normalized_for_typographic_linebreaks": true,
   "independent_review": {
-    "status": "passed",
-    "approved": true,
-    "reviewer": "create_twitter",
-    "path": "../review-msmarco/origin-attribution-check.json"
+    "status": "pending",
+    "reviewer": "create_twitter"
+  },
+  "final_hashes": {
+    "pptx": "d5fc3e842fdeac84343fc8db35a005ef4c811e48fc0ab053c6ae0b88c7ccfe09",
+    "pdf": "585ecacacafb8712d1fa4b656d90193817744a455cee3b389da8eaa7891bbd5a"
   }
 }
