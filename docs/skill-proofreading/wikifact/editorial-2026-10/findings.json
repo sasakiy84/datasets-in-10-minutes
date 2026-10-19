@@ -10,7 +10,7 @@
       "after": "WikiFactは、知識基盤Wikidataの「主語・関係・目的語」という三つ組を、英語の短い文に変換した事実補完データである。\nモデルは「作品の著者は」「国の通貨は」といった文の続きを生成する。根拠となる文章を与えず、モデルが覚えている事実を名前として答えられるかを測る。",
       "issue": "読者が概要を理解できる自然な説明に整理する",
       "action": "rewrite",
-      "new_page": 5
+      "new_page": 4
     },
     {
       "old_page": 6,
@@ -19,7 +19,7 @@
       "after": "同じ作品に複数の著者がいるように、一つの入力に複数の正解がある。また、一つの対象が複数の名前や略号を持つこともある。\n正解となる対象の名前や別名のいずれかに一致すれば正解とする。次の3例は、公開実行の入力と参照回答の全文である。",
       "issue": "読者が概要を理解できる自然な説明に整理する",
       "action": "rewrite",
-      "new_page": 6
+      "new_page": 5
     },
     {
       "old_page": 7,
@@ -28,7 +28,7 @@
       "after": "2人の著者のうち1人を答えればよい。Thomas Nicholas ScortiaとThomas N. Scortiaは、同じ著者の別名である。",
       "issue": "3人目ではないという禁止的補足を、別名の関係へ",
       "action": "rewrite",
-      "new_page": 7
+      "new_page": 6
     },
     {
       "old_page": 9,
@@ -37,7 +37,7 @@
       "after": "事件名から、原告となった組織の名前を答える。",
       "issue": "参照1文字列という監査単位の説明を課題の意味へ",
       "action": "rewrite",
-      "new_page": 9
+      "new_page": 8
     },
     {
       "old_page": 16,
@@ -46,7 +46,7 @@
       "after": "関係ごとに、学習・開発・テストへ分ける",
       "issue": "100/50/850の数値だけの見出しを分割の目的へ",
       "action": "rewrite",
-      "new_page": 16
+      "new_page": 13
     },
     {
       "old_page": 16,
@@ -55,70 +55,7 @@
       "after": "通常は、関係ごとに1,000問を抽出して分割する。公開テストでは、問題数がこれより少ない関係もある。",
       "issue": "通常設計と小規模関係の違いを自然な説明へ",
       "action": "rewrite",
-      "new_page": 16
-    },
-    {
-      "old_page": 17,
-      "location": "shape 3",
-      "before": "試行間の同一IDをまとめたtestは計7,462問。実装が対応する86関係の全件実行ではない。",
-      "after": "公開テストは計7,462問で、86関係のうち10関係を対象とする。",
-      "issue": "試行ID照合の工程と全件実行ではないという重複否定を外部化",
-      "action": "rewrite",
-      "new_page": 17
-    },
-    {
-      "old_page": 19,
-      "location": "shape 2",
-      "before": "各関係のtestに対し、最上位候補が参照に一致した割合を計算する。その後、10関係の正答率を同じ重みで平均した値が全体の指標。\n96問の原告も、850問の著者も、全体平均では同じ1関係として扱われる。全7,462問の正誤をそのまま平均した値ではない。",
-      "after": "各関係のtestで、最上位候補が参照回答に一致した割合を求める。その後、10関係の正答率を同じ重みで平均する。\n96問の原告も、850問の著者も、全体の得点には同じ重みで反映される。",
-      "issue": "問題単位と関係単位の違いを具体的に説明し、重ねた否定を削る",
-      "action": "rewrite",
-      "new_page": 19
-    },
-    {
-      "old_page": 20,
-      "location": "shape 0",
-      "before": "候補数と試行数も、モデルで違っていた",
-      "after": "モデルごとに、候補数と評価回数が異なる",
-      "issue": "モデル条件の違いを自然な見出しへ",
-      "action": "rewrite",
-      "new_page": 20
-    },
-    {
-      "old_page": 20,
-      "location": "shape 2",
-      "before": "OPTとtext-davinci-003は、5候補から対数確率最大の候補を選び、各3試行の正答率を平均した。\nLlama 2 70Bは1試行。設定上は5出力だが、取得した全7,462件のtestレコードには、それぞれ1候補の出力が含まれていた。\nそのため、Llama 2の公開Accuracy@1と@5は同じ値になる。5候補を生成した条件として比較する値ではない。",
-      "after": "OPT-175Bとtext-davinci-003は、1問につき5候補を生成し、対数確率が最大の候補を採点する。異なる提示例を使う3試行の正答率を平均した。\nLlama 2 70Bの公開出力は1問につき1候補で、評価は1試行である。そのためAccuracy@1と@5は同じ値になる。",
-      "issue": "設定値と全7462レコード照合という制作過程を外部化し、実際の候補数・試行数と得点への影響を保持",
-      "action": "rewrite",
-      "new_page": 20
-    },
-    {
-      "old_page": 21,
-      "location": "shape 3",
-      "before": "v0.4.0収録・suite v0.3.0。最大5提示例、temperature 1、出力上限8トークン。",
-      "after": "HELM Classicで2023年に公開された結果。各問に最大5例を提示。",
-      "issue": "suite識別子とtemperatureの細部を記録へ。8token上限は旧23で説明する",
-      "action": "rewrite",
-      "new_page": 21
-    },
-    {
-      "old_page": 25,
-      "location": "shape 0",
-      "before": "文脈の読解と切り分けて、事実知識を測る",
-      "after": "根拠文を与えずに、事実知識を尋ねる",
-      "issue": "切り分けてという読者への指示を、課題の性質へ",
-      "action": "rewrite",
-      "new_page": 25
-    },
-    {
-      "old_page": 25,
-      "location": "shape 2",
-      "before": "WikiFactは、文章に根拠が含まれる読解や、検索器が根拠を探す課題と異なり、主語と関係だけから目的語名を生成する。\n2026-10-18確認のHELM実装にも86関係の読込がある。今回扱う公開成績は2023年のClassic固定版で、現在の知識や最新モデルを評価したものではない。",
-      "after": "WikiFactは、主語と関係を示す短い文から、目的語となる名前を生成する。文章中の根拠を読み取る読解課題や、検索器で根拠を探す課題とは入力が異なる。\nHELMの公開実装は86関係に対応する。ここで紹介した2023年の公開成績は、そのうち10関係に対するものである。",
-      "issue": "現在実装の確認日と最新モデルではないという注意を除き、実装の範囲と公表結果を明示",
-      "action": "rewrite",
-      "new_page": 25
+      "new_page": 13
     },
     {
       "old_page": 26,
@@ -127,16 +64,16 @@
       "after": "公式サイトで、関係別の成績と出力を見られる",
       "issue": "入手の説明を肯定的な具体文へ",
       "action": "rewrite",
-      "new_page": 26
+      "new_page": 19
     },
     {
       "old_page": 26,
       "location": "shape 2",
       "before": "公式HELMページからWikiFactの条件別成績と予測へ進める。シナリオコードはCodaLabのtrain/dev/test JSONLを読み込む。\n今回、CodaLabは3ファイルとも503となった。一方、公開runの10関係の入力・参照・生成結果と、3モデル30条件の得点は取得できた。\n全86関係の元JSONLは未取得で、全体の総件数や全関係のデータ分布は今回の実測対象に含めていない。",
-      "after": "公式HELMページでは、WikiFactの関係別・モデル別成績と、各問の入力・参照回答・生成結果を閲覧できる。\n全86関係の問題は、CodaLabのtrain・dev・test JSONLとして案内されている。公式サイトでは、10関係の公開実行に含まれる入力・参照回答・出力を利用できる。",
-      "issue": "3ファイル503・30条件取得・全分布未実測という制作報告は外部化。配布先の利用上の制約を簡潔に保持 / 独立レビュー：503取得状況と紹介工程は外部記録へ、入手方法と閲覧できる範囲を説明",
+      "after": "公式HELMページでは、WikiFactの関係別・モデル別成績と、各問の入力・参照回答・生成結果を閲覧できる。\n問題データの読込コードは、CodaLabで配布するtrain・dev・testのJSONLを使う。配布先は現在アクセスできないため、ここでは公式サイトで公開されている10関係の実例と成績を紹介した。",
+      "issue": "3ファイル503・30条件取得・全分布未実測という制作報告は外部化。配布先の利用上の制約を簡潔に保持",
       "action": "rewrite",
-      "new_page": 26
+      "new_page": 19
     },
     {
       "old_page": 27,
@@ -145,7 +82,7 @@
       "after": "実装コードはApache 2.0で公開される",
       "issue": "コードとデータを区別するという指示を具体的な条件へ",
       "action": "rewrite",
-      "new_page": 27
+      "new_page": 20
     },
     {
       "old_page": 27,
@@ -154,7 +91,7 @@
       "after": "HELMの実装コードはApache License 2.0で公開される。加工済みWikiFactデータの専用ライセンスは、公式論文と読込コードには明記されていない。\nデータを再配布・再利用する際の条件は、配布元への確認が必要である。",
       "issue": "今回確認という工程表現を除き、未確認のデータ利用条件を読者に必要な範囲で保持",
       "action": "rewrite",
-      "new_page": 27
+      "new_page": 20
     },
     {
       "old_page": 28,
@@ -163,7 +100,7 @@
       "after": "専門領域の知識を、名前の補完で測る",
       "issue": "そろえて読むという指示を具体的なまとめへ",
       "action": "rewrite",
-      "new_page": 28
+      "new_page": 21
     },
     {
       "old_page": 28,
@@ -172,7 +109,7 @@
       "after": "WikiFactは、Wikidata由来の86関係を文の補完へ変え、一般的な事実から法律・経済・生物医学までを扱う。複数の対象や別名を正解として持つ。\nHELM Classicの公開成績は10関係の正答率を同じ重みで平均する。候補数の違いと、参照に含まれる名前の範囲が得点に影響する。",
       "issue": "読者が概要を理解できる自然な説明に整理する",
       "action": "rewrite",
-      "new_page": 28
+      "new_page": 21
     },
     {
       "old_page": 7,
@@ -181,7 +118,7 @@
       "after": "参照回答（全文）",
       "issue": "重複を含むという各頁での制作注は省き、原参照そのものは重複も保持",
       "action": "rewrite",
-      "new_page": 7
+      "new_page": 6
     },
     {
       "old_page": 8,
@@ -190,7 +127,7 @@
       "after": "参照回答（全文）",
       "issue": "重複を含むという各頁での制作注は省き、原参照そのものは重複も保持",
       "action": "rewrite",
-      "new_page": 8
+      "new_page": 7
     },
     {
       "old_page": 9,
@@ -199,7 +136,7 @@
       "after": "参照回答（全文）",
       "issue": "重複を含むという各頁での制作注は省き、原参照そのものは重複も保持",
       "action": "rewrite",
-      "new_page": 9
+      "new_page": 8
     },
     {
       "old_page": 32,
@@ -208,7 +145,7 @@
       "after": "参照回答（全文）",
       "issue": "重複を含むという各頁での制作注は省き、原参照そのものは重複も保持",
       "action": "rewrite",
-      "new_page": 32
+      "new_page": 25
     },
     {
       "old_page": 33,
@@ -217,7 +154,7 @@
       "after": "参照回答（全文）",
       "issue": "重複を含むという各頁での制作注は省き、原参照そのものは重複も保持",
       "action": "rewrite",
-      "new_page": 33
+      "new_page": 26
     },
     {
       "old_page": 34,
@@ -226,7 +163,7 @@
       "after": "参照回答（全文）",
       "issue": "重複を含むという各頁での制作注は省き、原参照そのものは重複も保持",
       "action": "rewrite",
-      "new_page": 34
+      "new_page": 27
     },
     {
       "old_page": 35,
@@ -235,7 +172,7 @@
       "after": "参照回答（全文）",
       "issue": "重複を含むという各頁での制作注は省き、原参照そのものは重複も保持",
       "action": "rewrite",
-      "new_page": 35
+      "new_page": 28
     },
     {
       "old_page": 36,
@@ -244,7 +181,7 @@
       "after": "参照回答（全文）",
       "issue": "重複を含むという各頁での制作注は省き、原参照そのものは重複も保持",
       "action": "rewrite",
-      "new_page": 36
+      "new_page": 29
     },
     {
       "old_page": 37,
@@ -253,7 +190,7 @@
       "after": "参照回答（全文）",
       "issue": "重複を含むという各頁での制作注は省き、原参照そのものは重複も保持",
       "action": "rewrite",
-      "new_page": 37
+      "new_page": 30
     },
     {
       "old_page": 38,
@@ -262,7 +199,7 @@
       "after": "参照回答（全文）",
       "issue": "重複を含むという各頁での制作注は省き、原参照そのものは重複も保持",
       "action": "rewrite",
-      "new_page": 38
+      "new_page": 31
     },
     {
       "old_page": 39,
@@ -271,7 +208,7 @@
       "after": "参照回答（全文）",
       "issue": "重複を含むという各頁での制作注は省き、原参照そのものは重複も保持",
       "action": "rewrite",
-      "new_page": 39
+      "new_page": 32
     },
     {
       "old_page": 40,
@@ -280,7 +217,7 @@
       "after": "参照回答（全文）",
       "issue": "重複を含むという各頁での制作注は省き、原参照そのものは重複も保持",
       "action": "rewrite",
-      "new_page": 40
+      "new_page": 33
     },
     {
       "old_page": 41,
@@ -289,7 +226,7 @@
       "after": "参照回答（全文）",
       "issue": "重複を含むという各頁での制作注は省き、原参照そのものは重複も保持",
       "action": "rewrite",
-      "new_page": 41
+      "new_page": 34
     },
     {
       "old_page": 36,
@@ -298,7 +235,7 @@
       "after": "実例8：医学的評価法の考案者を答える",
       "issue": "決まった形式で答えるという曖昧な表現を具体化",
       "action": "rewrite",
-      "new_page": 36
+      "new_page": 29
     },
     {
       "old_page": 36,
@@ -307,7 +244,7 @@
       "after": "医学的評価法の考案者を「discovered by」というテンプレートで尋ねる。参照にはVirginia Agparという表記や、同じ名前の重複が含まれる。",
       "issue": "配布参照のまま示すという制作報告を、データに含まれる表記の説明へ",
       "action": "rewrite",
-      "new_page": 36
+      "new_page": 29
     },
     {
       "old_page": 37,
@@ -316,7 +253,7 @@
       "after": "人物と役職の関係を尋ねる。参照回答は高等法院判事である。",
       "issue": "入力に日付は含まれないという自明な注意を削る",
       "action": "rewrite",
-      "new_page": 37
+      "new_page": 30
     },
     {
       "old_page": 40,
@@ -325,16 +262,7 @@
       "after": "イギリス領キプロスで用いられた通貨を尋ねる。",
       "issue": "現在の国を一律に尋ねないという禁止的注意を具体例の意味へ",
       "action": "rewrite",
-      "new_page": 40
-    },
-    {
-      "old_page": 45,
-      "location": "shape 3",
-      "before": "10関係の単純平均、3試行平均。Llama 2は実出力が1候補なので、この5候補比較から外した。",
-      "after": "10関係を同じ重みで平均し、3試行を平均した値。",
-      "issue": "Llamaを外した工程説明は旧20での1候補の説明と重複するため省く",
-      "action": "rewrite",
-      "new_page": 45
+      "new_page": 33
     },
     {
       "old_page": 46,
@@ -343,7 +271,7 @@
       "after": "公開実行の入力と参照を読むコード",
       "issue": "P50等のID対照は外部記録へ。読者が実例を読み出せるコードに置換",
       "action": "replace",
-      "new_page": 46
+      "new_page": 36
     },
     {
       "old_page": 46,
@@ -352,7 +280,7 @@
       "after": "公開実行のJSONから、入力と参照を読む",
       "issue": "実装の細部を実用例に置き換える",
       "action": "rewrite",
-      "new_page": 46
+      "new_page": 36
     },
     {
       "old_page": 46,
@@ -361,7 +289,7 @@
       "after": "scenario_state.jsonは、公式HELMの公開実行に付随するJSONファイル。各問の入力、参照回答、モデル出力を収める。",
       "issue": "subject引数の細部より、読むデータの意味を説明",
       "action": "rewrite",
-      "new_page": 46
+      "new_page": 36
     },
     {
       "old_page": 46,
@@ -370,25 +298,16 @@
       "after": "import json\nwith open(\"scenario_state.json\", encoding=\"utf-8\") as f:\n    state = json.load(f)\nexample = state[\"request_states\"][0][\"instance\"]\nprint(example[\"input\"][\"text\"])\nprint([r[\"output\"][\"text\"] for r in example[\"references\"]])",
       "issue": "公式実行の生レコードを使う、実際に実行する読込例",
       "action": "add",
-      "new_page": 46
+      "new_page": 36
     },
     {
-      "old_page": 50,
-      "location": "shape 0",
-      "before": "HELMの知識評価として新規に構築した",
-      "after": "専門領域まで広げた、HELMの事実知識評価",
-      "issue": "チームの工程より研究の狙いを見出しにする",
-      "action": "rewrite",
-      "new_page": 48
-    },
-    {
-      "old_page": 50,
+      "old_page": 26,
       "location": "shape 2",
-      "before": "WikiFactはHELM論文で導入されたデータセット。論文の貢献記録では、Hongyu Renが設計・実装、Lucia Zhengがデータ注釈・前処理を担当したとされる。\nMichihiro Yasunagaが知識評価チームを率い、Neel Guhaらも設計に参加。プロジェクト全体はPercy Liangが統括した。\n文の補完形式はLAMAを受け継ぎつつ、法律・経済・生物医学を含む幅広い関係へ対象を広げた。",
-      "after": "WikiFactは、HELMの事実知識評価のために新しく作られた。Hongyu Ren、Lucia Zheng、Michihiro Yasunagaらが制作に参加した。\n文の補完というLAMAの形式を受け継ぎ、法律・経済・生物医学など幅広い分野へ対象を広げた。",
-      "issue": "貢献者列挙を主題に関わる担当へ絞り、課題の成立と結ぶ / main校正：個人別の設計/実装/注釈/指揮の分担を外部化し、参加者と研究の意義を保持",
+      "before": "公式HELMページでは、WikiFactの関係別・モデル別成績と、各問の入力・参照回答・生成結果を閲覧できる。\n問題データの読込コードは、CodaLabで配布するtrain・dev・testのJSONLを使う。配布先は現在アクセスできないため、ここでは公式サイトで公開されている10関係の実例と成績を紹介した。",
+      "after": "公式HELMページでは、WikiFactの関係別・モデル別成績と、各問の入力・参照回答・生成結果を閲覧できる。\n全86関係の問題は、CodaLabのtrain・dev・test JSONLとして案内されている。公式サイトでは、10関係の公開実行に含まれる入力・参照回答・出力を利用できる。",
+      "issue": "独立レビュー：503取得状況と紹介工程は外部記録へ、入手方法と閲覧できる範囲を説明",
       "action": "rewrite",
-      "new_page": 48
+      "new_page": 19
     },
     {
       "old_page": 37,
@@ -397,16 +316,7 @@
       "after": "アリソン・フォスターの役職は",
       "issue": "main校正：原templateにない過去時点を補わない",
       "action": "rewrite",
-      "new_page": 37
-    },
-    {
-      "old_page": 45,
-      "location": "shape 0",
-      "before": "5候補を許すと、得点が上がる",
-      "after": "5候補のどれかが合えば正解となる評価",
-      "issue": "main校正：許すという曖昧語を、Accuracy@5の採点条件へ",
-      "action": "rewrite",
-      "new_page": 45
+      "new_page": 30
     },
     {
       "old_page": 52,
@@ -415,7 +325,7 @@
       "after": "Stanford CRFM (2023). v0.4.0（2023-11-17）。参照2026-10-18。",
       "issue": "main/独立校正：著者年と実参照日を文献情報として統一",
       "action": "rewrite",
-      "new_page": 50
+      "new_page": 39
     },
     {
       "old_page": 52,
@@ -424,16 +334,7 @@
       "after": "Stanford CRFM (n.d.). 公開実装。参照2026-10-18。",
       "issue": "main/独立校正：著者年と実参照日を文献情報として統一",
       "action": "rewrite",
-      "new_page": 50
-    },
-    {
-      "old_page": 2,
-      "location": "footer",
-      "before": "[1] Stanford CRFM, HELM Classic v0.4.0, WikiFact. 2023-11-17の固定版。2026-10-18参照。  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
-      "after": "[1] Stanford CRFM. HELM Classic v0.4.0 — WikiFact（2023）。   https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
-      "issue": "run内ID・参照日・固定版識別・処理監査の説明を出典から外部記録へ",
-      "action": "rewrite",
-      "new_page": 2
+      "new_page": 39
     },
     {
       "old_page": 7,
@@ -442,7 +343,7 @@
       "after": "[1] Stanford CRFM. HELM Classic v0.4.0 — WikiFact（2023）。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
       "issue": "run内ID・参照日・固定版識別・処理監査の説明を出典から外部記録へ",
       "action": "rewrite",
-      "new_page": 7
+      "new_page": 6
     },
     {
       "old_page": 8,
@@ -451,7 +352,7 @@
       "after": "[1] Stanford CRFM. HELM Classic v0.4.0 — WikiFact（2023）。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
       "issue": "run内ID・参照日・固定版識別・処理監査の説明を出典から外部記録へ",
       "action": "rewrite",
-      "new_page": 8
+      "new_page": 7
     },
     {
       "old_page": 9,
@@ -460,7 +361,7 @@
       "after": "[1] Stanford CRFM. HELM Classic v0.4.0 — WikiFact（2023）。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
       "issue": "run内ID・参照日・固定版識別・処理監査の説明を出典から外部記録へ",
       "action": "rewrite",
-      "new_page": 9
+      "new_page": 8
     },
     {
       "old_page": 10,
@@ -469,7 +370,7 @@
       "after": "[1] Stanford CRFM. HELM evaluate_reference_metrics。 \nhttps://github.com/stanford-crfm/helm/blob/main/src/helm/benchmark/metrics/evaluate_reference_metrics.py",
       "issue": "run内ID・参照日・固定版識別・処理監査の説明を出典から外部記録へ",
       "action": "rewrite",
-      "new_page": 10
+      "new_page": 15
     },
     {
       "old_page": 11,
@@ -478,52 +379,7 @@
       "after": "[1] Stanford CRFM. HELM Classic v0.4.0 — WikiFact（2023）。   https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
       "issue": "run内ID・参照日・固定版識別・処理監査の説明を出典から外部記録へ",
       "action": "rewrite",
-      "new_page": 11
-    },
-    {
-      "old_page": 17,
-      "location": "footer",
-      "before": "[1] Stanford CRFM, HELM Classic v0.4.0, WikiFact. 2023-11-17の固定版。2026-10-18参照。  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
-      "after": "[1] Stanford CRFM. HELM Classic v0.4.0 — WikiFact（2023）。   https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
-      "issue": "run内ID・参照日・固定版識別・処理監査の説明を出典から外部記録へ",
-      "action": "rewrite",
-      "new_page": 17
-    },
-    {
-      "old_page": 19,
-      "location": "footer",
-      "before": "[1] Stanford CRFM, HELM Classic v0.4.0, WikiFact. 2023-11-17の固定版。2026-10-18参照。  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
-      "after": "[1] Stanford CRFM. HELM Classic v0.4.0 — WikiFact（2023）。   https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
-      "issue": "run内ID・参照日・固定版識別・処理監査の説明を出典から外部記録へ",
-      "action": "rewrite",
-      "new_page": 19
-    },
-    {
-      "old_page": 20,
-      "location": "footer",
-      "before": "[1] Stanford CRFM, HELM Classic v0.4.0, WikiFact. 2023-11-17の固定版。2026-10-18参照。  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
-      "after": "[1] Stanford CRFM. HELM Classic v0.4.0 — WikiFact（2023）。   https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
-      "issue": "run内ID・参照日・固定版識別・処理監査の説明を出典から外部記録へ",
-      "action": "rewrite",
-      "new_page": 20
-    },
-    {
-      "old_page": 21,
-      "location": "footer",
-      "before": "[1] Stanford CRFM, HELM Classic v0.4.0, WikiFact. 2023-11-17の固定版。2026-10-18参照。  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
-      "after": "[1] Stanford CRFM. HELM Classic v0.4.0 — WikiFact（2023）。   https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
-      "issue": "run内ID・参照日・固定版識別・処理監査の説明を出典から外部記録へ",
-      "action": "rewrite",
-      "new_page": 21
-    },
-    {
-      "old_page": 22,
-      "location": "footer",
-      "before": "[1] Stanford CRFM, HELM Classic v0.4.0, WikiFact. 2023-11-17の固定版。2026-10-18参照。  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
-      "after": "[1] Stanford CRFM. HELM Classic v0.4.0 — WikiFact（2023）。   https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
-      "issue": "run内ID・参照日・固定版識別・処理監査の説明を出典から外部記録へ",
-      "action": "rewrite",
-      "new_page": 22
+      "new_page": 16
     },
     {
       "old_page": 23,
@@ -532,16 +388,7 @@
       "after": "[1] Stanford CRFM. HELM evaluate_reference_metrics。 \nhttps://github.com/stanford-crfm/helm/blob/main/src/helm/benchmark/metrics/evaluate_reference_metrics.py",
       "issue": "run内ID・参照日・固定版識別・処理監査の説明を出典から外部記録へ",
       "action": "rewrite",
-      "new_page": 23
-    },
-    {
-      "old_page": 25,
-      "location": "footer",
-      "before": "[1] Stanford CRFM, HELM WIKIFactScenario. 86関係の辞書と配布ファイルの読込。2026-10-18確認。\nhttps://github.com/stanford-crfm/helm/blob/main/src/helm/benchmark/scenarios/wikifact_scenario.py",
-      "after": "[1] Stanford CRFM. HELM WIKIFactScenario。 \nhttps://github.com/stanford-crfm/helm/blob/main/src/helm/benchmark/scenarios/wikifact_scenario.py",
-      "issue": "run内ID・参照日・固定版識別・処理監査の説明を出典から外部記録へ",
-      "action": "rewrite",
-      "new_page": 25
+      "new_page": 17
     },
     {
       "old_page": 26,
@@ -550,7 +397,7 @@
       "after": "[1] Stanford CRFM. HELM WIKIFactScenario。 \nhttps://github.com/stanford-crfm/helm/blob/main/src/helm/benchmark/scenarios/wikifact_scenario.py",
       "issue": "run内ID・参照日・固定版識別・処理監査の説明を出典から外部記録へ",
       "action": "rewrite",
-      "new_page": 26
+      "new_page": 19
     },
     {
       "old_page": 32,
@@ -559,7 +406,7 @@
       "after": "[1] Stanford CRFM. HELM Classic v0.4.0 — WikiFact（2023）。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
       "issue": "run内ID・参照日・固定版識別・処理監査の説明を出典から外部記録へ",
       "action": "rewrite",
-      "new_page": 32
+      "new_page": 25
     },
     {
       "old_page": 33,
@@ -568,7 +415,7 @@
       "after": "[1] Stanford CRFM. HELM Classic v0.4.0 — WikiFact（2023）。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
       "issue": "run内ID・参照日・固定版識別・処理監査の説明を出典から外部記録へ",
       "action": "rewrite",
-      "new_page": 33
+      "new_page": 26
     },
     {
       "old_page": 34,
@@ -577,7 +424,7 @@
       "after": "[1] Stanford CRFM. HELM Classic v0.4.0 — WikiFact（2023）。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
       "issue": "run内ID・参照日・固定版識別・処理監査の説明を出典から外部記録へ",
       "action": "rewrite",
-      "new_page": 34
+      "new_page": 27
     },
     {
       "old_page": 35,
@@ -586,7 +433,7 @@
       "after": "[1] Stanford CRFM. HELM Classic v0.4.0 — WikiFact（2023）。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
       "issue": "run内ID・参照日・固定版識別・処理監査の説明を出典から外部記録へ",
       "action": "rewrite",
-      "new_page": 35
+      "new_page": 28
     },
     {
       "old_page": 36,
@@ -595,7 +442,7 @@
       "after": "[1] Stanford CRFM. HELM Classic v0.4.0 — WikiFact（2023）。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
       "issue": "run内ID・参照日・固定版識別・処理監査の説明を出典から外部記録へ",
       "action": "rewrite",
-      "new_page": 36
+      "new_page": 29
     },
     {
       "old_page": 37,
@@ -604,7 +451,7 @@
       "after": "[1] Stanford CRFM. HELM Classic v0.4.0 — WikiFact（2023）。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
       "issue": "run内ID・参照日・固定版識別・処理監査の説明を出典から外部記録へ",
       "action": "rewrite",
-      "new_page": 37
+      "new_page": 30
     },
     {
       "old_page": 38,
@@ -613,7 +460,7 @@
       "after": "[1] Stanford CRFM. HELM Classic v0.4.0 — WikiFact（2023）。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
       "issue": "run内ID・参照日・固定版識別・処理監査の説明を出典から外部記録へ",
       "action": "rewrite",
-      "new_page": 38
+      "new_page": 31
     },
     {
       "old_page": 39,
@@ -622,7 +469,7 @@
       "after": "[1] Stanford CRFM. HELM Classic v0.4.0 — WikiFact（2023）。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
       "issue": "run内ID・参照日・固定版識別・処理監査の説明を出典から外部記録へ",
       "action": "rewrite",
-      "new_page": 39
+      "new_page": 32
     },
     {
       "old_page": 40,
@@ -631,7 +478,7 @@
       "after": "[1] Stanford CRFM. HELM Classic v0.4.0 — WikiFact（2023）。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
       "issue": "run内ID・参照日・固定版識別・処理監査の説明を出典から外部記録へ",
       "action": "rewrite",
-      "new_page": 40
+      "new_page": 33
     },
     {
       "old_page": 41,
@@ -640,34 +487,7 @@
       "after": "[1] Stanford CRFM. HELM Classic v0.4.0 — WikiFact（2023）。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
       "issue": "run内ID・参照日・固定版識別・処理監査の説明を出典から外部記録へ",
       "action": "rewrite",
-      "new_page": 41
-    },
-    {
-      "old_page": 43,
-      "location": "footer",
-      "before": "[1] Stanford CRFM, HELM Classic v0.4.0, WikiFact. 2023-11-17の固定版。2026-10-18参照。  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
-      "after": "[1] Stanford CRFM. HELM Classic v0.4.0 — WikiFact（2023）。   https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
-      "issue": "run内ID・参照日・固定版識別・処理監査の説明を出典から外部記録へ",
-      "action": "rewrite",
-      "new_page": 43
-    },
-    {
-      "old_page": 44,
-      "location": "footer",
-      "before": "[1] Stanford CRFM, HELM Classic v0.4.0, WikiFact. 2023-11-17の固定版。2026-10-18参照。  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
-      "after": "[1] Stanford CRFM. HELM Classic v0.4.0 — WikiFact（2023）。   https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
-      "issue": "run内ID・参照日・固定版識別・処理監査の説明を出典から外部記録へ",
-      "action": "rewrite",
-      "new_page": 44
-    },
-    {
-      "old_page": 45,
-      "location": "footer",
-      "before": "[1] Stanford CRFM, HELM Classic v0.4.0, WikiFact. 2023-11-17の固定版。2026-10-18参照。  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
-      "after": "[1] Stanford CRFM. HELM Classic v0.4.0 — WikiFact（2023）。   https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
-      "issue": "run内ID・参照日・固定版識別・処理監査の説明を出典から外部記録へ",
-      "action": "rewrite",
-      "new_page": 45
+      "new_page": 34
     },
     {
       "old_page": 46,
@@ -676,7 +496,7 @@
       "after": "[1] Stanford CRFM. HELM WIKIFactScenario。 \nhttps://github.com/stanford-crfm/helm/blob/main/src/helm/benchmark/scenarios/wikifact_scenario.py",
       "issue": "run内ID・参照日・固定版識別・処理監査の説明を出典から外部記録へ",
       "action": "rewrite",
-      "new_page": 46
+      "new_page": 36
     },
     {
       "old_page": 30,
@@ -685,7 +505,7 @@
       "after": "関係別成績とデータの読込",
       "issue": "監査表を実用コードへ置き換えた章構成に合わせる",
       "action": "rewrite",
-      "new_page": 30
+      "new_page": 23
     },
     {
       "old_page": 30,
@@ -694,7 +514,7 @@
       "after": "研究と参考文献",
       "issue": "監査表を実用コードへ置き換えた章構成に合わせる",
       "action": "rewrite",
-      "new_page": 30
+      "new_page": 23
     },
     {
       "old_page": 42,
@@ -703,7 +523,7 @@
       "after": "関係別成績とデータの読込",
       "issue": "監査表を実用コードへ置き換えた章構成に合わせる",
       "action": "rewrite",
-      "new_page": 42
+      "new_page": 35
     },
     {
       "old_page": 42,
@@ -712,34 +532,7 @@
       "after": "Appendix: 2. 関係別成績とデータの読込",
       "issue": "監査表を実用コードへ置き換えた章構成に合わせる",
       "action": "rewrite",
-      "new_page": 42
-    },
-    {
-      "old_page": 43,
-      "location": "chapter label",
-      "before": "Appendix: 2. 関係別成績と実行条件",
-      "after": "Appendix: 2. 関係別成績とデータの読込",
-      "issue": "監査表を実用コードへ置き換えた章構成に合わせる",
-      "action": "rewrite",
-      "new_page": 43
-    },
-    {
-      "old_page": 44,
-      "location": "chapter label",
-      "before": "Appendix: 2. 関係別成績と実行条件",
-      "after": "Appendix: 2. 関係別成績とデータの読込",
-      "issue": "監査表を実用コードへ置き換えた章構成に合わせる",
-      "action": "rewrite",
-      "new_page": 44
-    },
-    {
-      "old_page": 45,
-      "location": "chapter label",
-      "before": "Appendix: 2. 関係別成績と実行条件",
-      "after": "Appendix: 2. 関係別成績とデータの読込",
-      "issue": "監査表を実用コードへ置き換えた章構成に合わせる",
-      "action": "rewrite",
-      "new_page": 45
+      "new_page": 35
     },
     {
       "old_page": 46,
@@ -748,7 +541,7 @@
       "after": "Appendix: 2. 関係別成績とデータの読込",
       "issue": "監査表を実用コードへ置き換えた章構成に合わせる",
       "action": "rewrite",
-      "new_page": 46
+      "new_page": 36
     },
     {
       "old_page": 49,
@@ -757,7 +550,7 @@
       "after": "研究と参考文献",
       "issue": "監査表を実用コードへ置き換えた章構成に合わせる",
       "action": "rewrite",
-      "new_page": 47
+      "new_page": 37
     },
     {
       "old_page": 49,
@@ -766,16 +559,7 @@
       "after": "Appendix: 3. 研究と参考文献",
       "issue": "監査表を実用コードへ置き換えた章構成に合わせる",
       "action": "rewrite",
-      "new_page": 47
-    },
-    {
-      "old_page": 50,
-      "location": "chapter label",
-      "before": "Appendix: 3. 制作チームと参考文献",
-      "after": "Appendix: 3. 研究と参考文献",
-      "issue": "監査表を実用コードへ置き換えた章構成に合わせる",
-      "action": "rewrite",
-      "new_page": 48
+      "new_page": 37
     },
     {
       "old_page": 51,
@@ -784,7 +568,7 @@
       "after": "125.11pt",
       "issue": "参考文献URLまでnative編集枠に収める",
       "action": "resize",
-      "new_page": 49
+      "new_page": 38
     },
     {
       "old_page": 51,
@@ -793,7 +577,7 @@
       "after": "125.11pt",
       "issue": "参考文献URLまでnative編集枠に収める",
       "action": "resize",
-      "new_page": 49
+      "new_page": 38
     },
     {
       "old_page": 52,
@@ -802,7 +586,7 @@
       "after": "105.16pt",
       "issue": "参考文献URLまでnative編集枠に収める",
       "action": "resize",
-      "new_page": 50
+      "new_page": 39
     },
     {
       "old_page": 52,
@@ -811,7 +595,7 @@
       "after": "105.16pt",
       "issue": "参考文献URLまでnative編集枠に収める",
       "action": "resize",
-      "new_page": 50
+      "new_page": 39
     },
     {
       "old_page": 46,
@@ -820,7 +604,7 @@
       "after": "top125.33pt/height133.67pt",
       "issue": "実画素の上15.33pt/下24ptを各10ptへ、字形位置は保持",
       "action": "resize",
-      "new_page": 46
+      "new_page": 36
     },
     {
       "old_page": 7,
@@ -829,7 +613,7 @@
       "after": "59.61125984251969pt",
       "issue": "実画素の上下余白差を解消。原文/訳の文字・字形位置は保持",
       "action": "resize",
-      "new_page": 7
+      "new_page": 6
     },
     {
       "old_page": 7,
@@ -838,7 +622,7 @@
       "after": "60.172913385826774pt",
       "issue": "実画素の上下余白差を解消。原文/訳の文字・字形位置は保持",
       "action": "resize",
-      "new_page": 7
+      "new_page": 6
     },
     {
       "old_page": 8,
@@ -847,7 +631,7 @@
       "after": "35.17196850393701pt",
       "issue": "実画素の上下余白差を解消。原文/訳の文字・字形位置は保持",
       "action": "resize",
-      "new_page": 8
+      "new_page": 7
     },
     {
       "old_page": 9,
@@ -856,7 +640,7 @@
       "after": "35.27700787401575pt",
       "issue": "実画素の上下余白差を解消。原文/訳の文字・字形位置は保持",
       "action": "resize",
-      "new_page": 9
+      "new_page": 8
     },
     {
       "old_page": 32,
@@ -865,7 +649,7 @@
       "after": "35.27700787401575pt",
       "issue": "実画素の上下余白差を解消。原文/訳の文字・字形位置は保持",
       "action": "resize",
-      "new_page": 32
+      "new_page": 25
     },
     {
       "old_page": 32,
@@ -874,7 +658,7 @@
       "after": "58.83952755905512pt",
       "issue": "実画素の上下余白差を解消。原文/訳の文字・字形位置は保持",
       "action": "resize",
-      "new_page": 32
+      "new_page": 25
     },
     {
       "old_page": 33,
@@ -883,7 +667,7 @@
       "after": "59.61125984251969pt",
       "issue": "実画素の上下余白差を解消。原文/訳の文字・字形位置は保持",
       "action": "resize",
-      "new_page": 33
+      "new_page": 26
     },
     {
       "old_page": 33,
@@ -892,7 +676,7 @@
       "after": "60.14496062992126pt",
       "issue": "実画素の上下余白差を解消。原文/訳の文字・字形位置は保持",
       "action": "resize",
-      "new_page": 33
+      "new_page": 26
     },
     {
       "old_page": 34,
@@ -901,7 +685,7 @@
       "after": "83.81259842519685pt",
       "issue": "実画素の上下余白差を解消。原文/訳の文字・字形位置は保持",
       "action": "resize",
-      "new_page": 34
+      "new_page": 27
     },
     {
       "old_page": 35,
@@ -910,7 +694,7 @@
       "after": "35.27700787401575pt",
       "issue": "実画素の上下余白差を解消。原文/訳の文字・字形位置は保持",
       "action": "resize",
-      "new_page": 35
+      "new_page": 28
     },
     {
       "old_page": 35,
@@ -919,7 +703,7 @@
       "after": "58.83952755905512pt",
       "issue": "実画素の上下余白差を解消。原文/訳の文字・字形位置は保持",
       "action": "resize",
-      "new_page": 35
+      "new_page": 28
     },
     {
       "old_page": 36,
@@ -928,7 +712,7 @@
       "after": "58.83952755905512pt",
       "issue": "実画素の上下余白差を解消。原文/訳の文字・字形位置は保持",
       "action": "resize",
-      "new_page": 36
+      "new_page": 29
     },
     {
       "old_page": 37,
@@ -937,7 +721,7 @@
       "after": "59.61125984251969pt",
       "issue": "実画素の上下余白差を解消。原文/訳の文字・字形位置は保持",
       "action": "resize",
-      "new_page": 37
+      "new_page": 30
     },
     {
       "old_page": 37,
@@ -946,7 +730,7 @@
       "after": "60.172913385826774pt",
       "issue": "実画素の上下余白差を解消。原文/訳の文字・字形位置は保持",
       "action": "resize",
-      "new_page": 37
+      "new_page": 30
     },
     {
       "old_page": 38,
@@ -955,7 +739,7 @@
       "after": "60.14496062992126pt",
       "issue": "実画素の上下余白差を解消。原文/訳の文字・字形位置は保持",
       "action": "resize",
-      "new_page": 38
+      "new_page": 31
     },
     {
       "old_page": 39,
@@ -964,7 +748,7 @@
       "after": "59.61125984251969pt",
       "issue": "実画素の上下余白差を解消。原文/訳の文字・字形位置は保持",
       "action": "resize",
-      "new_page": 39
+      "new_page": 32
     },
     {
       "old_page": 39,
@@ -973,7 +757,7 @@
       "after": "35.17196850393701pt",
       "issue": "実画素の上下余白差を解消。原文/訳の文字・字形位置は保持",
       "action": "resize",
-      "new_page": 39
+      "new_page": 32
     },
     {
       "old_page": 40,
@@ -982,7 +766,7 @@
       "after": "59.61125984251969pt",
       "issue": "実画素の上下余白差を解消。原文/訳の文字・字形位置は保持",
       "action": "resize",
-      "new_page": 40
+      "new_page": 33
     },
     {
       "old_page": 40,
@@ -991,7 +775,7 @@
       "after": "58.83952755905512pt",
       "issue": "実画素の上下余白差を解消。原文/訳の文字・字形位置は保持",
       "action": "resize",
-      "new_page": 40
+      "new_page": 33
     },
     {
       "old_page": 41,
@@ -1000,7 +784,7 @@
       "after": "59.506220472440944pt",
       "issue": "実画素の上下余白差を解消。原文/訳の文字・字形位置は保持",
       "action": "resize",
-      "new_page": 41
+      "new_page": 34
     },
     {
       "old_page": 29,
@@ -1009,7 +793,592 @@
       "after": "54.08",
       "issue": "字形位置を保ち、章扉のnative領域を拡張",
       "action": "resize",
+      "new_page": 22
+    },
+    {
+      "old_page": 5,
+      "location": "shape 2",
+      "before": "WikiFactは、知識基盤Wikidataの「主語・関係・目的語」という三つ組を、英語の短い文に変換した事実補完データである。\nモデルは「作品の著者は」「国の通貨は」といった文の続きを生成する。根拠となる文章を与えず、モデルが覚えている事実を名前として答えられるかを測る。",
+      "after": "WikiFactは、知識基盤Wikidataの「主語・関係・目的語」という三つ組を、英語の短い文に変換した事実補完データである。\nモデルは「作品の著者は」「国の通貨は」といった文の続きを生成する。根拠となる文章を与えず、モデルが覚えている事実を名前として答えられるかを測る。\nStanford CRFMを中心とする研究チームが2022年に設計した。",
+      "issue": "元作成主体を一度示し、データの課題を主題にする",
+      "action": "rewrite",
+      "new_page": 4
+    },
+    {
+      "old_page": 6,
+      "location": "shape 2",
+      "before": "同じ作品に複数の著者がいるように、一つの入力に複数の正解がある。また、一つの対象が複数の名前や略号を持つこともある。\n正解となる対象の名前や別名のいずれかに一致すれば正解とする。次の3例は、公開実行の入力と参照回答の全文である。",
+      "after": "同じ作品に複数の著者がいるように、一つの入力に複数の正解がある。また、一つの対象が複数の名前や略号を持つこともある。\n正解となる対象の名前や別名のいずれかに一致すれば正解とする。次の3例は、公開されている入力と参照回答の全文である。",
+      "issue": "公開実行という制作単位を外し、実際の問題と参照の意味を述べる",
+      "action": "rewrite",
+      "new_page": 5
+    },
+    {
+      "old_page": 10,
+      "location": "shape 0",
+      "before": "候補を五つ作り、対数確率で順位を付ける",
+      "after": "参照のいずれかに一致すれば正解になる",
+      "issue": "基盤の候補生成設定でなく、データの答え方と評価の意味へ",
+      "action": "rewrite",
+      "new_page": 15
+    },
+    {
+      "old_page": 10,
+      "location": "shape 2",
+      "before": "HELMでは、1問当たり5候補を生成する設定を使う。出力の対数確率の和で並べ、最上位の候補をAccuracy@1で採点する。\nAccuracy@5では、最大5候補のどれかが参照回答に一致すれば正解。文字列を小文字化し、冠詞・句読点・余分な空白を除いて照合する。",
+      "after": "生成した名前が、参照回答のいずれかに一致した割合で正答率を求める。照合では英字の大小、冠詞、句読点、余分な空白をならす。\n一つの答えだけを見るAccuracy@1と、複数候補のどれかが合えばよいAccuracy@Kでは、正解とする条件が変わる。次の出力例では、先頭候補と5候補全体を比べる。",
+      "issue": "一般の採点条件と実例を説明し、5出力固定/対数確率順位という基盤設定は外部化",
+      "action": "rewrite",
+      "new_page": 15
+    },
+    {
+      "old_page": 11,
+      "location": "shape 0",
+      "before": "実例3の公開モデル出力と採点",
+      "after": "略称が、参照回答に含まれない場合",
+      "issue": "公開モデル採点監査という見出しを、実例が示すデータの性質へ",
+      "action": "rewrite",
+      "new_page": 16
+    },
+    {
+      "old_page": 11,
+      "location": "shape 3",
+      "before": "text-davinci-003、第1試行。@1は0、@5は1（USLは参照にない）。",
+      "after": "2023年の公開出力例（text-davinci-003）。先頭候補は不一致、5候補の中には一致する答えがある。",
+      "issue": "真正な既存生成5候補を識別し、試行番号と数値監査を外部化",
+      "action": "rewrite",
+      "new_page": 16
+    },
+    {
+      "old_page": 13,
+      "location": "shape 2",
+      "before": "2019年のLAMAは、文の穴埋めを通して言語モデルの事実知識を調べる方法を広めた。\nHELMではより幅広い知識を対象にするため、法律・経済・生物医学などの関係とテンプレートを手で選び、WikiFactを作った。",
+      "after": "2019年のLAMAは、文の穴埋めを通して言語モデルの事実知識を調べる方法を広めた。\nWikiFactでは対象を法律・経済・生物医学などへ広げ、関係と英語テンプレートを人手で選んだ。",
+      "issue": "基盤の紹介でなく、元課題の着想と設計の貢献を説明",
+      "action": "rewrite",
+      "new_page": 10
+    },
+    {
+      "old_page": 18,
+      "location": "shape 0",
+      "before": "HELMの採点と公開成績",
+      "after": "参照回答に一致するかを評価する",
+      "issue": "モデル別runの結果から、課題の採点へ章を再構成",
+      "action": "rewrite",
+      "new_page": 14
+    },
+    {
+      "old_page": 23,
+      "location": "shape 2",
+      "before": "実例3ではUSLという略称は参照に含まれず、会社名の全文が必要だった。正規化は略語の展開や、意味の同一性の推論を行わない。\n出力上限は8トークンなので、長い固有名や複数の答えをまとめる出力は途中で切れる場合がある。参照のいずれか一つに合う短い補完を求める評価となる。",
+      "after": "実例3のUSLという略称は、参照回答に含まれていない。人が同じ組織を思い浮かべても、参照に一致する名前でなければ正解にならない。\n知識基盤の名前や別名の収録範囲が、評価に影響する。複数の参照を持つ場合は、そのうち一つに合う補完を求める。",
+      "issue": "参照集合による評価上の限界を保持し、特定runの8トークン出力上限は外部化",
+      "action": "rewrite",
+      "new_page": 17
+    },
+    {
+      "old_page": 23,
+      "location": "shape 0",
+      "before": "短い補完でも、参照と生成形式が効く",
+      "after": "参照に含まれる名前が、正誤を左右する",
+      "issue": "本文から外した生成トークン制限を見出しにも残さず、参照名による採点の特徴を示す",
+      "action": "rewrite",
+      "new_page": 17
+    },
+    {
+      "old_page": 26,
+      "location": "shape 0",
+      "before": "公式サイトで、関係別の成績と出力を見られる",
+      "after": "配布JSONLと、公開例から利用を始める",
+      "issue": "入手と利用できるデータの形式へ",
+      "action": "rewrite",
+      "new_page": 19
+    },
+    {
+      "old_page": 26,
+      "location": "shape 2",
+      "before": "公式HELMページでは、WikiFactの関係別・モデル別成績と、各問の入力・参照回答・生成結果を閲覧できる。\n全86関係の問題は、CodaLabのtrain・dev・test JSONLとして案内されている。公式サイトでは、10関係の公開実行に含まれる入力・参照回答・出力を利用できる。",
+      "after": "全86関係の問題は、CodaLabのtrain・dev・test JSONLとして案内されている。データの読込実装は、関係を指定して文章と参照回答を取り出す。\n公式サイトでは、10関係の公開入力・参照回答・出力を閲覧できる。問題の形を調べたり、名前の照合を試したりするために使える。",
+      "issue": "データの入手と実用の範囲を示し、プラットフォームの成績閲覧手順を外部化",
+      "action": "rewrite",
+      "new_page": 19
+    },
+    {
+      "old_page": 27,
+      "location": "shape 0",
+      "before": "実装コードはApache 2.0で公開される",
+      "after": "読込コードと、加工済みデータの利用条件",
+      "issue": "基盤を主語にせず、利用するものごとの条件へ",
+      "action": "rewrite",
+      "new_page": 20
+    },
+    {
+      "old_page": 27,
+      "location": "shape 2",
+      "before": "HELMの実装コードはApache License 2.0で公開される。加工済みWikiFactデータの専用ライセンスは、公式論文と読込コードには明記されていない。\nデータを再配布・再利用する際の条件は、配布元への確認が必要である。",
+      "after": "公開されている読込実装はApache License 2.0で提供される。加工済みWikiFactデータの専用ライセンスは、論文と読込コードには明記されていない。\nデータを再配布・再利用する際の条件は、配布元への確認が必要である。",
+      "issue": "ライセンス不確実性という実用条件を保ち、基盤名の反復を外す",
+      "action": "rewrite",
+      "new_page": 20
+    },
+    {
+      "old_page": 28,
+      "location": "shape 2",
+      "before": "WikiFactは、Wikidata由来の86関係を文の補完へ変え、一般的な事実から法律・経済・生物医学までを扱う。複数の対象や別名を正解として持つ。\nHELM Classicの公開成績は10関係の正答率を同じ重みで平均する。候補数の違いと、参照に含まれる名前の範囲が得点に影響する。",
+      "after": "WikiFactは、Wikidata由来の86関係を文の補完へ変え、一般的な事実から法律・経済・生物医学までを扱う。複数の対象や別名を正解として持つ。\n根拠文を与えず、モデルが事実を表す名前を答えられるかを調べる。入力の関係や知識の時点、参照に含まれる名前の範囲が評価の意味を決める。",
+      "issue": "元課題の知識範囲・入力・答えをまとめ、特定10関係のrun集計説明は外部化",
+      "action": "rewrite",
+      "new_page": 21
+    },
+    {
+      "old_page": 46,
+      "location": "shape 0",
+      "before": "公開実行のJSONから、入力と参照を読む",
+      "after": "公開例のJSONから、入力と参照を読む",
+      "issue": "取得可能な本物のレコードの実用読込として示す",
+      "action": "rewrite",
+      "new_page": 36
+    },
+    {
+      "old_page": 46,
+      "location": "shape 2",
+      "before": "scenario_state.jsonは、公式HELMの公開実行に付随するJSONファイル。各問の入力、参照回答、モデル出力を収める。",
+      "after": "scenario_state.jsonは、公開された評価記録のJSON。各問の入力、参照回答、モデル出力を収める。",
+      "issue": "基盤解説でなく、実コードが読む形式と内容を明示",
+      "action": "rewrite",
+      "new_page": 36
+    },
+    {
+      "old_page": 3,
+      "location": "task-centered section label",
+      "before": "HELMの採点と公開成績",
+      "after": "参照回答に一致するかを評価する",
+      "issue": "モデル成績の章を課題の評価/データ形式へ再構成し、目次と帯を同期",
+      "action": "rewrite",
+      "new_page": 2
+    },
+    {
+      "old_page": 3,
+      "location": "task-centered section label",
+      "before": "利用の位置付けと入手方法",
+      "after": "データの入手と利用条件",
+      "issue": "モデル成績の章を課題の評価/データ形式へ再構成し、目次と帯を同期",
+      "action": "rewrite",
+      "new_page": 2
+    },
+    {
+      "old_page": 18,
+      "location": "task-centered section label",
+      "before": "3. HELMの採点と公開成績",
+      "after": "3. 参照回答に一致するかを評価する",
+      "issue": "モデル成績の章を課題の評価/データ形式へ再構成し、目次と帯を同期",
+      "action": "rewrite",
+      "new_page": 14
+    },
+    {
+      "old_page": 23,
+      "location": "task-centered section label",
+      "before": "3. HELMの採点と公開成績",
+      "after": "3. 参照回答に一致するかを評価する",
+      "issue": "モデル成績の章を課題の評価/データ形式へ再構成し、目次と帯を同期",
+      "action": "rewrite",
+      "new_page": 17
+    },
+    {
+      "old_page": 24,
+      "location": "task-centered section label",
+      "before": "利用の位置付けと入手方法",
+      "after": "データの入手と利用条件",
+      "issue": "モデル成績の章を課題の評価/データ形式へ再構成し、目次と帯を同期",
+      "action": "rewrite",
+      "new_page": 18
+    },
+    {
+      "old_page": 24,
+      "location": "task-centered section label",
+      "before": "4. 利用の位置付けと入手方法",
+      "after": "4. データの入手と利用条件",
+      "issue": "モデル成績の章を課題の評価/データ形式へ再構成し、目次と帯を同期",
+      "action": "rewrite",
+      "new_page": 18
+    },
+    {
+      "old_page": 26,
+      "location": "task-centered section label",
+      "before": "4. 利用の位置付けと入手方法",
+      "after": "4. データの入手と利用条件",
+      "issue": "モデル成績の章を課題の評価/データ形式へ再構成し、目次と帯を同期",
+      "action": "rewrite",
+      "new_page": 19
+    },
+    {
+      "old_page": 27,
+      "location": "task-centered section label",
+      "before": "4. 利用の位置付けと入手方法",
+      "after": "4. データの入手と利用条件",
+      "issue": "モデル成績の章を課題の評価/データ形式へ再構成し、目次と帯を同期",
+      "action": "rewrite",
+      "new_page": 20
+    },
+    {
+      "old_page": 28,
+      "location": "task-centered section label",
+      "before": "4. 利用の位置付けと入手方法",
+      "after": "4. データの入手と利用条件",
+      "issue": "モデル成績の章を課題の評価/データ形式へ再構成し、目次と帯を同期",
+      "action": "rewrite",
+      "new_page": 21
+    },
+    {
+      "old_page": 30,
+      "location": "task-centered section label",
+      "before": "関係別成績とデータの読込",
+      "after": "公開例のデータ形式",
+      "issue": "モデル成績の章を課題の評価/データ形式へ再構成し、目次と帯を同期",
+      "action": "rewrite",
+      "new_page": 23
+    },
+    {
+      "old_page": 42,
+      "location": "task-centered section label",
+      "before": "関係別成績とデータの読込",
+      "after": "公開例のデータ形式",
+      "issue": "モデル成績の章を課題の評価/データ形式へ再構成し、目次と帯を同期",
+      "action": "rewrite",
+      "new_page": 35
+    },
+    {
+      "old_page": 42,
+      "location": "task-centered section label",
+      "before": "Appendix: 2. 関係別成績とデータの読込",
+      "after": "Appendix: 2. 公開例のデータ形式",
+      "issue": "モデル成績の章を課題の評価/データ形式へ再構成し、目次と帯を同期",
+      "action": "rewrite",
+      "new_page": 35
+    },
+    {
+      "old_page": 46,
+      "location": "task-centered section label",
+      "before": "Appendix: 2. 関係別成績とデータの読込",
+      "after": "Appendix: 2. 公開例のデータ形式",
+      "issue": "モデル成績の章を課題の評価/データ形式へ再構成し、目次と帯を同期",
+      "action": "rewrite",
+      "new_page": 36
+    },
+    {
+      "old_page": 10,
+      "location": "shape 1",
+      "before": "1. 事実を文の続きで答える",
+      "after": "3. 参照回答に一致するかを評価する",
+      "issue": "真正出力例を採点章へ配置",
+      "action": "rewrite",
+      "new_page": 15
+    },
+    {
+      "old_page": 11,
+      "location": "shape 1",
+      "before": "1. 事実を文の続きで答える",
+      "after": "3. 参照回答に一致するかを評価する",
+      "issue": "真正出力例を採点章へ配置",
+      "action": "rewrite",
+      "new_page": 16
+    },
+    {
+      "old_page": 7,
+      "location": "dataset-focused source",
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0 — WikiFact（2023）。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
+      "after": "[1] Stanford CRFM (2023). WikiFact — 公開入力・参照回答。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
+      "issue": "実例の原出典と正式実装名を保持し、不要な基盤名の反復を除く",
+      "action": "rewrite",
+      "new_page": 6
+    },
+    {
+      "old_page": 8,
+      "location": "dataset-focused source",
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0 — WikiFact（2023）。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
+      "after": "[1] Stanford CRFM (2023). WikiFact — 公開入力・参照回答。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
+      "issue": "実例の原出典と正式実装名を保持し、不要な基盤名の反復を除く",
+      "action": "rewrite",
+      "new_page": 7
+    },
+    {
+      "old_page": 9,
+      "location": "dataset-focused source",
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0 — WikiFact（2023）。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
+      "after": "[1] Stanford CRFM (2023). WikiFact — 公開入力・参照回答。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
+      "issue": "実例の原出典と正式実装名を保持し、不要な基盤名の反復を除く",
+      "action": "rewrite",
+      "new_page": 8
+    },
+    {
+      "old_page": 10,
+      "location": "dataset-focused source",
+      "before": "[1] Stanford CRFM. HELM evaluate_reference_metrics。 \nhttps://github.com/stanford-crfm/helm/blob/main/src/helm/benchmark/metrics/evaluate_reference_metrics.py",
+      "after": "[1] Stanford CRFM. evaluate_reference_metrics。 \nhttps://github.com/stanford-crfm/helm/blob/main/src/helm/benchmark/metrics/evaluate_reference_metrics.py",
+      "issue": "実例の原出典と正式実装名を保持し、不要な基盤名の反復を除く",
+      "action": "rewrite",
+      "new_page": 15
+    },
+    {
+      "old_page": 11,
+      "location": "dataset-focused source",
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0 — WikiFact（2023）。   https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
+      "after": "[1] Stanford CRFM (2023). WikiFact — 公開入力・参照回答。   https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
+      "issue": "実例の原出典と正式実装名を保持し、不要な基盤名の反復を除く",
+      "action": "rewrite",
+      "new_page": 16
+    },
+    {
+      "old_page": 23,
+      "location": "dataset-focused source",
+      "before": "[1] Stanford CRFM. HELM evaluate_reference_metrics。 \nhttps://github.com/stanford-crfm/helm/blob/main/src/helm/benchmark/metrics/evaluate_reference_metrics.py",
+      "after": "[1] Stanford CRFM. evaluate_reference_metrics。 \nhttps://github.com/stanford-crfm/helm/blob/main/src/helm/benchmark/metrics/evaluate_reference_metrics.py",
+      "issue": "実例の原出典と正式実装名を保持し、不要な基盤名の反復を除く",
+      "action": "rewrite",
+      "new_page": 17
+    },
+    {
+      "old_page": 26,
+      "location": "dataset-focused source",
+      "before": "[1] Stanford CRFM. HELM WIKIFactScenario。 \nhttps://github.com/stanford-crfm/helm/blob/main/src/helm/benchmark/scenarios/wikifact_scenario.py",
+      "after": "[1] Stanford CRFM. WIKIFactScenario。 \nhttps://github.com/stanford-crfm/helm/blob/main/src/helm/benchmark/scenarios/wikifact_scenario.py",
+      "issue": "実例の原出典と正式実装名を保持し、不要な基盤名の反復を除く",
+      "action": "rewrite",
+      "new_page": 19
+    },
+    {
+      "old_page": 27,
+      "location": "dataset-focused source",
+      "before": "[1] Stanford CRFM, HELM. Apache License 2.0（コード）。  https://github.com/stanford-crfm/helm/blob/main/LICENSE",
+      "after": "[1] Stanford CRFM. Apache License 2.0（読込コード）。   https://github.com/stanford-crfm/helm/blob/main/LICENSE",
+      "issue": "実例の原出典と正式実装名を保持し、不要な基盤名の反復を除く",
+      "action": "rewrite",
+      "new_page": 20
+    },
+    {
+      "old_page": 32,
+      "location": "dataset-focused source",
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0 — WikiFact（2023）。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
+      "after": "[1] Stanford CRFM (2023). WikiFact — 公開入力・参照回答。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
+      "issue": "実例の原出典と正式実装名を保持し、不要な基盤名の反復を除く",
+      "action": "rewrite",
+      "new_page": 25
+    },
+    {
+      "old_page": 33,
+      "location": "dataset-focused source",
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0 — WikiFact（2023）。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
+      "after": "[1] Stanford CRFM (2023). WikiFact — 公開入力・参照回答。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
+      "issue": "実例の原出典と正式実装名を保持し、不要な基盤名の反復を除く",
+      "action": "rewrite",
+      "new_page": 26
+    },
+    {
+      "old_page": 34,
+      "location": "dataset-focused source",
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0 — WikiFact（2023）。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
+      "after": "[1] Stanford CRFM (2023). WikiFact — 公開入力・参照回答。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
+      "issue": "実例の原出典と正式実装名を保持し、不要な基盤名の反復を除く",
+      "action": "rewrite",
+      "new_page": 27
+    },
+    {
+      "old_page": 35,
+      "location": "dataset-focused source",
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0 — WikiFact（2023）。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
+      "after": "[1] Stanford CRFM (2023). WikiFact — 公開入力・参照回答。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
+      "issue": "実例の原出典と正式実装名を保持し、不要な基盤名の反復を除く",
+      "action": "rewrite",
+      "new_page": 28
+    },
+    {
+      "old_page": 36,
+      "location": "dataset-focused source",
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0 — WikiFact（2023）。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
+      "after": "[1] Stanford CRFM (2023). WikiFact — 公開入力・参照回答。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
+      "issue": "実例の原出典と正式実装名を保持し、不要な基盤名の反復を除く",
+      "action": "rewrite",
       "new_page": 29
+    },
+    {
+      "old_page": 37,
+      "location": "dataset-focused source",
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0 — WikiFact（2023）。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
+      "after": "[1] Stanford CRFM (2023). WikiFact — 公開入力・参照回答。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
+      "issue": "実例の原出典と正式実装名を保持し、不要な基盤名の反復を除く",
+      "action": "rewrite",
+      "new_page": 30
+    },
+    {
+      "old_page": 38,
+      "location": "dataset-focused source",
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0 — WikiFact（2023）。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
+      "after": "[1] Stanford CRFM (2023). WikiFact — 公開入力・参照回答。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
+      "issue": "実例の原出典と正式実装名を保持し、不要な基盤名の反復を除く",
+      "action": "rewrite",
+      "new_page": 31
+    },
+    {
+      "old_page": 39,
+      "location": "dataset-focused source",
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0 — WikiFact（2023）。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
+      "after": "[1] Stanford CRFM (2023). WikiFact — 公開入力・参照回答。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
+      "issue": "実例の原出典と正式実装名を保持し、不要な基盤名の反復を除く",
+      "action": "rewrite",
+      "new_page": 32
+    },
+    {
+      "old_page": 40,
+      "location": "dataset-focused source",
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0 — WikiFact（2023）。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
+      "after": "[1] Stanford CRFM (2023). WikiFact — 公開入力・参照回答。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
+      "issue": "実例の原出典と正式実装名を保持し、不要な基盤名の反復を除く",
+      "action": "rewrite",
+      "new_page": 33
+    },
+    {
+      "old_page": 41,
+      "location": "dataset-focused source",
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0 — WikiFact（2023）。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
+      "after": "[1] Stanford CRFM (2023). WikiFact — 公開入力・参照回答。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
+      "issue": "実例の原出典と正式実装名を保持し、不要な基盤名の反復を除く",
+      "action": "rewrite",
+      "new_page": 34
+    },
+    {
+      "old_page": 46,
+      "location": "dataset-focused source",
+      "before": "[1] Stanford CRFM. HELM WIKIFactScenario。 \nhttps://github.com/stanford-crfm/helm/blob/main/src/helm/benchmark/scenarios/wikifact_scenario.py",
+      "after": "[1] Stanford CRFM. WIKIFactScenario。 \nhttps://github.com/stanford-crfm/helm/blob/main/src/helm/benchmark/scenarios/wikifact_scenario.py",
+      "issue": "実例の原出典と正式実装名を保持し、不要な基盤名の反復を除く",
+      "action": "rewrite",
+      "new_page": 36
+    },
+    {
+      "old_page": 52,
+      "location": "shape 2",
+      "before": "HELM Classic — WikiFact\nStanford CRFM (2023). v0.4.0（2023-11-17）。参照2026-10-18。\n関係別・モデル別の公開成績と予測記録をまとめる。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
+      "after": "WikiFact\nStanford CRFM (2023). 公開入力・参照回答。参照2026-10-18。\n関係ごとの入力、参照回答、既存モデル出力を閲覧できる。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
+      "issue": "基盤文献の解説をデータ例の入口へ。URLはそのまま保持",
+      "action": "rewrite",
+      "new_page": 39
+    },
+    {
+      "old_page": 52,
+      "location": "shape 3",
+      "before": "HELM WIKIFactScenario\nStanford CRFM (n.d.). 公開実装。参照2026-10-18。\n86関係のIDと、問題・参照回答をJSONLから読み込む手順を定義する。\nhttps://github.com/stanford-crfm/helm/blob/main/src/helm/benchmark/scenarios/wikifact_scenario.py",
+      "after": "WIKIFactScenario\nStanford CRFM (n.d.). 公開読込実装。参照2026-10-18。\n86関係のIDと、問題・参照回答をJSONLから読み込む手順を定義する。\nhttps://github.com/stanford-crfm/helm/blob/main/src/helm/benchmark/scenarios/wikifact_scenario.py",
+      "issue": "データ形式・読込の一次資料を示し、基盤の一般解説を削除",
+      "action": "rewrite",
+      "new_page": 39
+    },
+    {
+      "old_page": 46,
+      "location": "code source",
+      "before": "[1] Stanford CRFM. WIKIFactScenario。 \nhttps://github.com/stanford-crfm/helm/blob/main/src/helm/benchmark/scenarios/wikifact_scenario.py",
+      "after": "[1] Stanford CRFM (2023). WikiFact — 公開入力・参照回答。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
+      "issue": "実際に読む公開scenario_state.jsonの出所へ出典を合わせる",
+      "action": "rewrite",
+      "new_page": 36
+    },
+    {
+      "old_page": 2,
+      "location": "whole page",
+      "before": "公式HELMサイト：WikiFactの公開結果\nWikiFact\n[1] Stanford CRFM, HELM Classic v0.4.0, WikiFact. 2023-11-17の固定版。2026-10-18参照。  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
+      "after": "",
+      "issue": "一般のHELM公式成績画面は課題そのものの紹介に不要なため外部化。データ例へのURLは文献に保持。",
+      "action": "delete_page",
+      "new_page": null
+    },
+    {
+      "old_page": 17,
+      "location": "whole page",
+      "before": "Classicの公開実行は10関係を含む\n2. 知識基盤から問題を作る\n試行間の同一IDをまとめたtestは計7,462問。実装が対応する86関係の全件実行ではない。\n[1] Stanford CRFM, HELM Classic v0.4.0, WikiFact. 2023-11-17の固定版。2026-10-18参照。  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
+      "after": "",
+      "issue": "特定公開runの10関係/7462件の集計表は基盤固有の取得・評価範囲。入手説明に10関係公開を簡潔に保持。",
+      "action": "delete_page",
+      "new_page": null
+    },
+    {
+      "old_page": 19,
+      "location": "whole page",
+      "before": "公開結果は、関係ごとの正答率を平均する\n3. HELMの採点と公開成績\n各関係のtestに対し、最上位候補が参照に一致した割合を計算する。その後、10関係の正答率を同じ重みで平均した値が全体の指標。\n96問の原告も、850問の著者も、全体平均では同じ1関係として扱われる。全7,462問の正誤をそのまま平均した値ではない。\n[1] Stanford CRFM, HELM Classic v0.4.0, WikiFact. 2023-11-17の固定版。2026-10-18参照。  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
+      "after": "",
+      "issue": "10関係runの均等平均/試行集計は特定公開成績の条件として外部記録へ。",
+      "action": "delete_page",
+      "new_page": null
+    },
+    {
+      "old_page": 20,
+      "location": "whole page",
+      "before": "候補数と試行数も、モデルで違っていた\n3. HELMの採点と公開成績\nOPTとtext-davinci-003は、5候補から対数確率最大の候補を選び、各3試行の正答率を平均した。\nLlama 2 70Bは1試行。設定上は5出力だが、取得した全7,462件のtestレコードには、それぞれ1候補の出力が含まれていた。\nそのため、Llama 2の公開Accuracy@1と@5は同じ値になる。5候補を生成した条件として比較する値ではない。\n[1] Stanford CRFM, HELM Classic v0.4.0, WikiFact. 2023-11-17の固定版。2026-10-18参照。  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
+      "after": "",
+      "issue": "モデルごとの候補数/試行数の比較は基盤の実行条件のため外部化。",
+      "action": "delete_page",
+      "new_page": null
+    },
+    {
+      "old_page": 21,
+      "location": "whole page",
+      "before": "HELM ClassicのAccuracy@1\n3. HELMの採点と公開成績\nv0.4.0収録・suite v0.3.0。最大5提示例、temperature 1、出力上限8トークン。\n[1] Stanford CRFM, HELM Classic v0.4.0, WikiFact. 2023-11-17の固定版。2026-10-18参照。  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
+      "after": "",
+      "issue": "特定3モデルの公開Accuracyは元課題の概要より実行結果を主題にしているため外部化。",
+      "action": "delete_page",
+      "new_page": null
+    },
+    {
+      "old_page": 22,
+      "location": "whole page",
+      "before": "関係によって正答率は大きく違う\n3. HELMの採点と公開成績\nAccuracy@1（%）。各関係を独立に評価。候補数は5／5／1、試行数は3／3／1。\n[1] Stanford CRFM, HELM Classic v0.4.0, WikiFact. 2023-11-17の固定版。2026-10-18参照。  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
+      "after": "",
+      "issue": "特定4関係のモデル比較値も実行記録へ保持。",
+      "action": "delete_page",
+      "new_page": null
+    },
+    {
+      "old_page": 25,
+      "location": "whole page",
+      "before": "文脈の読解と切り分けて、事実知識を測る\n4. 利用の位置付けと入手方法\nWikiFactは、文章に根拠が含まれる読解や、検索器が根拠を探す課題と異なり、主語と関係だけから目的語名を生成する。\n2026-10-18確認のHELM実装にも86関係の読込がある。今回扱う公開成績は2023年のClassic固定版で、現在の知識や最新モデルを評価したものではない。\n[1] Stanford CRFM, HELM WIKIFactScenario. 86関係の辞書と配布ファイルの読込。2026-10-18確認。\nhttps://github.com/stanford-crfm/helm/blob/main/src/helm/benchmark/scenarios/wikifact_scenario.py",
+      "after": "",
+      "issue": "根拠なし補完と知識範囲の説明は旧5/28と重複、プラットフォーム対応範囲の確認は外部へ。",
+      "action": "delete_page",
+      "new_page": null
+    },
+    {
+      "old_page": 43,
+      "location": "whole page",
+      "before": "10関係のAccuracy@1（前半）\nAppendix: 2. 関係別成績と実行条件\n単位は%。候補数は5／5／1、試行数は3／3／1。\n[1] Stanford CRFM, HELM Classic v0.4.0, WikiFact. 2023-11-17の固定版。2026-10-18参照。  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
+      "after": "",
+      "issue": "特定モデル別10関係の全成績表は評価基盤の実行記録へ。",
+      "action": "delete_page",
+      "new_page": null
+    },
+    {
+      "old_page": 44,
+      "location": "whole page",
+      "before": "10関係のAccuracy@1（後半）\nAppendix: 2. 関係別成績と実行条件\n単位は%。候補数は5／5／1、試行数は3／3／1。\n[1] Stanford CRFM, HELM Classic v0.4.0, WikiFact. 2023-11-17の固定版。2026-10-18参照。  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
+      "after": "",
+      "issue": "同上。元入力/参照は13実例を全文保持。",
+      "action": "delete_page",
+      "new_page": null
+    },
+    {
+      "old_page": 45,
+      "location": "whole page",
+      "before": "5候補を許すと、得点が上がる\nAppendix: 2. 関係別成績と実行条件\n10関係の単純平均、3試行平均。Llama 2は実出力が1候補なので、この5候補比較から外した。\n[1] Stanford CRFM, HELM Classic v0.4.0, WikiFact. 2023-11-17の固定版。2026-10-18参照。  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact",
+      "after": "",
+      "issue": "特定モデルの@1/@5集計は外部へ。@Kの意味と真正5出力例は旧10/11へ保持。",
+      "action": "delete_page",
+      "new_page": null
+    },
+    {
+      "old_page": 50,
+      "location": "whole page",
+      "before": "HELMの知識評価として新規に構築した\nAppendix: 3. 制作チームと参考文献\nWikiFactはHELM論文で導入されたデータセット。論文の貢献記録では、Hongyu Renが設計・実装、Lucia Zhengがデータ注釈・前処理を担当したとされる。\nMichihiro Yasunagaが知識評価チームを率い、Neel Guhaらも設計に参加。プロジェクト全体はPercy Liangが統括した。\n文の補完形式はLAMAを受け継ぎつつ、法律・経済・生物医学を含む幅広い関係へ対象を広げた。\n[1] Liang et al. (2023), Holistic Evaluation of Language Models. Transactions on Machine Learning Research.  https://arxiv.org/abs/2211.09110",
+      "after": "",
+      "issue": "作成チーム役割・基盤紹介の重複。作成主体/年は旧5へ一度、元LAMAと設計の拡張は旧13へ。",
+      "action": "delete_page",
+      "new_page": null
     },
     {
       "old_page": 47,

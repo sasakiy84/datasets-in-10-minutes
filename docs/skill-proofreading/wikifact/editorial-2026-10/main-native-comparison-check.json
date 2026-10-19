@@ -1,0 +1,188 @@
+{
+  "slug": "wikifact",
+  "comparison": "Exact native text, full table cells, chart categories and series; no visual-inspection claim",
+  "previous_pptx_sha256": "e8524198ab24e80088cff98edea01e035a93f9c99b27e04646c0a5c799350002",
+  "current_pptx_sha256": "4e7c7d8fd81685a8c26a775e04eb7dd6c4ec45173e8db0ccb3aa2a4295f7465d",
+  "previous_page_count": 50,
+  "current_page_count": 39,
+  "unchanged_pages": [
+    {
+      "current_page": 1,
+      "previous_pages": [
+        1
+      ]
+    },
+    {
+      "current_page": 3,
+      "previous_pages": [
+        4
+      ]
+    },
+    {
+      "current_page": 9,
+      "previous_pages": [
+        12
+      ]
+    },
+    {
+      "current_page": 11,
+      "previous_pages": [
+        14
+      ]
+    },
+    {
+      "current_page": 12,
+      "previous_pages": [
+        15
+      ]
+    },
+    {
+      "current_page": 13,
+      "previous_pages": [
+        16
+      ]
+    },
+    {
+      "current_page": 22,
+      "previous_pages": [
+        29
+      ]
+    },
+    {
+      "current_page": 24,
+      "previous_pages": [
+        31
+      ]
+    },
+    {
+      "current_page": 37,
+      "previous_pages": [
+        47
+      ]
+    },
+    {
+      "current_page": 38,
+      "previous_pages": [
+        49
+      ]
+    }
+  ],
+  "changed_pages": [
+    {
+      "page": 2,
+      "text": "\n事実を文の続きで答える\n知識基盤から問題を作る\n参照回答に一致するかを評価する\nデータの入手と利用条件\n目次"
+    },
+    {
+      "page": 4,
+      "text": "知識を、短い文の補完で尋ねる\n1. 事実を文の続きで答える\nWikiFactは、知識基盤Wikidataの「主語・関係・目的語」という三つ組を、英語の短い文に変換した事実補完データである。\nモデルは「作品の著者は」「国の通貨は」といった文の続きを生成する。根拠となる文章を与えず、モデルが覚えている事実を名前として答えられるかを測る。\nStanford CRFMを中心とする研究チームが2022年に設計した。\n[1] Liang et al. (2023), Holistic Evaluation of Language Models. Transactions on Machine Learning Research.  https://arxiv.org/abs/2211.09110"
+    },
+    {
+      "page": 5,
+      "text": "正解の対象も、その呼び名も複数ある\n1. 事実を文の続きで答える\n同じ作品に複数の著者がいるように、一つの入力に複数の正解がある。また、一つの対象が複数の名前や略号を持つこともある。\n正解となる対象の名前や別名のいずれかに一致すれば正解とする。次の3例は、公開されている入力と参照回答の全文である。\n[1] Liang et al. (2023), Holistic Evaluation of Language Models. Transactions on Machine Learning Research.  https://arxiv.org/abs/2211.09110"
+    },
+    {
+      "page": 6,
+      "text": "実例1：複数の著者と別名が正解になる\n1. 事実を文の続きで答える\n入力原文（全文）\nThe author of The Glass Inferno is\n参照回答（全文）\nThomas N. Scortia / Thomas Nicholas Scortia / Frank M. Robinson\n日本語訳（入力・答えの意味）\n『The Glass Inferno』の著者は\nThomas N. Scortia\nFrank M. Robinson\n2人の著者のうち1人を答えればよい。Thomas Nicholas ScortiaとThomas N. Scortiaは、同じ著者の別名である。\n[1] Stanford CRFM (2023). WikiFact — 公開入力・参照回答。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact"
+    },
+    {
+      "page": 7,
+      "text": "実例2：通貨の名前とコードを認める\n1. 事実を文の続きで答える\n入力原文（全文）\nThe currency of Indonesia is\n参照回答（全文）\nrupiah / Rp / IDR / Indonesian rupiah\n日本語訳（入力・答えの意味）\nインドネシアの通貨は\nルピア\n名前、通貨記号Rp、通貨コードIDRを、いずれも参照回答として認める。\n[1] Stanford CRFM (2023). WikiFact — 公開入力・参照回答。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact"
+    },
+    {
+      "page": 8,
+      "text": "実例3：事件名から原告を答える\n1. 事実を文の続きで答える\n入力原文（全文）\nThe plaintiff in USL v. BSDi is\n参照回答（全文）\nUnix System Laboratories\n日本語訳（入力・答えの意味）\nUSL対BSDi事件の原告は\nUnix System Laboratories\n事件名から、原告となった組織の名前を答える。\n[1] Stanford CRFM (2023). WikiFact — 公開入力・参照回答。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact"
+    },
+    {
+      "page": 10,
+      "text": "一般的な関係から、専門領域の関係へ\n2. 知識基盤から問題を作る\n2019年のLAMAは、文の穴埋めを通して言語モデルの事実知識を調べる方法を広めた。\nWikiFactでは対象を法律・経済・生物医学などへ広げ、関係と英語テンプレートを人手で選んだ。\n[1] Petroni et al. (2019), Language Models as Knowledge Bases? EMNLP-IJCNLP, 2463–2473.  https://aclanthology.org/D19-1250/\n[2] Liang et al. (2023), Holistic Evaluation of Language Models. Transactions on Machine Learning Research.  https://arxiv.org/abs/2211.09110"
+    },
+    {
+      "page": 14,
+      "text": "参照回答に一致するかを評価する\n3. 参照回答に一致するかを評価する"
+    },
+    {
+      "page": 15,
+      "text": "参照のいずれかに一致すれば正解になる\n3. 参照回答に一致するかを評価する\n生成した名前が、参照回答のいずれかに一致した割合で正答率を求める。照合では英字の大小、冠詞、句読点、余分な空白をならす。\n一つの答えだけを見るAccuracy@1と、複数候補のどれかが合えばよいAccuracy@Kでは、正解とする条件が変わる。次の出力例では、先頭候補と5候補全体を比べる。\n[1] Stanford CRFM. evaluate_reference_metrics。 \nhttps://github.com/stanford-crfm/helm/blob/main/src/helm/benchmark/metrics/evaluate_reference_metrics.py"
+    },
+    {
+      "page": 16,
+      "text": "略称が、参照回答に含まれない場合\n3. 参照回答に一致するかを評価する\n順位 | 生成候補（全文） | 正規化後の一致\n1 | USL | 0\n2 | Unisys Corporation | 0\n3 | Unisys Corporation | 0\n4 | Unix System Laboratories. | 1\n5 | The United States of America | 0\n2023年の公開出力例（text-davinci-003）。先頭候補は不一致、5候補の中には一致する答えがある。\n[1] Stanford CRFM (2023). WikiFact — 公開入力・参照回答。   https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact"
+    },
+    {
+      "page": 17,
+      "text": "参照に含まれる名前が、正誤を左右する\n3. 参照回答に一致するかを評価する\n実例3のUSLという略称は、参照回答に含まれていない。人が同じ組織を思い浮かべても、参照に一致する名前でなければ正解にならない。\n知識基盤の名前や別名の収録範囲が、評価に影響する。複数の参照を持つ場合は、そのうち一つに合う補完を求める。\n[1] Stanford CRFM. evaluate_reference_metrics。 \nhttps://github.com/stanford-crfm/helm/blob/main/src/helm/benchmark/metrics/evaluate_reference_metrics.py"
+    },
+    {
+      "page": 18,
+      "text": "データの入手と利用条件\n4. データの入手と利用条件"
+    },
+    {
+      "page": 19,
+      "text": "配布JSONLと、公開例から利用を始める\n4. データの入手と利用条件\n全86関係の問題は、CodaLabのtrain・dev・test JSONLとして案内されている。データの読込実装は、関係を指定して文章と参照回答を取り出す。\n公式サイトでは、10関係の公開入力・参照回答・出力を閲覧できる。問題の形を調べたり、名前の照合を試したりするために使える。\n[1] Stanford CRFM. WIKIFactScenario。 \nhttps://github.com/stanford-crfm/helm/blob/main/src/helm/benchmark/scenarios/wikifact_scenario.py"
+    },
+    {
+      "page": 20,
+      "text": "読込コードと、加工済みデータの利用条件\n4. データの入手と利用条件\n公開されている読込実装はApache License 2.0で提供される。加工済みWikiFactデータの専用ライセンスは、論文と読込コードには明記されていない。\nデータを再配布・再利用する際の条件は、配布元への確認が必要である。\n[1] Stanford CRFM. Apache License 2.0（読込コード）。   https://github.com/stanford-crfm/helm/blob/main/LICENSE"
+    },
+    {
+      "page": 21,
+      "text": "専門領域の知識を、名前の補完で測る\n4. データの入手と利用条件\nWikiFactは、Wikidata由来の86関係を文の補完へ変え、一般的な事実から法律・経済・生物医学までを扱う。複数の対象や別名を正解として持つ。\n根拠文を与えず、モデルが事実を表す名前を答えられるかを調べる。入力の関係や知識の時点、参照に含まれる名前の範囲が評価の意味を決める。\n[1] Liang et al. (2023), Holistic Evaluation of Language Models. Transactions on Machine Learning Research.  https://arxiv.org/abs/2211.09110"
+    },
+    {
+      "page": 23,
+      "text": "\n追加の実例\n公開例のデータ形式\n研究と参考文献\nAppendix: 目次"
+    },
+    {
+      "page": 25,
+      "text": "実例4：固有名をカテゴリに結び付ける\nAppendix: 1. 追加の実例\n入力原文（全文）\nWZRO-LP is an instance of\n参照回答（全文）\nradio station / radio broadcasting station\n日本語訳（入力・答えの意味）\nWZRO-LPは次の種類に当たる：\nラジオ局\n二つの英語表現が同じカテゴリを表す参照になっている。\n[1] Stanford CRFM (2023). WikiFact — 公開入力・参照回答。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact"
+    },
+    {
+      "page": 26,
+      "text": "実例5：薬剤と治療対象を結び付ける\nAppendix: 1. 追加の実例\n入力原文（全文）\ncaramiphen has effects on diseases such as\n参照回答（全文）\ncough / coughing\n日本語訳（入力・答えの意味）\nカラミフェンが作用する疾患・症状には、次がある：\n咳\nWikidataの関係を補完する課題。ここではcoughとcoughingが参照に入る。\n[1] Stanford CRFM (2023). WikiFact — 公開入力・参照回答。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact"
+    },
+    {
+      "page": 27,
+      "text": "実例6：役職と組織の包含関係\nAppendix: 1. 追加の実例\n入力原文（全文）\nTaoiseach is part of\n参照回答（全文）\nGovernment of Ireland / Cabinet of Ireland\n日本語訳（入力・答えの意味）\nアイルランド首相（Taoiseach）が属するのは\nアイルランド政府\nGovernment of IrelandとCabinet of Irelandを参照とする。\n[1] Stanford CRFM (2023). WikiFact — 公開入力・参照回答。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact"
+    },
+    {
+      "page": 28,
+      "text": "実例7：出生地を地名で答える\nAppendix: 1. 追加の実例\n入力原文（全文）\nAURORA was born in\n参照回答（全文）\nStavanger / Stavanger, Rogaland, Norway / Stavanger, Norway\n日本語訳（入力・答えの意味）\nAURORAが生まれた場所は\nスタヴァンゲル\n都市名だけの表記と、国名・地域名を添えた表記を認める。\n[1] Stanford CRFM (2023). WikiFact — 公開入力・参照回答。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact"
+    },
+    {
+      "page": 29,
+      "text": "実例8：医学的評価法の考案者を答える\nAppendix: 1. 追加の実例\n入力原文（全文）\nApgar score was discovered by\n参照回答（全文）\nVirginia Apgar / Virginia Agpar / Virginia Apgar\n日本語訳（入力・答えの意味）\nアプガースコアを考案したのは\nバージニア・アプガー\n医学的評価法の考案者を「discovered by」というテンプレートで尋ねる。参照にはVirginia Agparという表記や、同じ名前の重複が含まれる。\n[1] Stanford CRFM (2023). WikiFact — 公開入力・参照回答。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact"
+    },
+    {
+      "page": 30,
+      "text": "実例9：人物が務める役職を答える\nAppendix: 1. 追加の実例\n入力原文（全文）\nThe position held by Alison Foster is\n参照回答（全文）\nHigh Court judge\n日本語訳（入力・答えの意味）\nアリソン・フォスターの役職は\n高等法院判事\n人物と役職の関係を尋ねる。参照回答は高等法院判事である。\n[1] Stanford CRFM (2023). WikiFact — 公開入力・参照回答。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact"
+    },
+    {
+      "page": 31,
+      "text": "実例10：病態から症状・徴候を答える\nAppendix: 1. 追加の実例\n入力原文（全文）\nsecondary hypertrophic osteoarthropathy has symptoms such as\n参照回答（全文）\nnail clubbing / digital clubbing / clubbing of fingers / Hippocratic fingers / finger clubbing\n日本語訳（入力・答えの意味）\n続発性肥大性骨関節症の症状・徴候には、次がある：\nばち指\n[1] Stanford CRFM (2023). WikiFact — 公開入力・参照回答。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact"
+    },
+    {
+      "page": 32,
+      "text": "実例11：古典作品の著者を答える\nAppendix: 1. 追加の実例\n入力原文（全文）\nThe author of Dialectics of Nature is\n参照回答（全文）\nFriedrich Engels / F. Engels / Frederik Engels / Friedrich Engles\n日本語訳（入力・答えの意味）\n『自然弁証法』の著者は\nフリードリヒ・エンゲルス\nイニシャル表記などを含む複数の別名が参照になる。\n[1] Stanford CRFM (2023). WikiFact — 公開入力・参照回答。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact"
+    },
+    {
+      "page": 33,
+      "text": "実例12：歴史上の地域の通貨\nAppendix: 1. 追加の実例\n入力原文（全文）\nThe currency of British Cyprus is\n参照回答（全文）\nCypriot pound / Cypriot lira\n日本語訳（入力・答えの意味）\nイギリス領キプロスの通貨は\nキプロス・ポンド\nイギリス領キプロスで用いられた通貨を尋ねる。\n[1] Stanford CRFM (2023). WikiFact — 公開入力・参照回答。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact"
+    },
+    {
+      "page": 34,
+      "text": "実例13：参照に日本語表記が含まれる\nAppendix: 1. 追加の実例\n入力原文（全文）\n(5353) 1989 YT was discovered by\n参照回答（全文）\nYoshiaki Oshima / おおしま よしあき\n日本語訳（入力・答えの意味）\n(5353) 1989 YTを発見したのは\n大島良明\n入力は英語のテンプレートだが、参照の別名には日本語表記も含まれる。\n[1] Stanford CRFM (2023). WikiFact — 公開入力・参照回答。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact"
+    },
+    {
+      "page": 35,
+      "text": "公開例のデータ形式\nAppendix: 2. 公開例のデータ形式"
+    },
+    {
+      "page": 36,
+      "text": "公開例のJSONから、入力と参照を読む\nAppendix: 2. 公開例のデータ形式\nscenario_state.jsonは、公開された評価記録のJSON。各問の入力、参照回答、モデル出力を収める。\n[1] Stanford CRFM (2023). WikiFact — 公開入力・参照回答。 \nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact\nimport json\nwith open(\"scenario_state.json\", encoding=\"utf-8\") as f:\n    state = json.load(f)\nexample = state[\"request_states\"][0][\"instance\"]\nprint(example[\"input\"][\"text\"])\nprint([r[\"output\"][\"text\"] for r in example[\"references\"]])"
+    },
+    {
+      "page": 39,
+      "text": "参考文献\nAppendix: 3. 研究と参考文献\nWikiFact\nStanford CRFM (2023). 公開入力・参照回答。参照2026-10-18。\n関係ごとの入力、参照回答、既存モデル出力を閲覧できる。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/wikifact\nWIKIFactScenario\nStanford CRFM (n.d.). 公開読込実装。参照2026-10-18。\n86関係のIDと、問題・参照回答をJSONLから読み込む手順を定義する。\nhttps://github.com/stanford-crfm/helm/blob/main/src/helm/benchmark/scenarios/wikifact_scenario.py"
+    }
+  ]
+}

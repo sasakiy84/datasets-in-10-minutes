@@ -1,22 +1,43 @@
 {
-  "slug": "wikifact",
-  "status": "confirmed",
-  "creator": "HELM研究チーム（Liang et al.; Hongyu Ren, Lucia Zheng, Michihiro Yasunagaら）",
-  "upstream": "Wikidata 2022年1月dump。先行するLAMAから文補完の形式を継承。",
-  "helm_relation": "HELMがWikidata由来の三つ組を選定・テンプレート変換して新たに構築した事実補完データ。既存LAMA全体を別名で呼んだものではない。",
-  "primary_url": "https://arxiv.org/abs/2211.09110",
-  "section": "5.2 Fact completion / Datasets; Appendix E.2; contributions",
-  "evidence": "Here we curate a more diverse dataset to evaluate LMs. ... This results in 86 relation types in total.",
-  "slides": [
-    5,
-    13,
-    14,
-    15,
-    25,
-    28,
-    48
+  "original_creator": "HELM research team (Liang et al.; WikiFact contributors)",
+  "original_material": "Wikidata January 2022 dump; LAMA factual-completion format as prior work",
+  "helm_role": "HELMが新しいWikiFactデータを構築し評価。Wikidata自体やLAMAの作成者ではない。",
+  "evidence": [
+    {
+      "url": "https://arxiv.org/abs/2211.09110",
+      "section": "正式TMLR Appendix E.2.1",
+      "quote": "WikiFact is a new dataset constructed in this work.",
+      "local": "/workspace/artifacts/helm-parallel/wikifact/evidence/paper.txt",
+      "line": 10081,
+      "local_sha256": "8e3d7a2e57513af5ed999d85a5c2ee8843e444b3a2efd01aaa2c77060f6cbd70"
+    },
+    {
+      "url": "https://arxiv.org/abs/2211.09110",
+      "section": "E.2.1 Data",
+      "quote": "We then downloaded all triples corresponding to these relations (using the January 2022 Wikidata dump).",
+      "local": "/workspace/artifacts/helm-parallel/wikifact/evidence/paper.txt",
+      "local_sha256": "8e3d7a2e57513af5ed999d85a5c2ee8843e444b3a2efd01aaa2c77060f6cbd70"
+    }
   ],
-  "conclusion": "現行のHELM新規構築という帰属は一次本文と一致。",
-  "method": "skill_based_codex",
-  "gemini_used": false
+  "slide_pages": [
+    4,
+    10,
+    11,
+    12,
+    13,
+    38
+  ],
+  "conclusion": "原論文がWikiFactを本研究の新規構築と明記。Wikidataという素材、LAMAという先行形式、本課題の設計を区別。現行39頁は課題自体を主題とし、作成主体をp4に一度示す。特定基盤の設定・成績は外部記録へ。",
+  "slug": "wikifact",
+  "method": "primary_source_attribution_review",
+  "reviewed_on": "2026-10-19",
+  "status": "confirmed_current_dataset_focus",
+  "PPTX_PDF_modified_by_this_origin_check": true,
+  "current_pages": 39,
+  "final_hashes": {
+    "datasets-in-10-minutes-wikifact.pptx": "4e7c7d8fd81685a8c26a775e04eb7dd6c4ec45173e8db0ccb3aa2a4295f7465d",
+    "datasets-in-10-minutes-wikifact.pdf": "6e3802f69810d3f99f62cfc6d4260fd968970d699132b66adf4910ba2d2f15fe"
+  },
+  "independent_check": "原TMLR E.2.1を独立取得済みpaperで再照合。別途arXiv v1本文の初頁16Nov2022、WikiFact新規課題の記述、Jan2022素材の記述を確認。",
+  "v1_local": "/workspace/artifacts/helm-parallel/data-imputation/evidence/helm-paper-v1.txt"
 }
