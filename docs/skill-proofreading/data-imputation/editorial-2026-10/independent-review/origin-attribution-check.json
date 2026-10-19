@@ -1,0 +1,67 @@
+{
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "original_tables": {
+    "Buy": "Abt-Buyの片側商品表。Leipzig Database Groupが公開。Köpcke/Thor/Rahm(2010)の照合問題。",
+    "Restaurant": "照合用飲食店データ。UT Austin RIDDLEアーカイブREADMEはSheila TejadaからNick Kushmerick経由と記す。元公開年は断定しない。"
+  },
+  "ipm": "Mei et al. ICDE2021。事前学習LMで属性値を分類する補完研究。Buy/Restaurantを含む8データを利用。元照合表をIPMが作成したとは説明していない。",
+  "helm": "既存のBuy/Restaurantを転用し、行単位に分割/既存セルを隠す/5例付き文字列生成で比較する評価シナリオ。",
+  "slides_checked": [
+    1,
+    5,
+    6,
+    11,
+    12,
+    13,
+    14,
+    20,
+    21,
+    36,
+    37,
+    38
+  ],
+  "evidence": [
+    {
+      "url": "https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/entity_data_imputation_scenario.py",
+      "local": "/workspace/artifacts/helm-parallel/data-imputation/evidence/scenario-v030-official.py",
+      "supports": "既存表の読込、補完属性選択、分割、入力生成"
+    },
+    {
+      "url": "https://github.com/EliasMei/IPM",
+      "local": "/workspace/artifacts/helm-parallel/data-imputation/evidence/ipm-readme.md",
+      "supports": "原IPM研究と8データ・分類実装"
+    },
+    {
+      "url": "https://dbs.uni-leipzig.de/research/projects/benchmark-datasets-for-entity-resolution",
+      "local": "/workspace/artifacts/helm-parallel/data-imputation/evidence/leipzig-site.html",
+      "supports": "表の出所とCCBY4、2010照合研究への帰属"
+    },
+    {
+      "url": "https://www.cs.utexas.edu/users/ml/riddle/data/restaurant.tar.gz",
+      "local": "/workspace/artifacts/helm-parallel/data-imputation/evidence/restaurant-readme.txt",
+      "supports": "元飲食店表の来歴、許諾明記なし"
+    }
+  ],
+  "issue_resolved": {
+    "page": 6,
+    "before": "HELMの表",
+    "after": "使う表"
+  },
+  "conclusion": "原表はLeipzig Abt-Buy/UT Austin RIDDLE。IPM研究2021と二表補完を扱うLiangら研究初稿2022を分け、元表自体を2022作成と説明しない。",
+  "independent_extra_condition": {
+    "restaurant_test86_same_class_in_train": 17,
+    "train_rows": 622,
+    "test_rows": 86
+  },
+  "license_href": [
+    "https://creativecommons.org/licenses/by/4.0/",
+    "https://creativecommons.org/licenses/by/4.0/"
+  ],
+  "previous_conclusion": "作成主体/元表/IPM研究/HELM加工と成績を区別。追加構成修正は不要。",
+  "final_hashes": {
+    "datasets-in-10-minutes-data-imputation.pptx": "23674e78d6631849d963f519fe4bdd8e9e160ab02ad4f63b8b38d8636c6bf72a",
+    "datasets-in-10-minutes-data-imputation.pdf": "763772285562df5eafd02bafcb2f1f2ee1fd0d7a9018f066d69cd1d8f86d0d38"
+  },
+  "status": "approved_dataset_focused_38"
+}

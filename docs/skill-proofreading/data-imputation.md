@@ -10,3 +10,8 @@ Geminiは使用していない。Codexが日本語校正スキルをページご
 |50|事前学習言語モデルで属性値の意味を捉える補完方法IPMを提案する。手法説明は作者公開実装とも照合した。|事前学習言語モデルで属性値の意味を捉える補完方法IPMを提案する。|独立レビュー指摘。参考文献の説明から制作過程の報告を除き、文献の研究内容に絞る。|
 
 [全ページ文言](data-imputation/pages.jsonl)・[自己検査・独立レビュー](data-imputation/review.json)
+
+
+## 読者向けの説明・日本語の改訂（2026年10月）
+
+Geminiは使用せず、Codexがスキルで校正し、別担当が独立レビューした。削除・統合を含む[問題点と変更対](data-imputation/editorial-2026-10/changes.md)、[旧ページとの対応](data-imputation/editorial-2026-10/page-map.json)、[独立レビュー](data-imputation/editorial-2026-10/independent-review/handoff.json)、[最終ページの全文](data-imputation/pages.jsonl)。旧版の校正・検証記録は保持している。

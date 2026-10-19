@@ -1,0 +1,56 @@
+{
+  "creator": "元表はAbt-Buyの公開者/LeipzigとRestaurant/RIDDLEの収集・配布者。IPMはYinan Meiら。",
+  "source_dataset": "既存のBuy.csvとRestaurant fz.arff",
+  "primary": [
+    {
+      "url": "https://dbs.uni-leipzig.de/research/projects/benchmark-datasets-for-entity-resolution",
+      "section": "Abt-Buy配布",
+      "evidence": "元々商品照合用の表と正解対応を配布。"
+    },
+    {
+      "url": "https://www.cs.utexas.edu/users/ml/riddle/data/restaurant.tar.gz",
+      "section": "配布READMEとfz.arff",
+      "evidence": "飲食店照合用の元表。"
+    },
+    {
+      "url": "https://github.com/EliasMei/IPM",
+      "section": "IPM公式学習実装",
+      "evidence": "8データを分類式補完に使用。"
+    },
+    {
+      "url": "https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/entity_data_imputation_scenario.py",
+      "section": "read_tables / serialize_row / get_splits",
+      "evidence": "既存2表を読み、正解属性を隠して生成補完用へ変換。"
+    },
+    {
+      "url": "https://arxiv.org/abs/2211.09110v1",
+      "section": "5.3 Structured Data Reasoning; first page 16 Nov 2022",
+      "evidence": "For imputation, we choose the Restaurant and Buy datasets from Mei et al. (2021). For the tasks, we generate prompts following the random prompts from Narayan et al. (2022).",
+      "local": "/workspace/artifacts/helm-parallel/data-imputation/evidence/helm-paper-v1.txt"
+    }
+  ],
+  "helm_relation": "HELMが既存表を生成式補完課題へ転用。元表やIPM手法の作成主体とは区別。",
+  "slides": [
+    5,
+    11,
+    12,
+    13,
+    14,
+    20,
+    21,
+    36,
+    37,
+    38
+  ],
+  "slug": "data-imputation",
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "status": "confirmed_dataset_focus",
+  "conclusion": "原表の照合用データ、Meiらの2021年IPM、Liangらの2022年公表研究に現れる2表の補完課題を区別。題名・定義はBuy/Restaurantを使う欠損補完という範囲を明示し、評価基盤の固有設定・得点・処理の説明は外部化。",
+  "artifact_regeneration_required": true,
+  "final_hashes": {
+    "datasets-in-10-minutes-data-imputation.pptx": "23674e78d6631849d963f519fe4bdd8e9e160ab02ad4f63b8b38d8636c6bf72a",
+    "datasets-in-10-minutes-data-imputation.pdf": "763772285562df5eafd02bafcb2f1f2ee1fd0d7a9018f066d69cd1d8f86d0d38"
+  },
+  "year_note": "2022は紹介するBuy/Restaurantの言語モデル補完課題を扱う公表研究の年。元表の初公開・補完一般・IPMの年、また最初の2表併用とは断定しない。"
+}

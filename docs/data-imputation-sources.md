@@ -81,3 +81,8 @@ create_pileによる独立レビュー合格、未解決0。全54頁の個別vie
 ## リポジトリの検証記録
 
 [原レコード・出典・実行条件](data-audits/data-imputation.json)、[実際の校正対](skill-proofreading/data-imputation.md)、[全ページ文言](skill-proofreading/data-imputation/pages.jsonl)、[自己検査・独立レビュー](skill-proofreading/data-imputation/review.json)。
+
+
+## 読者向け説明の改訂
+
+[日本語・情報量の問題点と修正](skill-proofreading/data-imputation/editorial-2026-10/findings.json)。細かな再現条件・原レコードの照合情報は従来の検証記録に保持し、紹介スライドから整理した。
