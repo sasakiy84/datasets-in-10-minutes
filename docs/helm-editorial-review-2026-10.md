@@ -10,7 +10,7 @@ Geminiは使用せず、リポジトリの日本語校正・データセット�
 
 各資料の変更表には修正前後の文言、削除・統合の理由、改訂前後のページ対応を記録する。独立レビューとメインの記録には、実施した確認と最終成果物のハッシュを残す。
 
-最新方針での反映済み：17 / 47資料。反映済み資料は合計991ページから788ページへ整理。
+最新方針での反映済み：22 / 47資料。反映済み資料は合計1274ページから1031ページへ整理。
 
 | 資料 | 改訂前 | 改訂後 | 修正内容 |
 |---|---:|---:|---|
@@ -32,13 +32,13 @@ Geminiは使用せず、リポジトリの日本語校正・データセット�
 | lextreme | 55 | — | 最新方針に沿って確認・修正中 |
 | ccpm | 54 | 45 | [修正前後の表](skill-proofreading/ccpm/editorial-2026-10/changes.md) |
 | bustm | 54 | 45 | [修正前後の表](skill-proofreading/bustm/editorial-2026-10/changes.md) |
-| chid | 58 | — | 最新方針に沿って確認・修正中 |
+| chid | 58 | 52 | [修正前後の表](skill-proofreading/chid/editorial-2026-10/changes.md) |
 | wmt2020-enzh | 60 | — | 最新方針に沿って確認・修正中 |
 | twitter-aae | 49 | — | 最新方針に沿って確認・修正中 |
 | billsum | 79 | — | 最新方針に沿って確認・修正中 |
 | eurlexsum | 66 | — | 最新方針に沿って確認・修正中 |
 | multilexsum | 69 | — | 最新方針に沿って確認・修正中 |
-| cluewsc2020 | 60 | — | 最新方針に沿って確認・修正中 |
+| cluewsc2020 | 60 | 49 | [修正前後の表](skill-proofreading/cluewsc2020/editorial-2026-10/changes.md) |
 | the-pile | 56 | 51 | [修正前後の表](skill-proofreading/the-pile/editorial-2026-10/changes.md) |
 | wikifact | 52 | — | 最新方針に沿って確認・修正中 |
 | dyck | 48 | — | 最新方針に沿って確認・修正中 |
@@ -48,8 +48,8 @@ Geminiは使用せず、リポジトリの日本語校正・データセット�
 | legalbench | 84 | — | 最新方針に沿って確認・修正中 |
 | crosswoz | 61 | 56 | [修正前後の表](skill-proofreading/crosswoz/editorial-2026-10/changes.md) |
 | redefine | 53 | 46 | [修正前後の表](skill-proofreading/redefine/editorial-2026-10/changes.md) |
-| pattern-matching-suppression | 54 | — | 最新方針に沿って確認・修正中 |
-| ice | 49 | — | 最新方針に沿って確認・修正中 |
+| pattern-matching-suppression | 54 | 48 | [修正前後の表](skill-proofreading/pattern-matching-suppression/editorial-2026-10/changes.md) |
+| ice | 49 | 40 | [修正前後の表](skill-proofreading/ice/editorial-2026-10/changes.md) |
 | data-imputation | 54 | — | 最新方針に沿って確認・修正中 |
 | entity-matching | 59 | — | 最新方針に沿って確認・修正中 |
 | copyright-code | 57 | — | 最新方針に沿って確認・修正中 |
@@ -57,7 +57,7 @@ Geminiは使用せず、リポジトリの日本語校正・データセット�
 | chef | 65 | 58 | [修正前後の表](skill-proofreading/chef/editorial-2026-10/changes.md) |
 | cdial-bias | 59 | 51 | [修正前後の表](skill-proofreading/cdial-bias/editorial-2026-10/changes.md) |
 | c3 | 65 | 54 | [修正前後の表](skill-proofreading/c3/editorial-2026-10/changes.md) |
-| cleva | 62 | — | 最新方針に沿って確認・修正中 |
+| cleva | 62 | 54 | [修正前後の表](skill-proofreading/cleva/editorial-2026-10/changes.md) |
 | disinformation | 76 | — | 最新方針に沿って確認・修正中 |
 | realtoxicityprompts | 62 | — | 最新方針に沿って確認・修正中 |
 | synthetic-efficiency | 66 | — | 最新方針に沿って確認・修正中 |
