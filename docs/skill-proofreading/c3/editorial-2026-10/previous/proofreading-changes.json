@@ -1,0 +1,83 @@
+{
+  "method": "skill_based_codex",
+  "review_mode": "skill_based_codex",
+  "gemini_used": false,
+  "skill": "/workspace/datasets-in-10-minutes/.agents/skills/japanese-slide-proofreading/SKILL.md",
+  "changes": [
+    {
+      "page": 12,
+      "before": "到着時刻から出発時刻を戻す",
+      "after": "到着時刻から出発時刻を逆算する",
+      "reason": "数値から元の時刻を求める動作に合う動詞へ改めた。"
+    },
+    {
+      "page": 38,
+      "before": "営業部には急いで",
+      "after": "マーケティング部には急いで",
+      "reason": "市场部の部署名を、営業部へ限定しない訳にした。"
+    },
+    {
+      "page": 45,
+      "before": "はっきり説明する方法がない",
+      "after": "うまく説明できない",
+      "reason": "没办法说清楚を、方法の有無より説明できないこととして自然に訳した。"
+    },
+    {
+      "page": 18,
+      "before": "物語・報道・独白・広告",
+      "after": "物語・報道・広告",
+      "reason": "表セル末尾に「告」1字だけが折り返されたため、本文に既出の独白を表の列挙から省いた。"
+    },
+    {
+      "page": 27,
+      "before": "元データと、後続ベンチマークを分ける",
+      "after": "元データと、後続の評価を分ける",
+      "reason": "見出し末尾の「る」だけが次行に落ちる改行を解消した。"
+    },
+    {
+      "page": 28,
+      "before": "C³から採用した読解課題。変換データとプロンプトで評価する。",
+      "after": "C³の一部を採用。専用データとプロンプトで読解を評価。",
+      "reason": "セル末尾2字の折返しを解消し、元データ全体との範囲差も簡潔にした。"
+    },
+    {
+      "page": 30,
+      "before": "ここにC³の公開実行得点は置かない。",
+      "after": "",
+      "reason": "資料制作側の行為を述べる文を除き、公開run索引0件という事実に絞った。"
+    },
+    {
+      "page": 50,
+      "before": "撮影、電池、充電器から道具をカメラと捉える。公式注釈は場面の知識／複数文。",
+      "after": "撮影、電池、充電器からカメラだと補う。公式注釈は場面の知識／複数文。",
+      "reason": "表セルで「数文」や「文」だけが折り返される箇所を、意味を保って短くした。"
+    },
+    {
+      "page": 50,
+      "before": "毎週通っていることと、住んでいることは違う。公式注釈は言語知識／1文。",
+      "after": "毎週の訪問と居住を区別する。公式注釈は言語知識／1文。",
+      "reason": "表セルで「数文」や「文」だけが折り返される箇所を、意味を保って短くした。"
+    },
+    {
+      "page": 23,
+      "before": "歴史的な比較では、語の重なりに基づく方法、Co-Matching、BERT系の事前学習モデルを学習データで訓練し、開発・テストで評価した。",
+      "after": "BERT系は学習率0.00002、バッチ24、最大512トークン、8エポックで微調整した。長い入力は、文書・質問・候補のうち最長の列から切り詰める。",
+      "reason": "歴史的なBERT系得点の学習条件を正式論文§5.1に沿って具体化した。",
+      "kind": "evaluation_condition"
+    },
+    {
+      "page": 5,
+      "before": "Sun et al. (2019). arXiv:1904.09679, first submitted 21 April 2019.",
+      "after": "Sun et al. (2019). Probing Prior Knowledge Needed in Challenging Chinese Machine Reading Comprehension. arXiv:1904.09679v1.",
+      "reason": "独立指摘：初期版の正式題名を各頁footerにも全文で示す。初投稿日は本文/出典記録に保持。",
+      "stage": "independent_review"
+    },
+    {
+      "page": 60,
+      "before": "Sun et al. (2019). arXiv:1904.09679, first submitted 21 April 2019.",
+      "after": "Sun et al. (2019). Probing Prior Knowledge Needed in Challenging Chinese Machine Reading Comprehension. arXiv:1904.09679v1.",
+      "reason": "独立指摘：初期版の正式題名を各頁footerにも全文で示す。初投稿日は本文/出典記録に保持。",
+      "stage": "independent_review"
+    }
+  ]
+}
