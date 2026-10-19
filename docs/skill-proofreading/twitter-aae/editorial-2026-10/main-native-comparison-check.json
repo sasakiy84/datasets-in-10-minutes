@@ -1,0 +1,172 @@
+{
+  "slug": "twitter-aae",
+  "comparison": "Exact native text, full table cells, chart categories and series; no visual-inspection claim",
+  "previous_pptx_sha256": "4ad16115c8e2b3941a07b0482f3d3edcd28bbfa7ba38df8d447cbaeb8a6ad240",
+  "current_pptx_sha256": "39d7548403726b8355949c06f37e6f63dbdd07695689296971d86392bc25b805",
+  "previous_page_count": 48,
+  "current_page_count": 36,
+  "unchanged_pages": [
+    {
+      "current_page": 2,
+      "previous_pages": [
+        2
+      ]
+    },
+    {
+      "current_page": 10,
+      "previous_pages": [
+        11
+      ]
+    },
+    {
+      "current_page": 11,
+      "previous_pages": [
+        12
+      ]
+    },
+    {
+      "current_page": 12,
+      "previous_pages": [
+        13
+      ]
+    },
+    {
+      "current_page": 13,
+      "previous_pages": [
+        14
+      ]
+    },
+    {
+      "current_page": 14,
+      "previous_pages": [
+        15
+      ]
+    },
+    {
+      "current_page": 20,
+      "previous_pages": [
+        26
+      ]
+    },
+    {
+      "current_page": 22,
+      "previous_pages": [
+        28
+      ]
+    }
+  ],
+  "changed_pages": [
+    {
+      "page": 1,
+      "text": "TwitterAAE\nAfrican-American English on Twitter\n会話の言語的多様性を捉えるコーパス\nsasakiy84\ndatasets in 10 minutes (2026-10-18)"
+    },
+    {
+      "page": 3,
+      "text": "\n投稿の実例と言語的特徴\n人口統計と言語を結ぶ構築方法\n公開データと解析への利用\n目次"
+    },
+    {
+      "page": 4,
+      "text": "投稿の実例と言語的特徴\n1. 投稿の実例と言語的特徴"
+    },
+    {
+      "page": 5,
+      "text": "AAEを含む会話をNLPの対象にする\n1. 投稿の実例と言語的特徴\nTwitterAAEは、Twitter上のアフリカ系米国人英語（AAE）に関連する表現を調べる言語資源。投稿位置に対応する地域の人口構成と言葉の使い方を結び付けて構築した。\nAAEには語彙・発音・文法の体系がある。主流の書き言葉を中心に作られたNLPツールが、こうした会話をどの程度扱えるかを調べた。\n[1] Blodgett, Green & O’Connor (2016), Demographic Dialectal Variation in Social Media: A Case Study of African-American English. EMNLP, 1119–1130.\nhttps://aclanthology.org/D16-1120/"
+    },
+    {
+      "page": 6,
+      "text": "AA・whiteは、言語的特徴に基づく名前\n1. 投稿の実例と言語的特徴\n本編3例と追加10例では、異なる13件の投稿全文を示す。大文字や独自のつづり、句読点にも会話の特徴が現れる。\naa／whiteは、地域の人口構成に関連する言語の混合比に基づく名前。投稿者の自己申告による人種を表すラベルではない。\n[1] Blodgett et al. (n.d.), twitteraae. 人口統計と言語を結ぶ混合モデルのREADME。https://github.com/slanglab/twitteraae"
+    },
+    {
+      "page": 7,
+      "text": "実例1：電話代を払ってでも話したい\n1. 投稿の実例と言語的特徴\n投稿全文 / aa群（言語的特徴で抽出）\nIMA PAY OOMFS FONE BILL ,JUS KUZ I WANNA TALK TO HER\n日本語訳\nあのフォロワーの子と話したいからってだけで、携帯代を払ってやるつもり。\nOOMFはone of my followers（フォロワーの一人）の略。FONEやJUSなど、発音に近づけたつづりも使う。\n[1] Stanford CRFM. HELM Classic v0.4.0 — TwitterAAE.  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/twitter_aae"
+    },
+    {
+      "page": 8,
+      "text": "実例2：短い願いと呼びかけ\n1. 投稿の実例と言語的特徴\n投稿全文 / aa群（言語的特徴で抽出）\nI just wanna be happy bruh\n日本語訳\nただ幸せになりたいんだよ、なあ。\nbruhはくだけた呼びかけ。wannaはwant toの縮約で、短い投稿でも会話の調子が伝わる。\n[1] Stanford CRFM. HELM Classic v0.4.0 — TwitterAAE.  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/twitter_aae"
+    },
+    {
+      "page": 9,
+      "text": "実例3：white側にも語りかけの表現がある\n1. 投稿の実例と言語的特徴\n投稿全文 / white群（言語的特徴で抽出）\nSweet sleep, how I missed you my love.\n日本語訳\nああ愛しい眠り、どれほど恋しかったことか。\nsleepを恋人のように呼ぶ、擬人化した語りかけ。white抽出集合にもこのような会話が含まれる。\n[1] Stanford CRFM. HELM Classic v0.4.0 — TwitterAAE.  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/twitter_aae"
+    },
+    {
+      "page": 15,
+      "text": "言語同定では、英語を取りこぼしていた\n2. 人口統計と言語を結ぶ構築方法\n2016年の解析では、langid.pyがAA側の13.2%、white側の7.6%を非英語と判定した。Twitterの識別結果でも、欠損値を非英語に数えるかどうかの両条件でAA側の割合が高かった。\nAA混合比を10段階に分け、各識別条件で非英語とされた投稿から計1,500件を人手で調べた。明らかな非英語は13件（約0.87%）だった。\n英語だけを残す前処理そのものが、方言を含む意見や会話を取りこぼす問題につながる。\n[1] Blodgett, Green & O’Connor (2016), Demographic Dialectal Variation in Social Media: A Case Study of African-American English. EMNLP, 1119–1130.\nhttps://aclanthology.org/D16-1120/"
+    },
+    {
+      "page": 16,
+      "text": "公開データと解析への利用\n3. 公開データと解析への利用"
+    },
+    {
+      "page": 17,
+      "text": "構文解析のための注釈も公開されている\n3. 公開データと解析への利用\n2016年は人口統計と言語の混合モデルを作り、言語同定・構文解析の差を調べた。\n2018年にはAAEと主流米国英語の各250投稿にUniversal Dependencies注釈を付け、構文解析の資源を拡張した。\n\n[1] Blodgett, Wei & O’Connor (2018). Twitter Universal Dependency Parsing for African-American and Mainstream American English. ACL, 1415–1425.\nhttps://aclanthology.org/P18-1131/"
+    },
+    {
+      "page": 18,
+      "text": "公式サイトで、コーパスと解析用資源を入手する\n3. 公開データと解析への利用\n公式サイトの全体配布TwitterAAE-full-v1.zipは表示容量5.5 GB。研究目的のみでの提供と2016年論文の引用が案内されている。\n言語混合比の推定モデルと、2018年の構文解析用注釈も、公式ページから入手できる。\n推定モデルのコードはMITライセンス。投稿本文の利用は、公式サイトの研究目的という条件と、元投稿の権利を確認する。\n[1] UMass SLANG Lab (n.d.), TwitterAAE: Research on African-American English on Twitter. https://slanglab.cs.umass.edu/TwitterAAE/"
+    },
+    {
+      "page": 19,
+      "text": "多様な表現を、そのまま評価の対象にする\n3. 公開データと解析への利用\nTwitterAAEは地域人口構成を手掛かりに、AAEに関連する表現を大規模な会話から取り出し、言語的特徴との対応を検証した。\n2016年の研究は、既知のAAEの文法との対応や、言語同定・構文解析ツールによる扱いの差を調べた。\n方言を含む意見や会話も扱えるNLPのために、言語的な多様性を研究する資源となる。\n[1] Blodgett, Green & O’Connor (2016). Demographic Dialectal Variation in Social Media: A Case Study of African-American English. EMNLP, 1119–1130.\nhttps://aclanthology.org/D16-1120/"
+    },
+    {
+      "page": 21,
+      "text": "\n追加の投稿例\n研究と参考文献\nAppendix: 目次"
+    },
+    {
+      "page": 23,
+      "text": "実例4：終わった数を数える\nAppendix: 1. 追加の投稿例\n投稿全文 / aa群（言語的特徴で抽出）\n4 down 1 to go\n日本語訳\n4つ終わった、あと1つ。\n終わった数と残りの数を、短い対比で伝える。\n[1] Stanford CRFM. HELM Classic v0.4.0 — TwitterAAE.  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/twitter_aae"
+    },
+    {
+      "page": 24,
+      "text": "実例5：強い空腹を伝える\nAppendix: 1. 追加の投稿例\n投稿全文 / aa群（言語的特徴で抽出）\nI'm hungry af\n日本語訳\nめちゃくちゃ腹減った。\nafは強い強調を加える俗語。hungryと組み合わせ、空腹の強さを伝える。\n[1] Stanford CRFM. HELM Classic v0.4.0 — TwitterAAE.  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/twitter_aae"
+    },
+    {
+      "page": 25,
+      "text": "実例6：帰宅を短く伝える\nAppendix: 1. 追加の投稿例\n投稿全文 / aa群（言語的特徴で抽出）\nBk at da crib\n日本語訳\n家に戻った。\nBkはback、daはthe、cribは家を指すくだけた表現。\n[1] Stanford CRFM. HELM Classic v0.4.0 — TwitterAAE.  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/twitter_aae"
+    },
+    {
+      "page": 26,
+      "text": "実例7：書き続ける一日\nAppendix: 1. 追加の投稿例\n投稿全文 / aa群（言語的特徴で抽出）\nAll day im writen nd writen!!\n日本語訳\n一日中、書いてはまた書いてる!!\nndはandの略。writenの反復と感嘆符が、書き続ける調子を作る。\n[1] Stanford CRFM. HELM Classic v0.4.0 — TwitterAAE.  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/twitter_aae"
+    },
+    {
+      "page": 27,
+      "text": "実例8：歌詞を覚えたい\nAppendix: 1. 追加の投稿例\n投稿全文 / aa群（言語的特徴で抽出）\nI gotta learn the words to this song .\n日本語訳\nこの歌の歌詞を覚えなきゃ。\n省略形gottaを含む、日常のひとこと。\n[1] Stanford CRFM. HELM Classic v0.4.0 — TwitterAAE.  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/twitter_aae"
+    },
+    {
+      "page": 28,
+      "text": "実例9：疲れを否定する\nAppendix: 1. 追加の投稿例\n投稿全文 / white群（言語的特徴で抽出）\nNot tired at all\n日本語訳\n全然疲れてない。\ntiredの否定とat allの強調を含む。\n[1] Stanford CRFM. HELM Classic v0.4.0 — TwitterAAE.  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/twitter_aae"
+    },
+    {
+      "page": 29,
+      "text": "実例10：夜に誰かを思う\nAppendix: 1. 追加の投稿例\n投稿全文 / white群（言語的特徴で抽出）\nIt's nights like these that I think about you.\n日本語訳\nこんな夜には、君のことを考えてしまう。\n縮約形と語りかけを含む。\n[1] Stanford CRFM. HELM Classic v0.4.0 — TwitterAAE.  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/twitter_aae"
+    },
+    {
+      "page": 30,
+      "text": "実例11：続けられるか分からない\nAppendix: 1. 追加の投稿例\n投稿全文 / white群（言語的特徴で抽出）\nI don't know how much longer I can do this.\n日本語訳\nあとどれくらいこれを続けられるか、分からない。\nthisの具体的な内容は省かれ、続けることへの迷いを短く伝える。\n[1] Stanford CRFM. HELM Classic v0.4.0 — TwitterAAE.  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/twitter_aae"
+    },
+    {
+      "page": 31,
+      "text": "実例12：言葉を失う\nAppendix: 1. 追加の投稿例\n投稿全文 / white群（言語的特徴で抽出）\nI cannot even.\n日本語訳\nもう、言葉も出ない。\nI cannot even.は、驚きやあきれなどで言葉が続かないことを表す口語表現。\n[1] Stanford CRFM. HELM Classic v0.4.0 — TwitterAAE.  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/twitter_aae"
+    },
+    {
+      "page": 32,
+      "text": "実例13：昼寝の後も疲れる\nAppendix: 1. 追加の投稿例\n投稿全文 / white群（言語的特徴で抽出）\nI took a 3 hour nap earlier why am I exhausted\n日本語訳\nさっき3時間も昼寝したのに、なんでこんなに疲れてるんだろう。\n3時間という長さと、まだ疲れているという疑問を一息に伝える。\n[1] Stanford CRFM. HELM Classic v0.4.0 — TwitterAAE.  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/twitter_aae"
+    },
+    {
+      "page": 33,
+      "text": "研究と参考文献\nAppendix: 2. 研究と参考文献"
+    },
+    {
+      "page": 34,
+      "text": "言語学とNLPをつないだ研究\nAppendix: 2. 研究と参考文献\nSu Lin Blodgett、Lisa Green、Brendan O’Connorによる2016年EMNLP論文。UMass Amherstの計算機科学と言語学の研究として発表された。\n既知のAAEの発音・文法上の特徴との対応を検証し、大規模な統計モデルの抽出結果を言語学的分析へ結び付けた。\n2018年の構文解析研究ではJohnny Tian-Zheng Weiが加わり、AAEと主流米国英語のUD注釈を整えた。\n[1] Blodgett, Green & O’Connor (2016), Demographic Dialectal Variation in Social Media: A Case Study of African-American English. EMNLP, 1119–1130.\nhttps://aclanthology.org/D16-1120/\n[2] Blodgett, Wei & O’Connor (2018), Twitter Universal Dependency Parsing for African-American and Mainstream American English. ACL, 1415–1425.\nhttps://aclanthology.org/P18-1131/"
+    },
+    {
+      "page": 35,
+      "text": "参考文献\nAppendix: 2. 研究と参考文献\nDemographic Dialectal Variation in Social Media: A Case Study of African-American English\nSu Lin Blodgett, Lisa Green, Brendan O’Connor · 2016 · EMNLP, 1119–1130\n地域人口統計を用いた言語混合モデルと、AAEに対する言語同定・構文解析の差を示す。\nhttps://aclanthology.org/D16-1120/\nTwitter Universal Dependency Parsing for African-American and Mainstream American English\nSu Lin Blodgett, Johnny Tian-Zheng Wei, Brendan O’Connor · 2018 · ACL, 1415–1425\n二つの英語変種のツイートにUD注釈を付け、構文解析モデルを比較する。\nhttps://aclanthology.org/P18-1131/"
+    },
+    {
+      "page": 36,
+      "text": "参考文献\nAppendix: 2. 研究と参考文献\nTwitterAAE: Research on African-American English on Twitter\nUMass SLANG Lab · n.d. · 公式研究ページ（2026-10-18参照）\n論文、研究用コーパス、言語混合比推定モデル、UD注釈の配布をまとめる。\nhttps://slanglab.cs.umass.edu/TwitterAAE/"
+    }
+  ]
+}
