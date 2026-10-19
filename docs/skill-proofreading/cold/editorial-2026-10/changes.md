@@ -66,3 +66,5 @@
 |60|60|[]|設定/run索引の監査用文献ページを本文から削除。調査根拠とURLは既存記録に保持。|参考文献<br>Appendix: 3. 研究と参考文献<br>CLEVA v1 run configuration<br>Stanford CRFM · HELM v0.4.0<br>toxicity_detectionのprompt_id 0〜5を含む設定。公開実行の結果とは別。<br>https://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/presentation/run_specs_cleva_v1.conf<br>HELM Classic v0.4.0 public run index<br>Stanford CRFM · release 2023-11-17<br>8,526件の公開runを検索。対象COLD/CLEVAは0件。<br>https://crfm.stanford.edu/helm/classic/v0.4.0/||
 
 [旧版の全ページ文言](previous/baseline-native-pages.json)・[ページ対応](page-map.json)・[独立レビュー](independent-review/handoff.json)
+
+[元データの作成主体とHELMでの位置付けの確認](origin-attribution-check.json)。
