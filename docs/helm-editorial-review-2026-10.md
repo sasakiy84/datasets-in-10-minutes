@@ -10,7 +10,7 @@ Geminiは使用せず、リポジトリの日本語校正・データセット�
 
 各資料の変更表には修正前後の文言、削除・統合の理由、改訂前後のページ対応を記録する。独立レビューとメインの記録には、実施した確認と最終成果物のハッシュを残す。
 
-最新方針での反映済み：7 / 47資料。反映済み資料は合計409ページから314ページへ整理。
+最新方針での反映済み：12 / 47資料。反映済み資料は合計696ページから544ページへ整理。
 
 | 資料 | 改訂前 | 改訂後 | 修正内容 |
 |---|---:|---:|---|
@@ -22,8 +22,8 @@ Geminiは使用せず、リポジトリの日本語校正・データセット�
 | naturalquestions | 67 | — | 最新方針に沿って確認・修正中 |
 | quac | 66 | — | 最新方針に沿って確認・修正中 |
 | cnn-dailymail | 69 | — | 最新方針に沿って確認・修正中 |
-| cmedqa2 | 56 | — | 最新方針に沿って確認・修正中 |
-| cold | 60 | — | 最新方針に沿って確認・修正中 |
+| cmedqa2 | 56 | 43 | [修正前後の表](skill-proofreading/cmedqa2/editorial-2026-10/changes.md) |
+| cold | 60 | 44 | [修正前後の表](skill-proofreading/cold/editorial-2026-10/changes.md) |
 | msmarco | 61 | — | 最新方針に沿って確認・修正中 |
 | legal-support | 63 | 42 | [修正前後の表](skill-proofreading/legal-support/editorial-2026-10/changes.md) |
 | lsat | 62 | — | 最新方針に沿って確認・修正中 |
@@ -42,19 +42,19 @@ Geminiは使用せず、リポジトリの日本語校正・データセット�
 | the-pile | 56 | — | 最新方針に沿って確認・修正中 |
 | wikifact | 52 | — | 最新方針に沿って確認・修正中 |
 | dyck | 48 | — | 最新方針に沿って確認・修正中 |
-| numeracy | 53 | — | 最新方針に沿って確認・修正中 |
+| numeracy | 53 | 39 | [修正前後の表](skill-proofreading/numeracy/editorial-2026-10/changes.md) |
 | synthetic-reasoning | 55 | — | 最新方針に沿って確認・修正中 |
 | math | 55 | — | 最新方針に沿って確認・修正中 |
 | legalbench | 84 | — | 最新方針に沿って確認・修正中 |
 | crosswoz | 61 | 56 | [修正前後の表](skill-proofreading/crosswoz/editorial-2026-10/changes.md) |
-| redefine | 53 | — | 最新方針に沿って確認・修正中 |
+| redefine | 53 | 46 | [修正前後の表](skill-proofreading/redefine/editorial-2026-10/changes.md) |
 | pattern-matching-suppression | 54 | — | 最新方針に沿って確認・修正中 |
 | ice | 49 | — | 最新方針に沿って確認・修正中 |
 | data-imputation | 54 | — | 最新方針に沿って確認・修正中 |
 | entity-matching | 59 | — | 最新方針に沿って確認・修正中 |
 | copyright-code | 57 | — | 最新方針に沿って確認・修正中 |
 | copyright-text | 55 | — | 最新方針に沿って確認・修正中 |
-| chef | 65 | — | 最新方針に沿って確認・修正中 |
+| chef | 65 | 58 | [修正前後の表](skill-proofreading/chef/editorial-2026-10/changes.md) |
 | cdial-bias | 59 | — | 最新方針に沿って確認・修正中 |
 | c3 | 65 | — | 最新方針に沿って確認・修正中 |
 | cleva | 62 | — | 最新方針に沿って確認・修正中 |
