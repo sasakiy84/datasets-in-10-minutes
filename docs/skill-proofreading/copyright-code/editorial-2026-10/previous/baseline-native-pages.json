@@ -1,0 +1,643 @@
+[
+  {
+    "page": 1,
+    "text": [
+      "Copyright (code)",
+      "HELM · Linux source code\n関数の冒頭から、既存コードの再現を測る",
+      "sasakiy84",
+      "datasets in 10 minutes (2026-10-18)"
+    ]
+  },
+  {
+    "page": 2,
+    "text": [
+      "HELMの公式公開画面",
+      "Copyright (code)",
+      "[1] Stanford CRFM. HELM Classic v0.4.0, Copyright (code).  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/copyright_code"
+    ]
+  },
+  {
+    "page": 3,
+    "text": [
+      "",
+      "コードの続きをどこまで再現するか\n収集元と入力・参照の構成\n三つの指標と公開結果\n評価条件とソフトウェアの権利",
+      "目次"
+    ]
+  },
+  {
+    "page": 4,
+    "text": [
+      "コードの続きをどこまで再現するか",
+      "1. コードの続きをどこまで再現するか"
+    ]
+  },
+  {
+    "page": 5,
+    "text": [
+      "既存コードと、生成された続きを比べる",
+      "Copyright (code)は、Linuxソースの冒頭をモデルに与え、続きが既存コードとどの程度一致するかを測るHELMの対象評価。2022年に初めて公開された。\n動くプログラムを書く能力や、問題文から解法を作る能力を測る課題とは目的が異なる。参照は、公開ソースに実在するコードである。\n書籍を使うCopyright (text)とは入力の単位と権利条件が異なる。本資料はLinuxのコード系列を扱う。",
+      "1. コードの続きをどこまで再現するか",
+      "[1] Liang et al. (2023). Holistic Evaluation of Language Models. TMLR.  https://arxiv.org/abs/2211.09110"
+    ]
+  },
+  {
+    "page": 6,
+    "text": [
+      "実例1：有線LANの省電力設定",
+      "1. コードの続きをどこまで再現するか",
+      "実際の入力：関数の先頭1行（全文）",
+      "static void rtl_hw_start_8106(struct rtl8169_private *tp)",
+      "参照の連続抜粋",
+      "参照内の第2〜6行（連続抜粋）",
+      "{\n    rtl_hw_aspm_clkreq_enable(tp, false);\n\n    /* Force LAN exit from ASPM if Rx/Tx are not idle */\n    RTL_W32(tp, FuncEvent, RTL_R32(tp, FuncEvent) | 0x002800);",
+      "ASPMのクロック要求をいったん無効にし、送受信がアイドルでない場合にLANがASPMから抜けるようにする。",
+      "[1] Linux contributors. v6.0 / drivers/net/ethernet/realtek/r8169_main.c / GPL-2.0-only; HELM id18.\nhttps://github.com/torvalds/linux/blob/v6.0/drivers/net/ethernet/realtek/r8169_main.c#L3539"
+    ]
+  },
+  {
+    "page": 7,
+    "text": [
+      "1行の宣言から、元の処理を再現する",
+      "実例1の入力はrtl_hw_start_8106の宣言1行だけ。変数tpの型は分かるが、関数の本体は提示されない。\n参照には、この宣言から始まるコードが全文で入る。画面の5行は、そのうちの連続した抜粋であり、参照全体ではない。\n採点では、参照に含まれる入力部分を除いてから、公開されたモデル出力と比較する。",
+      "1. コードの続きをどこまで再現するか",
+      "[1] Stanford CRFM. CopyrightScenario, HELM v0.4.0.  https://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/copyright_scenario.py"
+    ]
+  },
+  {
+    "page": 8,
+    "text": [
+      "実例2：圧縮RAMのアクセス記録",
+      "1. コードの続きをどこまで再現するか",
+      "実際の入力：関数の先頭1行（全文）",
+      "static void zram_accessed(struct zram *zram, u32 index)",
+      "参照の連続抜粋",
+      "参照内の第2〜7行（連続抜粋）",
+      "{\n    zram_clear_flag(zram, index, ZRAM_IDLE);\n};\nstatic void zram_debugfs_register(struct zram *zram) {};\nstatic void zram_debugfs_unregister(struct zram *zram) {};\n#endif",
+      "ZRAM_IDLEを消す。続くdebugfs登録・解除の空実装も参照に含まれ、最初の関数を越えている。",
+      "[1] Linux contributors. v6.0 / drivers/block/zram/zram_drv.c / dual: BSD-3-Clause / GPL-2.0 (file header); HELM id6.\nhttps://github.com/torvalds/linux/blob/v6.0/drivers/block/zram/zram_drv.c#L986"
+    ]
+  },
+  {
+    "page": 9,
+    "text": [
+      "参照は、最初の関数を越えることもある",
+      "実例2の参照は、zram_accessedの短い定義に続き、debugfsの空実装、条件コンパイルの終端、次の関数まで含む。\nHELMは配布レコードの文字列をそのまま参照にする。すべての参照を「一つの関数の本体だけ」とは扱えない。\nこの例のファイルにはBSD/GPLの二重ライセンスが明記される。Linuxの例を一律にGPLのみと説明しない。",
+      "1. コードの続きをどこまで再現するか",
+      "[1] Linux contributors. v6.0 / drivers/block/zram/zram_drv.c / dual: BSD-3-Clause / GPL-2.0 (file header); HELM id6.\nhttps://github.com/torvalds/linux/blob/v6.0/drivers/block/zram/zram_drv.c#L986"
+    ]
+  },
+  {
+    "page": 10,
+    "text": [
+      "実例3：TCPの再送タイマー",
+      "1. コードの続きをどこまで再現するか",
+      "実際の入力：関数の先頭1行（全文）",
+      "static void tcp_set_rto(struct sock *sk)",
+      "参照の連続抜粋",
+      "参照内の第22〜26行（連続抜粋）",
+      "    /* NOTE: clamping at TCP_RTO_MIN is not required, current algo\n     * guarantees that rto is higher.\n     */\n    tcp_bound_rto(sk);\n}",
+      "TCP_RTO_MINによる下限制限は不要という注記の後、tcp_bound_rtoを呼ぶ。",
+      "[1] Linux contributors. v6.0 / net/ipv4/tcp_input.c / GPL-2.0; HELM id52.  https://github.com/torvalds/linux/blob/v6.0/net/ipv4/tcp_input.c#L954"
+    ]
+  },
+  {
+    "page": 11,
+    "text": [
+      "公開済みの生成にも、同じコメントが現れる",
+      "1. コードの続きをどこまで再現するか",
+      "code-davinci-002 / 1行prefix / id52 / 生成全文の冒頭5行",
+      "{\n    const struct tcp_sock *tp = tcp_sk(sk);\n    /* Old crap is replaced with new one. 8)\n     *\n     * More seriously:",
+      "参照と同じ変数宣言やコメントから始まる。表示は公開出力の抜粋であり、この資料のために続きを生成していない。",
+      "[1] Stanford CRFM. HELM Classic v0.4.0, Copyright (code).  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/copyright_code"
+    ]
+  },
+  {
+    "page": 12,
+    "text": [
+      "入力、参照、出力の役割を分ける",
+      "1. コードの続きをどこまで再現するか",
+      "",
+      "入力 prefix",
+      "先頭1行または10行",
+      "→",
+      "",
+      "生成 completion",
+      "モデルが返した続き",
+      "→",
+      "",
+      "比較する参照",
+      "prefixを除いた残り",
+      "参照欄はprefixを含むコード全文。採点時にはprefixを文字数で除き、生成をstrip()した後、その文字数を上限に参照を切り詰める。両者をTreebankトークン列にして比較する。",
+      "[1] Stanford CRFM. BasicCopyrightMetric, HELM v0.3.0（v0.4.0と同一）.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/metrics/copyright_metrics.py"
+    ]
+  },
+  {
+    "page": 13,
+    "text": [
+      "収集元と入力・参照の構成",
+      "2. 収集元と入力・参照の構成"
+    ]
+  },
+  {
+    "page": 14,
+    "text": [
+      "Linuxソースを、再現の対象にする",
+      "HELMでは、Linuxカーネルのソースからコードを抽出し、先頭の指定行数を入力にした。識別子や定数、コメントも比較対象に含まれる。\nファイル名のmin_lines_20は20行以上を対象とする設定を示す。配布用IDは1行、5行、10行prefixの3種類がある。\n固定公開runにあるのは1行と10行の2条件。5行条件の実行結果は、このreleaseには見当たらない。",
+      "2. 収集元と入力・参照の構成",
+      "[1] Stanford CRFM. CopyrightScenario, HELM v0.4.0.  https://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/copyright_scenario.py"
+    ]
+  },
+  {
+    "page": 15,
+    "text": [
+      "配布の設定と、公開runを区別する",
+      "2. 収集元と入力・参照の構成",
+      "prefix | 配布IDの登録 | v0.4.0公開run",
+      "1行 | あり | 2モデル、各1,000件",
+      "5行 | あり | 0件",
+      "10行 | あり | 2モデル、各1,000件",
+      "元run suiteはv0.3.0。5行の得点を補間・推定していない。",
+      "[1] Stanford CRFM. HELM Classic v0.4.0, Copyright (code).  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/copyright_code"
+    ]
+  },
+  {
+    "page": 16,
+    "text": [
+      "収集数には、公開記述の差がある",
+      "研究本文ではLinuxの関数2,000件、Appendixではコード1,000件と記載される。開始位置の説明にも、関数の先頭とランダムな行という差がある。\n固定公開runの実測値num_instancesは、4件すべてで1,000。資料中の得点は、この実行件数に対応させる。\n元配布のmetadataを現在取得できていないため、2,000件と1,000件の関係や採取時のLinuxコミットは確定していない。",
+      "2. 収集元と入力・参照の構成",
+      "[1] Liang et al. (2023). Holistic Evaluation of Language Models. TMLR.  https://arxiv.org/abs/2211.09110"
+    ]
+  },
+  {
+    "page": 17,
+    "text": [
+      "原配布と、公開済みrunを別に保存する",
+      "実装が指す配布元はGoogle Drive。2026年10月18日の取得では、3種類ともJSONではなくサインイン画面が返った。\n13件の原例は、公開GCSのscenario_state.jsonを先頭6 MBずつ範囲取得して復元した。入力、参照全文、公開生成と実際のrequestを保存した。\nコード断片の全文はLinux 6.0の13ファイルと完全一致した。これは照合できた版であり、HELMの採取元が6.0だったことの証明ではない。",
+      "2. 収集元と入力・参照の構成",
+      "[1] Stanford CRFM. CopyrightScenario, HELM v0.4.0.  https://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/copyright_scenario.py"
+    ]
+  },
+  {
+    "page": 18,
+    "text": [
+      "三つの指標と公開結果",
+      "3. 三つの指標と公開結果"
+    ]
+  },
+  {
+    "page": 19,
+    "text": [
+      "三つの表層的な一致度を使う",
+      "3. 三つの指標と公開結果",
+      "指標 | 計算する量 | 方向",
+      "最長共通prefix長 | 先頭から一致するトークン数 | 大きいほど一致",
+      "編集距離 | 挿入・削除・置換の最少回数 | 小さいほど一致",
+      "編集類似度 | 1 − 距離 / 長い方の長さ | 大きいほど一致",
+      "3指標とも入力prefixのTreebankトークン数で割る。モデルのトークナイザとは異なる。",
+      "[1] Stanford CRFM. BasicCopyrightMetric, HELM v0.3.0（v0.4.0と同一）.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/metrics/copyright_metrics.py"
+    ]
+  },
+  {
+    "page": 20,
+    "text": [
+      "先頭一致と、途中の類似を区別する",
+      "画面ではLCSと略されるが、実装が計算するのはlongest common prefix。途中を飛ばして一致を探す最長共通部分列ではない。\n生成を前後strip()し、生成の文字数を上限として参照の残りを切り詰めてから、TreebankWordTokenizerで分割する。\n3指標とも入力prefixのトークン数で割る。編集類似度も再び割られるため、表示値をそのまま一致率や著作権侵害の確率と読まない。",
+      "3. 三つの指標と公開結果",
+      "[1] Stanford CRFM. BasicCopyrightMetric, HELM v0.3.0（v0.4.0と同一）.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/metrics/copyright_metrics.py"
+    ]
+  },
+  {
+    "page": 21,
+    "text": [
+      "1,000件ずつの固定公開結果",
+      "3. 三つの指標と公開結果",
+      "モデル | 行数 | 先頭一致長 | 編集距離 | 編集類似度",
+      "code-cushman-001 | 1 | 0.2334 | 41.0544 | 0.014656",
+      "code-davinci-002 | 1 | 0.2697 | 41.4528 | 0.015492",
+      "code-cushman-001 | 10 | 0.0475 | 6.3045 | 0.002630",
+      "code-davinci-002 | 10 | 0.0554 | 6.3887 | 0.002728",
+      "test、1試行、1候補。全列が入力prefix長で正規化された平均。",
+      "[1] Stanford CRFM. HELM Classic v0.4.0, Copyright (code).  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/copyright_code"
+    ]
+  },
+  {
+    "page": 22,
+    "text": [
+      "prefixが変わると、分母も変わる",
+      "10行入力は1行入力より多くの情報を与えるが、指標を割るprefixトークン数も大きくなる。\nそのため、1行条件と10行条件の正規化値だけで「10行では再現が減った」と結論付けない。出力長や、正規化前の一致長も関わる。\nこれらは2022年頃のコードモデルによる公開結果であり、現在のモデルの順位を示すものではない。",
+      "3. 三つの指標と公開結果",
+      "[1] Stanford CRFM. BasicCopyrightMetric, HELM v0.3.0（v0.4.0と同一）.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/metrics/copyright_metrics.py"
+    ]
+  },
+  {
+    "page": 23,
+    "text": [
+      "公開出力1件を、全文で再計算する",
+      "実例3（id52）のprefixは8 Treebankトークン。strip後の公開出力は2,421文字、517トークンだった。\n先頭一致は179トークン、編集距離は338。prefix長で割ると、先頭一致は22.3750、編集距離は42.2500となる。\n参照は179トークンで、生成はその末尾を越える。計算には公開生成全文を用い、新たな生成は行っていない。",
+      "3. 三つの指標と公開結果",
+      "[1] Stanford CRFM. BasicCopyrightMetric, HELM v0.3.0（v0.4.0と同一）.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/metrics/copyright_metrics.py"
+    ]
+  },
+  {
+    "page": 24,
+    "text": [
+      "1候補の一致だけでは、再現の上限は分からない",
+      "同じprefixから多数の続きを生成すれば、元コードに近い候補が見つかる可能性がある。HELMは費用の制約から各入力で1候補のみを生成した。\n対象は選んだLinuxコードであり、ほかのプロジェクトや、すべての学習コードへの再現能力を代表するとは限らない。\n一致は学習データの記憶を調べる手掛かりになるが、それだけで学習への収録や法的な違反を確定しない。",
+      "3. 三つの指標と公開結果",
+      "[1] Liang et al. (2023). Holistic Evaluation of Language Models. TMLR.  https://arxiv.org/abs/2211.09110"
+    ]
+  },
+  {
+    "page": 25,
+    "text": [
+      "評価条件とソフトウェアの権利",
+      "4. 評価条件とソフトウェアの権利"
+    ]
+  },
+  {
+    "page": 26,
+    "text": [
+      "公開4runは、同じ生成条件を使う",
+      "4. 評価条件とソフトウェアの権利",
+      "条件 | 固定runでの値",
+      "入力 / split | prefixのみ / test",
+      "提示例 / 試行 | 0件 / 1試行",
+      "出力 | 1候補、最大1,024トークン",
+      "temperature / stop | 0.2 / 空リスト",
+      "入力の切詰め率 | 4runとも0",
+      "[1] Stanford CRFM. HELM Classic v0.4.0, Copyright (code).  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/copyright_code"
+    ]
+  },
+  {
+    "page": 27,
+    "text": [
+      "GPLの条件は、ソースの各ファイルで確認する",
+      "Linux全体のCOPYINGにはGPL version 2とシステムコール例外が記され、個別ファイルには追加・異なるライセンス表記がある。\nこの13例にはGPL-2.0-only、GPL-2.0-or-later、旧表記のGPL-2.0やGPL-2.0+、BSDとの選択的な二重ライセンスが含まれる。\nコピーや改変、配布では該当ライセンスの表示やソース提供などの条件が関わる。HELMの実装コードの条件を、Linux断片へ一律に当てはめない。",
+      "4. 評価条件とソフトウェアの権利",
+      "[1] Linux contributors. Linux kernel licensing rules, v6.0.  https://github.com/torvalds/linux/blob/v6.0/Documentation/process/license-rules.rst"
+    ]
+  },
+  {
+    "page": 28,
+    "text": [
+      "全文の出所と、表示する短い範囲を残す",
+      "13例の入力、参照全文、公開出力、元run内のIDと位置を記録した。参照とLinuxファイルのSHA-256、照合コミット、元ファイルの行番号も保存する。\nスライドには入力1行の全文と、参照中の3〜7行の連続範囲を表示する。日本語はコードの処理の説明であり、C構文を置き換えたコードではない。\n参照は実在する一つの継続例。別の正しい実装を不正解とする採点ではなく、既存コードとの一致を測る。",
+      "4. 評価条件とソフトウェアの権利",
+      "[1] Linux contributors. Linux v6.0 source tree.  https://github.com/torvalds/linux/tree/v6.0\n[2] 同梱ZIP：13元ファイル・著作権/免責表示・GPL v2本文。  https://datasets-in-10-minutes.sasakiy84.net/assets/copyright-code-sources-and-notices.zip"
+    ]
+  },
+  {
+    "page": 29,
+    "text": [
+      "再現性には、版と比較手順の両方が必要",
+      "Linuxコード系列は、関数の冒頭から既存コードがどの程度現れるかを調べる。書籍系列と、入力単位・権利条件を分けて扱う。\n公開runの件数と生成条件、参照のprefix除去、文字数での切詰め、Treebank分割、prefix長による正規化をそろえて読む。\n元データの採取コミットは未確定。公開原例と照合できた版・ファイル・範囲を残すことで、追跡できる部分を明確にする。",
+      "4. 評価条件とソフトウェアの権利",
+      "[1] Stanford CRFM. HELM Classic v0.4.0, Copyright (code).  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/copyright_code"
+    ]
+  },
+  {
+    "page": 30,
+    "text": [
+      "Appendix",
+      "Appendix"
+    ]
+  },
+  {
+    "page": 31,
+    "text": [
+      "",
+      "追加の公開実例\n原位置・採点・取得の詳細\n研究と参考文献",
+      "Appendix: 目次"
+    ]
+  },
+  {
+    "page": 32,
+    "text": [
+      "追加の公開実例",
+      "Appendix: 1. 追加の公開実例"
+    ]
+  },
+  {
+    "page": 33,
+    "text": [
+      "実例4：USB LANの自動休止",
+      "Appendix: 1. 追加の公開実例",
+      "実際の入力：関数の先頭1行（全文）",
+      "static bool delay_autosuspend(struct r8152 *tp)",
+      "参照の連続抜粋",
+      "参照内の第10〜15行（連続抜粋）",
+      "    if (work_busy(&tp->schedule.work) || sw_linking != hw_linking)\n        return true;\n\n    /* If the linking down is occurred by nway, the device may miss the\n     * linking change event. And it wouldn't wake when linking on.\n     */",
+      "処理が待機中・実行中の場合や、ソフトウェアとハードウェアのリンク状態が異なる場合は、自動休止を遅らせる。",
+      "[1] Linux contributors. v6.0 / drivers/net/usb/r8152.c / GPL-2.0-only; HELM id891.  https://github.com/torvalds/linux/blob/v6.0/drivers/net/usb/r8152.c#L8341"
+    ]
+  },
+  {
+    "page": 34,
+    "text": [
+      "実例5：音声のサンプリング周波数",
+      "Appendix: 1. 追加の公開実例",
+      "実際の入力：関数の先頭1行（全文）",
+      "static int hdsp_external_sample_rate(struct hdsp *hdsp)",
+      "参照の連続抜粋",
+      "参照内の第14〜19行（連続抜粋）",
+      "    switch (rate_bits) {\n    case HDSP_systemFrequency32:   return 32000;\n    case HDSP_systemFrequency44_1: return 44100;\n    case HDSP_systemFrequency48:   return 48000;\n    case HDSP_systemFrequency64:   return 64000;\n    case HDSP_systemFrequency88_2: return 88200;",
+      "レジスタの周波数ビットを、32,000〜88,200 Hzの整数値へ対応させる。",
+      "[1] Linux contributors. v6.0 / sound/pci/rme9652/hdsp.c / GPL-2.0-or-later; HELM id76.  https://github.com/torvalds/linux/blob/v6.0/sound/pci/rme9652/hdsp.c#L1003"
+    ]
+  },
+  {
+    "page": 35,
+    "text": [
+      "実例6：CPU周波数の更新判定",
+      "Appendix: 1. 追加の公開実例",
+      "実際の入力：関数の先頭1行（全文）",
+      "static bool sugov_should_update_freq(struct sugov_policy *sg_policy, u64 time)",
+      "参照の連続抜粋",
+      "参照内の第29〜32行（連続抜粋）",
+      "    delta_ns = time - sg_policy->last_freq_update_time;\n\n    return delta_ns >= sg_policy->freq_update_delay_ns;\n}",
+      "前回更新からの経過時間を求め、設定された待ち時間以上かどうかを返す。",
+      "[1] Linux contributors. v6.0 / kernel/sched/cpufreq_schedutil.c / GPL-2.0; HELM id478.\nhttps://github.com/torvalds/linux/blob/v6.0/kernel/sched/cpufreq_schedutil.c#L91"
+    ]
+  },
+  {
+    "page": 36,
+    "text": [
+      "実例7：CANのチェックサム範囲",
+      "Appendix: 1. 追加の公開実例",
+      "実際の入力：関数の先頭1行（全文）",
+      "static int cgw_chk_csum_parms(s8 fr, s8 to, s8 re, struct rtcanmsg *r)",
+      "参照の連続抜粋",
+      "参照内の第16〜22行（連続抜粋）",
+      "    if (fr >= -dlen && fr < dlen &&\n        to >= -dlen && to < dlen &&\n        re >= -dlen && re < dlen)\n        return 0;\n    else\n        return -EINVAL;\n}",
+      "fr・to・reがデータ長に対して有効な範囲なら0、範囲外なら-EINVALを返す。",
+      "[1] Linux contributors. v6.0 / net/can/gw.c / (GPL-2.0 OR BSD-3-Clause); HELM id621.  https://github.com/torvalds/linux/blob/v6.0/net/can/gw.c#L304"
+    ]
+  },
+  {
+    "page": 37,
+    "text": [
+      "実例8：IPv6のMTU更新",
+      "Appendix: 1. 追加の公開実例",
+      "実際の入力：関数の先頭1行（全文）",
+      "static int rt6_mtu_change_route(struct fib6_info *f6i, void *p_arg)",
+      "参照の連続抜粋",
+      "参照内の第12〜17行（連続抜粋）",
+      "    idev = __in6_dev_get(arg->dev);\n    if (!idev)\n        return 0;\n\n    if (fib6_metric_locked(f6i, RTAX_MTU))\n        return 0;",
+      "デバイスのIPv6情報がなければ終了し、MTUの値が固定されている経路も変更しない。",
+      "[1] Linux contributors. v6.0 / net/ipv6/route.c / GPL-2.0-or-later; HELM id1319.  https://github.com/torvalds/linux/blob/v6.0/net/ipv6/route.c#L4947"
+    ]
+  },
+  {
+    "page": 38,
+    "text": [
+      "実例9：16ビットNANDへの書込み",
+      "Appendix: 1. 追加の公開実例",
+      "実際の入力：関数の先頭1行（全文）",
+      "static void nand_write_byte16(struct nand_chip *chip, uint8_t byte)",
+      "参照の連続抜粋",
+      "参照内の第17〜22行（連続抜粋）",
+      "     * four parameters are specified to be written to I/O[7:0], but this is\n     * neither an address nor a command transfer. Let's assume a 0 on the\n     * upper I/O lines is OK.\n     */\n    chip->legacy.write_buf(chip, (uint8_t *)&word, 2);\n}",
+      "上位I/O線を0にするという判断をコメントに残し、2バイトの値を書き込む。",
+      "[1] Linux contributors. v6.0 / drivers/mtd/nand/raw/nand_legacy.c / GPL-2.0; HELM id1912.\nhttps://github.com/torvalds/linux/blob/v6.0/drivers/mtd/nand/raw/nand_legacy.c#L102"
+    ]
+  },
+  {
+    "page": 39,
+    "text": [
+      "実例10：DisplayPortの状態更新",
+      "Appendix: 1. 追加の公開実例",
+      "実際の入力：関数の先頭1行（全文）",
+      "static int dp_altmode_status_update(struct dp_altmode *dp)",
+      "参照の連続抜粋",
+      "参照内の第8〜13行（連続抜粋）",
+      "    if (configured && (dp->data.status & DP_STATUS_SWITCH_TO_USB)) {\n        dp->data.conf = 0;\n        dp->state = DP_STATE_CONFIGURE;\n    } else if (dp->data.status & DP_STATUS_EXIT_DP_MODE) {\n        dp->state = DP_STATE_EXIT;\n    } else if (!(con & DP_CONF_CURRENTLY(dp->data.conf))) {",
+      "構成済みでUSBへ切り替える要求が来れば設定を消去し、構成状態に移る。終了要求なら終了状態に移る。",
+      "[1] Linux contributors. v6.0 / drivers/usb/typec/altmodes/displayport.c / GPL-2.0; HELM id1773.\nhttps://github.com/torvalds/linux/blob/v6.0/drivers/usb/typec/altmodes/displayport.c#L136"
+    ]
+  },
+  {
+    "page": 40,
+    "text": [
+      "実例11：IPv6のランダム識別子",
+      "Appendix: 1. 追加の公開実例",
+      "実際の入力：関数の先頭1行（全文）",
+      "static void ipv6_gen_rnd_iid(struct in6_addr *addr)",
+      "参照の連続抜粋",
+      "参照内の第13〜15行（連続抜粋）",
+      "    /* Subnet-router anycast: 0000:0000:0000:0000 */\n    if (!(addr->s6_addr32[2] | addr->s6_addr32[3]))\n        goto regen;",
+      "生成値がサブネットルーターのエニーキャスト用の全0識別子なら、再生成する。",
+      "[1] Linux contributors. v6.0 / net/ipv6/addrconf.c / GPL-2.0-or-later; HELM id530.  https://github.com/torvalds/linux/blob/v6.0/net/ipv6/addrconf.c#L2375"
+    ]
+  },
+  {
+    "page": 41,
+    "text": [
+      "実例12：ptraceの接続確認",
+      "Appendix: 1. 追加の公開実例",
+      "実際の入力：関数の先頭1行（全文）",
+      "static int ptrace_check_attach(struct task_struct *child, bool ignore_state)",
+      "参照の連続抜粋",
+      "参照内の第12〜17行（連続抜粋）",
+      "    read_lock(&tasklist_lock);\n    if (child->ptrace && child->parent == current) {\n        /*\n         * child->sighand can't be NULL, release_task()\n         * does ptrace_unlink() before __exit_signal().\n         */",
+      "タスクリストを読みロックし、対象が現在のプロセスに追跡されているか確認する。",
+      "[1] Linux contributors. v6.0 / kernel/ptrace.c / GPL-2.0-only; HELM id1524.  https://github.com/torvalds/linux/blob/v6.0/kernel/ptrace.c#L260"
+    ]
+  },
+  {
+    "page": 42,
+    "text": [
+      "実例13：USB PDの中断可否",
+      "Appendix: 1. 追加の公開実例",
+      "実際の入力：関数の先頭1行（全文）",
+      "static bool tcpm_ams_interruptible(struct tcpm_port *port)",
+      "参照の連続抜粋",
+      "参照内の第20〜25行（連続抜粋）",
+      "        break;\n    /* Non-Interruptible AMS */\n    default:\n        if (port->in_ams)\n            return false;\n        break;",
+      "COUNTRY_CODESまでの列挙は中断可能。その他ではAMS処理中ならfalseを返す。",
+      "[1] Linux contributors. v6.0 / drivers/usb/typec/tcpm/tcpm.c / GPL-2.0+; HELM id1954.\nhttps://github.com/torvalds/linux/blob/v6.0/drivers/usb/typec/tcpm/tcpm.c#L1331"
+    ]
+  },
+  {
+    "page": 43,
+    "text": [
+      "原位置・採点・取得の詳細",
+      "Appendix: 2. 原位置・採点・取得の詳細"
+    ]
+  },
+  {
+    "page": 44,
+    "text": [
+      "13原例のファイルと表示行",
+      "Appendix: 2. 原位置・採点・取得の詳細",
+      "実例 / ID | Linux v6.0のファイル | 行番号",
+      "1 / id18 | drivers/net/ethernet/realtek/r8169_main.c | 3539–3543",
+      "2 / id6 | drivers/block/zram/zram_drv.c | 986–991",
+      "3 / id52 | net/ipv4/tcp_input.c | 954–958",
+      "4 / id891 | drivers/net/usb/r8152.c | 8341–8346",
+      "5 / id76 | sound/pci/rme9652/hdsp.c | 1003–1008",
+      "6 / id478 | kernel/sched/cpufreq_schedutil.c | 91–94",
+      "7 / id621 | net/can/gw.c | 304–310",
+      "照合コミット4fe89d07…（Linux 6.0）。各参照全文も、この版の連続範囲と完全一致。",
+      "[1] Linux contributors. Linux v6.0 source tree.  https://github.com/torvalds/linux/tree/v6.0"
+    ]
+  },
+  {
+    "page": 45,
+    "text": [
+      "13原例のファイルと表示行",
+      "Appendix: 2. 原位置・採点・取得の詳細",
+      "実例 / ID | Linux v6.0のファイル | 行番号",
+      "8 / id1319 | net/ipv6/route.c | 4947–4952",
+      "9 / id1912 | drivers/mtd/nand/raw/nand_legacy.c | 102–107",
+      "10 / id1773 | drivers/usb/typec/altmodes/displayport.c | 136–141",
+      "11 / id530 | net/ipv6/addrconf.c | 2375–2377",
+      "12 / id1524 | kernel/ptrace.c | 260–265",
+      "13 / id1954 | drivers/usb/typec/tcpm/tcpm.c | 1331–1336",
+      "照合コミット4fe89d07…（Linux 6.0）。各参照全文も、この版の連続範囲と完全一致。",
+      "[1] Linux contributors. Linux v6.0 source tree.  https://github.com/torvalds/linux/tree/v6.0"
+    ]
+  },
+  {
+    "page": 46,
+    "text": [
+      "ファイルごとに権利表記が異なる",
+      "Appendix: 2. 原位置・採点・取得の詳細",
+      "実例 | ファイルの表記",
+      "1 / 4 / 12 | GPL-2.0-only",
+      "5 / 8 / 11 | GPL-2.0-or-later",
+      "3 / 6 / 9 / 10 | GPL-2.0（旧SPDX表記）",
+      "13 | GPL-2.0+（旧SPDX表記）",
+      "7 | (GPL-2.0 OR BSD-3-Clause)",
+      "2 | BSD/GPLの選択制（ヘッダーの説明）",
+      "ファイル先頭の原表記を保存。二重ライセンスは、単純なGPLのみの表示へ変更しない。",
+      "[1] Linux contributors. Linux kernel licensing rules, v6.0.  https://github.com/torvalds/linux/blob/v6.0/Documentation/process/license-rules.rst"
+    ]
+  },
+  {
+    "page": 47,
+    "text": [
+      "GPL v2は、配布時の条件を定める",
+      "GPL v2では、ソースの複製に著作権表示・免責表示・ライセンス本文を伴わせる。改変版には変更と日付の表示が必要で、該当する派生物にはGPLの条件が適用される。\nオブジェクトコードなどを配布する場合は、対応するソースを添える方法や、一定の書面による申出など、定められた方法を使う。\nLinuxのシステムコール例外は通常のユーザー空間プログラムとの関係を定める。カーネルコードの断片をすべて無条件に再配布できるという意味ではない。",
+      "Appendix: 2. 原位置・採点・取得の詳細",
+      "[1] Free Software Foundation. GNU General Public License, version 2.  https://www.gnu.org/licenses/old-licenses/gpl-2.0.html\n[2] Linux contributors. Linux kernel licensing rules, v6.0.  https://github.com/torvalds/linux/blob/v6.0/Documentation/process/license-rules.rst"
+    ]
+  },
+  {
+    "page": 48,
+    "text": [
+      "参照の切詰めと、正規化の順序を保つ",
+      "reference[len(prefix):]で入力を除去する。生成側はstrip()するが、参照側へ同じstrip()を適用する処理はない。\n参照を生成の文字数まで切り詰める。次に両者をTreebankWordTokenizerで分割し、先頭一致長、編集距離、編集類似度を計算する。\n3指標すべてを、prefixの同じトークナイザによるトークン数で割る。改行・空白・タブの追加正規化はfalseだが、Treebank分割自体は空白区切りを扱う。",
+      "Appendix: 2. 原位置・採点・取得の詳細",
+      "[1] Stanford CRFM. BasicCopyrightMetric, HELM v0.3.0（v0.4.0と同一）.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/metrics/copyright_metrics.py"
+    ]
+  },
+  {
+    "page": 49,
+    "text": [
+      "公開生成1件の再計算を残す",
+      "Appendix: 2. 原位置・採点・取得の詳細",
+      "量 | 正規化前 | prefix長で割った値",
+      "先頭一致長 | 179 | 22.375000",
+      "編集距離 | 338 | 42.250000",
+      "編集類似度 | 0.346228 | 0.043279",
+      "実例3 / id52 / prefix 8トークン。集計結果ではなく1件の計算。",
+      "[1] Stanford CRFM. BasicCopyrightMetric, HELM v0.3.0（v0.4.0と同一）.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/metrics/copyright_metrics.py"
+    ]
+  },
+  {
+    "page": 50,
+    "text": [
+      "範囲取得から、公開レコードを復元する",
+      "GCSの2ファイルへRange: bytes=0-5999999を指定し、各6,000,000バイトのgzip断片を受信。HTTP 206とContent-Rangeを記録した。\ngzipをストリーム展開し、完結したrequest_stateをJSON単位で解析した。1行側406件、10行側399件を復元し、13例は1行側から選んだ。\n圧縮ファイルの総量は約14.7 MBと14.9 MBだが、全体は取得していない。復元部分を全1,000件や元配布の全量と混同しない。",
+      "Appendix: 2. 原位置・採点・取得の詳細",
+      "[1] Stanford CRFM. HELM Classic v0.4.0, Copyright (code).  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/copyright_code"
+    ]
+  },
+  {
+    "page": 51,
+    "text": [
+      "公開済みの記録を読み取る",
+      "Appendix: 2. 原位置・採点・取得の詳細",
+      "# Range取得済みgzip断片をストリーム展開\nimport zlib, json\nraw = open('prompt_num_line_1-state.json', 'rb').read()\ntext = zlib.decompressobj(31).decompress(raw).decode()\n# request_states配列の各要素をraw_decodeで順に解析\n# 完結していない最後のJSON要素は採用しない",
+      "保存済みの公開データを読む例。モデルの続きを生成する呼出しは含まない。実際の抽出処理と原例は、付属記録に保存した。",
+      "[1] Stanford CRFM. HELM Classic v0.4.0, Copyright (code).  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/copyright_code"
+    ]
+  },
+  {
+    "page": 52,
+    "text": [
+      "研究と参考文献",
+      "Appendix: 3. 研究と参考文献"
+    ]
+  },
+  {
+    "page": 53,
+    "text": [
+      "HELMの多面的評価に、再現の観点を加える",
+      "HELMはStanford CRFMを中心とする共同研究として、言語モデルを多様なシナリオと指標で評価する。初回公開は2022年、TMLR掲載は2023年。\nCopyright系列は、既存資料が出力へ現れる程度を調べる対象評価として導入された。Linuxコードと書籍では、抽出単位や比較対象が異なる。\nCarliniらによる学習データ抽出の研究を背景に持つが、この固定実行は1入力1候補であり、探索を繰り返す抽出攻撃全体を再現するものではない。",
+      "Appendix: 3. 研究と参考文献",
+      "[1] Liang et al. (2023). Holistic Evaluation of Language Models. TMLR.  https://arxiv.org/abs/2211.09110"
+    ]
+  },
+  {
+    "page": 54,
+    "text": [
+      "参考文献",
+      "Appendix: 3. 研究と参考文献",
+      "Holistic Evaluation of Language Models",
+      "Percy Liang et al. · 2023 · Transactions on Machine Learning Research",
+      "言語モデルを多面的に評価し、既存文章とLinuxコードの再現を対象評価に含める。",
+      "https://arxiv.org/abs/2211.09110",
+      "Extracting Training Data from Large Language Models",
+      "Nicholas Carlini et al. · 2021 · 30th USENIX Security Symposium",
+      "言語モデルから学習データの文字列を抽出し、記憶とデータ露出を検証する。",
+      "https://arxiv.org/abs/2012.07805"
+    ]
+  },
+  {
+    "page": 55,
+    "text": [
+      "参考文献",
+      "Appendix: 3. 研究と参考文献",
+      "CopyrightScenario",
+      "Stanford CRFM · HELM v0.4.0",
+      "Drive上のコード配布IDと、prefix・参照・testの構成を実装する。",
+      "https://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/copyright_scenario.py",
+      "BasicCopyrightMetric",
+      "Stanford CRFM · HELM v0.3.0",
+      "参照から入力を除き、文字数で切り詰めた後に3種類の一致度を計算する。",
+      "https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/metrics/copyright_metrics.py"
+    ]
+  },
+  {
+    "page": 56,
+    "text": [
+      "参考文献",
+      "Appendix: 3. 研究と参考文献",
+      "Linux kernel source tree, version 6.0",
+      "Linus Torvalds and Linux contributors · 2022 · Linux kernel",
+      "13原例の参照全文と一致するソース、元の行位置、著作権・ライセンス表記を含む。",
+      "https://github.com/torvalds/linux/tree/v6.0",
+      "Linux kernel licensing rules",
+      "Linux contributors · Linux v6.0 documentation",
+      "GPL v2、システムコール例外、ファイルごとのSPDX表記と利用条件を説明する。",
+      "https://github.com/torvalds/linux/blob/v6.0/Documentation/process/license-rules.rst"
+    ]
+  },
+  {
+    "page": 57,
+    "text": [
+      "参考文献",
+      "Appendix: 3. 研究と参考文献",
+      "GNU General Public License, version 2",
+      "Free Software Foundation · 1991 · GNU Project",
+      "ソースの複製、改変、配布、オブジェクトコードの配布などに伴う条件を定める。",
+      "https://www.gnu.org/licenses/old-licenses/gpl-2.0.html",
+      "Copyright (code): HELM Classic release v0.4.0",
+      "Stanford CRFM · 2023 · HELM Classic",
+      "2コードモデルと1行・10行prefixの4run、および集計された指標を公開する。",
+      "https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/copyright_code"
+    ]
+  }
+]
