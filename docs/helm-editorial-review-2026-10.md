@@ -10,7 +10,7 @@ Geminiは使用せず、リポジトリの日本語校正・データセット�
 
 各資料の変更表には修正前後の文言、削除・統合の理由、改訂前後のページ対応を記録する。独立レビューとメインの記録には、実施した確認と最終成果物のハッシュを残す。
 
-最新方針での反映済み：22 / 47資料。反映済み資料は合計1274ページから1031ページへ整理。
+最新方針での反映済み：24 / 47資料。反映済み資料は合計1403ページから1138ページへ整理。
 
 | 資料 | 改訂前 | 改訂後 | 修正内容 |
 |---|---:|---:|---|
@@ -18,8 +18,8 @@ Geminiは使用せず、リポジトリの日本語校正・データセット�
 | afqmc | 57 | 39 | [修正前後の表](skill-proofreading/afqmc/editorial-2026-10/changes.md) |
 | ocnli | 57 | 48 | [修正前後の表](skill-proofreading/ocnli/editorial-2026-10/changes.md) |
 | math23k | 59 | 45 | [修正前後の表](skill-proofreading/math23k/editorial-2026-10/changes.md) |
-| narrativeqa | 62 | — | 最新方針に沿って確認・修正中 |
-| naturalquestions | 67 | — | 最新方針に沿って確認・修正中 |
+| narrativeqa | 62 | 54 | [修正前後の表](skill-proofreading/narrativeqa/editorial-2026-10/changes.md) |
+| naturalquestions | 67 | 53 | [修正前後の表](skill-proofreading/naturalquestions/editorial-2026-10/changes.md) |
 | quac | 66 | — | 最新方針に沿って確認・修正中 |
 | cnn-dailymail | 69 | — | 最新方針に沿って確認・修正中 |
 | cmedqa2 | 56 | 43 | [修正前後の表](skill-proofreading/cmedqa2/editorial-2026-10/changes.md) |
