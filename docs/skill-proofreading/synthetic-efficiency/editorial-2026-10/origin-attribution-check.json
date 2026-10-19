@@ -1,0 +1,56 @@
+{
+  "slug": "synthetic-efficiency",
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "original_creator": "Stanford CRFM / Liangらの2022年公表研究で設計された推論時間の課題。素材はCarroll/Austen/Doyle/Dumas/Dostoyevsky（Garnett英訳）の5作品。",
+  "related_research": "NarayananらNeurIPS2023は、入力処理/逐次生成の時間近似と共通基盤によるIdealized推定を研究。元課題の初公開年とは区別。",
+  "year": 2022,
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/abs/2211.09110v1",
+      "basis": "2022初稿§4.9/C.7 efficiency、著者貢献記述の設計役割"
+    },
+    {
+      "url": "https://github.com/stanford-crfm/helm/blob/v0.3.0/scripts/efficiency/generate_instances.py",
+      "basis": "5作品からトークン長に合わせる入力生成。既定30と公開設定10は外部台帳で区別。"
+    },
+    {
+      "url": "https://papers.nips.cc/paper_files/paper/2023/hash/d1a14493e5f84d6c6129414f0cd1a7c6-Abstract-Conference.html",
+      "basis": "Formal Cheaply Estimating...、A100/Megatron、denoised/idealized推定。"
+    },
+    {
+      "url": "https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency",
+      "basis": "公開実測入力/生成/time。10原例・50要求/27stats照合はcontent-checks。"
+    }
+  ],
+  "helm_relationship": "設計研究の帰属として一度示す。資料本文は長さ制御の課題、素材、実生成、時間指標・使い方が主題で、基盤/登録/実行台帳の解説は外部化。",
+  "checked_slides": [
+    5,
+    6,
+    7,
+    17,
+    18,
+    19,
+    21,
+    22,
+    23,
+    25,
+    26,
+    28,
+    29,
+    52,
+    53,
+    54,
+    56,
+    57,
+    58,
+    59,
+    60
+  ],
+  "conclusion": "別の原データをHELM製と取り違えず、設計研究と素材の作成主体、後年の推定研究を分けた。",
+  "independent_review": "pending",
+  "final_hashes": {
+    "datasets-in-10-minutes-synthetic-efficiency.pptx": "f19d5082c2a5aea70f15163bee74c9e9acd4402a430f68b45c291d92315b5463",
+    "datasets-in-10-minutes-synthetic-efficiency.pdf": "7f80b2546494bc3ae55eebb3399eda1670d4490122bec6f0267a94469e2f329c"
+  }
+}

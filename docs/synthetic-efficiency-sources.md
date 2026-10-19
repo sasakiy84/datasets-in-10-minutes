@@ -67,3 +67,8 @@ review_decksが最終66頁を個別表示、50原request・27stats・10原入力
 ## リポジトリの検証記録
 
 [原レコード・出典・実行条件](data-audits/synthetic-efficiency.json)、[実際の校正対](skill-proofreading/synthetic-efficiency.md)、[全ページ文言](skill-proofreading/synthetic-efficiency/pages.jsonl)、[自己検査・独立レビュー](skill-proofreading/synthetic-efficiency/review.json)。
+
+
+## 読者向け説明の改訂
+
+[日本語・情報量の問題点と修正](skill-proofreading/synthetic-efficiency/editorial-2026-10/findings.json)。細かな再現条件・原レコードの照合情報は従来の検証記録に保持し、紹介スライドから整理した。

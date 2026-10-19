@@ -1,0 +1,735 @@
+{
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "actual_native_before_after": [
+    {
+      "old_page": 1,
+      "new_page": 1,
+      "shape": 3,
+      "before": "HELMの推論効率評価\n固定テキストの長さと生成上限を変え、時間を測る",
+      "after": "固定テキストの長さと生成上限を変え、時間を測る"
+    },
+    {
+      "old_page": 2,
+      "new_page": 2,
+      "shape": 2,
+      "before": "HELM Classicの公開結果と保存記録",
+      "after": "推論時間の公開研究記録"
+    },
+    {
+      "old_page": 2,
+      "new_page": 2,
+      "shape": 5,
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency",
+      "after": "[1] Stanford CRFM (2023). Synthetic efficiency 公開研究記録。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    },
+    {
+      "old_page": 3,
+      "new_page": 3,
+      "shape": 3,
+      "before": "長さを制御し、生成時間を比べる\n入力長と出力上限を変える\n三つの時間指標を読み解く\n成立の経緯と使い方",
+      "after": "長さを制御し、生成時間を比べる\n入力長と出力上限を変える\n三つの時間指標を読み解く\n時間の近似と、公開記録の使い方"
+    },
+    {
+      "old_page": 5,
+      "new_page": 5,
+      "shape": 2,
+      "before": "同じ評価枠組みで、推論時間を記録する",
+      "after": "長さをそろえた入力で、生成処理の時間を測る"
+    },
+    {
+      "old_page": 5,
+      "new_page": 5,
+      "shape": 3,
+      "before": "HELMのSynthetic efficiencyは、入力トークン数と生成するトークン数を変え、言語モデルの推論時間を調べるためのシナリオ。パブリックドメインの作品から切り出した固定テキストを使う。\n短い入力、長い入力、短い生成、長い生成を組み合わせる。同じ長さでも複数の入力を送り、実行時間のばらつきや、提供方式による違いを記録する。",
+      "after": "Synthetic efficiencyは、入力トークン数と生成上限を変え、言語モデルの推論時間を調べる課題。Stanford CRFMの研究チームが2022年に設計し、既存の文学作品を切り出して長さをそろえた入力を使う。\n短い入力と長い入力、短い生成と長い生成を組み合わせる。同じ長さでも複数の入力を送り、実行時間のばらつきや提供方式による違いを調べる。"
+    },
+    {
+      "old_page": 6,
+      "new_page": 6,
+      "shape": 3,
+      "before": "学習例や課題指示は加えず、用意した断片をプロンプトとして渡す。今回確認した公開記録は、温度0、出力一つ、停止文字列なし。\n参照欄には空文字列が入る。これは推論時間を記録するための形式で、続きを再現すべき正解文ではない。以下では実際の入力と生成出力を示す。",
+      "after": "学習例や課題指示は加えず、用意した断片をそのまま入力し、指定した上限まで続きを生成する。入力長と生成上限を決め、応答にかかった秒数と実際の出力長を記録する。\n正解として再現させる参照文は用意せず、生成にかかった時間を比較する。実例では、入力と実際に生成された続きを対応させて示す。"
+    },
+    {
+      "old_page": 6,
+      "new_page": 6,
+      "shape": 5,
+      "before": "[1] Stanford CRFM. SyntheticEfficiencyScenario. HELM v0.3.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/synthetic_efficiency_scenario.py",
+      "after": "[1] Stanford CRFM (n.d.). SyntheticEfficiencyScenario.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/synthetic_efficiency_scenario.py"
+    },
+    {
+      "old_page": 7,
+      "new_page": 7,
+      "shape": 5,
+      "before": "例示はdavinci-003・256tokensの公開10入力を全件使用。本編3件、Appendix7件。",
+      "after": "ここでは、5作品から2断片ずつ、計10入力を紹介する。いずれも256トークンの公開入力で、本編3件・付録7件。"
+    },
+    {
+      "old_page": 7,
+      "new_page": 7,
+      "shape": 6,
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency",
+      "after": "[1] Stanford CRFM (2023). Synthetic efficiency 公開研究記録。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    },
+    {
+      "old_page": 8,
+      "new_page": 8,
+      "shape": 4,
+      "before": "原入力全文：段落を保ち、折返し・空行を整形",
+      "after": "入力テキスト（全文）"
+    },
+    {
+      "old_page": 8,
+      "new_page": 8,
+      "shape": 6,
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。 Lewis Carroll. Alice’s Adventures in Wonderland. Project Gutenberg eBook11、2026-10-18取得。 id0 / 256→上限16\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency",
+      "after": "[1] Stanford CRFM (2023). Synthetic efficiency 公開研究記録。 Lewis Carroll. Alice’s Adventures in Wonderland. Project Gutenberg eBook11、2026-10-18取得。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    },
+    {
+      "old_page": 9,
+      "new_page": 9,
+      "shape": 4,
+      "before": "原入力に対応する日本語訳。途中から始まり、途中で終わる断片。",
+      "after": "入力テキストの日本語訳"
+    },
+    {
+      "old_page": 9,
+      "new_page": 9,
+      "shape": 6,
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。 Lewis Carroll. Alice’s Adventures in Wonderland. Project Gutenberg eBook11、2026-10-18取得。 id0 / 256→上限16\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency",
+      "after": "[1] Stanford CRFM (2023). Synthetic efficiency 公開研究記録。 Lewis Carroll. Alice’s Adventures in Wonderland. Project Gutenberg eBook11、2026-10-18取得。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    },
+    {
+      "old_page": 10,
+      "new_page": 10,
+      "shape": 4,
+      "before": "原入力全文：段落を保ち、折返し・空行を整形",
+      "after": "入力テキスト（全文）"
+    },
+    {
+      "old_page": 10,
+      "new_page": 10,
+      "shape": 6,
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。 Arthur Conan Doyle. The Adventures of Sherlock Holmes. Project Gutenberg eBook1661、2026-10-18取得。 id2 / 256→上限16\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency",
+      "after": "[1] Stanford CRFM (2023). Synthetic efficiency 公開研究記録。 Arthur Conan Doyle. The Adventures of Sherlock Holmes. Project Gutenberg eBook1661、2026-10-18取得。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    },
+    {
+      "old_page": 11,
+      "new_page": 11,
+      "shape": 4,
+      "before": "原入力に対応する日本語訳。途中から始まり、途中で終わる断片。",
+      "after": "入力テキストの日本語訳"
+    },
+    {
+      "old_page": 11,
+      "new_page": 11,
+      "shape": 6,
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。 Arthur Conan Doyle. The Adventures of Sherlock Holmes. Project Gutenberg eBook1661、2026-10-18取得。 id2 / 256→上限16\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency",
+      "after": "[1] Stanford CRFM (2023). Synthetic efficiency 公開研究記録。 Arthur Conan Doyle. The Adventures of Sherlock Holmes. Project Gutenberg eBook1661、2026-10-18取得。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    },
+    {
+      "old_page": 12,
+      "new_page": 12,
+      "shape": 4,
+      "before": "原入力全文：段落を保ち、折返し・空行を整形",
+      "after": "入力テキスト（全文）"
+    },
+    {
+      "old_page": 12,
+      "new_page": 12,
+      "shape": 6,
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。 Fyodor Dostoyevsky / Constance Garnett訳. Crime and Punishment. Project Gutenberg eBook2554、2026-10-18取得。 id4 / 256→上限16\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency",
+      "after": "[1] Stanford CRFM (2023). Synthetic efficiency 公開研究記録。 Fyodor Dostoyevsky / Constance Garnett訳. Crime and Punishment. Project Gutenberg eBook2554、2026-10-18取得。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    },
+    {
+      "old_page": 13,
+      "new_page": 13,
+      "shape": 4,
+      "before": "原入力に対応する日本語訳。途中から始まり、途中で終わる断片。",
+      "after": "入力テキストの日本語訳"
+    },
+    {
+      "old_page": 13,
+      "new_page": 13,
+      "shape": 6,
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。 Fyodor Dostoyevsky / Constance Garnett訳. Crime and Punishment. Project Gutenberg eBook2554、2026-10-18取得。 id4 / 256→上限16\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency",
+      "after": "[1] Stanford CRFM (2023). Synthetic efficiency 公開研究記録。 Fyodor Dostoyevsky / Constance Garnett訳. Crime and Punishment. Project Gutenberg eBook2554、2026-10-18取得。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    },
+    {
+      "old_page": 14,
+      "new_page": 14,
+      "shape": 5,
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency",
+      "after": "[1] Stanford CRFM (2023). Synthetic efficiency 公開研究記録。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    },
+    {
+      "old_page": 15,
+      "new_page": 15,
+      "shape": 5,
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency",
+      "after": "[1] Stanford CRFM (2023). Synthetic efficiency 公開研究記録。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    },
+    {
+      "old_page": 17,
+      "new_page": 17,
+      "shape": 2,
+      "before": "固定リリースは、5×7の長さ条件を持つ",
+      "after": "入力5通りと、出力上限7通りを組み合わせる"
+    },
+    {
+      "old_page": 17,
+      "new_page": 17,
+      "shape": 5,
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency",
+      "after": "[1] Stanford CRFM (2023). Synthetic efficiency 公開研究記録。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    },
+    {
+      "old_page": 19,
+      "new_page": 18,
+      "shape": 3,
+      "before": "公式生成コードは5作品の冒頭を飛ばし、トークナイザ別に連続した部分を切り出す。復号後に再計数し、指定トークン数へ調整する。\n同じ256tokensでも、文字数や語の量は異なる。davinci-003にはhuggingface/gpt2、OPTにはmeta/opt、AI21 J1にはai21/j1向けの入力を用意する。",
+      "after": "入力生成コードは、5作品の冒頭を飛ばし、モデルごとのトークナイザで連続した部分を切り出す。復号して再び数え、指定したトークン数へ調整する。\n同じ256トークンでも、分割の仕方によって文字数や語の量は異なる。入力長をそろえるときは、対象モデルが使うトークナイザで数える。"
+    },
+    {
+      "old_page": 19,
+      "new_page": 18,
+      "shape": 5,
+      "before": "[1] Stanford CRFM. Generate synthetic efficiency instances. HELM v0.3.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/scripts/efficiency/generate_instances.py",
+      "after": "[1] Stanford CRFM (n.d.). 入力生成コード。\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/scripts/efficiency/generate_instances.py"
+    },
+    {
+      "old_page": 20,
+      "new_page": 19,
+      "shape": 5,
+      "before": "いずれも10入力の平均。推定時間の計算には、上限ではなく保存された実生成トークン数を使う。",
+      "after": "公開記録、各10入力の平均。時間を推定するときは、上限ではなく実際に生成したトークン数を使う。"
+    },
+    {
+      "old_page": 20,
+      "new_page": 19,
+      "shape": 6,
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency",
+      "after": "[1] Stanford CRFM (2023). Synthetic efficiency 公開研究記録。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    },
+    {
+      "old_page": 22,
+      "new_page": 21,
+      "shape": 2,
+      "before": "実測・変動除去・共通基盤の三つの時間",
+      "after": "測った時間と、条件をそろえた推定時間を使う"
+    },
+    {
+      "old_page": 22,
+      "new_page": 21,
+      "shape": 5,
+      "before": "[1] Narayanan et al. (2023). Cheaply Estimating Inference Efficiency Metrics for Autoregressive Transformer Models. NeurIPS.\nhttps://papers.nips.cc/paper_files/paper/2023/hash/d1a14493e5f84d6c6129414f0cd1a7c6-Abstract-Conference.html\n[2] Stanford CRFM. BasicMetric.compute_efficiency_metrics / runtime estimator. HELM v0.3.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/metrics/basic_metrics.py",
+      "after": "[1] Narayanan et al. (2023). Cheaply Estimating Inference Efficiency Metrics for Autoregressive Transformer Models. NeurIPS.\nhttps://papers.nips.cc/paper_files/paper/2023/hash/d1a14493e5f84d6c6129414f0cd1a7c6-Abstract-Conference.html\n[2] Stanford CRFM (n.d.). 推論時間の計算コード。\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/metrics/basic_metrics.py"
+    },
+    {
+      "old_page": 23,
+      "new_page": 22,
+      "shape": 2,
+      "before": "OPTのrawは、12件バッチ全体の時間",
+      "after": "バッチ全体の時間を、1入力当たりへ換算する"
+    },
+    {
+      "old_page": 23,
+      "new_page": 22,
+      "shape": 5,
+      "before": "OPT-175B、入力256・出力16。batch_size12は、評価用の入力10件という件数とは別の実行情報。",
+      "after": "OPT-175B、入力256トークン・出力上限16の公開測定。"
+    },
+    {
+      "old_page": 23,
+      "new_page": 22,
+      "shape": 6,
+      "before": "[1] Stanford CRFM. BasicMetric.compute_efficiency_metrics / runtime estimator. HELM v0.3.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/metrics/basic_metrics.py",
+      "after": "[1] Stanford CRFM (n.d.). 推論時間の計算コード。\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/metrics/basic_metrics.py"
+    },
+    {
+      "old_page": 24,
+      "new_page": 23,
+      "shape": 5,
+      "before": "入力256・出力16、各10入力の平均。—は推定係数の登録がない項目。OPTのRaw列は12件バッチ全体。",
+      "after": "公開記録。入力256・出力上限16、10入力の平均。—は推定値なし。OPTのRawは12入力のバッチ全体。"
+    },
+    {
+      "old_page": 24,
+      "new_page": 23,
+      "shape": 6,
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency\n[2] Stanford CRFM. BasicMetric.compute_efficiency_metrics / runtime estimator. HELM v0.3.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/metrics/basic_metrics.py",
+      "after": "[1] Stanford CRFM (2023). Synthetic efficiency 公開研究記録。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency\n[2] Stanford CRFM (n.d.). 推論時間の計算コード。\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/metrics/basic_metrics.py"
+    },
+    {
+      "old_page": 25,
+      "new_page": 24,
+      "shape": 2,
+      "before": "davinci-003の時間は、条件ごとにばらつく",
+      "after": "davinci-003：長さ条件ごとの応答時間"
+    },
+    {
+      "old_page": 25,
+      "new_page": 24,
+      "shape": 5,
+      "before": "各点は保存された10入力の平均。上限64では実生成数も異なる。入力長だけを時間差の原因とする比較ではない。",
+      "after": "各点は公開記録10入力の平均。出力上限64でも、実際の生成数は入力ごとに異なる。"
+    },
+    {
+      "old_page": 25,
+      "new_page": 24,
+      "shape": 6,
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency",
+      "after": "[1] Stanford CRFM (2023). Synthetic efficiency 公開研究記録。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    },
+    {
+      "old_page": 26,
+      "new_page": 25,
+      "shape": 3,
+      "before": "davinci-003の入力256・出力16では、10入力の平均が2.019秒。個々の記録は0.681〜4.123秒に広がる。実例の作品の違いから時間差の原因を断定する集計ではない。\nRawにはAPIの混雑や通信なども関わる。Denoisedは複数回の最短時間を使う回帰、Idealizedは共通の計算基盤を使う推定で、問いに合わせて指標を選ぶ。",
+      "after": "2022年の公開測定では、davinci-003の入力256・出力上限16で、10入力の平均が2.019秒、個々の応答は0.681〜4.123秒だった。通信やサービスの混雑なども、応答時間のばらつきに関わる。\nDenoisedは複数回の最短時間を使う回帰で、API測定の変動を抑えた推定。Idealizedは共通のハードウェア・実装を使う推定で、比較したい条件に合わせて使う。"
+    },
+    {
+      "old_page": 26,
+      "new_page": 25,
+      "shape": 5,
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency\n[2] Narayanan et al. (2023). Cheaply Estimating Inference Efficiency Metrics for Autoregressive Transformer Models. NeurIPS.\nhttps://papers.nips.cc/paper_files/paper/2023/hash/d1a14493e5f84d6c6129414f0cd1a7c6-Abstract-Conference.html",
+      "after": "[1] Stanford CRFM (2023). Synthetic efficiency 公開研究記録。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency\n[2] Narayanan et al. (2023). Cheaply Estimating Inference Efficiency Metrics for Autoregressive Transformer Models. NeurIPS.\nhttps://papers.nips.cc/paper_files/paper/2023/hash/d1a14493e5f84d6c6129414f0cd1a7c6-Abstract-Conference.html"
+    },
+    {
+      "old_page": 27,
+      "new_page": 26,
+      "shape": 2,
+      "before": "保存キャッシュから、当時の測定を読む",
+      "after": "保存記録から、入力・出力・測定秒を読む"
+    },
+    {
+      "old_page": 27,
+      "new_page": 26,
+      "shape": 5,
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency",
+      "after": "[1] Stanford CRFM (2023). Synthetic efficiency 公開研究記録。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    },
+    {
+      "old_page": 28,
+      "new_page": 27,
+      "shape": 2,
+      "before": "成立の経緯と使い方",
+      "after": "時間の近似と、公開記録の使い方"
+    },
+    {
+      "old_page": 28,
+      "new_page": 27,
+      "shape": 3,
+      "before": "4. 成立の経緯と使い方",
+      "after": "4. 時間の近似と、公開記録の使い方"
+    },
+    {
+      "old_page": 29,
+      "new_page": 28,
+      "shape": 2,
+      "before": "2022年のHELMから、2023年の効率研究へ",
+      "after": "入力処理と、逐次生成の時間を近似する"
+    },
+    {
+      "old_page": 29,
+      "new_page": 28,
+      "shape": 3,
+      "before": "HELMの2022年の初稿には、Synthetic efficiencyの設計・実装への貢献が記載される。その後、Narayananらは2023年に、推論の効率とモデル能力の比較を整理した。\n2023年の研究は、入力を処理する段階と、出力を順に生成する段階を分けて時間を近似する。APIの最適化とモデル自体の性質を区別するため、Idealized runtimeを導入した。",
+      "after": "推論時間は、入力をまとめて処理する段階と、出力を1トークンずつ生成する段階からなる。入力長と出力長は、この処理時間に異なる形で関わる。\nNarayananらの2023年の研究は、二つの段階を測って時間を近似し、ハードウェアと実装をそろえたIdealized runtimeを示した。\nA100 GPUとMegatronを使い、モデル規模に応じたGPU数を想定する。サービス側の構成や待ち時間を含む応答時間とは、比較する条件が異なる。"
+    },
+    {
+      "old_page": 29,
+      "new_page": 28,
+      "shape": 4,
+      "before": "4. 成立の経緯と使い方",
+      "after": "4. 時間の近似と、公開記録の使い方"
+    },
+    {
+      "old_page": 30,
+      "new_page": 29,
+      "shape": 2,
+      "before": "公開コード・記録・作品テキストを参照できる",
+      "after": "公開された入力・出力・時間と、生成コードを使う"
+    },
+    {
+      "old_page": 30,
+      "new_page": 29,
+      "shape": 3,
+      "before": "HELMのシナリオは、入力長・トークナイザ・IDで指定した固定ファイルを読み込む。現在の原配布CodaLabは取得時に503となったが、公開実行には入力全文と生成出力が残る。\nHELMは素材をpublic domain sourcesと説明する。作品はProject Gutenbergの公開テキストとも照合した。現在の版と細部の違う箇所もあり、実例の原文はHELM保存入力を保持した。",
+      "after": "公開研究記録には、モデルと長さ条件ごとの入力、生成文、時間が保存されている。入力生成コードも公開されている。本資料の10断片と生成出力は、この公開記録のものである。\n素材は、公開当時にパブリックドメインの資料として紹介された文学作品。作品や利用する版ごとの条件は、Project Gutenbergなどの公開元で確認できる。"
+    },
+    {
+      "old_page": 30,
+      "new_page": 29,
+      "shape": 4,
+      "before": "4. 成立の経緯と使い方",
+      "after": "4. 時間の近似と、公開記録の使い方"
+    },
+    {
+      "old_page": 30,
+      "new_page": 29,
+      "shape": 5,
+      "before": "[1] Stanford CRFM. SyntheticEfficiencyScenario. HELM v0.3.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/synthetic_efficiency_scenario.py\n[2] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency",
+      "after": "[1] Stanford CRFM (n.d.). SyntheticEfficiencyScenario.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/synthetic_efficiency_scenario.py\n[2] Stanford CRFM (2023). Synthetic efficiency 公開研究記録。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    },
+    {
+      "old_page": 31,
+      "new_page": 30,
+      "shape": 3,
+      "before": "固定テキストから続きを生成し、長さ条件を変えた推論時間を記録する。固定版は39モデル×35条件、各10入力で構成される。\nRawは実行方式に依存し、OPTの記録はバッチ全体の秒数。DenoisedとIdealizedは異なる仮定の推定である。実生成数と係数の有無も確かめて、公開値を読み取る。",
+      "after": "固定テキストから続きを生成し、入力長と生成上限を変えて推論時間を調べる。実際の生成数が上限より少なくなることも、処理時間に関わる。\nRawは応答やバッチ全体の実測時間。Denoisedは変動を抑えた推定で、バッチでは1入力分へ換算する。Idealizedはハードウェアと実装をそろえた推定で、異なる観点から生成処理を比べられる。"
+    },
+    {
+      "old_page": 31,
+      "new_page": 30,
+      "shape": 4,
+      "before": "4. 成立の経緯と使い方",
+      "after": "4. 時間の近似と、公開記録の使い方"
+    },
+    {
+      "old_page": 31,
+      "new_page": 30,
+      "shape": 5,
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency\n[2] Stanford CRFM. BasicMetric.compute_efficiency_metrics / runtime estimator. HELM v0.3.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/metrics/basic_metrics.py",
+      "after": "[1] Stanford CRFM (2023). Synthetic efficiency 公開研究記録。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency\n[2] Stanford CRFM (n.d.). 推論時間の計算コード。\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/metrics/basic_metrics.py"
+    },
+    {
+      "old_page": 33,
+      "new_page": 32,
+      "shape": 3,
+      "before": "残り7入力の全文と訳\n測定値・推定式・配布の補足\n参考文献",
+      "after": "残り7入力の全文と訳\n長さ条件ごとの測定値\n参考文献"
+    },
+    {
+      "old_page": 34,
+      "new_page": 33,
+      "shape": 4,
+      "before": "原入力全文：段落を保ち、折返し・空行を整形",
+      "after": "入力テキスト（全文）"
+    },
+    {
+      "old_page": 34,
+      "new_page": 33,
+      "shape": 6,
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。 Jane Austen. Pride and Prejudice. Project Gutenberg eBook1342、2026-10-18取得。 id1 / 256→上限16\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency",
+      "after": "[1] Stanford CRFM (2023). Synthetic efficiency 公開研究記録。 Jane Austen. Pride and Prejudice. Project Gutenberg eBook1342、2026-10-18取得。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    },
+    {
+      "old_page": 35,
+      "new_page": 34,
+      "shape": 4,
+      "before": "原入力に対応する日本語訳。途中から始まり、途中で終わる断片。",
+      "after": "入力テキストの日本語訳"
+    },
+    {
+      "old_page": 35,
+      "new_page": 34,
+      "shape": 6,
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。 Jane Austen. Pride and Prejudice. Project Gutenberg eBook1342、2026-10-18取得。 id1 / 256→上限16\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency",
+      "after": "[1] Stanford CRFM (2023). Synthetic efficiency 公開研究記録。 Jane Austen. Pride and Prejudice. Project Gutenberg eBook1342、2026-10-18取得。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    },
+    {
+      "old_page": 36,
+      "new_page": 35,
+      "shape": 4,
+      "before": "原入力全文：段落を保ち、折返し・空行を整形",
+      "after": "入力テキスト（全文）"
+    },
+    {
+      "old_page": 36,
+      "new_page": 35,
+      "shape": 6,
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。 Alexandre Dumas. The Count of Monte Cristo. Project Gutenberg eBook1184、2026-10-18取得。 id3 / 256→上限16\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency",
+      "after": "[1] Stanford CRFM (2023). Synthetic efficiency 公開研究記録。 Alexandre Dumas. The Count of Monte Cristo. Project Gutenberg eBook1184、2026-10-18取得。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    },
+    {
+      "old_page": 37,
+      "new_page": 36,
+      "shape": 4,
+      "before": "原入力に対応する日本語訳。途中から始まり、途中で終わる断片。",
+      "after": "入力テキストの日本語訳"
+    },
+    {
+      "old_page": 37,
+      "new_page": 36,
+      "shape": 5,
+      "before": "それはポリカール・モレル、私の叔父で、後に大尉になった者だ。ダンテス、皇帝が覚えていらしたと、叔父に必ず伝えてくれ。あの老兵の目には涙が浮かぶだろう。さあさあ」と彼は続け、親しげにエドモンの肩をたたいた。「ルクレール船長の指示に従い、エルバ島に立ち寄ったのは大変よかった。もっとも、元帥に小包を届け、皇帝と話したと知れれば、面倒に巻き込まれるかもしれないがね。」\n0027m\n「どうして面倒になるのでしょう、旦那？」とダンテスは尋ねた。「私は何を運んでいたのかさえ知らず、皇帝も、初めて来た者にするような質問をなさっただけです。ですが、失礼します。検疫官と税関の検査官たちが、船のそばに来ています。」若者は舷門へ向かった。彼が離れると、ダングラールが近寄って言った。\n「さて、どうやら、」",
+      "after": "それはポリカール・モレル、私の叔父で、後に大尉になった者だ。ダンテス、皇帝が覚えていらしたと、叔父に必ず伝えてくれ。あの老兵の目には涙が浮かぶだろう。さあさあ」と彼は続け、親しげにエドモンの肩をたたいた。「ルクレール船長の指示に従い、エルバ島に立ち寄ったのは大変よかった。もっとも、元帥に小包を届け、皇帝と話したと知れれば、面倒に巻き込まれるかもしれないがね。」\n0027m\n「どうして面倒になるのでしょう、旦那？」とダンテスは尋ねた。「私は何を運んでいたのかさえ知らず、皇帝も、たまたま会った相手にするような質問をなさっただけです。ですが、失礼します。検疫官と税関の検査官たちが、船のそばに来ています。」若者は舷門へ向かった。彼が離れると、ダングラールが近寄って言った。\n「さて、どうやら、」"
+    },
+    {
+      "old_page": 37,
+      "new_page": 36,
+      "shape": 6,
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。 Alexandre Dumas. The Count of Monte Cristo. Project Gutenberg eBook1184、2026-10-18取得。 id3 / 256→上限16\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency",
+      "after": "[1] Stanford CRFM (2023). Synthetic efficiency 公開研究記録。 Alexandre Dumas. The Count of Monte Cristo. Project Gutenberg eBook1184、2026-10-18取得。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    },
+    {
+      "old_page": 38,
+      "new_page": 37,
+      "shape": 4,
+      "before": "原入力全文：段落を保ち、折返し・空行を整形",
+      "after": "入力テキスト（全文）"
+    },
+    {
+      "old_page": 38,
+      "new_page": 37,
+      "shape": 6,
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。 Lewis Carroll. Alice’s Adventures in Wonderland. Project Gutenberg eBook11、2026-10-18取得。 id5 / 256→上限16\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency",
+      "after": "[1] Stanford CRFM (2023). Synthetic efficiency 公開研究記録。 Lewis Carroll. Alice’s Adventures in Wonderland. Project Gutenberg eBook11、2026-10-18取得。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    },
+    {
+      "old_page": 39,
+      "new_page": 38,
+      "shape": 4,
+      "before": "原入力に対応する日本語訳。途中から始まり、途中で終わる断片。",
+      "after": "入力テキストの日本語訳"
+    },
+    {
+      "old_page": 39,
+      "new_page": 38,
+      "shape": 6,
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。 Lewis Carroll. Alice’s Adventures in Wonderland. Project Gutenberg eBook11、2026-10-18取得。 id5 / 256→上限16\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency",
+      "after": "[1] Stanford CRFM (2023). Synthetic efficiency 公開研究記録。 Lewis Carroll. Alice’s Adventures in Wonderland. Project Gutenberg eBook11、2026-10-18取得。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    },
+    {
+      "old_page": 40,
+      "new_page": 39,
+      "shape": 4,
+      "before": "原入力全文：段落を保ち、折返し・空行を整形",
+      "after": "入力テキスト（全文）"
+    },
+    {
+      "old_page": 40,
+      "new_page": 39,
+      "shape": 6,
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。 Jane Austen. Pride and Prejudice. Project Gutenberg eBook1342、2026-10-18取得。 id6 / 256→上限16\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency",
+      "after": "[1] Stanford CRFM (2023). Synthetic efficiency 公開研究記録。 Jane Austen. Pride and Prejudice. Project Gutenberg eBook1342、2026-10-18取得。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    },
+    {
+      "old_page": 41,
+      "new_page": 40,
+      "shape": 4,
+      "before": "原入力に対応する日本語訳。途中から始まり、途中で終わる断片。",
+      "after": "入力テキストの日本語訳"
+    },
+    {
+      "old_page": 41,
+      "new_page": 40,
+      "shape": 5,
+      "before": "「紹介の作法や、それに置かれる重きを、ばかばかしいと思うのかい？ そこは、まったく賛成できないね。メアリー、お前はどう思う？ お前は深く物を考える若い女性で、難しい本を読んで抜き書きもすると知っているよ。」\nメアリーは大変気の利いたことを言いたかったが、どう言えばよいか分からなかった。\n「メアリーが考えを整理している間に」と彼は続けた。「ビングリー氏の話へ戻ろう。」\n「あの人の話はもううんざり」と妻が叫んだ。\n「それは残念だ。でも、どうしてもっと早く言ってくれなかったんだい？ 朝のうちに分かっていれば、絶対に訪問しなかったのに。実に不運だが、実際にもう訪ねてしまった以上、今さら知り合いになることから逃れられないね。」\nその、",
+      "after": "「紹介の作法や、それを重んじることを、ばかばかしいと思うのかい？ その点には、賛成しかねるね。メアリー、お前はどう思う？ お前は深く物を考える若い女性で、難しい本を読んで抜き書きもすると知っているよ。」\nメアリーは大変気の利いたことを言いたかったが、どう言えばよいか分からなかった。\n「メアリーが考えを整理している間に」と彼は続けた。「ビングリー氏の話へ戻ろう。」\n「あの人の話はもううんざり」と妻が叫んだ。\n「それは残念だ。でも、どうしてもっと早く言ってくれなかったんだい？ 朝のうちに分かっていれば、絶対に訪問しなかったのに。実に不運だが、実際にもう訪ねてしまった以上、今さら知り合いになることから逃れられないね。」\nその、"
+    },
+    {
+      "old_page": 41,
+      "new_page": 40,
+      "shape": 6,
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。 Jane Austen. Pride and Prejudice. Project Gutenberg eBook1342、2026-10-18取得。 id6 / 256→上限16\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency",
+      "after": "[1] Stanford CRFM (2023). Synthetic efficiency 公開研究記録。 Jane Austen. Pride and Prejudice. Project Gutenberg eBook1342、2026-10-18取得。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    },
+    {
+      "old_page": 42,
+      "new_page": 41,
+      "shape": 4,
+      "before": "原入力全文：段落を保ち、折返し・空行を整形",
+      "after": "入力テキスト（全文）"
+    },
+    {
+      "old_page": 42,
+      "new_page": 41,
+      "shape": 6,
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。 Arthur Conan Doyle. The Adventures of Sherlock Holmes. Project Gutenberg eBook1661、2026-10-18取得。 id7 / 256→上限16\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency",
+      "after": "[1] Stanford CRFM (2023). Synthetic efficiency 公開研究記録。 Arthur Conan Doyle. The Adventures of Sherlock Holmes. Project Gutenberg eBook1661、2026-10-18取得。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    },
+    {
+      "old_page": 43,
+      "new_page": 42,
+      "shape": 4,
+      "before": "原入力に対応する日本語訳。途中から始まり、途中で終わる断片。",
+      "after": "入力テキストの日本語訳"
+    },
+    {
+      "old_page": 43,
+      "new_page": 42,
+      "shape": 6,
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。 Arthur Conan Doyle. The Adventures of Sherlock Holmes. Project Gutenberg eBook1661、2026-10-18取得。 id7 / 256→上限16\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency",
+      "after": "[1] Stanford CRFM (2023). Synthetic efficiency 公開研究記録。 Arthur Conan Doyle. The Adventures of Sherlock Holmes. Project Gutenberg eBook1661、2026-10-18取得。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    },
+    {
+      "old_page": 44,
+      "new_page": 43,
+      "shape": 4,
+      "before": "原入力全文：段落を保ち、折返し・空行を整形",
+      "after": "入力テキスト（全文）"
+    },
+    {
+      "old_page": 44,
+      "new_page": 43,
+      "shape": 6,
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。 Alexandre Dumas. The Count of Monte Cristo. Project Gutenberg eBook1184、2026-10-18取得。 id8 / 256→上限16\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency",
+      "after": "[1] Stanford CRFM (2023). Synthetic efficiency 公開研究記録。 Alexandre Dumas. The Count of Monte Cristo. Project Gutenberg eBook1184、2026-10-18取得。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    },
+    {
+      "old_page": 45,
+      "new_page": 44,
+      "shape": 4,
+      "before": "原入力に対応する日本語訳。途中から始まり、途中で終わる断片。",
+      "after": "入力テキストの日本語訳"
+    },
+    {
+      "old_page": 45,
+      "new_page": 44,
+      "shape": 6,
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。 Alexandre Dumas. The Count of Monte Cristo. Project Gutenberg eBook1184、2026-10-18取得。 id8 / 256→上限16\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency",
+      "after": "[1] Stanford CRFM (2023). Synthetic efficiency 公開研究記録。 Alexandre Dumas. The Count of Monte Cristo. Project Gutenberg eBook1184、2026-10-18取得。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    },
+    {
+      "old_page": 46,
+      "new_page": 45,
+      "shape": 4,
+      "before": "原入力全文：段落を保ち、折返し・空行を整形",
+      "after": "入力テキスト（全文）"
+    },
+    {
+      "old_page": 46,
+      "new_page": 45,
+      "shape": 6,
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。 Fyodor Dostoyevsky / Constance Garnett訳. Crime and Punishment. Project Gutenberg eBook2554、2026-10-18取得。 id9 / 256→上限16\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency",
+      "after": "[1] Stanford CRFM (2023). Synthetic efficiency 公開研究記録。 Fyodor Dostoyevsky / Constance Garnett訳. Crime and Punishment. Project Gutenberg eBook2554、2026-10-18取得。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    },
+    {
+      "old_page": 47,
+      "new_page": 46,
+      "shape": 4,
+      "before": "原入力に対応する日本語訳。途中から始まり、途中で終わる断片。",
+      "after": "入力テキストの日本語訳"
+    },
+    {
+      "old_page": 47,
+      "new_page": 46,
+      "shape": 5,
+      "before": "老女は扉の隙間から、いかにも疑わしそうに客を見た。暗がりで光る小さな目以外は、何も見えなかった。だが踊り場に人が何人もいるのを見ると、安心して扉を大きく開けた。若者は暗い玄関へ入った。小さな台所とは仕切られていた。老女は黙って彼に向き合い、問いかけるような目で見た。六十歳の、小さくしなびた老婆で、意地の悪そうな鋭い目と、尖った小さな鼻をしていた。色あせて、いくらか白髪の交じった髪には油がたっぷり塗られ、頭巾はかぶっていなかった。雌鶏の足のように細長い首にはフランネルらしいぼろ布が結ばれ、暑いのに、年を経て黄色くなった、毛の抜けた毛皮の肩掛けが肩でひらひらしていた。老女はしきりに咳をし、うめいた。若者は、いくぶん変わった表情で彼女を見ていたに違いない。その目に再び疑いの光が浮かんだからだ。\n「学生のラスコーリニコフです。私は、",
+      "after": "老女は扉の隙間から、いかにも疑わしそうに客を見た。暗がりで光る小さな目以外は、何も見えなかった。だが踊り場に人が何人もいるのを見ると、気を強くして扉を大きく開けた。若者は暗い玄関へ入った。小さな台所とは仕切られていた。老女は黙って彼に向き合い、問いかけるような目で見た。六十歳の、小さくしなびた老婆で、意地の悪そうな鋭い目と、尖った小さな鼻をしていた。色あせて、いくらか白髪の交じった髪には油がたっぷり塗られ、頭巾はかぶっていなかった。雌鶏の足のように細長い首にはフランネルらしいぼろ布が結ばれ、暑いのに、年を経て黄色くなった、毛の抜けた毛皮の肩掛けが肩でひらひらしていた。老女はしきりに咳をし、うめいた。若者は、いくぶん変わった表情で彼女を見ていたに違いない。老女の目に再び疑いの光が浮かんだからだ。\n「学生のラスコーリニコフです。私は、"
+    },
+    {
+      "old_page": 47,
+      "new_page": 46,
+      "shape": 6,
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。 Fyodor Dostoyevsky / Constance Garnett訳. Crime and Punishment. Project Gutenberg eBook2554、2026-10-18取得。 id9 / 256→上限16\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency",
+      "after": "[1] Stanford CRFM (2023). Synthetic efficiency 公開研究記録。 Fyodor Dostoyevsky / Constance Garnett訳. Crime and Punishment. Project Gutenberg eBook2554、2026-10-18取得。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    },
+    {
+      "old_page": 48,
+      "new_page": 47,
+      "shape": 5,
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency",
+      "after": "[1] Stanford CRFM (2023). Synthetic efficiency 公開研究記録。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    },
+    {
+      "old_page": 49,
+      "new_page": 48,
+      "shape": 5,
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency",
+      "after": "[1] Stanford CRFM (2023). Synthetic efficiency 公開研究記録。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    },
+    {
+      "old_page": 50,
+      "new_page": 49,
+      "shape": 5,
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency",
+      "after": "[1] Stanford CRFM (2023). Synthetic efficiency 公開研究記録。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    },
+    {
+      "old_page": 51,
+      "new_page": 50,
+      "shape": 5,
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency",
+      "after": "[1] Stanford CRFM (2023). Synthetic efficiency 公開研究記録。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    },
+    {
+      "old_page": 52,
+      "new_page": 51,
+      "shape": 2,
+      "before": "測定値・推定式・配布の補足",
+      "after": "長さ条件ごとの測定値"
+    },
+    {
+      "old_page": 52,
+      "new_page": 51,
+      "shape": 3,
+      "before": "Appendix: 2. 測定値・推定式・配布の補足",
+      "after": "Appendix: 2. 長さ条件ごとの測定値"
+    },
+    {
+      "old_page": 55,
+      "new_page": 52,
+      "shape": 3,
+      "before": "Appendix: 2. 測定値・推定式・配布の補足",
+      "after": "Appendix: 2. 長さ条件ごとの測定値"
+    },
+    {
+      "old_page": 55,
+      "new_page": 52,
+      "shape": 6,
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency",
+      "after": "[1] Stanford CRFM (2023). Synthetic efficiency 公開研究記録。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    },
+    {
+      "old_page": 56,
+      "new_page": 53,
+      "shape": 3,
+      "before": "Appendix: 2. 測定値・推定式・配布の補足",
+      "after": "Appendix: 2. 長さ条件ごとの測定値"
+    },
+    {
+      "old_page": 56,
+      "new_page": 53,
+      "shape": 6,
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency",
+      "after": "[1] Stanford CRFM (2023). Synthetic efficiency 公開研究記録。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    },
+    {
+      "old_page": 57,
+      "new_page": 54,
+      "shape": 3,
+      "before": "Appendix: 2. 測定値・推定式・配布の補足",
+      "after": "Appendix: 2. 長さ条件ごとの測定値"
+    },
+    {
+      "old_page": 57,
+      "new_page": 54,
+      "shape": 6,
+      "before": "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency",
+      "after": "[1] Stanford CRFM (2023). Synthetic efficiency 公開研究記録。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    },
+    {
+      "old_page": 62,
+      "new_page": 56,
+      "shape": 4,
+      "before": "Holistic Evaluation of Language Models\nPercy Liang et al. · 2022 · arXiv:2211.09110v1\n広範な課題と指標を評価するHELMを設計し、Synthetic efficiencyも実装した。\nhttps://arxiv.org/abs/2211.09110v1",
+      "after": "Holistic Evaluation of Language Models\nPercy Liang et al. · 2022 · arXiv初稿\n入力長と生成上限を制御するSynthetic efficiencyの設計を含む原研究。\nhttps://arxiv.org/abs/2211.09110v1"
+    },
+    {
+      "old_page": 63,
+      "new_page": 57,
+      "shape": 4,
+      "before": "HELM Classic — Synthetic efficiency\nStanford CRFM · v0.4.0（2023-11-17）· 2026-10-18参照\n固定版の条件別成績、モデルへの実request、入力、生成出力、時間情報を保存する。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency",
+      "after": "Synthetic efficiency — 公開研究記録\nStanford CRFM (2023). 2026-10-18参照。\n長さ条件ごとの入力、生成出力、測定時間を公開する。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    },
+    {
+      "old_page": 63,
+      "new_page": 57,
+      "shape": 5,
+      "before": "SyntheticEfficiencyScenario / BasicMetric\nStanford CRFM · HELM v0.3.0 · Python実装\nトークン長別の固定入力の読込と、バッチ時間・係数表からの時間指標の計算を実装する。\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/synthetic_efficiency_scenario.py",
+      "after": "SyntheticEfficiencyScenario\nStanford CRFM (n.d.). 公開コード（2026-10-18参照）。\nトークン長とトークナイザごとに、切り出した作品の入力を読み込む。\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/synthetic_efficiency_scenario.py"
+    },
+    {
+      "old_page": 64,
+      "new_page": 58,
+      "shape": 4,
+      "before": "helm-efficiency\nDeepak Narayanan et al. · NeurIPS2023公式コード · commit c31b8fcc2b990b629173d7c898f1cdfae929c9a4\nMegatronによるプロファイル、回帰、係数表、効率と能力の分析ノートブックを公開する。\nhttps://github.com/stanford-crfm/helm-efficiency",
+      "after": "helm-efficiency\nNarayanan et al. (n.d.). 2023年効率研究の公式コード。参照2026-10-18。\n時間の測定、回帰、推定係数、効率と能力の分析を公開する。\nhttps://github.com/stanford-crfm/helm-efficiency"
+    }
+  ],
+  "all60_read_in_context": true
+}

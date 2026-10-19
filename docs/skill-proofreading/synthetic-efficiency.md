@@ -22,3 +22,8 @@ Geminiは使用していない。Codexが日本語校正スキルをページご
 |22|APIの応答時間、またはオフラインのバッチ全体の時間|APIの応答時間、または<br>オフラインのバッチ全体の時間|時間の末尾一字だけが改行していたため、API/オフラインの意味境界へ改行を移す。|
 
 [全ページ文言](synthetic-efficiency/pages.jsonl)・[自己検査・独立レビュー](synthetic-efficiency/review.json)
+
+
+## 読者向けの説明・日本語の改訂（2026年10月）
+
+Geminiは使用せず、Codexがスキルで校正し、別担当が独立レビューした。削除・統合を含む[問題点と変更対](synthetic-efficiency/editorial-2026-10/changes.md)、[旧ページとの対応](synthetic-efficiency/editorial-2026-10/page-map.json)、[独立レビュー](synthetic-efficiency/editorial-2026-10/independent-review/handoff.json)、[最終ページの全文](synthetic-efficiency/pages.jsonl)。旧版の校正・検証記録は保持している。

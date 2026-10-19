@@ -1,0 +1,663 @@
+[
+  {
+    "page": 1,
+    "text": [
+      "Synthetic efficiency",
+      "HELMの推論効率評価\n固定テキストの長さと生成上限を変え、時間を測る",
+      "sasakiy84",
+      "datasets in 10 minutes (2026-10-18)"
+    ]
+  },
+  {
+    "page": 2,
+    "text": [
+      "HELM Classicの公開結果と保存記録",
+      "Synthetic efficiency",
+      "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    ]
+  },
+  {
+    "page": 3,
+    "text": [
+      "",
+      "長さを制御し、生成時間を比べる\n入力長と出力上限を変える\n三つの時間指標を読み解く\n成立の経緯と使い方",
+      "目次"
+    ]
+  },
+  {
+    "page": 4,
+    "text": [
+      "長さを制御し、生成時間を比べる",
+      "1. 長さを制御し、生成時間を比べる"
+    ]
+  },
+  {
+    "page": 5,
+    "text": [
+      "同じ評価枠組みで、推論時間を記録する",
+      "HELMのSynthetic efficiencyは、入力トークン数と生成するトークン数を変え、言語モデルの推論時間を調べるためのシナリオ。パブリックドメインの作品から切り出した固定テキストを使う。\n短い入力、長い入力、短い生成、長い生成を組み合わせる。同じ長さでも複数の入力を送り、実行時間のばらつきや、提供方式による違いを記録する。",
+      "1. 長さを制御し、生成時間を比べる",
+      "[1] Liang et al. (2022). Holistic Evaluation of Language Models. arXiv:2211.09110v1.  https://arxiv.org/abs/2211.09110v1"
+    ]
+  },
+  {
+    "page": 6,
+    "text": [
+      "入力から、そのまま続きを生成させる",
+      "学習例や課題指示は加えず、用意した断片をプロンプトとして渡す。今回確認した公開記録は、温度0、出力一つ、停止文字列なし。\n参照欄には空文字列が入る。これは推論時間を記録するための形式で、続きを再現すべき正解文ではない。以下では実際の入力と生成出力を示す。",
+      "1. 長さを制御し、生成時間を比べる",
+      "[1] Stanford CRFM. SyntheticEfficiencyScenario. HELM v0.3.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/synthetic_efficiency_scenario.py"
+    ]
+  },
+  {
+    "page": 7,
+    "text": [
+      "10入力は、5作品の異なる断片からなる",
+      "1. 長さを制御し、生成時間を比べる",
+      "作品 | 著者・英訳者 | 入力ID",
+      "不思議の国のアリス | Lewis Carroll | 0・5",
+      "高慢と偏見 | Jane Austen | 1・6",
+      "ホームズの冒険 | Arthur Conan Doyle | 2・7",
+      "モンテ・クリスト伯 | Alexandre Dumas | 3・8",
+      "罪と罰 | Dostoyevsky / Garnett英訳 | 4・9",
+      "例示はdavinci-003・256tokensの公開10入力を全件使用。本編3件、Appendix7件。",
+      "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    ]
+  },
+  {
+    "page": 8,
+    "text": [
+      "実例1：自分を叱るアリスと小さなケーキ",
+      "1. 長さを制御し、生成時間を比べる",
+      "原入力全文：段落を保ち、折返し・空行を整形",
+      "crying like that!” said Alice to herself, rather sharply; “I advise you to leave off this minute!” She generally gave herself very good advice, (though she very seldom followed it), and sometimes she scolded herself so severely as to bring tears into her eyes; and once she remembered trying to box her own ears for having cheated herself in a game of croquet she was playing against herself, for this curious child was very fond of pretending to be two people. “But it’s no use now,” thought poor Alice, “to pretend to be two people! Why, there’s hardly enough of me left to make _one_ respectable person!”\nSoon her eye fell on a little glass box that was lying under the table: she opened it, and found in it a very small cake, on which the words “EAT ME” were beautifully marked in currants. “Well, I’ll eat it,” said Alice, “and if it makes me grow larger, I can reach the key; and if it makes me grow smaller, I can creep under the",
+      "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。 Lewis Carroll. Alice’s Adventures in Wonderland. Project Gutenberg eBook11、2026-10-18取得。 id0 / 256→上限16\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    ]
+  },
+  {
+    "page": 9,
+    "text": [
+      "実例1：自分を叱るアリスと小さなケーキ（訳）",
+      "1. 長さを制御し、生成時間を比べる",
+      "原入力に対応する日本語訳。途中から始まり、途中で終わる断片。",
+      "「そんなふうに泣くなんて！」とアリスは、かなり厳しく自分に言った。「今すぐやめなさい！」ふだんから自分にはとてもよい忠告をするのだが、従うことはめったになかった。ときには涙が出るほど厳しく自分を叱りもした。一人でクロッケーをして自分をごまかしたため、自分の耳をひっぱたこうとしたことも思い出した。この変わった子は、一人二役を演じるのが大好きだったのだ。「でも、今は無駄だわ」とかわいそうなアリスは思った。「二人のふりをしたって！ まともな一人分にさえ、ほとんど足りないんですもの！」\nやがて、テーブルの下にある小さなガラス箱が目に入った。開けると、ごく小さなケーキがあり、干しぶどうで「EAT ME」と美しく書かれていた。「よし、食べちゃおう」とアリスは言った。「大きくなれば鍵に手が届くし、小さくなれば、その下をくぐって――」",
+      "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。 Lewis Carroll. Alice’s Adventures in Wonderland. Project Gutenberg eBook11、2026-10-18取得。 id0 / 256→上限16\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    ]
+  },
+  {
+    "page": 10,
+    "text": [
+      "実例2：仮面をつけた客がホームズを訪れる",
+      "1. 長さを制御し、生成時間を比べる",
+      "原入力全文：段落を保ち、折返し・空行を整形",
+      "blue cloak which was thrown over his shoulders was lined with flame-coloured silk and secured at the neck with a brooch which consisted of a single flaming beryl. Boots which extended halfway up his calves, and which were trimmed at the tops with rich brown fur, completed the impression of barbaric opulence which was suggested by his whole appearance. He carried a broad-brimmed hat in his hand, while he wore across the upper part of his face, extending down past the cheekbones, a black vizard mask, which he had apparently adjusted that very moment, for his hand was still raised to it as he entered. From the lower part of the face he appeared to be a man of strong character, with a thick, hanging lip, and a long, straight chin suggestive of resolution pushed to the length of obstinacy.\n“You had my note?” he asked with a deep harsh voice and a strongly marked German accent. “I told you that I would call.” He looked from one to the other of us, as if uncertain which to address.\n“Pray take a seat,”",
+      "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。 Arthur Conan Doyle. The Adventures of Sherlock Holmes. Project Gutenberg eBook1661、2026-10-18取得。 id2 / 256→上限16\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    ]
+  },
+  {
+    "page": 11,
+    "text": [
+      "実例2：仮面をつけた客がホームズを訪れる（訳）",
+      "1. 長さを制御し、生成時間を比べる",
+      "原入力に対応する日本語訳。途中から始まり、途中で終わる断片。",
+      "肩に掛けた青い外套には炎の色の絹の裏地があり、首元は、火のように輝くベリルを一つあしらったブローチで留められていた。ふくらはぎの中ほどまであるブーツは、上端が濃い茶色の毛皮で縁取られ、その姿全体が漂わせる荒々しい豪奢さを仕上げていた。片手にはつばの広い帽子を持ち、顔の上半分には頬骨の下まで覆う黒い仮面を着けていた。入ってきたとき、まだ手をそこへ上げていたので、ちょうど今、仮面を直したらしい。顔の下半分からは、厚く垂れた唇と、頑固さの域に達する決意を思わせる長くまっすぐな顎を持つ、意志の強そうな男に見えた。\n「私の手紙は受け取ったかね？」と、低く荒々しい声に強いドイツ語なまりを響かせて尋ねた。「伺うとお伝えしたはずだ。」誰に話しかければよいか迷うように、私たちを交互に見た。\n「どうぞお掛けください」と、",
+      "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。 Arthur Conan Doyle. The Adventures of Sherlock Holmes. Project Gutenberg eBook1661、2026-10-18取得。 id2 / 256→上限16\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    ]
+  },
+  {
+    "page": 12,
+    "text": [
+      "実例3：老女の部屋の呼び鈴を鳴らす",
+      "1. 長さを制御し、生成時間を比べる",
+      "原入力全文：段落を保ち、折返し・空行を整形",
+      "were not to be dreaded.\n“If I am so scared now, what would it be if it somehow came to pass that I were really going to do it?” he could not help asking himself as he reached the fourth storey. There his progress was barred by some porters who were engaged in moving furniture out of a flat. He knew that the flat had been occupied by a German clerk in the civil service, and his family. This German was moving out then, and so the fourth floor on this staircase would be untenanted except by the old woman. “That’s a good thing anyway,” he thought to himself, as he rang the bell of the old woman’s flat. The bell gave a faint tinkle as though it were made of tin and not of copper. The little flats in such houses always have bells that ring like that. He had forgotten the note of that bell, and now its peculiar tinkle seemed to remind him of something and to bring it clearly before him.... He started, his nerves were terribly overstrained by now. In a little while, the door was opened a tiny crack:",
+      "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。 Fyodor Dostoyevsky / Constance Garnett訳. Crime and Punishment. Project Gutenberg eBook2554、2026-10-18取得。 id4 / 256→上限16\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    ]
+  },
+  {
+    "page": 13,
+    "text": [
+      "実例3：老女の部屋の呼び鈴を鳴らす（訳）",
+      "1. 長さを制御し、生成時間を比べる",
+      "原入力に対応する日本語訳。途中から始まり、途中で終わる断片。",
+      "恐れることはなかった。\n「今こんなにおびえているなら、もし本当にあれをやることになったら、どうなるだろう？」四階に着くと、彼は思わず自問した。そこでは、住居から家具を運び出す人夫たちに行く手を塞がれた。その部屋にはドイツ人の役人と家族が住んでいたことを、彼は知っていた。このドイツ人は今、引っ越すところだった。すると、この階段の四階に住むのは老女だけになる。「それなら好都合だ」と彼は思い、老女の部屋のベルを鳴らした。ベルは銅ではなくブリキでできているかのように、かすかな音を立てた。こうした建物の小さな住居には、たいていこんな音のベルがある。そのベルの音を忘れていたが、今その独特の響きが何かを思い出させ、鮮明に浮かび上がらせるようだった……。彼はびくりとした。このときには、神経がひどく張り詰めていた。しばらくすると、扉がほんの少し開いた。",
+      "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。 Fyodor Dostoyevsky / Constance Garnett訳. Crime and Punishment. Project Gutenberg eBook2554、2026-10-18取得。 id4 / 256→上限16\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    ]
+  },
+  {
+    "page": 14,
+    "text": [
+      "実例1〜3：16tokensの生成出力",
+      "1. 長さを制御し、生成時間を比べる",
+      "実例 | 生成出力（空白・改行を整形） | 実測秒",
+      "1 | door; so either way I’ll get into the garden, and | 1.193",
+      "2 | said Holmes. “This is my friend and colleague, Dr. Watson | 4.123",
+      "3 | the chain was not taken off, and an old woman peeped out | 1.976",
+      "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    ]
+  },
+  {
+    "page": 15,
+    "text": [
+      "実例1〜3：生成出力の日本語訳",
+      "1. 長さを制御し、生成時間を比べる",
+      "実例 | 生成出力の訳（未完の断片も保持）",
+      "1 | 扉。どちらになっても庭に入れる。そして、",
+      "2 | とホームズは言った。「こちらは友人で仕事仲間の、ワトソン博士",
+      "3 | 鎖は外されず、老女が顔をのぞかせた",
+      "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    ]
+  },
+  {
+    "page": 16,
+    "text": [
+      "入力長と出力上限を変える",
+      "2. 入力長と出力上限を変える"
+    ]
+  },
+  {
+    "page": 17,
+    "text": [
+      "固定リリースは、5×7の長さ条件を持つ",
+      "2. 入力長と出力上限を変える",
+      "入力 tokens／\n出力上限 | 1 | 2 | 4 | 8 | 16 | 32 | 64",
+      "1 | ● | ● | ● | ● | ● | ● | ●",
+      "256 | ● | ● | ● | ● | ● | ● | ●",
+      "512 | ● | ● | ● | ● | ● | ● | ●",
+      "1024 | ● | ● | ● | ● | ● | ● | ●",
+      "1536 | ● | ● | ● | ● | ● | ● | ●",
+      "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    ]
+  },
+  {
+    "page": 18,
+    "text": [
+      "39モデル×35条件で、計1,365の実行設定",
+      "固定リリースのrun_specsには39モデル、各35条件がある。各条件は10入力、1試行で、学習例は0件。設定のmax_eval_instances=1,000に対し、元入力は10件。\nここでは3モデルについて、入力1・256・1,024と出力上限1・16・64の27条件を比較する。2023年の固定リリースに保存された記録である。",
+      "2. 入力長と出力上限を変える",
+      "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    ]
+  },
+  {
+    "page": 19,
+    "text": [
+      "トークン数は、モデルの分割方法に依存する",
+      "公式生成コードは5作品の冒頭を飛ばし、トークナイザ別に連続した部分を切り出す。復号後に再計数し、指定トークン数へ調整する。\n同じ256tokensでも、文字数や語の量は異なる。davinci-003にはhuggingface/gpt2、OPTにはmeta/opt、AI21 J1にはai21/j1向けの入力を用意する。",
+      "2. 入力長と出力上限を変える",
+      "[1] Stanford CRFM. Generate synthetic efficiency instances. HELM v0.3.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/scripts/efficiency/generate_instances.py"
+    ]
+  },
+  {
+    "page": 20,
+    "text": [
+      "出力上限64でも、実生成数は異なる",
+      "2. 入力長と出力上限を変える",
+      "davinci-003／入力tokens | 出力上限 | 平均の実生成tokens",
+      "1 | 64 | 59.4",
+      "256 | 64 | 55.7",
+      "1,024 | 64 | 55.9",
+      "いずれも10入力の平均。推定時間の計算には、上限ではなく保存された実生成トークン数を使う。",
+      "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    ]
+  },
+  {
+    "page": 21,
+    "text": [
+      "三つの時間指標を読み解く",
+      "3. 三つの時間指標を読み解く"
+    ]
+  },
+  {
+    "page": 22,
+    "text": [
+      "実測・変動除去・共通基盤の三つの時間",
+      "3. 三つの時間指標を読み解く",
+      "指標 | 何を表すか",
+      "Raw runtime | APIの応答時間、または\nオフラインのバッチ全体の時間",
+      "Denoised runtime | APIの変動を除く推定。オフラインではバッチ時間÷件数",
+      "Idealized runtime | A100 GPU上の最適化実装を仮定した推定",
+      "[1] Narayanan et al. (2023). Cheaply Estimating Inference Efficiency Metrics for Autoregressive Transformer Models. NeurIPS.\nhttps://papers.nips.cc/paper_files/paper/2023/hash/d1a14493e5f84d6c6129414f0cd1a7c6-Abstract-Conference.html\n[2] Stanford CRFM. BasicMetric.compute_efficiency_metrics / runtime estimator. HELM v0.3.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/metrics/basic_metrics.py"
+    ]
+  },
+  {
+    "page": 23,
+    "text": [
+      "OPTのrawは、12件バッチ全体の時間",
+      "3. 三つの時間指標を読み解く",
+      "保存記録の項目 | 値",
+      "batch_request_time | 12.289206秒",
+      "batch_size | 12件",
+      "Raw runtimeに記録する値 | 12.289206秒",
+      "1入力分のDenoised runtime | 12.289206÷12 = 1.024101秒",
+      "OPT-175B、入力256・出力16。batch_size12は、評価用の入力10件という件数とは別の実行情報。",
+      "[1] Stanford CRFM. BasicMetric.compute_efficiency_metrics / runtime estimator. HELM v0.3.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/metrics/basic_metrics.py"
+    ]
+  },
+  {
+    "page": 24,
+    "text": [
+      "同条件でも、指標ごとに意味が異なる",
+      "3. 三つの時間指標を読み解く",
+      "モデル | Raw秒 | バッチ件数 | Denoised秒 | Idealized秒",
+      "davinci-003 | 2.019 | 1 | — | —",
+      "AI21 J1-Jumbo | 1.207 | 1 | 0.996 | 1.057",
+      "OPT-175B | 12.289 | 12 | 1.024 | 1.324",
+      "入力256・出力16、各10入力の平均。—は推定係数の登録がない項目。OPTのRaw列は12件バッチ全体。",
+      "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency\n[2] Stanford CRFM. BasicMetric.compute_efficiency_metrics / runtime estimator. HELM v0.3.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/metrics/basic_metrics.py"
+    ]
+  },
+  {
+    "page": 25,
+    "text": [
+      "davinci-003の時間は、条件ごとにばらつく",
+      "3. 三つの時間指標を読み解く",
+      "各点は保存された10入力の平均。上限64では実生成数も異なる。入力長だけを時間差の原因とする比較ではない。",
+      "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    ]
+  },
+  {
+    "page": 26,
+    "text": [
+      "同一条件でも、個々の応答時間は違う",
+      "davinci-003の入力256・出力16では、10入力の平均が2.019秒。個々の記録は0.681〜4.123秒に広がる。実例の作品の違いから時間差の原因を断定する集計ではない。\nRawにはAPIの混雑や通信なども関わる。Denoisedは複数回の最短時間を使う回帰、Idealizedは共通の計算基盤を使う推定で、問いに合わせて指標を選ぶ。",
+      "3. 三つの時間指標を読み解く",
+      "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency\n[2] Narayanan et al. (2023). Cheaply Estimating Inference Efficiency Metrics for Autoregressive Transformer Models. NeurIPS.\nhttps://papers.nips.cc/paper_files/paper/2023/hash/d1a14493e5f84d6c6129414f0cd1a7c6-Abstract-Conference.html"
+    ]
+  },
+  {
+    "page": 27,
+    "text": [
+      "保存キャッシュから、当時の測定を読む",
+      "今回の50件の公開requestは全てcached=true。新しくAPIへ送って測り直した値ではなく、以前の測定を再利用した記録である。\ndavinci-003とAI21の記録には2022年11〜12月の日時が残る。現時点のAPI速度や価格の順位としては扱わず、当時の測定条件と定義を確認する資料として使う。",
+      "3. 三つの時間指標を読み解く",
+      "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    ]
+  },
+  {
+    "page": 28,
+    "text": [
+      "成立の経緯と使い方",
+      "4. 成立の経緯と使い方"
+    ]
+  },
+  {
+    "page": 29,
+    "text": [
+      "2022年のHELMから、2023年の効率研究へ",
+      "HELMの2022年の初稿には、Synthetic efficiencyの設計・実装への貢献が記載される。その後、Narayananらは2023年に、推論の効率とモデル能力の比較を整理した。\n2023年の研究は、入力を処理する段階と、出力を順に生成する段階を分けて時間を近似する。APIの最適化とモデル自体の性質を区別するため、Idealized runtimeを導入した。",
+      "4. 成立の経緯と使い方",
+      "[1] Liang et al. (2022). Holistic Evaluation of Language Models. arXiv:2211.09110v1.  https://arxiv.org/abs/2211.09110v1\n[2] Narayanan et al. (2023). Cheaply Estimating Inference Efficiency Metrics for Autoregressive Transformer Models. NeurIPS.\nhttps://papers.nips.cc/paper_files/paper/2023/hash/d1a14493e5f84d6c6129414f0cd1a7c6-Abstract-Conference.html"
+    ]
+  },
+  {
+    "page": 30,
+    "text": [
+      "公開コード・記録・作品テキストを参照できる",
+      "HELMのシナリオは、入力長・トークナイザ・IDで指定した固定ファイルを読み込む。現在の原配布CodaLabは取得時に503となったが、公開実行には入力全文と生成出力が残る。\nHELMは素材をpublic domain sourcesと説明する。作品はProject Gutenbergの公開テキストとも照合した。現在の版と細部の違う箇所もあり、実例の原文はHELM保存入力を保持した。",
+      "4. 成立の経緯と使い方",
+      "[1] Stanford CRFM. SyntheticEfficiencyScenario. HELM v0.3.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/synthetic_efficiency_scenario.py\n[2] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    ]
+  },
+  {
+    "page": 31,
+    "text": [
+      "まとめ：入力・生成長と、時間の定義をそろえる",
+      "固定テキストから続きを生成し、長さ条件を変えた推論時間を記録する。固定版は39モデル×35条件、各10入力で構成される。\nRawは実行方式に依存し、OPTの記録はバッチ全体の秒数。DenoisedとIdealizedは異なる仮定の推定である。実生成数と係数の有無も確かめて、公開値を読み取る。",
+      "4. 成立の経緯と使い方",
+      "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency\n[2] Stanford CRFM. BasicMetric.compute_efficiency_metrics / runtime estimator. HELM v0.3.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/metrics/basic_metrics.py"
+    ]
+  },
+  {
+    "page": 32,
+    "text": [
+      "Appendix",
+      "Appendix"
+    ]
+  },
+  {
+    "page": 33,
+    "text": [
+      "",
+      "残り7入力の全文と訳\n測定値・推定式・配布の補足\n参考文献",
+      "Appendix: 目次"
+    ]
+  },
+  {
+    "page": 34,
+    "text": [
+      "実例4：ベネット夫妻の紹介をめぐる会話",
+      "Appendix: 1. 残り7入力の全文と訳",
+      "原入力全文：段落を保ち、折返し・空行を整形",
+      "the advantage of your friend, and introduce Mr. Bingley to _her_.”\n“Impossible, Mr. Bennet, impossible, when I am not acquainted with him myself; how can you be so teasing?”\n“I honour your circumspection. A fortnight’s acquaintance is certainly very little. One cannot know what a man really is by the end of a fortnight. But if _we_ do not venture somebody else will; and after all, Mrs. Long and her nieces must stand their chance; and, therefore, as she will think it an act of kindness, if you decline the office, I will take it on myself.”\nThe girls stared at their father. Mrs. Bennet said only, “Nonsense, nonsense!”\n“What can be the meaning of that emphatic exclamation?” cried he.",
+      "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。 Jane Austen. Pride and Prejudice. Project Gutenberg eBook1342、2026-10-18取得。 id1 / 256→上限16\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    ]
+  },
+  {
+    "page": 35,
+    "text": [
+      "実例4：ベネット夫妻の紹介をめぐる会話（訳）",
+      "Appendix: 1. 残り7入力の全文と訳",
+      "原入力に対応する日本語訳。途中から始まり、途中で終わる断片。",
+      "お友達のために、ビングリー氏をあの方にご紹介なさっては。」\n「無理ですわ、ベネットさん、無理ですよ。私自身、面識がないのですから。どうしてそんなにからかうの？」\n「その慎重さには敬服するよ。知り合って二週間というのは、確かにごく短い。二週間たっただけでは、その人の本当の人柄は分からないからね。だが、私たちが思い切ってやらなければ、誰かほかの人がやるだろう。それに、ロング夫人と姪御さんたちにも、好機をつかむ余地はあってよい。だから結局、あの方には親切なことと思われるだろうし、君がその役を辞退するなら、私が引き受けよう。」\n娘たちは父親をまじまじと見た。ベネット夫人はただ、\n「ばかばかしい、ばかばかしい！」と言った。\n「その力強い叫びは、どういう意味だろうね？」と彼は声を上げた。",
+      "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。 Jane Austen. Pride and Prejudice. Project Gutenberg eBook1342、2026-10-18取得。 id1 / 256→上限16\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    ]
+  },
+  {
+    "page": 36,
+    "text": [
+      "実例5：エルバ島で皇帝に会ったダンテス",
+      "Appendix: 1. 残り7入力の全文と訳",
+      "原入力全文：段落を保ち、折返し・空行を整形",
+      "was Policar Morrel, my uncle, who was afterwards a captain. Dantès, you must tell my uncle that the emperor remembered him, and you will see it will bring tears into the old soldier’s eyes. Come, come,” continued he, patting Edmond’s shoulder kindly, “you did very right, Dantès, to follow Captain Leclere’s instructions, and touch at Elba, although if it were known that you had conveyed a packet to the marshal, and had conversed with the emperor, it might bring you into trouble.”\n0027m\n“How could that bring me into trouble, sir?” asked Dantès; “for I did not even know of what I was the bearer; and the emperor merely made such inquiries as he would of the first comer. But, pardon me, here are the health officers and the customs inspectors coming alongside.” And the young man went to the gangway. As he departed, Danglars approached, and said,—\n“Well, it appears that",
+      "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。 Alexandre Dumas. The Count of Monte Cristo. Project Gutenberg eBook1184、2026-10-18取得。 id3 / 256→上限16\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    ]
+  },
+  {
+    "page": 37,
+    "text": [
+      "実例5：エルバ島で皇帝に会ったダンテス（訳）",
+      "Appendix: 1. 残り7入力の全文と訳",
+      "原入力に対応する日本語訳。途中から始まり、途中で終わる断片。",
+      "それはポリカール・モレル、私の叔父で、後に大尉になった者だ。ダンテス、皇帝が覚えていらしたと、叔父に必ず伝えてくれ。あの老兵の目には涙が浮かぶだろう。さあさあ」と彼は続け、親しげにエドモンの肩をたたいた。「ルクレール船長の指示に従い、エルバ島に立ち寄ったのは大変よかった。もっとも、元帥に小包を届け、皇帝と話したと知れれば、面倒に巻き込まれるかもしれないがね。」\n0027m\n「どうして面倒になるのでしょう、旦那？」とダンテスは尋ねた。「私は何を運んでいたのかさえ知らず、皇帝も、初めて来た者にするような質問をなさっただけです。ですが、失礼します。検疫官と税関の検査官たちが、船のそばに来ています。」若者は舷門へ向かった。彼が離れると、ダングラールが近寄って言った。\n「さて、どうやら、」",
+      "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。 Alexandre Dumas. The Count of Monte Cristo. Project Gutenberg eBook1184、2026-10-18取得。 id3 / 256→上限16\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    ]
+  },
+  {
+    "page": 38,
+    "text": [
+      "実例6：ケーキを食べた後のアリス",
+      "Appendix: 1. 残り7入力の全文と訳",
+      "原入力全文：段落を保ち、折返し・空行を整形",
+      "door; so either way I’ll get into the garden, and I don’t care which happens!”\nShe ate a little bit, and said anxiously to herself, “Which way? Which way?”, holding her hand on the top of her head to feel which way it was growing, and she was quite surprised to find that she remained the same size: to be sure, this generally happens when one eats cake, but Alice had got so much into the way of expecting nothing but out-of-the-way things to happen, that it seemed quite dull and stupid for life to go on in the common way.\nSo she set to work, and very soon finished off the cake.\n* * * * * * *\n* * * * * *\n* * * *",
+      "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。 Lewis Carroll. Alice’s Adventures in Wonderland. Project Gutenberg eBook11、2026-10-18取得。 id5 / 256→上限16\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    ]
+  },
+  {
+    "page": 39,
+    "text": [
+      "実例6：ケーキを食べた後のアリス（訳）",
+      "Appendix: 1. 残り7入力の全文と訳",
+      "原入力に対応する日本語訳。途中から始まり、途中で終わる断片。",
+      "扉。どちらになっても庭に入れるんだから、どうなったって構わないわ！」\n少し食べて、「どっち？ どっち？」と心配そうに言いながら、どちらへ伸びるか確かめようと、頭のてっぺんに手を当てた。ところが、大きさが変わらないので、ひどく驚いた。もちろん、ケーキを食べれば普通はそうなるのだが、アリスは何でも途方もないことが起きるのに慣れきっていたので、物事が当たり前のまま進むのは、まるで退屈でつまらなく思えた。\nそこで食べることに取りかかり、すぐにケーキをすっかり平らげた。\n＊　＊　＊　＊　＊　＊　＊\n　＊　＊　＊　＊　＊　＊\n＊　＊　＊　＊",
+      "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。 Lewis Carroll. Alice’s Adventures in Wonderland. Project Gutenberg eBook11、2026-10-18取得。 id5 / 256→上限16\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    ]
+  },
+  {
+    "page": 40,
+    "text": [
+      "実例7：メアリーへの問いから、訪問の告白へ",
+      "Appendix: 1. 残り7入力の全文と訳",
+      "原入力全文：段落を保ち、折返し・空行を整形",
+      "“Do you consider the forms of introduction, and the stress that is laid on them, as nonsense? I cannot quite agree with you _there_. What say you, Mary? for you are a young lady of deep reflection, I know, and read great books and make extracts.”\nMary wished to say something very sensible, but knew not how.\n“While Mary is adjusting her ideas,” he continued, “let us return to Mr. Bingley.”\n“I am sick of Mr. Bingley,” cried his wife.\n“I am sorry to hear _that_; but why did not you tell me so before? If I had known as much this morning, I certainly would not have called on him. It is very unlucky; but as I have actually paid the visit, we cannot escape the acquaintance now.”\nThe",
+      "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。 Jane Austen. Pride and Prejudice. Project Gutenberg eBook1342、2026-10-18取得。 id6 / 256→上限16\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    ]
+  },
+  {
+    "page": 41,
+    "text": [
+      "実例7：メアリーへの問いから、訪問の告白へ（訳）",
+      "Appendix: 1. 残り7入力の全文と訳",
+      "原入力に対応する日本語訳。途中から始まり、途中で終わる断片。",
+      "「紹介の作法や、それに置かれる重きを、ばかばかしいと思うのかい？ そこは、まったく賛成できないね。メアリー、お前はどう思う？ お前は深く物を考える若い女性で、難しい本を読んで抜き書きもすると知っているよ。」\nメアリーは大変気の利いたことを言いたかったが、どう言えばよいか分からなかった。\n「メアリーが考えを整理している間に」と彼は続けた。「ビングリー氏の話へ戻ろう。」\n「あの人の話はもううんざり」と妻が叫んだ。\n「それは残念だ。でも、どうしてもっと早く言ってくれなかったんだい？ 朝のうちに分かっていれば、絶対に訪問しなかったのに。実に不運だが、実際にもう訪ねてしまった以上、今さら知り合いになることから逃れられないね。」\nその、",
+      "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。 Jane Austen. Pride and Prejudice. Project Gutenberg eBook1342、2026-10-18取得。 id6 / 256→上限16\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    ]
+  },
+  {
+    "page": 42,
+    "text": [
+      "実例8：ボヘミアの貴族が秘密を求める",
+      "Appendix: 1. 残り7入力の全文と訳",
+      "原入力全文：段落を保ち、折返し・空行を整形",
+      "said Holmes. “This is my friend and colleague, Dr. Watson, who is occasionally good enough to help me in my cases. Whom have I the honour to address?”\n“You may address me as the Count Von Kramm, a Bohemian nobleman. I understand that this gentleman, your friend, is a man of honour and discretion, whom I may trust with a matter of the most extreme importance. If not, I should much prefer to communicate with you alone.”\nI rose to go, but Holmes caught me by the wrist and pushed me back into my chair. “It is both, or none,” said he. “You may say before this gentleman anything which you may say to me.”\nThe Count shrugged his broad shoulders. “Then I must begin,” said he, “by binding you both to absolute secrecy for two years; at the end of that time the matter will be of no importance. At present it is not too much to say that it is of such weight it may have an influence upon European history.”\n“",
+      "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。 Arthur Conan Doyle. The Adventures of Sherlock Holmes. Project Gutenberg eBook1661、2026-10-18取得。 id7 / 256→上限16\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    ]
+  },
+  {
+    "page": 43,
+    "text": [
+      "実例8：ボヘミアの貴族が秘密を求める（訳）",
+      "Appendix: 1. 残り7入力の全文と訳",
+      "原入力に対応する日本語訳。途中から始まり、途中で終わる断片。",
+      "とホームズが言った。「こちらは友人で仕事仲間のワトソン博士です。ときどき親切にも、私の事件を手伝ってくれます。どなたとお呼びすればよいでしょう？」\n「ボヘミアの貴族、フォン・クラム伯爵と呼んでもらおう。この方は君の友人で、誠実で分別のある人と聞いている。きわめて重大な件も託せるだろう。そうでなければ、君だけにお話ししたい。」\n私は席を立とうとしたが、ホームズは手首をつかみ、椅子へ押し戻した。「二人に話すか、どちらにも話さないかです」と彼は言った。「私に言えることは、この人の前でもお話しになれます。」\n伯爵は広い肩をすくめた。「では、まずお二人に、二年間は絶対に秘密にすると約束していただきたい。その後には、重要でなくなる話だ。今のところは、ヨーロッパの歴史を左右しかねないほどの重みがあると言っても、言い過ぎではない。」\n「",
+      "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。 Arthur Conan Doyle. The Adventures of Sherlock Holmes. Project Gutenberg eBook1661、2026-10-18取得。 id7 / 256→上限16\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    ]
+  },
+  {
+    "page": 44,
+    "text": [
+      "実例9：船主とダングラールが小包を話題にする",
+      "Appendix: 1. 残り7入力の全文と訳",
+      "原入力全文：段落を保ち、折返し・空行を整形",
+      "he has given you satisfactory reasons for his landing at Porto-Ferrajo?”\n“Yes, most satisfactory, my dear Danglars.”\n“Well, so much the better,” said the supercargo; “for it is not pleasant to think that a comrade has not done his duty.”\n“Dantès has done his,” replied the owner, “and that is not saying much. It was Captain Leclere who gave orders for this delay.”\n“Talking of Captain Leclere, has not Dantès given you a letter from him?”\n“To me?—no—was there one?”\n“I believe that, besides the packet, Captain Leclere confided a letter to his care.”\n“Of what packet are you speaking, Danglars?”\n“Why, that which Dantès left at Porto-Ferrajo.”\n“How do you know he had a packet to leave at Porto-Ferra",
+      "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。 Alexandre Dumas. The Count of Monte Cristo. Project Gutenberg eBook1184、2026-10-18取得。 id8 / 256→上限16\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    ]
+  },
+  {
+    "page": 45,
+    "text": [
+      "実例9：船主とダングラールが小包を話題にする（訳）",
+      "Appendix: 1. 残り7入力の全文と訳",
+      "原入力に対応する日本語訳。途中から始まり、途中で終わる断片。",
+      "彼はポルト・フェラーヨに上陸した理由を、納得のいくように説明したのですか？」\n「ああ、十分納得したよ、ダングラール君。」\n「それなら結構です」と船荷監督は言った。「仲間が務めを果たさなかったと思うのは、気持ちのよいことではありませんから。」\n「ダンテスは務めを果たした」と船主は答えた。「それだけのことだ。寄港を命じたのはルクレール船長だったのだ。」\n「ルクレール船長と言えば、ダンテスは船長からの手紙をお渡ししませんでしたか？」\n「私に？ いや。手紙があったのか？」\n「小包とは別に、船長が手紙を彼に託したと思います。」\n「何の小包の話だ、ダングラール？」\n「ダンテスがポルト・フェラーヨに置いてきた、あの小包です。」\n「どうして、彼がポルト・フェラー…",
+      "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。 Alexandre Dumas. The Count of Monte Cristo. Project Gutenberg eBook1184、2026-10-18取得。 id8 / 256→上限16\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    ]
+  },
+  {
+    "page": 46,
+    "text": [
+      "実例10：ラスコーリニコフを迎え入れる老女",
+      "Appendix: 1. 残り7入力の全文と訳",
+      "原入力全文：段落を保ち、折返し・空行を整形",
+      "the old woman eyed her visitor with evident distrust through the crack, and nothing could be seen but her little eyes, glittering in the darkness. But, seeing a number of people on the landing, she grew bolder, and opened the door wide. The young man stepped into the dark entry, which was partitioned off from the tiny kitchen. The old woman stood facing him in silence and looking inquiringly at him. She was a diminutive, withered up old woman of sixty, with sharp malignant eyes and a sharp little nose. Her colourless, somewhat grizzled hair was thickly smeared with oil, and she wore no kerchief over it. Round her thin long neck, which looked like a hen’s leg, was knotted some sort of flannel rag, and, in spite of the heat, there hung flapping on her shoulders, a mangy fur cape, yellow with age. The old woman coughed and groaned at every instant. The young man must have looked at her with a rather peculiar expression, for a gleam of mistrust came into her eyes again.\n“Raskolnikov, a student, I",
+      "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。 Fyodor Dostoyevsky / Constance Garnett訳. Crime and Punishment. Project Gutenberg eBook2554、2026-10-18取得。 id9 / 256→上限16\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    ]
+  },
+  {
+    "page": 47,
+    "text": [
+      "実例10：ラスコーリニコフを迎え入れる老女（訳）",
+      "Appendix: 1. 残り7入力の全文と訳",
+      "原入力に対応する日本語訳。途中から始まり、途中で終わる断片。",
+      "老女は扉の隙間から、いかにも疑わしそうに客を見た。暗がりで光る小さな目以外は、何も見えなかった。だが踊り場に人が何人もいるのを見ると、安心して扉を大きく開けた。若者は暗い玄関へ入った。小さな台所とは仕切られていた。老女は黙って彼に向き合い、問いかけるような目で見た。六十歳の、小さくしなびた老婆で、意地の悪そうな鋭い目と、尖った小さな鼻をしていた。色あせて、いくらか白髪の交じった髪には油がたっぷり塗られ、頭巾はかぶっていなかった。雌鶏の足のように細長い首にはフランネルらしいぼろ布が結ばれ、暑いのに、年を経て黄色くなった、毛の抜けた毛皮の肩掛けが肩でひらひらしていた。老女はしきりに咳をし、うめいた。若者は、いくぶん変わった表情で彼女を見ていたに違いない。その目に再び疑いの光が浮かんだからだ。\n「学生のラスコーリニコフです。私は、",
+      "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。 Fyodor Dostoyevsky / Constance Garnett訳. Crime and Punishment. Project Gutenberg eBook2554、2026-10-18取得。 id9 / 256→上限16\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    ]
+  },
+  {
+    "page": 48,
+    "text": [
+      "実例4〜7：16tokensの生成出力",
+      "Appendix: 1. 残り7入力の全文と訳",
+      "実例 | 生成出力（空白・改行を整形） | 実測秒",
+      "4 | “Do you consider the forms of introduction, and the stress that | 1.993",
+      "5 | you have had a pleasant voyage, M. Morrel.” | 1.978",
+      "6 | Alice was now faced with a difficult decision. She had two options: | 2.754",
+      "7 | astonishment of the ladies was just what he wished; that of Mrs | 1.200",
+      "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    ]
+  },
+  {
+    "page": 49,
+    "text": [
+      "実例4〜7：生成出力の日本語訳",
+      "Appendix: 1. 残り7入力の全文と訳",
+      "実例 | 生成出力の訳（未完の断片も保持）",
+      "4 | 「紹介の作法や、それに置かれる重みを、",
+      "5 | 楽しい航海でしたね、モレルさん。」",
+      "6 | アリスは今、難しい決断を迫られていた。選択肢は二つあった：",
+      "7 | 女性たちの驚きこそ、まさに彼の望んだものだった。夫人のそれは、",
+      "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    ]
+  },
+  {
+    "page": 50,
+    "text": [
+      "実例8〜10：16tokensの生成出力",
+      "Appendix: 1. 残り7入力の全文と訳",
+      "実例 | 生成出力（空白・改行を整形） | 実測秒",
+      "8 | I promise,” said Holmes.\n“And I. | 2.788",
+      "9 | jo?”\n“He told me so himself.” | 1.500",
+      "10 | ’ve come to you,” the young man made haste to | 0.681",
+      "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    ]
+  },
+  {
+    "page": 51,
+    "text": [
+      "実例8〜10：生成出力の日本語訳",
+      "Appendix: 1. 残り7入力の全文と訳",
+      "実例 | 生成出力の訳（未完の断片も保持）",
+      "8 | 約束しましょう」とホームズは言った。\n「私も。",
+      "9 | ヨ？」\n「本人がそう言いました。」",
+      "10 | こちらへ伺いました」と、若者は急いで――",
+      "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    ]
+  },
+  {
+    "page": 52,
+    "text": [
+      "測定値・推定式・配布の補足",
+      "Appendix: 2. 測定値・推定式・配布の補足"
+    ]
+  },
+  {
+    "page": 53,
+    "text": [
+      "係数表から、実生成長を使って推定する",
+      "Appendix: 2. 測定値・推定式・配布の補足",
+      "T = P(n_input) + beta × (n_output − 1) + overhead\nP(n) = P(k) × n / k\n# k: n以上で最小の登録入力長\n# 登録長より長ければ、最大の登録長から比例拡張",
+      "出力0tokensでは生成部分を加えない。HELM固定v0.3.0の実装。共通基盤の係数表と、API用の係数表を使い分ける。",
+      "[1] Stanford CRFM. BasicMetric.compute_efficiency_metrics / runtime estimator. HELM v0.3.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/metrics/basic_metrics.py"
+    ]
+  },
+  {
+    "page": 54,
+    "text": [
+      "入力256・出力16の推定を再現する",
+      "Appendix: 2. 測定値・推定式・配布の補足",
+      "対象 | 係数・計算 | 推定秒",
+      "AI21 Denoised | 0.109 + 0.042×15 + 0.257 | 0.996",
+      "AI21 Idealized | 0.097 + 0.064×15 | 1.057",
+      "OPT Idealized | 0.109 + 0.081×15 | 1.324",
+      "OPTのDenoisedは係数式を上書きし、保存バッチ時間を12で割る。davinci-003の推定係数はこの登録表にない。",
+      "[1] Stanford CRFM. BasicMetric.compute_efficiency_metrics / runtime estimator. HELM v0.3.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/metrics/basic_metrics.py"
+    ]
+  },
+  {
+    "page": 55,
+    "text": [
+      "davinci-003：9条件のRaw平均",
+      "Appendix: 2. 測定値・推定式・配布の補足",
+      "入力tokens | 出力上限1 | 出力上限16 | 出力上限64",
+      "1 | 0.610 | 1.625 | 4.045",
+      "256 | 0.863 | 2.019 | 2.949",
+      "1024 | 0.907 | 1.660 | 2.986",
+      "単位は秒、各条件10入力の平均。API記録の応答時間。",
+      "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    ]
+  },
+  {
+    "page": 56,
+    "text": [
+      "AI21 J1-Jumbo：9条件のRaw平均",
+      "Appendix: 2. 測定値・推定式・配布の補足",
+      "入力tokens | 出力上限1 | 出力上限16 | 出力上限64",
+      "1 | 0.382 | 0.929 | 3.053",
+      "256 | 0.436 | 1.207 | 4.017",
+      "1024 | 1.358 | 1.951 | 4.413",
+      "単位は秒、各条件10入力の平均。API記録の応答時間。",
+      "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    ]
+  },
+  {
+    "page": 57,
+    "text": [
+      "OPT-175B：9条件のRaw平均",
+      "Appendix: 2. 測定値・推定式・配布の補足",
+      "入力tokens | 出力上限1 | 出力上限16 | 出力上限64",
+      "1 | 9.650 | 14.525 | 27.616",
+      "256 | 6.991 | 12.289 | 26.272",
+      "1024 | 8.128 | 11.899 | 30.626",
+      "単位は秒、各条件10入力の平均。OPTは12件バッチ全体の時間。",
+      "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    ]
+  },
+  {
+    "page": 58,
+    "text": [
+      "確認できた10入力を全て例示した",
+      "公式設定は1条件10入力で、保存記録のid0〜id9を全て掲載した。出所は5作品の各2断片。トークン長を変えた同じ箇所を、独立した追加例として増やしていない。\n原配布と追加ID10の取得は503だった。10例の原入力全文・日本語訳・原記録・SHA-256を保存し、入力長1や1,024の記録は条件比較の根拠として分けて保存した。",
+      "Appendix: 2. 測定値・推定式・配布の補足",
+      "[1] Stanford CRFM. SyntheticEfficiencyScenario. HELM v0.3.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/synthetic_efficiency_scenario.py\n[2] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    ]
+  },
+  {
+    "page": 59,
+    "text": [
+      "生成コードの30件と、公開runの10件",
+      "生成コードの既定呼出しは、1長さにつき30件を作る。各作品を半角スペースで分割して先頭2,048要素を飛ばし、5作品を巡って連続領域を順に切り出す。復号後の再計数で、足りなければ末尾トークンを補うなどして長さを調整する。\n一方、公開run specはnum_instances=10で、id0〜id9を評価する。現在の原配布は503で、生成済みファイル全体の構成を直接確認できていない。",
+      "Appendix: 2. 測定値・推定式・配布の補足",
+      "[1] Stanford CRFM. Generate synthetic efficiency instances. HELM v0.3.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/scripts/efficiency/generate_instances.py"
+    ]
+  },
+  {
+    "page": 60,
+    "text": [
+      "Gutenbergの現在の版との照合範囲",
+      "各入力の冒頭・末尾を、作品ごとのProject Gutenbergテキストで照合した。8断片は空白を整えると全文が一致する。高慢と偏見の2断片には句読点や語順などの版差がある。\n原入力の0027m、強調用のアンダースコア、途中で切れた語も保持した。日本語訳は本資料で作成し、既存の日本語翻訳は引用していない。",
+      "Appendix: 2. 測定値・推定式・配布の補足",
+      "[1] Stanford CRFM. HELM Classic v0.4.0, Synthetic efficiency. 2023-11-17固定版、2026-10-18参照。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency"
+    ]
+  },
+  {
+    "page": 61,
+    "text": [
+      "参考文献",
+      "Appendix: 3. 参考文献"
+    ]
+  },
+  {
+    "page": 62,
+    "text": [
+      "参考文献",
+      "Appendix: 3. 参考文献",
+      "Holistic Evaluation of Language Models\nPercy Liang et al. · 2022 · arXiv:2211.09110v1\n広範な課題と指標を評価するHELMを設計し、Synthetic efficiencyも実装した。\nhttps://arxiv.org/abs/2211.09110v1",
+      "Cheaply Estimating Inference Efficiency Metrics for Autoregressive Transformer Models\nDeepak Narayanan, Keshav Santhanam, Peter Henderson, Rishi Bommasani, Tony Lee, Percy Liang · 2023 · NeurIPS\n入力処理と自己回帰生成を分けたコストモデルを用い、共通基盤やAPIの変動を考慮する時間指標を提案する。\nhttps://papers.nips.cc/paper_files/paper/2023/hash/d1a14493e5f84d6c6129414f0cd1a7c6-Abstract-Conference.html"
+    ]
+  },
+  {
+    "page": 63,
+    "text": [
+      "参考文献",
+      "Appendix: 3. 参考文献",
+      "HELM Classic — Synthetic efficiency\nStanford CRFM · v0.4.0（2023-11-17）· 2026-10-18参照\n固定版の条件別成績、モデルへの実request、入力、生成出力、時間情報を保存する。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/synthetic_efficiency",
+      "SyntheticEfficiencyScenario / BasicMetric\nStanford CRFM · HELM v0.3.0 · Python実装\nトークン長別の固定入力の読込と、バッチ時間・係数表からの時間指標の計算を実装する。\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/synthetic_efficiency_scenario.py"
+    ]
+  },
+  {
+    "page": 64,
+    "text": [
+      "参考文献",
+      "Appendix: 3. 参考文献",
+      "helm-efficiency\nDeepak Narayanan et al. · NeurIPS2023公式コード · commit c31b8fcc2b990b629173d7c898f1cdfae929c9a4\nMegatronによるプロファイル、回帰、係数表、効率と能力の分析ノートブックを公開する。\nhttps://github.com/stanford-crfm/helm-efficiency",
+      "Alice’s Adventures in Wonderland\nLewis Carroll · Project Gutenberg eBook11（電子版公開2008）\nアリスが小さくなり、ガラス箱のケーキを食べる場面の英語本文を含む。\nhttps://www.gutenberg.org/ebooks/11"
+    ]
+  },
+  {
+    "page": 65,
+    "text": [
+      "参考文献",
+      "Appendix: 3. 参考文献",
+      "Pride and Prejudice\nJane Austen · Project Gutenberg eBook1342（電子版公開1998）\nベネット夫妻と娘たちが、ビングリー氏への紹介と訪問について話す英語本文を含む。\nhttps://www.gutenberg.org/ebooks/1342",
+      "The Adventures of Sherlock Holmes\nArthur Conan Doyle · Project Gutenberg eBook1661（電子版公開1999）\nA Scandal in Bohemiaなどの短編を収録し、仮面の客がホームズを訪れる場面を含む。\nhttps://www.gutenberg.org/ebooks/1661"
+    ]
+  },
+  {
+    "page": 66,
+    "text": [
+      "参考文献",
+      "Appendix: 3. 参考文献",
+      "The Count of Monte Cristo\nAlexandre Dumas · Project Gutenberg eBook1184（英語電子版公開1998）\n航海から戻ったダンテスとモレル、ダングラールの会話を含む英語本文を公開する。\nhttps://www.gutenberg.org/ebooks/1184",
+      "Crime and Punishment\nFyodor Dostoyevsky · Constance Garnett英訳 · Project Gutenberg eBook2554（電子版公開2006）\nラスコーリニコフが老女の住居を訪れる場面を含む英語翻訳を公開する。\nhttps://www.gutenberg.org/ebooks/2554"
+    ]
+  }
+]
