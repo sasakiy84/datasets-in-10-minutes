@@ -3,12 +3,13 @@
   "created_at": "2026-10-18T11:14:34Z",
   "review_mode": "skill_based_codex",
   "gemini_used": false,
-  "main_pages": 29,
-  "total_pages": 60,
+  "main_pages": 27,
+  "total_pages": 50,
   "self_visual_review": {
-    "visual-inspection.json": {
-      "method": "actual individual view_image of rendered PNGs",
-      "individually_viewed_pages": [
+    "visual-review.json": {
+      "method": "skill_based_codex",
+      "gemini_used": false,
+      "baseline_native_pages_read": [
         1,
         2,
         3,
@@ -70,105 +71,224 @@
         59,
         60
       ],
-      "overview_viewed": true,
-      "official_screen_viewed": true,
-      "coexist_probes_individually_viewed_examples": [
-        2,
-        3
-      ],
-      "all13_final_coexist_example_pages_individually_viewed": true,
-      "final_changed_pages_individually_rechecked": [
+      "individual_final_render_views": [
         1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
         16,
+        17,
+        18,
         19,
+        20,
         21,
         22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
         35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50
+      ],
+      "final_changed_page_rechecks": [
+        1,
+        10,
+        15,
+        20,
+        21,
+        22,
+        27,
+        41,
+        43,
         44,
         45
       ],
-      "intermediate_p45_rechecked_then_shortened_again": true,
-      "all_important_pages_individually_viewed": true,
-      "panel_frames": 28,
-      "visible_top_padding_pt": [
-        7.333333333333333,
-        8.0
+      "observations": [
+        "13独立文書の原文・参照訳・各JP全文を原データと読み比べ、原例の意味を保持した。",
+        "5数値表全セルとchart4値を不変baselineと一致確認、説明表は読者向けに整理。",
+        "全50頁の原文/JP/表/chart/code/参考文献を個別view。本文の少数字行は許容。",
+        "コード2本をnative本文から実行。文書IDで原文1区間を取得し、SacreBLEU2.5.1のzhスコア36.85247953081421を再確認。",
+        "最終coverのnative frame高を拡張、文字位置を保持。native-frame355段落75セル0、layout316段落65セル0。"
       ],
-      "visible_bottom_padding_pt": [
-        6.666666666666667,
-        8.0
-      ],
-      "max_top_bottom_difference_pt": 0.666666666666667,
-      "unchanged_other_pages": 52,
-      "result": "passed",
-      "reviewed_at": "2026-10-18T10:53:58.570638+00:00"
+      "remaining_issues": [],
+      "final_hashes": {
+        "datasets-in-10-minutes-wmt2020-enzh.pdf": "c939784d8b37122ffc0aeabe3876a72b115cb66889631ff44d5358ac65421882",
+        "datasets-in-10-minutes-wmt2020-enzh.pptx": "46f867ac4972220b85a081693f7e10d8fd6dfe18614ffbf42b2a21d0f93f5261"
+      }
     }
   },
-  "updated_at": "2026-10-18T11:14:34Z",
+  "updated_at": "2026-10-19T07:47:28+00:00",
   "artifact_sha256": {
-    "pdf": "4605132b59b2b6c767056f01243a69363fb230c070e1bd1fdf1c31d78f2ada08",
-    "pptx": "2830f1327b68d91a709043ab16c9f8705f1b9271b1be233156b2fb1150a0bcb3"
+    "pptx": "46f867ac4972220b85a081693f7e10d8fd6dfe18614ffbf42b2a21d0f93f5261",
+    "pdf": "c939784d8b37122ffc0aeabe3876a72b115cb66889631ff44d5358ac65421882"
   },
   "checks": {
-    "layout": {
-      "paragraphs_checked": 384,
-      "table_cells_checked": 130,
+    "layout-audit.json": {
+      "paragraphs_checked": 316,
+      "table_cells_checked": 65,
       "issues": []
     },
-    "package": {
-      "parsed_xml_parts": 155,
-      "integer_bullets": 136,
-      "hyperlinks": 67,
+    "package-audit.json": {
+      "parsed_xml_parts": 135,
+      "integer_bullets": 120,
+      "hyperlinks": 51,
       "new_schema_errors": [],
       "baseline_schema_errors": 11,
       "package_integrity": "passed",
       "internal_relationship_targets": "passed",
       "unique_shape_ids": "passed",
       "schema_note": "標準XSDを変更せず確認。マスター由来の既存エラーと、整数buSzPctの百分率字句形式との差を分離。整数箇条書きサイズは25000–400000で別途検査。",
-      "pages": 60,
-      "native_tables": 12,
+      "pages": 50,
+      "native_tables": 6,
       "native_charts": 1
     },
-    "text": {
-      "total_pages": 60,
-      "main_pages": 29,
-      "examples": 13,
-      "independent_documents": 13,
-      "main_examples": 3,
-      "appendix_examples": 10,
-      "direction_counts": {
-        "enzh": 7,
-        "zhen": 6
-      },
-      "native_quote_frames": 26,
-      "native_code_frames": 2,
-      "native_tables": 12,
-      "native_charts": 1,
-      "native_diagrams": 0,
-      "notes": 0,
-      "all_native_source_reference_full": true,
-      "all_native_japanese_full": true,
-      "body_font_pt": 15,
-      "reference_heading_font_pt": 21.5,
-      "proofreading_pages": 60,
-      "actual_proofreading_pairs": 15,
-      "new_model_generation": 0
-    },
-    "links": {
-      "native_url_only_runs": 67,
-      "pdf_link_rectangles": 67,
+    "links-audit.json": {
+      "native_url_only_runs": 51,
+      "pdf_link_rectangles": 51,
       "pdf_link_text_exactly_matches_url": true,
       "pdf_link_character_centers_match_url": true,
       "glyph_box_overhangs": [],
       "shortened_url_labels": [],
       "issues": []
+    },
+    "content-checks.json": {
+      "examples": [
+        {
+          "old_page": 6,
+          "new_page": 6,
+          "full_source_reference_japanese": "exact native strings"
+        },
+        {
+          "old_page": 8,
+          "new_page": 8,
+          "full_source_reference_japanese": "exact native strings"
+        },
+        {
+          "old_page": 9,
+          "new_page": 9,
+          "full_source_reference_japanese": "exact native strings"
+        },
+        {
+          "old_page": 33,
+          "new_page": 31,
+          "full_source_reference_japanese": "exact native strings"
+        },
+        {
+          "old_page": 34,
+          "new_page": 32,
+          "full_source_reference_japanese": "exact native strings"
+        },
+        {
+          "old_page": 35,
+          "new_page": 33,
+          "full_source_reference_japanese": "exact native strings"
+        },
+        {
+          "old_page": 36,
+          "new_page": 34,
+          "full_source_reference_japanese": "exact native strings"
+        },
+        {
+          "old_page": 37,
+          "new_page": 35,
+          "full_source_reference_japanese": "exact native strings"
+        },
+        {
+          "old_page": 38,
+          "new_page": 36,
+          "full_source_reference_japanese": "exact native strings"
+        },
+        {
+          "old_page": 39,
+          "new_page": 37,
+          "full_source_reference_japanese": "exact native strings"
+        },
+        {
+          "old_page": 40,
+          "new_page": 38,
+          "full_source_reference_japanese": "exact native strings"
+        },
+        {
+          "old_page": 41,
+          "new_page": 39,
+          "full_source_reference_japanese": "exact native strings"
+        },
+        {
+          "old_page": 42,
+          "new_page": 40,
+          "full_source_reference_japanese": "exact native strings"
+        }
+      ],
+      "numeric_tables_exact": 5,
+      "chart_series_exact": true,
+      "code_blocks_executed": 2,
+      "final_hashes": {
+        "datasets-in-10-minutes-wmt2020-enzh.pdf": "c939784d8b37122ffc0aeabe3876a72b115cb66889631ff44d5358ac65421882",
+        "datasets-in-10-minutes-wmt2020-enzh.pptx": "46f867ac4972220b85a081693f7e10d8fd6dfe18614ffbf42b2a21d0f93f5261"
+      }
     }
   },
   "audit_sources": {
-    "layout": "creator/layout-audit.json",
-    "links": "creator/links-audit.json",
-    "package": "creator/package-audit.json",
-    "text": "creator/text-audit.json"
+    "layout-audit.json": "editorial-2026-10/layout-audit.json",
+    "package-audit.json": "editorial-2026-10/package-audit.json",
+    "links-audit.json": "editorial-2026-10/links-audit.json",
+    "content-checks.json": "editorial-2026-10/content-checks.json"
   },
-  "independent_review": "independent-review/"
+  "independent_review": "editorial-2026-10/independent-review/",
+  "editorial_revisions": [
+    {
+      "checked_at": "2026-10-19T07:47:28+00:00",
+      "method": "skill_based_codex",
+      "gemini_used": false,
+      "baseline_artifact_sha256": {
+        "pptx": "2830f1327b68d91a709043ab16c9f8705f1b9271b1be233156b2fb1150a0bcb3",
+        "pdf": "4605132b59b2b6c767056f01243a69363fb230c070e1bd1fdf1c31d78f2ada08"
+      },
+      "artifact_sha256": {
+        "pptx": "46f867ac4972220b85a081693f7e10d8fd6dfe18614ffbf42b2a21d0f93f5261",
+        "pdf": "c939784d8b37122ffc0aeabe3876a72b115cb66889631ff44d5358ac65421882"
+      },
+      "previous_pages": 60,
+      "total_pages": 50,
+      "main_pages": 27,
+      "record_directory": "editorial-2026-10/",
+      "independent_review": "editorial-2026-10/independent-review/",
+      "main_check": "editorial-2026-10/main-review.json"
+    }
+  ],
+  "current_revision": "editorial-2026-10/",
+  "previous_review_record": "editorial-2026-10/previous/review.json"
 }

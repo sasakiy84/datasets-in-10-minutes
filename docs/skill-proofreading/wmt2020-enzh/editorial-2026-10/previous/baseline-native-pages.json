@@ -1,0 +1,637 @@
+[
+  {
+    "page": 1,
+    "text": [
+      "WMT2020（英中）",
+      "News Translation Task\nnewstest2020: English to/from Chinese\nニュースの原入力と参照訳で、英中の翻訳を評価する",
+      "sasakiy84",
+      "datasets in 10 minutes (2026-10-18)"
+    ]
+  },
+  {
+    "page": 2,
+    "text": [
+      "WMT20ニュース翻訳タスクの公式サイト",
+      "WMT2020",
+      "[1] WMT20. Shared Task: Machine Translation of News. Task, data and licensing.  https://www.statmt.org/wmt20/translation-task.html"
+    ]
+  },
+  {
+    "page": 3,
+    "text": [
+      "",
+      "原入力から、別の言語へ訳す\nニュース文書と参照訳の構成\nBLEUと、2020年の人手評価\nCLEVAでの採用と利用条件",
+      "目次"
+    ]
+  },
+  {
+    "page": 4,
+    "text": [
+      "原文の内容を、もう一つの言語へ",
+      "1. 原入力から、別の言語へ訳す"
+    ]
+  },
+  {
+    "page": 5,
+    "text": [
+      "英語から中国語、中国語から英語へ",
+      "WMT2020のニュース翻訳では、入力の内容を別の言語で表す。本資料は公開テストnewstest2020の英→中と中→英を扱う。\n入力と対応する参照訳が公開されている。参照訳は比較のための訳文であり、同じ内容を表す唯一の正解ではない。\n二つの翻訳方向は、それぞれ原言語の異なるニュース文書から作られた。同じ対を逆向きにして、独立した例を増やしていない。",
+      "1. 原入力から、別の言語へ訳す",
+      "[1] Barrault et al. (2020). Findings of the 2020 Conference on Machine Translation (WMT20). WMT, pp.1–55.  https://aclanthology.org/2020.wmt-1.1/\n[2] WMT20. Official test.tgz: newstest2020 / newstestB2020, English–Chinese.  https://data.statmt.org/wmt20/translation-task/test.tgz"
+    ]
+  },
+  {
+    "page": 6,
+    "text": [
+      "実例1：壁をめぐる非難と、拒否権の意向",
+      "1. 原入力から、別の言語へ訳す",
+      "英→中 / foxnews.100085 / seg 1 / 全体index 910",
+      "入力（英語）\nHouse rebukes Trump on border wall, but he plans veto\n参照訳（中国語）\n众议院在边境墙问题上指责特朗普，但他计划使用一票否决权",
+      "入力の日本語訳\n国境の壁をめぐり下院がトランプ氏を非難するが、同氏は拒否権を行使する意向だ。\n参照訳の日本語訳\n下院は国境の壁の問題でトランプ氏を非難するが、同氏は拒否権を使う予定だ。",
+      "[1] WMT20. newstest2020 / enzh / foxnews.100085 / seg 1.  https://data.statmt.org/wmt20/translation-task/test.tgz"
+    ]
+  },
+  {
+    "page": 7,
+    "text": [
+      "下院の非難と、拒否権行使の意向",
+      "Houseは下院、rebukesは非難。対立するbut節と、plansが示す意向を保つ。\n主節の非難と、but節の反対の動きを一つの見出しに保つ。plansは実行済みの拒否ではなく、行使する意向を表す。\nこの原入力と参照訳は、CLEVAの紙面例と一致する。ここでは、WMT2020の公開テストにある一つの区間として示した。",
+      "1. 原入力から、別の言語へ訳す",
+      "[1] WMT20. newstest2020 / enzh / foxnews.100085 / seg 1.  https://data.statmt.org/wmt20/translation-task/test.tgz\n[2] Li et al. (2023). CLEVA: Chinese Language Models EVAluation Platform. EMNLP System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/"
+    ]
+  },
+  {
+    "page": 8,
+    "text": [
+      "実例2：女性への抑圧に抗した人物を伝える",
+      "1. 原入力から、別の言語へ訳す",
+      "英→中 / en.ndtv.com.13041 / seg 8 / 全体index 1411",
+      "入力（英語）\nThis will help the present generation to know about the man, who had waged a war against women oppression and propagated widow remarriage, he said.\n参照訳（中国語）\n他说，这将有助于当代人了解这位名人，他发动了一场反对妇女压迫的战争，并鼓励寡妇再婚。",
+      "入力の日本語訳\n女性への抑圧と闘い、寡婦の再婚を推進したこの人物について、現代の人々が知る助けになる、と彼は述べた。\n参照訳の日本語訳\nこれは、女性への抑圧に反対する闘いを起こし、寡婦の再婚を奨励したこの著名人を、現代の人々が知る助けになる、と彼は述べた。",
+      "[1] WMT20. newstest2020 / enzh / en.ndtv.com.13041 / seg 8.  https://data.statmt.org/wmt20/translation-task/test.tgz"
+    ]
+  },
+  {
+    "page": 9,
+    "text": [
+      "実例3：固有名詞と、列挙された役職",
+      "1. 原入力から、別の言語へ訳す",
+      "中→英 / chinanews.com.102568 / seg 3 / 全体index 18",
+      "入力（中国語）\n中国驻柬大使馆外交官仲跻法、柬华理事总会代表、柬埔寨江西商会会长魏思钰等为获奖嘉宾颁奖。\n参照訳（英語）\nZhong Jifa, diplomat of the Chinese Embassy in Cambodia, and Wei Siyu, representative of the Cambodian Chinese Council and President of Jiangxi Chamber of Commerce in Cambodia, presented the awards to the winners.",
+      "入力の日本語訳\n中国駐カンボジア大使館の外交官・仲跻法、カンボジア華人理事総会の代表、カンボジア江西商会会長・魏思钰らが、受賞者に賞を贈った。\n参照訳の日本語訳\nカンボジアの中国大使館の外交官・仲跻法と、カンボジア華人理事総会代表兼カンボジア江西商会会長・魏思钰が、受賞者に賞を贈った。",
+      "[1] WMT20. newstest2020 / zhen / chinanews.com.102568 / seg 3.  https://data.statmt.org/wmt20/translation-task/test.tgz"
+    ]
+  },
+  {
+    "page": 10,
+    "text": [
+      "単語の対応と、文の役割を保つ",
+      "長い関係節がthe manを説明する。女性への抑圧に反対したことと、再婚の推進を両方保つ。\n人名や機関名のある文では、誰がどの役職で、何をしたのかを読み分ける。長い列挙でも、受賞者へ賞を贈ったという動作を保つ。\n表示したのは各SGMの1区間の全文と、その区間に対応する参照訳の全文。記事全体を入力にした実行結果ではない。",
+      "1. 原入力から、別の言語へ訳す",
+      "[1] WMT20. newstest2020 / enzh / en.ndtv.com.13041 / seg 8.  https://data.statmt.org/wmt20/translation-task/test.tgz\n[2] WMT20. newstest2020 / zhen / chinanews.com.102568 / seg 3.  https://data.statmt.org/wmt20/translation-task/test.tgz"
+    ]
+  },
+  {
+    "page": 11,
+    "text": [
+      "ニュース記事を、評価用の翻訳対へ",
+      "2. ニュース文書と参照訳の構成"
+    ]
+  },
+  {
+    "page": 12,
+    "text": [
+      "WMT2020全体と、英中の公開テスト",
+      "WMT20のニュース翻訳は11言語対、22方向を含む国際共有タスク。本資料はそのうちの英語・中国語の二方向に絞る。\nニュースサイトの原文を収集し、評価用の翻訳を作成した。入力が翻訳文になることを避けるため、各方向の原言語の文書を使う。\n学習用の対訳・単言語コーパス、開発データ、公開テストは別の資源。WMT14など、別年のテストも同じ集合とは扱わない。",
+      "2. ニュース文書と参照訳の構成",
+      "[1] Barrault et al. (2020). Findings of the 2020 Conference on Machine Translation (WMT20). WMT, pp.1–55.  https://aclanthology.org/2020.wmt-1.1/"
+    ]
+  },
+  {
+    "page": 13,
+    "text": [
+      "英→中1,418区間、中→英2,000区間",
+      "2. ニュース文書と参照訳の構成",
+      "方向 | 区間数 | 文書数 | 原文の言語",
+      "英→中 | 1,418 | 130 | 英語のみ",
+      "中→英 | 2,000 | 155 | 中国語のみ",
+      "SGMのdocidとseg idを再集計。区間数と記事数は異なる。各方向で原入力の重複・空欄は0。",
+      "[1] WMT20. Official test.tgz: newstest2020 / newstestB2020, English–Chinese.  https://data.statmt.org/wmt20/translation-task/test.tgz"
+    ]
+  },
+  {
+    "page": 14,
+    "text": [
+      "英→中では、一つの区間が複数文を含む",
+      "英→中では、翻訳者へ文単位ではなく段落の区切りを保った文章を渡した。翻訳時に文を結合・分割する自由度を持たせている。\n公式サイトも、一つの区間が通常より長く、複数の文を含む場合があると説明する。segを一律に一文と数えない。\n公開SGMは、文書のdocidと区間のidを持つ。同じseg idが別の記事にも現れるため、二つを組にして対応付ける。",
+      "2. ニュース文書と参照訳の構成",
+      "[1] Barrault et al. (2020). Findings of the 2020 Conference on Machine Translation (WMT20). WMT, pp.1–55.  https://aclanthology.org/2020.wmt-1.1/\n[2] WMT20. Shared Task: Machine Translation of News. Task, data and licensing.  https://www.statmt.org/wmt20/translation-task.html"
+    ]
+  },
+  {
+    "page": 15,
+    "text": [
+      "同じ入力に、異なる参照ファイルがある",
+      "2. ニュース文書と参照訳の構成",
+      "比較 | 英→中 | 中→英",
+      "通常配布とB配布の入力 | 全1,418区間で一致 | 全2,000区間で一致",
+      "参照文が異なる区間 | 1,416 / 1,418 | 1,997 / 2,000",
+      "通常配布の名前 | newstest2020 | newstest2020",
+      "別参照を持つ名前 | newstestB2020 | newstestB2020",
+      "入力が同じなので、B配布を追加の独立した入力例として数えない。本資料の13例は通常配布の参照を使用。",
+      "[1] WMT20. Official test.tgz: newstest2020 / newstestB2020, English–Chinese.  https://data.statmt.org/wmt20/translation-task/test.tgz"
+    ]
+  },
+  {
+    "page": 16,
+    "text": [
+      "参照の表現が、語句の一致を変える",
+      "2. ニュース文書と参照訳の構成",
+      "House rebukes Trump on border wall, but he plans veto",
+      "公開参照（中国語） | 意味の日本語訳",
+      "众议院在边境墙问题上指责特朗普，但他计划使用一票否决权 | 下院は国境の壁の問題でトランプ氏を非難するが、同氏は拒否権を使う予定だ。",
+      "众议院就边境城一事谴责特朗普，而特朗普打算否决 | 下院は国境の都市の件でトランプ氏を非難し、トランプ氏は否決するつもりだ。",
+      "上：newstest2020、下：newstestB2020。「边境城」はB配布の原形を保持。",
+      "[1] WMT20. Official test.tgz: newstest2020 / newstestB2020, English–Chinese.  https://data.statmt.org/wmt20/translation-task/test.tgz"
+    ]
+  },
+  {
+    "page": 17,
+    "text": [
+      "学習資源の制約も、性能の条件になる",
+      "共有タスクでは、提供された学習資源に従うconstrained条件と、それを超える資源を使う条件を区別する。テストの対だけで学習条件は決まらない。\nニュース翻訳のシステムは、対訳データ、単言語データ、逆翻訳、モデルの組合せなどを利用した。個別のシステム構成は参加論文で説明される。\nここで示す13例は公開テストの原入力と参照訳。実際のモデル出力や、未取得のCLEVAの学習・提示データではない。",
+      "2. ニュース文書と参照訳の構成",
+      "[1] Barrault et al. (2020). Findings of the 2020 Conference on Machine Translation (WMT20). WMT, pp.1–55.  https://aclanthology.org/2020.wmt-1.1/"
+    ]
+  },
+  {
+    "page": 18,
+    "text": [
+      "語句の一致と、人の判断を分ける",
+      "3. BLEUと、2020年の人手評価"
+    ]
+  },
+  {
+    "page": 19,
+    "text": [
+      "BLEUは、翻訳内容の正答率ではない",
+      "BLEUは、出力と参照のn-gramの重なりを数える。通常は1〜4-gramの修正適合率を幾何平均し、短い出力へ長さのペナルティを掛ける。\n修正適合率は、出力中の全n-gramに対する、参照と一致するn-gramの割合。一致数は参照の出現回数を上限とし、繰り返しによる水増しを抑える。\nn-gramはn個のトークンの連続列。複数区間の一致数と長さをまとめてコーパスのBLEUを求め、区間ごとのBLEUの単純平均とは区別する。",
+      "3. BLEUと、2020年の人手評価",
+      "[1] Papineni, Roukos, Ward & Zhu (2002). BLEU: a Method for Automatic Evaluation of Machine Translation. ACL.  https://aclanthology.org/P02-1040/"
+    ]
+  },
+  {
+    "page": 20,
+    "text": [
+      "言語の区切り方と、版を明示する",
+      "中国語の分割方法は得点に影響する。この計算のzh分割は漢字などを1字ずつに分け、非漢字部分にも区切り処理を行う。\nSacreBLEUは、参照や分割方法などの条件を再現しやすくする評価ツール。版、大小文字、参照数、tokenizerをそろえて値を読む。\n次の計算例はSacreBLEU 2.5.1、参照1本、大小文字を保持、zh分割。WMT2020や、未取得のCLEVA実行の採点条件を再現した値ではない。",
+      "3. BLEUと、2020年の人手評価",
+      "[1] Post (2018). A Call for Clarity in Reporting BLEU Scores. WMT, pp.186–191.  https://aclanthology.org/W18-6319/\n[2] Post et al. SacreBLEU 2.5.1. Local reference-to-reference calculation, fixed tokenization.  https://github.com/mjpost/sacrebleu/tree/v2.5.1"
+    ]
+  },
+  {
+    "page": 21,
+    "text": [
+      "公開参照同士でも、BLEUは36.85になる",
+      "3. BLEUと、2020年の人手評価",
+      "通常配布参照を出力側、B配布参照を参照側に置いた計算例。英→中の全1,418区間。",
+      "[1] WMT20. Official test.tgz: newstest2020 / newstestB2020, English–Chinese.  https://data.statmt.org/wmt20/translation-task/test.tgz\n[2] Post et al. SacreBLEU 2.5.1. Local reference-to-reference calculation, fixed tokenization.  https://github.com/mjpost/sacrebleu/tree/v2.5.1",
+      "修正適合率（％）"
+    ]
+  },
+  {
+    "page": 22,
+    "text": [
+      "2020年の人手評価は、別の尺度を使う",
+      "3. BLEUと、2020年の人手評価",
+      "評価対象 | 平均評点 | 標準化平均（z）",
+      "HUMAN-B | 80.6 | 0.568",
+      "HUMAN-A | 82.5 | 0.529",
+      "OPPO | 80.0 | 0.447",
+      "Tencent-Translation | 79.0 | 0.420",
+      "Huawei-TSC | 77.3 | 0.415",
+      "英→中。HUMAN-A/Bは評価した人手訳、3システムは資源制約内。DA評点（0〜100）は正答率ではない。",
+      "[1] Barrault et al. (2020). Findings of the 2020 Conference on Machine Translation (WMT20). WMT, pp.1–55.  https://aclanthology.org/2020.wmt-1.1/"
+    ]
+  },
+  {
+    "page": 23,
+    "text": [
+      "人手評価は、文書の文脈を見て採点する",
+      "英語からの翻訳では、原文と翻訳を示し、文書全体を見ながら個々の区間や文書を評価する方式を使った。意味がどれほど適切に伝わるかを人が判断する。\n採点者ごとの評点の傾向を平均と標準偏差で標準化し、平均z得点を求める。生の平均評点と、標準化後の並び順が同じになるとは限らない。\n会議の公式順位は統計的な同順位群も持つ。上の小数点の差を、すべて有意な性能差と扱わない。",
+      "3. BLEUと、2020年の人手評価",
+      "[1] Barrault et al. (2020). Findings of the 2020 Conference on Machine Translation (WMT20). WMT, pp.1–55.  https://aclanthology.org/2020.wmt-1.1/"
+    ]
+  },
+  {
+    "page": 24,
+    "text": [
+      "公開例の出所と、実行の範囲を追う",
+      "4. CLEVAでの採用と利用条件"
+    ]
+  },
+  {
+    "page": 25,
+    "text": [
+      "CLEVAの公開例は、2020年の配布へ一致",
+      "CLEVAは、過去のWMT大会から英中翻訳データを集め、SacreBLEUで評価すると説明する。紙面自体は、採用データの年を一つに限定していない。\n紙面の下院見出しと、HELMの二つの翻訳説明例は、WMT2020通常配布の原入力・参照訳へ完全一致する。\nこの一致が示すのは、公開例の出所。CLEVAの全翻訳集合がWMT2020だけであることや、B配布を使わないことまで証明するものではない。",
+      "4. CLEVAでの採用と利用条件",
+      "[1] Li et al. (2023). CLEVA: Chinese Language Models EVAluation Platform. EMNLP System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/\n[2] Stanford CRFM. CLEVATranslationScenario / Converter. HELM v0.4.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py"
+    ]
+  },
+  {
+    "page": 26,
+    "text": [
+      "HELMの設定と、公開された実行を分ける",
+      "4. CLEVAでの採用と利用条件",
+      "対象 | 確認できる内容",
+      "CLEVA translation v1 | en2zh / zh2enの二つの下位課題",
+      "prompt_id | 各方向0〜2、各3設定",
+      "Classic公開索引 | 8,526 spec中、CLEVA名の実行0件",
+      "未取得の実体 | 選定集合全体、templates、infer_params",
+      "設定の数はモデル数や生成候補数ではない。実際の得点・提示例数・温度は補っていない。",
+      "[1] Stanford CRFM. CLEVA v1 run settings, translation en2zh / zh2en. HELM v0.4.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/presentation/run_specs_cleva_v1.conf\n[2] Stanford CRFM. HELM Classic v0.4.0 public run index.  https://crfm.stanford.edu/helm/classic/v0.4.0/"
+    ]
+  },
+  {
+    "page": 27,
+    "text": [
+      "公開実装から分かることにも限界がある",
+      "HELM v0.4.0は、変換済みデータとテンプレートから翻訳入力と参照を作る。生成条件はinfer_params.jsonから読む。\n採点設定は翻訳用のCLEVAMachineTranslationMetricクラスを指定する。しかし、その配置先のmachine_translation_metrics.pyは、同版の公開metrics一覧にない。\nそのため、固定公開版だけからCLEVAの分割方法や集約を再現できたとは述べない。前の参照同士の計算は、条件を明示した別の説明用計算である。",
+      "4. CLEVAでの採用と利用条件",
+      "[1] Stanford CRFM. get_cleva_spec / get_cleva_machine_translation_metric_specs. HELM v0.4.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/run_specs.py\n[2] Stanford CRFM. Public metrics directory at HELM v0.4.0.  https://github.com/stanford-crfm/helm/tree/v0.4.0/src/helm/benchmark/metrics"
+    ]
+  },
+  {
+    "page": 28,
+    "text": [
+      "研究利用と、ニュース本文の権利を分ける",
+      "公式タスクページは、WMT20のデータを研究目的で自由に使えるとし、概要論文と各集合の追加引用条件を守るよう求める。\nそれ以外の用途は元データの権利者へ相談するという条件。公開ダウンロードが、ニュース本文の権利の放棄を意味するわけではない。\n本資料は識別可能な短い13区間を、出所と参照訳とともに示す。ニュースの原記事全体や、データ全量の追加配布は作っていない。",
+      "4. CLEVAでの採用と利用条件",
+      "[1] WMT20. Shared Task: Machine Translation of News. Task, data and licensing.  https://www.statmt.org/wmt20/translation-task.html"
+    ]
+  },
+  {
+    "page": 29,
+    "text": [
+      "入力・参照・方向・尺度をそろえて読む",
+      "WMT2020英中は、原言語の異なるニュース文書を二方向へ翻訳する公開テスト。文章区間と文書の単位を分け、対応する参照を使う。\nBLEUは参照の表現や分割条件で変わり、人の意味判断と同じ尺度ではない。2020年の会議の評価と、説明用の再計算も区別する。\nCLEVAの公開例は出所を追跡できる一方、選定集合全体と推論条件は未確定。元WMTデータの全件数を、そのままCLEVAの実行数へ置き換えない。",
+      "4. CLEVAでの採用と利用条件",
+      "[1] Barrault et al. (2020). Findings of the 2020 Conference on Machine Translation (WMT20). WMT, pp.1–55.  https://aclanthology.org/2020.wmt-1.1/\n[2] Li et al. (2023). CLEVA: Chinese Language Models EVAluation Platform. EMNLP System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/"
+    ]
+  },
+  {
+    "page": 30,
+    "text": [
+      "Appendix",
+      "Appendix"
+    ]
+  },
+  {
+    "page": 31,
+    "text": [
+      "",
+      "追加の公開翻訳例\n原位置・計算・公開実装\n研究と参考文献",
+      "Appendix: 目次"
+    ]
+  },
+  {
+    "page": 32,
+    "text": [
+      "追加の公開翻訳例",
+      "Appendix: 1. 追加の公開翻訳例"
+    ]
+  },
+  {
+    "page": 33,
+    "text": [
+      "実例4：5日間で500通の手紙",
+      "Appendix: 1. 追加の公開翻訳例",
+      "英→中 / cnn.385674 / seg 1 / 全体index 24",
+      "入力（英語）\nA woman in Maine got 500 letters from United Healthcare within five days\n参照訳（中国語）\n一位缅因州女性五天内收到 500 封来自联合健康保险的信件",
+      "入力の日本語訳\nメーン州の女性が、ユナイテッドヘルスケアから5日間で500通の手紙を受け取った。\n参照訳の日本語訳\nメーン州のある女性が、5日間でユナイテッドヘルスケアから500通の手紙を受け取った。",
+      "[1] WMT20. newstest2020 / enzh / cnn.385674 / seg 1.  https://data.statmt.org/wmt20/translation-task/test.tgz"
+    ]
+  },
+  {
+    "page": 34,
+    "text": [
+      "実例5：SNSの「いいね」を非表示にする",
+      "Appendix: 1. 追加の公開翻訳例",
+      "英→中 / rte.en.ie.5333 / seg 1 / 全体index 101",
+      "入力（英語）\nFacebook hides 'likes' in new Australia trial\n参照訳（中国語）\n脸书在澳大利亚新测试中隐藏点“赞”数",
+      "入力の日本語訳\nFacebookが、オーストラリアでの新たな試験で「いいね」を非表示にする。\n参照訳の日本語訳\nFacebookが、オーストラリアでの新たな試験で「いいね」の数を非表示にする。",
+      "[1] WMT20. newstest2020 / enzh / rte.en.ie.5333 / seg 1.  https://data.statmt.org/wmt20/translation-task/test.tgz"
+    ]
+  },
+  {
+    "page": 35,
+    "text": [
+      "実例6：ハリケーンの強さと場所",
+      "Appendix: 1. 追加の公開翻訳例",
+      "英→中 / upi.205660 / seg 1 / 全体index 114",
+      "入力（英語）\nLorenzo strengthens into Category 4 hurricane east of Caribbean\n参照訳（中国語）\n洛伦佐在加勒比海东部增强为 4 级飓风",
+      "入力の日本語訳\nロレンゾが、カリブ海の東でカテゴリー4のハリケーンに発達する。\n参照訳の日本語訳\nロレンゾが、カリブ海の東部でカテゴリー4のハリケーンに勢力を強める。",
+      "[1] WMT20. newstest2020 / enzh / upi.205660 / seg 1.  https://data.statmt.org/wmt20/translation-task/test.tgz"
+    ]
+  },
+  {
+    "page": 36,
+    "text": [
+      "実例7：AIを共通善のために使う",
+      "Appendix: 1. 追加の公開翻訳例",
+      "英→中 / seattle_times.7657 / seg 1 / 全体index 164",
+      "入力（英語）\nPope warns tech execs to use AI for the common good\n参照訳（中国語）\n教皇方济各就技术高管使用人工智能实现公共利益发出警告",
+      "入力の日本語訳\n教皇が、共通善のためにAIを使うようテクノロジー企業の幹部に注意を促す。\n参照訳の日本語訳\n教皇フランシスコが、公共の利益のためにAIを使うことについて、テクノロジー企業の幹部に注意を促す。",
+      "[1] WMT20. newstest2020 / enzh / seattle_times.7657 / seg 1.  https://data.statmt.org/wmt20/translation-task/test.tgz"
+    ]
+  },
+  {
+    "page": 37,
+    "text": [
+      "実例8：礼節ある政治家を表彰する制度",
+      "Appendix: 1. 追加の公開翻訳例",
+      "英→中 / standard.co.uk.14676 / seg 2 / 全体index 230",
+      "入力（英語）\nA new awards scheme has been set up to recognise politicians who show courtesy in their work.\n参照訳（中国語）\n设立新的奖项计划是为了表彰那些礼貌得体的政治人士",
+      "入力の日本語訳\n仕事で礼節を示す政治家をたたえるため、新たな表彰制度が設けられた。\n参照訳の日本語訳\n新たな表彰計画を設けるのは、礼儀正しく品位のある政治家をたたえるためだ。",
+      "[1] WMT20. newstest2020 / enzh / standard.co.uk.14676 / seg 2.  https://data.statmt.org/wmt20/translation-task/test.tgz"
+    ]
+  },
+  {
+    "page": 38,
+    "text": [
+      "実例9：協定が許す遠心分離機を限定する",
+      "Appendix: 1. 追加の公開翻訳例",
+      "中→英 / international_times-zh.151 / seg 4 / 全体index 30",
+      "入力（中国語）\n协议规定，伊朗只能用第一代IR-1型离心机来提炼铀。\n参照訳（英語）\nThe agreement stipulates that Iran can only use first-generation IR-1 centrifuges to refine uranium.",
+      "入力の日本語訳\n協定では、イランがウラン精製に使えるのは第1世代のIR-1型遠心分離機だけと定めている。\n参照訳の日本語訳\n協定は、イランがウラン精製に使えるのは第1世代のIR-1型遠心分離機だけと規定する。",
+      "[1] WMT20. newstest2020 / zhen / international_times-zh.151 / seg 4.  https://data.statmt.org/wmt20/translation-task/test.tgz"
+    ]
+  },
+  {
+    "page": 39,
+    "text": [
+      "実例10：クルーズ船に初めて乗る参加者",
+      "Appendix: 1. 追加の公開翻訳例",
+      "中→英 / hunan_ribao-zh.186 / seg 2 / 全体index 96",
+      "入力（中国語）\n参加此次活动的100余名残障人士大多是第一次登上邮轮。\n参照訳（英語）\nMost of the more than 100 disabled people who participated in the event had never boarded a cruise ship before.",
+      "入力の日本語訳\n今回の催しに参加した100人余りの障害者の多くは、クルーズ船に乗るのが初めてだった。\n参照訳の日本語訳\nこの催しに参加した100人余りの障害者の多くは、それまでクルーズ船に乗ったことがなかった。",
+      "[1] WMT20. newstest2020 / zhen / hunan_ribao-zh.186 / seg 2.  https://data.statmt.org/wmt20/translation-task/test.tgz"
+    ]
+  },
+  {
+    "page": 40,
+    "text": [
+      "実例11：8月の世界販売台数を伝える",
+      "Appendix: 1. 追加の公開翻訳例",
+      "中→英 / nikkei-.108 / seg 1 / 全体index 146",
+      "入力（中国語）\n马自达9月27日发布的数据显示，8月全球销量为11万7015辆。\n参照訳（英語）\nAccording to data released by Mazda on September 27, global sales in August were 117015 units.",
+      "入力の日本語訳\nマツダが9月27日に発表したデータによると、8月の世界販売は11万7015台だった。\n参照訳の日本語訳\nマツダが9月27日に発表したデータによると、8月の世界販売は117,015台だった。",
+      "[1] WMT20. newstest2020 / zhen / nikkei-.108 / seg 1.  https://data.statmt.org/wmt20/translation-task/test.tgz"
+    ]
+  },
+  {
+    "page": 41,
+    "text": [
+      "実例12：壁画が描く人物の生涯",
+      "Appendix: 1. 追加の公開翻訳例",
+      "中→英 / xinhua-zh-01.6415 / seg 2 / 全体index 228",
+      "入力（中国語）\n《天后圣迹图》是一幅全面反映妈祖生平的大型传统壁画。\n参照訳（英語）\nThe Drawing of Miracles of Mazu is a large traditional mural that fully reflects Mazu's life.",
+      "入力の日本語訳\n『天后聖蹟図』は、媽祖の生涯を全面的に描いた大きな伝統的壁画である。\n参照訳の日本語訳\n『媽祖の奇跡の図』は、媽祖の生涯を全面的に描いた大きな伝統的壁画である。",
+      "[1] WMT20. newstest2020 / zhen / xinhua-zh-01.6415 / seg 2.  https://data.statmt.org/wmt20/translation-task/test.tgz"
+    ]
+  },
+  {
+    "page": 42,
+    "text": [
+      "実例13：空港の供用開始の式典",
+      "Appendix: 1. 追加の公開翻訳例",
+      "中→英 / chinanews.com.102714 / seg 1 / 全体index 238",
+      "入力（中国語）\n9月25日，北京大兴国际机场投运仪式隆重举行。\n参照訳（英語）\nOn September 25th, a grand opening ceremony was held for the Beijing Daxing International Airport.",
+      "入力の日本語訳\n9月25日、北京大興国際空港の供用開始の式典が盛大に催された。\n参照訳の日本語訳\n9月25日、北京大興国際空港で盛大な開業式典が催された。",
+      "[1] WMT20. newstest2020 / zhen / chinanews.com.102714 / seg 1.  https://data.statmt.org/wmt20/translation-task/test.tgz"
+    ]
+  },
+  {
+    "page": 43,
+    "text": [
+      "各実例で、何を保って訳すか",
+      "Appendix: 1. 追加の公開翻訳例",
+      "実例 | 対応の手掛かり",
+      "1 | Houseは下院、rebukesは非難。対立するbut節と、plansが示す意向を保つ。",
+      "2 | 長い関係節がthe manを説明する。女性への抑圧に反対したことと、再婚の推進を両方保つ。",
+      "3 | 人名、機関名、役職、授賞という動作の対応を読む。公開参照訳の表現を唯一の正解とは扱わない。",
+      "4 | 数量500と期間5日を取り違えない。地名と企業名も翻訳に含む。",
+      "説明は本資料による。原入力と参照訳を同じ意味の日本語へ無理にそろえていない。",
+      "[1] WMT20. Official test.tgz: newstest2020 / newstestB2020, English–Chinese.  https://data.statmt.org/wmt20/translation-task/test.tgz"
+    ]
+  },
+  {
+    "page": 44,
+    "text": [
+      "各実例で、何を保って訳すか",
+      "Appendix: 1. 追加の公開翻訳例",
+      "実例 | 対応の手掛かり",
+      "5 | 引用符付きのlikesはSNSの反応。参照訳は点赞数と、数であることを明示する。",
+      "6 | 固有名詞とカテゴリー4、east ofが示す位置を保つ。",
+      "7 | 参照訳は教皇の名前を補う。原入力の明示語と、参照訳の具体化を分けて読む。",
+      "8 | has been set upは設立済みであることを示す。to recognise以下は表彰する目的。",
+      "9 | 只能／onlyが機器を限定する。IR-1という型式を、そのまま保つ。",
+      "説明は本資料による。原入力と参照訳を同じ意味の日本語へ無理にそろえていない。",
+      "[1] WMT20. Official test.tgz: newstest2020 / newstestB2020, English–Chinese.  https://data.statmt.org/wmt20/translation-task/test.tgz"
+    ]
+  },
+  {
+    "page": 45,
+    "text": [
+      "各実例で、何を保って訳すか",
+      "Appendix: 1. 追加の公開翻訳例",
+      "実例 | 対応の手掛かり",
+      "10 | 100人余りという全体と、その多くという範囲を分ける。初めてを、過去の経験の否定として表す。",
+      "11 | 中国語の万の単位を、英語では117015へ直す。発表日と販売対象月を混同しない。",
+      "12 | 作品名は英語参照訳で意味を説明する形になる。原題と訳題を別々の作品としない。",
+      "13 | 日付と空港名を保つ。投运は施設の稼働開始。参照訳ではgrand openingとする。",
+      "説明は本資料による。原入力と参照訳を同じ意味の日本語へ無理にそろえていない。",
+      "[1] WMT20. Official test.tgz: newstest2020 / newstestB2020, English–Chinese.  https://data.statmt.org/wmt20/translation-task/test.tgz"
+    ]
+  },
+  {
+    "page": 46,
+    "text": [
+      "原位置・計算・公開実装",
+      "Appendix: 2. 原位置・計算・公開実装"
+    ]
+  },
+  {
+    "page": 47,
+    "text": [
+      "原文書と区間を、組で固定する",
+      "Appendix: 2. 原位置・計算・公開実装",
+      "例 | 方向 / 全体index | docid | seg id",
+      "1 | enzh / 910 | foxnews.100085 | 1",
+      "2 | enzh / 1411 | en.ndtv.com.13041 | 8",
+      "3 | zhen / 18 | chinanews.com.102568 | 3",
+      "4 | enzh / 24 | cnn.385674 | 1",
+      "5 | enzh / 101 | rte.en.ie.5333 | 1",
+      "6 | enzh / 114 | upi.205660 | 1",
+      "7 | enzh / 164 | seattle_times.7657 | 1",
+      "全体indexは0起算、seg idは配布原形。SGM行番号、行SHA256、byte offset、対応参照を原記録へ保存。",
+      "[1] WMT20. Official test.tgz: newstest2020 / newstestB2020, English–Chinese.  https://data.statmt.org/wmt20/translation-task/test.tgz"
+    ]
+  },
+  {
+    "page": 48,
+    "text": [
+      "原文書と区間を、組で固定する",
+      "Appendix: 2. 原位置・計算・公開実装",
+      "例 | 方向 / 全体index | docid | seg id",
+      "8 | enzh / 230 | standard.co.uk.14676 | 2",
+      "9 | zhen / 30 | international_times-zh.151 | 4",
+      "10 | zhen / 96 | hunan_ribao-zh.186 | 2",
+      "11 | zhen / 146 | nikkei-.108 | 1",
+      "12 | zhen / 228 | xinhua-zh-01.6415 | 2",
+      "13 | zhen / 238 | chinanews.com.102714 | 1",
+      "全体indexは0起算、seg idは配布原形。SGM行番号、行SHA256、byte offset、対応参照を原記録へ保存。",
+      "[1] WMT20. Official test.tgz: newstest2020 / newstestB2020, English–Chinese.  https://data.statmt.org/wmt20/translation-task/test.tgz"
+    ]
+  },
+  {
+    "page": 49,
+    "text": [
+      "通常配布とB配布の参照同士を比較する",
+      "Appendix: 2. 原位置・計算・公開実装",
+      "方向 | 区間数 | tokenizer | BLEU",
+      "英→中 | 1,418 | zh | 36.8525",
+      "中→英 | 2,000 | 13a | 25.1686",
+      "SacreBLEU2.5.1 / nrefs1 / case mixed / smooth exp / eff no。モデル出力を使った評価ではない。",
+      "[1] WMT20. Official test.tgz: newstest2020 / newstestB2020, English–Chinese.  https://data.statmt.org/wmt20/translation-task/test.tgz\n[2] Post et al. SacreBLEU 2.5.1. Local reference-to-reference calculation, fixed tokenization.  https://github.com/mjpost/sacrebleu/tree/v2.5.1"
+    ]
+  },
+  {
+    "page": 50,
+    "text": [
+      "英→中の計算例で、何を数えたか",
+      "Appendix: 2. 原位置・計算・公開実装",
+      "量 | 出力側の全数 | 参照に一致する数",
+      "1-gram | 82,787 | 54,762",
+      "2-gram | 81,369 | 35,375",
+      "3-gram | 79,951 | 23,833",
+      "4-gram | 78,533 | 16,897",
+      "通常配布参照を出力側へ置く。参照側は78,915 token、出力側が長いためBP=1。",
+      "[1] Post et al. SacreBLEU 2.5.1. Local reference-to-reference calculation, fixed tokenization.  https://github.com/mjpost/sacrebleu/tree/v2.5.1"
+    ]
+  },
+  {
+    "page": 51,
+    "text": [
+      "SGMの区間全文を、公開ファイルから読む",
+      "Appendix: 2. 原位置・計算・公開実装",
+      "import re, tarfile, html\nwith tarfile.open('test.tgz') as archive:\n    raw = archive.extractfile(\n        'sgm/newstest2020-enzh-src.en.sgm'\n    ).read().decode('utf-8')\nsegments = re.findall(r'<seg id=\"[^\"]+\">(.*?)</seg>', raw)\nprint(html.unescape(segments[910]))",
+      "House rebukes Trump on border wall, but he plans veto",
+      "[1] WMT20. newstest2020 / enzh / foxnews.100085 / seg 1.  https://data.statmt.org/wmt20/translation-task/test.tgz"
+    ]
+  },
+  {
+    "page": 52,
+    "text": [
+      "参照全1,418区間のBLEUを計算する",
+      "Appendix: 2. 原位置・計算・公開実装",
+      "import re, tarfile, html\nfrom sacrebleu.metrics import BLEU\ndef refs(name):\n    with tarfile.open('test.tgz') as t:\n        raw = t.extractfile(name).read().decode('utf-8')\n    return [html.unescape(s) for s in re.findall(\n        r'<seg id=\"[^\"]+\">(.*?)</seg>', raw)]\na = refs('sgm/newstest2020-enzh-ref.zh.sgm')\nb = refs('sgm/newstestB2020-enzh-ref.zh.sgm')\nmetric = BLEU(tokenize='zh', lowercase=False)\nprint(metric.corpus_score(a, [b]).score)\nprint(metric.get_signature())",
+      "[1] WMT20. Official test.tgz: newstest2020 / newstestB2020, English–Chinese.  https://data.statmt.org/wmt20/translation-task/test.tgz\n[2] Post et al. SacreBLEU 2.5.1. Local reference-to-reference calculation, fixed tokenization.  https://github.com/mjpost/sacrebleu/tree/v2.5.1"
+    ]
+  },
+  {
+    "page": 53,
+    "text": [
+      "固定版の実行と、説明用計算の条件",
+      "get_cleva_specには、生成の既定値として提示例上限5、出力1候補、最大20 token、温度0などがある。実際にはinfer_paramsの値で上書きされる。\nCLEVAの変換済みtranslation.zipを取得できていないため、この既定値を公開実行の条件とはみなさない。公開索引からも実際の翻訳runは得られない。\nSacreBLEU2.5.1による参照比較は、使用した参照、tokenizer、大小文字、全区間数を固定した独立の計算例。CLEVAの未公開条件とは分けて再現する。",
+      "Appendix: 2. 原位置・計算・公開実装",
+      "[1] Stanford CRFM. get_cleva_spec / get_cleva_machine_translation_metric_specs. HELM v0.4.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/run_specs.py\n[2] Stanford CRFM. CLEVA v1 run settings, translation en2zh / zh2en. HELM v0.4.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/presentation/run_specs_cleva_v1.conf"
+    ]
+  },
+  {
+    "page": 54,
+    "text": [
+      "二方向の人手評価は、同一の方式ではない",
+      "2020年の英語からの翻訳は、原文を理解できる評価者によるsource-based評価。英語への翻訳は、英語の参照を使うreference-based評価を中心とする。\n文書の文脈を示す方法も評価方向で異なる。複数の区間をまとめて見せる構成と、区間を順に評価しながら全文書へアクセスする構成を区別する。\nしたがって、英→中の平均zと中→英の平均zを、そのまま同じ絶対尺度の翻訳品質として比較しない。",
+      "Appendix: 2. 原位置・計算・公開実装",
+      "[1] Barrault et al. (2020). Findings of the 2020 Conference on Machine Translation (WMT20). WMT, pp.1–55.  https://aclanthology.org/2020.wmt-1.1/"
+    ]
+  },
+  {
+    "page": 55,
+    "text": [
+      "研究と参考文献",
+      "Appendix: 3. 研究と参考文献"
+    ]
+  },
+  {
+    "page": 56,
+    "text": [
+      "国際共有タスクで、翻訳を比較する",
+      "WMT20はLoïc Barrault、Magdalena Biesialska、Ondřej Bojarらによる国際共有タスク。第5回Conference on Machine Translationとして2020年に開催された。\nニュース翻訳の共通テスト、参加システム、人手評価、同順位群を整備し、多言語の翻訳を比較する。英中はその一部である。\nCLEVAはこのような過去のWMTデータを、言語モデルの翻訳課題へ取り込む。原データの単位と後続評価の条件を分けて読む必要がある。",
+      "Appendix: 3. 研究と参考文献",
+      "[1] Barrault et al. (2020). Findings of the 2020 Conference on Machine Translation (WMT20). WMT, pp.1–55.  https://aclanthology.org/2020.wmt-1.1/\n[2] Li et al. (2023). CLEVA: Chinese Language Models EVAluation Platform. EMNLP System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/"
+    ]
+  },
+  {
+    "page": 57,
+    "text": [
+      "参考文献",
+      "Appendix: 3. 研究と参考文献",
+      "Findings of the 2020 Conference on Machine Translation (WMT20)",
+      "Loïc Barrault et al. · 2020 · WMT, pp.1–55",
+      "ニュース翻訳の収集、参加システム、人手評価、統計的な同順位群を報告する。",
+      "https://aclanthology.org/2020.wmt-1.1/",
+      "WMT20: Shared Task — Machine Translation of News",
+      "WMT20 organizers · 2020 · Official task page",
+      "言語対、データ、段落単位の翻訳、研究利用と追加引用の条件を説明する。",
+      "https://www.statmt.org/wmt20/translation-task.html"
+    ]
+  },
+  {
+    "page": 58,
+    "text": [
+      "参考文献",
+      "Appendix: 3. 研究と参考文献",
+      "BLEU: a Method for Automatic Evaluation of Machine Translation",
+      "Kishore Papineni, Salim Roukos, Todd Ward, Wei-Jing Zhu · 2002 · ACL",
+      "n-gramの修正適合率と、短い出力へのペナルティによる自動評価を提案する。",
+      "https://aclanthology.org/P02-1040/",
+      "A Call for Clarity in Reporting BLEU Scores",
+      "Matt Post · 2018 · WMT Research Papers, pp.186–191",
+      "BLEUの再現性を妨げる処理条件の違いを論じ、条件を明示する評価を扱う。",
+      "https://aclanthology.org/W18-6319/"
+    ]
+  },
+  {
+    "page": 59,
+    "text": [
+      "参考文献",
+      "Appendix: 3. 研究と参考文献",
+      "CLEVA: Chinese Language Models EVAluation Platform",
+      "Li et al. · 2023 · EMNLP System Demonstrations",
+      "過去のWMTから英中翻訳を採用。公開見出し例とSacreBLEUの使用を記す。",
+      "https://aclanthology.org/2023.emnlp-demo.17/",
+      "CLEVATranslationScenario and Converter",
+      "Stanford CRFM · 2023 · HELM v0.4.0 implementation",
+      "変換済みデータとテンプレートから入力と参照を構成し、二方向の翻訳例を示す。",
+      "https://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py"
+    ]
+  },
+  {
+    "page": 60,
+    "text": [
+      "参考文献",
+      "Appendix: 3. 研究と参考文献",
+      "get_cleva_spec and get_cleva_machine_translation_metric_specs",
+      "Stanford CRFM · 2023 · HELM v0.4.0 run specification",
+      "推論パラメータの読取、生成条件、翻訳用metricへの接続先を定義する。",
+      "https://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/run_specs.py",
+      "run_specs_cleva_v1.conf",
+      "Stanford CRFM · 2023 · HELM v0.4.0 configuration",
+      "翻訳en2zhとzh2enに、それぞれ0〜2の三つのprompt_idを登録する。",
+      "https://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/presentation/run_specs_cleva_v1.conf"
+    ]
+  }
+]
