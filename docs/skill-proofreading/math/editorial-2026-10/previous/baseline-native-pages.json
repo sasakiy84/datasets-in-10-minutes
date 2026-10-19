@@ -1,0 +1,601 @@
+[
+  {
+    "page": 1,
+    "text": [
+      "MATH",
+      "Mathematics Aptitude Test of Heuristics\n競技数学の解法と最終解答を扱う",
+      "sasakiy84",
+      "datasets in 10 minutes (2026-10-18)"
+    ]
+  },
+  {
+    "page": 2,
+    "text": [
+      "公式リポジトリ",
+      "MATH",
+      "[1] Dan Hendrycks et al. MATH. 公式リポジトリ。2026-10-18参照。  https://github.com/hendrycks/math"
+    ]
+  },
+  {
+    "page": 3,
+    "text": [
+      "",
+      "競技数学の問題と解答\n採点とHELMの比較条件\n収集とデータの全体像\n利用の変化と入手方法",
+      "目次"
+    ]
+  },
+  {
+    "page": 4,
+    "text": [
+      "競技数学の問題と解答",
+      "1. 競技数学の問題と解答"
+    ]
+  },
+  {
+    "page": 5,
+    "text": [
+      "問題、途中の解説、最終解答がそろう",
+      "MATHは、競技数学の12,500問に、途中の解説と最終解答を付けたデータセット。\nAMCやAIMEなど、米国の数学競技から問題を集めた。入力は英語の問題文で、数式や図の記述も含む。\n最終解答はLaTeXのboxedに入る。解答だけを出す条件と、解説を含めて出す条件の両方で使われる。",
+      "1. 競技数学の問題と解答",
+      "[1] Hendrycks et al. (2021). Measuring Mathematical Problem Solving With the MATH Dataset. NeurIPS Datasets and Benchmarks.\nhttps://arxiv.org/abs/2103.03874"
+    ]
+  },
+  {
+    "page": 6,
+    "text": [
+      "実例1：差の積を計算する",
+      "1. 競技数学の問題と解答",
+      "Algebra / Level 1 / 問題の原文（全文）",
+      "Evaluate (x + y)(x − y) when x = 15 and y = 5.",
+      "日本語訳",
+      "x = 15、y = 5のとき、(x + y)(x − y)の値を求めよ。",
+      "解答：200",
+      "(15 + 5)(15 − 5) = 20 × 10 = 200。",
+      "[1] MATH, EleutherAI/hendrycks_math. 固定revisionのtest分割。元の競技問題・解説の著者に帰属。 algebra / test row 372\nhttps://huggingface.co/datasets/EleutherAI/hendrycks_math"
+    ]
+  },
+  {
+    "page": 7,
+    "text": [
+      "同じ問題でも、モデルの出力は異なる",
+      "式に値を代入すれば、(15 + 5)(15 − 5) = 20 × 10で200になる。\nHELMの公開実行では、text-davinci-003が解答だけの条件で100、解説を出す条件で200と答えた。\n二つの条件では提示する例も変わる。具体的な入力条件と採点は次の章で扱う。",
+      "1. 競技数学の問題と解答",
+      "[1] HELM Classic v0.4.0. MATH、Level 1の固定評価。2023-11-17公開版。  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/math_regular"
+    ]
+  },
+  {
+    "page": 8,
+    "text": [
+      "実例2：二重根号を外す",
+      "1. 競技数学の問題と解答",
+      "Intermediate Algebra / Level 3 / 問題の原文（全文）",
+      "Simplify the expression √(41 + 24√2).",
+      "日本語訳",
+      "式 √(41 + 24√2) を簡単にせよ。",
+      "解答：3 + 4√2",
+      "(3 + 4√2)² = 9 + 32 + 24√2。3 + 4√2は正なので、平方根はこの値になる。",
+      "[1] MATH, EleutherAI/hendrycks_math. 固定revisionのtest分割。元の競技問題・解説の著者に帰属。 intermediate_algebra / test row 457\nhttps://huggingface.co/datasets/EleutherAI/hendrycks_math"
+    ]
+  },
+  {
+    "page": 9,
+    "text": [
+      "形を見抜いて、確かめる",
+      "平方根をa + b√2と置き、両辺を二乗すると、a² + 2b² = 41、2ab = 24が必要になる。\na = 3、b = 4なら両方を満たす。正の平方根を求めているので、3 + 4√2を選ぶ。",
+      "1. 競技数学の問題と解答",
+      "[1] Hendrycks et al. (2021). Measuring Mathematical Problem Solving With the MATH Dataset. NeurIPS Datasets and Benchmarks.\nhttps://arxiv.org/abs/2103.03874"
+    ]
+  },
+  {
+    "page": 10,
+    "text": [
+      "実例3：偶数の組を数える",
+      "1. 競技数学の問題と解答",
+      "Counting & Probability / Level 5 / 問題の原文（全文）",
+      "How many triples (a, b, c) of even positive integers satisfy a³ + b² + c ≤ 50?",
+      "日本語訳",
+      "a³ + b² + c ≤ 50を満たす、正の偶数の3つ組(a, b, c)はいくつあるか。",
+      "解答：35",
+      "aは2だけ。b = 2、4、6のとき、cの候補は順に19個、13個、3個なので、合計35個。",
+      "[1] MATH, EleutherAI/hendrycks_math. 固定revisionのtest分割。元の競技問題・解説の著者に帰属。 counting_and_probability / test row 445\nhttps://huggingface.co/datasets/EleutherAI/hendrycks_math"
+    ]
+  },
+  {
+    "page": 11,
+    "text": [
+      "条件から、候補を絞って数える",
+      "1. 競技数学の問題と解答",
+      "a | b | cの範囲 | 個数",
+      "2 | 2 | 2, 4, …, 38 | 19",
+      "2 | 4 | 2, 4, …, 26 | 13",
+      "2 | 6 | 2, 4, 6 | 3",
+      "aが4以上ならa³だけで50を超える。正の偶数という条件から、aは2に限られる。",
+      "[1] MATH, EleutherAI/hendrycks_math. 固定revisionのtest分割。元の競技問題・解説の著者に帰属。  https://huggingface.co/datasets/EleutherAI/hendrycks_math"
+    ]
+  },
+  {
+    "page": 12,
+    "text": [
+      "採点とHELMの比較条件",
+      "2. 採点とHELMの比較条件"
+    ]
+  },
+  {
+    "page": 13,
+    "text": [
+      "最終解答を正規化して照合する",
+      "生成した最終解答を、参照解答と照合する。空白やLaTeXの一部を整え、分数や平方根などの表記をそろえる。\n各問を正解1・不正解0で採点し、評価集合の正解率を求める。\nchain-of-thought条件でも、採点するのは最後のboxedから取り出した解答。途中の推論を個別には採点しない。",
+      "2. 採点とHELMの比較条件",
+      "[1] Stanford CRFM. MATHScenario v0.3.0. 参照解答の抽出と表記正規化。\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/math_scenario.py"
+    ]
+  },
+  {
+    "page": 14,
+    "text": [
+      "HELMの解答抽出は条件で変わる",
+      "2. 採点とHELMの比較条件",
+      "条件 | 提示する参照 | 生成から採点する部分",
+      "regular | 公式の8問と最終解答 | 生成した解答文字列",
+      "chain-of-thought | 同じ分野・Level 1の学習問題と解説 | 最後のboxedの中身",
+      "正規化した文字列の一致。一般の代数式を記号計算で同値判定する採点ではない。",
+      "[1] Stanford CRFM. MATHScenario v0.3.0. 参照解答の抽出と表記正規化。\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/math_scenario.py"
+    ]
+  },
+  {
+    "page": 15,
+    "text": [
+      "同じ問題の、実際に生成された二つの出力",
+      "2. 採点とHELMの比較条件",
+      "text-davinci-003 / trial 0 / x = 15, y = 5の問題",
+      "regular: 100",
+      "採点：0（参照解答は200）",
+      "chain-of-thought: Plugging in the given values for x and y, we get (15 + 5)(15 − 5) = \\boxed{200}.",
+      "訳：xとyに与えられた値を代入すると、(15 + 5)(15 − 5) = 200。",
+      "採点：1（最後のboxedから200を抽出）",
+      "[1] HELM Classic v0.4.0. MATH、Level 1の固定評価。2023-11-17公開版。 regular id8 / CoT id178。本文は全文、数式は組版。\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/math_regular"
+    ]
+  },
+  {
+    "page": 16,
+    "text": [
+      "正しい最終解答と、正しい推論を分ける",
+      "公開実行のregularは100を出したため不正解。chain-of-thoughtは最後のboxedから200を抽出できるため正解。\nこの採点は、途中の各等式や説明が正しいかを証明するものではない。\n解説付きの学習データは、最終解答だけでは見えない解法や誤りを調べる材料にもなる。",
+      "2. 採点とHELMの比較条件",
+      "[1] Stanford CRFM. MATHScenario v0.3.0. 参照解答の抽出と表記正規化。\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/math_scenario.py"
+    ]
+  },
+  {
+    "page": 17,
+    "text": [
+      "2021年：全5,000問では低い正解率",
+      "2. 採点とHELMの比較条件",
+      "方式 | 正解率",
+      "GPT-2 1.5B（2019）：AMPS事前学習後に微調整 | 6.9%",
+      "GPT-3 175B（2020）：8例提示 | 5.2%",
+      "MATH test全5,000問、全7分野・全難度。AMPSは別の数学事前学習データで、MATHとは区別される。",
+      "[1] Hendrycks et al. (2021). Measuring Mathematical Problem Solving With the MATH Dataset. NeurIPS Datasets and Benchmarks.\nhttps://arxiv.org/abs/2103.03874"
+    ]
+  },
+  {
+    "page": 18,
+    "text": [
+      "HELMはLevel 1の437問を評価する",
+      "HELM Classicの二つの条件は、7分野のLevel 1に絞った437問を評価する。\n全testの5,000問のうち8.74%。Level 2〜5の4,563問は、この二つの公開グループの評価には入らない。\n以下は各分野の実行値から、評価問題数で重み付けして再集計した正解率。各分野の値は3試行平均。",
+      "2. 採点とHELMの比較条件",
+      "[1] HELM Classic v0.4.0. MATH、Level 1の固定評価。2023-11-17公開版。  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/math_regular"
+    ]
+  },
+  {
+    "page": 19,
+    "text": [
+      "解説付き条件の正解率はモデルで異なる",
+      "2. 採点とHELMの比較条件",
+      "モデル（公開年） | regular | 解説付き",
+      "OPT-175B（2022） | 6.25% | 1.91%",
+      "text-davinci-003（2022） | 38.29% | 47.52%",
+      "Anthropic v4-s3（2022） | 17.62% | 16.09%",
+      "437問の件数重み付き再集計、各3試行。異なる提示例と出力条件を含む比較。2023年の固定版。",
+      "[1] HELM Classic v0.4.0. MATH、Level 1の固定評価。2023-11-17公開版。  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/math_regular"
+    ]
+  },
+  {
+    "page": 20,
+    "text": [
+      "提示例と生成条件も同時に変わる",
+      "2. 採点とHELMの比較条件",
+      "設定 | regular | 解説付き",
+      "提示例数の上限 | 8 | 8",
+      "最大出力トークン | 20 | 400",
+      "停止文字列 | $ | ###",
+      "候補数 / temperature | 1 / 0 | 1 / 0",
+      "二つの条件では、提示例の内容、出力上限、停止文字列も異なる。",
+      "[1] Stanford CRFM. HELM v0.3.0 run_specs.py, get_math_spec. 生成・適応条件。\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/run_specs.py"
+    ]
+  },
+  {
+    "page": 21,
+    "text": [
+      "収集とデータの全体像",
+      "3. 収集とデータの全体像"
+    ]
+  },
+  {
+    "page": 22,
+    "text": [
+      "数学競技の問題と、公開された解説を集める",
+      "AMC 10、AMC 12、AIMEなどの競技問題と、Art of Problem Solvingのコミュニティにある解説が主な素材。\n7,500問を学習、5,000問をtestに分け、各問に分野・難度・途中の解説・最終解答を対応させた。\n問題と解説はLaTeXで数式を表し、必要な図はAsymptoteという作図言語で記述する。",
+      "3. 収集とデータの全体像",
+      "[1] Hendrycks et al. (2021). Measuring Mathematical Problem Solving With the MATH Dataset. NeurIPS Datasets and Benchmarks.\nhttps://arxiv.org/abs/2103.03874"
+    ]
+  },
+  {
+    "page": 23,
+    "text": [
+      "7分野を、学習とtestに分けて収録",
+      "3. 収集とデータの全体像",
+      "分野 | 学習 | test",
+      "代数 | 1,744 | 1,187",
+      "場合の数・確率 | 771 | 474",
+      "幾何 | 870 | 479",
+      "中級代数 | 1,295 | 903",
+      "整数論 | 869 | 540",
+      "初等代数 | 1,205 | 871",
+      "解析の基礎 | 746 | 546",
+      "[1] MATH, EleutherAI/hendrycks_math. 固定revisionのtest分割。元の競技問題・解説の著者に帰属。  https://huggingface.co/datasets/EleutherAI/hendrycks_math"
+    ]
+  },
+  {
+    "page": 24,
+    "text": [
+      "testには難度1から5までを含む",
+      "3. 収集とデータの全体像",
+      "test全5,000問の件数。HELMの公開評価はLevel 1の437問。",
+      "[1] MATH, EleutherAI/hendrycks_math. 固定revisionのtest分割。元の競技問題・解説の著者に帰属。  https://huggingface.co/datasets/EleutherAI/hendrycks_math"
+    ]
+  },
+  {
+    "page": 25,
+    "text": [
+      "難度は、同じ分野の中で付けられる",
+      "難度は各分野の中で1〜5を付ける。1が易しく、5が難しい。\nAoPSの難度を使い、AMC 8の序盤の問題はLevel 1、AIMEの問題はLevel 5に当たることが多い。\n分野と難度は別の注釈。例えば複素数の絶対値や三角関数も、Level 1に含まれる。",
+      "3. 収集とデータの全体像",
+      "[1] Hendrycks et al. (2021). Measuring Mathematical Problem Solving With the MATH Dataset. NeurIPS Datasets and Benchmarks.\nhttps://arxiv.org/abs/2103.03874"
+    ]
+  },
+  {
+    "page": 26,
+    "text": [
+      "利用の変化と入手方法",
+      "4. 利用の変化と入手方法"
+    ]
+  },
+  {
+    "page": 27,
+    "text": [
+      "数学の学習と、汎用モデルの評価に使われる",
+      "2021年は、解説付きデータでの学習と、別途AMPSでの数学事前学習を組み合わせて評価した。\nHELMでは、学習例をプロンプトに入れる方法で複数の汎用言語モデルを比較した。\n2026-10-18時点で公式リポジトリ、固定した公開配布、HELMの実装を取得できる。",
+      "4. 利用の変化と入手方法",
+      "[1] Dan Hendrycks et al. MATH. 公式リポジトリ。2026-10-18参照。  https://github.com/hendrycks/math"
+    ]
+  },
+  {
+    "page": 28,
+    "text": [
+      "分野、分割、バージョンを固定して読む",
+      "4. 利用の変化と入手方法",
+      "from datasets import load_dataset\ndata = load_dataset(\n    'EleutherAI/hendrycks_math', 'algebra',\n    revision='21a5633873b6a120296cce3e2df9d5550074f4a3',\n    split='test',\n)\nprint(data[372]['problem'])\nprint(data[372]['solution'])",
+      "problem、solution、level、typeを持つ。元のLaTeXも含めて保存される。",
+      "[1] MATH, EleutherAI/hendrycks_math. 固定revisionのtest分割。元の競技問題・解説の著者に帰属。  https://huggingface.co/datasets/EleutherAI/hendrycks_math"
+    ]
+  },
+  {
+    "page": 29,
+    "text": [
+      "公式リンクと、分割を保つ配布を照合した",
+      "公式READMEが案内する配布では、12,500問を1つの集合として取得できた。\n今回の実例には、学習・testと7分野の分割を保つEleutherAIの公開配布を使った。\n両方の配布を全件取得し、問題・解説・分野・難度の12,500レコードが、重複数も含めて一致することを確認した。",
+      "4. 利用の変化と入手方法",
+      "[1] MATH. 公式READMEのリンク先配布。12,500件を1集合で公開。  https://huggingface.co/datasets/qwedsacf/competition_math"
+    ]
+  },
+  {
+    "page": 30,
+    "text": [
+      "元の競技問題の帰属を保って利用する",
+      "公式コードと公開データカードのライセンス表示はMIT。元の競技問題やAoPS上の解説の著者・出所も保持する。\n今回取得した分割付きParquetは合計約4.9 MB。公式リンク先の統合Parquetは約4.8 MBで、どちらも取得実測。\n実例の問題全文・解説全文・最終解答・固定revision・レコードhashを検証記録に保存した。",
+      "4. 利用の変化と入手方法",
+      "[1] Dan Hendrycks et al. MATH. 公式リポジトリ。2026-10-18参照。  https://github.com/hendrycks/math"
+    ]
+  },
+  {
+    "page": 31,
+    "text": [
+      "式を読み、解法を組み立て、最終解答を出す",
+      "MATHは12,500問の競技数学データで、7分野・5段階の難度と解説付きの解答を持つ。\n最終解答の採点と、途中の推論の正しさは別に検討する。\nHELMのregularと解説付き条件は、Level 1の437問を、異なる提示例と出力条件で比べる。",
+      "4. 利用の変化と入手方法",
+      "[1] Hendrycks et al. (2021). Measuring Mathematical Problem Solving With the MATH Dataset. NeurIPS Datasets and Benchmarks.\nhttps://arxiv.org/abs/2103.03874"
+    ]
+  },
+  {
+    "page": 32,
+    "text": [
+      "Appendix",
+      "Appendix"
+    ]
+  },
+  {
+    "page": 33,
+    "text": [
+      "",
+      "分野と難度が異なる追加例\n実行条件と配布の補足\n研究と参考文献",
+      "Appendix: 目次"
+    ]
+  },
+  {
+    "page": 34,
+    "text": [
+      "分野と難度が異なる追加例",
+      "Appendix: 1. 分野と難度が異なる追加例"
+    ]
+  },
+  {
+    "page": 35,
+    "text": [
+      "実例4：負の数を割る",
+      "Appendix: 1. 分野と難度が異なる追加例",
+      "Prealgebra / Level 1 / 問題の原文（全文）",
+      "Compute (−49) ÷ 7.",
+      "日本語訳",
+      "(−49) ÷ 7を計算せよ。",
+      "解答：−7",
+      "49 ÷ 7 = 7で、負の数を正の数で割るので答えは−7。",
+      "[1] MATH, EleutherAI/hendrycks_math. 固定revisionのtest分割。元の競技問題・解説の著者に帰属。 prealgebra / test row 134\nhttps://huggingface.co/datasets/EleutherAI/hendrycks_math"
+    ]
+  },
+  {
+    "page": 36,
+    "text": [
+      "実例5：30度の余弦",
+      "Appendix: 1. 分野と難度が異なる追加例",
+      "Geometry / Level 2 / 問題の原文（全文）",
+      "Compute cos 30°.",
+      "日本語訳",
+      "cos 30°を求めよ。",
+      "解答：√3 / 2",
+      "30°・60°・90°の直角三角形の辺の比から、cos 30° = √3 / 2。",
+      "[1] MATH, EleutherAI/hendrycks_math. 固定revisionのtest分割。元の競技問題・解説の著者に帰属。 geometry / test row 235\nhttps://huggingface.co/datasets/EleutherAI/hendrycks_math"
+    ]
+  },
+  {
+    "page": 37,
+    "text": [
+      "実例6：階乗の約数を数える",
+      "Appendix: 1. 分野と難度が異なる追加例",
+      "Number Theory / Level 4 / 問題の原文（全文）",
+      "Find the number of positive divisors of 9!.",
+      "日本語訳",
+      "9!の正の約数の個数を求めよ。",
+      "解答：160",
+      "9! = 2⁷ × 3⁴ × 5 × 7。約数は各素因数の指数を選ぶので、8 × 5 × 2 × 2 = 160個。",
+      "[1] MATH, EleutherAI/hendrycks_math. 固定revisionのtest分割。元の競技問題・解説の著者に帰属。 number_theory / test row 345\nhttps://huggingface.co/datasets/EleutherAI/hendrycks_math"
+    ]
+  },
+  {
+    "page": 38,
+    "text": [
+      "実例7：複素指数関数の値",
+      "Appendix: 1. 分野と難度が異なる追加例",
+      "Precalculus / Level 1 / 問題の原文（全文）",
+      "Compute eπi.",
+      "日本語訳",
+      "eπiを計算せよ。",
+      "解答：−1",
+      "オイラーの公式から、eπi = cos π + i sin π = −1。",
+      "[1] MATH, EleutherAI/hendrycks_math. 固定revisionのtest分割。元の競技問題・解説の著者に帰属。 precalculus / test row 235\nhttps://huggingface.co/datasets/EleutherAI/hendrycks_math"
+    ]
+  },
+  {
+    "page": 39,
+    "text": [
+      "実例8：平方根の定義域",
+      "Appendix: 1. 分野と難度が異なる追加例",
+      "Algebra / Level 5 / 問題の原文（全文）",
+      "Find the domain of √(6 − x − x²).",
+      "日本語訳",
+      "√(6 − x − x²)の定義域を求めよ。",
+      "解答：[−3, 2]",
+      "根号の中が0以上という条件は、(x + 3)(x − 2) ≤ 0。したがって−3 ≤ x ≤ 2。",
+      "[1] MATH, EleutherAI/hendrycks_math. 固定revisionのtest分割。元の競技問題・解説の著者に帰属。 algebra / test row 195\nhttps://huggingface.co/datasets/EleutherAI/hendrycks_math"
+    ]
+  },
+  {
+    "page": 40,
+    "text": [
+      "実例9：7の倍数を除く",
+      "Appendix: 1. 分野と難度が異なる追加例",
+      "Counting & Probability / Level 3 / 問題の原文（全文）",
+      "How many positive three-digit numbers are not multiples of 7?",
+      "日本語訳",
+      "正の3桁の整数のうち、7の倍数でないものはいくつあるか。",
+      "解答：772",
+      "3桁の整数は900個。7の倍数は105から994まで128個なので、900 − 128 = 772個。",
+      "[1] MATH, EleutherAI/hendrycks_math. 固定revisionのtest分割。元の競技問題・解説の著者に帰属。 counting_and_probability / test row 156\nhttps://huggingface.co/datasets/EleutherAI/hendrycks_math"
+    ]
+  },
+  {
+    "page": 41,
+    "text": [
+      "実例10：平方因子を根号の外へ出す",
+      "Appendix: 1. 分野と難度が異なる追加例",
+      "Prealgebra / Level 4 / 問題の原文（全文）",
+      "Simplify √242.",
+      "日本語訳",
+      "√242を簡単にせよ。",
+      "解答：11√2",
+      "242 = 11² × 2なので、√242 = 11√2。",
+      "[1] MATH, EleutherAI/hendrycks_math. 固定revisionのtest分割。元の競技問題・解説の著者に帰属。 prealgebra / test row 190\nhttps://huggingface.co/datasets/EleutherAI/hendrycks_math"
+    ]
+  },
+  {
+    "page": 42,
+    "text": [
+      "実例11：30度の正弦",
+      "Appendix: 1. 分野と難度が異なる追加例",
+      "Geometry / Level 1 / 問題の原文（全文）",
+      "Compute sin 30°.",
+      "日本語訳",
+      "sin 30°を求めよ。",
+      "解答：1 / 2",
+      "30°・60°・90°の直角三角形では、30°の対辺は斜辺の半分。",
+      "[1] MATH, EleutherAI/hendrycks_math. 固定revisionのtest分割。元の競技問題・解説の著者に帰属。 geometry / test row 167\nhttps://huggingface.co/datasets/EleutherAI/hendrycks_math"
+    ]
+  },
+  {
+    "page": 43,
+    "text": [
+      "実例12：平方数の約数を数える",
+      "Appendix: 1. 分野と難度が異なる追加例",
+      "Number Theory / Level 5 / 問題の原文（全文）",
+      "How many factors of 2⁵ · 3⁶ are perfect squares?",
+      "日本語訳",
+      "2⁵ · 3⁶の約数のうち、平方数はいくつあるか。",
+      "解答：12",
+      "平方数では、素因数の指数がすべて偶数になる。 2の指数は0・2・4の3通り、3の指数は0・2・4・6の4通り。",
+      "[1] MATH, EleutherAI/hendrycks_math. 固定revisionのtest分割。元の競技問題・解説の著者に帰属。 number_theory / test row 89\nhttps://huggingface.co/datasets/EleutherAI/hendrycks_math"
+    ]
+  },
+  {
+    "page": 44,
+    "text": [
+      "実例13：三角比の符号を選ぶ",
+      "Appendix: 1. 分野と難度が異なる追加例",
+      "Precalculus / Level 5 / 問題の原文（全文）",
+      "If sin x + cos x = 1/5 and 0 < x < π, find tan x.",
+      "日本語訳",
+      "sin x + cos x = 1/5、0 < x < πのとき、tan xを求めよ。",
+      "解答：−4 / 3",
+      "0 < x < πよりsin x > 0。条件からsin x = 4/5、cos x = −3/5となり、tan x = −4/3。",
+      "[1] MATH, EleutherAI/hendrycks_math. 固定revisionのtest分割。元の競技問題・解説の著者に帰属。 precalculus / test row 541\nhttps://huggingface.co/datasets/EleutherAI/hendrycks_math"
+    ]
+  },
+  {
+    "page": 45,
+    "text": [
+      "実行条件と配布の補足",
+      "Appendix: 2. 実行条件と配布の補足"
+    ]
+  },
+  {
+    "page": 46,
+    "text": [
+      "Level 1の分野別評価対象数",
+      "Appendix: 2. 実行条件と配布の補足",
+      "分野 | 問題数",
+      "代数 | 135",
+      "場合の数・確率 | 39",
+      "幾何 | 38",
+      "中級代数 | 52",
+      "整数論 | 30",
+      "初等代数 | 86",
+      "解析の基礎 | 57",
+      "[1] HELM Classic v0.4.0. MATH、Level 1の固定評価。2023-11-17公開版。  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/math_regular"
+    ]
+  },
+  {
+    "page": 47,
+    "text": [
+      "text-davinci-003の分野別正解率",
+      "Appendix: 2. 実行条件と配布の補足",
+      "分野 | regular | 解説付き",
+      "代数 | 28.15% | 50.37%",
+      "場合の数・確率 | 35.04% | 44.44%",
+      "幾何 | 56.14% | 44.74%",
+      "中級代数 | 26.92% | 32.05%",
+      "整数論 | 28.89% | 38.89%",
+      "初等代数 | 54.65% | 61.24%",
+      "解析の基礎 | 43.27% | 42.69%",
+      "[1] HELM Classic v0.4.0. MATH、Level 1の固定評価。2023-11-17公開版。  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/math_regular"
+    ]
+  },
+  {
+    "page": 48,
+    "text": [
+      "実際の提示例数はモデルと分野で異なる",
+      "regularでは今回の3モデルとも8例。解説付き条件でも、text-davinci-003とAnthropicは全分野で8例だった。\nOPTの解説付き条件は、中級代数5.16例、幾何5.88例、解析の基礎6.88例が平均。ほかは8例。\n入力を切り詰めた割合prompt_truncatedは、今回の42実行すべて0。提示例を減らして収めた場合も、この値は0になる。",
+      "Appendix: 2. 実行条件と配布の補足",
+      "[1] HELM Classic v0.4.0. MATH chain-of-thought、Level 1の固定評価。  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/math_chain_of_thought"
+    ]
+  },
+  {
+    "page": 49,
+    "text": [
+      "表記の正規化を、数学の同値判定と区別する",
+      "例えば1/2とLaTeXの\\frac{1}{2}は、表記をそろえて一致と判定される。\n一方で、(x + 1)²とx² + 2x + 1を一般に展開して比較する記号計算器は使わない。\nchain-of-thought条件では、生成と参照解説の最後のboxedを取り出してから、同じ正規化を行う。",
+      "Appendix: 2. 実行条件と配布の補足",
+      "[1] Stanford CRFM. MATHScenario v0.3.0. 参照解答の抽出と表記正規化。\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/math_scenario.py"
+    ]
+  },
+  {
+    "page": 50,
+    "text": [
+      "人の成績は、20問の別標本で調べた",
+      "testから20問を無作為に選び、大学生6人が1時間、手計算で解いた。\n数学を好まない参加者は8/20、IMOで3度金メダルを得た参加者は18/20だった。\nほかの4人は13問、14問、15問、18問に正解した。数学経験が異なる参加者を、同じ20問で比較した。",
+      "Appendix: 2. 実行条件と配布の補足",
+      "[1] Hendrycks et al. (2021). Measuring Mathematical Problem Solving With the MATH Dataset. NeurIPS Datasets and Benchmarks.\nhttps://arxiv.org/abs/2103.03874"
+    ]
+  },
+  {
+    "page": 51,
+    "text": [
+      "解説の符号も、最終解答とは別に確かめる",
+      "実例13の配布解説では、sin x = 4/5、cos x = −3/5を導いた後、最後の分数で符号の位置が入れ替わっている。\n最終解答−4/3は変わらないが、途中の式は、(4/5) ÷ (−3/5)と書くのが導出に対応する。\n資料の解説はこの対応を保って説明し、配布解説の原文は変更せず検証記録へ保存した。",
+      "Appendix: 2. 実行条件と配布の補足",
+      "[1] MATH, EleutherAI/hendrycks_math. 固定revisionのtest分割。元の競技問題・解説の著者に帰属。  https://huggingface.co/datasets/EleutherAI/hendrycks_math"
+    ]
+  },
+  {
+    "page": 52,
+    "text": [
+      "研究と参考文献",
+      "Appendix: 3. 研究と参考文献"
+    ]
+  },
+  {
+    "page": 53,
+    "text": [
+      "競技数学を、大規模な解説付き評価にする",
+      "第一著者はDan Hendrycks、最終著者はJacob Steinhardt。計8人の著者による研究としてNeurIPS 2021 Datasets and Benchmarksに発表された。\n競技数学の問題、段階的な解説、難度と分野の注釈を組み合わせ、数学的な問題解決を測る資源を作った。\n同時にAMPSを公開し、数学に特化した事前学習データが性能に与える影響も調べた。",
+      "Appendix: 3. 研究と参考文献",
+      "[1] Hendrycks et al. (2021). Measuring Mathematical Problem Solving With the MATH Dataset. NeurIPS Datasets and Benchmarks.\nhttps://arxiv.org/abs/2103.03874"
+    ]
+  },
+  {
+    "page": 54,
+    "text": [
+      "参考文献",
+      "Appendix: 3. 研究と参考文献",
+      "Measuring Mathematical Problem Solving With the MATH Dataset",
+      "Dan Hendrycks et al. · 2021 · NeurIPS Datasets and Benchmarks",
+      "競技数学12,500問と解説、分野・難度、解答の正規化による採点を示す。",
+      "https://arxiv.org/abs/2103.03874",
+      "Holistic Evaluation of Language Models",
+      "Percy Liang et al. · 2023 · TMLR",
+      "共通の適応方法と複数の指標を使い、MATHを含む多数の課題で言語モデルを比較する。",
+      "https://arxiv.org/abs/2211.09110"
+    ]
+  },
+  {
+    "page": 55,
+    "text": [
+      "参考文献",
+      "Appendix: 3. 研究と参考文献",
+      "MATH Dataset",
+      "Dan Hendrycks et al. · 公式リポジトリ",
+      "データの取得先、解答抽出と正規化、評価コード、AMPSの配布を案内する。",
+      "https://github.com/hendrycks/math",
+      "MATHScenario",
+      "Stanford CRFM · HELM v0.3.0",
+      "Level 1の抽出、公式提示例、解説付き条件の参照、解答の比較関数を実装する。",
+      "https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/math_scenario.py"
+    ]
+  }
+]

@@ -3,13 +3,13 @@
   "created_at": "2026-10-18T07:39:42Z",
   "review_mode": "skill_based_codex",
   "gemini_used": false,
-  "main_pages": 31,
-  "total_pages": 55,
+  "main_pages": 24,
+  "total_pages": 43,
   "self_visual_review": {
-    "visual-inspection.json": {
-      "method": "Codex view_image: overview and individual final page PNGs, 1080x608",
-      "overview_viewed": true,
-      "pages_individually_viewed": [
+    "visual-review.json": {
+      "method": "skill_based_codex",
+      "gemini_used": false,
+      "individual_page_views": [
         1,
         2,
         3,
@@ -52,89 +52,68 @@
         40,
         41,
         42,
-        43,
-        44,
-        45,
-        46,
-        47,
-        48,
-        49,
-        50,
-        51,
-        52,
-        53,
-        54,
-        55
+        43
       ],
-      "final_changed_pages_rechecked": [
-        6,
-        8,
-        10,
-        11,
-        15,
-        20,
-        35,
-        36,
-        37,
-        38,
-        39,
-        40,
-        41,
-        42,
-        43,
-        44,
-        49,
-        50
+      "overview_viewed": true,
+      "changed_page_rechecks": [
+        1,
+        3,
+        21,
+        23,
+        25,
+        26,
+        43
       ],
-      "checks": [
-        "全引用原文・訳・解答",
-        "native表8件・chart1件",
-        "コード",
-        "公式画面CSS",
-        "全参考文献",
-        "数式上付きと符号",
-        "引用枠の実字形上下余白",
-        "URLのみリンク範囲"
+      "findings_resolved": [
+        "native自動番号と本文の手入力番号の二重表示を除いた",
+        "5行の実コードに背景を合わせ、説明と出典の間隔を確保した",
+        "MITデータカードと配布容量の直接出典を併記した",
+        "独立レビュー3外枠を字形位置維持で拡張。全43PNG bytes不変、1/21/25個別再view。"
       ],
-      "remaining_issues": []
+      "original_examples_full_text_and_Japanese_preserved": 13,
+      "native_tables": 3,
+      "native_charts": 1,
+      "final_hashes": {
+        "datasets-in-10-minutes-math.pptx": "11eeb6f3b928d7bda6be675a33704810bb8481df402a51d55105f75cc04cc905",
+        "datasets-in-10-minutes-math.pdf": "c9a449148d2a93abf96407ebe4d65b971df4ac42798713ca4705b3a16a304713"
+      },
+      "remaining_issues": [],
+      "all_text_frame_visible_ink_audit": {
+        "frames": 224,
+        "paragraphs": 265,
+        "candidates": 0,
+        "tolerance_pt": 0.75
+      }
     }
   },
-  "updated_at": "2026-10-18T07:39:42Z",
+  "updated_at": "2026-10-19T10:26:34+00:00",
   "artifact_sha256": {
-    "pdf": "650a1fb3079ec5d2d177dc33b2c50ebceb01a7585d803c95229cd5ab18fda76d",
-    "pptx": "bc40995bea25effde38953bc845d7d152c5bfeb2da8d87f4e704f4ec3ad566f1"
+    "pptx": "11eeb6f3b928d7bda6be675a33704810bb8481df402a51d55105f75cc04cc905",
+    "pdf": "c9a449148d2a93abf96407ebe4d65b971df4ac42798713ca4705b3a16a304713"
   },
   "checks": {
-    "layout": {
-      "paragraphs_checked": 319,
-      "table_cells_checked": 87,
+    "layout-audit.json": {
+      "paragraphs_checked": 234,
+      "table_cells_checked": 29,
       "issues": []
     },
-    "package": {
-      "parsed_xml_parts": 145,
-      "integer_bullets": 138,
-      "hyperlinks": 46,
+    "package-audit.json": {
+      "parsed_xml_parts": 121,
+      "integer_bullets": 119,
+      "hyperlinks": 37,
       "new_schema_errors": [],
       "baseline_schema_errors": 11,
       "package_integrity": "passed",
       "internal_relationship_targets": "passed",
       "unique_shape_ids": "passed",
       "schema_note": "標準XSDを変更せず確認。マスター由来の既存エラーと、整数buSzPctの百分率字句形式との差を分離。整数箇条書きサイズは25000–400000で別途検査。",
-      "pages": 55,
-      "native_tables": 8,
+      "pages": 43,
+      "native_tables": 3,
       "native_charts": 1
     },
-    "text": {
-      "pages": 55,
-      "paragraphs_checked": 319,
-      "table_cells_checked": 87,
-      "issues": [],
-      "replacement_characters": false,
-      "notes_slides": 0
-    },
-    "links": {
-      "native_url_only_runs": 46,
-      "pdf_link_rectangles": 46,
+    "links-audit.json": {
+      "native_url_only_runs": 37,
+      "pdf_link_rectangles": 37,
       "pdf_link_text_exactly_matches_url": true,
       "pdf_link_character_centers_match_url": true,
       "glyph_box_overhangs": [],
@@ -142,5 +121,33 @@
       "issues": []
     }
   },
-  "independent_review": "independent-review/"
+  "independent_review": "editorial-2026-10/independent-review/",
+  "editorial_revisions": [
+    {
+      "checked_at": "2026-10-19T10:26:34+00:00",
+      "method": "skill_based_codex",
+      "gemini_used": false,
+      "baseline_artifact_sha256": {
+        "pptx": "bc40995bea25effde38953bc845d7d152c5bfeb2da8d87f4e704f4ec3ad566f1",
+        "pdf": "650a1fb3079ec5d2d177dc33b2c50ebceb01a7585d803c95229cd5ab18fda76d"
+      },
+      "artifact_sha256": {
+        "pptx": "11eeb6f3b928d7bda6be675a33704810bb8481df402a51d55105f75cc04cc905",
+        "pdf": "c9a449148d2a93abf96407ebe4d65b971df4ac42798713ca4705b3a16a304713"
+      },
+      "previous_pages": 55,
+      "total_pages": 43,
+      "main_pages": 24,
+      "record_directory": "editorial-2026-10/",
+      "independent_review": "editorial-2026-10/independent-review/",
+      "main_check": "editorial-2026-10/main-review.json"
+    }
+  ],
+  "current_revision": "editorial-2026-10/",
+  "previous_review_record": "editorial-2026-10/previous/review.json",
+  "audit_sources": {
+    "layout-audit.json": "editorial-2026-10/layout-audit.json",
+    "package-audit.json": "editorial-2026-10/package-audit.json",
+    "links-audit.json": "editorial-2026-10/links-audit.json"
+  }
 }

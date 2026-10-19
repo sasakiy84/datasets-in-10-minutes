@@ -12,3 +12,8 @@ Geminiは使用していない。Codexが日本語校正スキルをページご
 |43|平方数は素因数を偶数にする。|平方数では、素因数の指数がすべて偶数になる。|偶数になる対象を素因数から指数へ正した。|
 
 [全ページ文言](math/pages.jsonl)・[自己検査・独立レビュー](math/review.json)
+
+
+## 読者向けの説明・日本語の改訂（2026年10月）
+
+Geminiは使用せず、Codexがスキルで校正し、別担当が独立レビューした。削除・統合を含む[問題点と変更対](math/editorial-2026-10/changes.md)、[旧ページとの対応](math/editorial-2026-10/page-map.json)、[独立レビュー](math/editorial-2026-10/independent-review/handoff.json)、[最終ページの全文](math/pages.jsonl)。旧版の校正・検証記録は保持している。

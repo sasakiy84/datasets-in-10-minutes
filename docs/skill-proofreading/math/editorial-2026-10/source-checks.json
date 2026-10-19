@@ -1,0 +1,145 @@
+{
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "original_parquet_split_counts": {
+    "algebra": {
+      "train": 1744,
+      "test": 1187
+    },
+    "counting_and_probability": {
+      "train": 771,
+      "test": 474
+    },
+    "geometry": {
+      "train": 870,
+      "test": 479
+    },
+    "intermediate_algebra": {
+      "train": 1295,
+      "test": 903
+    },
+    "number_theory": {
+      "train": 869,
+      "test": 540
+    },
+    "prealgebra": {
+      "train": 1205,
+      "test": 871
+    },
+    "precalculus": {
+      "train": 746,
+      "test": 546
+    }
+  },
+  "test_level_counts": {
+    "Level 3": 1131,
+    "Level 1": 437,
+    "Level 4": 1214,
+    "Level 5": 1324,
+    "Level 2": 894
+  },
+  "split_vs_official_12500_multiset_match": true,
+  "examples": [
+    {
+      "example": 1,
+      "id": "algebra/test/372",
+      "source_record_fields_match": true,
+      "published_record_sha256": "ce2df48575f5fe2b69cf5a55e92f306e6de3ddcfceee1798acaedd273c121422"
+    },
+    {
+      "example": 2,
+      "id": "intermediate_algebra/test/457",
+      "source_record_fields_match": true,
+      "published_record_sha256": "506cc6a6f0b26778d13d28da1af49cf93c8521299b3be89763d30d5a8d3c602f"
+    },
+    {
+      "example": 3,
+      "id": "counting_and_probability/test/445",
+      "source_record_fields_match": true,
+      "published_record_sha256": "2a97f68cff17a0d2b60684b149bb581ee096ed059e6ef482876e7915b2780d05"
+    },
+    {
+      "example": 4,
+      "id": "prealgebra/test/134",
+      "source_record_fields_match": true,
+      "published_record_sha256": "dce18cc5042d7853e24fa410e824abd0e51d0e682f0b3ec4b30aaac13e501ec7"
+    },
+    {
+      "example": 5,
+      "id": "geometry/test/235",
+      "source_record_fields_match": true,
+      "published_record_sha256": "7a4ff805d040e6ae41ac1b96e749f16a7acfa3a36c9efd50b51d2887b4dbfa7a"
+    },
+    {
+      "example": 6,
+      "id": "number_theory/test/345",
+      "source_record_fields_match": true,
+      "published_record_sha256": "e4e4eb1f9e0d326d2cf1608365570dea70920bcdd5cccab809f1bd8c3e676395"
+    },
+    {
+      "example": 7,
+      "id": "precalculus/test/235",
+      "source_record_fields_match": true,
+      "published_record_sha256": "256a22a7f4dcbe0cbf0b5f0536313413063ef09e4152367d8b67b192133058fb"
+    },
+    {
+      "example": 8,
+      "id": "algebra/test/195",
+      "source_record_fields_match": true,
+      "published_record_sha256": "79c375bb5d6ba5873c6a752a214147f5393289a770e9d28d0ce5d1fa95045682"
+    },
+    {
+      "example": 9,
+      "id": "counting_and_probability/test/156",
+      "source_record_fields_match": true,
+      "published_record_sha256": "148a54e6ba18fc062a776166d20416e8599feaa7ad391db58a6a12299f64a395"
+    },
+    {
+      "example": 10,
+      "id": "prealgebra/test/190",
+      "source_record_fields_match": true,
+      "published_record_sha256": "588fff56b0b18063dc4aa18e73ebf2dc8492b80e3c3975121bf80fb5765f705e"
+    },
+    {
+      "example": 11,
+      "id": "geometry/test/167",
+      "source_record_fields_match": true,
+      "published_record_sha256": "c2cb95acedf63704219f3654b5c990929c966cdae234e1048c48bbf5b5bf3961"
+    },
+    {
+      "example": 12,
+      "id": "number_theory/test/89",
+      "source_record_fields_match": true,
+      "published_record_sha256": "6f5a0282a280602d2b98956368f674372d323afc803ca2b8b4c294427dc94fdf"
+    },
+    {
+      "example": 13,
+      "id": "precalculus/test/541",
+      "source_record_fields_match": true,
+      "published_record_sha256": "3b427a1967b39eaf2ef4a48f794a3bdbd359a003d2b5ea92bde1a9cfa0ad9f10"
+    }
+  ],
+  "mathematical_checks_passed": 13,
+  "original_implementation_normalization_examples_executed": true,
+  "native_read_code_executed": true,
+  "original_paper_results": {
+    "test_scope": "5000 questions, 7 subjects, all difficulty levels",
+    "GPT2_1_5B_AMPS_then_finetuned": 6.9,
+    "GPT3_175B_8_examples": 5.2,
+    "source": "paper.pdf Table2 / §4.1"
+  },
+  "human_evaluation": {
+    "n_questions": 20,
+    "participants": 6,
+    "minutes": 60,
+    "correct": [
+      8,
+      13,
+      14,
+      15,
+      18,
+      18
+    ],
+    "calculations": "by hand"
+  }
+}
