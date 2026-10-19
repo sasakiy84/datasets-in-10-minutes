@@ -1,0 +1,254 @@
+{
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "all7_test_parquets_recounted": {
+    "ecthr_a": {
+      "test_rows": 1000,
+      "empty_labels": 153,
+      "parquet_sha256": "e306383d3ffd3baec21ba7419c03a9d2273f1c0946cf2d5512cf98c81d1a3f8b"
+    },
+    "ecthr_b": {
+      "test_rows": 1000,
+      "empty_labels": 14,
+      "parquet_sha256": "d41d3667819cce507b57f6a59da28fc3691a722b6cfb7f4bc74805f0e713df6e"
+    },
+    "scotus": {
+      "test_rows": 1400,
+      "empty_labels": 0,
+      "parquet_sha256": "1116b7762ec235264723c6f68509572620b616118db623ec6bbc3671fcbb1b96"
+    },
+    "eurlex": {
+      "test_rows": 5000,
+      "empty_labels": 0,
+      "parquet_sha256": "0c2ce5e5bc26c907607613aa1d7e4209553dbc3b85ec6ddcff1c745e2c7fdb9d"
+    },
+    "ledgar": {
+      "test_rows": 10000,
+      "empty_labels": 0,
+      "parquet_sha256": "af9ed0ec09545d39449ffddca3996a1a7774e2bd0a9d6fc09d4e9dd067892a7a"
+    },
+    "unfair_tos": {
+      "test_rows": 1607,
+      "empty_labels": 1435,
+      "parquet_sha256": "cf3a30be32f5635bc269b12685290a27b144ad837391e776a2070ff0c3a521c4"
+    },
+    "case_hold": {
+      "test_rows": 3600,
+      "empty_labels": 0,
+      "parquet_sha256": "0028b12e681c1ddd4370a53d6670334a4cf2c8b3179f1d5c2c9c10a95a1afe37"
+    }
+  },
+  "examples": [
+    {
+      "example": 1,
+      "task": "ledgar",
+      "raw_record_sha_exact": true,
+      "selected_contiguous_input_exact": true,
+      "all_candidate_options_retained": false,
+      "integer_labels": [
+        47
+      ],
+      "class_names": [
+        "Governing Laws"
+      ]
+    },
+    {
+      "example": 2,
+      "task": "unfair_tos",
+      "raw_record_sha_exact": true,
+      "selected_contiguous_input_exact": true,
+      "all_candidate_options_retained": false,
+      "integer_labels": [
+        2
+      ],
+      "class_names": [
+        "Unilateral change"
+      ]
+    },
+    {
+      "example": 3,
+      "task": "ecthr_a",
+      "raw_record_sha_exact": true,
+      "selected_contiguous_input_exact": true,
+      "all_candidate_options_retained": false,
+      "integer_labels": [
+        3
+      ],
+      "class_names": [
+        "6"
+      ]
+    },
+    {
+      "example": 4,
+      "task": "ledgar",
+      "raw_record_sha_exact": true,
+      "selected_contiguous_input_exact": true,
+      "all_candidate_options_retained": false,
+      "integer_labels": [
+        87
+      ],
+      "class_names": [
+        "Taxes"
+      ]
+    },
+    {
+      "example": 5,
+      "task": "ledgar",
+      "raw_record_sha_exact": true,
+      "selected_contiguous_input_exact": true,
+      "all_candidate_options_retained": false,
+      "integer_labels": [
+        27
+      ],
+      "class_names": [
+        "Death"
+      ]
+    },
+    {
+      "example": 6,
+      "task": "unfair_tos",
+      "raw_record_sha_exact": true,
+      "selected_contiguous_input_exact": true,
+      "all_candidate_options_retained": false,
+      "integer_labels": [],
+      "class_names": []
+    },
+    {
+      "example": 7,
+      "task": "unfair_tos",
+      "raw_record_sha_exact": true,
+      "selected_contiguous_input_exact": true,
+      "all_candidate_options_retained": false,
+      "integer_labels": [
+        1
+      ],
+      "class_names": [
+        "Unilateral termination"
+      ]
+    },
+    {
+      "example": 8,
+      "task": "unfair_tos",
+      "raw_record_sha_exact": true,
+      "selected_contiguous_input_exact": true,
+      "all_candidate_options_retained": false,
+      "integer_labels": [
+        2,
+        1
+      ],
+      "class_names": [
+        "Unilateral change",
+        "Unilateral termination"
+      ]
+    },
+    {
+      "example": 9,
+      "task": "ecthr_a",
+      "raw_record_sha_exact": true,
+      "selected_contiguous_input_exact": true,
+      "all_candidate_options_retained": false,
+      "integer_labels": [
+        3
+      ],
+      "class_names": [
+        "6"
+      ]
+    },
+    {
+      "example": 10,
+      "task": "ecthr_b",
+      "raw_record_sha_exact": true,
+      "selected_contiguous_input_exact": true,
+      "all_candidate_options_retained": false,
+      "integer_labels": [
+        1
+      ],
+      "class_names": [
+        "3"
+      ]
+    },
+    {
+      "example": 11,
+      "task": "scotus",
+      "raw_record_sha_exact": true,
+      "selected_contiguous_input_exact": true,
+      "all_candidate_options_retained": false,
+      "integer_labels": [
+        8
+      ],
+      "class_names": [
+        "9"
+      ]
+    },
+    {
+      "example": 12,
+      "task": "eurlex",
+      "raw_record_sha_exact": true,
+      "selected_contiguous_input_exact": true,
+      "all_candidate_options_retained": false,
+      "integer_labels": [
+        7,
+        91,
+        96,
+        97
+      ],
+      "class_names": [
+        "100174",
+        "100277",
+        "100282",
+        "100283"
+      ]
+    },
+    {
+      "example": 13,
+      "task": "case_hold",
+      "raw_record_sha_exact": true,
+      "selected_contiguous_input_exact": true,
+      "all_candidate_options_retained": true,
+      "integer_labels": [
+        1
+      ],
+      "class_names": [
+        "1"
+      ]
+    }
+  ],
+  "ecthr_same_facts_different_labels": {
+    "a": [],
+    "b": [
+      1
+    ]
+  },
+  "official_metric_controlled_tests": {
+    "empty_set": {
+      "macro-f1": 0.6666666666666666,
+      "micro-f1": 1.0
+    },
+    "casehold": {
+      "macro-f1": 0.5555555555555555,
+      "micro-f1": 0.6666666666666666
+    }
+  },
+  "native_code_executed": true,
+  "original_ACL2022_Table3_macro_F1": {
+    "BERT": [
+      "63.6",
+      "73.4",
+      "58.3",
+      "57.2",
+      "81.8",
+      "81.3",
+      "70.8"
+    ],
+    "Legal-BERT": [
+      "64.0",
+      "74.7",
+      "66.5",
+      "57.4",
+      "83.0",
+      "83.0",
+      "75.3"
+    ]
+  },
+  "model_training_condition": "5 repetitions, select best development macro-F1 seed; original2022supervised evaluation, not new model inference"
+}

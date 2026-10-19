@@ -1,0 +1,57 @@
+{
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "dataset": "LexGLUE",
+  "original_creator": "Ilias Chalkidis, Abhik Jana, Dirk Hartung, Michael Bommarito, Ion Androutsopoulos, Daniel Martin Katz, Nikolaos Aletras",
+  "material_origin": "既存ECtHR A/B・EUR-LEX・LEDGAR・UNFAIR-ToS・CaseHOLDを整理し、SCOTUSはLexGLUE研究がCourtListenerの判決文とSCDBの争点情報を組み合わせ新たに構築した7課題。裁判所・EU機関・SEC提出契約・Web規約等の元著者/注釈者は別に帰属を持つ。",
+  "first_public_release": "2021-10-03",
+  "publication_year": 2022,
+  "primary_sources": [
+    {
+      "url": "https://aclanthology.org/2022.acl-long.297/",
+      "local": "evidence/acl-paper.pdf",
+      "basis": "正式ACL2022本文・§3構築/簡略化・Table1/3・5回から開発最良seed・空集合の扱い"
+    },
+    {
+      "url": "https://arxiv.org/abs/2110.00976v1",
+      "local": "evidence/arxiv-v1.html",
+      "basis": "citation_date 2021-10-03、初公開年"
+    },
+    {
+      "url": "https://github.com/coastalcph/lex-glue",
+      "local": "evidence/official-readme.md",
+      "basis": "元ベンチマークの取得先・評価コード"
+    },
+    {
+      "url": "https://huggingface.co/datasets/coastalcph/lex_glue",
+      "local": "evidence/hf-readme.md",
+      "basis": "公開ClassLabel/配布分割・CC BY4.0"
+    }
+  ],
+  "HELM_relationship": "後の採用先であり、LexGLUEと7構成課題の作成主体ではない。公開run0/入力変換/生成設定/参照生成/実装監査は本文から外部記録へ移した。",
+  "checked_final_pages": [
+    1,
+    5,
+    14,
+    15,
+    16,
+    17,
+    19,
+    20,
+    21,
+    22,
+    24,
+    25,
+    26,
+    46,
+    47,
+    48,
+    49
+  ],
+  "conclusion": "現行49頁は元LexGLUEの目的・13真正例・7課題の構築と元評価・実利用を説明し、元データ作成主体と後続採用先を混同していない。",
+  "final_hashes": {
+    "datasets-in-10-minutes-lexglue.pptx": "a84a3e4ab2d83afd539d639ce87f3d353a70e92b2abd144191466c2340baf2ab",
+    "datasets-in-10-minutes-lexglue.pdf": "39c53cda26d547f25547089121317fa2ca828cd9b1e01b5f7ad821349be8a706"
+  },
+  "independent_review": "approved"
+}

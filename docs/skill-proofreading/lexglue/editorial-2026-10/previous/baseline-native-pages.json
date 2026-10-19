@@ -1,0 +1,613 @@
+[
+  {
+    "page": 1,
+    "text": [
+      "LexGLUE",
+      "Legal General Language Understanding Evaluation\n裁判・法令・契約を、七つの課題で評価する",
+      "sasakiy84",
+      "datasets in 10 minutes (2026-10-18)"
+    ]
+  },
+  {
+    "page": 2,
+    "text": [
+      "公式リポジトリ",
+      "LexGLUE",
+      "[1] Chalkidis et al. LexGLUE 公式リポジトリ。  https://github.com/coastalcph/lex-glue"
+    ]
+  },
+  {
+    "page": 3,
+    "text": [
+      "",
+      "法律の文章で何を当てるか\n七つのデータと作り方\n採点方法と到達水準\nHELMでの位置付けと入手方法",
+      "目次"
+    ]
+  },
+  {
+    "page": 4,
+    "text": [
+      "法律の文章で何を当てるか",
+      "1. 法律の文章で何を当てるか"
+    ]
+  },
+  {
+    "page": 5,
+    "text": [
+      "法律の言語理解を、七つの課題にまとめる",
+      "LexGLUEは、英語の法律文書を使う7つのデータセットを、共通の評価枠組みにまとめたベンチマーク。2022年のACLで発表された。\n欧州人権裁判所の事件、米国最高裁の判決、EU法令、契約条項、利用規約、判例の引用を扱う。\n入力に応じて、条項や争点のラベルを付けたり、引用に入る判旨を5候補から選んだりする。",
+      "1. 法律の文章で何を当てるか",
+      "[1] Chalkidis et al. (2022). LexGLUE: A Benchmark Dataset for Legal Language Understanding in English. ACL.  https://aclanthology.org/2022.acl-long.297/"
+    ]
+  },
+  {
+    "page": 6,
+    "text": [
+      "実例1：準拠法を分類する",
+      "1. 法律の文章で何を当てるか",
+      "LEDGAR / 入力全文",
+      "This Agreement shall be construed under the laws of the State of Delaware.",
+      "日本語訳",
+      "本契約はデラウェア州の法に従って解釈される。",
+      "正解：準拠法",
+      "[1] coastalcph/lex_glue. 固定revision c23fdff… / 元の裁判・法令・契約の作成者に帰属。 ledgar/test/52  https://huggingface.co/datasets/coastalcph/lex_glue"
+    ]
+  },
+  {
+    "page": 7,
+    "text": [
+      "契約条項の主題を一つ選ぶ",
+      "実例1の入力は、デラウェア州法に従って契約を解釈するという1文。LEDGARでは、条項の主なテーマを100クラスから選ぶ。\nLexGLUEは、契約を内容別に整理するような用途も対象に含む。",
+      "1. 法律の文章で何を当てるか",
+      "[1] Chalkidis et al. (2022). LexGLUE: A Benchmark Dataset for Legal Language Understanding in English. ACL.  https://aclanthology.org/2022.acl-long.297/"
+    ]
+  },
+  {
+    "page": 8,
+    "text": [
+      "実例2：規約の一方的変更を見つける",
+      "1. 法律の文章で何を当てるか",
+      "UNFAIR-ToS / 入力全文",
+      "academia.edu reserves the right , at its sole discretion , to modify the site , services and these terms , at any time and without prior notice . ",
+      "日本語訳",
+      "academia.eduは、その単独の裁量により、いつでも事前の通知なく、サイト、サービスおよび本規約を変更する権利を留保する。",
+      "正解：一方的変更",
+      "[1] coastalcph/lex_glue. 固定revision c23fdff… / 元の裁判・法令・契約の作成者に帰属。 unfair_tos/test/15  https://huggingface.co/datasets/coastalcph/lex_glue"
+    ]
+  },
+  {
+    "page": 9,
+    "text": [
+      "利用規約には、複数ラベルや空集合もある",
+      "UNFAIR-ToSは、欧州の消費者法の観点で問題になりうる条項を、8種類で注釈したデータ。1文に複数の種類が付くこともある。\n実例2の参照は一方的変更。どの種類にも当たらない文には、空のラベル集合が付く。\nこれはデータセットの注釈を予測する課題であり、個別契約の法的効力を確定する判断とは区別される。",
+      "1. 法律の文章で何を当てるか",
+      "[1] Chalkidis et al. (2022). LexGLUE: A Benchmark Dataset for Legal Language Understanding in English. ACL.  https://aclanthology.org/2022.acl-long.297/"
+    ]
+  },
+  {
+    "page": 10,
+    "text": [
+      "実例3：認定された違反条項を予測する",
+      "1. 法律の文章で何を当てるか",
+      "ECtHR A / 入力全文",
+      "5.  The applicant was born in 1967 and lives in Smederevo.\n6.  On 26 March 2007 the applicant lodged a claim with the Žabari Municipal Court against his employer, the Ministry of Interior, seeking payment of certain benefits.\n7.  On 23 April 2012 the Požarevac First Instance Court the Žabari Court Unit ruled in favour of the applicant.\n8.  On 4 October 2012 the Belgrade Appellate Court revised the First Instance Court’s judgment and rejected the applicant’s claim. The applicant received the said judgment on 5 November 2012.\n9.  On 12 November 2014 the Constitutional Court rejected the applicant’s constitutional appeal.",
+      "正解：6",
+      "[1] coastalcph/lex_glue. 固定revision c23fdff… / 元の裁判・法令・契約の作成者に帰属。 ecthr_a/test/34  https://huggingface.co/datasets/coastalcph/lex_glue"
+    ]
+  },
+  {
+    "page": 11,
+    "text": [
+      "実例3：認定された違反条項を予測する（訳）",
+      "1. 法律の文章で何を当てるか",
+      "表示原文の日本語訳 / 入力全文",
+      "5. 申立人は1967年生まれで、スメデレヴォに住む。\n6. 2007年3月26日、内務省を雇用主とする申立人は、一定の手当の支払いを求めてジャバリ市裁判所に訴えを起こした。\n7. 2012年4月23日、ポジャレヴァツ第一審裁判所ジャバリ支部は、申立人に有利な判決を下した。\n8. 2012年10月4日、ベオグラード控訴裁判所は第一審判決を変更し、請求を棄却した。申立人は11月5日に判決を受け取った。\n9. 2014年11月12日、憲法裁判所は申立人の憲法上の不服申立てを退けた。",
+      "正解：欧州人権条約 第6条",
+      "[1] coastalcph/lex_glue. 固定revision c23fdff… / 元の裁判・法令・契約の作成者に帰属。 ecthr_a/test/34  https://huggingface.co/datasets/coastalcph/lex_glue"
+    ]
+  },
+  {
+    "page": 12,
+    "text": [
+      "同じ事実から、二つの異なるラベルを予測する",
+      "ECtHR Aは、事実の段落列から、裁判所が違反を認定した条項を予測する。ECtHR Bは、違反が主張され、裁判所が検討した条項を予測する。\nどちらも欧州人権条約の10条項に絞った複数ラベル分類。第6条などの条項名と、配布中の0始まりの整数は対応表で区別する。\nTask Bのラベルが付いていても、Task Aで違反が認定されるとは限らない。",
+      "1. 法律の文章で何を当てるか",
+      "[1] Chalkidis et al. (2022). LexGLUE: A Benchmark Dataset for Legal Language Understanding in English. ACL.  https://aclanthology.org/2022.acl-long.297/"
+    ]
+  },
+  {
+    "page": 13,
+    "text": [
+      "七つのデータと作り方",
+      "2. 七つのデータと作り方"
+    ]
+  },
+  {
+    "page": 14,
+    "text": [
+      "文書の種類と出力の形が異なる",
+      "2. 七つのデータと作り方",
+      "データ | 入力 | 出力",
+      "ECtHR A / B | 事件の事実列 | 違反 / 主張条項の集合",
+      "SCOTUS | 最高裁の判決文 | 争点分野を1つ",
+      "EUR-LEX | EU法令 | EuroVoc概念の集合",
+      "LEDGAR | 契約条項 | 主題を1つ",
+      "UNFAIR-ToS | 利用規約の1文 | 不公正条項の種類の集合",
+      "CaseHOLD | 判例の文脈と5候補 | 判旨の候補番号",
+      "[1] Chalkidis et al. (2022). LexGLUE: A Benchmark Dataset for Legal Language Understanding in English. ACL.  https://aclanthology.org/2022.acl-long.297/"
+    ]
+  },
+  {
+    "page": 15,
+    "text": [
+      "既存データを、比較しやすい形へ整える",
+      "公開され、論文で説明された法律データを選び、分割、入力とラベル、評価方法へのアクセスをそろえた。\nEUR-LEXは7,000以上のEuroVoc概念から第2階層の頻出100概念に整理。LEDGARは頻出100テーマを対象に、単一の主題を持つ条項へ絞った。\n法律の専門性を必要とする課題も対象にし、文書が長い課題も残した。",
+      "2. 七つのデータと作り方",
+      "[1] Chalkidis et al. (2022). LexGLUE: A Benchmark Dataset for Legal Language Understanding in English. ACL.  https://aclanthology.org/2022.acl-long.297/"
+    ]
+  },
+  {
+    "page": 16,
+    "text": [
+      "学習・開発・評価の分割を保つ",
+      "2. 七つのデータと作り方",
+      "データ | 学習 | 開発 | test",
+      "ECtHR A / B 各 | 9,000 | 1,000 | 1,000",
+      "SCOTUS | 5,000 | 1,400 | 1,400",
+      "EUR-LEX | 55,000 | 5,000 | 5,000",
+      "LEDGAR | 60,000 | 10,000 | 10,000",
+      "UNFAIR-ToS | 5,532 | 2,275 | 1,607",
+      "CaseHOLD | 45,000 | 3,900 | 3,600",
+      "固定配布の件数。CaseHOLD testは論文3,900、現配布3,600。",
+      "[1] coastalcph/lex_glue. 固定revision c23fdff… / 元の裁判・法令・契約の作成者に帰属。  https://huggingface.co/datasets/coastalcph/lex_glue"
+    ]
+  },
+  {
+    "page": 17,
+    "text": [
+      "多くの課題では、時間で分割する",
+      "ECtHRは2001〜2016年を学習、2016〜2017年を開発、2017〜2019年をtestとする。\nSCOTUSは1946〜1982年、1982〜1991年、1991〜2016年の順に分ける。EUR-LEX、LEDGAR、UNFAIR-ToSも時系列の分割を使う。\n後の時期の文書を予測する条件を保つため、学習とtestを混ぜず、公開された分割で比較する。",
+      "2. 七つのデータと作り方",
+      "[1] Chalkidis et al. (2022). LexGLUE: A Benchmark Dataset for Legal Language Understanding in English. ACL.  https://aclanthology.org/2022.acl-long.297/"
+    ]
+  },
+  {
+    "page": 18,
+    "text": [
+      "採点方法と到達水準",
+      "3. 採点方法と到達水準"
+    ]
+  },
+  {
+    "page": 19,
+    "text": [
+      "micro-F1とmacro-F1を並べて見る",
+      "micro-F1は、全クラスの正解・誤りをまとめて計算する。出現が多いラベルの影響を受けやすい。\nmacro-F1は、クラスごとに計算したF1の平均。出現の少ないクラスも、多いクラスと同じ重みで数える。\n単一ラベル分類やCaseHOLDの5択では、全クラスを含めたmicro-F1は正解率と一致する。",
+      "3. 採点方法と到達水準",
+      "[1] Chalkidis et al. (2022). LexGLUE: A Benchmark Dataset for Legal Language Understanding in English. ACL.  https://aclanthology.org/2022.acl-long.297/"
+    ]
+  },
+  {
+    "page": 20,
+    "text": [
+      "空の正解も、評価に含める",
+      "ECtHRとUNFAIR-ToSでは、どのラベルも付かない文書や文がある。すべて0の予測と参照は、通常のラベルだけのF1には正例として数えられない。\nそこで評価時には「どの種類にも当たらない」という追加ラベルを設け、空集合を正しく予測した場合も数える。学習時の出力クラスを増やす処理とは区別する。\n固定配布のtestでは、UNFAIR-ToSの空集合は1,607文中1,435文、89.30%。",
+      "3. 採点方法と到達水準",
+      "[1] Chalkidis et al. (2022). LexGLUE: A Benchmark Dataset for Legal Language Understanding in English. ACL.  https://aclanthology.org/2022.acl-long.297/"
+    ]
+  },
+  {
+    "page": 21,
+    "text": [
+      "法律向け事前学習の効果は課題で異なる",
+      "3. 採点方法と到達水準",
+      "課題 | BERT (2018) | Legal-BERT (2020)",
+      "ECtHR A | 63.6 | 64.0",
+      "ECtHR B | 73.4 | 74.7",
+      "SCOTUS | 58.3 | 66.5",
+      "EUR-LEX | 57.2 | 57.4",
+      "LEDGAR | 81.8 | 83.0",
+      "UNFAIR-ToS | 81.3 | 83.0",
+      "CaseHOLD | 70.8 | 75.3",
+      "2022年のtest macro-F1（%）。各課題で微調整、5 seedから開発最良を採用。",
+      "[1] Chalkidis et al. (2022). LexGLUE: A Benchmark Dataset for Legal Language Understanding in English. ACL.  https://aclanthology.org/2022.acl-long.297/"
+    ]
+  },
+  {
+    "page": 22,
+    "text": [
+      "長文を読む方法も、比較条件に含まれる",
+      "ECtHR A/BとSCOTUSでは、BERT系の階層モデルが最大64段落×128トークンを読む。段落を個別に符号化し、上位のTransformerで文書にまとめる。\nLongformerとBigBirdは疎な注意を使い、最大4,096トークンを扱う。モデル名だけでなく、読める範囲も条件の一部となる。\n成績は各課題で微調整し、5 seedのうち開発成績が最良のseedを採用。HELMの少数例提示の成績とは区別する。",
+      "3. 採点方法と到達水準",
+      "[1] Chalkidis et al. (2022). LexGLUE: A Benchmark Dataset for Legal Language Understanding in English. ACL.  https://aclanthology.org/2022.acl-long.297/"
+    ]
+  },
+  {
+    "page": 23,
+    "text": [
+      "HELMでの位置付けと入手方法",
+      "4. HELMでの位置付けと入手方法"
+    ]
+  },
+  {
+    "page": 24,
+    "text": [
+      "HELMには実装があり、固定版の公開runはない",
+      "HELM Classic v0.4.0のschemaにはLexGLUE群があり、7つのsubsetを読み込む実装もある。\n一方、固定releaseの全run_specsを名前とscenarioクラスで調べると、LexGLUEに対応する公開runは0件だった。\nこのため、ここではHELMの得点やモデル順位を示さず、公開されている入力・参照・生成設定の設計を説明する。",
+      "4. HELMでの位置付けと入手方法",
+      "[1] Stanford CRFM. HELM Classic v0.4.0, LexGLUE群。  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/lex_glue"
+    ]
+  },
+  {
+    "page": 25,
+    "text": [
+      "実装上の提示上限と出力上限",
+      "4. HELMでの位置付けと入手方法",
+      "subset | 提示例の上限 | 最大出力トークン",
+      "ECtHR A / B | 1 | 20",
+      "SCOTUS | 1 | 5",
+      "EUR-LEX | 5 | 20",
+      "LEDGAR | 5 | 20",
+      "UNFAIR-ToS | 5 | 20",
+      "CaseHOLD | 5 | 5",
+      "v0.4.0の設定値。実際の提示数・試行数・切詰め率は公開runなし。",
+      "[1] Stanford CRFM. LexGLUEScenario, HELM v0.4.0.  https://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/lex_glue_scenario.py"
+    ]
+  },
+  {
+    "page": 26,
+    "text": [
+      "配布のラベルと、出力文字列を区別する",
+      "HELMの複数ラベル課題は、配布の整数インデックスを文字列化する。ECtHRの第6条は3、EUR-LEXのEuroVoc ID 100174は7となる。\nLEDGARはClassLabelの名前を参照とし、CaseHOLDは0〜4の候補番号を使う。\nSCOTUSには説明中の番号と参照文字列のずれがある。固定配布・実装を照合した対応をAppendixに示す。",
+      "4. HELMでの位置付けと入手方法",
+      "[1] Stanford CRFM. LexGLUEScenario, HELM v0.4.0.  https://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/lex_glue_scenario.py"
+    ]
+  },
+  {
+    "page": 27,
+    "text": [
+      "subsetとrevisionを指定して取得する",
+      "4. HELMでの位置付けと入手方法",
+      "from datasets import load_dataset\ndata = load_dataset(\n    'coastalcph/lex_glue', 'ledgar',\n    revision='c23fdff1a6bf74e0e1a71cb86f1e781d37da888c',\n    split='test',\n)\nprint(data[52]['text'], data[52]['label'])",
+      "整数ラベルの意味は、そのsubsetのfeaturesにあるClassLabelと対応させる。",
+      "[1] coastalcph/lex_glue. 固定revision c23fdff… / 元の裁判・法令・契約の作成者に帰属。  https://huggingface.co/datasets/coastalcph/lex_glue"
+    ]
+  },
+  {
+    "page": 28,
+    "text": [
+      "共通カードと、元素材の権利を確認する",
+      "Hugging FaceのデータカードはCC BY 4.0を表示する。裁判所、EU機関、契約や規約の作成者など、元素材の出所と帰属も保つ。\n本資料では、固定revisionの7つのtest Parquetを取得し、13件の原レコードと参照ラベルを保存した。長い原入力の抜粋には範囲を明示する。\nコードと収録文書では利用条件の出所が異なるため、再配布時は各出所を確認する。",
+      "4. HELMでの位置付けと入手方法",
+      "[1] coastalcph/lex_glue. 固定revision c23fdff… / 元の裁判・法令・契約の作成者に帰属。  https://huggingface.co/datasets/coastalcph/lex_glue"
+    ]
+  },
+  {
+    "page": 29,
+    "text": [
+      "文書の種類、分割、ラベルをそろえて比較する",
+      "LexGLUEは、英語の法律文書に対する分類と5択を、7課題にまとめる。単一ラベル、複数ラベル、候補番号の違いを保つ。\n長文の扱い、空集合の採点、少数クラス、時系列の分割が成績の読み方に関わる。\nHELM固定版では公開runを確認できなかった。教師あり学習の公開成績と、実装上の少数例提示条件を区別して利用する。",
+      "4. HELMでの位置付けと入手方法",
+      "[1] Chalkidis et al. (2022). LexGLUE: A Benchmark Dataset for Legal Language Understanding in English. ACL.  https://aclanthology.org/2022.acl-long.297/"
+    ]
+  },
+  {
+    "page": 30,
+    "text": [
+      "Appendix",
+      "Appendix"
+    ]
+  },
+  {
+    "page": 31,
+    "text": [
+      "",
+      "追加の公開実例\n配布・実装の詳しい条件\n制作研究と参考文献",
+      "Appendix: 目次"
+    ]
+  },
+  {
+    "page": 32,
+    "text": [
+      "追加の公開実例",
+      "Appendix: 1. 追加の公開実例"
+    ]
+  },
+  {
+    "page": 33,
+    "text": [
+      "実例4：税に関する契約条項",
+      "Appendix: 1. 追加の公開実例",
+      "LEDGAR / 入力全文",
+      "The Borrower covenants and agrees as follows with respect to Taxes.",
+      "日本語訳",
+      "借入人は、税について以下のとおり誓約し、合意する。",
+      "正解：税",
+      "[1] coastalcph/lex_glue. 固定revision c23fdff… / 元の裁判・法令・契約の作成者に帰属。 ledgar/test/86  https://huggingface.co/datasets/coastalcph/lex_glue"
+    ]
+  },
+  {
+    "page": 34,
+    "text": [
+      "実例5：死亡による雇用終了",
+      "Appendix: 1. 追加の公開実例",
+      "LEDGAR / 入力全文",
+      "The Employee’s employment under this Agreement will terminate upon the Employee’s death.",
+      "日本語訳",
+      "本契約に基づく従業員の雇用は、その従業員の死亡により終了する。",
+      "正解：死亡",
+      "[1] coastalcph/lex_glue. 固定revision c23fdff… / 元の裁判・法令・契約の作成者に帰属。 ledgar/test/22  https://huggingface.co/datasets/coastalcph/lex_glue"
+    ]
+  },
+  {
+    "page": 35,
+    "text": [
+      "実例6：ラベルのない文も含む",
+      "Appendix: 1. 追加の公開実例",
+      "UNFAIR-ToS / 入力全文",
+      "you may cancel your subscription at any time . ",
+      "日本語訳",
+      "利用者は、いつでもサブスクリプションを解約できる。",
+      "正解：該当ラベルなし",
+      "[1] coastalcph/lex_glue. 固定revision c23fdff… / 元の裁判・法令・契約の作成者に帰属。 unfair_tos/test/57  https://huggingface.co/datasets/coastalcph/lex_glue"
+    ]
+  },
+  {
+    "page": 36,
+    "text": [
+      "実例7：一方的な終了権限",
+      "Appendix: 1. 追加の公開実例",
+      "UNFAIR-ToS / 入力全文",
+      "we reserve the right to modify or terminate free trials at any time , without notice and in our sole discretion . ",
+      "日本語訳",
+      "当社は、いつでも通知なく、かつその単独の裁量で、無料試用を変更または終了する権利を留保する。",
+      "正解：一方的終了",
+      "[1] coastalcph/lex_glue. 固定revision c23fdff… / 元の裁判・法令・契約の作成者に帰属。 unfair_tos/test/56  https://huggingface.co/datasets/coastalcph/lex_glue"
+    ]
+  },
+  {
+    "page": 37,
+    "text": [
+      "実例8：1文に複数のラベルを付ける",
+      "Appendix: 1. 追加の公開実例",
+      "UNFAIR-ToS / 入力全文",
+      "if we believe , in our sole discretion , that any member of academia.edu or academia premium or other academia.edu paid services is in breach of our terms , or act outside of the letter or spirit of our terms , we reserve the right to add limitations to your access to www.academia.edu , up to and including terminating all access to www.academia.edu . ",
+      "academia.edu、academia premium、またはその他のacademia.edu有料サービスの利用者が、本規約に違反し、またはその文言もしくは趣旨から外れて行動していると当社が単独の裁量で判断した場合、当社は、www.academia.eduへのアクセスに制限を加える権利を留保する。その制限には、すべてのアクセスの終了も含む。",
+      "正解：一方的変更 / 一方的終了",
+      "[1] coastalcph/lex_glue. 固定revision c23fdff… / 元の裁判・法令・契約の作成者に帰属。 unfair_tos/test/67  https://huggingface.co/datasets/coastalcph/lex_glue"
+    ]
+  },
+  {
+    "page": 38,
+    "text": [
+      "実例9：秘密文書を使った手続きを読む",
+      "Appendix: 1. 追加の公開実例",
+      "ECtHR A / 入力全文",
+      "5.  The applicant was born in 1989 and lives in Manisa.\n6.  The facts of the case, as submitted by the parties, may be summarised as follows.\n7.  On 7 July 2009 the applicant was dismissed from the Expert Gendarmerie School due to non-compliance with disciplinary rules.\n8.  On 28 July 2009 the applicant brought an action before the Supreme Military Administrative Court and requested the annulment of the decision to dismiss him.\n9.  On 6 January 2010 the Supreme Military Administrative Court rejected the applicant’s case, taking into account the “secret documents” submitted by the Ministry of Defence. These documents were not disclosed to the applicant.\n10.  On 5 May 2010 the applicant’s request for rectification was rejected by the same court.",
+      "正解：6",
+      "[1] coastalcph/lex_glue. 固定revision c23fdff… / 元の裁判・法令・契約の作成者に帰属。 ecthr_a/test/12  https://huggingface.co/datasets/coastalcph/lex_glue"
+    ]
+  },
+  {
+    "page": 39,
+    "text": [
+      "実例9：秘密文書を使った手続きを読む（訳）",
+      "Appendix: 1. 追加の公開実例",
+      "表示原文の日本語訳 / 入力全文",
+      "5. 申立人は1989年生まれで、マニサに住む。\n6. 当事者が提出した事実は、以下のとおり要約できる。\n7. 2009年7月7日、申立人は規律違反を理由に専門憲兵学校から退学処分を受けた。\n8. 7月28日、最高軍事行政裁判所に処分の取消しを求めて提訴した。\n9. 2010年1月6日、同裁判所は国防省が提出した「秘密文書」を考慮して請求を退けた。この文書は申立人に開示されなかった。\n10. 5月5日、同裁判所は申立人の訂正の申立ても退けた。",
+      "正解：欧州人権条約 第6条",
+      "[1] coastalcph/lex_glue. 固定revision c23fdff… / 元の裁判・法令・契約の作成者に帰属。 ecthr_a/test/12  https://huggingface.co/datasets/coastalcph/lex_glue"
+    ]
+  },
+  {
+    "page": 40,
+    "text": [
+      "実例10：主張された違反と認定を区別する",
+      "Appendix: 1. 追加の公開実例",
+      "ECtHR B / 事実列の先頭2段落（抜粋）",
+      "6.  The applicant was born in 1975 in Vladikavkaz, the Republic of North Ossetia‑Alania. He is currently detained in correctional colony no. 1 in Vladikavkaz (“the correctional colony”).\n7.  On 21 January 2013 the applicant was arrested on suspicion of drug trafficking and taken to remand prison no. 20/1 in Grozny, the Chechen Republic (“the remand prison”).",
+      "6. 申立人は1975年、北オセチア・アラニア共和国のウラジカフカスで生まれた。現在、同市の第1矯正収容所に収容されている。\n7. 2013年1月21日、薬物取引の容疑で逮捕され、チェチェン共和国グロズヌイの第20/1拘置所に移送された。",
+      "正解：主張された条項：第3条",
+      "[1] coastalcph/lex_glue. 固定revision c23fdff… / 元の裁判・法令・契約の作成者に帰属。 ecthr_b/test/26  https://huggingface.co/datasets/coastalcph/lex_glue"
+    ]
+  },
+  {
+    "page": 41,
+    "text": [
+      "実例11：米国最高裁の争点分野",
+      "Appendix: 1. 追加の公開実例",
+      "SCOTUS / 入力全文",
+      "503 U.S. 257 112 S.Ct. 1151 117 L.Ed.2d 400 PFZ PROPERTIES, INC., Petitioner,v.Rene Alberto RODRIGUEZ, et al. No. 91-122. March 9, 1992. On Writ of Certiorari to the United States Court of Appeals for the First Circuit. Case below, 928 F.2d 28. PER CURIAM. 1 The writ of certiorari is dismissed as improvidently granted.",
+      "503 U.S. 257 / 112 S.Ct. 1151 / 117 L.Ed.2d 400 申立人PFZ PROPERTIES, INC. 対 Rene Alberto RODRIGUEZほか 事件番号91-122。1992年3月9日。 第1巡回区控訴裁判所からの裁量上訴。原審928 F.2d 28。裁判所の名による意見。 1. 裁量上訴を認めたことが不適切だったため、これを却下する。",
+      "正解：司法権（分野コード9）",
+      "[1] coastalcph/lex_glue. 固定revision c23fdff… / 元の裁判・法令・契約の作成者に帰属。 scotus/test/18  https://huggingface.co/datasets/coastalcph/lex_glue"
+    ]
+  },
+  {
+    "page": 42,
+    "text": [
+      "実例12：EU法令をEuroVocで分類する",
+      "Appendix: 1. 追加の公開実例",
+      "EUR-LEX / 文書冒頭からWhereas直前まで（抜粋）",
+      "COUNCIL DECISION of 30 September 2013 appointing a Spanish member of the Committee of the Regions (2013/484/EU) THE COUNCIL OF THE EUROPEAN UNION, Having regard to the Treaty on the Functioning of the European Union, and in particular Article 305 thereof, Having regard to the proposal of the Spanish Government,",
+      "理事会決定 2013年9月30日 スペインから地域委員会の委員を任命する件 (2013/484/EU) 欧州連合理事会は、 欧州連合の機能に関する条約、特に第305条を踏まえ、 スペイン政府の提案を踏まえ、",
+      "正解：EuroVoc：100174 / 100277 / 100282 / 100283",
+      "[1] coastalcph/lex_glue. 固定revision c23fdff… / 元の裁判・法令・契約の作成者に帰属。 eurlex/test/60  https://huggingface.co/datasets/coastalcph/lex_glue"
+    ]
+  },
+  {
+    "page": 43,
+    "text": [
+      "EuroVocの識別子を概念名に対応させる",
+      "Appendix: 1. 追加の公開実例",
+      "識別子 | 英語の推奨名称",
+      "100174 | 1006 EU institutions and European civil service",
+      "100277 | 7206 Europe",
+      "100282 | 7231 economic geography",
+      "100283 | 7236 political geography",
+      "実例12の参照4件。名称はEU Publications Officeの公式EuroVocから取得。",
+      "[1] Publications Office of the European Union. EuroVoc, English preferred labels.  https://op.europa.eu/en/web/eu-vocabularies/eurovoc"
+    ]
+  },
+  {
+    "page": 44,
+    "text": [
+      "実例13：引用に入る判旨を5択で選ぶ",
+      "Appendix: 1. 追加の公開実例",
+      "CaseHOLD / context末尾の連続範囲＋選択肢5件全文",
+      "Turner concedes this precedent but encourages us to reconsider the court’s position, pointing to other circuits that have reached the opposite conclusion. See, e.g., United States v. Ciszkowski, 492 F.3d 1264, 1270 (11th Cir.2007) (<HOLDING>); United States v. Rizzo, 121 F.3d 794, 801 &\n0: recognizing a challenge to jurisdiction as a viable claim\n1: recognizing sentencing manipulation as a viable defense\n2: recognizing primary assumption of risk as a viable doctrine\n3: holding that counsel was ineffective for failing to assert an entrapment defense that was legally available and where there was no other viable defense to present\n4: holding that such a theory is viable under title vii",
+      "正解：1",
+      "[1] coastalcph/lex_glue. 固定revision c23fdff… / 元の裁判・法令・契約の作成者に帰属。 case_hold/test/38  https://huggingface.co/datasets/coastalcph/lex_glue"
+    ]
+  },
+  {
+    "page": 45,
+    "text": [
+      "実例13：引用に入る判旨を5択で選ぶ（訳）",
+      "Appendix: 1. 追加の公開実例",
+      "表示原文の日本語訳 / context末尾の連続範囲＋選択肢5件全文",
+      "ターナーはこの先例を認めつつ、反対の結論に達した他の巡回区を挙げ、当巡回区の見解の再検討を求める。例えばUnited States v. Ciszkowski, 492 F.3d 1264, 1270 (第11巡回区、2007年)（<HOLDING>）、United States v. Rizzo, 121 F.3d 794, 801 &\n0: 管轄権への異議を有効な主張と認める\n1: 量刑操作を有効な抗弁と認める\n2: 第一次的危険引受けを有効な法理と認める\n3: おとり捜査の抗弁が法的に認められ、ほかに有効な抗弁がなかったのに、それを主張しなかった弁護活動は不十分だったと判断する\n4: そのような理論がTitle VIIの下で有効と判断する",
+      "正解：選択肢1（0始まり）",
+      "[1] coastalcph/lex_glue. 固定revision c23fdff… / 元の裁判・法令・契約の作成者に帰属。 case_hold/test/38  https://huggingface.co/datasets/coastalcph/lex_glue"
+    ]
+  },
+  {
+    "page": 46,
+    "text": [
+      "配布・実装の詳しい条件",
+      "Appendix: 2. 配布・実装の詳しい条件"
+    ]
+  },
+  {
+    "page": 47,
+    "text": [
+      "条約の条番号と、配布の整数は別の値",
+      "Appendix: 2. 配布・実装の詳しい条件",
+      "整数 | 条約 | 整数 | 条約",
+      "0 | 第2条 | 5 | 第9条",
+      "1 | 第3条 | 6 | 第10条",
+      "2 | 第5条 | 7 | 第11条",
+      "3 | 第6条 | 8 | 第14条",
+      "4 | 第8条 | 9 | 第1議定書 第1条",
+      "[1] coastalcph/lex_glue. 固定revision c23fdff… / 元の裁判・法令・契約の作成者に帰属。  https://huggingface.co/datasets/coastalcph/lex_glue"
+    ]
+  },
+  {
+    "page": 48,
+    "text": [
+      "SCOTUSの番号は三つの層で読む",
+      "Appendix: 2. 配布・実装の詳しい条件",
+      "表現 | 実例11の値 | 意味",
+      "配布の整数インデックス | 8 | 0始まりの位置",
+      "ClassLabelの名前 | 9 | SCDBの分野コード",
+      "HELMの参照文字列 | 9 | ClassLabel名から作る",
+      "HELM説明の8 | Judicial Power | 0始まりで列挙",
+      "HELM説明の9 | Federalism | 参照9と意味がずれる",
+      "v0.4.0実装と固定配布を照合。実行成績への影響は、公開runがないため観測していない。",
+      "[1] Stanford CRFM. LexGLUEScenario, HELM v0.4.0.  https://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/lex_glue_scenario.py"
+    ]
+  },
+  {
+    "page": 49,
+    "text": [
+      "論文と固定配布の差を記録する",
+      "Appendix: 2. 配布・実装の詳しい条件",
+      "項目 | 2022年の論文 | 固定配布 c23fdff…",
+      "CaseHOLD test | 3,900問 | 3,600問",
+      "SCOTUSのラベル | 14分野 | ClassLabel名1〜13",
+      "ECtHR A 空集合 | 11.5%（記載値） | 153 / 1,000",
+      "ECtHR B 空集合 | 1.6%（記載値） | 14 / 1,000",
+      "UNFAIR-ToS 空集合 | 95.5%（記載値） | 1,435 / 1,607",
+      "固定配布の空集合はtest実測。論文の記載比率と区別する。差が生じた経緯は未確定。",
+      "[1] Chalkidis et al. (2022). LexGLUE: A Benchmark Dataset for Legal Language Understanding in English. ACL.  https://aclanthology.org/2022.acl-long.297/\n[2] coastalcph/lex_glue. 固定revision c23fdff… / 元の裁判・法令・契約の作成者に帰属。  https://huggingface.co/datasets/coastalcph/lex_glue"
+    ]
+  },
+  {
+    "page": 50,
+    "text": [
+      "HELMは不正解の参照を最大30件に絞る",
+      "単一・複数ラベル分類では、全クラスから正解を除いて不正解の参照を作り、seed42の乱数で順序を変える。\n不正解が30件を超えると、先頭30件だけを保持する。LEDGARやEUR-LEXでは、全100クラスを参照として毎回並べる実装ではない。\n入力本文はECtHRの段落列を空白で連結し、CaseHOLDはcontextと番号付きの5候補を連結する。",
+      "Appendix: 2. 配布・実装の詳しい条件",
+      "[1] Stanford CRFM. LexGLUEScenario, HELM v0.4.0.  https://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/lex_glue_scenario.py"
+    ]
+  },
+  {
+    "page": 51,
+    "text": [
+      "参照を作る処理と、採点の登録を照合する",
+      "複数ラベル分類はカンマと空白を区切りとして分類指標を登録し、単一ラベル分類も分類指標を登録する。\nCaseHOLDのタスク型はQAで、同じ関数の分類指標を追加する分岐には入らない。schemaの主指標名だけから、7課題すべての採点結果があると解釈しない。\nUNFAIR-ToSのdocstring例には、終了を述べる文に変更ラベルを示す記述がある。参照ラベルは、説明例の文言ではなく配布レコードと生成処理で確かめた。",
+      "Appendix: 2. 配布・実装の詳しい条件",
+      "[1] Stanford CRFM. get_lex_glue_spec, HELM v0.4.0.  https://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/run_specs.py"
+    ]
+  },
+  {
+    "page": 52,
+    "text": [
+      "長い入力を抜粋した範囲を明示する",
+      "実例10はECtHR Bの事実列の先頭2段落、実例12はEU法令の冒頭からWhereas直前までを表示する。参照ラベルは元の全文に付く。\n実例13はCaseHOLD contextの末尾の連続範囲を示し、5つの候補はすべて全文を保持する。元のcontextと全候補は原記録に保存する。\nほかの10例は入力全文を表示する。SCOTUSの空行は整理し、内容と順序は保った。",
+      "Appendix: 2. 配布・実装の詳しい条件",
+      "[1] coastalcph/lex_glue. 固定revision c23fdff… / 元の裁判・法令・契約の作成者に帰属。  https://huggingface.co/datasets/coastalcph/lex_glue"
+    ]
+  },
+  {
+    "page": 53,
+    "text": [
+      "制作研究と参考文献",
+      "Appendix: 3. 制作研究と参考文献"
+    ]
+  },
+  {
+    "page": 54,
+    "text": [
+      "法律データへの入口を、共通の評価でつくる",
+      "第一著者はIlias Chalkidis、最終著者はNikolaos Aletras。計7人の著者による研究として、ACL 2022で発表された。\n法域や文書の形式が異なる公開データに、統一した取得方法と基準モデルを用意した。\nLegal-BERTなどの法律向け事前学習、長文処理、ラベルの不均衡が、どの課題で役立つかを比較する基盤になっている。",
+      "Appendix: 3. 制作研究と参考文献",
+      "[1] Chalkidis et al. (2022). LexGLUE: A Benchmark Dataset for Legal Language Understanding in English. ACL.  https://aclanthology.org/2022.acl-long.297/"
+    ]
+  },
+  {
+    "page": 55,
+    "text": [
+      "参考文献",
+      "Appendix: 3. 制作研究と参考文献",
+      "LexGLUE: A Benchmark Dataset for Legal Language Understanding in English",
+      "Ilias Chalkidis et al. · 2022 · ACL",
+      "七つの英語法律課題、共通の評価方法、基準モデルの比較を示す。",
+      "https://aclanthology.org/2022.acl-long.297/",
+      "LEGAL-BERT: The Muppets straight out of Law School",
+      "Ilias Chalkidis et al. · 2020 · Findings of EMNLP",
+      "法律文書による事前学習と語彙の設計を、法律分野の言語処理で検証する。",
+      "https://aclanthology.org/2020.findings-emnlp.261/"
+    ]
+  },
+  {
+    "page": 56,
+    "text": [
+      "参考文献",
+      "Appendix: 3. 制作研究と参考文献",
+      "When Does Pretraining Help? Assessing Self-Supervised Learning for Law and the CaseHOLD Dataset of 53,000+ Legal Holdings",
+      "Lucia Zheng et al. · 2021 · ICAIL",
+      "法律向けの事前学習を比較し、判例引用の判旨を選ぶCaseHOLDを公開する。",
+      "https://arxiv.org/abs/2104.08671",
+      "LEDGAR: A Large-Scale Multi-label Corpus for Text Classification of Legal Provisions in Contracts",
+      "Don Tuggener et al. · 2020 · LREC",
+      "SECへの提出契約から、条項とその主題ラベルを収集する。",
+      "https://aclanthology.org/2020.lrec-1.155/"
+    ]
+  },
+  {
+    "page": 57,
+    "text": [
+      "参考文献",
+      "Appendix: 3. 制作研究と参考文献",
+      "LexGLUE Dataset",
+      "Ilias Chalkidis et al. · Hugging Face",
+      "各subsetの分割、ClassLabel、入力と参照ラベルを配布する。",
+      "https://huggingface.co/datasets/coastalcph/lex_glue",
+      "LexGLUEScenario / get_lex_glue_spec",
+      "Stanford CRFM · HELM v0.4.0",
+      "七つのsubsetの入力、参照、少数例提示と指標の登録を実装する。",
+      "https://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/lex_glue_scenario.py"
+    ]
+  }
+]
