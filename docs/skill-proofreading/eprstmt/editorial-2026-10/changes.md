@@ -64,3 +64,5 @@
 |58|58|[41]|実用的な課題実装の文献へ整理|参考文献<br>Appendix: 3. 研究と参考文献<br>CLEVA v1 run configuration<br>Stanford CRFM · HELM v0.4.0<br>sentiment_analysisのprompt_id 0〜5を含む設定。実行結果の公開とは別の情報。<br>https://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/presentation/run_specs_cleva_v1.conf<br>HELM Classic v0.4.0: public run index<br>Stanford CRFM · release 2023-11-17<br>固定公開8,526 runの索引。CLEVAの対象実行0件という公開範囲を示す。<br>https://crfm.stanford.edu/helm/classic/v0.4.0/|参考文献<br>Appendix: 2. 学習方式の比較と参考文献<br>CLEVA: Chinese Language Models EVAluation Platform<br>Li et al. · 2023 · EMNLP System Demonstrations<br>中国語の言語モデルを広い課題群で評価する枠組み。商品レビューの感情分析にもFewCLUEを利用する。<br>https://aclanthology.org/2023.emnlp-demo.17/<br>CLEVASentimentAnalysisScenario<br>Stanford CRFM · n.d. · HELM<br>商品レビューに肯定的・否定的の選択肢を付けた設問例を示す、感情分析課題の実装。<br>https://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py|
 
 [旧版の全ページ文言](previous/baseline-native-pages.json)・[ページ対応](page-map.json)・[独立レビュー](independent-review/handoff.json)
+
+[元データの作成主体とHELMでの位置付けの確認](origin-attribution-check.json)。
