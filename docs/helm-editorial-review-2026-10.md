@@ -10,7 +10,7 @@ Geminiは使用せず、リポジトリの日本語校正・データセット�
 
 各資料の変更表には修正前後の文言、削除・統合の理由、改訂前後のページ対応を記録する。独立レビューとメインの記録には、実施した確認と最終成果物のハッシュを残す。
 
-最新方針での反映済み：24 / 47資料。反映済み資料は合計1403ページから1138ページへ整理。
+最新方針での反映済み：27 / 47資料。反映済み資料は合計1566ページから1260ページへ整理。
 
 | 資料 | 改訂前 | 改訂後 | 修正内容 |
 |---|---:|---:|---|
@@ -33,8 +33,8 @@ Geminiは使用せず、リポジトリの日本語校正・データセット�
 | ccpm | 54 | 45 | [修正前後の表](skill-proofreading/ccpm/editorial-2026-10/changes.md) |
 | bustm | 54 | 45 | [修正前後の表](skill-proofreading/bustm/editorial-2026-10/changes.md) |
 | chid | 58 | 52 | [修正前後の表](skill-proofreading/chid/editorial-2026-10/changes.md) |
-| wmt2020-enzh | 60 | — | 最新方針に沿って確認・修正中 |
-| twitter-aae | 49 | — | 最新方針に沿って確認・修正中 |
+| wmt2020-enzh | 60 | 48 | [修正前後の表](skill-proofreading/wmt2020-enzh/editorial-2026-10/changes.md) |
+| twitter-aae | 49 | 36 | [修正前後の表](skill-proofreading/twitter-aae/editorial-2026-10/changes.md) |
 | billsum | 79 | — | 最新方針に沿って確認・修正中 |
 | eurlexsum | 66 | — | 最新方針に沿って確認・修正中 |
 | multilexsum | 69 | — | 最新方針に沿って確認・修正中 |
@@ -50,7 +50,7 @@ Geminiは使用せず、リポジトリの日本語校正・データセット�
 | redefine | 53 | 46 | [修正前後の表](skill-proofreading/redefine/editorial-2026-10/changes.md) |
 | pattern-matching-suppression | 54 | 48 | [修正前後の表](skill-proofreading/pattern-matching-suppression/editorial-2026-10/changes.md) |
 | ice | 49 | 40 | [修正前後の表](skill-proofreading/ice/editorial-2026-10/changes.md) |
-| data-imputation | 54 | — | 最新方針に沿って確認・修正中 |
+| data-imputation | 54 | 38 | [修正前後の表](skill-proofreading/data-imputation/editorial-2026-10/changes.md) |
 | entity-matching | 59 | — | 最新方針に沿って確認・修正中 |
 | copyright-code | 57 | — | 最新方針に沿って確認・修正中 |
 | copyright-text | 55 | — | 最新方針に沿って確認・修正中 |
