@@ -1,0 +1,829 @@
+{
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "checked_at": "2026-10-19T11:18:10.420365+00:00",
+  "all_baseline_pages_checked": 84,
+  "findings": [
+    {
+      "old_page": 1,
+      "new_page": 1,
+      "action": "checked_no_wording_change",
+      "reason": "既存の自然な説明と意味ある内容を保持。",
+      "before": "LegalBench\nA Collaboratively Built Benchmark for\nMeasuring Legal Reasoning in Large Language Models\n法律の推論を162の課題で評価する\nsasakiy84\ndatasets in 10 minutes (2026-10-18)",
+      "after": "LegalBench\nA Collaboratively Built Benchmark for\nMeasuring Legal Reasoning in Large Language Models\n法律の推論を162の課題で評価する\nsasakiy84\ndatasets in 10 minutes (2026-10-18)",
+      "external_record": null
+    },
+    {
+      "old_page": 2,
+      "new_page": 2,
+      "action": "revised",
+      "reason": "元の法律課題・2023年の評価と現在の入手方法を中心に、日本語・意味・情報の粒度を確認。原13入力と参照、法律の条件、主要成績を保持。",
+      "before": "公式サイト\nLegalBench\n[1] LegalBench. 公式サイト。2026-10-18確認。  https://hazyresearch.stanford.edu/legalbench/",
+      "after": "公式サイト\nLegalBench\n[1] LegalBench (n.d.). Official site.  https://hazyresearch.stanford.edu/legalbench/",
+      "external_record": null
+    },
+    {
+      "old_page": 3,
+      "new_page": 3,
+      "action": "revised",
+      "reason": "元の法律課題・2023年の評価と現在の入手方法を中心に、日本語・意味・情報の粒度を確認。原13入力と参照、法律の条件、主要成績を保持。",
+      "before": "\n実例から見る法律課題\n162課題の構成と作成方法\n採点と2023年の到達水準\nHELMでの範囲と現在の利用\n目次",
+      "after": "\n実例から見る法律課題\n162課題の構成と作成方法\n採点と2023年の到達水準\nデータの入手と使い方\n目次",
+      "external_record": null
+    },
+    {
+      "old_page": 4,
+      "new_page": 4,
+      "action": "checked_no_wording_change",
+      "reason": "既存の自然な説明と意味ある内容を保持。",
+      "before": "実例から見る法律課題\n1. 実例から見る法律課題",
+      "after": "実例から見る法律課題\n1. 実例から見る法律課題",
+      "external_record": null
+    },
+    {
+      "old_page": 5,
+      "new_page": 5,
+      "action": "revised",
+      "reason": "元の法律課題・2023年の評価と現在の入手方法を中心に、日本語・意味・情報の粒度を確認。原13入力と参照、法律の条件、主要成績を保持。",
+      "before": "一つの試験ではなく、法律課題の集合\nLegalBenchは、英語の法律課題ごとに入力と参照出力をそろえたベンチマーク。法律家と研究者が共同で構築した。\n商標、契約、証拠、裁判手続など、異なる分野の162課題を含む。課題によって、ラベル・用語・説明文など出力の形が変わる。\n2023年に公開され、20モデルを評価した。以下では実例から、何を読み、何を答え、どう採点するかを見る。\n1. 実例から見る法律課題\n[1] Guha et al. (2023), LegalBench: A Collaboratively Built Benchmark for Measuring Legal Reasoning in Large Language Models. arXiv.\nhttps://arxiv.org/abs/2308.11462",
+      "after": "一つの試験ではなく、法律課題の集合\nLegalBenchは、英語の法律課題ごとに入力と参照出力をそろえたベンチマーク。法律家と研究者が共同で構築した。\n商標、契約、証拠、裁判手続など、異なる分野の162課題を含む。課題によって、ラベル・用語・説明文など出力の形が変わる。\n2023年に公開され、20モデルを評価した。以下では実例から、何を読み、何を答え、どう採点するかを見る。\n1. 実例から見る法律課題\n[1] Guha et al. (2023). LegalBench. NeurIPS.  https://arxiv.org/abs/2308.11462",
+      "external_record": null
+    },
+    {
+      "old_page": 6,
+      "new_page": 6,
+      "action": "revised",
+      "reason": "元の法律課題・2023年の評価と現在の入手方法を中心に、日本語・意味・情報の粒度を確認。原13入力と参照、法律の条件、主要成績を保持。",
+      "before": "実例は公開された提示例用の集合から選ぶ\n本編3件と追加10件は、異なる13課題の公開trainレコードから1件ずつ選んだ。trainは主にプロンプトの提示例を作るための集合である。\n原レコードの入力欄は全文を示す。課題の問いを添え、固定のルール説明や他の提示例は省いた。実際のプロンプトは、それらを組み合わせて作る。\n参照ラベル・原レコード・提示テンプレート・固定改訂とハッシュを保存した。\n1. 実例から見る法律課題\n[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench",
+      "after": "公開された提示例から、入力と答えを見る\n実例は、異なる13課題の公開trainから1件ずつ示す。trainは、モデルへ与える提示例を作るための集合である。\n各例では原レコードの入力欄全文に、課題の問いを添える。実際のプロンプトは、課題ごとのルール説明や提示例と組み合わせて作る。\n1. 実例から見る法律課題\n[1] LegalBench (n.d.). Tasks, prompts, and evaluation.  https://github.com/HazyResearch/legalbench",
+      "external_record": null
+    },
+    {
+      "old_page": 7,
+      "new_page": 7,
+      "action": "revised",
+      "reason": "元の法律課題・2023年の評価と現在の入手方法を中心に、日本語・意味・情報の粒度を確認。原13入力と参照、法律の条件、主要成績を保持。",
+      "before": "商標は、語と商品の関係で分類する\n1. 実例から見る法律課題\n[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench",
+      "after": "商標は、語と商品の関係で分類する\n1. 実例から見る法律課題\n[1] LegalBench (n.d.). Tasks, prompts, and evaluation.  https://github.com/HazyResearch/legalbench",
+      "external_record": null
+    },
+    {
+      "old_page": 8,
+      "new_page": 8,
+      "action": "revised",
+      "reason": "元の法律課題・2023年の評価と現在の入手方法を中心に、日本語・意味・情報の粒度を確認。原13入力と参照、法律の条件、主要成績を保持。",
+      "before": "実例1：パンの商標は何を表すか\n1. 実例から見る法律課題\n原入力・課題の問い\nThe mark \"Tasty\" for bread. What is the type of mark?\ndescriptive\n日本語訳・課題\nパンに使う商標「Tasty（おいしい）」。この商標はどの種類か。\ndescriptive（記述的）\n[1] LegalBench. 公開trainレコードと参照回答。 abercrombie / train / index 1  https://github.com/HazyResearch/legalbench/tree/main/tasks",
+      "after": "実例1：パンの商標は何を表すか\n1. 実例から見る法律課題\n原入力・課題の問い\nThe mark \"Tasty\" for bread. What is the type of mark?\ndescriptive\n日本語訳・課題\nパンに使う商標「Tasty（おいしい）」。この商標はどの種類か。\ndescriptive（記述的）\n[1] LegalBench. 公開入力と参照回答。  https://github.com/HazyResearch/legalbench/tree/main/tasks/abercrombie",
+      "external_record": null
+    },
+    {
+      "old_page": 9,
+      "new_page": 9,
+      "action": "revised",
+      "reason": "元の法律課題・2023年の評価と現在の入手方法を中心に、日本語・意味・情報の粒度を確認。原13入力と参照、法律の条件、主要成績を保持。",
+      "before": "同じ語でも、何の商品かで判断が変わる\nTastyはパンの性質を直接表す。一般名称でも、商品と無関係な既存語でもない。\nabercrombieでは5分類の名前を出力する。長い説明を書くだけでは、要求されたラベルに一致しない。\n1. 実例から見る法律課題\n[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench",
+      "after": "同じ語でも、何の商品かで判断が変わる\nTastyはパンの性質を直接表す。一般名称でも、商品と無関係な既存語でもない。\nabercrombieでは、五つの分類名のいずれかを答える。\n1. 実例から見る法律課題\n[1] LegalBench (n.d.). Tasks, prompts, and evaluation.  https://github.com/HazyResearch/legalbench",
+      "external_record": null
+    },
+    {
+      "old_page": 10,
+      "new_page": 10,
+      "action": "revised",
+      "reason": "元の法律課題・2023年の評価と現在の入手方法を中心に、日本語・意味・情報の粒度を確認。原13入力と参照、法律の条件、主要成績を保持。",
+      "before": "伝聞の判定は、発言を使う目的も含む\nhearsayでは、法廷外の発言を、その発言内容が真実だと示すために使う場合を伝聞とする。\n入力には争点と、提出しようとする証拠がある。発言があったかだけでなく、何を立証するために使うかを判断する。\n1. 実例から見る法律課題\n[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench",
+      "after": "伝聞の判定は、発言を使う目的も含む\nhearsayでは、法廷外の発言を、その発言内容が真実だと示すために使う場合を伝聞とする。\n入力には争点と、提出しようとする証拠がある。発言があったかだけでなく、何を立証するために使うかを判断する。\n1. 実例から見る法律課題\n[1] LegalBench (n.d.). Tasks, prompts, and evaluation.  https://github.com/HazyResearch/legalbench",
+      "external_record": null
+    },
+    {
+      "old_page": 11,
+      "new_page": 11,
+      "action": "revised",
+      "reason": "元の法律課題・2023年の評価と現在の入手方法を中心に、日本語・意味・情報の粒度を確認。原13入力と参照、法律の条件、主要成績を保持。",
+      "before": "実例2：法廷外の発言を証拠にする\n1. 実例から見る法律課題\n原入力・課題の問い\nOn the issue of whether Rebecca was ill, the fact that Rebecca told Ronald that she was unwell. Is there hearsay?\nYes\n日本語訳・課題\nレベッカが病気だったかが争われている。レベッカがロナルドに、体調が悪かったと話したという事実。この証拠は伝聞に当たるか。\nYes（当たる）\n[1] LegalBench. 公開trainレコードと参照回答。 hearsay / train / index 1  https://github.com/HazyResearch/legalbench/tree/main/tasks",
+      "after": "実例2：法廷外の発言を証拠にする\n1. 実例から見る法律課題\n原入力・課題の問い\nOn the issue of whether Rebecca was ill, the fact that Rebecca told Ronald that she was unwell. Is there hearsay?\nYes\n日本語訳・課題\nレベッカが病気だったかが争われている。レベッカがロナルドに、体調が悪かったと話したという事実。この証拠は伝聞に当たるか。\nYes（当たる）\n[1] LegalBench. 公開入力と参照回答。  https://github.com/HazyResearch/legalbench/tree/main/tasks/hearsay",
+      "external_record": null
+    },
+    {
+      "old_page": 12,
+      "new_page": 12,
+      "action": "revised",
+      "reason": "元の法律課題・2023年の評価と現在の入手方法を中心に、日本語・意味・情報の粒度を確認。原13入力と参照、法律の条件、主要成績を保持。",
+      "before": "実例3：期限の規定は提訴権を与えるか\n1. 実例から見る法律課題\n原入力・課題の問い\nDoes the clause specify a private right of action?\nClause: Amendments to pleadings must be filed within 15 days of the filing of the initial pleading.\nNo\n日本語訳・課題\n訴答書面の修正は、最初の訴答書面を提出してから15日以内に提出しなければならない。この条項は私人の訴権を明記しているか。\nNo（明記しない）\n[1] LegalBench. 公開trainレコードと参照回答。 proa / train / index 0  https://github.com/HazyResearch/legalbench/tree/main/tasks",
+      "after": "実例3：期限の規定は提訴権を与えるか\n1. 実例から見る法律課題\n原入力・課題の問い\nDoes the clause specify a private right of action?\nClause: Amendments to pleadings must be filed within 15 days of the filing of the initial pleading.\nNo\n日本語訳・課題\n訴答書面の修正は、最初の訴答書面を提出してから15日以内に提出しなければならない。この条項は私人の訴権を明記しているか。\nNo（明記しない）\n[1] LegalBench. 公開入力と参照回答。  https://github.com/HazyResearch/legalbench/tree/main/tasks/proa",
+      "external_record": null
+    },
+    {
+      "old_page": 13,
+      "new_page": 13,
+      "action": "revised",
+      "reason": "元の法律課題・2023年の評価と現在の入手方法を中心に、日本語・意味・情報の粒度を確認。原13入力と参照、法律の条件、主要成績を保持。",
+      "before": "出力形式に合わせて、法律上の区別を読む\n商標では分類名、伝聞と私人の訴権ではYes／Noが答えになる。入力の語だけでなく、問われた法律上の条件を対応させる。\nproaの期限規定は15日という具体的な条件を持つが、私人が提訴できるという規定ではない。\n同じ法律分野でも、結論を選ぶ課題と、その理由を説明する課題は採点方法が異なる。\n1. 実例から見る法律課題\n[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench",
+      "after": "出力形式に合わせて、法律上の区別を読む\n商標では分類名、伝聞と私人の訴権ではYes／Noが答えになる。入力の語だけでなく、問われた法律上の条件を対応させる。\nproaの期限規定は15日という具体的な条件を持つが、私人が提訴できるという規定ではない。\n同じ法律分野でも、結論を選ぶ課題と、その理由を説明する課題は採点方法が異なる。\n1. 実例から見る法律課題\n[1] LegalBench (n.d.). Tasks, prompts, and evaluation.  https://github.com/HazyResearch/legalbench",
+      "external_record": null
+    },
+    {
+      "old_page": 14,
+      "new_page": 14,
+      "action": "checked_no_wording_change",
+      "reason": "既存の自然な説明と意味ある内容を保持。",
+      "before": "162課題の構成と作成方法\n2. 162課題の構成と作成方法",
+      "after": "162課題の構成と作成方法\n2. 162課題の構成と作成方法",
+      "external_record": null
+    },
+    {
+      "old_page": 15,
+      "new_page": 15,
+      "action": "revised",
+      "reason": "元の法律課題・2023年の評価と現在の入手方法を中心に、日本語・意味・情報の粒度を確認。原13入力と参照、法律の条件、主要成績を保持。",
+      "before": "法律家が、実務や教育の問いを持ち寄った\n40人の寄稿者が、実務で役立つ処理や、法律家が測る価値があると考える推論を課題にした。36のデータ源を利用した。\n既存の注釈データを変換した課題と、法律の教科書・演習に着想を得て人手で作った課題がある。\n判決、契約、合併契約、法令、日常的な法律相談など、文体も入力の長さも異なる。\n2. 162課題の構成と作成方法\n[1] Guha et al. (2023), LegalBench: A Collaboratively Built Benchmark for Measuring Legal Reasoning in Large Language Models. arXiv.\nhttps://arxiv.org/abs/2308.11462",
+      "after": "法律家が、実務や教育の問いを持ち寄った\n40人の寄稿者が、実務で役立つ処理や、法律家が測る価値があると考える推論を課題にした。36のデータ源を利用した。\n既存の注釈データを変換した課題と、法律の教科書・演習に着想を得て人手で作った課題がある。\n判決、契約、合併契約、法令、日常的な法律相談など、文体も入力の長さも異なる。\n2. 162課題の構成と作成方法\n[1] Guha et al. (2023). LegalBench. NeurIPS.  https://arxiv.org/abs/2308.11462",
+      "external_record": null
+    },
+    {
+      "old_page": 16,
+      "new_page": 16,
+      "action": "revised",
+      "reason": "元の法律課題・2023年の評価と現在の入手方法を中心に、日本語・意味・情報の粒度を確認。原13入力と参照、法律の条件、主要成績を保持。",
+      "before": "六つの推論形式を区別する\n2. 162課題の構成と作成方法\n[1] Guha et al. (2023), LegalBench: A Collaboratively Built Benchmark for Measuring Legal Reasoning in Large Language Models. arXiv.\nhttps://arxiv.org/abs/2308.11462",
+      "after": "法律推論を六つの形式で捉える\n2. 162課題の構成と作成方法\n[1] Guha et al. (2023). LegalBench. NeurIPS.  https://arxiv.org/abs/2308.11462",
+      "external_record": null
+    },
+    {
+      "old_page": 17,
+      "new_page": 17,
+      "action": "revised",
+      "reason": "元の法律課題・2023年の評価と現在の入手方法を中心に、日本語・意味・情報の粒度を確認。原13入力と参照、法律の条件、主要成績を保持。",
+      "before": "解釈や文章の役割も推論の対象にする\n2. 162課題の構成と作成方法\n[1] Guha et al. (2023), LegalBench: A Collaboratively Built Benchmark for Measuring Legal Reasoning in Large Language Models. arXiv.\nhttps://arxiv.org/abs/2308.11462",
+      "after": "解釈や文章の役割も推論の対象にする\n2. 162課題の構成と作成方法\n[1] Guha et al. (2023). LegalBench. NeurIPS.  https://arxiv.org/abs/2308.11462",
+      "external_record": null
+    },
+    {
+      "old_page": 18,
+      "new_page": 18,
+      "action": "revised",
+      "reason": "元の法律課題・2023年の評価と現在の入手方法を中心に、日本語・意味・情報の粒度を確認。原13入力と参照、法律の条件、主要成績を保持。",
+      "before": "公開コードは162課題を五つの群へ分ける\n2. 162課題の構成と作成方法\n[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench",
+      "after": "課題の大半は、文書の解釈を扱う\n2. 162課題の構成と作成方法\n結論を選ぶ12課題には、同じ入力から理由も説明する評価形式がある。\n[1] LegalBench (n.d.). Tasks, prompts, and evaluation.  https://github.com/HazyResearch/legalbench",
+      "external_record": null
+    },
+    {
+      "old_page": 19,
+      "new_page": 18,
+      "action": "combined",
+      "reason": "重複する説明を実例へ統合、または15pt実描画により原文全文・訳・21pt参照回答が同居。",
+      "before": "理由を説明する評価は、別データとして足さない\n固定したtasks.pyの五つの群は重複せず、合計162課題である。\n12課題には、同じ入力に対して理由も説明させるapplication_promptがある。推論形式は六つでも、これを162課題に新しい12課題として加算しない。\n論文の分類ごとの件数には節間の不一致がある。ここでは、取得したコードの明示的な課題一覧を集計した。\n2. 162課題の構成と作成方法\n[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench",
+      "after": "課題の大半は、文書の解釈を扱う\n2. 162課題の構成と作成方法\n結論を選ぶ12課題には、同じ入力から理由も説明する評価形式がある。\n[1] LegalBench (n.d.). Tasks, prompts, and evaluation.  https://github.com/HazyResearch/legalbench",
+      "external_record": null
+    },
+    {
+      "old_page": 20,
+      "new_page": 19,
+      "action": "revised",
+      "reason": "元の法律課題・2023年の評価と現在の入手方法を中心に、日本語・意味・情報の粒度を確認。原13入力と参照、法律の条件、主要成績を保持。",
+      "before": "一つの元データが、多数の課題になる\n2. 162課題の構成と作成方法\n[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench",
+      "after": "一つの元データが、多数の課題になる\n2. 162課題の構成と作成方法\nOPP-115の9課題など、ほかにも複数の系列がある。\n[1] LegalBench (n.d.). Tasks, prompts, and evaluation.  https://github.com/HazyResearch/legalbench",
+      "external_record": null
+    },
+    {
+      "old_page": 21,
+      "new_page": 19,
+      "action": "combined",
+      "reason": "重複する説明を実例へ統合、または15pt実描画により原文全文・訳・21pt参照回答が同居。",
+      "before": "系列名と課題名の単位をそろえる\nOPP-115のプライバシーポリシー分類は9課題。そのほか41課題を合わせ、系列別の合計も162になる。\nたとえばCUADは、契約の準拠法、監査権、競業避止などを、それぞれ別の入力・出力課題へ変換している。\nLegalBenchは集合の名前、CUADなどは元データの名前、cuad_audit_rightsなどは個別課題の識別子である。\n2. 162課題の構成と作成方法\n[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench",
+      "after": "一つの元データが、多数の課題になる\n2. 162課題の構成と作成方法\nOPP-115の9課題など、ほかにも複数の系列がある。\n[1] LegalBench (n.d.). Tasks, prompts, and evaluation.  https://github.com/HazyResearch/legalbench",
+      "external_record": null
+    },
+    {
+      "old_page": 22,
+      "new_page": 20,
+      "action": "revised",
+      "reason": "元の法律課題・2023年の評価と現在の入手方法を中心に、日本語・意味・情報の粒度を確認。原13入力と参照、法律の条件、主要成績を保持。",
+      "before": "提示例用とテスト用を課題ごとに分ける\n公開データは課題ごとにtrain.tsvとtest.tsvを持つ。trainは提示例の構築、testは採点に使う。入力欄やラベル欄は課題ごとに異なる。\nabercrombieやhearsayは、種類ごとの問題を手で作り、各種類から1例を提示例用に選んだ。\nrule_qaとscalrはゼロショット用で、trainに例がない。提示例がある課題と同じ条件にそろえて解釈しない。\n2. 162課題の構成と作成方法\n[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench",
+      "after": "提示例用とテスト用を課題ごとに分ける\n多くの課題はtrain.tsvとtest.tsvを持つ。trainでモデルへ示す入力・参照回答を用意し、testで回答を採点する。入力欄と答えの形式は課題ごとに異なる。\nabercrombieやhearsayは、人が種類ごとの問題を作り、各種類から1例を提示例用に選んだ。\nrule_qaとscalrは、提示例を使わないゼロショット用で、testを公開している。\n2. 162課題の構成と作成方法\n[1] LegalBench (n.d.). Tasks, prompts, and evaluation.  https://github.com/HazyResearch/legalbench",
+      "external_record": null
+    },
+    {
+      "old_page": 23,
+      "new_page": 21,
+      "action": "checked_no_wording_change",
+      "reason": "既存の自然な説明と意味ある内容を保持。",
+      "before": "採点と2023年の到達水準\n3. 採点と2023年の到達水準",
+      "after": "採点と2023年の到達水準\n3. 採点と2023年の到達水準",
+      "external_record": null
+    },
+    {
+      "old_page": 24,
+      "new_page": 22,
+      "action": "revised",
+      "reason": "元の法律課題・2023年の評価と現在の入手方法を中心に、日本語・意味・情報の粒度を確認。原13入力と参照、法律の条件、主要成績を保持。",
+      "before": "分類では、各ラベルの正解率を均等に扱う\n分類の出力を小文字化し、句読点を除き、前後の空白を取り除いて参照ラベルと照合する。\nラベルごとの再現率を平均したbalanced accuracyを使う。多数派のラベルだけを答えて高得点になるのを抑える。\n1問の一致・不一致と、集合全体でラベルごとに平均した得点を区別する。\n3. 採点と2023年の到達水準\n[1] LegalBench. 課題別の採点実装。  https://github.com/HazyResearch/legalbench/blob/main/evaluation.py",
+      "after": "分類では、各ラベルの正解率を均等に扱う\n分類の出力を小文字化し、句読点を除き、前後の空白を取り除いて参照ラベルと照合する。\nラベルごとの再現率を平均したbalanced accuracyを使う。少数派のラベルを含め、各ラベルを同じ重みで評価する。\n3. 採点と2023年の到達水準\n[1] LegalBench. Task-specific evaluation.  https://github.com/HazyResearch/legalbench/blob/main/evaluation.py",
+      "external_record": null
+    },
+    {
+      "old_page": 25,
+      "new_page": 23,
+      "action": "revised",
+      "reason": "元の法律課題・2023年の評価と現在の入手方法を中心に、日本語・意味・情報の粒度を確認。原13入力と参照、法律の条件、主要成績を保持。",
+      "before": "抽出・複数回答・説明は採点が異なる\ndefinition_extractionは、語幹化も使って参照用語と照合する。successor_liabilityは、選んだ例外の集合をF1で採点する。\n説明を求めるrule-applicationは、法律の訓練を受けた人が「結論の正しさ」と「理由付け」を別々に評価した。rule_qaも人が採点した。\n課題の得点を平均する前に、何を正解とした指標かをそろえて読む。\n3. 採点と2023年の到達水準\n[1] Guha et al. (2023), LegalBench: A Collaboratively Built Benchmark for Measuring Legal Reasoning in Large Language Models. arXiv.\nhttps://arxiv.org/abs/2308.11462",
+      "after": "抽出・複数回答・説明は採点が異なる\ndefinition_extractionは、語幹化も使って参照用語と照合する。successor_liabilityは、選んだ例外の集合をF1で採点する。\n理由を説明する課題は、法律の訓練を受けた人が「結論の正しさ」と「理由付け」を別々に評価した。rule_qaも人が採点した。\n3. 採点と2023年の到達水準\n[1] Guha et al. (2023). LegalBench. NeurIPS.  https://arxiv.org/abs/2308.11462",
+      "external_record": null
+    },
+    {
+      "old_page": 26,
+      "new_page": 24,
+      "action": "revised",
+      "reason": "元の法律課題・2023年の評価と現在の入手方法を中心に、日本語・意味・情報の粒度を確認。原13入力と参照、法律の条件、主要成績を保持。",
+      "before": "2023年：争点・規範・結論の成績\n3. 採点と2023年の到達水準\n各推論群の課題得点の平均（%）。2023年5〜8月の評価。\n[1] Guha et al. (2023), LegalBench: A Collaboratively Built Benchmark for Measuring Legal Reasoning in Large Language Models. arXiv.\nhttps://arxiv.org/abs/2308.11462",
+      "after": "2023年：争点・規範・結論の成績\n3. 採点と2023年の到達水準\n各推論群の課題得点の平均（%）。2023年5〜8月の評価。\n[1] Guha et al. (2023). LegalBench. NeurIPS.  https://arxiv.org/abs/2308.11462",
+      "external_record": null
+    },
+    {
+      "old_page": 27,
+      "new_page": 25,
+      "action": "revised",
+      "reason": "元の法律課題・2023年の評価と現在の入手方法を中心に、日本語・意味・情報の粒度を確認。原13入力と参照、法律の条件、主要成績を保持。",
+      "before": "2023年：文書解釈と文章の役割\n3. 採点と2023年の到達水準\n同じ2023年評価の群別平均（%）。分類・抽出など課題別の指標を含む。\n[1] Guha et al. (2023), LegalBench: A Collaboratively Built Benchmark for Measuring Legal Reasoning in Large Language Models. arXiv.\nhttps://arxiv.org/abs/2308.11462",
+      "after": "2023年：文書解釈と文章の役割\n3. 採点と2023年の到達水準\n同じ2023年評価の群別平均（%）。分類・抽出など課題別の指標を含む。\n[1] Guha et al. (2023). LegalBench. NeurIPS.  https://arxiv.org/abs/2308.11462",
+      "external_record": null
+    },
+    {
+      "old_page": 28,
+      "new_page": 26,
+      "action": "revised",
+      "reason": "元の法律課題・2023年の評価と現在の入手方法を中心に、日本語・意味・情報の粒度を確認。原13入力と参照、法律の条件、主要成績を保持。",
+      "before": "理由付けは、正しい結論より得点が低い\n3. 採点と2023年の到達水準\nrule-applicationの人手評価（%）。法律の訓練を受けた1人が採点。\n[1] Guha et al. (2023), LegalBench: A Collaboratively Built Benchmark for Measuring Legal Reasoning in Large Language Models. arXiv.\nhttps://arxiv.org/abs/2308.11462",
+      "after": "理由付けは、正しい結論より得点が低い\n3. 採点と2023年の到達水準\nrule-applicationの人手評価（%）。法律の訓練を受けた1人が採点。\n[1] Guha et al. (2023). LegalBench. NeurIPS.  https://arxiv.org/abs/2308.11462",
+      "external_record": null
+    },
+    {
+      "old_page": 29,
+      "new_page": 27,
+      "action": "revised",
+      "reason": "元の法律課題・2023年の評価と現在の入手方法を中心に、日本語・意味・情報の粒度を確認。原13入力と参照、法律の条件、主要成績を保持。",
+      "before": "モデルとプロンプトの条件を対応させる\n全体では20モデルを評価。GPT-3.5はtext-davinci-003、Claude-1はv1.3。課題別の指示と0〜8件の提示例を使い、温度は0とした。\nClaudeには専用の提示例タグと、出力候補を明記する形式を使った。入力形式まで完全に同一ではない。\n理由の説明を求める課題は3つの商用モデルだけを人手評価した。六つのdiversity課題は各30例、ほかは課題の全例を採点した。\n3. 採点と2023年の到達水準\n[1] Guha et al. (2023), LegalBench: A Collaboratively Built Benchmark for Measuring Legal Reasoning in Large Language Models. arXiv.\nhttps://arxiv.org/abs/2308.11462",
+      "after": "提示例を与え、課題ごとに回答を評価する\n分類や抽出などは20モデルを評価した。課題別の指示に0〜8件の提示例を添えて、回答させた。\n理由の説明は、GPT-4、text-davinci-003、Claude-1の3モデルを人手で評価した。州籍相違に関する6課題は各30例、ほかの課題は全例を採点した。\n3. 採点と2023年の到達水準\n[1] Guha et al. (2023). LegalBench. NeurIPS.  https://arxiv.org/abs/2308.11462",
+      "external_record": null
+    },
+    {
+      "old_page": 30,
+      "new_page": 28,
+      "action": "revised",
+      "reason": "元の法律課題・2023年の評価と現在の入手方法を中心に、日本語・意味・情報の粒度を確認。原13入力と参照、法律の条件、主要成績を保持。",
+      "before": "得意な群の平均だけでは、個別課題は分からない\nGPT-4は広い群で高いが、法規範の想起ではClaude-1に近い。文書の解釈でも、長い企業開示や合併契約では得点が下がる。\n同じ群に多数の契約課題があるため、群平均と、扱いたい分野・文書の個別成績を併せて見る。\nこの成績は2023年のモデル・データ・採点条件の記録である。\n3. 採点と2023年の到達水準\n[1] Guha et al. (2023), LegalBench: A Collaboratively Built Benchmark for Measuring Legal Reasoning in Large Language Models. arXiv.\nhttps://arxiv.org/abs/2308.11462",
+      "after": "モデルの得意分野は、課題ごとに変わる\nGPT-4は広い群で高いが、法規範の想起ではClaude-1に近い。文書の解釈でも、長い企業開示や合併契約では得点が下がる。\n同じ群に多数の契約課題があるため、群平均と、扱いたい分野・文書の個別成績を併せて見る。\n英語の課題で、米国法や契約分野に比重がある。成績は2023年のモデル・データ・採点条件による。\n3. 採点と2023年の到達水準\n[1] Guha et al. (2023). LegalBench. NeurIPS.  https://arxiv.org/abs/2308.11462",
+      "external_record": null
+    },
+    {
+      "old_page": 31,
+      "new_page": 29,
+      "action": "revised",
+      "reason": "元の法律課題・2023年の評価と現在の入手方法を中心に、日本語・意味・情報の粒度を確認。原13入力と参照、法律の条件、主要成績を保持。",
+      "before": "HELMでの範囲と現在の利用\n4. HELMでの範囲と現在の利用",
+      "after": "データの入手と使い方\n4. データの入手と使い方",
+      "external_record": null
+    },
+    {
+      "old_page": 32,
+      "new_page": null,
+      "action": "moved_to_external_record",
+      "reason": "採用先の実装/実行、細かな生成設定、ID索引・検算や重複説明を外部記録へ。元162課題と原評価は保持。",
+      "before": "HELM Classicは五つの課題を実装する\nv0.4.0のLegalBench実装は、abercrombie、corporate_lobbying、international_citizenship_questions、function_of_decision_section、proaを受け付ける。\n入力欄の順番、指示、ラベル欄を課題別設定から読み、参照回答を使って評価する。\nClassic v0.4.0の公開run_specsではLegalBenchの実行は0件だった。以下に同版のモデル得点は置かない。\n4. HELMでの範囲と現在の利用\n[1] Stanford CRFM. HELM v0.4.0 LegalBench scenario.  https://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/legalbench_scenario.py",
+      "after": null,
+      "external_record": "/workspace/artifacts/helm-parallel/legalbench"
+    },
+    {
+      "old_page": 33,
+      "new_page": 30,
+      "action": "revised",
+      "reason": "元の法律課題・2023年の評価と現在の入手方法を中心に、日本語・意味・情報の粒度を確認。原13入力と参照、法律の条件、主要成績を保持。",
+      "before": "実装の範囲と、公開実行の有無を分ける\nLegalBench全162課題と、HELMが受け付ける5課題は範囲が異なる。LegalSupportは別のシナリオであり、LegalBenchの実行件数へ含めない。\n現在のHELM実装にも同じ五つの課題が残り、データには固定のHugging Face改訂を指定している。\n公式LegalBenchは、HELM Liteなどの評価基盤からの利用も案内している。\n4. HELMでの範囲と現在の利用\n[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench",
+      "after": "TSVから、商標の入力と参照回答を読む\n4. データの入手と使い方\nimport csv\n\nwith open(\"tasks/abercrombie/train.tsv\",\n          encoding=\"utf-8\") as f:\n    rows = list(csv.DictReader(f, delimiter=\"\\t\"))\nrow = rows[1]\nprint(row[\"text\"])\nprint(row[\"answer\"])\n公式リポジトリのtasksフォルダを使う。textが入力、answerが参照回答で、課題ごとに列の構成が異なる。\n[1] LegalBench (n.d.). Tasks, prompts, and evaluation.  https://github.com/HazyResearch/legalbench",
+      "external_record": null
+    },
+    {
+      "old_page": 34,
+      "new_page": 31,
+      "action": "revised",
+      "reason": "元の法律課題・2023年の評価と現在の入手方法を中心に、日本語・意味・情報の粒度を確認。原13入力と参照、法律の条件、主要成績を保持。",
+      "before": "2026年に、一部の入力データが修正された\n2026-03-29、MAUDの7課題で、問いと異なる箇所の文章を結び付けていた問題が修正された。\nOPP-115の9課題は、短い注釈スパンから、文脈を含む段落全体を入力にする方式へ変更された。\n2023年の公表成績と、修正後のデータで得た値は、同じ評価条件として並べない。\n4. HELMでの範囲と現在の利用\n[1] LegalBench. データ更新履歴。2026-03-29の修正。  https://github.com/HazyResearch/legalbench/blob/main/CHANGELOG.md",
+      "after": "2026年に、一部の入力データが修正された\n2026-03-29、MAUDの7課題で、問いと異なる箇所の文章を結び付けていた問題が修正された。\nOPP-115の9課題は、短い注釈スパンから、文脈を含む段落全体を入力にする方式へ変更された。\n2023年の公表成績は、これらの入力修正前のデータで得た結果である。\n4. データの入手と使い方\n[1] LegalBench. Data changelog (2024–2026).  https://github.com/HazyResearch/legalbench/blob/main/CHANGELOG.md",
+      "external_record": null
+    },
+    {
+      "old_page": 35,
+      "new_page": 32,
+      "action": "revised",
+      "reason": "元の法律課題・2023年の評価と現在の入手方法を中心に、日本語・意味・情報の粒度を確認。原13入力と参照、法律の条件、主要成績を保持。",
+      "before": "課題ごとの出所と条件を確認して使う\n公式サイトから課題の説明、プロンプト、Hugging Faceの公開データへ進める。各課題のREADMEに出所とライセンスがある。\n13実例のうちdefinition_extractionはCC BY-SA 4.0。ほかの手作り課題などはCC BY 4.0だが、全162課題が同じライセンスではない。\n課題名、データの改訂、提示例、採点コードを固定すると、モデル間や更新前後の比較を再現できる。\n4. HELMでの範囲と現在の利用\n[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench",
+      "after": "課題ごとの出所と条件を確認して使う\n公式サイトから課題の説明、プロンプト、Hugging Faceの公開データへ進める。各課題のREADMEに出所とライセンスがある。\n実例のdefinition_extractionはCC BY-SA 4.0。ほかの手作り課題などはCC BY 4.0で、課題によって利用条件が異なる。\nREADMEとサンプルには、入力欄と答えの形式が示されている。\n4. データの入手と使い方\n[1] LegalBench (n.d.). Tasks, prompts, and evaluation.  https://github.com/HazyResearch/legalbench",
+      "external_record": null
+    },
+    {
+      "old_page": 36,
+      "new_page": 33,
+      "action": "revised",
+      "reason": "元の法律課題・2023年の評価と現在の入手方法を中心に、日本語・意味・情報の粒度を確認。原13入力と参照、法律の条件、主要成績を保持。",
+      "before": "法律のどの推論を、どの出力で測るか\nLegalBenchは、法律の多様な入力・出力を162課題へ分け、法律家とモデル研究者が共同で評価する基盤である。\nラベルを選ぶ結論、文書の解釈、用語の抽出、理由の説明を分けると、得点の意味が具体的になる。\n集計する単位、課題別の採点、提示例と版を対応させて、扱いたい文書の能力を判断する。\n4. HELMでの範囲と現在の利用\n[1] Guha et al. (2023), LegalBench: A Collaboratively Built Benchmark for Measuring Legal Reasoning in Large Language Models. arXiv.\nhttps://arxiv.org/abs/2308.11462",
+      "after": "法律のどの推論を、どの出力で測るか\nLegalBenchは、法律の多様な入力・出力を162課題にまとめ、法律家とモデル研究者が共同で構築したベンチマーク。\n分類名を選ぶ、文書を解釈する、用語を抽出する、理由を説明するなど、複数の形で法律の推論を測る。\n扱いたい法律分野や文書に応じて、課題ごとの得点と採点方法を読む。\n4. データの入手と使い方\n[1] Guha et al. (2023). LegalBench. NeurIPS.  https://arxiv.org/abs/2308.11462",
+      "external_record": null
+    },
+    {
+      "old_page": 37,
+      "new_page": 34,
+      "action": "checked_no_wording_change",
+      "reason": "既存の自然な説明と意味ある内容を保持。",
+      "before": "Appendix\nAppendix",
+      "after": "Appendix\nAppendix",
+      "external_record": null
+    },
+    {
+      "old_page": 38,
+      "new_page": 35,
+      "action": "revised",
+      "reason": "元の法律課題・2023年の評価と現在の入手方法を中心に、日本語・意味・情報の粒度を確認。原13入力と参照、法律の条件、主要成績を保持。",
+      "before": "\n追加の実例\n課題の一覧と評価の補足\n研究と参考文献\nAppendix: 目次",
+      "after": "\n追加の実例\n課題形式の補足\n研究と参考文献\nAppendix: 目次",
+      "external_record": null
+    },
+    {
+      "old_page": 39,
+      "new_page": 36,
+      "action": "checked_no_wording_change",
+      "reason": "既存の自然な説明と意味ある内容を保持。",
+      "before": "追加の実例\nAppendix: 1. 追加の実例",
+      "after": "追加の実例\nAppendix: 1. 追加の実例",
+      "external_record": null
+    },
+    {
+      "old_page": 40,
+      "new_page": 37,
+      "action": "revised",
+      "reason": "元の法律課題・2023年の評価と現在の入手方法を中心に、日本語・意味・情報の粒度を確認。原13入力と参照、法律の条件、主要成績を保持。",
+      "before": "実例4：定義される用語を取り出す\nAppendix: 1. 追加の実例\n原入力・課題の問い\nSentence: \"But even petitioner concedes, with its preferred dictionary in hand, that the word “decision” can also mean *306 “something short of a statement of reasons explaining a determination.” \ndecision\n日本語訳・課題\n「しかし、申立人でさえ、自ら好む辞書を手に、『decision』という語が、判断を説明する理由の記述に至らないものを意味することもあると認めている。」*306\n定義されている用語を抽出する。\ndecision\n[1] LegalBench. 公開trainレコードと参照回答。 definition_extraction / train / index 2  https://github.com/HazyResearch/legalbench/tree/main/tasks",
+      "after": "実例4：定義される用語を取り出す\nAppendix: 1. 追加の実例\n原入力・課題の問い\nSentence: \"But even petitioner concedes, with its preferred dictionary in hand, that the word “decision” can also mean *306 “something short of a statement of reasons explaining a determination.” \ndecision\n日本語訳・課題\n「しかし、申立人でさえ、自ら好む辞書を手に、『decision』という語が、判断の理由を説明する記述とまではいえないものを意味することもあると認めている。」*306\n定義されている用語を抽出する。\ndecision\n[1] LegalBench. 公開入力と参照回答。  https://github.com/HazyResearch/legalbench/tree/main/tasks/definition_extraction",
+      "external_record": null
+    },
+    {
+      "old_page": 41,
+      "new_page": 37,
+      "action": "combined",
+      "reason": "重複する説明を実例へ統合、または15pt実描画により原文全文・訳・21pt参照回答が同居。",
+      "before": "実例4の読み方\n判決文で定義されている用語を抽出する。\n引用文中のdecisionを取り出す。定義の内容全体を生成する課題ではない。\nAppendix: 1. 追加の実例\n[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench",
+      "after": "実例4：定義される用語を取り出す\nAppendix: 1. 追加の実例\n原入力・課題の問い\nSentence: \"But even petitioner concedes, with its preferred dictionary in hand, that the word “decision” can also mean *306 “something short of a statement of reasons explaining a determination.” \ndecision\n日本語訳・課題\n「しかし、申立人でさえ、自ら好む辞書を手に、『decision』という語が、判断の理由を説明する記述とまではいえないものを意味することもあると認めている。」*306\n定義されている用語を抽出する。\ndecision\n[1] LegalBench. 公開入力と参照回答。  https://github.com/HazyResearch/legalbench/tree/main/tasks/definition_extraction",
+      "external_record": null
+    },
+    {
+      "old_page": 42,
+      "new_page": 38,
+      "action": "revised",
+      "reason": "元の法律課題・2023年の評価と現在の入手方法を中心に、日本語・意味・情報の粒度を確認。原13入力と参照、法律の条件、主要成績を保持。",
+      "before": "実例5：州が異なっても金額条件がある\nAppendix: 1. 追加の実例\n原入力・課題の問い\nAva is from Alaska. Mia is from Missouri. Ava sues Mia for wrongful eviction for $61,000. Is there diversity jurisdiction?\nNo\n日本語訳・課題\nエイヴァはアラスカ州、ミアはミズーリ州の住民である。エイヴァは不当な立退きを理由に、ミアへ61,000ドルを請求して訴える。州籍相違による連邦裁判所の管轄はあるか。\nNo（ない）\n[1] LegalBench. 公開trainレコードと参照回答。 diversity_1 / train / index 1  https://github.com/HazyResearch/legalbench/tree/main/tasks",
+      "after": "実例5：州が異なっても金額条件がある\nAppendix: 1. 追加の実例\n原入力・課題の問い\nAva is from Alaska. Mia is from Missouri. Ava sues Mia for wrongful eviction for $61,000. Is there diversity jurisdiction?\nNo\n日本語訳・課題\nエイヴァはアラスカ州、ミアはミズーリ州の住民である。エイヴァは不当な立退きを理由に、ミアへ61,000ドルを請求して訴える。州籍相違による連邦裁判所の管轄はあるか。\nNo（ない）\n課題の規則では、州籍が完全に異なり、請求額が75,000ドルを超える必要がある。\n[1] LegalBench. 公開入力と参照回答。  https://github.com/HazyResearch/legalbench/tree/main/tasks/diversity_1",
+      "external_record": null
+    },
+    {
+      "old_page": 43,
+      "new_page": 38,
+      "action": "combined",
+      "reason": "重複する説明を実例へ統合、または15pt実描画により原文全文・訳・21pt参照回答が同居。",
+      "before": "実例5の読み方\n当事者の州と請求額から、州籍相違による管轄の有無を判定する。\n提示ルールでは、原告・被告の州籍が完全に異なり、かつ請求額が75,000ドルを超える必要がある。61,000ドルは金額条件を満たさない。\nAppendix: 1. 追加の実例\n[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench",
+      "after": "実例5：州が異なっても金額条件がある\nAppendix: 1. 追加の実例\n原入力・課題の問い\nAva is from Alaska. Mia is from Missouri. Ava sues Mia for wrongful eviction for $61,000. Is there diversity jurisdiction?\nNo\n日本語訳・課題\nエイヴァはアラスカ州、ミアはミズーリ州の住民である。エイヴァは不当な立退きを理由に、ミアへ61,000ドルを請求して訴える。州籍相違による連邦裁判所の管轄はあるか。\nNo（ない）\n課題の規則では、州籍が完全に異なり、請求額が75,000ドルを超える必要がある。\n[1] LegalBench. 公開入力と参照回答。  https://github.com/HazyResearch/legalbench/tree/main/tasks/diversity_1",
+      "external_record": null
+    },
+    {
+      "old_page": 44,
+      "new_page": 39,
+      "action": "revised",
+      "reason": "元の法律課題・2023年の評価と現在の入手方法を中心に、日本語・意味・情報の粒度を確認。原13入力と参照、法律の条件、主要成績を保持。",
+      "before": "実例6：国籍取得の居住条件を尋ねる\nAppendix: 1. 追加の実例\n原入力・課題の問い\nAnswer the following questions considering the state of international law on January 1st, 2020.\nQuestion: Consider the country of Bolivia. Does the country provide for period of residence in a residence-based acquisition? Answer Yes or No.\nYes\n日本語訳・課題\n2020年1月1日時点の法を前提とする。ボリビアを考える。居住に基づく国籍取得について、同国は居住期間の条件を定めているか。はい、または、いいえで答える。\nYes（定めている）\n[1] LegalBench. 公開trainレコードと参照回答。 international_citizenship_questions / train / index 1  https://github.com/HazyResearch/legalbench/tree/main/tasks",
+      "after": "実例6：国籍取得の居住条件を尋ねる\nAppendix: 1. 追加の実例\n原入力・課題の問い\nAnswer the following questions considering the state of international law on January 1st, 2020.\nQuestion: Consider the country of Bolivia. Does the country provide for period of residence in a residence-based acquisition? Answer Yes or No.\nYes\n日本語訳・課題\n2020年1月1日時点の国際法を前提とする。ボリビアを考える。居住に基づく国籍取得について、同国は居住期間の条件を定めているか。はい、または、いいえで答える。\nYes（定めている）\n[1] LegalBench. 公開入力と参照回答。  https://github.com/HazyResearch/legalbench/tree/main/tasks/international_citizenship_questions",
+      "external_record": null
+    },
+    {
+      "old_page": 45,
+      "new_page": 39,
+      "action": "combined",
+      "reason": "重複する説明を実例へ統合、または15pt実描画により原文全文・訳・21pt参照回答が同居。",
+      "before": "実例6の読み方\n2020年1月1日時点の国際的な国籍法について答える。\n条文が入力にない知識を問う例。資料の参照回答と、その後の法改正を区別して扱う。\nAppendix: 1. 追加の実例\n[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench",
+      "after": "実例6：国籍取得の居住条件を尋ねる\nAppendix: 1. 追加の実例\n原入力・課題の問い\nAnswer the following questions considering the state of international law on January 1st, 2020.\nQuestion: Consider the country of Bolivia. Does the country provide for period of residence in a residence-based acquisition? Answer Yes or No.\nYes\n日本語訳・課題\n2020年1月1日時点の国際法を前提とする。ボリビアを考える。居住に基づく国籍取得について、同国は居住期間の条件を定めているか。はい、または、いいえで答える。\nYes（定めている）\n[1] LegalBench. 公開入力と参照回答。  https://github.com/HazyResearch/legalbench/tree/main/tasks/international_citizenship_questions",
+      "external_record": null
+    },
+    {
+      "old_page": 46,
+      "new_page": 40,
+      "action": "revised",
+      "reason": "元の法律課題・2023年の評価と現在の入手方法を中心に、日本語・意味・情報の粒度を確認。原13入力と参照、法律の条件、主要成績を保持。",
+      "before": "実例7：判決末尾の文の役割を分類する\nAppendix: 1. 追加の実例\n原入力・課題の問い\nText: For these reasons, we AFFIRM.\nDecree\n日本語訳・課題\nこれらの理由により、原判断を維持する。\nこの文の役割を分類する。\nDecree（主文）\n[1] LegalBench. 公開trainレコードと参照回答。 function_of_decision_section / train / index 6  https://github.com/HazyResearch/legalbench/tree/main/tasks",
+      "after": "実例7：判決末尾の文の役割を分類する\nAppendix: 1. 追加の実例\n原入力・課題の問い\nText: For these reasons, we AFFIRM.\nDecree\n日本語訳・課題\nこれらの理由により、原判断を維持する。\nこの文の役割を分類する。\nDecree（主文）\n判決の文を、事実・手続・争点・法規範・分析・結論・主文の7種類に分類する。\n[1] LegalBench. 公開入力と参照回答。  https://github.com/HazyResearch/legalbench/tree/main/tasks/function_of_decision_section",
+      "external_record": null
+    },
+    {
+      "old_page": 47,
+      "new_page": 40,
+      "action": "combined",
+      "reason": "重複する説明を実例へ統合、または15pt実描画により原文全文・訳・21pt参照回答が同居。",
+      "before": "実例7の読み方\n段落を事実・手続・争点・法規範・分析・結論・主文の7種類へ分類する。\n参照ラベルはDecree。理由を分析する段落ではなく、裁判所の処分を告げる文である。\nAppendix: 1. 追加の実例\n[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench",
+      "after": "実例7：判決末尾の文の役割を分類する\nAppendix: 1. 追加の実例\n原入力・課題の問い\nText: For these reasons, we AFFIRM.\nDecree\n日本語訳・課題\nこれらの理由により、原判断を維持する。\nこの文の役割を分類する。\nDecree（主文）\n判決の文を、事実・手続・争点・法規範・分析・結論・主文の7種類に分類する。\n[1] LegalBench. 公開入力と参照回答。  https://github.com/HazyResearch/legalbench/tree/main/tasks/function_of_decision_section",
+      "external_record": null
+    },
+    {
+      "old_page": 48,
+      "new_page": 41,
+      "action": "revised",
+      "reason": "元の法律課題・2023年の評価と現在の入手方法を中心に、日本語・意味・情報の粒度を確認。原13入力と参照、法律の条件、主要成績を保持。",
+      "before": "実例8：引用文と判例名が対応するか\nAppendix: 1. 追加の実例\n原入力・課題の問い\nText: [T]he law is settled that as a general matter the First Amendment prohibits government officials from subjecting an individual to retaliatory actions . . . for speaking out.\nCitation: Feist v. La., Dep't of Justice, Off. of the Att'y Gen.\nNo\n日本語訳・課題\n「一般論として、表現を理由に公務員が個人へ報復的な措置を取ることは、合衆国憲法修正第1条が禁じているという法は確立している。」\n候補判例：Feist v. La., Dep’t of Justice, Off. of the Att’y Gen.\nこの判例名は引用の出所として正しいか。\nNo（正しくない）\n[1] LegalBench. 公開trainレコードと参照回答。 citation_prediction_classification / train / index 1  https://github.com/HazyResearch/legalbench/tree/main/tasks",
+      "after": "実例8：引用文と判例名が対応するか\nAppendix: 1. 追加の実例\n原入力・課題の問い\nText: [T]he law is settled that as a general matter the First Amendment prohibits government officials from subjecting an individual to retaliatory actions . . . for speaking out.\nCitation: Feist v. La., Dep't of Justice, Off. of the Att'y Gen.\nNo\n日本語訳・課題\n「一般に、公務員が発言への報復として個人に措置を取ることは、合衆国憲法修正第1条で禁じられている。この法理は確立している。」\n候補判例：Feist v. La., Dep’t of Justice, Off. of the Att’y Gen.\nこの判例名は引用の出所として正しいか。\nNo（正しくない）\n[1] LegalBench. 公開入力と参照回答。  https://github.com/HazyResearch/legalbench/tree/main/tasks/citation_prediction_classification",
+      "external_record": null
+    },
+    {
+      "old_page": 49,
+      "new_page": 41,
+      "action": "combined",
+      "reason": "重複する説明を実例へ統合、または15pt実描画により原文全文・訳・21pt参照回答が同居。",
+      "before": "実例8の読み方\n引用文の出所として示した判例名が正しいかを判定する。\n自由な判例名の生成と、示された候補が正しいかという二値判定は別の課題になっている。\nAppendix: 1. 追加の実例\n[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench",
+      "after": "実例8：引用文と判例名が対応するか\nAppendix: 1. 追加の実例\n原入力・課題の問い\nText: [T]he law is settled that as a general matter the First Amendment prohibits government officials from subjecting an individual to retaliatory actions . . . for speaking out.\nCitation: Feist v. La., Dep't of Justice, Off. of the Att'y Gen.\nNo\n日本語訳・課題\n「一般に、公務員が発言への報復として個人に措置を取ることは、合衆国憲法修正第1条で禁じられている。この法理は確立している。」\n候補判例：Feist v. La., Dep’t of Justice, Off. of the Att’y Gen.\nこの判例名は引用の出所として正しいか。\nNo（正しくない）\n[1] LegalBench. 公開入力と参照回答。  https://github.com/HazyResearch/legalbench/tree/main/tasks/citation_prediction_classification",
+      "external_record": null
+    },
+    {
+      "old_page": 50,
+      "new_page": 42,
+      "action": "revised",
+      "reason": "元の法律課題・2023年の評価と現在の入手方法を中心に、日本語・意味・情報の粒度を確認。原13入力と参照、法律の条件、主要成績を保持。",
+      "before": "実例9：準拠法の条項と秘密保持\nAppendix: 1. 追加の実例\n原入力・課題の問い\nClause: This Agreement shall be governed by and construed in accordance with the laws of the State of California\nQuestion: Does the clause waive confidentiality?\nNo\n日本語訳・課題\n本契約はカリフォルニア州法に準拠し、同法に従って解釈される。\n質問：この条項は秘密保持義務を免除しているか。\nNo（免除していない）\n[1] LegalBench. 公開trainレコードと参照回答。 contract_qa / train / index 4  https://github.com/HazyResearch/legalbench/tree/main/tasks",
+      "after": "実例9：準拠法の条項と秘密保持\nAppendix: 1. 追加の実例\n原入力・課題の問い\nClause: This Agreement shall be governed by and construed in accordance with the laws of the State of California\nQuestion: Does the clause waive confidentiality?\nNo\n日本語訳・課題\n本契約はカリフォルニア州法に準拠し、同法に従って解釈される。\n質問：この条項は秘密保持義務を免除しているか。\nNo（免除していない）\n[1] LegalBench. 公開入力と参照回答。  https://github.com/HazyResearch/legalbench/tree/main/tasks/contract_qa",
+      "external_record": null
+    },
+    {
+      "old_page": 51,
+      "new_page": 42,
+      "action": "combined",
+      "reason": "重複する説明を実例へ統合、または15pt実描画により原文全文・訳・21pt参照回答が同居。",
+      "before": "実例9の読み方\n条項と質問を読み、はい・いいえで答える。\n準拠法を定める条項から、別の秘密保持義務の免除を読み込まない。\nAppendix: 1. 追加の実例\n[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench",
+      "after": "実例9：準拠法の条項と秘密保持\nAppendix: 1. 追加の実例\n原入力・課題の問い\nClause: This Agreement shall be governed by and construed in accordance with the laws of the State of California\nQuestion: Does the clause waive confidentiality?\nNo\n日本語訳・課題\n本契約はカリフォルニア州法に準拠し、同法に従って解釈される。\n質問：この条項は秘密保持義務を免除しているか。\nNo（免除していない）\n[1] LegalBench. 公開入力と参照回答。  https://github.com/HazyResearch/legalbench/tree/main/tasks/contract_qa",
+      "external_record": null
+    },
+    {
+      "old_page": 52,
+      "new_page": 43,
+      "action": "revised",
+      "reason": "元の法律課題・2023年の評価と現在の入手方法を中心に、日本語・意味・情報の粒度を確認。原13入力と参照、法律の条件、主要成績を保持。",
+      "before": "実例10：被告の住所地で訴える\nAppendix: 1. 追加の実例\n原入力・課題の問い\nDustin is a repairman who lives in Arizona and repairs computers in California, Oregon, and Washington. While traveling to repair a computer in Washington, Dustin is involved in a car crash in Oregon with Laura, a citizen of Oregon. After the accident, Dustin returns to Arizona. Laura sues him in Arizona.  Is there personal jurisdiction?\nYes\n日本語訳・課題\nダスティンはアリゾナ州に住む修理業者で、カリフォルニア、オレゴン、ワシントン各州でコンピューターを修理している。ワシントン州へ修理に向かう途中、オレゴン州で同州住民のローラと自動車事故を起こす。事故後、ダスティンはアリゾナ州へ戻る。ローラは同州で彼を訴える。人的管轄はあるか。\nYes（ある）\n[1] LegalBench. 公開trainレコードと参照回答。 personal_jurisdiction / train / index 0  https://github.com/HazyResearch/legalbench/tree/main/tasks",
+      "after": "実例10：被告の住所地で訴える\nAppendix: 1. 追加の実例\n原入力・課題の問い\nDustin is a repairman who lives in Arizona and repairs computers in California, Oregon, and Washington. While traveling to repair a computer in Washington, Dustin is involved in a car crash in Oregon with Laura, a citizen of Oregon. After the accident, Dustin returns to Arizona. Laura sues him in Arizona.  Is there personal jurisdiction?\nYes\n日本語訳・課題\nダスティンはアリゾナ州に住む修理業者で、カリフォルニア、オレゴン、ワシントン各州でコンピューターを修理している。ワシントン州へ修理に向かう途中、オレゴン州で同州住民のローラと自動車事故を起こす。事故後、ダスティンはアリゾナ州へ戻る。ローラは同州で彼を訴える。人的管轄はあるか。\nYes（ある）\n[1] LegalBench. 公開入力と参照回答。  https://github.com/HazyResearch/legalbench/tree/main/tasks/personal_jurisdiction",
+      "external_record": null
+    },
+    {
+      "old_page": 53,
+      "new_page": 44,
+      "action": "revised",
+      "reason": "元の法律課題・2023年の評価と現在の入手方法を中心に、日本語・意味・情報の粒度を確認。原13入力と参照、法律の条件、主要成績を保持。",
+      "before": "実例10の読み方\n被告に対する人的管轄の有無を判定する。\n課題に示すルールでは、被告が住所を置く州には、その被告に対する人的管轄がある。\nAppendix: 1. 追加の実例\n[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench",
+      "after": "実例10の読み方\n被告に対する人的管轄の有無を判定する。\n課題に示すルールでは、被告が住所を置く州には、その被告に対する人的管轄がある。\nAppendix: 1. 追加の実例\n[1] LegalBench (n.d.). Tasks, prompts, and evaluation.  https://github.com/HazyResearch/legalbench",
+      "external_record": null
+    },
+    {
+      "old_page": 54,
+      "new_page": 45,
+      "action": "revised",
+      "reason": "元の法律課題・2023年の評価と現在の入手方法を中心に、日本語・意味・情報の粒度を確認。原13入力と参照、法律の条件、主要成績を保持。",
+      "before": "実例11：資産を買った会社の責任\nAppendix: 1. 追加の実例\n原入力・課題の問い（固定ルール説明・提示例は除く）\nFacts: \"Mediocre Corp purchased all of Special Corp's assets. The purchase agreement provides for assumption of all of Special Corp's liabilities. Following the asset purchase, Special Corp dissolved. However, Mediocre Corp now holds itself out as Special Corp. Purchasers of Special Corp's speical television remote controls have alleged a mass tort under a theory of products liability and have brough suit against Mediocre Corp. \"\nexpress agreement\n[1] LegalBench. 公開trainレコードと参照回答。 successor_liability / train / index 2  https://github.com/HazyResearch/legalbench/tree/main/tasks",
+      "after": "実例11：資産を買った会社の責任\nAppendix: 1. 追加の実例\n原入力・課題の問い\nFacts: \"Mediocre Corp purchased all of Special Corp's assets. The purchase agreement provides for assumption of all of Special Corp's liabilities. Following the asset purchase, Special Corp dissolved. However, Mediocre Corp now holds itself out as Special Corp. Purchasers of Special Corp's speical television remote controls have alleged a mass tort under a theory of products liability and have brough suit against Mediocre Corp. \"\nexpress agreement\n日本語訳・課題\nミディオカー社はスペシャル社の全資産を買い取った。売買契約では、スペシャル社の全責任を引き受けると定めている。資産売却後、スペシャル社は解散した。しかし、ミディオカー社は今や自社をスペシャル社として対外的に示している。スペシャル社の特殊なテレビ用リモコンの購入者らは、製造物責任を根拠に多数の被害を伴う不法行為を主張し、ミディオカー社を訴えた。どの例外が当たるか。\n明示の合意\n[1] LegalBench. 公開入力と参照回答。  https://github.com/HazyResearch/legalbench/tree/main/tasks/successor_liability",
+      "external_record": null
+    },
+    {
+      "old_page": 55,
+      "new_page": 45,
+      "action": "combined",
+      "reason": "重複する説明を実例へ統合、または15pt実描画により原文全文・訳・21pt参照回答が同居。",
+      "before": "実例11：資産を買った会社の責任（訳）\nAppendix: 1. 追加の実例\n日本語訳・課題\nミディオカー社はスペシャル社の全資産を買い取った。売買契約では、スペシャル社の全責任を引き受けると定めている。資産売却後、スペシャル社は解散した。しかし、ミディオカー社は今や自社をスペシャル社として対外的に示している。スペシャル社の特殊なテレビ用リモコンの購入者らは、製造物責任を根拠に多数の被害を伴う不法行為を主張し、ミディオカー社を訴えた。どの例外が当たるか。\nexpress agreement（明示の合意）\n[1] LegalBench. 公開trainレコードと参照回答。 successor_liability / train / index 2  https://github.com/HazyResearch/legalbench/tree/main/tasks",
+      "after": "実例11：資産を買った会社の責任\nAppendix: 1. 追加の実例\n原入力・課題の問い\nFacts: \"Mediocre Corp purchased all of Special Corp's assets. The purchase agreement provides for assumption of all of Special Corp's liabilities. Following the asset purchase, Special Corp dissolved. However, Mediocre Corp now holds itself out as Special Corp. Purchasers of Special Corp's speical television remote controls have alleged a mass tort under a theory of products liability and have brough suit against Mediocre Corp. \"\nexpress agreement\n日本語訳・課題\nミディオカー社はスペシャル社の全資産を買い取った。売買契約では、スペシャル社の全責任を引き受けると定めている。資産売却後、スペシャル社は解散した。しかし、ミディオカー社は今や自社をスペシャル社として対外的に示している。スペシャル社の特殊なテレビ用リモコンの購入者らは、製造物責任を根拠に多数の被害を伴う不法行為を主張し、ミディオカー社を訴えた。どの例外が当たるか。\n明示の合意\n[1] LegalBench. 公開入力と参照回答。  https://github.com/HazyResearch/legalbench/tree/main/tasks/successor_liability",
+      "external_record": null
+    },
+    {
+      "old_page": 56,
+      "new_page": 46,
+      "action": "revised",
+      "reason": "元の法律課題・2023年の評価と現在の入手方法を中心に、日本語・意味・情報の粒度を確認。原13入力と参照、法律の条件、主要成績を保持。",
+      "before": "実例11の読み方\n資産譲受人が売主の責任を負う例外を選ぶ。\n参照回答は契約による責任の明示的な引受け。課題全体では複数の例外を答える例もあり、F1で採点する。\nAppendix: 1. 追加の実例\n[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench",
+      "after": "資産の譲受人が責任を負う例外を答える\n参照回答は契約による責任の明示的な引受け。課題全体では複数の例外を答える例もあり、F1で採点する。\nAppendix: 1. 追加の実例\n[1] LegalBench (n.d.). Tasks, prompts, and evaluation.  https://github.com/HazyResearch/legalbench",
+      "external_record": null
+    },
+    {
+      "old_page": 57,
+      "new_page": 47,
+      "action": "revised",
+      "reason": "元の法律課題・2023年の評価と現在の入手方法を中心に、日本語・意味・情報の粒度を確認。原13入力と参照、法律の条件、主要成績を保持。",
+      "before": "実例12：農場を売買する契約\nAppendix: 1. 追加の実例\n原入力・課題の問い\nAva buys James' farm for $50,000. Is this contract governed by the UCC or the common law?\nCommon Law\n日本語訳・課題\nエイヴァはジェームズの農場を50,000ドルで買う。この契約に適用されるのはUCCか、コモン・ローか。\nCommon Law（コモン・ロー）\n[1] LegalBench. 公開trainレコードと参照回答。 ucc_v_common_law / train / index 4  https://github.com/HazyResearch/legalbench/tree/main/tasks",
+      "after": "実例12：農場を売買する契約\nAppendix: 1. 追加の実例\n原入力・課題の問い\nAva buys James' farm for $50,000. Is this contract governed by the UCC or the common law?\nCommon Law\n日本語訳・課題\nエイヴァはジェームズの農場を50,000ドルで買う。この契約に適用されるのはUCCか、コモン・ローか。\nCommon Law（コモン・ロー）\nUCC（統一商事法典）は動産売買、コモン・ローは不動産やサービスの契約を扱う規則で判定する。\n[1] LegalBench. 公開入力と参照回答。  https://github.com/HazyResearch/legalbench/tree/main/tasks/ucc_v_common_law",
+      "external_record": null
+    },
+    {
+      "old_page": 58,
+      "new_page": 47,
+      "action": "combined",
+      "reason": "重複する説明を実例へ統合、または15pt実描画により原文全文・訳・21pt参照回答が同居。",
+      "before": "実例12の読み方\n契約がUCCとコモン・ローのどちらに従うかを答える。\n課題で示す区別では、動産売買をUCC、不動産とサービスの契約をコモン・ローで扱う。\nAppendix: 1. 追加の実例\n[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench",
+      "after": "実例12：農場を売買する契約\nAppendix: 1. 追加の実例\n原入力・課題の問い\nAva buys James' farm for $50,000. Is this contract governed by the UCC or the common law?\nCommon Law\n日本語訳・課題\nエイヴァはジェームズの農場を50,000ドルで買う。この契約に適用されるのはUCCか、コモン・ローか。\nCommon Law（コモン・ロー）\nUCC（統一商事法典）は動産売買、コモン・ローは不動産やサービスの契約を扱う規則で判定する。\n[1] LegalBench. 公開入力と参照回答。  https://github.com/HazyResearch/legalbench/tree/main/tasks/ucc_v_common_law",
+      "external_record": null
+    },
+    {
+      "old_page": 59,
+      "new_page": 48,
+      "action": "revised",
+      "reason": "元の法律課題・2023年の評価と現在の入手方法を中心に、日本語・意味・情報の粒度を確認。原13入力と参照、法律の条件、主要成績を保持。",
+      "before": "実例13：告知した価格と請求額が異なる\nAppendix: 1. 追加の実例\n原入力・課題の問い\nAcme Toys is a telemarketer subject to the Telemarketing Sales Rule. Acme Toys told a customer that its frisbees cost $10 each, when in fact the frisbees cost $12 each. The customer agreed to the sale and was charged $12. Is this a violation of the Telemarketing Sales Rule?\nYes\n日本語訳・課題\nアクミー・トイズ社は電話勧誘販売ルールの対象である。同社は客にフリスビー1枚が10ドルだと伝えたが、実際の価格は12ドルだった。客は売買に同意し、12ドルを請求された。これは電話勧誘販売ルールへの違反か。\nYes（違反）\n[1] LegalBench. 公開trainレコードと参照回答。 telemarketing_sales_rule / train / index 0  https://github.com/HazyResearch/legalbench/tree/main/tasks",
+      "after": "実例13：告知した価格と請求額が異なる\nAppendix: 1. 追加の実例\n原入力・課題の問い\nAcme Toys is a telemarketer subject to the Telemarketing Sales Rule. Acme Toys told a customer that its frisbees cost $10 each, when in fact the frisbees cost $12 each. The customer agreed to the sale and was charged $12. Is this a violation of the Telemarketing Sales Rule?\nYes\n日本語訳・課題\nアクミー・トイズ社は電話勧誘販売ルールの対象である。同社は客にフリスビー1枚が10ドルだと伝えたが、実際の価格は12ドルだった。客は売買に同意し、12ドルを請求された。これは電話勧誘販売ルールへの違反か。\nYes（違反）\n[1] LegalBench. 公開入力と参照回答。  https://github.com/HazyResearch/legalbench/tree/main/tasks/telemarketing_sales_rule",
+      "external_record": null
+    },
+    {
+      "old_page": 60,
+      "new_page": 48,
+      "action": "combined",
+      "reason": "重複する説明を実例へ統合、または15pt実描画により原文全文・訳・21pt参照回答が同居。",
+      "before": "実例13の読み方\n電話勧誘販売ルールへの違反を判定する。\n商品価格についての虚偽の説明を判定する。問われるルールの条文番号は16 C.F.R. § 310.3(a)(1)・(2)。\nAppendix: 1. 追加の実例\n[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench",
+      "after": "実例13：告知した価格と請求額が異なる\nAppendix: 1. 追加の実例\n原入力・課題の問い\nAcme Toys is a telemarketer subject to the Telemarketing Sales Rule. Acme Toys told a customer that its frisbees cost $10 each, when in fact the frisbees cost $12 each. The customer agreed to the sale and was charged $12. Is this a violation of the Telemarketing Sales Rule?\nYes\n日本語訳・課題\nアクミー・トイズ社は電話勧誘販売ルールの対象である。同社は客にフリスビー1枚が10ドルだと伝えたが、実際の価格は12ドルだった。客は売買に同意し、12ドルを請求された。これは電話勧誘販売ルールへの違反か。\nYes（違反）\n[1] LegalBench. 公開入力と参照回答。  https://github.com/HazyResearch/legalbench/tree/main/tasks/telemarketing_sales_rule",
+      "external_record": null
+    },
+    {
+      "old_page": 61,
+      "new_page": 49,
+      "action": "revised",
+      "reason": "元の法律課題・2023年の評価と現在の入手方法を中心に、日本語・意味・情報の粒度を確認。原13入力と参照、法律の条件、主要成績を保持。",
+      "before": "課題の一覧と評価の補足\nAppendix: 2. 課題の一覧と評価の補足",
+      "after": "課題形式の補足\nAppendix: 2. 課題形式の補足",
+      "external_record": null
+    },
+    {
+      "old_page": 62,
+      "new_page": 50,
+      "action": "revised",
+      "reason": "元の法律課題・2023年の評価と現在の入手方法を中心に、日本語・意味・情報の粒度を確認。原13入力と参照、法律の条件、主要成績を保持。",
+      "before": "2023年の入力・出力形式の内訳\nAppendix: 2. 課題の一覧と評価の補足\n2023年の公表分類。合計162課題。推論形式の分類とは別の軸。\n[1] Guha et al. (2023), LegalBench: A Collaboratively Built Benchmark for Measuring Legal Reasoning in Large Language Models. arXiv.\nhttps://arxiv.org/abs/2308.11462",
+      "after": "2023年の入力・出力形式の内訳\nAppendix: 2. 課題形式の補足\n2023年の公表分類。合計162課題。推論形式の分類とは別の軸。\n[1] Guha et al. (2023). LegalBench. NeurIPS.  https://arxiv.org/abs/2308.11462",
+      "external_record": null
+    },
+    {
+      "old_page": 63,
+      "new_page": null,
+      "action": "moved_to_external_record",
+      "reason": "採用先の実装/実行、細かな生成設定、ID索引・検算や重複説明を外部記録へ。元162課題と原評価は保持。",
+      "before": "ゼロショットと提示例の役割\n2023年評価では、課題ごとに0〜8件の提示例を選んだ。長い開示文書では、複数の提示例を入れられない場合がある。\n分類・抽出は改行で出力を止めた。rule_qaと適用課題の大半は150トークン、diversity_jurisdiction_6は300トークンを生成した。\n提示例用trainの少なさは、モデルの教師あり学習の規模を表すものではない。\nAppendix: 2. 課題の一覧と評価の補足\n[1] Guha et al. (2023), LegalBench: A Collaboratively Built Benchmark for Measuring Legal Reasoning in Large Language Models. arXiv.\nhttps://arxiv.org/abs/2308.11462",
+      "after": null,
+      "external_record": "/workspace/artifacts/helm-parallel/legalbench"
+    },
+    {
+      "old_page": 64,
+      "new_page": null,
+      "action": "moved_to_external_record",
+      "reason": "採用先の実装/実行、細かな生成設定、ID索引・検算や重複説明を外部記録へ。元162課題と原評価は保持。",
+      "before": "2023年の件数表記と、固定コードの集計\n論文本文の推論群別件数は、争点16／17、解釈119など、箇所によって値が異なる。\nこの資料の課題構成表は、GitHubの固定改訂b46bf4ffのTASKSと五つの群を照合した。162識別子が重複なく、いずれかの群に一度ずつ入る。\n理由を説明する12のapplication_promptは、同じ入力を使う別の評価形式として扱った。\nAppendix: 2. 課題の一覧と評価の補足\n[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench",
+      "after": null,
+      "external_record": "/workspace/artifacts/helm-parallel/legalbench"
+    },
+    {
+      "old_page": 65,
+      "new_page": null,
+      "action": "moved_to_external_record",
+      "reason": "採用先の実装/実行、細かな生成設定、ID索引・検算や重複説明を外部記録へ。元162課題と原評価は保持。",
+      "before": "公開162課題の識別子（1/14）\nAppendix: 2. 課題の一覧と評価の補足\nabercrombie\ncanada_tax_court_outcomes\ncitation_prediction_classification\ncitation_prediction_open\nconsumer_contracts_qa\ncontract_nli_confidentiality_of_agreement\ncontract_nli_explicit_identification\ncontract_nli_inclusion_of_verbally_conveyed_information\ncontract_nli_limited_use\ncontract_nli_no_licensing\ncontract_nli_notice_on_compelled_disclosure\ncontract_nli_permissible_acquirement_of_similar_information\n[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench",
+      "after": null,
+      "external_record": "/workspace/artifacts/helm-parallel/legalbench"
+    },
+    {
+      "old_page": 66,
+      "new_page": null,
+      "action": "moved_to_external_record",
+      "reason": "採用先の実装/実行、細かな生成設定、ID索引・検算や重複説明を外部記録へ。元162課題と原評価は保持。",
+      "before": "公開162課題の識別子（2/14）\nAppendix: 2. 課題の一覧と評価の補足\ncontract_nli_permissible_copy\ncontract_nli_permissible_development_of_similar_information\ncontract_nli_permissible_post-agreement_possession\ncontract_nli_return_of_confidential_information\ncontract_nli_sharing_with_employees\ncontract_nli_sharing_with_third-parties\ncontract_nli_survival_of_obligations\ncontract_qa\ncorporate_lobbying\ncuad_affiliate_license-licensee\ncuad_affiliate_license-licensor\ncuad_anti-assignment\n[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench",
+      "after": null,
+      "external_record": "/workspace/artifacts/helm-parallel/legalbench"
+    },
+    {
+      "old_page": 67,
+      "new_page": null,
+      "action": "moved_to_external_record",
+      "reason": "採用先の実装/実行、細かな生成設定、ID索引・検算や重複説明を外部記録へ。元162課題と原評価は保持。",
+      "before": "公開162課題の識別子（3/14）\nAppendix: 2. 課題の一覧と評価の補足\ncuad_audit_rights\ncuad_cap_on_liability\ncuad_change_of_control\ncuad_competitive_restriction_exception\ncuad_covenant_not_to_sue\ncuad_effective_date\ncuad_exclusivity\ncuad_expiration_date\ncuad_governing_law\ncuad_insurance\ncuad_ip_ownership_assignment\ncuad_irrevocable_or_perpetual_license\n[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench",
+      "after": null,
+      "external_record": "/workspace/artifacts/helm-parallel/legalbench"
+    },
+    {
+      "old_page": 68,
+      "new_page": null,
+      "action": "moved_to_external_record",
+      "reason": "採用先の実装/実行、細かな生成設定、ID索引・検算や重複説明を外部記録へ。元162課題と原評価は保持。",
+      "before": "公開162課題の識別子（4/14）\nAppendix: 2. 課題の一覧と評価の補足\ncuad_joint_ip_ownership\ncuad_license_grant\ncuad_liquidated_damages\ncuad_minimum_commitment\ncuad_most_favored_nation\ncuad_no-solicit_of_customers\ncuad_no-solicit_of_employees\ncuad_non-compete\ncuad_non-disparagement\ncuad_non-transferable_license\ncuad_notice_period_to_terminate_renewal\ncuad_post-termination_services\n[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench",
+      "after": null,
+      "external_record": "/workspace/artifacts/helm-parallel/legalbench"
+    },
+    {
+      "old_page": 69,
+      "new_page": null,
+      "action": "moved_to_external_record",
+      "reason": "採用先の実装/実行、細かな生成設定、ID索引・検算や重複説明を外部記録へ。元162課題と原評価は保持。",
+      "before": "公開162課題の識別子（5/14）\nAppendix: 2. 課題の一覧と評価の補足\ncuad_price_restrictions\ncuad_renewal_term\ncuad_revenue-profit_sharing\ncuad_rofr-rofo-rofn\ncuad_source_code_escrow\ncuad_termination_for_convenience\ncuad_third_party_beneficiary\ncuad_uncapped_liability\ncuad_unlimited-all-you-can-eat-license\ncuad_volume_restriction\ncuad_warranty_duration\ndefinition_classification\n[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench",
+      "after": null,
+      "external_record": "/workspace/artifacts/helm-parallel/legalbench"
+    },
+    {
+      "old_page": 70,
+      "new_page": null,
+      "action": "moved_to_external_record",
+      "reason": "採用先の実装/実行、細かな生成設定、ID索引・検算や重複説明を外部記録へ。元162課題と原評価は保持。",
+      "before": "公開162課題の識別子（6/14）\nAppendix: 2. 課題の一覧と評価の補足\ndefinition_extraction\ndiversity_1\ndiversity_2\ndiversity_3\ndiversity_4\ndiversity_5\ndiversity_6\nfunction_of_decision_section\nhearsay\ninsurance_policy_interpretation\njcrew_blocker\ninternational_citizenship_questions\n[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench",
+      "after": null,
+      "external_record": "/workspace/artifacts/helm-parallel/legalbench"
+    },
+    {
+      "old_page": 71,
+      "new_page": null,
+      "action": "moved_to_external_record",
+      "reason": "採用先の実装/実行、細かな生成設定、ID索引・検算や重複説明を外部記録へ。元162課題と原評価は保持。",
+      "before": "公開162課題の識別子（7/14）\nAppendix: 2. 課題の一覧と評価の補足\nnys_judicial_ethics\nlearned_hands_benefits\nlearned_hands_business\nlearned_hands_consumer\nlearned_hands_courts\nlearned_hands_crime\nlearned_hands_divorce\nlearned_hands_domestic_violence\nlearned_hands_education\nlearned_hands_employment\nlearned_hands_estates\nlearned_hands_family\n[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench",
+      "after": null,
+      "external_record": "/workspace/artifacts/helm-parallel/legalbench"
+    },
+    {
+      "old_page": 72,
+      "new_page": null,
+      "action": "moved_to_external_record",
+      "reason": "採用先の実装/実行、細かな生成設定、ID索引・検算や重複説明を外部記録へ。元162課題と原評価は保持。",
+      "before": "公開162課題の識別子（8/14）\nAppendix: 2. 課題の一覧と評価の補足\nlearned_hands_health\nlearned_hands_housing\nlearned_hands_immigration\nlearned_hands_torts\nlearned_hands_traffic\nlegal_reasoning_causality\nmaud_ability_to_consummate_concept_is_subject_to_mae_carveouts\nmaud_financial_point_of_view_is_the_sole_consideration\nmaud_accuracy_of_fundamental_target_rws_bringdown_standard\nmaud_accuracy_of_target_general_rw_bringdown_timing_answer\nmaud_accuracy_of_target_capitalization_rw_(outstanding_shares)_bringdown_standard_answer\n[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench",
+      "after": null,
+      "external_record": "/workspace/artifacts/helm-parallel/legalbench"
+    },
+    {
+      "old_page": 73,
+      "new_page": null,
+      "action": "moved_to_external_record",
+      "reason": "採用先の実装/実行、細かな生成設定、ID索引・検算や重複説明を外部記録へ。元162課題と原評価は保持。",
+      "before": "公開162課題の識別子（9/14）\nAppendix: 2. 課題の一覧と評価の補足\nmaud_additional_matching_rights_period_for_modifications_(cor)\nmaud_application_of_buyer_consent_requirement_(negative_interim_covenant)\nmaud_buyer_consent_requirement_(ordinary_course)\nmaud_change_in_law__subject_to_disproportionate_impact_modifier\nmaud_changes_in_gaap_or_other_accounting_principles__subject_to_disproportionate_impact_modifier\nmaud_cor_permitted_in_response_to_intervening_event\nmaud_cor_permitted_with_board_fiduciary_determination_only\nmaud_cor_standard_(intervening_event)\nmaud_cor_standard_(superior_offer)\nmaud_definition_contains_knowledge_requirement_-_answer\nmaud_definition_includes_asset_deals\n[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench",
+      "after": null,
+      "external_record": "/workspace/artifacts/helm-parallel/legalbench"
+    },
+    {
+      "old_page": 74,
+      "new_page": null,
+      "action": "moved_to_external_record",
+      "reason": "採用先の実装/実行、細かな生成設定、ID索引・検算や重複説明を外部記録へ。元162課題と原評価は保持。",
+      "before": "公開162課題の識別子（10/14）\nAppendix: 2. 課題の一覧と評価の補足\nmaud_definition_includes_stock_deals\nmaud_fiduciary_exception__board_determination_standard\nmaud_fiduciary_exception_board_determination_trigger_(no_shop)\nmaud_fls_(mae)_standard\nmaud_general_economic_and_financial_conditions_subject_to_disproportionate_impact_modifier\nmaud_includes_consistent_with_past_practice\nmaud_initial_matching_rights_period_(cor)\nmaud_initial_matching_rights_period_(ftr)\nmaud_intervening_event_-_required_to_occur_after_signing_-_answer\nmaud_knowledge_definition\nmaud_liability_standard_for_no-shop_breach_by_target_non-do_representatives\n[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench",
+      "after": null,
+      "external_record": "/workspace/artifacts/helm-parallel/legalbench"
+    },
+    {
+      "old_page": 75,
+      "new_page": null,
+      "action": "moved_to_external_record",
+      "reason": "採用先の実装/実行、細かな生成設定、ID索引・検算や重複説明を外部記録へ。元162課題と原評価は保持。",
+      "before": "公開162課題の識別子（11/14）\nAppendix: 2. 課題の一覧と評価の補足\nmaud_ordinary_course_efforts_standard\nmaud_pandemic_or_other_public_health_event__subject_to_disproportionate_impact_modifier\nmaud_pandemic_or_other_public_health_event_specific_reference_to_pandemic-related_governmental_responses_or_measures\nmaud_relational_language_(mae)_applies_to\nmaud_specific_performance\nmaud_tail_period_length\nmaud_type_of_consideration\nopp115_data_retention\nopp115_data_security\nopp115_do_not_track\n[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench",
+      "after": null,
+      "external_record": "/workspace/artifacts/helm-parallel/legalbench"
+    },
+    {
+      "old_page": 76,
+      "new_page": null,
+      "action": "moved_to_external_record",
+      "reason": "採用先の実装/実行、細かな生成設定、ID索引・検算や重複説明を外部記録へ。元162課題と原評価は保持。",
+      "before": "公開162課題の識別子（12/14）\nAppendix: 2. 課題の一覧と評価の補足\nopp115_first_party_collection_use\nopp115_international_and_specific_audiences\nopp115_policy_change\nopp115_third_party_sharing_collection\nopp115_user_access,_edit_and_deletion\nopp115_user_choice_control\noral_argument_question_purpose\noverruling\npersonal_jurisdiction\nprivacy_policy_entailment\nprivacy_policy_qa\nproa\n[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench",
+      "after": null,
+      "external_record": "/workspace/artifacts/helm-parallel/legalbench"
+    },
+    {
+      "old_page": 77,
+      "new_page": null,
+      "action": "moved_to_external_record",
+      "reason": "採用先の実装/実行、細かな生成設定、ID索引・検算や重複説明を外部記録へ。元162課題と原評価は保持。",
+      "before": "公開162課題の識別子（13/14）\nAppendix: 2. 課題の一覧と評価の補足\nrule_qa\nscalr\nssla_company_defendants\nssla_individual_defendants\nssla_plaintiff\nsara_entailment\nsara_numeric\nsuccessor_liability\nsupply_chain_disclosure_best_practice_accountability\nsupply_chain_disclosure_best_practice_audits\nsupply_chain_disclosure_best_practice_certification\nsupply_chain_disclosure_best_practice_training\n[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench",
+      "after": null,
+      "external_record": "/workspace/artifacts/helm-parallel/legalbench"
+    },
+    {
+      "old_page": 78,
+      "new_page": null,
+      "action": "moved_to_external_record",
+      "reason": "採用先の実装/実行、細かな生成設定、ID索引・検算や重複説明を外部記録へ。元162課題と原評価は保持。",
+      "before": "公開162課題の識別子（14/14）\nAppendix: 2. 課題の一覧と評価の補足\nsupply_chain_disclosure_best_practice_verification\nsupply_chain_disclosure_disclosed_accountability\nsupply_chain_disclosure_disclosed_audits\nsupply_chain_disclosure_disclosed_certification\nsupply_chain_disclosure_disclosed_training\nsupply_chain_disclosure_disclosed_verification\ntelemarketing_sales_rule\ntextualism_tool_dictionaries\ntextualism_tool_plain\nucc_v_common_law\nunfair_tos\n[1] LegalBench. 公式タスク・プロンプト・採点コード。2026-10-18固定版。  https://github.com/HazyResearch/legalbench",
+      "after": null,
+      "external_record": "/workspace/artifacts/helm-parallel/legalbench"
+    },
+    {
+      "old_page": 79,
+      "new_page": null,
+      "action": "moved_to_external_record",
+      "reason": "採用先の実装/実行、細かな生成設定、ID索引・検算や重複説明を外部記録へ。元162課題と原評価は保持。",
+      "before": "入手容量と改訂を分けて記録する\n公式Hugging FaceのTSV一覧は、メタデータ上で計82,311,731 bytes（約82.3 MB）。今回、全テスト本文を取得して実測した値ではない。\nGitHubには公開trainと一部修正済みtestがあり、同じ配布範囲ではない。今回の13例はGitHubの固定改訂から取得した。\n原入力・ラベル・課題別のテンプレートとREADME、ファイルごとのSHA256を調査記録に保存した。\nAppendix: 2. 課題の一覧と評価の補足\n[1] LegalBench. nguha/legalbench公式公開配布。  https://huggingface.co/datasets/nguha/legalbench",
+      "after": null,
+      "external_record": "/workspace/artifacts/helm-parallel/legalbench"
+    },
+    {
+      "old_page": 80,
+      "new_page": 51,
+      "action": "checked_no_wording_change",
+      "reason": "既存の自然な説明と意味ある内容を保持。",
+      "before": "研究と参考文献\nAppendix: 3. 研究と参考文献",
+      "after": "研究と参考文献\nAppendix: 3. 研究と参考文献",
+      "external_record": null
+    },
+    {
+      "old_page": 81,
+      "new_page": 52,
+      "action": "revised",
+      "reason": "元の法律課題・2023年の評価と現在の入手方法を中心に、日本語・意味・情報の粒度を確認。原13入力と参照、法律の条件、主要成績を保持。",
+      "before": "法学と機械学習の共同研究\n第一著者Neel Guhaらを中心に、Stanford Universityなどの法学者、法律実務家、機械学習研究者が参加した。\n共通の法律推論の語彙を使い、法律家が作った課題を、言語モデルの評価として共有することを目指した。\n2023年の論文は162課題と20モデルの評価を報告。公式サイトは40人の寄稿者を紹介している。\nAppendix: 3. 研究と参考文献\n[1] Guha et al. (2023), LegalBench: A Collaboratively Built Benchmark for Measuring Legal Reasoning in Large Language Models. arXiv.\nhttps://arxiv.org/abs/2308.11462",
+      "after": "法学と機械学習の共同研究\nNeel Guhaらによる、法学・法律実務と機械学習の共同研究。スタンフォード大学をはじめ、多くの研究機関や実務家が参加した。\n法律の推論を表す共通の語彙を使い、法律家が作った課題を、言語モデルの評価に生かすことを目指した。\nNeurIPS 2023で162課題と20モデルの評価を報告。公式サイトは40人の寄稿者を紹介している。\nAppendix: 3. 研究と参考文献\n[1] Guha et al. (2023). LegalBench. NeurIPS.  https://arxiv.org/abs/2308.11462",
+      "external_record": null
+    },
+    {
+      "old_page": 82,
+      "new_page": 53,
+      "action": "revised",
+      "reason": "元の法律課題・2023年の評価と現在の入手方法を中心に、日本語・意味・情報の粒度を確認。原13入力と参照、法律の条件、主要成績を保持。",
+      "before": "参考文献\nAppendix: 3. 研究と参考文献\nLegalBench: A Collaboratively Built Benchmark for Measuring Legal Reasoning in Large Language Models\nGuha et al. · 2023 · arXiv:2308.11462\n六つの法律推論の整理、課題構築、20モデルの評価を報告する。\nhttps://arxiv.org/abs/2308.11462\nLegalBench\nLegalBench contributors · 公式サイト\n課題の仕様、寄稿者、参加方法と公開データを案内する。\nhttps://hazyresearch.stanford.edu/legalbench/",
+      "after": "参考文献\nAppendix: 3. 研究と参考文献\nLegalBench: A Collaboratively Built Benchmark for Measuring Legal Reasoning in Large Language Models\nGuha et al. · 2023 · NeurIPS 36, pp.44123–44279\n法律家と研究者が共同構築した162課題と、20モデルの評価を報告する。\nhttps://proceedings.neurips.cc/paper_files/paper/2023/hash/89e44582fd28ddfea1ea4dcb0ebbf4b0-Abstract-Datasets_and_Benchmarks.html\nLegalBench — official site\nLegalBench contributors (n.d.). 公式サイト。参照2026-10-19。\n課題の説明、寄稿者、参加方法と公開データを案内する。\nhttps://hazyresearch.stanford.edu/legalbench/",
+      "external_record": null
+    },
+    {
+      "old_page": 83,
+      "new_page": 54,
+      "action": "revised",
+      "reason": "元の法律課題・2023年の評価と現在の入手方法を中心に、日本語・意味・情報の粒度を確認。原13入力と参照、法律の条件、主要成績を保持。",
+      "before": "参考文献\nAppendix: 3. 研究と参考文献\nLegalBench: Tasks, prompts, and evaluation\nLegalBench contributors · 公式リポジトリ\n課題ごとのREADME、提示例、プロンプトと採点実装を公開する。\nhttps://github.com/HazyResearch/legalbench\nLegalBench data changelog\nLegalBench contributors · 2024–2026 · 更新履歴\nMAUDとOPP-115の入力修正、ラベル修正などの変更内容を記録する。\nhttps://github.com/HazyResearch/legalbench/blob/main/CHANGELOG.md",
+      "after": "参考文献\nAppendix: 3. 研究と参考文献\nLegalBench: Tasks, prompts, and evaluation\nLegalBench contributors (n.d.). 公式リポジトリ。参照2026-10-19。\n課題ごとのREADME、提示例、プロンプトと採点実装を公開する。\nhttps://github.com/HazyResearch/legalbench\nLegalBench data changelog\nLegalBench contributors · 2024–2026 · 更新履歴。参照2026-10-19。\nMAUDとOPP-115の入力修正、ラベル修正などの変更内容を記録する。\nhttps://github.com/HazyResearch/legalbench/blob/main/CHANGELOG.md",
+      "external_record": null
+    },
+    {
+      "old_page": 84,
+      "new_page": null,
+      "action": "moved_to_external_record",
+      "reason": "採用先の実装/実行、細かな生成設定、ID索引・検算や重複説明を外部記録へ。元162課題と原評価は保持。",
+      "before": "参考文献\nAppendix: 3. 研究と参考文献\nHolistic Evaluation of Language Models\nLiang et al. · 2023 · TMLR\n課題・指標・モデルを共通条件で比較する評価基盤を提案する。\nhttps://arxiv.org/abs/2211.09110\nHELM LegalBench scenario\nStanford CRFM · v0.4.0 · 公開実装\n五つのLegalBench課題の入力整形と、参照回答の読み込みを定義する。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/legalbench_scenario.py",
+      "after": null,
+      "external_record": "/workspace/artifacts/helm-parallel/legalbench"
+    }
+  ],
+  "reader_fixes": [
+    {
+      "page": 9,
+      "before": "abercrombieでは5分類の名前を出力する。長い説明を書くだけでは、要求されたラベルに一致しない。",
+      "after": "abercrombieでは、五つの分類名のいずれかを答える。",
+      "reason": "独立レビューと主担当の日本語・読者向け改善"
+    },
+    {
+      "page": 27,
+      "before": "六つのdiversity課題",
+      "after": "州籍相違に関する6課題",
+      "reason": "独立レビューと主担当の日本語・読者向け改善"
+    },
+    {
+      "page": 31,
+      "before": "2023年の公表成績と、修正後のデータで得た値は、同じ評価条件として並べない。",
+      "after": "2023年の公表成績は、これらの入力修正前のデータで得た結果である。",
+      "reason": "独立レビューと主担当の日本語・読者向け改善"
+    },
+    {
+      "page": 41,
+      "before": "一般論として、表現を理由に公務員が個人へ報復的な措置を取ることは、合衆国憲法修正第1条が禁じているという法は確立している。",
+      "after": "一般に、公務員が発言への報復として個人に措置を取ることは、合衆国憲法修正第1条で禁じられている。この法理は確立している。",
+      "reason": "独立レビューと主担当の日本語・読者向け改善"
+    },
+    {
+      "page": 46,
+      "before": "資産譲受人が売主の責任を負う例外を選ぶ。\n",
+      "after": "",
+      "reason": "独立レビューと主担当の日本語・読者向け改善"
+    },
+    {
+      "page": 18,
+      "before": "コード上の群",
+      "after": "推論の形式"
+    },
+    {
+      "page": 53,
+      "before": "URL10.5pt/2行",
+      "after": "同一URL9.5pt/1行",
+      "reason": "リンク領域と全文表示の一致"
+    },
+    {
+      "page": 28,
+      "before": "この成績は2023年のモデル・データ・採点条件の記録である。",
+      "after": "英語の課題で、米国法や契約分野に比重がある。成績は2023年のモデル・データ・採点条件による。",
+      "reason": "正式論文§4.1の対象範囲を利用者に説明"
+    }
+  ],
+  "translation_changes": [
+    {
+      "example": 4,
+      "field": "translation",
+      "before": "「しかし、申立人でさえ、自ら好む辞書を手に、『decision』という語が、判断を説明する理由の記述に至らないものを意味することもあると認めている。」*306\n定義されている用語を抽出する。",
+      "after": "「しかし、申立人でさえ、自ら好む辞書を手に、『decision』という語が、判断の理由を説明する記述とまではいえないものを意味することもあると認めている。」*306\n定義されている用語を抽出する。",
+      "reason": "something short ofの意味を保ち日本語を自然化"
+    },
+    {
+      "example": 6,
+      "field": "translation",
+      "before": "2020年1月1日時点の法を前提とする。ボリビアを考える。居住に基づく国籍取得について、同国は居住期間の条件を定めているか。はい、または、いいえで答える。",
+      "after": "2020年1月1日時点の国際法を前提とする。ボリビアを考える。居住に基づく国籍取得について、同国は居住期間の条件を定めているか。はい、または、いいえで答える。",
+      "reason": "原テンプレートのinternationalを保持"
+    }
+  ]
+}

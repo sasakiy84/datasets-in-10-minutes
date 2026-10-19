@@ -13,3 +13,8 @@ Geminiは使用していない。Codexが日本語校正スキルをページご
 |47|事実・手続・争点・法規範・分析・結論・命令の7種類|事実・手続・争点・法規範・分析・結論・主文の7種類|課題の説明と回答訳の用語をそろえる。|
 
 [全ページ文言](legalbench/pages.jsonl)・[自己検査・独立レビュー](legalbench/review.json)
+
+
+## 読者向けの説明・日本語の改訂（2026年10月）
+
+Geminiは使用せず、Codexがスキルで校正し、別担当が独立レビューした。削除・統合を含む[問題点と変更対](legalbench/editorial-2026-10/changes.md)、[旧ページとの対応](legalbench/editorial-2026-10/page-map.json)、[独立レビュー](legalbench/editorial-2026-10/independent-review/handoff.json)、[最終ページの全文](legalbench/pages.jsonl)。旧版の校正・検証記録は保持している。

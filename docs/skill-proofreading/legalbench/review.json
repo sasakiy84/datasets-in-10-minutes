@@ -3,7 +3,7 @@
   "self_review_complete": true,
   "independent_review_pending": false,
   "pages": 84,
-  "main_pages": 36,
+  "main_pages": 33,
   "examples": {
     "main": 3,
     "appendix": 10,
@@ -60,12 +60,13 @@
     "rechecked": "final PDF pages72/74 individually viewed; layout/package/text/links all pass"
   },
   "independent_review_approved": true,
-  "independent_review": "independent-review/",
+  "independent_review": "editorial-2026-10/independent-review/",
   "self_visual_review": {
     "visual-inspection.json": {
-      "overview": "overview.png",
-      "overview_checked": true,
-      "individually_viewed_pages": [
+      "method": "skill_based_codex",
+      "gemini_used": false,
+      "checked_at": "2026-10-19T11:18:10.420365+00:00",
+      "all_pages_individually_viewed": [
         1,
         2,
         3,
@@ -119,431 +120,621 @@
         51,
         52,
         53,
-        54,
-        55,
-        56,
-        57,
-        58,
-        59,
-        60,
-        61,
-        62,
-        63,
-        64,
-        65,
-        66,
-        67,
-        68,
-        69,
-        70,
-        71,
-        72,
-        73,
-        74,
-        75,
-        76,
-        77,
-        78,
-        79,
-        80,
-        81,
-        82,
-        83,
-        84
+        54
       ],
-      "method": "view_image of final PDF-rendered PNGs",
-      "findings": [],
-      "checked": [
-        "全84頁の日本語と余白",
-        "全13実例の原文・訳・正解",
-        "長い課題識別子の改行と欠落",
-        "結果表の数値・単位・モデル名",
-        "参考文献2件/頁",
-        "公式サイトの実スクリーンショット"
+      "overview_viewed": true,
+      "expanded_checks": "全13実例の原文/訳/答え、9表、コード、公式画面、4文献を個別確認。p18/19表下の注記の重なりを修正して再view。",
+      "final_hashes": {
+        "pptx": "365e6b45670fa090cd823c9673bec78198661bf24726ba7ff7df5d62996a02e9",
+        "pdf": "9b314911fe29b4238ab946882cfca6f4f5f0fe9ce6e8f7ea5dedeabd05be4a2a"
+      },
+      "changed_pages_rechecked": [
+        18,
+        19,
+        28
       ],
-      "panel_visible_gaps_pt": [
-        6.6667,
-        7.3333
-      ],
-      "panel_count": 26,
-      "table_note_gap_pt": 12.54,
-      "final_changes_rechecked": [
-        72,
-        74
-      ]
+      "notes": "全54個別viewとoverviewの後、表下注記の間隔と対象範囲補足の最終3頁を再view。"
     }
   },
-  "updated_at": "2026-10-18T07:40:04Z",
+  "updated_at": "2026-10-19T11:23:00+00:00",
   "artifact_sha256": {
-    "pdf": "58d82476e244f95bfee357cb80a247889ce62b3009722d0a1fa05946797b8bd3",
-    "pptx": "c7e6f95cba0caced90b9f0ca8c5373177161975ca52dfb44503789cc35b37f7a"
+    "pptx": "365e6b45670fa090cd823c9673bec78198661bf24726ba7ff7df5d62996a02e9",
+    "pdf": "9b314911fe29b4238ab946882cfca6f4f5f0fe9ce6e8f7ea5dedeabd05be4a2a"
   },
   "checks": {
-    "layout": {
-      "paragraphs_checked": 577,
+    "layout-audit.json": {
+      "paragraphs_checked": 283,
       "table_cells_checked": 89,
       "issues": []
     },
-    "package": {
-      "parsed_xml_parts": 201,
-      "integer_bullets": 172,
-      "hyperlinks": 76,
+    "package-audit.json": {
+      "parsed_xml_parts": 141,
+      "integer_bullets": 130,
+      "hyperlinks": 45,
       "new_schema_errors": [],
       "baseline_schema_errors": 11,
       "package_integrity": "passed",
       "internal_relationship_targets": "passed",
       "unique_shape_ids": "passed",
       "schema_note": "標準XSDを変更せず確認。マスター由来の既存エラーと、整数buSzPctの百分率字句形式との差を分離。整数箇条書きサイズは25000–400000で別途検査。",
-      "pages": 84,
+      "pages": 54,
       "native_tables": 9,
       "native_charts": 0
     },
-    "text": {
-      "pages": 84,
-      "missing": [],
-      "source_examples": [
-        {
-          "example": 1,
-          "task": "abercrombie",
-          "split": "train",
-          "index": "1",
-          "raw_record": "matched",
-          "input_full_text": "matched",
-          "answer": "descriptive",
-          "hashes": "matched"
-        },
-        {
-          "example": 2,
-          "task": "hearsay",
-          "split": "train",
-          "index": "1",
-          "raw_record": "matched",
-          "input_full_text": "matched",
-          "answer": "Yes",
-          "hashes": "matched"
-        },
-        {
-          "example": 3,
-          "task": "proa",
-          "split": "train",
-          "index": "0",
-          "raw_record": "matched",
-          "input_full_text": "matched",
-          "answer": "No",
-          "hashes": "matched"
-        },
-        {
-          "example": 4,
-          "task": "definition_extraction",
-          "split": "train",
-          "index": "2",
-          "raw_record": "matched",
-          "input_full_text": "matched",
-          "answer": "decision",
-          "hashes": "matched"
-        },
-        {
-          "example": 5,
-          "task": "diversity_1",
-          "split": "train",
-          "index": "1",
-          "raw_record": "matched",
-          "input_full_text": "matched",
-          "answer": "No",
-          "hashes": "matched"
-        },
-        {
-          "example": 6,
-          "task": "international_citizenship_questions",
-          "split": "train",
-          "index": "1",
-          "raw_record": "matched",
-          "input_full_text": "matched",
-          "answer": "Yes",
-          "hashes": "matched"
-        },
-        {
-          "example": 7,
-          "task": "function_of_decision_section",
-          "split": "train",
-          "index": "6",
-          "raw_record": "matched",
-          "input_full_text": "matched",
-          "answer": "Decree",
-          "hashes": "matched"
-        },
-        {
-          "example": 8,
-          "task": "citation_prediction_classification",
-          "split": "train",
-          "index": "1",
-          "raw_record": "matched",
-          "input_full_text": "matched",
-          "answer": "No",
-          "hashes": "matched"
-        },
-        {
-          "example": 9,
-          "task": "contract_qa",
-          "split": "train",
-          "index": "4",
-          "raw_record": "matched",
-          "input_full_text": "matched",
-          "answer": "No",
-          "hashes": "matched"
-        },
-        {
-          "example": 10,
-          "task": "personal_jurisdiction",
-          "split": "train",
-          "index": "0",
-          "raw_record": "matched",
-          "input_full_text": "matched",
-          "answer": "Yes",
-          "hashes": "matched"
-        },
-        {
-          "example": 11,
-          "task": "successor_liability",
-          "split": "train",
-          "index": "2",
-          "raw_record": "matched",
-          "input_full_text": "matched",
-          "answer": "express agreement",
-          "hashes": "matched"
-        },
-        {
-          "example": 12,
-          "task": "ucc_v_common_law",
-          "split": "train",
-          "index": "4",
-          "raw_record": "matched",
-          "input_full_text": "matched",
-          "answer": "Common Law",
-          "hashes": "matched"
-        },
-        {
-          "example": 13,
-          "task": "telemarketing_sales_rule",
-          "split": "train",
-          "index": "0",
-          "raw_record": "matched",
-          "input_full_text": "matched",
-          "answer": "Yes",
-          "hashes": "matched"
-        }
-      ],
-      "answer_runs": [
-        {
-          "page": 8,
-          "text": "descriptive",
-          "size_pt": 21,
-          "bold": true,
-          "color": "B13731"
-        },
-        {
-          "page": 8,
-          "text": "descriptive（記述的）",
-          "size_pt": 21,
-          "bold": true,
-          "color": "B13731"
-        },
-        {
-          "page": 11,
-          "text": "Yes",
-          "size_pt": 21,
-          "bold": true,
-          "color": "B13731"
-        },
-        {
-          "page": 11,
-          "text": "Yes（当たる）",
-          "size_pt": 21,
-          "bold": true,
-          "color": "B13731"
-        },
-        {
-          "page": 12,
-          "text": "No",
-          "size_pt": 21,
-          "bold": true,
-          "color": "B13731"
-        },
-        {
-          "page": 12,
-          "text": "No（明記しない）",
-          "size_pt": 21,
-          "bold": true,
-          "color": "B13731"
-        },
-        {
-          "page": 40,
-          "text": "decision",
-          "size_pt": 21,
-          "bold": true,
-          "color": "B13731"
-        },
-        {
-          "page": 40,
-          "text": "decision",
-          "size_pt": 21,
-          "bold": true,
-          "color": "B13731"
-        },
-        {
-          "page": 42,
-          "text": "No",
-          "size_pt": 21,
-          "bold": true,
-          "color": "B13731"
-        },
-        {
-          "page": 42,
-          "text": "No（ない）",
-          "size_pt": 21,
-          "bold": true,
-          "color": "B13731"
-        },
-        {
-          "page": 44,
-          "text": "Yes",
-          "size_pt": 21,
-          "bold": true,
-          "color": "B13731"
-        },
-        {
-          "page": 44,
-          "text": "Yes（定めている）",
-          "size_pt": 21,
-          "bold": true,
-          "color": "B13731"
-        },
-        {
-          "page": 46,
-          "text": "Decree",
-          "size_pt": 21,
-          "bold": true,
-          "color": "B13731"
-        },
-        {
-          "page": 46,
-          "text": "Decree（主文）",
-          "size_pt": 21,
-          "bold": true,
-          "color": "B13731"
-        },
-        {
-          "page": 48,
-          "text": "No",
-          "size_pt": 21,
-          "bold": true,
-          "color": "B13731"
-        },
-        {
-          "page": 48,
-          "text": "No（正しくない）",
-          "size_pt": 21,
-          "bold": true,
-          "color": "B13731"
-        },
-        {
-          "page": 50,
-          "text": "No",
-          "size_pt": 21,
-          "bold": true,
-          "color": "B13731"
-        },
-        {
-          "page": 50,
-          "text": "No（免除していない）",
-          "size_pt": 21,
-          "bold": true,
-          "color": "B13731"
-        },
-        {
-          "page": 52,
-          "text": "Yes",
-          "size_pt": 21,
-          "bold": true,
-          "color": "B13731"
-        },
-        {
-          "page": 52,
-          "text": "Yes（ある）",
-          "size_pt": 21,
-          "bold": true,
-          "color": "B13731"
-        },
-        {
-          "page": 54,
-          "text": "express agreement",
-          "size_pt": 21,
-          "bold": true,
-          "color": "B13731"
-        },
-        {
-          "page": 55,
-          "text": "express agreement（明示の合意）",
-          "size_pt": 21,
-          "bold": true,
-          "color": "B13731"
-        },
-        {
-          "page": 57,
-          "text": "Common Law",
-          "size_pt": 21,
-          "bold": true,
-          "color": "B13731"
-        },
-        {
-          "page": 57,
-          "text": "Common Law（コモン・ロー）",
-          "size_pt": 21,
-          "bold": true,
-          "color": "B13731"
-        },
-        {
-          "page": 59,
-          "text": "Yes",
-          "size_pt": 21,
-          "bold": true,
-          "color": "B13731"
-        },
-        {
-          "page": 59,
-          "text": "Yes（違反）",
-          "size_pt": 21,
-          "bold": true,
-          "color": "B13731"
-        }
-      ],
-      "table_note_gaps": [
-        {
-          "page": 26,
-          "gap_pt": 12.54
-        },
-        {
-          "page": 27,
-          "gap_pt": 12.54
-        },
-        {
-          "page": 28,
-          "gap_pt": 12.54
-        },
-        {
-          "page": 62,
-          "gap_pt": 12.54
-        }
-      ]
-    },
-    "links": {
-      "native_url_only_runs": 76,
-      "pdf_link_rectangles": 76,
+    "links-audit.json": {
+      "native_url_only_runs": 45,
+      "pdf_link_rectangles": 45,
       "pdf_link_text_exactly_matches_url": true,
       "pdf_link_character_centers_match_url": true,
       "glyph_box_overhangs": [],
       "shortened_url_labels": [],
       "issues": []
+    },
+    "content-checks.json": {
+      "method": "skill_based_codex",
+      "gemini_used": false,
+      "checked_at": "2026-10-19T11:18:10.420365+00:00",
+      "examples": [
+        {
+          "example": 1,
+          "task": "abercrombie",
+          "full_input": true,
+          "full_translation": true,
+          "reference": "descriptive",
+          "raw_record_sha256": "1be099c5cceaaceeb50b6d40d6e40c3ff7abda41394d6a3043441e76a30d3241"
+        },
+        {
+          "example": 2,
+          "task": "hearsay",
+          "full_input": true,
+          "full_translation": true,
+          "reference": "Yes",
+          "raw_record_sha256": "c87f8ef0d3dc8927c2bb90dad9a21cec7219e8fab21099937c8f29c83b44ade3"
+        },
+        {
+          "example": 3,
+          "task": "proa",
+          "full_input": true,
+          "full_translation": true,
+          "reference": "No",
+          "raw_record_sha256": "1f02817b1d1ce7d9d5a82a003330a2eada152e4ec48b932525bb335825ac0694"
+        },
+        {
+          "example": 4,
+          "task": "definition_extraction",
+          "full_input": true,
+          "full_translation": true,
+          "reference": "decision",
+          "raw_record_sha256": "67b6bebd0365cc62044cb307747bc09aa676accc8b855be30bce81d822eb5af7"
+        },
+        {
+          "example": 5,
+          "task": "diversity_1",
+          "full_input": true,
+          "full_translation": true,
+          "reference": "No",
+          "raw_record_sha256": "b0dc0432787bbf097bc21ede117be3baf548adef175683332eba4230a455fe33"
+        },
+        {
+          "example": 6,
+          "task": "international_citizenship_questions",
+          "full_input": true,
+          "full_translation": true,
+          "reference": "Yes",
+          "raw_record_sha256": "77aa7b47468374865f7210a6edaa26aefc0252853f74306dec9f9b99720385fb"
+        },
+        {
+          "example": 7,
+          "task": "function_of_decision_section",
+          "full_input": true,
+          "full_translation": true,
+          "reference": "Decree",
+          "raw_record_sha256": "3c16f73985f6d45b45387b1ebc449629b8a067a2152d41cd1cc477bbe785ad4c"
+        },
+        {
+          "example": 8,
+          "task": "citation_prediction_classification",
+          "full_input": true,
+          "full_translation": true,
+          "reference": "No",
+          "raw_record_sha256": "bb6107b7a708b9ed61aa03c24501d2570a8d22216c1ba21432dbd8321a4ec2e8"
+        },
+        {
+          "example": 9,
+          "task": "contract_qa",
+          "full_input": true,
+          "full_translation": true,
+          "reference": "No",
+          "raw_record_sha256": "20f055294c9ab42bff12d47c57935f3979f2f6061f6cf56d2d714ad1902c28d2"
+        },
+        {
+          "example": 10,
+          "task": "personal_jurisdiction",
+          "full_input": true,
+          "full_translation": true,
+          "reference": "Yes",
+          "raw_record_sha256": "78c18c1b7577df2d16c29d1db26aa585ecd610499da8a3de6cd718ee8023e0a9"
+        },
+        {
+          "example": 11,
+          "task": "successor_liability",
+          "full_input": true,
+          "full_translation": true,
+          "reference": "express agreement",
+          "raw_record_sha256": "0dad7d41e9858034c4bb5f37d9fce365be4de0cce6dfc7123a2111392d3e14c1"
+        },
+        {
+          "example": 12,
+          "task": "ucc_v_common_law",
+          "full_input": true,
+          "full_translation": true,
+          "reference": "Common Law",
+          "raw_record_sha256": "7ad0583c6b2b2d6ba1b856dfed90bb2068121937bec0019835b615569695a61a"
+        },
+        {
+          "example": 13,
+          "task": "telemarketing_sales_rule",
+          "full_input": true,
+          "full_translation": true,
+          "reference": "Yes",
+          "raw_record_sha256": "031192af591cc0b016652dbfd39b7a4852fda7f1b99e38624be9b938165a01fe"
+        }
+      ],
+      "all9_native_tables": [
+        {
+          "old_page": 7,
+          "new_page": 7,
+          "cells": [
+            [
+              "分類",
+              "語と商品の関係"
+            ],
+            [
+              "generic",
+              "その商品そのものの一般名称"
+            ],
+            [
+              "descriptive",
+              "商品の性質を直接表す"
+            ],
+            [
+              "suggestive",
+              "性質を間接的に示唆する"
+            ],
+            [
+              "arbitrary",
+              "商品と関係のない既存語"
+            ],
+            [
+              "fanciful",
+              "新しく作った語"
+            ]
+          ]
+        },
+        {
+          "old_page": 16,
+          "new_page": 16,
+          "cells": [
+            [
+              "形式",
+              "モデルに求めること"
+            ],
+            [
+              "争点の発見",
+              "事実が、どの法律上の問題を含むか見つける"
+            ],
+            [
+              "法規範の想起",
+              "関連する法や判例についての知識を答える"
+            ],
+            [
+              "法規範の適用",
+              "規範を事実に当てはめ、理由を説明する"
+            ]
+          ]
+        },
+        {
+          "old_page": 17,
+          "new_page": 17,
+          "cells": [
+            [
+              "形式",
+              "モデルに求めること"
+            ],
+            [
+              "結論の導出",
+              "規範を事実に当てはめた結論を選ぶ"
+            ],
+            [
+              "文書の解釈",
+              "契約や条文が、ある内容を含むか判断する"
+            ],
+            [
+              "修辞的な理解",
+              "判決の段落の役割や、定義された用語を捉える"
+            ]
+          ]
+        },
+        {
+          "old_page": 18,
+          "new_page": 18,
+          "cells": [
+            [
+              "推論の形式",
+              "課題数"
+            ],
+            [
+              "争点の発見",
+              "17"
+            ],
+            [
+              "法規範の想起",
+              "5"
+            ],
+            [
+              "結論の導出",
+              "12"
+            ],
+            [
+              "文書の解釈",
+              "118"
+            ],
+            [
+              "修辞的な理解",
+              "10"
+            ]
+          ]
+        },
+        {
+          "old_page": 20,
+          "new_page": 19,
+          "cells": [
+            [
+              "元データ・系列",
+              "課題数"
+            ],
+            [
+              "CUAD：契約条項の分類",
+              "38"
+            ],
+            [
+              "MAUD：合併契約の理解",
+              "34"
+            ],
+            [
+              "Learned Hands：法律相談",
+              "16"
+            ],
+            [
+              "ContractNLI：秘密保持契約",
+              "14"
+            ],
+            [
+              "Supply Chain Disclosure：企業開示",
+              "10"
+            ]
+          ]
+        },
+        {
+          "old_page": 26,
+          "new_page": 24,
+          "cells": [
+            [
+              "モデル",
+              "争点",
+              "規範",
+              "結論"
+            ],
+            [
+              "GPT-4 (2023)",
+              "82.9",
+              "59.2",
+              "89.9"
+            ],
+            [
+              "text-davinci-003 (2022)",
+              "60.9",
+              "46.3",
+              "78.0"
+            ],
+            [
+              "Claude-1 v1.3 (2023)",
+              "58.1",
+              "57.7",
+              "79.5"
+            ],
+            [
+              "Flan-T5-XXL (2022)",
+              "66.0",
+              "36.0",
+              "63.3"
+            ]
+          ]
+        },
+        {
+          "old_page": 27,
+          "new_page": 25,
+          "cells": [
+            [
+              "モデル",
+              "解釈",
+              "修辞的理解"
+            ],
+            [
+              "GPT-4 (2023)",
+              "75.2",
+              "79.4"
+            ],
+            [
+              "text-davinci-003 (2022)",
+              "72.6",
+              "66.7"
+            ],
+            [
+              "Claude-1 v1.3 (2023)",
+              "67.4",
+              "68.9"
+            ],
+            [
+              "Flan-T5-XXL (2022)",
+              "64.4",
+              "70.7"
+            ]
+          ]
+        },
+        {
+          "old_page": 28,
+          "new_page": 26,
+          "cells": [
+            [
+              "モデル",
+              "結論の正しさ",
+              "理由付け"
+            ],
+            [
+              "GPT-4 (2023)",
+              "82.2",
+              "79.7"
+            ],
+            [
+              "text-davinci-003 (2022)",
+              "58.5",
+              "44.2"
+            ],
+            [
+              "Claude-1 v1.3 (2023)",
+              "61.4",
+              "59.0"
+            ]
+          ]
+        },
+        {
+          "old_page": 62,
+          "new_page": 50,
+          "cells": [
+            [
+              "形式",
+              "課題数"
+            ],
+            [
+              "選択式",
+              "35"
+            ],
+            [
+              "自由生成",
+              "7"
+            ],
+            [
+              "二値分類",
+              "112"
+            ],
+            [
+              "多クラス・複数ラベル",
+              "8"
+            ]
+          ]
+        }
+      ],
+      "published_2023_values": [
+        82.9,
+        59.2,
+        89.9,
+        75.2,
+        79.4,
+        60.9,
+        46.3,
+        78.0,
+        72.6,
+        66.7,
+        58.1,
+        57.7,
+        79.5,
+        67.4,
+        68.9,
+        66.0,
+        36.0,
+        63.3,
+        64.4,
+        70.7,
+        82.2,
+        79.7,
+        58.5,
+        44.2,
+        61.4,
+        59.0
+      ],
+      "formal_primary_paper": "/workspace/artifacts/helm-editorial-revision/legalbench/evidence/formal-paper.pdf",
+      "formal_primary_sha256": "f7e92d5f3ef9fbfe70ce229b21be9215c38f30088d9ee8c472972eaf29141da1",
+      "native_paragraphs": 319,
+      "native_cells": 109,
+      "all_native_text_in_pdf": true,
+      "answer_runs": [
+        {
+          "page": 8,
+          "size": 21.0,
+          "bold": true
+        },
+        {
+          "page": 8,
+          "size": 21.0,
+          "bold": true
+        },
+        {
+          "page": 11,
+          "size": 21.0,
+          "bold": true
+        },
+        {
+          "page": 11,
+          "size": 21.0,
+          "bold": true
+        },
+        {
+          "page": 12,
+          "size": 21.0,
+          "bold": true
+        },
+        {
+          "page": 12,
+          "size": 21.0,
+          "bold": true
+        },
+        {
+          "page": 37,
+          "size": 21.0,
+          "bold": true
+        },
+        {
+          "page": 37,
+          "size": 21.0,
+          "bold": true
+        },
+        {
+          "page": 38,
+          "size": 21.0,
+          "bold": true
+        },
+        {
+          "page": 38,
+          "size": 21.0,
+          "bold": true
+        },
+        {
+          "page": 39,
+          "size": 21.0,
+          "bold": true
+        },
+        {
+          "page": 39,
+          "size": 21.0,
+          "bold": true
+        },
+        {
+          "page": 40,
+          "size": 21.0,
+          "bold": true
+        },
+        {
+          "page": 40,
+          "size": 21.0,
+          "bold": true
+        },
+        {
+          "page": 41,
+          "size": 21.0,
+          "bold": true
+        },
+        {
+          "page": 41,
+          "size": 21.0,
+          "bold": true
+        },
+        {
+          "page": 42,
+          "size": 21.0,
+          "bold": true
+        },
+        {
+          "page": 42,
+          "size": 21.0,
+          "bold": true
+        },
+        {
+          "page": 43,
+          "size": 21.0,
+          "bold": true
+        },
+        {
+          "page": 43,
+          "size": 21.0,
+          "bold": true
+        },
+        {
+          "page": 45,
+          "size": 21.0,
+          "bold": true
+        },
+        {
+          "page": 45,
+          "size": 21.0,
+          "bold": true
+        },
+        {
+          "page": 47,
+          "size": 21.0,
+          "bold": true
+        },
+        {
+          "page": 47,
+          "size": 21.0,
+          "bold": true
+        },
+        {
+          "page": 48,
+          "size": 21.0,
+          "bold": true
+        },
+        {
+          "page": 48,
+          "size": 21.0,
+          "bold": true
+        }
+      ],
+      "notes": 0,
+      "final_hashes": {
+        "pptx": "365e6b45670fa090cd823c9673bec78198661bf24726ba7ff7df5d62996a02e9",
+        "pdf": "9b314911fe29b4238ab946882cfca6f4f5f0fe9ce6e8f7ea5dedeabd05be4a2a"
+      }
     }
+  },
+  "editorial_revisions": [
+    {
+      "checked_at": "2026-10-19T11:23:00+00:00",
+      "method": "skill_based_codex",
+      "gemini_used": false,
+      "baseline_artifact_sha256": {
+        "pptx": "c7e6f95cba0caced90b9f0ca8c5373177161975ca52dfb44503789cc35b37f7a",
+        "pdf": "58d82476e244f95bfee357cb80a247889ce62b3009722d0a1fa05946797b8bd3"
+      },
+      "artifact_sha256": {
+        "pptx": "365e6b45670fa090cd823c9673bec78198661bf24726ba7ff7df5d62996a02e9",
+        "pdf": "9b314911fe29b4238ab946882cfca6f4f5f0fe9ce6e8f7ea5dedeabd05be4a2a"
+      },
+      "previous_pages": 84,
+      "total_pages": 54,
+      "main_pages": 33,
+      "record_directory": "editorial-2026-10/",
+      "independent_review": "editorial-2026-10/independent-review/",
+      "main_check": "editorial-2026-10/main-review.json"
+    }
+  ],
+  "total_pages": 54,
+  "current_revision": "editorial-2026-10/",
+  "previous_review_record": "editorial-2026-10/previous/review.json",
+  "audit_sources": {
+    "layout-audit.json": "editorial-2026-10/layout-audit.json",
+    "package-audit.json": "editorial-2026-10/package-audit.json",
+    "links-audit.json": "editorial-2026-10/links-audit.json",
+    "content-checks.json": "editorial-2026-10/content-checks.json"
   }
 }
