@@ -1,0 +1,45 @@
+{
+  "creator": "Ant FinancialのATEC開発者向け大会に由来する質問照合データ。CLUE著者が中国語理解評価の課題として配布・評価。",
+  "evidence": [
+    {
+      "url": "https://aclanthology.org/2020.coling-main.419/",
+      "file": "paper.txt",
+      "quote": "AFQMC The Ant Financial Question Matching Corpus3 comes from Ant Technology Exploration Conference (ATEC) Developer competition.",
+      "local_evidence": "/workspace/artifacts/helm-parallel/afqmc/evidence/paper.txt",
+      "sha256": "7e9be642a1fdd8b04e10ac8f81768483382cf0844eadf4a8c301b0182316b78d",
+      "matching": "論文レイアウトの改行を正規化して該当節を通読"
+    },
+    {
+      "url": "https://github.com/CLUEbenchmark/CLUE",
+      "file": "README.md",
+      "quote": "AFQMC 蚂蚁金融语义相似度 Ant Financial  Question Matching Corpus",
+      "local_evidence": "/workspace/artifacts/helm-parallel/afqmc/evidence/README.md",
+      "sha256": "5ad4912bd96f8b30c0b898b519ff7b2a3a2b5bb04d660d2aaf0798779e06108d"
+    }
+  ],
+  "pages": [
+    2,
+    5,
+    12,
+    17,
+    20,
+    21,
+    23,
+    39,
+    40,
+    41
+  ],
+  "relation": "CLEVAが金融質問の意味照合に採用。HELMのCLEVAParaphraseIdentificationScenarioは選択式の説明例と変換を実装。HELM/CLEVAによる元質問の作成とはしていない。17頁は2020年CLUE研究の成績。",
+  "slug": "afqmc",
+  "checked_at": "2026-10-19T08:41:04.203951+00:00",
+  "method": "一次論文と公式README・HELM公開実装を通読し、最終native全頁の帰属・報告値の主語と対照",
+  "gemini_used": false,
+  "primary_helm_url": "https://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py",
+  "primary_cleva_url": "https://aclanthology.org/2023.emnlp-demo.17/",
+  "conclusion": "元の作成・FewCLUE/CLUEでの整備・CLEVA採用・HELMの実装を区別して説明しており、帰属の修正は不要。",
+  "slide_changes_required": false,
+  "final_hashes": {
+    "pptx": "f8f2e7a93fb23b91fe1f6692c5410eb8f80d99fa408eccbd5261cf3485d942bc",
+    "pdf": "eff7718feb8b89ee8ae6fd3d1c67614a458ab4acf6836212785e0f41d5be3479"
+  }
+}

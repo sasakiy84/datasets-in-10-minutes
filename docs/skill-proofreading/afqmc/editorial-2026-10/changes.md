@@ -63,3 +63,5 @@
 |57|57|[41]|run索引を除き利用する課題実装と正式論文へ|参考文献<br>Appendix: 3. 研究と参考文献<br>CLEVAParaphraseIdentificationScenario and Converter<br>Stanford CRFM · HELM v0.4.0<br>AFQMC原例と一致する説明例、候補の変換、正解タグを定義する。<br>https://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py<br>HELM Classic v0.4.0 public release<br>Stanford CRFM · release 2023-11-17<br>固定8,526runの一覧。CLEVA実行の有無を調べる対象。<br>https://crfm.stanford.edu/helm/classic/v0.4.0/|参考文献<br>Appendix: 2. モデル比較と参考文献<br>CLEVA: Chinese Language Models EVAluation Platform<br>Li et al. · 2023 · EMNLP System Demonstrations<br>中国語モデルを多様な課題で評価する枠組み。金融質問を含む質問ペアの意味照合も扱う。<br>https://aclanthology.org/2023.emnlp-demo.17/<br>CLEVAParaphraseIdentificationScenario<br>Stanford CRFM · n.d. · HELM<br>金融サービスへの二つの質問が同じ意味かを問う、選択式の設問例を示す実装。<br>https://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py|
 
 [旧版の全ページ文言](previous/baseline-native-pages.json)・[ページ対応](page-map.json)・[独立レビュー](independent-review/handoff.json)
+
+[元データの作成主体とHELMでの位置付けの確認](origin-attribution-check.json)。
