@@ -1,0 +1,102 @@
+{
+  "slug": "twitter-aae",
+  "approved": true,
+  "status": "approved",
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "final_hashes": {
+    "datasets-in-10-minutes-twitter-aae.pdf": "3e435e51ba766e67394430cdb8467cbf67a53924356317205670589db5d800bc",
+    "datasets-in-10-minutes-twitter-aae.pptx": "4ad16115c8e2b3941a07b0482f3d3edcd28bbfa7ba38df8d447cbaeb8a6ad240"
+  },
+  "remaining_issues": [],
+  "individual_pages_viewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48
+  ],
+  "final_rechecked_pages": [
+    12,
+    13,
+    16
+  ],
+  "checks": [
+    "全48native本文・原13投稿/JP・5表/式/footerを通読、baseline変更/削除1頁を照合",
+    "全48頁個別view＋overview、最終12/16と13再view、最後は13のみPNG変更・残47同一",
+    "原13レコード/入力SHA/条件内ID・全ENJPを照合、4数値表は全セル不変・選別表の重要数値と主語保持",
+    "2016正式論文の収集/人口4比率/AA-white抽出80%/ヒスパニック+アジア5%/文法3比率/言語同定13.2対7.6/人手13-1500を再読確認",
+    "HELM抽出2段階・公開4run統計からBPB/PPL再算出、davinci両群2000要求の生トークンからBPB/PPL再計算一致、文字数統計再集計",
+    "実例1のlogprob-101.668241781/52bytes/BPB2.821を再算出、実JSON読込コード実行一致",
+    "公式サイト研究目的/5.5GB/2018各250投稿とREADMEの人口属性ではなく言語混合比という説明を確認",
+    "native286段落51セルframe0/overlap0、layout265/43=0、新規XSD0・42URL完全一致・notes0、14枠上下差<=2pt"
+  ],
+  "resolved_issues": [
+    {
+      "page": 12,
+      "issue": "要約後の収集条件がハッシュタグ1個でも除外と読める",
+      "fix": "ハッシュタグの多い投稿へ"
+    },
+    {
+      "page": 16,
+      "issue": "他2成分の指示が不明",
+      "fix": "ヒスパニック系・アジア系と明示"
+    },
+    {
+      "page": 13,
+      "issue": "混合比の推定モデルと後のHELM言語モデルの学習が曖昧",
+      "fix": "投稿の言語的特徴を推定する手掛かりへ"
+    }
+  ],
+  "evidence": [
+    "content-recheck.json",
+    "code-output.txt",
+    "native-checks.json",
+    "latest-png-diff.json",
+    "p13-final-png-diff.json",
+    "twitter-aae/panel-visible-gaps.json"
+  ]
+}

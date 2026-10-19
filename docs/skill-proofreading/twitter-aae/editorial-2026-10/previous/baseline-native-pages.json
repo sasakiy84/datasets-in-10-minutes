@@ -1,0 +1,527 @@
+[
+  {
+    "page": 1,
+    "text": [
+      "TwitterAAE",
+      "African-American English on Twitter\n会話の言語的多様性と言語モデルの評価",
+      "sasakiy84",
+      "datasets in 10 minutes (2026-10-18)"
+    ]
+  },
+  {
+    "page": 2,
+    "text": [
+      "公式サイト：研究と配布への入口",
+      "TwitterAAE",
+      "[1] UMass SLANG Lab (n.d.), TwitterAAE: Research on African-American English on Twitter. 2026-10-18参照。  https://slanglab.cs.umass.edu/TwitterAAE/"
+    ]
+  },
+  {
+    "page": 3,
+    "text": [
+      "",
+      "投稿の実例と言語モデルの課題\n人口統計と言語を結ぶ構築方法\nHELMの評価条件と結果\n利用の変化と公開範囲",
+      "目次"
+    ]
+  },
+  {
+    "page": 4,
+    "text": [
+      "投稿の実例と言語モデルの課題",
+      "1. 投稿の実例と言語モデルの課題"
+    ]
+  },
+  {
+    "page": 5,
+    "text": [
+      "AAEを含む会話をNLPの対象にする",
+      "1. 投稿の実例と言語モデルの課題",
+      "TwitterAAEは、Twitter上のAfrican-American English（AAE）に関連する言語を、地域の人口統計と言葉の共起から分析する資源。",
+      "AAEには語彙・発音・文法の体系がある。主流の書き言葉を中心に作られたNLPツールが、こうした会話をどの程度扱えるかを調べた。",
+      "[1] Blodgett, Green & O’Connor (2016), Demographic Dialectal Variation in Social Media: A Case Study of African-American English. EMNLP, 1119–1130.\nhttps://aclanthology.org/D16-1120/"
+    ]
+  },
+  {
+    "page": 6,
+    "text": [
+      "HELMでは、投稿の予測しやすさを比べる",
+      "1. 投稿の実例と言語モデルの課題",
+      "HELMは、AA寄り・white寄りの言語混合比で抽出した二つの投稿集合に、言語モデルが付ける確率を測る。",
+      "入力は投稿全文で、直前までの文字列から次のトークンを予測する。参照回答の代わりに、実際に書かれた文字列の確率を評価する。",
+      "[1] Stanford CRFM, HELM TwitterAAEScenario. AA／whiteの抽出とtestインスタンス。2026-10-18確認。\nhttps://github.com/stanford-crfm/helm/blob/main/src/helm/benchmark/scenarios/twitter_aae_scenario.py"
+    ]
+  },
+  {
+    "page": 7,
+    "text": [
+      "実例はHELMの公開実行入力から示す",
+      "1. 投稿の実例と言語モデルの課題",
+      "以下の3例とAppendixの10例は、公開されたscenario_stateから選んだ別々の投稿。元の大文字・つづり・句読点を保って全文を示す。",
+      "aa／whiteはデータの抽出条件名。元の推定値は、人口統計に関連付けられた言語が文中で占める割合であり、話者の自己申告人種ではない。",
+      "[1] Blodgett et al. (n.d.), twitteraae. 人口統計と言語を結ぶ混合モデルのREADME。2026-10-18参照。  https://github.com/slanglab/twitteraae"
+    ]
+  },
+  {
+    "page": 8,
+    "text": [
+      "実例1：電話代を払ってでも話したい",
+      "1. 投稿の実例と言語モデルの課題",
+      "HELM test / aa抽出条件・投稿全文",
+      "IMA PAY OOMFS FONE BILL ,JUS KUZ I WANNA TALK TO HER",
+      "日本語訳",
+      "あのフォロワーの子と話したいからってだけで、携帯代を払ってやるつもり。",
+      "OOMFはone of my followersの略。大文字やつづりの工夫も、実際に採点された文字列の一部。",
+      "[1] Stanford CRFM, HELM Classic v0.4.0, TwitterAAE. 公開実行suite v0.3.0。 instance: aa/id19602（HELM内ID）\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/twitter_aae"
+    ]
+  },
+  {
+    "page": 9,
+    "text": [
+      "実例2：短い願いと呼びかけ",
+      "1. 投稿の実例と言語モデルの課題",
+      "HELM test / aa抽出条件・投稿全文",
+      "I just wanna be happy bruh",
+      "日本語訳",
+      "ただ幸せになりたいんだよ、なあ。",
+      "bruhという呼びかけとwannaの縮約を含む。語りかけの調子を保って訳した。",
+      "[1] Stanford CRFM, HELM Classic v0.4.0, TwitterAAE. 公開実行suite v0.3.0。 instance: aa/id15055（HELM内ID）\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/twitter_aae"
+    ]
+  },
+  {
+    "page": 10,
+    "text": [
+      "実例3：white側にもくだけた会話がある",
+      "1. 投稿の実例と言語モデルの課題",
+      "HELM test / white抽出条件・投稿全文",
+      "Sweet sleep, how I missed you my love.",
+      "日本語訳",
+      "ああ愛しい眠り、どれほど恋しかったことか。",
+      "sleepを恋人のように呼ぶ、擬人化した語りかけ。white抽出集合にもこのような会話が含まれる。",
+      "[1] Stanford CRFM, HELM Classic v0.4.0, TwitterAAE. 公開実行suite v0.3.0。 instance: white/id12363（HELM内ID）\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/twitter_aae"
+    ]
+  },
+  {
+    "page": 11,
+    "text": [
+      "人口統計と言語を結ぶ構築方法",
+      "2. 人口統計と言語を結ぶ構築方法"
+    ]
+  },
+  {
+    "page": 12,
+    "text": [
+      "2013年の位置付き投稿から会話を集める",
+      "2. 人口統計と言語を結ぶ構築方法",
+      "2013年の公開Twitterストリーム160億件から、米国の国勢調査block groupに位置を対応できる約9,000万件を得た。",
+      "フォロワー1,000人以上の著者、3個以上のハッシュタグ、http・follow・mentionを含む投稿、リツイートなどを除いた。",
+      "前処理後は約5,920万投稿・280万ユーザー。位置情報を公開する利用者の会話が対象となる。",
+      "[1] Blodgett, Green & O’Connor (2016), Demographic Dialectal Variation in Social Media: A Case Study of African-American English. EMNLP, 1119–1130.\nhttps://aclanthology.org/D16-1120/"
+    ]
+  },
+  {
+    "page": 13,
+    "text": [
+      "地域の人口構成を、言語の手掛かりにする",
+      "2. 人口統計と言語を結ぶ構築方法",
+      "投稿位置を、通常600〜3,000人が暮らすblock groupへ結び付け、2013年American Community Surveyの人口構成を参照する。",
+      "非ヒスパニック白人・非ヒスパニック黒人・ヒスパニック・アジア系の4比率を、各ユーザーの投稿位置で平均した。",
+      "これは近隣地域の人口構成を介した遠隔教師信号。個人に人種を尋ねた注釈は付けていない。",
+      "[1] Blodgett, Green & O’Connor (2016), Demographic Dialectal Variation in Social Media: A Case Study of African-American English. EMNLP, 1119–1130.\nhttps://aclanthology.org/D16-1120/"
+    ]
+  },
+  {
+    "page": 14,
+    "text": [
+      "一人の中にも、一つの投稿にも混合を認める",
+      "2. 人口統計と言語を結ぶ構築方法",
+      "4集団に対応する単語分布を学習し、各投稿でそれらが占める混合比を推定する。ユーザーに対応付けた地域の人口比率を、その推定の事前分布に使う。",
+      "同じ人が投稿ごとに異なる表現を使える設計。特定のキーワードを一度使っただけで、その人の全投稿を同じ言語に固定しない。",
+      "[1] Blodgett, Green & O’Connor (2016), Demographic Dialectal Variation in Social Media: A Case Study of African-American English. EMNLP, 1119–1130.\nhttps://aclanthology.org/D16-1120/"
+    ]
+  },
+  {
+    "page": 15,
+    "text": [
+      "言語的特徴との対応を確かめた",
+      "2. 人口統計と言語を結ぶ構築方法",
+      "構文 | 公開された用例 | AA／white比",
+      "習慣を表すbe | I be tripping bruh | 11.94",
+      "未来を表すgon | Then she gon be single Af | 14.26",
+      "完了を表すdone | I done laughed so hard that I’m weak | 8.68",
+      "ユーザー単位で作った2016年の両コーパスを比較。表記だけでなく、既知の文法現象とも照合した。",
+      "[1] Blodgett, Green & O’Connor (2016), Demographic Dialectal Variation in Social Media: A Case Study of African-American English. EMNLP, 1119–1130.\nhttps://aclanthology.org/D16-1120/"
+    ]
+  },
+  {
+    "page": 16,
+    "text": [
+      "2016年の集合とHELMの集合は作り方が違う",
+      "2. 人口統計と言語を結ぶ構築方法",
+      "対象 | 選び方と件数",
+      "2016年の解析集合 | ユーザーの対応言語比率80%以上、他2成分の合計5%未満。AA約83万／white約730万投稿。",
+      "HELMの抽出集合 | 投稿のAA比率上位83万／white比率上位730万から、それぞれ5万投稿を無作為抽出。",
+      "HELMの公開コードが記載する二段階の抽出。2016年の解析集合をそのまま5万件にしたものではない。",
+      "[1] Stanford CRFM, HELM TwitterAAEScenario. AA／whiteの抽出とtestインスタンス。2026-10-18確認。\nhttps://github.com/stanford-crfm/helm/blob/main/src/helm/benchmark/scenarios/twitter_aae_scenario.py"
+    ]
+  },
+  {
+    "page": 17,
+    "text": [
+      "HELMの評価条件と結果",
+      "3. HELMの評価条件と結果"
+    ]
+  },
+  {
+    "page": 18,
+    "text": [
+      "低いbits per byteほど投稿を予測できる",
+      "3. HELMの評価条件と結果",
+      "言語モデルは、先行する文字列を条件に各トークンの確率を付ける。予測対象の対数確率を合計し、そのbyte数で割ってbitsへ換算する。",
+      "bits per byte（BPB）は、1 byteを表すために必要な平均情報量。低いほど、その文字列に高い確率を与えている。",
+      "トークンの区切りがモデル間で異なるため、HELMの主要指標にはbyteで正規化したBPBを使う。",
+      "[1] Stanford CRFM, HELM BasicMetrics. 対数確率・byte数からの集約。2026-10-18確認。\nhttps://github.com/stanford-crfm/helm/blob/main/src/helm/benchmark/metrics/basic_metrics.py"
+    ]
+  },
+  {
+    "page": 19,
+    "text": [
+      "HELMではAA側のBPBが高かった",
+      "3. HELMの評価条件と結果",
+      "モデル（公開年） | AA | white | 差 AA−white",
+      "OPT-175B（2022） | 2.114 | 1.506 | 0.608",
+      "text-davinci-003（2022） | 2.522 | 1.862 | 0.660",
+      "BPB、低いほど良い。Classic v0.4.0収録・suite v0.3.0、各条件1,000投稿、提示例0、各1試行。",
+      "[1] Stanford CRFM, HELM Classic v0.4.0, TwitterAAE. 公開実行suite v0.3.0。  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/twitter_aae"
+    ]
+  },
+  {
+    "page": 20,
+    "text": [
+      "得点差は、二つの抽出集合での予測の差",
+      "3. HELMの評価条件と結果",
+      "byte数で正規化した予測の難しさは、両モデルともAA抽出条件の投稿で大きかった。",
+      "集合にはつづり、話題、長さ、会話の形式などの違いも含まれる。同じ内容だけを方言で書き換えた対訳実験ではない。",
+      "この値が示すのは公開実行時の投稿集合での差であり、2026年のモデルの順位ではない。",
+      "[1] Stanford CRFM, HELM Classic v0.4.0, TwitterAAE. 公開実行suite v0.3.0。  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/twitter_aae"
+    ]
+  },
+  {
+    "page": 21,
+    "text": [
+      "言語同定では、英語を取りこぼしていた",
+      "3. HELMの評価条件と結果",
+      "2016年の解析では、langid.pyがAA側の13.2%、white側の7.6%を非英語と判定した。Twitterの識別結果でも、欠損値を非英語に数えるかどうかの両条件でAA側の割合が高かった。",
+      "AA混合比を10段階に分け、各識別条件で非英語とされた投稿から計1,500件を人手で調べた。明らかな非英語は13件（約0.87%）だった。",
+      "英語だけを残す前処理そのものが、方言を含む意見や会話を取りこぼす問題につながる。",
+      "[1] Blodgett, Green & O’Connor (2016), Demographic Dialectal Variation in Social Media: A Case Study of African-American English. EMNLP, 1119–1130.\nhttps://aclanthology.org/D16-1120/"
+    ]
+  },
+  {
+    "page": 22,
+    "text": [
+      "利用の変化と公開範囲",
+      "4. 利用の変化と公開範囲"
+    ]
+  },
+  {
+    "page": 23,
+    "text": [
+      "会話の解析から、言語モデルの格差測定へ",
+      "4. 利用の変化と公開範囲",
+      "2016年は人口統計と言語の混合モデルを作り、言語同定・構文解析の差を調べた。",
+      "2018年にはAAEと主流米国英語の各250投稿にUniversal Dependencies注釈を付け、構文解析の資源を拡張した。",
+      "HELM Classicは別途抽出した投稿を言語モデリングに用いる。2026-10-18確認の公開実装にもAA／whiteの両条件が残る。",
+      "[1] Blodgett, Wei & O’Connor (2018), Twitter Universal Dependency Parsing for African-American and Mainstream American English. ACL, 1415–1425.\nhttps://aclanthology.org/P18-1131/\n[2] Stanford CRFM, HELM TwitterAAEScenario. AA／whiteの抽出とtestインスタンス。2026-10-18確認。\nhttps://github.com/stanford-crfm/helm/blob/main/src/helm/benchmark/scenarios/twitter_aae_scenario.py"
+    ]
+  },
+  {
+    "page": 24,
+    "text": [
+      "公式配布とHELMの公開記録を使い分ける",
+      "4. 利用の変化と公開範囲",
+      "公式サイトの全体配布TwitterAAE-full-v1.zipは表示容量5.5 GB。研究目的のみでの提供と2016年論文の引用が案内されている。",
+      "HELMの5万件CSVはCodaLabのURLを参照する。今回の取得では双方503となったが、公開実行の1,000投稿ずつと得点は取得できた。",
+      "推定モデルのコードにはMITライセンスがある。投稿本文の権利や再配布範囲は、コードのMITライセンスとは別に扱う。",
+      "[1] UMass SLANG Lab (n.d.), TwitterAAE: Research on African-American English on Twitter. 2026-10-18参照。  https://slanglab.cs.umass.edu/TwitterAAE/"
+    ]
+  },
+  {
+    "page": 25,
+    "text": [
+      "多様な表現を、そのまま評価の対象にする",
+      "4. 利用の変化と公開範囲",
+      "TwitterAAEは地域人口構成を手掛かりに、AAEに関連する表現を大規模な会話から取り出し、言語的特徴との対応を検証した。",
+      "HELMは、同じコーパスから二つの言語抽出集合を作り、それぞれの投稿に対するBPBを比べる。",
+      "元の集合の作り方と公開実行の範囲を押さえると、投稿の予測しにくさと、既存NLP処理の取りこぼしを具体的に捉えられる。",
+      "[1] Liang et al. (2023), Holistic Evaluation of Language Models. TMLR.  https://arxiv.org/abs/2211.09110"
+    ]
+  },
+  {
+    "page": 26,
+    "text": [
+      "Appendix",
+      "Appendix"
+    ]
+  },
+  {
+    "page": 27,
+    "text": [
+      "",
+      "追加の投稿例\n版・実行条件の補足\n研究と参考文献",
+      "Appendix: 目次"
+    ]
+  },
+  {
+    "page": 28,
+    "text": [
+      "追加の投稿例",
+      "Appendix: 1. 追加の投稿例"
+    ]
+  },
+  {
+    "page": 29,
+    "text": [
+      "実例4：終わった数を数える",
+      "Appendix: 1. 追加の投稿例",
+      "HELM test / aa抽出条件・投稿全文",
+      "4 down 1 to go",
+      "日本語訳",
+      "4つ終わった、あと1つ。",
+      "何を数えているかは、この投稿だけでは分からない。",
+      "[1] Stanford CRFM, HELM Classic v0.4.0, TwitterAAE. 公開実行suite v0.3.0。 instance: aa/id42642（HELM内ID）\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/twitter_aae"
+    ]
+  },
+  {
+    "page": 30,
+    "text": [
+      "実例5：強い空腹を伝える",
+      "Appendix: 1. 追加の投稿例",
+      "HELM test / aa抽出条件・投稿全文",
+      "I'm hungry af",
+      "日本語訳",
+      "めちゃくちゃ腹減った。",
+      "afの強調を、日本語でも強い話し言葉で表した。",
+      "[1] Stanford CRFM, HELM Classic v0.4.0, TwitterAAE. 公開実行suite v0.3.0。 instance: aa/id8369（HELM内ID）\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/twitter_aae"
+    ]
+  },
+  {
+    "page": 31,
+    "text": [
+      "実例6：帰宅を短く伝える",
+      "Appendix: 1. 追加の投稿例",
+      "HELM test / aa抽出条件・投稿全文",
+      "Bk at da crib",
+      "日本語訳",
+      "家に戻った。",
+      "Bkはback、daはthe、cribは家を指すくだけた表現。",
+      "[1] Stanford CRFM, HELM Classic v0.4.0, TwitterAAE. 公開実行suite v0.3.0。 instance: aa/id46250（HELM内ID）\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/twitter_aae"
+    ]
+  },
+  {
+    "page": 32,
+    "text": [
+      "実例7：書き続ける一日",
+      "Appendix: 1. 追加の投稿例",
+      "HELM test / aa抽出条件・投稿全文",
+      "All day im writen nd writen!!",
+      "日本語訳",
+      "一日中、書いてはまた書いてる!!",
+      "ndはandに相当する。反復と感嘆符も表現の一部。",
+      "[1] Stanford CRFM, HELM Classic v0.4.0, TwitterAAE. 公開実行suite v0.3.0。 instance: aa/id24647（HELM内ID）\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/twitter_aae"
+    ]
+  },
+  {
+    "page": 33,
+    "text": [
+      "実例8：歌詞を覚えたい",
+      "Appendix: 1. 追加の投稿例",
+      "HELM test / aa抽出条件・投稿全文",
+      "I gotta learn the words to this song .",
+      "日本語訳",
+      "この歌の歌詞を覚えなきゃ。",
+      "省略形gottaを含む、日常のひとこと。",
+      "[1] Stanford CRFM, HELM Classic v0.4.0, TwitterAAE. 公開実行suite v0.3.0。 instance: aa/id29079（HELM内ID）\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/twitter_aae"
+    ]
+  },
+  {
+    "page": 34,
+    "text": [
+      "実例9：疲れを否定する",
+      "Appendix: 1. 追加の投稿例",
+      "HELM test / white抽出条件・投稿全文",
+      "Not tired at all",
+      "日本語訳",
+      "全然疲れてない。",
+      "tiredの否定とat allの強調を含む。",
+      "[1] Stanford CRFM, HELM Classic v0.4.0, TwitterAAE. 公開実行suite v0.3.0。 instance: white/id32104（HELM内ID）\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/twitter_aae"
+    ]
+  },
+  {
+    "page": 35,
+    "text": [
+      "実例10：夜に誰かを思う",
+      "Appendix: 1. 追加の投稿例",
+      "HELM test / white抽出条件・投稿全文",
+      "It's nights like these that I think about you.",
+      "日本語訳",
+      "こんな夜には、君のことを考えてしまう。",
+      "縮約形と語りかけを含む。",
+      "[1] Stanford CRFM, HELM Classic v0.4.0, TwitterAAE. 公開実行suite v0.3.0。 instance: white/id46712（HELM内ID）\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/twitter_aae"
+    ]
+  },
+  {
+    "page": 36,
+    "text": [
+      "実例11：続けられるか分からない",
+      "Appendix: 1. 追加の投稿例",
+      "HELM test / white抽出条件・投稿全文",
+      "I don't know how much longer I can do this.",
+      "日本語訳",
+      "あとどれくらいこれを続けられるか、分からない。",
+      "thisの指す内容は公開された一文からは特定できない。",
+      "[1] Stanford CRFM, HELM Classic v0.4.0, TwitterAAE. 公開実行suite v0.3.0。 instance: white/id42460（HELM内ID）\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/twitter_aae"
+    ]
+  },
+  {
+    "page": 37,
+    "text": [
+      "実例12：言葉を失う",
+      "Appendix: 1. 追加の投稿例",
+      "HELM test / white抽出条件・投稿全文",
+      "I cannot even.",
+      "日本語訳",
+      "もう、言葉も出ない。",
+      "I cannot even.は文脈に依存する口語表現として訳した。",
+      "[1] Stanford CRFM, HELM Classic v0.4.0, TwitterAAE. 公開実行suite v0.3.0。 instance: white/id19412（HELM内ID）\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/twitter_aae"
+    ]
+  },
+  {
+    "page": 38,
+    "text": [
+      "実例13：昼寝の後も疲れる",
+      "Appendix: 1. 追加の投稿例",
+      "HELM test / white抽出条件・投稿全文",
+      "I took a 3 hour nap earlier why am I exhausted",
+      "日本語訳",
+      "さっき3時間も昼寝したのに、なんでこんなに疲れてるんだろう。",
+      "時間の数値と疑問の調子を保った。",
+      "[1] Stanford CRFM, HELM Classic v0.4.0, TwitterAAE. 公開実行suite v0.3.0。 instance: white/id5140（HELM内ID）\nhttps://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/twitter_aae"
+    ]
+  },
+  {
+    "page": 39,
+    "text": [
+      "版・実行条件の補足",
+      "Appendix: 2. 版・実行条件の補足"
+    ]
+  },
+  {
+    "page": 40,
+    "text": [
+      "公開実行入力の長さを確かめた",
+      "Appendix: 2. 版・実行条件の補足",
+      "1,000投稿ずつの文字数 | AA | white",
+      "平均 | 39.85 | 57.17",
+      "中央値 | 33 | 48",
+      "最小／最大 | 2／261 | 2／422",
+      "Unicodeコードポイント数。エスケープ文字列は入力のまま数えた。元の2013年ツイート表示上の文字数ではない。",
+      "[1] Stanford CRFM, HELM Classic v0.4.0, TwitterAAE. 公開実行suite v0.3.0。  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/twitter_aae"
+    ]
+  },
+  {
+    "page": 41,
+    "text": [
+      "文字の表現も、評価入力の一部になる",
+      "Appendix: 2. 版・実行条件の補足",
+      "公開入力には、絵文字を文字列のまま表した「\\ud83d\\ude02」のようなエスケープ表現もある。",
+      "本資料の実例はそれらを復号・訂正せず、公開実行で使われたinput.textを保存する。短い自然文だけを選び、本文の実例で表記を追いやすくした。",
+      "HELM内のid11841などは投稿のTwitter IDではなく、条件内のインスタンスID。同じ番号でもAAとwhiteで本文が異なる。",
+      "[1] Stanford CRFM, HELM Classic v0.4.0, TwitterAAE. 公開実行suite v0.3.0。  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/twitter_aae"
+    ]
+  },
+  {
+    "page": 42,
+    "text": [
+      "公開実行の設定は両モデルで共通",
+      "Appendix: 2. 版・実行条件の補足",
+      "設定 | 値",
+      "method | language_modeling",
+      "max_eval_instances | 1,000（test）",
+      "max_train_instances / 試行数 | 0 / 1",
+      "temperature / max_tokens | 0 / 0",
+      "prompt_truncated | 0（両モデル・両条件）",
+      "生成した回答の採点ではなく、echo_promptで既存の投稿の確率を取得する。",
+      "[1] Stanford CRFM, HELM Classic v0.4.0, TwitterAAE. 公開実行suite v0.3.0。  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/twitter_aae"
+    ]
+  },
+  {
+    "page": 43,
+    "text": [
+      "BPBは投稿ごとの比を単純平均しない",
+      "Appendix: 2. 版・実行条件の補足",
+      "予測対象トークンの対数確率の総和をL、予測対象のbyte数の総和をBとすると、BPB = −L / (B × ln 2)。",
+      "投稿ごとの長さで重みが変わる、総byte数による集約。トークン単位のperplexityとは分母が異なる。",
+      "実例1のtext-davinci-003では、対数確率の和は−101.668、52 byte。1投稿のBPBは約2.821となる。",
+      "[1] Stanford CRFM, HELM BasicMetrics. 対数確率・byte数からの集約。2026-10-18確認。\nhttps://github.com/stanford-crfm/helm/blob/main/src/helm/benchmark/metrics/basic_metrics.py\n[2] Stanford CRFM, HELM Classic v0.4.0, TwitterAAE. 公開実行suite v0.3.0。  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/twitter_aae"
+    ]
+  },
+  {
+    "page": 44,
+    "text": [
+      "perplexityでは分母がトークンになる",
+      "Appendix: 2. 版・実行条件の補足",
+      "モデル | AA | white",
+      "OPT-175B | 184.99 | 65.76",
+      "text-davinci-003 | 152.51 | 77.07",
+      "同じ公開実行のperplexity。モデル間ではトークンの分割が異なるため、主要な比較にはBPBを用いた。",
+      "[1] Stanford CRFM, HELM Classic v0.4.0, TwitterAAE. 公開実行suite v0.3.0。  https://crfm.stanford.edu/helm/classic/v0.4.0/#/groups/twitter_aae"
+    ]
+  },
+  {
+    "page": 45,
+    "text": [
+      "公開範囲と取得できた範囲",
+      "Appendix: 2. 版・実行条件の補足",
+      "公式の全体ZIP（5.5 GB）は未取得。公式UD配布ZIPと公開HELM入力2,000件を取得し、13実例は後者から選定した。",
+      "公式サイトは研究目的での利用と論文の引用を求めている。投稿本文についての包括的な再配布許諾は確認できなかった。",
+      "原文、訳、条件内ID、固定実行URL、原レコード、取得ファイルのSHA-256を制作記録へ保存した。",
+      "[1] UMass SLANG Lab (n.d.), TwitterAAE: Research on African-American English on Twitter. 2026-10-18参照。  https://slanglab.cs.umass.edu/TwitterAAE/"
+    ]
+  },
+  {
+    "page": 46,
+    "text": [
+      "研究と参考文献",
+      "Appendix: 3. 研究と参考文献"
+    ]
+  },
+  {
+    "page": 47,
+    "text": [
+      "言語学とNLPをつないだ研究",
+      "Appendix: 3. 研究と参考文献",
+      "Su Lin Blodgett、Lisa Green、Brendan O’Connorによる2016年EMNLP論文。UMass Amherstの計算機科学と言語学の研究として発表された。",
+      "既知のAAEの発音・文法上の特徴との対応を検証し、大規模な統計モデルの抽出結果を言語学的分析へ結び付けた。",
+      "2018年の構文解析研究ではJohnny Tian-Zheng Weiが加わり、AAEと主流米国英語のUD注釈を整えた。",
+      "[1] Blodgett, Green & O’Connor (2016), Demographic Dialectal Variation in Social Media: A Case Study of African-American English. EMNLP, 1119–1130.\nhttps://aclanthology.org/D16-1120/\n[2] Blodgett, Wei & O’Connor (2018), Twitter Universal Dependency Parsing for African-American and Mainstream American English. ACL, 1415–1425.\nhttps://aclanthology.org/P18-1131/"
+    ]
+  },
+  {
+    "page": 48,
+    "text": [
+      "参考文献",
+      "Appendix: 3. 研究と参考文献",
+      "Demographic Dialectal Variation in Social Media: A Case Study of African-American English\nSu Lin Blodgett, Lisa Green, Brendan O’Connor · 2016 · EMNLP, 1119–1130\n地域人口統計を用いた言語混合モデルと、AAEに対する言語同定・構文解析の差を示す。\nhttps://aclanthology.org/D16-1120/",
+      "Twitter Universal Dependency Parsing for African-American and Mainstream American English\nSu Lin Blodgett, Johnny Tian-Zheng Wei, Brendan O’Connor · 2018 · ACL, 1415–1425\n二つの英語変種のツイートにUD注釈を付け、構文解析モデルを比較する。\nhttps://aclanthology.org/P18-1131/"
+    ]
+  },
+  {
+    "page": 49,
+    "text": [
+      "参考文献",
+      "Appendix: 3. 研究と参考文献",
+      "Holistic Evaluation of Language Models\nPercy Liang et al. · 2023 · Transactions on Machine Learning Research\n多様なシナリオと指標をそろえ、言語モデルの能力と格差を測るHELMの評価設計。\nhttps://arxiv.org/abs/2211.09110",
+      "TwitterAAE: Research on African-American English on Twitter\nUMass SLANG Lab · n.d. · 公式研究ページ（2026-10-18参照）\n論文、研究用コーパス、言語混合比推定モデル、UD注釈の配布をまとめる。\nhttps://slanglab.cs.umass.edu/TwitterAAE/"
+    ]
+  }
+]

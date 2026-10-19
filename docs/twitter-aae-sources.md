@@ -57,3 +57,8 @@ package-audit.jsonはZIP整合性、内部参照、図形ID、標準XSDを確認
 ## リポジトリの検証記録
 
 [原レコード・出典・実行条件](data-audits/twitter-aae.json)、[実際の校正対](skill-proofreading/twitter-aae.md)、[全ページ文言](skill-proofreading/twitter-aae/pages.jsonl)、[自己検査・独立レビュー](skill-proofreading/twitter-aae/review.json)。
+
+
+## 読者向け説明の改訂
+
+[日本語・情報量の問題点と修正](skill-proofreading/twitter-aae/editorial-2026-10/findings.json)。細かな再現条件・原レコードの照合情報は従来の検証記録に保持し、紹介スライドから整理した。
