@@ -1,0 +1,43 @@
+{
+  "original_creator": "Leo Gao, Stella Biderman et al., EleutherAI",
+  "original_material": "既存/新規22構成要素を集めた2020年公開英語コーパス",
+  "helm_role": "既存Pileのテスト文書から6構成要素を採用し、言語モデルの確率損失を評価。Pile自体の作成者ではない。",
+  "evidence": [
+    {
+      "url": "https://arxiv.org/abs/2101.00027",
+      "section": "v1 title/authors/abstract",
+      "quote": "EleutherAI; we present the Pile: an 825 GiB English text corpus targeted at training large-scale language models.",
+      "local": "/workspace/artifacts/helm-parallel/the-pile/evidence/paper.txt",
+      "line": 9,
+      "local_sha256": "a43edae28af5675d5a21a5951b1f9d2699270e2380ebbaafba98838eca0299b3"
+    },
+    {
+      "url": "https://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/the_pile_scenario.py",
+      "section": "ThePileScenario",
+      "quote": "既存Pileのtestデータを構成要素で選択する実装",
+      "local": "/workspace/artifacts/helm-parallel/the-pile/evidence"
+    }
+  ],
+  "slide_pages": [
+    5,
+    12,
+    17,
+    19,
+    21,
+    22,
+    49,
+    50,
+    51
+  ],
+  "conclusion": "EleutherAIの2020年公開コーパスを主題とし、HELM採用・固有設定・特定run成績と基盤文献は本文から外部化。22構成要素の設計、原論文の40GB学習比較、Pythia研究利用、入手と権利を解説。原作成主体に誤帰属なし。",
+  "slug": "the-pile",
+  "method": "primary_source_attribution_review",
+  "reviewed_on": "2026-10-19",
+  "status": "confirmed_dataset_focus",
+  "PPTX_PDF_modified_by_this_origin_check": true,
+  "final_hashes": {
+    "datasets-in-10-minutes-the-pile.pptx": "7e2c6959333fba5e567dc01935935952ce11d3dd9b9c669696de1b07c03f90a0",
+    "datasets-in-10-minutes-the-pile.pdf": "462ffd66f048bc61fe358b7d8e0f4b6849e0b210122bd82b5ef7ce158c58ebea"
+  },
+  "previous_record": "reader-v1-approved/origin-attribution-check.json"
+}

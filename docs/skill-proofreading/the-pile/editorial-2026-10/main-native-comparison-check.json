@@ -1,0 +1,270 @@
+{
+  "slug": "the-pile",
+  "comparison": "Exact native text, full table cells, chart categories and series; no visual-inspection claim",
+  "previous_pptx_sha256": "804ddff922166d1a3be84116203fee49c1eac243ea61109713f9ff05c55b2010",
+  "current_pptx_sha256": "7e2c6959333fba5e567dc01935935952ce11d3dd9b9c669696de1b07c03f90a0",
+  "previous_page_count": 54,
+  "current_page_count": 51,
+  "unchanged_pages": [
+    {
+      "current_page": 1,
+      "previous_pages": [
+        1
+      ]
+    },
+    {
+      "current_page": 2,
+      "previous_pages": [
+        2
+      ]
+    },
+    {
+      "current_page": 4,
+      "previous_pages": [
+        4
+      ]
+    },
+    {
+      "current_page": 5,
+      "previous_pages": [
+        5
+      ]
+    },
+    {
+      "current_page": 6,
+      "previous_pages": [
+        6
+      ]
+    },
+    {
+      "current_page": 7,
+      "previous_pages": [
+        7
+      ]
+    },
+    {
+      "current_page": 8,
+      "previous_pages": [
+        8
+      ]
+    },
+    {
+      "current_page": 10,
+      "previous_pages": [
+        10
+      ]
+    },
+    {
+      "current_page": 11,
+      "previous_pages": [
+        11
+      ]
+    },
+    {
+      "current_page": 12,
+      "previous_pages": [
+        12
+      ]
+    },
+    {
+      "current_page": 13,
+      "previous_pages": [
+        13
+      ]
+    },
+    {
+      "current_page": 14,
+      "previous_pages": [
+        14
+      ]
+    },
+    {
+      "current_page": 18,
+      "previous_pages": [
+        21
+      ]
+    },
+    {
+      "current_page": 19,
+      "previous_pages": [
+        22
+      ]
+    },
+    {
+      "current_page": 20,
+      "previous_pages": [
+        23
+      ]
+    },
+    {
+      "current_page": 23,
+      "previous_pages": [
+        26
+      ]
+    },
+    {
+      "current_page": 25,
+      "previous_pages": [
+        28
+      ]
+    },
+    {
+      "current_page": 26,
+      "previous_pages": [
+        29
+      ]
+    },
+    {
+      "current_page": 27,
+      "previous_pages": [
+        30
+      ]
+    },
+    {
+      "current_page": 28,
+      "previous_pages": [
+        31
+      ]
+    },
+    {
+      "current_page": 29,
+      "previous_pages": [
+        32
+      ]
+    },
+    {
+      "current_page": 30,
+      "previous_pages": [
+        33
+      ]
+    },
+    {
+      "current_page": 31,
+      "previous_pages": [
+        34
+      ]
+    },
+    {
+      "current_page": 32,
+      "previous_pages": [
+        35
+      ]
+    },
+    {
+      "current_page": 33,
+      "previous_pages": [
+        36
+      ]
+    },
+    {
+      "current_page": 34,
+      "previous_pages": [
+        37
+      ]
+    },
+    {
+      "current_page": 49,
+      "previous_pages": [
+        52
+      ]
+    }
+  ],
+  "changed_pages": [
+    {
+      "page": 3,
+      "text": "\n多様な文章を次の語の予測へ\n22の構成要素と混合の設計\n多分野の文章で学習する効果\n研究利用と入手条件\n目次"
+    },
+    {
+      "page": 9,
+      "text": "本文が、そのまま予測の対象になる\nモデルは直前までのトークンを読み、次のトークンへ確率を割り当てる。トークンは単語の一部や記号を含む単位で、JSONの括弧や句読点も予測の対象になる。\n学習では、実際に続くトークンへ高い確率を与えるようにする。評価では、学習に使わずに残した文書へ、どれだけ高い確率を与えられるかを測る。\n前の3例は、Web、コード、医学論文という文章の違いを示す公開サンプルの抜粋である。\n1. 多様な文章を次の語の予測へ\n[1] Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling.  https://arxiv.org/abs/2101.00027"
+    },
+    {
+      "page": 15,
+      "text": "3. 多分野の文章で学習する効果\n3. 多分野の文章で学習する効果"
+    },
+    {
+      "page": 16,
+      "text": "1バイト当たりの予測損失で比べる\nBits per byte（BPB）は、正解の文章へ割り当てた負の対数確率を、UTF-8のバイト数で割った値。小さいほど予測しやすかったことを示す。\nBPB = −Σ log₂ p（実際のトークン｜直前の文脈） / 採点対象のバイト数。文書ごとのBPBの単純平均ではなく、損失とバイト数を合算する。\nPerplexityはトークン数で正規化する。トークンの切り方が異なるモデル間では、BPBの方が比較しやすい。ただし、使える文脈長などの条件も結果に影響する。\n3. 多分野の文章で学習する効果\n[1] Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling.  https://arxiv.org/abs/2101.00027"
+    },
+    {
+      "page": 17,
+      "text": "40 GBの学習データで多分野へ汎化した\n3. 多分野の文章で学習する効果\n学習データ | Pile test BPB ↓ | WikiText PPL ↓ | LAMBADA % ↑\nThe Pile | 0.9433 | 5.59 | 50.1\nCC-100 (en) | 1.3293 | 8.27 | 49.7\nRaw CC | 1.1275 | 11.75 | 43.8\n同じ1.3Bモデルを各データの約40 GBで学習。評価集合と重複する学習データを除去。LAMBADAは末尾の単語を当てる正解率。\n[1] Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling.  https://arxiv.org/abs/2101.00027"
+    },
+    {
+      "page": 21,
+      "text": "公式コードと公開サンプルから内容を調べられる\n公式リポジトリから、構成要素の収集コードや配布先をたどれる。再構築では、どの構成要素を何回使うかを設定する。\n内容を小さく試すには、先頭10,000文書を収めた公開サンプルpile-10kが使える。本資料の13例も、このサンプルの本文から選んだ抜粋である。\n標準版・重複除去版・構成要素を除いたバージョンでは、収録文書や学習条件が変わる。利用する版と文書の出所を確かめる。\n4. 研究利用と入手条件\n[1] Neel Nanda (2022). pile-10k: The first 10K elements of The Pile.  https://huggingface.co/datasets/NeelNanda/pile-10k"
+    },
+    {
+      "page": 22,
+      "text": "多分野の文章と、その混合条件が価値になる\nThe Pileは、22の出所から825.18 GiBのテキストを集め、反復回数を変えて約1,254.20 GiB相当を混合した英語の事前学習コーパスである。\n約40 GBにそろえた実験でも、Webだけの学習より幅広い分野の予測損失が改善した。文章の種類と混合比が、何を学べるかに関わる。\n多様な文章を混ぜる設計は、学習後の性能比較だけでなく、Pythiaのように学習過程を調べる研究にも使われている。\n4. 研究利用と入手条件\n[1] Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling.  https://arxiv.org/abs/2101.00027"
+    },
+    {
+      "page": 24,
+      "text": "\n公開サンプルの追加例\n構成要素と利用条件\n参考文献\nAppendix: 目次"
+    },
+    {
+      "page": 35,
+      "text": "22構成要素の容量と混合比（1/4）\nAppendix: 2. 構成要素と利用条件\n構成要素 | 元容量 GiB | 反復数 | 混合比 %\nPile-CC | 227.12 | 1.0 | 18.11\nPubMed Central | 90.27 | 2.0 | 14.40\nBooks3 | 100.96 | 1.5 | 12.07\nOpenWebText2 | 62.77 | 2.0 | 10.01\nArXiv | 56.21 | 2.0 | 8.96\nGithub | 95.16 | 1.0 | 7.59\n[1] Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling.  https://arxiv.org/abs/2101.00027"
+    },
+    {
+      "page": 36,
+      "text": "22構成要素の容量と混合比（2/4）\nAppendix: 2. 構成要素と利用条件\n構成要素 | 元容量 GiB | 反復数 | 混合比 %\nFreeLaw | 51.15 | 1.5 | 6.12\nStackExchange | 32.20 | 2.0 | 5.13\nUSPTO Backgrounds | 22.90 | 2.0 | 3.65\nPubMed Abstracts | 19.26 | 2.0 | 3.07\nGutenberg (PG-19) | 10.88 | 2.5 | 2.17\nOpenSubtitles | 12.98 | 1.5 | 1.55\n[1] Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling.  https://arxiv.org/abs/2101.00027"
+    },
+    {
+      "page": 37,
+      "text": "22構成要素の容量と混合比（3/4）\nAppendix: 2. 構成要素と利用条件\n構成要素 | 元容量 GiB | 反復数 | 混合比 %\nWikipedia (en) | 6.38 | 3.0 | 1.53\nDM Mathematics | 7.75 | 2.0 | 1.24\nUbuntu IRC | 5.52 | 2.0 | 0.88\nBookCorpus2 | 6.30 | 1.5 | 0.75\nEuroParl | 4.59 | 2.0 | 0.73\nHackerNews | 3.90 | 2.0 | 0.62\n[1] Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling.  https://arxiv.org/abs/2101.00027"
+    },
+    {
+      "page": 38,
+      "text": "22構成要素の容量と混合比（4/4）\nAppendix: 2. 構成要素と利用条件\n構成要素 | 元容量 GiB | 反復数 | 混合比 %\nYoutubeSubtitles | 3.73 | 2.0 | 0.60\nPhilPapers | 2.38 | 2.0 | 0.38\nNIH ExPorter | 1.89 | 2.0 | 0.30\nEnron Emails | 0.88 | 2.0 | 0.14\n[1] Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling.  https://arxiv.org/abs/2101.00027"
+    },
+    {
+      "page": 39,
+      "text": "構成要素が収録する文章（1/4）\nAppendix: 2. 構成要素と利用条件\n構成要素 | 収録内容\nPile-CC | Common CrawlのWeb本文\nPubMed Central | 生物医学論文の全文\nBooks3 | 書籍の本文\nOpenWebText2 | Redditで共有された外部ページ\nArXiv | LaTeXから抽出した学術論文\nGithub | 公開リポジトリのコード\n[1] Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling.  https://arxiv.org/abs/2101.00027"
+    },
+    {
+      "page": 40,
+      "text": "構成要素が収録する文章（2/4）\nAppendix: 2. 構成要素と利用条件\n構成要素 | 収録内容\nFreeLaw | 裁判所の判決文\nStackExchange | 分野別の質問と回答\nUSPTO Backgrounds | 米国特許の背景説明\nPubMed Abstracts | 生物医学論文の抄録\nGutenberg (PG-19) | Project Gutenbergの古典書籍\nOpenSubtitles | 映画・テレビ作品の字幕\n[1] Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling.  https://arxiv.org/abs/2101.00027"
+    },
+    {
+      "page": 41,
+      "text": "構成要素が収録する文章（3/4）\nAppendix: 2. 構成要素と利用条件\n構成要素 | 収録内容\nWikipedia (en) | 英語の百科事典記事\nDM Mathematics | 生成器が作る数学の問題と答え\nUbuntu IRC | Ubuntuコミュニティのチャット\nBookCorpus2 | オンラインの小説\nEuroParl | 欧州議会の議事録\nHackerNews | 技術ニュースとコメント\n[1] Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling.  https://arxiv.org/abs/2101.00027"
+    },
+    {
+      "page": 42,
+      "text": "構成要素が収録する文章（4/4）\nAppendix: 2. 構成要素と利用条件\n構成要素 | 収録内容\nYoutubeSubtitles | YouTube動画の字幕\nPhilPapers | 哲学分野の学術論文\nNIH ExPorter | 米国NIHの研究助成要約\nEnron Emails | 公開された企業の業務メール\n[1] Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling.  https://arxiv.org/abs/2101.00027"
+    },
+    {
+      "page": 43,
+      "text": "公開・規約・同意の分類：2020年（1/4）\nAppendix: 2. 構成要素と利用条件\n構成要素 | 公開 | 規約整合 | 著者同意\nPile-CC | ○ | ○ | —\nPubMed Central | ○ | ○ | ○\nBooks3 | ○ | — | —\nOpenWebText2 | ○ | — | —\nArXiv | ○ | ○ | ○\nGithub | ○ | ○ | —\n[1] Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling.\nhttps://arxiv.org/abs/2101.00027\n2020年の構築者による分類。○は該当、—は該当すると判断されていない。"
+    },
+    {
+      "page": 44,
+      "text": "公開・規約・同意の分類：2020年（2/4）\nAppendix: 2. 構成要素と利用条件\n構成要素 | 公開 | 規約整合 | 著者同意\nFreeLaw | ○ | ○ | ○\nStackExchange | ○ | ○ | ○\nUSPTO Backgrounds | ○ | ○ | ○\nPubMed Abstracts | ○ | ○ | ○\nGutenberg (PG-19) | ○ | ○ | —\nOpenSubtitles | ○ | — | —\n[1] Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling.\nhttps://arxiv.org/abs/2101.00027\n2020年の構築者による分類。○は該当、—は該当すると判断されていない。"
+    },
+    {
+      "page": 45,
+      "text": "公開・規約・同意の分類：2020年（3/4）\nAppendix: 2. 構成要素と利用条件\n構成要素 | 公開 | 規約整合 | 著者同意\nWikipedia (en) | ○ | ○ | ○\nDM Mathematics | ○ | ○ | ○\nUbuntu IRC | ○ | ○ | ○\nBookCorpus2 | ○ | — | —\nEuroParl | ○ | ○ | ○\nHackerNews | ○ | ○ | —\n[1] Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling.\nhttps://arxiv.org/abs/2101.00027\n2020年の構築者による分類。○は該当、—は該当すると判断されていない。"
+    },
+    {
+      "page": 46,
+      "text": "公開・規約・同意の分類：2020年（4/4）\nAppendix: 2. 構成要素と利用条件\n構成要素 | 公開 | 規約整合 | 著者同意\nYoutubeSubtitles | ○ | — | —\nPhilPapers | ○ | ○ | ○\nNIH ExPorter | ○ | ○ | ○\nEnron Emails | ○ | ○ | —\n[1] Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling.\nhttps://arxiv.org/abs/2101.00027\n2020年の構築者による分類。○は該当、—は該当すると判断されていない。"
+    },
+    {
+      "page": 47,
+      "text": "JSONLから本文と構成要素名を読み出す\nimport json\nwith open(\"sample.jsonl\", encoding=\"utf-8\") as f:\n    doc = json.loads(next(f))\nprint(doc[\"meta\"][\"pile_set_name\"])\nprint(doc[\"text\"])\nAppendix: 2. 構成要素と利用条件\n[1] EleutherAI (n.d.). The Pile Replication Code. https://github.com/EleutherAI/the-pile\nsample.jsonlは、1行に1文書のJSONを収めたファイル。textが本文、meta.pile_set_nameが出所の構成要素名を表す。"
+    },
+    {
+      "page": 48,
+      "text": "公開・規約・著者の同意は別の軸である\n2020年の構築時には、インターネットで読めること、取得元の利用規約と整合すること、元の著者が利用に同意したことを調べた。前の一覧は、そのときの構築者による分類である。\nGithubは公開かつ規約に整合すると整理された一方、著者の同意は一律には認められていない。書籍や字幕にも、公開されていても規約・同意の欄を満たさないものがある。\nこの分類は個別文書のライセンス一覧ではないため、利用時には本文の出所に応じた条件の確認が必要になる。\nAppendix: 2. 構成要素と利用条件\n[1] Gao et al. (2020). The Pile: An 800GB Dataset of Diverse Text for Language Modeling.  https://arxiv.org/abs/2101.00027"
+    },
+    {
+      "page": 50,
+      "text": "参考文献\nAppendix: 3. 参考文献\nBiderman et al. (2023). Pythia: A Suite for Analyzing Large Language Models Across Training and Scaling. ICML.\n同じデータ順で異なる規模のモデルを学習し、途中のチェックポイントとともに学習過程の比較基盤を公開した。\nhttps://arxiv.org/abs/2304.01373\nEleutherAI (n.d.). The Pile Replication Code.（2026-10-18参照）\nThe Pileの再構築コード、各構成要素の収集実装、反復回数と容量表を公開する公式リポジトリ。\nhttps://github.com/EleutherAI/the-pile"
+    },
+    {
+      "page": 51,
+      "text": "参考文献\nAppendix: 3. 参考文献\nNeel Nanda (2022). pile-10k: The first 10K elements of The Pile.\nThe Pileの先頭10,000文書を、デバッグ向けに公開した小規模サンプル。本文と構成要素名の形式を試せる。\nhttps://huggingface.co/datasets/NeelNanda/pile-10k"
+    }
+  ]
+}
