@@ -1,0 +1,9 @@
+# CDial-Biasの改訂と追跡記録
+
+不変baseline59頁に基づく。旧29/47/49/50/52/55頁をスライド外へ移動し、新53頁・本編30頁に整理。13例の質問・応答は全て全文保持し、実例1の別说と実例13の快散场时を自然で精確な日本語へ精密化。細かなID・SHA・fixed revision・raw行はbaseline-pages.json、findings.json、旧 /workspace/artifacts/helm-parallel/cdial-bias/examples.json およびevidenceに保存され、旧成果物は未変更。
+
+現CSV28343対、READMEの発話タイプ合計28341などの細かな差は外部記録へ。実用上重要なdatatype1/2の定義逆転は本文と補足に保持。NAはREADMEで0 - NA (Irrelevant data)と説明され、test1209件が文字列NA、train/valは0である。未記入／非公開正解と解釈しない。全NAはdatatype0と対応。原ラベルを書換えていない。
+
+同じ質問・応答627件分の重複があることは利用説明で簡潔に記載。groupの自由記述と複数集団スラッシュは旧記録で確認可能。CLEVAの4下位課題・6prompt/24設定・公開run0の細かな一覧は外部へ移し、公開3選択肢と元4分類、およびCLEVA採用集合の範囲未確認を保持。
+
+研究目的限定・他用途追加許可とHFカードApache-2.0表記は同時に記載し、利用条件を緩めていない。元CSV上でidx7609を読むコードを実行し、原質問・応答・偏見ありと一致。

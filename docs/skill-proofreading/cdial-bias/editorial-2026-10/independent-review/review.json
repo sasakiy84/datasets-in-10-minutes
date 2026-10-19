@@ -1,0 +1,47 @@
+{
+  "slug": "cdial-bias",
+  "approved": true,
+  "status": "approved",
+  "reviewer": "create_cnndm",
+  "updated_at": "2026-10-19T07:47:20.240754+00:00",
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "baseline": "/workspace/artifacts/helm-editorial-revision/baseline/cdial-bias",
+  "creator_handoff": "/workspace/artifacts/helm-editorial-revision/cdial-bias/handoff.json",
+  "final_hashes": {
+    "pptx": "f55820195f9d3134c69229aaa8c70390677566a79c06fb3283d9a25db6b6d6d0",
+    "pdf": "8f988fc6d9aa275dbeaf47baa19d948b9dfa6e1d353e47ea3d879d376bf52475"
+  },
+  "remaining_issues": [],
+  "review_scope": [
+    "entire baseline and findings",
+    "all final native text in context",
+    "all final pages actual individual visual review",
+    "original examples/JP/labels and material source facts",
+    "native tables/chart/code/answers",
+    "all text frames and URL/native package checks"
+  ],
+  "checks": {
+    "original_count": "CSV train22,669 / val2,837 / test2,837 =28,343 independently recounted",
+    "examples": "13 complete context/response pairs and JP translations independently read against raw CSV and fixed source hashes; original attitude/data-type labels retained",
+    "evaluation": "Weighted F1 and class distribution; 262 contexts x10 generations x4 models and human evaluation clarified",
+    "native": "9 native tables with95 numeric cells/chart preserved; final307 paragraphs/182 cells matched to PDF",
+    "reader_revision": "audit-only fine settings moved outside main reader material; public CSV read-one-record code executed",
+    "resolved": [
+      "p43 finally nearing end of gathering, without adding speaker desire to leave",
+      "cover/Appendix native frames extended with position-preserving margin",
+      "fine learning-settings page removed",
+      "generation annotation explanation clarified",
+      "p52 undated official dataset citation given n.d. and consultation date"
+    ]
+  },
+  "evidence": [
+    "content-checks.json",
+    "visual-inspection.json",
+    "all-text-frame-audit.json",
+    "final-render-check.json",
+    "technical/cdial-bias/layout-audit.json",
+    "technical/cdial-bias/links-audit.json",
+    "technical/cdial-bias/package-audit.json"
+  ]
+}

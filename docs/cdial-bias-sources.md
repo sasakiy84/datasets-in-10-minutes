@@ -51,3 +51,8 @@ native11表/1chart/27引用code枠、13原ラベル21pt bold #B13731、native原
 ## リポジトリの検証記録
 
 [原レコード・出典・実行条件](data-audits/cdial-bias.json)、[実際の校正対](skill-proofreading/cdial-bias.md)、[全ページ文言](skill-proofreading/cdial-bias/pages.jsonl)、[自己検査・独立レビュー](skill-proofreading/cdial-bias/review.json)。
+
+
+## 読者向け説明の改訂
+
+[日本語・情報量の問題点と修正](skill-proofreading/cdial-bias/editorial-2026-10/findings.json)。細かな再現条件・原レコードの照合情報は従来の検証記録に保持し、紹介スライドから整理した。

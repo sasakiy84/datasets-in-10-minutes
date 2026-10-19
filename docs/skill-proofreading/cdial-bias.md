@@ -46,3 +46,8 @@ Geminiは使用していない。Codexが日本語校正スキルをページご
 |58|間隔14ptで最初のURLと次文献タイトルのglyph bboxが近接|文献間32ptと内容説明の短文化を併用、正式題名と完全URLを保持|字形とリンクの範囲を測り、文献間余白と頁内表示を両立する。|
 
 [全ページ文言](cdial-bias/pages.jsonl)・[自己検査・独立レビュー](cdial-bias/review.json)
+
+
+## 読者向けの説明・日本語の改訂（2026年10月）
+
+Geminiは使用せず、Codexがスキルで校正し、別担当が独立レビューした。削除・統合を含む[問題点と変更対](cdial-bias/editorial-2026-10/changes.md)、[旧ページとの対応](cdial-bias/editorial-2026-10/page-map.json)、[独立レビュー](cdial-bias/editorial-2026-10/independent-review/handoff.json)、[最終ページの全文](cdial-bias/pages.jsonl)。旧版の校正・検証記録は保持している。
