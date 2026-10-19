@@ -26,22 +26,24 @@
   "slides": [
     5,
     11,
+    12,
+    13,
     17,
     18,
-    19,
-    23,
-    44,
-    45
+    20,
+    21,
+    22,
+    43
   ],
-  "conclusion": "誤帰属なし。2018年の元データ/回答選択と2023年CLEVA採用・HELM実装を明確に説明。元の医療回答対応ラベルを医学的正確性の保証へ読み替えていない。",
+  "conclusion": "cMedQA2 was constructed by Sheng Zhang and coauthors, expanding their original Chinese medical answer-selection dataset. The current reader deck explains that dataset, its original100-candidate evaluation,2018 results and use; evaluation-platform adoption and altered binary prompt are external history.",
   "slug": "cmedqa2",
   "checked_at": "2026-10-19",
   "method": "skill_based_codex",
   "gemini_used": false,
   "artifact_changes_required": false,
   "artifact_hashes": {
-    "pptx": "7e3cf5df9c3a0f8f98a8027edd5a549df084fb75f0dc8762f3ab6a4a10df3baf",
-    "pdf": "f029f350a8030f9614836973d35a3b67816762c41b7348395124be1cb37754f7"
+    "pptx": "1995639a43239b64ffcfea1e45571c3d9c29831d1ac442ef4091fda81398c683",
+    "pdf": "2c855daa5c02ee35ac7164fb449bcaa99df3fe1e11a91ced391742092a3b045d"
   },
   "current_native_evidence": {
     "5": "cMedQA2は、中国語の医療相談を扱う\n利用者が書いた医療相談と、医師の回答を集めたデータセット。質問と複数の候補回答を読み、その質問に付いた回答を選ぶ。\n元の質問に付いた回答は1、別の質問への回答は0というラベルを持つ。以下の実例では、質問と候補回答1件を中国語全文と日本語訳で示す。\n医師が質問へ付けた回答を正解とする設計であり、医療内容を別途審査したラベルではない。医学試験の選択肢を集めたMedQAとは用途が異なる。\n1. 医療相談と候補回答\n[1] Zhang et al. (2018). Multi-Scale Attentive Interaction Networks for Chinese Medical Question Answer Selection. IEEE Access 6, 74061–74071.\nhttps://doi.org/10.1109/ACCESS.2018.2883637",
@@ -62,5 +64,10 @@
     "approved": true,
     "reviewer": "create_twitter",
     "path": "../review-cmedqa2/origin-attribution-check.json"
-  }
+  },
+  "final_hashes": {
+    "pptx": "1995639a43239b64ffcfea1e45571c3d9c29831d1ac442ef4091fda81398c683",
+    "pdf": "2c855daa5c02ee35ac7164fb449bcaa99df3fe1e11a91ced391742092a3b045d"
+  },
+  "latest_dataset_focus": "Adoption/altered binary task outside reader deck; original2018 dataset and original100-candidate answer selection remain."
 }

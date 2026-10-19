@@ -25,3 +25,12 @@ p42のnative pandasコードを公式データに実行
   "datasets-in-10-minutes-cmedqa2.pptx": "7e3cf5df9c3a0f8f98a8027edd5a549df084fb75f0dc8762f3ab6a4a10df3baf",
   "datasets-in-10-minutes-cmedqa2.pdf": "f029f350a8030f9614836973d35a3b67816762c41b7348395124be1cb37754f7"
 }
+
+
+## 元データ中心への再構成版・再承認
+
+旧承認45頁からCLEVA転用と関連文献の2頁を外部化した43頁。全保持頁のnativeを比較し、p43参照日追記以外の42頁は全文文字・表・画像が頁番号以外一致。最終PDFを独立描画し確認。全13CNJP/ラベル・元2018構築・100候補ACC@1/12値・利用条件を保持。変更境界18/19/20/22とp43文献を個別view。全native269段落81セルclip0。前回全45頁個別viewと一次検証に今回の差分照合を追加して最終hashで再承認。
+{
+  "pptx": "1995639a43239b64ffcfea1e45571c3d9c29831d1ac442ef4091fda81398c683",
+  "pdf": "2c855daa5c02ee35ac7164fb449bcaa99df3fe1e11a91ced391742092a3b045d"
+}
