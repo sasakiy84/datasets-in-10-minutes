@@ -14,3 +14,8 @@ Geminiは使用していない。Codexが日本語校正スキルをページご
 |30|MS MARCOの正例・負例を用いる、交差エントロピーなど複数の損失関数による学習例|MS MARCOの正例・負例を用い、交差エントロピーなど複数の損失関数で学習する公開例|述語に対応する助詞を補い、「用いる、」で切れた修飾関係を直す。|
 
 [全ページ文言](msmarco/pages.jsonl)・[自己検査・独立レビュー](msmarco/review.json)
+
+
+## 読者向けの説明・日本語の改訂（2026年10月）
+
+Geminiは使用せず、Codexがスキルで校正し、別担当が独立レビューした。削除・統合を含む[問題点と変更対](msmarco/editorial-2026-10/changes.md)、[旧ページとの対応](msmarco/editorial-2026-10/page-map.json)、[独立レビュー](msmarco/editorial-2026-10/independent-review/handoff.json)、[最終ページの全文](msmarco/pages.jsonl)。旧版の校正・検証記録は保持している。
