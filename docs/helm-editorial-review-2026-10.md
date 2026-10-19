@@ -10,7 +10,7 @@ Geminiは使用せず、リポジトリの日本語校正・データセット�
 
 各資料の変更表には修正前後の文言、削除・統合の理由、改訂前後のページ対応を記録する。独立レビューとメインの記録には、実施した確認と最終成果物のハッシュを残す。
 
-最新方針での反映済み：31 / 47資料。反映済み資料は合計1839ページから1500ページへ整理。
+最新方針での反映済み：32 / 47資料。反映済み資料は合計1908ページから1563ページへ整理。
 
 | 資料 | 改訂前 | 改訂後 | 修正内容 |
 |---|---:|---:|---|
@@ -37,7 +37,7 @@ Geminiは使用せず、リポジトリの日本語校正・データセット�
 | twitter-aae | 49 | 36 | [修正前後の表](skill-proofreading/twitter-aae/editorial-2026-10/changes.md) |
 | billsum | 79 | 72 | [修正前後の表](skill-proofreading/billsum/editorial-2026-10/changes.md) |
 | eurlexsum | 66 | 63 | [修正前後の表](skill-proofreading/eurlexsum/editorial-2026-10/changes.md) |
-| multilexsum | 69 | — | 最新方針に沿って確認・修正中 |
+| multilexsum | 69 | 63 | [修正前後の表](skill-proofreading/multilexsum/editorial-2026-10/changes.md) |
 | cluewsc2020 | 60 | 49 | [修正前後の表](skill-proofreading/cluewsc2020/editorial-2026-10/changes.md) |
 | the-pile | 56 | 51 | [修正前後の表](skill-proofreading/the-pile/editorial-2026-10/changes.md) |
 | wikifact | 52 | 39 | [修正前後の表](skill-proofreading/wikifact/editorial-2026-10/changes.md) |

@@ -1,6 +1,6 @@
 # データセットの出自と説明範囲の確認（2026年10月）
 
-対象47資料のうち、最新方針での改訂・独立レビュー・統合を終えた31資料を記載する。未完了の資料を確認済みとは扱わない。
+対象47資料のうち、最新方針での改訂・独立レビュー・統合を終えた32資料を記載する。未完了の資料を確認済みとは扱わない。
 
 選定に使った一覧の説明ではなく、各データセットや課題の目的、実例、構築、評価、使い方を主題に改めた。元データの作成、既存素材の利用、後続研究の加工・採用を、一次論文と公式配布に照合した。採用先の固有設定や検証用の細部はスライド外の記録へ移した。
 
@@ -20,13 +20,14 @@ Numeracyの多項式課題やWikiFactのように、選定元の研究で実際�
 | COLD | Dengらが中国語の攻撃的表現を収集・注釈し、検出器COLDDetectorとともに公開した。 | [一次資料の照合](skill-proofreading/cold/editorial-2026-10/origin-attribution-check.json) / [変更対](skill-proofreading/cold/editorial-2026-10/changes.md) |
 | MS MARCO | MicrosoftがBing質問・Web文章・人手回答から構築。TREC2019の段階的関連度判定は追加の評価資料。 | [一次資料の照合](skill-proofreading/msmarco/editorial-2026-10/origin-attribution-check.json) / [変更対](skill-proofreading/msmarco/editorial-2026-10/changes.md) |
 | LegalSupport | Liangらの研究で新規作成。CAPの既存判例が素材で、課題設計・実装はNeel Guhaの担当と確認した。 | [一次資料の照合](skill-proofreading/legal-support/editorial-2026-10/origin-attribution-check.json) / [変更対](skill-proofreading/legal-support/editorial-2026-10/changes.md) |
-| CCPM | 古典詩の本文と現代語の説明を照合する元研究・配布を主題にした。採用先の作成物とは扱わない。 | [一次資料の照合](skill-proofreading/ccpm/editorial-2026-10/origin-attribution-check.json) / [変更対](skill-proofreading/ccpm/editorial-2026-10/changes.md) |
-| BUSTM | FewCLUEで整備された短文意味照合。元データと少数例学習評価を中心にした。 | [一次資料の照合](skill-proofreading/bustm/editorial-2026-10/origin-attribution-check.json) / [変更対](skill-proofreading/bustm/editorial-2026-10/changes.md) |
+| CCPM | Li・Qi・Sun・Yi・ZhangのTHUNLP-AIPoet研究。古典詩句と現代語訳の対を集め、四択課題に構成した。 | [一次資料の照合](skill-proofreading/ccpm/editorial-2026-10/origin-attribution-check.json) / [変更対](skill-proofreading/ccpm/editorial-2026-10/changes.md) |
+| BUSTM | OPPOの小布会話AIチームが公開した短文意味照合。FewCLUEは少数例学習評価へ整備して採用した。 | [一次資料の照合](skill-proofreading/bustm/editorial-2026-10/origin-attribution-check.json) / [変更対](skill-proofreading/bustm/editorial-2026-10/changes.md) |
 | ChID | Zhengらの中国語成語穴埋めデータ。CLUEの候補共有形式は元形式との違いを保つ。 | [一次資料の照合](skill-proofreading/chid/editorial-2026-10/origin-attribution-check.json) / [変更対](skill-proofreading/chid/editorial-2026-10/changes.md) |
 | WMT2020（英中） | WMT2020ニュース翻訳の英中・中英テスト。運営の元評価と公式テスト配布を紹介する。 | [一次資料の照合](skill-proofreading/wmt2020-enzh/editorial-2026-10/origin-attribution-check.json) / [変更対](skill-proofreading/wmt2020-enzh/editorial-2026-10/changes.md) |
 | TwitterAAE | Blodgettらが位置付き投稿と地域人口構成から構築したコーパス。人口統計による言語的関連と個人の人種を区別する。 | [一次資料の照合](skill-proofreading/twitter-aae/editorial-2026-10/origin-attribution-check.json) / [変更対](skill-proofreading/twitter-aae/editorial-2026-10/changes.md) |
 | BillSum | Kornilova/EidelmanのFiscalNote Research研究。連邦議会・California議会の法案と専門家要約を対応付けた。 | [一次資料の照合](skill-proofreading/billsum/editorial-2026-10/origin-attribution-check.json) / [変更対](skill-proofreading/billsum/editorial-2026-10/changes.md) |
 | EUR-Lex-Sum | Aumiller・Chouhan・GertzがEUR-Lexの法令と専門家要約を収集し、最大24言語へ対応付けた。 | [一次資料の照合](skill-proofreading/eurlexsum/editorial-2026-10/origin-attribution-check.json) / [変更対](skill-proofreading/eurlexsum/editorial-2026-10/changes.md) |
+| Multi-LexSum | Shen・LoらとCivil Rights Litigation Clearinghouse等の協力で構築。法律実務の文書群と専門家要約を三つの粒度で提供する。 | [一次資料の照合](skill-proofreading/multilexsum/editorial-2026-10/origin-attribution-check.json) / [変更対](skill-proofreading/multilexsum/editorial-2026-10/changes.md) |
 | CLUEWSC2020 | CLUEチームが36作品から中国語の照応判定を構築。先行WSCの着想と本データの作成を分けた。 | [一次資料の照合](skill-proofreading/cluewsc2020/editorial-2026-10/origin-attribution-check.json) / [変更対](skill-proofreading/cluewsc2020/editorial-2026-10/changes.md) |
 | The Pile | EleutherAIが22資源を組み合わせた言語モデル学習用コーパス。構成素材ごとの由来・権利も区別した。 | [一次資料の照合](skill-proofreading/the-pile/editorial-2026-10/origin-attribution-check.json) / [変更対](skill-proofreading/the-pile/editorial-2026-10/changes.md) |
 | WikiFact | Liangらの研究で新規に構築した事実補完データ。Wikidata 2022年1月版は素材で、先行LAMAの形式とも区別した。 | [一次資料の照合](skill-proofreading/wikifact/editorial-2026-10/origin-attribution-check.json) / [変更対](skill-proofreading/wikifact/editorial-2026-10/changes.md) |
