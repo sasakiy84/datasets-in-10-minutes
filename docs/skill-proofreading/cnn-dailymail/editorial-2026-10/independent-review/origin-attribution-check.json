@@ -1,0 +1,55 @@
+{
+  "checked_at": "2026-10-19T10:43:07.707767+00:00",
+  "creator": "ニュース本文・ハイライトはCNN/Daily Mailと著者。Hermannら2015が読解用に構築、Nallapatiら2016が要約課題へ構成、Seeら2017が非匿名版を使用・整備。",
+  "HELM_relationship": "後続の評価への採用であり元データ作成ではない。固有の実装/生成/成績は読者スライドから外し旧証拠へ保存。",
+  "evidence": [
+    {
+      "url": "https://arxiv.org/pdf/1506.03340",
+      "local_evidence": "/workspace/artifacts/helm-editorial-revision/cnn-dailymail/evidence/hermann-paper.pdf",
+      "sha256": "bc4be202d74138e89fdeec6ca9a6f7232cd5afd7bd3c253508b793c576fba384",
+      "supports": "Hermannら2015: DeepMind/Oxfordによるニュース読解データ構築"
+    },
+    {
+      "url": "https://aclanthology.org/K16-1028/",
+      "local_evidence": "/workspace/artifacts/helm-parallel/cnn-dailymail/evidence/nallapati-paper.pdf",
+      "sha256": "e11eaa50f8a832157c13c81c9b428e79ea1d7cc40a4c84a51e7d801013f8ee5a",
+      "supports": "Nallapatiら2016: IBM Watson/Université de Montréalによる複数文要約への構成"
+    },
+    {
+      "url": "https://aclanthology.org/P17-1099/",
+      "local_evidence": "/workspace/artifacts/helm-parallel/cnn-dailymail/evidence/pointer-paper.pdf",
+      "sha256": "499a1f95e7f291821233351fc6fd1beecce55dbb2cae05bcf7386ab6df6aef89",
+      "supports": "See/Liu/Manning2017: Stanford/Google Brain、非匿名版とPointer-generator/coverage"
+    },
+    {
+      "url": "https://github.com/abisee/cnn-dailymail",
+      "local_evidence": "/workspace/artifacts/helm-parallel/cnn-dailymail/evidence/repo-readme.md",
+      "sha256": "699c565eb9b17823578f26af454956558bb6a82f869e68381cb8d6410793c0b6",
+      "supports": "非匿名版の前処理/欠落本文除外/公式配布案内"
+    },
+    {
+      "url": "https://huggingface.co/datasets/abisee/cnn_dailymail",
+      "local_evidence": "/workspace/artifacts/helm-parallel/cnn-dailymail/evidence/data-card.md",
+      "sha256": "86a299e42434c4b85d3198b2f0f6700d7def084ea5aab01503ade96cc3f121a1",
+      "supports": "3.0.0配布と分割/権利カード"
+    }
+  ],
+  "slides_checked": [
+    1,
+    5,
+    6,
+    20,
+    21,
+    26,
+    28,
+    52
+  ],
+  "conclusion": "元ニュース・読解課題・要約課題・非匿名版の役割と時期を本文で説明し、採用基盤を作成主体としない。",
+  "final_hashes": {
+    "pptx": "a37956f228b1565f74662c68d546282b3b6b40997ff5d779417daa62c8053eaa",
+    "pdf": "a1b82d96b1cb02e59c507ca3f37351d8eb2fbc1fe6d48bfb7aead289eb843cfd"
+  },
+  "approved": true,
+  "reviewer": "create_msmarco",
+  "independent_primary_content_and_hashes_verified": true
+}
