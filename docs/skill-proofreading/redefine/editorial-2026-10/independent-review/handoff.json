@@ -5,14 +5,15 @@
   "method": "skill_based_codex",
   "gemini_used": false,
   "reviewer": "review_decks",
-  "baseline_pages": 53,
-  "total_pages": 49,
-  "main_pages": 28,
+  "total_pages": 46,
+  "main_pages": 26,
   "final_hashes": {
-    "datasets-in-10-minutes-redefine.pptx": "668202349d88c1aa7a53947490b60413cba9d450403920fc5b8d296ab5f4128e",
-    "datasets-in-10-minutes-redefine.pdf": "ce1040670d9e7d90c071cca8916dc5f0574bf11efcbcfd9b57d10e521e3230ba"
+    "datasets-in-10-minutes-redefine.pptx": "65cbd3b72bcbebf6635cdac99e9f2867d20fe41737d06ae8171e4c5afbac7bde",
+    "datasets-in-10-minutes-redefine.pdf": "8745e2b3f4e4054d6eda642e158d3207be9a3a7c22277e25bfa8f20931dbe882"
   },
-  "all_native_pages_read": [
+  "review_mode": "前回49頁全検査を継承した差分レビュー",
+  "previous_review": "/workspace/artifacts/helm-editorial-revision/review-redefine/versions/pre-dataset-focus/handoff.json",
+  "previous_pages_individually_viewed": [
     1,
     2,
     3,
@@ -63,7 +64,97 @@
     48,
     49
   ],
-  "final_pages_individually_viewed": [
+  "current_pages_individually_viewed": [
+    3,
+    24,
+    25,
+    26,
+    30,
+    35,
+    36,
+    46
+  ],
+  "unchanged_current_native_shapes_and_geometry_except_page_number": [
+    1,
+    2,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    27,
+    28,
+    29,
+    31,
+    32,
+    33,
+    34,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45
+  ],
+  "unchanged_body_rasters_exact": [
+    1,
+    2,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    27,
+    28,
+    29,
+    31,
+    32,
+    33,
+    34,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45
+  ],
+  "independent_current_pdf_png_exact": [
     1,
     2,
     3,
@@ -109,34 +200,37 @@
     43,
     44,
     45,
-    46,
-    47,
-    48,
+    46
+  ],
+  "changed_native_pages": [
+    3,
+    24,
+    25,
+    26,
+    30,
+    35,
+    36,
+    46
+  ],
+  "removed_previous_pages": [
+    25,
+    26,
     49
   ],
-  "changed_page_rechecks": [
-    19,
-    22,
-    23,
-    29
+  "primary_checks_inherited": [
+    "原1244件/数字900の全答え再計算/word344",
+    "13英語入力/候補順と先頭空白/日本語/正解",
+    "9形式各100/原研究モデル成績3表1chart",
+    "人一致part別50件/分類確率lossと例示条件",
+    "原JSONLコード独立実行とCCBY帰属"
   ],
-  "findings": [
-    {
-      "page": 29,
-      "issue": "Appendix扉のnative枠下端が実字形を収めない",
-      "resolution": "heightとmargin_bottom各8pt拡張、字形位置保持、最終p29実再view",
-      "status": "resolved"
-    }
+  "primary_creator": "Xudong Shenが課題を提出、Inverse Scaling Prizeが公開しMcKenzieらが研究評価を報告",
+  "origin_primary_urls": [
+    "https://irmckenzie.co.uk/round1/",
+    "https://github.com/inverse-scaling/prize/tree/main/data-release",
+    "https://arxiv.org/abs/2306.09479"
   ],
+  "native_frame_scope": "38頁はページ番号以外の全shape/枠/段落XMLが前回合格版と一致。変更8頁を個別viewし、3引用・答え間隔と文献最終行を確認。",
   "unresolved": [],
-  "records": [
-    "content-checks.json",
-    "native-and-render-checks.json",
-    "layout-audit.json",
-    "package-audit.json",
-    "links-audit.json",
-    "all-text-frame-audit.json"
-  ],
-  "notes": "原1244件と数値900正解・9形式を独立再計算。全13原英語/二候補順/先頭空白/JP保持、二つの訳の助詞改善を確認。全49頁のnative全文と描画、表/グラフ/コード/参考文献を個別に確認。旧22/44/45/46の監査整理は主要条件を失わない。",
-  "latest_main_wording_response": "構築時には/構築時のゼロショット比較へ自然化、Gopherの規模方向を具体化。最終3頁を実再viewし意味保持確認。"
+  "notes": "元英語13全例は不変。採用先と中国語説明例、実装文献を外部化し、公式入手/原研究評価中心へ。3訳の無作為に選んだ数字はrandom digitの意味を保持。全46新規個別viewではなく同一38頁は前回目視とnative/本文画素一致で継承。"
 }
