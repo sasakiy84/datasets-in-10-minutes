@@ -63,3 +63,5 @@
 |57||[18]|公開56頁版は正式論文本文未取得のため、代表的な実験成績が示されていなかった。||2018年のtest ACC@1は最高72.1％<br>3. 評価方法と成績<br>モデル（文字単位）	dev（％）	test（％）<br>biGRU	68.9	68.7<br>CNN	67.6	67.8<br>Multi-Scale CNNs	70.0	70.9<br>Multi-Level Composite CNNs	70.4	70.1<br>提案モデル（CNNの幅2・3）	72.1	72.1<br>提案モデル（CNNの幅1・2・3）	72.3	71.6<br>提案モデルは、複数幅のCNNと相互注意を組み合わせる。<br>[1] Zhang et al. (2018). Multi-Scale Attentive Interaction Networks for Chinese Medical Question Answer Selection. IEEE Access 6, 74061–74071.<br>https://doi.org/10.1109/ACCESS.2018.2883637|
 
 [旧版の全ページ文言](previous/baseline-native-pages.json)・[ページ対応](page-map.json)・[独立レビュー](independent-review/handoff.json)
+
+[元データの作成主体とHELMでの位置付けの確認](origin-attribution-check.json)。

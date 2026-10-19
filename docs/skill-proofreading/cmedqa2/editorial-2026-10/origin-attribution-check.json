@@ -1,0 +1,66 @@
+{
+  "creator": "Sheng Zhang, Xin Zhang, Hui Wang, Lixiang Guo, Shanshan Liu（National University of Defense Technology）",
+  "origin": "2018年の質問回答選択研究で既存cMedQAを拡張・修正したcMedQA v2.0。HELM/CLEVAの新規作成コーパスではない。",
+  "primary_url": "https://doi.org/10.1109/ACCESS.2018.2883637",
+  "primary_file": {
+    "path": "/workspace/artifacts/helm-parallel/cmedqa2/evidence/acquired-fulltext--paper.pdf",
+    "sha256": "e44d592321438fa7c8d61a9b22a585f520fb1e65989e33889979a151fe4c6019"
+  },
+  "primary_pages": [
+    1
+  ],
+  "evidence_quote": "To evaluate our framework, we update and expand a dataset called cMedQA v2.0.",
+  "adopter": "CLEVAは2018年論文をデータ出典として引用。HELM v0.4.0はCLEVAのmedical_question_answeringを実装し、元質問と回答の公開二択例を示す。100候補回答選択という元課題と、A=否/B=是の公開実装例を分けて説明する。",
+  "secondary_url": "https://aclanthology.org/2023.emnlp-demo.17/",
+  "secondary_file": {
+    "path": "/workspace/artifacts/helm-parallel/cmedqa2/evidence/cleva-paper.pdf",
+    "sha256": "49412cfeff8d70fd6cae8a77d6d63e4298a51481f05b5e0847e24f9561900fd8"
+  },
+  "secondary_page": 19,
+  "secondary_quote": "Data are sampled or translated from Duan (2018); Zhang et al. (2018); Lin et al. (2022).",
+  "code_url": "https://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py",
+  "code_file": {
+    "path": "/workspace/artifacts/helm-parallel/cmedqa2/evidence/cleva-scenario.py",
+    "sha256": "c61c19eb5ea2cf408dddf6087eb5c7715d5795c4508f23d2ccc2fc7eaf03de5e"
+  },
+  "slides": [
+    5,
+    11,
+    17,
+    18,
+    19,
+    23,
+    44,
+    45
+  ],
+  "conclusion": "誤帰属なし。2018年の元データ/回答選択と2023年CLEVA採用・HELM実装を明確に説明。元の医療回答対応ラベルを医学的正確性の保証へ読み替えていない。",
+  "slug": "cmedqa2",
+  "checked_at": "2026-10-19",
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "artifact_changes_required": false,
+  "artifact_hashes": {
+    "pptx": "7e3cf5df9c3a0f8f98a8027edd5a549df084fb75f0dc8762f3ab6a4a10df3baf",
+    "pdf": "f029f350a8030f9614836973d35a3b67816762c41b7348395124be1cb37754f7"
+  },
+  "current_native_evidence": {
+    "5": "cMedQA2は、中国語の医療相談を扱う\n利用者が書いた医療相談と、医師の回答を集めたデータセット。質問と複数の候補回答を読み、その質問に付いた回答を選ぶ。\n元の質問に付いた回答は1、別の質問への回答は0というラベルを持つ。以下の実例では、質問と候補回答1件を中国語全文と日本語訳で示す。\n医師が質問へ付けた回答を正解とする設計であり、医療内容を別途審査したラベルではない。医学試験の選択肢を集めたMedQAとは用途が異なる。\n1. 医療相談と候補回答\n[1] Zhang et al. (2018). Multi-Scale Attentive Interaction Networks for Chinese Medical Question Answer Selection. IEEE Access 6, 74061–74071.\nhttps://doi.org/10.1109/ACCESS.2018.2883637",
+    "11": "医療相談サイトから、質問と医師の回答を収集\n中国語の医療相談サイトxywy.comから、利用者の質問と資格を持つ医師の回答を収集した。\nv1.0を拡張・修正したv2.0では、挨拶の除去や英語の句読点を中国語の句読点へ置き換える処理を行った。\n利用者のプライバシーに配慮して、個人情報を匿名化・除去したと説明されている。\n2. 収集とデータの構成\n[1] Zhang et al. (2018). Multi-Scale Attentive Interaction Networks for Chinese Medical Question Answer Selection. IEEE Access 6, 74061–74071.\nhttps://doi.org/10.1109/ACCESS.2018.2883637",
+    "17": "ACC@1は、最上位の回答が正例だった質問の割合\n質問ごとに100候補へ類似度のスコアを付け、最も高い候補を選ぶ。ACC@1は、その回答が正例だった質問の割合を表す。\n開発・テストはいずれも4,000問。例えば4,000問中2,000問で正例を最上位に置ければ、ACC@1は50％となる。\n2018年の実験では、文字単位の表現から質問と回答の関連を学ぶモデルを、この正解率で比較した。\n3. 評価方法と成績\n[1] Zhang et al. (2018). Multi-Scale Attentive Interaction Networks for Chinese Medical Question Answer Selection. IEEE Access 6, 74061–74071.\nhttps://doi.org/10.1109/ACCESS.2018.2883637",
+    "18": "2018年のtest ACC@1は最高72.1％\n3. 評価方法と成績\n提案モデルは、複数幅のCNNと相互注意を組み合わせる。\n[1] Zhang et al. (2018). Multi-Scale Attentive Interaction Networks for Chinese Medical Question Answer Selection. IEEE Access 6, 74061–74071.\nhttps://doi.org/10.1109/ACCESS.2018.2883637",
+    "19": "CLEVAでは、質問と回答の二択判定に応用\n中国語モデルの評価基盤CLEVAは、医療QA課題の出典としてcMedQA2を採用している。\nHELM v0.4.0の公開例では、質問と医師の回答を提示し、正しく答えているかをA＝否、B＝是の二択で尋ねる。実例1の質問・回答に対応し、正解はBである。\n元データの100候補から選ぶ形式を変更した利用法である。CLEVA版の評価集合の全体とモデル別成績は、参照した公開資料では明らかになっていない。\n3. 評価方法と成績\n[1] Li et al. (2023). CLEVA: Chinese Language Models EVAluation Platform. EMNLP System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/\n[2] Stanford CRFM (2023). CLEVAClosedBookQuestionAnsweringScenario and Converter. HELM v0.4.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py",
+    "23": "医療相談に対応する回答の選択を学ぶ\ncMedQA2は、108,000件の医療質問と203,569件の対応回答を学習・評価に使う、中国語の回答選択データセットである。\n学習では正負の回答を比較し、評価では100候補から回答を選ぶ。一つの質問に複数の正例があり、症状の語が似ていても別の質問への回答が負例になる。\nACC@1は、正例を最上位に選べた質問の割合を測る。元データの特徴を生かした回答選択の研究に、非商用研究の条件で利用できる。\n4. 入手と利用\n[1] Zhang et al. (2018). Multi-Scale Attentive Interaction Networks for Chinese Medical Question Answer Selection. IEEE Access 6, 74061–74071.\nhttps://doi.org/10.1109/ACCESS.2018.2883637",
+    "44": "参考文献\nAppendix: 3. 参考文献\nMulti-Scale Attentive Interaction Networks for Chinese Medical Question Answer Selection\nSheng Zhang, Xin Zhang, Hui Wang, Lixiang Guo & Shanshan Liu · 2018 · IEEE Access 6:74061–74071\n医療質問と回答の相互作用を捉える多尺度ネットワークと、拡張したcMedQA v2.0を扱う。\nhttps://doi.org/10.1109/ACCESS.2018.2883637\ncMedQA2: official repository and data\nSheng Zhang et al. · n.d. · GitHub / official data repository\n質問、回答、学習比較組、dev/test候補と、非商用研究の条件を公開する。\nhttps://github.com/zhangsheng93/cMedQA2",
+    "45": "参考文献\nAppendix: 3. 参考文献\nCLEVA: Chinese Language Models EVAluation Platform\nLi et al. · 2023 · EMNLP System Demonstrations\n中国語の言語モデルを幅広い課題で評価する枠組み。医療QAのデータとしてcMedQA2を採用する。\nhttps://aclanthology.org/2023.emnlp-demo.17/\nCLEVAClosedBookQuestionAnsweringScenario and Converter\nStanford CRFM · HELM v0.4.0\n医療相談を二択で判定する公開例と、評価データの読み込み方法を定義する。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py"
+  },
+  "original_data_not_created_by_HELM": true,
+  "public_adapted_evaluation_coverage_not_assumed": true,
+  "status": "verified_no_misattribution",
+  "evidence_quote_normalized_for_typographic_linebreaks": true,
+  "independent_review": {
+    "status": "passed",
+    "approved": true,
+    "reviewer": "create_twitter",
+    "path": "../review-cmedqa2/origin-attribution-check.json"
+  }
+}
