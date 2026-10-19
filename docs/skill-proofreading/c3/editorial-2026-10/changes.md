@@ -164,3 +164,5 @@
 |158|33|31|実黒字形がnative枠下端を1.603/2.264pt超える共通マスター枠。|{'height_pt': 46.08, 'margin_bottom_pt': 0.0}|{'height_pt': 54.08, 'margin_bottom_pt': 8.0}|
 
 [旧版の全ページ文言](previous/baseline-native-pages.json)・[ページ対応](page-map.json)・[独立レビュー](independent-review/handoff.json)
+
+[元データの作成主体とHELMでの位置付けの確認](origin-attribution-check.json)。
