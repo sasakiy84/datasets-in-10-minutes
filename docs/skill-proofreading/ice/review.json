@@ -4,12 +4,12 @@
   "review_mode": "skill_based_codex",
   "gemini_used": false,
   "main_pages": 28,
-  "total_pages": 49,
+  "total_pages": 48,
   "self_visual_review": {
     "visual-review.json": {
-      "method": "view_image",
-      "overview_viewed": true,
-      "pages_individually_viewed": [
+      "method": "skill_based_codex",
+      "gemini_used": false,
+      "individual_pages_viewed": [
         1,
         2,
         3,
@@ -57,73 +57,301 @@
         45,
         46,
         47,
-        48,
-        49
+        48
       ],
-      "rechecked_after_changes": [
+      "overview_viewed": true,
+      "changed_after_first_view": [
+        1,
+        4,
         6,
         7,
         9,
         11,
-        20,
-        21,
+        13,
+        14,
+        19,
+        25,
+        26,
         28,
-        31,
-        38,
-        39,
-        40
+        29,
+        45,
+        46,
+        47,
+        48
       ],
-      "official_site_image_viewed": true,
-      "checks": [
-        "最終行",
-        "glyph欠落",
-        "引用枠上下余白",
-        "出典との距離",
-        "タイトルとセルの改行",
-        "参考文献のまとまり"
+      "final_changed_pages_rechecked": [
+        1,
+        4,
+        6,
+        7,
+        9,
+        11,
+        13,
+        14,
+        19,
+        25,
+        26,
+        28,
+        29,
+        39,
+        45,
+        46,
+        47,
+        48
+      ],
+      "notes": "全48頁の本文・表・13原文と日本語訳・参考文献を個別確認。本文の少数字最終行を保持。",
+      "changed_after_main_and_independent_review": [
+        9,
+        39,
+        46,
+        48
       ]
     }
   },
-  "updated_at": "2026-10-18T07:03:17Z",
+  "updated_at": "2026-10-19T08:11:48+00:00",
   "artifact_sha256": {
-    "pdf": "395cd2087876883d3acf2ae8d4acb2b1c4628869577fcc156cf3235dcc0bf468",
-    "pptx": "29828d53207d3078b9654f461a07283c49422502108adb2145e7597689f89d73"
+    "pptx": "e473efa19cb83293f67726728148a28a65a274560738b43d07e8bbf0664538d9",
+    "pdf": "f17ee37e52f32c33223b83cda54c7c896d69f90174e9f867509df2942413f611"
   },
   "checks": {
-    "layout": {
-      "paragraphs_checked": 289,
+    "layout-audit.json": {
+      "paragraphs_checked": 303,
       "table_cells_checked": 57,
       "issues": []
     },
-    "package": {
-      "parsed_xml_parts": 131,
-      "integer_bullets": 144,
-      "hyperlinks": 47,
+    "package-audit.json": {
+      "parsed_xml_parts": 129,
+      "integer_bullets": 137,
+      "hyperlinks": 46,
       "new_schema_errors": [],
       "baseline_schema_errors": 11,
       "package_integrity": "passed",
       "internal_relationship_targets": "passed",
       "unique_shape_ids": "passed",
       "schema_note": "標準XSDを変更せず確認。マスター由来の既存エラーと、整数buSzPctの百分率字句形式との差を分離。整数箇条書きサイズは25000–400000で別途検査。",
-      "pages": 49,
+      "pages": 48,
       "native_tables": 5,
       "native_charts": 0
     },
-    "text": {
-      "method": "PDF actual glyph vs native PPTX paragraphs/cells",
-      "paragraphs": 289,
-      "cells": 57,
-      "issues": []
-    },
-    "links": {
-      "native_url_only_runs": 47,
-      "pdf_link_rectangles": 47,
+    "links-audit.json": {
+      "native_url_only_runs": 46,
+      "pdf_link_rectangles": 46,
       "pdf_link_text_exactly_matches_url": true,
       "pdf_link_character_centers_match_url": true,
       "glyph_box_overhangs": [],
       "shortened_url_labels": [],
       "issues": []
+    },
+    "content-checks.json": {
+      "examples": [
+        {
+          "example": 1,
+          "page": 7,
+          "original_contiguous_excerpt_and_meaning_preserved": true,
+          "source_span_and_hash_verified": true,
+          "full_source_not_copied": true,
+          "japanese_checked": true
+        },
+        {
+          "example": 2,
+          "page": 9,
+          "original_contiguous_excerpt_and_meaning_preserved": true,
+          "source_span_and_hash_verified": true,
+          "full_source_not_copied": true,
+          "japanese_checked": true
+        },
+        {
+          "example": 3,
+          "page": 11,
+          "original_contiguous_excerpt_and_meaning_preserved": true,
+          "source_span_and_hash_verified": true,
+          "full_source_not_copied": true,
+          "japanese_checked": true
+        },
+        {
+          "example": 4,
+          "page": 31,
+          "original_contiguous_excerpt_and_meaning_preserved": true,
+          "source_span_and_hash_verified": true,
+          "full_source_not_copied": true,
+          "japanese_checked": true
+        },
+        {
+          "example": 5,
+          "page": 32,
+          "original_contiguous_excerpt_and_meaning_preserved": true,
+          "source_span_and_hash_verified": true,
+          "full_source_not_copied": true,
+          "japanese_checked": true
+        },
+        {
+          "example": 6,
+          "page": 33,
+          "original_contiguous_excerpt_and_meaning_preserved": true,
+          "source_span_and_hash_verified": true,
+          "full_source_not_copied": true,
+          "japanese_checked": true
+        },
+        {
+          "example": 7,
+          "page": 34,
+          "original_contiguous_excerpt_and_meaning_preserved": true,
+          "source_span_and_hash_verified": true,
+          "full_source_not_copied": true,
+          "japanese_checked": true
+        },
+        {
+          "example": 8,
+          "page": 35,
+          "original_contiguous_excerpt_and_meaning_preserved": true,
+          "source_span_and_hash_verified": true,
+          "full_source_not_copied": true,
+          "japanese_checked": true
+        },
+        {
+          "example": 9,
+          "page": 36,
+          "original_contiguous_excerpt_and_meaning_preserved": true,
+          "source_span_and_hash_verified": true,
+          "full_source_not_copied": true,
+          "japanese_checked": true
+        },
+        {
+          "example": 10,
+          "page": 37,
+          "original_contiguous_excerpt_and_meaning_preserved": true,
+          "source_span_and_hash_verified": true,
+          "full_source_not_copied": true,
+          "japanese_checked": true
+        },
+        {
+          "example": 11,
+          "page": 38,
+          "original_contiguous_excerpt_and_meaning_preserved": true,
+          "source_span_and_hash_verified": true,
+          "full_source_not_copied": true,
+          "japanese_checked": true
+        },
+        {
+          "example": 12,
+          "page": 39,
+          "original_contiguous_excerpt_and_meaning_preserved": true,
+          "source_span_and_hash_verified": true,
+          "full_source_not_copied": true,
+          "japanese_checked": true
+        },
+        {
+          "example": 13,
+          "page": 40,
+          "original_contiguous_excerpt_and_meaning_preserved": true,
+          "source_span_and_hash_verified": true,
+          "full_source_not_copied": true,
+          "japanese_checked": true
+        }
+      ],
+      "india_500_full_hashes_verified": true,
+      "original_scope": "12 India public-run excerpts and 1 USA official-docstring excerpt",
+      "native_tables_unchanged_pages": [
+        15,
+        21,
+        41,
+        42,
+        43
+      ],
+      "metrics": [
+        {
+          "subset": "ea",
+          "model": "together_opt-175b",
+          "raw": 0.6609302497386823,
+          "display": "0.661",
+          "instances": 625.0
+        },
+        {
+          "subset": "ea",
+          "model": "openai_text-davinci-003",
+          "raw": 0.7635297830374674,
+          "display": "0.764",
+          "instances": 625.0
+        },
+        {
+          "subset": "hk",
+          "model": "together_opt-175b",
+          "raw": 0.7665103770961952,
+          "display": "0.767",
+          "instances": 500.0
+        },
+        {
+          "subset": "hk",
+          "model": "openai_text-davinci-003",
+          "raw": 0.8914830515877894,
+          "display": "0.891",
+          "instances": 500.0
+        },
+        {
+          "subset": "ind",
+          "model": "together_opt-175b",
+          "raw": 0.7939743829709132,
+          "display": "0.794",
+          "instances": 500.0
+        },
+        {
+          "subset": "ind",
+          "model": "openai_text-davinci-003",
+          "raw": 0.8954810778703375,
+          "display": "0.895",
+          "instances": 500.0
+        },
+        {
+          "subset": "usa",
+          "model": "together_opt-175b",
+          "raw": 0.700380907505801,
+          "display": "0.700",
+          "instances": 200.0
+        },
+        {
+          "subset": "usa",
+          "model": "openai_text-davinci-003",
+          "raw": 0.7197151866699617,
+          "display": "0.720",
+          "instances": 200.0
+        }
+      ],
+      "original_12_selected_run_specs_retained_outside_reader_slides": true,
+      "source_full_text_not_copied_into_editorial_delivery": true,
+      "hashes": {
+        "datasets-in-10-minutes-ice.pptx": "e473efa19cb83293f67726728148a28a65a274560738b43d07e8bbf0664538d9",
+        "datasets-in-10-minutes-ice.pdf": "f17ee37e52f32c33223b83cda54c7c896d69f90174e9f867509df2942413f611"
+      }
     }
   },
-  "independent_review": "independent-review/"
+  "independent_review": "editorial-2026-10/independent-review/",
+  "editorial_revisions": [
+    {
+      "checked_at": "2026-10-19T08:11:48+00:00",
+      "method": "skill_based_codex",
+      "gemini_used": false,
+      "baseline_artifact_sha256": {
+        "pptx": "29828d53207d3078b9654f461a07283c49422502108adb2145e7597689f89d73",
+        "pdf": "395cd2087876883d3acf2ae8d4acb2b1c4628869577fcc156cf3235dcc0bf468"
+      },
+      "artifact_sha256": {
+        "pptx": "e473efa19cb83293f67726728148a28a65a274560738b43d07e8bbf0664538d9",
+        "pdf": "f17ee37e52f32c33223b83cda54c7c896d69f90174e9f867509df2942413f611"
+      },
+      "previous_pages": 49,
+      "total_pages": 48,
+      "main_pages": 28,
+      "record_directory": "editorial-2026-10/",
+      "independent_review": "editorial-2026-10/independent-review/",
+      "main_check": "editorial-2026-10/main-review.json"
+    }
+  ],
+  "current_revision": "editorial-2026-10/",
+  "previous_review_record": "editorial-2026-10/previous/review.json",
+  "audit_sources": {
+    "layout-audit.json": "editorial-2026-10/layout-audit.json",
+    "package-audit.json": "editorial-2026-10/package-audit.json",
+    "links-audit.json": "editorial-2026-10/links-audit.json",
+    "content-checks.json": "editorial-2026-10/content-checks.json"
+  }
 }
