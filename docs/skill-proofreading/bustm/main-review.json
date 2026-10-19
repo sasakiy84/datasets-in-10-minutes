@@ -2,12 +2,11 @@
   "reviewer": "main",
   "method": "skill_based_codex",
   "gemini_used": false,
-  "checked_at": "2026-10-19T07:22:29.768322+00:00",
   "artifact_sha256": {
-    "pptx": "ae81c452dc8f781a7ec86c85284698bf36e82b82cd2ea83b619485d0f5db25d0",
-    "pdf": "b02e2ca207931ace2ea4cb1fccfc10fb3ca01f58049bdda356821b8952d6b88b"
+    "pptx": "c8d32ec3d2c6754537f31ecfa6896a979e6c2e2f5a3b9fddda1ada7f6b49f058",
+    "pdf": "7b69b705c741a7f2e67746ddb4bf51c1844b31ecfa5ff9cc5117d225a3de0af1"
   },
-  "native_text_read_pages": [
+  "current_native_text_read_pages": [
     1,
     2,
     3,
@@ -52,44 +51,114 @@
     42,
     43,
     44,
-    45,
-    46,
-    47
+    45
   ],
   "actual_individually_viewed_pages": [
-    7,
-    13,
-    19,
-    30,
-    38,
-    41,
-    42,
-    44,
-    46
+    6,
+    41
   ],
-  "checks": {
-    "all13_chinese_japanese_pairs_read": true,
-    "ambiguous_label_example_preserved_with_short_explanation": true,
-    "public_vs_hidden_test_and_small_train_sets_explained": true,
-    "code_reads_actual_jsonl": true
-  },
-  "findings": "全47頁native文言と代表9頁描画を確認。発話の語尾・操作・時点・欲求の違いを自然に説明。判断の割れるラベルを変更せず簡潔に補足。少数例の学習と公開・非公開テスト、2021年のモデル条件と人間評価の対象を保持。制作監査の頁は削除し、実際に本文とラベルを読むコードへ変更。全頁独立レビューは別担当。",
   "remaining_issues": [],
-  "revision_checks": [
-    {
-      "checked_at": "2026-10-19T07:31:20.751003+00:00",
-      "actual_individually_viewed_pages": [
-        41
-      ],
-      "previous_artifact_sha256": {
-        "pptx": "95e8f3f2c7ac9c24db93902348f9984bf168ad019c075d825e70eaaca05515cb",
-        "pdf": "84edcdcd6e2b46667056368871d55c5b208cf36ab43e02e987cc95f5f68a354f"
-      },
-      "artifact_sha256": {
-        "pptx": "ae81c452dc8f781a7ec86c85284698bf36e82b82cd2ea83b619485d0f5db25d0",
-        "pdf": "b02e2ca207931ace2ea4cb1fccfc10fb3ca01f58049bdda356821b8952d6b88b"
-      },
-      "findings": "最終変更はp41コード枠の上下余白の調整。文字・位置・折返し不変、同頁を再view。参考文献は前回main確認後の本文変更なし。"
-    }
-  ]
+  "dataset_centered_review": {
+    "quality_prompt": 116,
+    "approved": true,
+    "full_native_text_read": true,
+    "selection_platform_sections_removed": true,
+    "origin_verified": true,
+    "finding": "OPPO小布助手に由来する短文意味照合、32件少数例/複数分割、原FewCLUE方式別性能と人評価、配布・JSONL利用を中心に再構成。全45頁native本文と4表、13原対/訳/ラベルを確認。口語の語順・時間・好みと欲求・ラベルの曖昧さを保持。二択応用例も原対に対応した実用例として確認。 最終末尾Web書誌の参照日をnativeで確認。"
+  },
+  "earlier_main_review": {
+    "reviewer": "main",
+    "method": "skill_based_codex",
+    "gemini_used": false,
+    "checked_at": "2026-10-19T07:22:29.768322+00:00",
+    "artifact_sha256": {
+      "pptx": "ae81c452dc8f781a7ec86c85284698bf36e82b82cd2ea83b619485d0f5db25d0",
+      "pdf": "b02e2ca207931ace2ea4cb1fccfc10fb3ca01f58049bdda356821b8952d6b88b"
+    },
+    "native_text_read_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47
+    ],
+    "actual_individually_viewed_pages": [
+      7,
+      13,
+      19,
+      30,
+      38,
+      41,
+      42,
+      44,
+      46
+    ],
+    "checks": {
+      "all13_chinese_japanese_pairs_read": true,
+      "ambiguous_label_example_preserved_with_short_explanation": true,
+      "public_vs_hidden_test_and_small_train_sets_explained": true,
+      "code_reads_actual_jsonl": true
+    },
+    "findings": "全47頁native文言と代表9頁描画を確認。発話の語尾・操作・時点・欲求の違いを自然に説明。判断の割れるラベルを変更せず簡潔に補足。少数例の学習と公開・非公開テスト、2021年のモデル条件と人間評価の対象を保持。制作監査の頁は削除し、実際に本文とラベルを読むコードへ変更。全頁独立レビューは別担当。",
+    "remaining_issues": [],
+    "revision_checks": [
+      {
+        "checked_at": "2026-10-19T07:31:20.751003+00:00",
+        "actual_individually_viewed_pages": [
+          41
+        ],
+        "previous_artifact_sha256": {
+          "pptx": "95e8f3f2c7ac9c24db93902348f9984bf168ad019c075d825e70eaaca05515cb",
+          "pdf": "84edcdcd6e2b46667056368871d55c5b208cf36ab43e02e987cc95f5f68a354f"
+        },
+        "artifact_sha256": {
+          "pptx": "ae81c452dc8f781a7ec86c85284698bf36e82b82cd2ea83b619485d0f5db25d0",
+          "pdf": "b02e2ca207931ace2ea4cb1fccfc10fb3ca01f58049bdda356821b8952d6b88b"
+        },
+        "findings": "最終変更はp41コード枠の上下余白の調整。文字・位置・折返し不変、同頁を再view。参考文献は前回main確認後の本文変更なし。"
+      }
+    ]
+  }
 }
