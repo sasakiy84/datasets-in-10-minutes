@@ -11,3 +11,8 @@ Geminiは使用していない。Codexが日本語校正スキルをページご
 |15|1965年以降の米国の判決文を使う|1965年より後の米国の判決文を使う|written after 1965という境界年の条件を保つ。本文も同様に修正。|
 
 [全ページ文言](legal-support/pages.jsonl)・[自己検査・独立レビュー](legal-support/review.json)
+
+
+## 読者向けの説明・日本語の改訂（2026年10月）
+
+Geminiは使用せず、Codexがスキルで校正し、別担当が独立レビューした。削除・統合を含む[問題点と変更対](legal-support/editorial-2026-10/changes.md)、[旧ページとの対応](legal-support/editorial-2026-10/page-map.json)、[独立レビュー](legal-support/editorial-2026-10/independent-review/handoff.json)、[最終ページの全文](legal-support/pages.jsonl)。旧版の校正・検証記録は保持している。
