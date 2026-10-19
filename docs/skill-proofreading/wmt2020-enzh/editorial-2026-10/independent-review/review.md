@@ -1,13 +1,7 @@
-# WMT2020英中 読者向け改訂・独立レビュー
+# wmt2020-enzh 元データ中心版・差分独立レビュー
 
-承認。未解決なし。
+承認、未解決0。全48頁のnative本文/全文引用/訳/全表を再通読。前回全頁個別viewを継承し、現行全PDFを独立Poppler再描画、baselineページ対応を介して旧承認版と本文画素・shape XMLを比較。本文画素同一43頁、変更5頁。変更頁と削除境界を含む[3, 7, 23, 24, 25, 26, 27, 28, 29, 46]を個別view、overviewも確認。
 
-- 全50native頁の本文・13原例/参照/JP・全表/chart/footerを通読し、不変baselineの変更/削除10頁と照合
-- 全50頁個別view＋overview、最終変更5頁再view・残45PNG不変
-- 公式8SGM全6836対を再集計、13例原位置/全文/参照/lineSHA/offsetを照合、通常/B入力一致・参照相違1416/1997確認
-- 13原文/参照/JP全native文字列、5数値表全セルとchart4値をbaseline一致確認
-- 両方向SacreBLEU2.5.1スコア/counts/totals/signatureを独立再実行一致、nativeコード2本を実データで実行
-- 正式WMT論文の英中人手10値・z標準化・原言語/段落条件と公式研究利用/引用条件を再読確認
-- native355段落75セルframe0/overlap0、layout316/65=0、新規XSD0・51URL完全一致・notes0、28枠上下差<=2pt
+元原資料・全13例全文/JP・表/意味ある条件はcontent-recheckで再照合。native全段落/表セルのclip全文・実字形重なり、layout、新規XSD、URLリンク全文範囲、notesを独立検査し問題0。作成主体は原研究と後続利用を区別している。最終hashはhandoff.json。
 
-最終hashはhandoff.json。新たなモデル翻訳は生成していない。
+原公式test.tgzの8SGM全件6,836対/13異なるdocidの原位置とhash、6表のうち元数値5表全セルとchart、両方向BLEU全counts/signatureを再計算。SGM読込とBLEUのnative2コードを実行。p7の不要な採用先論文脚注を作者に戻し、配布元のみとした最終p7を再view。1,418/2,000区間、通常/B別参照、zh/13a分割、人手2020DA値と制約/標準化、研究利用権利を保持。
