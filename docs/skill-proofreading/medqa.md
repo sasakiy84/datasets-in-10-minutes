@@ -8,3 +8,8 @@ Geminiは使用していない。Codexが日本語校正スキルをページご
 |41|注射部位に直径14 mmの隆起した、やや硬い領域が生じた。|注射部位に14 mmの隆起した、やや硬い領域が生じた。|原文は14 mmの領域とだけ記すため、直径という測定方向を訳で追加しない。|
 
 [全ページ文言](medqa/pages.jsonl)・[自己検査・独立レビュー](medqa/review.json)
+
+
+## 読者向けの説明・日本語の改訂（2026年10月）
+
+Geminiは使用せず、Codexがスキルで校正し、別担当が独立レビューした。削除・統合を含む[問題点と変更対](medqa/editorial-2026-10/changes.md)、[旧ページとの対応](medqa/editorial-2026-10/page-map.json)、[独立レビュー](medqa/editorial-2026-10/independent-review/handoff.json)、[最終ページの全文](medqa/pages.jsonl)。旧版の校正・検証記録は保持している。

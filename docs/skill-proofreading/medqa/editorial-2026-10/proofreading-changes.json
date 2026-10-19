@@ -1,0 +1,1979 @@
+[
+  {
+    "old_page": 1,
+    "new_pages": [
+      1
+    ],
+    "before": {
+      "page": 1,
+      "text": [
+        "MedQA",
+        "医師資格試験の問題から医学知識を問う",
+        "sasakiy84",
+        "datasets in 10 minutes (2026-10-18)"
+      ],
+      "tables": [],
+      "chart_count": 0
+    },
+    "after": [
+      {
+        "page": 1,
+        "text": [
+          "MedQA",
+          "医師資格試験の問題から医学知識を問う",
+          "sasakiy84",
+          "datasets in 10 minutes (2026-10-19)"
+        ],
+        "tables": [],
+        "chart_count": 0
+      }
+    ],
+    "reason": "原文と全候補・正解を保ち、読者に向けて説明と出典、表示を整理。"
+  },
+  {
+    "old_page": 2,
+    "new_pages": [
+      2
+    ],
+    "before": {
+      "page": 2,
+      "text": [
+        "公式配布案内：MedQA",
+        "MedQA",
+        "[1] Di Jin et al. MedQA. 著者の公式コード・データ配布案内（2026-10-18取得）。  https://github.com/jind11/MedQA"
+      ],
+      "tables": [],
+      "chart_count": 0
+    },
+    "after": [
+      {
+        "page": 2,
+        "text": [
+          "公式配布案内：MedQA",
+          "MedQA",
+          "[1] Jin et al. (n.d.). MedQA — official repository.  https://github.com/jind11/MedQA"
+        ],
+        "tables": [],
+        "chart_count": 0
+      }
+    ],
+    "reason": "原文と全候補・正解を保ち、読者に向けて説明と出典、表示を整理。"
+  },
+  {
+    "old_page": 3,
+    "new_pages": [
+      3
+    ],
+    "before": {
+      "page": 3,
+      "text": [
+        "",
+        "医学の問題と実例\n3言語の構成と作成方法\n評価方法とHELMの範囲\n入手と再現の手順",
+        "目次"
+      ],
+      "tables": [],
+      "chart_count": 0
+    },
+    "after": [
+      {
+        "page": 3,
+        "text": [
+          "",
+          "医学の問題と実例\n三つの地域と作成方法\n教科書を使った元研究の評価\n入手と使い方",
+          "目次"
+        ],
+        "tables": [],
+        "chart_count": 0
+      }
+    ],
+    "reason": "原文と全候補・正解を保ち、読者に向けて説明と出典、表示を整理。"
+  },
+  {
+    "old_page": 4,
+    "new_pages": [
+      4
+    ],
+    "before": {
+      "page": 4,
+      "text": [
+        "1. 医学の問題と実例",
+        "1. 医学の問題と実例"
+      ],
+      "tables": [],
+      "chart_count": 0
+    },
+    "after": [
+      {
+        "page": 4,
+        "text": [
+          "1. 医学の問題と実例",
+          "1. 医学の問題と実例"
+        ],
+        "tables": [],
+        "chart_count": 0
+      }
+    ],
+    "reason": "原文と全候補・正解を保ち、読者に向けて説明と出典、表示を整理。"
+  },
+  {
+    "old_page": 5,
+    "new_pages": [
+      5
+    ],
+    "before": {
+      "page": 5,
+      "text": [
+        "症状や医学知識から、最も適切な答えを選ぶ",
+        "MedQAは、医師資格試験や模擬試験の問題を集めた多肢選択式のデータセット。患者の症状、機序、検査、治療などを問う。\n質問と選択肢が入力で、正解は選択肢のうち一つ。症例の記述から複数の医学知識を結び付ける問題も含む。\nここでは全体の3言語版を紹介し、HELMが読む米国版の英語・4択データから実例を示す。",
+        "1. 医学の問題と実例",
+        "[1] Jin et al. (2020). What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams. arXiv.\nhttps://arxiv.org/abs/2009.13081"
+      ],
+      "tables": [],
+      "chart_count": 0
+    },
+    "after": [
+      {
+        "page": 5,
+        "text": [
+          "症状や医学知識から、最も適切な答えを選ぶ",
+          "MedQAは、医師資格試験や模擬試験の問題を集めた多肢選択式のデータセット。Jinらが2020年に公開し、米国・中国本土・台湾の問題を収録した。\n質問と選択肢を読み、最も適切な答えを一つ選ぶ。患者の症状から診断・治療を考える問題や、機序・検査・解剖などの医学知識を問う問題がある。",
+          "1. 医学の問題と実例",
+          "[1] Jin et al. (2020). What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams. arXiv.\nhttps://arxiv.org/abs/2009.13081v1"
+        ],
+        "tables": [],
+        "chart_count": 0
+      }
+    ],
+    "reason": "原文と全候補・正解を保ち、読者に向けて説明と出典、表示を整理。"
+  },
+  {
+    "old_page": 6,
+    "new_pages": [
+      6
+    ],
+    "before": {
+      "page": 6,
+      "text": [
+        "質問・選択肢・正解を一つのレコードに持つ",
+        "questionは問題文、optionsは文字A〜Dと選択肢本文の対応。answer_idxが正解の文字、answerがその本文を表す。\n実例では質問と全選択肢の原文を省略せず、日本語訳と並べる。正解は配布データの注釈を保つ。\n本編3例と付録10例は、短い問題を中心に内容の違いが分かるよう選んだ。全体の問題分布を代表する標本ではない。",
+        "1. 医学の問題と実例",
+        "[1] Di Jin et al. MedQA. 著者の公式コード・データ配布案内（2026-10-18取得）。  https://github.com/jind11/MedQA"
+      ],
+      "tables": [],
+      "chart_count": 0
+    },
+    "after": [
+      {
+        "page": 6,
+        "text": [
+          "質問・選択肢・正解を一つのレコードに持つ",
+          "questionが問題文、optionsが選択肢の文字と本文の対応。answer_idxが正解の文字、answerがその本文を表す。\n米国・中国本土には5択版と4択版、台湾には4択版がある。この資料では4択版から15問を選び、問題文と全選択肢、日本語訳、正解を示す。",
+          "1. 医学の問題と実例",
+          "[1] Jin et al. (n.d.). MedQA — official repository.  https://github.com/jind11/MedQA"
+        ],
+        "tables": [],
+        "chart_count": 0
+      }
+    ],
+    "reason": "原文と全候補・正解を保ち、読者に向けて説明と出典、表示を整理。"
+  },
+  {
+    "old_page": 7,
+    "new_pages": [
+      7
+    ],
+    "before": {
+      "page": 7,
+      "text": [
+        "実例1：血友病Aの遺伝を考える",
+        "1. 医学の問題と実例",
+        "US・4択／test JSONL 268行目／step1",
+        "原文：質問と全選択肢（全文）",
+        "A 34-year-old male suffers from inherited hemophilia A. He and his wife have three unaffected daughters. What is the probability that the second daughter is a carrier of the disease?\n\nA. 0%\nB. 25%\nC. 50%\nD. 100%",
+        "日本語訳：質問と全選択肢",
+        "34歳の男性は遺伝性血友病Aを患っている。妻との間には、発症していない娘が3人いる。2番目の娘がこの病気の保因者である確率はどれか。\n\nA. 0%\nB. 25%\nC. 50%\nD. 100%",
+        "正解：D　100%",
+        "[1] Jin et al. (2020). What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams. arXiv.\nhttps://arxiv.org/abs/2009.13081"
+      ],
+      "tables": [],
+      "chart_count": 0
+    },
+    "after": [
+      {
+        "page": 7,
+        "text": [
+          "実例1：血友病Aの遺伝を考える",
+          "1. 医学の問題と実例",
+          "米国・英語：問題文・全選択肢",
+          "A 34-year-old male suffers from inherited hemophilia A. He and his wife have three unaffected daughters. What is the probability that the second daughter is a carrier of the disease?\nA. 0%\nB. 25%\nC. 50%\nD. 100%",
+          "日本語訳：問題文・全選択肢",
+          "34歳の男性は遺伝性血友病Aを患っている。妻との間には、発症していない娘が3人いる。2番目の娘がこの病気の保因者である確率はどれか。\nA. 0%\nB. 25%\nC. 50%\nD. 100%",
+          "正解：D　100%",
+          "[1] Jin et al. (n.d.). MedQA — official repository.  https://github.com/jind11/MedQA"
+        ],
+        "tables": [],
+        "chart_count": 0
+      }
+    ],
+    "reason": "原文と全候補・正解を保ち、読者に向けて説明と出典、表示を整理。"
+  },
+  {
+    "old_page": 8,
+    "new_pages": [
+      8
+    ],
+    "before": {
+      "page": 8,
+      "text": [
+        "数値の答えにも、医学の前提が必要になる",
+        "実例1の正解はDの100%。血友病Aの遺伝様式を踏まえて、娘が保因者となる確率を選ぶ。\n単純な計算問題のように見えても、病気、遺伝様式、性別と親子関係を読み取る必要がある。\n選択肢の数値は0%、25%、50%、100%。4択版では、5択版にあった75%の誤答が取り除かれている。",
+        "1. 医学の問題と実例",
+        "[1] Jin et al. (2020). What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams. arXiv.\nhttps://arxiv.org/abs/2009.13081"
+      ],
+      "tables": [],
+      "chart_count": 0
+    },
+    "after": [
+      {
+        "page": 8,
+        "text": [
+          "数値の答えにも、医学の前提が必要になる",
+          "実例1の正解はDの100%。血友病Aの遺伝様式を踏まえて、娘が保因者となる確率を選ぶ。\n単純な計算問題のように見えても、病気、遺伝様式、性別と親子関係を読み取る必要がある。\n選択肢の数値は0%、25%、50%、100%。4択版では、5択版にあった75%の誤答が取り除かれている。",
+          "1. 医学の問題と実例",
+          "[1] Jin et al. (2020). What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams. arXiv.\nhttps://arxiv.org/abs/2009.13081v1\n[2] Jin et al. (n.d.). MedQA — official repository.  https://github.com/jind11/MedQA"
+        ],
+        "tables": [],
+        "chart_count": 0
+      }
+    ],
+    "reason": "原文と全候補・正解を保ち、読者に向けて説明と出典、表示を整理。"
+  },
+  {
+    "old_page": 9,
+    "new_pages": [
+      9
+    ],
+    "before": {
+      "page": 9,
+      "text": [
+        "実例2：薬剤による検査値の変化",
+        "1. 医学の問題と実例",
+        "US・4択／test JSONL 837行目／step1",
+        "原文：質問と全選択肢（全文）",
+        "A 72-year-old anthropologist with long-standing hypertension visits your office for a routine exam. You notice an abnormality on his laboratory results caused by his regimen of captopril and triamterene. What abnormality did you most likely find?\n\nA. Hyperkalemia\nB. Hypernatremia\nC. Thrombocytopenia\nD. Anemia",
+        "日本語訳：質問と全選択肢",
+        "長年高血圧を患っている72歳の人類学者が定期診察に来た。カプトプリルとトリアムテレンの服用による検査値の異常が見つかった。最も考えられる異常はどれか。\n\nA. 高カリウム血症\nB. 高ナトリウム血症\nC. 血小板減少症\nD. 貧血",
+        "正解：A　高カリウム血症",
+        "[1] Jin et al. (2020). What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams. arXiv.\nhttps://arxiv.org/abs/2009.13081"
+      ],
+      "tables": [],
+      "chart_count": 0
+    },
+    "after": [
+      {
+        "page": 9,
+        "text": [
+          "実例2：薬剤による検査値の変化",
+          "1. 医学の問題と実例",
+          "米国・英語：問題文・全選択肢",
+          "A 72-year-old anthropologist with long-standing hypertension visits your office for a routine exam. You notice an abnormality on his laboratory results caused by his regimen of captopril and triamterene. What abnormality did you most likely find?\nA. Hyperkalemia\nB. Hypernatremia\nC. Thrombocytopenia\nD. Anemia",
+          "日本語訳：問題文・全選択肢",
+          "長年高血圧を患っている72歳の人類学者が定期診察に来た。カプトプリルとトリアムテレンの服用による検査値の異常が見つかった。最も考えられる異常はどれか。\nA. 高カリウム血症\nB. 高ナトリウム血症\nC. 血小板減少症\nD. 貧血",
+          "正解：A　高カリウム血症",
+          "[1] Jin et al. (n.d.). MedQA — official repository.  https://github.com/jind11/MedQA"
+        ],
+        "tables": [],
+        "chart_count": 0
+      }
+    ],
+    "reason": "原文と全候補・正解を保ち、読者に向けて説明と出典、表示を整理。"
+  },
+  {
+    "old_page": 10,
+    "new_pages": [
+      10
+    ],
+    "before": {
+      "page": 10,
+      "text": [
+        "薬剤名と、起こり得る変化を結び付ける",
+        "実例2は、カプトプリルとトリアムテレンを服用している患者の検査値を問う。注釈の正解は高カリウム血症。\n年齢や職業だけで答えを選ぶのではなく、薬剤の組合せと選択肢の検査所見を結び付ける。\n疾患名だけでなく、副作用、機序、検査、対応する処置まで、多様な形で医学知識を問える。",
+        "1. 医学の問題と実例",
+        "[1] Jin et al. (2020). What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams. arXiv.\nhttps://arxiv.org/abs/2009.13081"
+      ],
+      "tables": [],
+      "chart_count": 0
+    },
+    "after": [
+      {
+        "page": 10,
+        "text": [
+          "薬剤名と、起こり得る変化を結び付ける",
+          "実例2は、カプトプリルとトリアムテレンを服用している患者の検査値を問う。注釈の正解は高カリウム血症。\n年齢や職業だけで答えを選ぶのではなく、薬剤の組合せと選択肢の検査所見を結び付ける。\n疾患名だけでなく、副作用、機序、検査、対応する処置まで、多様な形で医学知識を問える。",
+          "1. 医学の問題と実例",
+          "[1] Jin et al. (2020). What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams. arXiv.\nhttps://arxiv.org/abs/2009.13081v1"
+        ],
+        "tables": [],
+        "chart_count": 0
+      }
+    ],
+    "reason": "原文と全候補・正解を保ち、読者に向けて説明と出典、表示を整理。"
+  },
+  {
+    "old_page": 11,
+    "new_pages": [
+      11
+    ],
+    "before": {
+      "page": 11,
+      "text": [
+        "実例3：放射線の作用を問う",
+        "1. 医学の問題と実例",
+        "US・4択／test JSONL 51行目／step1",
+        "原文：質問と全選択肢（全文）",
+        "A 65-year-old male is treated for anal carcinoma with therapy including external beam radiation. How does radiation affect cancer cells?\n\nA. Induces the formation of thymidine dimers\nB. Induces the formation of disulfide bonds\nC. Induces deamination of cytosine\nD. Induces breaks in double-stranded DNA",
+        "日本語訳：質問と全選択肢",
+        "65歳の男性が肛門癌に対し、外照射を含む治療を受けている。放射線は癌細胞にどのような作用を及ぼすか。\n\nA. チミジン二量体の形成を誘導する\nB. ジスルフィド結合の形成を誘導する\nC. シトシンの脱アミノ化を誘導する\nD. 二本鎖DNAの切断を誘導する",
+        "正解：D　二本鎖DNAの切断を誘導する",
+        "[1] Jin et al. (2020). What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams. arXiv.\nhttps://arxiv.org/abs/2009.13081"
+      ],
+      "tables": [],
+      "chart_count": 0
+    },
+    "after": [
+      {
+        "page": 11,
+        "text": [
+          "実例3：放射線の作用を問う",
+          "1. 医学の問題と実例",
+          "米国・英語：問題文・全選択肢",
+          "A 65-year-old male is treated for anal carcinoma with therapy including external beam radiation. How does radiation affect cancer cells?\nA. Induces the formation of thymidine dimers\nB. Induces the formation of disulfide bonds\nC. Induces deamination of cytosine\nD. Induces breaks in double-stranded DNA",
+          "日本語訳：問題文・全選択肢",
+          "65歳の男性が肛門癌に対し、外照射を含む治療を受けている。放射線は癌細胞にどのような作用を及ぼすか。\nA. チミジン二量体の形成を誘導する\nB. ジスルフィド結合の形成を誘導する\nC. シトシンの脱アミノ化を誘導する\nD. 二本鎖DNAの切断を誘導する",
+          "正解：D　二本鎖DNAの切断を誘導する",
+          "[1] Jin et al. (n.d.). MedQA — official repository.  https://github.com/jind11/MedQA"
+        ],
+        "tables": [],
+        "chart_count": 0
+      }
+    ],
+    "reason": "原文と全候補・正解を保ち、読者に向けて説明と出典、表示を整理。"
+  },
+  {
+    "old_page": 12,
+    "new_pages": [
+      12
+    ],
+    "before": {
+      "page": 12,
+      "text": [
+        "知識の直接照合から、症例の推論まで含む",
+        "実例3は、放射線の作用として二本鎖DNAの切断を選ぶ。症例の背景と、細胞に起こる機序を対応させる。\n構築時には、知識を直接問う問題と、複数の根拠を要する症例問題を人手で分類した。\n米国版devから無作為抽出した100問では、症例に基づく第2の型が98%。この割合は全件への自動注釈ではない。",
+        "1. 医学の問題と実例",
+        "[1] Jin et al. (2020). What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams. arXiv.\nhttps://arxiv.org/abs/2009.13081"
+      ],
+      "tables": [],
+      "chart_count": 0
+    },
+    "after": [
+      {
+        "page": 12,
+        "text": [
+          "知識の直接照合から、症例の推論まで含む",
+          "実例3は、放射線の作用として二本鎖DNAの切断を選ぶ。症例の背景と、細胞に起こる機序を対応させる。\n元研究は、単一の知識を直接問う問題と、患者の症例から診断・治療などを判断する問題に分けて分析した。\n開発用の各100問を人手で分類した調査では、症例問題の割合は米国98%、中国本土25%、台湾31%だった。",
+          "1. 医学の問題と実例",
+          "[1] Jin et al. (2020). What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams. arXiv.\nhttps://arxiv.org/abs/2009.13081v1"
+        ],
+        "tables": [],
+        "chart_count": 0
+      }
+    ],
+    "reason": "原文と全候補・正解を保ち、読者に向けて説明と出典、表示を整理。"
+  },
+  {
+    "old_page": 13,
+    "new_pages": [
+      13
+    ],
+    "before": {
+      "page": 13,
+      "text": [
+        "2. 3言語の構成と作成方法",
+        "2. 3言語の構成と作成方法"
+      ],
+      "tables": [],
+      "chart_count": 0
+    },
+    "after": [
+      {
+        "page": 13,
+        "text": [
+          "2. 三つの地域と作成方法",
+          "2. 三つの地域と作成方法"
+        ],
+        "tables": [],
+        "chart_count": 0
+      }
+    ],
+    "reason": "原文と全候補・正解を保ち、読者に向けて説明と出典、表示を整理。"
+  },
+  {
+    "old_page": 14,
+    "new_pages": [
+      14
+    ],
+    "before": {
+      "page": 14,
+      "text": [
+        "3言語・3地域、合計61,097問",
+        "2. 3言語の構成と作成方法",
+        "地域ごとに収集した問題であり、同じ問題の3言語翻訳ではない。",
+        "[1] Jin et al. (2020). What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams. arXiv.\nhttps://arxiv.org/abs/2009.13081\n[2] Stanford CRFM (2023). MedQAScenario. HELM v0.3.0.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/med_qa_scenario.py"
+      ],
+      "tables": [
+        [
+          [
+            "版",
+            "言語",
+            "問題数",
+            "HELM"
+          ],
+          [
+            "USMLE",
+            "英語",
+            "12,723",
+            "4択版を使用"
+          ],
+          [
+            "MCMLE",
+            "簡体字中国語",
+            "34,251",
+            "対象外"
+          ],
+          [
+            "TWMLE",
+            "繁体字中国語",
+            "14,123",
+            "対象外"
+          ]
+        ]
+      ],
+      "chart_count": 0
+    },
+    "after": [
+      {
+        "page": 14,
+        "text": [
+          "三つの地域、合計61,097問",
+          "2. 三つの地域と作成方法",
+          "地域ごとに収集した問題であり、同じ問題の翻訳ではない。",
+          "[1] Jin et al. (2020). What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams. arXiv.\nhttps://arxiv.org/abs/2009.13081v1"
+        ],
+        "tables": [
+          [
+            [
+              "地域・略称",
+              "言語",
+              "問題数"
+            ],
+            [
+              "米国 USMLE",
+              "英語",
+              "12,723"
+            ],
+            [
+              "中国本土 MCMLE",
+              "簡体字中国語",
+              "34,251"
+            ],
+            [
+              "台湾 TWMLE",
+              "繁体字中国語",
+              "14,123"
+            ]
+          ]
+        ],
+        "chart_count": 0
+      }
+    ],
+    "reason": "HELM対象列を外し、元データの三地域・三言語と各問題数を示す。"
+  },
+  {
+    "old_page": 15,
+    "new_pages": [
+      17
+    ],
+    "before": {
+      "page": 15,
+      "text": [
+        "簡体字中国語版が最も多い",
+        "2. 3言語の構成と作成方法",
+        "問題数。3版を合わせて61,097問。",
+        "[1] Jin et al. (2020). What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams. arXiv.\nhttps://arxiv.org/abs/2009.13081"
+      ],
+      "tables": [],
+      "chart_count": 1
+    },
+    "after": [
+      {
+        "page": 17,
+        "text": [
+          "簡体字中国語版が最も多い",
+          "2. 三つの地域と作成方法",
+          "問題数。3版を合わせて61,097問。",
+          "[1] Jin et al. (2020). What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams. arXiv.\nhttps://arxiv.org/abs/2009.13081v1"
+        ],
+        "tables": [],
+        "chart_count": 1
+      }
+    ],
+    "reason": "原文と全候補・正解を保ち、読者に向けて説明と出典、表示を整理。"
+  },
+  {
+    "old_page": 16,
+    "new_pages": [
+      18
+    ],
+    "before": {
+      "page": 16,
+      "text": [
+        "公開されている試験・模擬問題を集めた",
+        "米国、中国本土、台湾の医師資格試験に関する問題を、公開Webサイトから収集した。実際の試験問題と模擬問題の両方を含む。\n米国版の出所にはMedbullets、AMBOSS、Lecturioなどがある。台湾版は試験機関の公開問題を使う。\n教科書の段落を知識源として別に用意し、検索した根拠を使って選択肢を解くOpenQAを設計した。",
+        "2. 3言語の構成と作成方法",
+        "[1] Jin et al. (2020). What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams. arXiv.\nhttps://arxiv.org/abs/2009.13081"
+      ],
+      "tables": [],
+      "chart_count": 0
+    },
+    "after": [
+      {
+        "page": 18,
+        "text": [
+          "公開されている試験・模擬問題を集めた",
+          "米国、中国本土、台湾の医師資格試験に関する問題を、公開Webサイトから収集した。実際の試験問題と模擬問題の両方を含む。\n米国版の出所にはMedbullets、AMBOSS、Lecturioなどがある。台湾版は試験機関の公開問題を使う。\n教科書の段落を知識源として別に用意し、検索した根拠を使って選択肢を解くOpenQAを設計した。",
+          "2. 三つの地域と作成方法",
+          "[1] Jin et al. (2020). What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams. arXiv.\nhttps://arxiv.org/abs/2009.13081v1"
+        ],
+        "tables": [],
+        "chart_count": 0
+      }
+    ],
+    "reason": "原文と全候補・正解を保ち、読者に向けて説明と出典、表示を整理。"
+  },
+  {
+    "old_page": 17,
+    "new_pages": [
+      19
+    ],
+    "before": {
+      "page": 17,
+      "text": [
+        "4択版では、誤答を一つ減らしている",
+        "USとMainlandの通常splitは5択。4_options版では誤答の一つを除き、正解1件と誤答3件にする。論文は選択肢順の並べ替えも説明している。\n台湾版は4択。3版の論文実験は、いずれも4択で報告された。\nHELMの実装はUS/4_optionsだけを読み、全レコードが4択であることを検査する。docstringの5択例とは区別する。",
+        "2. 3言語の構成と作成方法",
+        "[1] Jin et al. (2020). What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams. arXiv.\nhttps://arxiv.org/abs/2009.13081\n[2] Stanford CRFM (2023). MedQAScenario. HELM v0.3.0.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/med_qa_scenario.py"
+      ],
+      "tables": [],
+      "chart_count": 0
+    },
+    "after": [
+      {
+        "page": 19,
+        "text": [
+          "4択版では、誤答を一つ減らしている",
+          "米国と中国本土の通常の分割データは5択。4_options版では誤答を一つ除き、正解1件と誤答3件にする。元論文は選択肢の順序の並べ替えも説明している。\n台湾版は4択。元研究の実験は、三つの地域とも4択で報告された。",
+          "2. 三つの地域と作成方法",
+          "[1] Jin et al. (2020). What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams. arXiv.\nhttps://arxiv.org/abs/2009.13081v1\n[2] Jin et al. (n.d.). MedQA — official repository.  https://github.com/jind11/MedQA"
+        ],
+        "tables": [],
+        "chart_count": 0
+      }
+    ],
+    "reason": "原文と全候補・正解を保ち、読者に向けて説明と出典、表示を整理。"
+  },
+  {
+    "old_page": 18,
+    "new_pages": [
+      20
+    ],
+    "before": {
+      "page": 18,
+      "text": [
+        "公式splitは、およそ80：10：10",
+        "2. 3言語の構成と作成方法",
+        "配布されたsplitファイルの件数も直接集計し、全9値が一致した。",
+        "[1] Jin et al. (2020). What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams. arXiv.\nhttps://arxiv.org/abs/2009.13081"
+      ],
+      "tables": [
+        [
+          [
+            "版",
+            "train",
+            "dev",
+            "test"
+          ],
+          [
+            "USMLE",
+            "10,178",
+            "1,272",
+            "1,273"
+          ],
+          [
+            "MCMLE",
+            "27,400",
+            "3,425",
+            "3,426"
+          ],
+          [
+            "TWMLE",
+            "11,298",
+            "1,412",
+            "1,413"
+          ]
+        ]
+      ],
+      "chart_count": 0
+    },
+    "after": [
+      {
+        "page": 20,
+        "text": [
+          "公式splitは、およそ80：10：10",
+          "2. 三つの地域と作成方法",
+          "問題ごとに無作為に分けた学習・開発・テストの件数。",
+          "[1] Jin et al. (2020). What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams. arXiv.\nhttps://arxiv.org/abs/2009.13081v1"
+        ],
+        "tables": [
+          [
+            [
+              "版",
+              "train",
+              "dev",
+              "test"
+            ],
+            [
+              "USMLE",
+              "10,178",
+              "1,272",
+              "1,273"
+            ],
+            [
+              "MCMLE",
+              "27,400",
+              "3,425",
+              "3,426"
+            ],
+            [
+              "TWMLE",
+              "11,298",
+              "1,412",
+              "1,413"
+            ]
+          ]
+        ],
+        "chart_count": 0
+      }
+    ],
+    "reason": "原文と全候補・正解を保ち、読者に向けて説明と出典、表示を整理。"
+  },
+  {
+    "old_page": 19,
+    "new_pages": [
+      21
+    ],
+    "before": {
+      "page": 19,
+      "text": [
+        "同じ問題でも、正解の文字は変わる",
+        "2. 3言語の構成と作成方法",
+        "質問と正解本文は同じ。文字だけを別の版から流用せず、選択肢の対応を保持する。",
+        "[1] Di Jin et al. MedQA. 著者の公式コード・データ配布案内（2026-10-18取得）。  https://github.com/jind11/MedQA"
+      ],
+      "tables": [
+        [
+          [
+            "版",
+            "実例1の選択肢",
+            "正解"
+          ],
+          [
+            "通常の5択",
+            "A:0%　B:25%　C:50%\nD:75%　E:100%",
+            "E"
+          ],
+          [
+            "4_options",
+            "A:0%　B:25%\nC:50%　D:100%",
+            "D"
+          ]
+        ]
+      ],
+      "chart_count": 0
+    },
+    "after": [
+      {
+        "page": 21,
+        "text": [
+          "同じ問題でも、正解の文字は変わる",
+          "2. 三つの地域と作成方法",
+          "実例1では、5択版のEも4択版のDも、答えの本文は100%。",
+          "[1] Jin et al. (n.d.). MedQA — official repository.  https://github.com/jind11/MedQA"
+        ],
+        "tables": [
+          [
+            [
+              "版",
+              "実例1の選択肢",
+              "正解"
+            ],
+            [
+              "通常の5択",
+              "A:0%　B:25%　C:50%\nD:75%　E:100%",
+              "E"
+            ],
+            [
+              "4_options",
+              "A:0%　B:25%\nC:50%　D:100%",
+              "D"
+            ]
+          ]
+        ],
+        "chart_count": 0
+      }
+    ],
+    "reason": "原文と全候補・正解を保ち、読者に向けて説明と出典、表示を整理。"
+  },
+  {
+    "old_page": 20,
+    "new_pages": [
+      22
+    ],
+    "before": {
+      "page": 20,
+      "text": [
+        "3. 評価方法とHELMの範囲",
+        "3. 評価方法とHELMの範囲"
+      ],
+      "tables": [],
+      "chart_count": 0
+    },
+    "after": [
+      {
+        "page": 22,
+        "text": [
+          "3. 教科書を使った元研究の評価",
+          "3. 教科書を使った元研究の評価"
+        ],
+        "tables": [],
+        "chart_count": 0
+      }
+    ],
+    "reason": "原文と全候補・正解を保ち、読者に向けて説明と出典、表示を整理。"
+  },
+  {
+    "old_page": 21,
+    "new_pages": [
+      23
+    ],
+    "before": {
+      "page": 21,
+      "text": [
+        "構築時は、教科書を検索してから選択肢を解く",
+        "論文のOpenQAは、質問・候補の答えと、教科書から抽出した文書集合を使う。検索器と読解モデルを組み合わせる。\n英語の教科書18冊と簡体字中国語の教科書33冊を収集し、段落に分けた。台湾版の実験では問題を英語に翻訳して英語側の知識源を使う。\n用意した教科書の根拠を検索できるかと、根拠から正しい選択肢を推論できるかの両方が成績に関わる。",
+        "3. 評価方法とHELMの範囲",
+        "[1] Jin et al. (2020). What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams. arXiv.\nhttps://arxiv.org/abs/2009.13081"
+      ],
+      "tables": [],
+      "chart_count": 0
+    },
+    "after": [
+      {
+        "page": 23,
+        "text": [
+          "構築時は、教科書を検索してから選択肢を解く",
+          "論文のOpenQAは、質問・候補の答えと、教科書から抽出した文書集合を使う。検索器と読解モデルを組み合わせる。\n英語の教科書18冊と簡体字中国語の教科書33冊を収集し、段落に分けた。台湾版の実験では問題を英語に翻訳して英語側の知識源を使う。\n用意した教科書の根拠を検索できるかと、根拠から正しい選択肢を推論できるかの両方が成績に関わる。",
+          "3. 教科書を使った元研究の評価",
+          "[1] Jin et al. (2020). What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams. arXiv.\nhttps://arxiv.org/abs/2009.13081v1"
+        ],
+        "tables": [],
+        "chart_count": 0
+      }
+    ],
+    "reason": "原文と全候補・正解を保ち、読者に向けて説明と出典、表示を整理。"
+  },
+  {
+    "old_page": 22,
+    "new_pages": [
+      24
+    ],
+    "before": {
+      "page": 22,
+      "text": [
+        "構築時の最良テスト正解率にも差がある",
+        "3. 評価方法とHELMの範囲",
+        "検索＋読解による2020年の報告。各版は4択、偶然の選択は25%。言語間で問題も方式も異なる。",
+        "[1] Jin et al. (2020). What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams. arXiv.\nhttps://arxiv.org/abs/2009.13081"
+      ],
+      "tables": [
+        [
+          [
+            "版",
+            "最良の方式",
+            "正解率"
+          ],
+          [
+            "USMLE",
+            "BioBERT-Large",
+            "36.7%"
+          ],
+          [
+            "MCMLE",
+            "RoBERTa-Large-wwm-ext",
+            "70.1%"
+          ],
+          [
+            "TWMLE",
+            "BioBERT-Large",
+            "42.0%"
+          ]
+        ]
+      ],
+      "chart_count": 0
+    },
+    "after": [
+      {
+        "page": 24,
+        "text": [
+          "元研究のテスト正答率は36.7〜70.1%",
+          "3. 教科書を使った元研究の評価",
+          "2020年の検索＋読解によるテスト正答率。各地域とも4択。台湾の問題は英語へ翻訳した。",
+          "[1] Jin et al. (2020). What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams. arXiv.\nhttps://arxiv.org/abs/2009.13081v1"
+        ],
+        "tables": [
+          [
+            [
+              "版",
+              "最良の方式",
+              "正答率"
+            ],
+            [
+              "USMLE",
+              "BioBERT-Large",
+              "36.7%"
+            ],
+            [
+              "MCMLE",
+              "RoBERTa-Large-wwm-ext",
+              "70.1%"
+            ],
+            [
+              "TWMLE",
+              "BioBERT-Large",
+              "42.0%"
+            ]
+          ]
+        ],
+        "chart_count": 0
+      }
+    ],
+    "reason": "原文と全候補・正解を保ち、読者に向けて説明と出典、表示を整理。"
+  },
+  {
+    "old_page": 23,
+    "new_pages": [],
+    "before": {
+      "page": 23,
+      "text": [
+        "HELMは、選択肢を並べて文字を生成させる",
+        "get_med_qa_specはmultiple_choice_jointを指定し、Question、A〜Dの候補、Answerを一つのプロンプトに並べる。\n指示は「Give a letter answer among A, B, C or D.」。モデルが生成した文字を、その問題の選択肢本文へ対応付けて採点する。\nこの設定は教科書検索を組み込まない。構築時の検索＋読解方式とは、モデルに渡す情報が異なる。",
+        "3. 評価方法とHELMの範囲",
+        "[1] Stanford CRFM (2023). get_med_qa_spec. HELM v0.3.0.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/run_specs.py\n[2] Stanford CRFM (2023). MultipleChoiceJointAdapter. HELM v0.3.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/adaptation/adapters/multiple_choice_joint_adapter.py"
+      ],
+      "tables": [],
+      "chart_count": 0
+    },
+    "after": [],
+    "reason": "元データの概要に不要な評価基盤固有の設定・得点・変換・監査・文献を別記録へ保存。"
+  },
+  {
+    "old_page": 24,
+    "new_pages": [],
+    "before": {
+      "page": 24,
+      "text": [
+        "文字を本文へ写してから、一致を判定する",
+        "正解がDの実例1では、出力Dを選択肢本文の100%へ写す。別の文字なら、その文字に対応する別の本文を比較する。\nBasicMetricには完全一致と、大文字・小文字、句読点、冠詞、空白を正規化した一致などがある。Classicの表示設定はtestのquasi_exact_match。\n生成文字の前後の空白は除くが、D.や100%を直接生成しても、文字から本文への写像には一致せず、正解扱いにならない。",
+        "3. 評価方法とHELMの範囲",
+        "[1] Stanford CRFM (2023). BasicMetric. HELM v0.3.0.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/metrics/basic_metrics.py\n[2] Stanford CRFM. HELM Classic v0.4.0（2023-11-17）。  https://crfm.stanford.edu/helm/classic/v0.4.0/"
+      ],
+      "tables": [],
+      "chart_count": 0
+    },
+    "after": [],
+    "reason": "元データの概要に不要な評価基盤固有の設定・得点・変換・監査・文献を別記録へ保存。"
+  },
+  {
+    "old_page": 25,
+    "new_pages": [],
+    "before": {
+      "page": 25,
+      "text": [
+        "Classic v0.4.0の公開runは0件",
+        "3. 評価方法とHELMの範囲",
+        "2026-10-18にlatest設定とv0.4.0の配布JSONを照合した。",
+        "[1] Stanford CRFM. HELM Classic v0.4.0（2023-11-17）。  https://crfm.stanford.edu/helm/classic/v0.4.0/"
+      ],
+      "tables": [
+        [
+          [
+            "確認対象",
+            "公開状態"
+          ],
+          [
+            "シナリオ定義",
+            "MedQAが登録されている"
+          ],
+          [
+            "表示上の主指標",
+            "quasi_exact_match / test"
+          ],
+          [
+            "run_specs・run suite索引",
+            "MedQAに該当するrunは0件"
+          ],
+          [
+            "モデル別の成績",
+            "この配布版には掲載値がない"
+          ]
+        ]
+      ],
+      "chart_count": 0
+    },
+    "after": [],
+    "reason": "元データの概要に不要な評価基盤固有の設定・得点・変換・監査・文献を別記録へ保存。"
+  },
+  {
+    "old_page": 26,
+    "new_pages": [],
+    "before": {
+      "page": 26,
+      "text": [
+        "データの規模と、公開実行の有無を分けて読む",
+        "米国版の4択データ12,723件は配布され、HELMの読込・採点設定も存在する。一方、このClassic配布版にモデル別の実行結果はない。\n構築時の36.7%などを、HELMによるモデル成績として扱わない。評価方式とモデル、使用する根拠が異なる。\nここでの実例は公式データから取得した問題であり、公開モデルの予測例ではない。",
+        "3. 評価方法とHELMの範囲",
+        "[1] Jin et al. (2020). What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams. arXiv.\nhttps://arxiv.org/abs/2009.13081"
+      ],
+      "tables": [],
+      "chart_count": 0
+    },
+    "after": [],
+    "reason": "元データの概要に不要な評価基盤固有の設定・得点・変換・監査・文献を別記録へ保存。"
+  },
+  {
+    "old_page": 27,
+    "new_pages": [
+      25
+    ],
+    "before": {
+      "page": 27,
+      "text": [
+        "4. 入手と再現の手順",
+        "4. 入手と再現の手順"
+      ],
+      "tables": [],
+      "chart_count": 0
+    },
+    "after": [
+      {
+        "page": 25,
+        "text": [
+          "4. 入手と使い方",
+          "4. 入手と使い方"
+        ],
+        "tables": [],
+        "chart_count": 0
+      }
+    ],
+    "reason": "原文と全候補・正解を保ち、読者に向けて説明と出典、表示を整理。"
+  },
+  {
+    "old_page": 28,
+    "new_pages": [
+      26
+    ],
+    "before": {
+      "page": 28,
+      "text": [
+        "公式配布から、使う版とsplitを選ぶ",
+        "公式GitHubの案内からdata_clean.zipを取得する。質問と教科書を含むが、HELMが読むのはquestions/US/4_options内のJSONL。\nphrases_no_exclude_train、dev、testの各ファイルを選ぶ。HELMではdevがvalidというsplit名になる。\n質問、全候補、answer_idxを一組として保存する。版、ファイル、行番号、原レコードのハッシュを残すと照合しやすい。",
+        "4. 入手と再現の手順",
+        "[1] Di Jin et al. MedQA. 著者の公式コード・データ配布案内（2026-10-18取得）。  https://github.com/jind11/MedQA\n[2] Stanford CRFM (2023). MedQAScenario. HELM v0.3.0.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/med_qa_scenario.py"
+      ],
+      "tables": [],
+      "chart_count": 0
+    },
+    "after": [
+      {
+        "page": 26,
+        "text": [
+          "公式配布から、使う版とsplitを選ぶ",
+          "公式GitHubの案内から、問題と教科書を含むdata_clean.zipを取得できる。questions内はUS、Mainland、Taiwanに分かれている。\n米国・中国本土の4択版は4_options内のtrain、dev、testを使う。各JSONLファイルの1行が1問で、問題文・選択肢・正解が入っている。",
+          "4. 入手と使い方",
+          "[1] Jin et al. (n.d.). MedQA — official repository.  https://github.com/jind11/MedQA"
+        ],
+        "tables": [],
+        "chart_count": 0
+      }
+    ],
+    "reason": "原文と全候補・正解を保ち、読者に向けて説明と出典、表示を整理。"
+  },
+  {
+    "old_page": 29,
+    "new_pages": [
+      27
+    ],
+    "before": {
+      "page": 29,
+      "text": [
+        "利用条件は、コードと収集した問題を区別する",
+        "公式リポジトリにはMIT Licenseがある。構築論文は、試験問題の利用と選択肢の加工についてfair useの考え方を説明する。\n教科書や試験問題の第三者の権利まで、コードのライセンスだけで判断しない。出所、使う範囲、配布条件を確認する。\nこの資料では出典を付して選んだ13問を紹介する。教科書や質問全件のファイルは、資料の配布物には含めない。",
+        "4. 入手と再現の手順",
+        "[1] Di Jin (2022). MIT License. MedQA repository.  https://github.com/jind11/MedQA/blob/master/LICENSE\n[2] Jin et al. (2020). What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams. arXiv.\nhttps://arxiv.org/abs/2009.13081"
+      ],
+      "tables": [],
+      "chart_count": 0
+    },
+    "after": [
+      {
+        "page": 27,
+        "text": [
+          "コードと試験問題・教科書の利用条件",
+          "公式リポジトリにはMIT Licenseがある。元論文は試験問題と選択肢の加工についてfair useの考え方を説明し、教科書の公開は研究利用の条件に従うとしている。\n試験問題や教科書には第三者の権利もある。再利用・再配布時には、データの出所と配布条件を確認する。",
+          "4. 入手と使い方",
+          "[1] Di Jin (2022). MIT License. MedQA repository.  https://github.com/jind11/MedQA/blob/master/LICENSE\n[2] Jin et al. (2020). What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams. arXiv.\nhttps://arxiv.org/abs/2009.13081v1"
+        ],
+        "tables": [],
+        "chart_count": 0
+      }
+    ],
+    "reason": "原文と全候補・正解を保ち、読者に向けて説明と出典、表示を整理。"
+  },
+  {
+    "old_page": 30,
+    "new_pages": [
+      28
+    ],
+    "before": {
+      "page": 30,
+      "text": [
+        "原レコードと読込処理を、同じ版で照合する",
+        "取得した公式ZIPとコードにSHA-256を保存し、HELM v0.3.0の読込処理を実行した。全12,723件が4択で、各1件のcorrectタグを持つ。\n全件でanswer_idxと正解本文の対応が一致した。13実例にも元ファイルの行とハッシュを保存した。\nHELMは選択肢末尾の引用符と空白を整える。この資料の英語欄は元データを保持し、整形の前後は別記録に残した。",
+        "4. 入手と再現の手順",
+        "[1] Stanford CRFM (2023). MedQAScenario. HELM v0.3.0.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/med_qa_scenario.py"
+      ],
+      "tables": [],
+      "chart_count": 0
+    },
+    "after": [
+      {
+        "page": 28,
+        "text": [
+          "JSONLから最初の問題と正解を読む",
+          "4. 入手と使い方",
+          "import json\nwith open('questions/US/4_options/phrases_no_exclude_test.jsonl',\n          encoding='utf-8') as f:\n    q = json.loads(next(f))\nprint(q['question'])\nprint(q['options'])\nprint(q['answer_idx'], q['answer'])",
+          "1行を読み、問題文・候補・正解の文字と本文を取り出す。",
+          "[1] Jin et al. (n.d.). MedQA — official repository.  https://github.com/jind11/MedQA"
+        ],
+        "tables": [],
+        "chart_count": 0
+      }
+    ],
+    "reason": "照合手順から、実際にJSONL一行を読み取る利用コードへ。"
+  },
+  {
+    "old_page": 31,
+    "new_pages": [
+      29
+    ],
+    "before": {
+      "page": 31,
+      "text": [
+        "文字情報の範囲と、評価できることを捉える",
+        "医学の知識を、症例の記述と選択肢に結び付けられるかを調べる。自由記述の診療記録や、実際の診療行動を採点するデータではない。\n配布テキストには図への言及が残る問題もある。たとえばtest[945]は緑の矢印を指すが、JSONLには図が含まれない。\n問題の出所や専門分野、言語、選択肢の版をそろえ、何を与えた状態の正解率なのかを記録する。",
+        "4. 入手と再現の手順",
+        "[1] Di Jin et al. MedQA. 著者の公式コード・データ配布案内（2026-10-18取得）。  https://github.com/jind11/MedQA"
+      ],
+      "tables": [],
+      "chart_count": 0
+    },
+    "after": [
+      {
+        "page": 29,
+        "text": [
+          "医学試験への回答をテキストで評価する",
+          "医学知識を症例の記述と選択肢に結び付ける力を調べられる。試験問題への回答を通じた評価であり、実際の診療場面での行動や安全性を直接測るものではない。\n配布テキストには、緑の矢印など図を参照する問題も残る。問題文に図への言及があっても、JSONLには図が含まれていない。",
+          "4. 入手と使い方",
+          "[1] Jin et al. (n.d.). MedQA — official repository.  https://github.com/jind11/MedQA"
+        ],
+        "tables": [],
+        "chart_count": 0
+      }
+    ],
+    "reason": "原文と全候補・正解を保ち、読者に向けて説明と出典、表示を整理。"
+  },
+  {
+    "old_page": 32,
+    "new_pages": [
+      30
+    ],
+    "before": {
+      "page": 32,
+      "text": [
+        "医学知識の適用を、多肢選択で調べる",
+        "MedQAは英語・簡体字中国語・繁体字中国語の61,097問。資格試験と模擬問題から、知識の照合と症例に基づく推論を扱う。\nHELMの範囲は米国版の英語・4択。文字を選択肢本文へ写して一致を採点し、教科書の検索はこの設定に含まれない。\n配布データ、評価設定、構築時の成績、公開runを区別して使う。Classic v0.4.0には、このシナリオのモデル別成績はない。",
+        "4. 入手と再現の手順",
+        "[1] Jin et al. (2020). What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams. arXiv.\nhttps://arxiv.org/abs/2009.13081\n[2] Stanford CRFM (2023). MedQAScenario. HELM v0.3.0.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/med_qa_scenario.py"
+      ],
+      "tables": [],
+      "chart_count": 0
+    },
+    "after": [
+      {
+        "page": 30,
+        "text": [
+          "医学知識の適用を、多肢選択で調べる",
+          "MedQAは、英語・簡体字中国語・繁体字中国語の61,097問を収録する。資格試験と模擬問題から、医学知識の照合と症例に基づく推論を扱う。\n元研究は教科書から根拠を検索して回答する方式を評価した。地域ごとに問題と知識源が異なり、使用する言語・選択肢の版・根拠の与え方に応じて結果を解釈する。",
+          "4. 入手と使い方",
+          "[1] Jin et al. (2020). What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams. arXiv.\nhttps://arxiv.org/abs/2009.13081v1\n[2] Jin et al. (n.d.). MedQA — official repository.  https://github.com/jind11/MedQA"
+        ],
+        "tables": [],
+        "chart_count": 0
+      }
+    ],
+    "reason": "原文と全候補・正解を保ち、読者に向けて説明と出典、表示を整理。"
+  },
+  {
+    "old_page": 33,
+    "new_pages": [
+      31
+    ],
+    "before": {
+      "page": 33,
+      "text": [
+        "Appendix",
+        "Appendix"
+      ],
+      "tables": [],
+      "chart_count": 0
+    },
+    "after": [
+      {
+        "page": 31,
+        "text": [
+          "Appendix",
+          "Appendix"
+        ],
+        "tables": [],
+        "chart_count": 0
+      }
+    ],
+    "reason": "原文と全候補・正解を保ち、読者に向けて説明と出典、表示を整理。"
+  },
+  {
+    "old_page": 34,
+    "new_pages": [
+      32
+    ],
+    "before": {
+      "page": 34,
+      "text": [
+        "",
+        "追加の実例\nデータ形式と集計\n研究と参考文献",
+        "Appendix: 目次"
+      ],
+      "tables": [],
+      "chart_count": 0
+    },
+    "after": [
+      {
+        "page": 32,
+        "text": [
+          "",
+          "追加の実例\n米国版の試験区分\n参考文献",
+          "Appendix: 目次"
+        ],
+        "tables": [],
+        "chart_count": 0
+      }
+    ],
+    "reason": "原文と全候補・正解を保ち、読者に向けて説明と出典、表示を整理。"
+  },
+  {
+    "old_page": 35,
+    "new_pages": [
+      33
+    ],
+    "before": {
+      "page": 35,
+      "text": [
+        "実例4：免疫グロブリンの役割",
+        "Appendix: 1. 追加の実例",
+        "US・4択／test JSONL 997行目／step1",
+        "原文：質問と全選択肢（全文）",
+        "The only immunoglobulin found as a dimer has what primary function?\n\nA. Protect against invasive helminth infection\nB. Protect against viral infections\nC. Inhibiting bacterial adherance and colonization of mucous membranes\nD. Provides the most specific recognition to circulating antigens in the bloodstream",
+        "日本語訳：質問と全選択肢",
+        "二量体として存在する唯一の免疫グロブリンの主な機能はどれか。\n\nA. 侵入性の蠕虫感染から防御する\nB. ウイルス感染から防御する\nC. 粘膜への細菌の付着と定着を阻害する\nD. 血中を循環する抗原を最も特異的に認識する",
+        "正解：C　粘膜への細菌の付着と定着を阻害する",
+        "[1] Jin et al. (2020). What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams. arXiv.\nhttps://arxiv.org/abs/2009.13081"
+      ],
+      "tables": [],
+      "chart_count": 0
+    },
+    "after": [
+      {
+        "page": 33,
+        "text": [
+          "実例6：免疫グロブリンの役割",
+          "Appendix: 1. 追加の実例",
+          "米国・英語：問題文・全選択肢",
+          "The only immunoglobulin found as a dimer has what primary function?\nA. Protect against invasive helminth infection\nB. Protect against viral infections\nC. Inhibiting bacterial adherance and colonization of mucous membranes\nD. Provides the most specific recognition to circulating antigens in the bloodstream",
+          "日本語訳：問題文・全選択肢",
+          "二量体として存在する唯一の免疫グロブリンの主な機能はどれか。\nA. 侵入性の蠕虫感染から防御する\nB. ウイルス感染から防御する\nC. 粘膜への細菌の付着と定着を阻害する\nD. 血中を循環する抗原を最も特異的に認識する",
+          "正解：C　粘膜への細菌の付着と定着を阻害する",
+          "[1] Jin et al. (n.d.). MedQA — official repository.  https://github.com/jind11/MedQA"
+        ],
+        "tables": [],
+        "chart_count": 0
+      }
+    ],
+    "reason": "原文と全候補・正解を保ち、読者に向けて説明と出典、表示を整理。"
+  },
+  {
+    "old_page": 36,
+    "new_pages": [
+      34
+    ],
+    "before": {
+      "page": 36,
+      "text": [
+        "実例5：筋細胞の弛緩に必要な過程",
+        "Appendix: 1. 追加の実例",
+        "US・4択／test JSONL 944行目／step1",
+        "原文：質問と全選択肢（全文）",
+        "A scientist observes a myocyte beating in cell culture. Which step is the most direct necessary component of relaxation for this cell?\n\nA. Influx of sodium ions\nB. Influx of calcium ions from the sacroplasmic reticulum\nC. Influx of calcium ions from outside the myocyte\nD. Efflux of calcium ions",
+        "日本語訳：質問と全選択肢",
+        "研究者が細胞培養中で拍動する筋細胞を観察している。この細胞が弛緩するために最も直接必要な過程はどれか。\n\nA. ナトリウムイオンの流入\nB. 筋小胞体からのカルシウムイオンの流入\nC. 筋細胞外からのカルシウムイオンの流入\nD. カルシウムイオンの流出",
+        "正解：D　カルシウムイオンの流出",
+        "[1] Jin et al. (2020). What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams. arXiv.\nhttps://arxiv.org/abs/2009.13081"
+      ],
+      "tables": [],
+      "chart_count": 0
+    },
+    "after": [
+      {
+        "page": 34,
+        "text": [
+          "実例7：筋細胞の弛緩に必要な過程",
+          "Appendix: 1. 追加の実例",
+          "米国・英語：問題文・全選択肢",
+          "A scientist observes a myocyte beating in cell culture. Which step is the most direct necessary component of relaxation for this cell?\nA. Influx of sodium ions\nB. Influx of calcium ions from the sacroplasmic reticulum\nC. Influx of calcium ions from outside the myocyte\nD. Efflux of calcium ions",
+          "日本語訳：問題文・全選択肢",
+          "研究者が細胞培養中で拍動する筋細胞を観察している。この細胞が弛緩するために最も直接必要な過程はどれか。\nA. ナトリウムイオンの流入\nB. 筋小胞体からのカルシウムイオンの流入\nC. 筋細胞外からのカルシウムイオンの流入\nD. カルシウムイオンの流出",
+          "正解：D　カルシウムイオンの流出",
+          "[1] Jin et al. (n.d.). MedQA — official repository.  https://github.com/jind11/MedQA"
+        ],
+        "tables": [],
+        "chart_count": 0
+      }
+    ],
+    "reason": "原文と全候補・正解を保ち、読者に向けて説明と出典、表示を整理。"
+  },
+  {
+    "old_page": 37,
+    "new_pages": [
+      35
+    ],
+    "before": {
+      "page": 37,
+      "text": [
+        "実例6：診断の閾値と偽陰性",
+        "Appendix: 1. 追加の実例",
+        "US・4択／test JSONL 482行目／step1",
+        "原文：質問と全選択肢（全文）",
+        "Current recommendations state that a single hemoglobin A1c value of greater than 6.5% is diagnostic of diabetes mellitus. If this 6.5% cut-off is to be increased to 7.0%, which of the following would be true?\n\nA. Increase in false negative test results\nB. Increase in false positive test results\nC. Decrease in true negative test results\nD. Increase in true positive test results",
+        "日本語訳：質問と全選択肢",
+        "現行の推奨では、ヘモグロビンA1cが1回でも6.5%を超えれば糖尿病と診断するとされる。この閾値を6.5%から7.0%に上げた場合、正しいものはどれか。\n\nA. 偽陰性の検査結果が増える\nB. 偽陽性の検査結果が増える\nC. 真陰性の検査結果が減る\nD. 真陽性の検査結果が増える",
+        "正解：A　偽陰性の検査結果が増える",
+        "[1] Jin et al. (2020). What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams. arXiv.\nhttps://arxiv.org/abs/2009.13081"
+      ],
+      "tables": [],
+      "chart_count": 0
+    },
+    "after": [
+      {
+        "page": 35,
+        "text": [
+          "実例8：診断の閾値と偽陰性",
+          "Appendix: 1. 追加の実例",
+          "米国・英語：問題文・全選択肢",
+          "Current recommendations state that a single hemoglobin A1c value of greater than 6.5% is diagnostic of diabetes mellitus. If this 6.5% cut-off is to be increased to 7.0%, which of the following would be true?\nA. Increase in false negative test results\nB. Increase in false positive test results\nC. Decrease in true negative test results\nD. Increase in true positive test results",
+          "日本語訳：問題文・全選択肢",
+          "現行の推奨では、ヘモグロビンA1cの1回の測定値が6.5%を超えれば糖尿病と診断するとされる。この閾値を6.5%から7.0%に上げた場合、正しいものはどれか。\nA. 偽陰性の検査結果が増える\nB. 偽陽性の検査結果が増える\nC. 真陰性の検査結果が減る\nD. 真陽性の検査結果が増える",
+          "正解：A　偽陰性の検査結果が増える",
+          "[1] Jin et al. (n.d.). MedQA — official repository.  https://github.com/jind11/MedQA"
+        ],
+        "tables": [],
+        "chart_count": 0
+      }
+    ],
+    "reason": "原文と全候補・正解を保ち、読者に向けて説明と出典、表示を整理。"
+  },
+  {
+    "old_page": 38,
+    "new_pages": [
+      36
+    ],
+    "before": {
+      "page": 38,
+      "text": [
+        "実例7：皮膚の所見から診断を選ぶ",
+        "Appendix: 1. 追加の実例",
+        "US・4択／test JSONL 226行目／step1",
+        "原文：質問と全選択肢（全文）",
+        "A 19-year-old Caucasian male presents to your office with hypopigmented skin. He undergoes a skin biopsy and is found to have an absence of melanocytes in the epidermis. Which of the following is the most likely diagnosis?\n\nA. Tinea versicolor\nB. Albinism\nC. Vitiligo\nD. Melanoma",
+        "日本語訳：質問と全選択肢",
+        "19歳の白人男性が皮膚の色素減少を訴えて受診した。皮膚生検で、表皮にメラノサイトが存在しないことが分かった。最も考えられる診断はどれか。\n\nA. 癜風\nB. 白皮症\nC. 尋常性白斑\nD. 悪性黒色腫",
+        "正解：C　尋常性白斑",
+        "[1] Jin et al. (2020). What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams. arXiv.\nhttps://arxiv.org/abs/2009.13081"
+      ],
+      "tables": [],
+      "chart_count": 0
+    },
+    "after": [
+      {
+        "page": 36,
+        "text": [
+          "実例9：皮膚の所見から診断を選ぶ",
+          "Appendix: 1. 追加の実例",
+          "米国・英語：問題文・全選択肢",
+          "A 19-year-old Caucasian male presents to your office with hypopigmented skin. He undergoes a skin biopsy and is found to have an absence of melanocytes in the epidermis. Which of the following is the most likely diagnosis?\nA. Tinea versicolor\nB. Albinism\nC. Vitiligo\nD. Melanoma",
+          "日本語訳：問題文・全選択肢",
+          "19歳の白人男性が皮膚の色素減少を訴えて受診した。皮膚生検で、表皮にメラノサイトが存在しないことが分かった。最も考えられる診断はどれか。\nA. 癜風\nB. 白皮症\nC. 尋常性白斑\nD. 悪性黒色腫",
+          "正解：C　尋常性白斑",
+          "[1] Jin et al. (n.d.). MedQA — official repository.  https://github.com/jind11/MedQA"
+        ],
+        "tables": [],
+        "chart_count": 0
+      }
+    ],
+    "reason": "原文と全候補・正解を保ち、読者に向けて説明と出典、表示を整理。"
+  },
+  {
+    "old_page": 39,
+    "new_pages": [
+      37
+    ],
+    "before": {
+      "page": 39,
+      "text": [
+        "実例8：症状と機能障害を結び付ける",
+        "Appendix: 1. 追加の実例",
+        "US・4択／test JSONL 1071行目／step1",
+        "原文：質問と全選択肢（全文）",
+        "A 72-year-old Caucasian male presents to your office with dysphagia and halitosis. If this patient is also found to have cricopharyngeal muscle dysfunction, which of the following is the most likely cause of his presenting symptoms?\n\nA. Gastroesophageal reflux disease\nB. Esophageal candidiasis\nC. Meckel's diverticulum\nD. Zenker's diverticulum",
+        "日本語訳：質問と全選択肢",
+        "72歳の白人男性が嚥下困難と口臭を訴えて受診した。輪状咽頭筋の機能障害も認められる場合、症状の原因として最も考えられるものはどれか。\n\nA. 胃食道逆流症\nB. 食道カンジダ症\nC. メッケル憩室\nD. ツェンカー憩室",
+        "正解：D　ツェンカー憩室",
+        "[1] Jin et al. (2020). What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams. arXiv.\nhttps://arxiv.org/abs/2009.13081"
+      ],
+      "tables": [],
+      "chart_count": 0
+    },
+    "after": [
+      {
+        "page": 37,
+        "text": [
+          "実例10：症状と機能障害を結び付ける",
+          "Appendix: 1. 追加の実例",
+          "米国・英語：問題文・全選択肢",
+          "A 72-year-old Caucasian male presents to your office with dysphagia and halitosis. If this patient is also found to have cricopharyngeal muscle dysfunction, which of the following is the most likely cause of his presenting symptoms?\nA. Gastroesophageal reflux disease\nB. Esophageal candidiasis\nC. Meckel's diverticulum\nD. Zenker's diverticulum",
+          "日本語訳：問題文・全選択肢",
+          "72歳の白人男性が嚥下困難と口臭を訴えて受診した。輪状咽頭筋の機能障害も認められる場合、症状の原因として最も考えられるものはどれか。\nA. 胃食道逆流症\nB. 食道カンジダ症\nC. メッケル憩室\nD. ツェンカー憩室",
+          "正解：D　ツェンカー憩室",
+          "[1] Jin et al. (n.d.). MedQA — official repository.  https://github.com/jind11/MedQA"
+        ],
+        "tables": [],
+        "chart_count": 0
+      }
+    ],
+    "reason": "原文と全候補・正解を保ち、読者に向けて説明と出典、表示を整理。"
+  },
+  {
+    "old_page": 40,
+    "new_pages": [
+      38
+    ],
+    "before": {
+      "page": 40,
+      "text": [
+        "実例9：作用機序から薬の種類を選ぶ",
+        "Appendix: 1. 追加の実例",
+        "US・4択／test JSONL 766行目／step1",
+        "原文：質問と全選択肢（全文）",
+        "A 7-year-old boy is brought to your office with complaints of wheezing and dyspnea. Laboratory work reveals eosinophilia and positive skin tests for allergens. Which of the following types of drugs would be an effective treatment in this patient?\n\nA. Beta-2 antagonist\nB. Histone deacetylase inhibitor\nC. Muscarinic antagonist\nD. Anticoagulant",
+        "日本語訳：質問と全選択肢",
+        "7歳の男児が喘鳴と呼吸困難を訴えて受診した。検査で好酸球増多とアレルゲンの皮膚試験陽性が認められた。この患者に有効な薬の種類はどれか。\n\nA. β2受容体拮抗薬\nB. ヒストン脱アセチル化酵素阻害薬\nC. ムスカリン受容体拮抗薬\nD. 抗凝固薬",
+        "正解：C　ムスカリン受容体拮抗薬",
+        "[1] Jin et al. (2020). What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams. arXiv.\nhttps://arxiv.org/abs/2009.13081"
+      ],
+      "tables": [],
+      "chart_count": 0
+    },
+    "after": [
+      {
+        "page": 38,
+        "text": [
+          "実例11：作用機序から薬の種類を選ぶ",
+          "Appendix: 1. 追加の実例",
+          "米国・英語：問題文・全選択肢",
+          "A 7-year-old boy is brought to your office with complaints of wheezing and dyspnea. Laboratory work reveals eosinophilia and positive skin tests for allergens. Which of the following types of drugs would be an effective treatment in this patient?\nA. Beta-2 antagonist\nB. Histone deacetylase inhibitor\nC. Muscarinic antagonist\nD. Anticoagulant",
+          "日本語訳：問題文・全選択肢",
+          "7歳の男児が喘鳴と呼吸困難を訴えて受診した。検査で好酸球増多とアレルゲンの皮膚試験陽性が認められた。この患者に有効な薬の種類はどれか。\nA. β2受容体拮抗薬\nB. ヒストン脱アセチル化酵素阻害薬\nC. ムスカリン受容体拮抗薬\nD. 抗凝固薬",
+          "正解：C　ムスカリン受容体拮抗薬",
+          "[1] Jin et al. (n.d.). MedQA — official repository.  https://github.com/jind11/MedQA"
+        ],
+        "tables": [],
+        "chart_count": 0
+      }
+    ],
+    "reason": "原文と全候補・正解を保ち、読者に向けて説明と出典、表示を整理。"
+  },
+  {
+    "old_page": 41,
+    "new_pages": [
+      39
+    ],
+    "before": {
+      "page": 41,
+      "text": [
+        "実例10：過敏反応と関与する細胞",
+        "Appendix: 1. 追加の実例",
+        "US・4択／test JSONL 841行目／step1",
+        "原文：質問と全選択肢（全文）",
+        "Candida is injected into the skin of a 38-year-old female patient. Forty-eight hours later, there is a 14 mm raised, slightly hardened area at the injection site. What type of hypersensitivity reaction has occurred and what cell type plays a role?\n\nA. Type I hypersensitivty; eosinophils\nB. Type IV hypersensitivity; mast cells\nC. Type III hypersensitivity; CD4+ T cells\nD. Type IV hypersensitivity; CD4+ T cells",
+        "日本語訳：質問と全選択肢",
+        "38歳の女性の皮膚にカンジダを注射した。48時間後、注射部位に14 mmの隆起した、やや硬い領域が生じた。これは何型の過敏反応で、どの細胞が関与するか。\n\nA. I型過敏反応・好酸球\nB. IV型過敏反応・肥満細胞\nC. III型過敏反応・CD4陽性T細胞\nD. IV型過敏反応・CD4陽性T細胞",
+        "正解：D　IV型過敏反応・CD4陽性T細胞",
+        "[1] Jin et al. (2020). What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams. arXiv.\nhttps://arxiv.org/abs/2009.13081"
+      ],
+      "tables": [],
+      "chart_count": 0
+    },
+    "after": [
+      {
+        "page": 39,
+        "text": [
+          "実例12：過敏反応と関与する細胞",
+          "Appendix: 1. 追加の実例",
+          "米国・英語：問題文・全選択肢",
+          "Candida is injected into the skin of a 38-year-old female patient. Forty-eight hours later, there is a 14 mm raised, slightly hardened area at the injection site. What type of hypersensitivity reaction has occurred and what cell type plays a role?\nA. Type I hypersensitivty; eosinophils\nB. Type IV hypersensitivity; mast cells\nC. Type III hypersensitivity; CD4+ T cells\nD. Type IV hypersensitivity; CD4+ T cells",
+          "日本語訳：問題文・全選択肢",
+          "38歳の女性の皮膚にカンジダを注射した。48時間後、注射部位に14 mmの隆起した、やや硬い領域が生じた。これは何型の過敏反応で、どの細胞が関与するか。\nA. I型過敏反応・好酸球\nB. IV型過敏反応・肥満細胞\nC. III型過敏反応・CD4陽性T細胞\nD. IV型過敏反応・CD4陽性T細胞",
+          "正解：D　IV型過敏反応・CD4陽性T細胞",
+          "[1] Jin et al. (n.d.). MedQA — official repository.  https://github.com/jind11/MedQA"
+        ],
+        "tables": [],
+        "chart_count": 0
+      }
+    ],
+    "reason": "原文と全候補・正解を保ち、読者に向けて説明と出典、表示を整理。"
+  },
+  {
+    "old_page": 42,
+    "new_pages": [
+      40
+    ],
+    "before": {
+      "page": 42,
+      "text": [
+        "実例11：薬剤の有害作用を問う",
+        "Appendix: 1. 追加の実例",
+        "US・4択／test JSONL 57行目／step1",
+        "原文：質問と全選択肢（全文）",
+        "An otherwise healthy 26-year-old man comes to the physician for medication counseling after recently being diagnosed with schizophrenia. Risperidone therapy is initiated. This patient is at increased risk for which of the following adverse effects?\n\nA. Agranulocytosis\nB. Shortened QT interval\nC. Gynecomastia\nD. Weight loss",
+        "日本語訳：質問と全選択肢",
+        "ほかに健康上の問題がない26歳の男性が、最近統合失調症と診断され、薬の説明を受けるために受診した。リスペリドンによる治療を開始した場合、リスクが高まる有害作用はどれか。\n\nA. 無顆粒球症\nB. QT間隔の短縮\nC. 女性化乳房\nD. 体重減少",
+        "正解：C　女性化乳房",
+        "[1] Jin et al. (2020). What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams. arXiv.\nhttps://arxiv.org/abs/2009.13081"
+      ],
+      "tables": [],
+      "chart_count": 0
+    },
+    "after": [
+      {
+        "page": 40,
+        "text": [
+          "実例13：薬剤の有害作用を問う",
+          "Appendix: 1. 追加の実例",
+          "米国・英語：問題文・全選択肢",
+          "An otherwise healthy 26-year-old man comes to the physician for medication counseling after recently being diagnosed with schizophrenia. Risperidone therapy is initiated. This patient is at increased risk for which of the following adverse effects?\nA. Agranulocytosis\nB. Shortened QT interval\nC. Gynecomastia\nD. Weight loss",
+          "日本語訳：問題文・全選択肢",
+          "ほかに健康上の問題がない26歳の男性が、最近統合失調症と診断され、薬の説明を受けるために受診した。リスペリドンによる治療を開始した場合、リスクが高まる有害作用はどれか。\nA. 無顆粒球症\nB. QT間隔の短縮\nC. 女性化乳房\nD. 体重減少",
+          "正解：C　女性化乳房",
+          "[1] Jin et al. (n.d.). MedQA — official repository.  https://github.com/jind11/MedQA"
+        ],
+        "tables": [],
+        "chart_count": 0
+      }
+    ],
+    "reason": "原文と全候補・正解を保ち、読者に向けて説明と出典、表示を整理。"
+  },
+  {
+    "old_page": 43,
+    "new_pages": [
+      41,
+      42
+    ],
+    "before": {
+      "page": 43,
+      "text": [
+        "実例12：手術前の薬を選ぶ",
+        "Appendix: 1. 追加の実例",
+        "US・4択／test JSONL 1227行目／step2&3",
+        "原文：質問と全選択肢（全文）",
+        "A 39-year-old woman, with a history of thyroidectomy and primary hyperparathyroidism presents for surgical evaluation for a right adrenal mass. Preoperatively, which of the following medications should she receive to prevent a hypertensive emergency intraoperatively?\n\nA. Atenolol\nB. Labetolol\nC. Nifedipine\nD. Phenoxybenzamine",
+        "日本語訳：質問と全選択肢",
+        "甲状腺摘出と原発性副甲状腺機能亢進症の既往がある39歳の女性が、右副腎腫瘤の手術評価のために受診した。術中の高血圧緊急症を防ぐため、術前に投与すべき薬はどれか。\n\nA. アテノロール\nB. ラベタロール\nC. ニフェジピン\nD. フェノキシベンザミン",
+        "正解：D　フェノキシベンザミン",
+        "[1] Jin et al. (2020). What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams. arXiv.\nhttps://arxiv.org/abs/2009.13081"
+      ],
+      "tables": [],
+      "chart_count": 0
+    },
+    "after": [
+      {
+        "page": 41,
+        "text": [
+          "実例14：手術前の薬を選ぶ",
+          "Appendix: 1. 追加の実例",
+          "米国・英語：問題文・全選択肢",
+          "A 39-year-old woman, with a history of thyroidectomy and primary hyperparathyroidism presents for surgical evaluation for a right adrenal mass. Preoperatively, which of the following medications should she receive to prevent a hypertensive emergency intraoperatively?\nA. Atenolol\nB. Labetolol\nC. Nifedipine\nD. Phenoxybenzamine",
+          "正解：D　フェノキシベンザミン",
+          "[1] Jin et al. (n.d.). MedQA — official repository.  https://github.com/jind11/MedQA"
+        ],
+        "tables": [],
+        "chart_count": 0
+      },
+      {
+        "page": 42,
+        "text": [
+          "実例14：手術前の薬を選ぶ（訳）",
+          "Appendix: 1. 追加の実例",
+          "日本語訳：問題文・全選択肢",
+          "甲状腺摘出と原発性副甲状腺機能亢進症の既往がある39歳の女性が、右副腎腫瘤の手術に向けた評価のために受診した。術中の高血圧緊急症を防ぐため、術前に投与すべき薬はどれか。\nA. アテノロール\nB. ラベタロール\nC. ニフェジピン\nD. フェノキシベンザミン",
+          "正解：D　フェノキシベンザミン",
+          "[1] Jin et al. (n.d.). MedQA — official repository.  https://github.com/jind11/MedQA"
+        ],
+        "tables": [],
+        "chart_count": 0
+      }
+    ],
+    "reason": "旧版の原文11ptを、全文を省略せず原文一頁と訳一頁へ。15pt実同居で回答と出典が干渉した。"
+  },
+  {
+    "old_page": 44,
+    "new_pages": [
+      43,
+      44
+    ],
+    "before": {
+      "page": 44,
+      "text": [
+        "実例13：蛋白尿の特徴を問う",
+        "Appendix: 1. 追加の実例",
+        "US・4択／test JSONL 575行目／step1",
+        "原文：質問と全選択肢（全文）",
+        "An 11-year-old boy presents to your office with pitting edema and proteinuria exceeding 3.5g in 24 hours. You suspect that this patient has experienced a loss of polyanions in his glomerular basement membranes. Which of the following findings would confirm your diagnosis?\n\nA. WBC casts in the urine\nB. Selective albuminuria\nC. Negatively birefringent crystals in the urine\nD. Bence-Jones proteinuria",
+        "日本語訳：質問と全選択肢",
+        "11歳の男児に圧痕性浮腫と、24時間で3.5 gを超える蛋白尿がある。糸球体基底膜のポリアニオンの喪失が疑われる。この診断を裏付ける所見はどれか。\n\nA. 尿中の白血球円柱\nB. 選択的アルブミン尿\nC. 尿中の負の複屈折を示す結晶\nD. ベンス・ジョーンズ蛋白尿",
+        "正解：B　選択的アルブミン尿",
+        "[1] Jin et al. (2020). What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams. arXiv.\nhttps://arxiv.org/abs/2009.13081"
+      ],
+      "tables": [],
+      "chart_count": 0
+    },
+    "after": [
+      {
+        "page": 43,
+        "text": [
+          "実例15：蛋白尿の特徴を問う",
+          "Appendix: 1. 追加の実例",
+          "米国・英語：問題文・全選択肢",
+          "An 11-year-old boy presents to your office with pitting edema and proteinuria exceeding 3.5g in 24 hours. You suspect that this patient has experienced a loss of polyanions in his glomerular basement membranes. Which of the following findings would confirm your diagnosis?\nA. WBC casts in the urine\nB. Selective albuminuria\nC. Negatively birefringent crystals in the urine\nD. Bence-Jones proteinuria",
+          "正解：B　選択的アルブミン尿",
+          "[1] Jin et al. (n.d.). MedQA — official repository.  https://github.com/jind11/MedQA"
+        ],
+        "tables": [],
+        "chart_count": 0
+      },
+      {
+        "page": 44,
+        "text": [
+          "実例15：蛋白尿の特徴を問う（訳）",
+          "Appendix: 1. 追加の実例",
+          "日本語訳：問題文・全選択肢",
+          "11歳の男児に圧痕性浮腫と、24時間で3.5 gを超える蛋白尿がある。糸球体基底膜のポリアニオンの喪失が疑われる。この診断を裏付ける所見はどれか。\nA. 尿中の白血球円柱\nB. 選択的アルブミン尿\nC. 尿中の負の複屈折を示す結晶\nD. ベンス・ジョーンズ蛋白尿",
+          "正解：B　選択的アルブミン尿",
+          "[1] Jin et al. (n.d.). MedQA — official repository.  https://github.com/jind11/MedQA"
+        ],
+        "tables": [],
+        "chart_count": 0
+      }
+    ],
+    "reason": "旧版の原文11ptを、全文を省略せず原文一頁と訳一頁へ。15pt実同居で回答と出典が干渉した。"
+  },
+  {
+    "old_page": 45,
+    "new_pages": [],
+    "before": {
+      "page": 45,
+      "text": [
+        "1問のレコードに、正解の文字と本文を持つ",
+        "Appendix: 2. データ形式と集計",
+        "\"answer\": \"100%\",\n\"options\": {\"A\": \"0%\", \"B\": \"25%\",\n            \"C\": \"50%\", \"D\": \"100%\"},\n\"meta_info\": \"step1\",\n\"answer_idx\": \"D\"",
+        "実例1のJSONLから連続したキーの並びを抜粋。質問とmetamap_phrasesは、この表示範囲の外にある。",
+        "[1] Di Jin et al. MedQA. 著者の公式コード・データ配布案内（2026-10-18取得）。  https://github.com/jind11/MedQA"
+      ],
+      "tables": [],
+      "chart_count": 0
+    },
+    "after": [],
+    "reason": "元データの概要に不要な評価基盤固有の設定・得点・変換・監査・文献を別記録へ保存。"
+  },
+  {
+    "old_page": 46,
+    "new_pages": [],
+    "before": {
+      "page": 46,
+      "text": [
+        "識別子は、ファイルと行位置に対応させる",
+        "この資料のUS/4_options/test/267は、test配列の0始まり267番目、JSONLの268行目を指す。配布元が付けた固有IDではない。\n13問はすべてtestから選んだ。原レコード全体をキー順でJSON化し、UTF-8のSHA-256を保存した。\n医学用語の日本語訳は質問と全候補を対象とし、年齢・数量・薬剤・病態の条件と、正解の対応を保持した。",
+        "Appendix: 2. データ形式と集計",
+        "[1] Di Jin et al. MedQA. 著者の公式コード・データ配布案内（2026-10-18取得）。  https://github.com/jind11/MedQA"
+      ],
+      "tables": [],
+      "chart_count": 0
+    },
+    "after": [],
+    "reason": "元データの概要に不要な評価基盤固有の設定・得点・変換・監査・文献を別記録へ保存。"
+  },
+  {
+    "old_page": 47,
+    "new_pages": [],
+    "before": {
+      "page": 47,
+      "text": [
+        "選択肢数は、ファイル群ごとに異なる",
+        "Appendix: 2. データ形式と集計",
+        "未分割のUS_qbankは14,369問・4〜13択。上記splitと区別する。",
+        "[1] Di Jin et al. MedQA. 著者の公式コード・データ配布案内（2026-10-18取得）。  https://github.com/jind11/MedQA"
+      ],
+      "tables": [
+        [
+          [
+            "配布ファイル群",
+            "実測の選択肢数"
+          ],
+          [
+            "USのtrain/dev/test",
+            "全12,723問が5択"
+          ],
+          [
+            "US/4_optionsの3split",
+            "全12,723問が4択"
+          ],
+          [
+            "Mainlandの3split",
+            "全34,251問が5択"
+          ],
+          [
+            "Mainland/4_optionsの3split",
+            "全34,251問が4択"
+          ],
+          [
+            "Taiwanの3split",
+            "全14,123問が4択"
+          ]
+        ]
+      ],
+      "chart_count": 0
+    },
+    "after": [],
+    "reason": "元データの概要に不要な評価基盤固有の設定・得点・変換・監査・文献を別記録へ保存。"
+  },
+  {
+    "old_page": 48,
+    "new_pages": [
+      45
+    ],
+    "before": {
+      "page": 48,
+      "text": [
+        "米国版のtestには、二つの試験区分がある",
+        "Appendix: 2. データ形式と集計",
+        "US/4_optionsの配布レコードを集計。問題のmeta_infoをそのまま分類した。",
+        "[1] Di Jin et al. MedQA. 著者の公式コード・データ配布案内（2026-10-18取得）。  https://github.com/jind11/MedQA"
+      ],
+      "tables": [
+        [
+          [
+            "meta_info",
+            "train",
+            "dev",
+            "test"
+          ],
+          [
+            "step1",
+            "5,629",
+            "701",
+            "679"
+          ],
+          [
+            "step2&3",
+            "4,549",
+            "571",
+            "594"
+          ]
+        ]
+      ],
+      "chart_count": 0
+    },
+    "after": [
+      {
+        "page": 45,
+        "text": [
+          "米国版には、基礎医学と臨床の問題がある",
+          "Appendix: 2. 米国版の試験区分",
+          "Step 1は基礎医学、Step 2・3は臨床知識の応用や患者の診療を扱う。",
+          "[1] Jin et al. (n.d.). MedQA — official repository.  https://github.com/jind11/MedQA\n[2] USMLE (n.d.). Step Exams.  https://www.usmle.org/step-exams"
+        ],
+        "tables": [
+          [
+            [
+              "試験区分",
+              "train",
+              "dev",
+              "test"
+            ],
+            [
+              "Step 1",
+              "5,629",
+              "701",
+              "679"
+            ],
+            [
+              "Step 2・3",
+              "4,549",
+              "571",
+              "594"
+            ]
+          ]
+        ],
+        "chart_count": 0
+      }
+    ],
+    "reason": "内部ラベルを試験区分の自然な表示に替え、公式USMLEの目的を短く補足。件数は保持。"
+  },
+  {
+    "old_page": 49,
+    "new_pages": [],
+    "before": {
+      "page": 49,
+      "text": [
+        "HELMは、末尾の引用符と空白を整える",
+        "選択肢本文にanswer.rstrip('\"').rstrip()を適用してReferenceを作る。正解は文字キーとanswer_idxの比較で付ける。\n全50,892選択肢のうち647件が変化した。たとえばtrain[10]のDは末尾の改行と引用符が除かれる。\nこの処理は医学内容の書き換えではない。元データとHELM入力を別に保存し、どの処理で変わったかを追えるようにする。",
+        "Appendix: 2. データ形式と集計",
+        "[1] Stanford CRFM (2023). MedQAScenario. HELM v0.3.0.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/med_qa_scenario.py"
+      ],
+      "tables": [],
+      "chart_count": 0
+    },
+    "after": [],
+    "reason": "元データの概要に不要な評価基盤固有の設定・得点・変換・監査・文献を別記録へ保存。"
+  },
+  {
+    "old_page": 50,
+    "new_pages": [],
+    "before": {
+      "page": 50,
+      "text": [
+        "実行設定の既定値と、実際の要求を分ける",
+        "Appendix: 2. データ形式と集計",
+        "公開runの実測条件ではなくコードの既定値。実際に収まる提示例数は入力長などに依存する。",
+        "[1] Stanford CRFM (2023). get_med_qa_spec. HELM v0.3.0.  https://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/run_specs.py\n[2] Stanford CRFM (2023). MultipleChoiceJointAdapter. HELM v0.3.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/adaptation/adapters/multiple_choice_joint_adapter.py"
+      ],
+      "tables": [
+        [
+          [
+            "項目",
+            "v0.3.0の設定・処理"
+          ],
+          [
+            "提示例の上限",
+            "max_train_instances=5"
+          ],
+          [
+            "生成",
+            "temperature=0、max_tokens=1"
+          ],
+          [
+            "要求の完了数",
+            "num_completions=1"
+          ],
+          [
+            "num_outputs=5の用途",
+            "top_k_per_token=5へ渡す"
+          ]
+        ]
+      ],
+      "chart_count": 0
+    },
+    "after": [],
+    "reason": "元データの概要に不要な評価基盤固有の設定・得点・変換・監査・文献を別記録へ保存。"
+  },
+  {
+    "old_page": 51,
+    "new_pages": [
+      46
+    ],
+    "before": {
+      "page": 51,
+      "text": [
+        "参考文献",
+        "Appendix: 3. 研究と参考文献",
+        "What Disease does this Patient Have? A Large-scale Open Domain Question Answering Dataset from Medical Exams\nDi Jin, Eileen Pan, Nassim Oufattole, Wei-Hung Weng, Hanyi Fang, Peter Szolovits (2020). arXiv:2009.13081.\n3言語の医学試験問題と教科書の知識源を作り、検索と読解を組み合わせた評価を報告する。\nhttps://arxiv.org/abs/2009.13081",
+        "MedQA\nDi Jin et al. 著者の公式リポジトリ（2026-10-18取得）。\n質問・教科書の配布先、4択版の構成、検索ベースラインのコードを掲載する。\nhttps://github.com/jind11/MedQA"
+      ],
+      "tables": [],
+      "chart_count": 0
+    },
+    "after": [
+      {
+        "page": 46,
+        "text": [
+          "参考文献",
+          "Appendix: 3. 参考文献",
+          "What Disease Does This Patient Have? A Large-Scale Open Domain Question Answering Dataset from Medical Exams\nJin et al. · 初公開2020／正式版2021 · Applied Sciences 11(14):6421\n医学試験問題と教科書の知識源を整備し、検索と読解を組み合わせた評価を報告する。\nhttps://doi.org/10.3390/app11146421",
+          "MedQA\nDi Jin et al. · n.d. · 公式リポジトリ · 参照2026-10-19\n質問・教科書の配布先、4択版の構成、検索ベースラインのコードを掲載する。\nhttps://github.com/jind11/MedQA"
+        ],
+        "tables": [],
+        "chart_count": 0
+      }
+    ],
+    "reason": "原文と全候補・正解を保ち、読者に向けて説明と出典、表示を整理。"
+  },
+  {
+    "old_page": 52,
+    "new_pages": [],
+    "before": {
+      "page": 52,
+      "text": [
+        "参考文献",
+        "Appendix: 3. 研究と参考文献",
+        "MedQAScenario\nStanford CRFM (2023). HELM v0.3.0, Python implementation.\n米国版の4択splitを読み込み、問題と全候補、正解タグをインスタンスにする。\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/scenarios/med_qa_scenario.py",
+        "get_med_qa_spec / MultipleChoiceJointAdapter\nStanford CRFM (2023). HELM v0.3.0, Python implementation.\nA〜Dの候補を共同のプロンプトに並べ、生成文字を選択肢本文へ写す設定と処理を定める。\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/adaptation/adapters/multiple_choice_joint_adapter.py"
+      ],
+      "tables": [],
+      "chart_count": 0
+    },
+    "after": [],
+    "reason": "元データの概要に不要な評価基盤固有の設定・得点・変換・監査・文献を別記録へ保存。"
+  },
+  {
+    "old_page": 53,
+    "new_pages": [],
+    "before": {
+      "page": 53,
+      "text": [
+        "参考文献",
+        "Appendix: 3. 研究と参考文献",
+        "BasicMetric\nStanford CRFM (2023). HELM v0.3.0, basic_metrics.py.\n生成文字を対応する候補へ写し、完全一致や正規化後の一致などを集計する。\nhttps://github.com/stanford-crfm/helm/blob/v0.3.0/src/helm/benchmark/metrics/basic_metrics.py",
+        "Holistic Evaluation of Language Models\nPercy Liang et al. (2023). Transactions on Machine Learning Research.\n広いシナリオと指標から言語モデルを評価するHELMの枠組みを提案する。\nhttps://arxiv.org/abs/2211.09110"
+      ],
+      "tables": [],
+      "chart_count": 0
+    },
+    "after": [],
+    "reason": "元データの概要に不要な評価基盤固有の設定・得点・変換・監査・文献を別記録へ保存。"
+  },
+  {
+    "old_page": null,
+    "new_pages": [
+      15
+    ],
+    "before": null,
+    "after": [
+      {
+        "page": 15,
+        "text": [
+          "実例4：細菌が動くための器官",
+          "2. 三つの地域と作成方法",
+          "中国本土・簡体字中国語：問題文・全選択肢",
+          "细菌的运动器官是（　　）。\nA. 菌毛\nB. 纤毛\nC. 触角\nD. 鞭毛",
+          "日本語訳：問題文・全選択肢",
+          "細菌が運動に使う器官はどれか。\nA. 線毛\nB. 繊毛\nC. 触角\nD. 鞭毛",
+          "正解：D　鞭毛",
+          "[1] Jin et al. (n.d.). MedQA — official repository.  https://github.com/jind11/MedQA"
+        ],
+        "tables": [],
+        "chart_count": 0
+      }
+    ],
+    "reason": "元データの地域差と試験区分を具体的に説明する。"
+  },
+  {
+    "old_page": null,
+    "new_pages": [
+      16
+    ],
+    "before": null,
+    "after": [
+      {
+        "page": 16,
+        "text": [
+          "実例5：肺門の解剖を問う",
+          "2. 三つの地域と作成方法",
+          "台湾・繁体字中国語：問題文・全選択肢",
+          "左肺門的肺動脈位在支氣管的：\nA. 上方\nB. 下方\nC. 前方\nD. 後方",
+          "日本語訳：問題文・全選択肢",
+          "左肺門では、肺動脈は気管支のどの位置にあるか。\nA. 上方\nB. 下方\nC. 前方\nD. 後方",
+          "正解：A　上方",
+          "[1] Jin et al. (n.d.). MedQA — official repository.  https://github.com/jind11/MedQA"
+        ],
+        "tables": [],
+        "chart_count": 0
+      }
+    ],
+    "reason": "元データの地域差と試験区分を具体的に説明する。"
+  },
+  {
+    "old_page": null,
+    "new_pages": [
+      47
+    ],
+    "before": null,
+    "after": [
+      {
+        "page": 47,
+        "text": [
+          "参考文献",
+          "Appendix: 3. 参考文献",
+          "Step Exams\nUSMLE · n.d. · 公式試験案内 · 参照2026-10-19\nStep 1の基礎医学、Step 2 CKの臨床知識、Step 3の独立した診療への知識応用を説明する。\nhttps://www.usmle.org/step-exams"
+        ],
+        "tables": [],
+        "chart_count": 0
+      }
+    ],
+    "reason": "元データの地域差と試験区分を具体的に説明する。"
+  }
+]
