@@ -1,0 +1,62 @@
+{
+  "primary_title": "The NarrativeQA Reading Comprehension Challenge",
+  "authors": [
+    "Tomáš Kočiský",
+    "Jonathan Schwarz",
+    "Phil Blunsom",
+    "Chris Dyer",
+    "Karl Moritz Hermann",
+    "Gábor Melis",
+    "Edward Grefenstette"
+  ],
+  "institutions": [
+    "DeepMind",
+    "University of Oxford"
+  ],
+  "primary_url": "https://aclanthology.org/Q18-1023/",
+  "primary_pdf_sha256": "9867e2c4f78b8bc1b1da388f44566bb12ac0581142ac3dcc4036a6eada5048a9",
+  "formal_year": 2018,
+  "preprint_year": 2017,
+  "core_creation": "Wikipedia summaries used to elicit questions and initial answers, second annotator judges answerability and independently answers; full stories/summary reading are separate conditions.",
+  "annotation_facts": {
+    "questions_per_work_session": 10,
+    "unanswerable_percent": 2.3,
+    "contiguous_answer_in_summary_percent": 44.05,
+    "contiguous_answer_in_full_story_percent": 29.57
+  },
+  "published_test_average_words": {
+    "summary": 654,
+    "full_story": 57780
+  },
+  "published_test_ROUGE_L": {
+    "seq2seq_without_context": 13.15,
+    "attention_sum_reader_summary": 22.26,
+    "span_summary": 36.3,
+    "one_human_reference_against_other": 57.02,
+    "span_full_story_with_retrieved_chunks": 6.22
+  },
+  "score_scope": "Original2018 reported model results; no original predictions were obtained or reconstructed.",
+  "full_story_note": "Original model first retrieves story chunks then reads them; human comparison reads summaries, not full stories.",
+  "rights": {
+    "repository": "Apache2.0",
+    "wikipedia_summaries_and_JP_translation": "CC BY-SA3.0 with article attribution",
+    "full_stories": "Rights governed by original providers, not assumed Apache2.0",
+    "files": [
+      {
+        "file": "license.txt",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+      },
+      {
+        "file": "wiki-license.txt",
+        "sha256": "405a5452ae963ba6b1ebb9bf95c1bc0a1c8602782591db645fa0069db88d6db2"
+      },
+      {
+        "file": "wiki-attribution.txt",
+        "sha256": "1a3966fe42fc3302d2921fd0836276cb5bafb5e78f7723bc79ca0e39de9100de"
+      }
+    ]
+  },
+  "current_example_source": "13 separate Wikipedia summary excerpts with contiguous offsets; full summary is not shown; genuine question and both original answers are complete.",
+  "known_data_count_variance": "Paper prose1567; paper counts and publicCSV1572. Cause not determined; slide uses actualCSV count.",
+  "review_status": "Sources checked; final rendering/hashes pending creator final synchronization"
+}

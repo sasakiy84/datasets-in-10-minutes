@@ -1,0 +1,59 @@
+{
+  "slug": "narrativeqa",
+  "checked_at": "2026-10-19T09:45:35.630193+00:00",
+  "method": "正式一次論文の著者・導入/構築/評価節、公式配布/利用条件と最終nativeを通読",
+  "gemini_used": false,
+  "creator": "Tomáš Kočiský, Jonathan Schwarz, Phil Blunsom, Chris Dyer, Karl Moritz Hermann, Gábor Melis, Edward Grefenstette。DeepMind/University of Oxford。2017プレプリント、2018TACL。",
+  "original_task": "書籍・映画の物語とWikipedia要約を対応付け、要約を読んだ人が質問と回答を作成。別の人の参照回答を追加。全文/要約の読解を評価。",
+  "HELM_relationship": "HELMは後から要約入力で採用。作品ごとの1問抽出やHELM固有の成績は元コーパスそのものではなく、本文から外部化。",
+  "evidence": [
+    {
+      "url": "https://aclanthology.org/Q18-1023/",
+      "local": "/workspace/artifacts/helm-classic-remaining/narrativeqa/paper.pdf",
+      "sha256": "9867e2c4f78b8bc1b1da388f44566bb12ac0581142ac3dcc4036a6eada5048a9",
+      "source": "Kočiský et al. (2018), The NarrativeQA Reading Comprehension Challenge, TACL6:317–328"
+    },
+    {
+      "url": "https://github.com/google-deepmind/narrativeqa",
+      "local": "/workspace/artifacts/helm-classic-remaining/narrativeqa/readme.md",
+      "sha256": "85b32d79619a8f2fec88ac62ace984bfb60544c6a90766580032a380bbf1262a",
+      "source": "Google DeepMind NarrativeQA official repository"
+    },
+    {
+      "url": "https://github.com/google-deepmind/narrativeqa/blob/master/third_party/wikipedia/LICENSE",
+      "local": "/workspace/artifacts/helm-classic-remaining/narrativeqa/wiki-license.txt",
+      "sha256": "405a5452ae963ba6b1ebb9bf95c1bc0a1c8602782591db645fa0069db88d6db2",
+      "source": "Wikipedia summaries LICENSE"
+    },
+    {
+      "url": "https://github.com/google-deepmind/narrativeqa/blob/master/third_party/wikipedia/ATTRIBUTION",
+      "local": "/workspace/artifacts/helm-classic-remaining/narrativeqa/wiki-attribution.txt",
+      "sha256": "1a3966fe42fc3302d2921fd0836276cb5bafb5e78f7723bc79ca0e39de9100de",
+      "source": "Wikipedia summaries ATTRIBUTION"
+    }
+  ],
+  "pages": [
+    1,
+    5,
+    15,
+    16,
+    17,
+    18,
+    19,
+    24,
+    25,
+    26,
+    28,
+    29,
+    30,
+    52,
+    53,
+    54
+  ],
+  "conclusion": "原研究の作成主体・目的・評価と、後続の採用/実装を分け、本文は元データセットの解説とした。",
+  "data_version_note": "論文本文1567に対し論文表の合計と取得CSV1572。スライドは公開CSVの実数を明示。原因は未確定。",
+  "final_hashes": {
+    "pptx": "60699333f0ab53fe9af66abb630e81cfaa38c975228650b0df53e5d94fe77aa3",
+    "pdf": "0b7b5f836ad941f3d28e2e5b5b99825fb5b84d9aeac5d522e7ebf48971dc39ea"
+  }
+}

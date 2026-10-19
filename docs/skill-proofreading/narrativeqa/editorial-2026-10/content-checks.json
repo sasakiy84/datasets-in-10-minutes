@@ -1,0 +1,587 @@
+{
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "raw_files": {
+    "documents": {
+      "path": "/workspace/artifacts/helm-classic-remaining/narrativeqa/documents.csv",
+      "sha256": "6dffa4cc0b5c9963fe3a097c87f04aa7767da36627500cc7a0d69e2405e1144a",
+      "rows": 1572
+    },
+    "summaries": {
+      "path": "/workspace/artifacts/helm-classic-remaining/narrativeqa/summaries.csv",
+      "sha256": "87d12b849219015c4fe717e95c707671d802c181145e8ba2acc11dff23ea7c75",
+      "rows": 1572
+    },
+    "qaps": {
+      "path": "/workspace/artifacts/helm-classic-remaining/narrativeqa/qaps.csv",
+      "sha256": "990b02af0b5280de210f0e6b80f43b3fab80dc6de630c4d5059a1b7131c26e38",
+      "rows": 46765
+    }
+  },
+  "examples": [
+    {
+      "example": 1,
+      "work_title": "A Voyage to Arcturus",
+      "sha256": "5ce54bea61241cb23885115ec3d133d37d5a86fae6bf683490c70b254ceb2bda",
+      "full_original_question_and_two_answers": true,
+      "summary_excerpt_contiguous": true,
+      "excerpt_offsets": [
+        1,
+        285
+      ],
+      "summary_full_words": 228,
+      "JP_full": true
+    },
+    {
+      "example": 2,
+      "work_title": "Arcade (film)",
+      "sha256": "4351836ff48d4b6cb879f67dc5926fbf270062a79f42f2e38f785e213120b732",
+      "full_original_question_and_two_answers": true,
+      "summary_excerpt_contiguous": true,
+      "excerpt_offsets": [
+        510,
+        940
+      ],
+      "summary_full_words": 348,
+      "JP_full": true
+    },
+    {
+      "example": 3,
+      "work_title": "The Marriage of William Ashe",
+      "sha256": "ccc7f95bd96e52c79c5975a7889dbf81fc18eb6f4a3b04e6fd3f4081d3bbdd82",
+      "full_original_question_and_two_answers": true,
+      "summary_excerpt_contiguous": true,
+      "excerpt_offsets": [
+        661,
+        1108
+      ],
+      "summary_full_words": 243,
+      "JP_full": true
+    },
+    {
+      "example": 4,
+      "work_title": "Lisbeth Longfrock",
+      "sha256": "5d7df7e6d5337cbf78d523e2fb9a4cef6753667486cd64d55a59a908f62094f5",
+      "full_original_question_and_two_answers": true,
+      "summary_excerpt_contiguous": true,
+      "excerpt_offsets": [
+        421,
+        494
+      ],
+      "summary_full_words": 236,
+      "JP_full": true
+    },
+    {
+      "example": 5,
+      "work_title": "The Old Wives' Tale",
+      "sha256": "85aab78dd253e058d839709d018c0400069858a4d36a877caef79c3ebf70de5c",
+      "full_original_question_and_two_answers": true,
+      "summary_excerpt_contiguous": true,
+      "excerpt_offsets": [
+        1045,
+        1216
+      ],
+      "summary_full_words": 237,
+      "JP_full": true
+    },
+    {
+      "example": 6,
+      "work_title": "The Mystery of a Hansom Cab",
+      "sha256": "51adff13ec747b2a56d0cd88f83d57c1782b9e6db04b6bf4120baeb201a0e81f",
+      "full_original_question_and_two_answers": true,
+      "summary_excerpt_contiguous": true,
+      "excerpt_offsets": [
+        324,
+        634
+      ],
+      "summary_full_words": 232,
+      "JP_full": true
+    },
+    {
+      "example": 7,
+      "work_title": "Tancred (novel)",
+      "sha256": "edbd92b4003359dbbe90a59e641bbf957d278d50943a5d5cd7d8c6cf13f9c255",
+      "full_original_question_and_two_answers": true,
+      "summary_excerpt_contiguous": true,
+      "excerpt_offsets": [
+        871,
+        963
+      ],
+      "summary_full_words": 231,
+      "JP_full": true
+    },
+    {
+      "example": 8,
+      "work_title": "Le Bal de Sceaux",
+      "sha256": "18d8340e2eb5786ae053d9b764ee64ca55304c30b0949cf66baa77b3ec336b4c",
+      "full_original_question_and_two_answers": true,
+      "summary_excerpt_contiguous": true,
+      "excerpt_offsets": [
+        870,
+        1228
+      ],
+      "summary_full_words": 233,
+      "JP_full": true
+    },
+    {
+      "example": 9,
+      "work_title": "12 (2003 film)",
+      "sha256": "feac33e90b43ac4e9cdcdc46dd9ddcdcbc14286c452a149efe30c53e22dd16ab",
+      "full_original_question_and_two_answers": true,
+      "summary_excerpt_contiguous": true,
+      "excerpt_offsets": [
+        673,
+        902
+      ],
+      "summary_full_words": 259,
+      "JP_full": true
+    },
+    {
+      "example": 10,
+      "work_title": "The Sessions (film)",
+      "sha256": "97a01b48162b5761c7f54cd0a2d6fb0a11960a9c5dbb2d6f3b52a73f00056fda",
+      "full_original_question_and_two_answers": true,
+      "summary_excerpt_contiguous": true,
+      "excerpt_offsets": [
+        488,
+        926
+      ],
+      "summary_full_words": 288,
+      "JP_full": true
+    },
+    {
+      "example": 11,
+      "work_title": "Broadcast News (film)",
+      "sha256": "289867699ecdc570088b4cb06473d2ed716e3338692d1480b84e415b3097c95c",
+      "full_original_question_and_two_answers": true,
+      "summary_excerpt_contiguous": true,
+      "excerpt_offsets": [
+        331,
+        618
+      ],
+      "summary_full_words": 333,
+      "JP_full": true
+    },
+    {
+      "example": 12,
+      "work_title": "The Hebrew Hammer",
+      "sha256": "978e7809af0b65c8a6b25ebd8668f73cd7d8a0342b0abe199989dc85f3edc17f",
+      "full_original_question_and_two_answers": true,
+      "summary_excerpt_contiguous": true,
+      "excerpt_offsets": [
+        1035,
+        1440
+      ],
+      "summary_full_words": 328,
+      "JP_full": true
+    },
+    {
+      "example": 13,
+      "work_title": "A Dry White Season",
+      "sha256": "6f392e3caa00561145e29efd57e6986284da86f2e744e900ca774e45343172ae",
+      "full_original_question_and_two_answers": true,
+      "summary_excerpt_contiguous": true,
+      "excerpt_offsets": [
+        360,
+        505
+      ],
+      "summary_full_words": 366,
+      "JP_full": true
+    }
+  ],
+  "stats": {
+    "summary_tokenized": {
+      "n": 1572,
+      "mean": 656.0273536895675,
+      "median": 682.5,
+      "population_std": 233.05893692646117,
+      "min": 224,
+      "max": 1189
+    },
+    "question_tokenized": {
+      "n": 46765,
+      "mean": 9.825681599486796,
+      "median": 9,
+      "population_std": 3.4094633629608824,
+      "min": 3,
+      "max": 34
+    },
+    "answer1_tokenized": {
+      "n": 46765,
+      "mean": 5.141558858120389,
+      "median": 4,
+      "population_std": 4.223689967467554,
+      "min": 1,
+      "max": 36
+    }
+  },
+  "histogram": {
+    "400": 336,
+    "800": 349,
+    "600": 490,
+    "200": 289,
+    "1000": 108
+  },
+  "native_tables": [
+    {
+      "old_page": 20,
+      "new_page": 19,
+      "cells": [
+        [
+          "分割",
+          "作品数",
+          "質問数"
+        ],
+        [
+          "学習",
+          "1,102",
+          "32,747"
+        ],
+        [
+          "開発",
+          "115",
+          "3,461"
+        ],
+        [
+          "テスト",
+          "355",
+          "10,557"
+        ],
+        [
+          "合計",
+          "1,572",
+          "46,765"
+        ]
+      ]
+    },
+    {
+      "old_page": 21,
+      "new_page": 20,
+      "cells": [
+        [
+          "素材",
+          "作品数",
+          "割合"
+        ],
+        [
+          "書籍",
+          "783",
+          "49.8%"
+        ],
+        [
+          "映画",
+          "789",
+          "50.2%"
+        ]
+      ]
+    },
+    {
+      "old_page": 23,
+      "new_page": 22,
+      "cells": [
+        [
+          "テスト集合の入力",
+          "平均単語数"
+        ],
+        [
+          "要約",
+          "654"
+        ],
+        [
+          "物語全文",
+          "57,780"
+        ]
+      ]
+    },
+    {
+      "old_page": 26,
+      "new_page": 25,
+      "cells": [
+        [
+          "方式",
+          "ROUGE-L"
+        ],
+        [
+          "文脈なしの生成モデル",
+          "13.15"
+        ],
+        [
+          "語を選ぶAttention Sum Reader",
+          "22.26"
+        ],
+        [
+          "回答範囲を選ぶSpan Prediction",
+          "36.30"
+        ],
+        [
+          "人の参照回答同士",
+          "57.02"
+        ]
+      ]
+    },
+    {
+      "old_page": 27,
+      "new_page": 26,
+      "cells": [
+        [
+          "入力",
+          "ROUGE-L"
+        ],
+        [
+          "要約",
+          "36.30"
+        ],
+        [
+          "物語全文",
+          "6.22"
+        ]
+      ]
+    },
+    {
+      "old_page": 56,
+      "new_page": 50,
+      "cells": [
+        [
+          "対象",
+          "平均の長さ"
+        ],
+        [
+          "質問",
+          "約10語"
+        ],
+        [
+          "第1参照回答",
+          "約5語"
+        ]
+      ]
+    }
+  ],
+  "charts": [
+    [
+      [
+        289.0,
+        336.0,
+        490.0,
+        349.0,
+        108.0
+      ]
+    ]
+  ],
+  "native_full_PDF": {
+    "paragraphs": 359,
+    "cells": 52,
+    "missing": []
+  },
+  "red_reference_runs": [
+    {
+      "page": 6,
+      "text": "1. None",
+      "size": 21.0
+    },
+    {
+      "page": 6,
+      "text": "2. None.",
+      "size": 21.0
+    },
+    {
+      "page": 6,
+      "text": "参照回答：誰もいない。／誰もいない。",
+      "size": 21.0
+    },
+    {
+      "page": 8,
+      "text": "1. To make the villain character of the game more realistic.",
+      "size": 21.0
+    },
+    {
+      "page": 8,
+      "text": "2. To make the Villian more realistic. ",
+      "size": 21.0
+    },
+    {
+      "page": 9,
+      "text": "参照回答：ゲームの悪役をより現実的にするため。／悪役をより現実的にするため。",
+      "size": 21.0
+    },
+    {
+      "page": 11,
+      "text": "1. IN ITALY",
+      "size": 21.0
+    },
+    {
+      "page": 11,
+      "text": "2. London",
+      "size": 21.0
+    },
+    {
+      "page": 12,
+      "text": "参照回答：イタリア。／ロンドン。",
+      "size": 21.0
+    },
+    {
+      "page": 35,
+      "text": "1. a herdsman",
+      "size": 21.0
+    },
+    {
+      "page": 35,
+      "text": "2. a herdsman",
+      "size": 21.0
+    },
+    {
+      "page": 35,
+      "text": "参照回答：家畜の世話をする人。／家畜の世話をする人。",
+      "size": 21.0
+    },
+    {
+      "page": 36,
+      "text": "1. In their old childhood home in England.",
+      "size": 21.0
+    },
+    {
+      "page": 36,
+      "text": "2. England.",
+      "size": 21.0
+    },
+    {
+      "page": 36,
+      "text": "参照回答：イギリスにある子ども時代の家。／イギリス。",
+      "size": 21.0
+    },
+    {
+      "page": 37,
+      "text": "1. The class divide between the wealthy and the poor.",
+      "size": 21.0
+    },
+    {
+      "page": 37,
+      "text": "2. Wealth versus poverty",
+      "size": 21.0
+    },
+    {
+      "page": 38,
+      "text": "参照回答：裕福な人々と貧しい人々との階級の隔たり。／富と貧困。",
+      "size": 21.0
+    },
+    {
+      "page": 39,
+      "text": "1. She nursed him back to health.",
+      "size": 21.0
+    },
+    {
+      "page": 39,
+      "text": "2. After Tancred was released, Eva nurses him back to health.",
+      "size": 21.0
+    },
+    {
+      "page": 39,
+      "text": "参照回答：看病して健康を回復させた。／釈放されたタンクレッドを看病し、健康を回復させた。",
+      "size": 21.0
+    },
+    {
+      "page": 40,
+      "text": "1. Maximilie is a Peer of France not a cloth merchant.",
+      "size": 21.0
+    },
+    {
+      "page": 40,
+      "text": "2. Maximilien is not a clothier; he is a Vicomte de Longueville and a Peer of France.",
+      "size": 21.0
+    },
+    {
+      "page": 41,
+      "text": "参照回答：マクシミリアンは布商人ではなく、フランスの貴族院議員だった。／布商人ではなく、ロングヴィル子爵でフランスの貴族院議員だった。",
+      "size": 21.0
+    },
+    {
+      "page": 42,
+      "text": "1. Jealous Hera will kill them.",
+      "size": 21.0
+    },
+    {
+      "page": 42,
+      "text": "2. Hera",
+      "size": 21.0
+    },
+    {
+      "page": 42,
+      "text": "参照回答：嫉妬に燃えるヘラ。／ヘラ。",
+      "size": 21.0
+    },
+    {
+      "page": 43,
+      "text": "1. They are becoming emotionally attached to one another. ",
+      "size": 21.0
+    },
+    {
+      "page": 43,
+      "text": "2. They are developing feelings for each other.",
+      "size": 21.0
+    },
+    {
+      "page": 44,
+      "text": "参照回答：互いに情が移り始めているから。／互いに恋愛感情を抱くようになったから。",
+      "size": 21.0
+    },
+    {
+      "page": 45,
+      "text": "1. Tom",
+      "size": 21.0
+    },
+    {
+      "page": 45,
+      "text": "2. Tom Grunick.",
+      "size": 21.0
+    },
+    {
+      "page": 45,
+      "text": "参照回答：トム。／トム・グルニック。",
+      "size": 21.0
+    },
+    {
+      "page": 46,
+      "text": "1. Kwanzaa and Hanukkah.",
+      "size": 21.0
+    },
+    {
+      "page": 46,
+      "text": "2. Hanukkah and Kwanzaa",
+      "size": 21.0
+    },
+    {
+      "page": 47,
+      "text": "参照回答：クワンザとハヌカー。／ハヌカーとクワンザ。",
+      "size": 21.0
+    },
+    {
+      "page": 48,
+      "text": "1. Ben trusts the police too much to help.",
+      "size": 21.0
+    },
+    {
+      "page": 48,
+      "text": "2. He trusts the police",
+      "size": 21.0
+    },
+    {
+      "page": 48,
+      "text": "参照回答：ベンが警察を信頼しすぎているから。／警察を信頼しているから。",
+      "size": 21.0
+    }
+  ],
+  "code_executed": true,
+  "code_stdout": "code-output.txt",
+  "reported_ROUGE_L_2018_test": {
+    "no_context": 13.15,
+    "AS_reader": 22.26,
+    "span_summary": 36.3,
+    "human_reference_vs_reference": 57.02,
+    "span_full_story": 6.22
+  },
+  "reported_performance_not_recomputed": "原モデル予測は取得していない。正式論文の報告値として照合。",
+  "notes": 0,
+  "hashes": {
+    "pptx": "60699333f0ab53fe9af66abb630e81cfaa38c975228650b0df53e5d94fe77aa3",
+    "pdf": "0b7b5f836ad941f3d28e2e5b5b99825fb5b84d9aeac5d522e7ebf48971dc39ea"
+  }
+}
