@@ -10,3 +10,8 @@ Geminiは使用していない。Codexが日本語校正スキルをページご
 |32|同じQuACの公式評価。人のHEQ-Dは比較基準として100。HELM得点とは比較しない。|QuACの公式評価。人のHEQ-Dは定義上100。HELMとは採点条件が異なる。|基準値の意味を精確にし、説明の重複を減らす。|
 
 [全ページ文言](quac/pages.jsonl)・[自己検査・独立レビュー](quac/review.json)
+
+
+## 読者向けの説明・日本語の改訂（2026年10月）
+
+Geminiは使用せず、Codexがスキルで校正し、別担当が独立レビューした。削除・統合を含む[問題点と変更対](quac/editorial-2026-10/changes.md)、[旧ページとの対応](quac/editorial-2026-10/page-map.json)、[独立レビュー](quac/editorial-2026-10/independent-review/handoff.json)、[最終ページの全文](quac/pages.jsonl)。旧版の校正・検証記録は保持している。

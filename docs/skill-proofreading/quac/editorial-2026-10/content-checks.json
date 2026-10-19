@@ -1,0 +1,521 @@
+{
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "raw_files": [
+    {
+      "path": "/workspace/artifacts/helm-classic-remaining/quac/train.json",
+      "sha256": "ff5cca5a2e4b4d1cb5b5ced68b9fce88394ef6d93117426d6d4baafbcc05c56a"
+    },
+    {
+      "path": "/workspace/artifacts/helm-classic-remaining/quac/val.json",
+      "sha256": "09e622916280ba04c9352acb1bc5bbe80f11a2598f6f34e934c51d9e6570f378"
+    },
+    {
+      "path": "/workspace/artifacts/helm-classic-remaining/quac/paper.pdf",
+      "sha256": "18c28ab6f048ff80e852b1f412f050e347276a1d940bf459d31d65e64396131b"
+    },
+    {
+      "path": "/workspace/artifacts/helm-classic-remaining/quac/site.html",
+      "sha256": "804befa6822820fe5e37cad50118113ca5274fb648b5fa00f0ebae9839af48ff"
+    },
+    {
+      "path": "/workspace/artifacts/helm-classic-remaining/quac/scorer.py",
+      "sha256": "cd9a391bbc93a6e8c62dbbd0b4945d3f915850a9dd07be80a637d9dabff30f84"
+    }
+  ],
+  "source_examples": [
+    {
+      "example": 1,
+      "id": "C_867b2cb2cb1a45f4ac34f6ba35cba82d_1_q#2",
+      "raw_record_sha256": "80f783112bea68312a6bdc7966bb50d1b82014274dffec2abef24e488fa8247e",
+      "full_context_sha256": "496bf24c84b9843462419ac1a57f0fb36c2adae0b2a6e52ebd4ae7866eb98bdb",
+      "all_references": true,
+      "teacher_span_and_flags": true,
+      "contiguous_excerpt": [
+        0,
+        208
+      ],
+      "full_selected_EN_JP_fields": true
+    },
+    {
+      "example": 2,
+      "id": "C_0010955f5148430081e67b941dc3b885_1_q#1",
+      "raw_record_sha256": "acab4ecf7c155ed1c5fa8c7bf794927e93fd85422fee6049726592c24b0b6841",
+      "full_context_sha256": "2e59f864430eff9c5ea692694a1b771f0b0e2ca43bba663eaa109d90c3539bd6",
+      "all_references": true,
+      "teacher_span_and_flags": true,
+      "contiguous_excerpt": [
+        159,
+        274
+      ],
+      "full_selected_EN_JP_fields": true
+    },
+    {
+      "example": 3,
+      "id": "C_761e993c8658494bba469dce01fd7b15_0_q#1",
+      "raw_record_sha256": "184e7559b5f31b86dd6ac1f0a4bd2e17390d66672889241bc7d1c48fa4876abf",
+      "full_context_sha256": "df5ac7fcab6e0ba9986bcbb97c769decc0ef99466bf123e81c11d839448d0289",
+      "all_references": true,
+      "teacher_span_and_flags": true,
+      "contiguous_excerpt": [
+        0,
+        134
+      ],
+      "full_selected_EN_JP_fields": true
+    },
+    {
+      "example": 4,
+      "id": "C_420bfcf5d8b344a480ac654f08ee55ad_1_q#8",
+      "raw_record_sha256": "11fcf458594fab9c6e35e16c137c1217c7d79467ae8ded944d4c1b3dd29fa7c9",
+      "full_context_sha256": "1a280ee838461857ca1a85a6438fe4acce5d56e91e46955af9b8b61735356fc2",
+      "all_references": true,
+      "teacher_span_and_flags": true,
+      "contiguous_excerpt": [
+        1327,
+        1561
+      ],
+      "full_selected_EN_JP_fields": true
+    },
+    {
+      "example": 5,
+      "id": "C_3a500c7651f44266a837bb7523590801_1_q#3",
+      "raw_record_sha256": "a7469d2e9d802f53ae665a4ac0ccbd25af57e286e88946b70c2ac10b4edc936a",
+      "full_context_sha256": "dca3ec732def580322208b18f0b865dea6fda1045eaba6c94cd532d7c59d9ecc",
+      "all_references": true,
+      "teacher_span_and_flags": true,
+      "contiguous_excerpt": [
+        578,
+        782
+      ],
+      "full_selected_EN_JP_fields": true
+    },
+    {
+      "example": 6,
+      "id": "C_c5451d72257c4c3d96e8b03362f6e051_1_q#2",
+      "raw_record_sha256": "a9761f477340bead2c275b67cab0e6e7db26822d89415b523ace4b9a9aba1f2d",
+      "full_context_sha256": "29dfa0322e1adae01962d2f9ed20ff31a76be7bbc2dd0574a66b15cf6f809dc4",
+      "all_references": true,
+      "teacher_span_and_flags": true,
+      "contiguous_excerpt": [
+        0,
+        137
+      ],
+      "full_selected_EN_JP_fields": true
+    },
+    {
+      "example": 7,
+      "id": "C_7111b50cfc084f7aaf2aab3ea154f0ad_0_q#1",
+      "raw_record_sha256": "d2d2d4d07ac485925e2a95b9eac5e4a75eb0691430c12edcad3f337f3c576145",
+      "full_context_sha256": "88c547715249220e4b2180cbe619f4417d92341a3b812c4a4db030d7d93a5815",
+      "all_references": true,
+      "teacher_span_and_flags": true,
+      "contiguous_excerpt": [
+        616,
+        790
+      ],
+      "full_selected_EN_JP_fields": true
+    },
+    {
+      "example": 8,
+      "id": "C_0735e63bb67b49b9897e540f109ec967_0_q#1",
+      "raw_record_sha256": "33f437888666d322518c883f1ec82cba65e4af30f4f18002301302f504c9dc5b",
+      "full_context_sha256": "0ccda622619be156fd3032fa2ff0273520644f14bade2085f2bee5134d4cfa06",
+      "all_references": true,
+      "teacher_span_and_flags": true,
+      "contiguous_excerpt": [
+        0,
+        172
+      ],
+      "full_selected_EN_JP_fields": true
+    },
+    {
+      "example": 9,
+      "id": "C_b6f2f106bdee40d087e8ff4f6fb9f754_1_q#1",
+      "raw_record_sha256": "e542dc22a73c46f35c7e1e911f89e608d2b72803af78346a452c23cf5a927207",
+      "full_context_sha256": "b3f8374d0d1f94a885ea942bcd550a538a348704c638965150165875bf03f421",
+      "all_references": true,
+      "teacher_span_and_flags": true,
+      "contiguous_excerpt": [
+        373,
+        660
+      ],
+      "full_selected_EN_JP_fields": true
+    },
+    {
+      "example": 10,
+      "id": "C_6f20228bb4fe4b54b491c7c8930808d5_0_q#1",
+      "raw_record_sha256": "eda5e8faa2d82874f625132608f4483ff14befd58a445fcc2c2f5cc9f3abd81d",
+      "full_context_sha256": "b9bfcfd0c21d746aaca9a020ef69578da35ed19d1da521040b64874256e9fc5d",
+      "all_references": true,
+      "teacher_span_and_flags": true,
+      "contiguous_excerpt": [
+        0,
+        110
+      ],
+      "full_selected_EN_JP_fields": true
+    },
+    {
+      "example": 11,
+      "id": "C_6ddf50a14de94ac9991786264f48a22f_0_q#1",
+      "raw_record_sha256": "152085c4818dac1521a3f6d921006b5c948aaa505247d13a806602b6be7f7a9e",
+      "full_context_sha256": "04713b4962ddacee21f93a130d2c3740dc974342ab1dfe370031c0de8327541b",
+      "all_references": true,
+      "teacher_span_and_flags": true,
+      "contiguous_excerpt": [
+        127,
+        270
+      ],
+      "full_selected_EN_JP_fields": true
+    },
+    {
+      "example": 12,
+      "id": "C_c347eb93f081466cac8eef4c90328eb2_0_q#1",
+      "raw_record_sha256": "f692627a745ed9ef293d217fc604b1b5385467a92159c481ce34eae934b03dc0",
+      "full_context_sha256": "6c2fa4be208167752849549bb95e800700e0da82ee3ef07782a2388270af025c",
+      "all_references": true,
+      "teacher_span_and_flags": true,
+      "contiguous_excerpt": [
+        211,
+        267
+      ],
+      "full_selected_EN_JP_fields": true
+    },
+    {
+      "example": 13,
+      "id": "C_6c922ff8e4a340d9bf2b85558179fdde_0_q#2",
+      "raw_record_sha256": "337166b009e3df77305bc19c9935ee2057260e31cec819f406e367ebd59f01d6",
+      "full_context_sha256": "976f0442c487b2b28c8ddda025460cf539e4ab8713b20ee88beb2eb390ed04cf",
+      "all_references": true,
+      "teacher_span_and_flags": true,
+      "contiguous_excerpt": [
+        515,
+        591
+      ],
+      "full_selected_EN_JP_fields": true
+    }
+  ],
+  "all_counts": "stats.json",
+  "official_all_dev_metrics": "official-metric-checks.json",
+  "native_tables": [
+    {
+      "old": 12,
+      "new": 10,
+      "cells": [
+        [
+          "項目",
+          "この例の注釈"
+        ],
+        [
+          "回答範囲",
+          "In January 1995, at 19, he joined Arsenal"
+        ],
+        [
+          "yes／no",
+          "y：はい"
+        ],
+        [
+          "追質問の勧め",
+          "y：続けることを勧める"
+        ]
+      ]
+    },
+    {
+      "old": 19,
+      "new": 16,
+      "cells": [
+        [
+          "集合",
+          "対話数",
+          "質問数"
+        ],
+        [
+          "学習",
+          "11,567",
+          "83,568"
+        ],
+        [
+          "開発",
+          "1,000",
+          "7,354"
+        ],
+        [
+          "テスト（本文非公開）",
+          "1,002",
+          "7,353"
+        ]
+      ]
+    },
+    {
+      "old": 21,
+      "new": 18,
+      "cells": [
+        [
+          "公開集合",
+          "教師の回答不能",
+          "割合"
+        ],
+        [
+          "学習83,568問",
+          "14,459問",
+          "17.3%"
+        ],
+        [
+          "開発7,354問",
+          "1,486問",
+          "20.2%"
+        ]
+      ]
+    },
+    {
+      "old": 25,
+      "new": 22,
+      "cells": [
+        [
+          "指標",
+          "何を数えるか"
+        ],
+        [
+          "F1",
+          "参照回答との単語の重なり"
+        ],
+        [
+          "HEQ-Q",
+          "人のF1以上になった質問の割合"
+        ],
+        [
+          "HEQ-D",
+          "評価対象の全質問で人のF1以上になった対話の割合"
+        ]
+      ]
+    },
+    {
+      "old": 32,
+      "new": 23,
+      "cells": [
+        [
+          "2018年のテスト",
+          "F1 (%)",
+          "HEQ-D (%)"
+        ],
+        [
+          "BiDAF++：履歴なし",
+          "50.2",
+          "2.2"
+        ],
+        [
+          "BiDAF++：直前2往復",
+          "60.1",
+          "4.0"
+        ],
+        [
+          "人の回答",
+          "81.1",
+          "100.0"
+        ]
+      ]
+    },
+    {
+      "old": 33,
+      "new": 24,
+      "cells": [
+        [
+          "公式サイトの掲載モデル",
+          "F1 (%)",
+          "HEQ-D (%)"
+        ],
+        [
+          "CKT-QA ensemble（2022-08）",
+          "76.3",
+          "17.9"
+        ],
+        [
+          "CDQ-DeBERTa single（2022-02）",
+          "75.8",
+          "15.9"
+        ]
+      ]
+    },
+    {
+      "old": 58,
+      "new": 49,
+      "cells": [
+        [
+          "注釈",
+          "内訳"
+        ],
+        [
+          "yes／no",
+          "y：1,500、n：122、x：5,732"
+        ],
+        [
+          "追質問",
+          "y：4,255、m：1,358、n：1,741"
+        ]
+      ]
+    }
+  ],
+  "native_chart": [
+    {
+      "page": 17,
+      "values": [
+        [
+          [
+            99.0,
+            133.0,
+            135.0,
+            142.0,
+            218.0,
+            108.0,
+            71.0,
+            65.0,
+            29.0
+          ]
+        ]
+      ]
+    }
+  ],
+  "native_full_PDF": {
+    "paragraphs": 377,
+    "cells": 64,
+    "missing": []
+  },
+  "red_answers": [
+    {
+      "page": 7,
+      "text": "Rick Nielsen",
+      "size": 21.0
+    },
+    {
+      "page": 7,
+      "text": "リック・ニールセン",
+      "size": 21.0
+    },
+    {
+      "page": 9,
+      "text": "In January 1995, at 19, he joined Arsenal",
+      "size": 21.0
+    },
+    {
+      "page": 9,
+      "text": "1995年1月、19歳でアーセナルに移籍した",
+      "size": 21.0
+    },
+    {
+      "page": 11,
+      "text": "CANNOTANSWER",
+      "size": 21.0
+    },
+    {
+      "page": 12,
+      "text": "回答不能（CANNOTANSWER）",
+      "size": 21.0
+    },
+    {
+      "page": 32,
+      "text": "it simply showed her what was possible with the fantasy genre.",
+      "size": 21.0
+    },
+    {
+      "page": 33,
+      "text": "ファンタジーというジャンルに何が可能なのかを示された",
+      "size": 21.0
+    },
+    {
+      "page": 34,
+      "text": "as were Cesar Franck,",
+      "size": 21.0
+    },
+    {
+      "page": 35,
+      "text": "セザール・フランクも同様だった",
+      "size": 21.0
+    },
+    {
+      "page": 36,
+      "text": "1980",
+      "size": 21.0
+    },
+    {
+      "page": 36,
+      "text": "1980年",
+      "size": 21.0
+    },
+    {
+      "page": 37,
+      "text": "In 2015, Martinez was hired by the MLB Network as a studio analyst",
+      "size": 21.0
+    },
+    {
+      "page": 38,
+      "text": "2015年、MLBネットワークのスタジオ解説者に起用された",
+      "size": 21.0
+    },
+    {
+      "page": 39,
+      "text": "In 1956",
+      "size": 21.0
+    },
+    {
+      "page": 40,
+      "text": "1956年",
+      "size": 21.0
+    },
+    {
+      "page": 41,
+      "text": "In Illinois, the anti-ERA activists used traditional symbols of the American housewife,",
+      "size": 21.0
+    },
+    {
+      "page": 42,
+      "text": "イリノイ州で、反対派は米国の伝統的な主婦の象徴を用いた",
+      "size": 21.0
+    },
+    {
+      "page": 43,
+      "text": "Yanni released If I Could Tell You, his first studio album in seven years.",
+      "size": 21.0
+    },
+    {
+      "page": 43,
+      "text": "7年ぶりのスタジオアルバム「If I Could Tell You」を発表した",
+      "size": 21.0
+    },
+    {
+      "page": 44,
+      "text": "It is not knowing that governs ethical actions, but feelings.",
+      "size": 21.0
+    },
+    {
+      "page": 45,
+      "text": "倫理的な行為を動かすのは知識ではなく、感情である",
+      "size": 21.0
+    },
+    {
+      "page": 46,
+      "text": "They have three adult children: two daughters and a son.",
+      "size": 21.0
+    },
+    {
+      "page": 46,
+      "text": "成人した子どもが3人いる。娘が2人、息子が1人",
+      "size": 21.0
+    },
+    {
+      "page": 47,
+      "text": "He made donations to Ron Paul's presidential campaign",
+      "size": 21.0
+    },
+    {
+      "page": 47,
+      "text": "ロン・ポールの大統領選挙運動に寄付した",
+      "size": 21.0
+    }
+  ],
+  "code_executed": true,
+  "notes": 0,
+  "hashes": {
+    "pptx": "1b455dae1e42255522b8d086d005bc55cb6bb7771c74a4817facd3f5a8fb531f",
+    "pdf": "f999e8bae4ce153babe5adab895d927f03fda66863c8976b0ce0626bf99b907a"
+  },
+  "reported_performance": "2018 model/human and2022 dated leaderboard values are checked to paper/site, not rerun model predictions."
+}
