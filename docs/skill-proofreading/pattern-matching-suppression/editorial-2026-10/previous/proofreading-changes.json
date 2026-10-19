@@ -1,0 +1,943 @@
+{
+  "method": "skill_based_codex",
+  "review_mode": "skill_based_codex",
+  "gemini_used": false,
+  "changes": [
+    {
+      "example": 1,
+      "before": "通常の交互列なら次はx。配布正解はoで、直前のoを繰り返して最後の交互規則を破る。",
+      "after": "交互列を続けるxではなく、直前と同じoを選ぶ。",
+      "reason": "次頁の説明と重なる解説を短くし、原文と訳を全文保持して出典との間隔を確保する。",
+      "page": 7
+    },
+    {
+      "example": 2,
+      "before": "通常の交互列なら次はB。配布正解はAで、直前のAを繰り返して最後の交互規則を破る。",
+      "after": "交互列を続けるBではなく、直前と同じAを選ぶ。",
+      "reason": "次頁の説明と重なる解説を短くし、原文と訳を全文保持して出典との間隔を確保する。",
+      "page": 9
+    },
+    {
+      "example": 3,
+      "before": "通常の交互列なら次はB。配布正解はAで、直前のAを繰り返して最後の交互規則を破る。",
+      "after": "交互列を続けるBではなく、直前と同じAを選ぶ。",
+      "reason": "次頁の説明と重なる解説を短くし、原文と訳を全文保持して出典との間隔を確保する。",
+      "page": 11
+    },
+    {
+      "example": 4,
+      "before": "通常の交互列なら次は2。配布正解は1で、直前の1を繰り返して最後の交互規則を破る。",
+      "after": "交互列を続ける2ではなく、直前と同じ1を選ぶ。",
+      "reason": "次頁の説明と重なる解説を短くし、原文と訳を全文保持して出典との間隔を確保する。",
+      "page": 34
+    },
+    {
+      "example": 6,
+      "before": "通常の交互列なら次はb。配布正解はaで、直前のaを繰り返して最後の交互規則を破る。",
+      "after": "交互列を続けるbではなく、直前と同じaを選ぶ。",
+      "reason": "次頁の説明と重なる解説を短くし、原文と訳を全文保持して出典との間隔を確保する。",
+      "page": 36
+    },
+    {
+      "example": 8,
+      "before": "通常の交互列なら次はw。配布正解はqで、直前のqを繰り返して最後の交互規則を破る。",
+      "after": "交互列を続けるwではなく、直前と同じqを選ぶ。",
+      "reason": "次頁の説明と重なる解説を短くし、原文と訳を全文保持して出典との間隔を確保する。",
+      "page": 38
+    },
+    {
+      "example": 13,
+      "before": "通常の交互列なら次は1。配布正解は0で、直前の0を繰り返して最後の交互規則を破る。",
+      "after": "交互列を続ける1ではなく、直前と同じ0を選ぶ。",
+      "reason": "次頁の説明と重なる解説を短くし、原文と訳を全文保持して出典との間隔を確保する。",
+      "page": 43
+    },
+    {
+      "page": 29,
+      "before": "Classic v0.4.0の公開run一覧ではCLEVA/本課題の該当は0件。元研究の観察と原データの再集計を区別し、新規モデル成績は示さない。",
+      "after": "Classic v0.4.0の公開run一覧では該当0件。性能の観察は元研究、件数は公式原版の再集計として示す。",
+      "reason": "結果の出所を簡潔に述べ、出典URLとの間隔を確保する。"
+    },
+    {
+      "page": 53,
+      "before": "Pattern Match Suppressionの提出者、原例と規則を止める課題の狙いを説明する。",
+      "after": "Pattern Match Suppressionの提出者、原例、規則を止める狙いを示す。",
+      "reason": "参考文献説明の末尾「る。」だけの折返しを解消し、文意を保って短文化する。"
+    }
+  ],
+  "layout_changes": [
+    "原文・候補間の追加空段落を除去し、引用開始を1.86inから1.78inへ。本文・原文は省略しない。",
+    "p24本文21ptから20.5ptへ。"
+  ],
+  "pages": [
+    {
+      "page": 1,
+      "title": "Pattern Matching\nSuppression",
+      "kind": "cover",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。",
+      "final_text": "Pattern Matching\nSuppression\nPattern Match Suppression（論文の表記）\n交互のパターンより、終わり方の指示を優先する\nsasakiy84\ndatasets in 10 minutes (2026-10-18)",
+      "native_tables": [],
+      "png_sha256": "21062f1fa041804192383aec8d02b16d5ce3eeff88181bc5fab78f71ddea08c6",
+      "remaining_issues": []
+    },
+    {
+      "page": 2,
+      "title": "Inverse Scaling Prizeの公式リポジトリ",
+      "kind": "image",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。",
+      "final_text": "Inverse Scaling Prizeの公式リポジトリ\nPattern Matching Suppression\n[1] Inverse Scaling Prize. 公式リポジトリ。固定commit920f17de。  https://github.com/inverse-scaling/prize",
+      "native_tables": [],
+      "png_sha256": "27b115a52fe750943fe6661420730ca30e4a0f90c7bf30fbe85da8957a7721a5",
+      "remaining_issues": []
+    },
+    {
+      "page": 3,
+      "title": "",
+      "kind": "toc",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。",
+      "final_text": "\n交互の列を、最後だけ破る\n原データの構成と限界\n評価と研究での観察\nCLEVAでの採用と入手\n目次",
+      "native_tables": [],
+      "png_sha256": "71e21c63a27c104f13d3ea0dba69e4eb83e3fcb1eb9e0e45f0e4635ec8cd05a5",
+      "remaining_issues": []
+    },
+    {
+      "page": 4,
+      "title": "交互の列を、最後だけ破る",
+      "kind": "divider",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。",
+      "final_text": "交互の列を、最後だけ破る\n1. 交互の列を、最後だけ破る",
+      "native_tables": [],
+      "png_sha256": "69e4171d4c1eb9659d3297c2537d4ac78893a374cfc0b9c63774e55a843625c3",
+      "remaining_issues": []
+    },
+    {
+      "page": 5,
+      "title": "規則を見つけた後で、その規則を止める",
+      "kind": "content",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。",
+      "final_text": "規則を見つけた後で、その規則を止める\nPattern Matching Suppressionは、二つの記号が交互に並ぶ列を示し、最後だけ規則を破るよう指示する英語データセット。\n繰返しから自然に予想される続きを出すことと、明示された終わり方の指示に従うことが衝突する。\n公式公開版は二候補を採点する。正解は交互列を続ける候補ではなく、最後に規則を破る候補である。\n1. 交互の列を、最後だけ破る\n[1] McKenzie et al. (2023). Inverse Scaling: When Bigger Isn’t Better. TMLR. arXiv v2(2024)を参照。  https://arxiv.org/abs/2306.09479",
+      "native_tables": [],
+      "png_sha256": "5ea23ddc5c52d9c97bff2e33096a872aa49800c93032a038b3778569b4c9dba6",
+      "remaining_issues": []
+    },
+    {
+      "page": 6,
+      "title": "提示されるのは、最後の一つを除く列",
+      "kind": "content",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。",
+      "final_text": "提示されるのは、最後の一つを除く列\npromptは、作る列の長さと終わり方を指定し、その後に途中までの列を示す。6個を求める例では5個が既に与えられる。\n元データのclassesは、次に続く二つの記号文字列。answer_indexは0始まりの候補位置で、候補の先頭空白も原値に含まれる。\n以下の13例は指示・提示列・二候補の全文。日本語訳でも、i・one・alphaなどは記号の名前として原綴りを保つ。\n1. 交互の列を、最後だけ破る\n[1] Inverse Scaling Prize. pattern-matching-suppression_classification.jsonl。固定commit920f17de。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "native_tables": [],
+      "png_sha256": "c1c0ac9ae216fcb7cea9aedb43d19bc4e9d9fec39f1062f87c1586376351872e",
+      "remaining_issues": []
+    },
+    {
+      "page": 7,
+      "title": "実例1：oとxの交互列",
+      "kind": "example",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。原指示/提示列/全候補・原正解/JP・集合名不整合を元行へ照合。",
+      "final_text": "実例1：oとxの交互列\n1. 交互の列を、最後だけ破る\n公式JSONL1310行目／prompt全文・二候補／記号名は原綴り\nGenerate a sequence of 6 symbols alternating between two symbols (o x) but ending unexpectedly.\no, x, o, x, o,\nclasses = [' x', ' o']\n二つの記号(o x)の間で交互になる6個の記号列を生成してください。ただし、最後は予想外のものにしてください。\no, x, o, x, o,\n候補（原順）：[' x', ' o']\n配布正解：classes[1] = ' o'\n交互列を続けるxではなく、直前と同じoを選ぶ。\n[1] Inverse Scaling Prize. pattern-matching-suppression_classification.jsonl。固定commit920f17de。 1310行目（0始まり1309）/ round2 / part1。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "native_tables": [],
+      "png_sha256": "d0273d39fe61e633ae96f512095b355198bd57179ddadabd3fc898ab9e24ce1a",
+      "remaining_issues": []
+    },
+    {
+      "page": 8,
+      "title": "oの後に、もう一度oを出す",
+      "kind": "content",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。",
+      "final_text": "oの後に、もう一度oを出す\n実例1の提示列はo, x, o, x, o。通常の交互規則なら、次はxになる。\n指示は6記号の列を、予想外に終えること。配布正解oを続けると、最後がo, oとなり交互の規則が破れる。\n途中の5記号は変更しない。既に示された列の後に、最後の1記号を選ぶ。\n1. 交互の列を、最後だけ破る\n[1] McKenzie et al. (2023). Inverse Scaling: When Bigger Isn’t Better. TMLR. arXiv v2(2024)を参照。  https://arxiv.org/abs/2306.09479",
+      "native_tables": [],
+      "png_sha256": "2cfa7d6e0d33d2dd1e46997b0fa91875c471e373a4ec9483851bb49204c9441c",
+      "remaining_issues": []
+    },
+    {
+      "page": 9,
+      "title": "実例2：20記号目で、交互の規則を破る",
+      "kind": "example",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。原指示/提示列/全候補・原正解/JP・集合名不整合を元行へ照合。",
+      "final_text": "実例2：20記号目で、交互の規則を破る\n1. 交互の列を、最後だけ破る\n公式JSONL7行目／prompt全文・二候補／記号名は原綴り\nGenerate a sequence of 20 symbols alternating between two symbols (A B) but ending unexpectedly.\nA, B, A, B, A, B, A, B, A, B, A, B, A, B, A, B, A, B, A,\nclasses = [' B', ' A']\n二つの記号(A B)の間で交互になる20個の記号列を生成してください。ただし、最後は予想外のものにしてください。\nA, B, A, B, A, B, A, B, A, B, A, B, A, B, A, B, A, B, A,\n候補（原順）：[' B', ' A']\n配布正解：classes[1] = ' A'\n交互列を続けるBではなく、直前と同じAを選ぶ。\n[1] Inverse Scaling Prize. pattern-matching-suppression_classification.jsonl。固定commit920f17de。 7行目（0始まり6）/ round2 / part1。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "native_tables": [],
+      "png_sha256": "b68490c0ed67fd58391032c5b3e6a77ce406416a515419b68e63264b49c9c089",
+      "remaining_issues": []
+    },
+    {
+      "page": 10,
+      "title": "長い繰返しでも、最後だけは例外になる",
+      "kind": "content",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。",
+      "final_text": "長い繰返しでも、最後だけは例外になる\n実例2は20記号を求め、先に19記号を示す。AとBが交互に並び、最後の提示記号はA。\n規則をそのまま続けるBが誤候補、Aを繰り返す方が配布正解になる。列が長くても、最後に求められる操作は同じ。\n原データは完成させる長さを6・8・10・12・14・16・20に変え、指示への切替を調べる。\n1. 交互の列を、最後だけ破る\n[1] McKenzie et al. (2023). Inverse Scaling: When Bigger Isn’t Better. TMLR. arXiv v2(2024)を参照。  https://arxiv.org/abs/2306.09479",
+      "native_tables": [],
+      "png_sha256": "060796868f9a33351bd110832836df0237ced649edb32393ade7317effe045d5",
+      "remaining_issues": []
+    },
+    {
+      "page": 11,
+      "title": "実例3：次に来る記号を、明示的に除く",
+      "kind": "example",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。原指示/提示列/全候補・原正解/JP・集合名不整合を元行へ照合。",
+      "final_text": "実例3：次に来る記号を、明示的に除く\n1. 交互の列を、最後だけ破る\n公式JSONL29行目／prompt全文・二候補／記号名は原綴り\nGenerate a sequence of 6 symbols alternating between (A B) but ending anything you like except \"B\".\nA, B, A, B, A,\nclasses = [' B', ' A']\n(A B)の間で交互になる6個の記号列を生成してください。ただし、最後は\"B\"以外の好きなものにしてください。\nA, B, A, B, A,\n候補（原順）：[' B', ' A']\n配布正解：classes[1] = ' A'\n交互列を続けるBではなく、直前と同じAを選ぶ。\n[1] Inverse Scaling Prize. pattern-matching-suppression_classification.jsonl。固定commit920f17de。 29行目（0始まり28）/ round2 / part1。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "native_tables": [],
+      "png_sha256": "135dfc5e7bd2a48a3c4c66f0c351ff2e52433f4c72d856483ad4986365eb83cd",
+      "remaining_issues": []
+    },
+    {
+      "page": 12,
+      "title": "曖昧な終わり方と、明示的な除外がある",
+      "kind": "content",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。",
+      "final_text": "曖昧な終わり方と、明示的な除外がある\n実例3は「B以外の好きなもの」で終えると指示する。二つの候補A/Bのうち、Bを除くと配布正解はA。\n別の指示は「予想外に終える」「予測不能に終える」と表現する。構築研究も、unexpectedの意味が十分には特定されていないという限界を述べる。\n自由に書くなら他の終わり方も考えられるが、この評価は配布された二候補の確率を比較する。\n1. 交互の列を、最後だけ破る\n[1] McKenzie et al. (2023). Inverse Scaling: When Bigger Isn’t Better. TMLR. arXiv v2(2024)を参照。  https://arxiv.org/abs/2306.09479",
+      "native_tables": [],
+      "png_sha256": "21b2b4c358fae67758e004bbeeb47cc1099bd610418cc876e72d90481b9de31f",
+      "remaining_issues": []
+    },
+    {
+      "page": 13,
+      "title": "原データの構成と限界",
+      "kind": "divider",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。",
+      "final_text": "原データの構成と限界\n2. 原データの構成と限界",
+      "native_tables": [],
+      "png_sha256": "a0739e670b8a7ad983ce35f7eecbf27470f00ee94cf6f019ba7f34e40a802004",
+      "remaining_issues": []
+    },
+    {
+      "page": 14,
+      "title": "第2回受賞課題を、固定公開版で読む",
+      "kind": "content",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。",
+      "final_text": "第2回受賞課題を、固定公開版で読む\nTomasz Korbakが提出し、Inverse Scaling Prizeの第2回で受賞した。公式受賞発表の引用年は2022年。\n2023年3月の公開ZIPは11受賞課題を収める。この課題はround=2、part=1の1,428件で、train/dev/testの区分はない。\nファイル名はpattern-matching-suppression、論文中の課題名はPattern Match Suppression。元英語配布とCLEVAが採用した版は区別する。\n2. 原データの構成と限界\n[1] McKenzie et al. (2022). Inverse Scaling Prize: Second Round Winners.  https://irmckenzie.co.uk/round2/\n[2] Inverse Scaling Prize. Data release、形式・版・CC BY4.0。固定commit920f17de。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/README.md",
+      "native_tables": [],
+      "png_sha256": "68d459193890b8ba92b5876aa8663917bbc3f3aa0578ea19b62ec120e443fa58",
+      "remaining_issues": []
+    },
+    {
+      "page": 15,
+      "title": "12記号対×17指示表現×7種類の長さ",
+      "kind": "content",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。表の全値/条件/原記号と1–2字だけの折返しを確認。",
+      "final_text": "12記号対×17指示表現×7種類の長さ\n2. 原データの構成と限界\n公式JSONL全件の構造を再集計。promptは全1,428件で一意。\n[1] Inverse Scaling Prize. pattern-matching-suppression_classification.jsonl。固定commit920f17de。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "native_tables": [
+        [
+          [
+            "変える要素",
+            "種類・件数"
+          ],
+          [
+            "記号対",
+            "12組、各119件"
+          ],
+          [
+            "指示の言い方",
+            "各記号対に17表現"
+          ],
+          [
+            "完成列の長さ",
+            "6・8・10・12・14・16・20"
+          ],
+          [
+            "全レコード",
+            "12×17×7 = 1,428"
+          ]
+        ]
+      ],
+      "png_sha256": "9d4605c8e4f374447adf740b30ff049ec928b69c92b5a4f92f9c6c78e05778ee",
+      "remaining_issues": []
+    },
+    {
+      "page": 16,
+      "title": "完成列の長さごとに、204件ずつある",
+      "kind": "content",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。完成長7種類×204件のnativechartと原集計を照合。",
+      "final_text": "完成列の長さごとに、204件ずつある\n2. 原データの構成と限界\n横軸は完成させる記号数。実際の提示列は、その数より1記号少ない。\n[1] Inverse Scaling Prize. pattern-matching-suppression_classification.jsonl。固定commit920f17de。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "native_tables": [],
+      "png_sha256": "e59fae57f6b8424f08a27cbc722220fdc760692fab9c0da2af133236ac1d4655",
+      "remaining_issues": []
+    },
+    {
+      "page": 17,
+      "title": "終わり方は、四つの言い方に分かれる",
+      "kind": "content",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。表の全値/条件/原記号と1–2字だけの折返しを確認。",
+      "final_text": "終わり方は、四つの言い方に分かれる\n2. 原データの構成と限界\n前半の指示表現も変えるため、合計17種類の表現になる。\n[1] Inverse Scaling Prize. pattern-matching-suppression_classification.jsonl。固定commit920f17de。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "native_tables": [
+        [
+          [
+            "指示の末尾",
+            "件数"
+          ],
+          [
+            "ending unexpectedly／予想外に",
+            "420"
+          ],
+          [
+            "ending unpredictably／予測不能に",
+            "336"
+          ],
+          [
+            "violating the pattern／規則を破る",
+            "336"
+          ],
+          [
+            "except …／指定記号以外に",
+            "336"
+          ]
+        ]
+      ],
+      "png_sha256": "b42c253f2d2e3093b24b7a566d433a75d0b60f207b6fd1d00714700ae625bdef",
+      "remaining_issues": []
+    },
+    {
+      "page": 18,
+      "title": "指示中の集合名に、原配布の不整合がある",
+      "kind": "content",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。表の全値/条件/原記号と1–2字だけの折返しを確認。",
+      "final_text": "指示中の集合名に、原配布の不整合がある\n2. 原データの構成と限界\n6群×119件=714件。列と二候補は完全だが、指示内の集合名は途切れている。原因は未確認で、原文は補正しない。\n[1] Inverse Scaling Prize. pattern-matching-suppression_classification.jsonl。固定commit920f17de。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "native_tables": [
+        [
+          [
+            "指示中の表記",
+            "列と候補の記号対"
+          ],
+          [
+            "i i ／ one ／ aa",
+            "i/ii、one/two、aa/ab"
+          ],
+          [
+            "alp ／ fir ／ lef",
+            "alpha/beta、first/second、left/right"
+          ]
+        ]
+      ],
+      "png_sha256": "7bf25ad2cf76ea6941b319ae528cc837a2160657b69556248749f19e0c59645c",
+      "remaining_issues": []
+    },
+    {
+      "page": 19,
+      "title": "候補順は固定だが、選択肢ラベルではない",
+      "kind": "content",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。",
+      "final_text": "候補順は固定だが、選択肢ラベルではない\n原JSONLのclasses[0]は通常の交互列を続ける記号、classes[1]は直前を繰り返して規則を破る記号。全1,428件のanswer_indexは1。\nこの配列位置は採点側の情報。英語promptに「A/Bの二択」が書かれているわけではなく、元評価は各候補文字列の確率を直接調べる。\n候補位置1への偏りと、モデルが実際に出す記号は区別する。CLEVAのA/B表示を、原ファイルの配列位置と混同しない。\n2. 原データの構成と限界\n[1] Inverse Scaling Prize. pattern-matching-suppression_classification.jsonl。固定commit920f17de。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "native_tables": [],
+      "png_sha256": "f89b0d8272a852e28900cc8caa577c1e7190e67319107b4f4a8924f85cb554f6",
+      "remaining_issues": []
+    },
+    {
+      "page": 20,
+      "title": "評価と研究での観察",
+      "kind": "divider",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。",
+      "final_text": "評価と研究での観察\n3. 評価と研究での観察",
+      "native_tables": [],
+      "png_sha256": "e94a9c755ca6a8c972e4a125a158a61f7add0a84d90f9ab06fd9d0dadec27ccf",
+      "remaining_issues": []
+    },
+    {
+      "page": 21,
+      "title": "二候補の確率から、正解率と損失を測る",
+      "kind": "content",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。",
+      "final_text": "二候補の確率から、正解率と損失を測る\n元のclassification評価は、promptの後に各候補文字列が続く確率を求める。複数トークンの候補は、文字列全体の確率を使う。\n二候補内で合計1になるよう正規化し、正解候補の負対数を平均して分類損失とする。最大確率の候補を選んだ一致率が分類正解率。\n自由生成した列全体の完全一致ではない。候補の先頭空白と、どちらの記号を正解とするかを保って比較する。\n3. 評価と研究での観察\n[1] McKenzie et al. (2023). Inverse Scaling: When Bigger Isn’t Better. TMLR. arXiv v2(2024)を参照。  https://arxiv.org/abs/2306.09479",
+      "native_tables": [],
+      "png_sha256": "b6015eaf93a00489602601433e76ff7e5cc71907bf348753c0e8c40eaf9c5eb5",
+      "remaining_issues": []
+    },
+    {
+      "page": 22,
+      "title": "人の一致100.0%は、モデルの正解率とは別",
+      "kind": "content",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。",
+      "final_text": "人の一致100.0%は、モデルの正解率とは別\n構築研究は、無作為に抽出した少なくとも50例を人が解き、提出ラベルとの一致を確認した。この課題の報告値は100.0%。\n1,428件全てを人が再注釈したという割合でも、モデルが全件正解したという成績でもない。\n本資料では全件の列を構造的に検算した。提示列が交互になり、長さが指定より1つ少なく、配布正解が直前の記号を繰り返すことを確認した。\n3. 評価と研究での観察\n[1] McKenzie et al. (2023). Inverse Scaling: When Bigger Isn’t Better. TMLR. arXiv v2(2024)を参照。  https://arxiv.org/abs/2306.09479",
+      "native_tables": [],
+      "png_sha256": "f418af421be160c58112e8e19f33dce214f26e5f36ce45e2fbadbc9fa5863724",
+      "remaining_issues": []
+    },
+    {
+      "page": 23,
+      "title": "暗黙の規則を続ける能力が、誤答へ働く",
+      "kind": "content",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。",
+      "final_text": "暗黙の規則を続ける能力が、誤答へ働く\n構築研究では、評価したモデルの成績は全般に低かった。最小モデルはGPT-3系列を除き、全系列でゼロより高い正解率を示したとする。\n大きい側でゼロを超えたのはGPT-4、GPT-4 RLHF、GPT-3 FeedMEだったと報告する。規模と指示学習のどちらが寄与したかを一律に断定しない。\n規則を続ける方が、規則を止めるという本来の課題より簡単な「おとり課題」になる、という解釈を示している。\n3. 評価と研究での観察\n[1] McKenzie et al. (2023). Inverse Scaling: When Bigger Isn’t Better. TMLR. arXiv v2(2024)を参照。  https://arxiv.org/abs/2306.09479",
+      "native_tables": [],
+      "png_sha256": "b1cc3d965fe7974d9518bfdd3372ce491189173e6d294f45b38ca18668432acd",
+      "remaining_issues": []
+    },
+    {
+      "page": 24,
+      "title": "例示を追加すると、規模依存の傾向も変わる",
+      "kind": "content",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。",
+      "final_text": "例示を追加すると、規模依存の傾向も変わる\n研究はゼロショットに加え、最大72例または文脈長に入る範囲のfew-shotを調べた。対象はAnthropic LM、Gopher、Chinchilla。\nPattern Match Suppressionは、例示の追加で逆方向の傾向が改善し、U字または通常方向になる課題の一つとして挙げられる。\n同じデータでも、入力に含める正解付き例の数とモデル系列によって結果は変わる。元の条件を、現在の任意のモデルへ広げない。\n3. 評価と研究での観察\n[1] McKenzie et al. (2023). Inverse Scaling: When Bigger Isn’t Better. TMLR. arXiv v2(2024)を参照。  https://arxiv.org/abs/2306.09479",
+      "native_tables": [],
+      "png_sha256": "123493dfd3a0acd9dd2b0ba5f20dc912002504479a7c4ef507300c0ae39451df",
+      "remaining_issues": []
+    },
+    {
+      "page": 25,
+      "title": "CLEVAでの採用と入手",
+      "kind": "divider",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。",
+      "final_text": "CLEVAでの採用と入手\n4. CLEVAでの採用と入手",
+      "native_tables": [],
+      "png_sha256": "85286ed2c4840c9a62957a8c5d096ac7ec97862c21628938275b3fa09152f42f",
+      "remaining_issues": []
+    },
+    {
+      "page": 26,
+      "title": "CLEVAは、中国語の指示追従課題に採用",
+      "kind": "content",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。",
+      "final_text": "CLEVAは、中国語の指示追従課題に採用\nCLEVAはinstruction_followingのpattern_matching_suppression下位課題に採用する。HELM v0.4.0の固定設定はprompt_id0・1、version v1。\n公開docstringのo/x例は、原英語JSONLの1,310行目、0始まり1,309に対応する。候補x/oと正解oも一致する。\nCLEVAが選定・翻訳・整形した実v1集合は未取得。元英語1,428件を、そのままCLEVAの評価件数とはしない。\n4. CLEVAでの採用と入手\n[1] Yanyang Li et al. (2023). CLEVA: Chinese Language Models EVAluation Platform. EMNLP System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/\n[2] Stanford CRFM (2023). CLEVAInstructionFollowingScenario. HELM v0.4.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py",
+      "native_tables": [],
+      "png_sha256": "fb67ec0d9fdc55eb9be6d99a94c31552355197aa3ff0e2a7c1e5e0941abdbc56",
+      "remaining_issues": []
+    },
+    {
+      "page": 27,
+      "title": "公開説明例は、原英語のo/x列に対応する",
+      "kind": "quote",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。",
+      "final_text": "公開説明例は、原英語のo/x列に対応する\n4. CLEVAでの採用と入手\n生成一个6个组成字符的序列，这个序列在“o”、“x”间交替，但是意外结束。\no，x，o，x，o，\nA. x\nB. o\n6個の記号からなる列を生成してください。oとxを交互に並べますが、予想外に終えてください。\no，x，o，x，o，\nA. x\nB. o\n公開例の正解：B ／ 原英語：classes[1] = ' o'\n[1] Stanford CRFM (2023). CLEVAInstructionFollowingScenario. HELM v0.4.0. 英語元レコードは実例1、公式JSONL1310行目。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py",
+      "native_tables": [],
+      "png_sha256": "a80f01c8980e529ec4c6f6549b61e51650ad55316e3b320bbfa49a5a06503bdc",
+      "remaining_issues": []
+    },
+    {
+      "page": 28,
+      "title": "候補の順序は、資料の表現ごとに確認する",
+      "kind": "content",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。表の全値/条件/原記号と1–2字だけの折返しを確認。",
+      "final_text": "候補の順序は、資料の表現ごとに確認する\n4. CLEVAでの採用と入手\n正解の記号と配列・選択肢の位置は別の情報。表記差を同一のindexと扱わない。\n[1] McKenzie et al. (2023). Inverse Scaling: When Bigger Isn’t Better. TMLR. arXiv v2(2024)を参照。  https://arxiv.org/abs/2306.09479\n[2] Stanford CRFM (2023). CLEVAInstructionFollowingScenario. HELM v0.4.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py",
+      "native_tables": [
+        [
+          [
+            "対象",
+            "候補順",
+            "正解"
+          ],
+          [
+            "構築論文のA/B列例",
+            "[' A', ' B']",
+            "A／位置0"
+          ],
+          [
+            "公式JSONLの同じ指示",
+            "[' B', ' A']",
+            "A／位置1"
+          ],
+          [
+            "HELM公開o/x例",
+            "A. x、B. o",
+            "o／選択肢B"
+          ]
+        ]
+      ],
+      "png_sha256": "60a32680b6c06e28a335d4028fb10c8ae64ac058f21665a75aded085ebaffdef",
+      "remaining_issues": []
+    },
+    {
+      "page": 29,
+      "title": "固定版・帰属・取得できた範囲を残す",
+      "kind": "content",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。",
+      "final_text": "固定版・帰属・取得できた範囲を残す\n公式data-releaseのZIPとREADMEから、原JSONLを取得できる。データはCC BY4.0で、課題提出者Tomasz Korbakと公開元を明示する。\n本資料では英語の指示・提示列・候補・配布正解を保持し、日本語訳と解説、段組と改行を加えた。集合名の不整合も元のまま示す。\nClassic v0.4.0の公開run一覧では該当0件。性能の観察は元研究、件数は公式原版の再集計として示す。\n4. CLEVAでの採用と入手\n[1] Inverse Scaling Prize. Data release、形式・版・CC BY4.0。固定commit920f17de。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/README.md\n[2] Stanford CRFM (2023). CLEVAInstructionFollowingScenario. HELM v0.4.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py",
+      "native_tables": [],
+      "png_sha256": "148d01d07bbff0c69695ad6d0df9750d924580218d7992e13bd85ad6d7f1d264",
+      "remaining_issues": []
+    },
+    {
+      "page": 30,
+      "title": "規則を当てることと、指示に従うことを分ける",
+      "kind": "content",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。",
+      "final_text": "規則を当てることと、指示に従うことを分ける\n交互の列の続きを当てるだけなら、規則に沿う記号を選べばよい。この課題では、最後にその規則を破るよう求める。\n原公開版は12記号対・17表現・7種類の長さから成る1,428件。全件の構造を検算できる一方、指示中の集合名には714件の不整合がある。\n二候補の確率評価、局所的な指示の曖昧さ、CLEVA採用版の未取得を分け、何への応答を測ったかを明確にする。\n4. CLEVAでの採用と入手\n[1] McKenzie et al. (2023). Inverse Scaling: When Bigger Isn’t Better. TMLR. arXiv v2(2024)を参照。  https://arxiv.org/abs/2306.09479",
+      "native_tables": [],
+      "png_sha256": "b4d0a1e4a5d5f15960ebe340be2d836ac46f0bb1c4714d0471dbee544a619f77",
+      "remaining_issues": []
+    },
+    {
+      "page": 31,
+      "title": "Appendix",
+      "kind": "divider",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。",
+      "final_text": "Appendix\nAppendix",
+      "native_tables": [],
+      "png_sha256": "d477dd3a0828b12e0d478cfb690dc8e19521069f548176cfcd4cc9e9493043ec",
+      "remaining_issues": []
+    },
+    {
+      "page": 32,
+      "title": "",
+      "kind": "toc",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。",
+      "final_text": "\n追加10件の実例\n記号対・表示範囲・検算\n研究と参考文献\nAppendix: 目次",
+      "native_tables": [],
+      "png_sha256": "2ed2e4db3f045e61b36590c86aad6a894d0eacabeefc7672f62f4f25fd3fdbf8",
+      "remaining_issues": []
+    },
+    {
+      "page": 33,
+      "title": "追加10件の実例",
+      "kind": "divider",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。",
+      "final_text": "追加10件の実例\nAppendix: 1. 追加10件の実例",
+      "native_tables": [],
+      "png_sha256": "71fe631b1af9a0e8bf65baf17eec9aa064fb66001fe74c0ba39c585dc1fce9e1",
+      "remaining_issues": []
+    },
+    {
+      "page": 34,
+      "title": "実例4：1と2の交互列",
+      "kind": "example",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。原指示/提示列/全候補・原正解/JP・集合名不整合を元行へ照合。",
+      "final_text": "実例4：1と2の交互列\nAppendix: 1. 追加10件の実例\n公式JSONL120行目／prompt全文・二候補／記号名は原綴り\nGenerate a sequence of 6 symbols alternating between two symbols (1 2) but ending unexpectedly.\n1, 2, 1, 2, 1,\nclasses = [' 2', ' 1']\n二つの記号(1 2)の間で交互になる6個の記号列を生成してください。ただし、最後は予想外のものにしてください。\n1, 2, 1, 2, 1,\n候補（原順）：[' 2', ' 1']\n配布正解：classes[1] = ' 1'\n交互列を続ける2ではなく、直前と同じ1を選ぶ。\n[1] Inverse Scaling Prize. pattern-matching-suppression_classification.jsonl。固定commit920f17de。 120行目（0始まり119）/ round2 / part1。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "native_tables": [],
+      "png_sha256": "501e958355f13c70c87b09c236c03fc68dee74fdeda7a119d7328dca3df070c0",
+      "remaining_issues": []
+    },
+    {
+      "page": 35,
+      "title": "実例5：iとiiの交互列",
+      "kind": "example",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。原指示/提示列/全候補・原正解/JP・集合名不整合を元行へ照合。",
+      "final_text": "実例5：iとiiの交互列\nAppendix: 1. 追加10件の実例\n公式JSONL239行目／prompt全文・二候補／記号名は原綴り／指示中の集合名は原表記（不整合あり）\nGenerate a sequence of 6 symbols alternating between two symbols (i i) but ending unexpectedly.\ni, ii, i, ii, i,\nclasses = [' ii', ' i']\n二つの記号(i i)の間で交互になる6個の記号列を生成してください。ただし、最後は予想外のものにしてください。\ni, ii, i, ii, i,\n候補（原順）：[' ii', ' i']\n配布正解：classes[1] = ' i'\n集合名は原表記「i i」。列・候補はi/ii。正解iは最後の規則を破る。\n[1] Inverse Scaling Prize. pattern-matching-suppression_classification.jsonl。固定commit920f17de。 239行目（0始まり238）/ round2 / part1。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "native_tables": [],
+      "png_sha256": "d8b36afd282c9f62d720e6831adf2eca0d4bfddb04343ba0a70213c1f915d8db",
+      "remaining_issues": []
+    },
+    {
+      "page": 36,
+      "title": "実例6：aとbの交互列",
+      "kind": "example",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。原指示/提示列/全候補・原正解/JP・集合名不整合を元行へ照合。",
+      "final_text": "実例6：aとbの交互列\nAppendix: 1. 追加10件の実例\n公式JSONL358行目／prompt全文・二候補／記号名は原綴り\nGenerate a sequence of 6 symbols alternating between two symbols (a b) but ending unexpectedly.\na, b, a, b, a,\nclasses = [' b', ' a']\n二つの記号(a b)の間で交互になる6個の記号列を生成してください。ただし、最後は予想外のものにしてください。\na, b, a, b, a,\n候補（原順）：[' b', ' a']\n配布正解：classes[1] = ' a'\n交互列を続けるbではなく、直前と同じaを選ぶ。\n[1] Inverse Scaling Prize. pattern-matching-suppression_classification.jsonl。固定commit920f17de。 358行目（0始まり357）/ round2 / part1。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "native_tables": [],
+      "png_sha256": "111296dcb8ed423dda5a4a3badc6c6d42f3efcb73509670dcf947179eaee5926",
+      "remaining_issues": []
+    },
+    {
+      "page": 37,
+      "title": "実例7：oneとtwoの交互列",
+      "kind": "example",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。原指示/提示列/全候補・原正解/JP・集合名不整合を元行へ照合。",
+      "final_text": "実例7：oneとtwoの交互列\nAppendix: 1. 追加10件の実例\n公式JSONL477行目／prompt全文・二候補／記号名は原綴り／指示中の集合名は原表記（不整合あり）\nGenerate a sequence of 6 symbols alternating between two symbols (one) but ending unexpectedly.\none, two, one, two, one,\nclasses = [' two', ' one']\n二つの記号(one)の間で交互になる6個の記号列を生成してください。ただし、最後は予想外のものにしてください。\none, two, one, two, one,\n候補（原順）：[' two', ' one']\n配布正解：classes[1] = ' one'\n集合名は原表記「one」。列・候補はone/two。正解oneは最後の規則を破る。\n[1] Inverse Scaling Prize. pattern-matching-suppression_classification.jsonl。固定commit920f17de。 477行目（0始まり476）/ round2 / part1。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "native_tables": [],
+      "png_sha256": "97b70a0b429ef9d53556fc33f31c7c2c74c54c6ef7b54c56e4d646b7cdd937c5",
+      "remaining_issues": []
+    },
+    {
+      "page": 38,
+      "title": "実例8：qとwの交互列",
+      "kind": "example",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。原指示/提示列/全候補・原正解/JP・集合名不整合を元行へ照合。",
+      "final_text": "実例8：qとwの交互列\nAppendix: 1. 追加10件の実例\n公式JSONL596行目／prompt全文・二候補／記号名は原綴り\nGenerate a sequence of 6 symbols alternating between two symbols (q w) but ending unexpectedly.\nq, w, q, w, q,\nclasses = [' w', ' q']\n二つの記号(q w)の間で交互になる6個の記号列を生成してください。ただし、最後は予想外のものにしてください。\nq, w, q, w, q,\n候補（原順）：[' w', ' q']\n配布正解：classes[1] = ' q'\n交互列を続けるwではなく、直前と同じqを選ぶ。\n[1] Inverse Scaling Prize. pattern-matching-suppression_classification.jsonl。固定commit920f17de。 596行目（0始まり595）/ round2 / part1。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "native_tables": [],
+      "png_sha256": "f5f0cbc51c66f488ecdee60e3a5aba5601dfc88ccfc402323726e9b8a5a6bc0b",
+      "remaining_issues": []
+    },
+    {
+      "page": 39,
+      "title": "実例9：aaとabの交互列",
+      "kind": "example",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。原指示/提示列/全候補・原正解/JP・集合名不整合を元行へ照合。",
+      "final_text": "実例9：aaとabの交互列\nAppendix: 1. 追加10件の実例\n公式JSONL715行目／prompt全文・二候補／記号名は原綴り／指示中の集合名は原表記（不整合あり）\nGenerate a sequence of 6 symbols alternating between two symbols (aa ) but ending unexpectedly.\naa, ab, aa, ab, aa,\nclasses = [' ab', ' aa']\n二つの記号(aa )の間で交互になる6個の記号列を生成してください。ただし、最後は予想外のものにしてください。\naa, ab, aa, ab, aa,\n候補（原順）：[' ab', ' aa']\n配布正解：classes[1] = ' aa'\n集合名は原表記「aa 」。列・候補はaa/ab。正解aaは最後の規則を破る。\n[1] Inverse Scaling Prize. pattern-matching-suppression_classification.jsonl。固定commit920f17de。 715行目（0始まり714）/ round2 / part1。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "native_tables": [],
+      "png_sha256": "8c639e2117387cd578dc5d983c4b7e43b563371d4caf2852a56ded9d5a2fa8c2",
+      "remaining_issues": []
+    },
+    {
+      "page": 40,
+      "title": "実例10：alphaとbetaの交互列",
+      "kind": "example",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。原指示/提示列/全候補・原正解/JP・集合名不整合を元行へ照合。",
+      "final_text": "実例10：alphaとbetaの交互列\nAppendix: 1. 追加10件の実例\n公式JSONL834行目／prompt全文・二候補／記号名は原綴り／指示中の集合名は原表記（不整合あり）\nGenerate a sequence of 6 symbols alternating between two symbols (alp) but ending unexpectedly.\nalpha, beta, alpha, beta, alpha,\nclasses = [' beta', ' alpha']\n二つの記号(alp)の間で交互になる6個の記号列を生成してください。ただし、最後は予想外のものにしてください。\nalpha, beta, alpha, beta, alpha,\n候補（原順）：[' beta', ' alpha']\n配布正解：classes[1] = ' alpha'\n集合名は原表記「alp」。列・候補はalpha/beta。正解alphaは最後の規則を破る。\n[1] Inverse Scaling Prize. pattern-matching-suppression_classification.jsonl。固定commit920f17de。 834行目（0始まり833）/ round2 / part1。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "native_tables": [],
+      "png_sha256": "918eb9828760867eb1b8bddc79a744fe7a41a6d26b71c1ded827ec28221ba154",
+      "remaining_issues": []
+    },
+    {
+      "page": 41,
+      "title": "実例11：firstとsecondの交互列",
+      "kind": "example",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。原指示/提示列/全候補・原正解/JP・集合名不整合を元行へ照合。",
+      "final_text": "実例11：firstとsecondの交互列\nAppendix: 1. 追加10件の実例\n公式JSONL953行目／prompt全文・二候補／記号名は原綴り／指示中の集合名は原表記（不整合あり）\nGenerate a sequence of 6 symbols alternating between two symbols (fir) but ending unexpectedly.\nfirst, second, first, second, first,\nclasses = [' second', ' first']\n二つの記号(fir)の間で交互になる6個の記号列を生成してください。ただし、最後は予想外のものにしてください。\nfirst, second, first, second, first,\n候補（原順）：[' second', ' first']\n配布正解：classes[1] = ' first'\n集合名は原表記「fir」。列・候補はfirst/second。正解firstは最後の規則を破る。\n[1] Inverse Scaling Prize. pattern-matching-suppression_classification.jsonl。固定commit920f17de。 953行目（0始まり952）/ round2 / part1。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "native_tables": [],
+      "png_sha256": "660b2b2bd1373a9f415b9d2de56994fbf669d5c4c0e865baa2fc408aacdf8852",
+      "remaining_issues": []
+    },
+    {
+      "page": 42,
+      "title": "実例12：leftとrightの交互列",
+      "kind": "example",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。原指示/提示列/全候補・原正解/JP・集合名不整合を元行へ照合。",
+      "final_text": "実例12：leftとrightの交互列\nAppendix: 1. 追加10件の実例\n公式JSONL1072行目／prompt全文・二候補／記号名は原綴り／指示中の集合名は原表記（不整合あり）\nGenerate a sequence of 6 symbols alternating between two symbols (lef) but ending unexpectedly.\nleft, right, left, right, left,\nclasses = [' right', ' left']\n二つの記号(lef)の間で交互になる6個の記号列を生成してください。ただし、最後は予想外のものにしてください。\nleft, right, left, right, left,\n候補（原順）：[' right', ' left']\n配布正解：classes[1] = ' left'\n集合名は原表記「lef」。列・候補はleft/right。正解leftは最後の規則を破る。\n[1] Inverse Scaling Prize. pattern-matching-suppression_classification.jsonl。固定commit920f17de。 1072行目（0始まり1071）/ round2 / part1。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "native_tables": [],
+      "png_sha256": "eec009b6d5f93433594d2c1c4543e7112d13a2437f9527bc5643bab3c66f95b8",
+      "remaining_issues": []
+    },
+    {
+      "page": 43,
+      "title": "実例13：0と1の交互列",
+      "kind": "example",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。原指示/提示列/全候補・原正解/JP・集合名不整合を元行へ照合。",
+      "final_text": "実例13：0と1の交互列\nAppendix: 1. 追加10件の実例\n公式JSONL1191行目／prompt全文・二候補／記号名は原綴り\nGenerate a sequence of 6 symbols alternating between two symbols (0 1) but ending unexpectedly.\n0, 1, 0, 1, 0,\nclasses = [' 1', ' 0']\n二つの記号(0 1)の間で交互になる6個の記号列を生成してください。ただし、最後は予想外のものにしてください。\n0, 1, 0, 1, 0,\n候補（原順）：[' 1', ' 0']\n配布正解：classes[1] = ' 0'\n交互列を続ける1ではなく、直前と同じ0を選ぶ。\n[1] Inverse Scaling Prize. pattern-matching-suppression_classification.jsonl。固定commit920f17de。 1191行目（0始まり1190）/ round2 / part1。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "native_tables": [],
+      "png_sha256": "c47361bf1e7d2eeb0e808563426a3f74614d7140906b136722f1accc411f995b",
+      "remaining_issues": []
+    },
+    {
+      "page": 44,
+      "title": "記号対・表示範囲・検算",
+      "kind": "divider",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。",
+      "final_text": "記号対・表示範囲・検算\nAppendix: 2. 記号対・表示範囲・検算",
+      "native_tables": [],
+      "png_sha256": "536af402c79f7e685bfb6d177cd3555da6be2604f4629ed28dd2f05b7aedc676",
+      "remaining_issues": []
+    },
+    {
+      "page": 45,
+      "title": "12記号対の原表記と件数（1/2）",
+      "kind": "content",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。表の全値/条件/原記号と1–2字だけの折返しを確認。",
+      "final_text": "12記号対の原表記と件数（1/2）\nAppendix: 2. 記号対・表示範囲・検算\n[1] Inverse Scaling Prize. pattern-matching-suppression_classification.jsonl。固定commit920f17de。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "native_tables": [
+        [
+          [
+            "列と候補の記号対",
+            "件数"
+          ],
+          [
+            "A / B",
+            "119"
+          ],
+          [
+            "1 / 2",
+            "119"
+          ],
+          [
+            "i / ii",
+            "119"
+          ],
+          [
+            "a / b",
+            "119"
+          ],
+          [
+            "one / two",
+            "119"
+          ],
+          [
+            "q / w",
+            "119"
+          ]
+        ]
+      ],
+      "png_sha256": "4e97a5c43227cce7ca6c095b8f80d25da26082578c1d50517570ab69d15d9cb4",
+      "remaining_issues": []
+    },
+    {
+      "page": 46,
+      "title": "12記号対の原表記と件数（2/2）",
+      "kind": "content",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。表の全値/条件/原記号と1–2字だけの折返しを確認。",
+      "final_text": "12記号対の原表記と件数（2/2）\nAppendix: 2. 記号対・表示範囲・検算\n[1] Inverse Scaling Prize. pattern-matching-suppression_classification.jsonl。固定commit920f17de。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "native_tables": [
+        [
+          [
+            "列と候補の記号対",
+            "件数"
+          ],
+          [
+            "aa / ab",
+            "119"
+          ],
+          [
+            "alpha / beta",
+            "119"
+          ],
+          [
+            "first / second",
+            "119"
+          ],
+          [
+            "left / right",
+            "119"
+          ],
+          [
+            "0 / 1",
+            "119"
+          ],
+          [
+            "o / x",
+            "119"
+          ]
+        ]
+      ],
+      "png_sha256": "51cf94ae3be688cce04123d152507abef99cd2703ca92f6108bed1bf9ba2e9b6",
+      "remaining_issues": []
+    },
+    {
+      "page": 47,
+      "title": "全1,428件を、長さと交互構造で検算した",
+      "kind": "content",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。",
+      "final_text": "全1,428件を、長さと交互構造で検算した\n完成長6・8・10・12・14・16・20ごとに204件。提示長は5・7・9・11・13・15・19で、それぞれ完成長より1つ少ない。\n全行で提示列の偶数位置は最初の記号、奇数位置は次の記号になる（位置は0始まり）。最後の提示記号は最初の記号。\n候補0は通常の次記号、候補1は最後の提示記号と一致する。配布正解は全て候補1で、最後だけ交互の規則が破れる。\nAppendix: 2. 記号対・表示範囲・検算\n[1] Inverse Scaling Prize. pattern-matching-suppression_classification.jsonl。固定commit920f17de。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "native_tables": [],
+      "png_sha256": "0642fcc2d1a1dd6fc650b0a6e83e12f41fed0109c4950a91412f5dd0ab94ae54",
+      "remaining_issues": []
+    },
+    {
+      "page": 48,
+      "title": "集合名の不整合は、列の構造とは別に数える",
+      "kind": "content",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。",
+      "final_text": "集合名の不整合は、列の構造とは別に数える\n長い記号名を含む6群の指示には、i i・one・aa・alp・fir・lefという表記がある。各119件、合計714件。\n各行の提示列と候補にはi/ii、one/two、aa/ab、alpha/beta、first/second、left/rightが完全な形で現れる。\n指示内の文字列が完全な記号対の先頭3文字と一致することは確認したが、生成器の原因は未確認。元の表記を推測で直していない。\nAppendix: 2. 記号対・表示範囲・検算\n[1] Inverse Scaling Prize. pattern-matching-suppression_classification.jsonl。固定commit920f17de。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "native_tables": [],
+      "png_sha256": "7be4e14aa571b98ab4a6613964c908f24f003797483a0958d784715875ee8dd4",
+      "remaining_issues": []
+    },
+    {
+      "page": 49,
+      "title": "提示列の末尾と、正解候補を直接照合する",
+      "kind": "code",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。nativeコード全文/実行出力o・枠上下余白を確認。",
+      "final_text": "提示列の末尾と、正解候補を直接照合する\nAppendix: 2. 記号対・表示範囲・検算\nimport ast\nrow = rows[1309]\nclasses = ast.literal_eval(row[\"classes\"])\nprefix = row[\"prompt\"].split(\"\\n\")[-1]\ntokens = [s.strip() for s in prefix.split(\",\") if s.strip()]\nassert classes[row[\"answer_index\"]].strip() == tokens[-1]\nprint(tokens[-1])  # o\nrowsは原JSONLを読んだ配列。1,310行目を使い、配布正解oが最後の提示記号oを繰り返すことを確認する。\n[1] Inverse Scaling Prize. pattern-matching-suppression_classification.jsonl。固定commit920f17de。 1310行目／実例1。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/isp-data-release.zip",
+      "native_tables": [],
+      "png_sha256": "01075ed75ba8c2827c099a41b87a8d9f0c82ecd76c9dffb512dd2f313fe7beae",
+      "remaining_issues": []
+    },
+    {
+      "page": 50,
+      "title": "研究と参考文献",
+      "kind": "divider",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。",
+      "final_text": "研究と参考文献\nAppendix: 3. 研究と参考文献",
+      "native_tables": [],
+      "png_sha256": "6c6df216a675849b167100678cf86fa4c76c9da56195af35bbb97955fb962dac",
+      "remaining_issues": []
+    },
+    {
+      "page": 51,
+      "title": "Tomasz Korbakの課題が、指示と規則の衝突を示す",
+      "kind": "content",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。",
+      "final_text": "Tomasz Korbakの課題が、指示と規則の衝突を示す\n提出者はTomasz Korbak。Inverse Scaling Prizeの第2回受賞課題として、明示的な指示より暗黙の繰返しを優先する現象を扱う。\nMcKenzieらの2023年TMLR論文は、11受賞課題を4つの原因仮説で整理する。本課題はDistractor Taskの一例。\n研究では人の解釈は配布正解に高く一致する一方、モデルの規模や例示数によって違う傾向が現れることを報告する。\nAppendix: 3. 研究と参考文献\n[1] McKenzie et al. (2023). Inverse Scaling: When Bigger Isn’t Better. TMLR. arXiv v2(2024)を参照。  https://arxiv.org/abs/2306.09479",
+      "native_tables": [],
+      "png_sha256": "e9ebe41f1462af97817d27a29721c84fda81185fc4fc620f23091eb11b02f582",
+      "remaining_issues": []
+    },
+    {
+      "page": 52,
+      "title": "参考文献",
+      "kind": "references",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。2文献の正式題名・著者年/掲載先・内容説明・URLがnative枠内にある。",
+      "final_text": "参考文献\nAppendix: 3. 研究と参考文献\nInverse Scaling: When Bigger Isn’t Better\nIan R. McKenzie et al. (2023). Transactions on Machine Learning Research. arXiv v2:2024.\n11受賞課題を評価し、交互列の完遂が指示への切替を妨げるという仮説と、規模・例示数の影響を報告する。\nhttps://arxiv.org/abs/2306.09479\nInverse Scaling Prize — Data release\nInverse Scaling Prize. 2023年3月公開。課題提出者Tomasz Korbak。固定commit920f17de。\n11課題のJSONLと候補確率による評価形式を公開し、CC BY4.0の条件と変更履歴を示す。\nhttps://github.com/inverse-scaling/prize/blob/920f17de85f2a7f2415b097bc49e6a7fbf17b0b2/data-release/README.md",
+      "native_tables": [],
+      "png_sha256": "7da986c1d5a5287bb87b165eac9460ebfd4fc3038c141f491c24696af25514af",
+      "remaining_issues": []
+    },
+    {
+      "page": 53,
+      "title": "参考文献",
+      "kind": "references",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。2文献の正式題名・著者年/掲載先・内容説明・URLがnative枠内にある。",
+      "final_text": "参考文献\nAppendix: 3. 研究と参考文献\nInverse Scaling Prize: Second Round Winners\nIan McKenzie et al. (2022). 公式受賞発表。\nPattern Match Suppressionの提出者、原例、規則を止める狙いを示す。\nhttps://irmckenzie.co.uk/round2/\nCLEVA: Chinese Language Models EVAluation Platform\nYanyang Li et al. (2023). EMNLP System Demonstrations, pp.186–217.\n中国語モデル評価の基盤を提案し、本課題を指示追従の素材として採用する。\nhttps://aclanthology.org/2023.emnlp-demo.17/",
+      "native_tables": [],
+      "png_sha256": "fe166ffbe303611e29df538860ebdf2736559861c7a63325e34c3d5c35fd6634",
+      "remaining_issues": []
+    },
+    {
+      "page": 54,
+      "title": "参考文献",
+      "kind": "references",
+      "actual_individual_view": true,
+      "method": "view_image",
+      "assessment": "日本語・タイトル・改行・出典と可視余白を確認。2文献の正式題名・著者年/掲載先・内容説明・URLがnative枠内にある。",
+      "final_text": "参考文献\nAppendix: 3. 研究と参考文献\nCLEVAInstructionFollowingScenario\nStanford CRFM (2023). HELM v0.4.0、公式Python実装。\no/xの交互列に関する中国語の説明例と正解Bを示し、CLEVA形式をHELMへ適用する。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py\nAttribution 4.0 International (CC BY 4.0)\nCreative Commons. データ公開READMEが指定する利用条件。\n帰属・ライセンスへのリンク・変更の表示など、利用時の条件を定める。\nhttps://creativecommons.org/licenses/by/4.0/",
+      "native_tables": [],
+      "png_sha256": "9437b5e43ea4c8a2720c0e5c58a7938763debe553e184786783240045498b97f",
+      "remaining_issues": []
+    }
+  ],
+  "all_individually_viewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54
+  ],
+  "overview_viewed": true,
+  "final_changed_pages_rechecked": [
+    7,
+    9,
+    11,
+    27,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    53
+  ],
+  "artifact_hashes": {
+    "datasets-in-10-minutes-pattern-matching-suppression.pptx": "2eb87dafd0d3d3ecd092de6f4358d5792fd79ad79448ed91d34f9e1c1e77f30d",
+    "datasets-in-10-minutes-pattern-matching-suppression.pdf": "8d171f08c652f0440a3b1b08710e755af43d657c3b8913ae01458378874b3cfd"
+  }
+}

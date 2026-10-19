@@ -55,3 +55,8 @@ CLEVAが選定・翻訳・整形した実v1配布集合は未取得。IPアク�
 ## リポジトリの検証記録
 
 [原レコード・出典・実行条件](data-audits/pattern-matching-suppression.json)、[実際の校正対](skill-proofreading/pattern-matching-suppression.md)、[全ページ文言](skill-proofreading/pattern-matching-suppression/pages.jsonl)、[自己検査・独立レビュー](skill-proofreading/pattern-matching-suppression/review.json)。
+
+
+## 読者向け説明の改訂
+
+[日本語・情報量の問題点と修正](skill-proofreading/pattern-matching-suppression/editorial-2026-10/findings.json)。細かな再現条件・原レコードの照合情報は従来の検証記録に保持し、紹介スライドから整理した。

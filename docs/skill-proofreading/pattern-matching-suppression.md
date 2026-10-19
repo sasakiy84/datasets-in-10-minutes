@@ -15,3 +15,8 @@ Geminiは使用していない。Codexが日本語校正スキルをページご
 |53|Pattern Match Suppressionの提出者、原例と規則を止める課題の狙いを説明する。|Pattern Match Suppressionの提出者、原例、規則を止める狙いを示す。|参考文献説明の末尾「る。」だけの折返しを解消し、文意を保って短文化する。|
 
 [全ページ文言](pattern-matching-suppression/pages.jsonl)・[自己検査・独立レビュー](pattern-matching-suppression/review.json)
+
+
+## 読者向けの説明・日本語の改訂（2026年10月）
+
+Geminiは使用せず、Codexがスキルで校正し、別担当が独立レビューした。削除・統合を含む[問題点と変更対](pattern-matching-suppression/editorial-2026-10/changes.md)、[旧ページとの対応](pattern-matching-suppression/editorial-2026-10/page-map.json)、[独立レビュー](pattern-matching-suppression/editorial-2026-10/independent-review/handoff.json)、[最終ページの全文](pattern-matching-suppression/pages.jsonl)。旧版の校正・検証記録は保持している。
