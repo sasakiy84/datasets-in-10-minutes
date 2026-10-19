@@ -1,0 +1,64 @@
+{
+  "slug": "math23k",
+  "checked_at": "2026-10-19T08:56:41.822939+00:00",
+  "method": "一次論文・公式データ/実装・公開CLEVA実例と最終native全頁の帰属を対照",
+  "gemini_used": false,
+  "creator": "Wang, Liu & Shi, Tencent AI Lab, 2017 EMNLP。GTSはXie & Sunの2019年IJCAI新手法。",
+  "HELM_relation": "CLEVAが採用し、HELMは採用版の入力・正解を読み込む。元コーパスをHELMが作成したとはしない。",
+  "evidence": [
+    {
+      "url": "https://aclanthology.org/D17-1088/",
+      "local_evidence": "/workspace/artifacts/helm-parallel/math23k/evidence/paper.txt",
+      "sha256": "5742793c5a1211de92784394df4d9a2cf279a1590ef0338787066c60f98cf511",
+      "evidence": "Yan Wang・Xiaojiang Liu・Shuming Shi（Tencent AI Lab）が2017年に導入。教育サイトの中国語文章題から一未知数の問題を選びMath23Kを構築。23161問を報告。"
+    },
+    {
+      "url": "https://www.ijcai.org/proceedings/2019/736",
+      "local_evidence": "/workspace/artifacts/helm-parallel/math23k/evidence/followup-paper.txt",
+      "sha256": "352a3f8994a730d404e77b18bfc325185ef63753bfd7476914e1e7ed7c055524",
+      "evidence": "Zhipeng Xie・Shichao Sunが2019年にGTSを提案。単なる追試ではなく、目標駆動の式木生成という新手法の研究。Math23Kで5分割評価。"
+    },
+    {
+      "url": "https://github.com/ShichaoSun/math_seq2tree",
+      "local_evidence": "/workspace/artifacts/helm-parallel/math23k/evidence/repo-readme.md",
+      "sha256": "62c3119fbfded7489ee91b6351c0f83154d1717e9d13483fbbf9f08f8c8ef1fe",
+      "evidence": "GTSの開発者の公式実装・データ公開先。取得ファイルは23162問。2017年原配布byteとの同一性未確認は外部記録に保持。"
+    },
+    {
+      "url": "https://aclanthology.org/2023.emnlp-demo.17/",
+      "local_evidence": "/workspace/artifacts/helm-parallel/math23k/evidence/cleva-paper.txt",
+      "sha256": "8b1ba52069ceed95d0852119361fa5602b6b506eb4a1cedf5b41ff7def1592a8",
+      "evidence": "CLEVAが数学推論課題として採用。公開原設問の鴨と鶏はid19868で答え720、元Math23Kデータと全文照合。"
+    },
+    {
+      "url": "https://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py",
+      "local_evidence": "/workspace/artifacts/helm-parallel/math23k/evidence/cleva-scenario.py",
+      "sha256": "c61c19eb5ea2cf408dddf6087eb5c7715d5795c4508f23d2ccc2fc7eaf03de5e",
+      "evidence": "HELMのCLEVA converterはデータをInstance化。docstringのid14819/15691は説明設問で、答え672/406。元データ構築主体でも公開モデル生成でもない。"
+    }
+  ],
+  "pages": [
+    2,
+    5,
+    14,
+    16,
+    19,
+    20,
+    21,
+    22,
+    24,
+    25,
+    41,
+    43,
+    44,
+    45
+  ],
+  "conclusion": "2019年GTSを追試と呼ぶ旧説明を訂正し、元研究・新手法・採用/実装と各報告値の主体を明確化した。",
+  "reader_focus": "CLEVA採用/HELM実装の紹介を読者用本文から外し、関係は本記録のみに保存",
+  "slide_changes_required": true,
+  "changes": "findings.json/main-review-response.json",
+  "final_hashes": {
+    "pptx": "0227965e2a12508e5f747ef8df2f5bfc709e3ef82e37e080e9a98011f69232c7",
+    "pdf": "f94c3bf6cef3f591c6eed470ae2e22fe36a2bc0d0b3027b85dbb8a233c47b128"
+  }
+}
