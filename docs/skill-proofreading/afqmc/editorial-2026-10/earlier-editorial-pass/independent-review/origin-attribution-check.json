@@ -1,0 +1,55 @@
+{
+  "slug": "afqmc",
+  "status": "approved",
+  "approved": true,
+  "reviewer": "create_msmarco",
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "scope": "追加された作成主体/採用/加工/報告値の主語を原資料・現nativeへ戻って確認。元の全頁描画承認からartifact変更なし。",
+  "creator": "Ant FinancialのATEC開発者向け大会に由来する質問照合データ。CLUE著者が中国語理解評価の課題として配布・評価。",
+  "relation": "CLEVAが金融質問の意味照合に採用。HELMのCLEVAParaphraseIdentificationScenarioは選択式の説明例と変換を実装。HELM/CLEVAによる元質問の作成とはしていない。17頁は2020年CLUE研究の成績。",
+  "primary_evidence_checked": [
+    {
+      "file": "/workspace/artifacts/helm-parallel/afqmc/evidence/paper.txt",
+      "sha256": "7e9be642a1fdd8b04e10ac8f81768483382cf0844eadf4a8c301b0182316b78d",
+      "independently_read": true
+    },
+    {
+      "file": "/workspace/artifacts/helm-parallel/afqmc/evidence/README.md",
+      "sha256": "5ad4912bd96f8b30c0b898b519ff7b2a3a2b5bb04d660d2aaf0798779e06108d",
+      "independently_read": true
+    }
+  ],
+  "native_pages_checked": [
+    2,
+    5,
+    12,
+    17,
+    20,
+    21,
+    23,
+    39,
+    40,
+    41
+  ],
+  "current_native": {
+    "2": "AFQMCを公開する、CLUEの公式リポジトリ\nAFQMC\n[1] CLUE team (n.d.). CLUE: AFQMC. GitHub.  https://github.com/CLUEbenchmark/CLUE",
+    "5": "金融サービスへの質問を、意味で照合する\nAFQMCは、金融サービスに関する二つの中国語文を読み、意味が似ているか、異なるかを判定するデータセット。\n花呗（後払い決済）、借呗（消費者向け融資）、支付宝（決済サービス）などの名称が頻出する。同じサービスの質問でも、利用開始、支払い、返済、返金など、何を尋ねているかは異なる。\n1. 二つの金融相談を比べる\n[1] CLUE team (n.d.). CLUE: AFQMC. GitHub.  https://github.com/CLUEbenchmark/CLUE\n[2] Ant Group (2020). H Share IPO Prospectus.  https://www1.hkexnews.hk/listedco/listconews/sehk/2020/1026/2020102600165.pdf",
+    "12": "ATECの開発者向け大会に由来する\n2020年のCLUE論文は、AFQMCをAnt Technology Exploration Conference（ATEC）の開発者向け大会に由来するデータと説明している。\nオンラインの顧客対応を題材とし、質問ペアの意味が似ているかを判定する。CLUEでは、中国語理解を評価する課題の一つとして配布・評価されている。\n2. データの出所と構成\n[1] Xu et al. (2020). CLUE: A Chinese Language Understanding Evaluation Benchmark. COLING.  https://aclanthology.org/2020.coling-main.419/",
+    "17": "2020年のCLUE実験における正答率\n3. モデルの学習と評価\nAFQMCのテストに対する、2020年論文の報告値。\n[1] Xu et al. (2020). CLUE: A Chinese Language Understanding Evaluation Benchmark. COLING.  https://aclanthology.org/2020.coling-main.419/",
+    "20": "CLEVAでは、二つの質問が同じ意味かを選ぶ\n4. CLEVAでの利用と入手方法\n公開されている中国語の設問\n日本語訳\n下面这两个问题是否表达了相同的意思？\n\n1：商家怎么开通花呗支付\n2：为什么无法开通花呗\nA. 不是\nB. 是\n答：\n次の二つの質問は、同じ意味を表していますか？\n\n1：店舗側はどうすれば花呗決済を利用できるようになりますか。\n2：なぜ花呗を利用開始できないのですか。\nA. いいえ\nB. はい\n答え：\n正解：A（同じ意味ではない）\n[1] Stanford CRFM (n.d.). CLEVAParaphraseIdentificationScenario. HELM.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py",
+    "21": "公式データの入手先と、利用条件\nCLUEの公式リポジトリが、AFQMCの公開ZIPへのリンクを示す。学習用・開発用・テスト用のJSONファイルを入手できる。\n付属モデルコードのApacheライセンスとは別に、AFQMCデータ全体の利用許諾は明示されていない。再利用の条件は配布元への確認が必要。\nCLEVAでは金融質問の意味照合に利用している。全問題や抽出範囲の詳細は、公開説明からは確認できない。\n4. CLEVAでの利用と入手方法\n[1] CLUE team (n.d.). CLUE: AFQMC. GitHub.  https://github.com/CLUEbenchmark/CLUE\n[2] Li et al. (2023). CLEVA: Chinese Language Models EVAluation Platform. EMNLP System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/",
+    "23": "尋ねている対象・操作・条件から、意味を比べる\nAFQMCは、金融サービスに関する二つの質問が、似た意味かどうかを判定するデータセット。\n同じサービス名を使う質問でも、何をしたいのか、何を知りたいのかは異なる。対象・操作・条件に注目すると、語の重なりだけでは捉えにくい違いが見えてくる。\n学習・開発の正解ラベルを使ってモデルを学習・評価できる。CLUEで中国語理解の評価に使われ、CLEVAでは選択式の意味照合にも利用されている。\n4. CLEVAでの利用と入手方法\n[1] Xu et al. (2020). CLUE: A Chinese Language Understanding Evaluation Benchmark. COLING.  https://aclanthology.org/2020.coling-main.419/",
+    "39": "参考文献\nAppendix: 2. モデル比較と参考文献\nCLUE: A Chinese Language Understanding Evaluation Benchmark\nLiang Xu et al. · 2020 · COLING, pp4762–4772\nAFQMCなど中国語理解の課題をまとめ、教師ありモデルの成績と人による評価を報告する。\nhttps://aclanthology.org/2020.coling-main.419/\nCLUE: official repository and AFQMC description\nCLUE team · n.d. · GitHub\nAFQMCの正式名称、二値ラベル、公開分割とデータの入手先を示す。\nhttps://github.com/CLUEbenchmark/CLUE",
+    "40": "参考文献\nAppendix: 2. モデル比較と参考文献\nAFQMC public data archive\nAnt Financial / CLUE team · n.d. · 公式公開データ\n中国語の質問ペアと学習・開発用の正解ラベル、テスト用の質問ペアを配布する。\nhttps://storage.googleapis.com/cluebenchmark/tasks/afqmc_public.zip\nAnt Group — H Share IPO Prospectus\nAnt Group Co., Ltd. · 2020 · Hong Kong Stock Exchange\n金融サービスの事業説明。花呗・借呗の消費者向け信用と、支付宝の決済機能を記載する。\nhttps://www1.hkexnews.hk/listedco/listconews/sehk/2020/1026/2020102600165.pdf",
+    "41": "参考文献\nAppendix: 2. モデル比較と参考文献\nCLEVA: Chinese Language Models EVAluation Platform\nLi et al. · 2023 · EMNLP System Demonstrations\n中国語モデルを多様な課題で評価する枠組み。金融質問を含む質問ペアの意味照合も扱う。\nhttps://aclanthology.org/2023.emnlp-demo.17/\nCLEVAParaphraseIdentificationScenario\nStanford CRFM · n.d. · HELM\n金融サービスへの二つの質問が同じ意味かを問う、選択式の設問例を示す実装。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py"
+  },
+  "final_hashes": {
+    "pptx": "f8f2e7a93fb23b91fe1f6692c5410eb8f80d99fa408eccbd5261cf3485d942bc",
+    "pdf": "eff7718feb8b89ee8ae6fd3d1c67614a458ab4acf6836212785e0f41d5be3479"
+  },
+  "original_corpus_created_by_HELM": false,
+  "conclusion": "元データの出所・CLUE/FewCLUE整備・CLEVA採用・HELM実装を区別した説明。HELMによる原コーパス作成との誤帰属なし。本文/構成の追加修正不要。",
+  "record_correction": null,
+  "remaining_issues": []
+}
