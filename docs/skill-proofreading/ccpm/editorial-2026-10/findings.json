@@ -628,41 +628,84 @@
     "new_page": 47
   },
   {
+    "old_page": 3,
+    "shape_id": 3,
+    "before": "現代語の説明から古典詩句を選ぶ\n対訳と似た詩句から問題を作る\n正解率で意味の対応を評価する\nCLEVAでの後利用と公開配布",
+    "after": "現代語の説明から古典詩句を選ぶ\n対訳と似た詩句から問題を作る\n正解率で意味の対応を評価する\nCLEVAでの利用と公開配布",
+    "reason": "メインレビュー：不自然な後利用を利用へ自然化",
+    "action": "rewrite",
+    "new_page": 3
+  },
+  {
+    "old_page": 24,
+    "shape_id": 2,
+    "before": "CLEVAでの後利用と公開配布",
+    "after": "CLEVAでの利用と公開配布",
+    "reason": "メインレビュー：不自然な後利用を利用へ自然化",
+    "action": "rewrite",
+    "new_page": 22
+  },
+  {
+    "old_page": 24,
+    "shape_id": 3,
+    "before": "4. CLEVAでの後利用と公開配布",
+    "after": "4. CLEVAでの利用と公開配布",
+    "reason": "メインレビュー：不自然な後利用を利用へ自然化",
+    "action": "rewrite",
+    "new_page": 22
+  },
+  {
+    "old_page": 25,
+    "shape_id": 4,
+    "before": "4. CLEVAでの後利用と公開配布",
+    "after": "4. CLEVAでの利用と公開配布",
+    "reason": "メインレビュー：不自然な後利用を利用へ自然化",
+    "action": "rewrite",
+    "new_page": 23
+  },
+  {
+    "old_page": 26,
+    "shape_id": 4,
+    "before": "4. CLEVAでの後利用と公開配布",
+    "after": "4. CLEVAでの利用と公開配布",
+    "reason": "メインレビュー：不自然な後利用を利用へ自然化",
+    "action": "rewrite",
+    "new_page": null
+  },
+  {
+    "old_page": 27,
+    "shape_id": 3,
+    "before": "4. CLEVAでの後利用と公開配布",
+    "after": "4. CLEVAでの利用と公開配布",
+    "reason": "メインレビュー：不自然な後利用を利用へ自然化",
+    "action": "rewrite",
+    "new_page": null
+  },
+  {
+    "old_page": 28,
+    "shape_id": 4,
+    "before": "4. CLEVAでの後利用と公開配布",
+    "after": "4. CLEVAでの利用と公開配布",
+    "reason": "メインレビュー：不自然な後利用を利用へ自然化",
+    "action": "rewrite",
+    "new_page": 24
+  },
+  {
+    "old_page": 29,
+    "shape_id": 4,
+    "before": "4. CLEVAでの後利用と公開配布",
+    "after": "4. CLEVAでの利用と公開配布",
+    "reason": "メインレビュー：不自然な後利用を利用へ自然化",
+    "action": "rewrite",
+    "new_page": 25
+  },
+  {
     "old_page": 18,
     "action": "remove_slide",
     "before": "説明文だけでは、問題を一意に特定できない\n2. 対訳と似た詩句から問題を作る\n2026-10-18、配布全件の文字列を加工せず集計。学習と公開テストには、説明と四候補が同じ問題が1件ある。\n[1] THUNLP-AIPoet (2021). CCPM.  https://github.com/THUNLP-AIPoet/CCPM",
     "after": "",
     "reason": "問題・説明の文字列一意数の監査",
-    "new_page": null,
-    "before_tables": [
-      [
-        [
-          "比較する単位",
-          "学習",
-          "検証",
-          "公開テスト"
-        ],
-        [
-          "レコード数",
-          "21,778",
-          "2,720",
-          "2,720"
-        ],
-        [
-          "説明文の種類",
-          "21,483",
-          "2,710",
-          "2,716"
-        ],
-        [
-          "説明＋四候補の種類",
-          "21,778",
-          "2,720",
-          "2,720"
-        ]
-      ]
-    ],
-    "relocated_to": "baseline-pages.json and original sources/audit records"
+    "new_page": null
   },
   {
     "old_page": 23,
@@ -670,75 +713,23 @@
     "before": "両方式を同じ学習設定で微調整した\n3. 正解率で意味の対応を評価する\nBERT-CCPoemは負例の検索に使うモデルで、ここで評価した二方式の基盤とは区別する。\n[1] Li, Qi, Sun, Yi & Zhang (2021). CCPM: A Chinese Classical Poetry Matching Dataset. arXiv:2106.01979v1.  https://arxiv.org/abs/2106.01979",
     "after": "",
     "reason": "細かな最適化設定は外部記録へ移し、基盤モデル・学習回数は結果頁に保持",
-    "new_page": null,
-    "before_tables": [
-      [
-        [
-          "項目",
-          "設定"
-        ],
-        [
-          "文の符号化器",
-          "bert-base-chinese"
-        ],
-        [
-          "最適化手法",
-          "Adam"
-        ],
-        [
-          "初期学習率",
-          "2×10⁻⁵、線形に減衰"
-        ],
-        [
-          "学習回数",
-          "4 epochs"
-        ]
-      ]
-    ],
-    "relocated_to": "baseline-pages.json and original sources/audit records"
+    "new_page": null
   },
   {
     "old_page": 26,
     "action": "remove_slide",
-    "before": "HELMにも課題の実装があり、公開実行は0件\nHELM v0.4.0にはCLEVAClassicalChineseUnderstandingScenarioがあり、実例1と同じ説明・候補・正解Aを記す。データとテンプレートを外部ZIPから読み、候補の番号を正解参照へ変換する。\nClassic v0.4.0の公開run_specs全8,526件にはCLEVA実行がない。CLEVA用評価ZIPも取得できていないため、HELMでの得点、実際の学習例数や生成条件は示さない。\n4. CLEVAでの後利用と公開配布\n[1] Stanford CRFM. CLEVAClassicalChineseUnderstandingScenario / Converter. HELM v0.4.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py",
+    "before": "HELMにも課題の実装があり、公開実行は0件\nHELM v0.4.0にはCLEVAClassicalChineseUnderstandingScenarioがあり、実例1と同じ説明・候補・正解Aを記す。データとテンプレートを外部ZIPから読み、候補の番号を正解参照へ変換する。\nClassic v0.4.0の公開run_specs全8,526件にはCLEVA実行がない。CLEVA用評価ZIPも取得できていないため、HELMでの得点、実際の学習例数や生成条件は示さない。\n4. CLEVAでの利用と公開配布\n[1] Stanford CRFM. CLEVAClassicalChineseUnderstandingScenario / Converter. HELM v0.4.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py",
     "after": "",
     "reason": "公開実行件数と未取得の制作状況",
-    "new_page": null,
-    "before_tables": [],
-    "relocated_to": "baseline-pages.json and original sources/audit records"
+    "new_page": null
   },
   {
     "old_page": 27,
     "action": "remove_slide",
-    "before": "元のCCPM配布と、後利用の集合を区別する\n4. CLEVAでの後利用と公開配布\n[1] Li et al. (2023). CLEVA: Chinese Language Models EVAluation Platform. EMNLP 2023: System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/\n[2] Stanford CRFM. CLEVAClassicalChineseUnderstandingScenario / Converter. HELM v0.4.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py",
+    "before": "元のCCPM配布と、後利用の集合を区別する\n4. CLEVAでの利用と公開配布\n[1] Li et al. (2023). CLEVA: Chinese Language Models EVAluation Platform. EMNLP 2023: System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/\n[2] Stanford CRFM. CLEVAClassicalChineseUnderstandingScenario / Converter. HELM v0.4.0.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py",
     "after": "",
     "reason": "確認範囲の監査表",
-    "new_page": null,
-    "before_tables": [
-      [
-        [
-          "対象",
-          "確認できた内容"
-        ],
-        [
-          "CCPM公式配布",
-          "全27,218問、train/valid正解、test_public正解なし"
-        ],
-        [
-          "CLEVA論文",
-          "CCPMから抽出する課題と、候補まで一致した掲載例"
-        ],
-        [
-          "HELM実装・設定",
-          "同課題のクラス、外部データ読込、6テンプレートID"
-        ],
-        [
-          "HELM公開実行",
-          "0件。CLEVA評価集合・保存requestは未取得"
-        ]
-      ]
-    ],
-    "relocated_to": "baseline-pages.json and original sources/audit records"
+    "new_page": null
   },
   {
     "old_page": 44,
@@ -746,54 +737,7 @@
     "before": "形式別件数の内訳\nAppendix: 2. 入力形式と詩句の読み方\n[1] Li, Qi, Sun, Yi & Zhang (2021). CCPM: A Chinese Classical Poetry Matching Dataset. arXiv:2106.01979v1.  https://arxiv.org/abs/2106.01979",
     "after": "",
     "reason": "詩型ごとの分割別詳細は外部記録へ移し、全体分布は本編に保持",
-    "new_page": null,
-    "before_tables": [
-      [
-        [
-          "形式",
-          "学習",
-          "検証",
-          "テスト",
-          "合計"
-        ],
-        [
-          "五言・一行",
-          "10,166",
-          "1,270",
-          "1,270",
-          "12,706"
-        ],
-        [
-          "七言・一行",
-          "9,392",
-          "1,173",
-          "1,173",
-          "11,738"
-        ],
-        [
-          "五言・二行",
-          "1,025",
-          "128",
-          "128",
-          "1,281"
-        ],
-        [
-          "七言・二行",
-          "1,195",
-          "149",
-          "149",
-          "1,493"
-        ],
-        [
-          "合計",
-          "21,778",
-          "2,720",
-          "2,720",
-          "27,218"
-        ]
-      ]
-    ],
-    "relocated_to": "baseline-pages.json and original sources/audit records"
+    "new_page": null
   },
   {
     "old_page": 46,
@@ -801,32 +745,7 @@
     "before": "分割間の一致は、比較する単位で異なる\nAppendix: 2. 入力形式と詩句の読み方\n全行の説明文と四候補を、表記を変えずに比較した共通要素数。説明＋候補の一致1件はtrain14,734行とtest_public1,020行。\n[1] THUNLP-AIPoet (2021). CCPM.  https://github.com/THUNLP-AIPoet/CCPM",
     "after": "",
     "reason": "分割間の文字列共通要素の監査。完全一致1問の制約は残す",
-    "new_page": null,
-    "before_tables": [
-      [
-        [
-          "組み合わせ",
-          "共通の説明文",
-          "共通の説明＋四候補"
-        ],
-        [
-          "学習 × 検証",
-          "65",
-          "0"
-        ],
-        [
-          "学習 × 公開テスト",
-          "82",
-          "1"
-        ],
-        [
-          "検証 × 公開テスト",
-          "11",
-          "0"
-        ]
-      ]
-    ],
-    "relocated_to": "baseline-pages.json and original sources/audit records"
+    "new_page": null
   },
   {
     "old_page": 54,
@@ -834,8 +753,6 @@
     "before": "参考文献\nAppendix: 3. 参考文献\nrun_specs_cleva_v1.conf\nStanford CRFM · HELM v0.4.0 · CLEVA設定\n古典中国語理解を含む課題とprompt IDを設定し、同課題には0〜5の六つのIDを登録する。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/presentation/run_specs_cleva_v1.conf",
     "after": "",
     "reason": "評価設定ファイルだけの参考文献",
-    "new_page": null,
-    "before_tables": [],
-    "relocated_to": "baseline-pages.json and original sources/audit records"
+    "new_page": null
   }
 ]
