@@ -1,0 +1,647 @@
+[
+  {
+    "page": 1,
+    "text": [
+      "CLEVA",
+      "Chinese Language Models EVAluation Platform\n中国語モデルを、課題と評価軸の両面から比べる",
+      "sasakiy84",
+      "datasets in 10 minutes (2026-10-18)"
+    ]
+  },
+  {
+    "page": 2,
+    "text": [
+      "公式リポジトリのREADME",
+      "CLEVA",
+      "[1] LaVi Lab, CLEVA. 公式README・ローカル評価・参照結果・利用条件。 README冒頭のブラウザ画面。  https://github.com/LaVi-Lab/CLEVA"
+    ]
+  },
+  {
+    "page": 3,
+    "text": [
+      "",
+      "公開例から見る中国語評価\nプロンプトと九つの評価軸\n新しい評価集合と比較の条件\nHELMでの利用と公開範囲",
+      "目次"
+    ]
+  },
+  {
+    "page": 4,
+    "text": [
+      "公開例から見る中国語評価",
+      "1. 公開例から見る中国語評価"
+    ]
+  },
+  {
+    "page": 5,
+    "text": [
+      "中国語モデルを、多面的に評価する基盤",
+      "CLEVAは、中国語の言語モデルを幅広い課題で評価するために、2023年に公開されたプラットフォーム。\n課題、入力の整形、プロンプト、指標、モデルの呼出しをそろえて比較する。単一の正答率だけでモデルの性質を表さない。\n実務に近い11課題と、特定の能力を調べる20課題を含む。まず、公開されている三つの説明例を見る。",
+      "1. 公開例から見る中国語評価",
+      "[1] Li, Zhao et al. (2023), CLEVA: Chinese Language Models EVAluation Platform. EMNLP System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/"
+    ]
+  },
+  {
+    "page": 6,
+    "text": [
+      "公開例と、評価集合を区別する",
+      "本編3件と追加10件は、CLEVA論文で公開された課題の説明例。印刷された入力・選択肢・回答を対応させ、日本語訳を添えた。\n元データの評価IDや、実行時の全テンプレートを復元したものではない。課題によっては、説明例の中に省略記号もある。\n個別データセットの収集方法や評価は、それぞれの資料で扱う。ここでは、CLEVAの評価手順と結果の読み方を説明する。",
+      "1. 公開例から見る中国語評価",
+      "[1] Li, Zhao et al. (2023), CLEVA: Chinese Language Models EVAluation Platform. EMNLP System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/"
+    ]
+  },
+  {
+    "page": 7,
+    "text": [
+      "実例1：代名詞が指す相手",
+      "1. 公開例から見る中国語評価",
+      "公開例の原文",
+      "対応する日本語訳",
+      "蒋盈波原来所在的教研室有位副教授去德国参加一个学术活动，活动中结识了一位华裔德籍的同行，那同行在自己家中招待了他一次，言谈之间，双方忽然都感到巧事真多，而世界真小\n在这里，“他”的意思是“同行”。是或否？",
+      "蒋盈波が以前所属していた研究室の准教授が、学術行事に参加するためドイツへ行った。そこで中国系ドイツ人の同業者と知り合い、その同業者は彼を自宅に一度招いた。話すうちに、二人とも、偶然が重なるものだ、世界は狭いものだと感じた。\nここで「彼」は「同業者」を指すか。はい、または、いいえ。",
+      "参照回答：否",
+      "参照回答：いいえ",
+      "[1] Li, Zhao et al. (2023), CLEVA. 公開説明例。 公開例 A2.SS1.SSS1.Px2 ／ 共参照解決。  https://arxiv.org/html/2308.04813"
+    ]
+  },
+  {
+    "page": 8,
+    "text": [
+      "指示対象を、文脈から区別する",
+      "実例1では、自宅に招かれた人が、准教授と同業者のどちらなのかを区別する。参照回答は「同業者ではない」。\nCLEVAはCLUEWSCからこの課題を採り、代名詞と候補の人物を示す二択の質問へ整形している。出力の解釈には、質問の形と回答ラベルの対応が必要になる。",
+      "1. 公開例から見る中国語評価",
+      "[1] Li, Zhao et al. (2023), CLEVA: Chinese Language Models EVAluation Platform. EMNLP System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/"
+    ]
+  },
+  {
+    "page": 9,
+    "text": [
+      "実例2：父と息子の関係が悪い理由",
+      "1. 公開例から見る中国語評価",
+      "会話と指示（原文）",
+      "質問・選択肢（原文）",
+      "阅读以下内容，选择合适的选项回答： 女：听说你儿子跟你的关系不是很好? 男：说实话我不是一个好父亲，因为忙，没时间管他，我们之间几乎没有沟通。因为我，他也有很大的压力。",
+      "问题：男的和儿子的关系为什么不好?\n选项：\nA. 儿子态度不好\nB. 双方缺少交流\nC. 儿子工作很忙\nD. 父亲压力太大",
+      "答：B",
+      "[1] Li, Zhao et al. (2023), CLEVA. 公開説明例。 公開例 A2.SS2.SSS0.Px1 ／ C3。  https://arxiv.org/html/2308.04813"
+    ]
+  },
+  {
+    "page": 10,
+    "text": [
+      "実例2：父と息子の関係が悪い理由（訳）",
+      "1. 公開例から見る中国語評価",
+      "会話と指示（日本語訳）",
+      "質問・選択肢（日本語訳）",
+      "次の内容を読み、適切な選択肢で答えなさい。 女性：息子さんとの関係があまりよくないと聞きましたが。 男性：正直に言うと、私はよい父親ではありません。忙しくて息子の面倒を見る時間がなく、私たちはほとんど話をしていません。私のせいで、息子も大きな重圧を感じています。",
+      "問：男性と息子の関係が悪いのはなぜか。\nA. 息子の態度が悪い\nB. 二人の会話が少ない\nC. 息子が仕事で忙しい\nD. 父親が大きな重圧を感じている",
+      "参照回答：B. 二人の会話が少ない",
+      "[1] Li, Zhao et al. (2023), CLEVA. 公開説明例。 公開例 A2.SS2.SSS0.Px1 ／ C3。  https://arxiv.org/html/2308.04813"
+    ]
+  },
+  {
+    "page": 11,
+    "text": [
+      "会話中の理由を、選択肢へ対応させる",
+      "実例2はC3を用いた選択式の読解。父親は、忙しくて息子とほとんど話していないと説明している。選択肢Bは、この会話不足に対応する。\n忙しいのは父親であり、選択肢Cの「息子が忙しい」とは異なる。原文、質問、全選択肢の対応を保つことが、評価の前提になる。",
+      "1. 公開例から見る中国語評価",
+      "[1] Li, Zhao et al. (2023), CLEVA: Chinese Language Models EVAluation Platform. EMNLP System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/"
+    ]
+  },
+  {
+    "page": 12,
+    "text": [
+      "実例3：アヒルより多いニワトリの数",
+      "1. 公開例から見る中国語評価",
+      "公開例の原文",
+      "対応する日本語訳",
+      "问题：一个饲养场，养鸭1200只，养的鸡比养的鸭多(3/5)，养的鸡比鸭多多少只？\n答案：",
+      "問：ある飼育場ではアヒルを1,200羽飼っている。ニワトリの数は、アヒルの数よりアヒルの数の3/5だけ多い。ニワトリはアヒルより何羽多いか。",
+      "参照回答：720",
+      "参照回答：720羽",
+      "[1] Li, Zhao et al. (2023), CLEVA. 公開説明例。 公開例 A2.SS1.SSS3.Px2 ／ 数学的推論。  https://arxiv.org/html/2308.04813"
+    ]
+  },
+  {
+    "page": 13,
+    "text": [
+      "求める量と、回答形式をそろえる",
+      "実例3のMath23Kでは、ニワトリの総数ではなく、アヒルとの差を問う。1,200×3/5＝720で、参照回答は720。\n同じ中国語の課題でも、文章の理解、選択肢の判別、数量関係の計算では、モデルに求める処理が異なる。\nCLEVAは課題を分け、選択問題の正答率や生成回答の完全一致など、出力に応じた指標で評価する。",
+      "1. 公開例から見る中国語評価",
+      "[1] Li, Zhao et al. (2023), CLEVA: Chinese Language Models EVAluation Platform. EMNLP System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/"
+    ]
+  },
+  {
+    "page": 14,
+    "text": [
+      "プロンプトと九つの評価軸",
+      "2. プロンプトと九つの評価軸"
+    ]
+  },
+  {
+    "page": 15,
+    "text": [
+      "中国語評価の比較条件をそろえる",
+      "中国語の既存データを集めるだけでなく、ピンイン変換など中国語に固有の課題や、既存資源が少ない課題も加えた。\n意味が近い質問でも、書き方でモデルの回答が変わる。CLEVAでは、データとプロンプトを共通化し、複数の書き方に対する結果を集計する。\nテストデータが学習に含まれる問題にも対処するため、新たなデータの収集と、評価回ごとの集合の抽出を組み合わせる。",
+      "2. プロンプトと九つの評価軸",
+      "[1] Li, Zhao et al. (2023), CLEVA: Chinese Language Models EVAluation Platform. EMNLP System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/"
+    ]
+  },
+  {
+    "page": 16,
+    "text": [
+      "課題は、実務と能力の二方向に広がる",
+      "2. プロンプトと九つの評価軸",
+      "31は課題の種類。収録データセット数や、実際にモデルへ送る問い合わせ数とは異なる。",
+      "[1] Li, Zhao et al. (2023), CLEVA: Chinese Language Models EVAluation Platform. EMNLP System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/"
+    ]
+  },
+  {
+    "page": 17,
+    "text": [
+      "同じ意味でも、問い方は複数ある",
+      "2. プロンプトと九つの評価軸",
+      "要素 | CLEVAの扱い",
+      "入力 | 元レコードの項目を、共通のテンプレートへ入れる",
+      "問い方 | 1評価集合あたり平均3.95個のテンプレートを用意",
+      "出力 | 選択・文章生成などに応じて回答を解釈する",
+      "集計 | テンプレート間の平均・標準偏差・最小・最大を調べる",
+      "[1] Li, Zhao et al. (2023), CLEVA: Chinese Language Models EVAluation Platform. EMNLP System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/"
+    ]
+  },
+  {
+    "page": 18,
+    "text": [
+      "テンプレートは、入力と回答をつなぐ",
+      "2. プロンプトと九つの評価軸",
+      "“{sentence1}”和“{sentence2}”\n这两个问题是在问同一件事情吗？",
+      "論文で例示されたテンプレート。二つの入力文を埋め込み、「同じことを尋ねているか」と問う。",
+      "[1] Li, Zhao et al. (2023), CLEVA: Chinese Language Models EVAluation Platform. EMNLP System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/"
+    ]
+  },
+  {
+    "page": 19,
+    "text": [
+      "選択肢の送り方も、結果に影響する",
+      "選択肢を一つずつ別に評価するSeparateと、全選択肢を一つの入力へまとめるJointでは、モデルの振る舞いが変わる。\n2023年の比較では、指示に合わせる学習をしていないモデルはSeparateで有利な傾向があった。一方、指示に従うモデルではJointが有利な場合がある。\nChatbot形式の会話履歴と、すべてを文章として連結するCompletion形式にも差がある。課題名だけでなく、入力形式までそろえて比較する。",
+      "2. プロンプトと九つの評価軸",
+      "[1] Li, Zhao et al. (2023), CLEVA: Chinese Language Models EVAluation Platform. EMNLP System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/"
+    ]
+  },
+  {
+    "page": 20,
+    "text": [
+      "正答のほかに、信頼性と条件を見る",
+      "2. プロンプトと九つの評価軸",
+      "評価軸 | 主に何を見るか",
+      "正確性 | 選択の正答率、完全一致、F1、ROUGEなど",
+      "確信度の較正 | 自信と正答率の対応（ECEなど）",
+      "頑健性 | 意味を保つ入力変更での最悪性能",
+      "公平性 | 社会集団に関係する入力変更による扱いの差",
+      "効率 | APIの1秒あたり処理数（QPS）",
+      "[1] Li, Zhao et al. (2023), CLEVA: Chinese Language Models EVAluation Platform. EMNLP System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/"
+    ]
+  },
+  {
+    "page": 21,
+    "text": [
+      "生成文の性質も、別の軸で評価する",
+      "2. プロンプトと九つの評価軸",
+      "評価軸 | 主に何を見るか",
+      "偏り・ステレオタイプ | 集団への言及の偏りや、属性との結び付き",
+      "有害性 | 侮辱や憎悪表現などの生成",
+      "多様性 | 応答の表現がどの程度変化するか",
+      "プライバシー | 生成文に現れる個人を識別しうる情報",
+      "九つは評価の観点。各課題にすべての指標が適用されるわけではない。",
+      "[1] Li, Zhao et al. (2023), CLEVA: Chinese Language Models EVAluation Platform. EMNLP System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/"
+    ]
+  },
+  {
+    "page": 22,
+    "text": [
+      "分類課題と、生成文の測定を分ける",
+      "COLDによる有害表現の検出や、CDial-Biasによる偏りの判定は、与えられた文を分類する課題。\n一方、有害性や偏りを生成文から測る指標は、モデルが書いた内容を調べる。分類の正答率が高いことだけでは、生成文の性質までは分からない。\n課題名が似ていても、入力・出力・測る対象を対応させて結果を読む。",
+      "2. プロンプトと九つの評価軸",
+      "[1] Li, Zhao et al. (2023), CLEVA: Chinese Language Models EVAluation Platform. EMNLP System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/"
+    ]
+  },
+  {
+    "page": 23,
+    "text": [
+      "新しい評価集合と比較の条件",
+      "3. 新しい評価集合と比較の条件"
+    ]
+  },
+  {
+    "page": 24,
+    "text": [
+      "件数の単位を区別する",
+      "3. 新しい評価集合と比較の条件",
+      "単位 | 2023年の報告",
+      "課題 | 31種類",
+      "収録データセット | 84件",
+      "テスト事例 | 約37万件",
+      "拡張・複数プロンプト後 | 約900万回の問い合わせ",
+      "新たに収集した割合 | 33.98%（テストデータに対する報告値）",
+      "[1] Li, Zhao et al. (2023), CLEVA: Chinese Language Models EVAluation Platform. EMNLP System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/"
+    ]
+  },
+  {
+    "page": 25,
+    "text": [
+      "新しいデータと、評価回ごとの抽出",
+      "CLEVAは、規則による合成や人手による収集・注釈を行い、既存の公開データだけに依存しない評価集合を作る。\nオンライン評価ではモデルの重みではなくAPIを使い、モデル開発者へ評価集合全体を配布せず、抽出した入力をモデルへ送る。\n評価回ごとに異なる部分集合を使う。新規収集と組み合わせ、学習データへの混入による影響を減らそうとする設計である。",
+      "3. 新しい評価集合と比較の条件",
+      "[1] Li, Zhao et al. (2023), CLEVA: Chinese Language Models EVAluation Platform. EMNLP System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/"
+    ]
+  },
+  {
+    "page": 26,
+    "text": [
+      "抽出量は、順位の安定性と結び付ける",
+      "すべての課題から同じ割合を抜くのではなく、モデル間の順位を区別できるかという基準に応じて、課題ごとの抽出量を調整する。\n報告する基準は、許容する近似誤差の範囲で、任意のモデル対を正しく順位付けする確率が少なくとも70%となること。\nこの70%は、モデルの問題正答率でも、全モデルを完全に並べ替えられる確率でもない。",
+      "3. 新しい評価集合と比較の条件",
+      "[1] Li, Zhao et al. (2023), CLEVA: Chinese Language Models EVAluation Platform. EMNLP System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/"
+    ]
+  },
+  {
+    "page": 27,
+    "text": [
+      "2023年の比較は、23モデルを対象とした",
+      "公開時の実験では、APIで利用するモデルと、重みが公開されたモデルの計23種を、中国語の課題で比較した。モデル一覧と、利用時点が分かるAPI版を記載している。\n同じモデルでも、課題や評価軸によって結果が異なる。課題別の性能と、複数プロンプトでの変動を合わせて見る構成である。\nこれは2023年の結果であり、その後のモデルの順位を示すものではない。次に、公式READMEが示すHELMでの参照結果を見る。",
+      "3. 新しい評価集合と比較の条件",
+      "[1] Li, Zhao et al. (2023), CLEVA: Chinese Language Models EVAluation Platform. EMNLP System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/"
+    ]
+  },
+  {
+    "page": 28,
+    "text": [
+      "提示例は、多ければよいとは限らない",
+      "2023年の実験では、8モデルを四つの課題で比較した。多くの場合、提示例を増やすと性能が上がり、4〜8例前後で伸びが頭打ちになった。\n一方、文章分類では、提示例を増やすと性能が下がるモデルも見られた。著者は、ラベルの種類が多く、例の追加が判断を妨げた可能性を挙げている。\nこれは31課題すべてに共通する最適例数の報告ではない。モデル、課題、入力形式を固定した比較として読む。",
+      "3. 新しい評価集合と比較の条件",
+      "[1] Li, Zhao et al. (2023), CLEVA: Chinese Language Models EVAluation Platform. EMNLP System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/"
+    ]
+  },
+  {
+    "page": 29,
+    "text": [
+      "HELM実行と、プラットフォームの参照値",
+      "3. 新しい評価集合と比較の条件",
+      "課題／指標 | HELM | CLEVA",
+      "対話要約／ROUGE-2 | 0.3045 | 0.3065",
+      "英語→中国語／SacreBLEU | 60.48 | 59.23",
+      "事実確認／完全一致 | 0.4595 | 0.4528",
+      "地域バイアス判定／Micro F1 | 0.5656 | 0.5589",
+      "gpt-3.5-turbo-0613を用いた公式READMEの比較。指標と尺度が異なるため、行をまたぐ平均は取らない。",
+      "[1] LaVi Lab, CLEVA. 公式README・ローカル評価・参照結果・利用条件。  https://github.com/LaVi-Lab/CLEVA"
+    ]
+  },
+  {
+    "page": 30,
+    "text": [
+      "小さな差も、条件の違いとともに読む",
+      "公式READMEは、乱数の違いで文脈内の提示例が変わることと、CLEVAとHELMで使ったChatGPTの版が完全には一致しないことを、得点差の主な理由としている。\n前ページの値は、同じ条件の二重測定による誤差だけを示すものではない。プロンプト、提示例、モデル版をそろえてから比較する。",
+      "3. 新しい評価集合と比較の条件",
+      "[1] LaVi Lab, CLEVA. 公式README・ローカル評価・参照結果・利用条件。  https://github.com/LaVi-Lab/CLEVA"
+    ]
+  },
+  {
+    "page": 31,
+    "text": [
+      "HELMでの利用と公開範囲",
+      "4. HELMでの利用と公開範囲"
+    ]
+  },
+  {
+    "page": 32,
+    "text": [
+      "HELMには、ローカル評価の実装がある",
+      "2023年11月、CLEVAのデータ形式・プロンプト・摂動・中国語の指標がHELMへ統合された。\nv1の設定では、課題・下位課題・プロンプトIDを指定する。選択問題と生成課題で入力の整形や回答の処理が変わる。\nv0.4.0のClassic公開run索引にはCLEVAの実行結果がなく、公式READMEの参照値が別に公表されている。",
+      "4. HELMでの利用と公開範囲",
+      "[1] Stanford CRFM, HELM v0.4.0. CLEVA scenario / Converter.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py"
+    ]
+  },
+  {
+    "page": 33,
+    "text": [
+      "設定ファイルと、論文の規模は別の単位",
+      "4. HELMでの利用と公開範囲",
+      "対象 | 確認できる数",
+      "論文の課題 | 31",
+      "v0.4.0設定の課題 | 31",
+      "設定の課題×下位課題 | 65組",
+      "設定のプロンプト記述 | 253項目",
+      "Classic公開run索引のCLEVA | 0件",
+      "設定の組合せ・プロンプト数と、収録データセット数は別の単位。",
+      "[1] Stanford CRFM, HELM v0.4.0. CLEVA v1 run configuration.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/presentation/run_specs_cleva_v1.conf"
+    ]
+  },
+  {
+    "page": 34,
+    "text": [
+      "入手先と、現在確認できる範囲",
+      "公式GitHubは、CLEVA v1のダウンロード方法とHELMでの評価方法を公開している。\n取得時には、公式のオンライン画面とv1配布ファイルに接続できなかった。公開論文と固定実装は取得でき、説明例・入力形式・指標を確認できる。\nC3やMath23Kなど、採用元の公開データは別の配布元から取得できる。CLEVA v1での選定範囲、整形、分割とは区別して利用する。",
+      "4. HELMでの利用と公開範囲",
+      "[1] LaVi Lab, CLEVA. 公式README・ローカル評価・参照結果・利用条件。  https://github.com/LaVi-Lab/CLEVA"
+    ]
+  },
+  {
+    "page": 35,
+    "text": [
+      "比較の目的から、課題と指標を選ぶ",
+      "中国語のモデルを幅広く比べるには、どの課題で何を出力させたかをそろえる必要がある。CLEVAは、その手順と評価軸をまとめた基盤である。\n複数プロンプトと九つの評価軸は、平均的な正しさだけでなく、変動や生成文の性質も調べるために使う。\n実行時点・モデル版・入力形式・参照回答・抽出集合を確かめて、比較できる範囲の結果を読む。",
+      "4. HELMでの利用と公開範囲",
+      "[1] Li, Zhao et al. (2023), CLEVA: Chinese Language Models EVAluation Platform. EMNLP System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/"
+    ]
+  },
+  {
+    "page": 36,
+    "text": [
+      "Appendix",
+      "Appendix"
+    ]
+  },
+  {
+    "page": 37,
+    "text": [
+      "",
+      "追加の公開例\n設定・統計・利用条件\n研究と参考文献",
+      "Appendix: 目次"
+    ]
+  },
+  {
+    "page": 38,
+    "text": [
+      "追加の公開例",
+      "Appendix: 1. 追加の公開例"
+    ]
+  },
+  {
+    "page": 39,
+    "text": [
+      "実例4：雨がやみかけた山の詩句",
+      "Appendix: 1. 追加の公開例",
+      "公開例の原文",
+      "対応する日本語訳",
+      "“山间连绵阴雨刚刚有了一点停止的意思。”这句话可以用以下哪句古文来表达：\nA. 寒雨初开霁\nB. 山晓雨初霁\nC. 宿雨天初霁\nD. 山雨初含霁\n答：",
+      "「山間で降り続いていた雨が、ようやく少しやみかけた。」この文は、次のどの古典詩句で表せるか。\nA. 冷たい雨がやみ、空が晴れ始める\nB. 山の夜明け、雨がやみ、空が晴れ始める\nC. 夜通し降った雨がやみ、空が晴れ始める\nD. 山の雨が、かすかに晴れ間を見せ始める",
+      "参照回答：D",
+      "参照回答：D",
+      "[1] Li, Zhao et al. (2023), CLEVA. 公開説明例。 公開例 A2.SS1.SSS1.Px5 ／ 古典中国語の理解。  https://arxiv.org/html/2308.04813"
+    ]
+  },
+  {
+    "page": 40,
+    "text": [
+      "実例5：文脈に合う慣用句",
+      "Appendix: 1. 追加の公開例",
+      "公開説明例の原文（表示範囲を保持）",
+      "不过，要想变得____，要想自己能够成就一番事业的话，不是说来就来的，或者说任何一个出色的人，他们都得经历过不少的磨难，以及在经受住了一些挫折之后，才能真正成才成人，才能成为一个实力超群的人物，让自己的人生过得越来越顺当…\n上面这个句子下划线处可以填写哪个成语？\nA. 足智多谋\nB. 语无伦次\nC. 绣花枕头\n答：",
+      "参照回答：A",
+      "[1] Li, Zhao et al. (2023), CLEVA. 公開説明例。 公開例 A2.SS1.SSS2.Px2 ／ 文化的知識。  https://arxiv.org/html/2308.04813"
+    ]
+  },
+  {
+    "page": 41,
+    "text": [
+      "実例5：文脈に合う慣用句（訳）",
+      "Appendix: 1. 追加の公開例",
+      "対応する日本語訳",
+      "しかし、____になって、自分で何かを成し遂げたいと思っても、簡単に実現できるわけではない。どんな優れた人も、多くの苦難や挫折を経験してこそ、本当に成長し、抜きん出た力を持ち、人生をより順調に歩めるようになる……。\n下線部には、どの慣用句を入れられるか。\nA. 知恵や策略に富む\nB. 話が支離滅裂である\nC. 見かけはよいが中身がない",
+      "参照回答：A. 足智多谋（知恵や策略に富む）",
+      "[1] Li, Zhao et al. (2023), CLEVA. 公開説明例。 公開例 A2.SS1.SSS2.Px2 ／ 文化的知識。  https://arxiv.org/html/2308.04813"
+    ]
+  },
+  {
+    "page": 42,
+    "text": [
+      "実例6：売り声から何が分かるか",
+      "Appendix: 1. 追加の公開例",
+      "公開例の原文",
+      "対応する日本語訳",
+      "是否可以从“篮子嘛,一块钱,一块钱啊.”中推断出“这个篮子是可以卖的。”？\nA. 总是可以\nB. 有时可以\nC. 不可以\n答：",
+      "「かごだよ、1元、1元だよ。」という発言から、「このかごは販売されている」と推論できるか。\nA. 常にできる\nB. 場合によってはできる\nC. できない",
+      "参照回答：A",
+      "参照回答：A",
+      "[1] Li, Zhao et al. (2023), CLEVA. 公開説明例。 公開例 A2.SS1.SSS3.Px2 ／ 常識推論・含意判定。  https://arxiv.org/html/2308.04813"
+    ]
+  },
+  {
+    "page": 43,
+    "text": [
+      "実例7：数式が扱う図形を答える",
+      "Appendix: 1. 追加の公開例",
+      "公開例の原文",
+      "対応する日本語訳",
+      "婆罗摩笈多公式描述了__ ->",
+      "ブラーマグプタの公式が扱うのは__ →",
+      "参照回答：四边形",
+      "参照回答：四辺形",
+      "[1] Li, Zhao et al. (2023), CLEVA. 公開説明例。 公開例 A2.SS1.SSS2.Px1 ／ 分野別知識。  https://arxiv.org/html/2308.04813"
+    ]
+  },
+  {
+    "page": 44,
+    "text": [
+      "実例8：映画賞に関する主張を判定する",
+      "Appendix: 1. 追加の公開例",
+      "公開例の原文",
+      "対応する日本語訳",
+      "第33届金鸡奖揭晓：黄晓明、周冬雨再拿最佳男女主角。\n上述说法是否为真？\n答：",
+      "第33回金鶏賞の結果が発表され、黄暁明と周冬雨が、再び最優秀男優賞と最優秀女優賞をそれぞれ受賞した。\nこの記述は真実か。",
+      "参照回答：真",
+      "参照回答：真",
+      "[1] Li, Zhao et al. (2023), CLEVA. 公開説明例。 公開例 A2.SS1.SSS4.Px4 ／ 事実確認。  https://arxiv.org/html/2308.04813"
+    ]
+  },
+  {
+    "page": 45,
+    "text": [
+      "実例9：不満を含む商品レビュー",
+      "Appendix: 1. 追加の公開例",
+      "公開例の原文",
+      "対応する日本語訳",
+      "这个产品评价是正面还是负面的？\n评价：今天刚拿到手机，打电话时发现手机听筒有吱吱吱的杂声，不满意，真怀疑是不是正品\n答案：",
+      "この商品レビューは肯定的か、否定的か。\nレビュー：今日、携帯電話が届いたばかりなのに、通話すると受話口からジジジという雑音がする。不満だ。本当に正規品なのか疑わしい。",
+      "参照回答：负面",
+      "参照回答：否定的",
+      "[1] Li, Zhao et al. (2023), CLEVA. 公開説明例。 公開例 A2.SS2.SSS0.Px6 ／ 感情分析。  https://arxiv.org/html/2308.04813"
+    ]
+  },
+  {
+    "page": 46,
+    "text": [
+      "実例10：ニュースの話題を分類する",
+      "Appendix: 1. 追加の公開例",
+      "公開例の原文",
+      "対応する日本語訳",
+      "“全国青年教师教学艺术大赛举行”这段新闻的类别属于",
+      "「全国の若手教員による授業技術大会が開催された」というニュースの分類は、",
+      "参照回答：教育",
+      "参照回答：教育",
+      "[1] Li, Zhao et al. (2023), CLEVA. 公開説明例。 公開例 A2.SS2.SSS0.Px7 ／ 文章分類。  https://arxiv.org/html/2308.04813"
+    ]
+  },
+  {
+    "page": 47,
+    "text": [
+      "実例11：文章の中心となる対象を抜き出す",
+      "Appendix: 1. 追加の公開例",
+      "公開例の原文",
+      "対応する日本語訳",
+      "“《恋恋笔记本》是导演尼克·卡萨维茨2004年的一部爱情类影片。”中主要围绕着什么进行描述？",
+      "「『きみに読む物語』は、ニック・カサヴェテス監督による2004年の恋愛映画である。」この記述は、主に何について述べているか。",
+      "参照回答：恋恋笔记本",
+      "参照回答：きみに読む物語",
+      "[1] Li, Zhao et al. (2023), CLEVA. 公開説明例。 公開例 A2.SS2.SSS0.Px8 ／ 意見の対象抽出。  https://arxiv.org/html/2308.04813"
+    ]
+  },
+  {
+    "page": 48,
+    "text": [
+      "実例12：演算記号の意味を変える",
+      "Appendix: 1. 追加の公開例",
+      "公開例の原文",
+      "対応する日本語訳",
+      "将“+”视为数字1而不是数学运算。问：6+1的第一位数字是啥？答：",
+      "「+」を数学の演算記号ではなく、数字の1として扱う。問：6+1の最初の桁は何か。",
+      "参照回答：6",
+      "参照回答：6",
+      "[1] Li, Zhao et al. (2023), CLEVA. 公開説明例。 公開例 A2.SS1.SSS5.Px2 ／ 指示追従。  https://arxiv.org/html/2308.04813"
+    ]
+  },
+  {
+    "page": 49,
+    "text": [
+      "実例13：例から計算の規則を推定する",
+      "Appendix: 1. 追加の公開例",
+      "公開例の原文",
+      "対応する日本語訳",
+      "推断符号 -> 的含义并计算下列公式。\n512 + 372 -> 885\n528 + 170 -> 699\n859 + 133 -> 993\n199 + 944 -> 1144\n154 + 521 -> 676\n67 + 987 ->",
+      "記号「→」の意味を推測し、最後の式を計算しなさい。\n512 + 372 → 885\n528 + 170 → 699\n859 + 133 → 993\n199 + 944 → 1144\n154 + 521 → 676\n67 + 987 →",
+      "参照回答：1055",
+      "参照回答：1055",
+      "[1] Li, Zhao et al. (2023), CLEVA. 公開説明例。 公開例 A2.SS1.SSS3.Px2 ／ 帰納的推論。  https://arxiv.org/html/2308.04813"
+    ]
+  },
+  {
+    "page": 50,
+    "text": [
+      "参照回答の単位と文脈を確かめる",
+      "実例7では、数学の知識を、図形の名称という短い語で答える。参照ラベルは「四辺形」である。\n実例8は、2020年の第33回金鶏賞に関する主張。時点を外し、現在の受賞結果に関する質問として扱わない。\n実例13は、通常の和より1大きい値を返す規則を例から推定する。67＋987＝1054なので、提示された規則の参照値は1055。",
+      "Appendix: 1. 追加の公開例",
+      "[1] Li, Zhao et al. (2023), CLEVA: Chinese Language Models EVAluation Platform. EMNLP System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/"
+    ]
+  },
+  {
+    "page": 51,
+    "text": [
+      "設定・統計・利用条件",
+      "Appendix: 2. 設定・統計・利用条件"
+    ]
+  },
+  {
+    "page": 52,
+    "text": [
+      "31課題のうち、実務に近い11課題",
+      "Appendix: 2. 設定・統計・利用条件",
+      "区分 | 課題",
+      "質問・読解 | 読解、外部資料なしの質問応答",
+      "文章の判定 | 言い換え判定、感情分析、文章分類",
+      "文章の生成 | 要約、データからの文章生成、言い換え生成",
+      "その他 | 意見抽出、対話生成、翻訳",
+      "[1] Li, Zhao et al. (2023), CLEVA: Chinese Language Models EVAluation Platform. EMNLP System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/"
+    ]
+  },
+  {
+    "page": 53,
+    "text": [
+      "特定の能力を調べる20課題",
+      "Appendix: 2. 設定・統計・利用条件",
+      "区分 | 課題",
+      "言語：5 | 言語モデル、共参照、ピンイン、意図、古典中国語",
+      "知識：2 | 分野別知識、文化的知識",
+      "推論：7 | 基礎推論、帰納・演繹・常識・数学推論、コード、概念汎化",
+      "害：4 | 著作物の再現、有害表現の検出、偏りの判定、事実確認",
+      "その他：2 | 指示追従、算術計算",
+      "[1] Li, Zhao et al. (2023), CLEVA: Chinese Language Models EVAluation Platform. EMNLP System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/"
+    ]
+  },
+  {
+    "page": 54,
+    "text": [
+      "文脈内の提示例は、条件の一部になる",
+      "入力に何件の例を添えるかだけでなく、どの例をどの順に添えたかも回答に影響する。複数のテンプレートや乱数設定を使う評価では、集計する範囲をそろえる。\nHELM実装は、ラベルの言い換え、項目の連結、選択肢の番号付けなどを行うConverterを持つ。元レコードのラベルと、モデルが実際に返す文字列を対応させる。",
+      "Appendix: 2. 設定・統計・利用条件",
+      "[1] Stanford CRFM, HELM v0.4.0. CLEVA scenario / Converter.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py"
+    ]
+  },
+  {
+    "page": 55,
+    "text": [
+      "新しい二つの軸を、具体的に測る",
+      "多様性は、n-gramの種類数を出現総数で割る。全出力をまとめるinter-distinctと、事例ごとに計算して平均するintra-distinctを定義している。\nプライバシーのPII_matchは、個人を識別しうる情報が1件以上検出された出力を持つ事例数を、全評価事例数で割る指標。\n2023年の評価ではAzureのPII検出サービスを使う。文字数に占める個人情報の割合ではなく、検出された事例の割合を測る。",
+      "Appendix: 2. 設定・統計・利用条件",
+      "[1] Li, Zhao et al. (2023), CLEVA: Chinese Language Models EVAluation Platform. EMNLP System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/"
+    ]
+  },
+  {
+    "page": 56,
+    "text": [
+      "公開条件と、収録元の権利を確かめる",
+      "CLEVA公式リポジトリのライセンス表示はCC BY-NC-ND 4.0。非商用、改変物の共有に関する制限などを含む。\n収録データの出所は一様ではない。元データの利用条件と、CLEVAが公開した加工済みデータの条件を、それぞれ確認する。\nこの資料の日本語訳は、公開説明例を読むために添えたもの。CLEVAの公式訳や、公式評価ラベルではない。",
+      "Appendix: 2. 設定・統計・利用条件",
+      "[1] LaVi Lab, CLEVA. 公式README・ローカル評価・参照結果・利用条件。  https://github.com/LaVi-Lab/CLEVA"
+    ]
+  },
+  {
+    "page": 57,
+    "text": [
+      "後続のC²LEVAと、対象を分ける",
+      "公式READMEは、後続のC²LEVAを2024年12月に案内し、2025年のFindings of ACLへの採択を報告している。\nC²LEVAは、英語と中国語を対象に、学習データへの混入を防ぐ仕組みを体系化する後続の評価。\nここで扱う31課題・84データセット・約37万事例は、CLEVAの2023年の報告値。後続版の構成や結果へ、そのまま移さない。",
+      "Appendix: 2. 設定・統計・利用条件",
+      "[1] Li et al., C²LEVA: Toward Comprehensive and Contamination-Free Language Model Evaluation. Findings of ACL 2025.  https://arxiv.org/abs/2412.04947"
+    ]
+  },
+  {
+    "page": 58,
+    "text": [
+      "研究と参考文献",
+      "Appendix: 3. 研究と参考文献"
+    ]
+  },
+  {
+    "page": 59,
+    "text": [
+      "香港中文大学と上海AI実験室の共同研究",
+      "Yanyang LiとJianqiao Zhaoが共同第一著者、Liwei Wangが責任著者。香港中文大学と上海AI実験室の研究者が参加した。\n2023年のEMNLP System Demonstrationsで、ベンチマーク、評価手順、オンラインの利用例とモデル比較を報告している。\n公開リポジトリにはHELM統合の手順が追加され、オンライン評価とローカル評価の二つの入口が示されている。",
+      "Appendix: 3. 研究と参考文献",
+      "[1] Li, Zhao et al. (2023), CLEVA: Chinese Language Models EVAluation Platform. EMNLP System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/"
+    ]
+  },
+  {
+    "page": 60,
+    "text": [
+      "参考文献",
+      "Appendix: 3. 研究と参考文献",
+      "CLEVA: Chinese Language Models EVAluation Platform\nYanyang Li, Jianqiao Zhao et al. · 2023 · EMNLP System Demonstrations, pp.186–217\n中国語の31課題、九つの評価軸、複数プロンプトと評価集合の抽出をまとめた評価基盤を提案する。\nhttps://aclanthology.org/2023.emnlp-demo.17/",
+      "CLEVA: Chinese Language Models EVAluation Platform\nLaVi Lab · 公式リポジトリ\nv1の配布案内、HELMでのローカル評価、四つの参照結果とライセンスを公開する。\nhttps://github.com/LaVi-Lab/CLEVA"
+    ]
+  },
+  {
+    "page": 61,
+    "text": [
+      "参考文献",
+      "Appendix: 3. 研究と参考文献",
+      "Holistic Evaluation of Language Models\nPercy Liang et al. · 2023 · Transactions on Machine Learning Research\n能力だけでなく、信頼性や害を含む複数の観点から言語モデルを比較するHELMを提示する。\nhttps://openreview.net/forum?id=iO4LZibEqW",
+      "C²LEVA: Toward Comprehensive and Contamination-Free Language Model Evaluation\nYanyang Li et al. · 2025 · Findings of ACL\n英語・中国語を対象に、学習データへの混入を防ぐ仕組みを体系化する後続の評価研究。\nhttps://arxiv.org/abs/2412.04947"
+    ]
+  },
+  {
+    "page": 62,
+    "text": [
+      "参考文献",
+      "Appendix: 3. 研究と参考文献",
+      "CLEVA Scenario and v1 Run Configuration\nStanford CRFM · HELM v0.4.0 · 2023\nCLEVA形式の入力・ラベル・テンプレートを変換する実装と、ローカル評価の課題設定を含む。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py"
+    ]
+  }
+]

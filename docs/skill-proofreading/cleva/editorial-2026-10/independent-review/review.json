@@ -1,0 +1,54 @@
+{
+  "slug": "cleva",
+  "approved": true,
+  "status": "approved",
+  "reviewer": "create_cnndm",
+  "updated_at": "2026-10-19T08:20:11.658036+00:00",
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "final_hashes": {
+    "pptx": "0c8a5b8b5c7da8ca9ffd0db5dc8bd12d3ac0f45c52362ddea088a4e097a89604",
+    "pdf": "7636004cfbc56cb6b9555d295a448cdd8d8ca86351aa99dda4a0d3ebd1e7ede3"
+  },
+  "remaining_issues": [],
+  "baseline": "/workspace/artifacts/helm-editorial-revision/baseline/cleva",
+  "creator_handoff": "/workspace/artifacts/helm-editorial-revision/cleva/handoff.json",
+  "reader_assessment": "公開例→プロンプト/9軸→評価集合/比較→HELM利用/入手の流れが自然。監査中心4頁を整理し、選定範囲・版差・利用条件を簡潔に保持。",
+  "checks": {
+    "primary_examples": "13 printed-scope inputs and reference answers independently parsed from actual source HTML, SHA matched",
+    "Japanese": "全13組・全候補を原文と独立通読。p6教研室/9太/39可以卖的の局所修正を最終実画素で確認",
+    "arithmetic": "1200×3/5=720; five sum+1 examples and target1055 independently computed",
+    "facts": "31tasks/11+20/84datasets/370K/9M/33.98/3.95/70%pair ranking/9dimensions/23models and PII/distinct definitions checked against formal paper",
+    "README": "all4 pairs and seed/ChatGPT version caveat independently read and matched",
+    "retained_native": "29 full quote/template frames except3 expected JP edits, 7 tables and chart values unchanged; chart series correctly renamed課題数",
+    "native_PDF": "380paragraphs/81cells missing0; answers26×21boldB13731",
+    "technical": "layout325/71 issues0; all275 text frames visible ink candidates0; 51URL-only links exact; newXSD0/notes0/author sasakiy84",
+    "rights": "CC BY-NC-ND4 and original source-data conditions retained"
+  },
+  "resolved_issues": [
+    {
+      "page": 39,
+      "before": "このかごは販売されている",
+      "after": "このかごは売ることができる",
+      "reason": "販売可能の意味を保持"
+    },
+    {
+      "pages": [
+        6,
+        9,
+        15
+      ],
+      "reason": "mainによる教育・研究部門/大きすぎる/課題数の修正を最終確認"
+    }
+  ],
+  "evidence": [
+    "primary-examples-check.json",
+    "content-checks.json",
+    "visual-inspection.json",
+    "final-render-check.json",
+    "all-text-frame-audit.json",
+    "technical/cleva/layout-audit.json",
+    "technical/cleva/links-audit.json",
+    "technical/cleva/package-audit.json"
+  ]
+}
