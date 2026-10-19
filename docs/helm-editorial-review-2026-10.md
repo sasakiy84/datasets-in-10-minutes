@@ -10,7 +10,7 @@ Geminiは使用せず、リポジトリの日本語校正・データセット�
 
 各資料の変更表には修正前後の文言、削除・統合の理由、改訂前後のページ対応を記録する。独立レビューとメインの記録には、実施した確認と最終成果物のハッシュを残す。
 
-最新方針での反映済み：41 / 47資料。反映済み資料は合計2443ページから2006ページへ整理。
+最新方針での反映済み：47 / 47資料。反映済み資料は合計2811ページから2299ページへ整理。
 
 | 資料 | 改訂前 | 改訂後 | 修正内容 |
 |---|---:|---:|---|
@@ -27,9 +27,9 @@ Geminiは使用せず、リポジトリの日本語校正・データセット�
 | msmarco | 61 | 43 | [修正前後の表](skill-proofreading/msmarco/editorial-2026-10/changes.md) |
 | legal-support | 63 | 42 | [修正前後の表](skill-proofreading/legal-support/editorial-2026-10/changes.md) |
 | lsat | 62 | 53 | [修正前後の表](skill-proofreading/lsat/editorial-2026-10/changes.md) |
-| medqa | 53 | — | 最新方針に沿って確認・修正中 |
+| medqa | 53 | 47 | [修正前後の表](skill-proofreading/medqa/editorial-2026-10/changes.md) |
 | lexglue | 57 | 49 | [修正前後の表](skill-proofreading/lexglue/editorial-2026-10/changes.md) |
-| lextreme | 55 | — | 最新方針に沿って確認・修正中 |
+| lextreme | 55 | 47 | [修正前後の表](skill-proofreading/lextreme/editorial-2026-10/changes.md) |
 | ccpm | 54 | 45 | [修正前後の表](skill-proofreading/ccpm/editorial-2026-10/changes.md) |
 | bustm | 54 | 45 | [修正前後の表](skill-proofreading/bustm/editorial-2026-10/changes.md) |
 | chid | 58 | 52 | [修正前後の表](skill-proofreading/chid/editorial-2026-10/changes.md) |
@@ -43,9 +43,9 @@ Geminiは使用せず、リポジトリの日本語校正・データセット�
 | wikifact | 52 | 39 | [修正前後の表](skill-proofreading/wikifact/editorial-2026-10/changes.md) |
 | dyck | 48 | 40 | [修正前後の表](skill-proofreading/dyck/editorial-2026-10/changes.md) |
 | numeracy | 53 | 39 | [修正前後の表](skill-proofreading/numeracy/editorial-2026-10/changes.md) |
-| synthetic-reasoning | 55 | — | 最新方針に沿って確認・修正中 |
+| synthetic-reasoning | 55 | 44 | [修正前後の表](skill-proofreading/synthetic-reasoning/editorial-2026-10/changes.md) |
 | math | 55 | 43 | [修正前後の表](skill-proofreading/math/editorial-2026-10/changes.md) |
-| legalbench | 84 | — | 最新方針に沿って確認・修正中 |
+| legalbench | 84 | 54 | [修正前後の表](skill-proofreading/legalbench/editorial-2026-10/changes.md) |
 | crosswoz | 61 | 56 | [修正前後の表](skill-proofreading/crosswoz/editorial-2026-10/changes.md) |
 | redefine | 53 | 46 | [修正前後の表](skill-proofreading/redefine/editorial-2026-10/changes.md) |
 | pattern-matching-suppression | 54 | 48 | [修正前後の表](skill-proofreading/pattern-matching-suppression/editorial-2026-10/changes.md) |
@@ -53,13 +53,13 @@ Geminiは使用せず、リポジトリの日本語校正・データセット�
 | data-imputation | 54 | 38 | [修正前後の表](skill-proofreading/data-imputation/editorial-2026-10/changes.md) |
 | entity-matching | 59 | 51 | [修正前後の表](skill-proofreading/entity-matching/editorial-2026-10/changes.md) |
 | copyright-code | 57 | 43 | [修正前後の表](skill-proofreading/copyright-code/editorial-2026-10/changes.md) |
-| copyright-text | 55 | — | 最新方針に沿って確認・修正中 |
+| copyright-text | 55 | 41 | [修正前後の表](skill-proofreading/copyright-text/editorial-2026-10/changes.md) |
 | chef | 65 | 58 | [修正前後の表](skill-proofreading/chef/editorial-2026-10/changes.md) |
 | cdial-bias | 59 | 51 | [修正前後の表](skill-proofreading/cdial-bias/editorial-2026-10/changes.md) |
 | c3 | 65 | 54 | [修正前後の表](skill-proofreading/c3/editorial-2026-10/changes.md) |
 | cleva | 62 | 54 | [修正前後の表](skill-proofreading/cleva/editorial-2026-10/changes.md) |
 | disinformation | 76 | 66 | [修正前後の表](skill-proofreading/disinformation/editorial-2026-10/changes.md) |
 | realtoxicityprompts | 62 | 55 | [修正前後の表](skill-proofreading/realtoxicityprompts/editorial-2026-10/changes.md) |
-| synthetic-efficiency | 66 | — | 最新方針に沿って確認・修正中 |
+| synthetic-efficiency | 66 | 60 | [修正前後の表](skill-proofreading/synthetic-efficiency/editorial-2026-10/changes.md) |
 
 EPRSTMTは承認済み44項目の対応表も保持する。各資料の詳細記録は`docs/skill-proofreading/<資料名>/editorial-2026-10/`にある。原制作・初回校正の記録は`previous/`、その後の再構成前の記録は`earlier-editorial-pass/`に保存する。
