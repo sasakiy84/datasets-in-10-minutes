@@ -1,0 +1,49 @@
+{
+  "creator": "Hai Hu, Kyle Richardson, Liang Xu, Lu Li, Sandra Kübler, Lawrence S. Moss。Indiana University・Allen Institute for AI・CLUEの共同研究として2020年に導入。中国語資料から前提を集め、母語話者が仮説を作成・再注釈。",
+  "evidence": [
+    {
+      "url": "https://aclanthology.org/2020.findings-emnlp.314/",
+      "file": "paper.txt",
+      "quote": "OCNLI: Original Chinese Natural Language Inference",
+      "local_evidence": "/workspace/artifacts/helm-parallel/ocnli/evidence/paper.txt",
+      "sha256": "62914ef4b3da76c85af63a85265312fcfced8e99e62a09155c869058197a239c"
+    },
+    {
+      "url": "https://github.com/CLUEbenchmark/OCNLI",
+      "file": "README.md",
+      "quote": "OCNLI",
+      "local_evidence": "/workspace/artifacts/helm-parallel/ocnli/evidence/official-readme.md",
+      "sha256": "f1da61502d1f56db90adc8e07bd31806eb54d76d9bc516848d49a50824d83040"
+    }
+  ],
+  "pages": [
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    24,
+    28,
+    29,
+    30,
+    32,
+    48,
+    49,
+    51
+  ],
+  "relation": "CLEVAがOCNLI由来の推論ペアを多肢選択化して採用。HELM v0.4.0のCLEVA scenarioはCLEVAデータ・テンプレートをInstance化する実装。元OCNLIの作成主体とは分けている。24頁は2020年OCNLI研究の報告値。",
+  "slug": "ocnli",
+  "checked_at": "2026-10-19T08:41:04.214075+00:00",
+  "method": "一次論文と公式README・HELM公開実装を通読し、最終native全頁の帰属・報告値の主語と対照",
+  "gemini_used": false,
+  "primary_helm_url": "https://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py",
+  "primary_cleva_url": "https://aclanthology.org/2023.emnlp-demo.17/",
+  "conclusion": "元の作成・FewCLUE/CLUEでの整備・CLEVA採用・HELMの実装を区別して説明しており、帰属の修正は不要。",
+  "slide_changes_required": false,
+  "final_hashes": {
+    "pptx": "77fc9ed74100af79517f382e2543c5de99fe67e12f97c8aafce8fb7619caf857",
+    "pdf": "09542947d06fb7ab8d24bbd09725daafc1432dd67ecf80740730ccc72b4e2619"
+  }
+}

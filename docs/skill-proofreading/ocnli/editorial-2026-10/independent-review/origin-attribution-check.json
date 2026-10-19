@@ -1,0 +1,65 @@
+{
+  "slug": "ocnli",
+  "status": "approved",
+  "approved": true,
+  "reviewer": "create_msmarco",
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "scope": "追加された作成主体/採用/加工/報告値の主語を原資料・現nativeへ戻って確認。元の全頁描画承認からartifact変更なし。",
+  "creator": "Hai Hu, Kyle Richardson, Liang Xu, Lu Li, Sandra Kübler, Lawrence S. Moss。Indiana University・Allen Institute for AI・CLUEの共同研究として2020年に導入。中国語資料から前提を集め、母語話者が仮説を作成・再注釈。",
+  "relation": "CLEVAがOCNLI由来の推論ペアを多肢選択化して採用。HELM v0.4.0のCLEVA scenarioはCLEVAデータ・テンプレートをInstance化する実装。元OCNLIの作成主体とは分けている。24頁は2020年OCNLI研究の報告値。",
+  "primary_evidence_checked": [
+    {
+      "file": "/workspace/artifacts/helm-parallel/ocnli/evidence/paper.txt",
+      "sha256": "62914ef4b3da76c85af63a85265312fcfced8e99e62a09155c869058197a239c",
+      "independently_read": true
+    },
+    {
+      "file": "/workspace/artifacts/helm-parallel/ocnli/evidence/official-readme.md",
+      "sha256": "f1da61502d1f56db90adc8e07bd31806eb54d76d9bc516848d49a50824d83040",
+      "independently_read": true
+    }
+  ],
+  "native_pages_checked": [
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    24,
+    28,
+    29,
+    30,
+    32,
+    48,
+    49,
+    51
+  ],
+  "current_native": {
+    "14": "英語から訳す代わりに、中国語で作る\nSNLIとMNLIは、前提を示して人に仮説を書かせる英語の推論コーパス。OCNLIはMNLIの作成・再注釈の手順を中国語へ展開した。\nXNLIは英語の推論問題を多言語へ翻訳した資源。一方、OCNLIは、中国語の素材から前提を集め、母語話者に仮説を書いてもらう。\n翻訳調の表現や英語圏の文化的背景への偏りを避け、中国語を自然に使うときの推論を評価することを狙った。\n2. 中国語での作成と検証\n[1] Hu et al. (2020). OCNLI: Original Chinese Natural Language Inference. Findings of EMNLP.  https://aclanthology.org/2020.findings-emnlp.314/\n[2] Conneau et al. (2018). XNLI: Evaluating Cross-lingual Sentence Representations. EMNLP.  https://aclanthology.org/D18-1269/",
+    "15": "書き言葉と話し言葉を、5文体から集める\n2. 中国語での作成と検証\n[1] Hu et al. (2020). OCNLI: Original Chinese Natural Language Inference. Findings of EMNLP.  https://aclanthology.org/2020.findings-emnlp.314/",
+    "16": "同じ前提から、複数の推論を引き出す\n前提は8〜50文字の文から選ぶ。電話会話では、転記に使われた記号を取り除く。\nSingleは、1前提につき各ラベルの仮説を1文ずつ作る。Multiは、各ラベルについて最大3文、合計最大9文を作る。\nMulti Encourageは多様な推論や否定語を使わない矛盾を奨励する。Multi Constraintは、矛盾3文のうち否定語を含むものを1文までに制限する。\n2. 中国語での作成と検証\n[1] Hu et al. (2020). OCNLI: Original Chinese Natural Language Inference. Findings of EMNLP.  https://aclanthology.org/2020.findings-emnlp.314/",
+    "17": "easy・medium・hardは、仮説を書く順序\neasy・medium・hardは、同じ前提とラベルについて、作成者が仮説を書いた1番目・2番目・3番目を表す。\n複数の仮説を書くことで、最初に思いつく単純な言い換え・否定以外の推論を引き出すことを狙った。すべての前提で3文目まで作れたわけではない。\nどの条件でも、仮説が前提と70%を超えて重ならないよう指示した。文字の重なりだけで解ける問題を減らす意図がある。\n2. 中国語での作成と検証\n[1] Hu et al. (2020). OCNLI: Original Chinese Natural Language Inference. Findings of EMNLP.  https://aclanthology.org/2020.findings-emnlp.314/",
+    "18": "母語話者が仮説を書き、別の人が確かめる\n中国語または他言語を専攻する、中国語母語話者の大学生・大学院生145人が仮説を作成した。\n各作成条件の一部を無作為に選び、4人が独立にラベルを付け直す。作成時のラベルを合わせて5票とし、3票以上の一致を採用する。\n再注釈したMulti EncourageとMulti Constraintの計6,000組を、dev・testへ各3,000組ずつ割り当てた。残りとSingle・Multiを学習集合に使う。\n2. 中国語での作成と検証\n[1] Hu et al. (2020). OCNLI: Original Chinese Natural Language Inference. Findings of EMNLP.  https://aclanthology.org/2020.findings-emnlp.314/",
+    "19": "50k版の学習用と開発用には、正解が付いている\n2. 中国語での作成と検証\n計56,486組。学習用49組、開発用50組の「-」は評価から除く。テストは入力のみを公開し、正解は非公開。\n[1] Hu et al. (n.d.). OCNLI official repository.  https://github.com/CLUEbenchmark/OCNLI",
+    "20": "前提が重なる50k版と、重ならない30k版\n50k版では、学習用と開発用に同じ前提文が現れる。ただし、組み合わせる仮説は異なる。\n前提が重ならない条件で評価するために、30k版の学習用データも提供されている。開発用・テスト用は50k版と共通である。\n10k・3k版もあり、学習データを少なくしたときの成績を調べられる。\n2. 中国語での作成と検証\n[1] Hu et al. (n.d.). OCNLI official repository.  https://github.com/CLUEbenchmark/OCNLI",
+    "24": "人による評価は、テスト300組で正答率90.3%\n収集・検証に参加していない中国語母語話者の学生5人が、20例で練習した後、テストから無作為に選んだ300組を判定した。\n5人の多数決を正解ラベルと比較し、正答率90.3%を得た。多数決が成立しない2組には、テストで最も多いneutralを割り当てた。\n2020年のRoBERTaは78.2%だった。人の成績は300組、モデルの成績は有効なテスト全体に対する値である。\n3. 2020年の評価と残る手掛かり\n[1] Hu et al. (2020). OCNLI: Original Chinese Natural Language Inference. Findings of EMNLP.  https://aclanthology.org/2020.findings-emnlp.314/",
+    "28": "CLEVAはOCNLIを、多肢選択の推論課題に採用\n2023年のCLEVAは、OCNLIの文ペアを多肢選択形式にして、自然言語推論を正答率で評価する。\n公開論文には、本編の実例1と同じ「篮子嘛,一块钱…」と「这个篮子是可以卖的。」を使った設問が掲載されている。\nCLEVAで使われた全問題や抽出範囲は、公開説明からは確認できない。\n4. 入手方法とCLEVAでの利用\n[1] Li et al. (2023). CLEVA: Chinese Language Models EVAluation Platform. EMNLP System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/\n[2] Stanford CRFM (n.d.). CLEVACommonsenseReasoningScenario. HELM.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py",
+    "29": "CLEVAの公開例：三つの選択肢へ変換\n4. 入手方法とCLEVAでの利用\n論文の原文・全選択肢\n日本語訳\n是否可以从“篮子嘛,一块钱,一块钱啊.”中推断\n出“这个篮子是可以卖的。”？\nA. 总是可以\nB. 有时可以\nC. 不可以\n「かごね、1元、1元だよ。」から\n「このかごは売ることができる。」と推論できるか。\nA. 常にできる\nB. 場合によってはできる\nC. できない\n公開例の正解：A（总是可以／常にできる）\n[1] Li et al. (2023). CLEVA: Chinese Language Models EVAluation Platform. EMNLP System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/",
+    "30": "現在の入手先と、引用文の利用条件\n公式リポジトリは50k・30k・10k・3kの学習用データと、共通の開発用・正解非公開のテスト用データを公開する。CLUEの公開ZIPは50k版を収録する。\nOCNLIはCC BY-NC 2.0を掲示する。帰属を示し、非商用の条件を守る。ニュースの前提はLCMCからELRAの許可を得て採用したと記される。\n前提には政府報告、ニュース、小説、番組・電話会話が含まれる。引用には、データセットと原資料それぞれの出所も関わる。\n4. 入手方法とCLEVAでの利用\n[1] Hu et al. (n.d.). OCNLI official repository.  https://github.com/CLUEbenchmark/OCNLI",
+    "32": "中国語の文と、そこから分かることを結び付ける\nOCNLIは、中国語の5文体から集めた前提と、人が書いた仮説の関係を、含意・矛盾・中立で判定する。\n複数の仮説を書かせ、否定語の使用に制約を設けることで、単純な言い換え以外の推論も引き出した。\n正解付きの学習用・開発用データを使って学習・評価できる。前提を共有する50k版と、前提が重ならない30k版が提供されている。\n4. 入手方法とCLEVAでの利用\n[1] Hu et al. (2020). OCNLI: Original Chinese Natural Language Inference. Findings of EMNLP.  https://aclanthology.org/2020.findings-emnlp.314/",
+    "48": "言語・論理・評価を結び付けた共同研究\nHai Hu、Kyle Richardson、Liang Xu、Lu Li、Sandra Kübler、Lawrence S. Mossによる、Indiana University・Allen Institute for AI・CLUEの共同研究。\nFindings of EMNLP 2020で発表された。翻訳へ依存せず、母語話者の推論と再注釈を中国語の基準として整備した。\n教師ありモデルの成績だけでなく、仮説のみの語彙的な手掛かりや、翻訳学習データからの転移を分析した。\nAppendix: 2. 学習データと参考文献\n[1] Hu et al. (2020). OCNLI: Original Chinese Natural Language Inference. Findings of EMNLP.  https://aclanthology.org/2020.findings-emnlp.314/",
+    "49": "参考文献\nAppendix: 2. 学習データと参考文献\nOCNLI: Original Chinese Natural Language Inference\nHai Hu, Kyle Richardson, Liang Xu, Lu Li, Sandra Kübler, Lawrence S. Moss · 2020 · Findings of EMNLP, pp.3512–3526\n中国語の前提と仮説を収集し、多数決による検証、モデル成績、注釈の手掛かりを分析する。\nhttps://aclanthology.org/2020.findings-emnlp.314/\nOCNLI — Original Chinese Natural Language Inference\nCLUEbenchmark / Hu et al. (n.d.). 公式リポジトリ。参照2026-10-19。\n学習用4規模、共通dev・入力のみのtest、形式・baseline・CC BY-NC 2.0の条件を公開する。\nhttps://github.com/CLUEbenchmark/OCNLI",
+    "51": "参考文献\nAppendix: 2. 学習データと参考文献\nCLEVA: Chinese Language Models EVAluation Platform\nYanyang Li, Jianqiao Zhao, Duo Zheng, Zi-Yuan Hu, Zhi Chen, Xiaohui Su, Yongfeng Huang, Shijia Huang, Dahua Lin, Michael R. Lyu, Liwei Wang · 2023 · EMNLP System Demonstrations, pp.186–217\n中国語モデルの31課題を統一評価し、OCNLI由来の自然言語推論を多肢選択として採用する。\nhttps://aclanthology.org/2023.emnlp-demo.17/\nCLEVA Scenarios — HELM v0.4.0\nStanford CRFM (n.d.). HELM。参照2026-10-19。\nCLEVAのデータとテンプレートを読み、入力・選択肢・正解をHELMのInstanceへ変換する。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py"
+  },
+  "final_hashes": {
+    "pptx": "77fc9ed74100af79517f382e2543c5de99fe67e12f97c8aafce8fb7619caf857",
+    "pdf": "09542947d06fb7ab8d24bbd09725daafc1432dd67ecf80740730ccc72b4e2619"
+  },
+  "original_corpus_created_by_HELM": false,
+  "conclusion": "元データの出所・CLUE/FewCLUE整備・CLEVA採用・HELM実装を区別した説明。HELMによる原コーパス作成との誤帰属なし。本文/構成の追加修正不要。",
+  "record_correction": "OCNLI README証拠の存在しないpathとnullSHAをofficial-readme.md/実SHAへ修正、作者対応済み。",
+  "remaining_issues": []
+}
