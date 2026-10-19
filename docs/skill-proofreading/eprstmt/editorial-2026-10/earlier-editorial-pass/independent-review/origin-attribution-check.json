@@ -1,0 +1,55 @@
+{
+  "slug": "eprstmt",
+  "status": "approved",
+  "approved": true,
+  "reviewer": "create_msmarco",
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "scope": "追加された作成主体/採用/加工/報告値の主語を原資料・現nativeへ戻って確認。元の全頁描画承認からartifact変更なし。",
+  "creator": "北京師範大学ICIP Labが元の商品レビューを収集。FewCLUE著者がフィルタリング・検査・再構成し、少数例学習の評価用に整備。",
+  "relation": "CLEVAがFewCLUEの感情分析を採用し、選択式の設問にする。HELMのCLEVASentimentAnalysisScenarioはCLEVA向けの設問・変換を実装する。HELMは元レビューの収集主体ではない。17頁の成績は2021年FewCLUE研究の報告値。",
+  "primary_evidence_checked": [
+    {
+      "file": "/workspace/artifacts/helm-parallel/eprstmt/evidence/paper.txt",
+      "sha256": "d530b95f3b2ccabe32a20cef8b1696fa4ed635afdaa5e7d6cb6dc34d259f8dba",
+      "independently_read": true
+    },
+    {
+      "file": "/workspace/artifacts/helm-parallel/eprstmt/evidence/README.md",
+      "sha256": "61c40b91a538ad031e3aabc2a6ca2e5a7c6dd8ac4eddbc9f97f59ec2fcd782f7",
+      "independently_read": true
+    }
+  ],
+  "native_pages_checked": [
+    5,
+    12,
+    13,
+    14,
+    17,
+    21,
+    22,
+    24,
+    40,
+    41
+  ],
+  "current_native": {
+    "5": "商品レビューの評価を、二つのラベルで表す\nEPRSTMTは、中国語の商品レビューを、肯定的な評価と否定的な評価に分類するデータセット。肯定的ならPositive、否定的ならNegativeというラベルを付ける。\nFewCLUEではEPR-sentimentとも呼ばれる。少数のラベル付きデータから学習するモデルを評価するために使われる。\n1. 商品レビューを分類する\n[1] Xu et al. (2021). FewCLUE: A Chinese Few-shot Learning Evaluation Benchmark. arXiv.  https://arxiv.org/abs/2107.07498",
+    "12": "商品レビューを、少数例学習の評価用に整備\n北京師範大学のICIP Labが集めた商品レビューをもとに、FewCLUE向けにフィルタリング・検査・再構成した。\nFewCLUEは、中国語の少数例学習を9課題で評価するベンチマーク。EPRSTMTは、その中の商品レビューの感情分析課題に当たる。\nFewCLUEの説明では、元のレビューの収集先や、ラベル付けの具体的な基準までは分からない。\n2. FewCLUEでの作成と構成\n[1] Xu et al. (2021). FewCLUE: A Chinese Few-shot Learning Evaluation Benchmark. arXiv.  https://arxiv.org/abs/2107.07498",
+    "13": "学習・開発は各32件、テストは二種類\n2. FewCLUEでの作成と構成\nラベルなしデータは、教師なし学習や半教師あり学習にも利用する。\n[1] ICIP Lab / CLUE team (n.d.). EPRSTMT (FewCLUE). GitHub.  https://github.com/CLUEbenchmark/FewCLUE/tree/main/datasets/eprstmt",
+    "14": "学習する32件を変えて、結果の安定性を調べる\n少数例で学習すると、どのレビューが学習用に選ばれるかによって結果が変わりやすい。そこで、学習用と開発用を5組ずつ用意している。\n各組の32件は、肯定的・否定的なレビューを合わせた件数。二つのラベルの内訳は、組によって異なる。\n5組をまとめた学習用・開発用ファイルもある。複数の組に共通するレビューがあるため、まとめたファイルには同じ文が含まれる。\n2. FewCLUEでの作成と構成\n[1] Xu et al. (2021). FewCLUE: A Chinese Few-shot Learning Evaluation Benchmark. arXiv.  https://arxiv.org/abs/2107.07498\n[2] CLUE team (n.d.). FewCLUE: 小样本学习测评基准. GitHub.  https://github.com/CLUEbenchmark/FewCLUE",
+    "17": "2021年のFewCLUE実験における正答率\n3. 評価方法とモデルへの入力\nいずれもRoBERTaを使ったEPRSTMTの報告値。\n[1] Xu et al. (2021). FewCLUE: A Chinese Few-shot Learning Evaluation Benchmark. arXiv.  https://arxiv.org/abs/2107.07498",
+    "21": "CLEVAでは、二つの選択肢から答える\n4. CLEVAでの利用と入手方法\n公開されている中国語の設問\n日本語訳\n这个产品评价是正面还是负面的？\n评价：商城就是快好省，快好省\nA. 负面\nB. 正面\n答案：\nこの商品レビューは肯定的ですか、否定的ですか？\nレビュー：この通販サイトは、速い、良い、お得。速い、良い、お得。\nA. 否定的\nB. 肯定的\n答え：\n正解：B（肯定的）\n[1] Stanford CRFM (n.d.). CLEVASentimentAnalysisScenario. HELM.\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py",
+    "22": "公式配布先と、利用条件\nFewCLUEの公式リポジトリから、EPRSTMTの学習用・開発用・テスト用データを入手できる。\n付属するBERTコードにはApache 2.0が適用される。一方、商品レビュー本文を含むデータ全体の利用条件は明示されていないため、再利用の条件は配布元への確認が必要。\nCLEVAではFewCLUEの感情分析を採用しているが、評価対象のレビュー全体や抽出方法の詳細は公開資料からは確認できない。\n4. CLEVAでの利用と入手方法\n[1] CLUE team (n.d.). FewCLUE: 小样本学习测评基准. GitHub.  https://github.com/CLUEbenchmark/FewCLUE\n[2] Li et al. (2023). CLEVA: Chinese Language Models EVAluation Platform. EMNLP System Demonstrations.  https://aclanthology.org/2023.emnlp-demo.17/",
+    "24": "短いレビューで、少数例学習の力を測る\nEPRSTMTは、中国語の商品レビューを肯定的・否定的に分類するデータセット。32件ずつの小さな学習セットで、少数例から学ぶ方法を評価する。\n短い文章にも、複数の評価や皮肉が含まれる。良い点と不満の両方があるレビューや、文章の印象とラベルが合いにくい例が、分類の難しさを表している。\nFewCLUEで少数例学習に使われ、CLEVAでは選択式の感情分析にも利用されている。\n4. CLEVAでの利用と入手方法\n[1] Xu et al. (2021). FewCLUE: A Chinese Few-shot Learning Evaluation Benchmark. arXiv.  https://arxiv.org/abs/2107.07498",
+    "40": "参考文献\nAppendix: 2. 学習方式の比較と参考文献\nFewCLUE: A Chinese Few-shot Learning Evaluation Benchmark\nLiang Xu et al. · 2021 · arXiv preprint\n中国語の少数例学習を9課題で比較する研究。EPRSTMTの構成と学習方式別の評価を報告する。\nhttps://arxiv.org/abs/2107.07498\nFewCLUE: 小样本学习测评基准，中文版\nCLUE team · n.d. · GitHub\nEPRSTMTなどの学習・開発・テスト用データと、少数例学習の実装を公開する。\nhttps://github.com/CLUEbenchmark/FewCLUE",
+    "41": "参考文献\nAppendix: 2. 学習方式の比較と参考文献\nCLEVA: Chinese Language Models EVAluation Platform\nLi et al. · 2023 · EMNLP System Demonstrations\n中国語の言語モデルを広い課題群で評価する枠組み。商品レビューの感情分析にもFewCLUEを利用する。\nhttps://aclanthology.org/2023.emnlp-demo.17/\nCLEVASentimentAnalysisScenario\nStanford CRFM · n.d. · HELM\n商品レビューに肯定的・否定的の選択肢を付けた設問例を示す、感情分析課題の実装。\nhttps://github.com/stanford-crfm/helm/blob/v0.4.0/src/helm/benchmark/scenarios/cleva_scenario.py"
+  },
+  "final_hashes": {
+    "pptx": "06d356116224111e48b94928c1d56ba584060eeb533c2542b0a895da74931b68",
+    "pdf": "cbeecefa1e881d383333c7b0b305b1ad3abfe968bda64648474eec3fbd8bbc3c"
+  },
+  "original_corpus_created_by_HELM": false,
+  "conclusion": "元データの出所・CLUE/FewCLUE整備・CLEVA採用・HELM実装を区別した説明。HELMによる原コーパス作成との誤帰属なし。本文/構成の追加修正不要。",
+  "record_correction": null,
+  "remaining_issues": []
+}

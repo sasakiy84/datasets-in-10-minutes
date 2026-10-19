@@ -1,0 +1,112 @@
+{
+  "slug": "eprstmt",
+  "title": "EPRSTMT",
+  "description": "中国語の商品レビューを肯定的・否定的に分類するデータセット。13例で評価の混在や皮肉を読み、少数例学習の構成と評価方法を説明する。",
+  "year": 2021,
+  "main_pages": 24,
+  "total_pages": 41,
+  "status": "self_review_passed_pending_final_frame_reapproval",
+  "files": {
+    "pptx": {
+      "path": "/workspace/artifacts/helm-editorial-revision/eprstmt/datasets-in-10-minutes-eprstmt.pptx",
+      "sha256": "06d356116224111e48b94928c1d56ba584060eeb533c2542b0a895da74931b68"
+    },
+    "pdf": {
+      "path": "/workspace/artifacts/helm-editorial-revision/eprstmt/datasets-in-10-minutes-eprstmt.pdf",
+      "sha256": "cbeecefa1e881d383333c7b0b305b1ad3abfe968bda64648474eec3fbd8bbc3c"
+    }
+  },
+  "final_hashes": {
+    "pptx": "06d356116224111e48b94928c1d56ba584060eeb533c2542b0a895da74931b68",
+    "pdf": "cbeecefa1e881d383333c7b0b305b1ad3abfe968bda64648474eec3fbd8bbc3c"
+  },
+  "baseline_hashes": {
+    "pptx": "2f6f60c236d70c48985567fecff13bc63920c0ae2a6d511cba7ee6ce80ca9229",
+    "pdf": "60509c8c16f4e17d6569f60ad05435b167145106ada302ccb076fd9675d688fe"
+  },
+  "acceptance_map": "acceptance-map.json",
+  "accepted_items_addressed": 44,
+  "findings": "findings.json",
+  "page_map": "page-map.json",
+  "full_text": "pages.jsonl",
+  "preservation": "preservation-checks.json",
+  "visual": "visual-inspection.json",
+  "audits": {
+    "layout-audit.json": {
+      "paragraphs_checked": 224,
+      "table_cells_checked": 39,
+      "issues": []
+    },
+    "text-audit.json": {
+      "paragraphs_checked": 249,
+      "cells_checked": 44,
+      "issues": []
+    },
+    "links-audit.json": {
+      "native_url_only_runs": 35,
+      "pdf_link_rectangles": 35,
+      "pdf_link_text_exactly_matches_url": true,
+      "pdf_link_character_centers_match_url": true,
+      "glyph_box_overhangs": [],
+      "shortened_url_labels": [],
+      "issues": []
+    },
+    "package-audit.json": {
+      "parsed_xml_parts": 115,
+      "integer_bullets": 113,
+      "hyperlinks": 35,
+      "new_schema_errors": [],
+      "baseline_schema_errors": 11,
+      "package_integrity": "passed",
+      "internal_relationship_targets": "passed",
+      "unique_shape_ids": "passed",
+      "schema_note": "標準XSDを変更せず確認。マスター由来の既存エラーと、整数buSzPctの百分率字句形式との差を分離。整数箇条書きサイズは25000–400000で別途検査。",
+      "pages": 41,
+      "native_tables": 3,
+      "native_charts": 0
+    }
+  },
+  "gemini_used": false,
+  "reviewer": "create_msmarco",
+  "independent_review": {
+    "status": "pending_final_frame_reapproval",
+    "approved": true,
+    "remaining_issues": [],
+    "path": "../review-eprstmt/handoff.json"
+  },
+  "previous_revision_hashes": {
+    "pptx": "d5fe9e282af80c6fc633deccc5226fec19ca756da4e4aa61dc3c612a8d8af1d5",
+    "pdf": "35b28ed8cb2c8cf06cda1dd7a3d397d39e9bdc8586bb1ac09c9584f072819439"
+  },
+  "independent_review_fixes": [
+    {
+      "page": 36,
+      "before": "半日探しても",
+      "after": "ずいぶん探しても",
+      "reason": "口語の半天を実時間と限定しない"
+    },
+    {
+      "page": 39,
+      "before": [
+        "LM-BFF",
+        "EFL"
+      ],
+      "after": [
+        "LM-BFF / RoBERTa",
+        "EFL / RoBERTa"
+      ],
+      "reason": "論文の既定のモデルを補足表で明記"
+    }
+  ],
+  "revision_history": [
+    {
+      "hashes": {
+        "pptx": "ff83e88e1fb34afec4e5d94d52501b67e7e4f9d89acd4431c6fe04ba6009f78a",
+        "pdf": "3b8ae02f968dd8ad38374bfa07ae0941bfe04470f7f55febca102709ca486819"
+      },
+      "status": "independent_review_passed"
+    }
+  ],
+  "appendix_frame_fix": "appendix-frame-fix.json",
+  "modified_at": "2026-10-19T07:22:26.186076+00:00"
+}
