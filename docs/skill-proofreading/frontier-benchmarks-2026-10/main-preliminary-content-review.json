@@ -1,0 +1,63 @@
+{
+  "phase": "draft content review; final artifacts are verified separately",
+  "method": "native PPTX text and tables read directly by main",
+  "gemini_used": false,
+  "scope": {
+    "arc-agi-3": "All native text and tables in the draft 28-page main section",
+    "gdpval": "All non-quotation native text and tables in the draft 43-page main section; source prompt lengths checked separately",
+    "benchcad": "All native text and tables in the draft 37-page main section"
+  },
+  "findings_sent_to_creators": [
+    {
+      "dataset": "arc-agi-3",
+      "issue": "The initial 13 short, unfinished action traces did not adequately explain goals or progress.",
+      "requested_change": "Use verified successful SDK play and publicly released human replays for the main examples and meaningful appendix cases."
+    },
+    {
+      "dataset": "arc-agi-3",
+      "issue": "Section bands jumped 1→2→1→3→2→4, and section divider slides were missing.",
+      "requested_change": "Reorganize into the four numbered sections and add section dividers."
+    },
+    {
+      "dataset": "arc-agi-3",
+      "before": "レベル1完了：levels_completed 0 → 1",
+      "requested_after": "レベル1を達成",
+      "reason": "The achievement matters to the reader; the SDK field belongs in the technical record."
+    },
+    {
+      "dataset": "gdpval",
+      "issue": "Main examples retained acquisition-order labels 8, 9, 3, and short source prompts were split excessively.",
+      "requested_change": "Number examples in presentation order and check full-size source pages for unnecessary fragmentation."
+    },
+    {
+      "dataset": "gdpval",
+      "before": "職業の依頼",
+      "requested_after": "実務の依頼",
+      "reason": "A natural Japanese description of a work request."
+    },
+    {
+      "dataset": "gdpval",
+      "before": "専門家対人間比較",
+      "requested_after": "専門家が人間とAIの成果物を比較する方法",
+      "reason": "The original wording incorrectly suggests that experts and humans are different groups."
+    },
+    {
+      "dataset": "gdpval",
+      "before": "依頼を成果物として仕上げる",
+      "requested_after": "依頼された仕事を成果物として仕上げる",
+      "reason": "Clarify what is completed."
+    },
+    {
+      "dataset": "benchcad",
+      "before": "両方を合わせた体積",
+      "requested_after": "少なくとも一方が占める領域の体積",
+      "reason": "Specify the union in IoU rather than suggesting the sum of two volumes."
+    },
+    {
+      "dataset": "benchcad",
+      "issue": "Examples showed reference shapes but omitted actual output programs and concrete Code Edit/QA tasks.",
+      "requested_change": "Add a short genuine reference program, a real edit instruction with before/after shapes, and a real numerical QA example."
+    }
+  ],
+  "final_status": "Pending final artifact review; these observations alone do not constitute approval."
+}
