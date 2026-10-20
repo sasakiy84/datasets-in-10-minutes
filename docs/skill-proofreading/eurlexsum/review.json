@@ -2,939 +2,4020 @@
   "dataset": "eurlexsum",
   "review_mode": "skill_based_codex",
   "gemini_used": false,
-  "main_pages": 32,
-  "total_pages": 63,
+  "main_pages": 68,
+  "total_pages": 153,
+  "updated_at": "2026-10-20T13:16:49Z",
+  "artifact_sha256": {
+    "pptx": "59676bd67c79fad0a4beb6f6a443648fa6e8da7ec313479e5304b578af1609a0",
+    "pdf": "946839fb18540d920a0787280951473e52cfeb006b8595451cb24a3cd8fac648"
+  },
+  "status": "independent_review_passed",
+  "remaining_issues": [],
+  "current_revision": "source-coverage-2026-10/",
+  "previous_review_record": "source-coverage-2026-10/previous/review.json",
+  "independent_review": "source-coverage-2026-10/independent-review/",
   "checks": {
-    "layout-audit.json": {
-      "paragraphs_checked": 348,
-      "table_cells_checked": 143,
+    "raw-checks.json": {
+      "tag": "source-coverage-2026-10",
+      "method": "skill_based_codex",
+      "gemini_used": false,
+      "source_files": {
+        "data/english/test.json": {
+          "sha256": "4eda506a07280338268e482cc787759e2c8e1bb2d44a4bf2c9ad6b5eab92e0f1",
+          "rows": 188
+        },
+        "data/german/test.json": {
+          "sha256": "05e50c1197a7193e3c4f16d9e6031b38b7c19f2c0e66bd18fc2a3b601a3dea93",
+          "rows": 188
+        },
+        "data/spanish/test.json": {
+          "sha256": "7450a965b0e5611503965f7dc2d4c1cc9fbcab3a04afab5796cd62f8558cb4c4",
+          "rows": 188
+        },
+        "data/french/test.json": {
+          "sha256": "dc2f24f78f4ff427d48681bbee2a1804f262b8a64eea004bfda1c69108068091",
+          "rows": 188
+        },
+        "data/italian/test.json": {
+          "sha256": "63317951f54f0059f0b5cf5fb254466fbccde7abcfe6831cebb538496f16e145",
+          "rows": 188
+        },
+        "data/irish/test.json": {
+          "sha256": "f3caa02f34b6bff0f01b9615c0f285161ac2c5c362210549ecba9a422fad39d0",
+          "rows": 188
+        },
+        "data/greek/test.json": {
+          "sha256": "bd8014bbd5c34f84dfd1e463f50e3a37839ca369d15a770c591e928ca391b9dd",
+          "rows": 188
+        },
+        "data/maltese/test.json": {
+          "sha256": "a3932e3749fa3de355c9f68c02f32f3d847ba5c476b41ac444d3e23f8dba5148",
+          "rows": 188
+        }
+      },
+      "examples": [
+        {
+          "example": 1,
+          "language": "english",
+          "celex_id": "32012R0651",
+          "line": 142,
+          "raw_line_sha256": "022850feced6969500b9ed70808e00032f90cf26cc20b326d024151d4bad9134",
+          "full_input_sha256": "61e68547d2bc604421e2a2dc97637f50c31955c2258125b3c9a74197768c540b",
+          "full_reference_sha256": "3cef25b1bf9031a821d2ca083e2b9f65c6a5d14379e197f675f6835149a83b57",
+          "input_blocks": [
+            {
+              "start": 4533,
+              "end": 4624,
+              "sha256": "938aceb25f2f80f939cc0ba4a14ed864360fefcd8af305bae889be92802ffb23"
+            },
+            {
+              "start": 4895,
+              "end": 5355,
+              "sha256": "12991e6cf2fdd4a7bc77be644ef7575f500d0d4a9d444522f5d93a8cff2c771b"
+            },
+            {
+              "start": 7079,
+              "end": 7267,
+              "sha256": "0935b61153ffc2c6aa3994f9851cbcc00d0759ac17bd6a637bca0c68982e4de5"
+            }
+          ],
+          "reference_blocks": [
+            {
+              "start": 259,
+              "end": 378,
+              "sha256": "430203a9c22562c45c9b100235ebb82bd25e250624451f8b442dc5c5ce111f14"
+            },
+            {
+              "start": 542,
+              "end": 896,
+              "sha256": "3576f06cb2294b3324468eb8b52c967cbfae02b2495c3d1472853e047c9de062"
+            },
+            {
+              "start": 1159,
+              "end": 1232,
+              "sha256": "ffd95677b8f083dc65accd8b000e47c5011c43fffb7371dd23d1ca0cdae963ac"
+            }
+          ]
+        },
+        {
+          "example": 2,
+          "language": "german",
+          "celex_id": "32013R1260",
+          "line": 144,
+          "raw_line_sha256": "1324f89361fc729a7f80b5cd025c6d1293836976bda8ae17ef4e2002091ce4d2",
+          "full_input_sha256": "2f2169bb2e55e07741a85265daa04cad4112cef2f2c72d9a2ec280ddb48edfe0",
+          "full_reference_sha256": "c758513e9b0be7d9e739ef0ae3b36990a20425813efbcd27e4f6b418586c5785",
+          "input_blocks": [
+            {
+              "start": 607,
+              "end": 1105,
+              "sha256": "47f871d344f853e9123ff4c9bc9280dd798e09206fbed36d9144b9c2108db16f"
+            },
+            {
+              "start": 1503,
+              "end": 2252,
+              "sha256": "c9891e61a34e44a35d704fca9ee8b54c79dcb4f3bc1f1815e3f0877db732585c"
+            },
+            {
+              "start": 3020,
+              "end": 3512,
+              "sha256": "38dd531ecfe4b3ff3d033c9e330056c2d1e9334457992db7e77f9055aad9633c"
+            },
+            {
+              "start": 7359,
+              "end": 7563,
+              "sha256": "4390af66725c89fae57c710d5f5cf308cd9ca0edafe7be3dad4533efcc0777f7"
+            },
+            {
+              "start": 9889,
+              "end": 9974,
+              "sha256": "1bab1a90e2d15b48b6852f667b4302a6a441baad8b5ca62477b89f914c4d28e4"
+            },
+            {
+              "start": 10027,
+              "end": 10236,
+              "sha256": "e9ac3d4762dc71249fb98387e03a74ba65283cee298a12d9c66a9828ec347f73"
+            },
+            {
+              "start": 11075,
+              "end": 11410,
+              "sha256": "c0d622a772fb49a34eb64a5fa60dde07162df23301138628e4243665986e96f0"
+            },
+            {
+              "start": 13587,
+              "end": 13858,
+              "sha256": "34d0a33c87e67b1f33906f1d8dedba0f04ac6f170e6aff410bc26da13592e478"
+            },
+            {
+              "start": 14499,
+              "end": 15188,
+              "sha256": "36940a4d020cbf8643e74623132f135f71f0188902d7c8ff9762063c7dce89da"
+            },
+            {
+              "start": 17182,
+              "end": 17323,
+              "sha256": "cab127529f8f04e669ca88a31c0e2c82b180785f0d2f61038c0103c8fa0d0241"
+            }
+          ],
+          "reference_blocks": [
+            {
+              "start": 0,
+              "end": 3233,
+              "sha256": "c758513e9b0be7d9e739ef0ae3b36990a20425813efbcd27e4f6b418586c5785"
+            }
+          ]
+        },
+        {
+          "example": 3,
+          "language": "spanish",
+          "celex_id": "32012R1026",
+          "line": 108,
+          "raw_line_sha256": "a4ecc56deefff227322290dcf5f6faeafeee5f183f3e6ca559fe47db97fd1a31",
+          "full_input_sha256": "e12a1e7e1113e27f97d36388cd722caf760c770d7ea6488eccdea5f77a1da48e",
+          "full_reference_sha256": "1a6d3aaf155912188f9382432ee1563f932a3ab8e265c2fd9257f5508d92e502",
+          "input_blocks": [
+            {
+              "start": 6393,
+              "end": 6699,
+              "sha256": "c0464abe91d46dd63bedeb1e0d1a4054a05761165ce6b2aae4a0e432b4acf9a0"
+            },
+            {
+              "start": 10834,
+              "end": 11107,
+              "sha256": "ea1842f97cc9520b26e1f154e6355b22cb22c910c47175e1b6f8e83408d36aea"
+            },
+            {
+              "start": 15413,
+              "end": 15709,
+              "sha256": "7b43edefe8b7064707e8065c6b3fa051e46e1b9c8f946a3dd0362f12505b731d"
+            }
+          ],
+          "reference_blocks": [
+            {
+              "start": 417,
+              "end": 835,
+              "sha256": "14a9e65ac2832aff9836675d627c045b7d47158f9e26af25abe87208da616785"
+            },
+            {
+              "start": 1767,
+              "end": 1979,
+              "sha256": "00f33bbed7cfe9388e1624b5d94d76e1410393cbdd7cc72ecb4ae837b8ffd0be"
+            },
+            {
+              "start": 3683,
+              "end": 3922,
+              "sha256": "9ad845b183d8b786dc0f08fac6412192251120ea11b86c0fe6f62fac7d5ebf46"
+            }
+          ]
+        },
+        {
+          "example": 4,
+          "language": "french",
+          "celex_id": "32008R0453",
+          "line": 156,
+          "raw_line_sha256": "345f80ff35ad8359042db34f370b9285ebd8f7dd985fb41816e6ba5ab545c0f4",
+          "full_input_sha256": "c8d7439277be7c372778c903e682875f851ea55f00e00c92a396e5127fb603b4",
+          "full_reference_sha256": "fe99337601f10a6851f220839f65bc2e4ef841fb0caedd23596c99e386cf3c92",
+          "input_blocks": [
+            {
+              "start": 6379,
+              "end": 6533,
+              "sha256": "f480f4c949b2c6f5aa66d88fbbe313f85a667dfc420747a3df33d6762129f25c"
+            },
+            {
+              "start": 9726,
+              "end": 10153,
+              "sha256": "fe9f524db9e19dbf0566692c2928a5e5c96b979bc6e9fdc7d0a773643eac784c"
+            }
+          ],
+          "reference_blocks": [
+            {
+              "start": 332,
+              "end": 474,
+              "sha256": "028a9d821694823f7d6f6c46ee7848a4d7677648a165fcae59e21e7fc51f274b"
+            },
+            {
+              "start": 2514,
+              "end": 2791,
+              "sha256": "cfad03a7853615d0990c0022d81d58fe766de45ab06dae78f57c6ec779d4467a"
+            }
+          ]
+        },
+        {
+          "example": 5,
+          "language": "italian",
+          "celex_id": "32020R2094",
+          "line": 71,
+          "raw_line_sha256": "5020c9b0a63221e36fa424bddac75df3754bba0fb78a6d4166ec37ea2d521418",
+          "full_input_sha256": "9ad7871a140e05e32696779056710fceb34ed2301884e2f2b0fb896b960a005d",
+          "full_reference_sha256": "1209c90d8442ef48a12c4a20a045b28d6a00ba35dcf5e1876fe0087bdbd1d689",
+          "input_blocks": [
+            {
+              "start": 9334,
+              "end": 9503,
+              "sha256": "1645c11f4392c5f1b290649d39154317585df0a95f569e272808bd6afe52f192"
+            },
+            {
+              "start": 11400,
+              "end": 11579,
+              "sha256": "55e19a8e350a167ea8861f7c5b73abad61f839044d65c6dc666c001bdcf13954"
+            },
+            {
+              "start": 11884,
+              "end": 12057,
+              "sha256": "3cdeda179fca732041ab6498eb0a828ef2e4176b2b5c268c8b010794656da431"
+            },
+            {
+              "start": 12278,
+              "end": 12464,
+              "sha256": "6dec62ba4bae1fe481a15c39307d17f3919627dd7b9e33896616aa805d64dc61"
+            },
+            {
+              "start": 12952,
+              "end": 13176,
+              "sha256": "677fbd9ab9cf9cf4db074a1563acb02ad70be5bdb63eb4efcb833e32ceb8a72e"
+            }
+          ],
+          "reference_blocks": [
+            {
+              "start": 327,
+              "end": 524,
+              "sha256": "450d72249048c5d574e5c320226d1b8f5892fb348c9129bb057c4ce569dfdd62"
+            },
+            {
+              "start": 538,
+              "end": 667,
+              "sha256": "0fe322539791f0868d74995fae092614975da9562e848b1939e41169eb168c17"
+            },
+            {
+              "start": 1303,
+              "end": 1764,
+              "sha256": "6704406abc523be1832f1e369fa34d4f9b880b7f53ff80ce402ec26ae76d5058"
+            }
+          ]
+        },
+        {
+          "example": 6,
+          "language": "irish",
+          "celex_id": "32017R1563",
+          "line": 135,
+          "raw_line_sha256": "ab64cd277da9e716378250f97a39c89774e9e379ca60df29b4f50cb94ec8c255",
+          "full_input_sha256": "b0ca49b164bde86a0155cd6437212133a4a4091084f5553f91fe77e9cc3f5dd3",
+          "full_reference_sha256": "aa7ff0ab5a8f029b5a143463f98f2d955eb7862cad4855d4c33b8fc78b775901",
+          "input_blocks": [
+            {
+              "start": 10732,
+              "end": 11318,
+              "sha256": "af546e903b7ef386063f40e071593d49c1d026dfcf61ce5956c993b889aa9687"
+            },
+            {
+              "start": 13625,
+              "end": 14604,
+              "sha256": "df79bf515e7aecdc5a551d5a531355830edb654c987d713f9dfa2a999a8b75cd"
+            }
+          ],
+          "reference_blocks": [
+            {
+              "start": 454,
+              "end": 834,
+              "sha256": "984484fef14b675b7d27960355b014555bf067002d8cf04a93e9e928bcb3ca49"
+            },
+            {
+              "start": 1507,
+              "end": 1932,
+              "sha256": "1c52719f7b196c27708f0460301022cb094c56c6c6fa1cb4690480cdb036c58a"
+            }
+          ]
+        },
+        {
+          "example": 7,
+          "language": "greek",
+          "celex_id": "32008R0762",
+          "line": 184,
+          "raw_line_sha256": "1b78aed864997c3fe2d12754c3d4a02c236492809105bfb7880c9961200fd229",
+          "full_input_sha256": "75ebbbb74c30f4187cd258534679bbc2078014b7d15c12cd01454ffd7c500c54",
+          "full_reference_sha256": "9debbb673ccd46750a71aefcb379b1b921bade45c2b2e74759d0f32d5b90761b",
+          "input_blocks": [
+            {
+              "start": 968,
+              "end": 1218,
+              "sha256": "145af865eb97960f1675c651d93991aad75e8674bc50cc551a0de7491a51afee"
+            },
+            {
+              "start": 1462,
+              "end": 1620,
+              "sha256": "4b522914b0d9995a46f8d10da28101e6be686a0e14a2c007f68727018ec2d4a3"
+            },
+            {
+              "start": 4225,
+              "end": 4397,
+              "sha256": "57ef0317d759671b01b3299e468edaf66b5b479077282964c0e4bd8471d302d1"
+            },
+            {
+              "start": 5199,
+              "end": 5667,
+              "sha256": "65fa94f704d9ddfced29652f9a19a3e8461256d7df1dbfa73c7e64fa3f71637a"
+            },
+            {
+              "start": 6716,
+              "end": 6946,
+              "sha256": "6d2acd2edf07e2d19ca7565c2fe88f3f43a6e57b3e8d1dbb5a91f694dd2ffbe8"
+            }
+          ],
+          "reference_blocks": [
+            {
+              "start": 302,
+              "end": 549,
+              "sha256": "6b5b705a8cfcf4abe9b917a525f20eee7ea16bb681b4f7432454e4b63f6fc8ce"
+            },
+            {
+              "start": 634,
+              "end": 987,
+              "sha256": "b88aca80ea94ac6c8220bad5ba61b27fb822ec8c519eac0baf715894638a6b0d"
+            }
+          ]
+        },
+        {
+          "example": 8,
+          "language": "maltese",
+          "celex_id": "32008R0763",
+          "line": 74,
+          "raw_line_sha256": "5c581a0754ad652bacb05c44f361498724608fe1b0631e2a18c56fcae14ea4a4",
+          "full_input_sha256": "18943aea37532bf27f272c0f29a98e3a2b4e3e95879ce831a22f7751fdfa336c",
+          "full_reference_sha256": "f6d1b568b9659dd0e349dc582f55133ff0a1c89526208fa87b079b4ffdfc14b9",
+          "input_blocks": [
+            {
+              "start": 5282,
+              "end": 5414,
+              "sha256": "e7a13ee0f5a596b616b882c25301e6b7fd249dfa9c9b1dcce1f377011afea14d"
+            },
+            {
+              "start": 7739,
+              "end": 8068,
+              "sha256": "d094935705a0c883b020b282e6e25aefafc1c6427e52654b4f33a363eb15b33e"
+            },
+            {
+              "start": 10033,
+              "end": 10238,
+              "sha256": "7f9e211778e126a4b2f17605e8642de481ce1487dc4a31399aa853d4b660ee32"
+            }
+          ],
+          "reference_blocks": [
+            {
+              "start": 306,
+              "end": 418,
+              "sha256": "fd32d99eff7f8e8e8b1215db537b44b10f34d404f5e4464571694af1ac743199"
+            },
+            {
+              "start": 591,
+              "end": 842,
+              "sha256": "38efdae846b7fbb675b18ffe2e0d9e51ec2761fe5df78f98707cdd6af78d22a3"
+            },
+            {
+              "start": 2381,
+              "end": 2534,
+              "sha256": "1f522d4eddb18ccca1f2aba7c65f2f0df2a5e347aaa946e149fdcd4514664d05"
+            }
+          ]
+        },
+        {
+          "example": 9,
+          "language": "english",
+          "celex_id": "32021R0523",
+          "line": 28,
+          "raw_line_sha256": "d3631c79a6b4b70551af6b620aa7d1dc7bf1bb8137838bfa04d644ee1fdc325c",
+          "full_input_sha256": "6f5257f7a68c1adca9dab6a0b5925372a10c239f49b265c2ed03eaff27d978aa",
+          "full_reference_sha256": "04d414a4692f141a876a3a64f04fac4f380d76e7eb7671d167da564e8df41be8",
+          "input_blocks": [
+            {
+              "start": 64047,
+              "end": 64968,
+              "sha256": "27977a950f4829a791af5796bdb3f5d035293c1237142ffa8f0757fc430bfa19"
+            }
+          ],
+          "reference_blocks": [
+            {
+              "start": 185,
+              "end": 584,
+              "sha256": "c9ebaa68004bd0ab617fd453258388e5277e15bcce3c8e38bbd59e71a73e3877"
+            }
+          ]
+        },
+        {
+          "example": 10,
+          "language": "english",
+          "celex_id": "32021R0023",
+          "line": 41,
+          "raw_line_sha256": "4a5bea80e94848154b0310991fec717054e02c80a4eb447fd56ca026a54dc9f4",
+          "full_input_sha256": "21b45e00eafbf138162f2f7430aca11fed7e00a8168c091caf74ff35fcbf1ca6",
+          "full_reference_sha256": "507de6a34526fbcc9934b8f758b3511884c767ad6a464d8730132933797aeacf",
+          "input_blocks": [
+            {
+              "start": 89717,
+              "end": 89999,
+              "sha256": "31a0f6019c401a1b60dc49cfaecdb4a2cb3250c21e5a213010d0b26894ab908e"
+            },
+            {
+              "start": 122015,
+              "end": 122528,
+              "sha256": "0b90c822b8eaceafcd2553d88a9124271c8f391aed80c4ab69b8120df5592764"
+            }
+          ],
+          "reference_blocks": [
+            {
+              "start": 244,
+              "end": 344,
+              "sha256": "1be3218357ebd9f674cc5ea84ecdd6cc3f16321696fcad36d35033b2d3208a9f"
+            },
+            {
+              "start": 2401,
+              "end": 2556,
+              "sha256": "c60ab76e1041bc20cc54c4bd0f0cbe363314415dad50d443ae87dd9a5e0531c6"
+            }
+          ]
+        },
+        {
+          "example": 11,
+          "language": "english",
+          "celex_id": "32021R0691",
+          "line": 68,
+          "raw_line_sha256": "eb4414b2e5fc11adc685a59373ce7598637bbac20a364ba9ce3c3bcc73dfbdcb",
+          "full_input_sha256": "899f7a65bc539de632316a2a686d94ba375f85ee9ade5426b8ca60efaa1b8988",
+          "full_reference_sha256": "108b9e7d719504014f1c6be36c7358eaaba5df10637353855914108dbb870ecf",
+          "input_blocks": [
+            {
+              "start": 33045,
+              "end": 33188,
+              "sha256": "74df8e7c0de4edc031f051827f390815ec5bfcf6b7d59ef77c5536c8cd10b23b"
+            },
+            {
+              "start": 34188,
+              "end": 34732,
+              "sha256": "8465965316baa4a45e81e4edf9eb5aef6b567e3571984163e5221f008e0bef1e"
+            },
+            {
+              "start": 40685,
+              "end": 41007,
+              "sha256": "04a1a5b4e2a7862bef41eaa967244409f506dd29fa575b5fa5050dcd4f1c3ec3"
+            },
+            {
+              "start": 41382,
+              "end": 41855,
+              "sha256": "1904e4d93c1152d0321373a5edd7f55f6054a685e9b96f52c906fd9e5831e34f"
+            }
+          ],
+          "reference_blocks": [
+            {
+              "start": 292,
+              "end": 569,
+              "sha256": "6d3626842895622933720960f4f020bd1d625b7df3a2b4ee971028b36a969121"
+            },
+            {
+              "start": 570,
+              "end": 691,
+              "sha256": "16b076dc6930b0d5fa38d595edf1c94089e8851435ccee25a36d12e0a87a32bb"
+            },
+            {
+              "start": 2019,
+              "end": 2685,
+              "sha256": "982171de7bb424ccc53f2713668df0104531d16a34afe0234244685536a94283"
+            }
+          ]
+        },
+        {
+          "example": 12,
+          "language": "english",
+          "celex_id": "32014R0251",
+          "line": 86,
+          "raw_line_sha256": "29069e72096349bc60fe700a082175ecccef005becf1832872100e04da786d12",
+          "full_input_sha256": "680f4b51b3c5456676077805723c6dd61dafa62c0d5a17fc3b0921a96ae4cc6c",
+          "full_reference_sha256": "a87054baf9bcb402387965a5b8a21a930277810dfd9847f06a5a7237c9fb83ac",
+          "input_blocks": [
+            {
+              "start": 14288,
+              "end": 14907,
+              "sha256": "e249091488c5f1103d2dac2d1423f3f40266634ad96ae9a4d8ba2525e97131dd"
+            },
+            {
+              "start": 15579,
+              "end": 15951,
+              "sha256": "487a92e06605e8842a25df5e4f0ada007040a63987cb01b6e45bac36bd09fdde"
+            }
+          ],
+          "reference_blocks": [
+            {
+              "start": 265,
+              "end": 388,
+              "sha256": "ebc95496b783e170195392f07c3ed8485e48e4173bc1073a8f1f8cda5da5e22c"
+            },
+            {
+              "start": 508,
+              "end": 670,
+              "sha256": "550551d4f2145236703ea5e277430f6fa85569458fb1590bb0f35a9b1532ff10"
+            },
+            {
+              "start": 959,
+              "end": 1249,
+              "sha256": "ad00c8ef89a3b5ac848adc3badf339a1736bb93991b0bf81c910109c6dc68dd4"
+            }
+          ]
+        },
+        {
+          "example": 13,
+          "language": "english",
+          "celex_id": "32008R0452",
+          "line": 181,
+          "raw_line_sha256": "c12f5f336ab4818c2118d64cf8d52cecda47ef588e21863bc0d7118585e9b573",
+          "full_input_sha256": "1cc72b58e48976bc91dd87faade10301b8b8914ec9d0ae1694be027919b7647a",
+          "full_reference_sha256": "1d3a11114875c2bd9f9cbefe32344bdf978fdcc348f51ebcbf3e8fd56dc2f7b5",
+          "input_blocks": [
+            {
+              "start": 8774,
+              "end": 8923,
+              "sha256": "39f636cd51c699e2aa45aa1a8d1664d1bc500eb44c41f5800f7f6f42cb0b9f9b"
+            },
+            {
+              "start": 10961,
+              "end": 11289,
+              "sha256": "ffc420d53bbacd386acd1dead952042ef7e8ee671035abd6e080286ccd25dbd4"
+            },
+            {
+              "start": 11651,
+              "end": 12027,
+              "sha256": "8cbd2269786da4efd92c8f908a29a8bdd4899540e0642a45950324d088f0969d"
+            }
+          ],
+          "reference_blocks": [
+            {
+              "start": 418,
+              "end": 562,
+              "sha256": "442f1c00afabf82aa2a02c6a72f3344595ca8ad02deddf49dca54d12d647efce"
+            },
+            {
+              "start": 1158,
+              "end": 1328,
+              "sha256": "c05b82856f10e25391a9e7a4ba25a439fccaedd8a86ef8d8fcb5f222607f2448"
+            },
+            {
+              "start": 1559,
+              "end": 1906,
+              "sha256": "e6bf2001a6ed3ae9f4ce7ea9c25a3a0296fc2ed3ca878e14b7018cad15c50c5c"
+            }
+          ]
+        }
+      ],
+      "all13_raw_records_unchanged": true,
+      "old13_input_and_reference_excerpts_retained": true,
+      "all13_full_raw_inputs_and_references_saved": true,
+      "reference_full_display_examples": [
+        2
+      ],
+      "note": "Read-only official test files archived during original research; no fresh corpus GET claimed. Display scope is selected blocks, never the former opening-paragraph proxy."
+    },
+    "three-digit-page-checks.json": {
+      "method": "PDF text plus individual rendered-page visual inspection",
+      "pages": [
+        {
+          "page": 100,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "100",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 101,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "101",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 102,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "102",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 103,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "103",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 104,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "104",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 105,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "105",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 106,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "106",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 107,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "107",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 108,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "108",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 109,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "109",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 110,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "110",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 111,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "111",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 112,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "112",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 113,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "113",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 114,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "114",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 115,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "115",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 116,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "116",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 117,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "117",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 118,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "118",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 119,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "119",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 120,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "120",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 121,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "121",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 122,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "122",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 123,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "123",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 124,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "124",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 125,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "125",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 126,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "126",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 127,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "127",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 128,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "128",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 129,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "129",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 130,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "130",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 131,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "131",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 132,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "132",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 133,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "133",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 134,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "134",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 135,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "135",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 136,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "136",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 137,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "137",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 138,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "138",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 139,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "139",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 140,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "140",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 141,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "141",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 142,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "142",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 143,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "143",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 144,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "144",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 145,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "145",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 146,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "146",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 147,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "147",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 148,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "148",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 149,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "149",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 150,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "150",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 151,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "151",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 152,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "152",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        },
+        {
+          "page": 153,
+          "single_number_correct": true,
+          "spans": [
+            {
+              "text": "153",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ]
+            }
+          ]
+        }
+      ],
       "issues": []
     },
+    "all-text-frame-audit.json": {
+      "method": "native_frame_pdf_text_match_and_visible_png_ink_bbox",
+      "frames": 704,
+      "paragraphs": 1039,
+      "tolerance_pt": 0.75,
+      "candidates": []
+    },
     "package-audit.json": {
-      "parsed_xml_parts": 161,
-      "integer_bullets": 136,
-      "hyperlinks": 54,
+      "parsed_xml_parts": 341,
+      "integer_bullets": 132,
+      "hyperlinks": 144,
       "new_schema_errors": [],
       "baseline_schema_errors": 11,
       "package_integrity": "passed",
       "internal_relationship_targets": "passed",
       "unique_shape_ids": "passed",
       "schema_note": "標準XSDを変更せず確認。マスター由来の既存エラーと、整数buSzPctの百分率字句形式との差を分離。整数箇条書きサイズは25000–400000で別途検査。",
-      "pages": 63,
+      "pages": 153,
       "native_tables": 8,
       "native_charts": 1
     },
+    "layout-audit.json": {
+      "paragraphs_checked": 1023,
+      "table_cells_checked": 143,
+      "issues": []
+    },
+    "source-coverage-audit.json": {
+      "tag": "source-coverage-2026-10",
+      "gemini_used": false,
+      "examples": [
+        {
+          "example": 1,
+          "language": "english",
+          "celex_id": "32012R0651",
+          "raw_line_sha256": "022850feced6969500b9ed70808e00032f90cf26cc20b326d024151d4bad9134",
+          "source_url": "https://huggingface.co/datasets/dennlinger/eur-lex-sum/blob/33ecb2d630298e3f912d067aaaa71aaf4ee92404/data/english/test.json",
+          "before": "対象を述べる冒頭の短い範囲が中心",
+          "after": "要約は、条文に分かれた「種類」「額面での発行と例外」「使える国」を、硬貨の種類ごとにまとめる。参照全文には別の規則729/2014による図柄などの説明もあるが、配布入力は651/2012だけである。",
+          "coverage_notes": [
+            "types:Art2(1)",
+            "face value/5%:Art3",
+            "collector legal tender:Art5(1)",
+            "Full reference also discusses729/2014, outside stored input."
+          ],
+          "reference_display": "explicit_excerpt",
+          "pages": {
+            "source": [
+              7,
+              8
+            ],
+            "source_ja": [
+              9,
+              10
+            ],
+            "reference": [
+              11,
+              12
+            ],
+            "reference_ja": [
+              13,
+              14
+            ]
+          }
+        },
+        {
+          "example": 2,
+          "language": "german",
+          "celex_id": "32013R1260",
+          "raw_line_sha256": "1324f89361fc729a7f80b5cd025c6d1293836976bda8ae17ef4e2002091ce4d2",
+          "source_url": "https://huggingface.co/datasets/dennlinger/eur-lex-sum/blob/33ecb2d630298e3f912d067aaaa71aaf4ee92404/data/german/test.json",
+          "before": "対象を述べる冒頭の短い範囲が中心",
+          "after": "参照全文は、統計の目的、政治・財政での用途、作成方法、関連法令を一つの説明にまとめる。55%・15か国・65%という二重多数決の数値や実施規則205/2014の説明は、配布入力の条文をそのまま短くしたものではなく、要約が補う背景である。",
+          "coverage_notes": [
+            "Full3233chars reference retained, including bibliographic/context sections.",
+            "purpose/definitions:Art1/2(g);national sources:Art7;quality:Art9;entry:Art12+publication date",
+            "uses:recitals1/2/7;regional cohesion recital4 examined in audit, not all quoted",
+            "QMV exact55/15/65 and implementation205/2014 not stated in stored input; identify background honestly."
+          ],
+          "reference_display": "full",
+          "pages": {
+            "source": [
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23
+            ],
+            "source_ja": [
+              24,
+              25,
+              26,
+              27,
+              28
+            ],
+            "reference": [
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36
+            ],
+            "reference_ja": [
+              37,
+              38,
+              39,
+              40,
+              41
+            ]
+          }
+        },
+        {
+          "example": 3,
+          "language": "spanish",
+          "celex_id": "32012R1026",
+          "raw_line_sha256": "a4ecc56deefff227322290dcf5f6faeafeee5f183f3e6ca559fe47db97fd1a31",
+          "source_url": "https://huggingface.co/datasets/dennlinger/eur-lex-sum/blob/33ecb2d630298e3f912d067aaaa71aaf4ee92404/data/spanish/test.json",
+          "before": "対象を述べる冒頭の短い範囲が中心",
+          "after": "要約は、第三国の漁業を対象とする制度から、輸入制限という具体策と、採用前の通知手続を選ぶ。条文の数量制限は、参照では輸入割当という短い言い方で示される。",
+          "coverage_notes": [
+            "scope:Art1(1);import quota:Art4(1c);advance notification:Art6(1)",
+            "Art3 unsustainable country conditions examined but not all quoted; title and Art4/6 context retained."
+          ],
+          "reference_display": "explicit_excerpt",
+          "pages": {
+            "source": [
+              43,
+              44
+            ],
+            "source_ja": [
+              45
+            ],
+            "reference": [
+              46,
+              47
+            ],
+            "reference_ja": [
+              48,
+              49
+            ]
+          }
+        },
+        {
+          "example": 4,
+          "language": "french",
+          "celex_id": "32008R0453",
+          "raw_line_sha256": "345f80ff35ad8359042db34f370b9285ebd8f7dd985fb41816e6ba5ab545c0f4",
+          "source_url": "https://huggingface.co/datasets/dennlinger/eur-lex-sum/blob/33ecb2d630298e3f912d067aaaa71aaf4ee92404/data/french/test.json",
+          "before": "対象を述べる冒頭の短い範囲が中心",
+          "after": "目的だけでなく、比較に必要な「既に人が就いている職（ポスト）」と季節調整の規則も要約に入る。参照は条番号や規制手続を省き、各国が行う作業を平易にまとめる。",
+          "coverage_notes": [
+            "purpose:Art1(1);occupied posts and seasonal adjustment:Art3(2/3)"
+          ],
+          "reference_display": "explicit_excerpt",
+          "pages": {
+            "source": [
+              72
+            ],
+            "source_ja": [
+              73
+            ],
+            "reference": [
+              74
+            ],
+            "reference_ja": [
+              75
+            ]
+          }
+        },
+        {
+          "example": 5,
+          "language": "italian",
+          "celex_id": "32020R2094",
+          "raw_line_sha256": "5020c9b0a63221e36fa424bddac75df3754bba0fb78a6d4166ec37ea2d521418",
+          "source_url": "https://huggingface.co/datasets/dennlinger/eur-lex-sum/blob/33ecb2d630298e3f912d067aaaa71aaf4ee92404/data/italian/test.json",
+          "before": "対象を述べる冒頭の短い範囲が中心",
+          "after": "要約は、総額の上限と、条文中の別の項目にある補助金・融資をまとめる。3,125億と3,600億を合わせた6,725億ユーロという、支援の中心が読み取れる。",
+          "coverage_notes": [
+            "instrument Art1(1);overall cap Art2(1);grants and loans Art2(2a(ii),2b)",
+            "2018price base retained; summary grant+loan total is312.5+360=672.5billion; loan repayment is explanatory background, not explicit in quoted clauses."
+          ],
+          "reference_display": "explicit_excerpt",
+          "pages": {
+            "source": [
+              76,
+              77
+            ],
+            "source_ja": [
+              78,
+              79
+            ],
+            "reference": [
+              80,
+              81
+            ],
+            "reference_ja": [
+              82,
+              83
+            ]
+          }
+        },
+        {
+          "example": 6,
+          "language": "irish",
+          "celex_id": "32017R1563",
+          "raw_line_sha256": "ab64cd277da9e716378250f97a39c89774e9e379ca60df29b4f50cb94ec8c255",
+          "source_url": "https://huggingface.co/datasets/dennlinger/eur-lex-sum/blob/33ecb2d630298e3f912d067aaaa71aaf4ee92404/data/irish/test.json",
+          "before": "対象を述べる冒頭の短い範囲が中心",
+          "after": "本文は輸出と輸入を別々の条文で規定する。参照要約は、誰が誰に提供でき、受け取った複製物をどう使えるかを一つの流れにまとめる。",
+          "coverage_notes": [
+            "no-rightsholder-authorization and scope Art1;authorized export/import Art3/4"
+          ],
+          "reference_display": "explicit_excerpt",
+          "pages": {
+            "source": [
+              84,
+              85,
+              86
+            ],
+            "source_ja": [
+              87,
+              88,
+              89
+            ],
+            "reference": [
+              90,
+              91
+            ],
+            "reference_ja": [
+              92,
+              93
+            ]
+          }
+        },
+        {
+          "example": 7,
+          "language": "greek",
+          "celex_id": "32008R0762",
+          "raw_line_sha256": "1b78aed864997c3fe2d12754c3d4a02c236492809105bfb7880c9961200fd229",
+          "source_url": "https://huggingface.co/datasets/dennlinger/eur-lex-sum/blob/33ecb2d630298e3f912d067aaaa71aaf4ee92404/data/greek/test.json",
+          "before": "対象を述べる冒頭の短い範囲が中心",
+          "after": "要約は、加盟国の提出義務と、別条にある90%の把握・残りの推計を一つの文にまとめる。本文には、提出期限が参照年の終了後12か月以内という実務上の条件もある。",
+          "coverage_notes": [
+            "purpose context examined recital1/2 (not all displayed);annual statistics and90%:Art1/3/5",
+            "summary selected claim90% is now supported;deadline shown for understanding and omitted by selected reference."
+          ],
+          "reference_display": "explicit_excerpt",
+          "pages": {
+            "source": [
+              94,
+              95,
+              96
+            ],
+            "source_ja": [
+              97,
+              98
+            ],
+            "reference": [
+              99,
+              100
+            ],
+            "reference_ja": [
+              101
+            ]
+          }
+        },
+        {
+          "example": 8,
+          "language": "maltese",
+          "celex_id": "32008R0763",
+          "raw_line_sha256": "5c581a0754ad652bacb05c44f361498724608fe1b0631e2a18c56fcae14ea4a4",
+          "source_url": "https://huggingface.co/datasets/dennlinger/eur-lex-sum/blob/33ecb2d630298e3f912d067aaaa71aaf4ee92404/data/maltese/test.json",
+          "before": "対象を述べる冒頭の短い範囲が中心",
+          "after": "要約は、10年ごとの調査という全体の制度から、集める情報の種類と提出期限を選んで説明する。対象となる人・世帯・住宅と、27か月という期限が本文と対応する。",
+          "coverage_notes": [
+            "scope/10years:Art1;data fields:Art3;27months:Art5(2)"
+          ],
+          "reference_display": "explicit_excerpt",
+          "pages": {
+            "source": [
+              102
+            ],
+            "source_ja": [
+              103
+            ],
+            "reference": [
+              104,
+              105
+            ],
+            "reference_ja": [
+              106,
+              107
+            ]
+          }
+        },
+        {
+          "example": 9,
+          "language": "english",
+          "celex_id": "32021R0523",
+          "raw_line_sha256": "d3631c79a6b4b70551af6b620aa7d1dc7bf1bb8137838bfa04d644ee1fdc325c",
+          "source_url": "https://huggingface.co/datasets/dennlinger/eur-lex-sum/blob/33ecb2d630298e3f912d067aaaa71aaf4ee92404/data/english/test.json",
+          "before": "対象を述べる冒頭の短い範囲が中心",
+          "after": "第1条全体では、基金に続いて助言ハブとポータルを設け、予算などの対象も定める。参照要約は、三つの仕組みと役割を箇条書きに整理し、後段の予算などはここでは省く。",
+          "coverage_notes": [
+            "all3components:entireArt1;old firstparagraph lackedAdvisoryHub andPortal;now included"
+          ],
+          "reference_display": "explicit_excerpt",
+          "pages": {
+            "source": [
+              108,
+              109
+            ],
+            "source_ja": [
+              110
+            ],
+            "reference": [
+              111,
+              112
+            ],
+            "reference_ja": [
+              113
+            ]
+          }
+        },
+        {
+          "example": 10,
+          "language": "english",
+          "celex_id": "32021R0023",
+          "raw_line_sha256": "4a5bea80e94848154b0310991fec717054e02c80a4eb447fd56ca026a54dc9f4",
+          "source_url": "https://huggingface.co/datasets/dennlinger/eur-lex-sum/blob/33ecb2d630298e3f912d067aaaa71aaf4ee92404/data/english/test.json",
+          "before": "対象を述べる冒頭の短い範囲が中心",
+          "after": "参照要約は、長い再建計画の規定を、回復のための行動として説明する。ここでは対象を定める第1条と、実際の再建計画を定める第9条を対応させる。",
+          "coverage_notes": [
+            "overallrules:Art1;recoveryplanning introduction and action only:Art9(1);risks/indicators not selected in final excerpt"
+          ],
+          "reference_display": "explicit_excerpt",
+          "pages": {
+            "source": [
+              114,
+              115
+            ],
+            "source_ja": [
+              116
+            ],
+            "reference": [
+              117
+            ],
+            "reference_ja": [
+              118
+            ]
+          }
+        },
+        {
+          "example": 11,
+          "language": "english",
+          "celex_id": "32021R0691",
+          "raw_line_sha256": "eb4414b2e5fc11adc685a59373ce7598637bbac20a364ba9ce3c3bcc73dfbdcb",
+          "source_url": "https://huggingface.co/datasets/dennlinger/eur-lex-sum/blob/33ecb2d630298e3f912d067aaaa71aaf4ee92404/data/english/test.json",
+          "before": "対象を述べる冒頭の短い範囲が中心",
+          "after": "要約は、基金の期間と名称に加え、支援を受ける人と利用できるサービスを説明する。条文中の措置の列挙が、失業後の再就職・自営業への復帰という目的に結び付けられる。",
+          "coverage_notes": [
+            "period:nameArt1;beneficiaries/mission:Art2;active labour policy andservices:Art7(1,2a)",
+            "renewal/rename are reference explanatory history; period/new full name in Art1;identify as reference context rather than infer from Art1 alone."
+          ],
+          "reference_display": "explicit_excerpt",
+          "pages": {
+            "source": [
+              119,
+              120,
+              121
+            ],
+            "source_ja": [
+              122,
+              123
+            ],
+            "reference": [
+              124,
+              125,
+              126
+            ],
+            "reference_ja": [
+              127,
+              128
+            ]
+          }
+        },
+        {
+          "example": 12,
+          "language": "english",
+          "celex_id": "32014R0251",
+          "raw_line_sha256": "29069e72096349bc60fe700a082175ecccef005becf1832872100e04da786d12",
+          "source_url": "https://huggingface.co/datasets/dennlinger/eur-lex-sum/blob/33ecb2d630298e3f912d067aaaa71aaf4ee92404/data/english/test.json",
+          "before": "対象を述べる冒頭の短い範囲が中心",
+          "after": "要約は、定義や表示を扱う規則から、適用される市場と三つの製品分類を選ぶ。製品名の一覧は残し、関連規則の番号や条文の参照を省く。",
+          "coverage_notes": [
+            "scope Art1(1/3);3classes Art3(1);summarysuppliedentirelybythesequotedarticles"
+          ],
+          "reference_display": "explicit_excerpt",
+          "pages": {
+            "source": [
+              129,
+              130
+            ],
+            "source_ja": [
+              131,
+              132
+            ],
+            "reference": [
+              133
+            ],
+            "reference_ja": [
+              134
+            ]
+          }
+        },
+        {
+          "example": 13,
+          "language": "english",
+          "celex_id": "32008R0452",
+          "raw_line_sha256": "c12f5f336ab4818c2118d64cf8d52cecda47ef588e21863bc0d7118585e9b573",
+          "source_url": "https://huggingface.co/datasets/dennlinger/eur-lex-sum/blob/33ecb2d630298e3f912d067aaaa71aaf4ee92404/data/english/test.json",
+          "before": "対象を述べる冒頭の短い範囲が中心",
+          "after": "要約は、品質基準の細かな項目や参照条文を省き、基準づくり・品質改善・国際協力という行動を残す。参照全文は後年の改正規則も扱うが、ここで示す抜粋は配布入力の第1条と第4条に対応する。",
+          "coverage_notes": [
+            "commonframework Art1;standardsquality Art4(1c/d);internationalcooperation Art4(2)",
+            "fullreference2019amendment/2domains differs stored2008original3domains;selectedexcerpt avoids conflating."
+          ],
+          "reference_display": "explicit_excerpt",
+          "pages": {
+            "source": [
+              135,
+              136,
+              137
+            ],
+            "source_ja": [
+              138
+            ],
+            "reference": [
+              139,
+              140
+            ],
+            "reference_ja": [
+              141
+            ]
+          }
+        }
+      ],
+      "remaining_issues": [],
+      "original_reference_note": "Example2 German raw reference calls 205/2014 des Rates in prose and der Kommission in its bibliography; original discrepancy preserved rather than silently harmonized."
+    },
+    "panel-ink-checks.json": [
+      {
+        "page": 7,
+        "top": 7.000026246719159,
+        "bottom": 6.9999737532808695,
+        "difference": 5.249343828950259e-05
+      },
+      {
+        "page": 8,
+        "top": 7.0,
+        "bottom": 6.999973753280841,
+        "difference": 2.624671915896215e-05
+      },
+      {
+        "page": 9,
+        "top": 7.0,
+        "bottom": 7.0,
+        "difference": 0.0
+      },
+      {
+        "page": 10,
+        "top": 7.0,
+        "bottom": 7.0,
+        "difference": 0.0
+      },
+      {
+        "page": 11,
+        "top": 7.0,
+        "bottom": 6.999947506561682,
+        "difference": 5.24934383179243e-05
+      },
+      {
+        "page": 12,
+        "top": 7.0,
+        "bottom": 6.999947506561682,
+        "difference": 5.24934383179243e-05
+      },
+      {
+        "page": 13,
+        "top": 7.0,
+        "bottom": 7.0,
+        "difference": 0.0
+      },
+      {
+        "page": 14,
+        "top": 7.0,
+        "bottom": 6.999973753280841,
+        "difference": 2.624671915896215e-05
+      },
+      {
+        "page": 16,
+        "top": 7.000026246719159,
+        "bottom": 6.999921259842495,
+        "difference": 0.00010498687666427031
+      },
+      {
+        "page": 17,
+        "top": 7.0,
+        "bottom": 6.999973753280841,
+        "difference": 2.624671915896215e-05
+      },
+      {
+        "page": 18,
+        "top": 7.000026246719159,
+        "bottom": 6.999921259842495,
+        "difference": 0.00010498687666427031
+      },
+      {
+        "page": 19,
+        "top": 7.0,
+        "bottom": 6.9999737532808695,
+        "difference": 2.624671913054044e-05
+      },
+      {
+        "page": 20,
+        "top": 7.0,
+        "bottom": 6.9999737532808695,
+        "difference": 2.624671913054044e-05
+      },
+      {
+        "page": 21,
+        "top": 7.0,
+        "bottom": 7.0,
+        "difference": 0.0
+      },
+      {
+        "page": 22,
+        "top": 7.0,
+        "bottom": 6.999973753280841,
+        "difference": 2.624671915896215e-05
+      },
+      {
+        "page": 23,
+        "top": 7.000026246719159,
+        "bottom": 6.9999737532808695,
+        "difference": 5.249343828950259e-05
+      },
+      {
+        "page": 24,
+        "top": 7.0,
+        "bottom": 7.0,
+        "difference": 0.0
+      },
+      {
+        "page": 25,
+        "top": 7.0,
+        "bottom": 7.0,
+        "difference": 0.0
+      },
+      {
+        "page": 26,
+        "top": 7.0,
+        "bottom": 6.999947506561682,
+        "difference": 5.24934383179243e-05
+      },
+      {
+        "page": 27,
+        "top": 7.0,
+        "bottom": 6.999947506561682,
+        "difference": 5.24934383179243e-05
+      },
+      {
+        "page": 28,
+        "top": 7.0,
+        "bottom": 6.999947506561682,
+        "difference": 5.24934383179243e-05
+      },
+      {
+        "page": 29,
+        "top": 7.0,
+        "bottom": 6.9999737532808695,
+        "difference": 2.624671913054044e-05
+      },
+      {
+        "page": 30,
+        "top": 7.0,
+        "bottom": 6.999973753280841,
+        "difference": 2.624671915896215e-05
+      },
+      {
+        "page": 31,
+        "top": 7.000052493438304,
+        "bottom": 6.999895013123364,
+        "difference": 0.00015748031493956205
+      },
+      {
+        "page": 32,
+        "top": 7.0,
+        "bottom": 6.999947506561682,
+        "difference": 5.24934383179243e-05
+      },
+      {
+        "page": 33,
+        "top": 7.0,
+        "bottom": 6.9999737532808695,
+        "difference": 2.624671913054044e-05
+      },
+      {
+        "page": 34,
+        "top": 7.0,
+        "bottom": 6.9999737532808695,
+        "difference": 2.624671913054044e-05
+      },
+      {
+        "page": 35,
+        "top": 7.000052493438304,
+        "bottom": 6.999895013123364,
+        "difference": 0.00015748031493956205
+      },
+      {
+        "page": 36,
+        "top": 7.000052493438304,
+        "bottom": 6.999947506561682,
+        "difference": 0.00010498687662163775
+      },
+      {
+        "page": 37,
+        "top": 7.0,
+        "bottom": 6.999947506561682,
+        "difference": 5.24934383179243e-05
+      },
+      {
+        "page": 38,
+        "top": 7.0,
+        "bottom": 7.0,
+        "difference": 0.0
+      },
+      {
+        "page": 39,
+        "top": 7.0,
+        "bottom": 7.0,
+        "difference": 0.0
+      },
+      {
+        "page": 40,
+        "top": 7.0,
+        "bottom": 7.0,
+        "difference": 0.0
+      },
+      {
+        "page": 41,
+        "top": 7.0,
+        "bottom": 7.0,
+        "difference": 0.0
+      },
+      {
+        "page": 43,
+        "top": 7.000026246719159,
+        "bottom": 6.9999737532808695,
+        "difference": 5.249343828950259e-05
+      },
+      {
+        "page": 44,
+        "top": 7.0,
+        "bottom": 7.0,
+        "difference": 0.0
+      },
+      {
+        "page": 45,
+        "top": 7.0,
+        "bottom": 6.9999737532808695,
+        "difference": 2.624671913054044e-05
+      },
+      {
+        "page": 46,
+        "top": 7.0,
+        "bottom": 6.9999737532808695,
+        "difference": 2.624671913054044e-05
+      },
+      {
+        "page": 47,
+        "top": 7.0,
+        "bottom": 6.9999475065617105,
+        "difference": 5.249343828950259e-05
+      },
+      {
+        "page": 48,
+        "top": 7.0,
+        "bottom": 7.0,
+        "difference": 0.0
+      },
+      {
+        "page": 49,
+        "top": 7.0,
+        "bottom": 6.999973753280841,
+        "difference": 2.624671915896215e-05
+      },
+      {
+        "page": 72,
+        "top": 7.000026246719159,
+        "bottom": 6.999947506561682,
+        "difference": 7.874015747688645e-05
+      },
+      {
+        "page": 73,
+        "top": 7.0,
+        "bottom": 7.0,
+        "difference": 0.0
+      },
+      {
+        "page": 74,
+        "top": 7.0,
+        "bottom": 7.0,
+        "difference": 0.0
+      },
+      {
+        "page": 75,
+        "top": 7.0,
+        "bottom": 6.9999737532808695,
+        "difference": 2.624671913054044e-05
+      },
+      {
+        "page": 76,
+        "top": 7.000026246719159,
+        "bottom": 6.999947506561682,
+        "difference": 7.874015747688645e-05
+      },
+      {
+        "page": 77,
+        "top": 7.0,
+        "bottom": 6.9999737532808695,
+        "difference": 2.624671913054044e-05
+      },
+      {
+        "page": 78,
+        "top": 7.0,
+        "bottom": 6.9999737532808695,
+        "difference": 2.624671913054044e-05
+      },
+      {
+        "page": 79,
+        "top": 7.0,
+        "bottom": 7.0,
+        "difference": 0.0
+      },
+      {
+        "page": 80,
+        "top": 7.0,
+        "bottom": 6.999947506561682,
+        "difference": 5.24934383179243e-05
+      },
+      {
+        "page": 81,
+        "top": 7.0,
+        "bottom": 6.9999737532808695,
+        "difference": 2.624671913054044e-05
+      },
+      {
+        "page": 82,
+        "top": 7.0,
+        "bottom": 7.0,
+        "difference": 0.0
+      },
+      {
+        "page": 83,
+        "top": 7.0,
+        "bottom": 6.999947506561682,
+        "difference": 5.24934383179243e-05
+      },
+      {
+        "page": 84,
+        "top": 7.000026246719159,
+        "bottom": 6.999947506561682,
+        "difference": 7.874015747688645e-05
+      },
+      {
+        "page": 85,
+        "top": 7.0,
+        "bottom": 6.9999737532808695,
+        "difference": 2.624671913054044e-05
+      },
+      {
+        "page": 86,
+        "top": 7.000026246719159,
+        "bottom": 6.999947506561682,
+        "difference": 7.874015747688645e-05
+      },
+      {
+        "page": 87,
+        "top": 7.0,
+        "bottom": 7.0,
+        "difference": 0.0
+      },
+      {
+        "page": 88,
+        "top": 7.0,
+        "bottom": 7.0,
+        "difference": 0.0
+      },
+      {
+        "page": 89,
+        "top": 7.0,
+        "bottom": 7.0,
+        "difference": 0.0
+      },
+      {
+        "page": 90,
+        "top": 7.0,
+        "bottom": 6.9999475065617105,
+        "difference": 5.249343828950259e-05
+      },
+      {
+        "page": 91,
+        "top": 7.0,
+        "bottom": 6.9999737532808695,
+        "difference": 2.624671913054044e-05
+      },
+      {
+        "page": 92,
+        "top": 7.0,
+        "bottom": 7.0,
+        "difference": 0.0
+      },
+      {
+        "page": 93,
+        "top": 7.0,
+        "bottom": 7.0,
+        "difference": 0.0
+      },
+      {
+        "page": 94,
+        "top": 7.000026246719159,
+        "bottom": 6.999947506561682,
+        "difference": 7.874015747688645e-05
+      },
+      {
+        "page": 95,
+        "top": 7.0,
+        "bottom": 6.999947506561682,
+        "difference": 5.24934383179243e-05
+      },
+      {
+        "page": 96,
+        "top": 7.0,
+        "bottom": 6.9999475065617105,
+        "difference": 5.249343828950259e-05
+      },
+      {
+        "page": 97,
+        "top": 7.0,
+        "bottom": 7.0,
+        "difference": 0.0
+      },
+      {
+        "page": 98,
+        "top": 7.0,
+        "bottom": 7.0,
+        "difference": 0.0
+      },
+      {
+        "page": 99,
+        "top": 7.000026246719159,
+        "bottom": 6.999947506561682,
+        "difference": 7.874015747688645e-05
+      },
+      {
+        "page": 100,
+        "top": 7.0,
+        "bottom": 6.9999737532808695,
+        "difference": 2.624671913054044e-05
+      },
+      {
+        "page": 101,
+        "top": 7.0,
+        "bottom": 7.0,
+        "difference": 0.0
+      },
+      {
+        "page": 102,
+        "top": 7.000026246719159,
+        "bottom": 6.999947506561682,
+        "difference": 7.874015747688645e-05
+      },
+      {
+        "page": 103,
+        "top": 7.0,
+        "bottom": 7.0,
+        "difference": 0.0
+      },
+      {
+        "page": 104,
+        "top": 7.0,
+        "bottom": 6.999947506561682,
+        "difference": 5.24934383179243e-05
+      },
+      {
+        "page": 105,
+        "top": 7.0,
+        "bottom": 7.0,
+        "difference": 0.0
+      },
+      {
+        "page": 106,
+        "top": 7.0,
+        "bottom": 7.0,
+        "difference": 0.0
+      },
+      {
+        "page": 107,
+        "top": 7.0,
+        "bottom": 6.999973753280841,
+        "difference": 2.624671915896215e-05
+      },
+      {
+        "page": 108,
+        "top": 7.000026246719159,
+        "bottom": 6.999947506561682,
+        "difference": 7.874015747688645e-05
+      },
+      {
+        "page": 109,
+        "top": 7.000026246719159,
+        "bottom": 6.999947506561682,
+        "difference": 7.874015747688645e-05
+      },
+      {
+        "page": 110,
+        "top": 7.0,
+        "bottom": 7.0,
+        "difference": 0.0
+      },
+      {
+        "page": 111,
+        "top": 7.0,
+        "bottom": 6.999947506561682,
+        "difference": 5.24934383179243e-05
+      },
+      {
+        "page": 112,
+        "top": 7.0,
+        "bottom": 6.999947506561682,
+        "difference": 5.24934383179243e-05
+      },
+      {
+        "page": 113,
+        "top": 7.0,
+        "bottom": 7.0,
+        "difference": 0.0
+      },
+      {
+        "page": 114,
+        "top": 7.000026246719159,
+        "bottom": 6.999947506561682,
+        "difference": 7.874015747688645e-05
+      },
+      {
+        "page": 115,
+        "top": 7.0,
+        "bottom": 6.999947506561682,
+        "difference": 5.24934383179243e-05
+      },
+      {
+        "page": 116,
+        "top": 7.0,
+        "bottom": 7.0,
+        "difference": 0.0
+      },
+      {
+        "page": 117,
+        "top": 7.0,
+        "bottom": 6.999947506561682,
+        "difference": 5.24934383179243e-05
+      },
+      {
+        "page": 118,
+        "top": 7.0,
+        "bottom": 7.0,
+        "difference": 0.0
+      },
+      {
+        "page": 119,
+        "top": 7.000026246719159,
+        "bottom": 6.999947506561682,
+        "difference": 7.874015747688645e-05
+      },
+      {
+        "page": 120,
+        "top": 7.0,
+        "bottom": 6.9999475065617105,
+        "difference": 5.249343828950259e-05
+      },
+      {
+        "page": 121,
+        "top": 7.0,
+        "bottom": 6.999947506561682,
+        "difference": 5.24934383179243e-05
+      },
+      {
+        "page": 122,
+        "top": 7.0,
+        "bottom": 7.0,
+        "difference": 0.0
+      },
+      {
+        "page": 123,
+        "top": 7.0,
+        "bottom": 7.0,
+        "difference": 0.0
+      },
+      {
+        "page": 124,
+        "top": 7.0,
+        "bottom": 6.999947506561682,
+        "difference": 5.24934383179243e-05
+      },
+      {
+        "page": 125,
+        "top": 7.0,
+        "bottom": 6.9999737532808695,
+        "difference": 2.624671913054044e-05
+      },
+      {
+        "page": 126,
+        "top": 7.0,
+        "bottom": 6.999973753280841,
+        "difference": 2.624671915896215e-05
+      },
+      {
+        "page": 127,
+        "top": 7.0,
+        "bottom": 7.0,
+        "difference": 0.0
+      },
+      {
+        "page": 128,
+        "top": 7.0,
+        "bottom": 6.9999737532808695,
+        "difference": 2.624671913054044e-05
+      },
+      {
+        "page": 129,
+        "top": 7.000026246719159,
+        "bottom": 6.999947506561682,
+        "difference": 7.874015747688645e-05
+      },
+      {
+        "page": 130,
+        "top": 7.0,
+        "bottom": 6.999947506561682,
+        "difference": 5.24934383179243e-05
+      },
+      {
+        "page": 131,
+        "top": 7.0,
+        "bottom": 7.0,
+        "difference": 0.0
+      },
+      {
+        "page": 132,
+        "top": 7.0,
+        "bottom": 6.999973753280841,
+        "difference": 2.624671915896215e-05
+      },
+      {
+        "page": 133,
+        "top": 7.0,
+        "bottom": 6.999947506561682,
+        "difference": 5.24934383179243e-05
+      },
+      {
+        "page": 134,
+        "top": 7.0,
+        "bottom": 6.9999737532808695,
+        "difference": 2.624671913054044e-05
+      },
+      {
+        "page": 135,
+        "top": 7.000026246719159,
+        "bottom": 6.9999737532808695,
+        "difference": 5.249343828950259e-05
+      },
+      {
+        "page": 136,
+        "top": 7.000026246719159,
+        "bottom": 6.999973753280841,
+        "difference": 5.24934383179243e-05
+      },
+      {
+        "page": 137,
+        "top": 7.0,
+        "bottom": 6.999947506561682,
+        "difference": 5.24934383179243e-05
+      },
+      {
+        "page": 138,
+        "top": 7.0,
+        "bottom": 7.0,
+        "difference": 0.0
+      },
+      {
+        "page": 139,
+        "top": 7.0,
+        "bottom": 6.9999737532808695,
+        "difference": 2.624671913054044e-05
+      },
+      {
+        "page": 140,
+        "top": 7.0,
+        "bottom": 6.9999475065617105,
+        "difference": 5.249343828950259e-05
+      },
+      {
+        "page": 141,
+        "top": 7.0,
+        "bottom": 7.0,
+        "difference": 0.0
+      },
+      {
+        "page": 149,
+        "top": 10.0,
+        "bottom": 9.336666666666645,
+        "difference": 0.6633333333333553
+      }
+    ],
     "links-audit.json": {
-      "native_url_only_runs": 54,
-      "pdf_link_rectangles": 54,
-      "pdf_link_text_exactly_matches_url": true,
+      "native_url_only_runs": 144,
+      "pdf_link_rectangles": 144,
+      "pdf_link_text_exactly_matches_url": false,
       "pdf_link_character_centers_match_url": true,
-      "glyph_box_overhangs": [],
+      "glyph_box_overhangs": [
+        {
+          "page": 7,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32012R0651 ／ english\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 8,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32012R0651 ／ english\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 9,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32012R0651 ／ english\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 10,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32012R0651 ／ english\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 11,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32012R0651 ／ english\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 12,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32012R0651 ／ english\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 13,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32012R0651 ／ english\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 14,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32012R0651 ／ english\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 16,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32013R1260 ／ german\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 17,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32013R1260 ／ german\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 18,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32013R1260 ／ german\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 19,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32013R1260 ／ german\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 20,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32013R1260 ／ german\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 21,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32013R1260 ／ german\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 22,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32013R1260 ／ german\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 23,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32013R1260 ／ german\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 24,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32013R1260 ／ german\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 25,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32013R1260 ／ german\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 26,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32013R1260 ／ german\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 27,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32013R1260 ／ german\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 28,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32013R1260 ／ german\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 29,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32013R1260 ／ german\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 30,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32013R1260 ／ german\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 31,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32013R1260 ／ german\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 32,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32013R1260 ／ german\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 33,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32013R1260 ／ german\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 34,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32013R1260 ／ german\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 35,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32013R1260 ／ german\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 36,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32013R1260 ／ german\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 37,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32013R1260 ／ german\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 38,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32013R1260 ／ german\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 39,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32013R1260 ／ german\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 40,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32013R1260 ／ german\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 41,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32013R1260 ／ german\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 43,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32012R1026 ／ spanish\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 44,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32012R1026 ／ spanish\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 45,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32012R1026 ／ spanish\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 46,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32012R1026 ／ spanish\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 47,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32012R1026 ／ spanish\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 48,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32012R1026 ／ spanish\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 49,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32012R1026 ／ spanish\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 72,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32008R0453 ／ french\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 73,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32008R0453 ／ french\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 74,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32008R0453 ／ french\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 75,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32008R0453 ／ french\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 76,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32020R2094 ／ italian\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 77,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32020R2094 ／ italian\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 78,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32020R2094 ／ italian\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 79,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32020R2094 ／ italian\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 80,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32020R2094 ／ italian\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 81,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32020R2094 ／ italian\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 82,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32020R2094 ／ italian\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 83,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32020R2094 ／ italian\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 84,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32017R1563 ／ irish\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 85,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32017R1563 ／ irish\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 86,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32017R1563 ／ irish\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 87,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32017R1563 ／ irish\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 88,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32017R1563 ／ irish\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 89,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32017R1563 ／ irish\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 90,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32017R1563 ／ irish\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 91,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32017R1563 ／ irish\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 92,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32017R1563 ／ irish\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 93,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32017R1563 ／ irish\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 94,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32008R0762 ／ greek\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 95,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32008R0762 ／ greek\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 96,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32008R0762 ／ greek\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 97,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32008R0762 ／ greek\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 98,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32008R0762 ／ greek\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 99,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32008R0762 ／ greek\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 100,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32008R0762 ／ greek\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 101,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32008R0762 ／ greek\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 102,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32008R0763 ／ maltese\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 103,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32008R0763 ／ maltese\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 104,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32008R0763 ／ maltese\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 105,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32008R0763 ／ maltese\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 106,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32008R0763 ／ maltese\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 107,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32008R0763 ／ maltese\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 108,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32021R0523 ／ english\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 109,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32021R0523 ／ english\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 110,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32021R0523 ／ english\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 111,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32021R0523 ／ english\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 112,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32021R0523 ／ english\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 113,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32021R0523 ／ english\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 114,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32021R0023 ／ english\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 115,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32021R0023 ／ english\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 116,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32021R0023 ／ english\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 117,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32021R0023 ／ english\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 118,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32021R0023 ／ english\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 119,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32021R0691 ／ english\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 120,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32021R0691 ／ english\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 121,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32021R0691 ／ english\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 122,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32021R0691 ／ english\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 123,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32021R0691 ／ english\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 124,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32021R0691 ／ english\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 125,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32021R0691 ／ english\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 126,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32021R0691 ／ english\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 127,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32021R0691 ／ english\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 128,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32021R0691 ／ english\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 129,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32014R0251 ／ english\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 130,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32014R0251 ／ english\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 131,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32014R0251 ／ english\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 132,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32014R0251 ／ english\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 133,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32014R0251 ／ english\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 134,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32014R0251 ／ english\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 135,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32008R0452 ／ english\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 136,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32008R0452 ／ english\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 137,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32008R0452 ／ english\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 138,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32008R0452 ／ english\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 139,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32008R0452 ／ english\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 140,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32008R0452 ／ english\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        },
+        {
+          "page": 141,
+          "extracted_text": "[1] Aumiller et al. EUR-Lex-Sum. 32008R0452 ／ english\nhttps://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "uri": "https://huggingface.co/datasets/dennlinger/eur-lex-sum",
+          "note": "矩形抽出では隣接文字の字形ボックスの接触も拾う。文字中心とネイティブのリンク範囲はURL部分だけ。"
+        }
+      ],
       "shortened_url_labels": [],
       "issues": []
     },
+    "native-frame-audit.json": {
+      "method": "native-frame clip PDF check +/-2pt x +/-3pt y",
+      "paragraphs": 1039,
+      "cells": 154,
+      "issues": []
+    },
     "content-checks.json": {
-      "example_pages": [
+      "tag": "source-coverage-2026-10",
+      "method": "skill_based_codex",
+      "gemini_used": false,
+      "total_pages": 153,
+      "main_pages": 68,
+      "examples": [
         {
-          "old_page": 7,
-          "new_page": 7,
-          "original_reference_japanese": "exact native strings"
+          "example": 1,
+          "kind": "source",
+          "pages": [
+            7,
+            8
+          ],
+          "displayed_characters": 607,
+          "all_selected_content_exact": true
         },
         {
-          "old_page": 9,
-          "new_page": 9,
-          "original_reference_japanese": "exact native strings"
+          "example": 1,
+          "kind": "reference",
+          "pages": [
+            11,
+            12
+          ],
+          "displayed_characters": 456,
+          "all_selected_content_exact": true
         },
         {
-          "old_page": 10,
-          "new_page": 10,
-          "original_reference_japanese": "exact native strings"
+          "example": 1,
+          "kind": "source_ja",
+          "pages": [
+            9,
+            10
+          ],
+          "displayed_characters": 252,
+          "all_selected_content_exact": true
         },
         {
-          "old_page": 12,
-          "new_page": 12,
-          "original_reference_japanese": "exact native strings"
+          "example": 1,
+          "kind": "reference_ja",
+          "pages": [
+            13,
+            14
+          ],
+          "displayed_characters": 180,
+          "all_selected_content_exact": true
         },
         {
-          "old_page": 13,
-          "new_page": 13,
-          "original_reference_japanese": "exact native strings"
+          "example": 2,
+          "kind": "source",
+          "pages": [
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "displayed_characters": 3195,
+          "all_selected_content_exact": true
         },
         {
-          "old_page": 38,
-          "new_page": 37,
-          "original_reference_japanese": "exact native strings"
+          "example": 2,
+          "kind": "reference",
+          "pages": [
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36
+          ],
+          "displayed_characters": 2780,
+          "all_selected_content_exact": true
         },
         {
-          "old_page": 39,
-          "new_page": 38,
-          "original_reference_japanese": "exact native strings"
+          "example": 2,
+          "kind": "source_ja",
+          "pages": [
+            24,
+            25,
+            26,
+            27,
+            28
+          ],
+          "displayed_characters": 978,
+          "all_selected_content_exact": true
         },
         {
-          "old_page": 40,
-          "new_page": 39,
-          "original_reference_japanese": "exact native strings"
+          "example": 2,
+          "kind": "reference_ja",
+          "pages": [
+            37,
+            38,
+            39,
+            40,
+            41
+          ],
+          "displayed_characters": 902,
+          "all_selected_content_exact": true
         },
         {
-          "old_page": 41,
-          "new_page": 40,
-          "original_reference_japanese": "exact native strings"
+          "example": 3,
+          "kind": "source",
+          "pages": [
+            43,
+            44
+          ],
+          "displayed_characters": 729,
+          "all_selected_content_exact": true
         },
         {
-          "old_page": 42,
-          "new_page": 41,
-          "original_reference_japanese": "exact native strings"
+          "example": 3,
+          "kind": "reference",
+          "pages": [
+            46,
+            47
+          ],
+          "displayed_characters": 724,
+          "all_selected_content_exact": true
         },
         {
-          "old_page": 43,
+          "example": 3,
+          "kind": "source_ja",
+          "pages": [
+            45
+          ],
+          "displayed_characters": 228,
+          "all_selected_content_exact": true
+        },
+        {
+          "example": 3,
+          "kind": "reference_ja",
+          "pages": [
+            48,
+            49
+          ],
+          "displayed_characters": 242,
+          "all_selected_content_exact": true
+        },
+        {
+          "example": 4,
+          "kind": "source",
+          "pages": [
+            72
+          ],
+          "displayed_characters": 492,
+          "all_selected_content_exact": true
+        },
+        {
+          "example": 4,
+          "kind": "reference",
+          "pages": [
+            74
+          ],
+          "displayed_characters": 359,
+          "all_selected_content_exact": true
+        },
+        {
+          "example": 4,
+          "kind": "source_ja",
+          "pages": [
+            73
+          ],
+          "displayed_characters": 164,
+          "all_selected_content_exact": true
+        },
+        {
+          "example": 4,
+          "kind": "reference_ja",
+          "pages": [
+            75
+          ],
+          "displayed_characters": 128,
+          "all_selected_content_exact": true
+        },
+        {
+          "example": 5,
+          "kind": "source",
+          "pages": [
+            76,
+            77
+          ],
+          "displayed_characters": 772,
+          "all_selected_content_exact": true
+        },
+        {
+          "example": 5,
+          "kind": "reference",
+          "pages": [
+            80,
+            81
+          ],
+          "displayed_characters": 671,
+          "all_selected_content_exact": true
+        },
+        {
+          "example": 5,
+          "kind": "source_ja",
+          "pages": [
+            78,
+            79
+          ],
+          "displayed_characters": 334,
+          "all_selected_content_exact": true
+        },
+        {
+          "example": 5,
+          "kind": "reference_ja",
+          "pages": [
+            82,
+            83
+          ],
+          "displayed_characters": 256,
+          "all_selected_content_exact": true
+        },
+        {
+          "example": 6,
+          "kind": "source",
+          "pages": [
+            84,
+            85,
+            86
+          ],
+          "displayed_characters": 1316,
+          "all_selected_content_exact": true
+        },
+        {
+          "example": 6,
+          "kind": "reference",
+          "pages": [
+            90,
+            91
+          ],
+          "displayed_characters": 675,
+          "all_selected_content_exact": true
+        },
+        {
+          "example": 6,
+          "kind": "source_ja",
+          "pages": [
+            87,
+            88,
+            89
+          ],
+          "displayed_characters": 509,
+          "all_selected_content_exact": true
+        },
+        {
+          "example": 6,
+          "kind": "reference_ja",
+          "pages": [
+            92,
+            93
+          ],
+          "displayed_characters": 256,
+          "all_selected_content_exact": true
+        },
+        {
+          "example": 7,
+          "kind": "source",
+          "pages": [
+            94,
+            95,
+            96
+          ],
+          "displayed_characters": 1084,
+          "all_selected_content_exact": true
+        },
+        {
+          "example": 7,
+          "kind": "reference",
+          "pages": [
+            99,
+            100
+          ],
+          "displayed_characters": 517,
+          "all_selected_content_exact": true
+        },
+        {
+          "example": 7,
+          "kind": "source_ja",
+          "pages": [
+            97,
+            98
+          ],
+          "displayed_characters": 384,
+          "all_selected_content_exact": true
+        },
+        {
+          "example": 7,
+          "kind": "reference_ja",
+          "pages": [
+            101
+          ],
+          "displayed_characters": 159,
+          "all_selected_content_exact": true
+        },
+        {
+          "example": 8,
+          "kind": "source",
+          "pages": [
+            102
+          ],
+          "displayed_characters": 583,
+          "all_selected_content_exact": true
+        },
+        {
+          "example": 8,
+          "kind": "reference",
+          "pages": [
+            104,
+            105
+          ],
+          "displayed_characters": 455,
+          "all_selected_content_exact": true
+        },
+        {
+          "example": 8,
+          "kind": "source_ja",
+          "pages": [
+            103
+          ],
+          "displayed_characters": 233,
+          "all_selected_content_exact": true
+        },
+        {
+          "example": 8,
+          "kind": "reference_ja",
+          "pages": [
+            106,
+            107
+          ],
+          "displayed_characters": 185,
+          "all_selected_content_exact": true
+        },
+        {
+          "example": 9,
+          "kind": "source",
+          "pages": [
+            108,
+            109
+          ],
+          "displayed_characters": 788,
+          "all_selected_content_exact": true
+        },
+        {
+          "example": 9,
+          "kind": "reference",
+          "pages": [
+            111,
+            112
+          ],
+          "displayed_characters": 347,
+          "all_selected_content_exact": true
+        },
+        {
+          "example": 9,
+          "kind": "source_ja",
+          "pages": [
+            110
+          ],
+          "displayed_characters": 259,
+          "all_selected_content_exact": true
+        },
+        {
+          "example": 9,
+          "kind": "reference_ja",
+          "pages": [
+            113
+          ],
+          "displayed_characters": 142,
+          "all_selected_content_exact": true
+        },
+        {
+          "example": 10,
+          "kind": "source",
+          "pages": [
+            114,
+            115
+          ],
+          "displayed_characters": 674,
+          "all_selected_content_exact": true
+        },
+        {
+          "example": 10,
+          "kind": "reference",
+          "pages": [
+            117
+          ],
+          "displayed_characters": 217,
+          "all_selected_content_exact": true
+        },
+        {
+          "example": 10,
+          "kind": "source_ja",
+          "pages": [
+            116
+          ],
+          "displayed_characters": 274,
+          "all_selected_content_exact": true
+        },
+        {
+          "example": 10,
+          "kind": "reference_ja",
+          "pages": [
+            118
+          ],
+          "displayed_characters": 110,
+          "all_selected_content_exact": true
+        },
+        {
+          "example": 11,
+          "kind": "source",
+          "pages": [
+            119,
+            120,
+            121
+          ],
+          "displayed_characters": 1269,
+          "all_selected_content_exact": true
+        },
+        {
+          "example": 11,
+          "kind": "reference",
+          "pages": [
+            124,
+            125,
+            126
+          ],
+          "displayed_characters": 926,
+          "all_selected_content_exact": true
+        },
+        {
+          "example": 11,
+          "kind": "source_ja",
+          "pages": [
+            122,
+            123
+          ],
+          "displayed_characters": 438,
+          "all_selected_content_exact": true
+        },
+        {
+          "example": 11,
+          "kind": "reference_ja",
+          "pages": [
+            127,
+            128
+          ],
+          "displayed_characters": 322,
+          "all_selected_content_exact": true
+        },
+        {
+          "example": 12,
+          "kind": "source",
+          "pages": [
+            129,
+            130
+          ],
+          "displayed_characters": 833,
+          "all_selected_content_exact": true
+        },
+        {
+          "example": 12,
+          "kind": "reference",
+          "pages": [
+            133
+          ],
+          "displayed_characters": 367,
+          "all_selected_content_exact": true
+        },
+        {
+          "example": 12,
+          "kind": "source_ja",
+          "pages": [
+            131,
+            132
+          ],
+          "displayed_characters": 291,
+          "all_selected_content_exact": true
+        },
+        {
+          "example": 12,
+          "kind": "reference_ja",
+          "pages": [
+            134
+          ],
+          "displayed_characters": 145,
+          "all_selected_content_exact": true
+        },
+        {
+          "example": 13,
+          "kind": "source",
+          "pages": [
+            135,
+            136,
+            137
+          ],
+          "displayed_characters": 728,
+          "all_selected_content_exact": true
+        },
+        {
+          "example": 13,
+          "kind": "reference",
+          "pages": [
+            139,
+            140
+          ],
+          "displayed_characters": 575,
+          "all_selected_content_exact": true
+        },
+        {
+          "example": 13,
+          "kind": "source_ja",
+          "pages": [
+            138
+          ],
+          "displayed_characters": 284,
+          "all_selected_content_exact": true
+        },
+        {
+          "example": 13,
+          "kind": "reference_ja",
+          "pages": [
+            141
+          ],
+          "displayed_characters": 162,
+          "all_selected_content_exact": true
+        }
+      ],
+      "retained_pages": [
+        {
+          "old_page": 1,
+          "new_page": 1,
+          "action": "preserve"
+        },
+        {
+          "old_page": 2,
+          "new_page": 2,
+          "action": "preserve"
+        },
+        {
+          "old_page": 3,
+          "new_page": 3,
+          "action": "preserve"
+        },
+        {
+          "old_page": 4,
+          "new_page": 4,
+          "action": "preserve"
+        },
+        {
+          "old_page": 5,
+          "new_page": 5,
+          "action": "preserve"
+        },
+        {
+          "old_page": 6,
+          "new_page": 6,
+          "action": "revise_explanation"
+        },
+        {
+          "old_page": 8,
+          "new_page": 15,
+          "action": "revise_explanation"
+        },
+        {
+          "old_page": 11,
           "new_page": 42,
-          "original_reference_japanese": "exact native strings"
+          "action": "revise_explanation"
         },
         {
-          "old_page": 44,
-          "new_page": 43,
-          "original_reference_japanese": "exact native strings"
-        },
-        {
-          "old_page": 45,
-          "new_page": 44,
-          "original_reference_japanese": "exact native strings"
-        },
-        {
-          "old_page": 46,
-          "new_page": 45,
-          "original_reference_japanese": "exact native strings"
-        },
-        {
-          "old_page": 47,
-          "new_page": 46,
-          "original_reference_japanese": "exact native strings"
-        },
-        {
-          "old_page": 48,
-          "new_page": 47,
-          "original_reference_japanese": "exact native strings"
-        },
-        {
-          "old_page": 49,
-          "new_page": 48,
-          "original_reference_japanese": "exact native strings"
-        },
-        {
-          "old_page": 50,
-          "new_page": 49,
-          "original_reference_japanese": "exact native strings"
-        },
-        {
-          "old_page": 51,
+          "old_page": 14,
           "new_page": 50,
-          "original_reference_japanese": "exact native strings"
+          "action": "revise_explanation"
+        },
+        {
+          "old_page": 15,
+          "new_page": 51,
+          "action": "preserve"
+        },
+        {
+          "old_page": 16,
+          "new_page": 52,
+          "action": "preserve"
+        },
+        {
+          "old_page": 17,
+          "new_page": 53,
+          "action": "preserve"
+        },
+        {
+          "old_page": 18,
+          "new_page": 54,
+          "action": "preserve"
+        },
+        {
+          "old_page": 19,
+          "new_page": 55,
+          "action": "preserve"
+        },
+        {
+          "old_page": 20,
+          "new_page": 56,
+          "action": "preserve"
+        },
+        {
+          "old_page": 21,
+          "new_page": 57,
+          "action": "preserve"
+        },
+        {
+          "old_page": 22,
+          "new_page": 58,
+          "action": "preserve"
+        },
+        {
+          "old_page": 23,
+          "new_page": 59,
+          "action": "preserve"
+        },
+        {
+          "old_page": 24,
+          "new_page": 60,
+          "action": "preserve"
+        },
+        {
+          "old_page": 25,
+          "new_page": 61,
+          "action": "preserve"
+        },
+        {
+          "old_page": 26,
+          "new_page": 62,
+          "action": "preserve"
+        },
+        {
+          "old_page": 27,
+          "new_page": 63,
+          "action": "preserve"
+        },
+        {
+          "old_page": 28,
+          "new_page": 64,
+          "action": "preserve"
+        },
+        {
+          "old_page": 29,
+          "new_page": 65,
+          "action": "preserve"
+        },
+        {
+          "old_page": 30,
+          "new_page": 66,
+          "action": "preserve"
+        },
+        {
+          "old_page": 31,
+          "new_page": 67,
+          "action": "preserve"
+        },
+        {
+          "old_page": 32,
+          "new_page": 68,
+          "action": "preserve"
+        },
+        {
+          "old_page": 33,
+          "new_page": 69,
+          "action": "preserve"
+        },
+        {
+          "old_page": 34,
+          "new_page": 70,
+          "action": "preserve"
+        },
+        {
+          "old_page": 35,
+          "new_page": 71,
+          "action": "preserve"
         },
         {
           "old_page": 52,
-          "new_page": 51,
-          "original_reference_japanese": "exact native strings"
+          "new_page": 142,
+          "action": "preserve"
         },
         {
           "old_page": 53,
-          "new_page": 52,
-          "original_reference_japanese": "exact native strings"
+          "new_page": 143,
+          "action": "preserve"
+        },
+        {
+          "old_page": 54,
+          "new_page": 144,
+          "action": "preserve"
+        },
+        {
+          "old_page": 55,
+          "new_page": 145,
+          "action": "preserve"
+        },
+        {
+          "old_page": 56,
+          "new_page": 146,
+          "action": "preserve"
+        },
+        {
+          "old_page": 57,
+          "new_page": 147,
+          "action": "preserve"
+        },
+        {
+          "old_page": 58,
+          "new_page": 148,
+          "action": "preserve"
+        },
+        {
+          "old_page": 59,
+          "new_page": 149,
+          "action": "preserve"
+        },
+        {
+          "old_page": 60,
+          "new_page": 150,
+          "action": "preserve"
+        },
+        {
+          "old_page": 61,
+          "new_page": 151,
+          "action": "preserve"
+        },
+        {
+          "old_page": 62,
+          "new_page": 152,
+          "action": "preserve"
+        },
+        {
+          "old_page": 63,
+          "new_page": 153,
+          "action": "preserve"
         }
       ],
-      "numeric_tables_preserved": 8,
-      "chart_values_exact": true,
-      "code_executed": true,
-      "author": "sasakiy84",
+      "native_tables_preserved": 8,
+      "native_chart_values_preserved": 1,
+      "full_reference_display_examples": [
+        2
+      ],
+      "raw_records_full_in_evidence": 13,
+      "translation_format_note": "JP見出しの改行をコロンへ整形した箇所だけ句読点比較を正規化。原語の単語/記号は空白・明示中略以外変更なし。",
+      "native_use_code_executed": true,
       "notes": 0,
-      "final_hashes": {
-        "datasets-in-10-minutes-eurlexsum.pdf": "8fa10a677263392655188f5f5bcf345894b7d2476272ac4fa44e2a30345e6270",
-        "datasets-in-10-minutes-eurlexsum.pptx": "48b68df28624227e63af328b44eaa846bf72dd7a83ce5c891ca91e2d994e333e"
-      },
-      "japanese_exception": "translation-polish.json: example12 only"
+      "author": "sasakiy84"
     }
   },
-  "visual_review": {
-    "individually_viewed_pages": [
-      1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9,
-      10,
-      11,
-      12,
-      13,
-      14,
-      15,
-      16,
-      17,
-      18,
-      19,
-      20,
-      21,
-      22,
-      23,
-      24,
-      25,
-      26,
-      27,
-      28,
-      29,
-      30,
-      31,
-      32,
-      33,
-      34,
-      35,
-      36,
-      37,
-      38,
-      39,
-      40,
-      41,
-      42,
-      43,
-      44,
-      45,
-      46,
-      47,
-      48,
-      49,
-      50,
-      51,
-      52,
-      53,
-      54,
-      55,
-      56,
-      57,
-      58,
-      59,
-      60,
-      61,
-      62,
-      63,
-      64,
-      65,
-      66
-    ],
-    "final_rechecked_pages": [
-      10,
-      40,
-      41,
-      42,
-      61
-    ],
-    "overview_viewed": true,
-    "official_screenshot_viewed": true,
-    "checks": [
-      "全本文・原文・訳・表・コード・文献・native棒グラフ",
-      "題名/表セルの孤立字折返しと重なり",
-      "全文と連続抜粋の表示範囲",
-      "引用枠の実字形上下余白",
-      "回答を唯一解と呼ばず参照要約と表示",
-      "2文献/頁で計4件を保持",
-      "出典と本文/表注の距離"
-    ],
-    "repairs": [
-      "主担当および独立レビューでp41題名2行目と字幕の接触を発見し短縮",
-      "p39原文を保持しJPのみ16.5→15.5ptでfooterとの距離を確保",
-      "表注を短くし最終セル・出典と分離",
-      "参考文献の2件を正式題名のまま収容"
-    ],
-    "issues": []
+  "audit_sources": {
+    "raw-checks.json": "source-coverage-2026-10/raw-checks.json",
+    "three-digit-page-checks.json": "source-coverage-2026-10/three-digit-page-checks.json",
+    "all-text-frame-audit.json": "source-coverage-2026-10/all-text-frame-audit.json",
+    "package-audit.json": "source-coverage-2026-10/package-audit.json",
+    "layout-audit.json": "source-coverage-2026-10/layout-audit.json",
+    "source-coverage-audit.json": "source-coverage-2026-10/source-coverage-audit.json",
+    "panel-ink-checks.json": "source-coverage-2026-10/panel-ink-checks.json",
+    "links-audit.json": "source-coverage-2026-10/links-audit.json",
+    "native-frame-audit.json": "source-coverage-2026-10/native-frame-audit.json",
+    "content-checks.json": "source-coverage-2026-10/content-checks.json"
   },
-  "panel_ink": [
-    {
-      "page": 7,
-      "gray_bounds_pixels": [
-        65,
-        184,
-        529,
-        531
-      ],
-      "visible_ink_y_pixels": [
-        195,
-        521
-      ],
-      "visible_top_gap_pt": 7.333333333333333,
-      "visible_bottom_gap_pt": 6.666666666666667,
-      "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
-      "top_inset_adjustment_pt": 0,
-      "height_adjustment_pt": 0
-    },
-    {
-      "page": 7,
-      "gray_bounds_pixels": [
-        551,
-        184,
-        1015,
-        469
-      ],
-      "visible_ink_y_pixels": [
-        195,
-        457
-      ],
-      "visible_top_gap_pt": 7.333333333333333,
-      "visible_bottom_gap_pt": 8.0,
-      "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
-      "top_inset_adjustment_pt": 0,
-      "height_adjustment_pt": 0
-    },
-    {
-      "page": 9,
-      "gray_bounds_pixels": [
-        65,
-        184,
-        1015,
-        473
-      ],
-      "visible_ink_y_pixels": [
-        195,
-        462
-      ],
-      "visible_top_gap_pt": 7.333333333333333,
-      "visible_bottom_gap_pt": 7.333333333333333,
-      "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
-      "top_inset_adjustment_pt": 0,
-      "height_adjustment_pt": 0
-    },
-    {
-      "page": 10,
-      "gray_bounds_pixels": [
-        65,
-        184,
-        1015,
-        458
-      ],
-      "visible_ink_y_pixels": [
-        195,
-        448
-      ],
-      "visible_top_gap_pt": 7.333333333333333,
-      "visible_bottom_gap_pt": 6.666666666666667,
-      "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
-      "top_inset_adjustment_pt": 0,
-      "height_adjustment_pt": 0
-    },
-    {
-      "page": 12,
-      "gray_bounds_pixels": [
-        65,
-        184,
-        637,
-        504
-      ],
-      "visible_ink_y_pixels": [
-        195,
-        494
-      ],
-      "visible_top_gap_pt": 7.333333333333333,
-      "visible_bottom_gap_pt": 6.666666666666667,
-      "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
-      "top_inset_adjustment_pt": 0,
-      "height_adjustment_pt": 0
-    },
-    {
-      "page": 12,
-      "gray_bounds_pixels": [
-        659,
-        184,
-        1015,
-        469
-      ],
-      "visible_ink_y_pixels": [
-        195,
-        457
-      ],
-      "visible_top_gap_pt": 7.333333333333333,
-      "visible_bottom_gap_pt": 8.0,
-      "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
-      "top_inset_adjustment_pt": 0,
-      "height_adjustment_pt": 0
-    },
-    {
-      "page": 13,
-      "gray_bounds_pixels": [
-        65,
-        184,
-        637,
-        494
-      ],
-      "visible_ink_y_pixels": [
-        194,
-        483
-      ],
-      "visible_top_gap_pt": 6.666666666666667,
-      "visible_bottom_gap_pt": 7.333333333333333,
-      "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
-      "top_inset_adjustment_pt": 0,
-      "height_adjustment_pt": 0
-    },
-    {
-      "page": 13,
-      "gray_bounds_pixels": [
-        659,
-        184,
-        1015,
-        518
-      ],
-      "visible_ink_y_pixels": [
-        194,
-        508
-      ],
-      "visible_top_gap_pt": 6.666666666666667,
-      "visible_bottom_gap_pt": 6.666666666666667,
-      "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
-      "top_inset_adjustment_pt": 0,
-      "height_adjustment_pt": 0
-    },
-    {
-      "page": 38,
-      "gray_bounds_pixels": [
-        65,
-        184,
-        572,
-        525
-      ],
-      "visible_ink_y_pixels": [
-        194,
-        515
-      ],
-      "visible_top_gap_pt": 6.666666666666667,
-      "visible_bottom_gap_pt": 6.666666666666667,
-      "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
-      "top_inset_adjustment_pt": 0,
-      "height_adjustment_pt": 0
-    },
-    {
-      "page": 38,
-      "gray_bounds_pixels": [
-        594,
-        184,
-        1015,
-        502
-      ],
-      "visible_ink_y_pixels": [
-        195,
-        491
-      ],
-      "visible_top_gap_pt": 7.333333333333333,
-      "visible_bottom_gap_pt": 7.333333333333333,
-      "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
-      "top_inset_adjustment_pt": 0,
-      "height_adjustment_pt": 0
-    },
-    {
-      "page": 39,
-      "gray_bounds_pixels": [
-        65,
-        184,
-        637,
-        510
-      ],
-      "visible_ink_y_pixels": [
-        194,
-        499
-      ],
-      "visible_top_gap_pt": 6.666666666666667,
-      "visible_bottom_gap_pt": 7.333333333333333,
-      "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
-      "top_inset_adjustment_pt": 0,
-      "height_adjustment_pt": 0
-    },
-    {
-      "page": 39,
-      "gray_bounds_pixels": [
-        659,
-        184,
-        1015,
-        503
-      ],
-      "visible_ink_y_pixels": [
-        195,
-        492
-      ],
-      "visible_top_gap_pt": 7.333333333333333,
-      "visible_bottom_gap_pt": 7.333333333333333,
-      "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
-      "top_inset_adjustment_pt": 0,
-      "height_adjustment_pt": 0
-    },
-    {
-      "page": 40,
-      "gray_bounds_pixels": [
-        65,
-        184,
-        1015,
-        496
-      ],
-      "visible_ink_y_pixels": [
-        195,
-        486
-      ],
-      "visible_top_gap_pt": 7.333333333333333,
-      "visible_bottom_gap_pt": 6.666666666666667,
-      "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
-      "top_inset_adjustment_pt": 0,
-      "height_adjustment_pt": 0
-    },
-    {
-      "page": 41,
-      "gray_bounds_pixels": [
-        65,
-        184,
-        1015,
-        459
-      ],
-      "visible_ink_y_pixels": [
-        195,
-        449
-      ],
-      "visible_top_gap_pt": 7.333333333333333,
-      "visible_bottom_gap_pt": 6.666666666666667,
-      "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
-      "top_inset_adjustment_pt": 0,
-      "height_adjustment_pt": 0
-    },
-    {
-      "page": 42,
-      "gray_bounds_pixels": [
-        65,
-        184,
-        572,
-        523
-      ],
-      "visible_ink_y_pixels": [
-        194,
-        513
-      ],
-      "visible_top_gap_pt": 6.666666666666667,
-      "visible_bottom_gap_pt": 6.666666666666667,
-      "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
-      "top_inset_adjustment_pt": 0,
-      "height_adjustment_pt": 0
-    },
-    {
-      "page": 42,
-      "gray_bounds_pixels": [
-        594,
-        184,
-        1015,
-        492
-      ],
-      "visible_ink_y_pixels": [
-        194,
-        482
-      ],
-      "visible_top_gap_pt": 6.666666666666667,
-      "visible_bottom_gap_pt": 6.666666666666667,
-      "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
-      "top_inset_adjustment_pt": 0,
-      "height_adjustment_pt": 0
-    },
-    {
-      "page": 43,
-      "gray_bounds_pixels": [
-        65,
-        184,
-        1015,
-        497
-      ],
-      "visible_ink_y_pixels": [
-        194,
-        487
-      ],
-      "visible_top_gap_pt": 6.666666666666667,
-      "visible_bottom_gap_pt": 6.666666666666667,
-      "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
-      "top_inset_adjustment_pt": 0,
-      "height_adjustment_pt": 0
-    },
-    {
-      "page": 44,
-      "gray_bounds_pixels": [
-        65,
-        184,
-        1015,
-        458
-      ],
-      "visible_ink_y_pixels": [
-        195,
-        448
-      ],
-      "visible_top_gap_pt": 7.333333333333333,
-      "visible_bottom_gap_pt": 6.666666666666667,
-      "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
-      "top_inset_adjustment_pt": 0,
-      "height_adjustment_pt": 0
-    },
-    {
-      "page": 45,
-      "gray_bounds_pixels": [
-        65,
-        184,
-        572,
-        523
-      ],
-      "visible_ink_y_pixels": [
-        194,
-        513
-      ],
-      "visible_top_gap_pt": 6.666666666666667,
-      "visible_bottom_gap_pt": 6.666666666666667,
-      "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
-      "top_inset_adjustment_pt": 0,
-      "height_adjustment_pt": 0
-    },
-    {
-      "page": 45,
-      "gray_bounds_pixels": [
-        594,
-        184,
-        1015,
-        502
-      ],
-      "visible_ink_y_pixels": [
-        195,
-        491
-      ],
-      "visible_top_gap_pt": 7.333333333333333,
-      "visible_bottom_gap_pt": 7.333333333333333,
-      "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
-      "top_inset_adjustment_pt": 0,
-      "height_adjustment_pt": 0
-    },
-    {
-      "page": 46,
-      "gray_bounds_pixels": [
-        65,
-        184,
-        529,
-        504
-      ],
-      "visible_ink_y_pixels": [
-        195,
-        494
-      ],
-      "visible_top_gap_pt": 7.333333333333333,
-      "visible_bottom_gap_pt": 6.666666666666667,
-      "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
-      "top_inset_adjustment_pt": 0,
-      "height_adjustment_pt": 0
-    },
-    {
-      "page": 46,
-      "gray_bounds_pixels": [
-        551,
-        184,
-        1015,
-        366
-      ],
-      "visible_ink_y_pixels": [
-        195,
-        356
-      ],
-      "visible_top_gap_pt": 7.333333333333333,
-      "visible_bottom_gap_pt": 6.666666666666667,
-      "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
-      "top_inset_adjustment_pt": 0,
-      "height_adjustment_pt": 0
-    },
-    {
-      "page": 47,
-      "gray_bounds_pixels": [
-        65,
-        184,
-        605,
-        523
-      ],
-      "visible_ink_y_pixels": [
-        194,
-        513
-      ],
-      "visible_top_gap_pt": 6.666666666666667,
-      "visible_bottom_gap_pt": 6.666666666666667,
-      "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
-      "top_inset_adjustment_pt": 0,
-      "height_adjustment_pt": 0
-    },
-    {
-      "page": 47,
-      "gray_bounds_pixels": [
-        626,
-        184,
-        1015,
-        521
-      ],
-      "visible_ink_y_pixels": [
-        194,
-        511
-      ],
-      "visible_top_gap_pt": 6.666666666666667,
-      "visible_bottom_gap_pt": 6.666666666666667,
-      "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
-      "top_inset_adjustment_pt": 0,
-      "height_adjustment_pt": 0
-    },
-    {
-      "page": 48,
-      "gray_bounds_pixels": [
-        65,
-        184,
-        1015,
-        507
-      ],
-      "visible_ink_y_pixels": [
-        195,
-        496
-      ],
-      "visible_top_gap_pt": 7.333333333333333,
-      "visible_bottom_gap_pt": 7.333333333333333,
-      "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
-      "top_inset_adjustment_pt": 0,
-      "height_adjustment_pt": 0
-    },
-    {
-      "page": 49,
-      "gray_bounds_pixels": [
-        65,
-        184,
-        1015,
-        496
-      ],
-      "visible_ink_y_pixels": [
-        195,
-        485
-      ],
-      "visible_top_gap_pt": 7.333333333333333,
-      "visible_bottom_gap_pt": 7.333333333333333,
-      "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
-      "top_inset_adjustment_pt": 0,
-      "height_adjustment_pt": 0
-    },
-    {
-      "page": 50,
-      "gray_bounds_pixels": [
-        65,
-        184,
-        1015,
-        531
-      ],
-      "visible_ink_y_pixels": [
-        195,
-        521
-      ],
-      "visible_top_gap_pt": 7.333333333333333,
-      "visible_bottom_gap_pt": 6.666666666666667,
-      "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
-      "top_inset_adjustment_pt": 0,
-      "height_adjustment_pt": 0
-    },
-    {
-      "page": 51,
-      "gray_bounds_pixels": [
-        65,
-        184,
-        1015,
-        527
-      ],
-      "visible_ink_y_pixels": [
-        195,
-        516
-      ],
-      "visible_top_gap_pt": 7.333333333333333,
-      "visible_bottom_gap_pt": 7.333333333333333,
-      "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
-      "top_inset_adjustment_pt": 0,
-      "height_adjustment_pt": 0
-    },
-    {
-      "page": 52,
-      "gray_bounds_pixels": [
-        65,
-        184,
-        605,
-        487
-      ],
-      "visible_ink_y_pixels": [
-        194,
-        477
-      ],
-      "visible_top_gap_pt": 6.666666666666667,
-      "visible_bottom_gap_pt": 6.666666666666667,
-      "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
-      "top_inset_adjustment_pt": 0,
-      "height_adjustment_pt": 0
-    },
-    {
-      "page": 52,
-      "gray_bounds_pixels": [
-        626,
-        184,
-        1015,
-        518
-      ],
-      "visible_ink_y_pixels": [
-        194,
-        508
-      ],
-      "visible_top_gap_pt": 6.666666666666667,
-      "visible_bottom_gap_pt": 6.666666666666667,
-      "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
-      "top_inset_adjustment_pt": 0,
-      "height_adjustment_pt": 0
-    },
-    {
-      "page": 53,
-      "gray_bounds_pixels": [
-        65,
-        184,
-        572,
-        487
-      ],
-      "visible_ink_y_pixels": [
-        194,
-        477
-      ],
-      "visible_top_gap_pt": 6.666666666666667,
-      "visible_bottom_gap_pt": 6.666666666666667,
-      "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
-      "top_inset_adjustment_pt": 0,
-      "height_adjustment_pt": 0
-    },
-    {
-      "page": 53,
-      "gray_bounds_pixels": [
-        594,
-        184,
-        1015,
-        526
-      ],
-      "visible_ink_y_pixels": [
-        195,
-        516
-      ],
-      "visible_top_gap_pt": 7.333333333333333,
-      "visible_bottom_gap_pt": 6.666666666666667,
-      "method": "1080x608 PNG; gray=(235,237,235), ink threshold max(R,G,B)<170; 1.5px per pt",
-      "top_inset_adjustment_pt": 0,
-      "height_adjustment_pt": 0
-    }
-  ],
-  "artifacts": {
-    "datasets-in-10-minutes-eurlexsum.pptx": {
-      "path": "/workspace/artifacts/helm-parallel/eurlexsum/datasets-in-10-minutes-eurlexsum.pptx",
-      "bytes": 329433,
-      "sha256": "b838ac7336927416b47a3099e211f8b3a9ce976dc0d69ab747e29f6450c6e0b3"
-    },
-    "datasets-in-10-minutes-eurlexsum.pdf": {
-      "path": "/workspace/artifacts/helm-parallel/eurlexsum/datasets-in-10-minutes-eurlexsum.pdf",
-      "bytes": 1327996,
-      "sha256": "eb2852fe96913b06917f8beb1207cc2bfdf1c3a03a12d73f53cefcf6b283c260"
-    }
-  },
-  "changes": [
-    {
-      "example_index": 2,
-      "field": "input_ja",
-      "before": "この規則は、人口及び生命事象に関する欧州統計の開発・作成・普及のための共通の法的枠組みを設ける。",
-      "after": "この規則は、人口と出生・死亡などの人口動態に関する欧州統計の開発・作成・普及のための共通の法的枠組みを設ける。",
-      "reason": "直訳的な「生命事象」を、この文脈で扱う出来事が分かる日本語にする。",
-      "method": "skill_based_codex",
-      "gemini_used": false,
-      "page": 10
-    },
-    {
-      "example_index": 2,
-      "field": "summary_ja",
-      "before": "この規則は、人口とそれに関する出来事、すなわち出生と死亡について、データの調和と提供を規律することを目的とする。",
-      "after": "この規則は、人口とそれに関する出来事、すなわち出生と死亡について、データの調和と提供について共通のルールを定めることを目的とする。",
-      "reason": "「規律する」の硬い直訳を、何を定めるかが分かる表現にする。",
-      "method": "skill_based_codex",
-      "gemini_used": false,
-      "page": 10
-    },
-    {
-      "before": "法令本文は千語から数十万語に及ぶ。",
-      "after": "法令本文は数百語から100万語超に及ぶ。",
-      "reason": "固定配布の実測範囲に合わせ、長さを過小に限定しない。",
-      "page": 6,
-      "method": "skill_based_codex",
-      "gemini_used": false
-    },
-    {
-      "before": "要約の目標段落数は、各言語のtrainから得た平均圧縮率と、入力の段落数から決める。",
-      "after": "要約の目標段落数は、各言語のtrainの段落圧縮率と、入力の段落数から決める。",
-      "reason": "論文averageと保存実装medianの差を断定的に混同しない。実装の中央値は出典記録に残す。",
-      "page": 25,
-      "method": "skill_based_codex",
-      "gemini_used": false
-    },
-    {
-      "example_index": 6,
-      "field": "input_ja",
-      "before": "この規則は、視覚障害者やその他の理由で印刷物を読むことが困難な人の利益のため、EUとマラケシュ条約の締約国である第三国との間で、一定の著作物その他の対象物をアクセシブルな形式の複製物として、権利者の許諾なしに国境を越えて交換するための統一規則を定める。対象は指令2001/29/ECと指令（EU）2017/1564で調和された領域であり、域内市場における排他的権利と例外の調和を損なわないことを目的とする。",
-      "after": "この規則は、視覚障害やその他の障害により印刷物を読むことが困難な人の利益のため、EUとマラケシュ条約の締約国である第三国との間で、一定の著作物その他の対象物をアクセシブルな形式の複製物として、権利者の許諾なしに国境を越えて交換するための統一規則を定める。対象は指令2001/29/ECと指令（EU）2017/1564で調和された領域であり、域内市場における排他的権利と例外の調和を損なわないことを目的とする。",
-      "reason": "print-disabledの条件を保ち、単に任意の理由で読みにくい人へ対象を広げない。",
-      "method": "skill_based_codex",
-      "gemini_used": false,
-      "page": 42
-    },
-    {
-      "example_index": 6,
-      "field": "summary_ja",
-      "before": "視覚障害者やその他の理由で印刷物を読むことが困難な人の利益のため、著作物その他の対象物*をアクセシブルな形式の複製物*として、EU諸国とマラケシュ条約の締約国であるEU域外国の間で共有する方法を定める。著作権者の許諾を得る必要はない。",
-      "after": "視覚障害やその他の障害により印刷物を読むことが困難な人の利益のため、著作物その他の対象物*をアクセシブルな形式の複製物*として、EU諸国とマラケシュ条約の締約国であるEU域外国の間で共有する方法を定める。著作権者の許諾を得る必要はない。",
-      "reason": "print-disabledの条件を保ち、単に任意の理由で読みにくい人へ対象を広げない。",
-      "method": "skill_based_codex",
-      "gemini_used": false,
-      "page": 42
-    },
-    {
-      "example_index": 2,
-      "field": "summary_ja",
-      "before": "この規則は、人口とそれに関する出来事、すなわち出生と死亡について、データの調和と提供について共通のルールを定めることを目的とする。",
-      "after": "この規則は、人口とそれに関する出来事、すなわち出生と死亡のデータを調和させ、提供するための共通ルールを定めることを目的とする。",
-      "reason": "「について」の近接した反復を整理し、データをどう扱う制度かを一文で追える語順にする。",
-      "method": "skill_based_codex",
-      "gemini_used": false,
-      "page": 10
-    },
-    {
-      "page": 61,
-      "before": "現在の英語trainには、空白区切りで要約の方が長い組も1件あった。全組が必ず短くなるとは説明しない。",
-      "after": "現在の英語trainには、空白区切りで数えると、法令本文より要約の方が長い組が1件含まれる。",
-      "reason": "制作者の説明方針を述べる文末を、実データに含まれる特徴の説明にする。",
-      "method": "skill_based_codex",
-      "gemini_used": false
-    },
-    {
-      "page": 41,
-      "pages": [
-        40,
-        41,
-        42
-      ],
-      "before": "実例6：読みやすい形式の著作物を交換する：入力（訳）",
-      "after": "実例6：読書を助ける複製物の交換：入力（訳）",
-      "reason": "題名の（訳）が独立した2行目となる重なりを解消し、同じ実例の題名も統一する。",
-      "method": "skill_based_codex",
-      "gemini_used": false
-    }
-  ],
-  "independent_review": "editorial-2026-10/independent-review/",
-  "remaining_issues": [],
-  "status": "independent_review_passed",
   "self_visual_review": {
     "visual-review.json": {
+      "tag": "source-coverage-2026-10",
       "method": "skill_based_codex",
       "gemini_used": false,
-      "baseline_native_pages_read": [
+      "individual_pages_viewed": [
         1,
         2,
         3,
@@ -1000,106 +4081,184 @@
         63,
         64,
         65,
-        66
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153
       ],
-      "individual_final_page_views": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16,
-        17,
-        18,
-        19,
-        20,
-        21,
-        22,
-        23,
-        24,
-        25,
-        26,
-        27,
-        28,
-        29,
-        30,
-        31,
-        32,
-        33,
-        34,
-        35,
-        36,
-        37,
-        38,
-        39,
-        40,
-        41,
-        42,
-        43,
-        44,
-        45,
-        46,
-        47,
-        48,
-        49,
-        50,
-        51,
-        52,
-        53,
-        54,
-        55,
-        56,
-        57,
-        58,
-        59,
-        60,
-        61,
-        62,
-        63,
-        64
+      "overview_viewed": true,
+      "three_digit_pages_individually_checked": [
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153
       ],
-      "final_changed_page_rechecks": [
-        6,
-        23,
-        32,
-        51,
-        59,
-        60,
-        62,
-        63,
-        64
-      ],
-      "observations": [
-        "不変baseline66頁の全native本文・表・原文とJPを通読し、64頁/main33へ整理。旧31実行件数監査と旧59公表値/公開集計4セル照合を外部記録へ移した。",
-        "13実例8言語の原文/参照と表示範囲はbaselineと完全一致。JPは実例12の4概念を自然化し、他12例は完全一致。表示が連続抜粋であることと元法令/要約の全文語数を保持。",
-        "8native表とchart6値は完全一致。24言語375共通法令/187validation/188test、2022LexRankと英西翻訳の条件、参照翻訳の位置付けを保持。",
-        "ROUGE F1を語の回収と重なりとして説明。制作分担・固定revision・行番号・取得画面説明を除去。Celex IDは意味ある法令識別子として保持。",
-        "公式README/HFカード/旧ローダーの許諾表記差、評価用の新しい法令への偏り、複数法令を扱う要約と最長入力の関係を簡潔に保持。",
-        "公開JSONLを読む6行nativeコードを実行。33枠の実画素上下差最大1.37pt、コード10/10pt。",
-        "64頁を個別view。最終タイトル32とレビュー修正51/59を再view。layout360段落143セル0/native407段落154セル0/XSD新規0/56URL一致/notes0/作者sasakiy84。"
-      ],
+      "native_frames": 704,
+      "native_paragraphs": 1039,
+      "native_frame_candidates": 0,
+      "quote_and_code_panels": 112,
+      "max_top_bottom_gap_difference_pt": 0.6633333333333553,
+      "final_appendix_frame_fix_png_differences": [],
       "remaining_issues": [],
       "final_hashes": {
-        "datasets-in-10-minutes-eurlexsum.pdf": "8fa10a677263392655188f5f5bcf345894b7d2476272ac4fa44e2a30345e6270",
-        "datasets-in-10-minutes-eurlexsum.pptx": "48b68df28624227e63af328b44eaa846bf72dd7a83ce5c891ca91e2d994e333e"
+        "pptx": "59676bd67c79fad0a4beb6f6a443648fa6e8da7ec313479e5304b578af1609a0",
+        "pdf": "946839fb18540d920a0787280951473e52cfeb006b8595451cb24a3cd8fac648"
       }
     }
   },
-  "updated_at": "2026-10-19T10:12:17+00:00",
-  "artifact_sha256": {
-    "pptx": "1d6e6f3064e67a8b4fed7627a14597845bfe3fd245e6718f16117ad53e2f39af",
-    "pdf": "46e066462c98c40757cf20ed37d6f3ea0a4b517991c8235d760a054de1d8c4ca"
-  },
+  "source_coverage_revisions": [
+    {
+      "checked_at": "2026-10-20T13:16:49Z",
+      "method": "skill_based_codex",
+      "gemini_used": false,
+      "baseline_artifact_sha256": {
+        "pptx": "1d6e6f3064e67a8b4fed7627a14597845bfe3fd245e6718f16117ad53e2f39af",
+        "pdf": "46e066462c98c40757cf20ed37d6f3ea0a4b517991c8235d760a054de1d8c4ca"
+      },
+      "artifact_sha256": {
+        "pptx": "59676bd67c79fad0a4beb6f6a443648fa6e8da7ec313479e5304b578af1609a0",
+        "pdf": "946839fb18540d920a0787280951473e52cfeb006b8595451cb24a3cd8fac648"
+      },
+      "total_pages": 153,
+      "record_directory": "source-coverage-2026-10/",
+      "independent_review": "source-coverage-2026-10/independent-review/handoff.json",
+      "main_review": "source-coverage-2026-10/main-review.json"
+    }
+  ],
   "editorial_revisions": [
     {
       "checked_at": "2026-10-19T10:12:17+00:00",
@@ -1120,13 +4279,5 @@
       "independent_review": "editorial-2026-10/independent-review/",
       "main_check": "editorial-2026-10/main-review.json"
     }
-  ],
-  "current_revision": "editorial-2026-10/",
-  "previous_review_record": "editorial-2026-10/previous/review.json",
-  "audit_sources": {
-    "layout-audit.json": "editorial-2026-10/layout-audit.json",
-    "package-audit.json": "editorial-2026-10/package-audit.json",
-    "links-audit.json": "editorial-2026-10/links-audit.json",
-    "content-checks.json": "editorial-2026-10/content-checks.json"
-  }
+  ]
 }

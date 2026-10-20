@@ -1,0 +1,52 @@
+{
+  "paper": {
+    "title": "EUR-Lex-Sum: A Multi- and Cross-lingual Dataset for Long-form Summarization in the Legal Domain",
+    "authors": [
+      "Dennis Aumiller",
+      "Ashish Chouhan",
+      "Michael Gertz"
+    ],
+    "year": 2022,
+    "url": "https://aclanthology.org/2022.emnlp-main.519/",
+    "local_pdf": "/workspace/artifacts/helm-parallel/eurlexsum/evidence/paper.pdf",
+    "sha256": "8d3c7a5eda347dcbaf0da016fbfa3243b14506ce5514af8dda645d17a46b1208"
+  },
+  "direct_read_checks": [
+    {
+      "section": "3.1",
+      "facts": [
+        "施行中EU法令20分野",
+        "Celex ID共通",
+        "2022年5〜6月収集"
+      ]
+    },
+    {
+      "section": "3.1.2",
+      "facts": [
+        "HTML/要約両方必要",
+        "言語別20〜30%が複数法令",
+        "最長関連法令一つを選択"
+      ]
+    },
+    {
+      "section": "5.1/Table3",
+      "facts": [
+        "段落単位の多言語埋め込みLexRank",
+        "追加学習不要",
+        "語幹処理なしROUGE",
+        "英語test26.68/13.65/13.58",
+        "独語test26.72/13.75/12.56",
+        "西語test28.34/17.12/15.23"
+      ]
+    },
+    {
+      "section": "Appendix implementation",
+      "facts": [
+        "LEDBill約4096tokens区切りの生成を連結",
+        "OPUS-MT約500subword区切り"
+      ]
+    }
+  ],
+  "status": "preliminary_baseline_non_example_read",
+  "gemini_used": false
+}
