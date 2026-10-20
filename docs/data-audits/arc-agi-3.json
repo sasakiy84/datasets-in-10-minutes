@@ -1,0 +1,115 @@
+{
+  "public_games": 25,
+  "public_levels": 183,
+  "level_histogram": {
+    "7": 5,
+    "8": 6,
+    "6": 9,
+    "9": 4,
+    "10": 1
+  },
+  "operation_tags": {
+    "keyboard": 4,
+    "keyboard_click": 13,
+    "click": 7,
+    "(none)": 1
+  },
+  "method": "All 25 public EnvironmentInfo records from official SDK API. One game counted once; level count = baseline_actions array length.",
+  "example_games": 13,
+  "example_task_levels": 13,
+  "successful_level1_examples": 7,
+  "main_example_games": [
+    "r11l-495a7899",
+    "lp85-305b61c3",
+    "ka59-38d34dbb"
+  ],
+  "sdk": "arc-agi 0.9.9",
+  "engine": "arcengine 0.9.3",
+  "model_result_rows": [
+    {
+      "datasetId": "v3_Semi_Private",
+      "datasetDisplayName": "ARC-AGI-3",
+      "modelId": "openai-gpt-5-6-sol-max",
+      "modelDisplayName": "GPT-5.6 Sol (Max)",
+      "modelType": "CoT",
+      "modelGroup": "openai-gpt-5-6-sol",
+      "modelReleaseDate": "2026-07-09T00:00:00.000Z",
+      "providerId": "OpenAI",
+      "providerDisplayName": "OpenAI",
+      "providerColor": "#1e93ffff",
+      "score": 0.0778,
+      "cost": 25064.11,
+      "resultsUrl": "/results/openai-gpt-5-6-sol",
+      "display": true
+    },
+    {
+      "datasetId": "v3_Semi_Private",
+      "datasetDisplayName": "ARC-AGI-3",
+      "modelId": "anthropic-claude-opus-5-high",
+      "modelDisplayName": "Claude Opus 5 (High)",
+      "modelType": "CoT",
+      "modelGroup": "anthropic-claude-opus-5",
+      "modelReleaseDate": "2026-07-24T00:00:00.000Z",
+      "providerId": "Anthropic",
+      "providerDisplayName": "Anthropic",
+      "providerColor": "#f93c32ff",
+      "score": 0.3016,
+      "cost": 20657.37,
+      "resultsUrl": "/results/anthropic-claude-opus-5",
+      "display": true
+    },
+    {
+      "datasetId": "v3_Semi_Private",
+      "datasetDisplayName": "ARC-AGI-3",
+      "modelId": "openai-gpt-6-astra-max",
+      "modelDisplayName": "GPT-6 Astra (Max)",
+      "modelType": "CoT",
+      "modelGroup": "openai-gpt-6-astra",
+      "modelReleaseDate": "2026-09-02T00:00:00.000Z",
+      "providerId": "OpenAI",
+      "providerDisplayName": "OpenAI",
+      "providerColor": "#1e93ffff",
+      "score": 0.6271280210060628,
+      "cost": 26097.501720000007,
+      "resultsUrl": "/results/openai-gpt-6-astra",
+      "display": true
+    },
+    {
+      "datasetId": "v3_Semi_Private",
+      "datasetDisplayName": "ARC-AGI-3",
+      "modelId": "openai-gpt-6-astra-high-provider-adapter",
+      "modelDisplayName": "GPT-6 Astra - Provider Adapter (High)",
+      "modelType": "CoT",
+      "modelGroup": "openai-gpt-6-astra-provider-adapter",
+      "modelReleaseDate": "2026-09-02T00:00:00.000Z",
+      "providerId": "OpenAI",
+      "providerDisplayName": "OpenAI",
+      "providerColor": "#1e93ffff",
+      "score": 0.99945712321257,
+      "cost": 18816.63138,
+      "resultsUrl": "/results/openai-gpt-6-astra",
+      "display": true,
+      "pointShape": "circle"
+    }
+  ],
+  "model_percent_method": "score field multiplied by 100 and rounded to 1 decimal place",
+  "leaderboard_generated_at": "2026-10-15T13:59:08.325Z",
+  "paper_versions": {
+    "definition": "v2",
+    "initial_results": "v2 table 2"
+  },
+  "paper_implementation_difference": "v2 equation (1) writes min(1.15,h/a)^2, but prose says level score capped at115%. SDK0.9.9 computes min(100*(h/a)^2,115); slide follows actual SDK and prose. v1 second-best baseline/100% cap superseded by v2 upper-median successful human/115% cap.",
+  "human_log_source": "OpenAI July29 settings article links to magic-sword/arc_agi_3_public_demo_human_testing; official human-log community mirror. Successful full sessions selected by independent reviewer, first level replayed in local SDK. Logs are illustrative sessions, not representatives of human scoring baseline.",
+  "human_log_rights": "Public source linked from official article. No independent blanket license asserted for human logs. Raw sessions retained only as review evidence; slides reproduce game observations from MIT-licensed official game code.",
+  "sdk_demonstrations": {
+    "r11l": "Author used public source to construct an actual successful SDK interaction, not a blind participant/model score",
+    "cn04": "Parent agent used public source to construct actual successful SDK interaction; copied with provenance"
+  },
+  "source_screenshot": "Official ARC-AGI-3 page, HTTP200, CSS4 stylesheets, actual Chromium screenshot visually checked. Asset failures noted in screenshot-log.json; page body/style/hero game rendering are visible.",
+  "gemini_used": false,
+  "artifact_sha256": {
+    "pdf": "2cf23630a39ae103fe62ff157e9290e37c201302f468188ecd0067594cf215a6",
+    "pptx": "2f6cedfd47f8f1b87f00502bbcf4c7361aa192b4d9d53715e2997765e9699678"
+  },
+  "final_review": "../skill-proofreading/arc-agi-3/review.json"
+}

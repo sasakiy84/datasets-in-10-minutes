@@ -1,0 +1,568 @@
+{
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "skills": [
+    "master-guided-slides",
+    "dataset-introduction-slides",
+    "japanese-slide-proofreading"
+  ],
+  "before_after": [
+    {
+      "category": "構成",
+      "before": "章名が1→2→1→3→2→4と往復する。",
+      "after": "目次の4章を連続させ、章入口に章扉を置く。",
+      "reason": "主題の関係をたどれる順に再構成した。"
+    },
+    {
+      "category": "実例",
+      "before": "画素の変化を示す未完了の観測。",
+      "after": "本編3ゲームを、目標と成功フィードバックを示す観測へ置換。",
+      "reason": "入力・操作・結果の対応を明確にした。"
+    },
+    {
+      "category": "日本語",
+      "before": "レベル1完了：levels_completed 0 → 1",
+      "after": "レベル1を達成",
+      "reason": "読者向けの成功表示からAPI内部値を除いた。"
+    },
+    {
+      "category": "日本語",
+      "before": "採用された環境数とは異なる。",
+      "after": "削除",
+      "reason": "既に全候補の試験と記しているため、重複を除いた。"
+    },
+    {
+      "category": "日本語",
+      "before": "公開デモは学習用の網羅的な見本ではない。",
+      "after": "削除",
+      "reason": "非公開側の仕組みの違いを具体的に説明した本文に絞った。"
+    },
+    {
+      "category": "日本語",
+      "before": "用途に合う条件を選んで比較する。",
+      "after": "削除",
+      "reason": "集合と実行基盤の具体的な違いを残した。"
+    },
+    {
+      "category": "事実",
+      "before": "初期v1の0.37 / 0.26 / 0.25 / 0.00%。",
+      "after": "v2が報告する初期0.50 / 0.40 / 0.20 / 0.10%。",
+      "reason": "採点説明をv2に統一した。"
+    },
+    {
+      "category": "事実",
+      "before": "LF52でACTION5を実行する。",
+      "after": "LF52で提供内のACTION6を2回実行する。",
+      "reason": "非提供操作を実例から除いた。"
+    },
+    {
+      "category": "組版",
+      "before": "出典と説明・成功表示との間隔が狭い。",
+      "after": "実描画の文字境界で8pt以上を確保する位置へ調整。",
+      "reason": "本文と出典の重なりを避けた。"
+    },
+    {
+      "category": "組版",
+      "before": "与えられるもの",
+      "after": "提示内容",
+      "reason": "表セルの最後1字だけの折返しを解消。"
+    },
+    {
+      "category": "組版",
+      "before": "全て人間と同じ手数",
+      "after": "人間と同じ手数",
+      "reason": "表見出しの最後1字だけの折返しを解消。"
+    },
+    {
+      "category": "意味の明確化",
+      "before": "全レベルを分母にした加重平均",
+      "after": "全レベルの重みの合計を分母にした加重平均",
+      "reason": "加重平均の分母を数学的に正確に述べた。"
+    },
+    {
+      "category": "実例",
+      "before": "r11lの最終図に次レベルの盤面を表示",
+      "after": "成功操作3のframe5に差替え",
+      "reason": "紫の中点と輪が重なる実際の局面を可視化。"
+    },
+    {
+      "category": "組版 V1",
+      "pages": [
+        6,
+        8,
+        10,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44
+      ],
+      "before": "観測ラベルの実文字下端が画像上辺に接触・重複。",
+      "after": "全13実例の画像を13pt下げ、縦横13pt縮めて下端を保持。",
+      "reason": "39ラベル全てで実文字下端と画像上辺に7.21pt以上の余白を実測。"
+    },
+    {
+      "category": "組版 V2",
+      "pages": [
+        48
+      ],
+      "before": "1行の参考文献タイトルに2行分の高さを予約。",
+      "after": "タイトルの予約高を22.6pt縮め、後続の書誌・説明・URLと次の文献を上へ移動。",
+      "reason": "タイトル実文字下端と書誌の実文字上端の間隔を4.04ptに調整。"
+    },
+    {
+      "category": "native frame / Appendix",
+      "pages": [
+        33
+      ],
+      "before": "Appendixのdescender inkがnative title枠下端から2.151pt外。",
+      "after": "MIDDLE anchorの実効content領域を保ち、heightとbottom marginを各3pt追加。",
+      "reason": "title inkを枠内へ収めた。p33のpixelは旧版同一。"
+    },
+    {
+      "category": "native frame / sources",
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        17,
+        25,
+        26,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "before": "出典の日本語丸括弧ink上端がnative枠から最大約0.624pt外。",
+      "after": "21頁のsource枠yを−0.7pt、高さとtop marginを各+0.7pt。",
+      "reason": "OOXML content原点とcontent高さを維持して枠内へ収めた。LO丸めで一部PDF座標に最大0.028015pt差、14頁のURL下線帯だけraster差。"
+    }
+  ],
+  "pages": [
+    {
+      "page": 1,
+      "title": "ARC-AGI-3",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    },
+    {
+      "page": 2,
+      "title": "ARC-AGI-3の公式サイト",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    },
+    {
+      "page": 3,
+      "title": "",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    },
+    {
+      "page": 4,
+      "title": "1. 観測からルールを学ぶ",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    },
+    {
+      "page": 5,
+      "title": "最終回答より、学び方を測る",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    },
+    {
+      "page": 6,
+      "title": "実例1：中点を同じ色の輪へ運ぶ",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    },
+    {
+      "page": 7,
+      "title": "実例1：端点の移動が中点を変える",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    },
+    {
+      "page": 8,
+      "title": "実例2：色列を動かして目印を合わせる",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    },
+    {
+      "page": 9,
+      "title": "実例2：色列の移動で目印を合わせる",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    },
+    {
+      "page": 10,
+      "title": "実例3：二つの駒をそれぞれ枠へ入れる",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    },
+    {
+      "page": 11,
+      "title": "実例3：操作する駒を切り替える",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    },
+    {
+      "page": 12,
+      "title": "ARC-AGI-2から何が変わったか",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    },
+    {
+      "page": 13,
+      "title": "試す・モデル化する・目標を知る・計画する",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    },
+    {
+      "page": 14,
+      "title": "2. 人間基準の得点と性能",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    },
+    {
+      "page": 15,
+      "title": "成功と行動数を一緒に採点する",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    },
+    {
+      "page": 16,
+      "title": "公開時のモデルは1%未満だった",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    },
+    {
+      "page": 17,
+      "title": "現在は実行基盤による差が大きい",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    },
+    {
+      "page": 18,
+      "title": "99.9%はモデル名だけでは読めない",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    },
+    {
+      "page": 19,
+      "title": "後のレベルほど採点への重みが大きい",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    },
+    {
+      "page": 20,
+      "title": "同じ完了率でも行動数で得点が変わる",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    },
+    {
+      "page": 21,
+      "title": "3. 環境の作成と公開セット",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    },
+    {
+      "page": 22,
+      "title": "専用のゲームスタジオが環境を作る",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    },
+    {
+      "page": 23,
+      "title": "人間が初見で解けることを採用条件にする",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    },
+    {
+      "page": 24,
+      "title": "135環境を3種類の集合に分ける",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    },
+    {
+      "page": 25,
+      "title": "公開25環境は6〜10レベルを持つ",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    },
+    {
+      "page": 26,
+      "title": "操作の組合せも環境ごとに違う",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    },
+    {
+      "page": 27,
+      "title": "4. 使い方と評価の読み方",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    },
+    {
+      "page": 28,
+      "title": "長い対話では、何を記憶するかも変わる",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    },
+    {
+      "page": 29,
+      "title": "人間の試遊とSDKから始められる",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    },
+    {
+      "page": 30,
+      "title": "SDKで観測を読み、次の操作を出す",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    },
+    {
+      "page": 31,
+      "title": "利用条件と評価対象を選ぶ",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    },
+    {
+      "page": 32,
+      "title": "ARC-AGI-3が見せるのは初見の学習効率",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    },
+    {
+      "page": 33,
+      "title": "Appendix",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    },
+    {
+      "page": 34,
+      "title": "",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    },
+    {
+      "page": 35,
+      "title": "実例4：左右の移動を比べる",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    },
+    {
+      "page": 36,
+      "title": "実例5：地形そのものが変わる",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    },
+    {
+      "page": 37,
+      "title": "実例6：図形を枠へ合わせる",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    },
+    {
+      "page": 38,
+      "title": "実例7：向きと位置をそろえる",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    },
+    {
+      "page": 39,
+      "title": "実例8：小さな位置変化を読む",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    },
+    {
+      "page": 40,
+      "title": "実例9：赤と青の並びを合わせる",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    },
+    {
+      "page": 41,
+      "title": "実例10：別の駒が反応する",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    },
+    {
+      "page": 42,
+      "title": "実例11：選んだマスの反応を調べる",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    },
+    {
+      "page": 43,
+      "title": "実例12：操作を重ねてレベルを完了する",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    },
+    {
+      "page": 44,
+      "title": "実例13：動く部分と背景を見分ける",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    },
+    {
+      "page": 45,
+      "title": "公開セットの環境とレベル数（1/2）",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    },
+    {
+      "page": 46,
+      "title": "公開セットの環境とレベル数（2/2）",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    },
+    {
+      "page": 47,
+      "title": "人間試験は、解けた理由も調べる",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    },
+    {
+      "page": 48,
+      "title": "参考文献（1/3）",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    },
+    {
+      "page": 49,
+      "title": "参考文献（2/3）",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    },
+    {
+      "page": 50,
+      "title": "参考文献（3/3）",
+      "text_review": "reviewed for subject/predicate, particles, parallel forms, temporal/conditional meaning, abbreviations, and redundant cautions",
+      "native_content": "pages.jsonl"
+    }
+  ],
+  "actual_visual_review": "Author full-page view1–30; final changed pages6,12,19,20 rechecked. Overview1–50 and text/data checks1–50 complete. Fresh independent full-page review31–50 requested by parent.",
+  "spacing_revision": {
+    "changed_pages": [
+      6,
+      8,
+      10,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      48
+    ],
+    "author_actual_reopened_pages": [
+      6,
+      8,
+      10,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      48
+    ],
+    "artifact_sha256": {
+      "pptx": "e3976eb69784d3579e19967560bd749e10f659433e5c52213f73ec7440481c38",
+      "pdf": "13278c91c6da1b80c0b0600071b3097d7aeea9631839ac37d85d2bb6fe9f73dc"
+    },
+    "external_generative_api_used": false,
+    "verification": "All changed pages individually opened at1080x608. Glyph/package/links/native-frame audits repeated. 36 unchanged pages are pixel-identical."
+  },
+  "native_frame_revision": {
+    "structural_pages": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      17,
+      25,
+      26,
+      33,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "pixel_changed_pages": [
+      7,
+      9,
+      11,
+      17,
+      25,
+      26,
+      35,
+      36,
+      39,
+      41,
+      42,
+      44,
+      45,
+      46
+    ],
+    "author_actual_reopened_pages": [
+      7,
+      9,
+      11,
+      17,
+      25,
+      26,
+      35,
+      36,
+      39,
+      41,
+      42,
+      44,
+      45,
+      46
+    ],
+    "artifact_sha256": {
+      "pptx": "2f6cedfd47f8f1b87f00502bbcf4c7361aa192b4d9d53715e2997765e9699678",
+      "pdf": "2cf23630a39ae103fe62ff157e9290e37c201302f468188ecd0067594cf215a6"
+    },
+    "all50_text_strings_identical": true,
+    "all50_pixel_identical": false,
+    "pixel_identical_pages": 36,
+    "difference_scope": "14pages URL underline raster bands only; glyph pixels unchanged as independently confirmed.",
+    "max_pdf_text_origin_rounding_delta_pt": 0.028015,
+    "ink_frame_candidates": 0
+  }
+}

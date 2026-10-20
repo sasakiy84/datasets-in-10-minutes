@@ -1,0 +1,250 @@
+[
+  {
+    "page": 1,
+    "text": "ARC-AGI-3\nARC: Abstraction and Reasoning Corpus\nAGI: Artificial General Intelligence\n未知の環境で、観測と行動からルールを学ぶ\nsasakiy84\ndatasets in 10 minutes (2026-10-20)",
+    "tables": []
+  },
+  {
+    "page": 2,
+    "text": "ARC-AGI-3の公式サイト\n1. 観測と行動から課題を知る\n[1] ARC Prize Foundation. ARC-AGI-3.  https://arcprize.org/arc-agi/3",
+    "tables": []
+  },
+  {
+    "page": 3,
+    "text": "\n観測と行動から課題を知る\n人間基準の得点と到達水準\n環境の作成と公開セット\n使い方と評価の読み方\n目次",
+    "tables": []
+  },
+  {
+    "page": 4,
+    "text": "最終回答より、学び方を測る\n初めて見るゲームを操作し、目標とルールを自分で見つける。自然言語による遊び方の説明は与えられない。\n入力は64×64の16色の画面。出力はキー操作や、座標を指定するクリックである。\n観測 → 行動 → 次の観測を繰り返し、全レベルを少ない行動で完了する。\n1. 観測と行動から課題を知る\n[1] ARC Prize Foundation (2026). ARC-AGI-3: A New Challenge for Frontier Agentic Intelligence, v2.  https://arxiv.org/abs/2603.24621",
+    "tables": []
+  },
+  {
+    "page": 5,
+    "text": "実例1：中点を同じ色の輪へ運ぶ\n1. 観測と行動から課題を知る\nr11l / レベル1からレベル2へ　SDKで実行した成功例\n開始時\n操作1後\nACTION6 (38, 8)\n操作3後\n端点を選択 → (48,36)\n二つの端点を動かし、紫色の中点を輪へ重ねると、次の盤面へ進む。\nレベル1完了：levels_completed 0 → 1\n[1] ARC Prize Foundation. Public Game Set / SDK観測（2026-10-20）.  https://arcprize.org/tasks",
+    "tables": []
+  },
+  {
+    "page": 6,
+    "text": "実例1：端点の移動が中点を変える\n白い端点を動かすと、線の中点にある紫色の図形も動く。二つの端点を調整し、紫色の図形を同じ色の輪へ重ねる。\n実行した操作はクリック(38,8)、もう一方の端点を選ぶクリック(28,57)、移動先を指すクリック(48,36)。\n3回目の操作で図形が点滅し、完了レベル数が0から1へ増えた。表示も次のレベルへ切り替わる。\n1. 観測と行動から課題を知る\n[1] ARC Prize Foundation. Public Game Set / SDK観測（2026-10-20）.  https://arcprize.org/tasks",
+    "tables": []
+  },
+  {
+    "page": 7,
+    "text": "成功と行動数を一緒に採点する\n得点はRHAE（Relative Human Action Efficiency）。人間が使った行動数に対する、エージェントの効率を表す。\nレベルを完了した場合、人間基準 ÷ AIの行動数を二乗する。未完了のレベルは0点になる。\n人間基準が10手なら、20手で25%、100手で1%。完了するだけでは高い得点にならない。\n2. 人間基準の得点と到達水準\n[1] ARC Prize Foundation (2026). ARC-AGI-3: A New Challenge for Frontier Agentic Intelligence, v2.  https://arxiv.org/abs/2603.24621\n[2] ARC Prize Foundation. ARC-AGI Toolkit 0.9.9.  https://github.com/arcprize/arc-agi",
+    "tables": []
+  },
+  {
+    "page": 8,
+    "text": "公開時のモデルは1%未満だった\n2. 人間基準の得点と到達水準\nsemi-private 55環境。論文v2が報告する公開時の性能。\n[1] ARC Prize Foundation (2026). ARC-AGI-3: A New Challenge for Frontier Agentic Intelligence, v2.  https://arxiv.org/abs/2603.24621",
+    "tables": [
+      "モデル（2026年3月公表） | RHAE\nOpus 4.6 (Max) | 0.50%\nGemini 3.1 Pro Preview | 0.40%\nGPT 5.4 (High) | 0.20%\nGrok-4.20 (Beta 0309 Reasoning) | 0.10%"
+    ]
+  },
+  {
+    "page": 9,
+    "text": "現在は実行基盤による差が大きい\n2. 人間基準の得点と到達水準\nsemi-private。2026-10-20確認。Standardは共通の履歴管理、Provider Adapterは提供元固有の状態を保持する。\n[1] ARC Prize Foundation. ARC-AGI-3 leaderboard（2026-10-20確認）.  https://arcprize.org/leaderboard",
+    "tables": [
+      "モデル / 実行基盤 | RHAE\nGPT-5.6 Sol (Max) / Standard | 7.8%\nClaude Opus 5 (High) / Standard | 30.2%\nGPT-6 Astra (Max) / Standard | 62.7%\nGPT-6 Astra (High) / Provider Adapter | 99.9%"
+    ]
+  },
+  {
+    "page": 10,
+    "text": "99.9%はモデル名だけでは読めない\nOpenAIのAstra紹介でもARC-AGI-3を採用し、99.9%と報告している。公式リーダーボードではProvider Adapter / Highの結果に対応する。\n同じAstraでもStandard / Maxでは62.7%。行動間で何を記憶し、長い履歴をどう要約するかが結果に関わる。\n公開セットの実験では、Solの記憶保持と履歴の要約を有効にすると、13.3%から38.3%へ上がった。\n2. 人間基準の得点と到達水準\n[1] OpenAI (2026). GPT-6 Astra: A new generation of intelligence.  https://openai.com/index/gpt-6-astra/\n[2] Ilan Bigio & Ted Sanders (2026-07-29). How enabling two settings tripled our scores on the ARC-AGI-3 benchmark.\nhttps://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores/",
+    "tables": []
+  },
+  {
+    "page": 11,
+    "text": "ARC-AGI-2から何が変わったか\n1. 観測と行動から課題を知る\n[1] ARC Prize Foundation (2026). ARC-AGI-3: A New Challenge for Frontier Agentic Intelligence, v2.  https://arxiv.org/abs/2603.24621",
+    "tables": [
+      "観点 | ARC-AGI-2 | ARC-AGI-3\n与えられるもの | 入力と出力の例 | 操作できる未知の環境\n解答の形 | 完成した出力グリッド | 観測に応じた行動列\n学ぶ機会 | 提示された例 | 自分の操作と反応\n採点の中心 | 出力の正しさ | 完了と行動効率"
+    ]
+  },
+  {
+    "page": 12,
+    "text": "実例2：色列を動かして目印を合わせる\n1. 観測と行動から課題を知る\nlp85 / レベル1からレベル2へ　公開の人間操作ログをSDKで再生\n操作4後\n操作5後\nACTION6 (6, 33)\n操作6後\nACTION6 (6, 33)\n同じ赤いボタンを続けて押すと色列が移り、目印が合うと盤面が切り替わる。\nレベル1完了：levels_completed 0 → 1\n[1] ARC Prize Foundation. 公開人間試験ログ（公式記事が参照するミラー）.  https://huggingface.co/datasets/magic-sword/arc_agi_3_public_demo_human_testing",
+    "tables": []
+  },
+  {
+    "page": 13,
+    "text": "実例2：色列の移動で目印を合わせる\n赤いボタンをクリックすると、輪に並んだ色のマスが移る。黄色の角が付いた目印に、対応するマスを合わせる。\n人間の公開操作ログでは、6回のクリックで最初のレベルを完了した。最後の3回は同じ位置(6,33)をクリックしている。\n成功すると上部の進捗表示が緑になり、新しい盤面へ切り替わる。観測した反応から、操作の規則と目標を結び付けられる。\n1. 観測と行動から課題を知る\n[1] ARC Prize Foundation. 公開人間試験ログ（公式記事が参照するミラー）.  https://huggingface.co/datasets/magic-sword/arc_agi_3_public_demo_human_testing",
+    "tables": []
+  },
+  {
+    "page": 14,
+    "text": "実例3：二つの駒をそれぞれ枠へ入れる\n1. 観測と行動から課題を知る\nka59 / レベル1からレベル2へ　公開の人間操作ログをSDKで再生\n操作17後\n操作18後\nACTION3\n操作19後\nACTION2\n右の駒を枠へ残し、左の駒を最後に下へ動かすと、次の盤面へ進む。\nレベル1完了：levels_completed 0 → 1\n[1] ARC Prize Foundation. 公開人間試験ログ（公式記事が参照するミラー）.  https://huggingface.co/datasets/magic-sword/arc_agi_3_public_demo_human_testing",
+    "tables": []
+  },
+  {
+    "page": 15,
+    "text": "実例3：操作する駒を切り替える\n左右の緑の駒を、それぞれ黒い枠の中へ移す。キーで動かす駒は、クリックして切り替えられる。\n公開の人間ログでは、先に右の駒を枠へ入れ、次に左の駒へ切り替えて動かす。最後に左の駒が枠へ入り、次のレベルへ進んだ。\n同じ方向キーでも、どの駒を選んでいるかで結果が変わる。画面の変化と直前の選択を一緒に記憶する必要がある。\n1. 観測と行動から課題を知る\n[1] ARC Prize Foundation. 公開人間試験ログ（公式記事が参照するミラー）.  https://huggingface.co/datasets/magic-sword/arc_agi_3_public_demo_human_testing",
+    "tables": []
+  },
+  {
+    "page": 16,
+    "text": "試す・モデル化する・目標を知る・計画する\n探索では、何を操作すれば情報が得られるかを選ぶ。無反応のクリックも、仮説を更新する材料になる。\n環境のモデルを作り、物の動きや操作の効果を予測する。勝利条件も、画面と反応から推定する。\n発見したルールを後のレベルへ持ち越し、長い行動列を計画する。最初のレベルは操作を学ぶ導入として易しく作られる。\n1. 観測と行動から課題を知る\n[1] ARC Prize Foundation (2026). ARC-AGI-3: A New Challenge for Frontier Agentic Intelligence, v2.  https://arxiv.org/abs/2603.24621",
+    "tables": []
+  },
+  {
+    "page": 17,
+    "text": "専用のゲームスタジオが環境を作る\nARC Prize Foundationの開発者が、新しい仕組みを持つ環境を設計する。既存ゲームの知識ではなく、物体・空間・因果などの基本的な理解を使う。\n構想の共同レビュー、内部試遊、外部の人間による試遊を経て、採用する環境を決める。\nPythonの共通エンジンと自動検査で、表示・操作・評価をそろえ、バグや単純すぎる環境を調べる。\n3. 環境の作成と公開セット\n[1] ARC Prize Foundation (2026). ARC-AGI-3: A New Challenge for Frontier Agentic Intelligence, v2.  https://arxiv.org/abs/2603.24621",
+    "tables": []
+  },
+  {
+    "page": 18,
+    "text": "人間が初見で解けることを採用条件にする\n各環境を10人が試し、少なくとも2人が初見で全レベルを完了できた環境を採用する。\n採点の人間基準には、各レベルを完了した人を行動数順に並べた中央の人を使う。成功者が4人でも5人でも3番目を選ぶ。\n全候補の試験では486人が414環境を試し、2,893回の試行を記録した。採用された環境数とは異なる。\n3. 環境の作成と公開セット\n[1] ARC Prize Foundation (2026). ARC-AGI-3: A New Challenge for Frontier Agentic Intelligence, v2.  https://arxiv.org/abs/2603.24621",
+    "tables": []
+  },
+  {
+    "page": 19,
+    "text": "135環境を3種類の集合に分ける\n3. 環境の作成と公開セット\n非公開側は、公開デモと重ならない仕組みを多く含む。公開デモは学習用の網羅的な見本ではない。\n[1] ARC Prize Foundation (2026). ARC-AGI-3: A New Challenge for Frontier Agentic Intelligence, v2.  https://arxiv.org/abs/2603.24621",
+    "tables": [
+      "集合 | 環境数 | 役割\n公開デモ | 25 | 形式と基本操作を試す\nSemi-private | 55 | 外部APIモデルの評価\nFully private | 55 | 競技用の非公開評価"
+    ]
+  },
+  {
+    "page": 20,
+    "text": "公開25環境は6〜10レベルを持つ\n3. 環境の作成と公開セット\n横軸：レベル数　縦軸：環境数。公開25環境・計183レベル。\n[1] ARC Prize Foundation. Public Game Set / SDK観測（2026-10-20）.  https://arcprize.org/tasks",
+    "tables": []
+  },
+  {
+    "page": 21,
+    "text": "操作の組合せも環境ごとに違う\n3. 環境の作成と公開セット\n25環境の配布タグを集計。実際に使える操作は、環境が返すavailable_actionsで確かめる。\n[1] ARC Prize Foundation. Public Game Set / SDK観測（2026-10-20）.  https://arcprize.org/tasks",
+    "tables": [
+      "公開メタデータの操作タグ | 環境数\nキーとクリック（keyboard_click） | 13\nクリック（click） | 7\nキー（keyboard） | 4\nタグなし | 1"
+    ]
+  },
+  {
+    "page": 22,
+    "text": "後のレベルほど採点への重みが大きい\nレベル1、2、3…の重みは1、2、3…となる。環境の得点は、全レベルを分母にした加重平均である。\nSDK 0.9.9ではレベル得点の上限が115%。環境全体には、完了したレベルの重みの割合による上限もある。\n最後に、評価した全環境の得点を平均する。短い導入レベルだけを速く解いても、環境全体の高得点にはつながらない。\n2. 人間基準の得点と到達水準\n[1] ARC Prize Foundation (2026). ARC-AGI-3: A New Challenge for Frontier Agentic Intelligence, v2.  https://arxiv.org/abs/2603.24621\n[2] ARC Prize Foundation. ARC-AGI Toolkit 0.9.9.  https://github.com/arcprize/arc-agi",
+    "tables": []
+  },
+  {
+    "page": 23,
+    "text": "同じ完了率でも行動数で得点が変わる\n2. 人間基準の得点と到達水準\n[1] ARC Prize Foundation. ARC-AGI Toolkit 0.9.9.  https://github.com/arcprize/arc-agi",
+    "tables": [
+      "説明用の3レベル | 全て人間と同じ手数 | 全て人間の2倍\nレベル1（重み1） | 100% | 25%\nレベル2（重み2） | 100% | 25%\nレベル3（重み3） | 100% | 25%\n環境全体 | 100% | 25%"
+    ]
+  },
+  {
+    "page": 24,
+    "text": "長い対話では、何を記憶するかも変わる\nStandardは共通のテキスト履歴を使い、モデルが残したメモを次の行動へ持ち越す。\nProvider Adapterは、提供元の対話状態や推論状態を保ち、長い履歴を要約して続ける。\n公開実験の13.3→38.3%と、非公開評価の7.8%は、対象集合と実行基盤が異なる。用途に合う条件を選んで比較する。\n4. 使い方と評価の読み方\n[1] ARC Prize Foundation. ARC-AGI-3 Benchmarking.  https://github.com/arcprize/arc-agi-3-benchmarking\n[2] Ilan Bigio & Ted Sanders (2026-07-29). How enabling two settings tripled our scores on the ARC-AGI-3 benchmark.\nhttps://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores/",
+    "tables": []
+  },
+  {
+    "page": 25,
+    "text": "人間の試遊とSDKから始められる\n公式サイトのPublic Game Setでは、ブラウザで25環境を試遊できる。リプレイから操作と反応を見返せる。\nPythonのarc-agiを導入すると、同じインターフェースでローカル実行とAPI実行を扱える。\n公開ゲームは取得して動かせる。非公開評価の課題そのものは配布せず、汎化を測るために保持する。\n4. 使い方と評価の読み方\n[1] ARC Prize Foundation. ARC-AGI-3.  https://arcprize.org/arc-agi/3\n[2] ARC Prize Foundation. ARC-AGI Toolkit 0.9.9.  https://github.com/arcprize/arc-agi",
+    "tables": []
+  },
+  {
+    "page": 26,
+    "text": "SDKで観測を読み、次の操作を出す\n4. 使い方と評価の読み方\nimport arc_agi\nfrom arcengine import GameAction\n\narc = arc_agi.Arcade()\nenv = arc.make(\"ls20\")\nobs = env.reset()\nobs = env.step(GameAction.ACTION4)\n返る観測には画面、完了レベル数、状態、利用可能な操作が含まれる。\n[1] ARC Prize Foundation. ARC-AGI Toolkit 0.9.9.  https://github.com/arcprize/arc-agi",
+    "tables": []
+  },
+  {
+    "page": 27,
+    "text": "利用条件と評価対象を選ぶ\nToolkitと公式Benchmarking実装はMIT License。Python側の実行基盤として利用・改変できる。\nベンチマークを報告するときは、評価集合、モデルと推論設定、実行基盤、得点の定義を対応させる。\n公開セットは仕組みの確認や開発に向く。モデルの未知の環境への適応は、非公開セットで確かめる。\n4. 使い方と評価の読み方\n[1] ARC Prize Foundation. ARC-AGI Toolkit 0.9.9.  https://github.com/arcprize/arc-agi\n[2] ARC Prize Foundation. ARC-AGI-3 Benchmarking.  https://github.com/arcprize/arc-agi-3-benchmarking",
+    "tables": []
+  },
+  {
+    "page": 28,
+    "text": "ARC-AGI-3が見せるのは初見の学習効率\n固定の例から一度だけ答える課題を、観測と行動を繰り返す未知の環境へ広げた。\n人間が初見で解ける環境を作り、完了までの行動数を人間基準と比べる。\n現在の高得点は、モデルだけでなく履歴や推論状態を保持する実行基盤と結び付いている。\n4. 使い方と評価の読み方\n[1] ARC Prize Foundation (2026). ARC-AGI-3: A New Challenge for Frontier Agentic Intelligence, v2.  https://arxiv.org/abs/2603.24621\n[2] ARC Prize Foundation. ARC-AGI-3 leaderboard（2026-10-20確認）.  https://arcprize.org/leaderboard",
+    "tables": []
+  },
+  {
+    "page": 29,
+    "text": "Appendix\nAppendix",
+    "tables": []
+  },
+  {
+    "page": 30,
+    "text": "\n追加10環境の観測\n公開セットの内訳\n参考文献\nAppendix: 目次",
+    "tables": []
+  },
+  {
+    "page": 31,
+    "text": "実例4：左右の移動を比べる\nAppendix: 1. 追加10環境の観測\nar25 / レベル1　連続する3回の観測\n操作10後\n操作11後\nACTION2\n操作12後\nACTION1\n黒い折れ曲がった図形が左へ移り、次の操作で元の位置へ戻る。水色の縦線と黄色の図形は同じ場所に残る。\n[1] ARC Prize Foundation. Public Game Set / SDK観測（2026-10-20）.  https://arcprize.org/tasks",
+    "tables": []
+  },
+  {
+    "page": 32,
+    "text": "実例5：地形そのものが変わる\nAppendix: 1. 追加10環境の観測\nbp35 / レベル1　連続する3回の観測\n操作13後\n操作14後\nACTION4\n操作15後\nACTION3\n水色の足場の下端が、3枚目では上へ移る。紫色の領域との距離が変わり、操作前と同じ地形ではなくなる。\n[1] ARC Prize Foundation. Public Game Set / SDK観測（2026-10-20）.  https://arcprize.org/tasks",
+    "tables": []
+  },
+  {
+    "page": 33,
+    "text": "実例6：図形を枠へ合わせる\nAppendix: 1. 追加10環境の観測\ncd82 / レベル1からレベル2へ　公開の人間操作ログをSDKで再生\n操作42後\n操作43後\nACTION2\n操作44後\nACTION5\n最後の操作で図形の配置がそろい、完了数が増えて次の盤面へ進む。\nレベル1完了：levels_completed 0 → 1\n[1] ARC Prize Foundation. 公開人間試験ログ（公式記事が参照するミラー）.  https://huggingface.co/datasets/magic-sword/arc_agi_3_public_demo_human_testing",
+    "tables": []
+  },
+  {
+    "page": 34,
+    "text": "実例7：向きと位置をそろえる\nAppendix: 1. 追加10環境の観測\ncn04 / レベル1からレベル2へ　SDKで実行した成功例\n操作12後\n操作13後\nACTION2\n操作14後\nACTION2\n白い図形を回転・移動させ、赤い端点の位置を緑の図形へ合わせる。\nレベル1完了：levels_completed 0 → 1\n[1] ARC Prize Foundation. Public Game Set / SDK観測（2026-10-20）.  https://arcprize.org/tasks",
+    "tables": []
+  },
+  {
+    "page": 35,
+    "text": "実例8：小さな位置変化を読む\nAppendix: 1. 追加10環境の観測\ndc22 / レベル1　連続する3回の観測\n開始時\n操作1後\nACTION4\n操作2後\nACTION3\n左下の灰色のマスと緑色の印が横へ移る。赤い棒や右側の二つの図形は、同じ位置に残っている。\n[1] ARC Prize Foundation. Public Game Set / SDK観測（2026-10-20）.  https://arcprize.org/tasks",
+    "tables": []
+  },
+  {
+    "page": 36,
+    "text": "実例9：赤と青の並びを合わせる\nAppendix: 1. 追加10環境の観測\nft09 / レベル1からレベル2へ　公開の人間操作ログをSDKで再生\n操作41後\n操作42後\nACTION6 (48, 37)\n操作43後\nACTION6 (54, 55)\nクリックでマスの色を変える。最後の操作で完了数が増え、次の盤面へ進む。\nレベル1完了：levels_completed 0 → 1\n[1] ARC Prize Foundation. 公開人間試験ログ（公式記事が参照するミラー）.  https://huggingface.co/datasets/magic-sword/arc_agi_3_public_demo_human_testing",
+    "tables": []
+  },
+  {
+    "page": 37,
+    "text": "実例10：別の駒が反応する\nAppendix: 1. 追加10環境の観測\ng50t / レベル1　連続する3回の観測\n操作11後\n操作12後\nACTION2\n操作13後\nACTION1\n上側の小さい駒の配置が変わり、次の操作で戻る。盤面の赤い経路と右下の青い図形は同じまま見えている。\n[1] ARC Prize Foundation. Public Game Set / SDK観測（2026-10-20）.  https://arcprize.org/tasks",
+    "tables": []
+  },
+  {
+    "page": 38,
+    "text": "実例11：選んだマスの反応を調べる\nAppendix: 1. 追加10環境の観測\nlf52 / レベル1　連続する3回の観測\n開始時\n操作1後\nACTION6 (19, 19)\n操作2後\nACTION5\n緑のマスをクリックしてACTION5を実行すると、周りの色が変わる。選択した場所と、そこで実行する操作を組み合わせる。\n[1] ARC Prize Foundation. Public Game Set / SDK観測（2026-10-20）.  https://arcprize.org/tasks",
+    "tables": []
+  },
+  {
+    "page": 39,
+    "text": "実例12：操作を重ねてレベルを完了する\nAppendix: 1. 追加10環境の観測\nls20 / レベル1からレベル2へ　公開の人間操作ログをSDKで再生\n操作61後\n操作62後\nACTION1\n操作63後\nACTION1\n最後の移動で完了数が増える。先のレベルで学んだ操作を、次の盤面へ持ち越す。\nレベル1完了：levels_completed 0 → 1\n[1] ARC Prize Foundation. 公開人間試験ログ（公式記事が参照するミラー）.  https://huggingface.co/datasets/magic-sword/arc_agi_3_public_demo_human_testing",
+    "tables": []
+  },
+  {
+    "page": 40,
+    "text": "実例13：動く部分と背景を見分ける\nAppendix: 1. 追加10環境の観測\nm0r0 / レベル1　連続する3回の観測\n操作5後\n操作6後\nACTION2\n操作7後\nACTION1\n水色の横棒が下へ移り、続く操作で上へ戻る。黄色と橙色の背景や黒い輪郭は同じ場所に残る。\n[1] ARC Prize Foundation. Public Game Set / SDK観測（2026-10-20）.  https://arcprize.org/tasks",
+    "tables": []
+  },
+  {
+    "page": 41,
+    "text": "公開セットの環境とレベル数（1/2）\nAppendix: 2. 公開セットの内訳\n[1] ARC Prize Foundation. Public Game Set / SDK観測（2026-10-20）.  https://arcprize.org/tasks",
+    "tables": [
+      "環境 | レベル数\nar25 | 8\nbp35 | 9\ncd82 | 6\ncn04 | 6\ndc22 | 6\nft09 | 6\ng50t | 7",
+      "環境 | レベル数\nka59 | 7\nlf52 | 10\nlp85 | 8\nls20 | 7\nm0r0 | 6\nr11l | 6"
+    ]
+  },
+  {
+    "page": 42,
+    "text": "公開セットの環境とレベル数（2/2）\nAppendix: 2. 公開セットの内訳\n[1] ARC Prize Foundation. Public Game Set / SDK観測（2026-10-20）.  https://arcprize.org/tasks",
+    "tables": [
+      "環境 | レベル数\nre86 | 8\ns5i5 | 8\nsb26 | 8\nsc25 | 6\nsk48 | 8\nsp80 | 6\nsu15 | 9",
+      "環境 | レベル数\ntn36 | 7\ntr87 | 6\ntu93 | 9\nvc33 | 7\nwa30 | 9"
+    ]
+  },
+  {
+    "page": 43,
+    "text": "人間試験は、解けた理由も調べる\n専用の試験会場で週に複数回の試遊を行い、参加者ごとの環境は初見1回に限った。現在のレベルのリセットは認めた。\n統計だけでなくリプレイも調べ、詰まりやすい仕組みや表示の問題を直した。\n全候補の総プレイ時間は427.9時間。1試行の中央値は7.4分だった。\nAppendix: 2. 公開セットの内訳\n[1] ARC Prize Foundation (2026). ARC-AGI-3: A New Challenge for Frontier Agentic Intelligence, v2.  https://arxiv.org/abs/2603.24621",
+    "tables": []
+  },
+  {
+    "page": 44,
+    "text": "参考文献（1/3）\nAppendix: 3. 参考文献\nARC-AGI-3: A New Challenge for Frontier Agentic Intelligence\nARC Prize Foundation, 2026. arXiv:2603.24621, v2.\n環境の構築、人間試験、評価集合と採点の説明。\nhttps://arxiv.org/abs/2603.24621\nAnnouncing ARC-AGI-3\nGreg Kamradt, ARC Prize, 2026-03-25.\n公開時の目的と、対話型の課題への移行を紹介。\nhttps://arcprize.org/blog/arc-agi-3-launch",
+    "tables": []
+  },
+  {
+    "page": 45,
+    "text": "参考文献（2/3）\nAppendix: 3. 参考文献\nARC-AGI Toolkit\nARC Prize Foundation, version 0.9.9, 2026.\n観測・操作のAPIと、ローカル実行の入口。\nhttps://github.com/arcprize/arc-agi\nARC-AGI-3 Benchmarking\nARC Prize Foundation, 2026.\nStandardとProvider Adapterの実行方法。\nhttps://github.com/arcprize/arc-agi-3-benchmarking",
+    "tables": []
+  },
+  {
+    "page": 46,
+    "text": "参考文献（3/3）\nAppendix: 3. 参考文献\nGPT-6 Astra: A new generation of intelligence\nOpenAI, 2026.\nARC-AGI-3の採用と、99.9%の実行条件。\nhttps://openai.com/index/gpt-6-astra/\nHow enabling two settings tripled our scores on the ARC-AGI-3 benchmark\nIlan Bigio and Ted Sanders, OpenAI, 2026-07-29.\n記憶と履歴要約を変えた公開セットの比較実験。\nhttps://openai.com/index/how-two-settings-tripled-our-arc-agi-3-scores/",
+    "tables": []
+  }
+]

@@ -1,0 +1,1211 @@
+[
+  {
+    "page": 1,
+    "title": "ARC-AGI-3",
+    "section": "",
+    "kind": "cover",
+    "main": true,
+    "planned_seconds": 5.81,
+    "role": "cover",
+    "language": "ja",
+    "proofreading": "skill_based_codex"
+  },
+  {
+    "page": 2,
+    "title": "ARC-AGI-3の公式サイト",
+    "section": "1. 観測と行動から課題を知る",
+    "kind": "image",
+    "sources": [
+      "site"
+    ],
+    "main": true,
+    "planned_seconds": 7.74,
+    "role": "image",
+    "language": "ja",
+    "proofreading": "skill_based_codex"
+  },
+  {
+    "page": 3,
+    "title": "",
+    "section": "目次",
+    "kind": "toc",
+    "main": true,
+    "planned_seconds": 7.74,
+    "role": "toc",
+    "language": "ja",
+    "proofreading": "skill_based_codex"
+  },
+  {
+    "page": 4,
+    "title": "1. 観測からルールを学ぶ",
+    "section": "1. 観測と行動から課題を知る",
+    "kind": "divider",
+    "main": true,
+    "planned_seconds": 4.84,
+    "role": "divider",
+    "language": "ja",
+    "proofreading": "skill_based_codex"
+  },
+  {
+    "page": 5,
+    "title": "最終回答より、学び方を測る",
+    "section": "1. 観測と行動から課題を知る",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "初めて見るゲームを操作し、目標とルールを自分で見つける。自然言語による遊び方の説明は与えられない。",
+      "入力は64×64の16色の画面。出力はキー操作や、座標を指定するクリックである。",
+      "観測 → 行動 → 次の観測を繰り返し、全レベルを少ない行動で完了する。"
+    ],
+    "main": true,
+    "planned_seconds": 19.35,
+    "role": "content",
+    "language": "ja",
+    "proofreading": "skill_based_codex"
+  },
+  {
+    "page": 6,
+    "title": "実例1：中点を同じ色の輪へ運ぶ",
+    "section": "1. 観測と行動から課題を知る",
+    "kind": "example",
+    "sources": [
+      "games"
+    ],
+    "example_index": 1,
+    "game_id": "r11l-495a7899",
+    "raw": "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/success-r11l/raw.json",
+    "steps": [
+      0,
+      1,
+      3
+    ],
+    "frames": [
+      "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/success-r11l/000.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/success-r11l/001.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/success-r11l/success-final.png"
+    ],
+    "body_text": [
+      "二つの端点を動かし、紫色の中点を輪へ重ねると、次の盤面へ進む。"
+    ],
+    "success": true,
+    "frame_indices": [
+      -1,
+      -1,
+      5
+    ],
+    "levels_completed": [
+      0,
+      0,
+      1
+    ],
+    "source_kind": "local SDK demonstration",
+    "main": true,
+    "planned_seconds": 29.03,
+    "role": "example",
+    "language": "ja",
+    "proofreading": "skill_based_codex",
+    "layout_revision": "V1 labels/images spacing",
+    "native_frame_revision": "frame/margin accommodation; source baseline or centered content preserved algebraically; LO PDF origin may round by0.028015pt"
+  },
+  {
+    "page": 7,
+    "title": "実例1：端点の移動が中点を変える",
+    "section": "1. 観測と行動から課題を知る",
+    "kind": "content",
+    "sources": [
+      "games"
+    ],
+    "body_text": [
+      "白い端点を動かすと、線の中点にある紫色の図形も動く。二つの端点を調整し、紫色の図形を同じ色の輪へ重ねる。",
+      "実行した操作はクリック(38,8)、もう一方の端点を選ぶクリック(28,57)、移動先を指すクリック(48,36)。",
+      "3回目の操作で図形が点滅し、完了レベル数が0から1へ増えた。表示も次のレベルへ切り替わる。"
+    ],
+    "main": true,
+    "planned_seconds": 25.16,
+    "role": "content",
+    "language": "ja",
+    "proofreading": "skill_based_codex",
+    "native_frame_revision": "frame/margin accommodation; source baseline or centered content preserved algebraically; LO PDF origin may round by0.028015pt"
+  },
+  {
+    "page": 8,
+    "title": "実例2：色列を動かして目印を合わせる",
+    "section": "1. 観測と行動から課題を知る",
+    "kind": "example",
+    "sources": [
+      "human"
+    ],
+    "example_index": 2,
+    "game_id": "lp85-305b61c3",
+    "raw": "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/success-lp85/raw.json",
+    "steps": [
+      4,
+      5,
+      6
+    ],
+    "frames": [
+      "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/success-lp85/004.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/success-lp85/005.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/success-lp85/006.png"
+    ],
+    "body_text": [
+      "赤いボタンで色列を動かし、目印を合わせると次の盤面へ進む。"
+    ],
+    "success": true,
+    "frame_indices": [
+      -1,
+      -1,
+      -1
+    ],
+    "levels_completed": [
+      0,
+      0,
+      1
+    ],
+    "source_kind": "public human log replayed in SDK",
+    "main": true,
+    "planned_seconds": 29.03,
+    "role": "example",
+    "language": "ja",
+    "proofreading": "skill_based_codex",
+    "layout_revision": "V1 labels/images spacing",
+    "native_frame_revision": "frame/margin accommodation; source baseline or centered content preserved algebraically; LO PDF origin may round by0.028015pt"
+  },
+  {
+    "page": 9,
+    "title": "実例2：色列の移動で目印を合わせる",
+    "section": "1. 観測と行動から課題を知る",
+    "kind": "content",
+    "sources": [
+      "human"
+    ],
+    "body_text": [
+      "赤いボタンをクリックすると、輪に並んだ色のマスが移る。黄色の角が付いた目印に、対応するマスを合わせる。",
+      "人間の公開操作ログでは、6回のクリックで最初のレベルを完了した。最後の3回は同じ位置(6,33)をクリックしている。",
+      "成功すると上部の進捗表示が緑になり、新しい盤面へ切り替わる。観測した反応から、操作の規則と目標を結び付けられる。"
+    ],
+    "main": true,
+    "planned_seconds": 25.16,
+    "role": "content",
+    "language": "ja",
+    "proofreading": "skill_based_codex",
+    "native_frame_revision": "frame/margin accommodation; source baseline or centered content preserved algebraically; LO PDF origin may round by0.028015pt"
+  },
+  {
+    "page": 10,
+    "title": "実例3：二つの駒をそれぞれ枠へ入れる",
+    "section": "1. 観測と行動から課題を知る",
+    "kind": "example",
+    "sources": [
+      "human"
+    ],
+    "example_index": 3,
+    "game_id": "ka59-38d34dbb",
+    "raw": "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/success-ka59/raw.json",
+    "steps": [
+      17,
+      18,
+      19
+    ],
+    "frames": [
+      "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/success-ka59/017.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/success-ka59/018.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/success-ka59/019.png"
+    ],
+    "body_text": [
+      "右の駒を枠に残し、左の駒も枠に入れると、次の盤面へ進む。"
+    ],
+    "success": true,
+    "frame_indices": [
+      -1,
+      -1,
+      -1
+    ],
+    "levels_completed": [
+      0,
+      0,
+      1
+    ],
+    "source_kind": "public human log replayed in SDK",
+    "main": true,
+    "planned_seconds": 29.03,
+    "role": "example",
+    "language": "ja",
+    "proofreading": "skill_based_codex",
+    "layout_revision": "V1 labels/images spacing",
+    "native_frame_revision": "frame/margin accommodation; source baseline or centered content preserved algebraically; LO PDF origin may round by0.028015pt"
+  },
+  {
+    "page": 11,
+    "title": "実例3：操作する駒を切り替える",
+    "section": "1. 観測と行動から課題を知る",
+    "kind": "content",
+    "sources": [
+      "human"
+    ],
+    "body_text": [
+      "左右の緑の駒を、それぞれ黒い枠の中へ移す。キーで動かす駒は、クリックして切り替えられる。",
+      "公開の人間ログでは、先に右の駒を枠へ入れ、次に左の駒へ切り替えて動かす。最後に左の駒が枠へ入り、次のレベルへ進んだ。",
+      "同じ方向キーでも、どの駒を選んでいるかで結果が変わる。画面の変化と直前の選択を一緒に記憶する必要がある。"
+    ],
+    "main": true,
+    "planned_seconds": 25.16,
+    "role": "content",
+    "language": "ja",
+    "proofreading": "skill_based_codex",
+    "native_frame_revision": "frame/margin accommodation; source baseline or centered content preserved algebraically; LO PDF origin may round by0.028015pt"
+  },
+  {
+    "page": 12,
+    "title": "ARC-AGI-2から何が変わったか",
+    "section": "1. 観測と行動から課題を知る",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "main": true,
+    "planned_seconds": 24.19,
+    "role": "content",
+    "language": "ja",
+    "proofreading": "skill_based_codex"
+  },
+  {
+    "page": 13,
+    "title": "試す・モデル化する・目標を知る・計画する",
+    "section": "1. 観測と行動から課題を知る",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "探索では、何を操作すれば情報が得られるかを選ぶ。無反応のクリックも、仮説を更新する材料になる。",
+      "環境のモデルを作り、物の動きや操作の効果を予測する。勝利条件も、画面と反応から推定する。",
+      "発見したルールを後のレベルへ持ち越し、長い行動列を計画する。最初のレベルは操作を学ぶ導入として易しく作られる。"
+    ],
+    "main": true,
+    "planned_seconds": 19.35,
+    "role": "content",
+    "language": "ja",
+    "proofreading": "skill_based_codex"
+  },
+  {
+    "page": 14,
+    "title": "2. 人間基準の得点と性能",
+    "section": "2. 人間基準の得点と到達水準",
+    "kind": "divider",
+    "main": true,
+    "planned_seconds": 4.84,
+    "role": "divider",
+    "language": "ja",
+    "proofreading": "skill_based_codex"
+  },
+  {
+    "page": 15,
+    "title": "成功と行動数を一緒に採点する",
+    "section": "2. 人間基準の得点と到達水準",
+    "kind": "content",
+    "sources": [
+      "paper",
+      "sdk"
+    ],
+    "body_text": [
+      "得点はRHAE（Relative Human Action Efficiency）。人間が使った行動数に対する、エージェントの効率を表す。",
+      "レベルを完了した場合、人間基準 ÷ AIの行動数を二乗する。未完了のレベルは0点になる。",
+      "人間基準が10手なら、20手で25%、100手で1%。完了するだけでは高い得点にならない。"
+    ],
+    "main": true,
+    "planned_seconds": 29.03,
+    "role": "content",
+    "language": "ja",
+    "proofreading": "skill_based_codex"
+  },
+  {
+    "page": 16,
+    "title": "公開時のモデルは1%未満だった",
+    "section": "2. 人間基準の得点と到達水準",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "main": true,
+    "planned_seconds": 17.42,
+    "role": "content",
+    "language": "ja",
+    "proofreading": "skill_based_codex"
+  },
+  {
+    "page": 17,
+    "title": "現在は実行基盤による差が大きい",
+    "section": "2. 人間基準の得点と到達水準",
+    "kind": "content",
+    "sources": [
+      "board"
+    ],
+    "main": true,
+    "planned_seconds": 29.03,
+    "role": "content",
+    "language": "ja",
+    "proofreading": "skill_based_codex",
+    "native_frame_revision": "frame/margin accommodation; source baseline or centered content preserved algebraically; LO PDF origin may round by0.028015pt"
+  },
+  {
+    "page": 18,
+    "title": "99.9%はモデル名だけでは読めない",
+    "section": "2. 人間基準の得点と到達水準",
+    "kind": "content",
+    "sources": [
+      "astra",
+      "settings"
+    ],
+    "body_text": [
+      "OpenAIのAstra紹介でもARC-AGI-3を採用し、99.9%と報告している。公式リーダーボードではProvider Adapter / Highの結果に対応する。",
+      "同じAstraでもStandard / Maxでは62.7%。行動間で何を記憶し、長い履歴をどう要約するかが結果に関わる。",
+      "公開セットの実験では、Solの記憶保持と履歴の要約を有効にすると、13.3%から38.3%へ上がった。"
+    ],
+    "main": true,
+    "planned_seconds": 29.03,
+    "role": "content",
+    "language": "ja",
+    "proofreading": "skill_based_codex"
+  },
+  {
+    "page": 19,
+    "title": "後のレベルほど採点への重みが大きい",
+    "section": "2. 人間基準の得点と到達水準",
+    "kind": "content",
+    "sources": [
+      "paper",
+      "sdk"
+    ],
+    "body_text": [
+      "レベル1、2、3…の重みは1、2、3…となる。環境の得点は、全レベルの重みの合計を分母にした加重平均である。",
+      "SDK 0.9.9ではレベル得点の上限が115%。環境全体には、完了したレベルの重みの割合による上限もある。",
+      "最後に、評価した全環境の得点を平均する。短い導入レベルだけを速く解いても、環境全体の高得点にはつながらない。"
+    ],
+    "main": true,
+    "planned_seconds": 24.19,
+    "role": "content",
+    "language": "ja",
+    "proofreading": "skill_based_codex"
+  },
+  {
+    "page": 20,
+    "title": "同じ完了率でも行動数で得点が変わる",
+    "section": "2. 人間基準の得点と到達水準",
+    "kind": "content",
+    "sources": [
+      "sdk"
+    ],
+    "main": true,
+    "planned_seconds": 19.35,
+    "role": "content",
+    "language": "ja",
+    "proofreading": "skill_based_codex"
+  },
+  {
+    "page": 21,
+    "title": "3. 環境の作成と公開セット",
+    "section": "3. 環境の作成と公開セット",
+    "kind": "divider",
+    "main": true,
+    "planned_seconds": 4.84,
+    "role": "divider",
+    "language": "ja",
+    "proofreading": "skill_based_codex"
+  },
+  {
+    "page": 22,
+    "title": "専用のゲームスタジオが環境を作る",
+    "section": "3. 環境の作成と公開セット",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "ARC Prize Foundationの開発者が、新しい仕組みを持つ環境を設計する。既存ゲームの知識ではなく、物体・空間・因果などの基本的な理解を使う。",
+      "構想の共同レビュー、内部試遊、外部の人間による試遊を経て、採用する環境を決める。",
+      "Pythonの共通エンジンと自動検査で、表示・操作・評価をそろえ、バグや単純すぎる環境を調べる。"
+    ],
+    "main": true,
+    "planned_seconds": 24.19,
+    "role": "content",
+    "language": "ja",
+    "proofreading": "skill_based_codex"
+  },
+  {
+    "page": 23,
+    "title": "人間が初見で解けることを採用条件にする",
+    "section": "3. 環境の作成と公開セット",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "各環境を10人が試し、少なくとも2人が初見で全レベルを完了できた環境を採用する。",
+      "採点の人間基準には、各レベルを完了した人を行動数順に並べた中央の人を使う。成功者が4人でも5人でも3番目を選ぶ。",
+      "全候補の試験では486人が414環境を試し、2,893回の試行を記録した。"
+    ],
+    "main": true,
+    "planned_seconds": 24.19,
+    "role": "content",
+    "language": "ja",
+    "proofreading": "skill_based_codex"
+  },
+  {
+    "page": 24,
+    "title": "135環境を3種類の集合に分ける",
+    "section": "3. 環境の作成と公開セット",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "main": true,
+    "planned_seconds": 19.35,
+    "role": "content",
+    "language": "ja",
+    "proofreading": "skill_based_codex"
+  },
+  {
+    "page": 25,
+    "title": "公開25環境は6〜10レベルを持つ",
+    "section": "3. 環境の作成と公開セット",
+    "kind": "content",
+    "sources": [
+      "games"
+    ],
+    "main": true,
+    "planned_seconds": 19.35,
+    "role": "content",
+    "language": "ja",
+    "proofreading": "skill_based_codex",
+    "native_frame_revision": "frame/margin accommodation; source baseline or centered content preserved algebraically; LO PDF origin may round by0.028015pt"
+  },
+  {
+    "page": 26,
+    "title": "操作の組合せも環境ごとに違う",
+    "section": "3. 環境の作成と公開セット",
+    "kind": "content",
+    "sources": [
+      "games"
+    ],
+    "main": true,
+    "planned_seconds": 14.52,
+    "role": "content",
+    "language": "ja",
+    "proofreading": "skill_based_codex",
+    "native_frame_revision": "frame/margin accommodation; source baseline or centered content preserved algebraically; LO PDF origin may round by0.028015pt"
+  },
+  {
+    "page": 27,
+    "title": "4. 使い方と評価の読み方",
+    "section": "4. 使い方と評価の読み方",
+    "kind": "divider",
+    "main": true,
+    "planned_seconds": 4.84,
+    "role": "divider",
+    "language": "ja",
+    "proofreading": "skill_based_codex"
+  },
+  {
+    "page": 28,
+    "title": "長い対話では、何を記憶するかも変わる",
+    "section": "4. 使い方と評価の読み方",
+    "kind": "content",
+    "sources": [
+      "benchmark",
+      "settings"
+    ],
+    "body_text": [
+      "Standardは共通のテキスト履歴を使い、モデルが残したメモを次の行動へ持ち越す。",
+      "Provider Adapterは、提供元の対話状態や推論状態を保ち、長い履歴を要約して続ける。",
+      "公開実験の13.3→38.3%と、非公開評価の7.8%は、対象集合と実行基盤が異なる。"
+    ],
+    "main": true,
+    "planned_seconds": 24.19,
+    "role": "content",
+    "language": "ja",
+    "proofreading": "skill_based_codex"
+  },
+  {
+    "page": 29,
+    "title": "人間の試遊とSDKから始められる",
+    "section": "4. 使い方と評価の読み方",
+    "kind": "content",
+    "sources": [
+      "site",
+      "sdk"
+    ],
+    "body_text": [
+      "公式サイトのPublic Game Setでは、ブラウザで25環境を試遊できる。リプレイから操作と反応を見返せる。",
+      "Pythonのarc-agiを導入すると、同じインターフェースでローカル実行とAPI実行を扱える。",
+      "公開ゲームは取得して動かせる。非公開評価の課題そのものは配布せず、汎化を測るために保持する。"
+    ],
+    "main": true,
+    "planned_seconds": 14.52,
+    "role": "content",
+    "language": "ja",
+    "proofreading": "skill_based_codex"
+  },
+  {
+    "page": 30,
+    "title": "SDKで観測を読み、次の操作を出す",
+    "section": "4. 使い方と評価の読み方",
+    "kind": "code",
+    "sources": [
+      "sdk"
+    ],
+    "main": true,
+    "planned_seconds": 19.35,
+    "role": "code",
+    "language": "ja",
+    "proofreading": "skill_based_codex"
+  },
+  {
+    "page": 31,
+    "title": "利用条件と評価対象を選ぶ",
+    "section": "4. 使い方と評価の読み方",
+    "kind": "content",
+    "sources": [
+      "sdk",
+      "benchmark"
+    ],
+    "body_text": [
+      "Toolkitと公式Benchmarking実装はMIT License。Python側の実行基盤として利用・改変できる。",
+      "ベンチマークを報告するときは、評価集合、モデルと推論設定、実行基盤、得点の定義を対応させる。",
+      "公開セットは仕組みの確認や開発に向く。モデルの未知の環境への適応は、非公開セットで確かめる。"
+    ],
+    "main": true,
+    "planned_seconds": 14.52,
+    "role": "content",
+    "language": "ja",
+    "proofreading": "skill_based_codex"
+  },
+  {
+    "page": 32,
+    "title": "ARC-AGI-3が見せるのは初見の学習効率",
+    "section": "4. 使い方と評価の読み方",
+    "kind": "content",
+    "sources": [
+      "paper",
+      "board"
+    ],
+    "body_text": [
+      "固定の例から一度だけ答える課題を、観測と行動を繰り返す未知の環境へ広げた。",
+      "人間が初見で解ける環境を作り、完了までの行動数を人間基準と比べる。",
+      "現在の高得点は、モデルだけでなく履歴や推論状態を保持する実行基盤と結び付いている。"
+    ],
+    "main": true,
+    "planned_seconds": 11.66,
+    "role": "content",
+    "language": "ja",
+    "proofreading": "skill_based_codex"
+  },
+  {
+    "page": 33,
+    "title": "Appendix",
+    "section": "Appendix",
+    "kind": "divider",
+    "main": false,
+    "planned_seconds": 0.0,
+    "role": "divider",
+    "language": "ja",
+    "proofreading": "skill_based_codex",
+    "native_frame_revision": "frame/margin accommodation; source baseline or centered content preserved algebraically; LO PDF origin may round by0.028015pt"
+  },
+  {
+    "page": 34,
+    "title": "",
+    "section": "Appendix: 目次",
+    "kind": "toc",
+    "main": false,
+    "planned_seconds": 0.0,
+    "role": "toc",
+    "language": "ja",
+    "proofreading": "skill_based_codex"
+  },
+  {
+    "page": 35,
+    "title": "実例4：左右の移動を比べる",
+    "section": "Appendix: 1. 追加10環境の観測",
+    "kind": "example",
+    "sources": [
+      "games"
+    ],
+    "example_index": 4,
+    "game_id": "ar25-0c556536",
+    "level": 1,
+    "frames": [
+      "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/examples/ar25-0c556536/010.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/examples/ar25-0c556536/011.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/examples/ar25-0c556536/012.png"
+    ],
+    "steps": [
+      10,
+      11,
+      12
+    ],
+    "actions": [
+      {
+        "action": "ACTION2",
+        "data": {}
+      },
+      {
+        "action": "ACTION1",
+        "data": {}
+      }
+    ],
+    "raw": "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/examples/ar25-0c556536/raw.json",
+    "body_text": [
+      "黒い折れ曲がった図形が左へ移り、次の操作で元の位置へ戻る。水色の縦線と黄色の図形は同じ場所に残る。"
+    ],
+    "state": [
+      "NOT_FINISHED",
+      "NOT_FINISHED",
+      "NOT_FINISHED"
+    ],
+    "levels_completed": [
+      0,
+      0,
+      0
+    ],
+    "main": false,
+    "planned_seconds": 0.0,
+    "role": "example",
+    "language": "ja",
+    "proofreading": "skill_based_codex",
+    "layout_revision": "V1 labels/images spacing",
+    "native_frame_revision": "frame/margin accommodation; source baseline or centered content preserved algebraically; LO PDF origin may round by0.028015pt"
+  },
+  {
+    "page": 36,
+    "title": "実例5：地形そのものが変わる",
+    "section": "Appendix: 1. 追加10環境の観測",
+    "kind": "example",
+    "sources": [
+      "games"
+    ],
+    "example_index": 5,
+    "game_id": "bp35-0a0ad940",
+    "level": 1,
+    "frames": [
+      "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/examples/bp35-0a0ad940/013.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/examples/bp35-0a0ad940/014.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/examples/bp35-0a0ad940/015.png"
+    ],
+    "steps": [
+      13,
+      14,
+      15
+    ],
+    "actions": [
+      {
+        "action": "ACTION4",
+        "data": {}
+      },
+      {
+        "action": "ACTION3",
+        "data": {}
+      }
+    ],
+    "raw": "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/examples/bp35-0a0ad940/raw.json",
+    "body_text": [
+      "水色の足場の下端が、3枚目では上へ移る。紫色の領域との距離が変わり、操作前と同じ地形ではなくなる。"
+    ],
+    "state": [
+      "NOT_FINISHED",
+      "NOT_FINISHED",
+      "NOT_FINISHED"
+    ],
+    "levels_completed": [
+      0,
+      0,
+      0
+    ],
+    "main": false,
+    "planned_seconds": 0.0,
+    "role": "example",
+    "language": "ja",
+    "proofreading": "skill_based_codex",
+    "layout_revision": "V1 labels/images spacing",
+    "native_frame_revision": "frame/margin accommodation; source baseline or centered content preserved algebraically; LO PDF origin may round by0.028015pt"
+  },
+  {
+    "page": 37,
+    "title": "実例6：図形を枠へ合わせる",
+    "section": "Appendix: 1. 追加10環境の観測",
+    "kind": "example",
+    "sources": [
+      "human"
+    ],
+    "example_index": 6,
+    "game_id": "cd82-fb555c5d",
+    "raw": "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/success-cd82/raw.json",
+    "steps": [
+      42,
+      43,
+      44
+    ],
+    "frames": [
+      "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/success-cd82/042.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/success-cd82/043.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/success-cd82/044.png"
+    ],
+    "body_text": [
+      "最後の操作で図形がそろい、完了数が増えて次の盤面へ進む。"
+    ],
+    "success": true,
+    "frame_indices": [
+      -1,
+      -1,
+      -1
+    ],
+    "levels_completed": [
+      0,
+      0,
+      1
+    ],
+    "source_kind": "public human log replayed in SDK",
+    "main": false,
+    "planned_seconds": 0.0,
+    "role": "example",
+    "language": "ja",
+    "proofreading": "skill_based_codex",
+    "layout_revision": "V1 labels/images spacing",
+    "native_frame_revision": "frame/margin accommodation; source baseline or centered content preserved algebraically; LO PDF origin may round by0.028015pt"
+  },
+  {
+    "page": 38,
+    "title": "実例7：向きと位置をそろえる",
+    "section": "Appendix: 1. 追加10環境の観測",
+    "kind": "example",
+    "sources": [
+      "games"
+    ],
+    "example_index": 7,
+    "game_id": "cn04-2fe56bfb",
+    "raw": "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/success-cn04/cn04-trace.json",
+    "steps": [
+      12,
+      13,
+      14
+    ],
+    "frames": [
+      "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/success-cn04/cn04-012.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/success-cn04/cn04-013.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/success-cn04/cn04-014.png"
+    ],
+    "body_text": [
+      "白い図形を回転・移動し、赤い端点を緑の図形に合わせる。"
+    ],
+    "success": true,
+    "frame_indices": [
+      -1,
+      -1,
+      -1
+    ],
+    "levels_completed": [
+      0,
+      0,
+      1
+    ],
+    "source_kind": "local SDK demonstration",
+    "main": false,
+    "planned_seconds": 0.0,
+    "role": "example",
+    "language": "ja",
+    "proofreading": "skill_based_codex",
+    "layout_revision": "V1 labels/images spacing",
+    "native_frame_revision": "frame/margin accommodation; source baseline or centered content preserved algebraically; LO PDF origin may round by0.028015pt"
+  },
+  {
+    "page": 39,
+    "title": "実例8：小さな位置変化を読む",
+    "section": "Appendix: 1. 追加10環境の観測",
+    "kind": "example",
+    "sources": [
+      "games"
+    ],
+    "example_index": 8,
+    "game_id": "dc22-fdcac232",
+    "level": 1,
+    "frames": [
+      "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/examples/dc22-fdcac232/000.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/examples/dc22-fdcac232/001.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/examples/dc22-fdcac232/002.png"
+    ],
+    "steps": [
+      0,
+      1,
+      2
+    ],
+    "actions": [
+      {
+        "action": "ACTION4",
+        "data": {}
+      },
+      {
+        "action": "ACTION3",
+        "data": {}
+      }
+    ],
+    "raw": "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/examples/dc22-fdcac232/raw.json",
+    "body_text": [
+      "左下の灰色のマスと緑色の印が横へ移る。赤い棒や右側の二つの図形は、同じ位置に残っている。"
+    ],
+    "state": [
+      "NOT_FINISHED",
+      "NOT_FINISHED",
+      "NOT_FINISHED"
+    ],
+    "levels_completed": [
+      0,
+      0,
+      0
+    ],
+    "main": false,
+    "planned_seconds": 0.0,
+    "role": "example",
+    "language": "ja",
+    "proofreading": "skill_based_codex",
+    "layout_revision": "V1 labels/images spacing",
+    "native_frame_revision": "frame/margin accommodation; source baseline or centered content preserved algebraically; LO PDF origin may round by0.028015pt"
+  },
+  {
+    "page": 40,
+    "title": "実例9：赤と青の並びを合わせる",
+    "section": "Appendix: 1. 追加10環境の観測",
+    "kind": "example",
+    "sources": [
+      "human"
+    ],
+    "example_index": 9,
+    "game_id": "ft09-0d8bbf25",
+    "raw": "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/success-ft09/raw.json",
+    "steps": [
+      41,
+      42,
+      43
+    ],
+    "frames": [
+      "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/success-ft09/041.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/success-ft09/042.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/success-ft09/043.png"
+    ],
+    "body_text": [
+      "クリックで赤と青の並びを変え、完成すると次の盤面へ進む。"
+    ],
+    "success": true,
+    "frame_indices": [
+      -1,
+      -1,
+      -1
+    ],
+    "levels_completed": [
+      0,
+      0,
+      1
+    ],
+    "source_kind": "public human log replayed in SDK",
+    "main": false,
+    "planned_seconds": 0.0,
+    "role": "example",
+    "language": "ja",
+    "proofreading": "skill_based_codex",
+    "layout_revision": "V1 labels/images spacing",
+    "native_frame_revision": "frame/margin accommodation; source baseline or centered content preserved algebraically; LO PDF origin may round by0.028015pt"
+  },
+  {
+    "page": 41,
+    "title": "実例10：別の駒が反応する",
+    "section": "Appendix: 1. 追加10環境の観測",
+    "kind": "example",
+    "sources": [
+      "games"
+    ],
+    "example_index": 10,
+    "game_id": "g50t-5849a774",
+    "level": 1,
+    "frames": [
+      "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/examples/g50t-5849a774/011.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/examples/g50t-5849a774/012.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/examples/g50t-5849a774/013.png"
+    ],
+    "steps": [
+      11,
+      12,
+      13
+    ],
+    "actions": [
+      {
+        "action": "ACTION2",
+        "data": {}
+      },
+      {
+        "action": "ACTION1",
+        "data": {}
+      }
+    ],
+    "raw": "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/examples/g50t-5849a774/raw.json",
+    "body_text": [
+      "上側の小さい駒の配置が変わり、次の操作で戻る。盤面の赤い経路と右下の青い図形は同じまま見えている。"
+    ],
+    "state": [
+      "NOT_FINISHED",
+      "NOT_FINISHED",
+      "NOT_FINISHED"
+    ],
+    "levels_completed": [
+      0,
+      0,
+      0
+    ],
+    "main": false,
+    "planned_seconds": 0.0,
+    "role": "example",
+    "language": "ja",
+    "proofreading": "skill_based_codex",
+    "layout_revision": "V1 labels/images spacing",
+    "native_frame_revision": "frame/margin accommodation; source baseline or centered content preserved algebraically; LO PDF origin may round by0.028015pt"
+  },
+  {
+    "page": 42,
+    "title": "実例11：選んだマスの反応を調べる",
+    "section": "Appendix: 1. 追加10環境の観測",
+    "kind": "example",
+    "sources": [
+      "games"
+    ],
+    "example_index": 11,
+    "game_id": "lf52-271a04aa",
+    "level": 1,
+    "frames": [
+      "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/examples/lf52-271a04aa/target-000.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/examples/lf52-271a04aa/target-001.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/examples/lf52-271a04aa/target-002.png"
+    ],
+    "steps": [
+      0,
+      1,
+      2
+    ],
+    "actions": [
+      {
+        "action": "ACTION6",
+        "data": {
+          "x": 19,
+          "y": 19
+        }
+      },
+      {
+        "action": "ACTION6",
+        "data": {
+          "x": 31,
+          "y": 19
+        }
+      }
+    ],
+    "raw": "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/examples/lf52-271a04aa/target-raw.json",
+    "body_text": [
+      "緑のマスを選び、その先をクリックすると盤面が変わる。選択する場所と移動先を組み合わせて、反応を調べる。"
+    ],
+    "state": [
+      "NOT_FINISHED",
+      "NOT_FINISHED",
+      "NOT_FINISHED"
+    ],
+    "levels_completed": [
+      0,
+      0,
+      0
+    ],
+    "main": false,
+    "planned_seconds": 0.0,
+    "role": "example",
+    "language": "ja",
+    "proofreading": "skill_based_codex",
+    "layout_revision": "V1 labels/images spacing",
+    "native_frame_revision": "frame/margin accommodation; source baseline or centered content preserved algebraically; LO PDF origin may round by0.028015pt"
+  },
+  {
+    "page": 43,
+    "title": "実例12：操作を重ねてレベルを完了する",
+    "section": "Appendix: 1. 追加10環境の観測",
+    "kind": "example",
+    "sources": [
+      "human"
+    ],
+    "example_index": 12,
+    "game_id": "ls20-9607627b",
+    "raw": "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/success-ls20/raw.json",
+    "steps": [
+      61,
+      62,
+      63
+    ],
+    "frames": [
+      "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/success-ls20/061.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/success-ls20/062.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/success-ls20/063.png"
+    ],
+    "body_text": [
+      "移動を重ねて目標へ達すると、完了数が増え、次の盤面へ進む。"
+    ],
+    "success": true,
+    "frame_indices": [
+      -1,
+      -1,
+      -1
+    ],
+    "levels_completed": [
+      0,
+      0,
+      1
+    ],
+    "source_kind": "public human log replayed in SDK",
+    "main": false,
+    "planned_seconds": 0.0,
+    "role": "example",
+    "language": "ja",
+    "proofreading": "skill_based_codex",
+    "layout_revision": "V1 labels/images spacing",
+    "native_frame_revision": "frame/margin accommodation; source baseline or centered content preserved algebraically; LO PDF origin may round by0.028015pt"
+  },
+  {
+    "page": 44,
+    "title": "実例13：動く部分と背景を見分ける",
+    "section": "Appendix: 1. 追加10環境の観測",
+    "kind": "example",
+    "sources": [
+      "games"
+    ],
+    "example_index": 13,
+    "game_id": "m0r0-492f87ba",
+    "level": 1,
+    "frames": [
+      "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/examples/m0r0-492f87ba/005.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/examples/m0r0-492f87ba/006.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/examples/m0r0-492f87ba/007.png"
+    ],
+    "steps": [
+      5,
+      6,
+      7
+    ],
+    "actions": [
+      {
+        "action": "ACTION2",
+        "data": {}
+      },
+      {
+        "action": "ACTION1",
+        "data": {}
+      }
+    ],
+    "raw": "/workspace/artifacts/frontier-benchmarks-2026-10/arc-agi-3/examples/m0r0-492f87ba/raw.json",
+    "body_text": [
+      "水色の横棒が下へ移り、続く操作で上へ戻る。黄色と橙色の背景や黒い輪郭は同じ場所に残る。"
+    ],
+    "state": [
+      "NOT_FINISHED",
+      "NOT_FINISHED",
+      "NOT_FINISHED"
+    ],
+    "levels_completed": [
+      0,
+      0,
+      0
+    ],
+    "main": false,
+    "planned_seconds": 0.0,
+    "role": "example",
+    "language": "ja",
+    "proofreading": "skill_based_codex",
+    "layout_revision": "V1 labels/images spacing",
+    "native_frame_revision": "frame/margin accommodation; source baseline or centered content preserved algebraically; LO PDF origin may round by0.028015pt"
+  },
+  {
+    "page": 45,
+    "title": "公開セットの環境とレベル数（1/2）",
+    "section": "Appendix: 2. 公開セットの内訳",
+    "kind": "content",
+    "sources": [
+      "games"
+    ],
+    "main": false,
+    "planned_seconds": 0.0,
+    "role": "content",
+    "language": "ja",
+    "proofreading": "skill_based_codex",
+    "native_frame_revision": "frame/margin accommodation; source baseline or centered content preserved algebraically; LO PDF origin may round by0.028015pt"
+  },
+  {
+    "page": 46,
+    "title": "公開セットの環境とレベル数（2/2）",
+    "section": "Appendix: 2. 公開セットの内訳",
+    "kind": "content",
+    "sources": [
+      "games"
+    ],
+    "main": false,
+    "planned_seconds": 0.0,
+    "role": "content",
+    "language": "ja",
+    "proofreading": "skill_based_codex",
+    "native_frame_revision": "frame/margin accommodation; source baseline or centered content preserved algebraically; LO PDF origin may round by0.028015pt"
+  },
+  {
+    "page": 47,
+    "title": "人間試験は、解けた理由も調べる",
+    "section": "Appendix: 2. 公開セットの内訳",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "専用の試験会場で週に複数回の試遊を行い、参加者ごとの環境は初見1回に限った。現在のレベルのリセットは認めた。",
+      "統計だけでなくリプレイも調べ、詰まりやすい仕組みや表示の問題を直した。",
+      "全候補の総プレイ時間は427.9時間。1試行の中央値は7.4分だった。"
+    ],
+    "main": false,
+    "planned_seconds": 0.0,
+    "role": "content",
+    "language": "ja",
+    "proofreading": "skill_based_codex"
+  },
+  {
+    "page": 48,
+    "title": "参考文献（1/3）",
+    "section": "Appendix: 3. 参考文献",
+    "kind": "references",
+    "main": false,
+    "planned_seconds": 0.0,
+    "role": "references",
+    "language": "ja",
+    "proofreading": "skill_based_codex",
+    "layout_revision": "V2 reference title/bibliography spacing"
+  },
+  {
+    "page": 49,
+    "title": "参考文献（2/3）",
+    "section": "Appendix: 3. 参考文献",
+    "kind": "references",
+    "main": false,
+    "planned_seconds": 0.0,
+    "role": "references",
+    "language": "ja",
+    "proofreading": "skill_based_codex"
+  },
+  {
+    "page": 50,
+    "title": "参考文献（3/3）",
+    "section": "Appendix: 3. 参考文献",
+    "kind": "references",
+    "main": false,
+    "planned_seconds": 0.0,
+    "role": "references",
+    "language": "ja",
+    "proofreading": "skill_based_codex"
+  }
+]
