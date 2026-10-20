@@ -1,0 +1,88 @@
+{
+  "date": "2026-10-21 Asia/Tokyo",
+  "baseline_commit": "e86ddd167c5939d9a4f04352a1ba747f998c1516",
+  "existing_catalog_count": 93,
+  "selected": [
+    "automationbench",
+    "toolathlon-verified",
+    "frontiermath"
+  ],
+  "selection_status": "confirmed: original task/problem records obtained for all three",
+  "primary_adoption_sources": [
+    "https://openai.com/index/gpt-6-astra/",
+    "https://www-cdn.anthropic.com/0339e6a7c5c7b87f5c07798616dc32c215d14235/Claude%20Fable%205.1%20%26%20Claude%20Mythos%205.1%20System%20Card.pdf"
+  ],
+  "excluded": "CLEVA family",
+  "method": "local slide and Japanese proofreading skills; independent creators and reviewers",
+  "gemini_used": false,
+  "external_generation_api_used": false,
+  "alternatives": [
+    {
+      "name": "BrowseComp",
+      "reason": "Official request discourages publishing dataset examples online; preferred richer freely illustrated introduction"
+    },
+    {
+      "name": "HealthBench",
+      "reason": "Original benchmark has similar publication request; Professional kept as future candidate without completing its separate terms investigation"
+    },
+    {
+      "name": "OfficeQA",
+      "reason": "Current official data require access approval; checked historical public Git trees did not provide CSV/PDF task files; selected a benchmark with accessible rich public examples instead"
+    }
+  ],
+  "public_examples_plan": {
+    "automationbench": "12 tasks across 6 public business domains; expense-policy and parent-account escalation inconsistencies excluded",
+    "toolathlon-verified": "13 public Git task definitions, initial data and expected artifacts/checkers; gated trajectories not obtained or republished",
+    "frontiermath": "9 of 12 publicly displayed problems, main 3 + appendix 6; three problematic source statements excluded and documented"
+  },
+  "preliminary_main_review": {
+    "automationbench": {
+      "native_pages_read_of_first89page_draft": [
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41
+      ],
+      "findings": "M1–M7 sent to creator: unnecessary disclaimer, unshown rules/ambiguous expected action, imperative warning, generic appendix guidance, version introduction, source attribution, author introduction; ambiguous sales example excluded"
+    },
+    "frontiermath": {
+      "original_questions_read": [
+        1,
+        8,
+        11
+      ],
+      "algebraic_check": "main-preliminary-review/frontiermath-polynomial-check.json"
+    },
+    "toolathlon-verified": {
+      "original_prompts_read": [
+        "canvas-homework-grader-python",
+        "inventory-sync",
+        "sales-accounting"
+      ],
+      "findings": "Keep fixed task date/latest submission/assignment scope and city-region aggregation; independent source auditor confirmed calendar-week expected records"
+    }
+  }
+}
