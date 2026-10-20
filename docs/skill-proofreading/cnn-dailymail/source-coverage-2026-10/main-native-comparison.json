@@ -1,0 +1,793 @@
+{
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "comparison": "Exact native text, full table cells, chart categories and series; no visual-inspection claim",
+  "baseline_sha256": "a37956f228b1565f74662c68d546282b3b6b40997ff5d779417daa62c8053eaa",
+  "final_sha256": "77fd1b3c85a30b41e6fc16ce0e9359c95d701b823cafb88bc10458f1bb479476",
+  "old_pages": 55,
+  "new_pages": 150,
+  "unchanged_pages": [
+    {
+      "page": 1,
+      "old_pages": [
+        1
+      ]
+    },
+    {
+      "page": 2,
+      "old_pages": [
+        2
+      ]
+    },
+    {
+      "page": 3,
+      "old_pages": [
+        3
+      ]
+    },
+    {
+      "page": 4,
+      "old_pages": [
+        4
+      ]
+    },
+    {
+      "page": 5,
+      "old_pages": [
+        5
+      ]
+    },
+    {
+      "page": 10,
+      "old_pages": [
+        8
+      ]
+    },
+    {
+      "page": 22,
+      "old_pages": [
+        14
+      ]
+    },
+    {
+      "page": 23,
+      "old_pages": [
+        15
+      ]
+    },
+    {
+      "page": 24,
+      "old_pages": [
+        16
+      ]
+    },
+    {
+      "page": 25,
+      "old_pages": [
+        17
+      ]
+    },
+    {
+      "page": 26,
+      "old_pages": [
+        18
+      ]
+    },
+    {
+      "page": 27,
+      "old_pages": [
+        19
+      ]
+    },
+    {
+      "page": 28,
+      "old_pages": [
+        20
+      ]
+    },
+    {
+      "page": 29,
+      "old_pages": [
+        21
+      ]
+    },
+    {
+      "page": 30,
+      "old_pages": [
+        22
+      ]
+    },
+    {
+      "page": 31,
+      "old_pages": [
+        23
+      ]
+    },
+    {
+      "page": 32,
+      "old_pages": [
+        24
+      ]
+    },
+    {
+      "page": 33,
+      "old_pages": [
+        25
+      ]
+    },
+    {
+      "page": 34,
+      "old_pages": [
+        26
+      ]
+    },
+    {
+      "page": 35,
+      "old_pages": [
+        27
+      ]
+    },
+    {
+      "page": 36,
+      "old_pages": [
+        28
+      ]
+    },
+    {
+      "page": 37,
+      "old_pages": [
+        29
+      ]
+    },
+    {
+      "page": 38,
+      "old_pages": [
+        30
+      ]
+    },
+    {
+      "page": 39,
+      "old_pages": [
+        31
+      ]
+    },
+    {
+      "page": 40,
+      "old_pages": [
+        32
+      ]
+    },
+    {
+      "page": 146,
+      "old_pages": [
+        51
+      ]
+    },
+    {
+      "page": 147,
+      "old_pages": [
+        52
+      ]
+    },
+    {
+      "page": 148,
+      "old_pages": [
+        53
+      ]
+    },
+    {
+      "page": 149,
+      "old_pages": [
+        54
+      ]
+    },
+    {
+      "page": 150,
+      "old_pages": [
+        55
+      ]
+    }
+  ],
+  "changed_pages": [
+    {
+      "page": 6,
+      "text": "記事全文から、参照要約への情報選択を見る\n実例は、配布3.0.0のテスト集合にある13記事。記事と編集者の参照要約を、どちらも全文示す。記事には写真説明なども含まれる。\n長い記事は話題の切れ目でページを分け、記事全体の後に日本語訳を置く。参照要約の頁では、本文からどの情報を選んだかを見る。\n1. 記事と編集者の要約\n[1] CNN / DailyMail 3.0.0. Dataset card and distribution.  https://huggingface.co/datasets/abisee/cnn_dailymail",
+      "charts": []
+    },
+    {
+      "page": 7,
+      "text": "実例1：司会者の復帰（記事1/1）\n1. 記事と編集者の要約\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\n(CNN)For the first time in eight years, a TV legend returned to doing what he does best. Contestants told to \"come on down!\" on the April 1 edition of \"The Price Is Right\" encountered not host Drew Carey but another familiar face in charge of the proceedings. Instead, there was Bob Barker, who hosted the TV game show for 35 years before stepping down in 2007. Looking spry at 91, Barker handled the first price-guessing game of the show, the classic \"Lucky Seven,\" before turning hosting duties over to Carey, who finished up. Despite being away from the show for most of the past eight years, Barker didn't seem to miss a beat.",
+      "charts": []
+    },
+    {
+      "page": 8,
+      "text": "実例1：司会者の復帰（記事の訳1/1）\n1. 記事と編集者の要約\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文の日本語訳\n（CNN）テレビ界の伝説的な司会者が、8年ぶりに最も得意な仕事へ戻ってきた。4月1日放送の「ザ・プライス・イズ・ライト」で「さあ、前へ！」と呼ばれた出場者たちを迎えたのは、司会のドリュー・キャリーではなく、もう一人のおなじみの顔だった。そこにいたのは、2007年に退くまで35年間、このテレビのゲーム番組の司会を務めたボブ・バーカーだ。91歳になっても元気な様子のバーカーは、番組最初の値段当てゲーム、定番の「ラッキー・セブン」を進行。その後はキャリーに司会を引き継ぎ、キャリーが最後まで務めた。この8年間の大半を番組から離れて過ごしたにもかかわらず、バーカーには少しも衰えた様子がなかった。",
+      "charts": []
+    },
+    {
+      "page": 9,
+      "text": "実例1：司会者の復帰（参照要約）\n1. 記事と編集者の要約\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n参照要約（全文）\nBob Barker returned to host \"The Price Is Right\" on Wednesday .\nBarker, 91, had retired as host in 2007 .\n参照要約の日本語訳\nボブ・バーカーが水曜日、「ザ・プライス・イズ・ライト」の司会に復帰した。\n91歳のバーカーは2007年に司会を引退していた。\n記事の番組復帰の場面から、司会者の名前・年齢・引退年を選ぶ。値段当てゲームの進行や後任への引継ぎは背景に回る。",
+      "charts": []
+    },
+    {
+      "page": 11,
+      "text": "実例2：起訴と逮捕の経緯（記事1/1）\n1. 記事と編集者の要約\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\nLondon (CNN)A 19-year-old man was charged Wednesday with terror offenses after he was arrested as he returned to Britain from Turkey, London's Metropolitan Police said. Yahya Rashid, a UK national from northwest London, was detained at Luton airport on Tuesday after he arrived on a flight from Istanbul, police said. He's been charged with engaging in conduct in preparation of acts of terrorism, and with engaging in conduct with the intention of assisting others to commit acts of terrorism. Both charges relate to the period between November 1 and March 31. Rashid is due to appear in Westminster Magistrates' Court on Wednesday, police said. CNN's Lindsay Isaac contributed to this report.",
+      "charts": []
+    },
+    {
+      "page": 12,
+      "text": "実例2：起訴と逮捕の経緯（記事の訳1/1）\n1. 記事と編集者の要約\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文の日本語訳\nロンドン（CNN）ロンドン警視庁によると、トルコから英国へ戻った際に逮捕された19歳の男性が、水曜日、テロ関連の罪で起訴された。英国籍でロンドン北西部出身のヤヒヤ・ラシッドは、イスタンブール発の便で到着した後、火曜日にルートン空港で拘束されたという。起訴されたのは、テロ行為の準備に当たる行為をした罪と、他者によるテロ行為を助ける意図で行動した罪だ。いずれの罪も11月1日から3月31日までの期間に関わる。警察によると、ラシッドは水曜日、ウェストミンスター治安判事裁判所へ出廷する予定だ。CNNのリンジー・アイザックが取材に協力した。",
+      "charts": []
+    },
+    {
+      "page": 13,
+      "text": "実例2：起訴と逮捕の経緯（参照要約）\n1. 記事と編集者の要約\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n参照要約（全文）\nLondon's Metropolitan Police say the man was arrested at Luton airport after landing on a flight from Istanbul .\nHe's been charged with terror offenses allegedly committed since the start of November .",
+      "charts": []
+    },
+    {
+      "page": 14,
+      "text": "実例2：起訴と逮捕の経緯（参照要約・訳）\n1. 記事と編集者の要約\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n参照要約の日本語訳\nロンドン警視庁によると、男性はイスタンブール発の便で到着後、ルートン空港で逮捕された。\n11月初め以降に犯したとされるテロ関連の罪で起訴された。\n逮捕された空港と到着便、起訴内容と対象期間を残す。年齢、氏名、出廷予定などは参照要約では省かれる。",
+      "charts": []
+    },
+    {
+      "page": 15,
+      "text": "実例3：ウイルスへの曝露と発症（記事1/2）\n1. 記事と編集者の要約\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\n(CNN)Five Americans who were monitored for three weeks at an Omaha, Nebraska, hospital after being exposed to Ebola in West Africa have been released, a Nebraska Medicine spokesman said in an email Wednesday. One of the five had a heart-related issue on Saturday and has been discharged but hasn't left the area, Taylor Wilson wrote. The others have already gone home. They were exposed to Ebola in Sierra Leone in March, but none developed the deadly virus.\nThey are clinicians for Partners in Health, a Boston-based aid group. They all had contact with a colleague who was diagnosed with the disease and is being treated at the National Institutes of Health in Bethesda, Maryland.",
+      "charts": []
+    },
+    {
+      "page": 16,
+      "text": "実例3：ウイルスへの曝露と発症（記事2/2）\n1. 記事と編集者の要約\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\nAs of Monday, that health care worker is in fair condition.\nThe Centers for Disease Control and Prevention in Atlanta has said the last of 17 patients who were being monitored are expected to be released by Thursday.\nMore than 10,000 people have died in a West African epidemic of Ebola that dates to December 2013, according to the World Health Organization. Almost all the deaths have been in Guinea, Liberia and Sierra Leone. Ebola is spread by direct contact with the bodily fluids of an infected person.",
+      "charts": []
+    },
+    {
+      "page": 17,
+      "text": "実例3：ウイルスへの曝露と発症（記事の訳1/2）\n1. 記事と編集者の要約\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文の日本語訳\n（CNN）西アフリカでエボラウイルスに曝露した後、ネブラスカ州オマハの病院で3週間にわたり経過観察を受けていた米国人5人が、病院を出た。ネブラスカ・メディシンの広報担当者が水曜日の電子メールで明らかにした。テイラー・ウィルソンによると、5人のうち1人は土曜日に心臓に関する問題が起き、退院したものの、まだこの地域に滞在している。ほかの人たちは既に帰宅した。5人は3月にシエラレオネでエボラウイルスに曝露したが、この致死性の病気を発症した人はいなかった。\n5人は、ボストンを拠点とする援助団体「パートナーズ・イン・ヘルス」の医療従事者だ。",
+      "charts": []
+    },
+    {
+      "page": 18,
+      "text": "実例3：ウイルスへの曝露と発症（記事の訳2/2）\n1. 記事と編集者の要約\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文の日本語訳\n全員が、エボラと診断され、メリーランド州ベセスダの米国立衛生研究所で治療を受けている同僚と接触していた。月曜日の時点で、その医療従事者の容体は安定している。\nアトランタの米疾病対策センターは、経過観察中だった患者17人のうち、最後の患者も木曜日までに病院を出られる見込みだとしている。\n世界保健機関によると、2013年12月に始まった西アフリカのエボラ流行で、1万人以上が亡くなった。死者のほぼ全員がギニア、リベリア、シエラレオネで出ている。エボラは、感染者の体液への直接の接触によって広がる。",
+      "charts": []
+    },
+    {
+      "page": 19,
+      "text": "実例3：ウイルスへの曝露と発症（参照要約）\n1. 記事と編集者の要約\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n参照要約（全文）\n17 Americans were exposed to the Ebola virus while in Sierra Leone in March .\nAnother person was diagnosed with the disease and taken to hospital in Maryland .\nNational Institutes of Health says the patient is in fair condition after weeks of treatment .",
+      "charts": []
+    },
+    {
+      "page": 20,
+      "text": "実例3：ウイルスへの曝露と発症（参照要約・訳）\n1. 記事と編集者の要約\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n参照要約の日本語訳\n3月にシエラレオネで米国人17人がエボラウイルスに曝露した。\n別の1人は発症し、メリーランド州の病院に搬送された。\n米国立衛生研究所によると、その患者は数週間の治療後、容体が安定している。\n本文では、5人の曝露と退院、別の同僚の治療、計17人の経過観察を説明する。参照要約は、観察対象全体と治療中の同僚に焦点を当てる。",
+      "charts": []
+    },
+    {
+      "page": 21,
+      "text": "参照要約の細部も、本文に照らして読む\n本文が明示するのは、5人のシエラレオネでの曝露と退院、別の同僚の治療、計17人の経過観察である。\n参照要約は17人全員について曝露の場所・月・国籍を記し、「数週間の治療」やNIHへの発言帰属も加える。これらの細部は配布本文では明示されていない。\n1. 記事と編集者の要約\n[1] CNN / DailyMail 3.0.0. Dataset card and distribution.  https://huggingface.co/datasets/abisee/cnn_dailymail",
+      "charts": []
+    },
+    {
+      "page": 41,
+      "text": "実例4：勢力が変わる熱帯低気圧（記事1/3）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\n(CNN)Filipinos are being warned to be on guard for flash floods and landslides as tropical storm Maysak approached the Asian island nation Saturday. Just a few days ago, Maysak gained super typhoon status thanks to its sustained 150 mph winds. It has since lost a lot of steam as it has spun west in the Pacific Ocean. It's now classified as a tropical storm, according to the Philippine national weather service, which calls it a different name, Chedeng. It boasts steady winds of more than 70 mph (115 kph) and gusts up to 90 mph as of 5 p.m. (5 a.m. ET) Saturday.",
+      "charts": []
+    },
+    {
+      "page": 42,
+      "text": "実例4：勢力が変わる熱帯低気圧（記事2/3）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\nStill, that doesn't mean Maysak won't pack a wallop.\nAuthorities took preemptive steps to keep people safe such as barring outdoor activities like swimming, surfing, diving and boating in some locales, as well as a number of precautionary evacuations. Gabriel Llave, a disaster official, told PNA that tourists who arrive Saturday in and around the coastal town of Aurora \"will not be accepted by the owners of hotels, resorts, inns and the like ... and will be advised to return to their respective places.\"",
+      "charts": []
+    },
+    {
+      "page": 43,
+      "text": "実例4：勢力が変わる熱帯低気圧（記事3/3）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\nAldczar Aurelio, a meteorologist with the Philippine Atmospheric, Geophysical and Astronomical Services Administration (PAGASA), said the storm was centered 200 miles southwest of Aurora province as of 5 p.m. (5 a.m. ET) and heading west at a 12.5 mph clip. It's expected to make landfall Sunday morning on the southeastern coast of Isabela province and be out of the Philippines by Monday. Ahead of the storm. Isabela Gov. Faustino Dry III warned Saturday that residents should act as if this will be \"no ordinary typhoon.\" Dry told PNA, \"We do not know what the impact will be once it will make landfall.\"",
+      "charts": []
+    },
+    {
+      "page": 44,
+      "text": "実例4：勢力が変わる熱帯低気圧（記事の訳1/3）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文の日本語訳\n（CNN）土曜日、トロピカルストームのメイサークがフィリピンへ近づき、同国の人々には鉄砲水や土砂崩れへの警戒が呼びかけられている。ほんの数日前、メイサークは持続風速150マイル毎時を伴い、スーパー台風になっていた。その後、太平洋を西へ進む間に大きく勢力を弱めた。フィリピンの気象当局は、この低気圧を別名のチェデンと呼び、現在はトロピカルストームに分類している。土曜日午後5時（米東部時間午前5時）の時点で、持続風速は70マイル毎時（115キロメートル毎時）を超え、最大瞬間風速は90マイル毎時に達する。",
+      "charts": []
+    },
+    {
+      "page": 45,
+      "text": "実例4：勢力が変わる熱帯低気圧（記事の訳2/3）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文の日本語訳\nそれでも、メイサークの威力がなくなったわけではない。\n当局は人々の安全を守るため、先手を打って対策を取った。一部地域で水泳、サーフィン、ダイビング、ボート遊びなどの屋外活動を禁じたほか、予防的な避難も実施した。災害対応の担当者ガブリエル・リャベはPNAに対し、土曜日に沿岸の町オーロラとその周辺へ到着する観光客について、「ホテル、リゾート、宿泊施設などの経営者は受け入れず……それぞれの場所へ戻るよう勧める」と語った。",
+      "charts": []
+    },
+    {
+      "page": 46,
+      "text": "実例4：勢力が変わる熱帯低気圧（記事の訳3/3）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文の日本語訳\nフィリピン大気地球物理天文局（PAGASA）の気象予報官アルドクサル・アウレリオによると、土曜日午後5時（米東部時間午前5時）の時点で、低気圧の中心はオーロラ州の南西200マイルにあり、時速12.5マイルで西へ進んでいた。日曜日の朝にイサベラ州南東部の海岸へ上陸し、月曜日までにフィリピンを通過する見込みだ。嵐の接近を前に、イサベラ州知事ファウスティノ・ドライ3世は土曜日、住民に「普通の台風ではない」ものとして行動するよう警告した。ドライはPNAに「上陸したとき、どのような影響が出るかは分からない」と語った。",
+      "charts": []
+    },
+    {
+      "page": 47,
+      "text": "実例4：勢力が変わる熱帯低気圧（参照要約）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n参照要約（全文）\nOnce a super typhoon, Maysak is now a tropical storm with 70 mph winds .\nIt could still cause flooding, landslides and other problems in the Philippines .\n参照要約の日本語訳\nかつてスーパー台風だったメイサークは、現在は風速70マイル毎時のトロピカルストームになっている。\nそれでもフィリピンに洪水や土砂崩れなどの被害をもたらすおそれがある。\n勢力が弱まった経緯と、洪水・土砂崩れの危険を残す。本文の風速は「70マイル毎時を超える」で、参照要約は70マイル毎時と記す。",
+      "charts": []
+    },
+    {
+      "page": 48,
+      "text": "実例5：死因の暫定的な見解（記事1/3）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\n(CNN)Andrew Getty, one of the heirs to billions of oil money, appears to have died of natural causes, a Los Angeles Police Department spokesman said. The coroner's preliminary assessment is there was no foul play involved in the death of Getty, grandson of oil tycoon J. Paul Getty, said Detective Meghan Aguilar. Andrew Getty, 47, had \"several health issues,\" Aguilar said, adding that an autopsy will be conducted. There is no criminal investigation underway, he said.\nSome medication had also been recovered from Getty's home, though investigators don't know whether Getty was taking it or what his medical history was, Ed Winter, assistant chief in the Los Angeles County coroner's office, told CNN affiliate KTLA Tuesday night.",
+      "charts": []
+    },
+    {
+      "page": 49,
+      "text": "実例5：死因の暫定的な見解（記事2/3）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\nKTLA reported that Getty was found on his side near a bathroom in his home. Getty's parents, Ann and Gordon Getty, released a statement confirming their son's death and asking for privacy.\nWhere the Getty family fortune came from . Gordon Getty is one of three living sons of J. Paul Getty, the oil baron who was thought to be the richest man in the world at the time of his death in 1976. Gordon Getty, 81, has a net worth of $2.1 billion, according to Forbes. One other son died in 1958 and another died in 1973. Gordon Getty spearheaded the controversial sale of Getty to Texaco for $10 billion in 1984. In its list of richest American families, Forbes estimated the Gettys' net worth to be about $5 billion.",
+      "charts": []
+    },
+    {
+      "page": 50,
+      "text": "実例5：死因の暫定的な見解（記事3/3）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\nCourt records show Andrew Getty had recently filed to get a restraining order against an ex-girlfriend. A hearing in the case had been scheduled for next week. In his request, Getty said he had been diagnosed with a serious medical condition in 2013. \"A rise in my blood pressure places me in grave risk of substantial and irreparable injury or death,\" he wrote in the petition. \"My doctors have advised that heated arguments can cause my blood pressure to rise dangerously.\" Andrew Getty had three brothers and three half-sisters. People we've lost in 2015 . CNN's Doug Criss, Janet DiGiacomo, Mark Mooney, Mike Love, Julie In and Cheri Mossburg contributed to this report.",
+      "charts": []
+    },
+    {
+      "page": 51,
+      "text": "実例5：死因の暫定的な見解（記事の訳1/3）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文の日本語訳\n（CNN）石油で築いた巨額の資産の相続人の一人、アンドリュー・ゲティは、自然死したとみられる。ロサンゼルス市警の広報担当者が明らかにした。石油王J・ポール・ゲティの孫であるゲティの死について、検視当局の暫定的な判断では事件性はないと、メーガン・アギラー刑事は述べた。47歳のゲティには「いくつかの健康上の問題」があったとし、解剖が行われる予定だと付け加えた。刑事捜査は行われていないという。\nロサンゼルス郡検視局の副責任者エド・ウィンターは火曜日の夜、CNN系列局KTLAに対し、ゲティの自宅で薬も見つかったと語った。ただし捜査当局には、ゲティがそれを服用していたか、どのような病歴があったかは分かっていない。",
+      "charts": []
+    },
+    {
+      "page": 52,
+      "text": "実例5：死因の暫定的な見解（記事の訳2/3）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文の日本語訳\nKTLAによると、ゲティは自宅の浴室近くで、体を横向きにした状態で発見された。両親のアンとゴードン・ゲティは声明を出し、息子の死を認めるとともに、プライバシーの尊重を求めた。\nゲティ家の資産はどこから生まれたのか。ゴードン・ゲティは、1976年に亡くなった時点で世界一の富豪と考えられていた石油王J・ポール・ゲティの、存命の息子3人のうちの一人だ。フォーブスによると、81歳のゴードン・ゲティの純資産は21億ドル。別の息子の一人は1958年に、もう一人は1973年に亡くなった。ゴードン・ゲティは1984年、議論を呼んだゲティ社のテキサコへの100億ドルでの売却を主導した。フォーブスは米国の富豪一族の一覧で、ゲティ家の純資産を約50億ドルと推計した。",
+      "charts": []
+    },
+    {
+      "page": 53,
+      "text": "実例5：死因の暫定的な見解（記事の訳3/3）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文の日本語訳\n裁判記録によると、アンドリュー・ゲティは最近、元交際相手に対する接近禁止命令を求めていた。来週、審理が開かれる予定だった。ゲティは申立書で、2013年に重い病気と診断されたと記していた。「血圧が上昇すると、重大で取り返しのつかない傷害、または死に至る大きな危険がある」と述べ、「医師からは、激しい口論によって血圧が危険なほど上がる可能性があると言われている」と記した。アンドリュー・ゲティには男のきょうだいが3人、片親を同じくする姉妹が3人いた。2015年に亡くなった人々。CNNのダグ・クリス、ジャネット・ディジャコモ、マーク・ムーニー、マイク・ラブ、ジュリー・イン、シェリ・モスバーグが取材に協力した。",
+      "charts": []
+    },
+    {
+      "page": 54,
+      "text": "実例5：死因の暫定的な見解（参照要約）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n参照要約（全文）\nAndrew Getty's death appears to be from natural causes, police say, citing coroner's early assessment .\nIn a petition for a restraining order, Getty had written he had a serious medical condition.\nPolice say this is not a criminal matter at this time .",
+      "charts": []
+    },
+    {
+      "page": 55,
+      "text": "実例5：死因の暫定的な見解（参照要約・訳）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n参照要約の日本語訳\n警察は、検視当局の初期判断に基づき、アンドリュー・ゲティは自然死したとみられると述べた。\nゲティは接近禁止命令の申立書で、重い病気があると記していた。\n警察によると、現時点では刑事事件として扱っていない。\n冒頭の死因に関する暫定判断と捜査状況に、後半の申立書の病歴を結び付ける。ゲティ家の資産の来歴は要約から省かれる。",
+      "charts": []
+    },
+    {
+      "page": 56,
+      "text": "実例6：大型実験装置の再稼働（記事1/5）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\n(CNN)The world's biggest and most powerful physics experiment is taking place as you read this. The Large Hadron Collider (LHC), a particle accelerator and the largest machine in the world, is ready for action following a two-year shutdown. After problems that delayed the restart in March, scientists at the European Organization for Nuclear Research (CERN) completed final tests, enabling the first beams to start circulating Sunday inside the LHC's 17 mile (27 km) ring. \"Operating accelerators for the benefit of the physics community is what CERN's here for,\" CERN Director-General Rolf Heuer said on the organization's website. \"Today, CERN's heart beats once more to the rhythm of the LHC.\"",
+      "charts": []
+    },
+    {
+      "page": 57,
+      "text": "実例6：大型実験装置の再稼働（記事2/5）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\nThe LHC generates up to 600 million particles per second, with a beam circulating for 10 hours, traveling more than 6 billion miles (more than 10 billion kilometers) -- the distance from Earth to Neptune and back again. At near light-speed, a proton in the LHC makes 11,245 circuits per second.\nIt took thousands of scientists, engineers and technicians decades to devise and build the particle accelerator, housed in a tunnel between Lake Geneva and the Jura mountain range. The purpose of the lengthy project is to recreate the conditions that existed moments after the \"Big Bang\" -- the scientific theory said to explain the creation of the universe.",
+      "charts": []
+    },
+    {
+      "page": 58,
+      "text": "実例6：大型実験装置の再稼働（記事3/5）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\nBy replicating the energy density and temperature, scientists hope to uncover how the universe evolved.\nOur current, limited, knowledge is based on what's called The Standard Model of particle physics.  \"But we know that this model is not complete,\" Dr. Mike Lamont, operations group leader at the LHC, told CNN in March. The burning questions that remain include the origin of mass and why some particles are very heavy, while others have no mass at all; a unified description of all the fundamental forces such as gravity; and uncovering dark matter and dark energy, since visible matter accounts for only 4 percent of the universe.",
+      "charts": []
+    },
+    {
+      "page": 59,
+      "text": "実例6：大型実験装置の再稼働（記事4/5）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\nThe LHC could also question the idea that the universe is only made of matter, despite the theory that antimatter must have been produced in the same amounts at the time of the Big Bang. CERN says the energies achievable by the LHC have only ever been found in nature.\nThe machine alone costs approximately three billion euros (about $3.3 billion), paid for by member countries of CERN and contributions by non-member nations.",
+      "charts": []
+    },
+    {
+      "page": 60,
+      "text": "実例6：大型実験装置の再稼働（記事5/5）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\nThe organization also asserts that its guidelines for the protection of the environment and personnel comply with standards set by Swiss and French laws and a European Council Directive. Scientists and physics enthusiasts will be waiting with bated breath as the LHC ventures into the great unknown.\n\"After two years of effort, the LHC is in great shape,\" said CERN Director for Accelerators and Technology, Frédérick Bordry. \"But the most important step is still to come when we increase the energy of the beams to new record levels.\" Peter Shadbolt contributed to this report.",
+      "charts": []
+    },
+    {
+      "page": 61,
+      "text": "実例6：大型実験装置の再稼働（記事の訳1/4）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文の日本語訳\n（CNN）世界最大かつ最も強力な物理実験が、これを読んでいる今、行われている。粒子加速器であり、世界最大の機械でもある大型ハドロン衝突型加速器（LHC）が、2年間の停止を経て動き出す準備を整えた。3月には問題のため再稼働が延期されたが、欧州原子核研究機構（CERN）の科学者たちは最終試験を終え、日曜日、全周17マイル（27キロメートル）のリング内で最初のビームを周回させられるようになった。CERNのロルフ・ホイヤー事務局長は機構のウェブサイトで、「物理学の研究者たちのために加速器を動かすことこそ、CERNが存在する理由だ」と語った。「今日、CERNの心臓は再びLHCのリズムで鼓動している。」\nLHCは毎秒最大6億個の粒子を生み出し、ビームは10時間にわたり周回する。",
+      "charts": []
+    },
+    {
+      "page": 62,
+      "text": "実例6：大型実験装置の再稼働（記事の訳2/4）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文の日本語訳\nその間の移動距離は60億マイル（100億キロメートル）を超え、地球と海王星を往復する距離に相当する。光速に近い速度で動くLHC内の陽子は、1秒に11,245周する。\nジュネーブ湖とジュラ山脈の間のトンネルに収められたこの粒子加速器を考案し建設するため、数千人の科学者、技術者、技能者が数十年を費やした。この長期プロジェクトの目的は、宇宙の誕生を説明するとされる科学理論「ビッグバン」の直後に存在した状態を再現することだ。エネルギー密度と温度を再現し、宇宙がどのように進化したかを解明したいと科学者たちは考えている。",
+      "charts": []
+    },
+    {
+      "page": 63,
+      "text": "実例6：大型実験装置の再稼働（記事の訳3/4）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文の日本語訳\n現在の限られた知識は、素粒子物理学の標準模型と呼ばれるものに基づいている。しかしLHC運転グループの責任者マイク・ラモント博士は3月、CNNに「この模型が完全でないことは分かっている」と語った。質量の起源や、非常に重い粒子と質量のない粒子がある理由の解明、重力など全ての基本的な力の統一的な記述が、未解決の重要な課題となっている。目に見える物質は宇宙のわずか4％を占めるため、暗黒物質と暗黒エネルギーの解明も課題となる。\nビッグバンの際には反物質も同じ量だけ生まれたはずだという理論があるのに、宇宙は物質だけからできている、という考えにも、LHCは疑問を投げかけるかもしれない。",
+      "charts": []
+    },
+    {
+      "page": 64,
+      "text": "実例6：大型実験装置の再稼働（記事の訳4/4）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文の日本語訳\nCERNは、LHCで到達できるエネルギーは、これまで自然界でしか見られなかったものだとしている。\n装置だけで約30億ユーロ（約33億ドル）がかかり、CERN加盟国の負担と非加盟国の拠出で賄われた。また機構は、環境と職員の保護に関する指針が、スイスとフランスの法律および欧州理事会の指令の基準に適合しているとしている。LHCが未知の世界へ踏み出すのを、科学者や物理学の愛好家たちは固唾をのんで見守るだろう。\nCERNの加速器・技術担当部長フレデリック・ボルドリーは、「2年間の努力を経て、LHCは素晴らしい状態にある」と語った。「しかし最も重要な段階は、ビームのエネルギーを新記録の水準へ高めるときで、それはまだこれからだ。」ピーター・シャドボルトが取材に協力した。",
+      "charts": []
+    },
+    {
+      "page": 65,
+      "text": "実例6：大型実験装置の再稼働（参照要約）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n参照要約（全文）\nThe Large Hadron Collider (LHC) begins again after a two-year shutdown .\nThe restart was delayed in March .\n参照要約の日本語訳\n大型ハドロン衝突型加速器（LHC）が2年間の停止を経て再稼働した。\n3月には再稼働が延期されていた。\n冒頭の再稼働と2年間の停止、3月の延期を2文にまとめる。粒子の運動、研究目的、費用、安全基準の説明は背景として省かれる。",
+      "charts": []
+    },
+    {
+      "page": 66,
+      "text": "実例7：収監中の通信方法（記事1/3）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\n(CNN)Imprisoned soldier Chelsea Manning can now communicate with the world  -- in 140 characters or less. Manning, who is serving a 35-year prison sentence for leaking thousands of classified documents, appears to have joined Twitter this week. In a series of tweets, the prisoner formerly known as Bradley Manning said she will be using a voice phone to dictate her tweets to  communications firm Fitzgibbon Media, which will post them on her behalf. She is not allowed Internet access in prison, according to The Guardian. \"It will be hard, but I don't want this Twitter feed to be a one-way street/conversation,\" Manning posted to her nearly 26,000-plus followers.",
+      "charts": []
+    },
+    {
+      "page": 67,
+      "text": "実例7：収監中の通信方法（記事2/3）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\nManning was sentenced in 2013, and in August of that year, she said she wanted to transition to a female. The Fort Leavenworth Disciplinary Barracks in Kansas, where she is serving her sentence, has authorized hormone therapy for her treatment. Manning said she suffers from gender dysphoria. Her  lawyers describe it as \"the medical diagnosis given to individuals whose gender identity -- their innate sense of being male or female -- differs from the sex they were assigned at birth, causing clinically significant distress.\"",
+      "charts": []
+    },
+    {
+      "page": 68,
+      "text": "実例7：収監中の通信方法（記事3/3）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\nLast year, a Kansas judge granted her request to be formally known as Chelsea Elizabeth Manning.\nThe former Army intelligence analyst was convicted of stealing and disseminating 750,000 pages of documents and videos to WikiLeaks in what has been described as the largest leak of classified material in U.S. history. She was found guilty of 20 of the 22 charges, including violations of the U.S. Espionage Act. Manning has written opinion pieces for The New York Times and The Guardian from prison.",
+      "charts": []
+    },
+    {
+      "page": 69,
+      "text": "実例7：収監中の通信方法（記事の訳1/3）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文の日本語訳\n（CNN）収監中の兵士チェルシー・マニングが、140文字以内で世界とやり取りできるようになった。数千件の機密文書を漏洩した罪で35年の刑に服しているマニングは、今週、ツイッターを始めたようだ。以前はブラッドリー・マニングという名前だった受刑者は、一連の投稿で、電話でツイートを口述し、広報会社フィッツギボン・メディアに代理投稿してもらうつもりだと述べた。ガーディアンによると、刑務所ではインターネットの利用が認められていない。",
+      "charts": []
+    },
+    {
+      "page": 70,
+      "text": "実例7：収監中の通信方法（記事の訳2/3）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文の日本語訳\nマニングは約2万6,000人を超えるフォロワーに向けて、「難しいとは思うけれど、このツイッターの発信や会話を一方通行にはしたくない」と投稿した。\nマニングは2013年に判決を受け、同年8月、女性へ移行したいと述べた。服役先のカンザス州フォート・レブンワース軍刑務所は、治療のためのホルモン療法を認めている。マニングは性別違和に苦しんでいると述べた。弁護士たちはこれを、「自分が男性か女性かという内面的な感覚である性自認と、出生時に割り当てられた性別が異なり、臨床的に重大な苦痛が生じている人に与えられる医学的な診断」と説明している。",
+      "charts": []
+    },
+    {
+      "page": 71,
+      "text": "実例7：収監中の通信方法（記事の訳3/3）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文の日本語訳\n昨年、カンザス州の判事は、正式な名前をチェルシー・エリザベス・マニングとする本人の申立てを認めた。\n元陸軍情報分析官のマニングは、文書と映像75万ページ分を盗み、ウィキリークスへ渡した罪で有罪となった。米国史上最大の機密資料の漏洩とされる事件だ。米スパイ防止法違反を含む22件の起訴内容のうち、20件で有罪となった。マニングは刑務所からニューヨーク・タイムズとガーディアンへ意見記事を寄稿してきた。",
+      "charts": []
+    },
+    {
+      "page": 72,
+      "text": "実例7：収監中の通信方法（参照要約）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n参照要約（全文）\nManning is serving a 35-year sentence for leaking thousands of classified documents .\nShe says she will be using a voice phone to dictate her tweets .\n参照要約の日本語訳\nマニングは数千件の機密文書を漏洩した罪で、35年の刑に服している。\n本人によると、電話でツイートを口述するという。\n収監の理由と刑期、電話でツイートを口述する方法を残す。インターネット利用の制限や本人の経歴は、本文で背景を補う。",
+      "charts": []
+    },
+    {
+      "page": 73,
+      "text": "実例8：監督の降板と制作費（記事1/3）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\n(CNN)Film director David Lynch has confirmed he will no longer direct the revival of \"Twin Peaks\" -- a cult 1990s television show that was set to return in 2016. The offbeat TV series, created by Lynch and Mark Frost, featured a quirky FBI agent who went to the Pacific Northwest town of Twin Peaks to investigate the mysterious murder of a high school girl named Laura Palmer. The groundbreaking series is considered one of the most influential shows in television history.",
+      "charts": []
+    },
+    {
+      "page": 74,
+      "text": "実例8：監督の降板と制作費（記事2/3）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\nLynch broke the news about his departure in a series of tweets, saying that the show's third season will continue without him. He said he felt the network was not offering enough money to produce the show \"the way it needed to be done.\" Lynch also wrote that he had personally called the actors over the weekend to let them know he would no longer be directing.\nShowtime Network, which will air the nine-episode comeback, released a statement saying they were \"saddened\" by Lynch's decision.",
+      "charts": []
+    },
+    {
+      "page": 75,
+      "text": "実例8：監督の降板と制作費（記事3/3）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\n\"We were saddened to read David Lynch's statement today since we believed we were working towards solutions with David and his reps on the few remaining deal points,\" read the statement. \"Showtime also loves the world of Twin Peaks and we continue to hold out hope that we can bring it back in all its glory with both of its extraordinary creators, David Lynch and Mark Frost, at its helm.\"\nShowtime announced they would produce a third season in October last year. Actor Kyle MacLachlan, who played the coffee-obsessed FBI agent Dale Cooper in the original series, had confirmed he would reprise the lead role for the new season.",
+      "charts": []
+    },
+    {
+      "page": 76,
+      "text": "実例8：監督の降板と制作費（記事の訳1/3）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文の日本語訳\n（CNN）映画監督デイヴィッド・リンチが、2016年に復活する予定だった1990年代のカルト的人気番組「ツイン・ピークス」の新作を、監督しないと明らかにした。リンチとマーク・フロストが生み出したこの風変わりなテレビシリーズでは、個性的なFBI捜査官が、ローラ・パーマーという女子高校生の謎の殺人事件を捜査するため、米国北西部の町ツイン・ピークスを訪れる。この画期的なシリーズは、テレビ史上最も影響力のある番組の一つとされる。\nリンチは一連のツイートで降板を発表し、番組の第3シーズンは自分抜きで続くと述べた。",
+      "charts": []
+    },
+    {
+      "page": 77,
+      "text": "実例8：監督の降板と制作費（記事の訳2/3）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文の日本語訳\n放送局が、番組を「必要な形で制作する」ために十分な予算を出していないと感じたという。また週末には、監督を降りることを伝えるため、俳優たちに自ら電話したと記した。\n全9話の復活版を放送するショウタイム・ネットワークは、リンチの決定に「悲しんでいる」とする声明を発表した。「私たちは、残っているわずかな契約上の論点について、デイヴィッドと代理人とともに解決へ向けて取り組んでいると考えていたため、今日のデイヴィッド・リンチの声明を読み、悲しく思った」と述べた。",
+      "charts": []
+    },
+    {
+      "page": 78,
+      "text": "実例8：監督の降板と制作費（記事の訳3/3）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文の日本語訳\n「ショウタイムもツイン・ピークスの世界を愛しており、二人の並外れた生みの親であるデイヴィッド・リンチとマーク・フロストの指揮の下、その輝きを全て取り戻して復活させられるという希望を、今も持ち続けている。」\nショウタイムは昨年10月、第3シーズンを制作すると発表した。オリジナル版で、コーヒーに目がないFBI捜査官デイル・クーパーを演じたカイル・マクラクランは、新シーズンでも主役を再び演じると明らかにしていた。",
+      "charts": []
+    },
+    {
+      "page": 79,
+      "text": "実例8：監督の降板と制作費（参照要約）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n参照要約（全文）\nDavid Lynch says he won't be directing new episodes of Twin Peaks .\nShowtime \"saddened\" over decision, which involved a dispute over money .\n参照要約の日本語訳\nデイヴィッド・リンチは「ツイン・ピークス」の新作を監督しないと述べた。\n制作費をめぐる対立を含むこの決定に、ショウタイムは「悲しんでいる」とした。\n監督の降板、制作費が足りないという本人の発言、放送局の声明を結び付ける。作品のあらすじや出演者の復帰は省かれる。",
+      "charts": []
+    },
+    {
+      "page": 80,
+      "text": "実例9：ミサイル発射の失敗（記事1/4）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\nEmbarrassing footage has emerged of a missile launch going spectacularly wrong in Russia. The minute-long clip shows the S300 rocket barely managing to take off before plummeting back down to earth. A small thud can be heard and bits of debris fly off as the weapon makes a feeble attempt to launch at the military base in an unknown part of Russia.\nLift off: The rocket just about launches with debris and a plume of smoke clearly visible next to the Russian flag .",
+      "charts": []
+    },
+    {
+      "page": 81,
+      "text": "実例9：ミサイル発射の失敗（記事2/4）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\nUp and down: The S300 rocket barely manages to take off before it starts plummeting back down to earth . It scarcely gets off the launchpad and is followed by a small plume of smoke, before it can be seen dropping out of the sky as shouts can be heard from those watching.\nSeconds later, the rocket goes out of view as whoever is filming takes cover and a huge explosion can be heard. The shaky camera returns to a massive plume of smoke.",
+      "charts": []
+    },
+    {
+      "page": 82,
+      "text": "実例9：ミサイル発射の失敗（記事3/4）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\nThe leaked footage will be of some embarrassment to Vladimir Putin who as grown the Russian defence budget has grown by 33 per cent to £54billion over the past year. It comes not long after shocking footage emerged of failed another rocket launch which killed six Russian ballistic missile technicians. Bang: A loud explosion can be heard before plumes of smoke are clearly visible following the failed launch of a rocket in Russia .\nFootage of the accident, which happened several months ago but officials tried to keep quiet, was posted on social network sites.",
+      "charts": []
+    },
+    {
+      "page": 83,
+      "text": "実例9：ミサイル発射の失敗（記事4/4）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\nIt happened near Donetsk in the Ukraine where it is believed the missile was about to be fired against government forces. A second OTR-21 Tochka missile was successfully launched a few seconds later from the wreckage, but there is nothing left of the launch site controlled by Russian backed militia. It shows a deafening explosion in a field with plumes of white smoke rising quickly into the atmosphere. A second missile, which would also have been programmed, is still launched from the wreckage a few seconds later, presumably heading towards its intended target.",
+      "charts": []
+    },
+    {
+      "page": 84,
+      "text": "実例9：ミサイル発射の失敗（記事の訳1/3）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文の日本語訳\nロシアでミサイルの発射が派手に失敗し、その失態を捉えた映像が公開された。1分間の映像には、S300ロケットがかろうじて飛び上がった後、地面へ落下する様子が映っている。ロシアの場所が分からない軍事基地で、兵器が弱々しく発射を試みると、小さな鈍い音が聞こえ、破片が飛び散る。\n離陸：ロケットはやっとのことで発射され、ロシア国旗の横には破片と煙の柱がはっきり見える。上がって、下がる：S300ロケットはかろうじて飛び上がった後、地面へ落ち始める。発射台をほとんど離れられず、小さな煙の柱が続く。そして見ていた人々の叫び声が聞こえる中、空から落ちてくる。",
+      "charts": []
+    },
+    {
+      "page": 85,
+      "text": "実例9：ミサイル発射の失敗（記事の訳2/3）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文の日本語訳\n数秒後、撮影者が身を隠すとロケットは画面から消え、大きな爆発音が聞こえる。揺れるカメラが再び捉えたのは、巨大な煙の柱だった。\n流出した映像は、ウラジーミル・プーチンにとって気まずいものになるだろう。ロシアの国防予算はこの1年で33％増え、540億ポンドとなった。ロシアの弾道ミサイル技術者6人が亡くなった、別のロケット発射失敗の衝撃的な映像が公開されて間もなく、今回の映像も出てきた。爆発：ロシアでのロケット発射失敗の後、煙の柱がはっきり見える前に、大きな爆発音が聞こえる。",
+      "charts": []
+    },
+    {
+      "page": 86,
+      "text": "実例9：ミサイル発射の失敗（記事の訳3/3）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文の日本語訳\n数か月前に起き、当局が伏せようとしていたその事故の映像は、ソーシャルネットワークのサイトに投稿された。事故はウクライナのドネツク近郊で起き、ミサイルは政府軍に向けて発射されるところだったとみられる。数秒後には、2発目のOTR-21トーチカ・ミサイルが残骸の中から無事に発射された。しかしロシアの支援を受ける民兵が支配する発射地点には、何も残っていない。映像には、野原で耳をつんざく爆発が起き、白い煙の柱が急速に上空へ立ち上る様子が映っている。やはり発射をプログラムされていたであろう2発目のミサイルは、数秒後、残骸の中からなお発射され、おそらく予定の目標へ向かっている。",
+      "charts": []
+    },
+    {
+      "page": 87,
+      "text": "実例9：ミサイル発射の失敗（参照要約）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n参照要約（全文）\nS300 barely takes off before plunging back to the ground .\nMinute-long clip shows people dashing for cover as rocket hits ground .\nMishap comes shortly after footage of crash killing missile engineers .",
+      "charts": []
+    },
+    {
+      "page": 88,
+      "text": "実例9：ミサイル発射の失敗（参照要約・訳）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n参照要約の日本語訳\nS300はほとんど上昇できず、地面へ落下した。\n1分間の映像には、ロケットが地面に衝突し、人々が物陰へ走る様子が映っている。\nこの失敗の少し前には、ミサイル技術者が亡くなる事故の映像もあった。\n発射直後の落下と、その後の爆発を残し、別の発射事故の背景にも触れる。本文では撮影者が身を隠し、周囲の叫び声が聞こえる。参照要約の「人々が走って避難する」という細部までは明示しない。",
+      "charts": []
+    },
+    {
+      "page": 89,
+      "text": "実例10：講義中に調理する学生（記事1/7）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\nA boldfaced student at Mississippi State, who refused to go hungry during his college lecture, brought a George Foreman grill to class and proceeded to cook bacon for his sandwich - while sitting in the front row of his class. Roman Ehrhardt became an internet sensation after one of his classmates shared a hilarious photo of him grilling his lunch in class - however according to a Buzzfeed Community posting, the senior communications major was actually completing project, in which had to violate a societal norm.",
+      "charts": []
+    },
+    {
+      "page": 90,
+      "text": "実例10：講義中に調理する学生（記事2/7）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\nBut that didn't stop his unknowing peers from relishing in his outrageous act. 'Y'all this guy is making a sandwich with a George Foreman in class. #hailstate [sic],' Britt Reynolds tweeted on Monday while sharing a photo of Roman grilling his food. Hilarious stunt: Britt Reynolds shared this photo of her classmate Roman Ehrhardt grilling bacon on a George Foreman during class on Monday . Classroom experiment: Roman (pictured) was secretly completing a project, in which he had to violate a societal norm .",
+      "charts": []
+    },
+    {
+      "page": 91,
+      "text": "実例10：講義中に調理する学生（記事3/7）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\nThe candid snapshot has been retweeted nearly 1,000 times since it was posted, with many commenting on how Roman is their hero. While one Twitter user called him a 'future leader', another applauded him for his 'progressive thinking'. And one student branded Roman the real life Jeff Spicoli, a character who battled his uptight history teacher Mr Hand by having pizza delivered to his classroom in the in the classic 1982 film Fast Times at Ridgemont High. '@brittkelso that dude is Jeff Spicoli X 10. Too bad Mr. Hand was not instructing [sic],' he joked.",
+      "charts": []
+    },
+    {
+      "page": 92,
+      "text": "実例10：講義中に調理する学生（記事4/7）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\nMoney's worth: The college senior shared this photo after he used the grill at his lecture, tweeting: 'The George Foreman that started it all' American icon: The snapshot has been retweeted nearly 1,000 times since it was posted, with many people calling Roman a 'hero' for his brazen actions .\nBritt continued to live tweet the moment, writing: 'The whole room smells like bacon now and I couldn't be more happy [sic].'",
+      "charts": []
+    },
+    {
+      "page": 93,
+      "text": "実例10：講義中に調理する学生（記事5/7）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\nAlthough Megan Pickle tweeted her to ask if Roman was making food for a 'speech or presentation', Britt told it was 'neither'. 'I've never even met him and I couldn't be more proud to be his classmate,' Britt added.\nMeanwhile, another student joked about the professor's reaction, commenting: 'I bet John Nicholson had a field day with that', with Britt adding that her teacher's 'balding head was smiling from ear to ear the whole time'. But that's because he was in on the joke. No manners: Karen Howell tweeted that Roman was being 'inappropriate' - which was actually the point . Great idea: Patrick Netherton lauded Roman for his ingenuity .",
+      "charts": []
+    },
+    {
+      "page": 94,
+      "text": "実例10：講義中に調理する学生（記事6/7）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\nGet it right: David Covuccu commented that Roman was actually making a pannini - not a sandwich .\nA week before, Roman asked Dr Nicholson, his introduction to communication theory professor, if he could pull the stunt in class after a friend suggested that he go all out for his project. Not only did the teacher agree, he helped Roman with the small details. Two days after his project was competed, Roman took to Twitter to share a link to the 'real story', which was posted on Buzzfeed.\nAnd although he isn't quite the bold hero his fellow classmates made him out to be, he seems to be enjoying his newfound celebrity status.",
+      "charts": []
+    },
+    {
+      "page": 95,
+      "text": "実例10：講義中に調理する学生（記事7/7）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\nRoman has changed his Twitter bio so that it now reads: 'Here for the Love who saved me. Be it through music and people! And I'm the George Foreman Guy. #Unashamed #free [sic].'\nThis Twitter user compared Roman to Jeff Spicoli, a character who waged war with his high school history teacher in the 1982 film Fast Times at Ridgemont High . Movie inspiration: Jeff Spicoli (Sean Penn) had pizza delivered to his history class (pictured) in the classic film . Roman chose a George Foreman grill like this one to complete his project. The grill systems range from $29 to $130 depending on the size and model .",
+      "charts": []
+    },
+    {
+      "page": 96,
+      "text": "実例10：講義中に調理する学生（記事の訳1/6）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文の日本語訳\nミシシッピ州立大学の大胆な学生は、講義中の空腹を我慢する気はなく、ジョージ・フォアマン・グリルを教室へ持ち込んだ。そして、教室の最前列に座ったまま、サンドイッチ用のベーコンを焼き始めた。ローマン・エアハートは、クラスメートの一人が教室で昼食を焼く愉快な写真を共有した後、ネットで話題の人になった。しかし、バズフィード・コミュニティへの投稿によると、コミュニケーション専攻のこの4年生は、実際には社会規範を破るという課題に取り組んでいた。\nそれでも、事情を知らない周囲の学生は、この型破りな行為を大いに楽しんだ。",
+      "charts": []
+    },
+    {
+      "page": 97,
+      "text": "実例10：講義中に調理する学生（記事の訳2/6）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文の日本語訳\n「みんな、この人、授業中にジョージ・フォアマンでサンドイッチを作ってる。#hailstate［原文のまま］」と、ブリット・レイノルズは月曜日、ローマンが調理する写真とともにツイートした。愉快な行為：ブリット・レイノルズが、月曜日の授業中、ジョージ・フォアマンでベーコンを焼くクラスメート、ローマン・エアハートの写真を共有した。教室での実験：写真のローマンは、社会規範を破るという課題に、ひそかに取り組んでいた。\nその何気ない写真は、投稿されてから約1,000回リツイートされ、ローマンは自分の英雄だと書く人も多かった。",
+      "charts": []
+    },
+    {
+      "page": 98,
+      "text": "実例10：講義中に調理する学生（記事の訳3/6）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文の日本語訳\nあるツイッター利用者は「未来の指導者」と呼び、別の人は「進歩的な考え方」をたたえた。また、ある学生はローマンを、現実のジェフ・スピコリだと評した。スピコリは、1982年の名作映画「初体験／リッジモント・ハイ」で、堅物の歴史教師ミスター・ハンドと対立し、教室へピザを届けさせる人物だ。「@brittkelso あいつはジェフ・スピコリの10倍だ。ミスター・ハンドが授業をしていなくて残念［原文のまま］」と、その学生は冗談を言った。\n元は取れた：この大学4年生は、講義でグリルを使った後、その写真を共有し、「全ての始まりとなったジョージ・フォアマン」とツイートした。アメリカの象徴：その写真は約1,000回リツイートされ、多くの人が大胆な行動を取ったローマンを「英雄」と呼んでいる。",
+      "charts": []
+    },
+    {
+      "page": 99,
+      "text": "実例10：講義中に調理する学生（記事の訳4/6）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文の日本語訳\nブリットはその場の実況を続け、「今や教室中がベーコンのにおい。最高にうれしい［原文のまま］」と書いた。ミーガン・ピクルが、ローマンは「スピーチか発表」のために料理しているのかとツイッターで尋ねると、ブリットは「どちらでもない」と答えた。「一度も話したことがないのに、彼と同じクラスであることを、これほど誇らしく思うことはない」とも付け加えた。\n一方、別の学生は教員の反応について、「ジョン・ニコルソンは大いに楽しんだだろうね」と冗談を言った。ブリットは、「頭の薄い先生が、ずっと満面の笑みを浮かべていた」と応じた。",
+      "charts": []
+    },
+    {
+      "page": 100,
+      "text": "実例10：講義中に調理する学生（記事の訳5/6）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文の日本語訳\nそれもそのはず、教員も事情を知っていたのだ。行儀が悪い：カレン・ハウエルは、ローマンの行動は「不適切」とツイートしたが、それこそが狙いだった。名案：パトリック・ネザートンは、ローマンの工夫をたたえた。正確に言おう：デイヴィッド・コヴッチは、ローマンが作っているのはサンドイッチではなく、パニーニだと指摘した。\n1週間前、ローマンは、友人から課題のために思い切りやってみてはと提案され、コミュニケーション理論入門を担当するニコルソン博士に、教室でこの行為をしてもよいか尋ねていた。教員は認めただけでなく、細かな準備も手伝った。課題を終えて2日後、ローマンは、バズフィードに掲載された「本当の話」へのリンクをツイッターで共有した。",
+      "charts": []
+    },
+    {
+      "page": 101,
+      "text": "実例10：講義中に調理する学生（記事の訳6/6）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文の日本語訳\n周りの学生が思い描いたほど大胆な英雄ではないとしても、ローマンは新たに得た有名人としての立場を楽しんでいるようだ。ツイッターの自己紹介は今、「私を救った愛のためにここにいる。音楽や人々を通して！ そして、私はジョージ・フォアマン・ガイだ。#Unashamed #free［原文のまま］」となっている。\nこのツイッター利用者は、ローマンをジェフ・スピコリになぞらえた。1982年の映画「初体験／リッジモント・ハイ」で、高校の歴史教師と対立した人物だ。映画が着想に：ジェフ・スピコリ（ショーン・ペン）は、この名作映画で、歴史の授業へピザを届けさせた（写真）。ローマンは課題のために、写真のようなジョージ・フォアマン・グリルを選んだ。このグリルは、大きさとモデルにより29ドルから130ドルで販売されている。",
+      "charts": []
+    },
+    {
+      "page": 102,
+      "text": "実例10：講義中に調理する学生（参照要約）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n参照要約（全文）\nRoman Ehrhardt became an internet sensation after a snapshot of him cooking bacon while in the front row of a college lecture was shared online .\nThe senior communications major at Mississippi State was secretly completing a project, in which he had to violate a societal norm .",
+      "charts": []
+    },
+    {
+      "page": 103,
+      "text": "実例10：講義中に調理する学生（参照要約・訳）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n参照要約の日本語訳\nローマン・エアハートは、大学の講義の最前列でベーコンを焼く写真がネットで共有され、話題になった。\nミシシッピ州立大学でコミュニケーションを専攻する4年生は、社会規範を破るという課題に、ひそかに取り組んでいた。\n冒頭の写真の拡散と、社会規範を破る授業課題だったことを2文にまとめる。後半の教員への事前相談は課題の背景を補い、ネットの反応や映画の例えは省かれる。",
+      "charts": []
+    },
+    {
+      "page": 104,
+      "text": "実例11：父親の声で眠る赤ちゃん（記事1/4）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\nA restless baby has been lulled to sleep by her father's impression of Darth Vader. Madison Avery Crotty, from San Diego, is seen screaming and crying until her doting dad decides to try out his terrifying impersonation. In a new video posted online, the wriggling one-month-old seems to doze off as soon as Thomas 'Buddy' starts his deep breathing technique. Scroll for video . Little Madison Crotty is seen crying until her doting father Buddy decided to try out his impersonation .\nBuddy had tried out several types of ‘white noise’ sounds to try and get Madison to sleep.",
+      "charts": []
+    },
+    {
+      "page": 105,
+      "text": "実例11：父親の声で眠る赤ちゃん（記事2/4）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\nAnd he's seen looking delighted to discover that his daughter finds the Star Wars sound soothing, saying: 'She likes the dark side!' at the end of the clip. The crackling, deep-sea type sound is reminiscent of what Madison might have heard in the womb just a month earlier. It seems that parents really will try anything to get their newborn to stop crying and go to bed - even the Dark Side.\nBuddy loaded the footage of the precious moment on his YouTube channel under the title: The Force Awakens... then falls back asleep. It has been viewed more than 4,000 times. Buddy loaded the precious moment on his YouTube channel yesterday .",
+      "charts": []
+    },
+    {
+      "page": 106,
+      "text": "実例11：父親の声で眠る赤ちゃん（記事3/4）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\nThe crackling, deep-sea type sound is reminiscent of what Madison might have heard in the womb . The clip, called The Force Awakens... then falls back asleep, has been viewed more than 4,000 times .\nThe Dark Lords of the Sith's heavy-breathing sound was devised by American sound engineer Ben Burtt in the Seventies. The grisly sound of Vader's breathing is so iconic that it even has a trademark - or, rather, a 'soundmark'. Lucasfilm reportedly trademarked 234 seconds of it with the US Patent and Trademark Office in 2014. The grisly sound of Vader's breathing is so iconic that it even has a trademark - or, rather, a 'soundmark' Its creator Ben Burtt says it makes Vader sound like a 'life support system', 'mechanical', and 'part robot'",
+      "charts": []
+    },
+    {
+      "page": 107,
+      "text": "実例11：父親の声で眠る赤ちゃん（記事4/4）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\nThe firm's lawyers describe the sound as 'rhythmic mechanical human breathing created by breathing through a scuba tank regulator.' An interview with the sound's designer, Burtt, from the Lucasfilm archives, shows him describing the process. He says that what started out as a very loud and noise-producing project which made Vader sound like a 'moving operating room' and 'queezing windmill', was eventually toned down to the 'life support system', 'mechanical', 'part robot' sound we know today.",
+      "charts": []
+    },
+    {
+      "page": 108,
+      "text": "実例11：父親の声で眠る赤ちゃん（記事の訳1/4）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文の日本語訳\n落ち着かずにいた赤ちゃんが、父親のダース・ベイダーのものまねで眠りについた。サンディエゴのマディソン・エイヴリー・クロッティちゃんは、優しい父親が怖いものまねを試そうと決めるまで、叫び声を上げて泣いている。ネットに投稿された新しい動画では、体を動かしていた生後1か月の赤ちゃんが、トーマス、通称「バディ」が深い呼吸を始めるとすぐ、うとうとするように見える。動画は下へ。小さなマディソン・クロッティちゃんは、優しい父バディがものまねを試すと決めるまで泣いている。\nバディはマディソンを寝かせようと、何種類もの「ホワイトノイズ」を試していた。",
+      "charts": []
+    },
+    {
+      "page": 109,
+      "text": "実例11：父親の声で眠る赤ちゃん（記事の訳2/4）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文の日本語訳\n娘がスター・ウォーズの音に落ち着くと分かり、動画の終わりで「ダークサイドが好きなんだね！」と話す父親は、とてもうれしそうだ。パチパチと響く深海のような音は、ほんの1か月前までマディソンが母親のおなかの中で聞いていたかもしれない音を思わせる。生まれたばかりの子が泣きやんで眠るなら、親は何でも試すらしい。ダークサイドさえも。\nバディはこの大切な瞬間の映像を、自分のユーチューブ・チャンネルへ「フォースの覚醒……そして再び眠りにつく」という題で投稿した。再生回数は4,000回を超えている。",
+      "charts": []
+    },
+    {
+      "page": 110,
+      "text": "実例11：父親の声で眠る赤ちゃん（記事の訳3/4）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文の日本語訳\nバディは昨日、この大切な瞬間を自分のユーチューブ・チャンネルに投稿した。パチパチと響く深海のような音は、マディソンが母親のおなかで聞いていたかもしれない音を思わせる。「フォースの覚醒……そして再び眠りにつく」というこの動画は、4,000回以上再生されている。\nシスの暗黒卿の、激しい呼吸の音は、米国の音響技師ベン・バートが1970年代に作り出した。ベイダーの不気味な呼吸音は、商標、より正確には「音の商標」を持つほど象徴的なものだ。ルーカスフィルムは2014年、234秒分の音を米特許商標庁に商標登録したとされる。ベイダーの不気味な呼吸音は、「音の商標」を持つほど象徴的だ。",
+      "charts": []
+    },
+    {
+      "page": 111,
+      "text": "実例11：父親の声で眠る赤ちゃん（記事の訳4/4）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文の日本語訳\n制作者ベン・バートによると、その音はベイダーを「生命維持装置」、「機械的」、「一部はロボット」のように聞こえさせる。\n同社の弁護士たちは、この音を「スキューバタンクのレギュレーターを通して息をすることで生まれる、リズミカルで機械的な人間の呼吸」と説明している。ルーカスフィルムのアーカイブにある制作者バートのインタビューでは、その制作過程が語られる。最初は音が非常に大きく、ベイダーが「動く手術室」や「queezing windmill」（原文表記）のように聞こえたという。しかし最終的には抑えられ、今おなじみの「生命維持装置」、「機械的」、「一部はロボット」の音になった。",
+      "charts": []
+    },
+    {
+      "page": 112,
+      "text": "実例11：父親の声で眠る赤ちゃん（参照要約）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n参照要約（全文）\nMadison Crotty, from San Diego in California, is seen screaming and crying .\nVideo posted online by her father Buddy shows how he gets her to sleep .\nHe copies the scuba tank breathing made famous by villain Darth Vader .",
+      "charts": []
+    },
+    {
+      "page": 113,
+      "text": "実例11：父親の声で眠る赤ちゃん（参照要約・訳）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n参照要約の日本語訳\nカリフォルニア州サンディエゴのマディソン・クロッティちゃんが、叫び声を上げて泣く様子が映っている。\n父親のバディがネットに投稿した動画は、寝かしつけ方を示している。\n父親は、悪役ダース・ベイダーで有名な、潜水用装置で息をするような音をまねる。\n記事1/4の寝かしつけと、記事4/4の呼吸音の説明を3文に結ぶ。本文はサンディエゴと記し、参照要約はカリフォルニア州も補う。音の商標の詳説は省かれる。",
+      "charts": []
+    },
+    {
+      "page": 114,
+      "text": "実例12：嵐の中で防水衣類を届ける（記事1/5）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\nA Sydney mother has braved this week’s horror Sydney storm by hitting the streets and handing out waterproof clothing, blankets and sleeping bags to the homeless. Sacha Whitehead, 26, received donations after posting a call to action on Facebook saying she would pick up the much-needed items and drive them into Sydney CBD. The Dee Why-based financial adviser spent the night with her sister Lexi handing the generous contributions out to the homeless during what's been hailed as the storm of a century.",
+      "charts": []
+    },
+    {
+      "page": 115,
+      "text": "実例12：嵐の中で防水衣類を届ける（記事2/5）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\nSacha Whitehead stands with a carload full of waterproof clothes and sleeping bags which she handed out to homeless people during Tuesday's nights severe Sydney storm .\nSydney’s dispossessed have suffered the worst of the wild weather, with many popular homeless spots totally washed out. Whitehead told Daily Mail Australia she was spurred into action after reading a friend's Facebook status. ‘One of my friends wrote a message sympathising with the homeless people enduring the storm. I couldn’t get the image out of my head, and decided I had to do something to help.’",
+      "charts": []
+    },
+    {
+      "page": 116,
+      "text": "実例12：嵐の中で防水衣類を届ける（記事3/5）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\nAn hour after posting her plea, Whitehead was inundated with offers from people offering donations. Battered trees and power lines lie across a major road in Raymond Terrace, North of Sydney, in the midst of what has been hailed the storm of the century . Whitehead was spurred into action after reading a friends Facebook status about how the homeless would be suffering through the storm . ‘We spent the day driving and collecting from people’s houses. Once my car was filled to the brim, we spent the night handing it all out.’",
+      "charts": []
+    },
+    {
+      "page": 117,
+      "text": "実例12：嵐の中で防水衣類を届ける（記事4/5）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\nThe sisters delivered the clothes to locations often frequented by the homeless, such as Central Station Tunnel and Hyde Park, where they found people trying to stay out of the storm. ‘They were really suffering. The dangerous conditions meant a lot of the usual clothing vans didn’t make the rounds, so many were freezing without adequate clothing.’\nWhitehead and her one-year-old daughter Liliana: The mother said she questioned her decision to leave the safety of her home at the peak of the violent storm . Whitehead is collecting more donations today and handing them this evening out at a popup shelter in Milsons Point .",
+      "charts": []
+    },
+    {
+      "page": 118,
+      "text": "実例12：嵐の中で防水衣類を届ける（記事5/5）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\nWhitehead admits that at the peak of the violent storm, which has since been declared a natural disaster, she questioned her decision to leave the safety of her home. ‘When we were driving back it was total bedlam, trees were flying left and right and none of the traffic lights were working. ‘I questioned whether I had made the wrong choice. But that just made me realise how much worse of a position these people were in.’ Whitehead is collecting more donations today and handing them out at a popup shelter in Milsons Point.\nAnyone with donations should contact sacha.whitehead1@gmail.com or call Mission Beat on 1300306461 .",
+      "charts": []
+    },
+    {
+      "page": 119,
+      "text": "実例12：嵐の中で防水衣類を届ける（記事の訳1/4）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文の日本語訳\nシドニーの母親が、今週の恐ろしい嵐にひるまず街へ出て、ホームレスの人々に防水衣類、毛布、寝袋を配った。サシャ・ホワイトヘッドさん、26歳は、必要な品々を集め、車でシドニーの中心部（CBD）へ届けるとフェイスブックで呼びかけ、寄付を受け取った。ディー・ワイに住むファイナンシャル・アドバイザーのホワイトヘッドさんは、「100年に一度の嵐」といわれる中、その夜はレクシーさんと姉妹で、寄せられた品々をホームレスの人々へ配って回った。火曜日の夜の激しい嵐の中、ホームレスの人々へ配った防水衣類や寝袋を、車いっぱいに積んで立つサシャ・ホワイトヘッドさん。",
+      "charts": []
+    },
+    {
+      "page": 120,
+      "text": "実例12：嵐の中で防水衣類を届ける（記事の訳2/4）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文の日本語訳\nシドニーの住まいのない人々は、この荒天の最も厳しい影響を受けており、ふだん多くのホームレスの人々が過ごす場所も、各所で水浸しになった。ホワイトヘッドさんはデイリー・メール・オーストラリアに、友人のフェイスブックへの投稿を読んで行動する気になったと話した。「友人の一人が、嵐に耐えるホームレスの人々に同情するメッセージを書いていました。その光景が頭から離れず、助けるために何かしなければと思ったのです。」\n呼びかけを投稿して1時間後、寄付を申し出る人々の連絡が、ホワイトヘッドさんのもとへ殺到した。「100年に一度の嵐」といわれる荒天の中、シドニー北部レイモンド・テラスでは、倒れた木や電線が幹線道路をふさいでいる。",
+      "charts": []
+    },
+    {
+      "page": 121,
+      "text": "実例12：嵐の中で防水衣類を届ける（記事の訳3/4）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文の日本語訳\nホームレスの人々が嵐で苦しむだろうという友人のフェイスブックへの投稿を読み、行動を起こしたホワイトヘッドさん。「昼間は車で走り回り、皆さんの家から品物を集めました。車がいっぱいになったら、その夜、全て配って回りました。」\n姉妹は、セントラル駅の地下道やハイド・パークなど、ホームレスの人々がよく集まる場所へ衣類を届け、嵐を避けようとしている人々に出会った。「本当に苦しんでいました。危険な状況のため、ふだん衣類を届けている車の多くが巡回できず、十分な服もなく凍えている人が大勢いたのです。」\nホワイトヘッドさんと、1歳の娘リリアナちゃん。母親は、激しい嵐の最中に安全な家を出た判断を疑ったと話した。",
+      "charts": []
+    },
+    {
+      "page": 122,
+      "text": "実例12：嵐の中で防水衣類を届ける（記事の訳4/4）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文の日本語訳\nホワイトヘッドさんは今日も寄付を集め、今夜、ミルソンズ・ポイントの臨時避難所で配る予定だ。\nその後、自然災害と認定された激しい嵐の最中、ホワイトヘッドさんは、安全な家を出ると決めたことを疑ったと認めている。「帰りの運転中は大混乱でした。木々が左右に飛び、信号は全く動いていませんでした。間違った選択をしたのかもしれないと思いました。でもそのことで、この人たちはどれほど厳しい状況にいるのか、あらためて気付かされたのです。」ホワイトヘッドさんは今日も寄付を集め、ミルソンズ・ポイントの臨時避難所で配る予定だ。\n寄付を希望する人は、sacha.whitehead1@gmail.com、またはミッション・ビートの電話番号1300306461へ連絡できる。",
+      "charts": []
+    },
+    {
+      "page": 123,
+      "text": "実例12：嵐の中で防水衣類を届ける（参照要約）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n参照要約（全文）\nSacha Whitehead collected sleeping bags and clothing donations .\nShe braved the storm by delivering the donations to homeless people .\nThe 26-year-old mother is collecting more donations to hand out tonight .",
+      "charts": []
+    },
+    {
+      "page": 124,
+      "text": "実例12：嵐の中で防水衣類を届ける（参照要約・訳）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n参照要約の日本語訳\nサシャ・ホワイトヘッドは、寝袋や衣類の寄付を集めた。\n嵐にもひるまず、集めた品をホームレスの人々に届けた。\n26歳の母親は、今夜配るためにさらに寄付を集めている。\n記事1/5の寄付・配布と、記事5/5の今夜も活動を続ける予定を残す。配布先や運転中の危険の描写は、活動の背景を伝える。",
+      "charts": []
+    },
+    {
+      "page": 125,
+      "text": "実例13：音楽サービスの順位（記事1/10）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\nLast month some of the biggest names in music joined Jay Z for the launch of his premium music streaming service Tidal. But despite all the pomp and circumstance, the app is now floundering at the lower ends of the iOS app store chart. At the time of writing the $9.95-a-month (£9.99) service ranked at 872 on the overall download chart and 51 in the music category in the US.\nScroll down for video . Tidal's $19.99-a-month app (pictured) launched in New York on 30 March. Following the launch the app jumped to 4th place on the iOS music chart but now ranks at 51 in the music category and 872 overall .",
+      "charts": []
+    },
+    {
+      "page": 126,
+      "text": "実例13：音楽サービスの順位（記事2/10）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\nWhile in the UK the situation is worse, with the app ranking at 92 in the music app category, and disappearing from the overall app list entirely. By comparison, Pandora radio and Spotify occupy first and second spots respectively when the iOS and Google Play downloads are combined. For iOS only, Pandora is top, Apple's Garageband is second and Spotify is third. The fall in favour was first spotted by BGR's Tero Kuittinen and the figures come from App Annie and its Intelligence platform.",
+      "charts": []
+    },
+    {
+      "page": 127,
+      "text": "実例13：音楽サービスの順位（記事3/10）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\nIt is not known why the app has dropped so significantly but the price may be considered too high for some users. Many users who downloaded it and are using it during the trial period may be looking to cancel their subscriptions and uninstall, or alternatively coverage of the app has dropped. The membership-based service - similar to Spotify - offers music and exclusive video content that users can stream on computers, tablets and smartphones or listen to offline. Tidal currently has more than 25 million songs and 75,000 music videos in its library.",
+      "charts": []
+    },
+    {
+      "page": 128,
+      "text": "実例13：音楽サービスの順位（記事4/10）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\nTidal is billed as the first artist-owned platform for music and video and the service aims to compete directly with Spotify and Apple's music service, headed by Dr Dre. Users can pay either $9.95 a month for a standard streaming service or $19.99 for high quality streaming in the US. The same tiers cost £9.99 and £19.99 in the UK. Unlike rival Spotify, the service doesn't have a free tier - meaning the musicians stand to make more money from it, but this also means it doesn't play adverts. Tidal streams at 1,411 kilobytes per second - above the 320 for subscribers of Spotify.",
+      "charts": []
+    },
+    {
+      "page": 129,
+      "text": "実例13：音楽サービスの順位（記事5/10）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\nDuring the launch event on 30 March, Rihanna, Madonna, Beyonce, Usher, Daft Punk, Arcade Fire, Jack White and Kanye West joined a host of other stars as they were revealed as co-owners of the subscription service, created by Jay Z. Tidal is billed as the first artist-owned platform for music and video and the service aims to compete directly with Spotify and Apple's music service, headed by Dr Dre. Tidal users can pay either $9.95 a month for a standard streaming service or $19.99 for high quality streaming in the US. The same tiers cost £9.99 and £19.99 in the UK.",
+      "charts": []
+    },
+    {
+      "page": 130,
+      "text": "実例13：音楽サービスの順位（記事6/10）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\nUnlike rival Spotify, the service doesn't have a free tier - meaning the musicians stand to make more money from it, but this also means it doesn't play adverts.\nTidal does, however, come with a 30-day free trial. At the event, Alicia Keys said the artists hope Tidal will 'forever change the course of music history' and ensure the viability of the industry. Tidal currently has more than 25 million songs and 75,000 music videos in its library. It can be streamed online, but also comes with an offline mode and playlists can be imported using partner site Soundiiz.com.",
+      "charts": []
+    },
+    {
+      "page": 131,
+      "text": "実例13：音楽サービスの順位（記事7/10）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\nTidal is said to stream at 1,411 kilobytes per second, above the 320 for subscribers of Spotify which offers lower levels for free users. While in the UK the situation is worse for Tidal with the app ranking at 92 in the music app category list (red), and falling from the overall app list (light blue) entirely as of 22 April . During the launch event Rihanna, Madonna, Beyonce, Usher, Daft Punk, Arcade Fire, Jack White and Kanye West joined a host of other stars as they were revealed as co-owners of the subscription service,  created by Jay Z. Tidal is billed as the first artist-owned platform for music and video .",
+      "charts": []
+    },
+    {
+      "page": 132,
+      "text": "実例13：音楽サービスの順位（記事8/10）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\nBy comparison, Pandora Radio (left) and Spotify (right) occupy first and second spots respectively when the iOS and Google Play downloads are combined. For iOS only, Pandora is top, Apple's Garageband is in second place and Spotify sits in third place . Streaming - which allows users to play unlimited on-demand music online - has narrowly edged out CD sales in revenues over the last year in the US. Industry leader Spotify said it has 60 million users with 15 million of paying for the Premium service. Spotify already has a range of rivals including US-based Rhapsody and Google Play. Paris-based Deezer is the second largest service with 6 million customers.",
+      "charts": []
+    },
+    {
+      "page": 133,
+      "text": "実例13：音楽サービスの順位（記事9/10）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\nIt is strong in Europe and last year entered the US as a high-end-only service.\nFollowing the launch of Tidal, Spotify's ranking jumped from 20th overall (red) to 16th in the US, and on 5 April it went from third on the music app chart to second place before falling again the next day. In the UK it held its number one position on the music chart and rose from 8th place to 7th overall (blue) Tidal has more than 25 million songs and 75,000 music videos in its library (pictured). It can be streamed online but also comes with an offline mode, and playlists can be imported using partner site Soundiiz.com.",
+      "charts": []
+    },
+    {
+      "page": 134,
+      "text": "実例13：音楽サービスの順位（記事10/10）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文\nTidal is said to stream at 1,411 kilobytes per second, above the 320 for premium subscribers of Spotify .\nLike Tidal, Deezer's elite service uses FLAC files which are larger than MP3s. Apple - which pioneered digital music through iTunes in 2001 - is reportedly also looking to launch a new streaming service as the market shifts away from permanent downloads. Apple earlier made a bid for streaming customers by buying Beats Electronics, run by Dr. Dre. Along with the US, Tidal is available in Britain and France and plans to launch later this year in Australia and Germany.",
+      "charts": []
+    },
+    {
+      "page": 135,
+      "text": "実例13：音楽サービスの順位（記事の訳1/9）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文の日本語訳\n先月、音楽界の大物たちがジェイ・Zとともに、有料音楽配信サービスTidalの発表の場に集まった。しかし、その華々しさにもかかわらず、アプリは今、iOSのアプリストアのランキング下位で苦戦している。記事執筆時、月額9.95ドル（9.99ポンド）のこのサービスは、米国の総合ダウンロードランキングで872位、音楽部門で51位だった。\n動画は下へ。ジェイ・Zの月額19.99ドルのアプリTidal（写真）は、3月30日にニューヨークで発表された。発表後、iOSの音楽ランキングで4位まで上がったが、現在は音楽部門51位、総合872位となっている。\n一方、英国の状況はさらに厳しく、音楽アプリ部門で92位となり、総合ランキングからは完全に姿を消した。",
+      "charts": []
+    },
+    {
+      "page": 136,
+      "text": "実例13：音楽サービスの順位（記事の訳2/9）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文の日本語訳\n比較すると、iOSとグーグル・プレイのダウンロード数を合わせたランキングでは、Pandora RadioとSpotifyが、それぞれ1位と2位を占める。iOSだけではPandoraが1位、アップルのGarageBandが2位、Spotifyが3位だ。この人気の低下を最初に指摘したのはBGRのテロ・クイッティネンで、数字はApp AnnieのIntelligenceプラットフォームによる。\nアプリの順位がなぜここまで落ちたかは分からないが、一部の利用者には料金が高すぎると受け取られている可能性がある。ダウンロードして試用期間中に使っている人の多くが、契約を解約して削除しようとしているのかもしれないし、アプリの報道が減ったのかもしれない。",
+      "charts": []
+    },
+    {
+      "page": 137,
+      "text": "実例13：音楽サービスの順位（記事の訳3/9）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文の日本語訳\nSpotifyに似たこの会員制サービスは、音楽と限定動画を提供し、パソコン、タブレット、スマートフォンでストリーミングしたり、オフラインで聴いたりできる。Tidalのライブラリーには、現在2,500万曲以上の音楽と7万5,000本のミュージックビデオがある。\nTidalは、アーティストが所有する初の音楽・動画プラットフォームとうたわれ、Spotifyや、ドクター・ドレーが率いるアップルの音楽サービスと直接競うことを目指している。米国では、利用者は標準のストリーミングなら月額9.95ドル、高音質なら19.99ドルを支払う。英国の同じ二つのプランは、それぞれ9.99ポンド、19.99ポンドだ。競合のSpotifyと異なり、無料プランはない。",
+      "charts": []
+    },
+    {
+      "page": 138,
+      "text": "実例13：音楽サービスの順位（記事の訳4/9）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文の日本語訳\nそのためミュージシャンの収入が増える可能性がある一方、広告も流れない。Tidalは毎秒1,411キロバイトで配信し、Spotify加入者向けの320を上回る。\n3月30日の発表イベントでは、リアーナ、マドンナ、ビヨンセ、アッシャー、ダフト・パンク、アーケイド・ファイア、ジャック・ホワイト、カニエ・ウェストら多くのスターが集まり、ジェイ・Zが立ち上げたこの定額制サービスの共同所有者として紹介された。Tidalは、アーティストが所有する初の音楽・動画プラットフォームとうたわれ、Spotifyや、ドクター・ドレーが率いるアップルの音楽サービスと直接競うことを目指している。",
+      "charts": []
+    },
+    {
+      "page": 139,
+      "text": "実例13：音楽サービスの順位（記事の訳5/9）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文の日本語訳\n利用者は米国で、標準のストリーミングなら月額9.95ドル、高音質なら19.99ドルを支払う。英国の同じ二つのプランは、それぞれ9.99ポンド、19.99ポンドだ。競合のSpotifyと異なり、無料プランはない。そのためミュージシャンの収入が増える可能性がある一方、広告も流れない。\nただしTidalには、30日間の無料試用期間がある。イベントでアリシア・キーズは、アーティストたちはTidalが「音楽史の流れを永遠に変え」、音楽産業を成り立たせ続けることを願っていると語った。Tidalのライブラリーには、現在2,500万曲以上と7万5,000本のミュージックビデオがある。",
+      "charts": []
+    },
+    {
+      "page": 140,
+      "text": "実例13：音楽サービスの順位（記事の訳6/9）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文の日本語訳\nオンラインで再生できるほか、オフラインモードも備え、提携サイトSoundiiz.comを使ってプレイリストを取り込める。\nTidalは毎秒1,411キロバイトで配信するとされ、無料利用者向けにはさらに低い水準を用意するSpotifyの、加入者向けの320を上回る。一方、英国の状況はさらに厳しく、音楽アプリ部門では92位（赤）となり、4月22日時点で総合アプリ一覧（水色）から完全に姿を消した。発表イベントでは、リアーナ、マドンナ、ビヨンセ、アッシャー、ダフト・パンク、アーケイド・ファイア、ジャック・ホワイト、カニエ・ウェストら多くのスターが集まり、ジェイ・Zが立ち上げたこの定額制サービスの共同所有者として紹介された。",
+      "charts": []
+    },
+    {
+      "page": 141,
+      "text": "実例13：音楽サービスの順位（記事の訳7/9）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文の日本語訳\nTidalは、アーティストが所有する初の音楽・動画プラットフォームとうたわれている。\n比較すると、iOSとグーグル・プレイのダウンロード数を合わせたランキングでは、Pandora Radio（左）とSpotify（右）が、それぞれ1位と2位を占める。iOSだけではPandoraが首位、アップルのGarageBandが2位、Spotifyが3位だ。好きな音楽をオンラインで無制限に聴けるストリーミングの売上は、昨年、米国でCDの売上をわずかに上回った。業界最大手のSpotifyによると、利用者は6,000万人で、そのうち1,500万人がPremiumプランの料金を支払っている。",
+      "charts": []
+    },
+    {
+      "page": 142,
+      "text": "実例13：音楽サービスの順位（記事の訳8/9）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文の日本語訳\nSpotifyには既に、米国を拠点とするRhapsodyやGoogle Playなど、さまざまな競合がある。パリを拠点とするDeezerは、600万人の顧客を持つ2位のサービスだ。欧州で強く、昨年は高級プラン限定のサービスとして米国へ進出した。\nTidalの発表後、Spotifyの米国の総合順位は20位（赤）から16位へ上がった。4月5日には音楽アプリ部門で3位から2位へ上がったが、翌日に再び下がった。英国では音楽部門の1位を維持し、総合では8位から7位（青）へ上がった。Tidalのライブラリーには2,500万曲以上と7万5,000本のミュージックビデオがある（写真）。オンラインで再生でき、オフラインモードも備える。",
+      "charts": []
+    },
+    {
+      "page": 143,
+      "text": "実例13：音楽サービスの順位（記事の訳9/9）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n記事全文の日本語訳\n提携サイトSoundiiz.comからプレイリストを取り込むこともできる。Tidalは毎秒1,411キロバイトで配信するとされ、Spotifyの有料加入者向けの320を上回る。\nTidalと同様に、DeezerのEliteサービスは、MP3より容量が大きいFLACファイルを使っている。2001年にiTunesでデジタル音楽を切り開いたアップルも、市場がダウンロードによる恒久的な購入から移行する中、新しいストリーミングサービスの立ち上げを検討していると報じられている。アップルは以前、ドクター・ドレーが経営するビーツ・エレクトロニクスを買収し、ストリーミング利用者の獲得を図った。Tidalは米国に加えて英国とフランスで利用でき、今年後半にはオーストラリアとドイツでの開始を計画している。",
+      "charts": []
+    },
+    {
+      "page": 144,
+      "text": "実例13：音楽サービスの順位（参照要約）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n参照要約（全文）\nJay Z  launched his $19.99-a-month Tidal app in New York on 30 March .\nFollowing the launch it jumped to fourth place on the iOS music app chart .\nAt the time of writing it ranks at 51 on the music chart and 872 overall .\nRivals Pandora and Spotify sit in first and third place respectively .",
+      "charts": []
+    },
+    {
+      "page": 145,
+      "text": "実例13：音楽サービスの順位（参照要約・訳）\nAppendix: 1. 追加の実例\n[1] CNN / DailyMail 3.0.0. Article and editorial highlights.  https://huggingface.co/datasets/abisee/cnn_dailymail\n参照要約の日本語訳\nジェイ・Zは3月30日、ニューヨークで月額19.99ドルのTidalアプリを発表した。\n発表後、iOSの音楽アプリランキングで4位に上がった。\n記事執筆時には音楽部門51位、総合872位だった。\n競合のPandoraとSpotifyは、それぞれ1位と3位だった。\n記事1/10の発表日・料金・順位と、記事2/10のiOSの競合順位を選ぶ。要約の月額19.99ドルは高音質プランで、標準プランは9.95ドル。競合の1位と3位はiOSだけの順位である。",
+      "charts": []
+    }
+  ]
+}

@@ -19,3 +19,8 @@ Geminiは使用していない。Codexが日本語校正スキルをページご
 ## 読者向けの説明・日本語の改訂（2026年10月）
 
 Geminiは使用せず、Codexがスキルで校正し、別担当が独立レビューした。削除・統合を含む[問題点と変更対](cnn-dailymail/editorial-2026-10/changes.md)、[旧ページとの対応](cnn-dailymail/editorial-2026-10/page-map.json)、[独立レビュー](cnn-dailymail/editorial-2026-10/independent-review/handoff.json)、[最終ページの全文](cnn-dailymail/pages.jsonl)。旧版の校正・検証記録は保持している。
+
+
+## 要約と入力本文の対応の改訂（2026-10-20）
+
+Geminiは使用せず、Codexが制作・データセット紹介・日本語校正スキルを適用し、別担当が独立レビューした。[変更前後と表示範囲](cnn-dailymail/source-coverage-2026-10/changes.md)、[ページ対応](cnn-dailymail/source-coverage-2026-10/page-map.json)、[独立レビュー](cnn-dailymail/source-coverage-2026-10/independent-review/handoff.json)、[現行全文](cnn-dailymail/pages.jsonl)。改訂前の検証記録も保持している。

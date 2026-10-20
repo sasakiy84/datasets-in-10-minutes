@@ -1,0 +1,222 @@
+[
+  {
+    "page": 1,
+    "text": "CNN / DailyMail\nニュース記事を複数文に要約する\nsasakiy84\ndatasets in 10 minutes (2026-10-18)"
+  },
+  {
+    "page": 2,
+    "text": "非匿名版の公式リポジトリ\nCNN / DailyMail\n[1] Abigail See (n.d.). CNN / Daily Mail non-anonymized dataset.  https://github.com/abisee/cnn-dailymail"
+  },
+  {
+    "page": 3,
+    "text": "\n記事と編集者の要約\n採点とモデルの到達水準\n構築とデータの全体像\nデータの入手と使い方\n目次"
+  },
+  {
+    "page": 4,
+    "text": "記事と編集者の要約\n1. 記事と編集者の要約"
+  },
+  {
+    "page": 5,
+    "text": "長い記事から、伝える内容を選ぶ\nニュース記事の本文を入力にし、記事に付いていた編集者のハイライトを参照要約にする。\n参照要約は、別の作業者が実験用に書き直した文ではなく、ニュースの公開時に付いていた短い要点。\n人名や地名をそのまま残した、英語の非匿名版を扱う。\n1. 記事と編集者の要約\n[1] See, Liu & Manning (2017). Get To The Point: Summarization with Pointer-Generator Networks.  https://aclanthology.org/P17-1099/"
+  },
+  {
+    "page": 6,
+    "text": "本文は抜粋、参照要約は全文を示す\n実例は、配布3.0.0のテスト集合にある13記事。記事の冒頭1文を抜粋し、編集者の参照要約は全文を示す。\n参照要約には、抜粋より後の本文から選ばれた情報も含まれる。通常の要約では記事全体から重要な内容を選ぶ。\n1. 記事と編集者の要約\n[1] CNN / DailyMail 3.0.0. Dataset card and distribution.  https://huggingface.co/datasets/abisee/cnn_dailymail"
+  },
+  {
+    "page": 7,
+    "text": "実例1：司会者の復帰\n1. 記事と編集者の要約\n原文：記事冒頭1文の抜粋\n(CNN)For the first time in eight years, a TV legend returned to doing what he does best.\n編集者の参照要約（全文）\nBob Barker returned to host \"The Price Is Right\" on Wednesday . Barker, 91, had retired as host in 2007 .\n日本語訳：同じ範囲\n(CNN)8年ぶりに、テレビ界のレジェンドが得意の仕事に戻ってきた。\n編集者の参照要約（全文）\nボブ・バーカーが水曜日、「ザ・プライス・イズ・ライト」の司会に復帰した。 91歳のバーカーは2007年に司会を引退していた。\n[1] CNN / DailyMail 3.0.0. Dataset card and distribution.  https://huggingface.co/datasets/abisee/cnn_dailymail"
+  },
+  {
+    "page": 8,
+    "text": "要約は、冒頭文の言い換えだけではない\n編集者の要約は、番組への復帰と、年齢・引退年を2文にまとめている。\n記事冒頭には番組名も司会者名もない。参照要約は、後に続く本文から具体的な事実を拾っている。\n1. 記事と編集者の要約\n[1] CNN / DailyMail 3.0.0. Dataset card and distribution.  https://huggingface.co/datasets/abisee/cnn_dailymail"
+  },
+  {
+    "page": 9,
+    "text": "実例2：起訴と逮捕の経緯\n1. 記事と編集者の要約\n原文：記事冒頭1文の抜粋\nLondon (CNN)A 19-year-old man was charged Wednesday with terror offenses after he was arrested as he returned to Britain from Turkey, London's Metropolitan Police said.\n編集者の参照要約（全文）\nLondon's Metropolitan Police say the man was arrested at Luton airport after landing on a flight from Istanbul . He's been charged with terror offenses allegedly committed since the start of November .\n[1] CNN / DailyMail 3.0.0. Dataset card and distribution.  https://huggingface.co/datasets/abisee/cnn_dailymail"
+  },
+  {
+    "page": 10,
+    "text": "実例2：起訴と逮捕の経緯（訳）\n1. 記事と編集者の要約\n日本語訳：記事冒頭1文の抜粋\nロンドン（CNN）ロンドン警視庁によると、トルコから英国へ戻った際に逮捕された19歳の男性が、水曜日にテロ関連の罪で起訴された。\n編集者の参照要約（全文）の日本語訳\nロンドン警視庁によると、男性はイスタンブール発の便で到着後、ルートン空港で逮捕された。 11月初め以降に犯したとされるテロ関連の罪で起訴された。\n[1] CNN / DailyMail 3.0.0. Dataset card and distribution.  https://huggingface.co/datasets/abisee/cnn_dailymail"
+  },
+  {
+    "page": 11,
+    "text": "実例3：ウイルスへの曝露と発症\n1. 記事と編集者の要約\n原文：記事冒頭1文の抜粋\n(CNN)Five Americans who were monitored for three weeks at an Omaha, Nebraska, hospital after being exposed to Ebola in West Africa have been released, a Nebraska Medicine spokesman said in an email Wednesday.\n編集者の参照要約（全文）\n17 Americans were exposed to the Ebola virus while in Sierra Leone in March . Another person was diagnosed with the disease and taken to hospital in Maryland . National Institutes of Health says the patient is in fair condition after weeks of treatment .\n[1] CNN / DailyMail 3.0.0. Dataset card and distribution.  https://huggingface.co/datasets/abisee/cnn_dailymail"
+  },
+  {
+    "page": 12,
+    "text": "実例3：ウイルスへの曝露と発症（訳）\n1. 記事と編集者の要約\n日本語訳：記事冒頭1文の抜粋\n（CNN）ネブラスカ・メディシンの広報担当者が水曜日の電子メールで述べたところによると、西アフリカでエボラウイルスに曝露し、ネブラスカ州オマハの病院で3週間経過観察を受けていた米国人5人が、病院を出た。\n編集者の参照要約（全文）の日本語訳\n3月にシエラレオネで米国人17人がエボラウイルスに曝露した。 別の1人は発症し、メリーランド州の病院に搬送された。 米国立衛生研究所によると、その患者は数週間の治療後、容体が安定している。\n[1] CNN / DailyMail 3.0.0. Dataset card and distribution.  https://huggingface.co/datasets/abisee/cnn_dailymail"
+  },
+  {
+    "page": 13,
+    "text": "人数と出来事の対応を保つ\nエボラの記事は、経過観察後に病院を出た5人から始まる。参照要約は、曝露した17人と、発症した別の1人に焦点を移す。\n病原体への曝露、発症、退院を区別し、誰についての数値かを保つことが要約の内容を左右する。\n1. 記事と編集者の要約\n[1] CNN / DailyMail 3.0.0. Dataset card and distribution.  https://huggingface.co/datasets/abisee/cnn_dailymail"
+  },
+  {
+    "page": 14,
+    "text": "採点とモデルの到達水準\n2. 採点とモデルの到達水準"
+  },
+  {
+    "page": 15,
+    "text": "ROUGEは、参照要約との重なりを測る\nROUGE-1は単語、ROUGE-2は連続する2語、ROUGE-Lは順序を保った最長共通部分列に基づく。\n生成文側の一致率と参照側の一致率からF1を求め、記事ごとに採点して平均する。\nROUGEは参照要約との語の重なりを測る。主語や数量の取り違えは、別に本文と照合する必要がある。\n2. 採点とモデルの到達水準\n[1] See, Liu & Manning (2017). Get To The Point: Summarization with Pointer-Generator Networks.  https://aclanthology.org/P17-1099/"
+  },
+  {
+    "page": 16,
+    "text": "2017年：冒頭3文を選ぶ方式が強い\n2. 採点とモデルの到達水準\n非匿名版test、ROUGE F1×100。学習済みモデルは記事先頭400 tokenを使用。\n[1] See, Liu & Manning (2017). Get To The Point: Summarization with Pointer-Generator Networks.  https://aclanthology.org/P17-1099/"
+  },
+  {
+    "page": 17,
+    "text": "コピーと反復の抑制を組み合わせる\nPointer-generatorは、語彙から生成する処理と、入力記事中の語をコピーする処理を混ぜる。\ncoverageは、これまで注意を向けた箇所を追跡し、同じ内容の繰り返しを抑える。\nそれでもLead-3が高得点を取る。記事の冒頭に重要情報が集まりやすい、ニュースの構成が反映される。\n2. 採点とモデルの到達水準\n[1] See, Liu & Manning (2017). Get To The Point: Summarization with Pointer-Generator Networks.  https://aclanthology.org/P17-1099/"
+  },
+  {
+    "page": 18,
+    "text": "2020年：事前学習してから要約に適応\n2. 採点とモデルの到達水準\nCNN/DailyMail test、ROUGE F1×100。ノイズを加えた文章を復元する事前学習後、要約データで微調整。\n[1] Lewis et al. (2020). BART: Denoising Sequence-to-Sequence Pre-training.  https://aclanthology.org/2020.acl-main.703/"
+  },
+  {
+    "page": 19,
+    "text": "構築とデータの全体像\n3. 構築とデータの全体像"
+  },
+  {
+    "page": 20,
+    "text": "読解用ニュースから、要約課題へ広がる\n2015年、Hermannらは、CNNとDaily Mailのニュース記事・ハイライトから穴埋め式の読解問題を作成した。\n2016年、Nallapatiらは、記事からハイライト全体を生成する複数文の要約課題を構成した。\n2017年、Seeらは、@entity5などへの置換を使わず、実際の人名や組織名を残した非匿名版で要約した。\n3. 構築とデータの全体像\n[1] Hermann et al. (2015). Teaching Machines to Read and Comprehend.  https://arxiv.org/abs/1506.03340\n[2] Nallapati et al. (2016). Abstractive Text Summarization using Sequence-to-sequence RNNs and Beyond.  https://aclanthology.org/K16-1028/\n[3] See, Liu & Manning (2017). Get To The Point: Summarization with Pointer-Generator Networks.  https://aclanthology.org/P17-1099/"
+  },
+  {
+    "page": 21,
+    "text": "記事とハイライトを機械的に対応させる\n公開ニュースの本文と、編集者が付けたハイライトを集める。新たな要約の執筆作業は行わない。\n複数のハイライトを連結し、1本の参照要約として使う。\n公式の前処理コードは文末記号を補い、記事本文とハイライトを分離する。空の本文を持つ例への対処も公開されている。\n3. 構築とデータの全体像\n[1] Abigail See (n.d.). CNN / Daily Mail non-anonymized dataset.  https://github.com/abisee/cnn-dailymail"
+  },
+  {
+    "page": 22,
+    "text": "約29万記事で学び、別の記事で評価する\n3. 構築とデータの全体像\n1件は記事と参照要約の組。2017年の報告と現在の配布物でtrain件数が異なる。公式コードは本文欠落例を除外する。\n[1] See, Liu & Manning (2017). Get To The Point: Summarization with Pointer-Generator Networks.  https://aclanthology.org/P17-1099/\n[2] CNN / DailyMail 3.0.0. Dataset card and distribution.  https://huggingface.co/datasets/abisee/cnn_dailymail"
+  },
+  {
+    "page": 23,
+    "text": "記事は数百語、要約は数十語になる\n3. 構築とデータの全体像\n3.0.0 testの11,490記事。横軸は空白区切りの語数、縦軸は記事数。\n[1] CNN / DailyMail 3.0.0. Dataset card and distribution.  https://huggingface.co/datasets/abisee/cnn_dailymail"
+  },
+  {
+    "page": 24,
+    "text": "短い要約に、どの情報を残すか\n配布3.0.0のテスト記事は平均約684語、参照要約は約55語。記事に比べて短い文章に、主要な情報をまとめる。\n長い記事を途中で切る場合、参照要約に必要な情報が後半に残ることがある。モデルが読める範囲も、要約の内容に影響する。\n3. 構築とデータの全体像\n[1] CNN / DailyMail 3.0.0. Dataset card and distribution.  https://huggingface.co/datasets/abisee/cnn_dailymail"
+  },
+  {
+    "page": 25,
+    "text": "データの入手と使い方\n4. データの入手と使い方"
+  },
+  {
+    "page": 26,
+    "text": "公式の前処理コードと、加工済みデータを使う\n非匿名版の公式リポジトリは、記事URLの一覧と本文・ハイライトの前処理コードを公開している。\nHugging Faceでは、記事と参照要約を組にした配布データを読み込める。3.0.0の学習・開発・テスト集合が用意されている。\n4. データの入手と使い方\n[1] Abigail See (n.d.). CNN / Daily Mail non-anonymized dataset.  https://github.com/abisee/cnn-dailymail\n[2] CNN / DailyMail 3.0.0. Dataset card and distribution.  https://huggingface.co/datasets/abisee/cnn_dailymail"
+  },
+  {
+    "page": 27,
+    "text": "記事と参照要約を読み込む\n4. データの入手と使い方\nimport pyarrow.parquet as pq\n\ndata = pq.read_table(\"test-00000-of-00001.parquet\")\nrow = data.to_pylist()[9]\nprint(row[\"article\"])\nprint(row[\"highlights\"])\nテスト用Parquetを同じフォルダに置く。articleが記事本文、highlightsが編集者の参照要約。\n[1] CNN / DailyMail 3.0.0. Dataset card and distribution.  https://huggingface.co/datasets/abisee/cnn_dailymail"
+  },
+  {
+    "page": 28,
+    "text": "配布条件と、ニュース本文の権利\nHugging FaceのデータカードにはApache 2.0が表示され、非匿名版の前処理コードはMITライセンス。\n収録記事と編集者のハイライトの著作権は、CNN・Daily Mailと各著者に帰属する。コードのライセンスと元記事の権利を分けて扱う。\n4. データの入手と使い方\n[1] CNN / DailyMail 3.0.0. Dataset card and distribution.  https://huggingface.co/datasets/abisee/cnn_dailymail\n[2] Abigail See (n.d.). CNN / Daily Mail non-anonymized dataset.  https://github.com/abisee/cnn-dailymail"
+  },
+  {
+    "page": 29,
+    "text": "要点を選び、事実の対応を保って短くする\nCNN / DailyMailは、ニュース記事と編集者のハイライトを使って、複数文の要約を学ぶためのデータセット。\n冒頭3文を選ぶだけでもROUGEが高く、記事の構成が性能に影響する。\n要約では主要な情報を選ぶとともに、人名・人数・出来事の対応を本文に沿って保つ。\n4. データの入手と使い方\n[1] See, Liu & Manning (2017). Get To The Point: Summarization with Pointer-Generator Networks.  https://aclanthology.org/P17-1099/"
+  },
+  {
+    "page": 30,
+    "text": "Appendix\nAppendix"
+  },
+  {
+    "page": 31,
+    "text": "\n追加の実例\n研究と参考文献\nAppendix: 目次"
+  },
+  {
+    "page": 32,
+    "text": "追加の実例\nAppendix: 1. 追加の実例"
+  },
+  {
+    "page": 33,
+    "text": "実例4：勢力が変わる熱帯低気圧\nAppendix: 1. 追加の実例\n原文：記事冒頭1文の抜粋\n(CNN)Filipinos are being warned to be on guard for flash floods and landslides as tropical storm Maysak approached the Asian island nation Saturday.\n編集者の参照要約（全文）\nOnce a super typhoon, Maysak is now a tropical storm with 70 mph winds . It could still cause flooding, landslides and other problems in the Philippines .\n[1] CNN / DailyMail 3.0.0. Dataset card and distribution.  https://huggingface.co/datasets/abisee/cnn_dailymail"
+  },
+  {
+    "page": 34,
+    "text": "実例4：勢力が変わる熱帯低気圧（訳）\nAppendix: 1. 追加の実例\n日本語訳：記事冒頭1文の抜粋\n（CNN）熱帯低気圧メイサークが土曜日にフィリピンへ近づく中、国民に鉄砲水と土砂崩れへの警戒が呼びかけられている。\n編集者の参照要約（全文）の日本語訳\nかつてスーパー台風だったメイサークは、現在は風速70マイル毎時の熱帯低気圧になっている。 それでもフィリピンに洪水や土砂崩れなどの被害をもたらすおそれがある。\n[1] CNN / DailyMail 3.0.0. Dataset card and distribution.  https://huggingface.co/datasets/abisee/cnn_dailymail"
+  },
+  {
+    "page": 35,
+    "text": "実例5：死因の暫定的な見解\nAppendix: 1. 追加の実例\n原文：記事冒頭1文の抜粋\n(CNN)Andrew Getty, one of the heirs to billions of oil money, appears to have died of natural causes, a Los Angeles Police Department spokesman said.\n編集者の参照要約（全文）\nAndrew Getty's death appears to be from natural causes, police say, citing coroner's early assessment . In a petition for a restraining order, Getty had written he had a serious medical condition. Police say this is not a criminal matter at this time .\n[1] CNN / DailyMail 3.0.0. Dataset card and distribution.  https://huggingface.co/datasets/abisee/cnn_dailymail"
+  },
+  {
+    "page": 36,
+    "text": "実例5：死因の暫定的な見解（訳）\nAppendix: 1. 追加の実例\n日本語訳：記事冒頭1文の抜粋\n（CNN）ロサンゼルス市警の広報担当者によると、石油事業の巨額資産の相続人の1人、アンドリュー・ゲティは自然死したとみられる。\n編集者の参照要約（全文）の日本語訳\n警察は、検視当局の初期判断に基づき、アンドリュー・ゲティは自然死したとみられると述べた。 ゲティは接近禁止命令の申立書で、重い病気があると記していた。 警察によると、現時点では刑事事件として扱っていない。\n[1] CNN / DailyMail 3.0.0. Dataset card and distribution.  https://huggingface.co/datasets/abisee/cnn_dailymail"
+  },
+  {
+    "page": 37,
+    "text": "実例6：大型実験装置の再稼働\nAppendix: 1. 追加の実例\n原文：記事冒頭1文の抜粋\n(CNN)The world's biggest and most powerful physics experiment is taking place as you read this.\n編集者の参照要約（全文）\nThe Large Hadron Collider (LHC) begins again after a two-year shutdown . The restart was delayed in March .\n日本語訳：同じ範囲\n（CNN）あなたがこれを読んでいる今、世界最大で最も強力な物理実験が行われている。\n編集者の参照要約（全文）\n大型ハドロン衝突型加速器（LHC）が2年間の停止を経て再稼働した。 再稼働は3月に延期されていた。\n[1] CNN / DailyMail 3.0.0. Dataset card and distribution.  https://huggingface.co/datasets/abisee/cnn_dailymail"
+  },
+  {
+    "page": 38,
+    "text": "実例7：収監中の通信方法\nAppendix: 1. 追加の実例\n原文：記事冒頭1文の抜粋\n(CNN)Imprisoned soldier Chelsea Manning can now communicate with the world  -- in 140 characters or less.\n編集者の参照要約（全文）\nManning is serving a 35-year sentence for leaking thousands of classified documents .\nShe says she will be using a voice phone to dictate her tweets .\n日本語訳：同じ範囲\n（CNN）収監中の兵士チェルシー・マニングは、今や140文字以内で世界とやり取りできる。\n編集者の参照要約（全文）\nマニングは数千件の機密文書を漏洩した罪で、35年の刑に服している。\n本人によると、電話でツイートを口述するという。\n[1] CNN / DailyMail 3.0.0. Dataset card and distribution.  https://huggingface.co/datasets/abisee/cnn_dailymail"
+  },
+  {
+    "page": 39,
+    "text": "実例8：監督の降板と制作費\nAppendix: 1. 追加の実例\n原文：記事冒頭1文の抜粋\n(CNN)Film director David Lynch has confirmed he will no longer direct the revival of \"Twin Peaks\" -- a cult 1990s television show that was set to return in 2016.\n編集者の参照要約（全文）\nDavid Lynch says he won't be directing new episodes of Twin Peaks . Showtime \"saddened\" over decision, which involved a dispute over money .\n[1] CNN / DailyMail 3.0.0. Dataset card and distribution.  https://huggingface.co/datasets/abisee/cnn_dailymail"
+  },
+  {
+    "page": 40,
+    "text": "実例8：監督の降板と制作費（訳）\nAppendix: 1. 追加の実例\n日本語訳：記事冒頭1文の抜粋\n（CNN）映画監督デイヴィッド・リンチは、2016年に復活予定だった1990年代のカルト的人気テレビ番組「ツイン・ピークス」の新作を、もはや監督しないと認めた。\n編集者の参照要約（全文）の日本語訳\nデイヴィッド・リンチは「ツイン・ピークス」の新作を監督しないと述べた。 制作費をめぐる対立を含むこの決定に、ショウタイムは「悲しんでいる」とした。\n[1] CNN / DailyMail 3.0.0. Dataset card and distribution.  https://huggingface.co/datasets/abisee/cnn_dailymail"
+  },
+  {
+    "page": 41,
+    "text": "実例9：ミサイル発射の失敗\nAppendix: 1. 追加の実例\n原文：記事冒頭1文の抜粋\nEmbarrassing footage has emerged of a missile launch going spectacularly wrong in Russia.\n編集者の参照要約（全文）\nS300 barely takes off before plunging back to the ground . Minute-long clip shows people dashing for cover as rocket hits ground . Mishap comes shortly after footage of crash killing missile engineers .\n[1] CNN / DailyMail 3.0.0. Dataset card and distribution.  https://huggingface.co/datasets/abisee/cnn_dailymail"
+  },
+  {
+    "page": 42,
+    "text": "実例9：ミサイル発射の失敗（訳）\nAppendix: 1. 追加の実例\n日本語訳：記事冒頭1文の抜粋\nロシアでミサイルの発射が派手に失敗し、その失態を捉えた映像が公開された。\n編集者の参照要約（全文）の日本語訳\nS300はほとんど上昇できず、地面へ落下した。 1分間の映像には、ロケットが地面に衝突し、人々が物陰へ走る様子が映っている。 この失敗の少し前には、ミサイル技術者が亡くなる事故の映像もあった。\n[1] CNN / DailyMail 3.0.0. Dataset card and distribution.  https://huggingface.co/datasets/abisee/cnn_dailymail"
+  },
+  {
+    "page": 43,
+    "text": "実例10：講義中に調理する学生\nAppendix: 1. 追加の実例\n原文：記事冒頭1文の抜粋\nA boldfaced student at Mississippi State, who refused to go hungry during his college lecture, brought a George Foreman grill to class and proceeded to cook bacon for his sandwich - while sitting in the front row of his class.\n編集者の参照要約（全文）\nRoman Ehrhardt became an internet sensation after a snapshot of him cooking bacon while in the front row of a college lecture was shared online . The senior communications major at Mississippi State was secretly completing a project, in which he had to violate a societal norm .\n[1] CNN / DailyMail 3.0.0. Dataset card and distribution.  https://huggingface.co/datasets/abisee/cnn_dailymail"
+  },
+  {
+    "page": 44,
+    "text": "実例10：講義中に調理する学生（訳）\nAppendix: 1. 追加の実例\n日本語訳：記事冒頭1文の抜粋\nミシシッピ州立大学の大胆な学生は、講義中の空腹を我慢する気はなく、ジョージ・フォアマン・グリルを教室へ持ち込んだ。そして、教室の最前列に座ったまま、サンドイッチ用のベーコンを焼き始めた。\n編集者の参照要約（全文）の日本語訳\nローマン・エアハートは、大学の講義の最前列でベーコンを焼く写真がネットで共有され、話題になった。 ミシシッピ州立大学でコミュニケーションを専攻する4年生は、社会規範を破るという課題に、ひそかに取り組んでいた。\n[1] CNN / DailyMail 3.0.0. Dataset card and distribution.  https://huggingface.co/datasets/abisee/cnn_dailymail"
+  },
+  {
+    "page": 45,
+    "text": "実例11：父親の声で眠る赤ちゃん\nAppendix: 1. 追加の実例\n原文：記事冒頭1文の抜粋\nA restless baby has been lulled to sleep by her father's impression of Darth Vader.\n編集者の参照要約（全文）\nMadison Crotty, from San Diego in California, is seen screaming and crying . Video posted online by her father Buddy shows how he gets her to sleep . He copies the scuba tank breathing made famous by villain Darth Vader .\n[1] CNN / DailyMail 3.0.0. Dataset card and distribution.  https://huggingface.co/datasets/abisee/cnn_dailymail"
+  },
+  {
+    "page": 46,
+    "text": "実例11：父親の声で眠る赤ちゃん（訳）\nAppendix: 1. 追加の実例\n日本語訳：記事冒頭1文の抜粋\n落ち着かない赤ちゃんが、父親によるダース・ベイダーの物まねで眠りについた。\n編集者の参照要約（全文）の日本語訳\nカリフォルニア州サンディエゴのマディソン・クロッティちゃんが、叫び声を上げて泣く様子が映っている。 父親のバディがネットに投稿した動画は、寝かしつけ方を示している。 父親は、悪役ダース・ベイダーで有名な、潜水用装置で息をするような音をまねる。\n[1] CNN / DailyMail 3.0.0. Dataset card and distribution.  https://huggingface.co/datasets/abisee/cnn_dailymail"
+  },
+  {
+    "page": 47,
+    "text": "実例12：嵐の中で防水衣類を届ける\nAppendix: 1. 追加の実例\n原文：記事冒頭1文の抜粋\nA Sydney mother has braved this week’s horror Sydney storm by hitting the streets and handing out waterproof clothing, blankets and sleeping bags to the homeless.\n編集者の参照要約（全文）\nSacha Whitehead collected sleeping bags and clothing donations . She braved the storm by delivering the donations to homeless people . The 26-year-old mother is collecting more donations to hand out tonight .\n[1] CNN / DailyMail 3.0.0. Dataset card and distribution.  https://huggingface.co/datasets/abisee/cnn_dailymail"
+  },
+  {
+    "page": 48,
+    "text": "実例12：嵐の中で防水衣類を届ける（訳）\nAppendix: 1. 追加の実例\n日本語訳：記事冒頭1文の抜粋\nシドニーの母親が、今週の恐ろしい嵐にもひるまず街へ出て、防水衣類や毛布、寝袋をホームレスの人々に配った。\n編集者の参照要約（全文）の日本語訳\nサシャ・ホワイトヘッドは、寝袋や衣類の寄付を集めた。 嵐にもひるまず、集めた品をホームレスの人々に届けた。 26歳の母親は、今夜配るためにさらに寄付を集めている。\n[1] CNN / DailyMail 3.0.0. Dataset card and distribution.  https://huggingface.co/datasets/abisee/cnn_dailymail"
+  },
+  {
+    "page": 49,
+    "text": "実例13：音楽サービスの順位\nAppendix: 1. 追加の実例\n原文：記事冒頭1文の抜粋\nLast month some of the biggest names in music joined Jay Z for the launch of his premium music streaming service Tidal.\n編集者の参照要約（全文）\nJay Z  launched his $19.99-a-month Tidal app in New York on 30 March . Following the launch it jumped to fourth place on the iOS music app chart . At the time of writing it ranks at 51 on the music chart and 872 overall . Rivals Pandora and Spotify sit in first and third place respectively .\n[1] CNN / DailyMail 3.0.0. Dataset card and distribution.  https://huggingface.co/datasets/abisee/cnn_dailymail"
+  },
+  {
+    "page": 50,
+    "text": "実例13：音楽サービスの順位（訳）\nAppendix: 1. 追加の実例\n日本語訳：記事冒頭1文の抜粋\n先月、音楽界の大物たちがジェイ・Zに加わり、有料音楽配信サービスTidalの開始を祝った。\n編集者の参照要約（全文）の日本語訳\nジェイ・Zは3月30日、ニューヨークで月額19.99ドルのTidalアプリを発表した。 発表後、iOSの音楽アプリランキングで4位に上がった。 記事執筆時には音楽部門51位、総合872位だった。 競合のPandoraとSpotifyは、それぞれ1位と3位だった。\n[1] CNN / DailyMail 3.0.0. Dataset card and distribution.  https://huggingface.co/datasets/abisee/cnn_dailymail"
+  },
+  {
+    "page": 51,
+    "text": "研究と参考文献\nAppendix: 2. 研究と参考文献"
+  },
+  {
+    "page": 52,
+    "text": "要約の非匿名版を整備した研究\n2017年にAbigail See、Peter J. Liu、Christopher D. Manningが、固有名を残した非匿名版を要約研究に用いた。スタンフォード大学とGoogle Brainの共同研究。\n入力中の語をコピーするPointer-generatorと、繰り返しを抑えるcoverageを組み合わせた。\nニュース素材と読解課題を受け継ぎ、記事全体から要点を生成する研究へ発展した。\nAppendix: 2. 研究と参考文献\n[1] See, Liu & Manning (2017). Get To The Point: Summarization with Pointer-Generator Networks.  https://aclanthology.org/P17-1099/"
+  },
+  {
+    "page": 53,
+    "text": "参考文献\nAppendix: 2. 研究と参考文献\nGet To The Point: Summarization with Pointer-Generator Networks\nSee, Liu & Manning · 2017 · ACL\n入力中の語をコピーする生成方式と、同じ内容の反復を抑えるcoverageを提案する。\nhttps://aclanthology.org/P17-1099/\nAbstractive Text Summarization using Sequence-to-sequence RNNs and Beyond\nNallapati et al. · 2016 · CoNLL\nニュース記事とハイライトを、複数文の要約を学ぶためのデータに構成した。\nhttps://aclanthology.org/K16-1028/"
+  },
+  {
+    "page": 54,
+    "text": "参考文献\nAppendix: 2. 研究と参考文献\nBART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension\nLewis et al. · 2020 · ACL\n文章を復元する事前学習を、ニュース要約などの生成課題へ適応する。\nhttps://aclanthology.org/2020.acl-main.703/\nCNN / DailyMail — dataset card\nAbigail Seeほか (n.d.). 配布データ。参照2026-10-19。\n記事・ハイライト・識別子を含むデータの分割とバージョンを案内する。\nhttps://huggingface.co/datasets/abisee/cnn_dailymail"
+  },
+  {
+    "page": 55,
+    "text": "参考文献\nAppendix: 2. 研究と参考文献\nTeaching Machines to Read and Comprehend\nHermann et al. · 2015 · NeurIPS\nCNNとDaily Mailのニュースから、大規模な穴埋め式の読解問題を作成した。\nhttps://arxiv.org/abs/1506.03340\nCNN / Daily Mail Dataset (non-anonymized)\nAbigail See (n.d.). 公式リポジトリ。参照2026-10-19。\n非匿名版の取得元URL一覧と、本文・ハイライトを加工するコードを公開する。\nhttps://github.com/abisee/cnn-dailymail"
+  }
+]

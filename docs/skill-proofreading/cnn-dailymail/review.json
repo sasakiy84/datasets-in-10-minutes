@@ -1,16 +1,3118 @@
 {
   "dataset": "cnn-dailymail",
-  "created_at": "2026-10-18T06:59:49Z",
   "review_mode": "skill_based_codex",
   "gemini_used": false,
-  "main_pages": 29,
-  "total_pages": 55,
+  "main_pages": 37,
+  "total_pages": 150,
+  "updated_at": "2026-10-20T13:44:17Z",
+  "artifact_sha256": {
+    "pptx": "77fd1b3c85a30b41e6fc16ce0e9359c95d701b823cafb88bc10458f1bb479476",
+    "pdf": "dfcff9251ae452338b7f8ef4f246ac10c2e940af243161f7beff2710bd08f148"
+  },
+  "status": "independent_review_passed",
+  "remaining_issues": [],
+  "current_revision": "source-coverage-2026-10/",
+  "previous_review_record": "source-coverage-2026-10/previous/review.json",
+  "independent_review": "source-coverage-2026-10/independent-review/",
+  "checks": {
+    "all-text-frame-audit.json": {
+      "method": "native_frame_pdf_text_match_and_visible_png_ink_bbox",
+      "frames": 725,
+      "paragraphs": 888,
+      "bottom_tolerance_pt": 0.75,
+      "other_edges_tolerance_pt": 2.5,
+      "candidates": []
+    },
+    "main-weather-classification-check.json": {
+      "method": "skill_based_codex",
+      "gemini_used": false,
+      "source_url": "https://www.jma.go.jp/jma/kishou/know/typhoon/1-1.html",
+      "checked_date": "2026-10-20",
+      "downloaded_html_sha256": "84ed035d0da6ab7e71dc515c3ca192f844d9790d38664714a6bf7437eb606222",
+      "primary_text": "北西太平洋または南シナ海に存在し、低気圧域内の最大風速（10分間平均）がおよそ17m/s以上の熱帯低気圧を台風と呼ぶ。",
+      "translation_decision": "CNN例4のtropical stormは日本の区分へ置き換えず、原記事のトロピカルストームという分類語を保つ。異なる平均時間や分類体系から独自に日本での勢力区分を再判定しない。",
+      "product_scope": "気象分類の講義や一般的な注意書きを増やさず、原文の語と参照訳の対応を正す。"
+    },
+    "package-audit.json": {
+      "parsed_xml_parts": 335,
+      "integer_bullets": 120,
+      "hyperlinks": 148,
+      "new_schema_errors": [],
+      "baseline_schema_errors": 11,
+      "package_integrity": "passed",
+      "internal_relationship_targets": "passed",
+      "unique_shape_ids": "passed",
+      "schema_note": "標準XSDを変更せず確認。マスター由来の既存エラーと、整数buSzPctの百分率字句形式との差を分離。整数箇条書きサイズは25000–400000で別途検査。",
+      "pages": 150,
+      "native_tables": 3,
+      "native_charts": 1
+    },
+    "layout-audit.json": {
+      "paragraphs_checked": 829,
+      "table_cells_checked": 34,
+      "issues": []
+    },
+    "links-audit.json": {
+      "native_url_only_runs": 148,
+      "pdf_link_rectangles": 148,
+      "pdf_link_text_exactly_matches_url": true,
+      "pdf_link_character_centers_match_url": true,
+      "glyph_box_overhangs": [],
+      "shortened_url_labels": [],
+      "issues": []
+    },
+    "three-digit-number-check.json": {
+      "pages": [
+        {
+          "page": 100,
+          "number": "100",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "0",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 571,
+              "saved_png_white_glyph_pixels": 120
+            },
+            {
+              "char": "0",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 571,
+              "saved_png_white_glyph_pixels": 120
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 101,
+          "number": "101",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "0",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 571,
+              "saved_png_white_glyph_pixels": 120
+            },
+            {
+              "char": "1",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 102,
+          "number": "102",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "0",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 571,
+              "saved_png_white_glyph_pixels": 120
+            },
+            {
+              "char": "2",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 473,
+              "saved_png_white_glyph_pixels": 105
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 103,
+          "number": "103",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "0",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 571,
+              "saved_png_white_glyph_pixels": 120
+            },
+            {
+              "char": "3",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 475,
+              "saved_png_white_glyph_pixels": 97
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 104,
+          "number": "104",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "0",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 571,
+              "saved_png_white_glyph_pixels": 120
+            },
+            {
+              "char": "4",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 498,
+              "saved_png_white_glyph_pixels": 110
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 105,
+          "number": "105",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "0",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 571,
+              "saved_png_white_glyph_pixels": 120
+            },
+            {
+              "char": "5",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 505,
+              "saved_png_white_glyph_pixels": 109
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 106,
+          "number": "106",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "0",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 571,
+              "saved_png_white_glyph_pixels": 120
+            },
+            {
+              "char": "6",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 545,
+              "saved_png_white_glyph_pixels": 112
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 107,
+          "number": "107",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "0",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 571,
+              "saved_png_white_glyph_pixels": 120
+            },
+            {
+              "char": "7",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 388,
+              "saved_png_white_glyph_pixels": 86
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 108,
+          "number": "108",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "0",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 571,
+              "saved_png_white_glyph_pixels": 120
+            },
+            {
+              "char": "8",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 579,
+              "saved_png_white_glyph_pixels": 125
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 109,
+          "number": "109",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "0",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 571,
+              "saved_png_white_glyph_pixels": 120
+            },
+            {
+              "char": "9",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 533,
+              "saved_png_white_glyph_pixels": 116
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 110,
+          "number": "110",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "1",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 69
+            },
+            {
+              "char": "0",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 571,
+              "saved_png_white_glyph_pixels": 120
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 111,
+          "number": "111",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "1",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 69
+            },
+            {
+              "char": "1",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 112,
+          "number": "112",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "1",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 69
+            },
+            {
+              "char": "2",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 473,
+              "saved_png_white_glyph_pixels": 105
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 113,
+          "number": "113",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "1",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 69
+            },
+            {
+              "char": "3",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 475,
+              "saved_png_white_glyph_pixels": 97
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 114,
+          "number": "114",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "1",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 69
+            },
+            {
+              "char": "4",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 498,
+              "saved_png_white_glyph_pixels": 110
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 115,
+          "number": "115",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "1",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 69
+            },
+            {
+              "char": "5",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 505,
+              "saved_png_white_glyph_pixels": 109
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 116,
+          "number": "116",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "1",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 69
+            },
+            {
+              "char": "6",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 545,
+              "saved_png_white_glyph_pixels": 112
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 117,
+          "number": "117",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "1",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 69
+            },
+            {
+              "char": "7",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 388,
+              "saved_png_white_glyph_pixels": 86
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 118,
+          "number": "118",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "1",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 69
+            },
+            {
+              "char": "8",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 579,
+              "saved_png_white_glyph_pixels": 125
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 119,
+          "number": "119",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "1",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 69
+            },
+            {
+              "char": "9",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 533,
+              "saved_png_white_glyph_pixels": 116
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 120,
+          "number": "120",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "2",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 473,
+              "saved_png_white_glyph_pixels": 105
+            },
+            {
+              "char": "0",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 571,
+              "saved_png_white_glyph_pixels": 120
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 121,
+          "number": "121",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "2",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 473,
+              "saved_png_white_glyph_pixels": 105
+            },
+            {
+              "char": "1",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 122,
+          "number": "122",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "2",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 473,
+              "saved_png_white_glyph_pixels": 105
+            },
+            {
+              "char": "2",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 473,
+              "saved_png_white_glyph_pixels": 105
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 123,
+          "number": "123",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "2",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 473,
+              "saved_png_white_glyph_pixels": 105
+            },
+            {
+              "char": "3",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 475,
+              "saved_png_white_glyph_pixels": 97
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 124,
+          "number": "124",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "2",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 473,
+              "saved_png_white_glyph_pixels": 105
+            },
+            {
+              "char": "4",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 498,
+              "saved_png_white_glyph_pixels": 110
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 125,
+          "number": "125",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "2",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 473,
+              "saved_png_white_glyph_pixels": 105
+            },
+            {
+              "char": "5",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 505,
+              "saved_png_white_glyph_pixels": 109
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 126,
+          "number": "126",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "2",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 473,
+              "saved_png_white_glyph_pixels": 105
+            },
+            {
+              "char": "6",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 545,
+              "saved_png_white_glyph_pixels": 112
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 127,
+          "number": "127",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "2",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 473,
+              "saved_png_white_glyph_pixels": 105
+            },
+            {
+              "char": "7",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 388,
+              "saved_png_white_glyph_pixels": 86
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 128,
+          "number": "128",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "2",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 473,
+              "saved_png_white_glyph_pixels": 105
+            },
+            {
+              "char": "8",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 579,
+              "saved_png_white_glyph_pixels": 125
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 129,
+          "number": "129",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "2",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 473,
+              "saved_png_white_glyph_pixels": 105
+            },
+            {
+              "char": "9",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 533,
+              "saved_png_white_glyph_pixels": 116
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 130,
+          "number": "130",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "3",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 475,
+              "saved_png_white_glyph_pixels": 99
+            },
+            {
+              "char": "0",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 571,
+              "saved_png_white_glyph_pixels": 120
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 131,
+          "number": "131",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "3",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 475,
+              "saved_png_white_glyph_pixels": 99
+            },
+            {
+              "char": "1",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 132,
+          "number": "132",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "3",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 475,
+              "saved_png_white_glyph_pixels": 99
+            },
+            {
+              "char": "2",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 473,
+              "saved_png_white_glyph_pixels": 105
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 133,
+          "number": "133",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "3",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 475,
+              "saved_png_white_glyph_pixels": 99
+            },
+            {
+              "char": "3",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 475,
+              "saved_png_white_glyph_pixels": 97
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 134,
+          "number": "134",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "3",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 475,
+              "saved_png_white_glyph_pixels": 99
+            },
+            {
+              "char": "4",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 498,
+              "saved_png_white_glyph_pixels": 110
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 135,
+          "number": "135",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "3",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 475,
+              "saved_png_white_glyph_pixels": 99
+            },
+            {
+              "char": "5",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 505,
+              "saved_png_white_glyph_pixels": 109
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 136,
+          "number": "136",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "3",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 475,
+              "saved_png_white_glyph_pixels": 99
+            },
+            {
+              "char": "6",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 545,
+              "saved_png_white_glyph_pixels": 112
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 137,
+          "number": "137",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "3",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 475,
+              "saved_png_white_glyph_pixels": 99
+            },
+            {
+              "char": "7",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 388,
+              "saved_png_white_glyph_pixels": 86
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 138,
+          "number": "138",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "3",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 475,
+              "saved_png_white_glyph_pixels": 99
+            },
+            {
+              "char": "8",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 579,
+              "saved_png_white_glyph_pixels": 125
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 139,
+          "number": "139",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "3",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 475,
+              "saved_png_white_glyph_pixels": 99
+            },
+            {
+              "char": "9",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 533,
+              "saved_png_white_glyph_pixels": 116
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 140,
+          "number": "140",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "4",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 498,
+              "saved_png_white_glyph_pixels": 112
+            },
+            {
+              "char": "0",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 571,
+              "saved_png_white_glyph_pixels": 120
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 141,
+          "number": "141",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "4",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 498,
+              "saved_png_white_glyph_pixels": 112
+            },
+            {
+              "char": "1",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 142,
+          "number": "142",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "4",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 498,
+              "saved_png_white_glyph_pixels": 112
+            },
+            {
+              "char": "2",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 473,
+              "saved_png_white_glyph_pixels": 105
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 143,
+          "number": "143",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "4",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 498,
+              "saved_png_white_glyph_pixels": 112
+            },
+            {
+              "char": "3",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 475,
+              "saved_png_white_glyph_pixels": 97
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 144,
+          "number": "144",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "4",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 498,
+              "saved_png_white_glyph_pixels": 112
+            },
+            {
+              "char": "4",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 498,
+              "saved_png_white_glyph_pixels": 110
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 145,
+          "number": "145",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "4",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 498,
+              "saved_png_white_glyph_pixels": 112
+            },
+            {
+              "char": "5",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 505,
+              "saved_png_white_glyph_pixels": 109
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 146,
+          "number": "146",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "4",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 498,
+              "saved_png_white_glyph_pixels": 112
+            },
+            {
+              "char": "6",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 545,
+              "saved_png_white_glyph_pixels": 112
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 147,
+          "number": "147",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "4",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 498,
+              "saved_png_white_glyph_pixels": 112
+            },
+            {
+              "char": "7",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 388,
+              "saved_png_white_glyph_pixels": 86
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 148,
+          "number": "148",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "4",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 498,
+              "saved_png_white_glyph_pixels": 112
+            },
+            {
+              "char": "8",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 579,
+              "saved_png_white_glyph_pixels": 125
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 149,
+          "number": "149",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "4",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 498,
+              "saved_png_white_glyph_pixels": 112
+            },
+            {
+              "char": "9",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 533,
+              "saved_png_white_glyph_pixels": 116
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        },
+        {
+          "page": 150,
+          "number": "150",
+          "char_glyphs": [
+            {
+              "char": "1",
+              "bbox": [
+                674.7869873046875,
+                6.043155670166016,
+                685.0830078125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 328,
+              "saved_png_white_glyph_pixels": 71
+            },
+            {
+              "char": "5",
+              "bbox": [
+                685.0830078125,
+                6.043155670166016,
+                695.3790283203125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 505,
+              "saved_png_white_glyph_pixels": 116
+            },
+            {
+              "char": "0",
+              "bbox": [
+                695.3790283203125,
+                6.043155670166016,
+                705.675048828125,
+                30.55915641784668
+              ],
+              "white_glyph_pixels_at_3x": 571,
+              "saved_png_white_glyph_pixels": 120
+            }
+          ],
+          "clip": "right 80x40pt at 3x",
+          "all_three_chars_visibly_rendered": true
+        }
+      ],
+      "independent_character_white_pixel_check": true,
+      "missing": [],
+      "method": "PDF rawdict glyph text/bbox plus 3x raster white-ink check of every digit; enlarged number-only contact sheet visual inspection",
+      "saved_1_5x_png_digit_checks": 153,
+      "enlarged_sheet_actually_viewed": true
+    },
+    "content-checks.json": {
+      "pages": 150,
+      "full_examples": [
+        {
+          "example": 1,
+          "id": "2bd8ada1de6a7b02f59430cc82045eb8d29cf033",
+          "raw_test_row": 9,
+          "article_sha256": "a775622c220a7da1a33d03b6504f38b7fa46abfa8867599f500309b735b6d943",
+          "article_words": 113,
+          "full_source": true,
+          "full_translation": true,
+          "full_references": true,
+          "source_pages": {
+            "en": [
+              7
+            ],
+            "ja": [
+              8
+            ]
+          },
+          "reference_pages": [
+            9
+          ],
+          "coverage": "記事の番組復帰の場面から、司会者の名前・年齢・引退年を選ぶ。値段当てゲームの進行や後任への引継ぎは背景に回る。"
+        },
+        {
+          "example": 2,
+          "id": "ee17dfb574feca82ccac5689595e47483bd23f12",
+          "raw_test_row": 10,
+          "article_sha256": "76961ae081bf396205fdad4867bc335f261fc8e286c1eda6f35cc98fda58c0de",
+          "article_words": 111,
+          "full_source": true,
+          "full_translation": true,
+          "full_references": true,
+          "source_pages": {
+            "en": [
+              11
+            ],
+            "ja": [
+              12
+            ]
+          },
+          "reference_pages": [
+            13,
+            14
+          ],
+          "coverage": "逮捕された空港と到着便、起訴内容と対象期間を残す。年齢、氏名、出廷予定などは参照要約では省かれる。"
+        },
+        {
+          "example": 3,
+          "id": "a38e72fed88684ec8d60dd5856282e999dc8c0ca",
+          "raw_test_row": 3,
+          "article_sha256": "81bd708b1de926b5983a23068cb621f091724fecbd61ba8351263d41048dbbe8",
+          "article_words": 202,
+          "full_source": true,
+          "full_translation": true,
+          "full_references": true,
+          "source_pages": {
+            "en": [
+              15,
+              16
+            ],
+            "ja": [
+              17,
+              18
+            ]
+          },
+          "reference_pages": [
+            19,
+            20
+          ],
+          "coverage": "本文では、5人の曝露と退院、別の同僚の治療、計17人の経過観察を説明する。参照要約は、観察対象全体と治療中の同僚に焦点を当てる。"
+        },
+        {
+          "example": 4,
+          "id": "6222f33c2c79b80be437335eeb3f488509e92cf5",
+          "raw_test_row": 8,
+          "article_sha256": "acf031ee61ac18f0c7e9f29591658d90e777771c5438c94f12d33f33a4db1f64",
+          "article_words": 289,
+          "full_source": true,
+          "full_translation": true,
+          "full_references": true,
+          "source_pages": {
+            "en": [
+              41,
+              42,
+              43
+            ],
+            "ja": [
+              44,
+              45,
+              46
+            ]
+          },
+          "reference_pages": [
+            47
+          ],
+          "coverage": "勢力が弱まった経緯と、洪水・土砂崩れの危険を残す。本文の風速は「70マイル毎時を超える」で、参照要約は70マイル毎時と記す。"
+        },
+        {
+          "example": 5,
+          "id": "0d3c8c276d079c4c225f034c69aa024cdab7869d",
+          "raw_test_row": 7,
+          "article_sha256": "4afee57ad4f8db6bdf1e4009030393f2ee118dadcf32b511fdd6ac60343c2547",
+          "article_words": 361,
+          "full_source": true,
+          "full_translation": true,
+          "full_references": true,
+          "source_pages": {
+            "en": [
+              48,
+              49,
+              50
+            ],
+            "ja": [
+              51,
+              52,
+              53
+            ]
+          },
+          "reference_pages": [
+            54,
+            55
+          ],
+          "coverage": "冒頭の死因に関する暫定判断と捜査状況に、後半の申立書の病歴を結び付ける。ゲティ家の資産の来歴は要約から省かれる。"
+        },
+        {
+          "example": 6,
+          "id": "934a2d9235022c9e8a6aeec5e7e941b127569b76",
+          "raw_test_row": 32,
+          "article_sha256": "44ef67a1d01d46bf252f937aac209183c29d9ccc21f0f19f996e1427c5249983",
+          "article_words": 490,
+          "full_source": true,
+          "full_translation": true,
+          "full_references": true,
+          "source_pages": {
+            "en": [
+              56,
+              57,
+              58,
+              59,
+              60
+            ],
+            "ja": [
+              61,
+              62,
+              63,
+              64
+            ]
+          },
+          "reference_pages": [
+            65
+          ],
+          "coverage": "冒頭の再稼働と2年間の停止、3月の延期を2文にまとめる。粒子の運動、研究目的、費用、安全基準の説明は背景として省かれる。"
+        },
+        {
+          "example": 7,
+          "id": "9bea5cbe9a0184eec4086a08452066dead185173",
+          "raw_test_row": 46,
+          "article_sha256": "db0218754a42822586da9f85d8ea1446ea8d446ca7643874c9c53e68ab11d9c6",
+          "article_words": 274,
+          "full_source": true,
+          "full_translation": true,
+          "full_references": true,
+          "source_pages": {
+            "en": [
+              66,
+              67,
+              68
+            ],
+            "ja": [
+              69,
+              70,
+              71
+            ]
+          },
+          "reference_pages": [
+            72
+          ],
+          "coverage": "収監の理由と刑期、電話でツイートを口述する方法を残す。インターネット利用の制限や本人の経歴は、本文で背景を補う。"
+        },
+        {
+          "example": 8,
+          "id": "78a670384c908a15617cab7f575fd50dc5999937",
+          "raw_test_row": 55,
+          "article_sha256": "82b270c9bd31f70d3ff18d4e794b41232c8e97027823354376350309b1c5ce58",
+          "article_words": 275,
+          "full_source": true,
+          "full_translation": true,
+          "full_references": true,
+          "source_pages": {
+            "en": [
+              73,
+              74,
+              75
+            ],
+            "ja": [
+              76,
+              77,
+              78
+            ]
+          },
+          "reference_pages": [
+            79
+          ],
+          "coverage": "監督の降板、制作費が足りないという本人の発言、放送局の声明を結び付ける。作品のあらすじや出演者の復帰は省かれる。"
+        },
+        {
+          "example": 9,
+          "id": "8fda1f861bbf799672e944649304d23aa5ce7cab",
+          "raw_test_row": 10003,
+          "article_sha256": "53c44911e9de7511ab2fc99f35e0fa2925cf557e369db29ead07626a96f0cead",
+          "article_words": 356,
+          "full_source": true,
+          "full_translation": true,
+          "full_references": true,
+          "source_pages": {
+            "en": [
+              80,
+              81,
+              82,
+              83
+            ],
+            "ja": [
+              84,
+              85,
+              86
+            ]
+          },
+          "reference_pages": [
+            87,
+            88
+          ],
+          "coverage": "発射直後の落下と、その後の爆発を残し、別の発射事故の背景にも触れる。本文では撮影者が身を隠し、周囲の叫び声が聞こえる。参照要約の「人々が走って避難する」という細部までは明示しない。"
+        },
+        {
+          "example": 10,
+          "id": "89653daee6d142ed8a50683fd4f83cd12d3a3749",
+          "raw_test_row": 10006,
+          "article_sha256": "7d3256e283ef6f1edc9c26dc51795e157fa5417fcbf39abb24bec6470715134d",
+          "article_words": 670,
+          "full_source": true,
+          "full_translation": true,
+          "full_references": true,
+          "source_pages": {
+            "en": [
+              89,
+              90,
+              91,
+              92,
+              93,
+              94,
+              95
+            ],
+            "ja": [
+              96,
+              97,
+              98,
+              99,
+              100,
+              101
+            ]
+          },
+          "reference_pages": [
+            102,
+            103
+          ],
+          "coverage": "冒頭の写真の拡散と、社会規範を破る授業課題だったことを2文にまとめる。後半の教員への事前相談は課題の背景を補い、ネットの反応や映画の例えは省かれる。"
+        },
+        {
+          "example": 11,
+          "id": "2613da08d05fb20d4e4e73788942090a40552d95",
+          "raw_test_row": 10016,
+          "article_sha256": "a02209d9cc3f93874045d2a52cc78d156b1d5d77e408ebd0c41c377509cd6aef",
+          "article_words": 416,
+          "full_source": true,
+          "full_translation": true,
+          "full_references": true,
+          "source_pages": {
+            "en": [
+              104,
+              105,
+              106,
+              107
+            ],
+            "ja": [
+              108,
+              109,
+              110,
+              111
+            ]
+          },
+          "reference_pages": [
+            112,
+            113
+          ],
+          "coverage": "記事1/4の寝かしつけと、記事4/4の呼吸音の説明を3文に結ぶ。本文はサンディエゴと記し、参照要約はカリフォルニア州も補う。音の商標の詳説は省かれる。"
+        },
+        {
+          "example": 12,
+          "id": "f34eb9827a5e0d080a84a37e45b4ce4198215097",
+          "raw_test_row": 10019,
+          "article_sha256": "0d18911c611d11503fa3457866ed2de0314392b6d439e23d825542edb3a220a4",
+          "article_words": 482,
+          "full_source": true,
+          "full_translation": true,
+          "full_references": true,
+          "source_pages": {
+            "en": [
+              114,
+              115,
+              116,
+              117,
+              118
+            ],
+            "ja": [
+              119,
+              120,
+              121,
+              122
+            ]
+          },
+          "reference_pages": [
+            123,
+            124
+          ],
+          "coverage": "記事1/5の寄付・配布と、記事5/5の今夜も活動を続ける予定を残す。配布先や運転中の危険の描写は、活動の背景を伝える。"
+        },
+        {
+          "example": 13,
+          "id": "b96ef482f5e64cd9b0c31c04358c49db558952f5",
+          "raw_test_row": 10028,
+          "article_sha256": "2f7f34e8a6ccb00c1ae9b93111f89c7d3b96de7f266df83513ba5daf59515b71",
+          "article_words": 1029,
+          "full_source": true,
+          "full_translation": true,
+          "full_references": true,
+          "source_pages": {
+            "en": [
+              125,
+              126,
+              127,
+              128,
+              129,
+              130,
+              131,
+              132,
+              133,
+              134
+            ],
+            "ja": [
+              135,
+              136,
+              137,
+              138,
+              139,
+              140,
+              141,
+              142,
+              143
+            ]
+          },
+          "reference_pages": [
+            144,
+            145
+          ],
+          "coverage": "記事1/10の発表日・料金・順位と、記事2/10のiOSの競合順位を選ぶ。要約の月額19.99ドルは高音質プランで、標準プランは9.95ドル。競合の1位と3位はiOSだけの順位である。"
+        }
+      ],
+      "reference_runs": [
+        {
+          "page": 9,
+          "text": "Bob Barker returned to host \"The Price Is Right\" on Wednesday .",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 9,
+          "text": "Barker, 91, had retired as host in 2007 .",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 9,
+          "text": "ボブ・バーカーが水曜日、「ザ・プライス・イズ・ライト」の司会に復帰した。",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 9,
+          "text": "91歳のバーカーは2007年に司会を引退していた。",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 13,
+          "text": "London's Metropolitan Police say the man was arrested at Luton airport after landing on a flight from Istanbul .",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 13,
+          "text": "He's been charged with terror offenses allegedly committed since the start of November .",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 14,
+          "text": "ロンドン警視庁によると、男性はイスタンブール発の便で到着後、ルートン空港で逮捕された。",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 14,
+          "text": "11月初め以降に犯したとされるテロ関連の罪で起訴された。",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 19,
+          "text": "17 Americans were exposed to the Ebola virus while in Sierra Leone in March .",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 19,
+          "text": "Another person was diagnosed with the disease and taken to hospital in Maryland .",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 19,
+          "text": "National Institutes of Health says the patient is in fair condition after weeks of treatment .",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 20,
+          "text": "3月にシエラレオネで米国人17人がエボラウイルスに曝露した。",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 20,
+          "text": "別の1人は発症し、メリーランド州の病院に搬送された。",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 20,
+          "text": "米国立衛生研究所によると、その患者は数週間の治療後、容体が安定している。",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 47,
+          "text": "Once a super typhoon, Maysak is now a tropical storm with 70 mph winds .",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 47,
+          "text": "It could still cause flooding, landslides and other problems in the Philippines .",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 47,
+          "text": "かつてスーパー台風だったメイサークは、現在は風速70マイル毎時のトロピカルストームになっている。",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 47,
+          "text": "それでもフィリピンに洪水や土砂崩れなどの被害をもたらすおそれがある。",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 54,
+          "text": "Andrew Getty's death appears to be from natural causes, police say, citing coroner's early assessment .",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 54,
+          "text": "In a petition for a restraining order, Getty had written he had a serious medical condition.",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 54,
+          "text": "Police say this is not a criminal matter at this time .",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 55,
+          "text": "警察は、検視当局の初期判断に基づき、アンドリュー・ゲティは自然死したとみられると述べた。",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 55,
+          "text": "ゲティは接近禁止命令の申立書で、重い病気があると記していた。",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 55,
+          "text": "警察によると、現時点では刑事事件として扱っていない。",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 65,
+          "text": "The Large Hadron Collider (LHC) begins again after a two-year shutdown .",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 65,
+          "text": "The restart was delayed in March .",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 65,
+          "text": "大型ハドロン衝突型加速器（LHC）が2年間の停止を経て再稼働した。",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 65,
+          "text": "3月には再稼働が延期されていた。",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 72,
+          "text": "Manning is serving a 35-year sentence for leaking thousands of classified documents .",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 72,
+          "text": "She says she will be using a voice phone to dictate her tweets .",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 72,
+          "text": "マニングは数千件の機密文書を漏洩した罪で、35年の刑に服している。",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 72,
+          "text": "本人によると、電話でツイートを口述するという。",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 79,
+          "text": "David Lynch says he won't be directing new episodes of Twin Peaks .",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 79,
+          "text": "Showtime \"saddened\" over decision, which involved a dispute over money .",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 79,
+          "text": "デイヴィッド・リンチは「ツイン・ピークス」の新作を監督しないと述べた。",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 79,
+          "text": "制作費をめぐる対立を含むこの決定に、ショウタイムは「悲しんでいる」とした。",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 87,
+          "text": "S300 barely takes off before plunging back to the ground .",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 87,
+          "text": "Minute-long clip shows people dashing for cover as rocket hits ground .",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 87,
+          "text": "Mishap comes shortly after footage of crash killing missile engineers .",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 88,
+          "text": "S300はほとんど上昇できず、地面へ落下した。",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 88,
+          "text": "1分間の映像には、ロケットが地面に衝突し、人々が物陰へ走る様子が映っている。",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 88,
+          "text": "この失敗の少し前には、ミサイル技術者が亡くなる事故の映像もあった。",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 102,
+          "text": "Roman Ehrhardt became an internet sensation after a snapshot of him cooking bacon while in the front row of a college lecture was shared online .",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 102,
+          "text": "The senior communications major at Mississippi State was secretly completing a project, in which he had to violate a societal norm .",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 103,
+          "text": "ローマン・エアハートは、大学の講義の最前列でベーコンを焼く写真がネットで共有され、話題になった。",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 103,
+          "text": "ミシシッピ州立大学でコミュニケーションを専攻する4年生は、社会規範を破るという課題に、ひそかに取り組んでいた。",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 112,
+          "text": "Madison Crotty, from San Diego in California, is seen screaming and crying .",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 112,
+          "text": "Video posted online by her father Buddy shows how he gets her to sleep .",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 112,
+          "text": "He copies the scuba tank breathing made famous by villain Darth Vader .",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 113,
+          "text": "カリフォルニア州サンディエゴのマディソン・クロッティちゃんが、叫び声を上げて泣く様子が映っている。",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 113,
+          "text": "父親のバディがネットに投稿した動画は、寝かしつけ方を示している。",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 113,
+          "text": "父親は、悪役ダース・ベイダーで有名な、潜水用装置で息をするような音をまねる。",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 123,
+          "text": "Sacha Whitehead collected sleeping bags and clothing donations .",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 123,
+          "text": "She braved the storm by delivering the donations to homeless people .",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 123,
+          "text": "The 26-year-old mother is collecting more donations to hand out tonight .",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 124,
+          "text": "サシャ・ホワイトヘッドは、寝袋や衣類の寄付を集めた。",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 124,
+          "text": "嵐にもひるまず、集めた品をホームレスの人々に届けた。",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 124,
+          "text": "26歳の母親は、今夜配るためにさらに寄付を集めている。",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 144,
+          "text": "Jay Z  launched his $19.99-a-month Tidal app in New York on 30 March .",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 144,
+          "text": "Following the launch it jumped to fourth place on the iOS music app chart .",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 144,
+          "text": "At the time of writing it ranks at 51 on the music chart and 872 overall .",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 144,
+          "text": "Rivals Pandora and Spotify sit in first and third place respectively .",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 145,
+          "text": "ジェイ・Zは3月30日、ニューヨークで月額19.99ドルのTidalアプリを発表した。",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 145,
+          "text": "発表後、iOSの音楽アプリランキングで4位に上がった。",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 145,
+          "text": "記事執筆時には音楽部門51位、総合872位だった。",
+          "size": 21,
+          "color": "B13731"
+        },
+        {
+          "page": 145,
+          "text": "競合のPandoraとSpotifyは、それぞれ1位と3位だった。",
+          "size": 21,
+          "color": "B13731"
+        }
+      ],
+      "retained_slide_xml_same": [
+        {
+          "old_page": 1,
+          "kind": "retained",
+          "page": 1
+        },
+        {
+          "old_page": 2,
+          "kind": "retained",
+          "page": 2
+        },
+        {
+          "old_page": 3,
+          "kind": "retained",
+          "page": 3
+        },
+        {
+          "old_page": 4,
+          "kind": "retained",
+          "page": 4
+        },
+        {
+          "old_page": 5,
+          "kind": "retained",
+          "page": 5
+        },
+        {
+          "old_page": 8,
+          "kind": "retained",
+          "page": 10
+        },
+        {
+          "old_page": 14,
+          "kind": "retained",
+          "page": 22
+        },
+        {
+          "old_page": 15,
+          "kind": "retained",
+          "page": 23
+        },
+        {
+          "old_page": 16,
+          "kind": "retained",
+          "page": 24
+        },
+        {
+          "old_page": 17,
+          "kind": "retained",
+          "page": 25
+        },
+        {
+          "old_page": 18,
+          "kind": "retained",
+          "page": 26
+        },
+        {
+          "old_page": 19,
+          "kind": "retained",
+          "page": 27
+        },
+        {
+          "old_page": 20,
+          "kind": "retained",
+          "page": 28
+        },
+        {
+          "old_page": 21,
+          "kind": "retained",
+          "page": 29
+        },
+        {
+          "old_page": 22,
+          "kind": "retained",
+          "page": 30
+        },
+        {
+          "old_page": 23,
+          "kind": "retained",
+          "page": 31
+        },
+        {
+          "old_page": 24,
+          "kind": "retained",
+          "page": 32
+        },
+        {
+          "old_page": 25,
+          "kind": "retained",
+          "page": 33
+        },
+        {
+          "old_page": 26,
+          "kind": "retained",
+          "page": 34
+        },
+        {
+          "old_page": 27,
+          "kind": "retained",
+          "page": 35
+        },
+        {
+          "old_page": 28,
+          "kind": "retained",
+          "page": 36
+        },
+        {
+          "old_page": 29,
+          "kind": "retained",
+          "page": 37
+        },
+        {
+          "old_page": 30,
+          "kind": "retained",
+          "page": 38
+        },
+        {
+          "old_page": 31,
+          "kind": "retained",
+          "page": 39
+        },
+        {
+          "old_page": 32,
+          "kind": "retained",
+          "page": 40
+        },
+        {
+          "old_page": 51,
+          "kind": "retained",
+          "page": 146
+        },
+        {
+          "old_page": 52,
+          "kind": "retained",
+          "page": 147
+        },
+        {
+          "old_page": 53,
+          "kind": "retained",
+          "page": 148
+        },
+        {
+          "old_page": 54,
+          "kind": "retained",
+          "page": 149
+        },
+        {
+          "old_page": 55,
+          "kind": "retained",
+          "page": 150
+        }
+      ],
+      "modified_context_slides": [
+        {
+          "old_page": 6,
+          "kind": "revised_context",
+          "page": 6
+        },
+        {
+          "old_page": 13,
+          "kind": "revised_context",
+          "page": 21
+        }
+      ],
+      "charts_and_embedded_xlsx_unchanged": true,
+      "author": "sasakiy84",
+      "notes_count": 0,
+      "gemini_used": false
+    }
+  },
+  "audit_sources": {
+    "all-text-frame-audit.json": "source-coverage-2026-10/all-text-frame-audit.json",
+    "main-weather-classification-check.json": "source-coverage-2026-10/main-weather-classification-check.json",
+    "package-audit.json": "source-coverage-2026-10/package-audit.json",
+    "layout-audit.json": "source-coverage-2026-10/layout-audit.json",
+    "links-audit.json": "source-coverage-2026-10/links-audit.json",
+    "three-digit-number-check.json": "source-coverage-2026-10/three-digit-number-check.json",
+    "content-checks.json": "source-coverage-2026-10/content-checks.json"
+  },
   "self_visual_review": {
     "visual-inspection.json": {
-      "method": "skill_based_codex_individual_actual_view_image",
+      "timestamp": "2026-10-20T13:03:13.914232+00:00",
+      "method": "Codex actual individual full-page image inspection using view_image; 150 pages plus overview; no Gemini",
       "gemini_used": false,
-      "checked_at": "2026-10-19T10:44:05.937387+00:00",
-      "all_pages": [
+      "pages": [
         1,
         2,
         3,
@@ -65,505 +3167,307 @@
         52,
         53,
         54,
-        55
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150
       ],
-      "overview_viewed": true,
-      "final_changed_pages_rechecked": [
+      "pages_inspected": 150,
+      "changed_pages_inspected": [
+        6,
+        7,
+        8,
+        9,
+        11,
         12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
         20,
-        22,
-        23,
-        26,
-        27,
-        28,
+        21,
+        41,
         42,
         43,
         44,
-        46
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145
       ],
-      "remaining52_png_exact_except_final3": [
-        22,
-        23,
-        26
+      "rechecked_pages": [
+        47
       ],
-      "focus": "原文/日本語/参照要約全文・21ptえんじ答え・図表の単位・コード・正式文献/URLnative収容・出典余白",
-      "issues": [],
-      "final_hashes": {
-        "pptx": "a37956f228b1565f74662c68d546282b3b6b40997ff5d779417daa62c8053eaa",
-        "pdf": "a1b82d96b1cb02e59c507ca3f37351d8eb2fbc1fe6d48bfb7aead289eb843cfd"
-      }
+      "three_digit_numbers_inspected": [
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150
+      ],
+      "result": "passed",
+      "issues_remaining": [],
+      "three_digit_enlarged_check": "three-digit-number-check.json",
+      "number_only_3x_sheet_viewed": true
     }
   },
-  "updated_at": "2026-10-19T10:55:49+00:00",
-  "artifact_sha256": {
-    "pptx": "a37956f228b1565f74662c68d546282b3b6b40997ff5d779417daa62c8053eaa",
-    "pdf": "a1b82d96b1cb02e59c507ca3f37351d8eb2fbc1fe6d48bfb7aead289eb843cfd"
-  },
-  "checks": {
-    "layout-audit.json": {
-      "paragraphs_checked": 328,
-      "table_cells_checked": 34,
-      "issues": []
-    },
-    "package-audit.json": {
-      "parsed_xml_parts": 145,
-      "integer_bullets": 120,
-      "hyperlinks": 53,
-      "new_schema_errors": [],
-      "baseline_schema_errors": 11,
-      "package_integrity": "passed",
-      "internal_relationship_targets": "passed",
-      "unique_shape_ids": "passed",
-      "schema_note": "標準XSDを変更せず確認。マスター由来の既存エラーと、整数buSzPctの百分率字句形式との差を分離。整数箇条書きサイズは25000–400000で別途検査。",
-      "pages": 55,
-      "native_tables": 3,
-      "native_charts": 1
-    },
-    "links-audit.json": {
-      "native_url_only_runs": 53,
-      "pdf_link_rectangles": 53,
-      "pdf_link_text_exactly_matches_url": true,
-      "pdf_link_character_centers_match_url": true,
-      "glyph_box_overhangs": [],
-      "shortened_url_labels": [],
-      "issues": []
-    },
-    "content-checks.json": {
+  "source_coverage_revisions": [
+    {
+      "checked_at": "2026-10-20T13:44:17Z",
       "method": "skill_based_codex",
       "gemini_used": false,
-      "checked_at": "2026-10-19T10:43:07.707767+00:00",
-      "raw_test_records": 11490,
-      "raw_parquet_sha256": "04e322d2634a96dba76bf9a6294fbbe48e0b36abeae43f13d86ba2c3bebffe4e",
-      "examples": [
-        {
-          "example": 1,
-          "test_row": 9,
-          "id": "2bd8ada1de6a7b02f59430cc82045eb8d29cf033",
-          "source_url": "http://web.archive.org/web/20150403170234id_/http://www.cnn.com/2015/04/01/entertainment/price-is-right-bob-barker-feat",
-          "raw_record_sha256": "97fcf7dd4666fe53ec5a7d1323b534e043c04bbe468bae5fcbe07fbc519270f3",
-          "full_article_external": true,
-          "continuous_excerpt": [
-            0,
-            88
-          ],
-          "reference_full": true,
-          "EN_JP_native_full": true
-        },
-        {
-          "example": 2,
-          "test_row": 10,
-          "id": "ee17dfb574feca82ccac5689595e47483bd23f12",
-          "source_url": "http://web.archive.org/web/20150405052737id_/http://edition.cnn.com/2015/04/01/europe/uk-terror-charge/index.html",
-          "raw_record_sha256": "8e99c5858f025776e27976a2ed5da4b78034d6898c5e9d1e716c8c8aa55d9639",
-          "full_article_external": true,
-          "continuous_excerpt": [
-            0,
-            168
-          ],
-          "reference_full": true,
-          "EN_JP_native_full": true
-        },
-        {
-          "example": 3,
-          "test_row": 3,
-          "id": "a38e72fed88684ec8d60dd5856282e999dc8c0ca",
-          "source_url": "http://web.archive.org/web/20150404033756id_/http://www.cnn.com/2015/04/01/health/ebola-americans-monitoring/index.html",
-          "raw_record_sha256": "476b5acbccbdbb605aed232a4fd0b2a590ce757800718961f82baa34fb0d1664",
-          "full_article_external": true,
-          "continuous_excerpt": [
-            0,
-            208
-          ],
-          "reference_full": true,
-          "EN_JP_native_full": true
-        },
-        {
-          "example": 4,
-          "test_row": 8,
-          "id": "6222f33c2c79b80be437335eeb3f488509e92cf5",
-          "source_url": "http://web.archive.org/web/20150404160039id_/http://www.cnn.com/2015/04/04/asia/tropical-weather-philippines/",
-          "raw_record_sha256": "060438d64129da0018210376a1c1f81c7767c00c847894de8615c09200fb2978",
-          "full_article_external": true,
-          "continuous_excerpt": [
-            0,
-            148
-          ],
-          "reference_full": true,
-          "EN_JP_native_full": true
-        },
-        {
-          "example": 5,
-          "test_row": 7,
-          "id": "0d3c8c276d079c4c225f034c69aa024cdab7869d",
-          "source_url": "http://web.archive.org/web/20150404041001id_/http://edition.cnn.com/2015/04/01/us/andrew-getty-death/index.html",
-          "raw_record_sha256": "2cd945aa100880c607ec79d6ef3855f3637d21acc5ec7109f669ff9870bd5834",
-          "full_article_external": true,
-          "continuous_excerpt": [
-            0,
-            149
-          ],
-          "reference_full": true,
-          "EN_JP_native_full": true
-        },
-        {
-          "example": 6,
-          "test_row": 32,
-          "id": "934a2d9235022c9e8a6aeec5e7e941b127569b76",
-          "source_url": "http://web.archive.org/web/20150406112746id_/http://www.cnn.com/2015/04/05/europe/hadron-collider-restart/",
-          "raw_record_sha256": "96d08af464fa9d65d3b249c91063ee034e706d2bb504696eb62485df6bb17dbf",
-          "full_article_external": true,
-          "continuous_excerpt": [
-            0,
-            95
-          ],
-          "reference_full": true,
-          "EN_JP_native_full": true
-        },
-        {
-          "example": 7,
-          "test_row": 46,
-          "id": "9bea5cbe9a0184eec4086a08452066dead185173",
-          "source_url": "http://web.archive.org/web/20150407020134id_/http://edition.cnn.com/2015/04/03/us/chelsea-manning-joins-twitter/index.html",
-          "raw_record_sha256": "c1cd26299de151c90606a31f788f858bf987cfe26376aeb41fc98c4165110584",
-          "full_article_external": true,
-          "continuous_excerpt": [
-            0,
-            105
-          ],
-          "reference_full": true,
-          "EN_JP_native_full": true
-        },
-        {
-          "example": 8,
-          "test_row": 55,
-          "id": "78a670384c908a15617cab7f575fd50dc5999937",
-          "source_url": "http://web.archive.org/web/20150407045558id_/http://www.cnn.com/2015/04/05/entertainment/twin-peaks-david-lynch-leaving/",
-          "raw_record_sha256": "ecbe37387723041074485fea35343eebafec27a40c8ff25a8177d373a10df065",
-          "full_article_external": true,
-          "continuous_excerpt": [
-            0,
-            161
-          ],
-          "reference_full": true,
-          "EN_JP_native_full": true
-        },
-        {
-          "example": 9,
-          "test_row": 10003,
-          "id": "8fda1f861bbf799672e944649304d23aa5ce7cab",
-          "source_url": "http://web.archive.org/web/20150725070739id_/http://www.dailymail.co.uk/news/article-3050344/What-goes-come-Russian-army-s-rocket-launch-test-goes-terribly-wrong-missile-drops-straight-explodes-them.html",
-          "raw_record_sha256": "0f62f9b81a1c2dc573d86f61ae65b3be5bde13fb8820d4ba0a60fe0bc643c351",
-          "full_article_external": true,
-          "continuous_excerpt": [
-            0,
-            89
-          ],
-          "reference_full": true,
-          "EN_JP_native_full": true
-        },
-        {
-          "example": 10,
-          "test_row": 10006,
-          "id": "89653daee6d142ed8a50683fd4f83cd12d3a3749",
-          "source_url": "http://web.archive.org/web/20150725070909id_/http://www.dailymail.co.uk/femail/article-3050938/Brazen-college-student-hailed-hero-classmate-shares-Twitter-picture-firing-George-Foreman-grill-cook-lunch-middle-busy-lecture.html",
-          "raw_record_sha256": "7dad1f3b844f70516920d099655ee7dcf3c021356f4cc9bd1fb4a16c03126d60",
-          "full_article_external": true,
-          "continuous_excerpt": [
-            0,
-            226
-          ],
-          "reference_full": true,
-          "EN_JP_native_full": true
-        },
-        {
-          "example": 11,
-          "test_row": 10016,
-          "id": "2613da08d05fb20d4e4e73788942090a40552d95",
-          "source_url": "http://web.archive.org/web/20150725071353id_/http://www.dailymail.co.uk/femail/article-3050179/She-likes-dark-Watch-doting-father-gets-screaming-baby-sleep-practising-Darth-Vader-deep-breathing.html",
-          "raw_record_sha256": "c3c7072622ff900d4bdc271e02215ea7fba366eef163e0b5e39a573e40f207fe",
-          "full_article_external": true,
-          "continuous_excerpt": [
-            0,
-            83
-          ],
-          "reference_full": true,
-          "EN_JP_native_full": true
-        },
-        {
-          "example": 12,
-          "test_row": 10019,
-          "id": "f34eb9827a5e0d080a84a37e45b4ce4198215097",
-          "source_url": "http://web.archive.org/web/20150725071524id_/http://www.dailymail.co.uk/news/article-3049868/Young-mum-spends-horror-storm-handing-dry-clothes-homeless.html",
-          "raw_record_sha256": "6d6e0a4c8cbe31942fe62502b4281e9bfcc0b2b3a66c5b0f7173c616088fac0e",
-          "full_article_external": true,
-          "continuous_excerpt": [
-            0,
-            162
-          ],
-          "reference_full": true,
-          "EN_JP_native_full": true
-        },
-        {
-          "example": 13,
-          "test_row": 10028,
-          "id": "b96ef482f5e64cd9b0c31c04358c49db558952f5",
-          "source_url": "http://web.archive.org/web/20150725072108id_/http://www.dailymail.co.uk/sciencetech/article-3050209/Is-Jay-Z-s-Tidal-FLOP-App-s-ranking-plummets-month-launch.html",
-          "raw_record_sha256": "157e3c1686ab3966bbc5e4dc7cff20165164d1f5bea3fbe5afc92b8ff1c8ffe5",
-          "full_article_external": true,
-          "continuous_excerpt": [
-            0,
-            119
-          ],
-          "reference_full": true,
-          "EN_JP_native_full": true
-        }
-      ],
-      "all13_source_URL_SHA1_match": true,
-      "statistics_recomputed": true,
-      "original_paper_tables": [
-        {
-          "old": 16,
-          "new": 16,
-          "cells": [
-            [
-              "方式",
-              "R-1",
-              "R-2",
-              "R-L"
-            ],
-            [
-              "Seq2seq + attention",
-              "31.33",
-              "11.81",
-              "28.83"
-            ],
-            [
-              "Pointer-generator + coverage",
-              "39.53",
-              "17.28",
-              "36.38"
-            ],
-            [
-              "Lead-3（冒頭3文）",
-              "40.34",
-              "17.70",
-              "36.57"
-            ]
-          ]
-        },
-        {
-          "old": 18,
-          "new": 18,
-          "cells": [
-            [
-              "モデル",
-              "R-1",
-              "R-2",
-              "R-L"
-            ],
-            [
-              "BART（2020）",
-              "44.16",
-              "21.28",
-              "40.90"
-            ]
-          ]
-        },
-        {
-          "old": 27,
-          "new": 22,
-          "cells": [
-            [
-              "分割",
-              "2017年の報告",
-              "配布3.0.0"
-            ],
-            [
-              "train",
-              "287,226",
-              "287,113"
-            ],
-            [
-              "validation",
-              "13,368",
-              "13,368"
-            ],
-            [
-              "test",
-              "11,490",
-              "11,490"
-            ]
-          ]
-        }
-      ],
-      "native_charts": [
-        {
-          "page": 23,
-          "values": [
-            [
-              683.0,
-              3561.0,
-              3371.0,
-              1997.0,
-              1878.0
-            ]
-          ],
-          "unit": "記事数"
-        }
-      ],
-      "native_paragraphs": 336,
-      "native_cells": 36,
-      "PDF_all_native_exact": true,
-      "red_answer_runs": [
-        {
-          "page": 7,
-          "size": 21.0,
-          "bold": true
-        },
-        {
-          "page": 7,
-          "size": 21.0,
-          "bold": true
-        },
-        {
-          "page": 9,
-          "size": 21.0,
-          "bold": true
-        },
-        {
-          "page": 10,
-          "size": 21.0,
-          "bold": true
-        },
-        {
-          "page": 11,
-          "size": 21.0,
-          "bold": true
-        },
-        {
-          "page": 12,
-          "size": 21.0,
-          "bold": true
-        },
-        {
-          "page": 33,
-          "size": 21.0,
-          "bold": true
-        },
-        {
-          "page": 34,
-          "size": 21.0,
-          "bold": true
-        },
-        {
-          "page": 35,
-          "size": 21.0,
-          "bold": true
-        },
-        {
-          "page": 36,
-          "size": 21.0,
-          "bold": true
-        },
-        {
-          "page": 37,
-          "size": 21.0,
-          "bold": true
-        },
-        {
-          "page": 37,
-          "size": 21.0,
-          "bold": true
-        },
-        {
-          "page": 38,
-          "size": 21.0,
-          "bold": true
-        },
-        {
-          "page": 38,
-          "size": 21.0,
-          "bold": true
-        },
-        {
-          "page": 38,
-          "size": 21.0,
-          "bold": true
-        },
-        {
-          "page": 38,
-          "size": 21.0,
-          "bold": true
-        },
-        {
-          "page": 39,
-          "size": 21.0,
-          "bold": true
-        },
-        {
-          "page": 40,
-          "size": 21.0,
-          "bold": true
-        },
-        {
-          "page": 41,
-          "size": 21.0,
-          "bold": true
-        },
-        {
-          "page": 42,
-          "size": 21.0,
-          "bold": true
-        },
-        {
-          "page": 43,
-          "size": 21.0,
-          "bold": true
-        },
-        {
-          "page": 44,
-          "size": 21.0,
-          "bold": true
-        },
-        {
-          "page": 45,
-          "size": 21.0,
-          "bold": true
-        },
-        {
-          "page": 46,
-          "size": 21.0,
-          "bold": true
-        },
-        {
-          "page": 47,
-          "size": 21.0,
-          "bold": true
-        },
-        {
-          "page": 48,
-          "size": 21.0,
-          "bold": true
-        },
-        {
-          "page": 49,
-          "size": 21.0,
-          "bold": true
-        },
-        {
-          "page": 50,
-          "size": 21.0,
-          "bold": true
-        }
-      ],
-      "notes": 0,
-      "final_hashes": {
+      "baseline_artifact_sha256": {
         "pptx": "a37956f228b1565f74662c68d546282b3b6b40997ff5d779417daa62c8053eaa",
         "pdf": "a1b82d96b1cb02e59c507ca3f37351d8eb2fbc1fe6d48bfb7aead289eb843cfd"
-      }
+      },
+      "artifact_sha256": {
+        "pptx": "77fd1b3c85a30b41e6fc16ce0e9359c95d701b823cafb88bc10458f1bb479476",
+        "pdf": "dfcff9251ae452338b7f8ef4f246ac10c2e940af243161f7beff2710bd08f148"
+      },
+      "total_pages": 150,
+      "record_directory": "source-coverage-2026-10/",
+      "independent_review": "source-coverage-2026-10/independent-review/handoff.json",
+      "main_review": "source-coverage-2026-10/main-review.json"
     }
-  },
-  "independent_review": "editorial-2026-10/independent-review/",
+  ],
   "editorial_revisions": [
     {
       "checked_at": "2026-10-19T10:55:49+00:00",
@@ -585,12 +3489,5 @@
       "main_check": "editorial-2026-10/main-review.json"
     }
   ],
-  "current_revision": "editorial-2026-10/",
-  "previous_review_record": "editorial-2026-10/previous/review.json",
-  "audit_sources": {
-    "layout-audit.json": "editorial-2026-10/layout-audit.json",
-    "package-audit.json": "editorial-2026-10/package-audit.json",
-    "links-audit.json": "editorial-2026-10/links-audit.json",
-    "content-checks.json": "editorial-2026-10/content-checks.json"
-  }
+  "created_at": "2026-10-18T06:59:49Z"
 }
