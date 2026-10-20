@@ -1,0 +1,877 @@
+[
+  {
+    "page": 1,
+    "title": "BenchCAD",
+    "section": "",
+    "kind": "cover"
+  },
+  {
+    "page": 2,
+    "title": "",
+    "section": "目次",
+    "kind": "toc"
+  },
+  {
+    "page": 3,
+    "title": "1. CADを生成する課題",
+    "section": "1. CADを生成する課題",
+    "kind": "divider"
+  },
+  {
+    "page": 4,
+    "title": "公式公開実装",
+    "section": "1. CADを生成する課題",
+    "kind": "screenshot",
+    "sources": [
+      "repo"
+    ]
+  },
+  {
+    "page": 5,
+    "title": "CADは、形状を編集できる設計データ",
+    "section": "1. CADを生成する課題",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "CAD（Computer-Aided Design）は、寸法や幾何操作で部品を設計する。",
+      "CadQueryは、Pythonで立体を作るライブラリ。断面を押し出す、穴を開ける、軌道に沿って延ばす、といった操作を組み合わせる。",
+      "BenchCADでは、画像の見た目を再現するだけでなく、実行できるコードと参照形状との一致を測る。"
+    ]
+  },
+  {
+    "page": 6,
+    "title": "1.0では四つの能力を測る",
+    "section": "1. CADを生成する課題",
+    "kind": "content",
+    "sources": [
+      "repo"
+    ]
+  },
+  {
+    "page": 7,
+    "title": "実例は公開された部品データから選ぶ",
+    "section": "1. CADを生成する課題",
+    "kind": "content",
+    "sources": [
+      "repo"
+    ],
+    "body_text": [
+      "本編では、コイルばね、ねじれドリル、T字管継手を示す。",
+      "各例の4視点は、配布データに含まれる画像。期待される形状は、同じレコードの参照コードを実行して描画した。",
+      "ここに示す配布画像は各134×134 px。現行Vision2Code評価では、STEPから各256×256 pxの4視点を再描画する。"
+    ]
+  },
+  {
+    "page": 8,
+    "title": "コイルばね：4視点から形状を読む",
+    "section": "1. CADを生成する課題",
+    "kind": "example-input",
+    "sources": [
+      "data"
+    ],
+    "example_id": "coil_spring_001209_s20260505",
+    "family": "coil_spring",
+    "role": "input",
+    "input_views": [
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/coil_spring_001209_s20260505/view_0_png.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/coil_spring_001209_s20260505/view_1_png.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/coil_spring_001209_s20260505/view_2_png.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/coil_spring_001209_s20260505/view_3_png.png"
+    ]
+  },
+  {
+    "page": 9,
+    "title": "コイルばね：参照コードが作る立体",
+    "section": "1. CADを生成する課題",
+    "kind": "example-output",
+    "sources": [
+      "data"
+    ],
+    "example_id": "coil_spring_001209_s20260505",
+    "family": "coil_spring",
+    "role": "reference",
+    "reference_code": "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/coil_spring_001209_s20260505/gt.py",
+    "reference_step": "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/coil_spring_001209_s20260505/gt.step"
+  },
+  {
+    "page": 10,
+    "title": "ねじれドリル：4視点から形状を読む",
+    "section": "1. CADを生成する課題",
+    "kind": "example-input",
+    "sources": [
+      "data"
+    ],
+    "example_id": "twisted_drill_001393_s20260505",
+    "family": "twisted_drill",
+    "role": "input",
+    "input_views": [
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/twisted_drill_001393_s20260505/view_0_png.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/twisted_drill_001393_s20260505/view_1_png.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/twisted_drill_001393_s20260505/view_2_png.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/twisted_drill_001393_s20260505/view_3_png.png"
+    ]
+  },
+  {
+    "page": 11,
+    "title": "ねじれドリル：参照コードが作る立体",
+    "section": "1. CADを生成する課題",
+    "kind": "example-output",
+    "sources": [
+      "data"
+    ],
+    "example_id": "twisted_drill_001393_s20260505",
+    "family": "twisted_drill",
+    "role": "reference",
+    "reference_code": "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/twisted_drill_001393_s20260505/gt.py",
+    "reference_step": "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/twisted_drill_001393_s20260505/gt.step"
+  },
+  {
+    "page": 12,
+    "title": "T字管継手：4視点から形状を読む",
+    "section": "1. CADを生成する課題",
+    "kind": "example-input",
+    "sources": [
+      "data"
+    ],
+    "example_id": "t_pipe_fitting_001454_s20260505",
+    "family": "t_pipe_fitting",
+    "role": "input",
+    "input_views": [
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/t_pipe_fitting_001454_s20260505/view_0_png.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/t_pipe_fitting_001454_s20260505/view_1_png.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/t_pipe_fitting_001454_s20260505/view_2_png.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/t_pipe_fitting_001454_s20260505/view_3_png.png"
+    ]
+  },
+  {
+    "page": 13,
+    "title": "T字管継手：参照コードが作る立体",
+    "section": "1. CADを生成する課題",
+    "kind": "example-output",
+    "sources": [
+      "data"
+    ],
+    "example_id": "t_pipe_fitting_001454_s20260505",
+    "family": "t_pipe_fitting",
+    "role": "reference",
+    "reference_code": "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/t_pipe_fitting_001454_s20260505/gt.py",
+    "reference_step": "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/t_pipe_fitting_001454_s20260505/gt.step"
+  },
+  {
+    "page": 14,
+    "title": "Code Edit：電池ホルダーの幅を変える",
+    "section": "1. CADを生成する課題",
+    "kind": "edit-example",
+    "sources": [
+      "repo"
+    ],
+    "example_id": "battery_holder_box_y_f130",
+    "role": "edit-input",
+    "raw": "raw/edit-test.jsonl"
+  },
+  {
+    "page": 15,
+    "title": "Code Edit：編集前と参照形状",
+    "section": "1. CADを生成する課題",
+    "kind": "edit-example",
+    "sources": [
+      "repo"
+    ],
+    "example_id": "battery_holder_box_y_f130",
+    "role": "edit-reference"
+  },
+  {
+    "page": 16,
+    "title": "QA：Tナットを同じ質問で比べる",
+    "section": "1. CADを生成する課題",
+    "kind": "qa-example",
+    "sources": [
+      "repo"
+    ],
+    "example_id": "tee_nut_000282_s4420",
+    "role": "vision-qa",
+    "question": "What is the barrel OD to thread diameter ratio?",
+    "answer": 1.5
+  },
+  {
+    "page": 17,
+    "title": "Tナット：コード入力（前半）",
+    "section": "1. CADを生成する課題",
+    "kind": "qa-code",
+    "sources": [
+      "repo"
+    ],
+    "example_id": "tee_nut_000282_s4420",
+    "role": "code-qa",
+    "code_part": 1
+  },
+  {
+    "page": 18,
+    "title": "Tナット：コード入力（後半）",
+    "section": "1. CADを生成する課題",
+    "kind": "qa-code",
+    "sources": [
+      "repo"
+    ],
+    "example_id": "tee_nut_000282_s4420",
+    "role": "code-qa",
+    "code_part": 2
+  },
+  {
+    "page": 19,
+    "title": "2. 作成方法とデータの広がり",
+    "section": "2. 作成方法とデータの広がり",
+    "kind": "divider"
+  },
+  {
+    "page": 20,
+    "title": "標準に結び付いた部品を生成する",
+    "section": "2. 作成方法とデータの広がり",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "専門家が部品ファミリーごとに、パラメータの型・生成器・制約検証・形状構築を用意した。",
+      "106ファミリー中52は、47種類のISO・DIN・EN・ASME・IEC規格の寸法表や幾何関係に結び付く。",
+      "例えば、ドリルの直径や歯車のモジュールと歯数の関係を使う。"
+    ]
+  },
+  {
+    "page": 21,
+    "title": "コードの実行と形状確認を通った17,900部品",
+    "section": "2. 作成方法とデータの広がり",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "各ファミリーのeasy・medium・hardごとに、制約を満たすパラメータを抽出する。",
+      "コードを隔離環境で実行し、コンパイル失敗、30秒超過、体積がゼロまたは不正な形状を除外する。",
+      "生成した画像を専門家が確認し、通過した部品だけを公開した。"
+    ]
+  },
+  {
+    "page": 22,
+    "title": "1.0の公開データは三つの構成",
+    "section": "2. 作成方法とデータの広がり",
+    "kind": "content",
+    "sources": [
+      "repo"
+    ]
+  },
+  {
+    "page": 23,
+    "title": "部品と難度の広がり",
+    "section": "2. 作成方法とデータの広がり",
+    "kind": "content",
+    "sources": [
+      "data"
+    ]
+  },
+  {
+    "page": 24,
+    "title": "1ファミリーに含まれる部品数の分布",
+    "section": "2. 作成方法とデータの広がり",
+    "kind": "content",
+    "sources": [
+      "data"
+    ]
+  },
+  {
+    "page": 25,
+    "title": "単純な押し出しに収まらない形状を含む",
+    "section": "2. 作成方法とデータの広がり",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "ねじ、歯車、ばね、継手、構造部品、筐体など、106種類の部品ファミリーがある。",
+      "押し出しだけでなく、らせん状の掃引、断面間の接続、ねじり押し出し、回転配置を含む。",
+      "形状が似ていても、穴や羽根、歯形を省くと、参照形状とは一致しない。"
+    ]
+  },
+  {
+    "page": 26,
+    "title": "公開分割と未知ファミリー評価",
+    "section": "2. 作成方法とデータの広がり",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "配布名code_gen・edit_bench・QAは課題ごとの分割名。一般的なtrain・validation・testの三分割ではない。",
+      "追加学習の実験では、既知ファミリーを含む条件と、10ファミリーを学習から除いた条件を比較した。",
+      "1.0の公開データと、後述する2.0の非公開Coreは別の集合である。"
+    ]
+  },
+  {
+    "page": 27,
+    "title": "3. 評価方法と到達水準",
+    "section": "3. 評価方法と到達水準",
+    "kind": "divider"
+  },
+  {
+    "page": 28,
+    "title": "形状一致は実行した立体で採点する",
+    "section": "3. 評価方法と到達水準",
+    "kind": "content",
+    "sources": [
+      "repo"
+    ],
+    "body_text": [
+      "Vision2Codeは、生成コードを実行してSTEP形式の立体に変換し、参照形状とのボクセル（三次元格子）のIoUを測る。",
+      "IoUは「共通部分の体積 ÷ 少なくとも一方が占める領域の体積」。実行できないコードは得点0になる。",
+      "実行率も報告する。形状がどれだけ一致したかと、コードが動いた割合を分けて読める。"
+    ]
+  },
+  {
+    "page": 29,
+    "title": "公開初期のVision2Code結果",
+    "section": "3. 評価方法と到達水準",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ]
+  },
+  {
+    "page": 30,
+    "title": "編集とQAでは、別の答えを採点する",
+    "section": "3. 評価方法と到達水準",
+    "kind": "content",
+    "sources": [
+      "repo"
+    ],
+    "body_text": [
+      "Code Editでは、元の立体から目標立体へ近づいた分を、残されていた改善幅で正規化する。変更しない出力は0、目標に一致すれば1。",
+      "現行QA実装では、整数・個数は完全一致。寸法・比率は、符号を確認し、小さい絶対値を大きい絶対値で割った連続点を使う。",
+      "画像とコードで同じ質問を使うため、見落としとコード理解の違いを調べられる。"
+    ]
+  },
+  {
+    "page": 31,
+    "title": "同じQAでも、画像とコードで差がある",
+    "section": "3. 評価方法と到達水準",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ]
+  },
+  {
+    "page": 32,
+    "title": "4. 現在の利用と入手方法",
+    "section": "4. 現在の利用と入手方法",
+    "kind": "divider"
+  },
+  {
+    "page": 33,
+    "title": "最新モデルも評価に採用している",
+    "section": "4. 現在の利用と入手方法",
+    "kind": "content",
+    "sources": [
+      "news"
+    ],
+    "body_text": [
+      "OpenAIはGPT-6 Astraの公開時に、Vision2Codeの1,000部品サブセットでPythonツールあり0.959を報告した。",
+      "Anthropicの公開結果を受け、BenchCADはClaude Fable 5.1のツールあり0.926、なし0.606を掲載した。",
+      "Fableの値は256 pxの各視点で再評価したもの。以前の128 px評価は0.843／0.437だった。"
+    ]
+  },
+  {
+    "page": 34,
+    "title": "ツールで実行と画像確認を繰り返す",
+    "section": "4. 現在の利用と入手方法",
+    "kind": "content",
+    "sources": [
+      "astra"
+    ],
+    "body_text": [
+      "ツールありの評価では、コードを実行し、画像を切り出して確認しながら答えを改められる。",
+      "Astraの公開図中にあるClaudeとの比較には、カメラ位置の指示修正など三つの評価設定の変更がある。",
+      "公開初期は一回の生成、後のツールありの結果は反復実行による改善も含む。"
+    ]
+  },
+  {
+    "page": 35,
+    "title": "2.0は図面・組立・基板へ範囲を広げた",
+    "section": "4. 現在の利用と入手方法",
+    "kind": "content",
+    "sources": [
+      "v2"
+    ],
+    "body_text": [
+      "2026-10-12公開のBenchCAD 2.0は、部品単体の再構成から、実際の機械設計に近い六つの課題へ広がった。",
+      "寸法入り図面から部品を作る、部品を組み立てる、画像から組立を復元する、基板の接続を読む課題を含む。",
+      "Coreは報告用の100件で、evaluation-onlyの条件で共有する非公開評価集合。"
+    ]
+  },
+  {
+    "page": 36,
+    "title": "2.0の六つの課題",
+    "section": "4. 現在の利用と入手方法",
+    "kind": "content",
+    "sources": [
+      "v2"
+    ]
+  },
+  {
+    "page": 37,
+    "title": "2.0では形状以外の対応も採点する",
+    "section": "4. 現在の利用と入手方法",
+    "kind": "content",
+    "sources": [
+      "v2repo"
+    ],
+    "body_text": [
+      "部品は、3次元の重なり0.8とトポロジー（穴や独立した立体の構成）0.2で採点する。組立では、各部品の配置も採点する。",
+      "基板では、部品やピンの接続をグラフとして参照配線と比較する。",
+      "2026-10-18更新の暫定harness 2.1は、推論履歴の保持、最大60ラウンド、出力50万トークンを採用。10月12日の結果を再現するタグはv2.0-core1。"
+    ]
+  },
+  {
+    "page": 38,
+    "title": "2.0 Coreでは、組立と接続が課題として残る",
+    "section": "4. 現在の利用と入手方法",
+    "kind": "content",
+    "sources": [
+      "v2"
+    ]
+  },
+  {
+    "page": 39,
+    "title": "既存のCADデータとの違い",
+    "section": "4. 現在の利用と入手方法",
+    "kind": "content",
+    "sources": [
+      "deepcad",
+      "text2cad"
+    ],
+    "body_text": [
+      "DeepCADは、スケッチと押し出しによるCAD操作列を扱う。Text2CADは、自然言語からCADを生成するための説明を加えた。",
+      "BenchCAD 1.0は、工業部品の分類、規格由来のパラメータ、幅広い幾何操作と四課題を組み合わせる。",
+      "BenchCAD 2.0は、寸法入り図面、組立の位置関係、基板の接続へ評価範囲を広げた。"
+    ]
+  },
+  {
+    "page": 40,
+    "title": "1.0の公開データを読み込む",
+    "section": "4. 現在の利用と入手方法",
+    "kind": "code",
+    "sources": [
+      "data"
+    ]
+  },
+  {
+    "page": 41,
+    "title": "入手と利用条件",
+    "section": "4. 現在の利用と入手方法",
+    "kind": "content",
+    "sources": [
+      "public"
+    ]
+  },
+  {
+    "page": 42,
+    "title": "BenchCADで何を確かめられるか",
+    "section": "4. 現在の利用と入手方法",
+    "kind": "content",
+    "sources": [
+      "v2"
+    ],
+    "body_text": [
+      "1.0は、17,900の実行検証済み部品を基に、画像理解・数値理解・コード生成・編集を分けて評価する。",
+      "同じ部品を4視点、参照コード、実行形状で追うと、外形の再現と細部の再現の違いが見える。",
+      "2.0は、部品の形状に加え、組立の配置と基板の接続を評価する。"
+    ]
+  },
+  {
+    "page": 43,
+    "title": "Appendix",
+    "section": "Appendix",
+    "kind": "divider"
+  },
+  {
+    "page": 44,
+    "title": "",
+    "section": "Appendix: 目次",
+    "kind": "toc"
+  },
+  {
+    "page": 45,
+    "title": "かさ歯車：4視点から形状を読む",
+    "section": "Appendix: 1. 追加の部品例",
+    "kind": "example-input",
+    "sources": [
+      "data"
+    ],
+    "example_id": "bevel_gear_001427_s20260505",
+    "family": "bevel_gear",
+    "role": "input",
+    "input_views": [
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/bevel_gear_001427_s20260505/view_0_png.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/bevel_gear_001427_s20260505/view_1_png.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/bevel_gear_001427_s20260505/view_2_png.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/bevel_gear_001427_s20260505/view_3_png.png"
+    ]
+  },
+  {
+    "page": 46,
+    "title": "かさ歯車：参照コードが作る立体",
+    "section": "Appendix: 1. 追加の部品例",
+    "kind": "example-output",
+    "sources": [
+      "data"
+    ],
+    "example_id": "bevel_gear_001427_s20260505",
+    "family": "bevel_gear",
+    "role": "reference",
+    "reference_code": "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/bevel_gear_001427_s20260505/gt.py",
+    "reference_step": "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/bevel_gear_001427_s20260505/gt.step"
+  },
+  {
+    "page": 47,
+    "title": "羽根車：4視点から形状を読む",
+    "section": "Appendix: 1. 追加の部品例",
+    "kind": "example-input",
+    "sources": [
+      "data"
+    ],
+    "example_id": "impeller_001396_s20260505",
+    "family": "impeller",
+    "role": "input",
+    "input_views": [
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/impeller_001396_s20260505/view_0_png.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/impeller_001396_s20260505/view_1_png.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/impeller_001396_s20260505/view_2_png.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/impeller_001396_s20260505/view_3_png.png"
+    ]
+  },
+  {
+    "page": 48,
+    "title": "羽根車：参照コードが作る立体",
+    "section": "Appendix: 1. 追加の部品例",
+    "kind": "example-output",
+    "sources": [
+      "data"
+    ],
+    "example_id": "impeller_001396_s20260505",
+    "family": "impeller",
+    "role": "reference",
+    "reference_code": "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/impeller_001396_s20260505/gt.py",
+    "reference_step": "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/impeller_001396_s20260505/gt.step"
+  },
+  {
+    "page": 49,
+    "title": "蝶番：4視点から形状を読む",
+    "section": "Appendix: 1. 追加の部品例",
+    "kind": "example-input",
+    "sources": [
+      "data"
+    ],
+    "example_id": "hinge_001480_s20260505",
+    "family": "hinge",
+    "role": "input",
+    "input_views": [
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/hinge_001480_s20260505/view_0_png.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/hinge_001480_s20260505/view_1_png.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/hinge_001480_s20260505/view_2_png.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/hinge_001480_s20260505/view_3_png.png"
+    ]
+  },
+  {
+    "page": 50,
+    "title": "蝶番：参照コードが作る立体",
+    "section": "Appendix: 1. 追加の部品例",
+    "kind": "example-output",
+    "sources": [
+      "data"
+    ],
+    "example_id": "hinge_001480_s20260505",
+    "family": "hinge",
+    "role": "reference",
+    "reference_code": "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/hinge_001480_s20260505/gt.py",
+    "reference_step": "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/hinge_001480_s20260505/gt.step"
+  },
+  {
+    "page": 51,
+    "title": "放熱板：4視点から形状を読む",
+    "section": "Appendix: 1. 追加の部品例",
+    "kind": "example-input",
+    "sources": [
+      "data"
+    ],
+    "example_id": "heat_sink_001316_s20260505",
+    "family": "heat_sink",
+    "role": "input",
+    "input_views": [
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/heat_sink_001316_s20260505/view_0_png.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/heat_sink_001316_s20260505/view_1_png.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/heat_sink_001316_s20260505/view_2_png.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/heat_sink_001316_s20260505/view_3_png.png"
+    ]
+  },
+  {
+    "page": 52,
+    "title": "放熱板：参照コードが作る立体",
+    "section": "Appendix: 1. 追加の部品例",
+    "kind": "example-output",
+    "sources": [
+      "data"
+    ],
+    "example_id": "heat_sink_001316_s20260505",
+    "family": "heat_sink",
+    "role": "reference",
+    "reference_code": "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/heat_sink_001316_s20260505/gt.py",
+    "reference_step": "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/heat_sink_001316_s20260505/gt.step"
+  },
+  {
+    "page": 53,
+    "title": "筐体：4視点から形状を読む",
+    "section": "Appendix: 1. 追加の部品例",
+    "kind": "example-input",
+    "sources": [
+      "data"
+    ],
+    "example_id": "enclosure_001259_s20260505",
+    "family": "enclosure",
+    "role": "input",
+    "input_views": [
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/enclosure_001259_s20260505/view_0_png.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/enclosure_001259_s20260505/view_1_png.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/enclosure_001259_s20260505/view_2_png.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/enclosure_001259_s20260505/view_3_png.png"
+    ]
+  },
+  {
+    "page": 54,
+    "title": "筐体：参照コードが作る立体",
+    "section": "Appendix: 1. 追加の部品例",
+    "kind": "example-output",
+    "sources": [
+      "data"
+    ],
+    "example_id": "enclosure_001259_s20260505",
+    "family": "enclosure",
+    "role": "reference",
+    "reference_code": "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/enclosure_001259_s20260505/gt.py",
+    "reference_step": "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/enclosure_001259_s20260505/gt.step"
+  },
+  {
+    "page": 55,
+    "title": "蝶ナット：4視点から形状を読む",
+    "section": "Appendix: 1. 追加の部品例",
+    "kind": "example-input",
+    "sources": [
+      "data"
+    ],
+    "example_id": "wing_nut_001314_s20260505",
+    "family": "wing_nut",
+    "role": "input",
+    "input_views": [
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/wing_nut_001314_s20260505/view_0_png.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/wing_nut_001314_s20260505/view_1_png.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/wing_nut_001314_s20260505/view_2_png.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/wing_nut_001314_s20260505/view_3_png.png"
+    ]
+  },
+  {
+    "page": 56,
+    "title": "蝶ナット：参照コードが作る立体",
+    "section": "Appendix: 1. 追加の部品例",
+    "kind": "example-output",
+    "sources": [
+      "data"
+    ],
+    "example_id": "wing_nut_001314_s20260505",
+    "family": "wing_nut",
+    "role": "reference",
+    "reference_code": "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/wing_nut_001314_s20260505/gt.py",
+    "reference_step": "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/wing_nut_001314_s20260505/gt.step"
+  },
+  {
+    "page": 57,
+    "title": "旋削部品：4視点から形状を読む",
+    "section": "Appendix: 1. 追加の部品例",
+    "kind": "example-input",
+    "sources": [
+      "data"
+    ],
+    "example_id": "lathe_turned_part_001256_s20260505",
+    "family": "lathe_turned_part",
+    "role": "input",
+    "input_views": [
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/lathe_turned_part_001256_s20260505/view_0_png.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/lathe_turned_part_001256_s20260505/view_1_png.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/lathe_turned_part_001256_s20260505/view_2_png.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/lathe_turned_part_001256_s20260505/view_3_png.png"
+    ]
+  },
+  {
+    "page": 58,
+    "title": "旋削部品：参照コードが作る立体",
+    "section": "Appendix: 1. 追加の部品例",
+    "kind": "example-output",
+    "sources": [
+      "data"
+    ],
+    "example_id": "lathe_turned_part_001256_s20260505",
+    "family": "lathe_turned_part",
+    "role": "reference",
+    "reference_code": "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/lathe_turned_part_001256_s20260505/gt.py",
+    "reference_step": "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/lathe_turned_part_001256_s20260505/gt.step"
+  },
+  {
+    "page": 59,
+    "title": "カム：4視点から形状を読む",
+    "section": "Appendix: 1. 追加の部品例",
+    "kind": "example-input",
+    "sources": [
+      "data"
+    ],
+    "example_id": "cam_001616_s20260505",
+    "family": "cam",
+    "role": "input",
+    "input_views": [
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/cam_001616_s20260505/view_0_png.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/cam_001616_s20260505/view_1_png.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/cam_001616_s20260505/view_2_png.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/cam_001616_s20260505/view_3_png.png"
+    ]
+  },
+  {
+    "page": 60,
+    "title": "カム：参照コードが作る立体",
+    "section": "Appendix: 1. 追加の部品例",
+    "kind": "example-output",
+    "sources": [
+      "data"
+    ],
+    "example_id": "cam_001616_s20260505",
+    "family": "cam",
+    "role": "reference",
+    "reference_code": "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/cam_001616_s20260505/gt.py",
+    "reference_step": "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/cam_001616_s20260505/gt.step"
+  },
+  {
+    "page": 61,
+    "title": "基板支持板：4視点から形状を読む",
+    "section": "Appendix: 1. 追加の部品例",
+    "kind": "example-input",
+    "sources": [
+      "data"
+    ],
+    "example_id": "pcb_standoff_plate_001863_s20260505",
+    "family": "pcb_standoff_plate",
+    "role": "input",
+    "input_views": [
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/pcb_standoff_plate_001863_s20260505/view_0_png.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/pcb_standoff_plate_001863_s20260505/view_1_png.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/pcb_standoff_plate_001863_s20260505/view_2_png.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/pcb_standoff_plate_001863_s20260505/view_3_png.png"
+    ]
+  },
+  {
+    "page": 62,
+    "title": "基板支持板：参照コードが作る立体",
+    "section": "Appendix: 1. 追加の部品例",
+    "kind": "example-output",
+    "sources": [
+      "data"
+    ],
+    "example_id": "pcb_standoff_plate_001863_s20260505",
+    "family": "pcb_standoff_plate",
+    "role": "reference",
+    "reference_code": "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/pcb_standoff_plate_001863_s20260505/gt.py",
+    "reference_step": "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/pcb_standoff_plate_001863_s20260505/gt.step"
+  },
+  {
+    "page": 63,
+    "title": "蛇腹：4視点から形状を読む",
+    "section": "Appendix: 1. 追加の部品例",
+    "kind": "example-input",
+    "sources": [
+      "data"
+    ],
+    "example_id": "bellows_001287_s20260505",
+    "family": "bellows",
+    "role": "input",
+    "input_views": [
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/bellows_001287_s20260505/view_0_png.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/bellows_001287_s20260505/view_1_png.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/bellows_001287_s20260505/view_2_png.png",
+      "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/bellows_001287_s20260505/view_3_png.png"
+    ]
+  },
+  {
+    "page": 64,
+    "title": "蛇腹：参照コードが作る立体",
+    "section": "Appendix: 1. 追加の部品例",
+    "kind": "example-output",
+    "sources": [
+      "data"
+    ],
+    "example_id": "bellows_001287_s20260505",
+    "family": "bellows",
+    "role": "reference",
+    "reference_code": "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/bellows_001287_s20260505/gt.py",
+    "reference_step": "/workspace/artifacts/frontier-benchmarks-2026-10/benchcad/evidence/bellows_001287_s20260505/gt.step"
+  },
+  {
+    "page": 65,
+    "title": "参照コード：放熱板",
+    "section": "Appendix: 2. 配布と評価の詳細",
+    "kind": "code",
+    "sources": [
+      "data"
+    ]
+  },
+  {
+    "page": 66,
+    "title": "配布画像と評価入力の違い",
+    "section": "Appendix: 2. 配布と評価の詳細",
+    "kind": "content",
+    "sources": [
+      "repo"
+    ],
+    "body_text": [
+      "code_genには各134×134 pxの4画像と、合成画像が含まれる。データカードでは正面・右・上・等角のプレビューと説明される。",
+      "現行のVision2Code runnerは、参照STEPから4つの斜め視点を256×256 pxで描画し、白い間隔を付けた524×524 pxの1枚を入力する。",
+      "プレビュー画像で測った得点と、このrunnerの得点は入力条件が異なる。"
+    ]
+  },
+  {
+    "page": 67,
+    "title": "著者と公開の経緯",
+    "section": "Appendix: 3. 著者と参考文献",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "Haozhe Zhang、Kaichen Liu、Miaomiao Chen、Lei Li、Shaojie Yang、Cheng Peng、Hanjie Chenによる2026年5月の研究。",
+      "論文は、工業CADにおける形状認識、パラメータ理解、実行可能なコード生成を分けて分析する。",
+      "2026年10月に、BenchCAD Teamが2.0を公開し、図面・組立・基板の評価を追加した。"
+    ]
+  },
+  {
+    "page": 68,
+    "title": "参考文献",
+    "section": "Appendix: 3. 著者と参考文献",
+    "kind": "references"
+  },
+  {
+    "page": 69,
+    "title": "参考文献",
+    "section": "Appendix: 3. 著者と参考文献",
+    "kind": "references"
+  },
+  {
+    "page": 70,
+    "title": "参考文献",
+    "section": "Appendix: 3. 著者と参考文献",
+    "kind": "references"
+  }
+]
