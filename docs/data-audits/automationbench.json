@@ -1,0 +1,911 @@
+{
+  "dataset": "AutomationBench",
+  "source_pin": "4a8e1061254004d9dac807054eed33fad7d1ff14",
+  "source_repository": "https://github.com/zapier/AutomationBench",
+  "source_version": "1.0.6",
+  "source_files_sha256": {
+    "README.md": "4c5452dec0abe00ad4dd9e1543709817c563486c1f53088c0adc9fafb609093a",
+    "LICENSE": "c6f9d87aff6d627d5cd78cb09364dafed7d6f1c4bb7a91183d57377157e96ba4",
+    "CHANGELOG.md": "76728984302e35177fae39a3486f6f24187d60b2f22e0f312a5d5e43576c850d",
+    "pyproject.toml": "924cc76d59fd1a7be1174b64548c02c0c8c7bbaec215a5091d7459245d6c0c40",
+    "automationbench/rubric/__init__.py": "d797b4cb6139ae570f7286713fcebb6e55906daa83f4111ff8b8d683c6c7b279",
+    "automationbench/domains/sales/tasks.py": "393d265026fb69b3254bf6f172e298c79e48444f35fba6cd955e605e224f21ee",
+    "automationbench/domains/marketing/tasks.py": "9fc7da71b77f8cb3e4a1dc5cfbd33f85e7d88b954b1fb904e1c51e60a52d9a04",
+    "automationbench/domains/operations/tasks.py": "3c50c69b774a5bee99e1bc4f39dd337302d0ce480906ba8582eb73acd16cb5bc",
+    "automationbench/domains/support/tasks.py": "a9429e87c1c62878b876bc82ab09739fc482c204d7f37803975aad178084cc06",
+    "automationbench/domains/finance/tasks.py": "7ce169cc71ee6be1f22cd0c6239cfc4cb9cfa2faa5496b0acf878ecf4fe6d49a",
+    "automationbench/domains/hr/tasks.py": "c173a36a03f43096bd122577584aa32f9df379d8760aa46c43be04c85d101779",
+    "automationbench/domains/simple/tasks.py": "c5b1470ed22ba892c3a08be4836131e1a9dafe9c97adc4d5f9d1cd4766c2394a"
+  },
+  "public_scored_tasks": 600,
+  "domain_counts": {
+    "sales": 100,
+    "marketing": 100,
+    "operations": 100,
+    "support": 100,
+    "finance": 100,
+    "hr": 100
+  },
+  "simple_tasks_not_in_headline_score": 200,
+  "published_private_scope": "600+ held-out tasks; vendor Fable fallback footnote refers to 657 tasks",
+  "source_claim_apps": 47,
+  "source_claim_api_endpoints": "approximately 500",
+  "measured_scope_note": "Official published app count is not asserted identical to Python WorldState service-field count or seed-key counts. Seed service keys are not required application counts.",
+  "statistics": {
+    "unit": "all assertions defined per scored public task, including exclusions/guards; not denominator of partial_credit",
+    "tasks": 600,
+    "assertions_total": 9612,
+    "median": 11.0,
+    "min": 3,
+    "max": 64,
+    "mean": 16.02,
+    "histogram_bins": [
+      "1–5",
+      "6–10",
+      "11–20",
+      "21–40",
+      "41+"
+    ],
+    "histogram_counts": [
+      35,
+      231,
+      173,
+      138,
+      23
+    ]
+  },
+  "selected_examples": [
+    {
+      "task_name": "sales.zoom_calendar_conflict",
+      "domain": "sales",
+      "example_id": 603,
+      "prompt_matches_base_getter": true,
+      "assertions_match_base_getter": true,
+      "user_prompt_sha256": "0e4bea9eedbeb3a051523f547e22736e022510d04307cfcd5d96c11c7dbb869f",
+      "conditions": 11,
+      "input_display_scope": "full user prompt; source initial-state excerpts/reformatted tables; Japanese translation; expected changes derived from assertions and task instructions"
+    },
+    {
+      "task_name": "operations.asana_fire_drill",
+      "domain": "operations",
+      "example_id": 1201,
+      "prompt_matches_base_getter": true,
+      "assertions_match_base_getter": true,
+      "user_prompt_sha256": "a4a44cbe3309911ec6d183b8f949ec4a2ed39073aac3b25cf6081d63c9f889f1",
+      "conditions": 11,
+      "input_display_scope": "full user prompt; source initial-state excerpts/reformatted tables; Japanese translation; expected changes derived from assertions and task instructions"
+    },
+    {
+      "task_name": "finance.payment_reconciliation",
+      "domain": "finance",
+      "example_id": 4015,
+      "prompt_matches_base_getter": true,
+      "assertions_match_base_getter": true,
+      "user_prompt_sha256": "405a205aeb90598cd4f5127dbd55221631acc544d7b5200678f4c974ed99152b",
+      "conditions": 11,
+      "input_display_scope": "full user prompt; source initial-state excerpts/reformatted tables; Japanese translation; expected changes derived from assertions and task instructions"
+    },
+    {
+      "task_name": "marketing.social_engagement_response",
+      "domain": "marketing",
+      "example_id": 1003,
+      "prompt_matches_base_getter": true,
+      "assertions_match_base_getter": true,
+      "user_prompt_sha256": "d509bb50274ed72fc48909251c256cd7645124aa9c4a180eeea786336d0fbd99",
+      "conditions": 15,
+      "input_display_scope": "full user prompt; source initial-state excerpts/reformatted tables; Japanese translation; expected changes derived from assertions and task instructions"
+    },
+    {
+      "task_name": "marketing.ad_performance_review",
+      "domain": "marketing",
+      "example_id": 1011,
+      "prompt_matches_base_getter": true,
+      "assertions_match_base_getter": true,
+      "user_prompt_sha256": "a2d0717b4c50b66408ba4dbc10180478944c589b1262ebe19b39fd03287e0208",
+      "conditions": 20,
+      "input_display_scope": "full user prompt; source initial-state excerpts/reformatted tables; Japanese translation; expected changes derived from assertions and task instructions"
+    },
+    {
+      "task_name": "marketing.referral_processing",
+      "domain": "marketing",
+      "example_id": 1024,
+      "prompt_matches_base_getter": true,
+      "assertions_match_base_getter": true,
+      "user_prompt_sha256": "34ed6778f44b28e3301cdf1125bc6d21690281483eeab733dcbe6016e6c18543",
+      "conditions": 28,
+      "input_display_scope": "full user prompt; source initial-state excerpts/reformatted tables; Japanese translation; expected changes derived from assertions and task instructions"
+    },
+    {
+      "task_name": "support.gorgias_freshdesk_migration",
+      "domain": "support",
+      "example_id": 1432,
+      "prompt_matches_base_getter": true,
+      "assertions_match_base_getter": true,
+      "user_prompt_sha256": "bc391680aadb6dece0d0f994391ddd287120cb94815ee14390e9e97380edcda8",
+      "conditions": 36,
+      "input_display_scope": "full user prompt; source initial-state excerpts/reformatted tables; Japanese translation; expected changes derived from assertions and task instructions"
+    },
+    {
+      "task_name": "support.zendesk_hubspot_churn_risk",
+      "domain": "support",
+      "example_id": 1438,
+      "prompt_matches_base_getter": true,
+      "assertions_match_base_getter": true,
+      "user_prompt_sha256": "e0c454d39fb89b9e587a1ca0ce9cc0cd860f796a497cca1a90f74dbc5b5dfbee",
+      "conditions": 48,
+      "input_display_scope": "full user prompt; source initial-state excerpts/reformatted tables; Japanese translation; expected changes derived from assertions and task instructions"
+    },
+    {
+      "task_name": "finance.timesheet_to_invoice",
+      "domain": "finance",
+      "example_id": 4005,
+      "prompt_matches_base_getter": true,
+      "assertions_match_base_getter": true,
+      "user_prompt_sha256": "27af9911d13ed10f1674acb554cc87ec37e6f64bc2f5a35d588c1014360faf87",
+      "conditions": 3,
+      "input_display_scope": "full user prompt; source initial-state excerpts/reformatted tables; Japanese translation; expected changes derived from assertions and task instructions"
+    },
+    {
+      "task_name": "finance.multicurrency_invoice",
+      "domain": "finance",
+      "example_id": 4017,
+      "prompt_matches_base_getter": true,
+      "assertions_match_base_getter": true,
+      "user_prompt_sha256": "d4c730a4edbf4fd8406bc52320da069a11183e92ecb8a73eb0b4a9446413253c",
+      "conditions": 4,
+      "input_display_scope": "full user prompt; source initial-state excerpts/reformatted tables; Japanese translation; expected changes derived from assertions and task instructions"
+    },
+    {
+      "task_name": "hr.performance_feedback_logging",
+      "domain": "hr",
+      "example_id": 5007,
+      "prompt_matches_base_getter": true,
+      "assertions_match_base_getter": true,
+      "user_prompt_sha256": "cffdc918c5f61ef819374b3cb27c4077af7a79342017767733c208618b124cec",
+      "conditions": 7,
+      "input_display_scope": "full user prompt; source initial-state excerpts/reformatted tables; Japanese translation; expected changes derived from assertions and task instructions"
+    },
+    {
+      "task_name": "hr.pto_balance_alert",
+      "domain": "hr",
+      "example_id": 5012,
+      "prompt_matches_base_getter": true,
+      "assertions_match_base_getter": true,
+      "user_prompt_sha256": "07fa60277a2922dcd5878781a3ffa1325de26ed8044cb3bff151e25e482c3a10",
+      "conditions": 8,
+      "input_display_scope": "full user prompt; source initial-state excerpts/reformatted tables; Japanese translation; expected changes derived from assertions and task instructions"
+    }
+  ],
+  "excluded_examples": [
+    {
+      "task_name": "finance.slack_receipt_capture",
+      "reason": "Meal policy caps each person at $75 and requires attendee count above cap, but $127.50 source message contains no attendee count while assertion requires its row. Excluded rather than inventing attendees."
+    },
+    {
+      "task_name": "sales.multi_hop_lookup",
+      "reason": "Expected escalation includes parent-company Critical case, but routing policy does not explicitly extend account cases to parents. Excluded from slides rather than silently completing the rule."
+    }
+  ],
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "external_model_api_used": false,
+  "runtime_notes": [
+    "Official dataset loaders generated all 800 public/simple rows locally.",
+    "Local task/schema functions were used under Python 3.12 for inspection; official end-to-end package declares Python >=3.13.",
+    "Only the three known-reference action sequences were locally replayed; no agent/model evaluation, no real external app action."
+  ],
+  "official_page_captured": {
+    "url": "https://zapier.com/benchmarks",
+    "screenshot": "official-site.png",
+    "normal_tls": true,
+    "rendered_css_checked": true
+  },
+  "current_result_conditions": {
+    "date": "2026-10-21 Asia/Tokyo",
+    "scope": "version1.0.6 / held-out private / API mode",
+    "results": [
+      {
+        "model": "Gemini 4 Argon",
+        "effort": "High",
+        "score_percent": 51.29
+      },
+      {
+        "model": "Claude Sonnet 5.5",
+        "effort": "Max",
+        "fallback": "provider default",
+        "score_percent": 44.75
+      },
+      {
+        "model": "Claude Opus 5.5",
+        "effort": "Max",
+        "fallback": "provider default",
+        "score_percent": 42.47
+      },
+      {
+        "model": "GPT-6 Astra",
+        "effort": "Max",
+        "score_percent": 41.4
+      }
+    ],
+    "fable": {
+      "model": "Claude Fable 5.1 with Opus5 fallback",
+      "score_percent": 31.4,
+      "fallback_tasks": 260,
+      "evaluated_tasks": 657,
+      "cost_note": "Fable-only reported cost understates combination cost; not included in slide cost comparison"
+    }
+  },
+  "reference_replay": [
+    {
+      "task_name": "sales.zoom_calendar_conflict",
+      "mode": "locally authored reference actions using official simulator functions; known source values, not an agent/model run",
+      "initial_success": 0.0,
+      "partial_credit_after": 1.0,
+      "task_completed_correctly_after": 1.0,
+      "calls": [
+        {
+          "function": "zoom_update_meeting",
+          "arguments": {
+            "meeting_id": "1234567890",
+            "topic": "[RESCHEDULED] Q1 Product Review - External"
+          },
+          "output": {
+            "success": true,
+            "meeting": {
+              "id": 1234567890,
+              "uuid": "zoom-conflict-001",
+              "topic": "[RESCHEDULED] Q1 Product Review - External",
+              "type": 1,
+              "start_time": "2026-02-20T14:00:00+00:00",
+              "duration": 60,
+              "timezone": "America/Los_Angeles",
+              "agenda": "Quarterly product review with partners",
+              "host_email": "meetings@ourcompany.example.com",
+              "status": "waiting",
+              "registration_required": false,
+              "settings_waiting_room": false
+            }
+          }
+        },
+        {
+          "function": "slack_send_channel_message",
+          "arguments": {
+            "channel": "ops-updates",
+            "text": "Executive Strategy Session remains. Zoom 1234567890 is [RESCHEDULED] Q1 Product Review - External; Calendar evt_conflict_001 remains unchanged."
+          },
+          "output": {
+            "success": true,
+            "message": {
+              "ts": "1792513159.139426",
+              "channel": "C_OPS",
+              "user": "USLACKBOT",
+              "text": "Executive Strategy Session remains. Zoom 1234567890 is [RESCHEDULED] Q1 Product Review - External; Calendar evt_conflict_001 remains unchanged.",
+              "type": "message",
+              "bot_id": "USLACKBOT",
+              "username": "Zapier"
+            },
+            "ts": "1792513159.139426",
+            "channel": "C_OPS"
+          }
+        }
+      ],
+      "assertion_results": [
+        {
+          "type": "zoom_meeting_field_equals",
+          "passed": true,
+          "excluded": false,
+          "params": {
+            "meeting_id": 1234567890,
+            "field": "topic",
+            "value": "[RESCHEDULED] Q1 Product Review - External"
+          }
+        },
+        {
+          "type": "google_calendar_event_field_equals",
+          "passed": true,
+          "excluded": true,
+          "params": {
+            "event_id": "evt_conflict_001",
+            "field": "summary",
+            "value": "Executive Strategy Session"
+          }
+        },
+        {
+          "type": "slack_message_exists",
+          "passed": true,
+          "excluded": false,
+          "params": {
+            "channel_name": "ops-updates",
+            "text_contains": "Executive Strategy Session"
+          }
+        },
+        {
+          "type": "slack_message_exists",
+          "passed": true,
+          "excluded": false,
+          "params": {
+            "channel_name": "ops-updates",
+            "text_contains": "1234567890"
+          }
+        },
+        {
+          "type": "zoom_meeting_field_equals",
+          "passed": true,
+          "excluded": true,
+          "params": {
+            "meeting_id": 1111111111,
+            "field": "topic",
+            "value": "Product Review - Internal"
+          }
+        },
+        {
+          "type": "slack_message_exists",
+          "passed": true,
+          "excluded": false,
+          "params": {
+            "channel_name": "ops-updates",
+            "text_contains": "evt_conflict_001"
+          }
+        },
+        {
+          "type": "slack_message_not_exists",
+          "passed": true,
+          "excluded": true,
+          "params": {
+            "channel_name": "general",
+            "text_contains": "Executive Strategy Session"
+          }
+        },
+        {
+          "type": "zoom_meeting_field_equals",
+          "passed": true,
+          "excluded": true,
+          "params": {
+            "meeting_id": 9988776655,
+            "field": "topic",
+            "value": "Partner Onboarding - PRIORITY"
+          }
+        },
+        {
+          "type": "google_calendar_event_field_not_contains",
+          "passed": true,
+          "excluded": true,
+          "params": {
+            "event_id": "evt_conflict_001",
+            "field": "summary",
+            "value": "[RESCHEDULED]"
+          }
+        },
+        {
+          "type": "google_calendar_event_field_equals",
+          "passed": true,
+          "excluded": true,
+          "params": {
+            "event_id": "evt_tz_trap_001",
+            "field": "summary",
+            "value": "APAC Sales Sync"
+          }
+        },
+        {
+          "type": "zoom_meeting_field_equals",
+          "passed": true,
+          "excluded": true,
+          "params": {
+            "meeting_id": 5544332211,
+            "field": "topic",
+            "value": "[RESCHEDULED] Q4 Pipeline Review"
+          }
+        }
+      ],
+      "final_state_sha256": "94f0cd45d5756f9115812f7de7d49cc0cdf458953a37fd83c07695308da1709b"
+    },
+    {
+      "task_name": "operations.asana_fire_drill",
+      "mode": "locally authored reference actions using official simulator functions; known source values, not an agent/model run",
+      "initial_success": 0.0,
+      "partial_credit_after": 1.0,
+      "task_completed_correctly_after": 1.0,
+      "calls": [
+        {
+          "function": "asana_create_task",
+          "arguments": {
+            "workspace": "ws_ops",
+            "name": "Monthly Fire Drill Checklist - February",
+            "dueDate": "2026-02-18"
+          },
+          "output": {
+            "success": true,
+            "invocation_id": "b8bd530a-4ba9-43ac-b278-f2c09f2325f7",
+            "response_uuid": "b8bd530a-4ba9-43ac-b278-f2c09f2325f7",
+            "status": "success",
+            "results": [
+              {
+                "gid": "1208765432109876",
+                "permalink_url": "https://app.asana.com/0/5678901234567/1208765432109876",
+                "name": "Monthly Fire Drill Checklist - February",
+                "assignee": {
+                  "name": "Zap Zaplar",
+                  "gid": "1234567890123",
+                  "resource_type": "user"
+                },
+                "assignee__name": "Zap Zaplar",
+                "assignee__gid": "1234567890123",
+                "assignee__resource_type": "user",
+                "workspace": "ws_ops",
+                "workspace__name": "ws_ops",
+                "workspace__gid": "9876543210987",
+                "workspace__resource_type": "workspace",
+                "liked": "false",
+                "hearted": "false",
+                "hearts": "[]",
+                "likes": "[]",
+                "tags": "[]",
+                "due_at": "2024-02-15T17:00:00.000Z",
+                "due_on": "2024-02-15",
+                "notes": "This task involves implementing the new feature requested by the product team for the Q1 launch. Please coordinate with the design team for UI specifications.",
+                "parent": "",
+                "completed": false,
+                "is_rendered_as_separator": "false",
+                "actual_time_minutes": "0",
+                "num_hearts": "0",
+                "num_likes": "0",
+                "num_subtasks": "0",
+                "attachments": "[]",
+                "dependencies": "[]",
+                "dependents": "[]",
+                "followers": "[{\"gid\":\"1234567890123\",\"resource_type\":\"user\",\"name\":\"Zap Zaplar\"}]",
+                "memberships": "[{\"project\":{\"gid\":\"5678901234567\",\"resource_type\":\"project\",\"name\":\"Q1 Product Launch\"},\"section\":null}]",
+                "projects": "[{\"gid\":\"5678901234567\",\"resource_type\":\"project\",\"name\":\"Q1 Product Launch\"}]",
+                "approval_status": "pending",
+                "assignee_section": "",
+                "assignee_status": "upcoming",
+                "completed_at": "",
+                "completed_by": "",
+                "created_at": "2024-01-02T10:30:00.000Z",
+                "external": "",
+                "html_notes": "<body>This task involves implementing the new feature requested by the product team for the Q1 launch. Please coordinate with the design team for UI specifications.</body>",
+                "modified_at": "2024-01-02T10:30:00.000Z",
+                "resource_subtype": "default_task",
+                "resource_type": "task",
+                "start_at": "",
+                "start_on": "",
+                "id": "asana_e3e4fde0f74c43769e6550950002a4d4",
+                "dueDate": "2026-02-18"
+              }
+            ],
+            "count": 1
+          }
+        },
+        {
+          "function": "asana_add_task_to_section",
+          "arguments": {
+            "task_id": "1208765432109876",
+            "workspace": "ws_ops",
+            "projects": "proj_facilities",
+            "section": "sec_feb"
+          },
+          "output": {
+            "success": true,
+            "invocation_id": "2dea1735-d6d4-4ff2-bb99-5a6aa8252e81",
+            "response_uuid": "2dea1735-d6d4-4ff2-bb99-5a6aa8252e81",
+            "status": "success",
+            "results": [
+              {
+                "gid": "1208765432109876",
+                "name": "Example Task",
+                "assignee": {
+                  "name": "Zap Zaplar",
+                  "gid": "67890",
+                  "resource_type": "user"
+                },
+                "assignee__name": "Zap Zaplar",
+                "assignee__gid": "67890",
+                "assignee__resource_type": "user",
+                "workspace": "ws_ops",
+                "workspace__name": "Example Workspace",
+                "workspace__gid": "1234",
+                "workspace__resource_type": "workspace",
+                "liked": "false",
+                "hearts": "[]",
+                "likes": "[]",
+                "tags": "[]",
+                "due_at": "2024-02-01T00:00:00.000Z",
+                "due_on": "2024-02-01",
+                "notes": "Task description here.",
+                "parent": "",
+                "completed": "false",
+                "hearted": "false",
+                "is_rendered_as_separator": "false",
+                "actual_time_minutes": "120",
+                "num_hearts": "0",
+                "num_likes": "0",
+                "num_subtasks": "0",
+                "attachments": "[{\"gid\":\"1204644817926\",\"created_at\":\"2023-05-23T03:14:12.541Z\",\"host\":\"asana\",\"name\":\"sample.jpg\",\"size\":16631,\"permanent_url\":\"https://files.example.com/attachments/1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t\",\"file\":\"https://files.example.com/attachments/1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t\"}]",
+                "dependencies": "[]",
+                "dependents": "[]",
+                "followers": "[{\"gid\":\"12345\",\"resource_type\":\"user\",\"name\":\"Greg Sanchez\"}]",
+                "memberships": "[{\"project\":{\"gid\":\"1234\",\"resource_type\":\"project\",\"name\":\"Example Project\"},\"section\":{\"gid\":\"sample_section\",\"resource_type\":\"section\",\"name\":\"Section Name\"}}]",
+                "projects": "proj_facilities",
+                "approval_status": "pending",
+                "assignee_section": "",
+                "assignee_status": "upcoming",
+                "completed_at": "",
+                "completed_by": "",
+                "created_at": "2024-01-17T00:00:00.000Z",
+                "external": "",
+                "html_notes": "<body>Task details here.</body>",
+                "modified_at": "2024-01-17T00:00:00.000Z",
+                "permalink_url": "https://example.com/task/1234",
+                "resource_subtype": "default_task",
+                "resource_type": "task",
+                "start_at": "",
+                "start_on": "",
+                "id": "asana_19b2b65e460c43ad8f36eb5171cd4819",
+                "task_id": "1208765432109876",
+                "section": "sec_feb"
+              }
+            ],
+            "count": 1
+          }
+        },
+        {
+          "function": "asana_add_tag_to_task",
+          "arguments": {
+            "task_id": "1208765432109876",
+            "tag": "Compliance"
+          },
+          "output": {
+            "success": true,
+            "invocation_id": "a4d8bed3-5bba-4d8b-86f1-1a2f687c5442",
+            "response_uuid": "a4d8bed3-5bba-4d8b-86f1-1a2f687c5442",
+            "status": "success",
+            "results": [
+              {
+                "success": "true",
+                "tag_id": "tag_op_1735000000001",
+                "task_id": "1208765432109876",
+                "task_gid": "1208765432109876",
+                "tag": "Compliance",
+                "added_at": "2024-12-24T10:00:00.000Z",
+                "status": "success",
+                "id": "asana_57fc3eefbc894413b65470309cca7e4c"
+              }
+            ],
+            "count": 1
+          }
+        },
+        {
+          "function": "slack_send_channel_message",
+          "arguments": {
+            "channel": "ops-updates",
+            "text": "Created Monthly Fire Drill Checklist - February. Due: 2026-02-18. Compliance; February section."
+          },
+          "output": {
+            "success": true,
+            "message": {
+              "ts": "1792513159.589730",
+              "channel": "COPSUPD",
+              "user": "USLACKBOT",
+              "text": "Created Monthly Fire Drill Checklist - February. Due: 2026-02-18. Compliance; February section.",
+              "type": "message",
+              "bot_id": "USLACKBOT",
+              "username": "Zapier"
+            },
+            "ts": "1792513159.589730",
+            "channel": "COPSUPD"
+          }
+        }
+      ],
+      "assertion_results": [
+        {
+          "type": "asana_action_exists",
+          "passed": true,
+          "excluded": false,
+          "params": {
+            "action_key": "create_task",
+            "params": {
+              "workspace": "ws_ops",
+              "name": "Monthly Fire Drill Checklist - February",
+              "dueDate": "2026-02-18"
+            }
+          }
+        },
+        {
+          "type": "asana_action_exists",
+          "passed": true,
+          "excluded": false,
+          "params": {
+            "action_key": "add_task_to_section",
+            "params": {
+              "task_id": "1208765432109876",
+              "workspace": "ws_ops",
+              "projects": "proj_facilities",
+              "section": "sec_feb"
+            }
+          }
+        },
+        {
+          "type": "asana_action_exists",
+          "passed": true,
+          "excluded": false,
+          "params": {
+            "action_key": "add_tag_to_task",
+            "params": {
+              "task_id": "1208765432109876",
+              "tag": "Compliance"
+            }
+          }
+        },
+        {
+          "type": "slack_message_exists",
+          "passed": true,
+          "excluded": false,
+          "params": {
+            "channel_name": "ops-updates",
+            "text_contains": "Monthly Fire Drill Checklist - February"
+          }
+        },
+        {
+          "type": "slack_message_exists",
+          "passed": true,
+          "excluded": false,
+          "params": {
+            "channel_name": "ops-updates",
+            "text_contains": "Due: 2026-02-18"
+          }
+        },
+        {
+          "type": "slack_message_not_exists",
+          "passed": true,
+          "excluded": true,
+          "params": {
+            "channel_name": "general",
+            "text_contains": "Monthly Fire Drill Checklist"
+          }
+        },
+        {
+          "type": "asana_action_not_exists",
+          "passed": true,
+          "excluded": true,
+          "params": {
+            "action_key": "create_task",
+            "params": {
+              "workspace": "ws_ops",
+              "name": "Annual Safety Audit - February"
+            }
+          }
+        },
+        {
+          "type": "asana_action_not_exists",
+          "passed": true,
+          "excluded": true,
+          "params": {
+            "action_key": "create_task",
+            "params": {
+              "workspace": "ws_ops",
+              "name": "Monthly Fire Drill Checklist - Annex"
+            }
+          }
+        },
+        {
+          "type": "slack_message_not_exists",
+          "passed": true,
+          "excluded": true,
+          "params": {
+            "channel_name": "facilities-general",
+            "text_contains": "Fire Drill"
+          }
+        },
+        {
+          "type": "asana_action_not_exists",
+          "passed": true,
+          "excluded": true,
+          "params": {
+            "action_key": "create_task",
+            "params": {
+              "workspace": "ws_ops",
+              "name": "Monthly Fire Drill Checklist - March Preview"
+            }
+          }
+        },
+        {
+          "type": "asana_action_not_exists",
+          "passed": true,
+          "excluded": true,
+          "params": {
+            "action_key": "create_task",
+            "params": {
+              "workspace": "ws_ops",
+              "name": "Monthly Fire Drill Checklist - Original"
+            }
+          }
+        }
+      ],
+      "final_state_sha256": "41497eec943344639aa8fc512b8e799ba52c1208d1244002d90e7cba9d570ffc"
+    },
+    {
+      "task_name": "finance.payment_reconciliation",
+      "mode": "locally authored reference actions using official simulator functions; known source values, not an agent/model run",
+      "initial_success": 0.0,
+      "partial_credit_after": 1.0,
+      "task_completed_correctly_after": 1.0,
+      "calls": [
+        {
+          "function": "gmail_send_email",
+          "arguments": {
+            "to": "controller@company.example.com",
+            "subject": "April reconciliation discrepancies",
+            "body": "PMT-2026-0402 AMOUNT_MISMATCH bank $8,750.00 / QB 8500.00\nPMT-2026-0403 BANK_ONLY $3,600.00\nPMT-2026-0404 BANK_ONLY $12,100.00\nPMT-2026-0405 QB_ONLY 4100.00"
+          },
+          "output": {
+            "success": true,
+            "message": {
+              "id": "68c930a2ee2a42c1",
+              "message_id": "68c930a2ee2a42c1",
+              "thread_id": "1cbd8b206e314eb8",
+              "from": "user@gmail.com",
+              "to": [
+                "controller@company.example.com"
+              ],
+              "cc": [],
+              "bcc": [],
+              "subject": "April reconciliation discrepancies",
+              "body_plain": "PMT-2026-0402 AMOUNT_MISMATCH bank $8,750.00 / QB 8500.00\nPMT-2026-0403 BANK_ONLY $3,600.00\nPMT-2026-0404 BANK_ONLY $12,100.00\nPMT-2026-0405 QB_ONLY 4100.00",
+              "body_html": "<html><body>PMT-2026-0402 AMOUNT_MISMATCH bank $8,750.00 / QB 8500.00\nPMT-2026-0403 BANK_ONLY $3,600.00\nPMT-2026-0404 BANK_ONLY $12,100.00\nPMT-2026-0405 QB_ONLY 4100.00</body></html>",
+              "snippet": "PMT-2026-0402 AMOUNT_MISMATCH bank $8,750.00 / QB 8500.00\nPMT-2026-0403 BANK_ONLY $3,600.00\nPMT-2026",
+              "label_ids": [
+                "SENT"
+              ],
+              "attachment_ids": [],
+              "date": 1792513159295,
+              "internal_date": 1792513159295,
+              "is_read": true,
+              "is_starred": false,
+              "has_attachments": false,
+              "size_estimate": 1000
+            }
+          }
+        }
+      ],
+      "assertion_results": [
+        {
+          "type": "gmail_message_sent_to",
+          "passed": true,
+          "excluded": false,
+          "params": {
+            "to": "controller@company.example.com"
+          }
+        },
+        {
+          "type": "gmail_message_sent_to_with_body_contains",
+          "passed": true,
+          "excluded": false,
+          "params": {
+            "to": "controller@company.example.com",
+            "body_contains": [
+              "PMT-2026-0402"
+            ]
+          }
+        },
+        {
+          "type": "gmail_message_sent_to_with_body_contains",
+          "passed": true,
+          "excluded": false,
+          "params": {
+            "to": "controller@company.example.com",
+            "body_contains": [
+              "AMOUNT_MISMATCH",
+              "$8,750.00",
+              "8500.00"
+            ]
+          }
+        },
+        {
+          "type": "gmail_message_sent_to_with_body_contains",
+          "passed": true,
+          "excluded": false,
+          "params": {
+            "to": "controller@company.example.com",
+            "body_contains": [
+              "PMT-2026-0403"
+            ]
+          }
+        },
+        {
+          "type": "gmail_message_sent_to_with_body_contains",
+          "passed": true,
+          "excluded": false,
+          "params": {
+            "to": "controller@company.example.com",
+            "body_contains": [
+              "BANK_ONLY",
+              "$3,600.00"
+            ]
+          }
+        },
+        {
+          "type": "gmail_message_sent_to_with_body_contains",
+          "passed": true,
+          "excluded": false,
+          "params": {
+            "to": "controller@company.example.com",
+            "body_contains": [
+              "PMT-2026-0404"
+            ]
+          }
+        },
+        {
+          "type": "gmail_message_sent_to_with_body_contains",
+          "passed": true,
+          "excluded": false,
+          "params": {
+            "to": "controller@company.example.com",
+            "body_contains": [
+              "$12,100.00"
+            ]
+          }
+        },
+        {
+          "type": "gmail_message_sent_to_with_body_contains",
+          "passed": true,
+          "excluded": false,
+          "params": {
+            "to": "controller@company.example.com",
+            "body_contains": [
+              "PMT-2026-0405"
+            ]
+          }
+        },
+        {
+          "type": "gmail_message_sent_to_with_body_contains",
+          "passed": true,
+          "excluded": false,
+          "params": {
+            "to": "controller@company.example.com",
+            "body_contains": [
+              "QB_ONLY",
+              "4100.00"
+            ]
+          }
+        },
+        {
+          "type": "gmail_message_sent_to_with_body_not_contains",
+          "passed": true,
+          "excluded": false,
+          "params": {
+            "to": "controller@company.example.com",
+            "body_not_contains": "PMT-2026-0401"
+          }
+        },
+        {
+          "type": "gmail_message_sent_to_with_body_not_contains",
+          "passed": true,
+          "excluded": false,
+          "params": {
+            "to": "controller@company.example.com",
+            "body_not_contains": "Helix"
+          }
+        }
+      ],
+      "final_state_sha256": "58cea44a117e7e6e7d5508364d49af1660de74f7b2f7e2fbbf15bbae5f8d84f2"
+    }
+  ],
+  "pptx_sha256": "5febfcc161857af3d5a5eb045c3e7cd61b56ccf0af959b7fcc5a3a3ac23df64b",
+  "pdf_sha256": "e6422e937133d89aeb07d26dc78142022e8c08e10b7f940be6351cd34efe52ed",
+  "final_content_origin_corrections": [
+    {
+      "task_name": "support.gorgias_freshdesk_migration",
+      "fact": "Shipping dispute under review has tags shipping/legal-review, not urgent-migrate."
+    },
+    {
+      "task_name": "marketing.ad_performance_review",
+      "fact": "No currency supplied in spend fields/assertions; slides preserve numeric amounts without invented dollar units."
+    }
+  ],
+  "selected_examples_semantic_read_scope": "All12 selected user prompts/system policies/initial-state excerpts/assertions read; whole800 runtime prompt/assertion equality independently verified by reviewer. All600 structural statistics do not imply all600 semantic manual review.",
+  "artifact_sha256": {
+    "pdf": "e6422e937133d89aeb07d26dc78142022e8c08e10b7f940be6351cd34efe52ed",
+    "pptx": "5febfcc161857af3d5a5eb045c3e7cd61b56ccf0af959b7fcc5a3a3ac23df64b"
+  },
+  "final_review": "../skill-proofreading/automationbench/review.json"
+}

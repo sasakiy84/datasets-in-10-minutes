@@ -1,0 +1,161 @@
+{
+  "scope": "Early authored content.py draft, before PPTX/PDF generation; read all13 Japanese example entries and compared to source prompts/state/assertions",
+  "draft_source_sha256": "0657254f9726e1a774fe93c2e7e67c3c19fe2539535d6f28bf546de482817281",
+  "issues": [
+    {
+      "id": "J1",
+      "task": "finance.multicurrency_invoice",
+      "severity": "meaning omission",
+      "before": "JP draft omitted destination email, original amount/currency/USD fields, required numerical formatting",
+      "suggested_after": "Include ap-team destination, original amount/currency and USD for every invoice, and computed USD as comma-separated plain number",
+      "status": "sent to creator, pending"
+    },
+    {
+      "id": "J2",
+      "task": "hr.pto_balance_alert",
+      "severity": "naturalness/quantity interpretation",
+      "before": "有給休暇の残高、積立上限まで5日以内、残り3日",
+      "suggested_after": "有給休暇の残日数、保有上限との差が5日以下、上限まで3日分",
+      "reason": "Differentiate accrued day quantity from chronological time remaining",
+      "status": "sent to creator, pending"
+    },
+    {
+      "id": "J3",
+      "severity": "terminology introduction",
+      "before": "CSM/PTO/CRM abbreviations without guaranteed first-use explanation",
+      "suggested_after": "Introduce short Japanese role/meaning at first use; CTR/CPA/SOP already contextually translated where appropriate",
+      "status": "sent to creator, pending"
+    }
+  ],
+  "optional": [
+    {
+      "source": "fire drill",
+      "draft": "防災訓練",
+      "suggested": "避難訓練 or 火災避難訓練",
+      "reason": "Preserve fire-specific rather than all-hazard drill scope"
+    }
+  ],
+  "gemini_used": false,
+  "draft_full_native_scope": "All89 initial exported native pages read, no initial individual image view",
+  "creator_response": "Creator accepted J1–J10 and plans85-page regenerated candidate; final verification pending",
+  "additional_issues": [
+    {
+      "id": "J4",
+      "page": 7,
+      "issue": "Redundant disclaimer that expected state is not a model generation",
+      "suggestion": "State source as public grading conditions without repeating obvious negative caveat"
+    },
+    {
+      "id": "J5",
+      "page": 25,
+      "issue": "Instruction-like warning not to substitute public scores for private scores",
+      "suggestion": "Explain positively that official results use private held-out set"
+    },
+    {
+      "id": "J6",
+      "page": 27,
+      "issue": "Generic negative heading and unnatural scope overview",
+      "suggestion": "Concrete cross-domain matching/notification heading and natural additional-example description"
+    },
+    {
+      "id": "J7",
+      "pages": [
+        82,
+        83
+      ],
+      "issue": "残高 persists after PTO terminology correction",
+      "suggestion": "残日数"
+    },
+    {
+      "id": "J8",
+      "page": 54,
+      "issue": "Video CTR0.5 row gives a pause rule without immediate actual keep judgment",
+      "suggestion": "Lead with 維持, then boundary condition"
+    },
+    {
+      "id": "J9",
+      "page": 86,
+      "issue": "Generic verification cautions and repeated simulation clarification",
+      "suggestion": "Delete or merge; no audit process page"
+    },
+    {
+      "id": "J10",
+      "page": 38,
+      "issue": "Preceding benchmarks should have own primary-source references",
+      "suggestion": "Correspond WebArena/AppWorld with primary literature"
+    }
+  ],
+  "source_display_findings": [
+    {
+      "id": "DISPLAY1",
+      "example": "zoom conflict",
+      "before": "Input shows only Calendar/Zoom category, actual meeting titles first appear in expected output",
+      "suggested_after": "Show selected real meeting titles with attendees/priority in input table"
+    },
+    {
+      "id": "DISPLAY2",
+      "example": "fire drill",
+      "before": "Task title/date/tag only appear in expected output",
+      "suggested_after": "Show selected valid facilities email source line with actual title/date/tag; main discovered and assigned fix"
+    },
+    {
+      "id": "DISPLAY3",
+      "example": "ad optimization",
+      "before": "Input shows CTR but not spend/conversions supporting expected total and CPA",
+      "suggested_after": "Add source spend1200+950 and conversions10+3 alongside calculation"
+    },
+    {
+      "id": "DISPLAY4",
+      "example": "referral",
+      "before": "Tracking code values first appear as output",
+      "suggested_after": "Show policy mapping standard/re-engage to the actual two code strings"
+    },
+    {
+      "id": "DISPLAY5",
+      "example": "social mentions",
+      "before": "Input has only one positive example but output gives two likes",
+      "suggested_after": "Show second positive mention and relevant overall categorization"
+    },
+    {
+      "id": "DISPLAY6",
+      "example": "ticket migration",
+      "before": "Input has only generic tags; selected actual ticket names first appear as output",
+      "suggested_after": "Show Critical payment failure tags and Shipping dispute tags alongside governing rules"
+    },
+    {
+      "id": "DISPLAY7",
+      "example": "performance feedback",
+      "before": "Input is pre-parsed summary table rather than a real formatted post",
+      "suggested_after": "Show one actual FEEDBACK post and poster-to-real-name mapping to demonstrate extraction/join"
+    }
+  ],
+  "source_display_response": "Main supports all and allows page additions; creator notified for a batch rewrite. Individual visual review waiting for revised body freeze.",
+  "second_draft_scope": "All85 pages directly extracted from PPTX a12f278bd319952c635d5b231a1c60e0f592d1ea301b3e2ce9d82cf34bf09f23 and read; fixes pending frozen pair",
+  "last_content_findings": [
+    {
+      "id": "FINAL1",
+      "page": 58,
+      "issue": "Shipping dispute under review tag list incorrectly changed to urgent-migrate/legal-review; source and runtime have shipping/legal-review",
+      "status": "creator accepted correction"
+    },
+    {
+      "id": "FINAL2",
+      "page": 51,
+      "issue": "Advertising spend currency unspecified in source; slide added USD marker/dollar unit",
+      "status": "asked creator to preserve numerical values without inferred currency; reviewer earlier suggestion corrected"
+    },
+    {
+      "id": "FINAL3",
+      "page": 85,
+      "issue": "WebArena primary citation added in body but missing full entry in final bibliography",
+      "status": "creator replaces uncited Anthropic release entry, keeping85 pages"
+    },
+    {
+      "id": "FINAL4",
+      "page": 81,
+      "issue": "Residual general reproduction cautions rather than actual experiment conditions",
+      "status": "creator replacing with actual highest-available-effort public-evaluation setting"
+    }
+  ],
+  "final_visual_status": "not begun; pending frozen pair"
+}
