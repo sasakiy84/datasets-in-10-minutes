@@ -1,0 +1,696 @@
+{
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "status": "audit_complete_no_slide_changes",
+  "example_count": 13,
+  "official_full_Short_inputs": 13,
+  "official_full_Tiny_references": 13,
+  "source_truncation_or_lead_sentence_proxy_issues": 0,
+  "per_example": [
+    {
+      "example": 1,
+      "case_id": "CJ-DC-0002",
+      "task": "official Short→Tiny",
+      "source_release": "v20220616",
+      "raw_record_SHA256": "3d177a41a41fca61eac8af3adbcbf04cd2f800e24bb3b6e56acaa5ca9a598af1",
+      "original_short_full": "In 2012, U.S. District Court of D.C. found that the policy of seizing and retaining private vehicles pending civil forfeiture proceedings without providing a post-deprivation hearing was unconstitutional.",
+      "displayed_short_full": "In 2012, U.S. District Court of D.C. found that the policy of seizing and retaining private vehicles pending civil forfeiture proceedings without providing a post-deprivation hearing was unconstitutional.",
+      "original_tiny_full": "D.C. resident challenges policy of private vehicle seizure without providing prompt post-deprivation hearing (D.D.C.)",
+      "input_pages": [
+        8
+      ],
+      "reference_pages": [
+        8
+      ],
+      "JP_pages": [
+        8
+      ],
+      "input_word_count": 28,
+      "reference_word_count": 14,
+      "literal_input_full_match": true,
+      "literal_reference_full_match": true,
+      "source_raw_record_exact": true,
+      "all_reference_assertion_units": [
+        {
+          "fact": "D.C.住民",
+          "Short_relation": "not_in_Short",
+          "evidence_or_explanation": "Longにa D.C. resident"
+        },
+        {
+          "fact": "方針を訴訟で争う",
+          "Short_relation": "not_in_Short",
+          "evidence_or_explanation": "Shortは違憲判断を述べる。Longはfiled this lawsuitと方針への異議。"
+        },
+        {
+          "fact": "私有車の押収方針",
+          "Short_relation": "in_Short",
+          "evidence_or_explanation": "policy of seizing and retaining private vehicles"
+        },
+        {
+          "fact": "速やかな押収後審理を設けない",
+          "Short_relation": "partly_in_Short",
+          "evidence_or_explanation": "Shortは事後審理の欠如を示すがpromptという時間的評価はない。"
+        },
+        {
+          "fact": "D.D.C.",
+          "Short_relation": "in_Short",
+          "evidence_or_explanation": "U.S. District Court of D.C."
+        }
+      ],
+      "diagnosis": "入力の再抜粋/冒頭文proxyなし。参照にShort外の情報がある場合は公式summary間の関係であり、スライド上の入力省略ではない。",
+      "action": "keep existing full Short/Tiny/JP"
+    },
+    {
+      "example": 2,
+      "case_id": "EE-KS-0025",
+      "task": "official Short→Tiny",
+      "source_release": "v20220616",
+      "raw_record_SHA256": "6428dcba0b8b45b8d810cac84785c44b24610a98abcf020aaf8db60ab50842a8",
+      "original_short_full": "Plaintiffs sued Sprint, alleging ADEA violations pursuant to 29 U.S.C. § 621, the ADA, and 42 U.S.C. §12203. Class comprised just under 1,700 members. Eventually, parties reached $57 million settlement agreement.",
+      "displayed_short_full": "Plaintiffs sued Sprint, alleging ADEA violations pursuant to 29 U.S.C. § 621, the ADA, and 42 U.S.C. §12203. Class comprised just under 1,700 members. Eventually, parties reached $57 million settlement agreement.",
+      "original_tiny_full": "Plaintiffs sue Sprint for age discrimination; 1,697-member class wins $57 million settlement (D. Kan.) ",
+      "input_pages": [
+        10
+      ],
+      "reference_pages": [
+        10
+      ],
+      "JP_pages": [
+        11
+      ],
+      "input_word_count": 31,
+      "reference_word_count": 14,
+      "literal_input_full_match": true,
+      "literal_reference_full_match": true,
+      "source_raw_record_exact": true,
+      "all_reference_assertion_units": [
+        {
+          "fact": "原告らがSprintを提訴",
+          "Short_relation": "in_Short",
+          "evidence_or_explanation": "Plaintiffs sued Sprint"
+        },
+        {
+          "fact": "年齢差別",
+          "Short_relation": "semantic_in_Short",
+          "evidence_or_explanation": "ADEA violations"
+        },
+        {
+          "fact": "集団1,697人",
+          "Short_relation": "not_in_Short",
+          "evidence_or_explanation": "Shortはjust under 1,700。Longに1,697-member class。"
+        },
+        {
+          "fact": "5,700万ドルの和解",
+          "Short_relation": "in_Short",
+          "evidence_or_explanation": "$57 million settlement agreement"
+        },
+        {
+          "fact": "D. Kan.",
+          "Short_relation": "not_in_Short",
+          "evidence_or_explanation": "Shortに裁判所所在地なし。LongはDistrict of Kansas。"
+        }
+      ],
+      "diagnosis": "入力の再抜粋/冒頭文proxyなし。参照にShort外の情報がある場合は公式summary間の関係であり、スライド上の入力省略ではない。",
+      "action": "keep existing full Short/Tiny/JP"
+    },
+    {
+      "example": 3,
+      "case_id": "PA-FL-0001",
+      "task": "official Short→Tiny",
+      "source_release": "v20220616",
+      "raw_record_SHA256": "30c95e7041e0ffe278042077506900ac1daf1aa16f33dfe0898f97453d4c1d4a",
+      "original_short_full": "A class action lawsuit was filed in federal court against Carnival Corporation after two Cuban-born Americans were denied a ticket to Cuba. Plaintiffs voluntarily dismissed the case after Carnival changed its discriminatory policy.",
+      "displayed_short_full": "A class action lawsuit was filed in federal court against Carnival Corporation after two Cuban-born Americans were denied a ticket to Cuba. Plaintiffs voluntarily dismissed the case after Carnival changed its discriminatory policy.",
+      "original_tiny_full": "A class action lawsuit was filed against a company after Cuban-born Americans were denied a ticket to Cuba.",
+      "input_pages": [
+        12
+      ],
+      "reference_pages": [
+        12
+      ],
+      "JP_pages": [
+        13
+      ],
+      "input_word_count": 33,
+      "reference_word_count": 18,
+      "literal_input_full_match": true,
+      "literal_reference_full_match": true,
+      "source_raw_record_exact": true,
+      "all_reference_assertion_units": [
+        {
+          "fact": "集団訴訟が提起された",
+          "Short_relation": "in_Short",
+          "evidence_or_explanation": "A class action lawsuit was filed"
+        },
+        {
+          "fact": "会社が被告",
+          "Short_relation": "in_Short",
+          "evidence_or_explanation": "against Carnival Corporation"
+        },
+        {
+          "fact": "キューバ生まれの米国人",
+          "Short_relation": "in_Short",
+          "evidence_or_explanation": "two Cuban-born Americans"
+        },
+        {
+          "fact": "キューバ行き乗船券を拒否された後",
+          "Short_relation": "in_Short",
+          "evidence_or_explanation": "after two Cuban-born Americans were denied a ticket to Cuba"
+        }
+      ],
+      "diagnosis": "入力の再抜粋/冒頭文proxyなし。参照にShort外の情報がある場合は公式summary間の関係であり、スライド上の入力省略ではない。",
+      "action": "keep existing full Short/Tiny/JP"
+    },
+    {
+      "example": 4,
+      "case_id": "PN-PA-0023",
+      "task": "official Short→Tiny",
+      "source_release": "v20220616",
+      "raw_record_SHA256": "0ed5677903674f41ee8ba43ea46c85ae57328d4f45b7be8b1bfb40b72b30629a",
+      "original_short_full": "Six named plaintiffs filed a class-action lawsuit against the city of Pittsburgh and various elected officials and police officials alleging that actions taken against non-violent protestors constituted violations of their First and Fourth Amendment rights. ",
+      "displayed_short_full": "Six named plaintiffs filed a class-action lawsuit against the city of Pittsburgh and various elected officials and police officials alleging that actions taken against non-violent protestors constituted violations of their First and Fourth Amendment rights. ",
+      "original_tiny_full": "Added to the Clearinghouse: Lawsuit filed by @AbolitionistLC in 2020 alleging that the Pittsburgh police violated non-violent protestors First and Fourth Amendment rights.",
+      "input_pages": [
+        35
+      ],
+      "reference_pages": [
+        35
+      ],
+      "JP_pages": [
+        36
+      ],
+      "input_word_count": 35,
+      "reference_word_count": 23,
+      "literal_input_full_match": true,
+      "literal_reference_full_match": true,
+      "source_raw_record_exact": true,
+      "all_reference_assertion_units": [
+        {
+          "fact": "Clearinghouseへの追加という告知",
+          "Short_relation": "reference_metadata",
+          "evidence_or_explanation": "Shortに登録/投稿の告知なし。"
+        },
+        {
+          "fact": "@AbolitionistLCによる提訴",
+          "Short_relation": "not_in_Short",
+          "evidence_or_explanation": "Shortはsix named plaintiffs。保存LongにもこのSNS識別子なし。"
+        },
+        {
+          "fact": "2020年",
+          "Short_relation": "not_in_Short",
+          "evidence_or_explanation": "LongのJune 29, 2020。"
+        },
+        {
+          "fact": "ピッツバーグ警察",
+          "Short_relation": "in_Short",
+          "evidence_or_explanation": "city of Pittsburgh and various elected officials and police officials"
+        },
+        {
+          "fact": "非暴力の抗議参加者",
+          "Short_relation": "in_Short",
+          "evidence_or_explanation": "non-violent protestors"
+        },
+        {
+          "fact": "修正第1条・第4条の権利侵害という主張",
+          "Short_relation": "in_Short",
+          "evidence_or_explanation": "alleging that actions taken against non-violent protestors constituted violations of their First and Fourth Amendment rights"
+        }
+      ],
+      "diagnosis": "入力の再抜粋/冒頭文proxyなし。参照にShort外の情報がある場合は公式summary間の関係であり、スライド上の入力省略ではない。",
+      "action": "keep existing full Short/Tiny/JP"
+    },
+    {
+      "example": 5,
+      "case_id": "IM-DC-0035",
+      "task": "official Short→Tiny",
+      "source_release": "v20220616",
+      "raw_record_SHA256": "64737b67617e9897397b69903e8f6ece9930a1872101fa958c1a4c8da8cbc7c3",
+      "original_short_full": "On Oct. 24, 2017, the Protect Democracy Project sued DHS and CBP in D.D.C. under FOIA. Plaintiff sought disclosure of agency records on the extent to which defendants cooperate with armed private militia groups along the U.S.-Mexico border. This case is ongoing.",
+      "displayed_short_full": "On Oct. 24, 2017, the Protect Democracy Project sued DHS and CBP in D.D.C. under FOIA. Plaintiff sought disclosure of agency records on the extent to which defendants cooperate with armed private militia groups along the U.S.-Mexico border. This case is ongoing.",
+      "original_tiny_full": "This is a case brought by the Protect Democracy Project, seeking disclosure of records on the extent to which defendants cooperate with armed private militia groups along the U.S.-Mexico border",
+      "input_pages": [
+        37
+      ],
+      "reference_pages": [
+        37
+      ],
+      "JP_pages": [
+        38
+      ],
+      "input_word_count": 42,
+      "reference_word_count": 30,
+      "literal_input_full_match": true,
+      "literal_reference_full_match": true,
+      "source_raw_record_exact": true,
+      "all_reference_assertion_units": [
+        {
+          "fact": "Protect Democracy Projectによる事件",
+          "Short_relation": "in_Short",
+          "evidence_or_explanation": "the Protect Democracy Project sued"
+        },
+        {
+          "fact": "記録公開を求める",
+          "Short_relation": "in_Short",
+          "evidence_or_explanation": "Plaintiff sought disclosure of agency records"
+        },
+        {
+          "fact": "被告機関と武装私人民兵の協力の程度",
+          "Short_relation": "in_Short",
+          "evidence_or_explanation": "the extent to which defendants cooperate with armed private militia groups"
+        },
+        {
+          "fact": "米墨国境",
+          "Short_relation": "in_Short",
+          "evidence_or_explanation": "along the U.S.-Mexico border"
+        }
+      ],
+      "diagnosis": "入力の再抜粋/冒頭文proxyなし。参照にShort外の情報がある場合は公式summary間の関係であり、スライド上の入力省略ではない。",
+      "action": "keep existing full Short/Tiny/JP"
+    },
+    {
+      "example": 6,
+      "case_id": "PN-OH-0010",
+      "task": "official Short→Tiny",
+      "source_release": "v20220616",
+      "raw_record_SHA256": "1308a2eb3727419fa99fc239a128136959614a543f5cd0315bbe7dc11a64d0c8",
+      "original_short_full": "Individual plaintiffs sued the city of Columbus, Ohio and multiple police officers after protesting the murder of George Floyd. The plaintiffs alleged that the defendants violated their First and Fourth Amendment rights by using excessive force to infringe upon their freedom to assemble. ",
+      "displayed_short_full": "Individual plaintiffs sued the city of Columbus, Ohio and multiple police officers after protesting the murder of George Floyd. The plaintiffs alleged that the defendants violated their First and Fourth Amendment rights by using excessive force to infringe upon their freedom to assemble. ",
+      "original_tiny_full": "In E.D. Ohio case, plaintiffs secure preliminary injunction to prevent police from using excessive force against non-violent protestors. In granting the injunction, Judge Marbley recounted how \"formal policing took its earliest form in slave patrols.\"",
+      "input_pages": [
+        39
+      ],
+      "reference_pages": [
+        39
+      ],
+      "JP_pages": [
+        40
+      ],
+      "input_word_count": 43,
+      "reference_word_count": 35,
+      "literal_input_full_match": true,
+      "literal_reference_full_match": true,
+      "source_raw_record_exact": true,
+      "all_reference_assertion_units": [
+        {
+          "fact": "E.D. Ohioという表記",
+          "Short_relation": "not_in_Short",
+          "evidence_or_explanation": "Shortにこの裁判所表記なし。LongにもE.D. Ohioという表記はなく、原参照を保持。"
+        },
+        {
+          "fact": "原告が仮差止めを得た",
+          "Short_relation": "not_in_Short",
+          "evidence_or_explanation": "LongにJudge Marbley granted the preliminary injunction。"
+        },
+        {
+          "fact": "非暴力の抗議参加者への過剰な実力行使を禁じる",
+          "Short_relation": "partly_in_Short",
+          "evidence_or_explanation": "Shortは過剰な実力行使の主張。差止めと非暴力の条件はLongにある。"
+        },
+        {
+          "fact": "Marbley判事",
+          "Short_relation": "not_in_Short",
+          "evidence_or_explanation": "LongにJudge Algenon Marbley。"
+        },
+        {
+          "fact": "差止めを認める際、警察活動の起源をslave patrolsと述べた",
+          "Short_relation": "not_in_Short",
+          "evidence_or_explanation": "Longの4/30/2021段落に同じ引用。"
+        }
+      ],
+      "diagnosis": "入力の再抜粋/冒頭文proxyなし。参照にShort外の情報がある場合は公式summary間の関係であり、スライド上の入力省略ではない。",
+      "action": "keep existing full Short/Tiny/JP"
+    },
+    {
+      "example": 7,
+      "case_id": "EE-IN-0131",
+      "task": "official Short→Tiny",
+      "source_release": "v20220616",
+      "raw_record_SHA256": "e0d8f6464743405a89e60d73300b81717c397794936394cb9860163937156a22",
+      "original_short_full": "In December 2013, the EEOC brought this suit against Bright Petroleum for scrutinizing, disciplining and discharging against its female employee who filed a charge of sex discrimination with the EEOC. The EEOC and Bright Petroleum entered a three-year consent decree on December 12, 2014. ",
+      "displayed_short_full": "In December 2013, the EEOC brought this suit against Bright Petroleum for scrutinizing, disciplining and discharging against its female employee who filed a charge of sex discrimination with the EEOC. The EEOC and Bright Petroleum entered a three-year consent decree on December 12, 2014. ",
+      "original_tiny_full": "EEOC brought claim of retaliatory discharge against Bright Petroleum in December 2013. Parties reached a consent decree in 2014 (S.D. Ind.)",
+      "input_pages": [
+        41
+      ],
+      "reference_pages": [
+        41
+      ],
+      "JP_pages": [
+        42
+      ],
+      "input_word_count": 44,
+      "reference_word_count": 21,
+      "literal_input_full_match": true,
+      "literal_reference_full_match": true,
+      "source_raw_record_exact": true,
+      "all_reference_assertion_units": [
+        {
+          "fact": "EEOCがBright Petroleumを提訴",
+          "Short_relation": "in_Short",
+          "evidence_or_explanation": "the EEOC brought this suit against Bright Petroleum"
+        },
+        {
+          "fact": "報復的解雇",
+          "Short_relation": "semantic_in_Short",
+          "evidence_or_explanation": "性差別申立てをした女性への監視・懲戒・解雇という関係。Longはbecause she filed and maintained a chargeと明記。"
+        },
+        {
+          "fact": "2013年12月",
+          "Short_relation": "in_Short",
+          "evidence_or_explanation": "In December 2013"
+        },
+        {
+          "fact": "2014年に同意判決",
+          "Short_relation": "in_Short",
+          "evidence_or_explanation": "consent decree on December 12, 2014"
+        },
+        {
+          "fact": "S.D. Ind.",
+          "Short_relation": "not_in_Short",
+          "evidence_or_explanation": "LongにSouthern District of Indiana。"
+        }
+      ],
+      "diagnosis": "入力の再抜粋/冒頭文proxyなし。参照にShort外の情報がある場合は公式summary間の関係であり、スライド上の入力省略ではない。",
+      "action": "keep existing full Short/Tiny/JP"
+    },
+    {
+      "example": 8,
+      "case_id": "NS-DC-0106",
+      "task": "official Short→Tiny",
+      "source_release": "v20220616",
+      "raw_record_SHA256": "dccf6d184583d0d455dca954ceba88e6b0af60b3f32d843886f703f07f8247d3",
+      "original_short_full": "On Mar. 3, 2017, plaintiffs The James Madison Project and the news website The Daily Beast's executive editor sued various federal agencies under FOIA, seeking disclosure of agency records related to the implementation of President Trump's Jan. 27, 2017 Executive Order. Production is ongoing as of June 6.",
+      "displayed_short_full": "On Mar. 3, 2017, plaintiffs The James Madison Project and the news website The Daily Beast's executive editor sued various federal agencies under FOIA, seeking disclosure of agency records related to the implementation of President Trump's Jan. 27, 2017 Executive Order. Production is ongoing as of June 6.",
+      "original_tiny_full": "In this case, the James Madison Project and the news website The Daily Beast sought disclosure of agency records related to the implementation of President Trump's Jan. 27, 2017 Executive Order",
+      "input_pages": [
+        43
+      ],
+      "reference_pages": [
+        43
+      ],
+      "JP_pages": [
+        44
+      ],
+      "input_word_count": 48,
+      "reference_word_count": 31,
+      "literal_input_full_match": true,
+      "literal_reference_full_match": true,
+      "source_raw_record_exact": true,
+      "all_reference_assertion_units": [
+        {
+          "fact": "James Madison Project",
+          "Short_relation": "in_Short",
+          "evidence_or_explanation": "The James Madison Project"
+        },
+        {
+          "fact": "Daily Beastが公開を求めるという主体表現",
+          "Short_relation": "wording_differs",
+          "evidence_or_explanation": "Shortの提訴主体はニュースサイトのexecutive editor。Tinyはnews website The Daily Beastと表現。LongもNoah Shachtmanを当事者として説明。"
+        },
+        {
+          "fact": "機関の記録公開を求める",
+          "Short_relation": "in_Short",
+          "evidence_or_explanation": "seeking disclosure of agency records"
+        },
+        {
+          "fact": "トランプ大統領の2017/1/27大統領令の実施",
+          "Short_relation": "in_Short",
+          "evidence_or_explanation": "the implementation of President Trump's Jan. 27, 2017 Executive Order"
+        }
+      ],
+      "diagnosis": "入力の再抜粋/冒頭文proxyなし。参照にShort外の情報がある場合は公式summary間の関係であり、スライド上の入力省略ではない。",
+      "action": "keep existing full Short/Tiny/JP"
+    },
+    {
+      "example": 9,
+      "case_id": "NS-VA-0007",
+      "task": "official Short→Tiny",
+      "source_release": "v20220616",
+      "raw_record_SHA256": "1557061cbf5f0a257779d4504fe613e2e8a7d2b37743ddccb5ef5191afd3e32e",
+      "original_short_full": "On Apr. 12, 2017, the ACLUs of Virginia, Maryland, Pennsylvania, and Delaware sued DHS under FOIA, for information on the implementation of the travel ban Executive Orders at regional airports. Defendants were unable to consolidate all nationwide ACLU cases in multidistrict litigation, and this case is proceeding here.",
+      "displayed_short_full": "On Apr. 12, 2017, the ACLUs of Virginia, Maryland, Pennsylvania, and Delaware sued DHS under FOIA, for information on the implementation of the travel ban Executive Orders at regional airports. Defendants were unable to consolidate all nationwide ACLU cases in multidistrict litigation, and this case is proceeding here.",
+      "original_tiny_full": "Final updates on @ACLUVA, @ACLU_MD, @aclupa, and @ACLUDeleware lawsuit against @DHSgov demanding document production re the Muslim Ban. Plaintiffs brought the suit under FOIA in 2017.",
+      "input_pages": [
+        45
+      ],
+      "reference_pages": [
+        45
+      ],
+      "JP_pages": [
+        46
+      ],
+      "input_word_count": 48,
+      "reference_word_count": 26,
+      "literal_input_full_match": true,
+      "literal_reference_full_match": true,
+      "source_raw_record_exact": true,
+      "all_reference_assertion_units": [
+        {
+          "fact": "最終更新という告知",
+          "Short_relation": "reference_metadata",
+          "evidence_or_explanation": "Shortは事件が当地で進行中と述べ、最終更新の告知はない。"
+        },
+        {
+          "fact": "@ACLUVA/@ACLU_MD/@aclupa/@ACLUDeleware",
+          "Short_relation": "name_to_handle",
+          "evidence_or_explanation": "ShortはVirginia/Maryland/Pennsylvania/DelawareのACLU名。SNSハンドル文字列はない。"
+        },
+        {
+          "fact": "@DHSgovに資料提出を要求",
+          "Short_relation": "semantic_in_Short",
+          "evidence_or_explanation": "sued DHS under FOIA, for information"
+        },
+        {
+          "fact": "Muslim Banという呼称",
+          "Short_relation": "not_in_Short",
+          "evidence_or_explanation": "Shortはtravel ban Executive Orders。原参照の政治的呼称を保持。"
+        },
+        {
+          "fact": "2017年にFOIAで提訴",
+          "Short_relation": "in_Short",
+          "evidence_or_explanation": "On Apr. 12, 2017"
+        },
+        {
+          "fact": "FOIA",
+          "Short_relation": "in_Short",
+          "evidence_or_explanation": "sued DHS under FOIA"
+        }
+      ],
+      "diagnosis": "入力の再抜粋/冒頭文proxyなし。参照にShort外の情報がある場合は公式summary間の関係であり、スライド上の入力省略ではない。",
+      "action": "keep existing full Short/Tiny/JP"
+    },
+    {
+      "example": 10,
+      "case_id": "CJ-OK-0006",
+      "task": "official Short→Tiny",
+      "source_release": "v20220616",
+      "raw_record_SHA256": "ace6422620f8a9034ee54c81dec72a2e3aae31fff077718c9f6875df8244331e",
+      "original_short_full": "Civil Rights Corps sued Tulsa County and various judicial officers, alleging that the court system operated a wealth-based detention system by detaining arrestees without inquiring into their ability to pay bail. While the plaintiffs motion for preliminary injunction was denied, the plaintiffs motion for class certification is still pending.",
+      "displayed_short_full": "Civil Rights Corps sued Tulsa County and various judicial officers, alleging that the court system operated a wealth-based detention system by detaining arrestees without inquiring into their ability to pay bail. While the plaintiffs motion for preliminary injunction was denied, the plaintiffs motion for class certification is still pending.",
+      "original_tiny_full": "Just added to the Clearinghouse: One of @CivRightsCorps cases focusing on criminalization of poverty. This case involves an alleged wealth-based detention scheme in Tulsa County, Oklahoma.",
+      "input_pages": [
+        47
+      ],
+      "reference_pages": [
+        47
+      ],
+      "JP_pages": [
+        48
+      ],
+      "input_word_count": 49,
+      "reference_word_count": 26,
+      "literal_input_full_match": true,
+      "literal_reference_full_match": true,
+      "source_raw_record_exact": true,
+      "all_reference_assertion_units": [
+        {
+          "fact": "Clearinghouseへの追加告知",
+          "Short_relation": "reference_metadata",
+          "evidence_or_explanation": "Shortに追加の告知なし。"
+        },
+        {
+          "fact": "@CivRightsCorpsの事件",
+          "Short_relation": "name_to_handle",
+          "evidence_or_explanation": "Civil Rights Corps"
+        },
+        {
+          "fact": "貧困の犯罪化という論点",
+          "Short_relation": "semantic_in_Short",
+          "evidence_or_explanation": "支払能力の確認なく保釈金によって勾留するという主張。"
+        },
+        {
+          "fact": "資力に基づく勾留制度が争われる",
+          "Short_relation": "in_Short",
+          "evidence_or_explanation": "alleging that the court system operated a wealth-based detention system"
+        },
+        {
+          "fact": "オクラホマ州タルサ郡",
+          "Short_relation": "partly_in_Short",
+          "evidence_or_explanation": "ShortはTulsa Countyのみ。LongはNorthern District of Oklahomaと記す。"
+        }
+      ],
+      "diagnosis": "入力の再抜粋/冒頭文proxyなし。参照にShort外の情報がある場合は公式summary間の関係であり、スライド上の入力省略ではない。",
+      "action": "keep existing full Short/Tiny/JP"
+    },
+    {
+      "example": 11,
+      "case_id": "ED-DC-0007",
+      "task": "official Short→Tiny",
+      "source_release": "v20220616",
+      "raw_record_SHA256": "775adbb412b8acf6158ec4e5b53361cd257bb8c9d4e4c34a4996b67234bd1699",
+      "original_short_full": "Princeton sued U.S. Department of Education and OCR in a \"reverse FOIA\" to stop them from releasing documents related to an OCR compliance review to Students for Fair Admissions, Inc., which had submitted a FOIA request and filed a lawsuit against the DOE to compel disclosure. Parties voluntarily dismissed case.",
+      "displayed_short_full": "Princeton sued U.S. Department of Education and OCR in a \"reverse FOIA\" to stop them from releasing documents related to an OCR compliance review to Students for Fair Admissions, Inc., which had submitted a FOIA request and filed a lawsuit against the DOE to compel disclosure. Parties voluntarily dismissed case.",
+      "original_tiny_full": "Princeton sues DOE in reverse FOIA action to stop disclosure. (D.D.C.) ",
+      "input_pages": [
+        49
+      ],
+      "reference_pages": [
+        49
+      ],
+      "JP_pages": [
+        50
+      ],
+      "input_word_count": 50,
+      "reference_word_count": 11,
+      "literal_input_full_match": true,
+      "literal_reference_full_match": true,
+      "source_raw_record_exact": true,
+      "all_reference_assertion_units": [
+        {
+          "fact": "Princetonが教育省を訴える",
+          "Short_relation": "in_Short",
+          "evidence_or_explanation": "Princeton sued U.S. Department of Education"
+        },
+        {
+          "fact": "逆FOIA訴訟",
+          "Short_relation": "in_Short",
+          "evidence_or_explanation": "reverse FOIA"
+        },
+        {
+          "fact": "公開を止めるため",
+          "Short_relation": "in_Short",
+          "evidence_or_explanation": "to stop them from releasing documents"
+        },
+        {
+          "fact": "D.D.C.",
+          "Short_relation": "not_in_Short",
+          "evidence_or_explanation": "Shortに裁判所名なし。保存LongにもD.D.C.という明示はなく、原参照を保持。"
+        }
+      ],
+      "diagnosis": "入力の再抜粋/冒頭文proxyなし。参照にShort外の情報がある場合は公式summary間の関係であり、スライド上の入力省略ではない。",
+      "action": "keep existing full Short/Tiny/JP"
+    },
+    {
+      "example": 12,
+      "case_id": "IM-MD-0016",
+      "task": "official Short→Tiny",
+      "source_release": "v20220616",
+      "raw_record_SHA256": "60e75ce2f09518e66f312b5e02dac02c00e1ced922f93ae72ed51c0c1d034a82",
+      "original_short_full": "This is a habeas action seeking the release of immigration detainees housed in ICE facilities in Maryland. The court initially denied the detainees' TRO, but eventually granted two preliminary injunctions that ordered the release of several detainees from their respective detention centers. The court also granted the petitioners' motion for class certification.",
+      "displayed_short_full": "This is a habeas action seeking the release of immigration detainees housed in ICE facilities in Maryland. The court initially denied the detainees' TRO, but eventually granted two preliminary injunctions that ordered the release of several detainees from their respective detention centers. The court also granted the petitioners' motion for class certification.",
+      "original_tiny_full": "Documents now posted for Maryland litigation brought on behalf of ICE detainees seeking release from detention due to COVID-19",
+      "input_pages": [
+        51
+      ],
+      "reference_pages": [
+        51
+      ],
+      "JP_pages": [
+        52
+      ],
+      "input_word_count": 52,
+      "reference_word_count": 19,
+      "literal_input_full_match": true,
+      "literal_reference_full_match": true,
+      "source_raw_record_exact": true,
+      "all_reference_assertion_units": [
+        {
+          "fact": "訴訟資料の掲載告知",
+          "Short_relation": "reference_metadata",
+          "evidence_or_explanation": "Shortは司法手続を述べ、資料掲載の告知はない。"
+        },
+        {
+          "fact": "メリーランド州での訴訟",
+          "Short_relation": "in_Short",
+          "evidence_or_explanation": "ICE facilities in Maryland"
+        },
+        {
+          "fact": "ICE被収容者のための訴訟",
+          "Short_relation": "in_Short",
+          "evidence_or_explanation": "habeas action seeking the release of immigration detainees"
+        },
+        {
+          "fact": "拘束からの解放を求める",
+          "Short_relation": "in_Short",
+          "evidence_or_explanation": "seeking the release"
+        },
+        {
+          "fact": "COVID-19を理由とする",
+          "Short_relation": "not_in_Short",
+          "evidence_or_explanation": "ShortにCOVID-19なし。Long冒頭に基礎疾患によるCOVID-19リスクを説明。"
+        }
+      ],
+      "diagnosis": "入力の再抜粋/冒頭文proxyなし。参照にShort外の情報がある場合は公式summary間の関係であり、スライド上の入力省略ではない。",
+      "action": "keep existing full Short/Tiny/JP"
+    },
+    {
+      "example": 13,
+      "case_id": "PN-CA-0053",
+      "task": "official Short→Tiny",
+      "source_release": "v20220616",
+      "raw_record_SHA256": "cf762fdd1f7d17590a3392014e82e3e2772f62b30fc0c562d3a7d0e1a75f6b32",
+      "original_short_full": "The NAACP and individual people sued the city of San Jose and political officials for policing tactics that allegedly deprived them of their First, Fourth, and Fourteenth Amendment rights. The plaintiffs, protesting systemic racism in policing, alleged that the police used excessive force in a racially motivated manner to end the protests.",
+      "displayed_short_full": "The NAACP and individual people sued the city of San Jose and political officials for policing tactics that allegedly deprived them of their First, Fourth, and Fourteenth Amendment rights. The plaintiffs, protesting systemic racism in policing, alleged that the police used excessive force in a racially motivated manner to end the protests.",
+      "original_tiny_full": "Just added to the Clearinghouse - @NAACP sued the city of San Jose for allegedly unconstitutional police practices being used against peaceful protestors.",
+      "input_pages": [
+        53
+      ],
+      "reference_pages": [
+        53
+      ],
+      "JP_pages": [
+        54
+      ],
+      "input_word_count": 52,
+      "reference_word_count": 23,
+      "literal_input_full_match": true,
+      "literal_reference_full_match": true,
+      "source_raw_record_exact": true,
+      "all_reference_assertion_units": [
+        {
+          "fact": "Clearinghouseへの追加告知",
+          "Short_relation": "reference_metadata",
+          "evidence_or_explanation": "Shortに追加告知なし。"
+        },
+        {
+          "fact": "@NAACP",
+          "Short_relation": "name_to_handle",
+          "evidence_or_explanation": "The NAACP"
+        },
+        {
+          "fact": "サンノゼ市を訴えた",
+          "Short_relation": "in_Short",
+          "evidence_or_explanation": "sued the city of San Jose"
+        },
+        {
+          "fact": "違憲とされる警察活動",
+          "Short_relation": "semantic_in_Short",
+          "evidence_or_explanation": "allegedly deprived them of their First, Fourth, and Fourteenth Amendment rights"
+        },
+        {
+          "fact": "平和的抗議参加者",
+          "Short_relation": "not_in_Short",
+          "evidence_or_explanation": "Shortは抗議と人種差別的な過剰実力行使を述べるがpeacefulと明記しない。Longはpeacefully protesting。"
+        }
+      ],
+      "diagnosis": "入力の再抜粋/冒頭文proxyなし。参照にShort外の情報がある場合は公式summary間の関係であり、スライド上の入力省略ではない。",
+      "action": "keep existing full Short/Tiny/JP"
+    }
+  ],
+  "final_hashes": {
+    "pptx": "0cf2a18570c6ddc4bd49e3ab52f4f12d32492056a5e411dffa925516adfc5f7f",
+    "pdf": "7db24628892404553aec3d9c7949dfa2fe4b4c41af8be42ac59f7cfdd7e14eed"
+  },
+  "assessment": "全13は公式Short全文→公式Tiny全文の実例であり、今回対象の短すぎる再抜粋には当たらない。Tinyの情報は常にShortに含意されるわけではないため、完全な本文根拠対応を確認したとは主張しない。各事実の包含/非包含/参照の告知表現/主体表現差を全例で確認。元訴訟文書群の未掲載をShort→Tiny入力欠落とは判定しない。",
+  "multiple_document_example": "現資料は元文書群→3粒度も説明するが、真正な元文書群の実物例は未掲載。以前の調査資産に本文集合の取得はなく約2.22GB全体を取得していない。main方針により今回は追加制作しない。"
+}

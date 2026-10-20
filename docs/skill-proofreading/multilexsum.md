@@ -22,3 +22,10 @@ Geminiは使用していない。Codexが日本語校正スキルをページご
 ## 読者向けの説明・日本語の改訂（2026年10月）
 
 Geminiは使用せず、Codexがスキルで校正し、別担当が独立レビューした。削除・統合を含む[問題点と変更対](multilexsum/editorial-2026-10/changes.md)、[旧ページとの対応](multilexsum/editorial-2026-10/page-map.json)、[独立レビュー](multilexsum/editorial-2026-10/independent-review/handoff.json)、[最終ページの全文](multilexsum/pages.jsonl)。旧版の校正・検証記録は保持している。
+
+
+## 要約入力の掲載範囲の再点検（2026-10-20）
+
+Geminiは使用せず、Codexがデータセット紹介・日本語校正スキルに沿って点検した。13例すべて、公式のShort→Tiny課題の入力Short全文と参照Tiny全文を掲載している。元入力は28〜52語で、元訴訟文書の冒頭を切り出したものではない。原票との一致と、参照Tinyの各主張がShortに含まれるかを記録した。参照のすべてがShortだけで裏付けられるとは扱っていない。今回の入力抜粋不足に当たる箇所はなく、PPTX・PDFは変更していない。
+
+[照合と確認範囲](multilexsum/source-coverage-2026-10/handoff.json)・[ページ対応](multilexsum/source-coverage-2026-10/page-map.json)。
