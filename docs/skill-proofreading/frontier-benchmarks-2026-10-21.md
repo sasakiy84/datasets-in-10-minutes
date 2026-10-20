@@ -28,4 +28,6 @@ AutomationBenchの本編3例は公開模擬環境で参照操作を再現して�
 
 [選定記録](frontier-benchmarks-2026-10-21/selection.json)・[メインの原稿確認範囲](frontier-benchmarks-2026-10-21/main-review-progress.json)・[ローカル検証](frontier-benchmarks-2026-10-21/verification-local.json)。
 
-公開確認は最終配布物の固定後に追記する。
+2026-10-21 02:07 JST、[公開ギャラリー](https://datasets-in-10-minutes.sasakiy84.net/)の新規PDF・PPTX各3件とカタログを実際に取得し、すべてHTTP 200かつ固定済み最終ファイルと一致することを確認した。ギャラリーは96件。
+
+[公開ファイル確認結果](frontier-benchmarks-2026-10-21/publication-result.json)・[配布物固定記録](frontier-benchmarks-2026-10-21/publication-frozen.json)・[公開処理](https://github.com/sasakiy84/datasets-in-10-minutes/actions/runs/39462834528)。
