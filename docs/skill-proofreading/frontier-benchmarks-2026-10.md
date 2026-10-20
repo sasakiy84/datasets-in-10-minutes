@@ -27,3 +27,11 @@
 誤った数値、評価条件の混同、原文の欠落、長文の不自然なページ分割、画像内の文字切れ、出典との接近などを修正した。校正はローカルの日本語校正スキルによるもので、Geminiや外部モデルAPIによる提案ではない。修正前後の文言と理由、原票との照合、実施した確認の範囲を資料ごとの記録に残した。PowerPoint本体での開封と閲覧時間の実測は未実施。
 
 [選定記録](frontier-benchmarks-2026-10/selection.json)・[メインの初期内容レビュー](frontier-benchmarks-2026-10/main-preliminary-content-review.json)。既存90資料のファイルと既存90行のメタデータを保持し、新規3件だけを追加した。資料ごとにmainへコミットする。
+
+## 公開確認
+
+3資料をそれぞれ独立したコミット（ARC-AGI-3: `b17dfdf`、BenchCAD: `fe444e7`、GDPval: `4811ac1`）でmainへ追加した。日時と共通記録を含む公開対象は `04cea6d3542949448812a569b714fa7ad4e08707`。
+
+[GitHub Actions](https://github.com/sasakiy84/datasets-in-10-minutes/actions/runs/39451066394)のテスト・ビルド・公開が成功した。2026-10-20 15:46 UTC、[公開ギャラリー](https://datasets-in-10-minutes.sasakiy84.net/)のPDF/PPTX全6ファイルと93件のcatalog.jsonを取得し、確認済みローカル版との完全一致を検証した。
+
+[公開前の固定記録](frontier-benchmarks-2026-10/publication-frozen.json)・[公開ファイル照合結果](frontier-benchmarks-2026-10/publication-result.json)・[統合確認](frontier-benchmarks-2026-10/integration-verification.json)。この公開確認の追記は文書のみで、配布スライドやカタログは変更していない。
