@@ -1,0 +1,208 @@
+{
+  "task": "privacy-desensitization",
+  "raw_files": 27,
+  "reference_files": 27,
+  "all_expected_filenames_present": true,
+  "replacement": "/hidden/",
+  "required_types": [
+    "Phone/Fax",
+    "Social Security Number",
+    "Email",
+    "Credit Card",
+    "IP including attached port"
+  ],
+  "other_content_preserved_as_task_requirement": true,
+  "checker": "Exact filename set; compare each UTF-8 file after whitespace removal. No live apps or model API needed.",
+  "files": [
+    {
+      "input": "files/appointment_schedule.md",
+      "expected": "desensitized_documents/appointment_schedule_desensitized.md",
+      "input_bytes": 1173,
+      "output_bytes": 1076,
+      "hidden_token_count": 14
+    },
+    {
+      "input": "files/bank_transactions.csv",
+      "expected": "desensitized_documents/bank_transactions_desensitized.csv",
+      "input_bytes": 539,
+      "output_bytes": 527,
+      "hidden_token_count": 2
+    },
+    {
+      "input": "files/conference_attendees.md",
+      "expected": "desensitized_documents/conference_attendees_desensitized.md",
+      "input_bytes": 1258,
+      "output_bytes": 1112,
+      "hidden_token_count": 22
+    },
+    {
+      "input": "files/contact_info.txt",
+      "expected": "desensitized_documents/contact_info_desensitized.txt",
+      "input_bytes": 775,
+      "output_bytes": 650,
+      "hidden_token_count": 17
+    },
+    {
+      "input": "files/customer_database.json",
+      "expected": "desensitized_documents/customer_database_desensitized.json",
+      "input_bytes": 1082,
+      "output_bytes": 954,
+      "hidden_token_count": 18
+    },
+    {
+      "input": "files/delivery_records.txt",
+      "expected": "desensitized_documents/delivery_records_desensitized.txt",
+      "input_bytes": 759,
+      "output_bytes": 702,
+      "hidden_token_count": 12
+    },
+    {
+      "input": "files/driver_licenses.txt",
+      "expected": "desensitized_documents/driver_licenses_desensitized.txt",
+      "input_bytes": 1040,
+      "output_bytes": 921,
+      "hidden_token_count": 17
+    },
+    {
+      "input": "files/employee_records.csv",
+      "expected": "desensitized_documents/employee_records_desensitized.csv",
+      "input_bytes": 439,
+      "output_bytes": 384,
+      "hidden_token_count": 5
+    },
+    {
+      "input": "files/hr_personnel.txt",
+      "expected": "desensitized_documents/hr_personnel_desensitized.txt",
+      "input_bytes": 940,
+      "output_bytes": 865,
+      "hidden_token_count": 9
+    },
+    {
+      "input": "files/insurance_claims.md",
+      "expected": "desensitized_documents/insurance_claims_desensitized.md",
+      "input_bytes": 873,
+      "output_bytes": 799,
+      "hidden_token_count": 8
+    },
+    {
+      "input": "files/loan_applications.txt",
+      "expected": "desensitized_documents/loan_applications_desensitized.txt",
+      "input_bytes": 917,
+      "output_bytes": 832,
+      "hidden_token_count": 13
+    },
+    {
+      "input": "files/medical_records.txt",
+      "expected": "desensitized_documents/medical_records_desensitized.txt",
+      "input_bytes": 551,
+      "output_bytes": 498,
+      "hidden_token_count": 8
+    },
+    {
+      "input": "files/meeting_notes.md",
+      "expected": "desensitized_documents/meeting_notes_desensitized.md",
+      "input_bytes": 1122,
+      "output_bytes": 1007,
+      "hidden_token_count": 13
+    },
+    {
+      "input": "files/membership_data.json",
+      "expected": "desensitized_documents/membership_data_desensitized.json",
+      "input_bytes": 1392,
+      "output_bytes": 1242,
+      "hidden_token_count": 19
+    },
+    {
+      "input": "files/online_orders.json",
+      "expected": "desensitized_documents/online_orders_desensitized.json",
+      "input_bytes": 1608,
+      "output_bytes": 1470,
+      "hidden_token_count": 18
+    },
+    {
+      "input": "files/personal_profile.txt",
+      "expected": "desensitized_documents/personal_profile_desensitized.txt",
+      "input_bytes": 886,
+      "output_bytes": 805,
+      "hidden_token_count": 10
+    },
+    {
+      "input": "files/pharmacy_records.csv",
+      "expected": "desensitized_documents/pharmacy_records_desensitized.csv",
+      "input_bytes": 710,
+      "output_bytes": 652,
+      "hidden_token_count": 13
+    },
+    {
+      "input": "files/real_estate.txt",
+      "expected": "desensitized_documents/real_estate_desensitized.txt",
+      "input_bytes": 1034,
+      "output_bytes": 907,
+      "hidden_token_count": 18
+    },
+    {
+      "input": "files/sales_reports.csv",
+      "expected": "desensitized_documents/sales_reports_desensitized.csv",
+      "input_bytes": 660,
+      "output_bytes": 543,
+      "hidden_token_count": 12
+    },
+    {
+      "input": "files/security_logs.log",
+      "expected": "desensitized_documents/security_logs_desensitized.log",
+      "input_bytes": 1144,
+      "output_bytes": 1038,
+      "hidden_token_count": 14
+    },
+    {
+      "input": "files/service_contract.txt",
+      "expected": "desensitized_documents/service_contract_desensitized.txt",
+      "input_bytes": 1270,
+      "output_bytes": 1151,
+      "hidden_token_count": 12
+    },
+    {
+      "input": "files/student_info.json",
+      "expected": "desensitized_documents/student_info_desensitized.json",
+      "input_bytes": 1323,
+      "output_bytes": 1166,
+      "hidden_token_count": 19
+    },
+    {
+      "input": "files/survey_responses.txt",
+      "expected": "desensitized_documents/survey_responses_desensitized.txt",
+      "input_bytes": 1096,
+      "output_bytes": 980,
+      "hidden_token_count": 16
+    },
+    {
+      "input": "files/system_logs.log",
+      "expected": "desensitized_documents/system_logs_desensitized.log",
+      "input_bytes": 1062,
+      "output_bytes": 964,
+      "hidden_token_count": 15
+    },
+    {
+      "input": "files/tax_records.txt",
+      "expected": "desensitized_documents/tax_records_desensitized.txt",
+      "input_bytes": 1021,
+      "output_bytes": 914,
+      "hidden_token_count": 16
+    },
+    {
+      "input": "files/travel_bookings.csv",
+      "expected": "desensitized_documents/travel_bookings_desensitized.csv",
+      "input_bytes": 679,
+      "output_bytes": 512,
+      "hidden_token_count": 20
+    },
+    {
+      "input": "files/vendor_contracts.txt",
+      "expected": "desensitized_documents/vendor_contracts_desensitized.txt",
+      "input_bytes": 1065,
+      "output_bytes": 908,
+      "hidden_token_count": 17
+    }
+  ],
+  "execution_scope": "Tar members read in memory only; no extraction or external services"
+}

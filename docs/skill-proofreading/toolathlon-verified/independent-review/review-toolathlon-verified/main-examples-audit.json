@@ -1,0 +1,122 @@
+{
+  "ab-testing": {
+    "raw_files": 20,
+    "per_scenario_matches_rounded_groundtruth": true,
+    "overall_conversion_percent_arithmetic_mean": {
+      "A": 73.8396191701491,
+      "B": 74.12085660313622
+    },
+    "winner": "B",
+    "required_state": "record.csv with all 20 scenarios plus overall; promo-assets-for-b bucket exists; no new entries in abtesting_logging bucket",
+    "native_checker_read": true,
+    "external_cloud_executed": false
+  },
+  "sales-accounting": {
+    "initial_rows_including_header": 121,
+    "reference_rows_including_header": 126,
+    "original121_rows_identical": true,
+    "reference_appended_rows": [
+      [
+        "2024-01-07",
+        "Purchase",
+        "iPhone 15 Pro",
+        5,
+        8000,
+        40000,
+        "Supplier A"
+      ],
+      [
+        "2024-01-08",
+        "Purchase",
+        "MacBook Air",
+        3,
+        7200,
+        21600,
+        "Supplier B"
+      ],
+      [
+        "2024-01-08",
+        "Sales",
+        "iPhone 15 Pro",
+        2,
+        9999,
+        19998,
+        "Wang Wu"
+      ],
+      [
+        "2024-01-09",
+        "Sales",
+        "MacBook Air",
+        1,
+        8999,
+        8999,
+        "Zhao Liu"
+      ],
+      [
+        "2024-01-10",
+        "Sales",
+        "AirPods Pro",
+        3,
+        1899,
+        5697,
+        "Liu Qi"
+      ]
+    ],
+    "exclude_current_week_transaction": "2024-01-16",
+    "date_interpretation": "Task date2024-01-18, past two calendar weeks Jan1–14; exclude Jan15–21",
+    "native_checker_read": true,
+    "live_memory_tool_run": false
+  },
+  "canvas-homework-grader-python": {
+    "email_records": 9,
+    "homework2_records": 7,
+    "expected_students": 6,
+    "expected_grades": {
+      "Timothy Ruiz": {
+        "student_id": "20240101",
+        "expected_grade": 10,
+        "error_type": "none",
+        "attachment_filename": "timothy_ruiz_two_sum_v2.py",
+        "is_latest_submission": true
+      },
+      "Martha Watson": {
+        "student_id": "20240102",
+        "expected_grade": 0,
+        "error_type": "syntax_error",
+        "attachment_filename": "martha_watson_two_sum.py",
+        "is_latest_submission": null
+      },
+      "Donald Richardson": {
+        "student_id": "20240103",
+        "expected_grade": 0,
+        "error_type": "runtime_error",
+        "attachment_filename": "donald_richardson_two_sum.py",
+        "is_latest_submission": null
+      },
+      "Shirley Rodriguez": {
+        "student_id": "20240104",
+        "expected_grade": 10,
+        "error_type": "none",
+        "attachment_filename": "shirley_rodriguez_two_sum.py",
+        "is_latest_submission": null
+      },
+      "Alice Ward": {
+        "student_id": "20240105",
+        "expected_grade": 0,
+        "error_type": "logic_error",
+        "attachment_filename": "alice_ward_two_sum.py",
+        "is_latest_submission": null
+      },
+      "Frank Phillips": {
+        "student_id": "20240106",
+        "expected_grade": 0,
+        "error_type": "import_error",
+        "attachment_filename": "frank_phillips_two_sum.py",
+        "is_latest_submission": null
+      }
+    },
+    "native_checker_read": true,
+    "live_canvas_run": false,
+    "submission_programs_executed": false
+  }
+}

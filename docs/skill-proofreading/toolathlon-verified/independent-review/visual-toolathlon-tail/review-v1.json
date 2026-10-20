@@ -1,0 +1,221 @@
+{
+  "approved": false,
+  "approval_scope": "p56–80 visual and native/PDF prose only; not overall deck",
+  "snapshot_dir": "/workspace/artifacts/frontier-benchmarks-2026-10-21/visual-toolathlon-tail/snapshot-v1",
+  "pdf_sha256": "6b5dd6c082c43210fde68be52bf026d050cd8fe7e193ea7a40b6b2b9f7afc4bb",
+  "pptx_sha256": "40c89bfa0273fbe7b7f3b6c7a03f55d89488161f138e3517acc7cdbb97a6fff6",
+  "initial_unmatched_pptx_sha256": "a6f3390e894e62157deb610669773832e6cf601059fcec808ca45d01b3c4ebe8",
+  "history": [
+    "Initial simultaneous copy captured PDF6b5dd6 and in-progress PPTXa6f339; unmatched PPTX retained. Matching 40c89b PPTX inherited read-only from visual-toolathlon-mid/snapshot.pptx, SHA checked, copied as corresponding.pptx; native text for all25 pages reread from matching version."
+  ],
+  "performed": {
+    "individual_actual_view_pages": [
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80
+    ],
+    "count": 25,
+    "width_px": 1600,
+    "native_and_pdf_text_read_pages": [
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80
+    ],
+    "native_frame_inspection_pages": [
+      57,
+      59,
+      61,
+      62,
+      65,
+      69,
+      70,
+      74,
+      77,
+      79,
+      80
+    ],
+    "pdf_min_font_checked_pages": [
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80
+    ],
+    "skills_read_full": [
+      "master-guided-slides",
+      "dataset-introduction-slides",
+      "japanese-slide-proofreading"
+    ],
+    "passed_visual_observations": [
+      "No clipping, overlaps, title wrapping, or repeated page numbers observed in assigned pages.",
+      "p61/65/70 tables show continuous top/bottom rules stronger than header rule and sufficient following gap.",
+      "p57/58/62/66/67/71 original quotations include final line with background padding.",
+      "p74/77 chapter dividers centered.",
+      "p79/80 reference full titles and URLs visible."
+    ]
+  },
+  "inherited": [
+    "Matching old pair association supplied by main; SHA independently checked."
+  ],
+  "not_performed": [
+    "Raw/source fact verification, exact official quotation authenticity, licenses and reference metadata source audit (assigned to review_officeqa2).",
+    "Full-deck review outside p56–80.",
+    "Package/XSD audit and PPTX/PDF hyperlink annotation audit.",
+    "Final-pair differential review."
+  ],
+  "issues": [
+    {
+      "id": "tail-01",
+      "pages": [
+        68
+      ],
+      "severity": "required",
+      "problem": "日本語訳が原文にある必須ログの具体的内容を「指定の記録」として省略している",
+      "alternative": "status=AB_Test_Concluded、winner=A、action=No_ChangeのJSONを訳にも明示する",
+      "status": "sent_to_creator"
+    },
+    {
+      "id": "tail-02",
+      "pages": [
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        75,
+        76,
+        78
+      ],
+      "severity": "required",
+      "problem": "出典とURLの文字サイズがnative7.9pt、PDF7.91ptで8pt未満",
+      "alternative": "出典とURLの両方を8pt以上に拡大し再出力する",
+      "status": "sent_to_creator"
+    },
+    {
+      "id": "tail-03",
+      "pages": [
+        69
+      ],
+      "severity": "required",
+      "problem": "重要期待出力B勝利→配信用バケット作成の結論が通常黒文字だけで表示される",
+      "alternative": "該当結論を21–22pt以上太字B13731にする",
+      "status": "sent_to_creator"
+    },
+    {
+      "id": "tail-04",
+      "pages": [
+        61
+      ],
+      "severity": "recommendation",
+      "problem": "参照列/hidden/が他セルと同じ通常文字",
+      "alternative": "重要な期待出力の値を太字B13731にする",
+      "status": "sent_to_creator"
+    },
+    {
+      "id": "tail-05",
+      "pages": [
+        79,
+        80
+      ],
+      "severity": "recommendation",
+      "problem": "参考文献タイトル18.5pt、書誌12.5pt、紹介17.5ptで推奨初期値より小さい",
+      "alternative": "余白内でタイトル20pt以上、書誌13pt以上、紹介18pt以上に拡大",
+      "status": "sent_to_creator"
+    },
+    {
+      "id": "tail-06",
+      "pages": [
+        80
+      ],
+      "severity": "recommendation",
+      "problem": "第2文献の紹介文「概要へ進める」が読者への行動案内",
+      "alternative": "公式Defaultエージェントの結果と、課題・ソフトウェア環境の概要を掲載する。",
+      "status": "sent_to_creator"
+    }
+  ],
+  "remaining": [
+    "Creator fixes and final frozen pair needed; re-view changed assigned pages and rawpixel compare others against this snapshot."
+  ],
+  "checkpoints": [
+    "checkpoint-01.json",
+    "checkpoint-02.json",
+    "checkpoint-03.json"
+  ]
+}
