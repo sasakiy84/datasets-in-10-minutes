@@ -20,3 +20,5 @@
 - [CNN / DailyMailの独立レビュー](cnn-dailymail/source-coverage-2026-10/independent-review/handoff.json)
 - [BillSumの独立レビュー](billsum/source-coverage-2026-10/independent-review/handoff.json)
 - [EUR-Lex-Sumの独立レビュー](eurlexsum/source-coverage-2026-10/independent-review/handoff.json)
+
+公開元commit `e3643aeb8ef3e16733db80b5eb7fbd1ea899c9ba` の[CI・デプロイ](https://github.com/sasakiy84/datasets-in-10-minutes/actions/runs/39434757384)は成功。公開URLから取得した3資料のPDF・PPTX計6ファイルと、全90件のカタログが凍結したビルドと一致した。[公開確認記録](summarization-source-coverage-2026-10/published-verification.json)。
