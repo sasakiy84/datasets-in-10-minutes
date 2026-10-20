@@ -1,0 +1,75 @@
+{
+  "scope": "Independent recomputation of final numerical/algebraic steps of public solutions, not independent verification of all mathematical proofs or benchmark submissions",
+  "results": [
+    {
+      "source_public_id": 4,
+      "method": "floor(100 times harmonic number H_3264), using math.fsum",
+      "result": "866",
+      "expected": "866",
+      "passed": true
+    },
+    {
+      "source_public_id": 8,
+      "method": "integer recurrence S_0=2,S_1=x,S_n=x*S_(n-1)-S_(n-2), evaluating 2*T_19(19/2)",
+      "result": "1876572071974094803391179",
+      "expected": "1876572071974094803391179",
+      "passed": true
+    },
+    {
+      "source_public_id": 10,
+      "method": "5**18+6*5**9+1 from final public solution formula",
+      "result": "3814708984376",
+      "expected": "3814708984376",
+      "passed": true
+    },
+    {
+      "source_public_id": 12,
+      "method": "coefficient of x^1000 in product (1-x^d)^-1 for dimensions 1,1,4,4,5,5,6; exact integer DP",
+      "result": "625243878951",
+      "expected": "625243878951",
+      "passed": true
+    },
+    {
+      "source_public_id": 2,
+      "method": "evaluate published degree8 polynomial at 227 and 5, add, raise to4, divide8",
+      "result": "73948492097301691765464030714938921180352979774791349212169829996615700482",
+      "expected": "73948492097301691765464030714938921180352979774791349212169829996615700482",
+      "passed": true
+    },
+    {
+      "source_public_id": 3,
+      "method": "v2(f^3(3)) with f(n)=n*2^n: f(3)=24,f^2(3)=402653184, v2(402653184)=27",
+      "result": "402653211",
+      "expected": "402653211",
+      "passed": true
+    },
+    {
+      "source_public_id": 7,
+      "method": "floor(1000*C) with C=0.5*product_p(1-2/p**2+1/p**3), truncated at primes <=1,000,000; numerical consistency check, not rigorous tail proof",
+      "result": "214",
+      "expected": "214",
+      "passed": true,
+      "truncated_C": 0.21412478186344802
+    }
+  ],
+  "not_numerically_recomputed": [
+    1,
+    11
+  ],
+  "retained_public_ids": [
+    1,
+    2,
+    3,
+    4,
+    7,
+    8,
+    10,
+    11,
+    12
+  ],
+  "excluded_public_ids": [
+    5,
+    6,
+    9
+  ]
+}

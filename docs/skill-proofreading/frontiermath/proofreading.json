@@ -1,0 +1,86 @@
+{
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "external_model_api_used": false,
+  "skill": "japanese-slide-proofreading",
+  "skill_paths": [
+    ".agents/skills/japanese-slide-proofreading/SKILL.md",
+    ".agents/skills/dataset-introduction-slides/SKILL.md",
+    ".agents/skills/master-guided-slides/SKILL.md"
+  ],
+  "changes": [
+    {
+      "page": 7,
+      "before": "外接円の半径が1の正101角形で、各対角線を確率0.001で引く。",
+      "after": "半径1の円に内接する正101角形Pを考える。各対角線を確率0.001で引くと、Pは複数の閉領域に分かれる。",
+      "reason": "閉領域に分かれるという原文の条件を日本語訳にも保持する。"
+    },
+    {
+      "page": 13,
+      "before": "fは区間[0,1]上の実数値関数である。",
+      "after": "fは区間[0,1]上の可積分な実数値関数である。",
+      "reason": "原文のintegrableを保つ。"
+    },
+    {
+      "page": 11,
+      "before": "例3 関数の揺れを制限して積分を最大化する",
+      "after": "例3 関数の揺れと積分の上限",
+      "reason": "自然で短い見出しとし、原文ラベルとの重なりをなくす。"
+    },
+    {
+      "page": 19,
+      "before": "正解率を読むときには、修正前のバージョン1と、修正後のバージョン2を対応させる。",
+      "after": "改訂後の集合は、Tiers 1–3とTier 4を合わせて338問となった。",
+      "reason": "読者への一般的な指示を、理解に必要な具体的な規模へ置き換える。"
+    },
+    {
+      "page": 32,
+      "before": "モデルの進歩を読むには、難度のTier、問題のバージョン、対象集合、実行条件を対応させる。",
+      "after": "Pythonの試行計算を使いながら得た最終回答を、問題ごとの手順で自動採点する。",
+      "reason": "まとめを注意書きではなくデータセットの具体的な特徴で締める。"
+    },
+    {
+      "page": 48,
+      "before": "Tsirelson空間は、関数解析に現れるバナッハ空間の一つである。",
+      "after": "Tsirelson空間は、ノルムによる極限に関して完備な線形空間（バナッハ空間）の一例である。",
+      "reason": "専門用語を初出時に説明する。"
+    },
+    {
+      "page": 53,
+      "before": "答えは74桁の整数であり、単に証明の結論を「真」と答える課題ではない。",
+      "after": "答えは74桁の整数になる。",
+      "reason": "自明な否定を省き、出力の単位を簡潔に伝える。"
+    },
+    {
+      "page": 58,
+      "before": "取得した改訂版の最終著者Josh Ducey",
+      "after": "技術報告の改訂版の最終著者Josh Ducey",
+      "reason": "制作工程の説明を除き、読者に必要な資料の版を示す。"
+    },
+    {
+      "page": 31,
+      "before": "CC BY",
+      "after": "CC BY 4.0",
+      "reason": "公式公開ページのライセンスを具体的に表す。"
+    },
+    {
+      "page": 49,
+      "before": "例9 楕円曲線と体の拡大を組み合わせる：原文 1/4",
+      "after": "例9 楕円曲線と体の拡大：原文 1/4",
+      "reason": "意味を保って一行に収める。"
+    },
+    {
+      "page": 48,
+      "before": "例8 大きすぎるNそのものではなく2の指数を答える",
+      "after": "例8 巨大なNを割り切る2の指数を求める",
+      "reason": "読みやすく、求める量を直接表す。"
+    }
+  ],
+  "additional_deletions": [
+    {
+      "before": "非公開問題の内容を、公開例から推定して補う必要はない",
+      "after": "",
+      "reason": "制作上の注意が本文に漏れており、読者の理解に不要なので削除。"
+    }
+  ]
+}
