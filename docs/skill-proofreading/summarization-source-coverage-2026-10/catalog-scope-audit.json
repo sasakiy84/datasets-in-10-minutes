@@ -1,0 +1,48 @@
+{
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "catalog_count": 90,
+  "summarization_datasets": [
+    {
+      "slug": "xsum",
+      "title": "XSum",
+      "tasks": "要約",
+      "pages_before": 69
+    },
+    {
+      "slug": "cnn-dailymail",
+      "title": "CNN / DailyMail",
+      "tasks": "要約",
+      "pages_before": 55
+    },
+    {
+      "slug": "billsum",
+      "title": "BillSum",
+      "tasks": "要約",
+      "pages_before": 72
+    },
+    {
+      "slug": "multilexsum",
+      "title": "Multi-LexSum",
+      "tasks": "要約",
+      "pages_before": 63
+    },
+    {
+      "slug": "eurlexsum",
+      "title": "EUR-Lex-Sum",
+      "tasks": "要約|翻訳",
+      "pages_before": 63
+    }
+  ],
+  "related_but_other_task": [
+    {
+      "slug": "narrativeqa",
+      "tasks": "質問応答",
+      "reason": "要約を質問応答の入力/質問作成に使う資料。要約生成を課題とする資料ではないため、この表示範囲監査の対象外。"
+    }
+  ],
+  "scope_method": "全90件の名称・課題・説明を確認し、要約5件を抽出。別担当が全90件のnative textも走査し、混合課題FACTS Groundingの要約実例を追加確認。",
+  "mixed_task_extra_check": [
+    "facts-grounding"
+  ]
+}
