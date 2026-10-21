@@ -1,0 +1,93 @@
+{
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "scope": "all52 pages mainbody, thirteen fulltasktranslations and referenceactions, captions and source conditions",
+  "actual_pairs": [
+    {
+      "before": "画面を入力して次の操作を予測する",
+      "after": "元の評価は保存したHTMLで次の操作を判定する",
+      "reason": "元2023手法と画像付き2024配布を区別する"
+    },
+    {
+      "before": "Mind2Webで1.9倍速く完了した",
+      "after": "Mind2Webという名前でデモのタスク所要時間を示し、1.9倍の速度向上を紹介する",
+      "reason": "Astra脚注のreported elapsed demo timeと版不明を反映する"
+    },
+    {
+      "before": "操作を正しく実行したタスクの割合",
+      "after": "タスク成功率は、全ステップが成功したタスクの割合",
+      "reason": "独立した保存状態の予測をlive実行と誤認させない"
+    },
+    {
+      "before": "マットレスを安い順に探す",
+      "after": "クイーンサイズの低反発マットレスを、価格が最も安いものから探してください",
+      "reason": "原文size/material/lowestpriceを落とさない"
+    },
+    {
+      "before": "データはMIT",
+      "after": "元のデータはCC BY4.0、コードはMIT",
+      "reason": "コードとデータの条件を分ける"
+    },
+    {
+      "before": "参照要素は正解と同一の要素",
+      "after": "参照要素と同じ効果を持つ要素に含まれる",
+      "reason": "同等要素を許す公式評価を正確に導入する"
+    },
+    {
+      "before": "評価が高い",
+      "after": "評価が最も高い",
+      "reason": "best ratedの最上級を保持"
+    },
+    {
+      "before": "価格が最も安いものから探してください",
+      "after": "価格が最も安いクイーンサイズの低反発マットレスを探してください",
+      "reason": "lowestpriceは並替操作に限定しない"
+    },
+    {
+      "before": "7月7日帰着",
+      "after": "7月7日帰り",
+      "reason": "returningは復路日を示し到着日に限定しない"
+    },
+    {
+      "before": "HTML内のtagとopaquebackendIDのみ",
+      "after": "実タグとrole/aria_label/placeholder/実textのnativeDOM抜粋",
+      "reason": "主入力の意味を読者が理解できるようにする"
+    }
+  ],
+  "final_batch": {
+    "method": "skill_based_codex",
+    "gemini_used": false,
+    "pairs": [
+      {
+        "before": "5月18日帰着",
+        "after": "5月18日帰り",
+        "reason": "return dateは到着日に限定しない"
+      },
+      {
+        "before": "Flan-T5-XLと評価年2023のみ",
+        "after": "Flan-T5-XL（2022）、2023年評価は注記に分離",
+        "reason": "モデル公開年と評価年を区別する"
+      },
+      {
+        "before": "1.9倍速い（比較対象・環境が未記載）",
+        "after": "更新Codex実行環境＋Astra、従来Sol環境と比較し1.9倍速い",
+        "reason": "一次原文の比較対象と実行環境条件を示す"
+      },
+      {
+        "before": "右DOM欄で単語や内部属性nameの末尾が改行",
+        "after": "属性名と値を分け、値は単語境界で改行・不必要なnameを省く",
+        "reason": "主入力の意味が読めるnativeHTML抜粋にする"
+      },
+      {
+        "before": "Hybrid対象37pxを1280px幅画像内で表示",
+        "after": "同保存画像の640x290pxへ寄せて切抜き",
+        "reason": "選択肢と対象枠を読みやすくする"
+      }
+    ]
+  },
+  "final_note_repair": {
+    "before": "2023年に学習用で調整したモデルを評価。ステップの指標は、タスクごとの値を平均する。",
+    "after": "Flan-T5-XLは2022年公開。MindActの評価は2023年。\n学習用で調整し、ステップ成功率はタスクごとに平均した。",
+    "reason": "二文の意味境界で2行へ、モデル年と評価年を明示、孤立した語尾を解消"
+  }
+}
