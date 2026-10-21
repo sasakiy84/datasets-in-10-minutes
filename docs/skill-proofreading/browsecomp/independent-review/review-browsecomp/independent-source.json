@@ -1,0 +1,57 @@
+{
+  "reviewer": "/root/review_draco",
+  "own_acquisition": [
+    "OpenAI BrowseComp official article HTTP200",
+    "arxiv2504.12516 HTML",
+    "simple-evals mainbrowsecomp_eval.py",
+    "OpenAI Astra current article HTTP200",
+    "official OpenAI BrowseCompLongContext HF metadata/README/JSONL",
+    "model-release official OpenAI articles four dates",
+    "row102 Veritas College official school history"
+  ],
+  "raw_sha256": {
+    "astra.txt": "6503167036e27518f585e68a345cc2b3c175f00a7d7508077dae555dda7ba22a",
+    "official.html": "7111e13d877f4f5ed60e522d6c464d7b6d22498612b7422fe661e30e9bae8d5a",
+    "official.txt": "7b61831fb33d8cf659a20921aebe8bafd58f1bc94643b14953be4fd7a52e5139",
+    "paper.html": "c60984cd99d7f923ca9fe6f8f05cb041b9a30ed8ca187a1d7e1f6a43e421c0d5",
+    "browsecomp_eval.py": "0bfb33cfdf5fa0e0d7da48068cc86c5a22acc755979be4a2b46f8a821cc44b74",
+    "paper.txt": "ed2207e8835bf40df5cb2b5a8fbe24b1e2bf7323a8b2b6806693afe8a91826d9",
+    "astra.html": "f417504fb78f471bee730ce2670ac55bbc068ff544e185c480fbfd80d63e107a",
+    "row102-school-history.txt": "51771b9d33dc52cbd9fdca29ff953da98421f793c83da85f288f1b313ac46b8c",
+    "row102-school-history.html": "beee7055a998b4ce29eb7077532eced9135602952c3d73c3a8c05347938815e7",
+    "longcontext.jsonl": "3bc0fb4028a5ad1c80d1c3528b8024833f4597c2637f0629ccd5462fc2e36c1b",
+    "release-deepresearch.html": "187f6eac46182d66897e5b38035768fb7cd77e0a5ca5c4a5425fdc716db62bbd",
+    "hf-README.md": "439578e3a78dd3004f5ca878656465c8b125330c6d38f9f134765cb6bfa5e5a9",
+    "decoded.json": "ae75cd87b605188f0934ec31d218e134e322ef2772a93421a803e0f4d351a810",
+    "release-gpt4o.html": "5cac9ac46d134e7bb60aac402da94ac144f993ef09bf34e7e2a1d2a23f3142da",
+    "hf.json": "f788f7aeca23a6d3c49b4f59d76f420f7be6b9d43660d4ec3770a374d59d4003",
+    "release-gpt45.html": "7e525654baf2f2b8eb01ee390435dba8c054a64e8cec4f09f97883ba1d1c7b9a",
+    "release-o1.html": "b4c6082545a5264664b33f56751547c4cc92294a98c87df4302a030539e78455"
+  },
+  "name": "Browsing Competition",
+  "tasks": 1266,
+  "construction": "human factseeking short-answer questions with evidence; five searches; challenge checks with prior models; inverted fact design; initial1287 minus21 after review",
+  "initial_results": {
+    "GPT4o": 0.6,
+    "GPT4o_browsing": 1.9,
+    "GPT4.5": 0.9,
+    "o1_medium": 9.9,
+    "DeepResearch": 51.5
+  },
+  "human_verification": {
+    "attempted": 1255,
+    "selfreported_solvable": 367,
+    "reference_agree": 317
+  },
+  "current_Astra_article_BrowseComp": {
+    "GPT6Astra": 91.5,
+    "GPT5.6Sol": 90.4,
+    "ClaudeFable5": 87.4,
+    "ClaudeOpus5": 90.8
+  },
+  "data_acquisition": "Independent official openai/BrowseCompLongContext public MIT HF295rows, own static XOR decode; examples all retained original BrowseComp questions.",
+  "publication_request": "Official article asks not to reveal dataset examples online; root explicitly distinguishes from MIT and directs13example work",
+  "implementation_note_record_only": "current simple-evals grade_sample returns match.group(0) but consumer compares yes; source paper governs reported evaluation rather than running code; noAPI execution",
+  "remaining": [],
+  "example_review": "examples-review.json; all13 original+answer+URL arrays exact; full JP read"
+}
