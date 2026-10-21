@@ -1,0 +1,80 @@
+{
+  "changes": [
+    {
+      "before": "jq test_basic_operations::test_pipe_operator",
+      "after": "jq test_args_parsing::test_arg_sets_named_variable_and_consumes_two_params",
+      "reason": "前者のmoduleがgold_failで採点除外と独立reviewで判明し、採点対象の公開testに差し替えた。"
+    },
+    {
+      "before": "JSON配列は1行",
+      "after": "JSON配列の要素は1件",
+      "reason": "配列長のassertを出力テキストの行数と取り違えないよう訂正した。"
+    },
+    {
+      "before": "95%以上通過",
+      "after": "表注で95%以上通る課題の割合と説明",
+      "reason": "列内百分率の分母を示した。"
+    },
+    {
+      "before": "コードを大きく育てる能力が問われる",
+      "after": "公式の公開結果では、完全解決も現れた",
+      "reason": "2026-10-21取得の公式結果を紹介し、初期評価から現在への変化を示した。"
+    },
+    {
+      "before": "xsv/yj/fdの入力が多段で下端へ伸びる",
+      "after": "改行を明示した文字列表記と短い探索先表示",
+      "reason": "同じ入力内容を保持し、期待動作と出典の間隔を確保した。"
+    },
+    {
+      "before": "DuckDB期待動作の末尾が解説と重なる",
+      "after": "意味の区切りで期待動作を2行に配置",
+      "reason": "最終描画の折返しを確認して重なりを解消した。"
+    },
+    {
+      "before": "gronは参照テキストと一致するとだけ説明",
+      "after": "入力の頁と6行の期待出力全文の頁",
+      "reason": "入力から期待動作を推測せず確認できるようにした。"
+    },
+    {
+      "before": "参考文献紹介文を読む・確認する等で結ぶ",
+      "after": "報告する・案内する・公開する等で内容を説明",
+      "reason": "読後の資料が何を含むかを示す文へ整えた。"
+    },
+    {
+      "before": "数値列に各1を含むため左揃え",
+      "after": "数値と列見出しを共に右揃え",
+      "reason": "表の比較を追いやすくするシリーズ仕様へ整えた。"
+    },
+    {
+      "before": "参考文献テキスト枠がURLの最終行より短い",
+      "after": "参考文献枠を0.24inch拡張",
+      "reason": "独立のglyph/frame検査に従い、文字下端まで編集枠を確保した。"
+    },
+    {
+      "before": "仮のFable card URL",
+      "after": "公式landing https://www.anthropic.com/claude-fable-and-mythos-5-1",
+      "reason": "rootが共有した正規URLと以前取得済PDFを出典にした。"
+    },
+    {
+      "before": "p1g下/p8J左の字形が編集枠をわずかに越える",
+      "after": "文字位置を保ち、p1枠を上下に拡張、p8枠を左へ2pt広げた",
+      "reason": "独立glyph/frameチェックに対応。"
+    },
+    {
+      "before": "p40表注の間隔7.27pt、p41/42文献間6.5/7.1pt",
+      "after": "p40表注を5pt下、p41/42の2件目を18pt下へ移動",
+      "reason": "表注12pt以上、文献間24pt以上を確保。"
+    },
+    {
+      "before": "p1Title1は下余白継承によりg下端が枠から2.15pt出る",
+      "after": "Title1の下余白4ptを明示",
+      "reason": "glyph下端210.96ptがframe下端212.81pt以内となり、描画と編集枠を整合した。"
+    }
+  ],
+  "checked": "全42頁原稿、各例のinput/assert、配色・書式・出典、独立review指摘対応",
+  "planned_seconds": 600,
+  "final_pair_sha256": {
+    "datasets-in-10-minutes-programbench.pptx": "b2194ee668571bf92bfe46fef2a8040ba258ffbe6d32695388f22245f17d3e67",
+    "datasets-in-10-minutes-programbench.pdf": "6c8f1a558f8a473ef41bd9e59848ce18c6971dfc79b0fe8a89cc1d859eba2aff"
+  }
+}

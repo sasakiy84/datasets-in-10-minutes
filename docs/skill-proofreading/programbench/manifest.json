@@ -1,0 +1,569 @@
+[
+  {
+    "page": 1,
+    "title": "ProgramBench",
+    "section": "",
+    "kind": "cover",
+    "planned_seconds": 9,
+    "part": "main"
+  },
+  {
+    "page": 2,
+    "title": "",
+    "section": "目次",
+    "kind": "toc",
+    "planned_seconds": 14,
+    "part": "main"
+  },
+  {
+    "page": 3,
+    "title": "ProgramBench",
+    "section": "1. プログラムを再構築する課題",
+    "kind": "official-site",
+    "sources": [
+      "site"
+    ],
+    "planned_seconds": 9,
+    "part": "main"
+  },
+  {
+    "page": 4,
+    "title": "1. プログラムを再構築する課題",
+    "section": "1. プログラムを再構築する課題",
+    "kind": "divider",
+    "planned_seconds": 9,
+    "part": "main"
+  },
+  {
+    "page": 5,
+    "title": "求めるのは、一つのプログラム全体",
+    "section": "1. プログラムを再構築する課題",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "入力は、参照用の実行ファイルと使い方の文書。エージェントはその動作を調べる。",
+      "提出するのは、同じ動作を再現するソースコードとビルドスクリプト。実装言語とコードの分け方を自分で決める。",
+      "元のソースコードの復元ではなく、入出力やファイルの変化を再現する課題である。"
+    ],
+    "planned_seconds": 33,
+    "part": "main"
+  },
+  {
+    "page": 6,
+    "title": "実行して調べ、隠されたテストで評価する",
+    "section": "1. プログラムを再構築する課題",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "参照プログラムには任意の入力を与え、標準出力・標準エラー・終了コード・生成ファイルを観察できる。",
+      "解答中はネット接続と逆コンパイルを使えず、元のソースコードや採点用テストは渡されない。",
+      "以下の実例は、公開配布された採点用テストから選んだ。単発の出力を答えるのではなく、こうした動作を持つプログラムを作る。"
+    ],
+    "planned_seconds": 38,
+    "part": "main"
+  },
+  {
+    "page": 7,
+    "title": "実例1：ripgrepの文字列検索",
+    "section": "1. プログラムを再構築する課題",
+    "kind": "example",
+    "sources": [
+      "tests"
+    ],
+    "example_id": "burntsushi__ripgrep.3b7fd44",
+    "example_role": "main",
+    "original_test_file": "tasks/burntsushi__ripgrep.3b7fd44/static-tests/eval/tests/test_additional_features.py",
+    "original_test_name": "test_literal_mode_special_chars",
+    "input": "test.txt の内容:\nfoo.*bar\n[hello]\n操作: ./executable -F \"foo.*bar\" test.txt",
+    "expected": "終了コードは0。出力に foo.*bar を含む。",
+    "planned_seconds": 38,
+    "part": "main"
+  },
+  {
+    "page": 8,
+    "title": "実例2：SQLiteの問い合わせとJSON出力",
+    "section": "1. プログラムを再構築する課題",
+    "kind": "example",
+    "sources": [
+      "tests"
+    ],
+    "example_id": "sqlite__sqlite.839433d",
+    "example_role": "main",
+    "original_test_file": "tasks/sqlite__sqlite.839433d/static-tests/eval/tests/test_sqlite3.py",
+    "original_test_name": "test_mode_json",
+    "input": "./executable -json :memory: \\\n  \"SELECT 1 as a, 'hello' as b;\"",
+    "expected": "JSON配列の要素は1件で、a は1、b は \"hello\"。",
+    "planned_seconds": 38,
+    "part": "main"
+  },
+  {
+    "page": 9,
+    "title": "実例3：xsvのCSV行数",
+    "section": "1. プログラムを再構築する課題",
+    "kind": "example",
+    "sources": [
+      "tests"
+    ],
+    "example_id": "burntsushi__xsv.f430466",
+    "example_role": "main",
+    "original_test_file": "tasks/burntsushi__xsv.f430466/static-tests/eval/tests/test_count.py",
+    "original_test_name": "test_count_basic",
+    "input": "test.csv の内容（\\n は改行）:\nname,age\\nAlice,30\\nBob,25\\nCarol,35\\n\n操作: ./executable count test.csv",
+    "expected": "出力の前後の空白を除くと 3。標準エラーは空。",
+    "planned_seconds": 38,
+    "part": "main"
+  },
+  {
+    "page": 10,
+    "title": "2. 課題の作成とデータの構成",
+    "section": "2. 課題の作成とデータの構成",
+    "kind": "divider",
+    "planned_seconds": 9,
+    "part": "main"
+  },
+  {
+    "page": 11,
+    "title": "既存のソフトウェアから課題を作る",
+    "section": "2. 課題の作成とデータの構成",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "単体の実行プログラムを作れる、コンパイル型言語のオープンソースプロジェクトを候補にする。",
+      "エージェントがソースから参照プログラムをビルドし、その手順を保存する。",
+      "動作テストを作った後、ソース・テスト・実装を明かす生成物を除いて、解答環境を用意する。"
+    ],
+    "planned_seconds": 28,
+    "part": "main"
+  },
+  {
+    "page": 12,
+    "title": "200課題は小さな道具から大規模システムまで",
+    "section": "2. 課題の作成とデータの構成",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "planned_seconds": 24,
+    "part": "main"
+  },
+  {
+    "page": 13,
+    "title": "参照プログラムの言語構成",
+    "section": "2. 課題の作成とデータの構成",
+    "kind": "content",
+    "sources": [
+      "tests"
+    ],
+    "planned_seconds": 19,
+    "part": "main"
+  },
+  {
+    "page": 14,
+    "title": "テスト生成と解答では、見える情報が違う",
+    "section": "2. 課題の作成とデータの構成",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "テストを作るエージェントは、実行ファイルに加えてソース・既存テスト・文書も参照する。",
+      "コードのどこを通ったかを測り、未確認の動作を追加で調べる。既存の動作テストも取り込む。",
+      "参照プログラムで安定して通るか、弱い判定や何もしないダミープログラムでも通るテストがないかを確認し、除外・修正する。"
+    ],
+    "planned_seconds": 33,
+    "part": "main"
+  },
+  {
+    "page": 15,
+    "title": "3. 採点方法と到達水準",
+    "section": "3. 採点方法と到達水準",
+    "kind": "divider",
+    "planned_seconds": 9,
+    "part": "main"
+  },
+  {
+    "page": 16,
+    "title": "完全解決率と、テスト通過率",
+    "section": "3. 採点方法と到達水準",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "完全解決率は、すべての採点テストに通った課題の割合。",
+      "テスト通過率は、各課題で通ったテストの割合。途中までの進歩を見るためにも使う。",
+      "判定方法はテストごとに異なる。文字列の一致、JSONの値、終了コード、生成ファイルなど、外から観察できる動作を確認する。"
+    ],
+    "planned_seconds": 33,
+    "part": "main"
+  },
+  {
+    "page": 17,
+    "title": "初期評価では、完全解決は0件",
+    "section": "3. 採点方法と到達水準",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "planned_seconds": 28,
+    "part": "main"
+  },
+  {
+    "page": 18,
+    "title": "2026年9月には、長文脈の評価にも採用",
+    "section": "3. 採点方法と到達水準",
+    "kind": "content",
+    "sources": [
+      "card"
+    ],
+    "body_text": [
+      "Claude Fable 5.1の評価では、参照実行ファイルのテスト通過率が90%未満の34課題を除き、166課題を使った。",
+      "残った課題でも、参照実行ファイルが通るテストだけを採点し、6時間の制限を外した。",
+      "この条件での隠しテスト通過率は、Fable 5.1が87.6%、Fable 5が86.3%、Opus 5が85.4%。"
+    ],
+    "planned_seconds": 33,
+    "part": "main"
+  },
+  {
+    "page": 19,
+    "title": "公式の公開結果では、完全解決も現れた",
+    "section": "3. 採点方法と到達水準",
+    "kind": "content",
+    "sources": [
+      "site"
+    ],
+    "planned_seconds": 24,
+    "part": "main"
+  },
+  {
+    "page": 20,
+    "title": "4. 評価での利用と入手方法",
+    "section": "4. 評価での利用と入手方法",
+    "kind": "divider",
+    "planned_seconds": 9,
+    "part": "main"
+  },
+  {
+    "page": 21,
+    "title": "一つの課題にも、多数の動作テストがある",
+    "section": "4. 評価での利用と入手方法",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "200課題に合計248,853件のテスト関数がある。検索や変換の基本機能に加え、引数・出力形式・例外時の動作まで調べる。",
+      "各プロジェクトの難しさは大きく異なる。小さなCLIの操作と、FFmpegや言語処理系の再実装を同じ枠組みで評価する。",
+      "参照プログラムの動作を調べ、実装・実行・修正を繰り返すため、長い作業履歴を扱う。"
+    ],
+    "planned_seconds": 24,
+    "part": "main"
+  },
+  {
+    "page": 22,
+    "title": "配布先と、そこで手に入るもの",
+    "section": "4. 評価での利用と入手方法",
+    "kind": "content",
+    "sources": [
+      "repo"
+    ],
+    "planned_seconds": 24,
+    "part": "main"
+  },
+  {
+    "page": 23,
+    "title": "評価環境を用意して、コードベースを提出する",
+    "section": "4. 評価での利用と入手方法",
+    "kind": "content",
+    "sources": [
+      "guide"
+    ],
+    "body_text": [
+      "公式ガイドはLinuxのx86_64環境を案内している。課題用のコンテナには、参照実行ファイルと文書がある。",
+      "解答中のネット接続を止め、完成したコードベースをアーカイブにして提出する。",
+      "評価用のコマンドが、課題ごとのテストを取得して実行し、通過・失敗と集計結果を出す。"
+    ],
+    "planned_seconds": 24,
+    "part": "main"
+  },
+  {
+    "page": 24,
+    "title": "コードとテストの利用条件を確かめる",
+    "section": "4. 評価での利用と入手方法",
+    "kind": "content",
+    "sources": [
+      "tests"
+    ],
+    "body_text": [
+      "ProgramBenchの評価用コードはMITライセンスで公開されている。",
+      "テストはAIが生成し、元のプロジェクトのテストに由来する部分を含みうる。各課題の帰属情報とライセンスが付いている。",
+      "再配布や改変では、使う課題のATTRIBUTION.mdとLICENSEを確認する。"
+    ],
+    "planned_seconds": 24,
+    "part": "main"
+  },
+  {
+    "page": 25,
+    "title": "ProgramBenchが測るもの",
+    "section": "4. 評価での利用と入手方法",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "実行ファイルと文書だけを手がかりに、同じ動作をするコードベースをゼロから作る。",
+      "200の既存ソフトウェアと、外部動作を確かめる多数のテストにより、プログラム全体を実装する能力を測る。",
+      "完全解決、部分的な通過、作業の進め方を見ることで、長時間のソフトウェア開発を評価できる。"
+    ],
+    "planned_seconds": 29,
+    "part": "main"
+  },
+  {
+    "page": 26,
+    "title": "Appendix",
+    "section": "Appendix",
+    "kind": "appendix-divider",
+    "planned_seconds": 0,
+    "part": "appendix"
+  },
+  {
+    "page": 27,
+    "title": "",
+    "section": "Appendix: 目次",
+    "kind": "toc",
+    "planned_seconds": 0,
+    "part": "appendix"
+  },
+  {
+    "page": 28,
+    "title": "追加例1：sdの空パターン置換",
+    "section": "Appendix: 1. 異なる動作の追加例",
+    "kind": "example",
+    "sources": [
+      "tests"
+    ],
+    "example_id": "chmln__sd.87d1ba5",
+    "example_role": "appendix",
+    "original_test_file": "tasks/chmln__sd.87d1ba5/static-tests/eval/tests/test_edge_cases.py",
+    "original_test_name": "test_empty_find_pattern",
+    "input": "標準入力: abc\n操作: ./executable \"\" \"X\"",
+    "expected": "終了コードは0。出力に XaXbXcX を含む。",
+    "planned_seconds": 0,
+    "part": "appendix"
+  },
+  {
+    "page": 29,
+    "title": "追加例2：DuckDBの出力モード",
+    "section": "Appendix: 1. 異なる動作の追加例",
+    "kind": "example",
+    "sources": [
+      "tests"
+    ],
+    "example_id": "duckdb__duckdb.bdb65ec",
+    "example_role": "appendix",
+    "original_test_file": "tasks/duckdb__duckdb.bdb65ec/static-tests/eval/tests/test_duckdb_cli.py",
+    "original_test_name": "test_cmd_flag_runs_before_stdin",
+    "input": "操作: ./executable --batch --no-init \\\n  -cmd \".mode csv\"\n標準入力: SELECT 42 as x;",
+    "expected": "出力に x と42を含み、罫線の ┌ は含まない。\n終了コードは0。",
+    "planned_seconds": 0,
+    "part": "appendix"
+  },
+  {
+    "page": 30,
+    "title": "追加例3：zstdの圧縮と復元",
+    "section": "Appendix: 1. 異なる動作の追加例",
+    "kind": "example",
+    "sources": [
+      "tests"
+    ],
+    "example_id": "facebook__zstd.1168da0",
+    "example_role": "appendix",
+    "original_test_file": "tasks/facebook__zstd.1168da0/static-tests/eval/tests/test_03_decompression.py",
+    "original_test_name": "test_decompress_to_stdout",
+    "input": "標準入力: \"Hello, World! \" を100回\n1. ./executable -c で圧縮\n2. 圧縮結果を ./executable -dc に渡す",
+    "expected": "復元後のバイト列が、入力と完全に一致する。",
+    "planned_seconds": 0,
+    "part": "appendix"
+  },
+  {
+    "page": 31,
+    "title": "追加例4：FFmpegへ標準入力で動画を渡す",
+    "section": "Appendix: 1. 異なる動作の追加例",
+    "kind": "example",
+    "sources": [
+      "tests"
+    ],
+    "example_id": "ffmpeg__ffmpeg.360a402",
+    "example_role": "appendix",
+    "original_test_file": "tasks/ffmpeg__ffmpeg.360a402/static-tests/eval/tests/test_demux_gaps.py",
+    "original_test_name": "test_stdin_input_with_dash_alias",
+    "input": "入力: 配布テストの2秒の test.mp4 のバイト列\n操作: ./executable -i - -f null -",
+    "expected": "終了コードは0。標準エラーに\nInput #0 と Stream #0:0 を含む。",
+    "planned_seconds": 0,
+    "part": "appendix"
+  },
+  {
+    "page": 32,
+    "title": "追加例5：jqの名前付き変数",
+    "section": "Appendix: 1. 異なる動作の追加例",
+    "kind": "example",
+    "sources": [
+      "tests"
+    ],
+    "example_id": "jqlang__jq.b33a763",
+    "example_role": "appendix",
+    "original_test_file": "tasks/jqlang__jq.b33a763/static-tests-5379/eval/tests/test_args_parsing.py",
+    "original_test_name": "test_arg_sets_named_variable_and_consumes_two_params",
+    "input": "標準入力: {}\n操作: ./executable --arg foo bar '$foo'",
+    "expected": "出力の前後の空白を除くと \"bar\"。終了コードは0。",
+    "planned_seconds": 0,
+    "part": "appendix"
+  },
+  {
+    "page": 33,
+    "title": "追加例6：PHPのスクリプト引数",
+    "section": "Appendix: 1. 異なる動作の追加例",
+    "kind": "example",
+    "sources": [
+      "tests"
+    ],
+    "example_id": "php__php-src.c891263",
+    "example_role": "appendix",
+    "original_test_file": "tasks/php__php-src.c891263/static-tests/eval/tests/test_variable_operations.py",
+    "original_test_name": "test_argv_values",
+    "input": "./executable -r 'echo json_encode($argv);' \\\n  -- test 123",
+    "expected": "終了コードは0。出力に \"test\" と \"123\" を含む。",
+    "planned_seconds": 0,
+    "part": "appendix"
+  },
+  {
+    "page": 34,
+    "title": "追加例7：yjでYAMLをJSONへ変換する",
+    "section": "Appendix: 1. 異なる動作の追加例",
+    "kind": "example",
+    "sources": [
+      "tests"
+    ],
+    "example_id": "sclevine__yj.8016400",
+    "example_role": "appendix",
+    "original_test_file": "tasks/sclevine__yj.8016400/static-tests/eval/tests/test_yaml_conversions.py",
+    "original_test_name": "test_yaml_to_json_default",
+    "input": "標準入力（\\n は改行）:\nkey: value\\nnumber: 42\n操作: ./executable",
+    "expected": "出力に \"key\"、\"value\"、\"number\"、42を含む。\n終了コードは0。標準エラーは空。",
+    "planned_seconds": 0,
+    "part": "appendix"
+  },
+  {
+    "page": 35,
+    "title": "追加例8：fdの探索の深さ",
+    "section": "Appendix: 1. 異なる動作の追加例",
+    "kind": "example",
+    "sources": [
+      "tests"
+    ],
+    "example_id": "sharkdp__fd.40d8eb3",
+    "example_role": "appendix",
+    "original_test_file": "tasks/sharkdp__fd.40d8eb3/static-tests/eval/tests/test_depth_control.py",
+    "original_test_name": "test_max_depth_one",
+    "input": "探索先: file.txt、sub/file2.txt、\n        sub/deep/file3.txt\n操作: ./executable --max-depth 1",
+    "expected": "出力に file.txt と sub を含み、\nfile2.txt と deep は含まない。",
+    "planned_seconds": 0,
+    "part": "appendix"
+  },
+  {
+    "page": 36,
+    "title": "追加例9：hexylの16進数表示",
+    "section": "Appendix: 1. 異なる動作の追加例",
+    "kind": "example",
+    "sources": [
+      "tests"
+    ],
+    "example_id": "sharkdp__hexyl.2e26437",
+    "example_role": "appendix",
+    "original_test_file": "tasks/sharkdp__hexyl.2e26437/static-tests/eval/tests/test_base_display.py",
+    "original_test_name": "test_base_hexadecimal",
+    "input": "標準入力のバイト: 00 10 20 FF（16進数）\n操作: ./executable --base=hexadecimal \\\n  --color=never",
+    "expected": "終了コードは0。出力に00、10、20、ffを含む。",
+    "planned_seconds": 0,
+    "part": "appendix"
+  },
+  {
+    "page": 37,
+    "title": "追加例10：gronのJSON展開",
+    "section": "Appendix: 1. 異なる動作の追加例",
+    "kind": "example",
+    "sources": [
+      "tests"
+    ],
+    "example_id": "tomnomnom__gron.88a6234",
+    "example_role": "appendix",
+    "original_test_file": "tasks/tomnomnom__gron.88a6234/static-tests/eval/tests/test_gron_core.py",
+    "original_test_name": "test_basic_data_types",
+    "input": "標準入力（JSON）:\n{\"string\":\"hello\",\"number\":42,\"float\":3.14,\n \"bool\":true,\"null_val\":null}\n操作: ./executable -m",
+    "expected": "各値を代入文へ展開し、参照結果と一致する。",
+    "planned_seconds": 0,
+    "part": "appendix"
+  },
+  {
+    "page": 38,
+    "title": "追加例10：gronの期待出力",
+    "section": "Appendix: 1. 異なる動作の追加例",
+    "kind": "example-output",
+    "sources": [
+      "tests"
+    ],
+    "example_id": "tomnomnom__gron.88a6234",
+    "example_role": "appendix-output-continuation",
+    "planned_seconds": 0,
+    "part": "appendix"
+  },
+  {
+    "page": 39,
+    "title": "動作を調べる環境と、採点環境",
+    "section": "Appendix: 2. 評価環境と利用条件",
+    "kind": "content",
+    "sources": [
+      "guide"
+    ],
+    "body_text": [
+      "推論用コンテナでは参照プログラムの実行だけを許し、ソースやビルド成果物へのアクセスを除く。",
+      "提出されたコードを別の評価用環境でビルドし、参照プログラムに対して作られたテストを実行する。",
+      "配布テストには、個別に採点から除いたものも記録される。採点では、除外されたテストを通過率の分母から外す。"
+    ],
+    "planned_seconds": 0,
+    "part": "appendix"
+  },
+  {
+    "page": 40,
+    "title": "掲載例に付属する元プロジェクトの条件",
+    "section": "Appendix: 2. 評価環境と利用条件",
+    "kind": "content",
+    "sources": [
+      "tests"
+    ],
+    "planned_seconds": 0,
+    "part": "appendix"
+  },
+  {
+    "page": 41,
+    "title": "参考文献",
+    "section": "Appendix: 3. 参考文献",
+    "kind": "references",
+    "planned_seconds": 0,
+    "part": "appendix"
+  },
+  {
+    "page": 42,
+    "title": "参考文献",
+    "section": "Appendix: 3. 参考文献",
+    "kind": "references",
+    "planned_seconds": 0,
+    "part": "appendix"
+  }
+]
