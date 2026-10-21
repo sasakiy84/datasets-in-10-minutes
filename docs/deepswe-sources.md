@@ -1,0 +1,39 @@
+# DeepSWE v1.1 — primary sources and scope
+
+Prepared 2026-10-22 Asia/Tokyo, author sasakiy84. Main planned skim 600 seconds plus Appendix. Thirteen independent tasks from thirteen distinct upstream repositories, across all five languages. OfficeQA was excluded after the current official distribution required a gate; no historical mirrors or access-gate workarounds were used. DeepSWE was explicitly authorized by the parent as the second dataset.
+
+## Fresh official sources
+
+- Wenqi Huang, Charley Lee, Leonard Tng, Serena Ge (Datacurve, 2026), **DeepSWE: Measuring Frontier Coding Agents on Original, Long-Horizon Engineering Tasks**, https://arxiv.org/abs/2607.07946 . Fresh HTTP200 HTML in `raw/deepswe-paper.html`, text in `raw/paper.txt`. Manuscript reports May 2026 evaluation; arXiv v1 published July 8,2026. arXiv's non-exclusive distribution license is not treated as a blanket reuse license for figures. Numeric facts are redrawn in native tables, not reproductions of paper figures. The official `leaderboard.svg` was freshly fetched HTTP200 and rendered locally for actual inspection; no model was run. Initial five-row score readings were visually checked from that figure. All cited construction, protocol, metrics, and quality-assurance passages were read directly.
+- Datacurve, official project https://deepswe.datacurve.ai/ . Fresh curl HTTP200 `raw/project.html`, own extracted text `raw/project.txt`. CSS screenshot in `official-site.png`, viewport1440x1100 clipped to1440x450 at the hero; actual creator view. The official HTML is shown at its canonical URL and CSS/fonts via CA-verified requests. No fake reconstruction, no TLS bypass, no cookies panel, no asset fetch failures. `screenshot-log.json` records transport and status. Leaderboard has v1.1,113 tasks, update September22,2026 and integer-rounded scores; the selected values and efforts were read from the current official page.
+- Datacurve, official https://github.com/datacurve-ai/deep-swe . Public metadata, tree,README freshly acquired: `raw/deepswe-repo.json`,`deepswe-tree.json`,`deepswe-README.md`. Revision `0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea`; public pinned codeload archive HTTP200 `raw/source.tar.gz`,3,824,406 bytes. Regular files safely extracted to `raw/repo`; no repository Git operation or benchmark execution. Full own scan counted113 instruction.md/task.toml pairs,91 distinct repositories,TypeScript35/Go34/Python34/JavaScript5/Rust5. Categories feature_request106/bugfix4/enhancement3. Root Apache2.0 license saved verbatim `LICENSE-DeepSWE.txt`; no NOTICE file in the source archive. Apache permission applies to this released benchmark; upstream target projects keep their own licenses.
+- Official changelog https://deepswe.datacurve.ai/changelog . Fresh HTTP200 `raw/changelog.html/.txt`, read directly. v1.1 release June15,2026:113 tasks,isolated verification,structured test reports. Astra added September3; Gemini3.8Flash September1. Initial paper evaluation and current v1.1 conditions are separated.
+- Official Pier documentation source https://github.com/datacurve-ai/pier linked by current benchmark README. Current README requires Pier newer than0.3.0 for the separate verifier environment. The deck refers to the official benchmark's documented usage; no install,model invocation,login,API call or credential access was performed.
+
+## Inherited official current-adoption source
+
+Anthropic (2026), **Claude Fable 5.1 & Claude Mythos 5.1 System Card**, https://www.anthropic.com/claude-fable-and-mythos-5-1 . Existing public-source PDF inherited from `/workspace/artifacts/frontier-benchmarks-2026-10/fable-5-1-system-card.pdf`, text `/tmp/fable-card.txt`; independently read DeepSWE §8.3,p168. Fable5.1 DeepSWEv1.1 average67.4% overfive trials. The source criticizes some hidden-test rejections of valid alternative implementations; this is presented as the source's finding, not replaced by an unconditional claim that verifiers accept every valid solution. No unsupported per-benchmark harness/effort/timeout is inferred for this score.
+
+## Examples and expected behavior
+
+`examples.json` preserves complete actual `instruction.md` text (including final branch/commit request), complete Japanese translation, upstream repository/language/task ID, and a real selected `test.patch` excerpt with line range. No task instructions were executed. Slides quote complete instruction text with meaningful paragraph/sentence splits only when it cannot fit by itself, and separate full translations; no question is counted twice. Input repository code is explicitly identified but not reproduced in full on slides. The expected behavior is a Japanese description of selected real test assertions and stated requirements, not an invented reference patch or model transcript. Full source snapshots retain the original tests/reference patches. Original inputs are not mislabeled as full repository context. All13 originals were tested in single native pages at18pt/1.10 and17pt/1.05. Final compact single-page originals use17pt/1.03 where readable and within the footer boundary; otherwise complete originals split at meaningful boundaries. Japanese paragraphs/sentences are distributed evenly, preserving the final branch/commit sentence without a dedicated orphan page.
+
+The main three tasks are Mashumaro flattening,HappyDOM async shutdown,Go ShapeIndex serialization. The ten Appendix tasks cover KaTeX multicolumn,oxvg selector preservation,Numba boundary modes,Ink grid,Koota predicate,Anko defaults,Tengo destructuring,Helm output ordering,Scriggo methods,Adaptix aliases. Independent reviewer fetched all13 directly from the official revision and matched their original text separately. Scriggo pointer/interface semantics were checked against actual tests: `*Counter` implementing Stringer passes; a Num value with only `(*Num).String` fails. The translation avoids pointer-to-interface terminology.
+
+## Meaning of reported measurements
+
+Initial pass@1 macro-averages per-task binary success fractions. pass@4 counts at least one success in up tofour attempts; scored counts can fall belowfour after infrastructure exclusions. Initial May2026 trials use mini-swe-agent,9000s wall limit,no step/cost cap. Current task.toml has a different10800s agent timeout; it is not silently substituted into the initial protocol. Current reward.json includes partial pass fractions for diagnostics, but ranking reward remains binary. Public tests and solutions are held out from the solving agent, not described as inaccessible to readers.
+
+The1.4% figure is10 disagreements out of735 audited DeepSWE rollouts between a GPT-5.5 judge and the verifier, not a ground-truth error rate. It is an auxiliary audit, not model-based leaderboard grading. Current official site values are rounded integers and are not treated as exact ties or merged with initial-v1 or Fablecard conditions.
+
+## Scope and checks
+
+Gemini/model APIs/model execution/credentials/login/gate bypass/Git/subagents: none. Only public HTTP sources and read-only local source inspection were used. Planned main reading time600seconds is not a measured reading-time result. LibreOffice export and python-pptx reopen are verified; no interactive Microsoft PowerPoint opening is claimed. Individual creator actualview, independent source/content/JP/visual review, native/PDF glyph/link/table checks, final exact pair hashes, and any remaining review are recorded separately.
+
+## 最終配布物と確認記録
+
+[PPTX](../slides/datasets-in-10-minutes-deepswe.pptx)・[PDF](../slides/datasets-in-10-minutes-deepswe.pdf)。本編38頁、総100頁。本編の流し読みは600秒の予定で、閲覧時間は未実測。
+
+[原票・集計・出典の検証](data-audits/deepswe.json)・[校正の修正対](skill-proofreading/deepswe.md)・[全ページ文言](skill-proofreading/deepswe/pages.jsonl)・[最終検証票](skill-proofreading/deepswe/review.json)。作成担当の引継ぎ票は独立確認前の記録として保持し、最終承認は最終検証票に集約した。
+
+同梱ライセンス・帰属情報：[LICENSE-DeepSWE.txt](licenses/deepswe/LICENSE-DeepSWE.txt)。
