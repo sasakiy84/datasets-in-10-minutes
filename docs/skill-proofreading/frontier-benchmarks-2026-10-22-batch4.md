@@ -27,6 +27,8 @@ HealthBenchでは得点の分母を、すべての加点基準を満たす場合
 
 ## ローカル検証と公開
 
-Pythonテスト4件とギャラリーのNodeテストが成功した。ギャラリーを構築し、107件の掲載、新規8件のサムネイル、16配布ファイルとカタログの対応を確認した。詳細は[ローカル検証](frontier-benchmarks-2026-10-22-batch4/local-verification.json)に記録する。公開先の確認結果は[公開検証](frontier-benchmarks-2026-10-22-batch4/publication-result.json)に記録する。
+Pythonテスト4件とギャラリーのNodeテストが成功した。ギャラリーを構築し、107件の掲載、新規8件のサムネイル、16配布ファイルとカタログの対応を確認した。詳細は[ローカル検証](frontier-benchmarks-2026-10-22-batch4/local-verification.json)に記録した。公開先の確認結果は[公開検証](frontier-benchmarks-2026-10-22-batch4/publication-result.json)に記録した。
 
 資料ごとのコミットは[対応表](frontier-benchmarks-2026-10-22-batch4/dataset-commits.json)に記録した。ブラウザーでは作成日時降順のクエリ、タイトル検索と更新日時降順の組合せ、リセット後107件表示を確認した。新規8件のサムネイルと[作成日時降順の画面](frontier-benchmarks-2026-10-22-batch4/gallery-created-desc.png)・[検索結果](frontier-benchmarks-2026-10-22-batch4/gallery-science-query.png)を実際に開いて確認した。
+
+公開は[GitHub Actions](https://github.com/sasakiy84/datasets-in-10-minutes/actions/runs/39656749914)の成功を確認した。2026-10-22T03:55:51（日本時間）に、[ギャラリー](https://datasets-in-10-minutes.sasakiy84.net/?sort=created-desc)のカタログと、新規8件のPDF/PPTX計16ファイルを公開先から取得し、すべてHTTP200・確認済み版との完全一致を確認した。公開カタログは107件。公開した基点と各ファイルの対応は[固定記録](frontier-benchmarks-2026-10-22-batch4/publication-frozen.json)に残した。
