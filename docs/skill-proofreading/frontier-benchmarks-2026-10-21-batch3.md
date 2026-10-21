@@ -30,4 +30,6 @@ ProgramBenchの元プロジェクトのライセンスは原文を保持した�
 
 ## 公開
 
-ローカルのギャラリービルドは99件で成功した。新規6ファイルが最終検証済み版と一致し、表紙サムネイル3枚も確認した。公開先での照合結果は配信完了後に追記する。
+ローカルのギャラリービルドは99件で成功した。新規6ファイルが最終検証済み版と一致し、表紙サムネイル3枚も確認した。GitHub Actionsのビルド・テスト・デプロイが成功した。公開先から3件のPDF・PPTXとカタログの計7ファイルを取得し、すべてHTTP 200かつ固定した最終版と一致することを確認した。
+
+[公開確認](frontier-benchmarks-2026-10-21-batch3/publication-result.json)・[配布版の固定](frontier-benchmarks-2026-10-21-batch3/publication-frozen.json)・[デプロイ結果](https://github.com/sasakiy84/datasets-in-10-minutes/actions/runs/39610850949)・[ギャラリー](https://datasets-in-10-minutes.sasakiy84.net/)。
