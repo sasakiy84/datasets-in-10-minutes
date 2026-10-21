@@ -1,0 +1,109 @@
+{
+  "dataset": "arxivmath",
+  "dataset_revision": "4c38882866fb19388cbb4a229c160040b191d4fe",
+  "acquisition": {
+    "dataset": "own full fixed-revision Parquet+card/API",
+    "project": "own HTML/competition-table JSON/CSS screenshot; own actual view",
+    "paper": "own arxiv2605.00674v2 PDF57pages",
+    "fable_card": "inherited primary localPDF/text; relevant8.10 independently read",
+    "source_papers": "independent reviewer own acquisition; creator inherited texts then independently read all13 abstracts",
+    "outputs_trials": "independent reviewer own alloutputsParquet acquisition and106row recount; no creator own claim"
+  },
+  "split": "train",
+  "intended_use": "evaluation",
+  "counts": {
+    "rows": 53,
+    "unique_problem_idx": 53,
+    "public_gold": 53
+  },
+  "prompt_words": {
+    "method": "Python str.split on raw problem; Unicode whitespace; formula tokens included; numpy.quantile linear",
+    "median": 165.0,
+    "q1": 108.0,
+    "q3": 229.0,
+    "min": 71,
+    "max": 503
+  },
+  "parquet_bytes": 239973,
+  "selected_ids": [
+    10,
+    35,
+    30,
+    1,
+    4,
+    13,
+    17,
+    20,
+    25,
+    27,
+    32,
+    29,
+    51
+  ],
+  "selected_sources": [
+    "2609.14794",
+    "2609.28512",
+    "2609.26723",
+    "2609.04659",
+    "2609.10517",
+    "2609.16081",
+    "2609.22324",
+    "2609.22928",
+    "2609.25390",
+    "2609.25543",
+    "2609.28102",
+    "2609.26285",
+    "2609.37978"
+  ],
+  "excluded_examples": [
+    {
+      "problem_idx": 46,
+      "reason": "Releasedgold7weights disagrees with source Example27 sixweights; no gold was corrected. Replaced with source-supported29.",
+      "evidence_owner": "review_global_mmlu",
+      "evidence_file": "../review-arxivmath/example-source-check.json"
+    }
+  ],
+  "current_evaluation": {
+    "scope": "September2026,53problems",
+    "models": [
+      "GPT-6.1 Sol max",
+      "Gemini4Argon",
+      "ClaudeOpus5.5high",
+      "Qwen3.8-2.4T-A95B"
+    ],
+    "accuracy_pct": [
+      91.51,
+      87.74,
+      82.08,
+      45.28
+    ],
+    "trials_per_problem": 2,
+    "independent_output_review": "../review-arxivmath/outputs-trial-audit.json",
+    "trial_count_each": 106,
+    "correct_each": [
+      97,
+      93,
+      87,
+      48
+    ]
+  },
+  "earlier_evaluation": {
+    "May2026paper": "aggregate ArXivMath as published,4runs/problem,no tools",
+    "FableCardJune2026": "49problem card snapshot,4runs/problem Mythos; currentjuneconfig48is another snapshot and not substituted"
+  },
+  "display_math": {
+    "source_original_preserved": true,
+    "method": "native editable Unicode mathematical symbols, subscript/superscript runs; fractions in linear form; all hypotheses and quantifiers retained",
+    "review": "independent source reviewer hand-read13 display originals against raw; creator also read all rendered originals"
+  },
+  "licensing": {
+    "data": "CC BY-SA4.0",
+    "code": "MIT",
+    "adaptations": "Japanese translations and mathematical typographic changes explicitly identified on slide26; dataset attribution and13sourcepapers credited"
+  },
+  "artifact_sha256": {
+    "pdf": "63bd62863ed2ece55f855a14852a1c028aaa2c8492c0a631eb57a959e405219d",
+    "pptx": "89e488576721ee309cc36cb0189ca3763435d6b624a1e9979560cc59b4f0fc0e"
+  },
+  "final_review": "../skill-proofreading/arxivmath/review.json"
+}
