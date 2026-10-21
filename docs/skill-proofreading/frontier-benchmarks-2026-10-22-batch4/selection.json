@@ -1,0 +1,33 @@
+{
+  "selected": [
+    "healthbench",
+    "deepswe",
+    "browsecomp",
+    "mind2web",
+    "arxivmath",
+    "mmlu-pro",
+    "swe-bench-multilingual",
+    "terminal-bench-science"
+  ],
+  "date": "2026-10-22",
+  "existing_datasets": 99,
+  "gemini_used": false,
+  "method": "skill_based_codex",
+  "primary_adoption_sources": [
+    "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+    "https://openai.com/index/gpt-6-astra/",
+    "https://www.mercor.com/apex/oss-benchmarks/oss-mmlu-pro-leaderboard/"
+  ],
+  "excluded": {
+    "officeqa": "Current official dataset requires access approval; replaced with public DeepSWE without accepting gates or using historical copies.",
+    "chartography": "Released100 tasks gated; actual public complete examples3 plus dummy examples, insufficient for intended13; replaced with MMLU-Pro."
+  },
+  "source_version_notes": {
+    "arxivmath": "Current monthly release distinct from June2026 card49-question results; source reviewer found mutable June config48; specify releases exactly.",
+    "mmlu-pro": "AA retired from active reporting, so no claim of current AA index membership. Current primary Mercor leaderboard independently accessed by root web tool.14subject base, not57originalMMLU.",
+    "healthbench": "Official ungated OpenAI HF data MIT; public host Azure blocked; no credential/access-gate bypass. Source online non-republication request distinct from MIT permission.",
+    "browsecomp": "Official OpenAI BrowseCompLongContext subset has original questions; examples chosen there, base benchmark1266, derivative295 is a selection source only. MIT and source request separately recorded.",
+    "terminal-bench-science": "Use v0.1.0 fixed70-task snapshot; currentmain71 not interchangeable.",
+    "swe-bench-multilingual": "Official descriptions42repos vs current observed41 require precise current snapshot count, do not silently inherit."
+  }
+}
