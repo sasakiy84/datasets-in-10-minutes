@@ -1,0 +1,96 @@
+{
+  "dataset": "Global-MMLU",
+  "external_model_api_used": false,
+  "changes": [
+    {
+      "before": "例6 B：国防長官",
+      "after": "例6 B：国防省",
+      "reason": "スペイン語配布原文el Ministerio de Defensaに日本語を対応させた。"
+    },
+    {
+      "before": "例12 D：覆す",
+      "after": "例12 D：無視する",
+      "reason": "ヒンディー語配布原文की अवहेलना करनेの意味に対応させた。"
+    },
+    {
+      "before": "Global Massive Multitask Language Understanding",
+      "after": "MMLU: Massive Multitask Language Understanding",
+      "reason": "対象名Global-MMLUとMMLUの正式展開を区別した。"
+    },
+    {
+      "before": "Global-MMLUは、翻訳の先にある評価対象を見せる",
+      "after": "42言語の知識評価に文化注釈を加えた",
+      "reason": "まとめの見出しを対象の具体的な特徴へ改めた。"
+    },
+    {
+      "before": "本資料では7言語のtestを取得した。1言語あたり14,042問で、英語のParquetは約3.73 MiB、日本語は約4.16 MiBだった。",
+      "after": "1言語のtestは14,042問。配布Parquetの容量は、英語が約3.73 MiB、日本語が約4.16 MiBである。",
+      "reason": "取得作業の報告を読者の入手判断に必要な量へ整理した。"
+    },
+    {
+      "before": "新しい問題へ置き換えたわけではなく、MMLUが問う知識の偏りを可視化したデータである。",
+      "after": "英語のMMLUが問う知識の偏りを、42言語への翻訳と文化注釈によって可視化したデータである。",
+      "reason": "否定形の説明をデータの内容と役割へ具体化した。"
+    },
+    {
+      "before": "専門家と母語話者が、翻訳の流暢さと意味を確認した",
+      "after": "専門家と母語話者が翻訳の意味を確認した",
+      "reason": "通常タイトルの1文字だけの折返しを解消した。"
+    },
+    {
+      "before": "Fable 5.1の評価にも42言語のGMMLUが使われた",
+      "after": "Fable 5.1は42言語のGMMLUで94.0%",
+      "reason": "到達水準を先に示し、タイトルの折返しを解消した。"
+    },
+    {
+      "before": "独立した問題数",
+      "after": "問題数",
+      "reason": "表見出しの孤立2文字の折返しを解消した。"
+    },
+    {
+      "before": "追加例を掲載後、例番号と解説を一覧表3頁で再説明",
+      "after": "各例の原文ラベルへCS/CAを併記し、離れた解説一覧を削除",
+      "reason": "実例と分類の対応を同じ頁で読めるようにした。"
+    },
+    {
+      "before": "原文枠を推定文字幅だけで計算",
+      "after": "実際のPDFの文字bboxに基づき原文・訳枠の高さと正解位置を調整",
+      "reason": "仏語の最終選択肢の枠外表示、Hindiの余白過大と出典との重なりを修正した。"
+    },
+    {
+      "before": "文化語の解説を離れた一覧表とともに削除",
+      "after": "グルと二本の剣、Arkansas toothpick、格率の意味をそれぞれ実例の正解直下へ一文で説明",
+      "reason": "問題を理解するために必要な語の意味を、その場で読める形に戻した。"
+    },
+    {
+      "before": "参考文献の項目間実インクgap6.51pt/11.05pt",
+      "after": "項目2をp53で18pt、p54で14pt下げ、実gap24.516pt/25.054pt",
+      "reason": "1頁2件を維持して、項目間のまとまりと24pt以上の間隔を確保した。"
+    },
+    {
+      "before": "表紙副題・Appendix扉・文献5枠で文字の一部がnativeframe下端外",
+      "after": "7枠の高さを実文字inkに合わせて拡張。PDFの既存50頁はrawpixel完全一致",
+      "reason": "PPTXの編集可能な文字枠の内側に、文言・見た目を保って全文を収めた。"
+    },
+    {
+      "before": "p28/30の出典URL4枠で上端に最大0.963ptの実glyph超過",
+      "after": "top−1.5pt、height+1.5pt、margin_top+1.5ptで表示位置を維持して枠内に収容",
+      "reason": "文字とURLリンクの表示位置を変えず、nativePPTXの文字枠内へ全文を収めた。全55頁rawpixel完全一致を確認。"
+    },
+    {
+      "before": "p2はHugging Face配布ページの画面",
+      "after": "Cohere Labs公式プロジェクトhttps://cohere.com/research/globalmmluのCSS付き画面へ差替え",
+      "reason": "独立した公式プロジェクトの存在を確認したため優先した。Cookieパネルは標準Closeで閉じ、同意は追加していない。"
+    },
+    {
+      "before": "Liteは15言語・計6000レコードを持つと現在形で説明",
+      "after": "初版1.0(2024-12)15言語/6000と、現行3.0(2026-05)23言語/test9200を一枚で区別",
+      "reason": "現在の配布cardと独立全23test再集計に合わせて版・対象を更新した。"
+    },
+    {
+      "before": "p55参考文献はFable System Card1件",
+      "after": "現行Global-MMLU-Lite Dataset Cardを2件目に追加",
+      "reason": "最新Liteの一次根拠と入手先を対応させ、1頁2件を保った。"
+    }
+  ]
+}
