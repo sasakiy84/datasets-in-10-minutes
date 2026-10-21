@@ -1,0 +1,89 @@
+{
+  "tasks": 100,
+  "domains": {
+    "Academic": 12,
+    "Finance": 20,
+    "Shopping/Product Comparison": 16,
+    "Technology": 10,
+    "Personalized Assistant": 6,
+    "Medicine": 6,
+    "Needle in a Haystack": 6,
+    "General Knowledge": 9,
+    "UX Design": 9,
+    "Law": 6
+  },
+  "criteria": 3934,
+  "negative": 415,
+  "weights": [
+    -500,
+    -300,
+    -200,
+    -150,
+    -100,
+    -75,
+    -60,
+    -50,
+    -30,
+    -25,
+    -20,
+    -15,
+    -10,
+    -5,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    10,
+    12,
+    15,
+    20
+  ],
+  "sha256": {
+    "test.jsonl": "e35bfe78cd827fa1d541b79fbc7bc7b91966d3227d8742c83e99d26d4ac4679a",
+    "README.md": "59da3a850a68d839cde2ed936e228dbccd3e36c2e0a9b8d47923ed2e4d0d31a2",
+    "paper.html": "d4aaecce570602e10ed005346f5c29d3e78002221bbcc3d86cc52d971b046d9b",
+    "hf.json": "3f4937799bb63a9f45f6fbbd41ffa23a33af96af8b7c078ba478b8aa6dc3869b",
+    "paper.txt": "4b9f66197580af28787a001a3f43b7cb7454c9849f7c62e391043b8748048308",
+    "LICENSE": "e37cadddbedc930ab6f74e2e0d2b889579f2dbda57ef29b71800c6b203175b19"
+  },
+  "own_checks": [
+    "HF API/README/LICENSE/test.jsonl independently retrieved",
+    "arxiv2602.11685v1 HTML independently retrieved; construction/evaluation/results read",
+    "local Fablecard §8.12.2 read"
+  ],
+  "initial_results": {
+    "PerplexityDR_Opus4.6": 70.5,
+    "PerplexityDR_Opus4.5": 67.2,
+    "GeminiDR": 59.0,
+    "OpenAI_o3DR": 52.1,
+    "OpenAI_o4miniDR": 41.9,
+    "ClaudeOpus4.6_tools": 59.8,
+    "ClaudeOpus4.5_tools": 46.7
+  },
+  "remaining": [
+    "selected 13 examples source/translation checks",
+    "native all-page content proof",
+    "final package/PDF/table checks",
+    "visual pages 1–30"
+  ],
+  "latest_results": {
+    "source_existing_pdf": "/workspace/artifacts/frontier-benchmarks-2026-10/fable-5-1-system-card.pdf",
+    "page": 179,
+    "own_check": "Rendered page179 independently and opened PNG with view_image; read chart labels",
+    "inherited": "PDF original download provenance inherited from prior batch; no new URL access claimed",
+    "Fable5.1": {
+      "low": 84.6,
+      "med": 85.3,
+      "high": 85.4,
+      "xhigh": 87.1,
+      "max": 87.7
+    },
+    "budget_tokens": 980000,
+    "judge": "Opus4.6",
+    "grading_runs": 5
+  }
+}
