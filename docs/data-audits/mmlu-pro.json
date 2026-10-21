@@ -1,0 +1,135 @@
+{
+  "dataset": "MMLU-Pro",
+  "revision": "b189ec765aa7ed75c8acfea42df31fdae71f97be",
+  "acquisition": {
+    "dataset": "creator own fixed-revision full test+validation Parquet,API,card",
+    "paper": "creator own arxiv2406.01574 PDF",
+    "repo": "creator own README/API/LICENSE",
+    "leaderboard": "creator own official Gradio publicapp HTML/config/CSS screenshot and actualview",
+    "current_Mercor": "root own webtool primary response inherited W/mercor-mmlu-pro-web.json; creator independently read response; direct creatorGET403",
+    "independent_examples": "review_global_mmlu own fixed-revision full Parquet and all13 source/gold/JP review"
+  },
+  "counts": {
+    "test": 12032,
+    "validation": 70,
+    "test_unique_ids": 12032,
+    "categories": {
+      "business": 789,
+      "law": 1101,
+      "psychology": 798,
+      "biology": 717,
+      "chemistry": 1132,
+      "history": 381,
+      "other": 924,
+      "health": 818,
+      "economics": 844,
+      "math": 1351,
+      "physics": 1299,
+      "computer science": 410,
+      "philosophy": 499,
+      "engineering": 969
+    },
+    "options_distribution": {
+      "3": 21,
+      "4": 606,
+      "5": 52,
+      "6": 93,
+      "7": 158,
+      "8": 320,
+      "9": 801,
+      "10": 9981
+    },
+    "mean_options": 9.473902925531915,
+    "test_public_gold": 12032
+  },
+  "selected_ids": [
+    3380,
+    11293,
+    1360,
+    8165,
+    10026,
+    3795,
+    10688,
+    7041,
+    114,
+    6100,
+    4968,
+    11010,
+    2133
+  ],
+  "independent_questions": 13,
+  "selected_categories": [
+    "biology",
+    "engineering",
+    "law",
+    "math",
+    "physics",
+    "chemistry",
+    "computer science",
+    "economics",
+    "business",
+    "health",
+    "history",
+    "philosophy",
+    "psychology"
+  ],
+  "original_fields_exact_match": true,
+  "gold_labels_consistent": true,
+  "current_performance": {
+    "source": "Mercor own benchmark organizer primary",
+    "metric": "Pass@1",
+    "retrieved": "2026-10-22JST",
+    "models": [
+      "Claude Opus5.5Max",
+      "Claude Fable5.1Max",
+      "GPT6AstraMax",
+      "Gemini3.1ProHigh"
+    ],
+    "values": [
+      93.4,
+      93.0,
+      91.5,
+      91.3
+    ],
+    "prompt_shots": "not disclosed; not inferred"
+  },
+  "licensing": {
+    "data": "MIT in official dataset card",
+    "code": "Apache2.0 in official GitHub LICENSE",
+    "Japanese": "creator translations identified on example slides"
+  },
+  "AA": "retired from active Intelligence Index4.0; not used as currentadoption",
+  "Fable": "CoT-controllability experiment is distinct from accuracy; current deck adopts ordinaryaccuracy Mercor instead",
+  "excluded_examples": [
+    {
+      "question_id": 9685,
+      "reason": "goldG time conflicts with thermal-radiation question; excluded without editing gold"
+    },
+    {
+      "question_id": 10770,
+      "reason": "multiple shortest paths F/G; excluded without editing gold"
+    }
+  ],
+  "display_adaptations": {
+    "raw_originals_preserved": true,
+    "chemical_notation": "Raw C_2H_4O displayed as C₂H₄O; malformed literal \\rightarrowCH_4 displayed as → CH₄; min^-1 displayed as min⁻¹. Chemical equation meaning and all choices retained.",
+    "Japanese_units": "K in engineering translation; original English °K preserved; physics original and Japanese both retain °F.",
+    "hominid": "Translated as ヒト科動物の一種, distinct from hominin.",
+    "answer": "All13 correct answer letters followed by full Japanese option; 22pt bold B13731; manual linebreak within example13 answer preserves all words."
+  },
+  "prompt_variation_metric": {
+    "source": "paper §6.3, own read",
+    "measure": "24prompt score range (maximum minus minimum), not standard deviation",
+    "MMLU_typical_pp": "4–5",
+    "MMLUPro_typical_pp": "about2"
+  },
+  "answer_extraction_2024": {
+    "source": "paper §4, own read",
+    "method": "regex extracts A–J; if both patterns fail, random option fallback; compare resulting label to reference answer"
+  },
+  "artifact_sha256": {
+    "pdf": "7e7c728a265d650952cdbf861eb216084203effe9b1e1f8ebf47a203adb15a52",
+    "pptx": "0b50c78147041a648574b79c73b6a76f3bdc3e09c6e1ab854a8935a568671762"
+  },
+  "final_review": "../skill-proofreading/mmlu-pro/review.json"
+}
