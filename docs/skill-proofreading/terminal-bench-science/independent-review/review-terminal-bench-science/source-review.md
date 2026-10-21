@@ -1,0 +1,11 @@
+# Independent source and content review
+
+Own acquisition: public GitHub v0.1.0 instructions and task metadata for all 13 examples, README, REVIEWING, CONTRIBUTING, Apache license, domain coverage SVG, selected public grader code; release commit f81afac4f11048e77a15dfc8fb1dbfb897fea0ce. Additional own Zenodo API confirms software title/version/date/license, and fixed-commit target_1.csv confirms 1293 observations. All 13 original records and metadata exactly match own source. Draft native original strings preserve the full task-specific instruction after explicitly declared removal of the common HTML comment, 28800-second limit, and common warning; Markdown fences/style normalized.
+
+Own reading: all 13 full originals, Japanese summaries, deliverables, and explanation paragraphs. Main public grader gates checked: 100 classifications must all match; periods within 2% with CST zero. Animal grouping uses unweighted four-species means plus per-species ARI thresholds; ARI basic meaning is defined. Reactor zero sampled temperature violations, dose99.9%,conversion98%, ratio1.06 each/1.04 mean, and report consistency are retained. All remaining examples preserve key numerical conditions and output formats; summary labels do not claim verbatim translations.
+
+Own current official site acquisition uses downloaded official CSS/JS and rendered DOM. Public current table: Astra/Codex68.1±3.2, Opus5.5/ClaudeCode63.3±3.3, Fable5.1/ClaudeCode40.0±3.4. The site defines ± as standard error. Public trial counts are not asserted. Fable card capture acquisition is inherited; section8.7 content is independently read: internal Fable5.1 52.6 at10 trials/task, Opus5 29.0 at12, Fable5 24.7 at10, ClaudeCode --bare/max effort. These are separate from current public table conditions.
+
+Own coverage SVG: life19/physical17/earth8/math17/engineering9=70. Release date2026-08-26. Repository Apache2.0 does not replace terms for external datasets/dependencies. No benchmark model, agent, solution, or task tests were run.
+
+Final pair acceptance complete: own all83 native/technical and own41–83 independent visuals bridged to final; independent reviewerfront1–40 final approval inherited. See review.json for exact hashes and scopes.
