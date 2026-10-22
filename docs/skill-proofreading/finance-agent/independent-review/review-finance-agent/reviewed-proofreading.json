@@ -1,0 +1,100 @@
+{
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "external_generation_api_used": false,
+  "scope": "Japanese wording, factual precision, actual draft layout and source mapping; independent and root suggestions applied",
+  "corrections": [
+    {
+      "before": "Finance Agent",
+      "after": "Finance Agent\nBenchmark",
+      "reason": "表紙に正式名称を含めた。"
+    },
+    {
+      "before": "最初から決算書全文が質問に添付される課題ではない。エージェントが検索して資料を取得する。",
+      "after": "入力は質問文で、エージェントが検索して資料を取得する。",
+      "reason": "入力と調査の流れを直接説明する。"
+    },
+    {
+      "before": "どの数値や説明を満たしたかを細かく確認できる。",
+      "after": "どの要点を満たし、どこに誤りがあるかを確認できる。",
+      "reason": "「満たす」の目的語を自然にした。"
+    },
+    {
+      "before": "この取引先が予期しない事態でも処理の大幅な中断を防げるよう、適切なバックアップや代替措置を備えていると考えている。",
+      "after": "この委託先が適切なバックアップと代替措置を備えており、不測の事態でも処理の大幅な中断を避けられると考えている。",
+      "reason": "会社の見解と委託先の対応を主語の明瞭な文にした。"
+    },
+    {
+      "before": "正社員",
+      "after": "フルタイムの従業員",
+      "reason": "full-time employeesを雇用契約上の正社員と同一視しない。"
+    },
+    {
+      "before": "に終了する年度",
+      "after": "に終了した年度",
+      "reason": "終了済みの会計年度に過去形を用いた。"
+    },
+    {
+      "before": "採点は重要な基準を必須条件にし、残る基準の達成度を重み付きの部分点にする。",
+      "after": "採点は各基準の達成度を重要度に応じて重み付けし、部分点を付ける。",
+      "reason": "必須基準が加重平均の分母から除かれるとの誤読を避ける。"
+    },
+    {
+      "before": "公式リポジトリを展開した場所から読む。Rubric列にはJSON形式の採点基準が入る。",
+      "after": "リポジトリ内で実行。Rubric列はJSON形式。",
+      "reason": "相対パスの位置を正確にし、説明と出典の重なりを解消した。"
+    },
+    {
+      "before": "全問正解か部分点かを確認して結果を読む。",
+      "after": "1問ごとの正誤判定か、部分点かを確認して結果を読む。",
+      "reason": "全問題に正解する意味と区別した。"
+    },
+    {
+      "before": "中央値",
+      "after": "予想の中心値",
+      "reason": "midpointを統計的なmedianと混同しない。"
+    },
+    {
+      "before": "各節を一つのKPIとして",
+      "after": "各節は一つの主要な業績指標（KPI）を表す",
+      "reason": "文を自然にし、専門略語を説明した。"
+    },
+    {
+      "before": "株式報酬費用：19億3,500万米ドル。",
+      "after": "株式報酬費用：19億3,500万米ドル\n（1.935 billion dollars）。",
+      "reason": "原問のbillions単位を併記し、意味の切れ目で改行した。"
+    },
+    {
+      "before": "予想予想の中心値",
+      "after": "予想の中心値",
+      "reason": "根拠記録中の語の重複を修正。PPTX/PDF本文は変更しない。"
+    }
+  ],
+  "layout_changes": [
+    {
+      "before": "CFO example input/JP and reference answer on two pages",
+      "after": "p7 one page with full original/JP/labelled answer/explanation",
+      "reason": "short example fits readably; retain meaningful detail"
+    },
+    {
+      "before": "v1.1 update details/results and archived v2 score table in main",
+      "after": "Appendix pp55–57; current v2.1 table p26 after version/scoring explanation",
+      "reason": "prioritize current published results and relevant comparison conditions"
+    },
+    {
+      "before": "TJX answer cites only Q3 release",
+      "after": "p11 cites Q3 guidance and Q4 actual results",
+      "reason": "support both sides of comparison"
+    },
+    {
+      "before": "AMD range column/header left aligned",
+      "after": "p35 numeric range values and header right aligned",
+      "reason": "numeric column consistency"
+    },
+    {
+      "before": "cover/Appendix/long JP/reference URL ink extends native text frames",
+      "after": "native frames expanded without truncating text or shrinking ordinary body orphan text",
+      "reason": "all actual glyphs remain within editable frames"
+    }
+  ]
+}

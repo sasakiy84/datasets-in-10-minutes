@@ -1,0 +1,221 @@
+{
+  "dataset": "Finance Agent Benchmark",
+  "correct_origin": "Vals AI official vals-ai/finance-agent; not an unrelated personal financial assistant",
+  "source_revision": "8ba65f81ab759a8e0d44e72aabc5a47cf839d563",
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "external_generation_api_used": false,
+  "model_evaluation_run": false,
+  "credential_values_read": false,
+  "source_collection_date": "2026-10-22",
+  "original": {
+    "questions": 537,
+    "categories": 9,
+    "experts": 7,
+    "split": {
+      "public_validation": 50,
+      "private_validation": 150,
+      "test": 337
+    },
+    "paper_evaluation_set": "all 537; class-balanced category accuracy and naive all-question accuracy distinguished"
+  },
+  "versions": {
+    "v1.1": {
+      "official_updated": "2026-06-04",
+      "test": 337,
+      "metric_label": "official Accuracy; not redefined as simple mean of displayed category columns",
+      "source": "https://www.vals.ai/benchmarks/finance_agent"
+    },
+    "v2": {
+      "official_updated": "2026-10-18",
+      "archived": true,
+      "split": [
+        27,
+        450,
+        450
+      ],
+      "metric": "severity-weighted per-check average, gated by dealbreaker checks; All-Pass separate; board 3-run mean",
+      "source": "https://www.vals.ai/benchmarks/fabv2"
+    },
+    "v2.1": {
+      "official_updated": "2026-10-19",
+      "current": true,
+      "split": [
+        27,
+        450,
+        449
+      ],
+      "total": 926,
+      "scores": {
+        "Claude Opus 5.5": 67.85,
+        "Gemini 4 Argon": 67.66,
+        "GPT-6.1 Sol": 61.82,
+        "GPT-6 Astra": 60.43
+      },
+      "v2_comparable": false,
+      "reason": "question/rubric/test and judge changes",
+      "source": "https://www.vals.ai/benchmarks/fabv2-1"
+    }
+  },
+  "input_scope": "question plus common tool instructions; agent searches and obtains documents. No claim that an entire 10-K is preattached. All 13 question originals preserved on one page each.",
+  "static_csv_check": {
+    "rows": 50,
+    "selected": 13,
+    "distinct": 13,
+    "original_answer_rubric_exact_match": true,
+    "all_creator_verified": true
+  },
+  "primary_section_checks": [
+    {
+      "id": "finance-agent-public-6",
+      "facts": "Airbnbの2024年Form 10-Kの署名欄はElinor MertzをChief Financial Officerと記す。",
+      "scope": "Creator read full question, complete reference answer, all rubric checks; selected relevant primary filing/press-release sections and independently recomputed the displayed calculation where relevant. Does not claim all pages of each corporate filing read.",
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/1559720/000155972025000010/abnb-20241231.htm"
+      ]
+    },
+    {
+      "id": "finance-agent-public-9",
+      "facts": "2024/2023/2022年の売上高は2,865,507 / 2,225,012 / 1,905,871千米ドル。",
+      "scope": "Creator read full question, complete reference answer, all rubric checks; selected relevant primary filing/press-release sections and independently recomputed the displayed calculation where relevant. Does not claim all pages of each corporate filing read.",
+      "sources": [
+        "https://investors.palantir.com/files/2024%20FY%20PLTR%2010-K.pdf"
+      ]
+    },
+    {
+      "id": "finance-agent-public-2",
+      "facts": "2024-11-20公表Q3 FY2025 releaseはQ4税引前利益率予想10.8～10.9%。2025-02-26公表Q4 FY2025 releaseの実績11.6%。",
+      "scope": "Creator read full question, complete reference answer, all rubric checks; selected relevant primary filing/press-release sections and independently recomputed the displayed calculation where relevant. Does not claim all pages of each corporate filing read.",
+      "sources": [
+        "https://investor.tjx.com/node/20606",
+        "https://investor.tjx.com/news-releases/news-release-details/tjx-companies-inc-reports-q4-and-fy25-results-q4-comp-store"
+      ]
+    },
+    {
+      "id": "finance-agent-public-3",
+      "facts": "各四半期の予想の中心値5.7/6.7/7.5/7.1billion、±0.3billion。",
+      "scope": "Creator read full question, complete reference answer, all rubric checks; selected relevant primary filing/press-release sections and independently recomputed the displayed calculation where relevant. Does not claim all pages of each corporate filing read.",
+      "sources": [
+        "https://ir.amd.com/news-events/press-releases/detail/1192/amd-reports-first-quarter-2024-financial-results",
+        "https://www.amd.com/en/newsroom/press-releases/2024-7-30-amd-reports-second-quarter-2024-financial-results.html",
+        "https://ir.amd.com/news-events/press-releases/detail/1224/amd-reports-third-quarter-2024-financial-results",
+        "https://ir.amd.com/news-events/press-releases/detail/1236/amd-reports-fourth-quarter-and-full-year-2024-financial-results"
+      ]
+    },
+    {
+      "id": "finance-agent-public-16",
+      "facts": "2024 revenue11102/GBV81784;2023 revenue9917/GBV73252;2022 revenue8399/GBV63212 (million USD)。",
+      "scope": "Creator read full question, complete reference answer, all rubric checks; selected relevant primary filing/press-release sections and independently recomputed the displayed calculation where relevant. Does not claim all pages of each corporate filing read.",
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/1559720/000155972025000010/abnb-20241231.htm",
+        "https://www.sec.gov/Archives/edgar/data/1559720/000155972024000006/abnb-20231231.htm"
+      ]
+    },
+    {
+      "id": "finance-agent-public-20",
+      "facts": "Concentration Risk節の2文が配布Answerと一致。",
+      "scope": "Creator read full question, complete reference answer, all rubric checks; selected relevant primary filing/press-release sections and independently recomputed the displayed calculation where relevant. Does not claim all pages of each corporate filing read.",
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/1794669/000179466925000011/four-20241231.htm"
+      ]
+    },
+    {
+      "id": "finance-agent-public-25",
+      "facts": "As ofJune30 2024 full-time228000 / US126000 / international102000。",
+      "scope": "Creator read full question, complete reference answer, all rubric checks; selected relevant primary filing/press-release sections and independently recomputed the displayed calculation where relevant. Does not claim all pages of each corporate filing read.",
+      "sources": [
+        "https://www.microsoft.com/investor/reports/ar24/index.html"
+      ]
+    },
+    {
+      "id": "finance-agent-public-30",
+      "facts": "2024 revenue1,281,015 / cost of sales940,886 / derived gross profit340,129 (thousand USD)。Projected2026grossprofit466.5722425million→467million。",
+      "scope": "Creator read full question, complete reference answer, all rubric checks; selected relevant primary filing/press-release sections and independently recomputed the displayed calculation where relevant. Does not claim all pages of each corporate filing read.",
+      "sources": [
+        "https://d18rn0p25nwr6d.cloudfront.net/CIK-0001866581/75aa60bb-5c3f-4f9d-83fe-01d599729f46.html"
+      ]
+    },
+    {
+      "id": "finance-agent-public-33",
+      "facts": "2024 channelpartners337394thousand /20%; direct1312332 /80%。",
+      "scope": "Creator read full question, complete reference answer, all rubric checks; selected relevant primary filing/press-release sections and independently recomputed the displayed calculation where relevant. Does not claim all pages of each corporate filing read.",
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/1477333/000147733325000043/cloud-20241231.htm"
+      ]
+    },
+    {
+      "id": "finance-agent-public-34",
+      "facts": "2024 Form10K AdjustedEBITDA reconciliationの2023列 stockbasedcomp1935million。",
+      "scope": "Creator read full question, complete reference answer, all rubric checks; selected relevant primary filing/press-release sections and independently recomputed the displayed calculation where relevant. Does not claim all pages of each corporate filing read.",
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/1543151/000154315125000008/uber-20241231.htm"
+      ]
+    },
+    {
+      "id": "finance-agent-public-40",
+      "facts": "2024Q4 Comparable store sales decreased0.8%。",
+      "scope": "Creator read full question, complete reference answer, all rubric checks; selected relevant primary filing/press-release sections and independently recomputed the displayed calculation where relevant. Does not claim all pages of each corporate filing read.",
+      "sources": [
+        "https://ir.flooranddecor.com/sec-filings/content/0001507079-25-000012/fnd-2024earningsreleaseex9.htm"
+      ]
+    },
+    {
+      "id": "finance-agent-public-44",
+      "facts": "2024 AdjustedEBITDAreconciliation Stockbasedcomp1407million。",
+      "scope": "Creator read full question, complete reference answer, all rubric checks; selected relevant primary filing/press-release sections and independently recomputed the displayed calculation where relevant. Does not claim all pages of each corporate filing read.",
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/1559720/000155972025000010/abnb-20241231.htm"
+      ]
+    },
+    {
+      "id": "finance-agent-public-19",
+      "facts": "2024/2023 effective tax rate10.9%/6.8%。",
+      "scope": "Creator read full question, complete reference answer, all rubric checks; selected relevant primary filing/press-release sections and independently recomputed the displayed calculation where relevant. Does not claim all pages of each corporate filing read.",
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/1341439/000095017024075605/orcl-20240531.htm"
+      ]
+    }
+  ],
+  "recomputed": {
+    "PLTR_cagr_percent": 22.617931616335095,
+    "TJX_above_lower_bp": 79.99999999999989,
+    "TJX_above_upper_bp": 69.99999999999993,
+    "MSFT_international_percent": 44.73684210526316,
+    "BROS_2026_gross_profit_million": 466.5722425000001,
+    "Oracle_change_bp": 410.00000000000006,
+    "ABNB_take_rates_percent": [
+      13.287034107447953,
+      13.538196909299405,
+      13.574782353516579
+    ]
+  },
+  "excluded_candidates": [
+    {
+      "row": 0,
+      "reason": "time-sensitive US Steel golden-share question; not selected where time-scope consistency uncertain"
+    },
+    {
+      "row": 45,
+      "reason": "Zillow reference answer conflicts with 2024 acquisitions and mortgage trend; excluded rather than silently changing gold"
+    },
+    {
+      "row": 42,
+      "reason": "Uber freight has -2% constant-currency growth, whereas gold drops minus and mixes currency bases; excluded"
+    }
+  ],
+  "license": {
+    "original_public50": "CC BY 4.0; paper Dataset Split and Appendix B",
+    "repository_software": "MIT",
+    "new_public27": "not asserted to share original license"
+  },
+  "known_limits": [
+    "Creator reviewed selected relevant primary filing sections, not every page of all corporate filings.",
+    "No benchmark/model runs; official published results only.",
+    "600-second reading plan is unmeasured."
+  ],
+  "artifact_sha256": {
+    "pdf": "2c8c2a97edce492f81895c51a03f83a7039231383edfd6f9fe5138bfa5fac3be",
+    "pptx": "52b77614c4cd2cfee6b32df8359c4d3d182262cae0119b37813e46c8c023b1ea"
+  },
+  "final_review": "../skill-proofreading/finance-agent/review.json"
+}
