@@ -4,7 +4,7 @@ Geminiは使用していない。ローカルの制作・日本語校正スキ�
 
 |ページ・対象|修正前|修正後|理由|
 |---|---|---|---|
-|1,5,6,13,14,15,16,17,19,21,22,27,28,29,59|Finance Agent|Finance Agent<br>Benchmark|表紙に正式名称を含めた。|
+|1|Finance Agent|Finance Agent<br>Benchmark|表紙に正式名称を含めた。|
 |6|最初から決算書全文が質問に添付される課題ではない。エージェントが検索して資料を取得する。|入力は質問文で、エージェントが検索して資料を取得する。|入力と調査の流れを直接説明する。|
 |19|どの数値や説明を満たしたかを細かく確認できる。|どの要点を満たし、どこに誤りがあるかを確認できる。|「満たす」の目的語を自然にした。|
 |39|この取引先が予期しない事態でも処理の大幅な中断を防げるよう、適切なバックアップや代替措置を備えていると考えている。|この委託先が適切なバックアップと代替措置を備えており、不測の事態でも処理の大幅な中断を避けられると考えている。|会社の見解と委託先の対応を主語の明瞭な文にした。|
@@ -16,7 +16,7 @@ Geminiは使用していない。ローカルの制作・日本語校正スキ�
 |34|中央値|予想の中心値|midpointを統計的なmedianと混同しない。|
 |52|各節を一つのKPIとして|各節は一つの主要な業績指標（KPI）を表す|文を自然にし、専門略語を説明した。|
 |47|株式報酬費用：19億3,500万米ドル。|株式報酬費用：19億3,500万米ドル<br>（1.935 billion dollars）。|原問のbillions単位を併記し、意味の切れ目で改行した。|
-|34|予想予想の中心値|予想の中心値|根拠記録中の語の重複を修正。PPTX/PDF本文は変更しない。|
+|根拠記録（AMD例）|予想予想の中心値|予想の中心値|根拠記録中の語の重複を修正。PPTX/PDF本文は変更しない。|
 |全体|CFO example input/JP and reference answer on two pages|p7 one page with full original/JP/labelled answer/explanation|short example fits readably; retain meaningful detail|
 |全体|v1.1 update details/results and archived v2 score table in main|Appendix pp55–57; current v2.1 table p26 after version/scoring explanation|prioritize current published results and relevant comparison conditions|
 |全体|TJX answer cites only Q3 release|p11 cites Q3 guidance and Q4 actual results|support both sides of comparison|

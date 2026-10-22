@@ -1,0 +1,79 @@
+{
+  "baseline": {
+    "existing_catalog_rows_unchanged": 107,
+    "existing_artifact_hashes_unchanged": 214,
+    "added": [
+      "bigcodebench",
+      "finance-agent",
+      "ifbench"
+    ],
+    "catalog_count": 110,
+    "quality_history": "1–122, no gaps or duplicates, 122 balanced fences"
+  },
+  "new_decks": [
+    {
+      "slug": "ifbench",
+      "main_pages": 29,
+      "total_pages": 47,
+      "examples": 13,
+      "approved": true,
+      "artifact_sha256": {
+        "pdf": "ef466ec816e9f776435ae3e4818ec64a11b8aa3b721c199aa75ab871b78f2bd0",
+        "pptx": "d44e7a3098ce822577cb7b0f1af3269e99f2c311dc636c3251a29b68a15619f5"
+      },
+      "independent_all_pages_covered": true
+    },
+    {
+      "slug": "bigcodebench",
+      "main_pages": 31,
+      "total_pages": 59,
+      "examples": 13,
+      "approved": true,
+      "artifact_sha256": {
+        "pdf": "def58b2c11863c2364d70afbc979d359bb42256020f2c0c8286de42688177539",
+        "pptx": "1db72ddda2b87fe68b040fca0b769fccc1cd64dc88fa99cfe83ed70b5dc525a5"
+      },
+      "independent_all_pages_covered": true
+    },
+    {
+      "slug": "finance-agent",
+      "main_pages": 30,
+      "total_pages": 62,
+      "examples": 13,
+      "approved": true,
+      "artifact_sha256": {
+        "pdf": "2c8c2a97edce492f81895c51a03f83a7039231383edfd6f9fe5138bfa5fac3be",
+        "pptx": "52b77614c4cd2cfee6b32df8359c4d3d182262cae0119b37813e46c8c023b1ea"
+      },
+      "independent_all_pages_covered": true
+    }
+  ],
+  "total_new_pages": 168,
+  "total_examples": 39,
+  "tests": {
+    "commands": [
+      {
+        "command": "python -m unittest discover -s tests -p 'test_*.py'",
+        "result": "4 tests OK",
+        "exit_code": 0
+      },
+      {
+        "command": "node --test tests/gallery_query.test.cjs",
+        "result": "1 test passed",
+        "exit_code": 0
+      }
+    ],
+    "scope": "existing gallery date/query regression tests; no app code changed"
+  },
+  "browser": {
+    "created_desc_query_sort": true,
+    "title_query_and_updated_desc": true,
+    "reset_count110": true,
+    "browser": "system Chromium via Playwright",
+    "javascript_errors": [],
+    "broken_loaded_images": [],
+    "catalog_count": 110
+  },
+  "new6_preview_artifacts_match": true,
+  "gallery_count": 110
+}

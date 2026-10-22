@@ -1,0 +1,117 @@
+{
+  "reviewer": "/root/review_ifbench",
+  "scope": "Independent review of final editorial metadata and batch overview. Does not replace Finance Agent/BigCodeBench content/visual approval; those scoped independent records were read.",
+  "reviewed_files": [
+    "docs/skill-proofreading/ifbench.md",
+    "docs/skill-proofreading/finance-agent.md",
+    "docs/skill-proofreading/bigcodebench.md",
+    "docs/ifbench-sources.md",
+    "docs/finance-agent-sources.md",
+    "docs/bigcodebench-sources.md",
+    "docs/data-audits/ifbench.json",
+    "docs/data-audits/finance-agent.json",
+    "docs/data-audits/bigcodebench.json",
+    "docs/skill-proofreading/ifbench/review.json",
+    "docs/skill-proofreading/ifbench/main-review.json",
+    "docs/skill-proofreading/finance-agent/review.json",
+    "docs/skill-proofreading/finance-agent/main-review.json",
+    "docs/skill-proofreading/bigcodebench/review.json",
+    "docs/skill-proofreading/bigcodebench/main-review.json",
+    "W/overview-draft.md",
+    "W/bigcodebench/handoff.json",
+    "W/bigcodebench/proofreading.json"
+  ],
+  "own_checks": {
+    "final_artifact_hash_alignment": {
+      "ifbench": {
+        "missing_listed_records": [],
+        "md_link_issues": [],
+        "hashes_match_all_review_data_and_binary": true,
+        "main_pages": 29,
+        "total_pages": 47,
+        "examples": 13
+      },
+      "finance-agent": {
+        "missing_listed_records": [],
+        "md_link_issues": [],
+        "hashes_match_all_review_data_and_binary": true,
+        "main_pages": 30,
+        "total_pages": 62,
+        "examples": 13
+      },
+      "bigcodebench": {
+        "missing_listed_records": [],
+        "md_link_issues": [],
+        "hashes_match_all_review_data_and_binary": true,
+        "main_pages": 31,
+        "total_pages": 59,
+        "examples": 13
+      }
+    },
+    "source_license_consistency": "IFBench ODC-BY1.0 data/Apache2.0 code and thirdparty carveout; Finance originalpublic50CCBY4.0/codeMIT/new27notasserted; BigCodeBenchApache2.0 dataset/code all consistent across sources/data/attribution.",
+    "proofreading_pairs": "Read actual before/after rows and creator records for3datasets; IF timeline deletion then custom exception restoration is historical and final17 is correct; Finance 1page mapping finding recorded.",
+    "overview": "90main/168total/39distinct examples3main+10appendix per dataset;600s planned notmeasured; own/inherited scopes in mainreview accurately distinguished; continueduse/currentvsolderconditions consistent.",
+    "baseline_own_executed": {
+      "existing_catalog_rows_unchanged": 107,
+      "existing_artifact_hashes_unchanged": 214,
+      "catalog_total": 110,
+      "new_quality_prompt_numbering": "1–122 no gaps,122balanced fences"
+    },
+    "links": "All six actual Markdown files local links resolve; all creator_records and independent_records listed in canonical reviews exist. Overview links resolve when placed under docs/skill-proofreading as intended.",
+    "metadata_path_policy": "Workspace snapshot/raw download references treated as verification provenance, not falsely required as distributed attachments. Workdir names inside canonical metadata interpreted as provenance because independent_records provides real distributed paths."
+  },
+  "findings": [
+    {
+      "id": "R1",
+      "severity": "record_accuracy",
+      "file": "docs/ifbench-sources.md",
+      "location": "first source bullet",
+      "before": "Read all21pages",
+      "issue": "全21頁の全読了という実施範囲はcreator自身が根拠不十分な過大表現と認めた。独立側も全21頁読了は主張していない。",
+      "proposed": "Creator inspected the paper text for definitions/construction,58constraints/300prompts, Figure1 singleturn model comparison, Table3 matched training comparison, and the relevant Appendix constraint descriptions.",
+      "evidence": "Creator direct reply: limited source-specific inspection; corrected W/ifbench/sources.md first bullet, binaries unchanged.",
+      "status": "resolved; independently reread corrected R file"
+    },
+    {
+      "id": "R2",
+      "severity": "wording",
+      "file": "docs/finance-agent-sources.md",
+      "location": "Benchmark and versions paragraph3",
+      "before": "初期論文の全537問での分類平均/全問正解率",
+      "issue": "全問正解率は全問すべて正解した割合とも読め、p30修正で避けた曖昧さが記録に残る。",
+      "proposed": "初期論文の全537問について、分類ごとの正解率の平均と、全問題を一括集計した正解率",
+      "evidence": "data-audits/finance-agent.json original.paper_evaluation_set distinguishes class-balanced vs naive all-question accuracy; proofreading row p30 clarifies per-question correctness.",
+      "status": "resolved; independently reread corrected R file"
+    },
+    {
+      "id": "R3",
+      "severity": "record_page_mapping",
+      "file": "docs/skill-proofreading/finance-agent.md",
+      "location": "first change row page/target column",
+      "before": "1,5,6,13,14,15,16,17,19,21,22,27,28,29,59",
+      "issue": "行の理由は表紙への正式名称追加で、修正後のFinance Agent改行Benchmarkはp1のみ。別14頁は改行なし正式名を自動正規化一致させた対象であり、この表紙の修正が全15頁に施されたとの誤読を招く。",
+      "proposed": "1（表紙）",
+      "evidence": "finance-agent/pages.jsonl exact linebroken after occurs only page1; continuous formal name also occurs pages5,6,13,14,15,16,17,19,21,22,27,28,29,59. Creator proofreading reason explicitly cover.",
+      "status": "resolved; independently reread corrected R file"
+    }
+  ],
+  "remaining": [],
+  "approved": true,
+  "binary_changes_required": false,
+  "shared_files_edited": false,
+  "git_commands_used": false,
+  "updated_at": "2026-10-22T09:22:32.181854+00:00",
+  "resolution_review": {
+    "own_reread_files": [
+      "docs/ifbench-sources.md",
+      "docs/finance-agent-sources.md",
+      "docs/skill-proofreading/finance-agent.md"
+    ],
+    "checked_all_five_record_corrections": true,
+    "scope": "Limited creator paper reading affirmative claim; explicit macro/micro finance scoring; judge as scoring model; cover-only page1; AMD duplicate-word correction explicitly evidence metadata.",
+    "actual_before_after_pairs_preserved": true,
+    "all_three_pdf_pptx_hashes_rechecked_unchanged": true,
+    "no_new_findings": true,
+    "corrections_record": "records-corrections.json"
+  }
+}
