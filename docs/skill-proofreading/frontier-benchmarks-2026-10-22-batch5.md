@@ -24,10 +24,12 @@ Finance Agentでは公開50問の入力・参照回答・採点基準を照合�
 
 モデル評価の実行は行っていない。PPTXは編集可能なテキスト・表・コードを使い、LibreOfficeから出力したPDFの描画を確認した。Microsoft PowerPointでの確認は行っていない。既存107件のカタログ行とPDF/PPTX214ファイルは、作業開始時との一致を確認した。
 
-## ローカル検証と公開準備
+## ローカル検証と公開
 
 Pythonテスト4件とギャラリーのNodeテストが成功した。110件のギャラリーを構築し、作成日時降順のクエリ、タイトル検索と更新日時降順の組合せ、リセット後110件の表示をブラウザーで確認した。新規3件のサムネイルと[作成日時降順](frontier-benchmarks-2026-10-22-batch5/gallery-created-desc.png)・[検索結果](frontier-benchmarks-2026-10-22-batch5/gallery-finance-query.png)の画面を実際に開いて確認した。6配布ファイルは承認済み版と一致する。[ローカル検証](frontier-benchmarks-2026-10-22-batch5/local-verification.json)に記録した。
 
 各データセットを個別にコミットし、[コミット対応表](frontier-benchmarks-2026-10-22-batch5/dataset-commits.json)に残した。作成日時と更新日時はGit履歴から復元した。ユーザー指示は履歴122へ収録し、番号・引用の対応を確認した。
 
 確認記録も別担当が再読した。IFBenchの論文を読んだ範囲を実施箇所に限定し、Finance Agentの採点用語と修正対象欄を明確にした。[記録レビュー](frontier-benchmarks-2026-10-22-batch5/review-batch-records.json)と[記録の修正対](frontier-benchmarks-2026-10-22-batch5/records-corrections.json)に残し、再確認後の未解決事項はない。
+
+公開は[GitHub Actions](https://github.com/sasakiy84/datasets-in-10-minutes/actions/runs/39755159569)の成功を確認した。2026-10-22T18:27:04.452983+09:00（日本時間）に、[公開ギャラリー](https://datasets-in-10-minutes.sasakiy84.net/?sort=created-desc)のカタログと新規3件のPDF/PPTX計6ファイルを取得し、すべてHTTP200・承認済み版との完全一致を確認した。公開カタログは110件。[固定記録](frontier-benchmarks-2026-10-22-batch5/publication-frozen.json)と[公開検証](frontier-benchmarks-2026-10-22-batch5/publication-result.json)に対応を残した。公開の基点は `0578de017c862f7359d85c06cb3d196a9eb86106`。この確認を記録する後続のdocsのみのコミットは配布物を変更しない。
