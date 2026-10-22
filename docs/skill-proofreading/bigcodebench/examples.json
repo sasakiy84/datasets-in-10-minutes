@@ -1,0 +1,405 @@
+[
+  {
+    "example": 1,
+    "id": "BigCodeBench/25",
+    "row": 25,
+    "scope": "main",
+    "title": "辞書を圧縮し、文字列へ変換する",
+    "original": "Serializes a dictionary to a JSON string, compresses it using zlib, and then encodes the compressed data with base64.\nThe function should output with:\n    str: A base64 encoded string that represents the zlib-compressed JSON string of the dictionary.\nYou should write self-contained code starting with:\n```\nimport base64\nimport json\nimport zlib\ndef task_func(data_dict):\n```",
+    "original_field": "instruct_prompt",
+    "original_fullness": "entire Instruct original including imports/function prefix; Markdown code fences rendered as native code typography, not literal delimiter lines",
+    "japanese": "辞書をJSON文字列に変換し、zlibで圧縮した後、base64で符号化する。出力は、圧縮したJSONを表すbase64の文字列である。指定された書き出しを使い、必要なコードをすべて含む実装を書く。",
+    "japanese_scope": "all natural-language instructions translated, code prefix retains original spelling and is displayed in original page rather than duplicated",
+    "expected": "期待する動作：復号・展開すると元の辞書に戻る",
+    "explanation": "配布テストは文字列型を確認したうえで、base64を復号し、zlibを展開してJSONを読み戻す。入れ子のリストや辞書も確かめる。",
+    "source_url": "https://huggingface.co/datasets/bigcode/bigcodebench",
+    "revision": "b74c0d0bf70d2c0bc459be537895cca163007f1a",
+    "data_version": "v0.1.4",
+    "code_prompt": "import base64\nimport json\nimport zlib\ndef task_func(data_dict):\n",
+    "complete_prompt": "import base64\nimport json\nimport zlib\n\ndef task_func(data_dict):\n    \"\"\"\n    Serializes a dictionary to a JSON string, compresses it using zlib, and then encodes the compressed\n    data with base64.\n\n    Parameters:\n    data_dict (dict): The dictionary to be compressed and encoded. The dictionary should only contain\n                      data that can be serialized to JSON.\n\n    Returns:\n    str: A base64 encoded string that represents the zlib-compressed JSON string of the dictionary.\n\n    Requirements:\n    - base64\n    - zlib\n    - json\n    \n    Example:\n    >>> data = {'key1': 'value1', 'key2': 'value2'}\n    >>> encoded_data = task_func(data)\n    >>> print(encoded_data)\n    eJyrVspOrTRUslJQKkvMKU01VNJRAIkYwUWMlGoBw5sKmw==\n    \"\"\"\n",
+    "canonical_solution": "    json_str = json.dumps(data_dict)\n    compressed = zlib.compress(json_str.encode())\n    return base64.b64encode(compressed).decode()",
+    "test": "import unittest\nimport json\nimport zlib\nimport base64\nclass TestCases(unittest.TestCase):\n    def test_case_1(self):\n        # Test with a simple dictionary containing string values.\n        data = {'key1': 'value1', 'key2': 'value2'}\n        result = task_func(data)\n        self.assertIsInstance(result, str)\n        decompressed_data = json.loads(zlib.decompress(base64.b64decode(result)).decode())\n        self.assertEqual(decompressed_data, data)\n    def test_case_2(self):\n        # Test with an empty dictionary.\n        data = {}\n        result = task_func(data)\n        self.assertIsInstance(result, str)\n        decompressed_data = json.loads(zlib.decompress(base64.b64decode(result)).decode())\n        self.assertEqual(decompressed_data, data)\n    def test_case_3(self):\n        # Test with a dictionary containing mixed types (string and integers).\n        data = {'name': 'John', 'age': 30, 'city': 'New York'}\n        result = task_func(data)\n        self.assertIsInstance(result, str)\n        decompressed_data = json.loads(zlib.decompress(base64.b64decode(result)).decode())\n        self.assertEqual(decompressed_data, data)\n    def test_case_4(self):\n        # Test with a nested dictionary containing lists of dictionaries.\n        data = {'users': [{'id': 1, 'name': 'Alice'}, {'id': 2, 'name': 'Bob'}]}\n        result = task_func(data)\n        self.assertIsInstance(result, str)\n        decompressed_data = json.loads(zlib.decompress(base64.b64decode(result)).decode())\n        self.assertEqual(decompressed_data, data)\n    def test_case_5(self):\n        # Test with a dictionary containing multiple integer values.\n        data = {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}\n        result = task_func(data)\n        self.assertIsInstance(result, str)\n        decompressed_data = json.loads(zlib.decompress(base64.b64decode(result)).decode())\n        self.assertEqual(decompressed_data, data)",
+    "selected_test_methods": [
+      "test_case_1",
+      "test_case_4"
+    ],
+    "libraries": [
+      "zlib",
+      "base64",
+      "json"
+    ],
+    "license": "Apache-2.0",
+    "creator_source_check": "instruct_prompt, canonical_solution and full test class read statically; no benchmark/model execution"
+  },
+  {
+    "example": 2,
+    "id": "BigCodeBench/140",
+    "row": 140,
+    "scope": "main",
+    "title": "指定した数値列を標準化する",
+    "original": "Standardize specified numeric columns in a dataframe.\nThe function should raise the exception for: ValueError: If 'df' is not a DataFrame, 'cols' is not a list, or columns in 'cols' don't exist in 'df'.\nThe function should output with:\n    DataFrame: The dataframe with standardized columns.\nYou should write self-contained code starting with:\n```\nimport pandas as pd\nfrom sklearn.preprocessing import StandardScaler\ndef task_func(df, cols):\n```",
+    "original_field": "instruct_prompt",
+    "original_fullness": "entire Instruct original including imports/function prefix; Markdown code fences rendered as native code typography, not literal delimiter lines",
+    "japanese": "データフレームの指定した数値列を標準化する。dfがDataFrameでない場合、colsがリストでない場合、指定した列が存在しない場合はValueErrorを送出する。標準化した列を含むデータフレームを返す。指定された書き出しを使い、必要なコードをすべて含む実装を書く。",
+    "japanese_scope": "all natural-language instructions translated, code prefix retains original spelling and is displayed in original page rather than duplicated",
+    "expected": "期待する動作：平均は約0、標準偏差は約1",
+    "explanation": "配布テストはA・B列の平均と標準偏差を確認し、列が存在しない場合などの例外も調べる。",
+    "source_url": "https://huggingface.co/datasets/bigcode/bigcodebench",
+    "revision": "b74c0d0bf70d2c0bc459be537895cca163007f1a",
+    "data_version": "v0.1.4",
+    "code_prompt": "import pandas as pd\nfrom sklearn.preprocessing import StandardScaler\ndef task_func(df, cols):\n",
+    "complete_prompt": "import pandas as pd\nfrom sklearn.preprocessing import StandardScaler\n\ndef task_func(df, cols):\n    \"\"\"\n    Standardize specified numeric columns in a dataframe.\n\n    Parameters:\n    df (DataFrame): The dataframe.\n    cols (list): The columns to standardize.\n\n    Returns:\n    DataFrame: The dataframe with standardized columns.\n\n    Raises:\n    ValueError: If 'df' is not a DataFrame, 'cols' is not a list, or columns in 'cols' don't exist in 'df'.\n\n    Requirements:\n    - pandas\n    - sklearn.preprocessing.StandardScaler\n\n    Example:\n    >>> np.random.seed(0)\n    >>> df = pd.DataFrame({'A': np.random.normal(0, 1, 1000), 'B': np.random.exponential(1, 1000)})\n    >>> df = task_func(df, ['A', 'B'])\n    >>> print(df.describe())\n                      A             B\n    count  1.000000e+03  1.000000e+03\n    mean  -1.243450e-17 -1.865175e-16\n    std    1.000500e+00  1.000500e+00\n    min   -3.040310e+00 -1.024196e+00\n    25%   -6.617441e-01 -7.183075e-01\n    50%   -1.293911e-02 -2.894497e-01\n    75%    6.607755e-01  4.095312e-01\n    max    2.841457e+00  5.353738e+00\n    \"\"\"\n",
+    "canonical_solution": "    if not isinstance(df, pd.DataFrame):\n        raise ValueError(\"The input df must be a pandas DataFrame.\")\n    if not isinstance(cols, list) or not all(isinstance(col, str) for col in cols):\n        raise ValueError(\"cols must be a list of column names.\")\n    if not all(col in df.columns for col in cols):\n        raise ValueError(\"All columns in cols must exist in the dataframe.\")\n\n    scaler = StandardScaler()\n    df[cols] = scaler.fit_transform(df[cols])\n\n    return df",
+    "test": "import unittest\nimport numpy as np\nimport pandas as pd \nclass TestCases(unittest.TestCase):\n    def setUp(self):\n        np.random.seed(0)\n        self.df = pd.DataFrame({\n            'A': np.random.normal(0, 1, 1000), \n            'B': np.random.exponential(1, 1000), \n            'C': np.random.randint(0, 100, 1000)\n        })\n    def test_standardized_columns(self):\n        standardized_df = task_func(self.df, ['A', 'B'])\n        self.assertAlmostEqual(standardized_df['A'].mean(), 0, places=1)\n        self.assertAlmostEqual(standardized_df['A'].std(), 1, places=1)\n        self.assertAlmostEqual(standardized_df['B'].mean(), 0, places=1)\n        self.assertAlmostEqual(standardized_df['B'].std(), 1, places=1)\n        df_list = standardized_df.apply(lambda row: ','.join(row.values.astype(str)), axis=1).tolist()\n        with open('df_contents.txt', 'w') as file:\n            file.write(str(df_list))\n    def test_invalid_input_dataframe(self):\n        with self.assertRaises(ValueError):\n            task_func(\"not a dataframe\", ['A', 'B'])\n    def test_invalid_input_cols(self):\n        with self.assertRaises(ValueError):\n            task_func(self.df, 'A')\n    def test_nonexistent_column(self):\n        with self.assertRaises(ValueError):\n            task_func(self.df, ['A', 'NonexistentColumn'])\n    def test_empty_dataframe(self):\n        with self.assertRaises(ValueError):\n            task_func(pd.DataFrame(), ['A', 'B'])",
+    "selected_test_methods": [
+      "test_standardized_columns",
+      "test_nonexistent_column"
+    ],
+    "libraries": [
+      "pandas",
+      "sklearn"
+    ],
+    "license": "Apache-2.0",
+    "creator_source_check": "instruct_prompt, canonical_solution and full test class read statically; no benchmark/model execution"
+  },
+  {
+    "example": 3,
+    "id": "BigCodeBench/32",
+    "row": 32,
+    "scope": "main",
+    "title": "Webページから最初のタグを読む",
+    "original": "Scrape a web page for the first occurrence of a specified HTML tag and return its text content.\nThe function should output with:\n    str: The text content of the specified HTML tag if found, otherwise returns None.\nYou should write self-contained code starting with:\n```\nimport requests\nfrom bs4 import BeautifulSoup\ndef task_func(url, tag):\n```",
+    "original_field": "instruct_prompt",
+    "original_fullness": "entire Instruct original including imports/function prefix; Markdown code fences rendered as native code typography, not literal delimiter lines",
+    "japanese": "Webページから、指定したHTMLタグの最初の出現を探し、そのテキストを返す。タグが見つからなければNoneを返す。指定された書き出しを使い、必要なコードをすべて含む実装を書く。",
+    "japanese_scope": "all natural-language instructions translated, code prefix retains original spelling and is displayed in original page rather than duplicated",
+    "expected": "期待する動作：titleタグの文字列は \"Test Page\"",
+    "explanation": "タグが存在しない場合にNoneを返すことも確かめる。",
+    "source_url": "https://huggingface.co/datasets/bigcode/bigcodebench",
+    "revision": "b74c0d0bf70d2c0bc459be537895cca163007f1a",
+    "data_version": "v0.1.4",
+    "code_prompt": "import requests\nfrom bs4 import BeautifulSoup\ndef task_func(url, tag):\n",
+    "complete_prompt": "import requests\nfrom bs4 import BeautifulSoup\n\ndef task_func(url, tag):\n    \"\"\"\n    Scrape a web page for the first occurrence of a specified HTML tag and return its text content.\n\n    Parameters:\n    url (str): The URL of the website to scrape.\n    tag (str): The HTML tag to find and retrieve text from.\n\n    Returns:\n    str: The text content of the specified HTML tag if found, otherwise returns None.\n\n    Requirements:\n    - requests\n    - bs4.BeautifulSoup\n\n    Example:\n    >>> task_func(\"https://www.google.com/\", \"title\")\n    'Google'\n    \"\"\"\n",
+    "canonical_solution": "    response = requests.get(url)\n    soup = BeautifulSoup(response.text, 'html.parser')\n    tag_content = soup.find(tag)\n    \n    return tag_content.string if tag_content else None",
+    "test": "import unittest\nfrom unittest.mock import patch, Mock\nimport requests\nfrom bs4 import BeautifulSoup\nimport os\nclass TestCases(unittest.TestCase):\n    @patch('requests.get')\n    def test_title_tag_found(self, mock_get):\n        \"\"\"Test retrieving the title tag.\"\"\"\n        html_content = \"<html><head><title>Test Page</title></head><body></body></html>\"\n        mock_response = Mock()\n        mock_response.text = html_content\n        mock_get.return_value = mock_response\n        result = task_func(\"http://test.com\", \"title\")\n        self.assertEqual(result, \"Test Page\")\n    @patch('requests.get')\n    def test_h1_tag_found(self, mock_get):\n        \"\"\"Test retrieving the h1 tag.\"\"\"\n        html_content = \"<html><body><h1>This is a test page</h1></body></html>\"\n        mock_response = Mock()\n        mock_response.text = html_content\n        mock_get.return_value = mock_response\n        result = task_func(\"http://test.com\", \"h1\")\n        self.assertEqual(result, \"This is a test page\")\n    @patch('requests.get')\n    def test_nonexistent_tag(self, mock_get):\n        \"\"\"Test for a tag that doesn't exist.\"\"\"\n        html_content = \"<html><body><h1>Existing Tag</h1></body></html>\"\n        mock_response = Mock()\n        mock_response.text = html_content\n        mock_get.return_value = mock_response\n        result = task_func(\"http://test.com\", \"h2\")\n        self.assertIsNone(result)\n    def test_invalid_url_handling(self):\n        \"\"\"Test how the function handles an invalid URL.\"\"\"\n        with self.assertRaises(requests.exceptions.RequestException):\n            task_func(\"invalid_url\", \"title\")\n    @patch('requests.get')\n    def test_malformed_html(self, mock_get):\n        \"\"\"Test the function with a malformed HTML input.\"\"\"\n        html_content = \"<html><head><title>Test Page</title><head><body><h1>This is a test page<h1></body></html>\"\n        mock_response = Mock()\n        mock_response.text = html_content\n        mock_get.return_value = mock_response\n        result = task_func(\"http://test.com\", \"title\")\n        self.assertEqual(result, \"Test Page\")\n        result = task_func(\"http://test.com\", \"h1\")\n        self.assertIsNone(result)\n    @patch('requests.get')\n    def test_multiple_matching_tags(self, mock_get):\n        \"\"\"Test the function with multiple tags of the same type.\"\"\"\n        html_content = \"<html><body><p>First Paragraph</p><p>Second Paragraph</p></body></html>\"\n        mock_response = Mock()\n        mock_response.text = html_content\n        mock_get.return_value = mock_response\n        result = task_func(\"http://test.com\", \"p\")\n        self.assertEqual(result, \"First Paragraph\")\n    @patch('requests.get')\n    def test_empty_tag(self, mock_get):\n        \"\"\"Test the function with an empty tag content.\"\"\"\n        html_content = \"<html><body><div></div><h1>Not empty</h1></body></html>\"\n        mock_response = Mock()\n        mock_response.text = html_content\n        mock_get.return_value = mock_response\n        result = task_func(\"http://test.com\", \"div\")\n        self.assertIsNone(result)\n        result = task_func(\"http://test.com\", \"h1\")\n        self.assertEqual(result, \"Not empty\")",
+    "selected_test_methods": [
+      "test_title_tag_found",
+      "test_nonexistent_tag"
+    ],
+    "libraries": [
+      "bs4",
+      "requests"
+    ],
+    "license": "Apache-2.0",
+    "creator_source_check": "instruct_prompt, canonical_solution and full test class read statically; no benchmark/model execution"
+  },
+  {
+    "example": 4,
+    "id": "BigCodeBench/19",
+    "row": 19,
+    "scope": "appendix",
+    "title": "ファイルをZIPへまとめる",
+    "original": "Zips all files (not including subdirectories) located in the specified directory and returns the path to the created zip file.\nNote that: Notes: The zip name is always 'files.zip'\nThe function should raise the exception for: FileNotFoundError: if the specified directory does not exist\nThe function should output with:\n    str: The path to the generated zip file. Returns None if the directory does not contain any files.\nYou should write self-contained code starting with:\n```\nimport os\nimport glob\nimport zipfile\ndef task_func(directory):\n```",
+    "original_field": "instruct_prompt",
+    "original_fullness": "entire Instruct original including imports/function prefix; Markdown code fences rendered as native code typography, not literal delimiter lines",
+    "japanese": "指定したディレクトリのファイルをZIPにまとめ、生成したZIPのパスを返す。サブディレクトリは含めない。ファイル名は常にfiles.zipとする。指定ディレクトリが存在しなければFileNotFoundErrorを送出し、ファイルが一つもなければNoneを返す。指定された書き出しを使い、必要なコードをすべて含む実装を書く。",
+    "japanese_scope": "all natural-language instructions translated, code prefix retains original spelling and is displayed in original page rather than duplicated",
+    "expected": "期待する動作：直下のファイルだけをZIPに含める",
+    "explanation": "配布テストは直下とサブディレクトリに各1ファイルを置き、ZIPに直下の1ファイルだけが入ることを確認する。",
+    "source_url": "https://huggingface.co/datasets/bigcode/bigcodebench",
+    "revision": "b74c0d0bf70d2c0bc459be537895cca163007f1a",
+    "data_version": "v0.1.4",
+    "code_prompt": "import os\nimport glob\nimport zipfile\ndef task_func(directory):\n",
+    "complete_prompt": "import os\nimport glob\nimport zipfile\n\ndef task_func(directory):\n    \"\"\"\n    Zips all files (not including subdirectories) located in the specified directory and returns the path to the created zip file.\n    \n    Parameters:\n    directory (str): The directory path containing the files to be zipped.\n    \n    Returns:\n    str: The path to the generated zip file. Returns None if the directory does not contain any files.\n    \n    Raises:\n    FileNotFoundError: if the specified directory does not exist\n\n    Requirements:\n    - os\n    - glob\n    - zipfile\n    \n    Notes:\n    - The zip name is always 'files.zip'\n\n    Example:\n    >>> path = task_func('/path/to/files')\n    >>> isinstance(path, str)\n    True\n    \"\"\"\n",
+    "canonical_solution": "    if not os.path.exists(directory):\n        raise FileNotFoundError(f\"Directory '{directory}' not found.\")\n    files = [f for f in glob.glob(os.path.join(directory, '*')) if os.path.isfile(f)]\n    if not files:\n        return None\n    zip_file_path = os.path.join(directory, 'files.zip')\n    with zipfile.ZipFile(zip_file_path, 'w') as zipf:\n        for file in files:\n            zipf.write(file, os.path.basename(file))\n    \n    return zip_file_path",
+    "test": "import unittest\nimport os\nimport tempfile\nimport zipfile\nclass TestCases(unittest.TestCase):\n    \n    def setUp(self):\n        \"\"\"Setup a temporary directory before each test.\"\"\"\n        self.test_dir = tempfile.mkdtemp()\n    \n    def tearDown(self):\n        \"\"\"Clean up the temporary directory after each test.\"\"\"\n        for root, dirs, files in os.walk(self.test_dir, topdown=False):\n            for name in files:\n                os.remove(os.path.join(root, name))\n            for name in dirs:\n                os.rmdir(os.path.join(root, name))\n        os.rmdir(self.test_dir)\n    \n    def test_single_file_zip(self):\n        \"\"\"Test zipping a directory with one file.\"\"\"\n        with open(os.path.join(self.test_dir, \"testfile1.txt\"), \"w\") as f:\n            f.write(\"This is a test file.\")\n        zip_path = task_func(self.test_dir)\n        self.assertTrue(os.path.exists(zip_path))\n    \n    def test_multiple_files_zip(self):\n        \"\"\"Test zipping a directory with multiple files.\"\"\"\n        for i in range(5):\n            with open(os.path.join(self.test_dir, f\"testfile{i}.txt\"), \"w\") as f:\n                f.write(f\"This is test file {i}.\")\n        zip_path = task_func(self.test_dir)\n        self.assertTrue(os.path.exists(zip_path))\n    \n    def test_empty_directory(self):\n        \"\"\"Test zipping an empty directory should return None.\"\"\"\n        zip_path = task_func(self.test_dir)\n        self.assertIsNone(zip_path)\n    \n    def test_non_existent_directory(self):\n        \"\"\"Test behavior when the specified directory does not exist.\"\"\"\n        with self.assertRaises(FileNotFoundError):\n            task_func(\"/non/existent/directory\")\n    \n    def test_exclusion_of_subdirectories(self):\n        \"\"\"Ensure that subdirectories within the specified directory are not included in the zip.\"\"\"\n        os.makedirs(os.path.join(self.test_dir, \"subdir\"))\n        with open(os.path.join(self.test_dir, \"testfile.txt\"), \"w\") as f:\n            f.write(\"This is a test file.\")\n        with open(os.path.join(self.test_dir, \"subdir\", \"nestedfile.txt\"), \"w\") as f:\n            f.write(\"This is a nested file.\")\n        zip_path = task_func(self.test_dir)\n        with zipfile.ZipFile(zip_path, 'r') as zipf:\n            self.assertEqual(len(zipf.namelist()), 1)  # Only testfile.txt should be included\n    def test_file_integrity_in_zip(self):\n        \"\"\"Check that files zipped are intact and readable.\"\"\"\n        filename = \"testfile.txt\"\n        content = \"This is a test file.\"\n        with open(os.path.join(self.test_dir, filename), \"w\") as f:\n            f.write(content)\n        zip_path = task_func(self.test_dir)\n        with zipfile.ZipFile(zip_path, 'r') as zipf:\n            with zipf.open(filename) as file:\n                self.assertEqual(file.read().decode(), content)",
+    "selected_test_methods": [
+      "test_exclusion_of_subdirectories",
+      "test_empty_directory"
+    ],
+    "libraries": [
+      "glob",
+      "zipfile",
+      "os"
+    ],
+    "license": "Apache-2.0",
+    "creator_source_check": "instruct_prompt, canonical_solution and full test class read statically; no benchmark/model execution"
+  },
+  {
+    "example": 5,
+    "id": "BigCodeBench/52",
+    "row": 52,
+    "scope": "appendix",
+    "title": "指定語を除いて単語の頻度を数える",
+    "original": "Count the frequency of each word in a text after removing specific stopwords.\nThe function should output with:\n    Series: A pandas Series with word frequencies excluding the words in STOPWORDS list.\nYou should write self-contained code starting with:\n```\nimport pandas as pd\nimport regex as re\n# Constants\nSTOPWORDS = [\"a\", \"an\", \"the\", \"in\", \"is\", \"are\"]\ndef task_func(text):\n```",
+    "original_field": "instruct_prompt",
+    "original_fullness": "entire Instruct original including imports/function prefix; Markdown code fences rendered as native code typography, not literal delimiter lines",
+    "japanese": "テキストから指定された除外語を取り除き、各単語の出現頻度を数える。STOPWORDSの語を含まない、単語頻度のpandas Seriesを返す。指定された書き出しを使い、必要なコードをすべて含む実装を書く。",
+    "japanese_scope": "all natural-language instructions translated, code prefix retains original spelling and is displayed in original page rather than duplicated",
+    "expected": "期待する動作：\"Hello world Hello everyone\" から hello は2回",
+    "explanation": "配布テストは大文字と小文字をそろえた数え上げを確認する。a・an・the・in・is・areだけの入力なら、結果は空になる。",
+    "source_url": "https://huggingface.co/datasets/bigcode/bigcodebench",
+    "revision": "b74c0d0bf70d2c0bc459be537895cca163007f1a",
+    "data_version": "v0.1.4",
+    "code_prompt": "import pandas as pd\nimport regex as re\n# Constants\nSTOPWORDS = [\"a\", \"an\", \"the\", \"in\", \"is\", \"are\"]\ndef task_func(text):\n",
+    "complete_prompt": "import pandas as pd\nimport regex as re\n\n# Constants\nSTOPWORDS = [\"a\", \"an\", \"the\", \"in\", \"is\", \"are\"]\n\n\ndef task_func(text):\n    \"\"\"\n    Count the frequency of each word in a text after removing specific stopwords.\n\n    Parameters:\n    text (str): The text to analyze.\n\n    Returns:\n    Series: A pandas Series with word frequencies excluding the words in STOPWORDS list.\n\n    Requirements:\n    - pandas\n    - regex\n\n    Example:\n    >>> text = \"This is a sample text. This text contains sample words.\"\n    >>> word_counts = task_func(text)\n    >>> print(word_counts)\n    this        2\n    sample      2\n    text        2\n    contains    1\n    words       1\n    dtype: int64\n    \"\"\"\n",
+    "canonical_solution": "    words = re.findall(r\"\\b\\w+\\b\", text.lower())\n    words = [word for word in words if word not in STOPWORDS]\n    word_counts = pd.Series(words).value_counts().rename(None)\n    return word_counts",
+    "test": "import unittest\nclass TestCases(unittest.TestCase):\n    \"\"\"Test cases for the task_func function.\"\"\"\n    def test_case_1(self):\n        text = \"This is a sample text This text contains sample words\"\n        word_counts = task_func(text).to_dict()\n        expected_counts = {\"this\": 2, \"sample\": 2, \"text\": 2, \"contains\": 1, \"words\": 1}\n        self.assertDictEqual(word_counts, expected_counts)\n    def test_case_2(self):\n        text = \"Hello world Hello everyone\"\n        word_counts = task_func(text).to_dict()\n        expected_counts = {\"hello\": 2, \"world\": 1, \"everyone\": 1}\n        self.assertDictEqual(word_counts, expected_counts)\n    def test_case_3(self):\n        text = \"a an the in is are\"\n        word_counts = task_func(text).to_dict()\n        expected_counts = {}\n        self.assertDictEqual(word_counts, expected_counts)\n    def test_case_4(self):\n        text = \"This is a test sentence which has a bunch of words and no period\"\n        word_counts = task_func(text).to_dict()\n        expected_counts = {\n                \"this\": 1,\n                \"test\": 1,\n                \"sentence\": 1,\n                \"which\": 1,\n                \"has\": 1,\n                \"bunch\": 1,\n                \"of\": 1,\n                \"words\": 1,\n                \"and\": 1,\n                \"no\": 1,\n                \"period\": 1,\n            }\n        self.assertDictEqual(word_counts, expected_counts)\n    def test_case_5(self):\n        text = (\n            \"I I I want want to to to to to go to to to the olympics olympics this year\"\n        )\n        word_counts = task_func(text).to_dict()\n        expected_counts = {\"i\": 3, \"want\": 2, \"to\": 8, \"go\": 1, \"olympics\": 2, \"this\": 1, \"year\": 1}\n        self.assertDictEqual(word_counts, expected_counts)",
+    "selected_test_methods": [
+      "test_case_2",
+      "test_case_3"
+    ],
+    "libraries": [
+      "regex",
+      "pandas"
+    ],
+    "license": "Apache-2.0",
+    "creator_source_check": "instruct_prompt, canonical_solution and full test class read statically; no benchmark/model execution"
+  },
+  {
+    "example": 6,
+    "id": "BigCodeBench/56",
+    "row": 56,
+    "scope": "appendix",
+    "title": "テキストから得点と科目を取り出す",
+    "original": "Extract data from a text and create a Pandas DataFrame. The text contains several lines, each formatted as 'Score: 85, Category: Math'. Make sure to convert the scores in integer.\nThe function should output with:\n    DataFrame: A pandas DataFrame with extracted data.\nYou should write self-contained code starting with:\n```\nimport pandas as pd\nimport regex as re\ndef task_func(text):\n```",
+    "original_field": "instruct_prompt",
+    "original_fullness": "entire Instruct original including imports/function prefix; Markdown code fences rendered as native code typography, not literal delimiter lines",
+    "japanese": "テキストからデータを抽出し、pandas DataFrameを作る。各行は「Score: 85, Category: Math」の形式である。得点は整数に変換する。抽出したデータを含むデータフレームを返す。指定された書き出しを使い、必要なコードをすべて含む実装を書く。",
+    "japanese_scope": "all natural-language instructions translated, code prefix retains original spelling and is displayed in original page rather than duplicated",
+    "expected": "期待する動作：Score列に整数85、Category列にMathが入る",
+    "explanation": "配布テストは複数行を与え、各行の得点と科目を確認する。空のテキストからは0行のデータフレームを返す。",
+    "source_url": "https://huggingface.co/datasets/bigcode/bigcodebench",
+    "revision": "b74c0d0bf70d2c0bc459be537895cca163007f1a",
+    "data_version": "v0.1.4",
+    "code_prompt": "import pandas as pd\nimport regex as re\ndef task_func(text):\n",
+    "complete_prompt": "import pandas as pd\nimport regex as re\n\ndef task_func(text):\n    \"\"\"\n    Extract data from a text and create a Pandas DataFrame. The text contains several lines, each formatted as 'Score: 85, Category: Math'. Make sure to convert the scores in integer.\n\n    Parameters:\n    text (str): The text to analyze.\n\n    Returns:\n    DataFrame: A pandas DataFrame with extracted data.\n\n    Requirements:\n    - pandas\n    - regex\n\n    Example:\n    >>> text = \"Score: 85, Category: Math\\\\nScore: 90, Category: Science\\\\nScore: 80, Category: Math\"\n    >>> df = task_func(text)\n    >>> print(df)\n       Score Category\n    0     85     Math\n    1     90  Science\n    2     80     Math\n    \"\"\"\n",
+    "canonical_solution": "    pattern = r\"Score: (.*?), Category: (.*?)(\\n|$)\"\n    matches = re.findall(pattern, text)\n    data = [\n        match[:2] for match in matches\n    ]  # Extracting only the score and category from each match\n    df = pd.DataFrame(data, columns=[\"Score\", \"Category\"])\n    df[\"Score\"] = df[\"Score\"].astype(int)\n    return df",
+    "test": "import unittest\nclass TestCases(unittest.TestCase):\n    \"\"\"Test cases for the task_func function.\"\"\"\n    def test_case_1(self):\n        text = \"Score: 85, Category: Math\\nScore: 90, Category: Science\\nScore: 80, Category: Math\"\n        df = task_func(text)\n        self.assertEqual(len(df), 3)\n        self.assertEqual(df[\"Score\"].iloc[0], 85)\n        self.assertEqual(df[\"Category\"].iloc[0], \"Math\")\n        self.assertEqual(df[\"Score\"].iloc[1], 90)\n        self.assertEqual(df[\"Category\"].iloc[1], \"Science\")\n        self.assertEqual(df[\"Score\"].iloc[2], 80)\n        self.assertEqual(df[\"Category\"].iloc[2], \"Math\")\n    def test_case_2(self):\n        text = \"Score: 70, Category: History\"\n        df = task_func(text)\n        self.assertEqual(len(df), 1)\n        self.assertEqual(df[\"Score\"].iloc[0], 70)\n        self.assertEqual(df[\"Category\"].iloc[0], \"History\")\n    def test_case_3(self):\n        text = \"\"  # Empty string\n        df = task_func(text)\n        self.assertEqual(len(df), 0)  # Expecting an empty DataFrame\n    def test_case_4(self):\n        text = \"Score: 70, Category: Chemistry\"\n        df = task_func(text)\n        self.assertEqual(len(df), 1)\n        self.assertEqual(df[\"Score\"].iloc[0], 70)\n        self.assertEqual(df[\"Category\"].iloc[0], \"Chemistry\")\n    def test_case_5(self):\n        text = \"Score: 70, Category: Literature\\nScore: 37, Category: Mathematics\\nScore: 90, Category: Japanese\\nScore: 58, Category: Machine Learning\"\n        df = task_func(text)\n        self.assertEqual(len(df), 4)\n        self.assertEqual(df[\"Score\"].iloc[0], 70)\n        self.assertEqual(df[\"Category\"].iloc[0], \"Literature\")\n        self.assertEqual(df[\"Score\"].iloc[1], 37)\n        self.assertEqual(df[\"Category\"].iloc[1], \"Mathematics\")\n        self.assertEqual(df[\"Score\"].iloc[2], 90)\n        self.assertEqual(df[\"Category\"].iloc[2], \"Japanese\")\n        self.assertEqual(df[\"Score\"].iloc[3], 58)\n        self.assertEqual(df[\"Category\"].iloc[3], \"Machine Learning\")",
+    "selected_test_methods": [
+      "test_case_1",
+      "test_case_3"
+    ],
+    "libraries": [
+      "regex",
+      "pandas"
+    ],
+    "license": "Apache-2.0",
+    "creator_source_check": "instruct_prompt, canonical_solution and full test class read statically; no benchmark/model execution"
+  },
+  {
+    "example": 7,
+    "id": "BigCodeBench/60",
+    "row": 60,
+    "scope": "appendix",
+    "title": "辞書のリストをCSVとJSONに保存する",
+    "original": "Save the list of dictionaries provided in the 'result' parameter to a CSV file (without index) and a JSON file.\nThe function should output with:\n    None\nYou should write self-contained code starting with:\n```\nimport json\nimport pandas as pd\ndef task_func(result, csv_file_path=\"test.csv\", json_file_path=\"test.json\"):\n```",
+    "original_field": "instruct_prompt",
+    "original_fullness": "entire Instruct original including imports/function prefix; Markdown code fences rendered as native code typography, not literal delimiter lines",
+    "japanese": "resultとして与えた辞書のリストを、インデックスを付けないCSVと、JSONの両方に保存する。戻り値はNoneとする。指定された書き出しを使い、必要なコードをすべて含む実装を書く。",
+    "japanese_scope": "all natural-language instructions translated, code prefix retains original spelling and is displayed in original page rather than duplicated",
+    "expected": "期待する動作：両方のファイルに元の値を保存する",
+    "explanation": "配布テストは、hi=7・bye=4・from_user=11を持つデータを保存し、CSVとJSONを読み戻して値を確認する。",
+    "source_url": "https://huggingface.co/datasets/bigcode/bigcodebench",
+    "revision": "b74c0d0bf70d2c0bc459be537895cca163007f1a",
+    "data_version": "v0.1.4",
+    "code_prompt": "import json\nimport pandas as pd\ndef task_func(result, csv_file_path=\"test.csv\", json_file_path=\"test.json\"):\n",
+    "complete_prompt": "import json\nimport pandas as pd\n\n\ndef task_func(result, csv_file_path=\"test.csv\", json_file_path=\"test.json\"):\n    \"\"\"\n    Save the list of dictionaries provided in the 'result' parameter to a CSV file (without index) and a JSON file.\n\n    Parameters:\n    - result (list): A list of dictionaries.\n    - csv_file_path (str): A path to a CSV file.\n    - json_file_path (str): A path to a JSON file.\n\n    Returns:\n    None\n\n    Requirements:\n    - pandas\n    - json\n\n    Example:\n    >>> result = [{\"hi\": 7, \"bye\": 4, \"from_user\": 0}, {1: 2, 3: 4, 5: 6}]\n    >>> task_func(result, 'test.csv', 'test.json')\n    \"\"\"\n",
+    "canonical_solution": "    # Save to CSV\n    df = pd.DataFrame(result)\n    df.to_csv(csv_file_path, index=False)\n\n    # Save to JSON\n    with open(json_file_path, 'w') as f:\n        json.dump(result, f, indent=4)\n\n    return None",
+    "test": "import unittest\nimport os\nclass TestCases(unittest.TestCase):\n    \"\"\"Test cases for the task_func function.\"\"\"\n    def setUp(self):\n        self.test_dir = \"data/task_func\"\n        os.makedirs(self.test_dir, exist_ok=True)\n        self.f_1 = os.path.join(self.test_dir, \"csv_1.csv\")\n        self.f_2 = os.path.join(self.test_dir, \"csv_2.csv\")\n        self.f_3 = os.path.join(self.test_dir, \"csv_3.csv\")\n        self.f_4 = os.path.join(self.test_dir, \"csv_4.csv\")\n        self.f_5 = os.path.join(self.test_dir, \"csv_5.csv\")\n        self.j_1 = os.path.join(self.test_dir, \"json_1.json\")\n        self.j_2 = os.path.join(self.test_dir, \"json_2.json\")\n        self.j_3 = os.path.join(self.test_dir, \"json_3.json\")\n        self.j_4 = os.path.join(self.test_dir, \"json_4.json\")\n        self.j_5 = os.path.join(self.test_dir, \"json_5.json\")\n    def tearDown(self):\n        import shutil\n        if os.path.exists(self.test_dir):\n            shutil.rmtree(self.test_dir)\n    def test_case_1(self):\n        # Test with a list of dictionaries with string keys and integer values\n        result = [\n            {\"hi\": 7, \"bye\": 4, \"from_user\": 0}\n        ]\n        task_func(result, self.f_1, self.j_1)\n        self.assertTrue(os.path.exists(self.f_1))\n        self.assertTrue(os.path.exists(self.j_1))\n        with open(self.j_1, 'r') as f:\n            loaded_json = json.load(f)\n        # Adjusting the expected result for JSON's string keys\n        expected_result = [{\"hi\": 7, \"bye\": 4, \"from_user\": 0}]\n        self.assertEqual(loaded_json, expected_result)\n    def test_case_2(self):\n        # Test with a list of dictionaries with integer keys and values\n        result = [{1: 2, 3: 4, 5: 6}]\n        task_func(result, self.f_2, self.j_2)\n        self.assertTrue(os.path.exists(self.f_2))\n        self.assertTrue(os.path.exists(self.j_2))\n        with open(self.j_2, 'r') as f:\n            loaded_json = json.load(f)\n        # Adjusting the expected result for JSON's string keys\n        expected_result = [{\"1\": 2, \"3\": 4, \"5\": 6}]\n        self.assertEqual(loaded_json, expected_result)\n    def test_case_3(self):\n        # Test with an empty list\n        result = []\n        task_func(result, self.f_3, self.j_3)\n        self.assertTrue(os.path.exists(self.f_3))\n        self.assertTrue(os.path.exists(self.j_3))\n        with open(self.j_3, 'r') as f:\n            loaded_json = json.load(f)\n        # Adjusting the expected result for JSON's string keys\n        expected_result = []\n        self.assertEqual(loaded_json, expected_result)\n    def test_case_4(self):\n        # Test with a list of dictionaries with string keys and integer values\n        result = [\n            {\"hi\": 7, \"bye\": 4, \"from_user\": 3}\n        ]\n        task_func(result, self.f_4, self.j_4)\n        self.assertTrue(os.path.exists(self.f_4))\n        self.assertTrue(os.path.exists(self.j_4))\n        with open(self.j_4, 'r') as f:\n            loaded_json = json.load(f)\n        # Adjusting the expected result for JSON's string keys\n        expected_result = [{\"hi\": 7, \"bye\": 4, \"from_user\": 3}]\n        self.assertEqual(loaded_json, expected_result)\n    def test_case_5(self):\n        # Test with a list of dictionaries with string keys and integer values\n        result = [\n            {\"hi\": 7, \"bye\": 4, \"from_user\": 11}\n        ]\n        task_func(result, self.f_5, self.j_5)\n        self.assertTrue(os.path.exists(self.f_5))\n        df = pd.read_csv(self.f_5)\n        self.assertEqual(df.loc[0, \"hi\"], 7)\n        self.assertEqual(df.loc[0, \"bye\"], 4)\n        self.assertEqual(df.loc[0, \"from_user\"], 11)\n        self.assertTrue(os.path.exists(self.j_5))\n        with open(self.j_5, 'r') as f:\n            loaded_json = json.load(f)\n        # Adjusting the expected result for JSON's string keys\n        expected_result = [{\"hi\": 7, \"bye\": 4, \"from_user\": 11}]\n        self.assertEqual(loaded_json, expected_result)",
+    "selected_test_methods": [
+      "test_case_5"
+    ],
+    "libraries": [
+      "pandas",
+      "json"
+    ],
+    "license": "Apache-2.0",
+    "creator_source_check": "instruct_prompt, canonical_solution and full test class read statically; no benchmark/model execution"
+  },
+  {
+    "example": 8,
+    "id": "BigCodeBench/110",
+    "row": 110,
+    "scope": "appendix",
+    "title": "日別売上の折れ線グラフを返す",
+    "original": "Draw and return the daily turnover line chart from a pandas DataFrame.\nThe function should raise the exception for: ValueError: If 'df' is not a DataFrame or lacks 'Date' or 'Sales' columns, or has no data to plot.\nThe function should output with:\n    Axes: Matplotlib Axes object with the line chart.\nYou should write self-contained code starting with:\n```\nimport pandas as pd\nimport matplotlib.pyplot as plt\ndef task_func(df):\n```",
+    "original_field": "instruct_prompt",
+    "original_fullness": "entire Instruct original including imports/function prefix; Markdown code fences rendered as native code typography, not literal delimiter lines",
+    "japanese": "pandas DataFrameから日別売上の折れ線グラフを描いて返す。dfがDataFrameでない場合、Date列またはSales列がない場合、描くデータがない場合はValueErrorを送出する。MatplotlibのAxesオブジェクトを返す。指定された書き出しを使い、必要なコードをすべて含む実装を書く。",
+    "japanese_scope": "all natural-language instructions translated, code prefix retains original spelling and is displayed in original page rather than duplicated",
+    "expected": "期待する動作：タイトルはDaily Turnover、縦軸はSales",
+    "explanation": "Axesはグラフを描く領域を表す。配布テストは描画オブジェクトの型と、折れ線上の売上値、タイトル、縦軸ラベルを調べる。",
+    "source_url": "https://huggingface.co/datasets/bigcode/bigcodebench",
+    "revision": "b74c0d0bf70d2c0bc459be537895cca163007f1a",
+    "data_version": "v0.1.4",
+    "code_prompt": "import pandas as pd\nimport matplotlib.pyplot as plt\ndef task_func(df):\n",
+    "complete_prompt": "import pandas as pd\nimport matplotlib.pyplot as plt\n\ndef task_func(df):\n    \"\"\"\n    Draw and return the daily turnover line chart from a pandas DataFrame.\n\n    Parameters:\n    df (DataFrame): A pandas DataFrame with 'Date' and 'Sales' columns.\n\n    Returns:\n    Axes: Matplotlib Axes object with the line chart.\n\n    Raises:\n    ValueError: If 'df' is not a DataFrame or lacks 'Date' or 'Sales' columns, or has no data to plot.\n\n    Requirements:\n    - pandas\n    - matplotlib.pyplot\n\n    Example:\n    >>> df = pd.DataFrame({\n    ...     'Date': pd.date_range(start='1/1/2021', end='12/31/2021'),\n    ...     'Sales': np.random.randint(100, 2000, size=365)\n    ... })\n    >>> ax = task_func(df)\n    >>> ax.get_title()  # Expected: 'Daily Turnover'\n    'Daily Turnover'\n    >>> ax.get_ylabel()  # Expected: 'Sales'\n    'Sales'\n    \"\"\"\n",
+    "canonical_solution": "    if not isinstance(df, pd.DataFrame) or not all(col in df.columns for col in ['Date', 'Sales']):\n        raise ValueError(\"Invalid 'df': must be a DataFrame with 'Date' and 'Sales' columns.\")\n\n    df['Date'] = pd.to_datetime(df['Date'])\n    df = df.set_index('Date')\n    resampled_df = df.resample('D').sum()\n\n    if resampled_df.empty or resampled_df['Sales'].sum() == 0:\n        raise ValueError(\"No data available to plot after resampling.\")\n\n    ax = resampled_df.plot(y='Sales')\n    ax.set_title('Daily Turnover')\n    ax.set_ylabel('Sales')\n    plt.show()\n    return ax",
+    "test": "import unittest\nimport pandas as pd\nimport numpy as np\nimport matplotlib.pyplot as plt\nclass TestCases(unittest.TestCase):\n    def setUp(self):\n        np.random.seed(42)\n        self.df = pd.DataFrame({\n            'Date': pd.date_range(start='1/1/2021', periods=10),\n            'Sales': np.random.randint(100, 2000, size=10)\n        })\n    def test_return_type(self):\n    # Adjusted to include more data points\n        np.random.seed(42)\n        large_df = pd.DataFrame({\n            'Date': pd.date_range(start='1/1/2021', periods=30),\n            'Sales': np.random.randint(100, 2000, size=30)\n        })\n        ax = task_func(large_df)\n        self.assertIsInstance(ax, plt.Axes)\n        \n    def test_value(self):\n        # Adjusted to include more data points\n        ax = task_func(self.df)\n        # Retrieve the line plot data\n        # Assuming 'ax' is the Axes object returned by your function 'task_func'\n        # Retrieve the line plot data\n        line = ax.get_lines()[0]  # Get the first (and likely only) line plot\n        sales = line.get_ydata()\n        actual_sales = [str(int(sale)) for sale in sales]\n        expect = ['1226', '1559', '960', '1394', '1230', '1195', '1824', '1144', '1738', '221']\n        self.assertEqual(actual_sales, expect, \"DataFrame contents should match the expected output\")\n        \n    def test_plot_title_and_labels(self):\n        # Adjusted to include more data points\n        np.random.seed(42)\n        large_df = pd.DataFrame({\n            'Date': pd.date_range(start='1/1/2021', periods=30),\n            'Sales': np.random.randint(100, 2000, size=30)\n        })\n        ax = task_func(large_df)\n        self.assertEqual(ax.get_title(), 'Daily Turnover')\n        self.assertEqual(ax.get_ylabel(), 'Sales')\n    def test_invalid_input(self):\n        with self.assertRaises(ValueError):\n            task_func(pd.DataFrame({'a': [1, 2], 'b': [3, 4]}))\n    def test_empty_dataframe(self):\n        with self.assertRaises(ValueError):\n            task_func(pd.DataFrame({'Date': [], 'Sales': []}))\n    def test_date_conversion(self):\n        df_with_string_dates = self.df.copy()\n        df_with_string_dates['Date'] = df_with_string_dates['Date'].dt.strftime('%Y-%m-%d')\n        ax = task_func(df_with_string_dates)\n        self.assertIsInstance(ax, plt.Axes)",
+    "selected_test_methods": [
+      "test_value",
+      "test_plot_title_and_labels"
+    ],
+    "libraries": [
+      "pandas",
+      "matplotlib"
+    ],
+    "license": "Apache-2.0",
+    "creator_source_check": "instruct_prompt, canonical_solution and full test class read statically; no benchmark/model execution"
+  },
+  {
+    "example": 9,
+    "id": "BigCodeBench/145",
+    "row": 145,
+    "scope": "appendix",
+    "title": "IPアドレスの一覧をCSVに保存する",
+    "original": "Generates a CSV file listing all IP addresses in the specified IP range. Each IP address is written as a row in the CSV file.\nThe function should output with:\n    str: The path to the generated CSV file.\nYou should write self-contained code starting with:\n```\nimport csv\nfrom ipaddress import IPv4Network\ndef task_func(ip_range, csv_path):\n```",
+    "original_field": "instruct_prompt",
+    "original_fullness": "entire Instruct original including imports/function prefix; Markdown code fences rendered as native code typography, not literal delimiter lines",
+    "japanese": "指定されたIPアドレスの範囲について、全アドレスの一覧をCSVに保存する。各アドレスを1行に書き、生成したCSVのパスを文字列として返す。指定された書き出しを使い、必要なコードをすべて含む実装を書く。",
+    "japanese_scope": "all natural-language instructions translated, code prefix retains original spelling and is displayed in original page rather than duplicated",
+    "expected": "期待する動作：見出しの後に、列挙された各アドレスを書き出す",
+    "explanation": "配布テストはアドレスの列挙を2件に置き換え、見出しを1回、データ行を2回書くことを確認する。ファイルの作成と戻り値の型も調べる。",
+    "source_url": "https://huggingface.co/datasets/bigcode/bigcodebench",
+    "revision": "b74c0d0bf70d2c0bc459be537895cca163007f1a",
+    "data_version": "v0.1.4",
+    "code_prompt": "import csv\nfrom ipaddress import IPv4Network\ndef task_func(ip_range, csv_path):\n",
+    "complete_prompt": "import csv\nfrom ipaddress import IPv4Network\n\ndef task_func(ip_range, csv_path):\n    \"\"\"\n    Generates a CSV file listing all IP addresses in the specified IP range.\n    Each IP address is written as a row in the CSV file.\n\n    Requirements:\n    - csv\n    - ipaddress.IPv4Network\n\n    Parameters:\n        ip_range (str): The IP range in CIDR notation (e.g., \"192.168.0.0/16\").\n        csv_path (str): The path where the CSV file will be saved.\n\n    Returns:\n        str: The path to the generated CSV file.\n\n    Examples:\n    >>> csv_path = task_func('192.168.0.0/16', 'file.csv')\n    >>> isinstance(csv_path, str)\n    True\n    >>> csv_path.endswith('.csv')\n    True\n    \"\"\"\n",
+    "canonical_solution": "    with open(csv_path, 'w', newline='') as csvfile:\n        fieldnames = ['IP Address']\n        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)\n\n        writer.writeheader()\n\n        for ip in IPv4Network(ip_range):\n            writer.writerow({'IP Address': str(ip)})\n\n    return csv_path",
+    "test": "import unittest\nfrom unittest.mock import patch, mock_open\nimport os\nimport ipaddress\nclass TestCases(unittest.TestCase):\n    IP_RANGE = '192.168.0.0/30'\n    CSV_PATH = 'test.csv'\n    def tearDown(self):\n        \"\"\"Clean up after each test.\"\"\"\n        if os.path.exists(self.CSV_PATH):\n            os.remove(self.CSV_PATH)\n    def test_return_type(self):\n        \"\"\"Test that the function returns a string.\"\"\"\n        result = task_func(self.IP_RANGE, self.CSV_PATH)\n        self.assertIsInstance(result, str)\n    def test_file_creation(self):\n        \"\"\"Test that the CSV file is created.\"\"\"\n        result = task_func(self.IP_RANGE, self.CSV_PATH)\n        self.assertTrue(os.path.exists(result))\n    @patch(\"builtins.open\", new_callable=mock_open)\n    def test_csv_content(self, mock_file):\n        \"\"\"Test the content of the CSV file.\"\"\"\n        task_func(self.IP_RANGE, self.CSV_PATH)\n        mock_file.assert_called_with(self.CSV_PATH, 'w', newline='')\n    @patch(\"csv.DictWriter\")\n    def test_csv_writer_usage(self, mock_writer):\n        \"\"\"Test that csv.DictWriter is used correctly.\"\"\"\n        task_func(self.IP_RANGE, self.CSV_PATH)\n        mock_writer.assert_called()\n    @patch('ipaddress.IPv4Network.__iter__', return_value=iter([\n        ipaddress.IPv4Address('192.168.0.1'),\n        ipaddress.IPv4Address('192.168.0.2')\n    ]))\n    @patch('csv.DictWriter')\n    @patch(\"builtins.open\", new_callable=mock_open)\n    def test_csv_writing(self, mock_file, mock_csv_writer, mock_ipv4network_iter):\n        \"\"\"Test that the CSV writer writes the expected number of rows.\"\"\"\n        task_func(self.IP_RANGE, self.CSV_PATH)\n        # The mock csv writer instance is obtained from the mock_csv_writer class.\n        mock_writer_instance = mock_csv_writer.return_value\n        # Assert that writeheader was called once.\n        mock_writer_instance.writeheader.assert_called_once()\n        # Assert that writerow was called twice (once for each mocked IP address).\n        self.assertEqual(mock_writer_instance.writerow.call_count, 2)",
+    "selected_test_methods": [
+      "test_csv_writing",
+      "test_file_creation"
+    ],
+    "libraries": [
+      "csv",
+      "ipaddress"
+    ],
+    "license": "Apache-2.0",
+    "creator_source_check": "instruct_prompt, canonical_solution and full test class read statically; no benchmark/model execution"
+  },
+  {
+    "example": 10,
+    "id": "BigCodeBench/148",
+    "row": 148,
+    "scope": "appendix",
+    "title": "カテゴリ値を整数へ符号化する",
+    "original": "Encrypt the categorical data in a specific column of a DataFrame using LabelEncoder.\nThe function should output with:\n    pd.DataFrame: The DataFrame with the encoded column.\nYou should write self-contained code starting with:\n```\nimport pandas as pd\nfrom sklearn.preprocessing import LabelEncoder\ndef task_func(df: pd.DataFrame, column_name: str) -> pd.DataFrame:\n```",
+    "original_field": "instruct_prompt",
+    "original_fullness": "entire Instruct original including imports/function prefix; Markdown code fences rendered as native code typography, not literal delimiter lines",
+    "japanese": "LabelEncoderを使い、DataFrameの指定した列にあるカテゴリ値を整数に符号化する。符号化した列を含むDataFrameを返す。指定された書き出しを使い、必要なコードをすべて含む実装を書く。",
+    "japanese_scope": "all natural-language instructions translated, code prefix retains original spelling and is displayed in original page rather than duplicated",
+    "expected": "期待する動作：apple・banana・cherryを0・1・2に対応させる",
+    "explanation": "配布テストのfruit列はapple, banana, cherry, apple, bananaであり、出力は0, 1, 2, 0, 1になる。",
+    "source_url": "https://huggingface.co/datasets/bigcode/bigcodebench",
+    "revision": "b74c0d0bf70d2c0bc459be537895cca163007f1a",
+    "data_version": "v0.1.4",
+    "code_prompt": "import pandas as pd\nfrom sklearn.preprocessing import LabelEncoder\ndef task_func(df: pd.DataFrame, column_name: str) -> pd.DataFrame:\n",
+    "complete_prompt": "import pandas as pd\nfrom sklearn.preprocessing import LabelEncoder\n\n\ndef task_func(df: pd.DataFrame, column_name: str) -> pd.DataFrame:\n    \"\"\"\n    Encrypt the categorical data in a specific column of a DataFrame using LabelEncoder.\n\n    Parameters:\n    df (pd.DataFrame): The DataFrame that contains the data.\n    column_name (str): The name of the column to encode.\n\n    Returns:\n    pd.DataFrame: The DataFrame with the encoded column.\n\n    Requirements:\n    - pandas\n    - sklearn\n\n    Example:\n    >>> df = pd.DataFrame({'fruit': ['apple', 'banana', 'cherry', 'apple', 'banana']})\n    >>> encoded_df = task_func(df, 'fruit')\n    >>> encoded_df['fruit'].tolist()\n    [0, 1, 2, 0, 1]\n    \"\"\"\n",
+    "canonical_solution": "    le = LabelEncoder()\n    df[column_name] = le.fit_transform(df[column_name])\n    return df",
+    "test": "import unittest\nimport pandas as pd\nclass TestCases(unittest.TestCase):\n    def test_case_1(self):\n        df = pd.DataFrame({'fruit': ['apple', 'banana', 'cherry', 'apple', 'banana']})\n        encoded_df = task_func(df, 'fruit')\n        self.assertEqual(encoded_df['fruit'].tolist(), [0, 1, 2, 0, 1])\n    def test_case_2(self):\n        df = pd.DataFrame({'animal': ['cat', 'dog', 'bird', 'cat', 'bird']})\n        encoded_df = task_func(df, 'animal')\n        self.assertEqual(encoded_df['animal'].tolist(), [1, 2, 0, 1, 0])\n    def test_case_3(self):\n        df = pd.DataFrame({'color': ['red', 'blue', 'green', 'red', 'green']})\n        encoded_df = task_func(df, 'color')\n        self.assertEqual(encoded_df['color'].tolist(), [2, 0, 1, 2, 1])\n    def test_case_4(self):\n        df = pd.DataFrame({'vehicle': ['car', 'bus', 'train', 'car', 'train']})\n        encoded_df = task_func(df, 'vehicle')\n        self.assertEqual(encoded_df['vehicle'].tolist(), [1, 0, 2, 1, 2])\n    def test_case_5(self):\n        df = pd.DataFrame({'city': ['NYC', 'LA', 'SF', 'NYC', 'SF']})\n        encoded_df = task_func(df, 'city')\n        self.assertEqual(encoded_df['city'].tolist(), [1, 0, 2, 1, 2])",
+    "selected_test_methods": [
+      "test_case_1"
+    ],
+    "libraries": [
+      "pandas",
+      "sklearn"
+    ],
+    "license": "Apache-2.0",
+    "creator_source_check": "instruct_prompt, canonical_solution and full test class read statically; no benchmark/model execution"
+  },
+  {
+    "example": 11,
+    "id": "BigCodeBench/408",
+    "row": 408,
+    "scope": "appendix",
+    "title": "SQLの検索結果をデータフレームにする",
+    "original": "Query an SQLite database and return the results. This function connects to a given SQLite database, executes a given SQL query, and returns the results as a pandas DataFrame.\nThe function should output with:\n    pd.DataFrame: A DataFrame containing the results of the executed query.\nYou should write self-contained code starting with:\n```\nimport sqlite3\nimport pandas as pd\ndef task_func(db_file: str, query: str) -> pd.DataFrame:\n```",
+    "original_field": "instruct_prompt",
+    "original_fullness": "entire Instruct original including imports/function prefix; Markdown code fences rendered as native code typography, not literal delimiter lines",
+    "japanese": "指定されたSQLiteデータベースに接続し、SQLの問い合わせを実行する。検索結果を含むpandas DataFrameを返す。指定された書き出しを使い、必要なコードをすべて含む実装を書く。",
+    "japanese_scope": "all natural-language instructions translated, code prefix retains original spelling and is displayed in original page rather than duplicated",
+    "expected": "期待する動作：年齢の条件と並び順を、検索結果へ反映する",
+    "explanation": "配布テストは年齢の上限を条件にし、年齢の降順に並べて問い合わせる。返る全行が年齢条件と降順の両方を満たすか確認する。",
+    "source_url": "https://huggingface.co/datasets/bigcode/bigcodebench",
+    "revision": "b74c0d0bf70d2c0bc459be537895cca163007f1a",
+    "data_version": "v0.1.4",
+    "code_prompt": "import sqlite3\nimport pandas as pd\ndef task_func(db_file: str, query: str) -> pd.DataFrame:\n",
+    "complete_prompt": "import sqlite3\nimport pandas as pd\n\n\ndef task_func(db_file: str, query: str) -> pd.DataFrame:\n    \"\"\"Query an SQLite database and return the results.\n\n    This function connects to a given SQLite database, executes a given SQL query,\n    and returns the results as a pandas DataFrame.\n\n    Parameters:\n    - db_file (str): Path to the SQLite database file.\n    - query (str): SQL query to execute.\n\n    Returns:\n    - pd.DataFrame: A DataFrame containing the results of the executed query.\n\n    Requirements:\n    - sqlite3\n    - pandas\n\n    Example:\n    >>> db_file = 'sample_database.db'\n    >>> df = task_func(db_file, \"SELECT * FROM users WHERE name = 'John Doe'\")\n    pd.DataFrame:\n    id        name  age\n    --  ----------  ---\n    ..  John Doe   ..\n    >>> df = task_func(db_file, \"SELECT age, COUNT(*) AS count FROM users GROUP BY age\")\n    pd.DataFrame:\n    age  count\n    ---  -----\n    25   3\n    \"\"\"\n",
+    "canonical_solution": "    with sqlite3.connect(db_file) as conn:\n        return pd.read_sql_query(query, conn)",
+    "test": "import unittest\nimport sqlite3\nfrom faker import Faker\nimport os\nclass TestCases(unittest.TestCase):\n    \n    def setUp(self):\n        \"\"\"Set up test data before running tests.\"\"\"\n        self.fake = Faker()\n        self.specific_names = [\n            \"John Doe\",\n            \"Jane Smith\",\n            \"Alice Brown\",\n            \"Bob White\",\n            \"Charlie Green\",\n        ]\n        self.specific_ages = [25, 30, 35, 40, 45]\n        self.db_file = self.generate_test_data_with_file()\n    def generate_test_data_with_file(self) -> str:\n        \"\"\"Generate test data and save it to a temporary SQLite database file.\"\"\"\n        db_file = \"./temp_test_db.sqlite3\"\n        if os.path.exists(db_file):\n            os.remove(db_file)\n        conn = sqlite3.connect(db_file)\n        create_table_query = \"\"\"\n        CREATE TABLE users (\n            id INTEGER PRIMARY KEY,\n            name TEXT NOT NULL,\n            age INTEGER NOT NULL\n        )\n        \"\"\"\n        conn.execute(create_table_query)\n        for _ in range(100):\n            name = self.fake.name()\n            age = self.fake.random_int(min=20, max=70)\n            conn.execute(\"INSERT INTO users (name, age) VALUES (?, ?)\", (name, age))\n        for name, age in zip(self.specific_names, self.specific_ages):\n            conn.execute(\"INSERT INTO users (name, age) VALUES (?, ?)\", (name, age))\n        conn.commit()\n        conn.close()\n        return db_file\n    def test_case_1(self):\n        \"\"\"Test fetching all users.\"\"\"\n        df = task_func(self.db_file, \"SELECT * FROM users\")\n        self.assertEqual(len(df), 100 + len(self.specific_names))\n        for name in self.specific_names:\n            self.assertIn(name, df[\"name\"].values)\n    def test_case_2(self):\n        \"\"\"Test fetching specific users based on names.\"\"\"\n        names_as_strings = \"', '\".join(self.specific_names)\n        df = task_func(\n            self.db_file,\n            f\"SELECT name, age FROM users WHERE name IN ('{names_as_strings}')\",\n        )\n        for name in self.specific_names:\n            self.assertIn(name, df[\"name\"].values)\n        for age in self.specific_ages:\n            self.assertIn(age, df[\"age\"].values)\n    def test_case_3(self):\n        \"\"\"Test fetching users based on age condition.\"\"\"\n        age_limit = self.fake.random_int(min=20, max=60)\n        df = task_func(self.db_file, f\"SELECT * FROM users WHERE age > {age_limit}\")\n        self.assertTrue(all(df[\"age\"] > age_limit))\n    def test_case_4(self):\n        \"\"\"Test fetching users and sorting by name.\"\"\"\n        df = task_func(self.db_file, \"SELECT * FROM users ORDER BY name\")\n        sorted_names = sorted(df[\"name\"].tolist())\n        self.assertListEqual(df[\"name\"].tolist(), sorted_names)\n    def test_case_5(self):\n        \"\"\"Test fetching users based on age and sorting by age.\"\"\"\n        age_limit = self.fake.random_int(min=20, max=30)\n        df = task_func(\n            self.db_file,\n            f\"SELECT * FROM users WHERE age < {age_limit} ORDER BY age DESC\",\n        )\n        self.assertTrue(all(df[\"age\"] < age_limit))\n        self.assertTrue(\n            all(df[\"age\"].iloc[i] >= df[\"age\"].iloc[i + 1] for i in range(len(df) - 1))\n        )\n    def tearDown(self):\n        \"\"\"Clean up test data after running tests.\"\"\"\n        os.remove(self.db_file)",
+    "selected_test_methods": [
+      "test_case_5"
+    ],
+    "libraries": [
+      "sqlite3",
+      "pandas"
+    ],
+    "license": "Apache-2.0",
+    "creator_source_check": "instruct_prompt, canonical_solution and full test class read statically; no benchmark/model execution"
+  },
+  {
+    "example": 12,
+    "id": "BigCodeBench/536",
+    "row": 536,
+    "scope": "appendix",
+    "title": "SQLiteの表をCSVに書き出す",
+    "original": "Read SQLite3 table via pandas and export to a CSV file.\nThe function should output with:\n    str: The absolute path of the exported CSV file.\nYou should write self-contained code starting with:\n```\nimport sqlite3\nimport pandas as pd\nimport os\ndef task_func(db_name, table_name, csv_path=\"data.csv\"):\n```",
+    "original_field": "instruct_prompt",
+    "original_fullness": "entire Instruct original including imports/function prefix; Markdown code fences rendered as native code typography, not literal delimiter lines",
+    "japanese": "pandasを使ってSQLite3の表を読み込み、CSVファイルへ書き出す。書き出したCSVの絶対パスを文字列として返す。指定された書き出しを使い、必要なコードをすべて含む実装を書く。",
+    "japanese_scope": "all natural-language instructions translated, code prefix retains original spelling and is displayed in original page rather than duplicated",
+    "expected": "期待する動作：People表の3行をCSVへ保存する",
+    "explanation": "配布テストのPeople表にはAlice・Bob・Charlieがいる。保存したCSVが3行でAliceを含むことと、指定した出力先の絶対パスを返すことを確認する。",
+    "source_url": "https://huggingface.co/datasets/bigcode/bigcodebench",
+    "revision": "b74c0d0bf70d2c0bc459be537895cca163007f1a",
+    "data_version": "v0.1.4",
+    "code_prompt": "import sqlite3\nimport pandas as pd\nimport os\ndef task_func(db_name, table_name, csv_path=\"data.csv\"):\n",
+    "complete_prompt": "import sqlite3\nimport pandas as pd\nimport os\n\n\ndef task_func(db_name, table_name, csv_path=\"data.csv\"):\n    \"\"\"\n    Read SQLite3 table via pandas and export to a CSV file.\n\n    Parameters:\n    - db_name (str): The path to the SQLite3 database.\n    - table_name (str): The name of the table to export.\n    - csv_path (str, optional): The path where the CSV file will be saved. Defaults to 'data.csv'.\n\n    Requirements:\n    - sqlite3\n    - pandas\n    - os\n\n    Returns:\n    str: The absolute path of the exported CSV file.\n\n    Example:\n    >>> task_func('test.db', 'People')\n    'data.csv'\n    >>> task_func('/absolute/path/to/test.db', 'Orders', 'orders.csv')\n    '/absolute/path/to/orders.csv'\n    \"\"\"\n",
+    "canonical_solution": "    try:\n        conn = sqlite3.connect(db_name)\n        df = pd.read_sql_query(f\"SELECT * from {table_name}\", conn)\n        df.to_csv(csv_path, index=False)\n        return os.path.abspath(csv_path)\n    finally:\n        conn.close()",
+    "test": "import unittest\nimport os\nimport tempfile\nimport shutil\nimport sqlite3\nimport pandas as pd\nclass TestCases(unittest.TestCase):\n    def setUp(self):\n        self.temp_dir_obj = tempfile.TemporaryDirectory()\n        self.temp_dir = self.temp_dir_obj.name\n        self.db_path = os.path.join(self.temp_dir, \"test.db\")\n        # Setup the database and tables\n        conn = sqlite3.connect(self.db_path)\n        cursor = conn.cursor()\n        # Create tables and insert some data\n        cursor.execute(\"CREATE TABLE People (Name TEXT, Age INTEGER)\")\n        cursor.execute(\n            \"INSERT INTO People VALUES ('Alice', 30), ('Bob', 25), ('Charlie', 35)\"\n        )\n        cursor.execute(\"CREATE TABLE Orders (Product TEXT, Quantity INTEGER)\")\n        cursor.execute(\n            \"INSERT INTO Orders VALUES ('Widgets', 5), ('Gadgets', 10), ('Doodads', 15)\"\n        )\n        conn.commit()\n        conn.close()\n    def tearDown(self):\n        self.temp_dir_obj.cleanup()\n    def test_case_1(self):\n        # Test exporting the People table\n        csv_path = os.path.join(self.temp_dir, \"data.csv\")\n        output_path = task_func(self.db_path, \"People\", csv_path)\n        self.assertTrue(os.path.exists(output_path), \"CSV file not created.\")\n        df = pd.read_csv(output_path)\n        self.assertEqual(len(df), 3, \"CSV contains incorrect number of rows.\")\n        self.assertTrue(\"Alice\" in df[\"Name\"].values, \"Expected data not found in CSV.\")\n    def test_case_2(self):\n        # Test exporting the Orders table\n        csv_path = os.path.join(self.temp_dir, \"orders.csv\")\n        output_path = task_func(self.db_path, \"Orders\", csv_path)\n        self.assertTrue(os.path.exists(output_path), \"CSV file not created.\")\n        df = pd.read_csv(output_path)\n        self.assertEqual(len(df), 3, \"CSV contains incorrect number of rows.\")\n        self.assertTrue(5 in df[\"Quantity\"].values, \"Expected data not found in CSV.\")\n    def test_case_3(self):\n        # Test exporting with a custom CSV path\n        custom_path = os.path.join(self.temp_dir, \"custom_data.csv\")\n        output_path = task_func(self.db_path, \"People\", custom_path)\n        self.assertTrue(\n            os.path.exists(output_path), \"CSV file not created at custom path.\"\n        )\n        self.assertEqual(\n            output_path,\n            os.path.abspath(custom_path),\n            \"Returned path does not match expected path.\",\n        )\n    def test_case_4(self):\n        # Test with a non-existent database\n        with self.assertRaises(Exception):\n            task_func(os.path.join(self.temp_dir, \"nonexistent.db\"), \"People\")\n    def test_case_5(self):\n        # Test with a non-existent table\n        with self.assertRaises(pd.io.sql.DatabaseError):\n            task_func(self.db_path, \"NonexistentTable\")\n    def test_case_6(self):\n        # Test if the function overwrites an existing CSV file\n        csv_path = os.path.join(self.temp_dir, \"data.csv\")\n        with open(csv_path, \"w\") as file:\n            file.write(\"Old Content\")\n        output_path = task_func(self.db_path, \"People\", csv_path)\n        self.assertTrue(os.path.exists(output_path), \"CSV file not created.\")\n        with open(output_path, \"r\") as file:\n            content = file.read()\n            self.assertNotEqual(\n                \"Old Content\", content, \"Old content found in CSV. Overwriting failed.\"\n            )\n    def test_case_7(self):\n        # Test error handling with invalid CSV path\n        with self.assertRaises(OSError):\n            task_func(self.db_path, \"People\", \"/nonexistent_path/data.csv\")",
+    "selected_test_methods": [
+      "test_case_1",
+      "test_case_3"
+    ],
+    "libraries": [
+      "sqlite3",
+      "pandas",
+      "os"
+    ],
+    "license": "Apache-2.0",
+    "creator_source_check": "instruct_prompt, canonical_solution and full test class read statically; no benchmark/model execution"
+  },
+  {
+    "example": 13,
+    "id": "BigCodeBench/26",
+    "row": 26,
+    "scope": "appendix",
+    "title": "メッセージを暗号化して文字列にする",
+    "original": "Encrypts a message with a symmetric encryption key using Fernet encryption, and then encode the encrypted message using base64.\nThe function should output with:\n    str: The base64 encoded encrypted message. The message is first encrypted using Fernet encryption,\n    then the result is base64 encoded.\nYou should write self-contained code starting with:\n```\nimport base64\nfrom cryptography.fernet import Fernet\ndef task_func(message, encryption_key):\n```",
+    "original_field": "instruct_prompt",
+    "original_fullness": "entire Instruct original including imports/function prefix; Markdown code fences rendered as native code typography, not literal delimiter lines",
+    "japanese": "対称鍵暗号のFernetでメッセージを暗号化し、暗号化した結果をさらにbase64で符号化する。返す値はbase64で符号化した暗号文の文字列である。指定された書き出しを使い、必要なコードをすべて含む実装を書く。",
+    "japanese_scope": "all natural-language instructions translated, code prefix retains original spelling and is displayed in original page rather than duplicated",
+    "expected": "期待する動作：平文とは異なる文字列を返し、不正な鍵は拒否する",
+    "explanation": "配布テストはHello, World!などを与え、文字列型で平文と異なることを確認する。長さが不正な鍵では例外が起きる。",
+    "source_url": "https://huggingface.co/datasets/bigcode/bigcodebench",
+    "revision": "b74c0d0bf70d2c0bc459be537895cca163007f1a",
+    "data_version": "v0.1.4",
+    "code_prompt": "import base64\nfrom cryptography.fernet import Fernet\ndef task_func(message, encryption_key):\n",
+    "complete_prompt": "import base64\nfrom cryptography.fernet import Fernet\n\ndef task_func(message, encryption_key):\n    \"\"\"\n    Encrypts a message with a symmetric encryption key using Fernet encryption, and then encode the \n    encrypted message using base64.\n\n    Parameters:\n    message (str): The message to be encrypted and encoded.\n    encryption_key (str): The key used for symmetric encryption. It should be a string, which will \n                          be encoded to bytes, then URL-safe base64 encoded to conform to the requirements \n                          for Fernet (32 bytes after encoding).\n\n    Returns:\n    str: The base64 encoded encrypted message. The message is first encrypted using Fernet encryption, \n         then the result is base64 encoded.\n\n    Requirements:\n    - base64\n    - cryptography.fernet\n\n    Example:\n    >>> encrypted_message = task_func('Hello, World!', '01234567890123456789012345678901')\n    >>> isinstance(encrypted_message, str)\n    True\n    \"\"\"\n",
+    "canonical_solution": "    fernet = Fernet(base64.urlsafe_b64encode(encryption_key.encode()))\n    encrypted_message = fernet.encrypt(message.encode())\n    return base64.b64encode(encrypted_message).decode()",
+    "test": "import unittest\nimport base64\nfrom cryptography.fernet import Fernet\nclass TestCases(unittest.TestCase):\n    def test_case_1(self):\n        # Test with a basic message and a valid encryption key.\n        result = task_func('Hello, World!', '01234567890123456789012345678901')\n        self.assertIsInstance(result, str)\n        self.assertNotEqual(result, 'Hello, World!')\n    def test_case_2(self):\n        # Test with an empty message and a valid encryption key.\n        result = task_func('', '01234567890123456789012345678901')\n        self.assertIsInstance(result, str)\n        self.assertNotEqual(result, '')\n    def test_case_3(self):\n        # Test with a numeric message and a valid encryption key.\n        result = task_func('1234567890', '01234567890123456789012345678901')\n        self.assertIsInstance(result, str)\n        self.assertNotEqual(result, '1234567890')\n    def test_case_4(self):\n        # Test with a long message and a valid encryption key.\n        long_message = 'A' * 500\n        result = task_func(long_message, '01234567890123456789012345678901')\n        self.assertIsInstance(result, str)\n        self.assertNotEqual(result, long_message)\n    def test_case_5(self):\n        # Test with a basic message and an incorrectly formatted encryption key.\n        with self.assertRaises(ValueError):\n            task_func('Hello, World!', '0123456789')\n    def test_case_6(self):\n        # Test with a non-base64 but correct length key.\n        with self.assertRaises(Exception):\n            task_func('Hello, World!', '01234567890123456789012345678901'*2)  # Not base64-encoded",
+    "selected_test_methods": [
+      "test_case_1",
+      "test_case_5"
+    ],
+    "libraries": [
+      "base64",
+      "cryptography"
+    ],
+    "license": "Apache-2.0",
+    "creator_source_check": "instruct_prompt, canonical_solution and full test class read statically; no benchmark/model execution"
+  }
+]

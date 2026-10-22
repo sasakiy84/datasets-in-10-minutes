@@ -1,0 +1,499 @@
+{
+  "dataset": "BigCodeBench",
+  "creator_method": "skill_based_codex",
+  "gemini_used": false,
+  "external_generation_or_model_evaluation_used": false,
+  "data": {
+    "official_url": "https://huggingface.co/datasets/bigcode/bigcodebench",
+    "revision": "b74c0d0bf70d2c0bc459be537895cca163007f1a",
+    "version": "v0.1.4",
+    "rows": 1140,
+    "unique_task_ids": 1140,
+    "parquet_bytes": 2362110,
+    "declared_libraries": 139,
+    "test_methods_static_ast": 6434,
+    "mean_tests": 5.643859649122807,
+    "language": "English instructions / Python implementations",
+    "gated": false,
+    "license": "Apache-2.0",
+    "official_full_name": "BigCodeBench",
+    "paper_title": "BigCodeBench: Benchmarking Code Generation with Diverse Function Calls and Complex Instructions"
+  },
+  "score_definitions": {
+    "Full": 1140,
+    "Hard": 148,
+    "Complete": "structured docstring prompt",
+    "Instruct": "concise natural language plus code prefix",
+    "Pass@1": "percentage of tasks for which one generated implementation passes all associated tests",
+    "calibrated": "missing prompt setup, imports or constants restored before testing",
+    "prefilling": "code prefix inserted before generation; distinct from calibration"
+  },
+  "leaderboard_sources": {
+    "full_revision": "08ceb6b15ecd9c0f7c82932e4e248208ffeeb9b4",
+    "hard_revision": "522a45334d838a87b421ac96db27b2ef7fc165bb",
+    "full_rows": 202,
+    "hard_rows": 202,
+    "latest_model_date": "2025-04-14",
+    "prefill": {
+      "GPT-4.1-Mini": false,
+      "DeepSeek-V3": false,
+      "Qwen2.5-Coder-32B-Instruct": true
+    },
+    "all_twelve_displayed_values": "creator checked fixed official HF parquet; independent reviewer separately downloaded and matched",
+    "website_vs_hf": "official website JSON and HF score parquet differ; score tables explicitly cite HF fixed primary values, screenshot is only official-site introduction"
+  },
+  "current_use": {
+    "article": "https://alignment.openai.com/self-incrimination/",
+    "article_date": "2026-03-21",
+    "paper": "https://arxiv.org/abs/2602.22303",
+    "public_code": "https://github.com/brucewlee/self-incrimination",
+    "scope": "seven general capability checks include Full1140 Complete; GPT-4.1, GPT-4.1 mini and Gemini2.0Flash before/after training; no score numbers or frontier-model claims used"
+  },
+  "source_conflicts_and_decisions": [
+    {
+      "issue": "unique functions paper723/card397",
+      "decision": "omit differing number"
+    },
+    {
+      "issue": "Hard reference length tokens vs characters and solve-rate figure vs prose",
+      "decision": "describe selection dimensions without disputed numeric thresholds"
+    },
+    {
+      "issue": "human97%",
+      "decision": "show32/33 tasks from11annotators; do not imply generalhuman/Fullaccuracy"
+    },
+    {
+      "issue": "task148 English Encrypt vs LabelEncoder",
+      "decision": "retain original English; translate implementation/test behavior as integer encoding"
+    },
+    {
+      "issue": "task536 Complete example relative path vs return absolute",
+      "decision": "display full Instruct which requests absolute path; public canonical/test behavior confirms absolute"
+    },
+    {
+      "issue": "candidate0 defaults mismatch and254 precision ignored",
+      "decision": "excluded from selected13"
+    },
+    {
+      "issue": "145 mock vs actual IPv4Network",
+      "decision": "expected explanation explicitly uses mocked2addresses; no claim that /30 has only2 addresses"
+    },
+    {
+      "issue": "26 random Fernet ciphertext",
+      "decision": "no fabricated fixed goldciphertext; show type/nonplaintext/invalidkey behavior"
+    }
+  ],
+  "examples": [
+    {
+      "id": "BigCodeBench/25",
+      "row": 25,
+      "original_complete_canonical_test_prefix_equal": {
+        "instruct_prompt": true,
+        "complete_prompt": true,
+        "canonical_solution": true,
+        "test": true,
+        "code_prompt": true
+      },
+      "test_methods": 5,
+      "inspection": "creator fully read original/JP/canonical/public tests; expected behavior statically interpreted; no task executed",
+      "expected": "期待する動作：復号・展開すると元の辞書に戻る"
+    },
+    {
+      "id": "BigCodeBench/140",
+      "row": 140,
+      "original_complete_canonical_test_prefix_equal": {
+        "instruct_prompt": true,
+        "complete_prompt": true,
+        "canonical_solution": true,
+        "test": true,
+        "code_prompt": true
+      },
+      "test_methods": 5,
+      "inspection": "creator fully read original/JP/canonical/public tests; expected behavior statically interpreted; no task executed",
+      "expected": "期待する動作：平均は約0、標準偏差は約1"
+    },
+    {
+      "id": "BigCodeBench/32",
+      "row": 32,
+      "original_complete_canonical_test_prefix_equal": {
+        "instruct_prompt": true,
+        "complete_prompt": true,
+        "canonical_solution": true,
+        "test": true,
+        "code_prompt": true
+      },
+      "test_methods": 7,
+      "inspection": "creator fully read original/JP/canonical/public tests; expected behavior statically interpreted; no task executed",
+      "expected": "期待する動作：titleタグの文字列は \"Test Page\""
+    },
+    {
+      "id": "BigCodeBench/19",
+      "row": 19,
+      "original_complete_canonical_test_prefix_equal": {
+        "instruct_prompt": true,
+        "complete_prompt": true,
+        "canonical_solution": true,
+        "test": true,
+        "code_prompt": true
+      },
+      "test_methods": 6,
+      "inspection": "creator fully read original/JP/canonical/public tests; expected behavior statically interpreted; no task executed",
+      "expected": "期待する動作：直下のファイルだけをZIPに含める"
+    },
+    {
+      "id": "BigCodeBench/52",
+      "row": 52,
+      "original_complete_canonical_test_prefix_equal": {
+        "instruct_prompt": true,
+        "complete_prompt": true,
+        "canonical_solution": true,
+        "test": true,
+        "code_prompt": true
+      },
+      "test_methods": 5,
+      "inspection": "creator fully read original/JP/canonical/public tests; expected behavior statically interpreted; no task executed",
+      "expected": "期待する動作：\"Hello world Hello everyone\" から hello は2回"
+    },
+    {
+      "id": "BigCodeBench/56",
+      "row": 56,
+      "original_complete_canonical_test_prefix_equal": {
+        "instruct_prompt": true,
+        "complete_prompt": true,
+        "canonical_solution": true,
+        "test": true,
+        "code_prompt": true
+      },
+      "test_methods": 5,
+      "inspection": "creator fully read original/JP/canonical/public tests; expected behavior statically interpreted; no task executed",
+      "expected": "期待する動作：Score列に整数85、Category列にMathが入る"
+    },
+    {
+      "id": "BigCodeBench/60",
+      "row": 60,
+      "original_complete_canonical_test_prefix_equal": {
+        "instruct_prompt": true,
+        "complete_prompt": true,
+        "canonical_solution": true,
+        "test": true,
+        "code_prompt": true
+      },
+      "test_methods": 5,
+      "inspection": "creator fully read original/JP/canonical/public tests; expected behavior statically interpreted; no task executed",
+      "expected": "期待する動作：両方のファイルに元の値を保存する"
+    },
+    {
+      "id": "BigCodeBench/110",
+      "row": 110,
+      "original_complete_canonical_test_prefix_equal": {
+        "instruct_prompt": true,
+        "complete_prompt": true,
+        "canonical_solution": true,
+        "test": true,
+        "code_prompt": true
+      },
+      "test_methods": 6,
+      "inspection": "creator fully read original/JP/canonical/public tests; expected behavior statically interpreted; no task executed",
+      "expected": "期待する動作：タイトルはDaily Turnover、縦軸はSales"
+    },
+    {
+      "id": "BigCodeBench/145",
+      "row": 145,
+      "original_complete_canonical_test_prefix_equal": {
+        "instruct_prompt": true,
+        "complete_prompt": true,
+        "canonical_solution": true,
+        "test": true,
+        "code_prompt": true
+      },
+      "test_methods": 5,
+      "inspection": "creator fully read original/JP/canonical/public tests; expected behavior statically interpreted; no task executed",
+      "expected": "期待する動作：見出しの後に、列挙された各アドレスを書き出す"
+    },
+    {
+      "id": "BigCodeBench/148",
+      "row": 148,
+      "original_complete_canonical_test_prefix_equal": {
+        "instruct_prompt": true,
+        "complete_prompt": true,
+        "canonical_solution": true,
+        "test": true,
+        "code_prompt": true
+      },
+      "test_methods": 5,
+      "inspection": "creator fully read original/JP/canonical/public tests; expected behavior statically interpreted; no task executed",
+      "expected": "期待する動作：apple・banana・cherryを0・1・2に対応させる"
+    },
+    {
+      "id": "BigCodeBench/408",
+      "row": 408,
+      "original_complete_canonical_test_prefix_equal": {
+        "instruct_prompt": true,
+        "complete_prompt": true,
+        "canonical_solution": true,
+        "test": true,
+        "code_prompt": true
+      },
+      "test_methods": 5,
+      "inspection": "creator fully read original/JP/canonical/public tests; expected behavior statically interpreted; no task executed",
+      "expected": "期待する動作：年齢の条件と並び順を、検索結果へ反映する"
+    },
+    {
+      "id": "BigCodeBench/536",
+      "row": 536,
+      "original_complete_canonical_test_prefix_equal": {
+        "instruct_prompt": true,
+        "complete_prompt": true,
+        "canonical_solution": true,
+        "test": true,
+        "code_prompt": true
+      },
+      "test_methods": 7,
+      "inspection": "creator fully read original/JP/canonical/public tests; expected behavior statically interpreted; no task executed",
+      "expected": "期待する動作：People表の3行をCSVへ保存する"
+    },
+    {
+      "id": "BigCodeBench/26",
+      "row": 26,
+      "original_complete_canonical_test_prefix_equal": {
+        "instruct_prompt": true,
+        "complete_prompt": true,
+        "canonical_solution": true,
+        "test": true,
+        "code_prompt": true
+      },
+      "test_methods": 6,
+      "inspection": "creator fully read original/JP/canonical/public tests; expected behavior statically interpreted; no task executed",
+      "expected": "期待する動作：平文とは異なる文字列を返し、不正な鍵は拒否する"
+    }
+  ],
+  "source_collection_files": [
+    {
+      "path": "raw/LICENSE",
+      "bytes": 11438,
+      "sha256": "a858540b8dfd0c74db6953edaae85bde0b671643a7e2fb04a065f4dfd25fc28c",
+      "retrieved_date": "2026-10-22",
+      "retrieval": "public HTTP via normal configured proxy and CA; no model or evaluation call"
+    },
+    {
+      "path": "raw/README.md",
+      "bytes": 11351,
+      "sha256": "4aa8cbfa3111e92db886583d554a3c9e8f14561d47261d6441c069835e3bdc28",
+      "retrieved_date": "2026-10-22",
+      "retrieval": "public HTTP via normal configured proxy and CA; no model or evaluation call"
+    },
+    {
+      "path": "raw/bigcodebench-hard-results-meta.json",
+      "bytes": 1200,
+      "sha256": "707f1f4a41762052be2592c24ba7cd1de96ba4ee0b289318f4fe161820b77418",
+      "retrieved_date": "2026-10-22",
+      "retrieval": "public HTTP via normal configured proxy and CA; no model or evaluation call"
+    },
+    {
+      "path": "raw/bigcodebench-hard-results.json",
+      "bytes": 57529,
+      "sha256": "37bd161d0058e81a329f6d6f614c038575ac22c6590211765f7011488bb10d17",
+      "retrieved_date": "2026-10-22",
+      "retrieval": "public HTTP via normal configured proxy and CA; no model or evaluation call"
+    },
+    {
+      "path": "raw/bigcodebench-hard-results.parquet",
+      "bytes": 11998,
+      "sha256": "a1fe024c16f4fdac9ca7c6418d4bb47810c7c9d8fc4de1ff01c4cfea39b79615",
+      "retrieved_date": "2026-10-22",
+      "retrieval": "public HTTP via normal configured proxy and CA; no model or evaluation call"
+    },
+    {
+      "path": "raw/bigcodebench-results-meta.json",
+      "bytes": 1283,
+      "sha256": "aee30f617472372edf2e9d47d398906167e2201b20b6adec6984f455eab64452",
+      "retrieved_date": "2026-10-22",
+      "retrieval": "public HTTP via normal configured proxy and CA; no model or evaluation call"
+    },
+    {
+      "path": "raw/bigcodebench-results.json",
+      "bytes": 57587,
+      "sha256": "941df904c50a913fb14dea024214ac00d97196ce5ceb888aa37ddc7d0ab91af1",
+      "retrieved_date": "2026-10-22",
+      "retrieval": "public HTTP via normal configured proxy and CA; no model or evaluation call"
+    },
+    {
+      "path": "raw/bigcodebench-results.parquet",
+      "bytes": 12503,
+      "sha256": "b2aa99eff40dd1c62d5038a85e90f473c01405cd34dfd9fb0d645fe107feb647",
+      "retrieved_date": "2026-10-22",
+      "retrieval": "public HTTP via normal configured proxy and CA; no model or evaluation call"
+    },
+    {
+      "path": "raw/dataset-card.md",
+      "bytes": 8828,
+      "sha256": "ecf83775f5b479deb66704ddc7ea53df59a61468077d52037f21eee6450be932",
+      "retrieved_date": "2026-10-22",
+      "retrieval": "public HTTP via normal configured proxy and CA; no model or evaluation call"
+    },
+    {
+      "path": "raw/dataset.json",
+      "bytes": 7011976,
+      "sha256": "45160e573c1d3f32a0622b26964b5e845abf446c7aad01ad5e599a6e5b58b762",
+      "retrieved_date": "2026-10-22",
+      "retrieval": "public HTTP via normal configured proxy and CA; no model or evaluation call"
+    },
+    {
+      "path": "raw/dataset.parquet",
+      "bytes": 2362110,
+      "sha256": "d9a4965821c9507ebdfb551c288656b2d5fe553234f5183044333ca8a4018267",
+      "retrieved_date": "2026-10-22",
+      "retrieval": "public HTTP via normal configured proxy and CA; no model or evaluation call"
+    },
+    {
+      "path": "raw/hard-blog.html",
+      "bytes": 192148,
+      "sha256": "ebeee4b95e0743c03fe69209012a7d895ae7c64c36e447c1aaf3804027ce7eca",
+      "retrieved_date": "2026-10-22",
+      "retrieval": "public HTTP via normal configured proxy and CA; no model or evaluation call"
+    },
+    {
+      "path": "raw/hard-blog.txt",
+      "bytes": 11014,
+      "sha256": "0a60063eceab15bbc4c5414f39171184ac0c6e25e467fcf56ae4c1012326a10f",
+      "retrieved_date": "2026-10-22",
+      "retrieval": "public HTTP via normal configured proxy and CA; no model or evaluation call"
+    },
+    {
+      "path": "raw/hard-hf.json",
+      "bytes": 1963,
+      "sha256": "8951b41b142d3d190f2e2bc985e06068e2d4bdd516bb3016f95c7335daa86195",
+      "retrieved_date": "2026-10-22",
+      "retrieval": "public HTTP via normal configured proxy and CA; no model or evaluation call"
+    },
+    {
+      "path": "raw/hf.json",
+      "bytes": 2853,
+      "sha256": "5f0dc2a02631ccd88885ce8d54b84a26299537784627960da16a139bb600571e",
+      "retrieved_date": "2026-10-22",
+      "retrieval": "public HTTP via normal configured proxy and CA; no model or evaluation call"
+    },
+    {
+      "path": "raw/leaderboard-about.py",
+      "bytes": 12086,
+      "sha256": "19f33a3802a9001dbb327126d0b286f3f9b38e061b39fbb7655d400bbd2d0d2a",
+      "retrieved_date": "2026-10-22",
+      "retrieval": "public HTTP via normal configured proxy and CA; no model or evaluation call"
+    },
+    {
+      "path": "raw/leaderboard-app.py",
+      "bytes": 29731,
+      "sha256": "b8133af6adec7c0d7090ca7b704f13eaab358eafc3d534554f1202c05467e206",
+      "retrieved_date": "2026-10-22",
+      "retrieval": "public HTTP via normal configured proxy and CA; no model or evaluation call"
+    },
+    {
+      "path": "raw/leaderboard-envs.py",
+      "bytes": 1180,
+      "sha256": "d9d16684dbd7eab036f0db4a121377f48c742c5e435e71c6ebfe2841bcd2c7f8",
+      "retrieved_date": "2026-10-22",
+      "retrieval": "public HTTP via normal configured proxy and CA; no model or evaluation call"
+    },
+    {
+      "path": "raw/leaderboard-populate.py",
+      "bytes": 2440,
+      "sha256": "1af63b1e415ec8ec3fdfb23eea59bb6144d7cb12d6649ee0457a85ff47e77d44",
+      "retrieved_date": "2026-10-22",
+      "retrieval": "public HTTP via normal configured proxy and CA; no model or evaluation call"
+    },
+    {
+      "path": "raw/leaderboard-tree.json",
+      "bytes": 2237,
+      "sha256": "e30bccda821bf4c994a42098e6d559bc9b53f07cd858f75fe5739090e37e7a23",
+      "retrieved_date": "2026-10-22",
+      "retrieval": "public HTTP via normal configured proxy and CA; no model or evaluation call"
+    },
+    {
+      "path": "raw/openai-use.html",
+      "bytes": 23363,
+      "sha256": "cceda50f291613e393edfac6d9014670504191c27f9382e98d2352946c3cd612",
+      "retrieved_date": "2026-10-22",
+      "retrieval": "public HTTP via normal configured proxy and CA; no model or evaluation call"
+    },
+    {
+      "path": "raw/paper.pdf",
+      "bytes": 3546144,
+      "sha256": "4de866fa9d89958d68f63c0b2e17a55544ac9e1efd508497c74a22baab72f06e",
+      "retrieved_date": "2026-10-22",
+      "retrieval": "public HTTP via normal configured proxy and CA; no model or evaluation call"
+    },
+    {
+      "path": "raw/paper.txt",
+      "bytes": 174322,
+      "sha256": "0a03b87b36ce668529e4ca5e8dab481263f285aaf9ea511c2649758ab5bbab53",
+      "retrieved_date": "2026-10-22",
+      "retrieval": "public HTTP via normal configured proxy and CA; no model or evaluation call"
+    },
+    {
+      "path": "raw/repo-commits.json",
+      "bytes": 4359,
+      "sha256": "edc2e8abcde683538efbacee8013ae8ecbe8c3b3e0f11e4129c1eaae724c324b",
+      "retrieved_date": "2026-10-22",
+      "retrieval": "public HTTP via normal configured proxy and CA; no model or evaluation call"
+    },
+    {
+      "path": "raw/repo.json",
+      "bytes": 7105,
+      "sha256": "3f0f69dc7b29bd7c7e0288e5794e718b2fdb11f3b661fd63b3cbb7321481f24d",
+      "retrieved_date": "2026-10-22",
+      "retrieval": "public HTTP via normal configured proxy and CA; no model or evaluation call"
+    },
+    {
+      "path": "raw/self-report-paper.pdf",
+      "bytes": 4159234,
+      "sha256": "739ee7747236c1886131b6e33cc2f6833d3d7eb99b34f34732d79dc61aebaccc",
+      "retrieved_date": "2026-10-22",
+      "retrieval": "public HTTP via normal configured proxy and CA; no model or evaluation call"
+    },
+    {
+      "path": "raw/self-report-paper.txt",
+      "bytes": 296855,
+      "sha256": "845edc45178052c75d807db1909b6061e6284979ae939264f88ea0edb96edad4",
+      "retrieved_date": "2026-10-22",
+      "retrieval": "public HTTP via normal configured proxy and CA; no model or evaluation call"
+    },
+    {
+      "path": "raw/self-report-readme.md",
+      "bytes": 1294,
+      "sha256": "083f20588a8832d4ac28a7244c7f5d8cc7580e4bdc756b02bcadf9162eb0f78e",
+      "retrieved_date": "2026-10-22",
+      "retrieval": "public HTTP via normal configured proxy and CA; no model or evaluation call"
+    },
+    {
+      "path": "raw/self-report-repo-tree.json",
+      "bytes": 16968,
+      "sha256": "dcd6dc99ca071df76a946cf26725312c4dc82186f3c09aa6b9bc7f8118568c61",
+      "retrieved_date": "2026-10-22",
+      "retrieval": "public HTTP via normal configured proxy and CA; no model or evaluation call"
+    },
+    {
+      "path": "raw/self-report-run_bigcodebench.py",
+      "bytes": 3085,
+      "sha256": "4a821d45118ea296b6dd265a45e13b6c33d9d321b8314e3b76a9b32361afcaf8",
+      "retrieved_date": "2026-10-22",
+      "retrieval": "public HTTP via normal configured proxy and CA; no model or evaluation call"
+    },
+    {
+      "path": "raw/site.html",
+      "bytes": 67232,
+      "sha256": "523dae984a0d4289d63f800f68cdfa569b873ad29098706bc29abca1395e6243",
+      "retrieved_date": "2026-10-22",
+      "retrieval": "public HTTP via normal configured proxy and CA; no model or evaluation call"
+    }
+  ],
+  "own_scope": [
+    "creator public source collection",
+    "full static reading selected13originals/JP/canonical/tests",
+    "construction/statistics/metric/current-use primary reading",
+    "all1140 test AST parsed and aggregate counts independently computed by creator",
+    "original fields matched pinned dataset"
+  ],
+  "inherited_scope": [
+    "independent reviewer separately reobtained primary sources and matched selected13; final approval bound separately in review-bigcodebench/review.json"
+  ]
+}

@@ -1,0 +1,1391 @@
+[
+  {
+    "page": 1,
+    "title": "BigCodeBench",
+    "section": "",
+    "kind": "cover",
+    "main": true,
+    "planned_seconds": 8,
+    "native_content": [
+      "BigCodeBench",
+      "複数のPythonライブラリーを組み合わせるコード生成",
+      "sasakiy84",
+      "datasets in 10 minutes (2026-10-22)"
+    ]
+  },
+  {
+    "page": 2,
+    "title": "BigCodeBenchの公式リーダーボード",
+    "section": "公式サイト",
+    "kind": "screenshot",
+    "sources": [
+      "project"
+    ],
+    "main": true,
+    "planned_seconds": 8,
+    "native_content": [
+      "BigCodeBenchの公式リーダーボード",
+      "公式サイト",
+      "[1] BigCode Project (n.d.; 2026-10-22参照), BigCodeBench Leaderboard.  https://bigcode-bench.github.io/"
+    ]
+  },
+  {
+    "page": 3,
+    "title": "",
+    "section": "目次",
+    "kind": "toc",
+    "main": true,
+    "planned_seconds": 8,
+    "native_content": [
+      "",
+      "課題と三つの実例\n構築方法と課題の広がり\n採点方法とモデルの到達水準\n継続利用と入手方法",
+      "目次"
+    ]
+  },
+  {
+    "page": 4,
+    "title": "1. 課題と三つの実例",
+    "section": "1. 課題と三つの実例",
+    "kind": "divider",
+    "main": true,
+    "planned_seconds": 5,
+    "native_content": [
+      "1. 課題と三つの実例",
+      "1. 課題と三つの実例"
+    ]
+  },
+  {
+    "page": 5,
+    "title": "1,140課題で、関数を実装する力を測る",
+    "section": "1. 課題と三つの実例",
+    "kind": "content",
+    "sources": [
+      "data"
+    ],
+    "body_text": [
+      "BigCodeBenchは、英語で書かれた要件からPythonの関数を実装する評価用データセットである。データ分析、ファイル操作、Web処理などを扱う。",
+      "入力は処理の説明と関数の書き出しで、出力は実装するコードである。必要なライブラリーの機能を組み合わせ、指定された戻り値や例外処理を満たす。",
+      "配布するテストを実行し、要求された動作ができるか採点する。"
+    ],
+    "main": true,
+    "planned_seconds": 20,
+    "native_content": [
+      "1,140課題で、関数を実装する力を測る",
+      "BigCodeBenchは、英語で書かれた要件からPythonの関数を実装する評価用データセットである。データ分析、ファイル操作、Web処理などを扱う。\n入力は処理の説明と関数の書き出しで、出力は実装するコードである。必要なライブラリーの機能を組み合わせ、指定された戻り値や例外処理を満たす。\n配布するテストを実行し、要求された動作ができるか採点する。",
+      "1. 課題と三つの実例",
+      "[1] BigCode Project (n.d.; 2026-10-22参照), BigCodeBench Dataset v0.1.4.  https://huggingface.co/datasets/bigcode/bigcodebench"
+    ]
+  },
+  {
+    "page": 6,
+    "title": "同じ処理を、二つの書き方で依頼する",
+    "section": "1. 課題と三つの実例",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "Completeは、コード内の文書文字列docstringで、引数・戻り値・例外・利用例などを詳しく示す。",
+      "Instructは、自然言語の依頼文とコードの書き出しを示す。同じ機能を、より簡潔な指示から実装する。",
+      "ここではInstructの公開v0.1.4から、処理の異なる13課題を選ぶ。原文には指示とコード指定をすべて示し、日本語では自然言語の指示を訳す。"
+    ],
+    "main": true,
+    "planned_seconds": 20,
+    "native_content": [
+      "同じ処理を、二つの書き方で依頼する",
+      "Completeは、コード内の文書文字列docstringで、引数・戻り値・例外・利用例などを詳しく示す。\nInstructは、自然言語の依頼文とコードの書き出しを示す。同じ機能を、より簡潔な指示から実装する。\nここではInstructの公開v0.1.4から、処理の異なる13課題を選ぶ。原文には指示とコード指定をすべて示し、日本語では自然言語の指示を訳す。",
+      "1. 課題と三つの実例",
+      "[1] Zhuo et al. (2025), BigCodeBench. ICLR 2025.  https://arxiv.org/abs/2406.15877"
+    ]
+  },
+  {
+    "page": 7,
+    "title": "例1：辞書を圧縮し、文字列へ変換する",
+    "section": "1. 課題と三つの実例",
+    "kind": "example-original",
+    "sources": [
+      "data"
+    ],
+    "example_id": "BigCodeBench/25",
+    "example": 1,
+    "original": "Serializes a dictionary to a JSON string, compresses it using zlib, and then encodes the compressed data with base64.\nThe function should output with:\n    str: A base64 encoded string that represents the zlib-compressed JSON string of the dictionary.\nYou should write self-contained code starting with:\n```\nimport base64\nimport json\nimport zlib\ndef task_func(data_dict):\n```",
+    "font_size": 18.5,
+    "code_fences_rendered_as_formatting": true,
+    "bilingual": false,
+    "main": true,
+    "planned_seconds": 34,
+    "native_content": [
+      "例1：辞書を圧縮し、文字列へ変換する",
+      "1. 課題と三つの実例",
+      "Instructの原文（全文・コード指定を含む）",
+      "",
+      "Serializes a dictionary to a JSON string, compresses it using zlib, and then encodes the compressed data with base64.\nThe function should output with:\n    str: A base64 encoded string that represents the zlib-compressed JSON string of the dictionary.\nYou should write self-contained code starting with:\nimport base64\nimport json\nimport zlib\ndef task_func(data_dict):",
+      "[1] BigCode Project (n.d.; 2026-10-22参照), BigCodeBench Dataset v0.1.4. BigCodeBench/25  https://huggingface.co/datasets/bigcode/bigcodebench"
+    ]
+  },
+  {
+    "page": 8,
+    "title": "例1：日本語訳と期待する動作",
+    "section": "1. 課題と三つの実例",
+    "kind": "example-translation",
+    "sources": [
+      "data"
+    ],
+    "example_id": "BigCodeBench/25",
+    "example": 1,
+    "japanese": "辞書をJSON文字列に変換し、zlibで圧縮した後、base64で符号化する。出力は、圧縮したJSONを表すbase64の文字列である。指定された書き出しを使い、必要なコードをすべて含む実装を書く。",
+    "expected": "期待する動作：復号・展開すると元の辞書に戻る",
+    "explanation": "配布テストは文字列型を確認したうえで、base64を復号し、zlibを展開してJSONを読み戻す。入れ子のリストや辞書も確かめる。",
+    "main": true,
+    "planned_seconds": 34,
+    "native_content": [
+      "例1：日本語訳と期待する動作",
+      "1. 課題と三つの実例",
+      "日本語訳（自然言語の指示）",
+      "辞書をJSON文字列に変換し、zlibで圧縮した後、base64で符号化する。出力は、圧縮したJSONを表すbase64の文字列である。指定された書き出しを使い、必要なコードをすべて含む実装を書く。",
+      "期待する動作：復号・展開すると元の辞書に戻る",
+      "配布テストは文字列型を確認したうえで、base64を復号し、zlibを展開してJSONを読み戻す。入れ子のリストや辞書も確かめる。",
+      "[1] BigCode Project (n.d.; 2026-10-22参照), BigCodeBench Dataset v0.1.4. BigCodeBench/25  https://huggingface.co/datasets/bigcode/bigcodebench"
+    ]
+  },
+  {
+    "page": 9,
+    "title": "例2：指定した数値列を標準化する",
+    "section": "1. 課題と三つの実例",
+    "kind": "example-original",
+    "sources": [
+      "data"
+    ],
+    "example_id": "BigCodeBench/140",
+    "example": 2,
+    "original": "Standardize specified numeric columns in a dataframe.\nThe function should raise the exception for: ValueError: If 'df' is not a DataFrame, 'cols' is not a list, or columns in 'cols' don't exist in 'df'.\nThe function should output with:\n    DataFrame: The dataframe with standardized columns.\nYou should write self-contained code starting with:\n```\nimport pandas as pd\nfrom sklearn.preprocessing import StandardScaler\ndef task_func(df, cols):\n```",
+    "font_size": 18.5,
+    "code_fences_rendered_as_formatting": true,
+    "bilingual": false,
+    "main": true,
+    "planned_seconds": 34,
+    "native_content": [
+      "例2：指定した数値列を標準化する",
+      "1. 課題と三つの実例",
+      "Instructの原文（全文・コード指定を含む）",
+      "",
+      "Standardize specified numeric columns in a dataframe.\nThe function should raise the exception for: ValueError: If 'df' is not a DataFrame, 'cols' is not a list, or columns in 'cols' don't exist in 'df'.\nThe function should output with:\n    DataFrame: The dataframe with standardized columns.\nYou should write self-contained code starting with:\nimport pandas as pd\nfrom sklearn.preprocessing import StandardScaler\ndef task_func(df, cols):",
+      "[1] BigCode Project (n.d.; 2026-10-22参照), BigCodeBench Dataset v0.1.4. BigCodeBench/140  https://huggingface.co/datasets/bigcode/bigcodebench"
+    ]
+  },
+  {
+    "page": 10,
+    "title": "例2：日本語訳と期待する動作",
+    "section": "1. 課題と三つの実例",
+    "kind": "example-translation",
+    "sources": [
+      "data"
+    ],
+    "example_id": "BigCodeBench/140",
+    "example": 2,
+    "japanese": "データフレームの指定した数値列を標準化する。dfがDataFrameでない場合、colsがリストでない場合、指定した列が存在しない場合はValueErrorを送出する。標準化した列を含むデータフレームを返す。指定された書き出しを使い、必要なコードをすべて含む実装を書く。",
+    "expected": "期待する動作：平均は約0、標準偏差は約1",
+    "explanation": "配布テストはA・B列の平均と標準偏差を確認し、列が存在しない場合などの例外も調べる。",
+    "main": true,
+    "planned_seconds": 34,
+    "native_content": [
+      "例2：日本語訳と期待する動作",
+      "1. 課題と三つの実例",
+      "日本語訳（自然言語の指示）",
+      "データフレームの指定した数値列を標準化する。dfがDataFrameでない場合、colsがリストでない場合、指定した列が存在しない場合はValueErrorを送出する。標準化した列を含むデータフレームを返す。指定された書き出しを使い、必要なコードをすべて含む実装を書く。",
+      "期待する動作：平均は約0、標準偏差は約1",
+      "配布テストはA・B列の平均と標準偏差を確認し、列が存在しない場合などの例外も調べる。",
+      "[1] BigCode Project (n.d.; 2026-10-22参照), BigCodeBench Dataset v0.1.4. BigCodeBench/140  https://huggingface.co/datasets/bigcode/bigcodebench"
+    ]
+  },
+  {
+    "page": 11,
+    "title": "例3：Webページから最初のタグを読む",
+    "section": "1. 課題と三つの実例",
+    "kind": "example-original",
+    "sources": [
+      "data"
+    ],
+    "example_id": "BigCodeBench/32",
+    "example": 3,
+    "original": "Scrape a web page for the first occurrence of a specified HTML tag and return its text content.\nThe function should output with:\n    str: The text content of the specified HTML tag if found, otherwise returns None.\nYou should write self-contained code starting with:\n```\nimport requests\nfrom bs4 import BeautifulSoup\ndef task_func(url, tag):\n```",
+    "font_size": 18.5,
+    "code_fences_rendered_as_formatting": true,
+    "bilingual": false,
+    "main": true,
+    "planned_seconds": 34,
+    "native_content": [
+      "例3：Webページから最初のタグを読む",
+      "1. 課題と三つの実例",
+      "Instructの原文（全文・コード指定を含む）",
+      "",
+      "Scrape a web page for the first occurrence of a specified HTML tag and return its text content.\nThe function should output with:\n    str: The text content of the specified HTML tag if found, otherwise returns None.\nYou should write self-contained code starting with:\nimport requests\nfrom bs4 import BeautifulSoup\ndef task_func(url, tag):",
+      "[1] BigCode Project (n.d.; 2026-10-22参照), BigCodeBench Dataset v0.1.4. BigCodeBench/32  https://huggingface.co/datasets/bigcode/bigcodebench"
+    ]
+  },
+  {
+    "page": 12,
+    "title": "例3：日本語訳と期待する動作",
+    "section": "1. 課題と三つの実例",
+    "kind": "example-translation",
+    "sources": [
+      "data"
+    ],
+    "example_id": "BigCodeBench/32",
+    "example": 3,
+    "japanese": "Webページから、指定したHTMLタグの最初の出現を探し、そのテキストを返す。タグが見つからなければNoneを返す。指定された書き出しを使い、必要なコードをすべて含む実装を書く。",
+    "expected": "期待する動作：titleタグの文字列は \"Test Page\"",
+    "explanation": "タグが存在しない場合にNoneを返すことも確かめる。",
+    "main": true,
+    "planned_seconds": 34,
+    "native_content": [
+      "例3：日本語訳と期待する動作",
+      "1. 課題と三つの実例",
+      "日本語訳（自然言語の指示）",
+      "Webページから、指定したHTMLタグの最初の出現を探し、そのテキストを返す。タグが見つからなければNoneを返す。指定された書き出しを使い、必要なコードをすべて含む実装を書く。",
+      "配布テストのHTML（title部分）",
+      "<title>Test Page</title>",
+      "期待する動作：titleタグの文字列は \"Test Page\"",
+      "タグが存在しない場合にNoneを返すことも確かめる。",
+      "[1] BigCode Project (n.d.; 2026-10-22参照), BigCodeBench Dataset v0.1.4. BigCodeBench/32  https://huggingface.co/datasets/bigcode/bigcodebench"
+    ]
+  },
+  {
+    "page": 13,
+    "title": "2. 構築方法と課題の広がり",
+    "section": "2. 構築方法と課題の広がり",
+    "kind": "divider",
+    "main": true,
+    "planned_seconds": 5,
+    "native_content": [
+      "2. 構築方法と課題の広がり",
+      "2. 構築方法と課題の広がり"
+    ]
+  },
+  {
+    "page": 14,
+    "title": "モデルによる生成を、専門家が繰り返し点検した",
+    "section": "2. 構築方法と課題の広がり",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "2024年に公開され、ICLR 2025で発表された。短いアルゴリズムだけでなく、複数のライブラリーを使う実用的な処理を評価するために作られた。",
+      "ODEXのコード例を種にGPT-4で課題を拡張し、関数名の置換や説明の言い換えを行った。4,718件の候補から、コードとテストを整える。",
+      "人が生成を指導し、テストの不足や実装の不備を修正した。最終的に1,140課題を残した。"
+    ],
+    "main": true,
+    "planned_seconds": 20,
+    "native_content": [
+      "モデルによる生成を、専門家が繰り返し点検した",
+      "2024年に公開され、ICLR 2025で発表された。短いアルゴリズムだけでなく、複数のライブラリーを使う実用的な処理を評価するために作られた。\nODEXのコード例を種にGPT-4で課題を拡張し、関数名の置換や説明の言い換えを行った。4,718件の候補から、コードとテストを整える。\n人が生成を指導し、テストの不足や実装の不備を修正した。最終的に1,140課題を残した。",
+      "2. 構築方法と課題の広がり",
+      "[1] Zhuo et al. (2025), BigCodeBench. ICLR 2025.  https://arxiv.org/abs/2406.15877"
+    ]
+  },
+  {
+    "page": 15,
+    "title": "20人の作業で、説明・実装・テストをそろえた",
+    "section": "2. 構築方法と課題の広がり",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "構築には著者20人が計1年間にわたり参加し、75%はPythonの経験が5年以上あった。",
+      "説明と実装の一致、必要なインポート、例外処理、テストの安定性を人が確認した。別の担当者による相互点検も行った。",
+      "最終確認では11人が計33課題を解き、32課題で全テストを通過した。これは構築時の標本による確認である。"
+    ],
+    "main": true,
+    "planned_seconds": 20,
+    "native_content": [
+      "20人の作業で、説明・実装・テストをそろえた",
+      "構築には著者20人が計1年間にわたり参加し、75%はPythonの経験が5年以上あった。\n説明と実装の一致、必要なインポート、例外処理、テストの安定性を人が確認した。別の担当者による相互点検も行った。\n最終確認では11人が計33課題を解き、32課題で全テストを通過した。これは構築時の標本による確認である。",
+      "2. 構築方法と課題の広がり",
+      "[1] Zhuo et al. (2025), BigCodeBench. ICLR 2025.  https://arxiv.org/abs/2406.15877"
+    ]
+  },
+  {
+    "page": 16,
+    "title": "多くの処理で、複数のライブラリーを使う",
+    "section": "2. 構築方法と課題の広がり",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "main": true,
+    "planned_seconds": 20,
+    "native_content": [
+      "多くの処理で、複数のライブラリーを使う",
+      "2. 構築方法と課題の広がり",
+      "分岐網羅率は、参照実装の条件分岐をテストがどれだけ通るかを表す。",
+      "[1] Zhuo et al. (2025), BigCodeBench. ICLR 2025.  https://arxiv.org/abs/2406.15877",
+      [
+        [
+          "項目",
+          "値"
+        ],
+        [
+          "Pythonの課題数",
+          "1,140"
+        ],
+        [
+          "利用するライブラリー数",
+          "139"
+        ],
+        [
+          "参照実装1課題のライブラリー数の平均",
+          "2.8"
+        ],
+        [
+          "1課題のテスト数の平均",
+          "5.6"
+        ],
+        [
+          "参照実装の平均分岐網羅率",
+          "99%"
+        ]
+      ]
+    ]
+  },
+  {
+    "page": 17,
+    "title": "計算・汎用処理・可視化が多い",
+    "section": "2. 構築方法と課題の広がり",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "main": true,
+    "planned_seconds": 20,
+    "native_content": [
+      "計算・汎用処理・可視化が多い",
+      "2. 構築方法と課題の広がり",
+      "同じ課題を複数の分野に数える。",
+      "[1] Zhuo et al. (2025), BigCodeBench. ICLR 2025.  https://arxiv.org/abs/2406.15877",
+      [
+        [
+          "ライブラリーの分野",
+          "使用する課題(%)"
+        ],
+        [
+          "計算",
+          "63"
+        ],
+        [
+          "汎用処理",
+          "44"
+        ],
+        [
+          "可視化",
+          "31"
+        ],
+        [
+          "システム",
+          "30"
+        ]
+      ]
+    ]
+  },
+  {
+    "page": 18,
+    "title": "時間・ネットワーク・暗号処理も扱う",
+    "section": "2. 構築方法と課題の広がり",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "main": true,
+    "planned_seconds": 20,
+    "native_content": [
+      "時間・ネットワーク・暗号処理も扱う",
+      "2. 構築方法と課題の広がり",
+      "公式のCryptographyには、base64などの符号化も含まれる。",
+      "[1] Zhuo et al. (2025), BigCodeBench. ICLR 2025.  https://arxiv.org/abs/2406.15877",
+      [
+        [
+          "ライブラリーの分野",
+          "使用する課題(%)"
+        ],
+        [
+          "時間",
+          "10"
+        ],
+        [
+          "ネットワーク",
+          "8"
+        ],
+        [
+          "暗号・符号化",
+          "5"
+        ]
+      ]
+    ]
+  },
+  {
+    "page": 19,
+    "title": "Hardは、実用的で難しい148課題を選ぶ",
+    "section": "2. 構築方法と課題の広がり",
+    "kind": "content",
+    "sources": [
+      "hard"
+    ],
+    "body_text": [
+      "Fullは1,140課題全体を指し、Hardはその中から選んだ148課題の部分集合である。どちらにもCompleteとInstructがある。",
+      "HardはStack Overflowの利用者の質問と似た課題を取り出し、使うライブラリーの数、参照解の長さ、モデルの解決率などで絞った。",
+      "限られた計算予算で、難しい課題を評価したい場合に使う。"
+    ],
+    "main": true,
+    "planned_seconds": 20,
+    "native_content": [
+      "Hardは、実用的で難しい148課題を選ぶ",
+      "Fullは1,140課題全体を指し、Hardはその中から選んだ148課題の部分集合である。どちらにもCompleteとInstructがある。\nHardはStack Overflowの利用者の質問と似た課題を取り出し、使うライブラリーの数、参照解の長さ、モデルの解決率などで絞った。\n限られた計算予算で、難しい課題を評価したい場合に使う。",
+      "2. 構築方法と課題の広がり",
+      "[1] Zhuo (2024), Introducing BigCodeBench-Hard.  https://huggingface.co/blog/terryyz/bigcodebench-hard"
+    ]
+  },
+  {
+    "page": 20,
+    "title": "3. 採点方法とモデルの到達水準",
+    "section": "3. 採点方法とモデルの到達水準",
+    "kind": "divider",
+    "main": true,
+    "planned_seconds": 5,
+    "native_content": [
+      "3. 採点方法とモデルの到達水準",
+      "3. 採点方法とモデルの到達水準"
+    ]
+  },
+  {
+    "page": 21,
+    "title": "全テストを通る課題の割合をPass@1にする",
+    "section": "3. 採点方法とモデルの到達水準",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "各課題で一つの実装を作り、その課題に付いたテストをすべて通れば成功とする。成功した課題の割合がPass@1である。",
+      "配列の値だけでなく、生成ファイル、例外、グラフの情報、模擬した通信の結果などもテストする。",
+      "2024年の主な比較は、解答例を示さないzero-shotと、次のトークンごとに最も確率が高い候補を選ぶgreedy decodingを使った。"
+    ],
+    "main": true,
+    "planned_seconds": 20,
+    "native_content": [
+      "全テストを通る課題の割合をPass@1にする",
+      "各課題で一つの実装を作り、その課題に付いたテストをすべて通れば成功とする。成功した課題の割合がPass@1である。\n配列の値だけでなく、生成ファイル、例外、グラフの情報、模擬した通信の結果などもテストする。\n2024年の主な比較は、解答例を示さないzero-shotと、次のトークンごとに最も確率が高い候補を選ぶgreedy decodingを使った。",
+      "3. 採点方法とモデルの到達水準",
+      "[1] Zhuo et al. (2025), BigCodeBench. ICLR 2025.  https://arxiv.org/abs/2406.15877"
+    ]
+  },
+  {
+    "page": 22,
+    "title": "省いたインポートを補う採点も報告する",
+    "section": "3. 採点方法とモデルの到達水準",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "生成コードから必要な部分を取り出した後、そのまま実行する成績と、欠けた書き出しを補う成績を計算する。",
+      "calibrated Pass@1は、欠けたインポートや定数などを入力のコード指定から補った成績である。",
+      "公開表には、コードの書き出しを回答の先頭に事前投入するprefillingの設定もある。採点時に欠けた部分を補うcalibrationと、生成を始める設定を分けて示す。"
+    ],
+    "main": true,
+    "planned_seconds": 20,
+    "native_content": [
+      "省いたインポートを補う採点も報告する",
+      "生成コードから必要な部分を取り出した後、そのまま実行する成績と、欠けた書き出しを補う成績を計算する。\ncalibrated Pass@1は、欠けたインポートや定数などを入力のコード指定から補った成績である。\n公開表には、コードの書き出しを回答の先頭に事前投入するprefillingの設定もある。採点時に欠けた部分を補うcalibrationと、生成を始める設定を分けて示す。",
+      "3. 採点方法とモデルの到達水準",
+      "[1] Zhuo et al. (2025), BigCodeBench. ICLR 2025.  https://arxiv.org/abs/2406.15877"
+    ]
+  },
+  {
+    "page": 23,
+    "title": "初期評価でも、Instructの得点が低い",
+    "section": "3. 採点方法とモデルの到達水準",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "main": true,
+    "planned_seconds": 20,
+    "native_content": [
+      "初期評価でも、Instructの得点が低い",
+      "3. 採点方法とモデルの到達水準",
+      "Full 1,140課題、zero-shot・greedy。そのまま実行したPass@1。",
+      "[1] Zhuo et al. (2025), BigCodeBench. ICLR 2025.  https://arxiv.org/abs/2406.15877",
+      [
+        [
+          "モデル（2024年）",
+          "Complete(%)",
+          "Instruct(%)"
+        ],
+        [
+          "GPT-4o (05-13)",
+          "60.2",
+          "49.9"
+        ],
+        [
+          "Claude 3 Opus",
+          "56.8",
+          "45.2"
+        ],
+        [
+          "DeepSeek Chat V2",
+          "49.4",
+          "40.4"
+        ]
+      ]
+    ]
+  },
+  {
+    "page": 24,
+    "title": "公式公開表には、後続モデルの評価も残る",
+    "section": "3. 採点方法とモデルの到達水準",
+    "kind": "content",
+    "sources": [
+      "board"
+    ],
+    "main": true,
+    "planned_seconds": 20,
+    "native_content": [
+      "公式公開表には、後続モデルの評価も残る",
+      "3. 採点方法とモデルの到達水準",
+      "Full、calibrated Pass@1。2026-10-22取得の公開表。",
+      "[1] BigCode Project (n.d.; 2026-10-22参照), official BigCodeBench results.  https://huggingface.co/datasets/bigcode/bigcodebench-results",
+      [
+        [
+          "モデル",
+          "事前投入",
+          "Complete(%)",
+          "Instruct(%)"
+        ],
+        [
+          "GPT-4.1 Mini (2025)",
+          "なし",
+          "59.3",
+          "48.9"
+        ],
+        [
+          "DeepSeek V3 (2024)",
+          "なし",
+          "62.2",
+          "50.0"
+        ],
+        [
+          "Qwen2.5 Coder 32B (2024)",
+          "あり",
+          "58.0",
+          "49.0"
+        ]
+      ]
+    ]
+  },
+  {
+    "page": 25,
+    "title": "Hardでは、同じモデルも得点が下がる",
+    "section": "3. 採点方法とモデルの到達水準",
+    "kind": "content",
+    "sources": [
+      "hardboard"
+    ],
+    "main": true,
+    "planned_seconds": 20,
+    "native_content": [
+      "Hardでは、同じモデルも得点が下がる",
+      "3. 採点方法とモデルの到達水準",
+      "Hard 148課題、calibrated Pass@1。",
+      "[1] BigCode Project (n.d.; 2026-10-22参照), official BigCodeBench-Hard results.  https://huggingface.co/datasets/bigcode/bigcodebench-hard-results",
+      [
+        [
+          "モデル",
+          "事前投入",
+          "Complete(%)",
+          "Instruct(%)"
+        ],
+        [
+          "GPT-4.1 Mini (2025)",
+          "なし",
+          "33.8",
+          "31.8"
+        ],
+        [
+          "DeepSeek V3 (2024)",
+          "なし",
+          "40.5",
+          "28.4"
+        ],
+        [
+          "Qwen2.5 Coder 32B (2024)",
+          "あり",
+          "33.8",
+          "27.7"
+        ]
+      ]
+    ]
+  },
+  {
+    "page": 26,
+    "title": "4. 継続利用と入手方法",
+    "section": "4. 継続利用と入手方法",
+    "kind": "divider",
+    "main": true,
+    "planned_seconds": 5,
+    "native_content": [
+      "4. 継続利用と入手方法",
+      "4. 継続利用と入手方法"
+    ]
+  },
+  {
+    "page": 27,
+    "title": "2026年には、追加訓練後の能力確認にも使われる",
+    "section": "4. 継続利用と入手方法",
+    "kind": "content",
+    "sources": [
+      "selfreport"
+    ],
+    "body_text": [
+      "Leeらは、エージェントに不正な振る舞いを自己申告させる訓練を行い、一般的な能力が保たれるか調べた。",
+      "七つの評価の一つに、BigCodeBenchの1,140課題を採用した。公開コードはComplete形式を使う。",
+      "GPT-4.1、GPT-4.1 mini、Gemini 2.0 Flashの訓練前後を比較する。ここではコード生成能力を保てるかを測る役割を持つ。"
+    ],
+    "main": true,
+    "planned_seconds": 20,
+    "native_content": [
+      "2026年には、追加訓練後の能力確認にも使われる",
+      "Leeらは、エージェントに不正な振る舞いを自己申告させる訓練を行い、一般的な能力が保たれるか調べた。\n七つの評価の一つに、BigCodeBenchの1,140課題を採用した。公開コードはComplete形式を使う。\nGPT-4.1、GPT-4.1 mini、Gemini 2.0 Flashの訓練前後を比較する。ここではコード生成能力を保てるかを測る役割を持つ。",
+      "4. 継続利用と入手方法",
+      "[1] Lee, Chen and Korbak (2026), Training Agents to Self-Report Misbehavior.  https://arxiv.org/abs/2602.22303"
+    ]
+  },
+  {
+    "page": 28,
+    "title": "公式配布から、二つの提示文とテストを読める",
+    "section": "4. 継続利用と入手方法",
+    "kind": "content",
+    "sources": [
+      "data"
+    ],
+    "body_text": [
+      "Hugging Faceのbigcode/bigcodebenchで、1,140課題を申請なしで取得できる。ここで使ったv0.1.4には、依頼文、書き出し、参照実装、テストがそろっている。",
+      "CompleteとInstructの両方を同じ課題IDで確認できる。v0.1.4はデータの改訂版を示す。",
+      "公式GitHubには評価用の実装と環境の案内があり、FullとHard、提示形式を選べる。"
+    ],
+    "main": true,
+    "planned_seconds": 20,
+    "native_content": [
+      "公式配布から、二つの提示文とテストを読める",
+      "Hugging Faceのbigcode/bigcodebenchで、1,140課題を申請なしで取得できる。ここで使ったv0.1.4には、依頼文、書き出し、参照実装、テストがそろっている。\nCompleteとInstructの両方を同じ課題IDで確認できる。v0.1.4はデータの改訂版を示す。\n公式GitHubには評価用の実装と環境の案内があり、FullとHard、提示形式を選べる。",
+      "4. 継続利用と入手方法",
+      "[1] BigCode Project (n.d.; 2026-10-22参照), BigCodeBench Dataset v0.1.4.  https://huggingface.co/datasets/bigcode/bigcodebench"
+    ]
+  },
+  {
+    "page": 29,
+    "title": "1件の依頼とテストを確認する",
+    "section": "4. 継続利用と入手方法",
+    "kind": "code",
+    "sources": [
+      "data"
+    ],
+    "main": true,
+    "planned_seconds": 20,
+    "native_content": [
+      "1件の依頼とテストを確認する",
+      "4. 継続利用と入手方法",
+      "from datasets import load_dataset\n\nds = load_dataset(\"bigcode/bigcodebench\",\n                  split=\"v0.1.4\")\nitem = ds[25]\nprint(item[\"instruct_prompt\"])\nprint(item[\"test\"])",
+      "依頼文とテストを同じレコードで読み、求められる動作を確かめる。",
+      "[1] BigCode Project (n.d.; 2026-10-22参照), BigCodeBench Dataset v0.1.4.  https://huggingface.co/datasets/bigcode/bigcodebench"
+    ]
+  },
+  {
+    "page": 30,
+    "title": "データと評価コードはApache 2.0で配布される",
+    "section": "4. 継続利用と入手方法",
+    "kind": "content",
+    "sources": [
+      "repo"
+    ],
+    "body_text": [
+      "公式データカードとコードはApache License 2.0を指定する。利用・改変・再配布ができ、再配布にはライセンス文や必要な帰属表示を保つ。",
+      "実行環境には、対象課題が使うPythonライブラリーも必要になる。公式に用意された評価環境から始めると、依存関係をそろえやすい。"
+    ],
+    "main": true,
+    "planned_seconds": 20,
+    "native_content": [
+      "データと評価コードはApache 2.0で配布される",
+      "公式データカードとコードはApache License 2.0を指定する。利用・改変・再配布ができ、再配布にはライセンス文や必要な帰属表示を保つ。\n実行環境には、対象課題が使うPythonライブラリーも必要になる。公式に用意された評価環境から始めると、依存関係をそろえやすい。",
+      "4. 継続利用と入手方法",
+      "[1] BigCode Project (n.d.; 2026-10-22参照), BigCodeBench official repository.  https://github.com/bigcode-project/bigcodebench"
+    ]
+  },
+  {
+    "page": 31,
+    "title": "ライブラリーを組み合わせ、指定の動作を実装する",
+    "section": "4. 継続利用と入手方法",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "BigCodeBenchは、実用的なPython処理を関数単位で実装する1,140課題である。139ライブラリーにまたがる機能の組合せと、複数の要件への対応を評価する。",
+      "同じ課題の詳しいCompleteと簡潔なInstruct、全体のFullと難しいHardを目的に合わせて選ぶ。",
+      "戻り値だけでなく、ファイルや例外などを確認するテストから、何を実装できたかを具体的に調べられる。"
+    ],
+    "main": true,
+    "planned_seconds": 12,
+    "native_content": [
+      "ライブラリーを組み合わせ、指定の動作を実装する",
+      "BigCodeBenchは、実用的なPython処理を関数単位で実装する1,140課題である。139ライブラリーにまたがる機能の組合せと、複数の要件への対応を評価する。\n同じ課題の詳しいCompleteと簡潔なInstruct、全体のFullと難しいHardを目的に合わせて選ぶ。\n戻り値だけでなく、ファイルや例外などを確認するテストから、何を実装できたかを具体的に調べられる。",
+      "4. 継続利用と入手方法",
+      "[1] Zhuo et al. (2025), BigCodeBench. ICLR 2025.  https://arxiv.org/abs/2406.15877"
+    ]
+  },
+  {
+    "page": 32,
+    "title": "Appendix",
+    "section": "Appendix",
+    "kind": "divider",
+    "main": false,
+    "planned_seconds": 0,
+    "native_content": [
+      "Appendix",
+      "Appendix"
+    ]
+  },
+  {
+    "page": 33,
+    "title": "",
+    "section": "Appendix: 目次",
+    "kind": "toc",
+    "main": false,
+    "planned_seconds": 0,
+    "native_content": [
+      "",
+      "多様な処理を示す追加例\n提示形式と利用条件\n参考文献",
+      "Appendix: 目次"
+    ]
+  },
+  {
+    "page": 34,
+    "title": "例4：ファイルをZIPへまとめる",
+    "section": "Appendix: 1. 多様な処理を示す追加例",
+    "kind": "example-original",
+    "sources": [
+      "data"
+    ],
+    "example_id": "BigCodeBench/19",
+    "example": 4,
+    "original": "Zips all files (not including subdirectories) located in the specified directory and returns the path to the created zip file.\nNote that: Notes: The zip name is always 'files.zip'\nThe function should raise the exception for: FileNotFoundError: if the specified directory does not exist\nThe function should output with:\n    str: The path to the generated zip file. Returns None if the directory does not contain any files.\nYou should write self-contained code starting with:\n```\nimport os\nimport glob\nimport zipfile\ndef task_func(directory):\n```",
+    "font_size": 17.0,
+    "code_fences_rendered_as_formatting": true,
+    "bilingual": false,
+    "main": false,
+    "planned_seconds": 0,
+    "native_content": [
+      "例4：ファイルをZIPへまとめる",
+      "Appendix: 1. 多様な処理を示す追加例",
+      "Instructの原文（全文・コード指定を含む）",
+      "",
+      "Zips all files (not including subdirectories) located in the specified directory and returns the path to the created zip file.\nNote that: Notes: The zip name is always 'files.zip'\nThe function should raise the exception for: FileNotFoundError: if the specified directory does not exist\nThe function should output with:\n    str: The path to the generated zip file. Returns None if the directory does not contain any files.\nYou should write self-contained code starting with:\nimport os\nimport glob\nimport zipfile\ndef task_func(directory):",
+      "[1] BigCode Project (n.d.; 2026-10-22参照), BigCodeBench Dataset v0.1.4. BigCodeBench/19  https://huggingface.co/datasets/bigcode/bigcodebench"
+    ]
+  },
+  {
+    "page": 35,
+    "title": "例4：日本語訳と期待する動作",
+    "section": "Appendix: 1. 多様な処理を示す追加例",
+    "kind": "example-translation",
+    "sources": [
+      "data"
+    ],
+    "example_id": "BigCodeBench/19",
+    "example": 4,
+    "japanese": "指定したディレクトリのファイルをZIPにまとめ、生成したZIPのパスを返す。サブディレクトリは含めない。ファイル名は常にfiles.zipとする。指定ディレクトリが存在しなければFileNotFoundErrorを送出し、ファイルが一つもなければNoneを返す。指定された書き出しを使い、必要なコードをすべて含む実装を書く。",
+    "expected": "期待する動作：直下のファイルだけをZIPに含める",
+    "explanation": "配布テストは直下とサブディレクトリに各1ファイルを置き、ZIPに直下の1ファイルだけが入ることを確認する。",
+    "main": false,
+    "planned_seconds": 0,
+    "native_content": [
+      "例4：日本語訳と期待する動作",
+      "Appendix: 1. 多様な処理を示す追加例",
+      "日本語訳（自然言語の指示）",
+      "指定したディレクトリのファイルをZIPにまとめ、生成したZIPのパスを返す。サブディレクトリは含めない。ファイル名は常にfiles.zipとする。指定ディレクトリが存在しなければFileNotFoundErrorを送出し、ファイルが一つもなければNoneを返す。指定された書き出しを使い、必要なコードをすべて含む実装を書く。",
+      "期待する動作：直下のファイルだけをZIPに含める",
+      "配布テストは直下とサブディレクトリに各1ファイルを置き、ZIPに直下の1ファイルだけが入ることを確認する。",
+      "[1] BigCode Project (n.d.; 2026-10-22参照), BigCodeBench Dataset v0.1.4. BigCodeBench/19  https://huggingface.co/datasets/bigcode/bigcodebench"
+    ]
+  },
+  {
+    "page": 36,
+    "title": "例5：指定語を除いて単語の頻度を数える",
+    "section": "Appendix: 1. 多様な処理を示す追加例",
+    "kind": "example-original",
+    "sources": [
+      "data"
+    ],
+    "example_id": "BigCodeBench/52",
+    "example": 5,
+    "original": "Count the frequency of each word in a text after removing specific stopwords.\nThe function should output with:\n    Series: A pandas Series with word frequencies excluding the words in STOPWORDS list.\nYou should write self-contained code starting with:\n```\nimport pandas as pd\nimport regex as re\n# Constants\nSTOPWORDS = [\"a\", \"an\", \"the\", \"in\", \"is\", \"are\"]\ndef task_func(text):\n```",
+    "font_size": 18.5,
+    "code_fences_rendered_as_formatting": true,
+    "bilingual": false,
+    "main": false,
+    "planned_seconds": 0,
+    "native_content": [
+      "例5：指定語を除いて単語の頻度を数える",
+      "Appendix: 1. 多様な処理を示す追加例",
+      "Instructの原文（全文・コード指定を含む）",
+      "",
+      "Count the frequency of each word in a text after removing specific stopwords.\nThe function should output with:\n    Series: A pandas Series with word frequencies excluding the words in STOPWORDS list.\nYou should write self-contained code starting with:\nimport pandas as pd\nimport regex as re\n# Constants\nSTOPWORDS = [\"a\", \"an\", \"the\", \"in\", \"is\", \"are\"]\ndef task_func(text):",
+      "[1] BigCode Project (n.d.; 2026-10-22参照), BigCodeBench Dataset v0.1.4. BigCodeBench/52  https://huggingface.co/datasets/bigcode/bigcodebench"
+    ]
+  },
+  {
+    "page": 37,
+    "title": "例5：日本語訳と期待する動作",
+    "section": "Appendix: 1. 多様な処理を示す追加例",
+    "kind": "example-translation",
+    "sources": [
+      "data"
+    ],
+    "example_id": "BigCodeBench/52",
+    "example": 5,
+    "japanese": "テキストから指定された除外語を取り除き、各単語の出現頻度を数える。STOPWORDSの語を含まない、単語頻度のpandas Seriesを返す。指定された書き出しを使い、必要なコードをすべて含む実装を書く。",
+    "expected": "期待する動作：\"Hello world Hello everyone\" から hello は2回",
+    "explanation": "配布テストは大文字と小文字をそろえた数え上げを確認する。a・an・the・in・is・areだけの入力なら、結果は空になる。",
+    "main": false,
+    "planned_seconds": 0,
+    "native_content": [
+      "例5：日本語訳と期待する動作",
+      "Appendix: 1. 多様な処理を示す追加例",
+      "日本語訳（自然言語の指示）",
+      "テキストから指定された除外語を取り除き、各単語の出現頻度を数える。STOPWORDSの語を含まない、単語頻度のpandas Seriesを返す。指定された書き出しを使い、必要なコードをすべて含む実装を書く。",
+      "期待する動作：\"Hello world Hello everyone\" から hello は2回",
+      "配布テストは大文字と小文字をそろえた数え上げを確認する。a・an・the・in・is・areだけの入力なら、結果は空になる。",
+      "[1] BigCode Project (n.d.; 2026-10-22参照), BigCodeBench Dataset v0.1.4. BigCodeBench/52  https://huggingface.co/datasets/bigcode/bigcodebench"
+    ]
+  },
+  {
+    "page": 38,
+    "title": "例6：テキストから得点と科目を取り出す",
+    "section": "Appendix: 1. 多様な処理を示す追加例",
+    "kind": "example-original",
+    "sources": [
+      "data"
+    ],
+    "example_id": "BigCodeBench/56",
+    "example": 6,
+    "original": "Extract data from a text and create a Pandas DataFrame. The text contains several lines, each formatted as 'Score: 85, Category: Math'. Make sure to convert the scores in integer.\nThe function should output with:\n    DataFrame: A pandas DataFrame with extracted data.\nYou should write self-contained code starting with:\n```\nimport pandas as pd\nimport regex as re\ndef task_func(text):\n```",
+    "font_size": 18.5,
+    "code_fences_rendered_as_formatting": true,
+    "bilingual": false,
+    "main": false,
+    "planned_seconds": 0,
+    "native_content": [
+      "例6：テキストから得点と科目を取り出す",
+      "Appendix: 1. 多様な処理を示す追加例",
+      "Instructの原文（全文・コード指定を含む）",
+      "",
+      "Extract data from a text and create a Pandas DataFrame. The text contains several lines, each formatted as 'Score: 85, Category: Math'. Make sure to convert the scores in integer.\nThe function should output with:\n    DataFrame: A pandas DataFrame with extracted data.\nYou should write self-contained code starting with:\nimport pandas as pd\nimport regex as re\ndef task_func(text):",
+      "[1] BigCode Project (n.d.; 2026-10-22参照), BigCodeBench Dataset v0.1.4. BigCodeBench/56  https://huggingface.co/datasets/bigcode/bigcodebench"
+    ]
+  },
+  {
+    "page": 39,
+    "title": "例6：日本語訳と期待する動作",
+    "section": "Appendix: 1. 多様な処理を示す追加例",
+    "kind": "example-translation",
+    "sources": [
+      "data"
+    ],
+    "example_id": "BigCodeBench/56",
+    "example": 6,
+    "japanese": "テキストからデータを抽出し、pandas DataFrameを作る。各行は「Score: 85, Category: Math」の形式である。得点は整数に変換する。抽出したデータを含むデータフレームを返す。指定された書き出しを使い、必要なコードをすべて含む実装を書く。",
+    "expected": "期待する動作：Score列に整数85、Category列にMathが入る",
+    "explanation": "配布テストは複数行を与え、各行の得点と科目を確認する。空のテキストからは0行のデータフレームを返す。",
+    "main": false,
+    "planned_seconds": 0,
+    "native_content": [
+      "例6：日本語訳と期待する動作",
+      "Appendix: 1. 多様な処理を示す追加例",
+      "日本語訳（自然言語の指示）",
+      "テキストからデータを抽出し、pandas DataFrameを作る。各行は「Score: 85, Category: Math」の形式である。得点は整数に変換する。抽出したデータを含むデータフレームを返す。指定された書き出しを使い、必要なコードをすべて含む実装を書く。",
+      "期待する動作：Score列に整数85、Category列にMathが入る",
+      "配布テストは複数行を与え、各行の得点と科目を確認する。空のテキストからは0行のデータフレームを返す。",
+      "[1] BigCode Project (n.d.; 2026-10-22参照), BigCodeBench Dataset v0.1.4. BigCodeBench/56  https://huggingface.co/datasets/bigcode/bigcodebench"
+    ]
+  },
+  {
+    "page": 40,
+    "title": "例7：辞書のリストをCSVとJSONに保存する",
+    "section": "Appendix: 1. 多様な処理を示す追加例",
+    "kind": "example-original",
+    "sources": [
+      "data"
+    ],
+    "example_id": "BigCodeBench/60",
+    "example": 7,
+    "original": "Save the list of dictionaries provided in the 'result' parameter to a CSV file (without index) and a JSON file.\nThe function should output with:\n    None\nYou should write self-contained code starting with:\n```\nimport json\nimport pandas as pd\ndef task_func(result, csv_file_path=\"test.csv\", json_file_path=\"test.json\"):\n```",
+    "font_size": 18.5,
+    "code_fences_rendered_as_formatting": true,
+    "bilingual": false,
+    "main": false,
+    "planned_seconds": 0,
+    "native_content": [
+      "例7：辞書のリストをCSVとJSONに保存する",
+      "Appendix: 1. 多様な処理を示す追加例",
+      "Instructの原文（全文・コード指定を含む）",
+      "",
+      "Save the list of dictionaries provided in the 'result' parameter to a CSV file (without index) and a JSON file.\nThe function should output with:\n    None\nYou should write self-contained code starting with:\nimport json\nimport pandas as pd\ndef task_func(result, csv_file_path=\"test.csv\", json_file_path=\"test.json\"):",
+      "[1] BigCode Project (n.d.; 2026-10-22参照), BigCodeBench Dataset v0.1.4. BigCodeBench/60  https://huggingface.co/datasets/bigcode/bigcodebench"
+    ]
+  },
+  {
+    "page": 41,
+    "title": "例7：日本語訳と期待する動作",
+    "section": "Appendix: 1. 多様な処理を示す追加例",
+    "kind": "example-translation",
+    "sources": [
+      "data"
+    ],
+    "example_id": "BigCodeBench/60",
+    "example": 7,
+    "japanese": "resultとして与えた辞書のリストを、インデックスを付けないCSVと、JSONの両方に保存する。戻り値はNoneとする。指定された書き出しを使い、必要なコードをすべて含む実装を書く。",
+    "expected": "期待する動作：両方のファイルに元の値を保存する",
+    "explanation": "配布テストは、hi=7・bye=4・from_user=11を持つデータを保存し、CSVとJSONを読み戻して値を確認する。",
+    "main": false,
+    "planned_seconds": 0,
+    "native_content": [
+      "例7：日本語訳と期待する動作",
+      "Appendix: 1. 多様な処理を示す追加例",
+      "日本語訳（自然言語の指示）",
+      "resultとして与えた辞書のリストを、インデックスを付けないCSVと、JSONの両方に保存する。戻り値はNoneとする。指定された書き出しを使い、必要なコードをすべて含む実装を書く。",
+      "期待する動作：両方のファイルに元の値を保存する",
+      "配布テストは、hi=7・bye=4・from_user=11を持つデータを保存し、CSVとJSONを読み戻して値を確認する。",
+      "[1] BigCode Project (n.d.; 2026-10-22参照), BigCodeBench Dataset v0.1.4. BigCodeBench/60  https://huggingface.co/datasets/bigcode/bigcodebench"
+    ]
+  },
+  {
+    "page": 42,
+    "title": "例8：日別売上の折れ線グラフを返す",
+    "section": "Appendix: 1. 多様な処理を示す追加例",
+    "kind": "example-original",
+    "sources": [
+      "data"
+    ],
+    "example_id": "BigCodeBench/110",
+    "example": 8,
+    "original": "Draw and return the daily turnover line chart from a pandas DataFrame.\nThe function should raise the exception for: ValueError: If 'df' is not a DataFrame or lacks 'Date' or 'Sales' columns, or has no data to plot.\nThe function should output with:\n    Axes: Matplotlib Axes object with the line chart.\nYou should write self-contained code starting with:\n```\nimport pandas as pd\nimport matplotlib.pyplot as plt\ndef task_func(df):\n```",
+    "font_size": 18.5,
+    "code_fences_rendered_as_formatting": true,
+    "bilingual": false,
+    "main": false,
+    "planned_seconds": 0,
+    "native_content": [
+      "例8：日別売上の折れ線グラフを返す",
+      "Appendix: 1. 多様な処理を示す追加例",
+      "Instructの原文（全文・コード指定を含む）",
+      "",
+      "Draw and return the daily turnover line chart from a pandas DataFrame.\nThe function should raise the exception for: ValueError: If 'df' is not a DataFrame or lacks 'Date' or 'Sales' columns, or has no data to plot.\nThe function should output with:\n    Axes: Matplotlib Axes object with the line chart.\nYou should write self-contained code starting with:\nimport pandas as pd\nimport matplotlib.pyplot as plt\ndef task_func(df):",
+      "[1] BigCode Project (n.d.; 2026-10-22参照), BigCodeBench Dataset v0.1.4. BigCodeBench/110  https://huggingface.co/datasets/bigcode/bigcodebench"
+    ]
+  },
+  {
+    "page": 43,
+    "title": "例8：日本語訳と期待する動作",
+    "section": "Appendix: 1. 多様な処理を示す追加例",
+    "kind": "example-translation",
+    "sources": [
+      "data"
+    ],
+    "example_id": "BigCodeBench/110",
+    "example": 8,
+    "japanese": "pandas DataFrameから日別売上の折れ線グラフを描いて返す。dfがDataFrameでない場合、Date列またはSales列がない場合、描くデータがない場合はValueErrorを送出する。MatplotlibのAxesオブジェクトを返す。指定された書き出しを使い、必要なコードをすべて含む実装を書く。",
+    "expected": "期待する動作：タイトルはDaily Turnover、縦軸はSales",
+    "explanation": "Axesはグラフを描く領域を表す。配布テストは描画オブジェクトの型と、折れ線上の売上値、タイトル、縦軸ラベルを調べる。",
+    "main": false,
+    "planned_seconds": 0,
+    "native_content": [
+      "例8：日本語訳と期待する動作",
+      "Appendix: 1. 多様な処理を示す追加例",
+      "日本語訳（自然言語の指示）",
+      "pandas DataFrameから日別売上の折れ線グラフを描いて返す。dfがDataFrameでない場合、Date列またはSales列がない場合、描くデータがない場合はValueErrorを送出する。MatplotlibのAxesオブジェクトを返す。指定された書き出しを使い、必要なコードをすべて含む実装を書く。",
+      "期待する動作：タイトルはDaily Turnover、縦軸はSales",
+      "Axesはグラフを描く領域を表す。配布テストは描画オブジェクトの型と、折れ線上の売上値、タイトル、縦軸ラベルを調べる。",
+      "[1] BigCode Project (n.d.; 2026-10-22参照), BigCodeBench Dataset v0.1.4. BigCodeBench/110  https://huggingface.co/datasets/bigcode/bigcodebench"
+    ]
+  },
+  {
+    "page": 44,
+    "title": "例9：IPアドレスの一覧をCSVに保存する",
+    "section": "Appendix: 1. 多様な処理を示す追加例",
+    "kind": "example-original",
+    "sources": [
+      "data"
+    ],
+    "example_id": "BigCodeBench/145",
+    "example": 9,
+    "original": "Generates a CSV file listing all IP addresses in the specified IP range. Each IP address is written as a row in the CSV file.\nThe function should output with:\n    str: The path to the generated CSV file.\nYou should write self-contained code starting with:\n```\nimport csv\nfrom ipaddress import IPv4Network\ndef task_func(ip_range, csv_path):\n```",
+    "font_size": 18.5,
+    "code_fences_rendered_as_formatting": true,
+    "bilingual": false,
+    "main": false,
+    "planned_seconds": 0,
+    "native_content": [
+      "例9：IPアドレスの一覧をCSVに保存する",
+      "Appendix: 1. 多様な処理を示す追加例",
+      "Instructの原文（全文・コード指定を含む）",
+      "",
+      "Generates a CSV file listing all IP addresses in the specified IP range. Each IP address is written as a row in the CSV file.\nThe function should output with:\n    str: The path to the generated CSV file.\nYou should write self-contained code starting with:\nimport csv\nfrom ipaddress import IPv4Network\ndef task_func(ip_range, csv_path):",
+      "[1] BigCode Project (n.d.; 2026-10-22参照), BigCodeBench Dataset v0.1.4. BigCodeBench/145  https://huggingface.co/datasets/bigcode/bigcodebench"
+    ]
+  },
+  {
+    "page": 45,
+    "title": "例9：日本語訳と期待する動作",
+    "section": "Appendix: 1. 多様な処理を示す追加例",
+    "kind": "example-translation",
+    "sources": [
+      "data"
+    ],
+    "example_id": "BigCodeBench/145",
+    "example": 9,
+    "japanese": "指定されたIPアドレスの範囲について、全アドレスの一覧をCSVに保存する。各アドレスを1行に書き、生成したCSVのパスを文字列として返す。指定された書き出しを使い、必要なコードをすべて含む実装を書く。",
+    "expected": "期待する動作：見出しの後に、列挙された各アドレスを書き出す",
+    "explanation": "配布テストはアドレスの列挙を2件に置き換え、見出しを1回、データ行を2回書くことを確認する。ファイルの作成と戻り値の型も調べる。",
+    "main": false,
+    "planned_seconds": 0,
+    "native_content": [
+      "例9：日本語訳と期待する動作",
+      "Appendix: 1. 多様な処理を示す追加例",
+      "日本語訳（自然言語の指示）",
+      "指定されたIPアドレスの範囲について、全アドレスの一覧をCSVに保存する。各アドレスを1行に書き、生成したCSVのパスを文字列として返す。指定された書き出しを使い、必要なコードをすべて含む実装を書く。",
+      "期待する動作：見出しの後に、列挙された各アドレスを書き出す",
+      "配布テストはアドレスの列挙を2件に置き換え、見出しを1回、データ行を2回書くことを確認する。ファイルの作成と戻り値の型も調べる。",
+      "[1] BigCode Project (n.d.; 2026-10-22参照), BigCodeBench Dataset v0.1.4. BigCodeBench/145  https://huggingface.co/datasets/bigcode/bigcodebench"
+    ]
+  },
+  {
+    "page": 46,
+    "title": "例10：カテゴリ値を整数へ符号化する",
+    "section": "Appendix: 1. 多様な処理を示す追加例",
+    "kind": "example-original",
+    "sources": [
+      "data"
+    ],
+    "example_id": "BigCodeBench/148",
+    "example": 10,
+    "original": "Encrypt the categorical data in a specific column of a DataFrame using LabelEncoder.\nThe function should output with:\n    pd.DataFrame: The DataFrame with the encoded column.\nYou should write self-contained code starting with:\n```\nimport pandas as pd\nfrom sklearn.preprocessing import LabelEncoder\ndef task_func(df: pd.DataFrame, column_name: str) -> pd.DataFrame:\n```",
+    "font_size": 18.5,
+    "code_fences_rendered_as_formatting": true,
+    "bilingual": false,
+    "main": false,
+    "planned_seconds": 0,
+    "native_content": [
+      "例10：カテゴリ値を整数へ符号化する",
+      "Appendix: 1. 多様な処理を示す追加例",
+      "Instructの原文（全文・コード指定を含む）",
+      "",
+      "Encrypt the categorical data in a specific column of a DataFrame using LabelEncoder.\nThe function should output with:\n    pd.DataFrame: The DataFrame with the encoded column.\nYou should write self-contained code starting with:\nimport pandas as pd\nfrom sklearn.preprocessing import LabelEncoder\ndef task_func(df: pd.DataFrame, column_name: str) -> pd.DataFrame:",
+      "[1] BigCode Project (n.d.; 2026-10-22参照), BigCodeBench Dataset v0.1.4. BigCodeBench/148  https://huggingface.co/datasets/bigcode/bigcodebench"
+    ]
+  },
+  {
+    "page": 47,
+    "title": "例10：日本語訳と期待する動作",
+    "section": "Appendix: 1. 多様な処理を示す追加例",
+    "kind": "example-translation",
+    "sources": [
+      "data"
+    ],
+    "example_id": "BigCodeBench/148",
+    "example": 10,
+    "japanese": "LabelEncoderを使い、DataFrameの指定した列にあるカテゴリ値を整数に符号化する。符号化した列を含むDataFrameを返す。指定された書き出しを使い、必要なコードをすべて含む実装を書く。",
+    "expected": "期待する動作：apple・banana・cherryを0・1・2に対応させる",
+    "explanation": "配布テストのfruit列はapple, banana, cherry, apple, bananaであり、出力は0, 1, 2, 0, 1になる。",
+    "main": false,
+    "planned_seconds": 0,
+    "native_content": [
+      "例10：日本語訳と期待する動作",
+      "Appendix: 1. 多様な処理を示す追加例",
+      "日本語訳（自然言語の指示）",
+      "LabelEncoderを使い、DataFrameの指定した列にあるカテゴリ値を整数に符号化する。符号化した列を含むDataFrameを返す。指定された書き出しを使い、必要なコードをすべて含む実装を書く。",
+      "期待する動作：apple・banana・cherryを0・1・2に対応させる",
+      "配布テストのfruit列はapple, banana, cherry, apple, bananaであり、出力は0, 1, 2, 0, 1になる。",
+      "[1] BigCode Project (n.d.; 2026-10-22参照), BigCodeBench Dataset v0.1.4. BigCodeBench/148  https://huggingface.co/datasets/bigcode/bigcodebench"
+    ]
+  },
+  {
+    "page": 48,
+    "title": "例11：SQLの検索結果をデータフレームにする",
+    "section": "Appendix: 1. 多様な処理を示す追加例",
+    "kind": "example-original",
+    "sources": [
+      "data"
+    ],
+    "example_id": "BigCodeBench/408",
+    "example": 11,
+    "original": "Query an SQLite database and return the results. This function connects to a given SQLite database, executes a given SQL query, and returns the results as a pandas DataFrame.\nThe function should output with:\n    pd.DataFrame: A DataFrame containing the results of the executed query.\nYou should write self-contained code starting with:\n```\nimport sqlite3\nimport pandas as pd\ndef task_func(db_file: str, query: str) -> pd.DataFrame:\n```",
+    "font_size": 18.5,
+    "code_fences_rendered_as_formatting": true,
+    "bilingual": false,
+    "main": false,
+    "planned_seconds": 0,
+    "native_content": [
+      "例11：SQLの検索結果をデータフレームにする",
+      "Appendix: 1. 多様な処理を示す追加例",
+      "Instructの原文（全文・コード指定を含む）",
+      "",
+      "Query an SQLite database and return the results. This function connects to a given SQLite database, executes a given SQL query, and returns the results as a pandas DataFrame.\nThe function should output with:\n    pd.DataFrame: A DataFrame containing the results of the executed query.\nYou should write self-contained code starting with:\nimport sqlite3\nimport pandas as pd\ndef task_func(db_file: str, query: str) -> pd.DataFrame:",
+      "[1] BigCode Project (n.d.; 2026-10-22参照), BigCodeBench Dataset v0.1.4. BigCodeBench/408  https://huggingface.co/datasets/bigcode/bigcodebench"
+    ]
+  },
+  {
+    "page": 49,
+    "title": "例11：日本語訳と期待する動作",
+    "section": "Appendix: 1. 多様な処理を示す追加例",
+    "kind": "example-translation",
+    "sources": [
+      "data"
+    ],
+    "example_id": "BigCodeBench/408",
+    "example": 11,
+    "japanese": "指定されたSQLiteデータベースに接続し、SQLの問い合わせを実行する。検索結果を含むpandas DataFrameを返す。指定された書き出しを使い、必要なコードをすべて含む実装を書く。",
+    "expected": "期待する動作：年齢の条件と並び順を、検索結果へ反映する",
+    "explanation": "配布テストは年齢の上限を条件にし、年齢の降順に並べて問い合わせる。返る全行が年齢条件と降順の両方を満たすか確認する。",
+    "main": false,
+    "planned_seconds": 0,
+    "native_content": [
+      "例11：日本語訳と期待する動作",
+      "Appendix: 1. 多様な処理を示す追加例",
+      "日本語訳（自然言語の指示）",
+      "指定されたSQLiteデータベースに接続し、SQLの問い合わせを実行する。検索結果を含むpandas DataFrameを返す。指定された書き出しを使い、必要なコードをすべて含む実装を書く。",
+      "期待する動作：年齢の条件と並び順を、検索結果へ反映する",
+      "配布テストは年齢の上限を条件にし、年齢の降順に並べて問い合わせる。返る全行が年齢条件と降順の両方を満たすか確認する。",
+      "[1] BigCode Project (n.d.; 2026-10-22参照), BigCodeBench Dataset v0.1.4. BigCodeBench/408  https://huggingface.co/datasets/bigcode/bigcodebench"
+    ]
+  },
+  {
+    "page": 50,
+    "title": "例12：SQLiteの表をCSVに書き出す",
+    "section": "Appendix: 1. 多様な処理を示す追加例",
+    "kind": "example-original",
+    "sources": [
+      "data"
+    ],
+    "example_id": "BigCodeBench/536",
+    "example": 12,
+    "original": "Read SQLite3 table via pandas and export to a CSV file.\nThe function should output with:\n    str: The absolute path of the exported CSV file.\nYou should write self-contained code starting with:\n```\nimport sqlite3\nimport pandas as pd\nimport os\ndef task_func(db_name, table_name, csv_path=\"data.csv\"):\n```",
+    "font_size": 17.5,
+    "code_fences_rendered_as_formatting": true,
+    "bilingual": true,
+    "main": false,
+    "planned_seconds": 0,
+    "native_content": [
+      "例12：SQLiteの表をCSVに書き出す",
+      "Appendix: 1. 多様な処理を示す追加例",
+      "Instructの原文（全文・コード指定を含む）",
+      "",
+      "Read SQLite3 table via pandas and export to a CSV file.\nThe function should output with:\n    str: The absolute path of the exported CSV file.\nYou should write self-contained code starting with:\nimport sqlite3\nimport pandas as pd\nimport os\ndef task_func(db_name, table_name, csv_path=\"data.csv\"):",
+      "日本語訳（自然言語の指示）",
+      "pandasを使ってSQLite3の表を読み込み、CSVファイルへ書き出す。書き出したCSVの絶対パスを文字列として返す。指定された書き出しを使い、必要なコードをすべて含む実装を書く。",
+      "[1] BigCode Project (n.d.; 2026-10-22参照), BigCodeBench Dataset v0.1.4. BigCodeBench/536  https://huggingface.co/datasets/bigcode/bigcodebench"
+    ]
+  },
+  {
+    "page": 51,
+    "title": "例12：テストと期待する動作",
+    "section": "Appendix: 1. 多様な処理を示す追加例",
+    "kind": "example-translation",
+    "sources": [
+      "data"
+    ],
+    "example_id": "BigCodeBench/536",
+    "example": 12,
+    "japanese": "pandasを使ってSQLite3の表を読み込み、CSVファイルへ書き出す。書き出したCSVの絶対パスを文字列として返す。指定された書き出しを使い、必要なコードをすべて含む実装を書く。",
+    "expected": "期待する動作：People表の3行をCSVへ保存する",
+    "explanation": "配布テストのPeople表にはAlice・Bob・Charlieがいる。保存したCSVが3行でAliceを含むことと、指定した出力先の絶対パスを返すことを確認する。",
+    "main": false,
+    "planned_seconds": 0,
+    "native_content": [
+      "例12：テストと期待する動作",
+      "Appendix: 1. 多様な処理を示す追加例",
+      "配布テストで確かめること",
+      "期待する動作：People表の3行をCSVへ保存する",
+      "配布テストのPeople表にはAlice・Bob・Charlieがいる。保存したCSVが3行でAliceを含むことと、指定した出力先の絶対パスを返すことを確認する。",
+      "[1] BigCode Project (n.d.; 2026-10-22参照), BigCodeBench Dataset v0.1.4. BigCodeBench/536  https://huggingface.co/datasets/bigcode/bigcodebench"
+    ]
+  },
+  {
+    "page": 52,
+    "title": "例13：メッセージを暗号化して文字列にする",
+    "section": "Appendix: 1. 多様な処理を示す追加例",
+    "kind": "example-original",
+    "sources": [
+      "data"
+    ],
+    "example_id": "BigCodeBench/26",
+    "example": 13,
+    "original": "Encrypts a message with a symmetric encryption key using Fernet encryption, and then encode the encrypted message using base64.\nThe function should output with:\n    str: The base64 encoded encrypted message. The message is first encrypted using Fernet encryption,\n    then the result is base64 encoded.\nYou should write self-contained code starting with:\n```\nimport base64\nfrom cryptography.fernet import Fernet\ndef task_func(message, encryption_key):\n```",
+    "font_size": 18.5,
+    "code_fences_rendered_as_formatting": true,
+    "bilingual": false,
+    "main": false,
+    "planned_seconds": 0,
+    "native_content": [
+      "例13：メッセージを暗号化して文字列にする",
+      "Appendix: 1. 多様な処理を示す追加例",
+      "Instructの原文（全文・コード指定を含む）",
+      "",
+      "Encrypts a message with a symmetric encryption key using Fernet encryption, and then encode the encrypted message using base64.\nThe function should output with:\n    str: The base64 encoded encrypted message. The message is first encrypted using Fernet encryption,\n    then the result is base64 encoded.\nYou should write self-contained code starting with:\nimport base64\nfrom cryptography.fernet import Fernet\ndef task_func(message, encryption_key):",
+      "[1] BigCode Project (n.d.; 2026-10-22参照), BigCodeBench Dataset v0.1.4. BigCodeBench/26  https://huggingface.co/datasets/bigcode/bigcodebench"
+    ]
+  },
+  {
+    "page": 53,
+    "title": "例13：日本語訳と期待する動作",
+    "section": "Appendix: 1. 多様な処理を示す追加例",
+    "kind": "example-translation",
+    "sources": [
+      "data"
+    ],
+    "example_id": "BigCodeBench/26",
+    "example": 13,
+    "japanese": "対称鍵暗号のFernetでメッセージを暗号化し、暗号化した結果をさらにbase64で符号化する。返す値はbase64で符号化した暗号文の文字列である。指定された書き出しを使い、必要なコードをすべて含む実装を書く。",
+    "expected": "期待する動作：平文とは異なる文字列を返し、不正な鍵は拒否する",
+    "explanation": "配布テストはHello, World!などを与え、文字列型で平文と異なることを確認する。長さが不正な鍵では例外が起きる。",
+    "main": false,
+    "planned_seconds": 0,
+    "native_content": [
+      "例13：日本語訳と期待する動作",
+      "Appendix: 1. 多様な処理を示す追加例",
+      "日本語訳（自然言語の指示）",
+      "対称鍵暗号のFernetでメッセージを暗号化し、暗号化した結果をさらにbase64で符号化する。返す値はbase64で符号化した暗号文の文字列である。指定された書き出しを使い、必要なコードをすべて含む実装を書く。",
+      "期待する動作：平文とは異なる文字列を返し、不正な鍵は拒否する",
+      "配布テストはHello, World!などを与え、文字列型で平文と異なることを確認する。長さが不正な鍵では例外が起きる。",
+      "[1] BigCode Project (n.d.; 2026-10-22参照), BigCodeBench Dataset v0.1.4. BigCodeBench/26  https://huggingface.co/datasets/bigcode/bigcodebench"
+    ]
+  },
+  {
+    "page": 54,
+    "title": "提示形式と利用条件",
+    "section": "Appendix: 2. 提示形式と利用条件",
+    "kind": "divider",
+    "main": false,
+    "planned_seconds": 0,
+    "native_content": [
+      "提示形式と利用条件",
+      "Appendix: 2. 提示形式と利用条件"
+    ]
+  },
+  {
+    "page": 55,
+    "title": "提示文を短くすると、使える手掛かりも変わる",
+    "section": "Appendix: 2. 提示形式と利用条件",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "main": false,
+    "planned_seconds": 0,
+    "native_content": [
+      "提示文を短くすると、使える手掛かりも変わる",
+      "Appendix: 2. 提示形式と利用条件",
+      "[1] Zhuo et al. (2025), BigCodeBench. ICLR 2025.  https://arxiv.org/abs/2406.15877",
+      [
+        [
+          "項目",
+          "Complete",
+          "Instruct"
+        ],
+        [
+          "主な形式",
+          "docstring",
+          "自然言語の依頼"
+        ],
+        [
+          "平均の文字数",
+          "1112.5",
+          "663.2"
+        ],
+        [
+          "平均の行数",
+          "33.5",
+          "11.7"
+        ],
+        [
+          "解く処理・テスト",
+          "同じ",
+          "同じ"
+        ]
+      ]
+    ]
+  },
+  {
+    "page": 56,
+    "title": "一つの関数を、実行できる環境で評価する",
+    "section": "Appendix: 2. 提示形式と利用条件",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "HumanEvalは短く自己完結した関数の実装を中心にし、DS-1000はデータサイエンスの処理を扱う。BigCodeBenchは用途を広げ、複数のライブラリーを使う処理を問う。",
+      "SWE-benchのようなリポジトリ全体の修正とは異なり、必要な機能を一つの関数として実装する。",
+      "依存ライブラリーのバージョンや実行環境はテストの動作に関わる。比較では、使った課題集合と提示形式、コードを補う処理をそろえる。"
+    ],
+    "main": false,
+    "planned_seconds": 0,
+    "native_content": [
+      "一つの関数を、実行できる環境で評価する",
+      "HumanEvalは短く自己完結した関数の実装を中心にし、DS-1000はデータサイエンスの処理を扱う。BigCodeBenchは用途を広げ、複数のライブラリーを使う処理を問う。\nSWE-benchのようなリポジトリ全体の修正とは異なり、必要な機能を一つの関数として実装する。\n依存ライブラリーのバージョンや実行環境はテストの動作に関わる。比較では、使った課題集合と提示形式、コードを補う処理をそろえる。",
+      "Appendix: 2. 提示形式と利用条件",
+      "[1] Zhuo et al. (2025), BigCodeBench. ICLR 2025.  https://arxiv.org/abs/2406.15877"
+    ]
+  },
+  {
+    "page": 57,
+    "title": "参考文献",
+    "section": "Appendix: 3. 参考文献",
+    "kind": "references",
+    "main": false,
+    "planned_seconds": 0,
+    "native_content": [
+      "参考文献",
+      "Appendix: 3. 参考文献",
+      "BigCodeBench: Benchmarking Code Generation with Diverse Function Calls and Complex Instructions\nTerry Yue Zhuo et al. (2025). ICLR 2025.\n課題の構築、ライブラリーの広がり、提示形式と採点方法、初期のモデル比較を報告する。\nhttps://arxiv.org/abs/2406.15877",
+      "BigCodeBench Dataset\nBigCode Project (n.d.). Hugging Face. Apache 2.0. 2026-10-22参照。\n1,140課題の指示文・書き出し・参照実装・テストを、データの改訂ごとに配布する。\nhttps://huggingface.co/datasets/bigcode/bigcodebench"
+    ]
+  },
+  {
+    "page": 58,
+    "title": "参考文献",
+    "section": "Appendix: 3. 参考文献",
+    "kind": "references",
+    "main": false,
+    "planned_seconds": 0,
+    "native_content": [
+      "参考文献",
+      "Appendix: 3. 参考文献",
+      "Introducing BigCodeBench-Hard\nTerry Yue Zhuo (2024). Hugging Face Blog.\nStack Overflowの質問との対応と難しさに基づき、148課題の部分集合を選ぶ方法を説明する。\nhttps://huggingface.co/blog/terryyz/bigcodebench-hard",
+      "BigCodeBench official repository\nBigCode Project (n.d.). GitHub. Apache 2.0. 2026-10-22参照。\nコード生成、出力の整形と補完、実行テスト、環境の準備に使う実装を公開する。\nhttps://github.com/bigcode-project/bigcodebench"
+    ]
+  },
+  {
+    "page": 59,
+    "title": "参考文献",
+    "section": "Appendix: 3. 参考文献",
+    "kind": "references",
+    "main": false,
+    "planned_seconds": 0,
+    "native_content": [
+      "参考文献",
+      "Appendix: 3. 参考文献",
+      "Training Agents to Self-Report Misbehavior\nBruce W. Lee, Chen Yueh-Han and Tomek Korbak (2026). arXiv.\n自己申告を訓練したモデルの一般能力を調べ、BigCodeBenchを含む七つの評価で比較する。\nhttps://arxiv.org/abs/2602.22303",
+      "BigCodeBench Leaderboard\nBigCode Project (n.d.). 2026-10-22参照。\nFullとHard、CompleteとInstructを切り替えて公開モデルの成績を比較する。\nhttps://bigcode-bench.github.io/"
+    ]
+  }
+]
