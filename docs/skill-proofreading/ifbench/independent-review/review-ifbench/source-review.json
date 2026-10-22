@@ -1,0 +1,221 @@
+{
+  "status": "source_japanese_native_review_complete",
+  "reviewer": "/root/review_ifbench",
+  "method": "independent_primary_source_static_read",
+  "gemini_used": false,
+  "external_generation_api_used": false,
+  "model_evaluation_run": false,
+  "own_acquisition": [
+    "source-acquisition.json",
+    "pinned-acquisition.json",
+    "code-acquisition.json"
+  ],
+  "github_revision": "1c40f0c10d9b5c5c2f10a175a28007ebb64f7f4d",
+  "huggingface_revision": "2e8a48de45ff3bf41242f927254ca81b59ca3ae2",
+  "data_counts": {
+    "prompts": 300,
+    "unique_prompt_keys": 300,
+    "constraint_types": 58,
+    "constraint_occurrences": 344,
+    "one_constraint_prompts": 256,
+    "two_constraint_prompts": 44,
+    "category_constraint_type_counts": {
+      "count": 9,
+      "words": 13,
+      "format": 14,
+      "repeat": 3,
+      "sentence": 3,
+      "ratio": 5,
+      "custom": 11
+    }
+  },
+  "hf_split": "train is physical split label for evaluation300, not IFTrain training constraints",
+  "github_hf_prompt_differences": [
+    "13",
+    "19"
+  ],
+  "selected13": [
+    {
+      "key": "280",
+      "instruction_id_list": [
+        "custom:multiples"
+      ],
+      "original_read": true,
+      "hf_gh_prompt_match": true,
+      "jp_review": "complete; final native full translation meaning read",
+      "expected_behavior_review": "complete; requested conditions distinguished from exact checker limits"
+    },
+    {
+      "key": "274",
+      "instruction_id_list": [
+        "custom:csv_city"
+      ],
+      "original_read": true,
+      "hf_gh_prompt_match": true,
+      "jp_review": "complete; final native full translation meaning read",
+      "expected_behavior_review": "complete; requested conditions distinguished from exact checker limits"
+    },
+    {
+      "key": "24",
+      "instruction_id_list": [
+        "count:numbers",
+        "count:unique_word_count"
+      ],
+      "original_read": true,
+      "hf_gh_prompt_match": true,
+      "jp_review": "complete; final native full translation meaning read",
+      "expected_behavior_review": "complete; requested conditions distinguished from exact checker limits"
+    },
+    {
+      "key": "47",
+      "instruction_id_list": [
+        "count:words_japanese"
+      ],
+      "original_read": true,
+      "hf_gh_prompt_match": true,
+      "jp_review": "complete; final native full translation meaning read",
+      "expected_behavior_review": "complete; requested conditions distinguished from exact checker limits"
+    },
+    {
+      "key": "100",
+      "instruction_id_list": [
+        "format:options"
+      ],
+      "original_read": true,
+      "hf_gh_prompt_match": true,
+      "jp_review": "complete; final native full translation meaning read",
+      "expected_behavior_review": "complete; requested conditions distinguished from exact checker limits"
+    },
+    {
+      "key": "64",
+      "instruction_id_list": [
+        "repeat:repeat_simple"
+      ],
+      "original_read": true,
+      "hf_gh_prompt_match": true,
+      "jp_review": "complete; final native full translation meaning read",
+      "expected_behavior_review": "complete; requested conditions distinguished from exact checker limits"
+    },
+    {
+      "key": "70",
+      "instruction_id_list": [
+        "format:emoji"
+      ],
+      "original_read": true,
+      "hf_gh_prompt_match": true,
+      "jp_review": "complete; final native full translation meaning read",
+      "expected_behavior_review": "complete; requested conditions distinguished from exact checker limits"
+    },
+    {
+      "key": "74",
+      "instruction_id_list": [
+        "format:line_indent"
+      ],
+      "original_read": true,
+      "hf_gh_prompt_match": true,
+      "jp_review": "complete; final native full translation meaning read",
+      "expected_behavior_review": "complete; requested conditions distinguished from exact checker limits"
+    },
+    {
+      "key": "83",
+      "instruction_id_list": [
+        "format:list"
+      ],
+      "original_read": true,
+      "hf_gh_prompt_match": true,
+      "jp_review": "complete; final native full translation meaning read",
+      "expected_behavior_review": "complete; requested conditions distinguished from exact checker limits"
+    },
+    {
+      "key": "110",
+      "instruction_id_list": [
+        "format:parentheses"
+      ],
+      "original_read": true,
+      "hf_gh_prompt_match": true,
+      "jp_review": "complete; final native full translation meaning read",
+      "expected_behavior_review": "complete; requested conditions distinguished from exact checker limits"
+    },
+    {
+      "key": "126",
+      "instruction_id_list": [
+        "format:sub-bullets"
+      ],
+      "original_read": true,
+      "hf_gh_prompt_match": true,
+      "jp_review": "complete; final native full translation meaning read",
+      "expected_behavior_review": "complete; requested conditions distinguished from exact checker limits"
+    },
+    {
+      "key": "241",
+      "instruction_id_list": [
+        "words:paragraph_last_first"
+      ],
+      "original_read": true,
+      "hf_gh_prompt_match": true,
+      "jp_review": "complete; final native full translation meaning read",
+      "expected_behavior_review": "complete; requested conditions distinguished from exact checker limits"
+    },
+    {
+      "key": "296",
+      "instruction_id_list": [
+        "format:no_whitespace"
+      ],
+      "original_read": true,
+      "hf_gh_prompt_match": true,
+      "jp_review": "complete; final native full translation meaning read",
+      "expected_behavior_review": "complete; requested conditions distinguished from exact checker limits"
+    }
+  ],
+  "source_code_read": "All14 relevant checker class definitions fully statically read; all evaluation_lib.py incl strict/loose/report read; registry read. No checker/model run.",
+  "scoring": {
+    "strict": "for each nonempty response each checker boolean; prompt success is all booleans",
+    "loose": "Each checker separately accepts any of8 candidates: original,remove* and first/last/both line removals with/without*; prompt all booleans. May use different candidate for different checker.",
+    "aggregation": "prompt_correct/prompts vs instruction_correct/344 constraintoccurrences, not same denominator",
+    "only_constraint_following": "task helpfulness/factual content not generally checked except fixed task checker details"
+  },
+  "observed_checker_limits": {
+    "multiples": "regex digit sequence equals14,21,28,35,42,49; nonnumeric commentary does not invalidate",
+    "csv": "eight csv reader rows total; exact header ID Country City Year Count; five columns each of seven data rows; no semantic validation",
+    "unique_words": "lowercase whitespace splitting strip punct set; numeric tokens can count as unique words",
+    "japaneseNth": "whitespace tokens every5th; contains JPunicode; skips empty/numeric slot; no global Japanese adequacy check",
+    "special_bullets": "counts >=2 marker occurrences anywhere, not line starts despite docstring",
+    "sub_bullets": "splits* and checks each following fragment contains-; no * requirement guard",
+    "parentheses": "returns true after matching closing at depth>=5, may not require rest balanced",
+    "emoji": "sentence splitting and emoji last/secondlast or nextsentence first; presentation should describe user constraint without overspec",
+    "no_whitespace": "str.isspace any Unicode whitespace"
+  },
+  "licenses": {
+    "code": "Apache2.0 officialLICENSE downloaded",
+    "data": "OfficialREADME ODC-BY1.0 research/educational intended; thirdparty model output separate terms; attribution/changes required"
+  },
+  "primary_current_use": {
+    "Ai2": "2026-05-11 article says AA added to Index in2025; historical adoption only, not proof currentIndex inclusion",
+    "AA": {
+      "source": "https://artificialanalysis.ai/methodology/intelligence-benchmarking",
+      "current_version": "4.3.2",
+      "position": "Standalone additional evaluation, not current Intelligence Index; removed in v4.1 but continue new models",
+      "questions": 294,
+      "repeats": 5,
+      "setup": "single turn officialcode loose prompt accuracy averaged across questions and repeats",
+      "removal_reason_for6_questions": "not established; do not infer"
+    }
+  },
+  "paper_inconsistencies": "v3 abstract/intro Tulu45.9/Qwen54.7 differ Table3 44.6/53.7; Fig1 further other values. Use clearly located same-table values, do not silently merge.",
+  "additional_own_source_visual": {
+    "file": "raw/paper-p07.png",
+    "page": 7,
+    "actual_opened": true,
+    "scope": "Table2/3 samecondition IFEval+IFBench comparison actual text values checked at2x"
+  },
+  "source_scope": {
+    "paper_read": "pages1–7 and current-use/licensing source text; relevant source checker classes14 + full aggregation module; not claiming every appendix passage read",
+    "creator_manuscript": "All47 native final pages meaning read: v2 all47 plus final changedp17; unchanged46 native XML equality verified.",
+    "paper_appendix": "Appendix G evaluation details and Table8 caption custom-group exception independently read, in addition to pages1–7."
+  },
+  "construction_custom_exception": {
+    "source": "raw/paper.txt lines1176–1178 Table8 caption",
+    "finding": "WildChat combination excludes custom instruction group; confirmed in final p17 and actual final image",
+    "review_correction": "Initial source review had focused maintext and questioned exception; own Table8-caption re-read now confirms it."
+  }
+}

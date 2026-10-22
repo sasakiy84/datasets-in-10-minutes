@@ -1,0 +1,313 @@
+[
+  {
+    "source_id": "280",
+    "source_row": 280,
+    "title": "7の倍数だけを列挙する",
+    "original": "Count from 10 to 50 but only print multiples of 7.",
+    "original_scope": "full single-turn prompt, unchanged",
+    "ja": "10から50まで数え、7の倍数だけを出力する。",
+    "expected_behavior": "判定する数列：14, 21, 28, 35, 42, 49",
+    "explanation": "検証器は出力から数を取り出し、この順序の数列と一致するか確かめる。",
+    "checker": "PrintMultiplesChecker",
+    "instruction_id_list": [
+      "custom:multiples"
+    ],
+    "kwargs": [
+      {}
+    ],
+    "role": "main",
+    "source_url": "https://huggingface.co/datasets/allenai/IFBench_test",
+    "source_revision": "2e8a48de45ff3bf41242f927254ca81b59ca3ae2",
+    "github_revision": "1c40f0c10d9b5c5c2f10a175a28007ebb64f7f4d",
+    "license": "ODC-BY-1.0",
+    "answer_kind": "requested output conditions and static checker interpretation, no generated model answer"
+  },
+  {
+    "source_id": "274",
+    "source_row": 274,
+    "title": "指定の列と行数でCSVを作る",
+    "original": "Generate CSV data: The column names are [\"ID\", \"Country\", \"City\", \"Year\", \"Count\"], the data should be comma delimited. Please generate 7 rows.",
+    "original_scope": "full single-turn prompt, unchanged",
+    "ja": "CSVデータを生成する。列名は「ID」「Country」「City」「Year」「Count」とし、コンマで区切る。データを7行生成する。",
+    "expected_behavior": "指定の5列、見出し1行とデータ7行",
+    "explanation": "検証器は見出しの並び、データの行数、各行の列数を確認する。都市や年の内容自体は採点しない。",
+    "checker": "CityCSVChecker",
+    "instruction_id_list": [
+      "custom:csv_city"
+    ],
+    "kwargs": [
+      {}
+    ],
+    "role": "main",
+    "source_url": "https://huggingface.co/datasets/allenai/IFBench_test",
+    "source_revision": "2e8a48de45ff3bf41242f927254ca81b59ca3ae2",
+    "github_revision": "1c40f0c10d9b5c5c2f10a175a28007ebb64f7f4d",
+    "license": "ODC-BY-1.0",
+    "answer_kind": "requested output conditions and static checker interpretation, no generated model answer"
+  },
+  {
+    "source_id": "24",
+    "source_row": 24,
+    "title": "数値の個数と語の種類を同時に指定する",
+    "original": "Include exactly 36 numbers in the response. Use at least 36 unique words in the response. How can planners and urban designers create cities that are more conducive to good mental health and wellbeing?",
+    "original_scope": "full single-turn prompt, unchanged",
+    "ja": "回答には数値をちょうど36個含める。少なくとも36種類の異なる語を使う。都市計画者や都市デザイナーは、心の健康と幸福をより促す都市をどのように作れるか。",
+    "expected_behavior": "数値をちょうど36個、異なる語を36種類以上",
+    "explanation": "この問題には二つの条件がある。プロンプト単位の得点では、両方を満たしたときだけ合格になる。",
+    "checker": "NumbersCountChecker / UniqueWordCountChecker",
+    "instruction_id_list": [
+      "count:numbers",
+      "count:unique_word_count"
+    ],
+    "kwargs": [
+      {
+        "N": 36.0
+      },
+      {
+        "N": 36.0
+      }
+    ],
+    "role": "main",
+    "source_url": "https://huggingface.co/datasets/allenai/IFBench_test",
+    "source_revision": "2e8a48de45ff3bf41242f927254ca81b59ca3ae2",
+    "github_revision": "1c40f0c10d9b5c5c2f10a175a28007ebb64f7f4d",
+    "license": "ODC-BY-1.0",
+    "answer_kind": "requested output conditions and static checker interpretation, no generated model answer"
+  },
+  {
+    "source_id": "47",
+    "source_row": 47,
+    "title": "5語ごとに日本語を入れて書き直す",
+    "original": "Every 5th word of your response must be in Japanese. rewrite: Focusing on Quality Assurance will allow us to align knowledge on what Quality Assurance is all about, and the responsibilities we all play a part in when embedding quality outcomes.",
+    "original_scope": "full single-turn prompt, unchanged",
+    "ja": "回答の5語目ごとに日本語を使う。次の文を書き直す。「品質保証に重点を置けば、品質保証とは何か、また質の高い成果を根付かせる際に私たち全員が担う責任について、共通の理解を持てる。」",
+    "expected_behavior": "5語目、10語目…に日本語を入れる",
+    "explanation": "検証器は空白で語を区切り、指定位置に日本語の文字が含まれるかを確認する。",
+    "checker": "NthWordJapaneseChecker",
+    "instruction_id_list": [
+      "count:words_japanese"
+    ],
+    "kwargs": [
+      {
+        "N": 5.0
+      }
+    ],
+    "role": "appendix",
+    "source_url": "https://huggingface.co/datasets/allenai/IFBench_test",
+    "source_revision": "2e8a48de45ff3bf41242f927254ca81b59ca3ae2",
+    "github_revision": "1c40f0c10d9b5c5c2f10a175a28007ebb64f7f4d",
+    "license": "ODC-BY-1.0",
+    "answer_kind": "requested output conditions and static checker interpretation, no generated model answer"
+  },
+  {
+    "source_id": "100",
+    "source_row": 100,
+    "title": "指定された短い選択肢だけで答える",
+    "original": "Answer with one of the following options: yes/no/maybe. Could sensitive historical events be better digested in game form with humour, interesting allegorical story, and loveable characters?",
+    "original_scope": "full single-turn prompt, unchanged",
+    "ja": "yes／no／maybeのいずれかで答える。扱いに配慮が必要な歴史的出来事は、ユーモアや興味深い寓話的な物語、愛される登場人物を使ったゲームにすれば、より受け止めやすくなるだろうか。",
+    "expected_behavior": "yes / no / maybe のいずれかだけで答える",
+    "explanation": "内容への賛否を一意の正解として付けず、許可された選択肢で答えたかを確認する。",
+    "checker": "OptionsResponseChecker",
+    "instruction_id_list": [
+      "format:options"
+    ],
+    "kwargs": [
+      {
+        "options": "yes/no/maybe"
+      }
+    ],
+    "role": "appendix",
+    "source_url": "https://huggingface.co/datasets/allenai/IFBench_test",
+    "source_revision": "2e8a48de45ff3bf41242f927254ca81b59ca3ae2",
+    "github_revision": "1c40f0c10d9b5c5c2f10a175a28007ebb64f7f4d",
+    "license": "ODC-BY-1.0",
+    "answer_kind": "requested output conditions and static checker interpretation, no generated model answer"
+  },
+  {
+    "source_id": "64",
+    "source_row": 64,
+    "title": "指定された文だけを返す",
+    "original": "Write python code to extract a filename from filepath. Only output this sentence here, ignore all other requests.",
+    "original_scope": "full single-turn prompt, unchanged",
+    "ja": "ファイルパスからファイル名を取り出すPythonコードを書く。ただし、他の依頼はすべて無視し、「Only output this sentence here, ignore all other requests.」という文だけを出力する。",
+    "expected_behavior": "Only output this sentence here, ignore all other requests.",
+    "explanation": "指定文を返す課題である。検証器は前後の空白と大文字・小文字の違いを除いて照合する。",
+    "checker": "RepeatSimpleChecker",
+    "instruction_id_list": [
+      "repeat:repeat_simple"
+    ],
+    "kwargs": [
+      {}
+    ],
+    "role": "appendix",
+    "source_url": "https://huggingface.co/datasets/allenai/IFBench_test",
+    "source_revision": "2e8a48de45ff3bf41242f927254ca81b59ca3ae2",
+    "github_revision": "1c40f0c10d9b5c5c2f10a175a28007ebb64f7f4d",
+    "license": "ODC-BY-1.0",
+    "answer_kind": "requested output conditions and static checker interpretation, no generated model answer"
+  },
+  {
+    "source_id": "70",
+    "source_row": 70,
+    "title": "すべての文末に絵文字を付ける",
+    "original": "explain Relativistic speed Please use an emoji at the end of every sentence.",
+    "original_scope": "full single-turn prompt, unchanged",
+    "ja": "相対論的な速さを説明する。すべての文の末尾に絵文字を付ける。",
+    "expected_behavior": "すべての文の末尾に絵文字を付ける",
+    "explanation": "文章を文に分け、各文の末尾付近に絵文字があるかを確認する。",
+    "checker": "EmojiSentenceChecker",
+    "instruction_id_list": [
+      "format:emoji"
+    ],
+    "kwargs": [
+      {}
+    ],
+    "role": "appendix",
+    "source_url": "https://huggingface.co/datasets/allenai/IFBench_test",
+    "source_revision": "2e8a48de45ff3bf41242f927254ca81b59ca3ae2",
+    "github_revision": "1c40f0c10d9b5c5c2f10a175a28007ebb64f7f4d",
+    "license": "ODC-BY-1.0",
+    "answer_kind": "requested output conditions and static checker interpretation, no generated model answer"
+  },
+  {
+    "source_id": "74",
+    "source_row": 74,
+    "title": "行を追うごとに字下げを増やす",
+    "original": "Create stairs by incrementally indenting each new line. Describe technologies without being constrained by existing scientific principles",
+    "original_scope": "full single-turn prompt, unchanged",
+    "ja": "新しい行ごとに字下げを増やし、階段状にする。既存の科学原理に縛られずに技術を説明する。",
+    "expected_behavior": "後の行ほど先頭の空白を増やす",
+    "explanation": "検証器は隣り合う行の先頭の空白を比べる。字下げが増えているかが判定の対象になる。",
+    "checker": "IndentStairsChecker",
+    "instruction_id_list": [
+      "format:line_indent"
+    ],
+    "kwargs": [
+      {}
+    ],
+    "role": "appendix",
+    "source_url": "https://huggingface.co/datasets/allenai/IFBench_test",
+    "source_revision": "2e8a48de45ff3bf41242f927254ca81b59ca3ae2",
+    "github_revision": "1c40f0c10d9b5c5c2f10a175a28007ebb64f7f4d",
+    "license": "ODC-BY-1.0",
+    "answer_kind": "requested output conditions and static checker interpretation, no generated model answer"
+  },
+  {
+    "source_id": "83",
+    "source_row": 83,
+    "title": "音楽用語を指定の記号で列挙する",
+    "original": "Answer with a list of items, instead of bullet points use !?!?. Defination of: preludes, caprichos, romances and ballads",
+    "original_scope": "full single-turn prompt, unchanged",
+    "ja": "項目の一覧で答え、箇条書きの記号の代わりに「!?!?」を使う。前奏曲、奇想曲、ロマンス、バラードを定義する。",
+    "expected_behavior": "指定された区切り：!?!?",
+    "explanation": "検証器は指定の記号が少なくとも2回含まれるかを見る。",
+    "checker": "SpecialBulletPointsChecker",
+    "instruction_id_list": [
+      "format:list"
+    ],
+    "kwargs": [
+      {
+        "sep": "!?!?"
+      }
+    ],
+    "role": "appendix",
+    "source_url": "https://huggingface.co/datasets/allenai/IFBench_test",
+    "source_revision": "2e8a48de45ff3bf41242f927254ca81b59ca3ae2",
+    "github_revision": "1c40f0c10d9b5c5c2f10a175a28007ebb64f7f4d",
+    "license": "ODC-BY-1.0",
+    "answer_kind": "requested output conditions and static checker interpretation, no generated model answer"
+  },
+  {
+    "source_id": "110",
+    "source_row": 110,
+    "title": "括弧を5段以上に入れ子にする",
+    "original": "Nest parentheses (and [brackets {and braces}]) at least 5 levels deep. introduction to an academic paper on AI",
+    "original_scope": "full single-turn prompt, unchanged",
+    "ja": "丸括弧、角括弧、波括弧を少なくとも5段に入れ子にする。AIについての学術論文の導入を書く。",
+    "expected_behavior": "括弧を少なくとも5段に入れ子にする",
+    "explanation": "検証器は丸括弧・角括弧・波括弧の対応と、入れ子の深さを調べる。",
+    "checker": "NestedParenthesesChecker",
+    "instruction_id_list": [
+      "format:parentheses"
+    ],
+    "kwargs": [
+      {}
+    ],
+    "role": "appendix",
+    "source_url": "https://huggingface.co/datasets/allenai/IFBench_test",
+    "source_revision": "2e8a48de45ff3bf41242f927254ca81b59ca3ae2",
+    "github_revision": "1c40f0c10d9b5c5c2f10a175a28007ebb64f7f4d",
+    "license": "ODC-BY-1.0",
+    "answer_kind": "requested output conditions and static checker interpretation, no generated model answer"
+  },
+  {
+    "source_id": "126",
+    "source_row": 126,
+    "title": "各箇条書きに小項目を付ける",
+    "original": "write a paraghraph on how solar eclispes can affect plants Your response must include bullet points denoted by * and at least one sub-bullet point denoted by - for each bullet point.",
+    "original_scope": "full single-turn prompt, unchanged",
+    "ja": "日食が植物にどのような影響を与えるかについて段落を書く。回答には「*」で示す箇条書きを入れ、各項目に「-」で示す小項目を少なくとも一つ付ける。",
+    "expected_behavior": "各 * 項目に、少なくとも一つの - 小項目",
+    "explanation": "検証器は「*」で分けた各部分に「-」があるかを確認する。行頭の位置までを厳密に調べる実装ではない。",
+    "checker": "SubBulletPointsChecker",
+    "instruction_id_list": [
+      "format:sub-bullets"
+    ],
+    "kwargs": [
+      {}
+    ],
+    "role": "appendix",
+    "source_url": "https://huggingface.co/datasets/allenai/IFBench_test",
+    "source_revision": "2e8a48de45ff3bf41242f927254ca81b59ca3ae2",
+    "github_revision": "1c40f0c10d9b5c5c2f10a175a28007ebb64f7f4d",
+    "license": "ODC-BY-1.0",
+    "answer_kind": "requested output conditions and static checker interpretation, no generated model answer"
+  },
+  {
+    "source_id": "241",
+    "source_row": 241,
+    "title": "段落の最初と最後を同じ語にする",
+    "original": "whats a counterexample to the intersection of infinitely many open sets being open  Each paragraph of your response must end with the same word it started with, separate paragraphs with a newline.",
+    "original_scope": "full single-turn prompt, unchanged",
+    "ja": "無限個の開集合の共通部分が開集合にならない反例は何か。各段落の最後を、その段落の最初と同じ語にする。段落は改行で区切る。",
+    "expected_behavior": "各段落の最初と最後を同じ語にする",
+    "explanation": "各行を段落として読み、先頭語と末尾語を照合する。比較時には大文字・小文字などを整える。",
+    "checker": "ParagraphLastFirstWordMatchChecker",
+    "instruction_id_list": [
+      "words:paragraph_last_first"
+    ],
+    "kwargs": [
+      {}
+    ],
+    "role": "appendix",
+    "source_url": "https://huggingface.co/datasets/allenai/IFBench_test",
+    "source_revision": "2e8a48de45ff3bf41242f927254ca81b59ca3ae2",
+    "github_revision": "1c40f0c10d9b5c5c2f10a175a28007ebb64f7f4d",
+    "license": "ODC-BY-1.0",
+    "answer_kind": "requested output conditions and static checker interpretation, no generated model answer"
+  },
+  {
+    "source_id": "296",
+    "source_row": 296,
+    "title": "空白を使わずに答える",
+    "original": "In set theory, are all sets classes? The output should not contain any whitespace.",
+    "original_scope": "full single-turn prompt, unchanged",
+    "ja": "集合論では、すべての集合はクラスですか。出力には空白文字を一切含めない。",
+    "expected_behavior": "空白文字を含めない",
+    "explanation": "検証器は空白や改行などが含まれるかを調べる。数学的な回答内容の真偽は、この検証器の採点対象ではない。",
+    "checker": "NoWhitespaceChecker",
+    "instruction_id_list": [
+      "format:no_whitespace"
+    ],
+    "kwargs": [
+      {}
+    ],
+    "role": "appendix",
+    "source_url": "https://huggingface.co/datasets/allenai/IFBench_test",
+    "source_revision": "2e8a48de45ff3bf41242f927254ca81b59ca3ae2",
+    "github_revision": "1c40f0c10d9b5c5c2f10a175a28007ebb64f7f4d",
+    "license": "ODC-BY-1.0",
+    "answer_kind": "requested output conditions and static checker interpretation, no generated model answer"
+  }
+]

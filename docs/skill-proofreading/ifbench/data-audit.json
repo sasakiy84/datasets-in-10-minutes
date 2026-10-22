@@ -1,0 +1,350 @@
+{
+  "dataset": "ifbench",
+  "artifact_sha256": {
+    "pdf": "ef466ec816e9f776435ae3e4818ec64a11b8aa3b721c199aa75ab871b78f2bd0",
+    "pptx": "d44e7a3098ce822577cb7b0f1af3269e99f2c311dc636c3251a29b68a15619f5"
+  },
+  "own_scope": [
+    "creator primary paper/README/HF/code/article/methodology reading",
+    "all thirteen originals, full Japanese meanings and fourteen checker classes statically read",
+    "own full deck actual visual review and native/source checks"
+  ],
+  "collection_date_utc": "2026-10-22",
+  "raw_files_sha256": {
+    "LICENSE-code.txt": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "aa-ifbench.html": "178b378c76e20fa37ba8b4a87fa4c480cd28b13d97536a249a67dfff78bc79a0",
+    "aa-methodology.html": "e024d60c737237096a24b29166aa5a6d4230758e6dcfbf0f85dd675d766a71b4",
+    "aa-methodology.txt": "689a8fd39c2f21faf83621dee5b0cbde680764329c1695f9b100abda84c3dbf9",
+    "aa-rsc.txt": "d7b669be836c3ccd021e98b931482d5688183c10f000d3beddad410d66958e9f",
+    "aa-scores.json": "6187c93e272e7c5346775f4dd79ac068a746590a99cd8d26141936eb565789aa",
+    "data.json": "d365da7c4c361b3adc50251870e97b1ae20547a57c6d5814b47450f2c1c6ae29",
+    "data.parquet": "80037e4d99c39a55c1e2e7d5a863d8d9edeb5ebe136ba8c1e849f8c015027c6a",
+    "evaluation_lib.py": "e681a4b03a6a9dfb540fbd9ef6b963de503a5ffac557ed611c326ee385850cf6",
+    "gh-repo.json": "fc0b231f7c961fee864f00b9757afb66335f950132ac6e38f10b502960978551",
+    "github-readme.md": "3aeda5d9691ba92c2439a3ed881c51f342f3e609e997ee66f854f12138f73807",
+    "hf-api.json": "25c5bdbd45c6a814cbe8ef54996e1376af365cf0d6885675bf213c05a7a44c88",
+    "hf-readme.md": "c50b4a9c37dcfb64092e83f13031852e1d24521125afc587e82a38805aa5c702",
+    "instructions.py": "a76a3b300b531b95200e53427c6b1fbb72b671cf6d358796797c0fa4b6c7c44f",
+    "license-data.txt": "b1c4de4bf91c95eec945ea7cbe0575fd52e7ee8fa430acb01d323d8214b1c482",
+    "official-abs.html": "8a5914f1022f6677d8182286e82b36b5de43fd58932ea11d097c48697b3ad87e",
+    "official-blog.html": "1b730c0a467bb43d3427f43da19be2ed4570bfbb2413343cb569c3b8ce17d2c3",
+    "official-blog.txt": "62c0c51e43a99a87f9614f2aafa91809dbd42c4de92be60e6a7c51bf4ddda57c",
+    "paper.pdf": "a998a59fa3697631b508e9555ea5eb7d529f5a52512e65b2ad93882cc591dde9",
+    "paper.txt": "b47220d75ad1bf253c27df09f816d7b3f0037ff09acae69102acdefffb4708b9",
+    "registry.py": "5119f2919261c77566f698f2f367883aff56cf89443bac5a56b6e30ddbd5aef9",
+    "sample_output.jsonl": "f9ad5227e47b175d91ec18c1b9ae222e71c64c7aaf1696f915e83efc00f62b3a",
+    "test.jsonl": "d2ada7da94a38cfe406351614c4e686846ed2da6d1b339db95fa5ead19554a4a",
+    "tree.json": "065b057972f5c34fd1b5fc818e0811b506c966960734db6b2dfdbd8a9f67d702"
+  },
+  "versions": {
+    "paper": "arXiv2507.02833v3 / NeurIPS2025 D&B",
+    "github": "1c40f0c10d9b5c5c2f10a175a28007ebb64f7f4d",
+    "hf": "2e8a48de45ff3bf41242f927254ca81b59ca3ae2"
+  },
+  "formal_name": "IFBench; no unsupported expanded formal name invented",
+  "counts": {
+    "prompts": 300,
+    "new_constraints": 58,
+    "categories": 7,
+    "conditions_per_prompt": {
+      "1": 256,
+      "2": 44
+    },
+    "condition_occurrences": 344,
+    "types_by_category": {
+      "count": 9,
+      "ratio": 5,
+      "words": 13,
+      "sentence": 3,
+      "format": 14,
+      "custom": 11,
+      "repeat": 3
+    }
+  },
+  "hf_split": "train, but evaluation data",
+  "hf_github_prompt_difference_keys": [
+    "13",
+    "19"
+  ],
+  "selected_difference_keys": [],
+  "examples": [
+    {
+      "source_id": "280",
+      "page": 7,
+      "hf_original_exact": true,
+      "github_original_exact": true,
+      "full_original_native": true,
+      "full_japanese_native": true,
+      "expected_behavior_native": true,
+      "instruction_ids_match": true,
+      "checker_statically_read": "PrintMultiplesChecker",
+      "answer_kind": "requested output conditions and static checker interpretation, no generated model answer"
+    },
+    {
+      "source_id": "274",
+      "page": 8,
+      "hf_original_exact": true,
+      "github_original_exact": true,
+      "full_original_native": true,
+      "full_japanese_native": true,
+      "expected_behavior_native": true,
+      "instruction_ids_match": true,
+      "checker_statically_read": "CityCSVChecker",
+      "answer_kind": "requested output conditions and static checker interpretation, no generated model answer"
+    },
+    {
+      "source_id": "24",
+      "page": 9,
+      "hf_original_exact": true,
+      "github_original_exact": true,
+      "full_original_native": true,
+      "full_japanese_native": true,
+      "expected_behavior_native": true,
+      "instruction_ids_match": true,
+      "checker_statically_read": "NumbersCountChecker / UniqueWordCountChecker",
+      "answer_kind": "requested output conditions and static checker interpretation, no generated model answer"
+    },
+    {
+      "source_id": "47",
+      "page": 33,
+      "hf_original_exact": true,
+      "github_original_exact": true,
+      "full_original_native": true,
+      "full_japanese_native": true,
+      "expected_behavior_native": true,
+      "instruction_ids_match": true,
+      "checker_statically_read": "NthWordJapaneseChecker",
+      "answer_kind": "requested output conditions and static checker interpretation, no generated model answer"
+    },
+    {
+      "source_id": "100",
+      "page": 34,
+      "hf_original_exact": true,
+      "github_original_exact": true,
+      "full_original_native": true,
+      "full_japanese_native": true,
+      "expected_behavior_native": true,
+      "instruction_ids_match": true,
+      "checker_statically_read": "OptionsResponseChecker",
+      "answer_kind": "requested output conditions and static checker interpretation, no generated model answer"
+    },
+    {
+      "source_id": "64",
+      "page": 35,
+      "hf_original_exact": true,
+      "github_original_exact": true,
+      "full_original_native": true,
+      "full_japanese_native": true,
+      "expected_behavior_native": true,
+      "instruction_ids_match": true,
+      "checker_statically_read": "RepeatSimpleChecker",
+      "answer_kind": "requested output conditions and static checker interpretation, no generated model answer"
+    },
+    {
+      "source_id": "70",
+      "page": 36,
+      "hf_original_exact": true,
+      "github_original_exact": true,
+      "full_original_native": true,
+      "full_japanese_native": true,
+      "expected_behavior_native": true,
+      "instruction_ids_match": true,
+      "checker_statically_read": "EmojiSentenceChecker",
+      "answer_kind": "requested output conditions and static checker interpretation, no generated model answer"
+    },
+    {
+      "source_id": "74",
+      "page": 37,
+      "hf_original_exact": true,
+      "github_original_exact": true,
+      "full_original_native": true,
+      "full_japanese_native": true,
+      "expected_behavior_native": true,
+      "instruction_ids_match": true,
+      "checker_statically_read": "IndentStairsChecker",
+      "answer_kind": "requested output conditions and static checker interpretation, no generated model answer"
+    },
+    {
+      "source_id": "83",
+      "page": 38,
+      "hf_original_exact": true,
+      "github_original_exact": true,
+      "full_original_native": true,
+      "full_japanese_native": true,
+      "expected_behavior_native": true,
+      "instruction_ids_match": true,
+      "checker_statically_read": "SpecialBulletPointsChecker",
+      "answer_kind": "requested output conditions and static checker interpretation, no generated model answer"
+    },
+    {
+      "source_id": "110",
+      "page": 39,
+      "hf_original_exact": true,
+      "github_original_exact": true,
+      "full_original_native": true,
+      "full_japanese_native": true,
+      "expected_behavior_native": true,
+      "instruction_ids_match": true,
+      "checker_statically_read": "NestedParenthesesChecker",
+      "answer_kind": "requested output conditions and static checker interpretation, no generated model answer"
+    },
+    {
+      "source_id": "126",
+      "page": 40,
+      "hf_original_exact": true,
+      "github_original_exact": true,
+      "full_original_native": true,
+      "full_japanese_native": true,
+      "expected_behavior_native": true,
+      "instruction_ids_match": true,
+      "checker_statically_read": "SubBulletPointsChecker",
+      "answer_kind": "requested output conditions and static checker interpretation, no generated model answer"
+    },
+    {
+      "source_id": "241",
+      "page": 41,
+      "hf_original_exact": true,
+      "github_original_exact": true,
+      "full_original_native": true,
+      "full_japanese_native": true,
+      "expected_behavior_native": true,
+      "instruction_ids_match": true,
+      "checker_statically_read": "ParagraphLastFirstWordMatchChecker",
+      "answer_kind": "requested output conditions and static checker interpretation, no generated model answer"
+    },
+    {
+      "source_id": "296",
+      "page": 42,
+      "hf_original_exact": true,
+      "github_original_exact": true,
+      "full_original_native": true,
+      "full_japanese_native": true,
+      "expected_behavior_native": true,
+      "instruction_ids_match": true,
+      "checker_statically_read": "NoWhitespaceChecker",
+      "answer_kind": "requested output conditions and static checker interpretation, no generated model answer"
+    }
+  ],
+  "gold": "No unique gold answers invented. Red text specifies required output/verified number sequence. No model execution.",
+  "static_checker_scope": {
+    "strict": "raw response",
+    "loose": "each constraint can pass any of eight text transformations independently; not one common transformed candidate required",
+    "prompt_score": "all constraints must pass",
+    "constraint_score": "individual constraints averaged",
+    "CityCSVChecker": "specified header order5columns plus7data rows; content truth not checked",
+    "SpecialBulletPointsChecker": "at least2occurrences, weaker than line-leading requirement",
+    "SubBulletPointsChecker": "split on *, each segment contains -, weaker than strict list positions",
+    "NestedParenthesesChecker": "tracks brackets/depth; can return on closure at sufficient depth without requiring entire output globally balanced",
+    "NthWordJapaneseChecker": "whitespace tokens, skips numeric words, checks Japanese characters",
+    "UniqueWordCountChecker": "digits can also count as words",
+    "IndentStairsChecker": "checks successive nonempty lines; no substantive content truth check"
+  },
+  "construction": "New human-written constraints and Python verifiers; unseen WildChat requests combined except custom instruction group (paper Table8 caption). Human checks compatibility.",
+  "metrics": {
+    "paper_public_models": {
+      "location": "Figure1, singleturn loose prompt",
+      "rows": [
+        [
+          "OpenAI o3",
+          95.0,
+          69.3
+        ],
+        [
+          "Claude4Sonnet",
+          91.3,
+          42.3
+        ],
+        [
+          "Qwen3-32B",
+          85.6,
+          37.3
+        ]
+      ]
+    },
+    "training_comparison": {
+      "location": "Table3, singleturn loose prompt",
+      "rows": [
+        [
+          "TULU3DPO8B",
+          81.1,
+          25.5
+        ],
+        [
+          "same+IF-RLVR",
+          92.2,
+          44.6
+        ],
+        [
+          "Qwen2.5 7B+IF-RLVR",
+          87.8,
+          53.7
+        ]
+      ],
+      "paper_internal_inconsistency": "Abstract45.9/54.7 differ from Table3 44.6/53.7; use internally matched Table3 only, never merge."
+    }
+  },
+  "current_primary_evidence": {
+    "url": "https://artificialanalysis.ai/methodology/intelligence-benchmarking",
+    "methodology_version": "4.3.2",
+    "index_status": "removed in v4.1; current Additional Evaluations standalone",
+    "questions": 294,
+    "repeats": 5,
+    "scoring": "singleturn loose prompt-level, averaged across questions and repetitions",
+    "subset_why_294": "not specified; no inferred exclusion keys",
+    "scores": [
+      {
+        "name": "MiniMax-M3",
+        "slug": "minimax-m3",
+        "ifbench": 0.828571428571429,
+        "release_date": null,
+        "reasoning_effort": null
+      },
+      {
+        "name": "Grok 4.20 0309 (Reasoning)",
+        "slug": "grok-4-20-0309",
+        "ifbench": 0.829251700680272,
+        "release_date": null,
+        "reasoning_effort": null
+      },
+      {
+        "name": "Grok 4.3 (High)",
+        "slug": "grok-4-3",
+        "ifbench": 0.812925170068027,
+        "release_date": null,
+        "reasoning_effort": null
+      },
+      {
+        "name": "Grok 4.3 (Medium)",
+        "slug": "grok-4-3-medium",
+        "ifbench": 0.833333333333333,
+        "release_date": null,
+        "reasoning_effort": null
+      },
+      {
+        "name": "Nemotron 3 Ultra 550B A55B (Reasoning)",
+        "slug": "nvidia-nemotron-3-ultra-550b-a55b",
+        "ifbench": 0.813605442176871,
+        "release_date": null,
+        "reasoning_effort": null
+      }
+    ],
+    "score_source": "https://artificialanalysis.ai/evaluations/ifbench RSC name/slug/float ifbench field; not global model names/cost fields",
+    "historical_adoption": "Ai2 May11 2026 article says last year =>2025"
+  },
+  "licenses": {
+    "data": "ODC-BY-1.0",
+    "code": "Apache-2.0",
+    "retained_files": [
+      "LICENSE-IFBench-code-Apache-2.0.txt",
+      "LICENSE-IFBench-data-ODC-BY-1.0.txt",
+      "ATTRIBUTION-IFBench.md"
+    ],
+    "license_data_download": "SPDX canonical mirror; official ODC site403; no bypass"
+  },
+  "execution": {
+    "model_runs": 0,
+    "external_generation_apis": 0,
+    "gemini_used": false
+  },
+  "remaining": []
+}
