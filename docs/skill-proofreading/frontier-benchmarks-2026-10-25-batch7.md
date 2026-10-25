@@ -31,3 +31,5 @@ LiveBenchは2024年の公開実例と現行2.0の課題・成績を分けた。�
 Pythonテスト4件とギャラリーのNodeテストが成功した。116件のギャラリーを構築し、作成日時降順、LiveBench検索と更新日時降順の組合せ、リセット後116件の表示をブラウザーで確認した。新規3件のサムネイルと[作成日時降順](frontier-benchmarks-2026-10-25-batch7/gallery-created-desc.png)・[検索結果](frontier-benchmarks-2026-10-25-batch7/gallery-livebench-query.png)を実際に開いて確認した。日時をGit履歴から復元し、既存113件と226配布物が不変であること、6新規ファイルが承認済み版と一致することを確認した。[ローカル検証](frontier-benchmarks-2026-10-25-batch7/local-verification.json)に記録した。
 
 別担当が3件の確認記録も再読し、最終ファイル、確認範囲、利用条件、採点条件、修正前後対の対象、列挙された監査票と相対リンクを照合した。修正後の残件はない。[記録レビュー](frontier-benchmarks-2026-10-25-batch7/review-batch-records.json)を保存した。
+
+公開は[GitHub Actions](https://github.com/sasakiy84/datasets-in-10-minutes/actions/runs/40171696324)の成功を確認した。2026-10-25T16:12:09.516742+09:00（日本時間）に[公開ギャラリー](https://datasets-in-10-minutes.sasakiy84.net/?sort=created-desc)のカタログと新規3件のPDF/PPTX計6ファイルを取得し、全7ファイルがHTTP200・承認済み版と完全一致することを確認した。公開カタログは116件。[固定記録](frontier-benchmarks-2026-10-25-batch7/publication-frozen.json)と[公開検証](frontier-benchmarks-2026-10-25-batch7/publication-result.json)に対応を残した。公開の基点は `2f4120633abbea380345c6bf337a60f56ff841a7`。この公開検証記録を収録する後続のdocsのみのコミットは配布物を変更しない。
