@@ -1,0 +1,196 @@
+{
+  "reviewer": "root",
+  "method": "Personally read all13 fixedoriginals andgold; independent arithmetic/enumeration/textconversion andsemanticlanguage inspection. No independent primary download claim; sourceacquisition/evaluator implementation/wholeJP/visual technicalchecks elsewhere.",
+  "model_evaluation_run": false,
+  "external_generation_api_used": false,
+  "checks": [
+    {
+      "example": 1,
+      "id": "d3a1d50e3fc5c13815a425b0443cb1297b9436fdb431336503c0d7c1a01d7b6e",
+      "task": "zebra_puzzle",
+      "source_gold": "filmmaking",
+      "computed_or_checked": "filmmaking",
+      "reason": {
+        "all_valid_assignments": [
+          [
+            [
+              "garlic",
+              "nectarine",
+              "cucumber"
+            ],
+            [
+              "japanese",
+              "chinese",
+              "thai"
+            ],
+            [
+              "puzzles",
+              "magic-tricks",
+              "filmmaking"
+            ]
+          ]
+        ],
+        "total_assignments_considered": 216
+      },
+      "scope": "own independent static calculation"
+    },
+    {
+      "example": 2,
+      "id": "01fc14e123214c67cbf235824d1ec952a825d5f78464ecc18fb9609c2781f50c",
+      "task": "tablejoin",
+      "source_gold": "{\"label\": \"lG1K/C5s5Ww\"}",
+      "computed_or_checked": {
+        "label": "lG1K/C5s5Ww"
+      },
+      "reason": "Unique pair with matching categorical value domains ham/spam; email strings and allzero column do not match.",
+      "scope": "own independent static calculation"
+    },
+    {
+      "example": 3,
+      "id": "4ada75f390691d79823cad8cabd13283a080f2b2cd69b56f39ff2cd09cab1b58",
+      "task": "paraphrase",
+      "source_gold": null,
+      "computed_or_checked": {
+        "unique_gold": null,
+        "required": "Whole answer in doublequotes; five sections headedSection1..5; paraphrase the provided text."
+      },
+      "reason": "No unique generated text answer created. Read fulloriginal + supplied instruction IDs/kwargs; evaluator implementation inspection inherited.",
+      "scope": "own literal prompt/metadata inspection"
+    },
+    {
+      "example": 4,
+      "id": "e4ee35e76ddb5c90ccea3e6aa41f00de01b44122d4d602dd4a0da6892757e3af",
+      "task": "LCB_generation",
+      "source_gold": null,
+      "computed_or_checked": {
+        "3": "333",
+        "9": "999999999"
+      },
+      "reason": "Direct string concatenation for2 publicsamples, no benchmark/reference/modelrun.",
+      "scope": "own independent static calculation"
+    },
+    {
+      "example": 5,
+      "id": "9521286567b7eb08daaecd0b7ebd0bb44555769e3e28344aacc94507c506f623",
+      "task": "AMPS_Hard",
+      "source_gold": "3",
+      "computed_or_checked": 3,
+      "reason": "Geometricmean sqrt(1*9)=3.",
+      "scope": "own independent static calculation"
+    },
+    {
+      "example": 6,
+      "id": "58a7cb59a3183f7cf4223b926070e9a2e0059d16ec8d897348047ac743877c8f",
+      "task": "math_comp",
+      "source_gold": "C",
+      "computed_or_checked": {
+        "value": 17,
+        "answer_letter": "C",
+        "requested_output": "CCCCC"
+      },
+      "reason": "2023/7=289,sqrt289=17; thirdchoiceC; prompt requires5 repeatedletters.",
+      "scope": "own independent static calculation"
+    },
+    {
+      "example": 7,
+      "id": "3d118e7c265b1ddf3c22d8765dc0c224dec03fad27d51c9687b46d61b6c4d0e5",
+      "task": "spatial",
+      "source_gold": "4",
+      "computed_or_checked": 4,
+      "reason": "Two diagonals of a square intersect ininterior, splittinginto4 triangularpieces. Requestedboldsingleinteger.",
+      "scope": "own independent static calculation"
+    },
+    {
+      "example": 8,
+      "id": "d7c4df37a14bc749741b0ad00369fbd6b1b88ee87155779c30915e4e81244cbf",
+      "task": "web_of_lies_v2",
+      "source_gold": "yes, yes, yes",
+      "computed_or_checked": "yes, yes, yes",
+      "reason": "Gymtruth; farm assertiongymtruth entailsfarmtruth; restaurantassertsfarmtruth, museumassertsrestauranttruth. Museumassertsrinktruthconsistent. Unspecifiedneighbor/distractor facts do notchange result.",
+      "scope": "own independent static calculation"
+    },
+    {
+      "example": 9,
+      "id": "e97f5c01548d6e52ab781821f749da6639940c88a5843ba7ec708dec713a6daa",
+      "task": "connections",
+      "source_gold": "loot, raid, rob, sack, bobby, hair, push, safety",
+      "computed_or_checked": {
+        "plunder": [
+          "loot",
+          "raid",
+          "rob",
+          "sack"
+        ],
+        "words_before_pin": [
+          "bobby",
+          "hair",
+          "push",
+          "safety"
+        ]
+      },
+      "reason": "Own English semantic grouping; eachgroup4 coversall8 exactly, matchinggoldgroupmembership.",
+      "scope": "own language/meaning inspection"
+    },
+    {
+      "example": 10,
+      "id": "3930c1a9f5be45985e44f14574267baf94e09c1d8d76fa16ac7c5bb192dbe080",
+      "task": "typos",
+      "source_gold": "In this article, we establish necessary and sufficient conditions for a polynomial of degree $n$ to have exactly $n$ real roots. A complete study of polynomials of degree five is carried out. The results are compared with those obtained using Sturm sequences.",
+      "computed_or_checked": {
+        "artice": "article",
+        "nessecary": "necessary",
+        "anbd": "and",
+        "condidtions": "conditions",
+        "ethose": "those",
+        "useing": "using"
+      },
+      "reason": "Only6 misspellings replaced; literal$n$, punctuation andallothercharacters retained.",
+      "scope": "own independent static calculation"
+    },
+    {
+      "example": 11,
+      "id": "04a66da39fcd1eeabb041b30c37d8fc08ba62740d89466ad05739cc95ca22695",
+      "task": "connections",
+      "source_gold": "bit, dash, pinch, touch, buy, deal, steal, value",
+      "computed_or_checked": {
+        "small_amount": [
+          "bit",
+          "dash",
+          "pinch",
+          "touch"
+        ],
+        "bargain": [
+          "buy",
+          "deal",
+          "steal",
+          "value"
+        ]
+      },
+      "reason": "Own English semantic grouping; eachgroup4 coversall8 exactly, matchesfixedreplacementgold.",
+      "scope": "own language/meaning inspection"
+    },
+    {
+      "example": 12,
+      "id": "56ace477670fa1527771dc1a4f2babac3b704f1c313b8981a53ce892f55b6c05",
+      "task": "tablereformat",
+      "source_gold": "species,quantity\nLAKE TROUT,2931\nKOKANEE,716220\nGRAYLING ARCTIC,84211\nSUNFISH BLUEGILL,47840\nWIPER,386460\nSUCKER JUNE,80510\nTIGER TROUT,401119\nRAINBOW,3904196\nBROOK TROUT,232058\nCUTTHROAT,1506513\nCHUB,34740\nALL TROUT,1650\nBROWN TROUT,245553\nGOLDEN TROUT,4581\n",
+      "computed_or_checked": {
+        "rows_with_header": 15,
+        "columns": 2,
+        "gold_csv_exact": true
+      },
+      "reason": "ParsedTSV thenwroteCSV; 14datapairs +header retainedexactly, no tablevalues changed.",
+      "scope": "own independent static calculation"
+    },
+    {
+      "example": 13,
+      "id": "666f26a703b286a7d31f2f46070307d6aa9e9644fcc24482de85820bfe2ad341",
+      "task": "cta",
+      "source_gold": "label",
+      "computed_or_checked": "label",
+      "reason": "ham/spam areclassificationlabels, notemailmessagecontent; uniqueappropriateclassfromemail/label.",
+      "scope": "own meaning inspection"
+    }
+  ],
+  "remaining": []
+}

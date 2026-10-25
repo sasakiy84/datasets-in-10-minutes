@@ -1,0 +1,262 @@
+[
+  {
+    "page": 1,
+    "text": "LiveBench\n問題を更新し、幅広い能力を評価する\nsasakiy84\ndatasets in 10 minutes (2026-10-25)"
+  },
+  {
+    "page": 2,
+    "text": "\n公開問題で課題と正解を見る\n問題の構築と分野の広がり\n採点方法とモデルの成績\n長い実務課題への展開と入手方法\n目次"
+  },
+  {
+    "page": 3,
+    "text": "LiveBench 2.0 の公式サイト\n公式サイト\n\n[1] LiveBench (2026-10-25参照), LiveBench 2.0.\nhttps://livebench.ai/"
+  },
+  {
+    "page": 4,
+    "text": "1. 公開問題で課題と正解を見る\n1. 公開問題で課題と正解を見る"
+  },
+  {
+    "page": 5,
+    "text": "更新型の問題集合から、長い実務課題へ\nLiveBenchは、問題を継続的に更新して、幅広いモデル能力を測る評価データセットとして2024年に登場した。答えが明確な課題を集め、正解照合やテストで採点する設計を採った。\n2026年10月公開の2.0では、アプリの操作や報告書・スライドの作成など、複数の手順を踏む実務課題へ対象を広げた。\n1. 公開問題で課題と正解を見る\n[1] White et al. (2025), LiveBench. https://arxiv.org/abs/2406.19314\n[2] LiveBench (2026-10-25参照), LiveBench 2.0. https://livebench.ai/"
+  },
+  {
+    "page": 6,
+    "text": "13例は、公開された1.0系列から選んだ\n本編の3例とAppendixの10例は、2024年6月・7月に公開された1.0系列の問題である。推理、数学、コード、言語、指示への対応、データ分析の六分野を含む。\n問題の原文、依頼の日本語訳、参照回答や採点条件を対応させる。2.0の課題構成と成績は、2026年10月の公開情報に基づいて紹介する。\n1. 公開問題で課題と正解を見る\n[1] LiveBench (2026-10-25参照), official repository. https://github.com/LiveBench/LiveBench\n[2] LiveBench (2026-10-25参照), Methodology. https://livebench.ai/#/methodology"
+  },
+  {
+    "page": 7,
+    "text": "例1 三人の属性を推理する：原文\n1. 公開問題で課題と正解を見る\nThere are 3 people standing in a line numbered 1 through 3 in a left to right order.\nEach person has a set of attributes: Food, Nationality, Hobby.\nThe attributes have the following possible values:\n- Food: nectarine, garlic, cucumber\n- Nationality: chinese, japanese, thai\n- Hobby: magic-tricks, filmmaking, puzzles\nand exactly one person in the line has a given value for an attribute.\nGiven the following premises about the line of people:\n- the person that likes garlic is on the far left\n- the person who is thai is somewhere to the right of the person who likes magic-tricks\n- the person who is chinese is somewhere between the person that likes cucumber and the person who likes puzzles\nAnswer the following question:\nWhat is the hobby of the person who is thai? Return your answer as a single word, in the following format: ***X***, where X is the answer.\n[1] LiveBench (2024), reasoning — public questions.\nhttps://huggingface.co/datasets/livebench/reasoning"
+  },
+  {
+    "page": 8,
+    "text": "例1 三人の属性を推理する：日本語訳\n1. 公開問題で課題と正解を見る\n問題の日本語訳\n3人が左から1番、2番、3番の順に並んでいる。各人には、食べ物・国籍・趣味の三つの属性がある。候補は次のとおり。\n食べ物：ネクタリン、ニンニク、キュウリ\n国籍：中国人、日本人、タイ人\n趣味：手品、映画制作、パズル\n各属性のそれぞれの値に当てはまる人は、ちょうど1人ずついる。\n次の条件が分かっている。\n・ニンニクが好きな人は、いちばん左にいる。\n・タイ人は、手品が好きな人より右にいる。\n・中国人は、キュウリが好きな人とパズルが好きな人の間にいる。\nタイ人の趣味は何か。答えを1語で、***X*** の形式で返す。Xには答えを入れる。\n[1] LiveBench (2024), reasoning — public questions.\nhttps://huggingface.co/datasets/livebench/reasoning"
+  },
+  {
+    "page": 9,
+    "text": "例1 三人の属性を推理する：答えの読み方\n1. 公開問題で課題と正解を見る\n正解：filmmaking（映画制作）\n位置\n食べ物\n国籍\n趣味\n1\nニンニク\n日本人\nパズル\n2\nネクタリン\n中国人\n手品\n3\nキュウリ\nタイ人\n映画制作\n中国人は2番にいる。ニンニクが1番なので、キュウリが3番、パズルが1番になる。タイ人は3番に入り、手品は2番に決まるため、3番の趣味は映画制作となる。\n[1] LiveBench (2024), reasoning — public questions.\nhttps://huggingface.co/datasets/livebench/reasoning"
+  },
+  {
+    "page": 10,
+    "text": "例2 結合できる列を対応付ける：原文\n1. 公開問題で課題と正解を見る\n依頼と二つの表の原文（全文）\nPlease create a valid join mapping between CSV Table A and CSV Table B. Each column in A maps to 0 or 1 columns in B. Return your response as a Python dictionary, formatted as {col_name_in_df_a : col_name_in_df_b}. Please return only the dictionary.\nCSV Table A:\nemail,label\nAct now! Limited-tim,spam\nUpgrade to our premi,ham\nThank you for subscr,ham\nYour order has been ,ham\nWe're excited to sha,ham\nURGENT: Your account,spam\nWe've extended our s,ham\nYou've been selected,spam\nYour account has bee,spam\nUnlock exclusive dis,spam\nCSV Table B:\nlG1K/C5s5Ww,t8DtGa8xUVw\nham,0\nham,0\nham,0\nham,0\nham,0\nham,0\nspam,0\nham,0\nham,0\nham,0\nham,0\nOutput:\n[1] LiveBench (2024), data_analysis — public questions.\nhttps://huggingface.co/datasets/livebench/data_analysis"
+  },
+  {
+    "page": 11,
+    "text": "例2 結合できる列を対応付ける：日本語訳\n1. 公開問題で課題と正解を見る\n依頼の日本語訳（表の値は原文と共通）\nCSV形式の表Aと表Bについて、有効な結合用の列の対応を作る。Aの各列に、Bの列を最大1列ずつ対応付ける。答えは {表Aの列名 : 表Bの列名} というPython辞書の形式にし、辞書だけを返す。\n表Aには email と label がある。表Bでは列名が lG1K/C5s5Ww と t8DtGa8xUVw に置き換わっている。表の値は原文に示したとおり。\n[1] LiveBench (2024), data_analysis — public questions.\nhttps://huggingface.co/datasets/livebench/data_analysis\n正解：{\"label\": \"lG1K/C5s5Ww\"}\n表Aのlabelにはhamとspamが入り、表BのlG1K/C5s5Wwにも同じ種類の値がある。もう一方の列は0だけなので、対応する列はlabelからlG1K/C5s5Wwへの一組となる。"
+  },
+  {
+    "page": 12,
+    "text": "例3 引用符と五つの節を守る：原文\n1. 公開問題で課題と正解を見る\n問題の原文（全文）\nThe following are the beginning sentences of a news article from the Guardian.\n-------\n Should I feel guilty about buying a Christmas tree? Millions are grown and cut each year, but is this an environmental plus or minus? Bill Green, Tring, Herts Post your answers – and new questions – below or email them to nq@theguardian.com\n-------\nPlease paraphrase based on the sentences provided.  Wrap your entire response with double quotation marks. Your response must have 5 sections. Mark the beginning of each section with Section X, such as:\nSection 1\n[content of section 1]\nSection 2\n[content of section 2]\n[1] LiveBench (2024), instruction_following — public questions.\nhttps://huggingface.co/datasets/livebench/instruction_following"
+  },
+  {
+    "page": 13,
+    "text": "例3 引用符と五つの節を守る：日本語訳\n1. 公開問題で課題と正解を見る\n問題の日本語訳\n以下は、The Guardianの記事の冒頭の文である。\n-------\nクリスマスツリーを買うことに罪悪感を覚えるべきだろうか。毎年、何百万本もの木が育てられ、伐採されている。これは環境にとってプラスなのか、マイナスなのか。Bill Green、Tring、Herts。回答や新しい質問は下欄に投稿するか、nq@theguardian.comへメールで送ってください。\n-------\n示された文を言い換える。回答全体を二重引用符で囲む。回答は五つの節にする。各節の冒頭には、次の例のように Section X と記す。\nSection 1\n［第1節の内容］\nSection 2\n［第2節の内容］\n[1] LiveBench (2024), instruction_following — public questions.\nhttps://huggingface.co/datasets/livebench/instruction_following"
+  },
+  {
+    "page": 14,
+    "text": "例3 引用符と五つの節を守る：答えの読み方\n1. 公開問題で課題と正解を見る\n判定条件：全体を二重引用符で囲む／五つの節\nこの例では、回答文は一つに定まらない。公開された機械判定は、回答全体の引用符と、Sectionに番号を付けた節見出しを確認する。\n[1] LiveBench (2024), instruction_following — public questions.\nhttps://huggingface.co/datasets/livebench/instruction_following"
+  },
+  {
+    "page": 15,
+    "text": "2. 問題の構築と分野の広がり\n2. 問題の構築と分野の広がり"
+  },
+  {
+    "page": 16,
+    "text": "新しい素材と、既存課題の難化を組み合わせる\nColin Whiteらは、公開された評価問題がモデルの学習に入り、成績を押し上げる問題に対応するため、評価用の問題を入れ替える仕組みを作った。\n新しい数学競技、論文の要旨、ニュース記事、データ表を素材にする方法と、既存の推理・数式・指示追従課題を難しく作り直す方法を組み合わせた。\n2. 問題の構築と分野の広がり\n[1] White et al. (2025), LiveBench.\nhttps://arxiv.org/abs/2406.19314"
+  },
+  {
+    "page": 17,
+    "text": "登場時は六分野を含む\n2. 問題の構築と分野の広がり\n分野\n代表的な課題\n数学\n競技問題、数式の穴埋め、式の計算\nコード\nプログラム生成、途中のコードの補完\n推理\n属性推理、発言の真偽、空間関係\n言語\n共通語の分類、誤字訂正、文の並べ替え\n指示への対応\n言い換え・要約などに形式条件を付ける\nデータ分析\n表の変換、結合列の対応、列の分類\n[1] White et al. (2025), LiveBench.\nhttps://arxiv.org/abs/2406.19314"
+  },
+  {
+    "page": 18,
+    "text": "課題ごとに、素材と正解の作り方が異なる\n空間推理には人が書いた50問を用意した。属性推理や数式の計算では生成手順を使い、既存の課題より複雑な条件や数値を取り入れた。\n誤字訂正では論文要旨のつづりを崩し、表変換ではデータの形式を変える。元の文章や表を参照値として、出力を照合できるようにした。\n2. 問題の構築と分野の広がり\n[1] White et al. (2025), LiveBench.\nhttps://arxiv.org/abs/2406.19314"
+  },
+  {
+    "page": 19,
+    "text": "新しい問題を加え、古い問題を入れ替える\n2024年6月の初期公開は960問。翌月までに課題の追加と除外を行い、全体を1,000問にした。\n当初は平均で約6分の1ずつを月ごとに入れ替え、約6か月で一巡させる運用を設計した。新しい問題は公開を1か月遅らせ、未公開の問題も使って評価した。\n2. 問題の構築と分野の広がり\n[1] White et al. (2025), LiveBench.\nhttps://arxiv.org/abs/2406.19314"
+  },
+  {
+    "page": 20,
+    "text": "3. 採点方法とモデルの成績\n3. 採点方法とモデルの成績"
+  },
+  {
+    "page": 21,
+    "text": "正解照合と、課題に応じた部分点を使う\n単語や数値の答えは参照値と照合し、コードはテストで動作を確かめる。表の列対応は適合率と再現率からF1を計算し、語の組分けは正しく作れた組の割合を得点にする。\n登場時の集計は、問題ごとの0〜1の得点を課題ごとに平均し、その平均を分野ごと、最後に六分野全体で平均する。問題の多い分野だけが総合点を支配しない設計である。\n3. 採点方法とモデルの成績\n[1] White et al. (2025), LiveBench. https://arxiv.org/abs/2406.19314\n[2] LiveBench (2026-10-25参照), official repository. https://github.com/LiveBench/LiveBench"
+  },
+  {
+    "page": 22,
+    "text": "指示追従では、全条件と個別条件を評価する\n3. 採点方法とモデルの成績\n評価の観点\n例3で確認する内容\n回答全体の条件\n最初と最後を二重引用符で囲む\n節の形式\nSectionと番号の見出しを付ける\n集計\n全条件の成否と、満たした条件の割合を平均\n問題の依頼は五つの節を指定する。採点実装では、Sectionに番号を付けた見出しを五つ以上検出できるかを調べる。\n[1] LiveBench (2026-10-25参照), official repository.\nhttps://github.com/LiveBench/LiveBench"
+  },
+  {
+    "page": 23,
+    "text": "2025年の論文では、o1-previewが64.7点\n3. 採点方法とモデルの成績\nモデル\n総合点\no1-preview-2024-09-12\n64.7\nClaude 3.5 Sonnet-20241022\n58.5\nGemini exp-1114\n56.0\nLlama 3.1 405B Instruct\n51.1\nICLR 2025掲載の1.0評価。6分野・18課題、得点は0〜100。単一ターン、原則temperature=0。\n[1] White et al. (2025), LiveBench.\nhttps://arxiv.org/abs/2406.19314"
+  },
+  {
+    "page": 24,
+    "text": "同じ名前でも、公開時期で課題が変わる\n2025年4月には、コード課題を競技プログラミング中心から実用ライブラリの利用へ更新し、表の列分類を終了した。5月には、実際のリポジトリを修正するエージェント型コード課題を追加した。\nその後も新しい推理やデータ分析を追加した。問題の公開日と除外日、評価に使うバージョンをそろえることで、対象となる問題集合を選べる。\n3. 採点方法とモデルの成績\n[1] LiveBench (2026-10-25参照), Changelog.\nhttps://github.com/LiveBench/LiveBench/blob/main/changelog.md"
+  },
+  {
+    "page": 25,
+    "text": "4. 長い実務課題への展開と入手方法\n4. 長い実務課題への展開と入手方法"
+  },
+  {
+    "page": 26,
+    "text": "2.0は、実行して成果物を作る能力へ広がった\n2026年10月14日公開の2.0は七つの評価区分を持つ。推理とデータ分析は短い問いへの回答、残る五区分はツールを使って進める課題である。\nアプリを変更後の要件に合わせて運用する、バグを直す、ブラウザーで仕事を終える、根拠付きの報告書を書く、文書やスライドを仕上げるといった成果を評価する。\n4. 長い実務課題への展開と入手方法\n[1] LiveBench (2026-10-25参照), Methodology.\nhttps://livebench.ai/#/methodology"
+  },
+  {
+    "page": 27,
+    "text": "2.0は、119の実行課題と352問からなる\n4. 長い実務課題への展開と入手方法\n評価区分\n件数\n入力・成果の例\nエージェント操作\n18\n変化する要件の下でアプリを運用\nコード修正\n29\nバグ報告とリポジトリから修正\nブラウザー操作\n25\nWebアプリ内の作業を完了\n調査\n22\n出典付きの報告書を提出\nデザイン\n25\n文書・PDF・スライドを作成\n別に、推理202問とデータ分析150問を含む。2026-10-14公開分、2026-10-25参照。\n[1] LiveBench (2026-10-25参照), Methodology.\nhttps://livebench.ai/#/methodology"
+  },
+  {
+    "page": 28,
+    "text": "2.0の総合点は、評価区分を等しく平均する\n各区分をモデルごとに1回実行し、課題の成績を0〜100の得点にする。推理とデータ分析は、下位の課題群の平均を等しい重みでまとめる。\n総合点は、値のある評価区分の平均である。原則としてモデルが対応する最も高い推論設定を使い、例外の設定は公開表の詳細に示す。\n4. 長い実務課題への展開と入手方法\n[1] LiveBench (2026-10-25参照), Methodology.\nhttps://livebench.ai/#/methodology"
+  },
+  {
+    "page": 29,
+    "text": "2.0では、Fable 5.1の総合点が88.0\n4. 長い実務課題への展開と入手方法\nモデル\n総合\n操作\n推理\nClaude Fable 5.1\n88.0\n80.8\n91.7\nClaude Opus 5.5\n86.5\n85.0\n92.2\nGPT-6 Astra\n86.1\n82.4\n92.7\nGemini 4 Argon\n84.1\n69.9\n95.1\n2026-10-14公開分、サイト更新表示2026-10-23、2026-10-25参照。各区分1回の評価。操作はエージェント操作の区分。\n[1] LiveBench (2026-10-25参照), LiveBench 2.0.\nhttps://livebench.ai/"
+  },
+  {
+    "page": 30,
+    "text": "公開データで、入力と参照値を確認できる\n1.0系列の問題は、分野別の公式配布から取得できる。設問、参照値、課題名、公開日・除外日などが入り、課題に応じて公開テストや形式条件も付く。\n配布物のライセンスはApache License 2.0。実装や出題元の帰属情報も確認する。公開コードには、一部の数式問題でモデルを補助判定に呼ぶ処理もある。\n4. 長い実務課題への展開と入手方法\n[1] LiveBench (2026-10-25参照), Dataset Documentation. https://github.com/LiveBench/LiveBench/blob/main/docs/DATASHEET.md\n[2] LiveBench (2026-10-25参照), official repository. https://github.com/LiveBench/LiveBench"
+  },
+  {
+    "page": 31,
+    "text": "問題の原文と参照値を取り出す\n4. 長い実務課題への展開と入手方法\nfrom datasets import load_dataset\n\ndata = load_dataset(\"livebench/reasoning\", split=\"test\")\nexample = data[0]\nprint(example[\"turns\"][0])\nprint(example[\"ground_truth\"])\n公開問題を読む最小例。評価対象は、使う公開バージョンに合わせて選ぶ。\n[1] LiveBench (2026-10-25参照), official repository.\nhttps://github.com/LiveBench/LiveBench"
+  },
+  {
+    "page": 32,
+    "text": "更新される課題と、正解の確かめ方を押さえる\nLiveBenchは、入力・答えが明確な多分野の問題を更新し、学習への混入や採点の偏りを抑えるために作られた。形式条件や部分点も含めて、何を測るかを課題ごとに定める。\n2.0では、短い質問に答える力と、ツールを使い成果物を完成させる力を同じ評価系列で扱うようになった。公開バージョンの課題構成と採点単位が、成績を読む前提になる。\n4. 長い実務課題への展開と入手方法\n[1] White et al. (2025), LiveBench. https://arxiv.org/abs/2406.19314\n[2] LiveBench (2026-10-25参照), Methodology. https://livebench.ai/#/methodology"
+  },
+  {
+    "page": 33,
+    "text": "Appendix\nAppendix"
+  },
+  {
+    "page": 34,
+    "text": "\n六分野の追加例\n更新の変遷と参考文献\nAppendix: 目次"
+  },
+  {
+    "page": 35,
+    "text": "1. 六分野の追加例\nAppendix: 1. 六分野の追加例"
+  },
+  {
+    "page": 36,
+    "text": "例4 数字NをN回並べる：問題文の原文\nAppendix: 1. 六分野の追加例\n問題文・入力・出力・制約・公開例の原文（全文）\nYou are given an integer N between 1 and 9, inclusive, as input.\nConcatenate N copies of the digit N and print the resulting string.\nInput: The input is given from Standard Input in the following format: N\nOutput: Print the answer.\nConstraints: N is an integer between 1 and 9, inclusive.\nSample Input 1: 3   Sample Output 1: 333\nConcatenate three copies of the digit 3 to yield the string 333.\nSample Input 2: 9   Sample Output 2: 999999999\n[1] LiveBench (2024), coding — public questions.\nhttps://huggingface.co/datasets/livebench/coding"
+  },
+  {
+    "page": 37,
+    "text": "例4 数字NをN回並べる：出力指示の原文\nAppendix: 1. 六分野の追加例\nモデルに添える共通の生成・出力形式の指示（全文）\n### Instructions: You are an expert Python programmer. You will be given a question (problem specification) and will generate a correct Python program that matches the specification and passes all tests. You will NOT return anything except for the program.\n### Format: Read the inputs from stdin solve the problem and write the answer to stdout (do not directly test on the sample inputs). Enclose your code within delimiters as follows.\n```python\n# YOUR CODE HERE\n```\n\n### Answer: (use the provided format with backticks)\n[1] LiveBench (2024), coding — public questions.\nhttps://huggingface.co/datasets/livebench/coding"
+  },
+  {
+    "page": 38,
+    "text": "例4 数字NをN回並べる：日本語訳\nAppendix: 1. 六分野の追加例\n問題の日本語訳\nあなたはPythonに詳しいプログラマーである。問題の仕様を読み、すべてのテストに通る正しいPythonプログラムを作る。プログラム以外は返さない。\n1以上9以下の整数Nが入力される。数字NをN個つなげた文字列を出力する。\n入力は標準入力から、Nの形式で与えられる。答えを出力する。\n制約：Nは1以上9以下の整数。\n公開例1：入力3、出力333。数字3を三つつなげると333になる。\n公開例2：入力9、出力999999999。\n標準入力から値を読み、問題を解き、標準出力へ答えを書く。サンプル入力だけを直接試すプログラムにはしない。コードは次の形式の区切りで囲む。\n```python\n# YOUR CODE HERE\n```\n回答には、指定されたバッククォートの形式を使う。\n[1] LiveBench (2024), coding — public questions.\nhttps://huggingface.co/datasets/livebench/coding"
+  },
+  {
+    "page": 39,
+    "text": "例4 数字NをN回並べる：答えの読み方\nAppendix: 1. 六分野の追加例\n公開例の出力：3 → 333　／　9 → 999999999\n文字列として数字NをN回繰り返す。公開例では3を三つ並べた333、9を九つ並べた999999999が期待される。\n[1] LiveBench (2024), coding — public questions.\nhttps://huggingface.co/datasets/livebench/coding"
+  },
+  {
+    "page": 40,
+    "text": "例5 二数の幾何平均を求める：原文\nAppendix: 1. 六分野の追加例\n問題の原文（全文）\nCompute the geometric mean of {1, 9}. Please put your final answer in a $\\\\boxed{}$.\n[1] LiveBench (2024), math — public questions.\nhttps://huggingface.co/datasets/livebench/math\n{1, 9}の幾何平均を求める。最終回答を \\boxed{} で囲む。\n正解：3\n正の二数の幾何平均は積の平方根なので、√(1×9)=3となる。"
+  },
+  {
+    "page": 41,
+    "text": "例6 数式の値と回答形式を確かめる：原文\nAppendix: 1. 六分野の追加例\n問題の原文（全文）\nWhat is the value of √(2023/(2+0+2+3))? (A) 13   (B) 15   (C) 17   (D) 19   (E) 21 If you cannot determine the correct multiple-choice answer, take your best guess. Once you have your answer, please duplicate that letter five times in a single string. For example, if the answer is F, then write FFFFF.\n[1] LiveBench (2024), math — public questions.\nhttps://huggingface.co/datasets/livebench/math"
+  },
+  {
+    "page": 42,
+    "text": "例6 数式の値と回答形式を確かめる：日本語訳\nAppendix: 1. 六分野の追加例\n問題の日本語訳\n√(2023 / (2+0+2+3)) の値はいくつか。\n(A) 13　(B) 15　(C) 17　(D) 19　(E) 21\n正しい選択肢を決められない場合は、最もよいと思う答えを選ぶ。答えが決まったら、その文字を五つ並べて一つの文字列にする。例えば、答えがFならFFFFFと書く。\n[1] LiveBench (2024), math — public questions.\nhttps://huggingface.co/datasets/livebench/math\n正解：C（出力はCCCCC）\n分母は2+0+2+3=7、2023÷7=289、√289=17である。正解の記号はCだが、要求される出力はCを五つ並べたCCCCCとなる。"
+  },
+  {
+    "page": 43,
+    "text": "例7 正方形を対角線で切る：原文\nAppendix: 1. 六分野の追加例\n問題の原文（全文）\nSuppose I have a physical, solid square with vertices ABCD, and I make two cuts through AC and BD. How many pieces are there after the cuts?  Think step by step, and then put your answer in **bold** as a single integer (for example, **0**). If you don't know, guess.\n[1] LiveBench (2024), reasoning — public questions.\nhttps://huggingface.co/datasets/livebench/reasoning\n頂点をABCDとする正方形の板がある。対角線ACとBDに沿って二回切ると、何個の断片になるか。順を追って考え、答えを一つの整数として太字で示す（例：**0**）。分からない場合は推測する。\n正解：4"
+  },
+  {
+    "page": 44,
+    "text": "例7 正方形を対角線で切る：解説\nAppendix: 1. 六分野の追加例\n二本の対角線は正方形の中心で交わり、領域を四つの三角形に分ける。\n[1] LiveBench (2024), reasoning — public questions.\nhttps://huggingface.co/datasets/livebench/reasoning"
+  },
+  {
+    "page": 45,
+    "text": "例8 発言の真偽をたどる：原文\nAppendix: 1. 六分野の追加例\n問題の原文（全文）\nIn this question, assume each person either always tells the truth or always lies. Ayaan is at the gym. Beatriz is at the museum. The person at the farm saw a firetruck. Mateo is at the barbershop. The person at the gym tells the truth. The person at the barbershop lies. The person at the restaurant thinks their neighbor is telling the truth. Kehinde is at the farm. The person at the museum says the person at the ice skating rink tells the truth. The person at the farm thinks their neighbor is telling the truth. The person at the museum says the person at the restaurant tells the truth. The person at the farm says the person at the gym tells the truth. Jaxon is at the ice skating rink. The person at the restaurant says the person at the farm tells the truth. Hiroshi is at the restaurant. Does the person at the museum tell the truth? Does the person at the restaurant tell the truth? Does the person at the farm tell the truth? Think step by step, and then put your answer in **bold** as a list of three words, yes or no (for example, **yes, no, yes**). If you don't know, guess.\n[1] LiveBench (2024), reasoning — public questions.\nhttps://huggingface.co/datasets/livebench/reasoning"
+  },
+  {
+    "page": 46,
+    "text": "例8 発言の真偽をたどる：日本語訳\nAppendix: 1. 六分野の追加例\n問題の日本語訳\n各人は、常に真実を話すか、常にうそをつくかのどちらかだとする。Ayaanはジムにいる。Beatrizは博物館にいる。農場にいる人は消防車を見た。Mateoは理髪店にいる。ジムにいる人は真実を話す。理髪店にいる人はうそをつく。レストランにいる人は、隣人が真実を話していると思っている。Kehindeは農場にいる。博物館にいる人は、スケートリンクにいる人は真実を話すと言う。農場にいる人は、隣人が真実を話していると思っている。博物館にいる人は、レストランにいる人は真実を話すと言う。農場にいる人は、ジムにいる人は真実を話すと言う。Jaxonはスケートリンクにいる。レストランにいる人は、農場にいる人は真実を話すと言う。Hiroshiはレストランにいる。\n博物館にいる人は真実を話すか。レストランにいる人は真実を話すか。農場にいる人は真実を話すか。順を追って考え、yesまたはnoを三つ並べ、太字で答える（例：**yes, no, yes**）。分からない場合は推測する。\n[1] LiveBench (2024), reasoning — public questions.\nhttps://huggingface.co/datasets/livebench/reasoning"
+  },
+  {
+    "page": 47,
+    "text": "例8 発言の真偽をたどる：答えの読み方\nAppendix: 1. 六分野の追加例\n正解：yes, yes, yes\n農場の人は、真実を話すジムの人について正しい発言をしているため、真実を話す人だと分かる。同じように、農場の人について話すレストランの人、レストランの人について話す博物館の人も、真実を話す人だと分かる。\n[1] LiveBench (2024), reasoning — public questions.\nhttps://huggingface.co/datasets/livebench/reasoning"
+  },
+  {
+    "page": 48,
+    "text": "例9 八つの語を二組に分ける：原文\nAppendix: 1. 六分野の追加例\n問題の原文（全文）\nYou are given 8 words/phrases below. Find two groups of four items that share something in common. Here are a few examples of groups: bass, flounder, salmon, trout (all four are fish); ant, drill, island, opal (all four are two-word phrases that start with 'fire'); are, why, bee, queue (all four are homophones of letters); sea, sister, sin, wonder (all four are members of a septet). Categories will be more specific than e.g., '5-letter-words', 'names', or 'verbs'. There is exactly one solution. Think step-by-step, and then give your answer in **bold** as a list of the 8 items separated by commas, ordered by group (for example, **bass, founder, salmon, trout, ant, drill, island, opal**). If you don't know the answer, make your best guess. The items are: push, sack, hair, raid, loot, bobby, safety, rob.\n[1] LiveBench (2024), language — public questions.\nhttps://huggingface.co/datasets/livebench/language"
+  },
+  {
+    "page": 49,
+    "text": "例9 八つの語を二組に分ける：日本語訳\nAppendix: 1. 六分野の追加例\n問題の日本語訳\n次の八つの語句を、共通点を持つ四語ずつの二組に分ける。例として、bass・flounder・salmon・troutは魚、ant・drill・island・opalは前にfireを付けると二語の表現になる。are・why・bee・queueはアルファベットの文字名と同じ発音で、sea・sister・sin・wonderは、七つの海・七姉妹・七つの大罪・七不思議のように、七つで一組になるものを指す。「5文字の語」「名前」「動詞」といった分類より具体的な共通点を探す。解は一つだけである。\n順を追って考え、八つの語を組ごとに並べ、カンマで区切って太字で答える。指定された例は **bass, founder, salmon, trout, ant, drill, island, opal**。分からない場合は最もよいと思う答えを選ぶ。\n対象の語：push, sack, hair, raid, loot, bobby, safety, rob。\n[1] LiveBench (2024), language — public questions.\nhttps://huggingface.co/datasets/livebench/language"
+  },
+  {
+    "page": 50,
+    "text": "例9 八つの語を二組に分ける：答えの読み方\nAppendix: 1. 六分野の追加例\n正解：loot, raid, rob, sack\nbobby, hair, push, safety\nloot・raid・rob・sackは略奪に関係する動詞。bobby・hair・push・safetyは後ろにpinを付けると、bobby pin・hairpin・pushpin・safety pinになる。語の意味だけでなく、別の語を補った共通点も扱う。\n[1] LiveBench (2024), language — public questions.\nhttps://huggingface.co/datasets/livebench/language"
+  },
+  {
+    "page": 51,
+    "text": "例10 誤字だけを訂正する：原文\nAppendix: 1. 六分野の追加例\n問題の原文（全文）\nPlease output this exact text, with no changes at all except for fixing the misspellings. Please leave all other stylistic decisions like commas and US vs British spellings as in the original text.\nIn this artice, we establish nessecary anbd sufficient condidtions for a polynomial of degree $n$ to have exactly $n$ real roots. A complete study of polynomials of degree five is carried out. The results are compared with ethose obtained useing Sturm sequences.\n[1] LiveBench (2024), language — public questions.\nhttps://huggingface.co/datasets/livebench/language"
+  },
+  {
+    "page": 52,
+    "text": "例10 誤字だけを訂正する：日本語訳\nAppendix: 1. 六分野の追加例\n依頼の日本語訳と本文の意味\n誤ったつづりだけを直し、それ以外は一切変えずに、次の文章をそのまま出力する。カンマや米国式・英国式のつづりなど、ほかの文体上の選択は原文どおりにする。\n文章の意味：次数nの多項式がちょうどn個の実根を持つための必要十分条件を示す。5次多項式を詳しく調べ、その結果をSturm列による結果と比較する。\n[1] LiveBench (2024), language — public questions.\nhttps://huggingface.co/datasets/livebench/language"
+  },
+  {
+    "page": 53,
+    "text": "例10 誤字だけを訂正する：答えの読み方\nAppendix: 1. 六分野の追加例\n正解：In this article, we establish necessary and sufficient conditions for a polynomial of degree $n$ to have exactly $n$ real roots. A complete study of polynomials of degree five is carried out. The results are compared with those obtained using Sturm sequences.\n直すのはartice→article、nessecary→necessary、anbd→and、condidtions→conditions、ethose→those、useing→usingの六か所。内容を書き換える校正ではなく、つづりの誤りだけを直す。\n[1] LiveBench (2024), language — public questions.\nhttps://huggingface.co/datasets/livebench/language"
+  },
+  {
+    "page": 54,
+    "text": "例11 少量とお買い得を表す語を探す：原文\nAppendix: 1. 六分野の追加例\n問題の原文（全文）\nYou are given 8 words/phrases below. Find two groups of four items that share something in common. Here are a few examples of groups: bass, flounder, salmon, trout (all four are fish); ant, drill, island, opal (all four are two-word phrases that start with 'fire'); are, why, bee, queue (all four are homophones of letters); sea, sister, sin, wonder (all four are members of a septet). Categories will be more specific than e.g., '5-letter-words', 'names', or 'verbs'. There is exactly one solution. Think step-by-step, and then give your answer in **bold** as a list of the 8 items separated by commas, ordered by group (for example, **bass, founder, salmon, trout, ant, drill, island, opal**). If you don't know the answer, make your best guess. The items are: value, touch, bit, steal, deal, pinch, dash, buy.\n[1] LiveBench (2024), language — public questions.\nhttps://huggingface.co/datasets/livebench/language"
+  },
+  {
+    "page": 55,
+    "text": "例11 少量とお買い得を表す語を探す：日本語訳\nAppendix: 1. 六分野の追加例\n問題の日本語訳\n次の八つの語句を、共通点を持つ四語ずつの二組に分ける。例として、bass・flounder・salmon・troutは魚、ant・drill・island・opalは前にfireを付けると二語の表現になる。are・why・bee・queueはアルファベットの文字名と同じ発音で、sea・sister・sin・wonderは、七つの海・七姉妹・七つの大罪・七不思議のように、七つで一組になるものを指す。「5文字の語」「名前」「動詞」といった分類より具体的な共通点を探す。解は一つだけである。\n順を追って考え、八つの語を組ごとに並べ、カンマで区切って太字で答える。指定された例は **bass, founder, salmon, trout, ant, drill, island, opal**。分からない場合は最もよいと思う答えを選ぶ。\n対象の語：value, touch, bit, steal, deal, pinch, dash, buy。\n[1] LiveBench (2024), language — public questions.\nhttps://huggingface.co/datasets/livebench/language"
+  },
+  {
+    "page": 56,
+    "text": "例11 少量とお買い得を表す語を探す：答えの読み方\nAppendix: 1. 六分野の追加例\n正解：bit, dash, pinch, touch\nbuy, deal, steal, value\nbit・dash・pinch・touchはいずれも少量を表す。buy・deal・steal・valueは、お買い得な商品や有利な取引を表す文脈で使われる。stealには「盗む」だけでなく「格安品」という意味もある。\n[1] LiveBench (2024), language — public questions.\nhttps://huggingface.co/datasets/livebench/language"
+  },
+  {
+    "page": 57,
+    "text": "例12 TSV表をCSV表へ変換する：原文\nAppendix: 1. 六分野の追加例\nInput Table:（全14行、左から右へ続く。タブは空白で表示）\nPlease convert the Input Table from TSV format to CSV format. Please respond only with the table.\nspecies  quantity\nLAKE TROUT  2931\nKOKANEE  716220\nGRAYLING ARCTIC  84211\nSUNFISH BLUEGILL  47840\nWIPER  386460\nSUCKER JUNE  80510\nTIGER TROUT  401119\nRAINBOW  3904196\nBROOK TROUT  232058\nCUTTHROAT  1506513\nCHUB  34740\nALL TROUT  1650\nBROWN TROUT  245553\nGOLDEN TROUT  4581\nOutput:\n[1] LiveBench (2024), data_analysis — public questions.\nhttps://huggingface.co/datasets/livebench/data_analysis"
+  },
+  {
+    "page": 58,
+    "text": "例12 TSV表をCSV表へ変換する：日本語訳\nAppendix: 1. 六分野の追加例\n依頼の日本語訳（表の値は原文と共通）\n入力表をTSV形式からCSV形式へ変換する。表だけを返す。\n入力表の列名は species と quantity。TSVはタブ、CSVはカンマで列を区切る。種名と数値は原文の全14行を保つ。\n[1] LiveBench (2024), data_analysis — public questions.\nhttps://huggingface.co/datasets/livebench/data_analysis"
+  },
+  {
+    "page": 59,
+    "text": "例12 TSV表をCSV表へ変換する：答えの読み方\nAppendix: 1. 六分野の追加例\n参照出力（全14行）\nspecies,quantity\nLAKE TROUT,2931\nKOKANEE,716220\nGRAYLING ARCTIC,84211\nSUNFISH BLUEGILL,47840\nWIPER,386460\nSUCKER JUNE,80510\nTIGER TROUT,401119\nRAINBOW,3904196\nBROOK TROUT,232058\nCUTTHROAT,1506513\nCHUB,34740\nALL TROUT,1650\nBROWN TROUT,245553\nGOLDEN TROUT,4581\n[1] LiveBench (2024), data_analysis — public questions.\nhttps://huggingface.co/datasets/livebench/data_analysis"
+  },
+  {
+    "page": 60,
+    "text": "例13 列の内容から列名を選ぶ：原文\nAppendix: 1. 六分野の追加例\n問題の原文（全文）\nPick the column's class based on the provided column sample. Choose exactly one of the listed classes. Please respond only with the name of the class. \n Column sample: [['ham'], ['spam'], ['ham'], ['ham'], ['spam']] \n Classes: ['email' 'label'] \n Output:\n[1] LiveBench (2024), data_analysis — public questions.\nhttps://huggingface.co/datasets/livebench/data_analysis"
+  },
+  {
+    "page": 61,
+    "text": "例13 列の内容から列名を選ぶ：日本語訳\nAppendix: 1. 六分野の追加例\n問題の日本語訳\n列の値の例に基づいて、その列の分類を選ぶ。候補から一つだけ選び、分類名だけを返す。\n列の値の例：[['ham'], ['spam'], ['ham'], ['ham'], ['spam']]\n候補：['email' 'label']\n[1] LiveBench (2024), data_analysis — public questions.\nhttps://huggingface.co/datasets/livebench/data_analysis\n正解：label\nhamとspamはメール本文ではなく、通常メールと迷惑メールを分けるラベルである。したがって列名はlabelとなる。"
+  },
+  {
+    "page": 62,
+    "text": "2. 更新の変遷と参考文献\nAppendix: 2. 更新の変遷と参考文献"
+  },
+  {
+    "page": 63,
+    "text": "更新によって、課題そのものも変わる\nAppendix: 2. 更新の変遷と参考文献\n時期\n主な変更\n2024年6–8月\n初期公開、空間推理の追加、数学の更新\n2025年4–5月\n実用コードへ刷新、エージェント型修正を追加\n2025年11月–2026年1月\n心の理論、移動を伴う論理、連続増加を追加\n2026年10月\n2.0で長い実行課題と成果物の評価へ展開\n[1] LiveBench (2026-10-25参照), Changelog. https://github.com/LiveBench/LiveBench/blob/main/changelog.md\n[2] LiveBench (2026-10-25参照), Methodology. https://livebench.ai/#/methodology"
+  },
+  {
+    "page": 64,
+    "text": "参考文献\nAppendix: 2. 更新の変遷と参考文献\nLiveBench: A Challenging, Contamination-Limited LLM Benchmark\nColin White et al. (2025), ICLR 2025.\n新しい問題の継続的な投入と、正解照合に基づく多分野の評価を提案する。\nhttps://proceedings.iclr.cc/paper_files/paper/2025/file/e4a46394ba5378b3f9a186a5b4c650d1-Paper-Conference.pdf\nLiveBench 2.0 — Methodology\nLiveBench / Abacus.AI (n.d.; 2026-10-25参照).\n七つの評価区分、各区分の採点と総合点の計算方法を示す。\nhttps://livebench.ai/#/methodology"
+  },
+  {
+    "page": 65,
+    "text": "参考文献\nAppendix: 2. 更新の変遷と参考文献\nLiveBench: Code and Changelog\nLiveBench (n.d.; 2026-10-25参照), GitHub.\n課題ごとの採点実装と、問題・実行環境の更新の履歴を公開する。\nhttps://github.com/LiveBench/LiveBench\nDatasheet for LiveBench\nLiveBench (n.d.; 2026-10-25参照), GitHub.\nデータの構築・配布・保守とApache License 2.0での利用条件を記載する。\nhttps://github.com/LiveBench/LiveBench/blob/main/docs/DATASHEET.md"
+  }
+]

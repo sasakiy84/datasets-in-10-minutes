@@ -1,0 +1,206 @@
+{
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "changes": [
+    {
+      "example": 2,
+      "location": "結合できる列を対応付ける",
+      "before": "CSV形式の表Aと表Bについて、有効な結合用の列の対応を作る。Aの各列は、Bの0列または1列に対応する。答えは {表Aの列名 : 表Bの列名} というPython辞書の形式にし、辞書だけを返す。\n表Aには email と label がある。表Bでは列名が lG1K/C5s5Ww と t8DtGa8xUVw に置き換わっている。表の値は原文に示したとおり。",
+      "after": "CSV形式の表Aと表Bについて、有効な結合用の列の対応を作る。Aの各列に、Bの列を最大1列ずつ対応付ける。答えは {表Aの列名 : 表Bの列名} というPython辞書の形式にし、辞書だけを返す。\n表Aには email と label がある。表Bでは列名が lG1K/C5s5Ww と t8DtGa8xUVw に置き換わっている。表の値は原文に示したとおり。",
+      "reason": "自然な日本語と意味の明確化",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "example": 3,
+      "location": "引用符と五つの節を守る",
+      "before": "この例には正解文が一つに定まらない。公開された機械判定では、回答全体の引用符と、Sectionを目印にした五つの節という二つの形式条件を確認する。",
+      "after": "この例では、回答文は一つに定まらない。公開された機械判定は、回答全体の引用符と、Sectionに番号を付けた節見出しを確認する。",
+      "reason": "自然な日本語と意味の明確化",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "example": 7,
+      "location": "正方形を対角線で切る",
+      "before": "頂点をABCDとする、実物の中身の詰まった正方形があるとする。対角線ACとBDに沿って二回切ると、何個の断片になるか。順を追って考え、答えを一つの整数として太字で示す（例：**0**）。分からない場合は推測する。",
+      "after": "頂点をABCDとする正方形の板がある。対角線ACとBDに沿って二回切ると、何個の断片になるか。順を追って考え、答えを一つの整数として太字で示す（例：**0**）。分からない場合は推測する。",
+      "reason": "自然な日本語と意味の明確化",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "example": 8,
+      "location": "発言の真偽をたどる",
+      "before": "ジムの人が真実を話すので、その人について真実だと述べた農場の人も真実を話す。農場の人が真実だと述べたレストランの人も真実を話し、その人について同様に述べた博物館の人も真実を話す。",
+      "after": "農場の人は、真実を話すジムの人について正しい発言をしているため、真実を話す人だと分かる。同じように、農場の人について話すレストランの人、レストランの人について話す博物館の人も、真実を話す人だと分かる。",
+      "reason": "自然な日本語と意味の明確化",
+      "pages": [
+        46
+      ]
+    },
+    {
+      "example": 9,
+      "location": "八つの語を二組に分ける",
+      "before": "次の八つの語句を、共通点を持つ四語ずつの二組に分ける。例として、bass・flounder・salmon・troutは魚、ant・drill・island・opalは前にfireを付けると二語の表現になる。are・why・bee・queueはアルファベットの文字名と同じ発音で、sea・sister・sin・wonderは七つで一組になるものの一員である。「5文字の語」「名前」「動詞」といった分類より具体的な共通点を探す。解は一つだけである。\n順を追って考え、八つの語を組ごとに並べ、カンマで区切って太字で答える。指定された例は **bass, founder, salmon, trout, ant, drill, island, opal**。分からない場合は最もよいと思う答えを選ぶ。\n対象の語：push, sack, hair, raid, loot, bobby, safety, rob。",
+      "after": "次の八つの語句を、共通点を持つ四語ずつの二組に分ける。例として、bass・flounder・salmon・troutは魚、ant・drill・island・opalは前にfireを付けると二語の表現になる。are・why・bee・queueはアルファベットの文字名と同じ発音で、sea・sister・sin・wonderは、七つの海・七姉妹・七つの大罪・七不思議のように、七つで一組になるものを指す。「5文字の語」「名前」「動詞」といった分類より具体的な共通点を探す。解は一つだけである。\n順を追って考え、八つの語を組ごとに並べ、カンマで区切って太字で答える。指定された例は **bass, founder, salmon, trout, ant, drill, island, opal**。分からない場合は最もよいと思う答えを選ぶ。\n対象の語：push, sack, hair, raid, loot, bobby, safety, rob。",
+      "reason": "自然な日本語と意味の明確化",
+      "pages": [
+        48
+      ]
+    },
+    {
+      "example": 11,
+      "location": "少量と買い得を表す語を探す",
+      "before": "次の八つの語句を、共通点を持つ四語ずつの二組に分ける。例として、bass・flounder・salmon・troutは魚、ant・drill・island・opalは前にfireを付けると二語の表現になる。are・why・bee・queueはアルファベットの文字名と同じ発音で、sea・sister・sin・wonderは七つで一組になるものの一員である。「5文字の語」「名前」「動詞」といった分類より具体的な共通点を探す。解は一つだけである。\n順を追って考え、八つの語を組ごとに並べ、カンマで区切って太字で答える。指定された例は **bass, founder, salmon, trout, ant, drill, island, opal**。分からない場合は最もよいと思う答えを選ぶ。\n対象の語：value, touch, bit, steal, deal, pinch, dash, buy。",
+      "after": "次の八つの語句を、共通点を持つ四語ずつの二組に分ける。例として、bass・flounder・salmon・troutは魚、ant・drill・island・opalは前にfireを付けると二語の表現になる。are・why・bee・queueはアルファベットの文字名と同じ発音で、sea・sister・sin・wonderは、七つの海・七姉妹・七つの大罪・七不思議のように、七つで一組になるものを指す。「5文字の語」「名前」「動詞」といった分類より具体的な共通点を探す。解は一つだけである。\n順を追って考え、八つの語を組ごとに並べ、カンマで区切って太字で答える。指定された例は **bass, founder, salmon, trout, ant, drill, island, opal**。分からない場合は最もよいと思う答えを選ぶ。\n対象の語：value, touch, bit, steal, deal, pinch, dash, buy。",
+      "reason": "自然な日本語と意味の明確化",
+      "pages": [
+        54
+      ]
+    },
+    {
+      "example": 11,
+      "location": "少量とお買い得を表す語を探す",
+      "before": "少量と買い得を表す語を探す",
+      "after": "少量とお買い得を表す語を探す",
+      "reason": "自然な日本語と意味の明確化",
+      "pages": [
+        53,
+        54,
+        55
+      ]
+    },
+    {
+      "example": 11,
+      "location": "少量とお買い得を表す語を探す",
+      "before": "bit・dash・pinch・touchはいずれも少量を表す。buy・deal・steal・valueは、買い得な商品や有利な取引を表す文脈で使われる。stealには「盗む」だけでなく「格安品」という意味もある。",
+      "after": "bit・dash・pinch・touchはいずれも少量を表す。buy・deal・steal・valueは、お買い得な商品や有利な取引を表す文脈で使われる。stealには「盗む」だけでなく「格安品」という意味もある。",
+      "reason": "自然な日本語と意味の明確化",
+      "pages": [
+        55
+      ]
+    },
+    {
+      "example": 7,
+      "location": "正方形の解説",
+      "before": "二本の対角線は正方形の中心で交わり、領域を四つの三角形に分ける。",
+      "after": "二本の対角線が中心で交わり、四つの三角形ができる。",
+      "reason": "重複する対象名を省き、原文・訳・正解と同頁に解説を配置する",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "example": 13,
+      "location": "列名選択の日本語訳と配置",
+      "before": "列の値の例に基づいて、その列の分類を選ぶ。候補から一つだけ選び、分類名だけを返す。\n列の値の例：[['ham'], ['spam'], ['ham'], ['ham'], ['spam']]\n候補：['email' 'label']",
+      "after": "列の値の例に基づいて、候補から分類を一つ選び、分類名だけを返す。列の値と候補は原文と共通。",
+      "reason": "非言語の列サンプルと候補を原文と共有し、原文・訳・正解・解説を同頁に統合する。表示範囲を明示。",
+      "pages": [
+        59
+      ]
+    },
+    {
+      "example": 13,
+      "location": "列名選択の解説",
+      "before": "hamとspamはメールの分類を表すので、列名はlabelとなる。",
+      "after": "hamは通常メール、spamは迷惑メールを表す分類ラベル。",
+      "reason": "正解labelの繰り返しを省き、ham/spamの意味を直接説明する。原文・訳・答え・解説を一頁へ。",
+      "pages": [
+        59
+      ]
+    },
+    {
+      "location": "例9 正解出力の区切り",
+      "pages": [
+        49
+      ],
+      "before": "loot, raid, rob, sack\nbobby, hair, push, safety",
+      "after": "loot, raid, rob, sack,\nbobby, hair, push, safety",
+      "reason": "改行しても8語のカンマ区切りを保つ"
+    },
+    {
+      "location": "例11 正解出力の区切り",
+      "pages": [
+        55
+      ],
+      "before": "bit, dash, pinch, touch\nbuy, deal, steal, value",
+      "after": "bit, dash, pinch, touch,\nbuy, deal, steal, value",
+      "reason": "改行しても8語のカンマ区切りを保つ"
+    },
+    {
+      "location": "依頼と採点条件の区別",
+      "pages": [
+        14
+      ],
+      "before": "判定条件：全体を二重引用符で囲む／五つの節",
+      "after": "要求する形式：全体を二重引用符で囲む／五つの節",
+      "reason": "依頼は五つの節、実装は五つ以上の節であり同一条件と誤読させない",
+      "before_evidence": "candidate3 page14",
+      "after_evidence": "final2 page14"
+    },
+    {
+      "location": "原文の意味上の改行を復元",
+      "pages": [
+        7
+      ],
+      "before": "There are 3 people standing in a line numbered 1 through 3 in a left to right order. Each person has a set of attributes: Food, Nationality, Hobby. The attributes have the following possible values: - Food: nectarine, garlic, cucumber - Nationality: chinese, japanese, thai - Hobby: magic-tricks, filmmaking, puzzles and exactly one person in the line has a given value for an attribute. Given the following premises about the line of people: - the person that likes garlic is on the far left - the person who is thai is somewhere to the right of the person who likes magic-tricks - the person who is chinese is somewhere between the person that likes cucumber and the person who likes puzzles Answer the following question: What is the hobby of the person who is thai? Return your answer as a single word, in the following format: ***X***, where X is the answer.",
+      "after": "There are 3 people standing in a line numbered 1 through 3 in a left to right order.\nEach person has a set of attributes: Food, Nationality, Hobby.\nThe attributes have the following possible values:\n- Food: nectarine, garlic, cucumber\n- Nationality: chinese, japanese, thai\n- Hobby: magic-tricks, filmmaking, puzzles\nand exactly one person in the line has a given value for an attribute.\nGiven the following premises about the line of people:\n- the person that likes garlic is on the far left\n- the person who is thai is somewhere to the right of the person who likes magic-tricks\n- the person who is chinese is somewhere between the person that likes cucumber and the person who likes puzzles\nAnswer the following question:\nWhat is the hobby of the person who is thai? Return your answer as a single word, in the following format: ***X***, where X is the answer.",
+      "reason": "原文の属性・前提または記事・依頼・Section例の区切りを復元し全文一頁を維持",
+      "before_evidence": "draft1 page7",
+      "after_evidence": "final2 page7"
+    },
+    {
+      "location": "原文の意味上の改行を復元",
+      "pages": [
+        12
+      ],
+      "before": "The following are the beginning sentences of a news article from the Guardian. -------  Should I feel guilty about buying a Christmas tree? Millions are grown and cut each year, but is this an environmental plus or minus? Bill Green, Tring, Herts Post your answers – and new questions – below or email them to nq@theguardian.com ------- Please paraphrase based on the sentences provided.  Wrap your entire response with double quotation marks. Your response must have 5 sections. Mark the beginning of each section with Section X, such as: Section 1 [content of section 1] Section 2 [content of section 2]",
+      "after": "The following are the beginning sentences of a news article from the Guardian.\n-------\n Should I feel guilty about buying a Christmas tree? Millions are grown and cut each year, but is this an environmental plus or minus? Bill Green, Tring, Herts Post your answers – and new questions – below or email them to nq@theguardian.com\n-------\nPlease paraphrase based on the sentences provided.  Wrap your entire response with double quotation marks. Your response must have 5 sections. Mark the beginning of each section with Section X, such as:\nSection 1\n[content of section 1]\nSection 2\n[content of section 2]",
+      "reason": "原文の属性・前提または記事・依頼・Section例の区切りを復元し全文一頁を維持",
+      "before_evidence": "draft1 page12",
+      "after_evidence": "final2 page12"
+    }
+  ],
+  "artifact_sha256": {
+    "pdf": "88795e512a2fc401dce4070dac87d4e532f32a6eb5ffcc80bb579733ad18bf43",
+    "pptx": "8691f4b809f451ea20edc73715ece16c0d1003d3b26f8df415234c4aebe20b49"
+  },
+  "reviewed_examples": 13,
+  "full_page_visual_scope": "See creator-visual-review.json for actually viewed snapshots and final bridges.",
+  "layout_changes": [
+    {
+      "pages": [
+        7,
+        12
+      ],
+      "change": "原文の属性候補・前提・記事・出力形式の意味上の改行を復元し、全文を各一頁に保持"
+    },
+    {
+      "pages": [
+        40,
+        43,
+        59
+      ],
+      "change": "短い原文と日本語訳・正解・説明を同じ頁に統合"
+    },
+    {
+      "pages": [
+        62,
+        63
+      ],
+      "change": "参考文献を二件ずつ配置し、文字の実形状に基づいて文献間を37pt以上確保"
+    },
+    {
+      "pages": [
+        14,
+        22
+      ],
+      "change": "依頼の五つの節と、公開実装の五つ以上の節を区別し、赤ラベルを要求する形式へ整理"
+    }
+  ]
+}
