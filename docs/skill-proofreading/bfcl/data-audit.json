@@ -1,0 +1,104 @@
+{
+  "dataset": "BFCL",
+  "source_revision": "6ea57973c7a6097fd7c5915698c54c17c5b1b6c8",
+  "retrieved_date": "2026-10-25",
+  "artifact_sha256": {
+    "pdf": "33a9f8a14c511f9e838f5c9fdc94570bb9450f7d8c615b3ef9859bf5d21a7194",
+    "pptx": "6467aef385e3a4780469b057672bcb7aa0cec27d37651ec7ed6c466feb193c9a"
+  },
+  "primary_sources": {
+    "paper": "https://proceedings.mlr.press/v267/patil25a.html",
+    "site": "https://gorilla.cs.berkeley.edu/leaderboard.html",
+    "current_results": "https://gorilla.cs.berkeley.edu/data_overall.csv",
+    "code": "https://github.com/ShishirPatil/gorilla/tree/6ea57973c7a6097fd7c5915698c54c17c5b1b6c8/berkeley-function-call-leaderboard"
+  },
+  "source_counts_raw_rows": {
+    "bfcl_eval--data--BFCL_v4_multi_turn_base.json": 200,
+    "bfcl_eval--data--BFCL_v4_parallel_multiple.json": 200,
+    "bfcl_eval--data--BFCL_v4_live_irrelevance.json": 884,
+    "bfcl_eval--data--BFCL_v4_live_parallel_multiple.json": 24,
+    "bfcl_eval--data--BFCL_v4_simple_python.json": 400,
+    "bfcl_eval--data--BFCL_v4_live_parallel.json": 16,
+    "bfcl_eval--data--BFCL_v4_multi_turn_miss_param.json": 200,
+    "bfcl_eval--data--BFCL_v4_simple_javascript.json": 50,
+    "bfcl_eval--data--BFCL_v4_live_multiple.json": 1053,
+    "bfcl_eval--data--BFCL_v4_multi_turn_long_context.json": 200,
+    "bfcl_eval--data--BFCL_v4_live_relevance.json": 16,
+    "bfcl_eval--data--BFCL_v4_web_search.json": 100,
+    "bfcl_eval--data--BFCL_v4_parallel.json": 200,
+    "bfcl_eval--data--BFCL_v4_multi_turn_miss_func.json": 200,
+    "bfcl_eval--data--BFCL_v4_simple_java.json": 100,
+    "bfcl_eval--data--BFCL_v4_multiple.json": 200,
+    "bfcl_eval--data--BFCL_v4_memory.json": 155,
+    "bfcl_eval--data--BFCL_v4_irrelevance.json": 240,
+    "bfcl_eval--data--BFCL_v4_live_simple.json": 258,
+    "bfcl_eval--data--BFCL_v4_format_sensitivity.json": 10
+  },
+  "version_scope": "V1 construction, V2 Live, V3 multi-turn, current V4 weighted results; historical ICML results explicitly separated.",
+  "verified_counts": {
+    "live_collected": 64517,
+    "live_final": 2251,
+    "live_call_required": 1351,
+    "multi_turn_current": 800,
+    "web_distinct_questions": 100,
+    "web_modes": 2,
+    "memory_distinct_questions": 155,
+    "memory_backends": 3,
+    "format_questions": 200,
+    "format_conditions": 26
+  },
+  "category_semantics": "Multiple selects one function from multiple candidates, parallel calls the same function multiple times, parallel_multiple combines candidates and calls. TEST_CATEGORIES.md sequence wording is not used.",
+  "metric": {
+    "single_turn": "AST function name/argument types/allowed values; omission can be allowed. Parallel count must agree and matching is order-independent.",
+    "multi_turn": "All turns satisfy state and response checks.",
+    "agentic_current": "Last non-call message compared by normalized word-boundary reference containment. Current code differs from old paper exact-answer-field wording.",
+    "overall_weights_percent": {
+      "nonlive": 10,
+      "live": 10,
+      "irrelevance": 10,
+      "multi_turn": 30,
+      "agentic": 40
+    },
+    "irrelevance_aggregation": "Mean of nonlive and live category accuracies, not pooled counts."
+  },
+  "known_primary_differences": [
+    "Old V4 blog lists Live irrelevance882/relevance18; fixed data has884/16, overall Live2251 unchanged. No combined benchmark total asserted in slides.",
+    "Paper historical scoring includes execution and SQL; results are not equated to current V4 table.",
+    "Current agentic checker uses contained reference word rather than dedicated answer field exact match."
+  ],
+  "examples": {
+    "unique": 13,
+    "main": 3,
+    "appendix": 10,
+    "single_turn": 11,
+    "multi_turn": 1,
+    "web_search": 1,
+    "all_complete_user_questions": true,
+    "single_turn_full_schemas": true,
+    "multi_web_schema_excerpts_explicitly_labeled": true
+  },
+  "licenses": [
+    "LICENSE-BFCL-Apache-2.0.txt",
+    "ATTRIBUTION-BFCL.md"
+  ],
+  "static_verification": [
+    "13 source/gold records read; irrelevance no-call condition read in checker",
+    "full original and Japanese field-line native audit",
+    "official CSV selected values checked",
+    "source category counts computed",
+    "independent primary source and selected-source review separately retained"
+  ],
+  "model_inference_executed": false,
+  "external_generation_api_used": false,
+  "reading_time": {
+    "planned_main_seconds": 600,
+    "actual_seconds": null
+  },
+  "remaining": [],
+  "license_verification": {
+    "repository_license_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "distributed_license_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "identical": true,
+    "readme_statement": "All the leaderboard statistics, and data used to train the models are released under Apache 2.0."
+  }
+}

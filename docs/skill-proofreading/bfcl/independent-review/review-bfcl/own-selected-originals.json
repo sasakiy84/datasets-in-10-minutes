@@ -1,0 +1,728 @@
+[
+  {
+    "id": "simple_python_97",
+    "category": "simple_python",
+    "record": {
+      "id": "simple_python_97",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Calculate the factorial of the number 5"
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "math.factorial",
+          "description": "Calculate the factorial of a given number.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "number": {
+                "type": "integer",
+                "description": "The number to compute factorial."
+              }
+            },
+            "required": [
+              "number"
+            ]
+          }
+        }
+      ]
+    },
+    "expected": {
+      "id": "simple_python_97",
+      "ground_truth": [
+        {
+          "math.factorial": {
+            "number": [
+              5
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "multiple_73",
+    "category": "multiple",
+    "record": {
+      "id": "multiple_73",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Who was the founder of Buddhism and where was it originated?"
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "religion.get_core_beliefs",
+          "description": "Retrieves the core beliefs and practices of a specified religion.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "religion": {
+                "type": "string",
+                "description": "Name of the religion for which to retrieve the core beliefs and practices."
+              }
+            },
+            "required": [
+              "religion"
+            ]
+          }
+        },
+        {
+          "name": "religion.get_origin",
+          "description": "Retrieves the origin and founder information of a specified religion.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "religion": {
+                "type": "string",
+                "description": "Name of the religion for which to retrieve the founder and origin."
+              }
+            },
+            "required": [
+              "religion"
+            ]
+          }
+        }
+      ]
+    },
+    "expected": {
+      "id": "multiple_73",
+      "ground_truth": [
+        {
+          "religion.get_origin": {
+            "religion": [
+              "Buddhism"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "parallel_51",
+    "category": "parallel",
+    "record": {
+      "id": "parallel_51",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Search for a Chicken Noodle Soup recipe and a Vegan Salad recipe."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "recipe_search.find",
+          "description": "Locate recipes based on the type of dish.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "dish": {
+                "type": "string",
+                "description": "The name of the dish to search for."
+              },
+              "diet": {
+                "type": "string",
+                "enum": [
+                  "Vegan",
+                  "Vegetarian",
+                  "Paleo",
+                  "Keto"
+                ],
+                "description": "Dietary preference.",
+                "default": "Keto"
+              }
+            },
+            "required": [
+              "dish"
+            ]
+          }
+        }
+      ]
+    },
+    "expected": {
+      "id": "parallel_51",
+      "ground_truth": [
+        {
+          "recipe_search.find": {
+            "dish": [
+              "Chicken Noodle Soup"
+            ],
+            "diet": [
+              "",
+              "Keto"
+            ]
+          }
+        },
+        {
+          "recipe_search.find": {
+            "dish": [
+              "Salad",
+              "salad",
+              "Vegan Salad",
+              "vegan salad"
+            ],
+            "diet": [
+              "Vegan"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "irrelevance_8",
+    "category": "irrelevance",
+    "record": {
+      "id": "irrelevance_8",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Find the integral of x^3 from 1 to 5"
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "str_to_int",
+          "description": "Converts string value to integer.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "value": {
+                "type": "string",
+                "description": "String value to be converted to integer"
+              }
+            },
+            "required": [
+              "value"
+            ]
+          }
+        }
+      ]
+    },
+    "expected": null
+  },
+  {
+    "id": "simple_java_76",
+    "category": "simple_java",
+    "record": {
+      "id": "simple_java_76",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Help me execute the step method to update the graphics of an intro animation with a width of 800 pixels and a height of 600 pixels?"
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "Intro.step",
+          "description": "Updates the graphics of an intro animation based on the specified width and height.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "w": {
+                "type": "integer",
+                "description": "The width of the area to update."
+              },
+              "h": {
+                "type": "integer",
+                "description": "The height of the area to update."
+              }
+            },
+            "required": [
+              "w",
+              "h"
+            ]
+          }
+        }
+      ]
+    },
+    "expected": {
+      "id": "simple_java_76",
+      "ground_truth": [
+        {
+          "Intro.step": {
+            "w": [
+              800
+            ],
+            "h": [
+              600
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "simple_javascript_22",
+    "category": "simple_javascript",
+    "record": {
+      "id": "simple_javascript_22",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Help me reset a state property called 'userSession' to 'null' in a React component?"
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "resetStateProperty",
+          "description": "This function resets a given state property to null. It is typically used in React components to clear state.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "stateProperty": {
+                "type": "String",
+                "description": "The name of the state property to reset."
+              }
+            },
+            "required": [
+              "stateProperty"
+            ]
+          }
+        }
+      ]
+    },
+    "expected": {
+      "id": "simple_javascript_22",
+      "ground_truth": [
+        {
+          "resetStateProperty": {
+            "stateProperty": [
+              "userSession"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "live_simple_247-129-0",
+    "category": "live_simple",
+    "record": {
+      "id": "live_simple_247-129-0",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Give me the application version."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "version_api.VersionApi.get_version",
+          "description": "Retrieves the current version information of the application, including its name and version number.",
+          "parameters": {
+            "type": "dict",
+            "required": [],
+            "properties": {}
+          }
+        }
+      ]
+    },
+    "expected": {
+      "id": "live_simple_247-129-0",
+      "ground_truth": [
+        {
+          "version_api.VersionApi.get_version": {}
+        }
+      ]
+    }
+  },
+  {
+    "id": "live_multiple_196-88-0",
+    "category": "live_multiple",
+    "record": {
+      "id": "live_multiple_196-88-0",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "获取阿迪达斯的工单"
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "get_current_weather",
+          "description": "Retrieves the current weather conditions for a specified location, including temperature and atmospheric conditions.",
+          "parameters": {
+            "type": "dict",
+            "required": [
+              "location"
+            ],
+            "properties": {
+              "location": {
+                "type": "string",
+                "description": "The location for which weather is being requested, in the format of 'City, State', such as 'San Francisco, CA' or 'New York, NY'."
+              },
+              "unit": {
+                "type": "string",
+                "description": "The unit of temperature measurement for the weather report.",
+                "enum": [
+                  "celsius",
+                  "fahrenheit"
+                ],
+                "default": "fahrenheit"
+              }
+            }
+          }
+        },
+        {
+          "name": "get_tickets",
+          "description": "Retrieve a list of support tickets for a specified company.",
+          "parameters": {
+            "type": "dict",
+            "required": [
+              "customer"
+            ],
+            "properties": {
+              "customer": {
+                "type": "string",
+                "description": "The name of the company for which to retrieve support tickets."
+              }
+            }
+          }
+        }
+      ]
+    },
+    "expected": {
+      "id": "live_multiple_196-88-0",
+      "ground_truth": [
+        {
+          "get_tickets": {
+            "customer": [
+              "阿迪达斯"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "live_parallel_14-10-0",
+    "category": "live_parallel",
+    "record": {
+      "id": "live_parallel_14-10-0",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "What's the weather like in the two cities of Boston and San Francisco?"
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "get_current_weather",
+          "description": "Retrieves the current weather information for a specified location.",
+          "parameters": {
+            "type": "dict",
+            "required": [
+              "location"
+            ],
+            "properties": {
+              "location": {
+                "type": "string",
+                "description": "The location for which the current weather is requested, in the format of 'City, State', such as 'San Francisco, CA' or 'New York, NY'. Use short form for state"
+              },
+              "unit": {
+                "type": "string",
+                "description": "The unit of measurement for temperature values.",
+                "enum": [
+                  "celsius",
+                  "fahrenheit"
+                ],
+                "default": "fahrenheit"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "expected": {
+      "id": "live_parallel_14-10-0",
+      "ground_truth": [
+        {
+          "get_current_weather": {
+            "location": [
+              "Boston, MA"
+            ],
+            "unit": [
+              "",
+              "fahrenheit"
+            ]
+          }
+        },
+        {
+          "get_current_weather": {
+            "location": [
+              "San Francisco, CA"
+            ],
+            "unit": [
+              "",
+              "fahrenheit"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "parallel_multiple_35",
+    "category": "parallel_multiple",
+    "record": {
+      "id": "parallel_multiple_35",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Identify objects in my backyard image my_backyard_image_url and analyze the sentiment of today's journal entry my_journal_entry_text."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "image_processing.object_identification",
+          "description": "Identify objects in a given image.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "image_url": {
+                "type": "string",
+                "description": "The URL of the image."
+              }
+            },
+            "required": [
+              "image_url"
+            ]
+          }
+        },
+        {
+          "name": "text_analysis.sentiment_analysis",
+          "description": "Analyze the sentiment of a given text.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to be analyzed."
+              }
+            },
+            "required": [
+              "text"
+            ]
+          }
+        }
+      ]
+    },
+    "expected": {
+      "id": "parallel_multiple_35",
+      "ground_truth": [
+        {
+          "image_processing.object_identification": {
+            "image_url": [
+              "my_backyard_image_url"
+            ]
+          }
+        },
+        {
+          "text_analysis.sentiment_analysis": {
+            "text": [
+              "my_journal_entry_text"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "multi_turn_base_47",
+    "category": "multi_turn_base",
+    "record": {
+      "id": "multi_turn_base_47",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "I have a list of student record in this directory, could you find me where is it by telling me its name and using 'find'?"
+          }
+        ],
+        [
+          {
+            "role": "user",
+            "content": "Look at the student_record.txt and tell me the average score."
+          }
+        ],
+        [
+          {
+            "role": "user",
+            "content": "What about the standard deviation?"
+          }
+        ]
+      ],
+      "initial_config": {
+        "GorillaFileSystem": {
+          "root": {
+            "project_directory": {
+              "type": "directory",
+              "contents": {
+                "student_record.txt": {
+                  "type": "file",
+                  "content": "John: 100 Jane: 95 Alice: 85 Bob: 90 Tom: 88 Olivia: 92"
+                }
+              }
+            }
+          }
+        },
+        "MathAPI": {}
+      },
+      "path": [
+        "GorillaFileSystem.touch",
+        "GorillaFileSystem.echo",
+        "GorillaFileSystem.sort",
+        "GorillaFileSystem.wc",
+        "MathAPI.mean"
+      ],
+      "involved_classes": [
+        "GorillaFileSystem",
+        "MathAPI"
+      ]
+    },
+    "expected": {
+      "id": "multi_turn_base_47",
+      "ground_truth": [
+        [
+          "find(path='.')"
+        ],
+        [
+          "cat(file_name='student_record.txt')",
+          "mean(numbers=[100, 95, 85, 90, 88, 92])"
+        ],
+        [
+          "standard_deviation(numbers=[100, 95, 85, 90, 88, 92])"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "web_search_50",
+    "category": "web_search",
+    "record": {
+      "id": "web_search_50",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Cycling competitions such as the Tour de France showcase top endurance athletes from around the world. What is the birth country of the cyclist who won the 2024 Tour de France?"
+          }
+        ]
+      ],
+      "involved_classes": [
+        "WebSearchAPI"
+      ]
+    },
+    "expected": {
+      "id": "web_search_50",
+      "ground_truth": [
+        "Slovenia"
+      ],
+      "source": [
+        {
+          "subquestion": "Who won the 2024 Tour de France?",
+          "answer": "Tadej Pogacar",
+          "source": "https://www.cyclingnews.com/races/tour-de-france-2024/race-history/"
+        },
+        {
+          "subquestion": "What is the birth place of Tadej Pogacar?",
+          "answer": "Slovenia",
+          "source": "https://www.olympics.com/en/athletes/tadej-pogacar"
+        }
+      ],
+      "num_hops": 2
+    }
+  },
+  {
+    "id": "parallel_multiple_48",
+    "category": "parallel_multiple",
+    "record": {
+      "id": "parallel_multiple_48",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "What is the equivalent note of C in Indian musical scale? And convert the frequency 440 Hz to wavelength?"
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "frequency_to_wavelength",
+          "description": "Converts the frequency of a musical note to its wavelength.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "frequency": {
+                "type": "float",
+                "description": "The frequency in hertz of the musical note."
+              }
+            },
+            "required": [
+              "frequency"
+            ]
+          }
+        },
+        {
+          "name": "note_conversion.indian",
+          "description": "Converts a note in Western music to Indian classical music.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "note": {
+                "type": "string",
+                "description": "The note in Western musical scale."
+              }
+            },
+            "required": [
+              "note"
+            ]
+          }
+        }
+      ]
+    },
+    "expected": {
+      "id": "parallel_multiple_48",
+      "ground_truth": [
+        {
+          "note_conversion.indian": {
+            "note": [
+              "C"
+            ]
+          }
+        },
+        {
+          "frequency_to_wavelength": {
+            "frequency": [
+              440.0
+            ]
+          }
+        }
+      ]
+    }
+  }
+]

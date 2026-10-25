@@ -1,0 +1,1203 @@
+[
+  {
+    "source_id": "simple_python_97",
+    "category": "simple_python",
+    "source_record": {
+      "id": "simple_python_97",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Calculate the factorial of the number 5"
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "math.factorial",
+          "description": "Calculate the factorial of a given number.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "number": {
+                "type": "integer",
+                "description": "The number to compute factorial."
+              }
+            },
+            "required": [
+              "number"
+            ]
+          }
+        }
+      ]
+    },
+    "source_answer": {
+      "id": "simple_python_97",
+      "ground_truth": [
+        {
+          "math.factorial": {
+            "number": [
+              5
+            ]
+          }
+        }
+      ]
+    },
+    "role": "main",
+    "title": "5の階乗を求める",
+    "original": "Calculate the factorial of the number 5",
+    "original_schema": "name: math.factorial\ndescription: Calculate the factorial of a given number.\nparameters: type=dict; required=[\"number\"]\nnumber: type=integer; description=The number to compute factorial.",
+    "original_scope": "complete supplied question and all function-schema fields; JSON punctuation transformed into field-path notation, original field values retained",
+    "ja": "5の階乗を計算する。",
+    "ja_schema": "name: math.factorial\ndescription: 与えられた数の階乗を計算する。\nparameters: type=dict; required=[\"number\"]\nnumber: type=integer; description=階乗を求める数。",
+    "expected_behavior": "math.factorial(number=5)",
+    "explanation": "階乗を求める関数math.factorialを選び、numberに整数5を渡す。",
+    "source_url": "https://github.com/ShishirPatil/gorilla/tree/main/berkeley-function-call-leaderboard/bfcl_eval/data",
+    "source_revision": "6ea57973c7a6097fd7c5915698c54c17c5b1b6c8",
+    "license": "Apache-2.0",
+    "answer_kind": "One permitted function-call representation from published ground_truth, not an executed API return; irrelevance means no function call",
+    "source_schema_full": "name: math.factorial\ndescription: Calculate the factorial of a given number.\nparameters: type=dict; required=[\"number\"]\nnumber: type=integer; description=The number to compute factorial.",
+    "ja_schema_full": "name: math.factorial\ndescription: 与えられた数の階乗を計算する。\nparameters: type=dict; required=[\"number\"]\nnumber: type=integer; description=階乗を求める数。",
+    "schema_display_scope": "Complete supplied function-schema fields, flattened losslessly; Japanese descriptions translated, identifiers/types/defaults retained.",
+    "slide_original_scope": "complete supplied question and all function-schema fields; JSON punctuation transformed into field-path notation, original field values retained"
+  },
+  {
+    "source_id": "multiple_73",
+    "category": "multiple",
+    "source_record": {
+      "id": "multiple_73",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Who was the founder of Buddhism and where was it originated?"
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "religion.get_core_beliefs",
+          "description": "Retrieves the core beliefs and practices of a specified religion.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "religion": {
+                "type": "string",
+                "description": "Name of the religion for which to retrieve the core beliefs and practices."
+              }
+            },
+            "required": [
+              "religion"
+            ]
+          }
+        },
+        {
+          "name": "religion.get_origin",
+          "description": "Retrieves the origin and founder information of a specified religion.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "religion": {
+                "type": "string",
+                "description": "Name of the religion for which to retrieve the founder and origin."
+              }
+            },
+            "required": [
+              "religion"
+            ]
+          }
+        }
+      ]
+    },
+    "source_answer": {
+      "id": "multiple_73",
+      "ground_truth": [
+        {
+          "religion.get_origin": {
+            "religion": [
+              "Buddhism"
+            ]
+          }
+        }
+      ]
+    },
+    "role": "main",
+    "title": "仏教の起源を調べる関数を選ぶ",
+    "original": "Who was the founder of Buddhism and where was it originated?",
+    "original_schema": "name: religion.get_core_beliefs\ndescription: Retrieves the core beliefs and practices of a specified religion.\nparameters: type=dict; required=[\"religion\"]\nreligion: type=string; description=Name of the religion for which to retrieve the core beliefs and practices.\n\nname: religion.get_origin\ndescription: Retrieves the origin and founder information of a specified religion.\nparameters: type=dict; required=[\"religion\"]\nreligion: type=string; description=Name of the religion for which to retrieve the founder and origin.",
+    "original_scope": "complete supplied question and all function-schema fields; JSON punctuation transformed into field-path notation, original field values retained",
+    "ja": "仏教の開祖は誰で、仏教はどこで始まったのか。",
+    "ja_schema": "name: religion.get_core_beliefs\ndescription: 指定した宗教の中心的な信仰や実践を取得する。\nparameters: type=dict; required=[\"religion\"]\nreligion: type=string; description=中心的な信仰や実践を取得する宗教名。\n\nname: religion.get_origin\ndescription: 指定した宗教の起源と創始者の情報を取得する。\nparameters: type=dict; required=[\"religion\"]\nreligion: type=string; description=創始者と起源を取得する宗教名。",
+    "expected_behavior": "religion.get_origin(religion=\"Buddhism\")",
+    "explanation": "信仰や実践を取得する関数ではなく、起源と創始者を取得する関数を選ぶ。引数には英語の宗教名を使う。",
+    "source_url": "https://github.com/ShishirPatil/gorilla/tree/main/berkeley-function-call-leaderboard/bfcl_eval/data",
+    "source_revision": "6ea57973c7a6097fd7c5915698c54c17c5b1b6c8",
+    "license": "Apache-2.0",
+    "answer_kind": "One permitted function-call representation from published ground_truth, not an executed API return; irrelevance means no function call",
+    "source_schema_full": "name: religion.get_core_beliefs\ndescription: Retrieves the core beliefs and practices of a specified religion.\nparameters: type=dict; required=[\"religion\"]\nreligion: type=string; description=Name of the religion for which to retrieve the core beliefs and practices.\n\nname: religion.get_origin\ndescription: Retrieves the origin and founder information of a specified religion.\nparameters: type=dict; required=[\"religion\"]\nreligion: type=string; description=Name of the religion for which to retrieve the founder and origin.",
+    "ja_schema_full": "name: religion.get_core_beliefs\ndescription: 指定した宗教の中心的な信仰や実践を取得する。\nparameters: type=dict; required=[\"religion\"]\nreligion: type=string; description=中心的な信仰や実践を取得する宗教名。\n\nname: religion.get_origin\ndescription: 指定した宗教の起源と創始者の情報を取得する。\nparameters: type=dict; required=[\"religion\"]\nreligion: type=string; description=創始者と起源を取得する宗教名。",
+    "schema_display_scope": "Complete supplied function-schema fields, flattened losslessly; Japanese descriptions translated, identifiers/types/defaults retained.",
+    "slide_original_scope": "complete supplied question and all function-schema fields; JSON punctuation transformed into field-path notation, original field values retained"
+  },
+  {
+    "source_id": "parallel_51",
+    "category": "parallel",
+    "source_record": {
+      "id": "parallel_51",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Search for a Chicken Noodle Soup recipe and a Vegan Salad recipe."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "recipe_search.find",
+          "description": "Locate recipes based on the type of dish.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "dish": {
+                "type": "string",
+                "description": "The name of the dish to search for."
+              },
+              "diet": {
+                "type": "string",
+                "enum": [
+                  "Vegan",
+                  "Vegetarian",
+                  "Paleo",
+                  "Keto"
+                ],
+                "description": "Dietary preference.",
+                "default": "Keto"
+              }
+            },
+            "required": [
+              "dish"
+            ]
+          }
+        }
+      ]
+    },
+    "source_answer": {
+      "id": "parallel_51",
+      "ground_truth": [
+        {
+          "recipe_search.find": {
+            "dish": [
+              "Chicken Noodle Soup"
+            ],
+            "diet": [
+              "",
+              "Keto"
+            ]
+          }
+        },
+        {
+          "recipe_search.find": {
+            "dish": [
+              "Salad",
+              "salad",
+              "Vegan Salad",
+              "vegan salad"
+            ],
+            "diet": [
+              "Vegan"
+            ]
+          }
+        }
+      ]
+    },
+    "role": "main",
+    "title": "二つの料理のレシピを検索する",
+    "original": "Search for a Chicken Noodle Soup recipe and a Vegan Salad recipe.",
+    "original_schema": "name: recipe_search.find\ndescription: Locate recipes based on the type of dish.\nparameters: type=dict; required=[\"dish\"]\ndish: type=string; description=The name of the dish to search for.\ndiet: type=string; enum=[\"Vegan\", \"Vegetarian\", \"Paleo\", \"Keto\"]; description=Dietary preference.; default=Keto",
+    "original_scope": "complete supplied question and all function-schema fields; JSON punctuation transformed into field-path notation, original field values retained",
+    "ja": "チキンヌードルスープとヴィーガンサラダのレシピを検索する。",
+    "ja_schema": "name: recipe_search.find\ndescription: 料理の種類に基づいてレシピを探す。\nparameters: type=dict; required=[\"dish\"]\ndish: type=string; description=検索する料理の名前。\ndiet: type=string; enum=[\"Vegan\", \"Vegetarian\", \"Paleo\", \"Keto\"]; description=食事上の好み。; default=Keto",
+    "expected_behavior": "recipe_search.find(dish=\"Chicken Noodle Soup\")\nrecipe_search.find(dish=\"Salad\", diet=\"Vegan\")",
+    "explanation": "二つの料理に同じ関数を一度ずつ使う。サラダではdietにVeganを指定する。参照条件はサラダ名の複数の表記を許容する。",
+    "source_url": "https://github.com/ShishirPatil/gorilla/tree/main/berkeley-function-call-leaderboard/bfcl_eval/data",
+    "source_revision": "6ea57973c7a6097fd7c5915698c54c17c5b1b6c8",
+    "license": "Apache-2.0",
+    "answer_kind": "One permitted function-call representation from published ground_truth, not an executed API return; irrelevance means no function call",
+    "source_schema_full": "name: recipe_search.find\ndescription: Locate recipes based on the type of dish.\nparameters: type=dict; required=[\"dish\"]\ndish: type=string; description=The name of the dish to search for.\ndiet: type=string; enum=[\"Vegan\", \"Vegetarian\", \"Paleo\", \"Keto\"]; description=Dietary preference.; default=Keto",
+    "ja_schema_full": "name: recipe_search.find\ndescription: 料理の種類に基づいてレシピを探す。\nparameters: type=dict; required=[\"dish\"]\ndish: type=string; description=検索する料理の名前。\ndiet: type=string; enum=[\"Vegan\", \"Vegetarian\", \"Paleo\", \"Keto\"]; description=食事上の好み。; default=Keto",
+    "schema_display_scope": "Complete supplied function-schema fields, flattened losslessly; Japanese descriptions translated, identifiers/types/defaults retained.",
+    "slide_original_scope": "complete supplied question and all function-schema fields; JSON punctuation transformed into field-path notation, original field values retained"
+  },
+  {
+    "source_id": "irrelevance_8",
+    "category": "irrelevance",
+    "source_record": {
+      "id": "irrelevance_8",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Find the integral of x^3 from 1 to 5"
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "str_to_int",
+          "description": "Converts string value to integer.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "value": {
+                "type": "string",
+                "description": "String value to be converted to integer"
+              }
+            },
+            "required": [
+              "value"
+            ]
+          }
+        }
+      ]
+    },
+    "source_answer": {
+      "id": "irrelevance_8",
+      "ground_truth": [],
+      "reason": "irrelevance category expects no function call"
+    },
+    "role": "appendix",
+    "title": "依頼に合う関数がなければ、呼び出さない",
+    "original": "Find the integral of x^3 from 1 to 5",
+    "original_schema": "name: str_to_int\ndescription: Converts string value to integer.\nparameters: type=dict; required=[\"value\"]\nvalue: type=string; description=String value to be converted to integer",
+    "original_scope": "complete supplied question and all function-schema fields; JSON punctuation transformed into field-path notation, original field values retained",
+    "ja": "x^3を1から5まで積分する。",
+    "ja_schema": "name: str_to_int\ndescription: 文字列の値を整数へ変換する。\nparameters: type=dict; required=[\"value\"]\nvalue: type=string; description=整数へ変換する文字列の値。",
+    "expected_behavior": "関数を呼び出さない。",
+    "explanation": "用意された関数は文字列を整数へ変換するもので、積分の依頼には対応しない。このカテゴリでは、無関係な関数を呼ばないことを評価する。",
+    "source_url": "https://github.com/ShishirPatil/gorilla/tree/main/berkeley-function-call-leaderboard/bfcl_eval/data",
+    "source_revision": "6ea57973c7a6097fd7c5915698c54c17c5b1b6c8",
+    "license": "Apache-2.0",
+    "answer_kind": "One permitted function-call representation from published ground_truth, not an executed API return; irrelevance means no function call",
+    "source_schema_full": "name: str_to_int\ndescription: Converts string value to integer.\nparameters: type=dict; required=[\"value\"]\nvalue: type=string; description=String value to be converted to integer",
+    "ja_schema_full": "name: str_to_int\ndescription: 文字列の値を整数へ変換する。\nparameters: type=dict; required=[\"value\"]\nvalue: type=string; description=整数へ変換する文字列の値。",
+    "schema_display_scope": "Complete supplied function-schema fields, flattened losslessly; Japanese descriptions translated, identifiers/types/defaults retained.",
+    "slide_original_scope": "complete supplied question and all function-schema fields; JSON punctuation transformed into field-path notation, original field values retained"
+  },
+  {
+    "source_id": "simple_java_76",
+    "category": "simple_java",
+    "source_record": {
+      "id": "simple_java_76",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Help me execute the step method to update the graphics of an intro animation with a width of 800 pixels and a height of 600 pixels?"
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "Intro.step",
+          "description": "Updates the graphics of an intro animation based on the specified width and height.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "w": {
+                "type": "integer",
+                "description": "The width of the area to update."
+              },
+              "h": {
+                "type": "integer",
+                "description": "The height of the area to update."
+              }
+            },
+            "required": [
+              "w",
+              "h"
+            ]
+          }
+        }
+      ]
+    },
+    "source_answer": {
+      "id": "simple_java_76",
+      "ground_truth": [
+        {
+          "Intro.step": {
+            "w": [
+              800
+            ],
+            "h": [
+              600
+            ]
+          }
+        }
+      ]
+    },
+    "role": "appendix",
+    "title": "Javaで描画を更新する",
+    "original": "Help me execute the step method to update the graphics of an intro animation with a width of 800 pixels and a height of 600 pixels?",
+    "original_schema": "name: Intro.step\ndescription: Updates the graphics of an intro animation based on the specified width and height.\nparameters: type=dict; required=[\"w\", \"h\"]\nw: type=integer; description=The width of the area to update.\nh: type=integer; description=The height of the area to update.",
+    "original_scope": "complete supplied question and all function-schema fields; JSON punctuation transformed into field-path notation, original field values retained",
+    "ja": "幅800ピクセル、高さ600ピクセルの導入アニメーションの描画を更新するため、stepメソッドを実行したい。",
+    "ja_schema": "name: Intro.step\ndescription: 指定された幅と高さに基づいて、導入アニメーションの描画を更新する。\nparameters: type=dict; required=[\"w\", \"h\"]\nw: type=integer; description=更新する領域の幅。\nh: type=integer; description=更新する領域の高さ。",
+    "expected_behavior": "Intro.step(w=800, h=600)",
+    "explanation": "幅をw、高さをhに対応させる。単一ターンのJava用データから選んだ例で、配布された引数条件は800と600である。",
+    "source_url": "https://github.com/ShishirPatil/gorilla/tree/main/berkeley-function-call-leaderboard/bfcl_eval/data",
+    "source_revision": "6ea57973c7a6097fd7c5915698c54c17c5b1b6c8",
+    "license": "Apache-2.0",
+    "answer_kind": "One permitted function-call representation from published ground_truth, not an executed API return; irrelevance means no function call",
+    "source_schema_full": "name: Intro.step\ndescription: Updates the graphics of an intro animation based on the specified width and height.\nparameters: type=dict; required=[\"w\", \"h\"]\nw: type=integer; description=The width of the area to update.\nh: type=integer; description=The height of the area to update.",
+    "ja_schema_full": "name: Intro.step\ndescription: 指定された幅と高さに基づいて、導入アニメーションの描画を更新する。\nparameters: type=dict; required=[\"w\", \"h\"]\nw: type=integer; description=更新する領域の幅。\nh: type=integer; description=更新する領域の高さ。",
+    "schema_display_scope": "Complete supplied function-schema fields, flattened losslessly; Japanese descriptions translated, identifiers/types/defaults retained.",
+    "slide_original_scope": "complete supplied question and all function-schema fields; JSON punctuation transformed into field-path notation, original field values retained"
+  },
+  {
+    "source_id": "simple_javascript_22",
+    "category": "simple_javascript",
+    "source_record": {
+      "id": "simple_javascript_22",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Help me reset a state property called 'userSession' to 'null' in a React component?"
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "resetStateProperty",
+          "description": "This function resets a given state property to null. It is typically used in React components to clear state.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "stateProperty": {
+                "type": "String",
+                "description": "The name of the state property to reset."
+              }
+            },
+            "required": [
+              "stateProperty"
+            ]
+          }
+        }
+      ]
+    },
+    "source_answer": {
+      "id": "simple_javascript_22",
+      "ground_truth": [
+        {
+          "resetStateProperty": {
+            "stateProperty": [
+              "userSession"
+            ]
+          }
+        }
+      ]
+    },
+    "role": "appendix",
+    "title": "JavaScriptで状態をリセットする",
+    "original": "Help me reset a state property called 'userSession' to 'null' in a React component?",
+    "original_schema": "name: resetStateProperty\ndescription: This function resets a given state property to null. It is typically used in React components to clear state.\nparameters: type=dict; required=[\"stateProperty\"]\nstateProperty: type=String; description=The name of the state property to reset.",
+    "original_scope": "complete supplied question and all function-schema fields; JSON punctuation transformed into field-path notation, original field values retained",
+    "ja": "ReactコンポーネントのuserSessionという状態プロパティをnullにリセットしたい。",
+    "ja_schema": "name: resetStateProperty\ndescription: 与えられた状態プロパティをnullにリセットする。通常はReactコンポーネントで状態を消去するために使う。\nparameters: type=dict; required=[\"stateProperty\"]\nstateProperty: type=String; description=リセットする状態プロパティの名前。",
+    "expected_behavior": "resetStateProperty(stateProperty=\"userSession\")",
+    "explanation": "状態は、画面の表示などに使う値を保持する仕組み。関数の引数にはnullではなく、リセットするプロパティ名を渡す。",
+    "source_url": "https://github.com/ShishirPatil/gorilla/tree/main/berkeley-function-call-leaderboard/bfcl_eval/data",
+    "source_revision": "6ea57973c7a6097fd7c5915698c54c17c5b1b6c8",
+    "license": "Apache-2.0",
+    "answer_kind": "One permitted function-call representation from published ground_truth, not an executed API return; irrelevance means no function call",
+    "source_schema_full": "name: resetStateProperty\ndescription: This function resets a given state property to null. It is typically used in React components to clear state.\nparameters: type=dict; required=[\"stateProperty\"]\nstateProperty: type=String; description=The name of the state property to reset.",
+    "ja_schema_full": "name: resetStateProperty\ndescription: 与えられた状態プロパティをnullにリセットする。通常はReactコンポーネントで状態を消去するために使う。\nparameters: type=dict; required=[\"stateProperty\"]\nstateProperty: type=String; description=リセットする状態プロパティの名前。",
+    "schema_display_scope": "Complete supplied function-schema fields, flattened losslessly; Japanese descriptions translated, identifiers/types/defaults retained.",
+    "slide_original_scope": "complete supplied question and all function-schema fields; JSON punctuation transformed into field-path notation, original field values retained"
+  },
+  {
+    "source_id": "live_simple_247-129-0",
+    "category": "live_simple",
+    "source_record": {
+      "id": "live_simple_247-129-0",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Give me the application version."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "version_api.VersionApi.get_version",
+          "description": "Retrieves the current version information of the application, including its name and version number.",
+          "parameters": {
+            "type": "dict",
+            "required": [],
+            "properties": {}
+          }
+        }
+      ]
+    },
+    "source_answer": {
+      "id": "live_simple_247-129-0",
+      "ground_truth": [
+        {
+          "version_api.VersionApi.get_version": {}
+        }
+      ]
+    },
+    "role": "appendix",
+    "title": "引数のない関数で、バージョンを取得する",
+    "original": "Give me the application version.",
+    "original_schema": "name: version_api.VersionApi.get_version\ndescription: Retrieves the current version information of the application, including its name and version number.\nparameters: type=dict; required=[]; properties={}",
+    "original_scope": "complete supplied question and all function-schema fields; JSON punctuation transformed into field-path notation, original field values retained",
+    "ja": "アプリケーションのバージョンを教えてほしい。",
+    "ja_schema": "name: version_api.VersionApi.get_version\ndescription: アプリケーションの名前とバージョン番号を含む、現在のバージョン情報を取得する。\nparameters: type=dict; required=[]; properties={}",
+    "expected_behavior": "version_api.VersionApi.get_version()",
+    "explanation": "この関数には引数がない。依頼文に数値がなくても、関数名だけで適切な呼び出しを作れる。",
+    "source_url": "https://github.com/ShishirPatil/gorilla/tree/main/berkeley-function-call-leaderboard/bfcl_eval/data",
+    "source_revision": "6ea57973c7a6097fd7c5915698c54c17c5b1b6c8",
+    "license": "Apache-2.0",
+    "answer_kind": "One permitted function-call representation from published ground_truth, not an executed API return; irrelevance means no function call",
+    "source_schema_full": "name: version_api.VersionApi.get_version\ndescription: Retrieves the current version information of the application, including its name and version number.\nparameters: type=dict; required=[]; properties={}",
+    "ja_schema_full": "name: version_api.VersionApi.get_version\ndescription: アプリケーションの名前とバージョン番号を含む、現在のバージョン情報を取得する。\nparameters: type=dict; required=[]; properties={}",
+    "schema_display_scope": "Complete supplied function-schema fields, flattened losslessly; Japanese descriptions translated, identifiers/types/defaults retained.",
+    "slide_original_scope": "complete supplied question and all function-schema fields; JSON punctuation transformed into field-path notation, original field values retained"
+  },
+  {
+    "source_id": "live_multiple_196-88-0",
+    "category": "live_multiple",
+    "source_record": {
+      "id": "live_multiple_196-88-0",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "获取阿迪达斯的工单"
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "get_current_weather",
+          "description": "Retrieves the current weather conditions for a specified location, including temperature and atmospheric conditions.",
+          "parameters": {
+            "type": "dict",
+            "required": [
+              "location"
+            ],
+            "properties": {
+              "location": {
+                "type": "string",
+                "description": "The location for which weather is being requested, in the format of 'City, State', such as 'San Francisco, CA' or 'New York, NY'."
+              },
+              "unit": {
+                "type": "string",
+                "description": "The unit of temperature measurement for the weather report.",
+                "enum": [
+                  "celsius",
+                  "fahrenheit"
+                ],
+                "default": "fahrenheit"
+              }
+            }
+          }
+        },
+        {
+          "name": "get_tickets",
+          "description": "Retrieve a list of support tickets for a specified company.",
+          "parameters": {
+            "type": "dict",
+            "required": [
+              "customer"
+            ],
+            "properties": {
+              "customer": {
+                "type": "string",
+                "description": "The name of the company for which to retrieve support tickets."
+              }
+            }
+          }
+        }
+      ]
+    },
+    "source_answer": {
+      "id": "live_multiple_196-88-0",
+      "ground_truth": [
+        {
+          "get_tickets": {
+            "customer": [
+              "阿迪达斯"
+            ]
+          }
+        }
+      ]
+    },
+    "role": "appendix",
+    "title": "中国語で問い合わせ票を取得する",
+    "original": "获取阿迪达斯的工单",
+    "original_schema": "name: get_current_weather\ndescription: Retrieves the current weather conditions for a specified location, including temperature and atmospheric conditions.\nparameters: type=dict; required=[\"location\"]\nlocation: type=string; description=The location for which weather is being requested, in the format of 'City, State', such as 'San Francisco, CA' or 'New York, NY'.\nunit: type=string; description=The unit of temperature measurement for the weather report.; enum=[\"celsius\", \"fahrenheit\"]; default=fahrenheit\n\nname: get_tickets\ndescription: Retrieve a list of support tickets for a specified company.\nparameters: type=dict; required=[\"customer\"]\ncustomer: type=string; description=The name of the company for which to retrieve support tickets.",
+    "original_scope": "complete supplied question and all function-schema fields; JSON punctuation transformed into field-path notation, original field values retained",
+    "ja": "アディダスの問い合わせ票を取得する。",
+    "ja_schema": "name: get_current_weather\ndescription: 指定した場所の、気温や大気の状態などを含む現在の天気を取得する。\nparameters: type=dict; required=[\"location\"]\nlocation: type=string; description=天気を取得する場所。「San Francisco, CA」や「New York, NY」のように「市, 州」の形式で指定する。\nunit: type=string; description=天気予報で使う気温の単位。; enum=[\"celsius\", \"fahrenheit\"]; default=fahrenheit\n\nname: get_tickets\ndescription: 指定した企業のサポート問い合わせ票の一覧を取得する。\nparameters: type=dict; required=[\"customer\"]\ncustomer: type=string; description=サポート問い合わせ票を取得する企業名。",
+    "expected_behavior": "get_tickets(customer=\"阿迪达斯\")",
+    "explanation": "中国語の「工单」は、サポートの問い合わせ票を指す。会社名は依頼文どおりの中国語表記を引数へ渡し、天気の関数は使わない。",
+    "source_url": "https://github.com/ShishirPatil/gorilla/tree/main/berkeley-function-call-leaderboard/bfcl_eval/data",
+    "source_revision": "6ea57973c7a6097fd7c5915698c54c17c5b1b6c8",
+    "license": "Apache-2.0",
+    "answer_kind": "One permitted function-call representation from published ground_truth, not an executed API return; irrelevance means no function call",
+    "source_schema_full": "name: get_current_weather\ndescription: Retrieves the current weather conditions for a specified location, including temperature and atmospheric conditions.\nparameters: type=dict; required=[\"location\"]\nlocation: type=string; description=The location for which weather is being requested, in the format of 'City, State', such as 'San Francisco, CA' or 'New York, NY'.\nunit: type=string; description=The unit of temperature measurement for the weather report.; enum=[\"celsius\", \"fahrenheit\"]; default=fahrenheit\n\nname: get_tickets\ndescription: Retrieve a list of support tickets for a specified company.\nparameters: type=dict; required=[\"customer\"]\ncustomer: type=string; description=The name of the company for which to retrieve support tickets.",
+    "ja_schema_full": "name: get_current_weather\ndescription: 指定した場所の、気温や大気の状態などを含む現在の天気を取得する。\nparameters: type=dict; required=[\"location\"]\nlocation: type=string; description=天気を取得する場所。「San Francisco, CA」や「New York, NY」のように「市, 州」の形式で指定する。\nunit: type=string; description=天気予報で使う気温の単位。; enum=[\"celsius\", \"fahrenheit\"]; default=fahrenheit\n\nname: get_tickets\ndescription: 指定した企業のサポート問い合わせ票の一覧を取得する。\nparameters: type=dict; required=[\"customer\"]\ncustomer: type=string; description=サポート問い合わせ票を取得する企業名。",
+    "schema_display_scope": "Complete supplied function-schema fields, flattened losslessly; Japanese descriptions translated, identifiers/types/defaults retained.",
+    "slide_original_scope": "complete supplied question and all function-schema fields; JSON punctuation transformed into field-path notation, original field values retained"
+  },
+  {
+    "source_id": "live_parallel_14-10-0",
+    "category": "live_parallel",
+    "source_record": {
+      "id": "live_parallel_14-10-0",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "What's the weather like in the two cities of Boston and San Francisco?"
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "get_current_weather",
+          "description": "Retrieves the current weather information for a specified location.",
+          "parameters": {
+            "type": "dict",
+            "required": [
+              "location"
+            ],
+            "properties": {
+              "location": {
+                "type": "string",
+                "description": "The location for which the current weather is requested, in the format of 'City, State', such as 'San Francisco, CA' or 'New York, NY'. Use short form for state"
+              },
+              "unit": {
+                "type": "string",
+                "description": "The unit of measurement for temperature values.",
+                "enum": [
+                  "celsius",
+                  "fahrenheit"
+                ],
+                "default": "fahrenheit"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "source_answer": {
+      "id": "live_parallel_14-10-0",
+      "ground_truth": [
+        {
+          "get_current_weather": {
+            "location": [
+              "Boston, MA"
+            ],
+            "unit": [
+              "",
+              "fahrenheit"
+            ]
+          }
+        },
+        {
+          "get_current_weather": {
+            "location": [
+              "San Francisco, CA"
+            ],
+            "unit": [
+              "",
+              "fahrenheit"
+            ]
+          }
+        }
+      ]
+    },
+    "role": "appendix",
+    "title": "二都市の天気を、別々に取得する",
+    "original": "What's the weather like in the two cities of Boston and San Francisco?",
+    "original_schema": "name: get_current_weather\ndescription: Retrieves the current weather information for a specified location.\nparameters: type=dict; required=[\"location\"]\nlocation: type=string; description=The location for which the current weather is requested, in the format of 'City, State', such as 'San Francisco, CA' or 'New York, NY'. Use short form for state\nunit: type=string; description=The unit of measurement for temperature values.; enum=[\"celsius\", \"fahrenheit\"]; default=fahrenheit",
+    "original_scope": "complete supplied question and all function-schema fields; JSON punctuation transformed into field-path notation, original field values retained",
+    "ja": "ボストンとサンフランシスコという二都市の天気はどうか。",
+    "ja_schema": "name: get_current_weather\ndescription: 指定した場所の現在の天気情報を取得する。\nparameters: type=dict; required=[\"location\"]\nlocation: type=string; description=現在の天気を取得する場所。「San Francisco, CA」や「New York, NY」のように「市, 州」の形式で指定する。州名は略記する。\nunit: type=string; description=気温の単位。; enum=[\"celsius\", \"fahrenheit\"]; default=fahrenheit",
+    "expected_behavior": "get_current_weather(\n    location=\"Boston, MA\")\nget_current_weather(\n    location=\"San Francisco, CA\")",
+    "explanation": "同じ関数を都市ごとに呼ぶ。unitを省略すると既定のfahrenheitになる。参照条件は、省略と明示指定の両方を許容する。",
+    "source_url": "https://github.com/ShishirPatil/gorilla/tree/main/berkeley-function-call-leaderboard/bfcl_eval/data",
+    "source_revision": "6ea57973c7a6097fd7c5915698c54c17c5b1b6c8",
+    "license": "Apache-2.0",
+    "answer_kind": "One permitted function-call representation from published ground_truth, not an executed API return; irrelevance means no function call",
+    "source_schema_full": "name: get_current_weather\ndescription: Retrieves the current weather information for a specified location.\nparameters: type=dict; required=[\"location\"]\nlocation: type=string; description=The location for which the current weather is requested, in the format of 'City, State', such as 'San Francisco, CA' or 'New York, NY'. Use short form for state\nunit: type=string; description=The unit of measurement for temperature values.; enum=[\"celsius\", \"fahrenheit\"]; default=fahrenheit",
+    "ja_schema_full": "name: get_current_weather\ndescription: 指定した場所の現在の天気情報を取得する。\nparameters: type=dict; required=[\"location\"]\nlocation: type=string; description=現在の天気を取得する場所。「San Francisco, CA」や「New York, NY」のように「市, 州」の形式で指定する。州名は略記する。\nunit: type=string; description=気温の単位。; enum=[\"celsius\", \"fahrenheit\"]; default=fahrenheit",
+    "schema_display_scope": "Complete supplied function-schema fields, flattened losslessly; Japanese descriptions translated, identifiers/types/defaults retained.",
+    "slide_original_scope": "complete supplied question and all function-schema fields; JSON punctuation transformed into field-path notation, original field values retained"
+  },
+  {
+    "source_id": "parallel_multiple_35",
+    "category": "parallel_multiple",
+    "source_record": {
+      "id": "parallel_multiple_35",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Identify objects in my backyard image my_backyard_image_url and analyze the sentiment of today's journal entry my_journal_entry_text."
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "image_processing.object_identification",
+          "description": "Identify objects in a given image.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "image_url": {
+                "type": "string",
+                "description": "The URL of the image."
+              }
+            },
+            "required": [
+              "image_url"
+            ]
+          }
+        },
+        {
+          "name": "text_analysis.sentiment_analysis",
+          "description": "Analyze the sentiment of a given text.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "text": {
+                "type": "string",
+                "description": "The text to be analyzed."
+              }
+            },
+            "required": [
+              "text"
+            ]
+          }
+        }
+      ]
+    },
+    "source_answer": {
+      "id": "parallel_multiple_35",
+      "ground_truth": [
+        {
+          "image_processing.object_identification": {
+            "image_url": [
+              "my_backyard_image_url"
+            ]
+          }
+        },
+        {
+          "text_analysis.sentiment_analysis": {
+            "text": [
+              "my_journal_entry_text"
+            ]
+          }
+        }
+      ]
+    },
+    "role": "appendix",
+    "title": "画像と文章を別の関数へ渡す",
+    "original": "Identify objects in my backyard image my_backyard_image_url and analyze the sentiment of today's journal entry my_journal_entry_text.",
+    "original_schema": "name: image_processing.object_identification\ndescription: Identify objects in a given image.\nparameters: type=dict; required=[\"image_url\"]\nimage_url: type=string; description=The URL of the image.\n\nname: text_analysis.sentiment_analysis\ndescription: Analyze the sentiment of a given text.\nparameters: type=dict; required=[\"text\"]\ntext: type=string; description=The text to be analyzed.",
+    "original_scope": "complete supplied question and all function-schema fields; JSON punctuation transformed into field-path notation, original field values retained",
+    "ja": "裏庭の画像my_backyard_image_urlに写る物体を特定し、今日の日記my_journal_entry_textの感情を分析する。",
+    "ja_schema": "name: image_processing.object_identification\ndescription: 与えられた画像にある物体を特定する。\nparameters: type=dict; required=[\"image_url\"]\nimage_url: type=string; description=画像のURL。\n\nname: text_analysis.sentiment_analysis\ndescription: 与えられた文章の感情を分析する。\nparameters: type=dict; required=[\"text\"]\ntext: type=string; description=分析する文章。",
+    "expected_behavior": "image_processing.object_identification(\n    image_url=\"my_backyard_image_url\")\ntext_analysis.sentiment_analysis(\n    text=\"my_journal_entry_text\")",
+    "explanation": "画像用と文章用の関数を一度ずつ呼ぶ。画像や日記の中身を読む課題ではなく、依頼文に書かれた入力名を対応する引数へ渡す課題である。",
+    "source_url": "https://github.com/ShishirPatil/gorilla/tree/main/berkeley-function-call-leaderboard/bfcl_eval/data",
+    "source_revision": "6ea57973c7a6097fd7c5915698c54c17c5b1b6c8",
+    "license": "Apache-2.0",
+    "answer_kind": "One permitted function-call representation from published ground_truth, not an executed API return; irrelevance means no function call",
+    "source_schema_full": "name: image_processing.object_identification\ndescription: Identify objects in a given image.\nparameters: type=dict; required=[\"image_url\"]\nimage_url: type=string; description=The URL of the image.\n\nname: text_analysis.sentiment_analysis\ndescription: Analyze the sentiment of a given text.\nparameters: type=dict; required=[\"text\"]\ntext: type=string; description=The text to be analyzed.",
+    "ja_schema_full": "name: image_processing.object_identification\ndescription: 与えられた画像にある物体を特定する。\nparameters: type=dict; required=[\"image_url\"]\nimage_url: type=string; description=画像のURL。\n\nname: text_analysis.sentiment_analysis\ndescription: 与えられた文章の感情を分析する。\nparameters: type=dict; required=[\"text\"]\ntext: type=string; description=分析する文章。",
+    "schema_display_scope": "Complete supplied function-schema fields, flattened losslessly; Japanese descriptions translated, identifiers/types/defaults retained.",
+    "slide_original_scope": "complete supplied question and all function-schema fields; JSON punctuation transformed into field-path notation, original field values retained"
+  },
+  {
+    "source_id": "multi_turn_base_47",
+    "category": "multi_turn_base",
+    "source_record": {
+      "id": "multi_turn_base_47",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "I have a list of student record in this directory, could you find me where is it by telling me its name and using 'find'?"
+          }
+        ],
+        [
+          {
+            "role": "user",
+            "content": "Look at the student_record.txt and tell me the average score."
+          }
+        ],
+        [
+          {
+            "role": "user",
+            "content": "What about the standard deviation?"
+          }
+        ]
+      ],
+      "initial_config": {
+        "GorillaFileSystem": {
+          "root": {
+            "project_directory": {
+              "type": "directory",
+              "contents": {
+                "student_record.txt": {
+                  "type": "file",
+                  "content": "John: 100 Jane: 95 Alice: 85 Bob: 90 Tom: 88 Olivia: 92"
+                }
+              }
+            }
+          }
+        },
+        "MathAPI": {}
+      },
+      "path": [
+        "GorillaFileSystem.touch",
+        "GorillaFileSystem.echo",
+        "GorillaFileSystem.sort",
+        "GorillaFileSystem.wc",
+        "MathAPI.mean"
+      ],
+      "involved_classes": [
+        "GorillaFileSystem",
+        "MathAPI"
+      ]
+    },
+    "source_answer": {
+      "id": "multi_turn_base_47",
+      "ground_truth": [
+        [
+          "find(path='.')"
+        ],
+        [
+          "cat(file_name='student_record.txt')",
+          "mean(numbers=[100, 95, 85, 90, 88, 92])"
+        ],
+        [
+          "standard_deviation(numbers=[100, 95, 85, 90, 88, 92])"
+        ]
+      ]
+    },
+    "resolved_functions": [
+      {
+        "name": "cat",
+        "description": "This tool belongs to the Gorilla file system. It is a simple file system that allows users to perform basic file operations such as navigating directories, creating files and directories, reading and writing to files, etc. Tool description: Display the contents of a file of any extension from currrent directory.",
+        "parameters": {
+          "type": "dict",
+          "properties": {
+            "file_name": {
+              "type": "string",
+              "description": "The name of the file from current directory to display. No path is allowed. "
+            }
+          },
+          "required": [
+            "file_name"
+          ]
+        },
+        "response": {
+          "type": "dict",
+          "properties": {
+            "file_content": {
+              "type": "string",
+              "description": "The content of the file."
+            }
+          }
+        }
+      },
+      {
+        "name": "find",
+        "description": "This tool belongs to the Gorilla file system. It is a simple file system that allows users to perform basic file operations such as navigating directories, creating files and directories, reading and writing to files, etc. Tool description: Find any file or directories under specific path that contain name in its file name.  This method searches for files of any extension and directories within a specified path that match the given name. If no name is provided, it returns all files and directories in the specified path and its subdirectories. Note: This method performs a recursive search through all subdirectories of the given path.",
+        "parameters": {
+          "type": "dict",
+          "properties": {
+            "path": {
+              "type": "string",
+              "description": "The directory path to start the search. Defaults to the current directory (\".\").",
+              "default": "."
+            },
+            "name": {
+              "type": "string",
+              "description": "The name of the file or directory to search for. If None, all items are returned. ",
+              "default": "None"
+            }
+          },
+          "required": []
+        },
+        "response": {
+          "type": "dict",
+          "properties": {
+            "matches": {
+              "type": "array",
+              "description": "A list of matching file and directory paths relative to the given path.",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "mean",
+        "description": "This tool belongs to the Math API, which provides various mathematical operations. Tool description: Calculate the mean of a list of numbers.",
+        "parameters": {
+          "type": "dict",
+          "properties": {
+            "numbers": {
+              "type": "array",
+              "items": {
+                "type": "float"
+              },
+              "description": "List of numbers to calculate the mean of. "
+            }
+          },
+          "required": [
+            "numbers"
+          ]
+        },
+        "response": {
+          "type": "dict",
+          "properties": {
+            "result": {
+              "type": "float",
+              "description": "Mean of the numbers."
+            }
+          }
+        }
+      },
+      {
+        "name": "standard_deviation",
+        "description": "This tool belongs to the Math API, which provides various mathematical operations. Tool description: Calculate the standard deviation of a list of numbers.",
+        "parameters": {
+          "type": "dict",
+          "properties": {
+            "numbers": {
+              "type": "array",
+              "items": {
+                "type": "float"
+              },
+              "description": "List of numbers to calculate the standard deviation of. "
+            }
+          },
+          "required": [
+            "numbers"
+          ]
+        },
+        "response": {
+          "type": "dict",
+          "properties": {
+            "result": {
+              "type": "float",
+              "description": "Standard deviation of the numbers."
+            }
+          }
+        }
+      }
+    ],
+    "role": "appendix",
+    "functions_scope": "four relevant functions excerpted from the two complete API classes; complete initial state and all three user turns retained",
+    "title": "会話しながら成績ファイルを調べる",
+    "original": "1. I have a list of student record in this directory, could you find me where is it by telling me its name and using 'find'?\n2. Look at the student_record.txt and tell me the average score.\n3. What about the standard deviation?",
+    "original_schema": "name: cat\ndescription: This tool belongs to the Gorilla file system. It is a simple file system that allows users to perform basic file operations such as navigating directories, creating files and directories, reading and writing to files, etc. Tool description: Display the contents of a file of any extension from currrent directory.\nparameters: type=dict; required=[\"file_name\"]\nfile_name: type=string; description=The name of the file from current directory to display. No path is allowed. \nresponse: {\"type\": \"dict\", \"properties\": {\"file_content\": {\"type\": \"string\", \"description\": \"The content of the file.\"}}}\n\nname: find\ndescription: This tool belongs to the Gorilla file system. It is a simple file system that allows users to perform basic file operations such as navigating directories, creating files and directories, reading and writing to files, etc. Tool description: Find any file or directories under specific path that contain name in its file name.  This method searches for files of any extension and directories within a specified path that match the given name. If no name is provided, it returns all files and directories in the specified path and its subdirectories. Note: This method performs a recursive search through all subdirectories of the given path.\nparameters: type=dict; required=[]\npath: type=string; description=The directory path to start the search. Defaults to the current directory (\".\").; default=.\nname: type=string; description=The name of the file or directory to search for. If None, all items are returned. ; default=None\nresponse: {\"type\": \"dict\", \"properties\": {\"matches\": {\"type\": \"array\", \"description\": \"A list of matching file and directory paths relative to the given path.\", \"items\": {\"type\": \"string\"}}}}\n\nname: mean\ndescription: This tool belongs to the Math API, which provides various mathematical operations. Tool description: Calculate the mean of a list of numbers.\nparameters: type=dict; required=[\"numbers\"]\nnumbers: type=array; items={\"type\": \"float\"}; description=List of numbers to calculate the mean of. \nresponse: {\"type\": \"dict\", \"properties\": {\"result\": {\"type\": \"float\", \"description\": \"Mean of the numbers.\"}}}\n\nname: standard_deviation\ndescription: This tool belongs to the Math API, which provides various mathematical operations. Tool description: Calculate the standard deviation of a list of numbers.\nparameters: type=dict; required=[\"numbers\"]\nnumbers: type=array; items={\"type\": \"float\"}; description=List of numbers to calculate the standard deviation of. \nresponse: {\"type\": \"dict\", \"properties\": {\"result\": {\"type\": \"float\", \"description\": \"Standard deviation of the numbers.\"}}}",
+    "original_scope": "Complete three user turns and complete initial student-file contents displayed; relevant function specifications displayed as explicitly labeled summary excerpts. Full record and resolved function specifications retained in this manifest.",
+    "ja": "1. このディレクトリに生徒の成績一覧がある。findを使って探し、ファイル名を教えてほしい。\n2. student_record.txtを読み、平均点を教えてほしい。\n3. 標準偏差はどうか。",
+    "ja_schema": "name: cat\ndescription: Gorillaファイルシステムの関数。ディレクトリの移動、ファイルやディレクトリの作成、ファイルの読み書きなどの基本操作を行える。現在のディレクトリにある、任意の拡張子のファイルの内容を表示する。\nparameters: type=dict; required=[\"file_name\"]\nfile_name: type=string; description=表示する、現在のディレクトリ内のファイル名。パスは指定できない。\nresponse: {\"type\": \"dict\", \"properties\": {\"file_content\": {\"type\": \"string\", \"description\": \"ファイルの内容。\"}}}\n\nname: find\ndescription: Gorillaファイルシステムの関数。ディレクトリの移動、ファイルやディレクトリの作成、ファイルの読み書きなどの基本操作を行える。指定したパス配下で、ファイル名やディレクトリ名にnameを含む項目を探す。拡張子を問わず、すべての下位ディレクトリを再帰的に検索する。nameを指定しなければ、指定パスと下位ディレクトリのすべての項目を返す。\nparameters: type=dict; required=[]\npath: type=string; description=検索を始めるディレクトリのパス。既定値は現在のディレクトリ（\".\"）。; default=.\nname: type=string; description=検索するファイルまたはディレクトリの名前。Noneなら全項目を返す。; default=None\nresponse: {\"type\": \"dict\", \"properties\": {\"matches\": {\"type\": \"array\", \"description\": \"与えたパスからの相対パスで表した、該当するファイルとディレクトリの一覧。\", \"items\": {\"type\": \"string\"}}}}\n\nname: mean\ndescription: さまざまな数学演算を行うMath APIの関数。数値のリストの平均を計算する。\nparameters: type=dict; required=[\"numbers\"]\nnumbers: type=array; items={\"type\": \"float\"}; description=平均を計算する数値のリスト。\nresponse: {\"type\": \"dict\", \"properties\": {\"result\": {\"type\": \"float\", \"description\": \"数値の平均。\"}}}\n\nname: standard_deviation\ndescription: さまざまな数学演算を行うMath APIの関数。数値のリストの標準偏差を計算する。\nparameters: type=dict; required=[\"numbers\"]\nnumbers: type=array; items={\"type\": \"float\"}; description=標準偏差を計算する数値のリスト。\nresponse: {\"type\": \"dict\", \"properties\": {\"result\": {\"type\": \"float\", \"description\": \"数値の標準偏差。\"}}}",
+    "expected_behavior": "1. find(path=\".\")\n2. cat(file_name=\"student_record.txt\")\n   mean(numbers=[100, 95, 85, 90, 88, 92])\n3. standard_deviation(\n   numbers=[100, 95, 85, 90, 88, 92])",
+    "explanation": "最初にファイルを探し、次に内容を読んで平均を計算する。最後の依頼には「何の標準偏差か」と書かれていないため、前のやり取りと数値を引き継ぐ。",
+    "source_url": "https://github.com/ShishirPatil/gorilla/tree/main/berkeley-function-call-leaderboard/bfcl_eval/data",
+    "source_revision": "6ea57973c7a6097fd7c5915698c54c17c5b1b6c8",
+    "license": "Apache-2.0",
+    "answer_kind": "Published minimal reference function-call trajectory; not an executed tool return.",
+    "source_schema_full": "name: cat\ndescription: This tool belongs to the Gorilla file system. It is a simple file system that allows users to perform basic file operations such as navigating directories, creating files and directories, reading and writing to files, etc. Tool description: Display the contents of a file of any extension from currrent directory.\nparameters: type=dict; required=[\"file_name\"]\nfile_name: type=string; description=The name of the file from current directory to display. No path is allowed. \nresponse: {\"type\": \"dict\", \"properties\": {\"file_content\": {\"type\": \"string\", \"description\": \"The content of the file.\"}}}\n\nname: find\ndescription: This tool belongs to the Gorilla file system. It is a simple file system that allows users to perform basic file operations such as navigating directories, creating files and directories, reading and writing to files, etc. Tool description: Find any file or directories under specific path that contain name in its file name.  This method searches for files of any extension and directories within a specified path that match the given name. If no name is provided, it returns all files and directories in the specified path and its subdirectories. Note: This method performs a recursive search through all subdirectories of the given path.\nparameters: type=dict; required=[]\npath: type=string; description=The directory path to start the search. Defaults to the current directory (\".\").; default=.\nname: type=string; description=The name of the file or directory to search for. If None, all items are returned. ; default=None\nresponse: {\"type\": \"dict\", \"properties\": {\"matches\": {\"type\": \"array\", \"description\": \"A list of matching file and directory paths relative to the given path.\", \"items\": {\"type\": \"string\"}}}}\n\nname: mean\ndescription: This tool belongs to the Math API, which provides various mathematical operations. Tool description: Calculate the mean of a list of numbers.\nparameters: type=dict; required=[\"numbers\"]\nnumbers: type=array; items={\"type\": \"float\"}; description=List of numbers to calculate the mean of. \nresponse: {\"type\": \"dict\", \"properties\": {\"result\": {\"type\": \"float\", \"description\": \"Mean of the numbers.\"}}}\n\nname: standard_deviation\ndescription: This tool belongs to the Math API, which provides various mathematical operations. Tool description: Calculate the standard deviation of a list of numbers.\nparameters: type=dict; required=[\"numbers\"]\nnumbers: type=array; items={\"type\": \"float\"}; description=List of numbers to calculate the standard deviation of. \nresponse: {\"type\": \"dict\", \"properties\": {\"result\": {\"type\": \"float\", \"description\": \"Standard deviation of the numbers.\"}}}",
+    "ja_schema_full": "name: cat\ndescription: Gorillaファイルシステムの関数。ディレクトリの移動、ファイルやディレクトリの作成、ファイルの読み書きなどの基本操作を行える。現在のディレクトリにある、任意の拡張子のファイルの内容を表示する。\nparameters: type=dict; required=[\"file_name\"]\nfile_name: type=string; description=表示する、現在のディレクトリ内のファイル名。パスは指定できない。\nresponse: {\"type\": \"dict\", \"properties\": {\"file_content\": {\"type\": \"string\", \"description\": \"ファイルの内容。\"}}}\n\nname: find\ndescription: Gorillaファイルシステムの関数。ディレクトリの移動、ファイルやディレクトリの作成、ファイルの読み書きなどの基本操作を行える。指定したパス配下で、ファイル名やディレクトリ名にnameを含む項目を探す。拡張子を問わず、すべての下位ディレクトリを再帰的に検索する。nameを指定しなければ、指定パスと下位ディレクトリのすべての項目を返す。\nparameters: type=dict; required=[]\npath: type=string; description=検索を始めるディレクトリのパス。既定値は現在のディレクトリ（\".\"）。; default=.\nname: type=string; description=検索するファイルまたはディレクトリの名前。Noneなら全項目を返す。; default=None\nresponse: {\"type\": \"dict\", \"properties\": {\"matches\": {\"type\": \"array\", \"description\": \"与えたパスからの相対パスで表した、該当するファイルとディレクトリの一覧。\", \"items\": {\"type\": \"string\"}}}}\n\nname: mean\ndescription: さまざまな数学演算を行うMath APIの関数。数値のリストの平均を計算する。\nparameters: type=dict; required=[\"numbers\"]\nnumbers: type=array; items={\"type\": \"float\"}; description=平均を計算する数値のリスト。\nresponse: {\"type\": \"dict\", \"properties\": {\"result\": {\"type\": \"float\", \"description\": \"数値の平均。\"}}}\n\nname: standard_deviation\ndescription: さまざまな数学演算を行うMath APIの関数。数値のリストの標準偏差を計算する。\nparameters: type=dict; required=[\"numbers\"]\nnumbers: type=array; items={\"type\": \"float\"}; description=標準偏差を計算する数値のリスト。\nresponse: {\"type\": \"dict\", \"properties\": {\"result\": {\"type\": \"float\", \"description\": \"数値の標準偏差。\"}}}",
+    "schema_display_scope": "Japanese summary excerpts of find/cat/mean/standard_deviation; not the complete model input.",
+    "slide_original_scope": "Complete three user turns and complete initial student-file contents displayed; relevant function specifications displayed as explicitly labeled summary excerpts. Full record and resolved function specifications retained in this manifest."
+  },
+  {
+    "source_id": "web_search_50",
+    "category": "web_search",
+    "source_record": {
+      "id": "web_search_50",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "Cycling competitions such as the Tour de France showcase top endurance athletes from around the world. What is the birth country of the cyclist who won the 2024 Tour de France?"
+          }
+        ]
+      ],
+      "involved_classes": [
+        "WebSearchAPI"
+      ]
+    },
+    "source_answer": {
+      "id": "web_search_50",
+      "ground_truth": [
+        "Slovenia"
+      ],
+      "source": [
+        {
+          "subquestion": "Who won the 2024 Tour de France?",
+          "answer": "Tadej Pogacar",
+          "source": "https://www.cyclingnews.com/races/tour-de-france-2024/race-history/"
+        },
+        {
+          "subquestion": "What is the birth place of Tadej Pogacar?",
+          "answer": "Slovenia",
+          "source": "https://www.olympics.com/en/athletes/tadej-pogacar"
+        }
+      ],
+      "num_hops": 2
+    },
+    "resolved_functions": [
+      {
+        "name": "search_engine_query",
+        "description": "This tool belongs to the Web Search API category. It provides functions to search the web and browse search results. Tool description: This function queries the search engine for the provided keywords and region.",
+        "parameters": {
+          "type": "dict",
+          "properties": {
+            "keywords": {
+              "type": "string",
+              "description": "The keywords to search for."
+            },
+            "max_results": {
+              "type": "integer",
+              "description": "The maximum number of search results to return.",
+              "default": 10
+            },
+            "region": {
+              "type": "string",
+              "description": "The region to search in. Defaults to 'wt-wt' (No region).",
+              "default": "wt-wt",
+              "enum": [
+                "xa-ar",
+                "xa-en",
+                "ar-es",
+                "au-en",
+                "at-de",
+                "be-fr",
+                "be-nl",
+                "br-pt",
+                "bg-bg",
+                "ca-en",
+                "ca-fr",
+                "ct-ca",
+                "cl-es",
+                "cn-zh",
+                "co-es",
+                "hr-hr",
+                "cz-cs",
+                "dk-da",
+                "ee-et",
+                "fi-fi",
+                "fr-fr",
+                "de-de",
+                "gr-el",
+                "hk-tz",
+                "hu-hu",
+                "in-en",
+                "id-id",
+                "id-en",
+                "ie-en",
+                "il-he",
+                "it-it",
+                "jp-jp",
+                "kr-kr",
+                "lv-lv",
+                "lt-lt",
+                "xl-es",
+                "my-ms",
+                "my-en",
+                "mx-es",
+                "nl-nl",
+                "nz-en",
+                "no-no",
+                "pe-es",
+                "ph-en",
+                "ph-tl",
+                "pl-pl",
+                "pt-pt",
+                "ro-ro",
+                "ru-ru",
+                "sg-en",
+                "sk-sk",
+                "sl-sl",
+                "za-en",
+                "es-es",
+                "se-sv",
+                "ch-de",
+                "ch-fr",
+                "ch-it",
+                "tw-tz",
+                "th-th",
+                "tr-tr",
+                "ua-uk",
+                "uk-en",
+                "us-en",
+                "ue-es",
+                "ve-es",
+                "vn-vi",
+                "wt-wt"
+              ]
+            }
+          },
+          "required": [
+            "keywords"
+          ]
+        }
+      },
+      {
+        "name": "fetch_url_content",
+        "description": "This tool belongs to the Web Search API category. It provides functions to search the web and browse search results. Tool description: This function retrieves content from the provided URL and processes it based on the selected mode.",
+        "parameters": {
+          "type": "dict",
+          "properties": {
+            "url": {
+              "type": "string",
+              "description": "The URL to fetch content from. Must start with 'http://' or 'https://'."
+            },
+            "mode": {
+              "type": "string",
+              "description": "The mode to process the fetched content. `raw` returns the raw HTML content; `markdown` converts raw HTML content to Markdown format for better readability, using html2text; `truncate` extracts and cleans text by removing scripts, styles, and extraneous whitespace.",
+              "default": "raw",
+              "enum": [
+                "raw",
+                "markdown",
+                "truncate"
+              ]
+            }
+          },
+          "required": [
+            "url"
+          ]
+        },
+        "response": {
+          "type": "dict",
+          "properties": {
+            "content": {
+              "type": "string",
+              "description": "The processed web content as a string."
+            }
+          }
+        }
+      }
+    ],
+    "role": "appendix",
+    "functions_scope": "all available WebSearchAPI function specifications",
+    "title": "検索とページ閲覧で、出生国を特定する",
+    "original": "Cycling competitions such as the Tour de France showcase top endurance athletes from around the world. What is the birth country of the cyclist who won the 2024 Tour de France?",
+    "original_schema": "name: search_engine_query\ndescription: This tool belongs to the Web Search API category. It provides functions to search the web and browse search results. Tool description: This function queries the search engine for the provided keywords and region.\nparameters: type=dict; required=[\"keywords\"]\nkeywords: type=string; description=The keywords to search for.\nmax_results: type=integer; description=The maximum number of search results to return.; default=10\nregion: type=string; description=The region to search in. Defaults to 'wt-wt' (No region).; default=wt-wt; enum=[\"xa-ar\", \"xa-en\", \"ar-es\", \"au-en\", \"at-de\", \"be-fr\", \"be-nl\", \"br-pt\", \"bg-bg\", \"ca-en\", \"ca-fr\", \"ct-ca\", \"cl-es\", \"cn-zh\", \"co-es\", \"hr-hr\", \"cz-cs\", \"dk-da\", \"ee-et\", \"fi-fi\", \"fr-fr\", \"de-de\", \"gr-el\", \"hk-tz\", \"hu-hu\", \"in-en\", \"id-id\", \"id-en\", \"ie-en\", \"il-he\", \"it-it\", \"jp-jp\", \"kr-kr\", \"lv-lv\", \"lt-lt\", \"xl-es\", \"my-ms\", \"my-en\", \"mx-es\", \"nl-nl\", \"nz-en\", \"no-no\", \"pe-es\", \"ph-en\", \"ph-tl\", \"pl-pl\", \"pt-pt\", \"ro-ro\", \"ru-ru\", \"sg-en\", \"sk-sk\", \"sl-sl\", \"za-en\", \"es-es\", \"se-sv\", \"ch-de\", \"ch-fr\", \"ch-it\", \"tw-tz\", \"th-th\", \"tr-tr\", \"ua-uk\", \"uk-en\", \"us-en\", \"ue-es\", \"ve-es\", \"vn-vi\", \"wt-wt\"]\n\nname: fetch_url_content\ndescription: This tool belongs to the Web Search API category. It provides functions to search the web and browse search results. Tool description: This function retrieves content from the provided URL and processes it based on the selected mode.\nparameters: type=dict; required=[\"url\"]\nurl: type=string; description=The URL to fetch content from. Must start with 'http://' or 'https://'.\nmode: type=string; description=The mode to process the fetched content. `raw` returns the raw HTML content; `markdown` converts raw HTML content to Markdown format for better readability, using html2text; `truncate` extracts and cleans text by removing scripts, styles, and extraneous whitespace.; default=raw; enum=[\"raw\", \"markdown\", \"truncate\"]\nresponse: {\"type\": \"dict\", \"properties\": {\"content\": {\"type\": \"string\", \"description\": \"The processed web content as a string.\"}}}",
+    "original_scope": "Complete user question displayed with full Japanese translation; both available Web-search tools summarized as explicitly labeled specification excerpts. Full resolved schemas retained in this manifest.",
+    "ja": "ツール・ド・フランスのような自転車競技には、世界各国の持久力に優れた選手が出場する。2024年のツール・ド・フランスで優勝した選手の出生国はどこか。",
+    "ja_schema": "name: search_engine_query\ndescription: Web Search APIの関数。Webを検索し、検索結果を閲覧する。この関数は、指定したキーワードと地域を使って検索エンジンへ問い合わせる。\nparameters: type=dict; required=[\"keywords\"]\nkeywords: type=string; description=検索するキーワード。\nmax_results: type=integer; description=返す検索結果の最大件数。; default=10\nregion: type=string; description=検索対象の地域。既定値は地域を指定しないwt-wt。; default=wt-wt; enum=[\"xa-ar\", \"xa-en\", \"ar-es\", \"au-en\", \"at-de\", \"be-fr\", \"be-nl\", \"br-pt\", \"bg-bg\", \"ca-en\", \"ca-fr\", \"ct-ca\", \"cl-es\", \"cn-zh\", \"co-es\", \"hr-hr\", \"cz-cs\", \"dk-da\", \"ee-et\", \"fi-fi\", \"fr-fr\", \"de-de\", \"gr-el\", \"hk-tz\", \"hu-hu\", \"in-en\", \"id-id\", \"id-en\", \"ie-en\", \"il-he\", \"it-it\", \"jp-jp\", \"kr-kr\", \"lv-lv\", \"lt-lt\", \"xl-es\", \"my-ms\", \"my-en\", \"mx-es\", \"nl-nl\", \"nz-en\", \"no-no\", \"pe-es\", \"ph-en\", \"ph-tl\", \"pl-pl\", \"pt-pt\", \"ro-ro\", \"ru-ru\", \"sg-en\", \"sk-sk\", \"sl-sl\", \"za-en\", \"es-es\", \"se-sv\", \"ch-de\", \"ch-fr\", \"ch-it\", \"tw-tz\", \"th-th\", \"tr-tr\", \"ua-uk\", \"uk-en\", \"us-en\", \"ue-es\", \"ve-es\", \"vn-vi\", \"wt-wt\"]\n\nname: fetch_url_content\ndescription: Web Search APIの関数。Webを検索し、検索結果を閲覧する。この関数は、指定されたURLの内容を取得し、選択したモードで処理する。\nparameters: type=dict; required=[\"url\"]\nurl: type=string; description=内容を取得するURL。http://またはhttps://で始まる必要がある。\nmode: type=string; description=取得した内容の処理モード。rawはHTMLをそのまま返す。markdownはhtml2textで読みやすいMarkdownへ変換する。truncateはスクリプトやスタイル、余分な空白を除いて本文を抽出する。; default=raw; enum=[\"raw\", \"markdown\", \"truncate\"]\nresponse: {\"type\": \"dict\", \"properties\": {\"content\": {\"type\": \"string\", \"description\": \"処理後のWeb本文の文字列。\"}}}",
+    "expected_behavior": "正解：Slovenia（スロベニア）",
+    "explanation": "2024年の優勝者Tadej Pogačarを特定してから、出生国を調べる二段階の問い。関数呼び出しの形ではなく、最終的な文章に参照の国名が含まれるかを採点する。",
+    "source_url": "https://github.com/ShishirPatil/gorilla/tree/main/berkeley-function-call-leaderboard/bfcl_eval/data",
+    "source_revision": "6ea57973c7a6097fd7c5915698c54c17c5b1b6c8",
+    "license": "Apache-2.0",
+    "answer_kind": "Published final-country reference answer; actual checker tests normalized word-boundary containment in the last non-call response.",
+    "source_schema_full": "name: search_engine_query\ndescription: This tool belongs to the Web Search API category. It provides functions to search the web and browse search results. Tool description: This function queries the search engine for the provided keywords and region.\nparameters: type=dict; required=[\"keywords\"]\nkeywords: type=string; description=The keywords to search for.\nmax_results: type=integer; description=The maximum number of search results to return.; default=10\nregion: type=string; description=The region to search in. Defaults to 'wt-wt' (No region).; default=wt-wt; enum=[\"xa-ar\", \"xa-en\", \"ar-es\", \"au-en\", \"at-de\", \"be-fr\", \"be-nl\", \"br-pt\", \"bg-bg\", \"ca-en\", \"ca-fr\", \"ct-ca\", \"cl-es\", \"cn-zh\", \"co-es\", \"hr-hr\", \"cz-cs\", \"dk-da\", \"ee-et\", \"fi-fi\", \"fr-fr\", \"de-de\", \"gr-el\", \"hk-tz\", \"hu-hu\", \"in-en\", \"id-id\", \"id-en\", \"ie-en\", \"il-he\", \"it-it\", \"jp-jp\", \"kr-kr\", \"lv-lv\", \"lt-lt\", \"xl-es\", \"my-ms\", \"my-en\", \"mx-es\", \"nl-nl\", \"nz-en\", \"no-no\", \"pe-es\", \"ph-en\", \"ph-tl\", \"pl-pl\", \"pt-pt\", \"ro-ro\", \"ru-ru\", \"sg-en\", \"sk-sk\", \"sl-sl\", \"za-en\", \"es-es\", \"se-sv\", \"ch-de\", \"ch-fr\", \"ch-it\", \"tw-tz\", \"th-th\", \"tr-tr\", \"ua-uk\", \"uk-en\", \"us-en\", \"ue-es\", \"ve-es\", \"vn-vi\", \"wt-wt\"]\n\nname: fetch_url_content\ndescription: This tool belongs to the Web Search API category. It provides functions to search the web and browse search results. Tool description: This function retrieves content from the provided URL and processes it based on the selected mode.\nparameters: type=dict; required=[\"url\"]\nurl: type=string; description=The URL to fetch content from. Must start with 'http://' or 'https://'.\nmode: type=string; description=The mode to process the fetched content. `raw` returns the raw HTML content; `markdown` converts raw HTML content to Markdown format for better readability, using html2text; `truncate` extracts and cleans text by removing scripts, styles, and extraneous whitespace.; default=raw; enum=[\"raw\", \"markdown\", \"truncate\"]\nresponse: {\"type\": \"dict\", \"properties\": {\"content\": {\"type\": \"string\", \"description\": \"The processed web content as a string.\"}}}",
+    "ja_schema_full": "name: search_engine_query\ndescription: Web Search APIの関数。Webを検索し、検索結果を閲覧する。この関数は、指定したキーワードと地域を使って検索エンジンへ問い合わせる。\nparameters: type=dict; required=[\"keywords\"]\nkeywords: type=string; description=検索するキーワード。\nmax_results: type=integer; description=返す検索結果の最大件数。; default=10\nregion: type=string; description=検索対象の地域。既定値は地域を指定しないwt-wt。; default=wt-wt; enum=[\"xa-ar\", \"xa-en\", \"ar-es\", \"au-en\", \"at-de\", \"be-fr\", \"be-nl\", \"br-pt\", \"bg-bg\", \"ca-en\", \"ca-fr\", \"ct-ca\", \"cl-es\", \"cn-zh\", \"co-es\", \"hr-hr\", \"cz-cs\", \"dk-da\", \"ee-et\", \"fi-fi\", \"fr-fr\", \"de-de\", \"gr-el\", \"hk-tz\", \"hu-hu\", \"in-en\", \"id-id\", \"id-en\", \"ie-en\", \"il-he\", \"it-it\", \"jp-jp\", \"kr-kr\", \"lv-lv\", \"lt-lt\", \"xl-es\", \"my-ms\", \"my-en\", \"mx-es\", \"nl-nl\", \"nz-en\", \"no-no\", \"pe-es\", \"ph-en\", \"ph-tl\", \"pl-pl\", \"pt-pt\", \"ro-ro\", \"ru-ru\", \"sg-en\", \"sk-sk\", \"sl-sl\", \"za-en\", \"es-es\", \"se-sv\", \"ch-de\", \"ch-fr\", \"ch-it\", \"tw-tz\", \"th-th\", \"tr-tr\", \"ua-uk\", \"uk-en\", \"us-en\", \"ue-es\", \"ve-es\", \"vn-vi\", \"wt-wt\"]\n\nname: fetch_url_content\ndescription: Web Search APIの関数。Webを検索し、検索結果を閲覧する。この関数は、指定されたURLの内容を取得し、選択したモードで処理する。\nparameters: type=dict; required=[\"url\"]\nurl: type=string; description=内容を取得するURL。http://またはhttps://で始まる必要がある。\nmode: type=string; description=取得した内容の処理モード。rawはHTMLをそのまま返す。markdownはhtml2textで読みやすいMarkdownへ変換する。truncateはスクリプトやスタイル、余分な空白を除いて本文を抽出する。; default=raw; enum=[\"raw\", \"markdown\", \"truncate\"]\nresponse: {\"type\": \"dict\", \"properties\": {\"content\": {\"type\": \"string\", \"description\": \"処理後のWeb本文の文字列。\"}}}",
+    "schema_display_scope": "Japanese summary excerpts of the two available tools; region enum values and full response schemas remain in external source records.",
+    "slide_original_scope": "Complete user question displayed with full Japanese translation; both available Web-search tools summarized as explicitly labeled specification excerpts. Full resolved schemas retained in this manifest."
+  },
+  {
+    "source_id": "parallel_multiple_48",
+    "category": "parallel_multiple",
+    "source_record": {
+      "id": "parallel_multiple_48",
+      "question": [
+        [
+          {
+            "role": "user",
+            "content": "What is the equivalent note of C in Indian musical scale? And convert the frequency 440 Hz to wavelength?"
+          }
+        ]
+      ],
+      "function": [
+        {
+          "name": "frequency_to_wavelength",
+          "description": "Converts the frequency of a musical note to its wavelength.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "frequency": {
+                "type": "float",
+                "description": "The frequency in hertz of the musical note."
+              }
+            },
+            "required": [
+              "frequency"
+            ]
+          }
+        },
+        {
+          "name": "note_conversion.indian",
+          "description": "Converts a note in Western music to Indian classical music.",
+          "parameters": {
+            "type": "dict",
+            "properties": {
+              "note": {
+                "type": "string",
+                "description": "The note in Western musical scale."
+              }
+            },
+            "required": [
+              "note"
+            ]
+          }
+        }
+      ]
+    },
+    "source_answer": {
+      "id": "parallel_multiple_48",
+      "ground_truth": [
+        {
+          "note_conversion.indian": {
+            "note": [
+              "C"
+            ]
+          }
+        },
+        {
+          "frequency_to_wavelength": {
+            "frequency": [
+              440.0
+            ]
+          }
+        }
+      ]
+    },
+    "role": "appendix",
+    "title": "音名と周波数を変換する",
+    "original": "What is the equivalent note of C in Indian musical scale? And convert the frequency 440 Hz to wavelength?",
+    "original_schema": "name: frequency_to_wavelength\ndescription: Converts the frequency of a musical note to its wavelength.\nparameters: type=dict; required=[\"frequency\"]\nfrequency: type=float; description=The frequency in hertz of the musical note.\n\nname: note_conversion.indian\ndescription: Converts a note in Western music to Indian classical music.\nparameters: type=dict; required=[\"note\"]\nnote: type=string; description=The note in Western musical scale.",
+    "original_scope": "complete supplied question and all function-schema fields; JSON punctuation transformed into field-path notation, original field values retained",
+    "ja": "西洋音楽の音名Cは、インド音楽の音階では何に相当するか。また、周波数440Hzを波長へ変換する。",
+    "ja_schema": "name: frequency_to_wavelength\ndescription: 音の周波数を波長へ変換する。\nparameters: type=dict; required=[\"frequency\"]\nfrequency: type=float; description=音の周波数。単位はヘルツ。\n\nname: note_conversion.indian\ndescription: 西洋音楽の音名を、インド古典音楽の音名へ変換する。\nparameters: type=dict; required=[\"note\"]\nnote: type=string; description=西洋音楽の音名。",
+    "expected_behavior": "note_conversion.indian(note=\"C\")\nfrequency_to_wavelength(frequency=440.0)",
+    "explanation": "音名と周波数は異なる引数で、別の関数に渡す。参照条件が指定するのは呼び出しであり、変換後の音名や波長そのものではない。",
+    "source_url": "https://github.com/ShishirPatil/gorilla/tree/main/berkeley-function-call-leaderboard/bfcl_eval/data",
+    "source_revision": "6ea57973c7a6097fd7c5915698c54c17c5b1b6c8",
+    "license": "Apache-2.0",
+    "answer_kind": "One permitted function-call representation from published ground_truth, not an executed API return; irrelevance means no function call",
+    "source_schema_full": "name: frequency_to_wavelength\ndescription: Converts the frequency of a musical note to its wavelength.\nparameters: type=dict; required=[\"frequency\"]\nfrequency: type=float; description=The frequency in hertz of the musical note.\n\nname: note_conversion.indian\ndescription: Converts a note in Western music to Indian classical music.\nparameters: type=dict; required=[\"note\"]\nnote: type=string; description=The note in Western musical scale.",
+    "ja_schema_full": "name: frequency_to_wavelength\ndescription: 音の周波数を波長へ変換する。\nparameters: type=dict; required=[\"frequency\"]\nfrequency: type=float; description=音の周波数。単位はヘルツ。\n\nname: note_conversion.indian\ndescription: 西洋音楽の音名を、インド古典音楽の音名へ変換する。\nparameters: type=dict; required=[\"note\"]\nnote: type=string; description=西洋音楽の音名。",
+    "schema_display_scope": "Complete supplied function-schema fields, flattened losslessly; Japanese descriptions translated, identifiers/types/defaults retained.",
+    "slide_original_scope": "complete supplied question and all function-schema fields; JSON punctuation transformed into field-path notation, original field values retained"
+  }
+]

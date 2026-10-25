@@ -1,0 +1,122 @@
+{
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "external_generation_api_used": false,
+  "changes": [
+    {
+      "before": "108-page draft with all field text for multi-turn and web tools, including entire region enum",
+      "after": "Preserve every user turn, complete initial file, full ground truth; clearly labelled excerpt of relevant tool capabilities/arguments/types/defaults",
+      "reason": "データセットの概要と使い方に必要な情報へ整理し、細かすぎる仕様列挙を検証記録へ分ける。"
+    },
+    {
+      "before": "複数の候補から、由来を調べる関数を選ぶ",
+      "after": "仏教の起源を調べる関数を選ぶ",
+      "reason": "通常タイトルを一行で読める長さにした。"
+    },
+    {
+      "before": "関数呼び出しの形だけでなく、専用の回答欄に書く国名を採点する。",
+      "after": "関数呼び出しの形ではなく、最終的な文章に参照の国名が含まれるかを採点する。",
+      "reason": "現在の採点コードは専用回答欄を抽出せず、最後の文章を照合する。"
+    },
+    {
+      "before": "Function name alone at bottom of page, remaining definition on next page",
+      "after": "Keep a complete function definition together where it fits; split only meaningfully at field boundaries",
+      "reason": "改頁位置で関数と説明の対応が失われるのを防いだ。"
+    },
+    {
+      "before": "仏教を開いたのは誰で、どこで生まれたのか。",
+      "after": "仏教の開祖は誰で、仏教はどこで始まったのか。",
+      "reason": "仏教の起源を人物の出生地と誤読しないよう主語を明示。"
+    },
+    {
+      "before": "優れた持久力を持つ選手",
+      "after": "持久力に優れた選手",
+      "reason": "日本語の自然な修飾関係にした。"
+    },
+    {
+      "before": "ノート整理",
+      "after": "個人の予定・タスク管理",
+      "reason": "一次資料のPersonal To-Do Listに対応する具体的な用途にした。"
+    },
+    {
+      "before": "BFCL V3 • Multi-Turn & Multi-Step",
+      "after": "BFCL V3 • Multi-Turn & Multi-Step Function Calling Evaluation",
+      "reason": "参考文献の正式な見出しを保持。"
+    },
+    {
+      "before": "BFCL V4 • Web Search",
+      "after": "BFCL V4 • Agentic Part 1: Web Search",
+      "reason": "参考文献の正式な見出しを保持。"
+    },
+    {
+      "before": "BFCL V4 • Memory",
+      "after": "BFCL V4 • Agentic Part 2: Evaluating Tool Calling for Memory",
+      "reason": "参考文献の正式な見出しを保持。"
+    },
+    {
+      "before": "BFCL V4 • Format Sensitivity",
+      "after": "BFCL V4 • Agentic Part 3: Evaluating Format Sensitivity for Tool Calls",
+      "reason": "参考文献の正式な見出しを保持。"
+    },
+    {
+      "before": "数5の階乗を計算する。",
+      "after": "5の階乗を計算する。",
+      "reason": "自然な依頼文にした。"
+    },
+    {
+      "before": "出力として求めるのは120という計算結果ではなく、関数名と引数である。numberには整数5を渡す。",
+      "after": "階乗を求める関数math.factorialを選び、numberに整数5を渡す。",
+      "reason": "入力と正解例から分かる否定を削り、動作を直接説明した。"
+    },
+    {
+      "before": "日々変わる株価ではなく、受賞者や過去の大会結果など、最近の安定した事実を問う。",
+      "after": "受賞者や過去の大会結果など、最近の安定した事実を問う。",
+      "reason": "自明な対比を削り、採用した問題の性質を述べた。"
+    },
+    {
+      "before": "単一ターンの関数選択だけでは、総合得点を十分に表せない。",
+      "after": "",
+      "reason": "重みの表から分かる注意の繰返しを削った。"
+    },
+    {
+      "before": "質問や関数定義を読むだけなら、モデルの応答を生成する必要はない。",
+      "after": "",
+      "reason": "公開データの説明から分かる自明な否定を削った。"
+    },
+    {
+      "before": "find(path=\".\", name=\"None\") は",
+      "after": "find(path=\".\") は",
+      "reason": "省略時の挙動を説明する例に、文字列Noneを検索する引数を入れない。"
+    },
+    {
+      "page": 9,
+      "before": "例2原文を二つの関数ごとに2頁、日本語訳も2頁に分割",
+      "after": "原問と全二関数仕様を原文1頁17pt、日本語訳も1頁17ptへ統合",
+      "reason": "原文を一頁で読むことを優先し、訳のために原文を分割しない。"
+    },
+    {
+      "page": 52,
+      "before": "中国語の依頼1行だけの原文頁、その次に天気の仕様頁",
+      "after": "中国語の依頼全文と最初の関数仕様全文を同じ頁に17ptで表示",
+      "reason": "余白だけの頁で入力を分断せず、候補関数と依頼を対応させる。"
+    },
+    {
+      "page": 57,
+      "before": "二都市の天気の依頼だけ1頁、唯一の関数仕様が次頁",
+      "after": "原文の依頼と全関数仕様を17ptで一頁に表示",
+      "reason": "原文のまとまりを一頁で把握できるようにした。"
+    },
+    {
+      "page": 10,
+      "before": "訳文本文上端1.81in、保守的出典間隔7.10pt",
+      "after": "訳文本文上端1.77in、全ページ出典間隔監査問題0",
+      "reason": "出典との余白を確保した。"
+    },
+    {
+      "page": 23,
+      "before": "バージョン列の1–4と見出しを左寄せ",
+      "after": "バージョン列の数値と見出しを右寄せ",
+      "reason": "数値列と対応する見出しの組版を統一した。"
+    }
+  ]
+}
