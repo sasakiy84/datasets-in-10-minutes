@@ -1,0 +1,25 @@
+{
+  "scope": "Technical evidence clarification; final binary unchanged.",
+  "raw_candidate2": "ink-audit-candidate2-raw.json",
+  "raw_flags": 104,
+  "resolved": [
+    {
+      "flags": 12,
+      "issue": "Cover subtitle actual descenders extended up to1.63pt below editable frame",
+      "resolution": "Expanded subtitle frame4pt; final exact-pair rerendered and glyph bounds verified."
+    },
+    {
+      "flags": 92,
+      "issue": "Reference1 paper title is a substring ofReference2 longer title; extended-region paragraph matching selectedReference2 glyphs incorrectly",
+      "resolution": "Search actual frame plus10pt first; fall back to broad search only if no full paragraph is found. This resolves ambiguous matching without discarding actual glyphs or relaxing page/frame tolerances."
+    }
+  ],
+  "final": "ink-audit.json",
+  "final_checked_glyphs": 12684,
+  "final_unknown": 0,
+  "final_outside_page": 0,
+  "final_native_frame_issues": 0,
+  "schema": "60parts checked;113buSzPct lexical differences under provided XSD retained and separately range-checked25000–400000,unexpected0",
+  "microsoft_reference": "https://learn.microsoft.com/en-us/dotnet/api/documentformat.openxml.drawing.bulletsizepercentage",
+  "independent_reviewer_pending": true
+}

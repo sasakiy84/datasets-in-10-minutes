@@ -1,0 +1,114 @@
+{
+  "dataset": "AA-Omniscience",
+  "artifact_sha256": {
+    "pdf": "81540fb4b92e5018374e32eb87efe45a409396c31ae83a4990d74499ca717326",
+    "pptx": "65494ea3e2be8f35adc0b1625957d16dc2eee9449d9bf76fd4d93ae6f1ade362"
+  },
+  "release": {
+    "public_revision": "e4883edbb9f5ccf2b2a8fdc6fb65e01a58e99849",
+    "downloaded_public_rows": 600,
+    "personally_read_selected_questions": 13,
+    "public_domains": {
+      "Finance": 100,
+      "Health": 100,
+      "Humanities and Social Sciences": 100,
+      "Law": 100,
+      "Science Engineering and Mathematics": 100,
+      "Software Engineering": 100
+    },
+    "public_csv_bytes": 154615,
+    "public_csv_sha256": "1e04603dafa3bd0d16d8151f07a5eb74c43d90c3a85d2fca120da2359174d02f",
+    "private_evaluation_questions": 6000,
+    "private_collection_downloaded_or_read": false,
+    "license": "Apache-2.0"
+  },
+  "question_creation": {
+    "paper": "https://arxiv.org/abs/2511.13029",
+    "read_scope": "Relevant introduction, sections2–3 and limitations/conclusion plusAppendixA–B; not a claim of reading every cited reference or every plot value.",
+    "generator": "GPT-5 at2025 construction",
+    "domains": 6,
+    "topics": 42,
+    "initial_models": 36,
+    "initial_top": {
+      "model": "Claude4.1Opus",
+      "index": 4.8,
+      "accuracy_percent": 36
+    }
+  },
+  "metrics": {
+    "index": "100*(correct-incorrect)/(correct+partial+incorrect+abstained)",
+    "accuracy": "correct/all",
+    "hallucination_rate": "incorrect/(partial+incorrect+abstained)",
+    "partial_answer_score": 0,
+    "abstention_score": 0,
+    "fullset_passes": 1
+  },
+  "current_primary_evidence": {
+    "checked_date": "2026-10-25",
+    "url": "https://artificialanalysis.ai/evaluations/omniscience",
+    "saved": "sources/current.html; sources/rendered.html; sources/rendered.txt",
+    "scope": "Official representative summary text, not claimed to reconstruct the complete dynamically filtered chart data.",
+    "index_rows": [
+      {
+        "model": "Claude Opus5.5",
+        "setting": "Max,DefaultFallback",
+        "index": 46
+      },
+      {
+        "model": "GPT-6Astra",
+        "setting": "High",
+        "index": 44
+      },
+      {
+        "model": "ClaudeFable5.1",
+        "setting": "Max,DefaultFallback",
+        "index": 43
+      }
+    ],
+    "current_grader": "GPT-5.6Luna medium",
+    "current_grader_url": "https://artificialanalysis.ai/methodology/intelligence-benchmarking",
+    "initial_grader": "Gemini2.5FlashPreview09-2025 reasoning",
+    "grader_migration_source": "same official methodology version history; metrics definition unchanged in current official page",
+    "evaluation_or_generation_run": false
+  },
+  "examples": {
+    "count": 13,
+    "main": 3,
+    "appendix": 10,
+    "ids": [
+      "575",
+      "63",
+      "334",
+      "580",
+      "588",
+      "275",
+      "272",
+      "119",
+      "190",
+      "401",
+      "405",
+      "15",
+      "364"
+    ],
+    "all_originals_whole_on_one_page": true,
+    "japanese_answers_explanations_read": 13,
+    "explanation_same_page": 11,
+    "unmerged_ids": [
+      "190",
+      "15"
+    ],
+    "fact_checks": "source-fact-verification.json"
+  },
+  "excluded_candidate": {
+    "question_id": "178",
+    "public_gold": "1938",
+    "reason": "Official Nobel source states1939; excluded rather than silently replacing supplied answer.",
+    "primary": "https://www.nobelprize.org/prizes/medicine/1939/domagk/facts/",
+    "check_method": "Official Nobel page text returned by web search, personally read."
+  },
+  "microsoft_powerpoint_validation": false,
+  "remaining": [
+    "independent reviewer exact-pair approval"
+  ],
+  "final_review": "../skill-proofreading/aa-omniscience/review.json"
+}
