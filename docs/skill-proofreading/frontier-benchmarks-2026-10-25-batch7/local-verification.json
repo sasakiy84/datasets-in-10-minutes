@@ -1,0 +1,79 @@
+{
+  "baseline": {
+    "existing_catalog_rows_unchanged": 113,
+    "existing_artifact_hashes_unchanged": 226,
+    "added": [
+      "aa-omniscience",
+      "deepsearchqa",
+      "livebench"
+    ],
+    "catalog_count": 116,
+    "quality_history": "1–125, no gaps or duplicates, 125 balanced fences"
+  },
+  "new_decks": [
+    {
+      "slug": "deepsearchqa",
+      "main_pages": 28,
+      "total_pages": 52,
+      "examples": 13,
+      "approved": true,
+      "artifact_sha256": {
+        "pdf": "f9270ee9390b2f25be1020f351af6c0900aacfbcb90a0030c9488cda95ef66d1",
+        "pptx": "8f17021b3ad7ba6269e393646353863260720c00dd7b75720872315afc06c71a"
+      },
+      "independent_all_pages_covered": true
+    },
+    {
+      "slug": "aa-omniscience",
+      "main_pages": 27,
+      "total_pages": 45,
+      "examples": 13,
+      "approved": true,
+      "artifact_sha256": {
+        "pdf": "81540fb4b92e5018374e32eb87efe45a409396c31ae83a4990d74499ca717326",
+        "pptx": "65494ea3e2be8f35adc0b1625957d16dc2eee9449d9bf76fd4d93ae6f1ade362"
+      },
+      "independent_all_pages_covered": true
+    },
+    {
+      "slug": "livebench",
+      "main_pages": 32,
+      "total_pages": 63,
+      "examples": 13,
+      "approved": true,
+      "artifact_sha256": {
+        "pdf": "88795e512a2fc401dce4070dac87d4e532f32a6eb5ffcc80bb579733ad18bf43",
+        "pptx": "8691f4b809f451ea20edc73715ece16c0d1003d3b26f8df415234c4aebe20b49"
+      },
+      "independent_all_pages_covered": true
+    }
+  ],
+  "total_new_pages": 160,
+  "total_examples": 39,
+  "tests": {
+    "commands": [
+      {
+        "command": "venv/bin/python -m unittest discover -s tests -p test_*.py",
+        "result": "4 tests OK",
+        "exit_code": 0
+      },
+      {
+        "command": "node --test tests/gallery_query.test.cjs",
+        "result": "1 passed",
+        "exit_code": 0
+      }
+    ],
+    "scope": "Existing date/query/gallery regression tests; no application code changed."
+  },
+  "browser": {
+    "created_desc_query_sort": true,
+    "title_query_and_updated_desc": true,
+    "reset_count116": true,
+    "browser": "system Chromium via Playwright",
+    "javascript_errors": [],
+    "broken_loaded_images": [],
+    "catalog_count": 116
+  },
+  "new6_preview_artifacts_match": true,
+  "gallery_count": 116
+}
