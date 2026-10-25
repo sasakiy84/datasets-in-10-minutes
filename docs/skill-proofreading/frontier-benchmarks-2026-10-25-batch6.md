@@ -31,3 +31,5 @@ BFCLは単一ターン11例に加え、ファイルを読む複数ターンの�
 Pythonテスト4件とギャラリーのNodeテストが成功した。113件のギャラリーを構築し、作成日時降順のクエリ、BFCL検索と更新日時降順の組合せ、リセット後113件の表示をブラウザーで確認した。新規3件のサムネイルと[作成日時降順](frontier-benchmarks-2026-10-25-batch6/gallery-created-desc.png)・[検索結果](frontier-benchmarks-2026-10-25-batch6/gallery-bfcl-query.png)を実際に開いて確認した。日時は各配布物のGit履歴から復元した。6配布ファイルは承認済み版と一致する。[ローカル検証](frontier-benchmarks-2026-10-25-batch6/local-verification.json)に記録した。
 
 確認記録も別担当が再読した。3件の最終ファイル、確認範囲、試行条件、利用条件、修正対象頁、列挙された検証記録と相対リンクを照合し、修正後の残件はない。[記録レビュー](frontier-benchmarks-2026-10-25-batch6/review-batch-records.json)を保存した。
+
+公開は[GitHub Actions](https://github.com/sasakiy84/datasets-in-10-minutes/actions/runs/40164446051)の成功を確認した。2026-10-25T14:11:00.554084+09:00（日本時間）に、[公開ギャラリー](https://datasets-in-10-minutes.sasakiy84.net/?sort=created-desc)のカタログと新規3件のPDF/PPTX計6ファイルを取得し、全7ファイルがHTTP200・承認済み版と完全一致することを確認した。公開カタログは113件。[固定記録](frontier-benchmarks-2026-10-25-batch6/publication-frozen.json)と[公開検証](frontier-benchmarks-2026-10-25-batch6/publication-result.json)に対応を残した。公開の基点は `9679d59e3c8013d333a2cca4da0319124abcae9d`。この確認と記録の精密化を収録する後続のdocsのみのコミットは配布物を変更しない。
