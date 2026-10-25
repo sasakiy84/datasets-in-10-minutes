@@ -1,0 +1,535 @@
+[
+  {
+    "example": 1,
+    "id": "row-123",
+    "row_index": 123,
+    "title": "三州に共通する人気の名前",
+    "role": "main",
+    "original": "According to the Social Security Administration, what are the identical names that show up in the top five boy's names of 1975 for the states of Maine, Texas, and California?",
+    "original_scope": "Full question from fixed official CSV; no omissions",
+    "japanese": "米国社会保障局（SSA）による1975年の男の子の名前の人気順位で、メイン州、テキサス州、カリフォルニア州のすべてで5位以内に入っている名前は何か。",
+    "gold": "Michael, Christopher, Jason",
+    "expected": "Michael、Christopher、Jason",
+    "explanation": "州ごとに人気の名前を上位5件ずつ取り出し、三つの一覧に共通する名前を求める。各州の順位が違っていても、5位以内に入っていれば候補になる。",
+    "problem_category": "History",
+    "answer_type": "Set Answer",
+    "source_url": "https://huggingface.co/datasets/google/deepsearchqa",
+    "source_revision": "b2623f8653065c2672de6d941fc5434cd652376c",
+    "evidence_url": "https://www.ssa.gov/oact/babynames/limits.html",
+    "license": "Apache-2.0",
+    "source_record": {
+      "problem": "According to the Social Security Administration, what are the identical names that show up in the top five boy's names of 1975 for the states of Maine, Texas, and California?",
+      "problem_category": "History",
+      "answer": "Michael, Christopher, Jason",
+      "answer_type": "Set Answer"
+    },
+    "placement": {
+      "original_pages": [
+        7
+      ],
+      "japanese_pages": [
+        7
+      ],
+      "answer_page": 7
+    },
+    "onepage_trial": {
+      "font_pt": 17.5,
+      "question_full": true,
+      "core_required_bottom_in": 4.465,
+      "available_bottom_in": 5.0,
+      "original_JP_gold_samepage": true
+    }
+  },
+  {
+    "example": 2,
+    "id": "row-364",
+    "row_index": 364,
+    "title": "三つの巻すべてに登場する著者",
+    "role": "main",
+    "original": "Could you please provide a complete list of authors who published at least one article in each of the first three volumes (Volumes 1, 2, and 3) of the Journal of Machine Learning Research?",
+    "original_scope": "Full question from fixed official CSV; no omissions",
+    "japanese": "機械学習の学術誌Journal of Machine Learning Researchの最初の3巻（第1・2・3巻）のそれぞれに、少なくとも1本の論文を発表した著者を全員挙げてほしい。",
+    "gold": "Robert C. Williamson, Yoram Singer, David Maxwell Chickering",
+    "expected": "Robert C. Williamson、Yoram Singer、David Maxwell Chickering",
+    "explanation": "各巻の論文の著者一覧を作り、三つの一覧に共通する人を探す。編集者として名前が載るだけの場合と、論文の著者である場合を分けて確認する。",
+    "problem_category": "Technology",
+    "answer_type": "Set Answer",
+    "source_url": "https://huggingface.co/datasets/google/deepsearchqa",
+    "source_revision": "b2623f8653065c2672de6d941fc5434cd652376c",
+    "evidence_url": "https://jmlr.org/papers/",
+    "license": "Apache-2.0",
+    "source_record": {
+      "problem": "Could you please provide a complete list of authors who published at least one article in each of the first three volumes (Volumes 1, 2, and 3) of the Journal of Machine Learning Research?",
+      "problem_category": "Technology",
+      "answer": "Robert C. Williamson, Yoram Singer, David Maxwell Chickering",
+      "answer_type": "Set Answer"
+    },
+    "placement": {
+      "original_pages": [
+        9
+      ],
+      "japanese_pages": [
+        9
+      ],
+      "answer_page": 9
+    },
+    "onepage_trial": {
+      "font_pt": 17.5,
+      "question_full": true,
+      "core_required_bottom_in": 4.805,
+      "available_bottom_in": 5.0,
+      "original_JP_gold_samepage": true
+    }
+  },
+  {
+    "example": 3,
+    "id": "row-10",
+    "row_index": 10,
+    "title": "二つの条件を満たす洪水の年",
+    "role": "main",
+    "original": "I'm researching extreme weather in the United States. Between 2017 and 2021 (inclusive), which year saw flood-related fatalities in over 20 states, with over 100 total deaths (with all states combined)? This includes both flash flooding and river flooding. Use National Weather Service and NOAA data.",
+    "original_scope": "Full question from fixed official CSV; no omissions",
+    "japanese": "米国の極端な気象を調べている。2017年から2021年までのうち、洪水による死者が出た州が20を超え、全州の死者数が合計100人を超えた年はいつか。鉄砲水と河川の氾濫をともに含め、米国国立気象局（NWS）と米国海洋大気庁（NOAA）のデータを用いる。",
+    "gold": "2021",
+    "expected": "2021年",
+    "explanation": "2021年は22州で計146人。2017年も計136人だが、死者が発生したのは18州だった。死者の総数と州の数を同時に確かめる。",
+    "problem_category": "Science",
+    "answer_type": "Single Answer",
+    "source_url": "https://huggingface.co/datasets/google/deepsearchqa",
+    "source_revision": "b2623f8653065c2672de6d941fc5434cd652376c",
+    "evidence_url": "https://www.weather.gov/media/hazstat/flood21.pdf",
+    "license": "Apache-2.0",
+    "source_record": {
+      "problem": "I'm researching extreme weather in the United States. Between 2017 and 2021 (inclusive), which year saw flood-related fatalities in over 20 states, with over 100 total deaths (with all states combined)? This includes both flash flooding and river flooding. Use National Weather Service and NOAA data.",
+      "problem_category": "Science",
+      "answer": "2021",
+      "answer_type": "Single Answer"
+    },
+    "placement": {
+      "original_pages": [
+        10
+      ],
+      "japanese_pages": [
+        10
+      ],
+      "answer_page": 11
+    },
+    "onepage_trial": {
+      "font_pt": 17.5,
+      "question_full": true,
+      "core_required_bottom_in": 5.32,
+      "available_bottom_in": 5.0,
+      "original_JP_gold_samepage": false
+    }
+  },
+  {
+    "example": 4,
+    "id": "row-29",
+    "row_index": 29,
+    "title": "二つの説明ページをつなぐ",
+    "role": "appendix",
+    "original": "By using the NHS website for “Shoulder Pain”, which of the possible causes of the condition creates symptoms like poor balance and coordination?",
+    "original_scope": "Full question from fixed official CSV; no omissions",
+    "japanese": "英国の公的医療サービス（NHS）の「Shoulder Pain」のページを使い、肩の痛みの原因として挙げられているもののうち、バランスや動作の協調がうまくできないといった症状を伴うのはどれか。",
+    "gold": "Hypermobility",
+    "expected": "Hypermobility（関節の過可動性）",
+    "explanation": "肩の痛みの原因一覧から関節の過可動性についての説明へ進む。関節過可動症候群の症状には、バランスや協調運動の問題が挙げられている。",
+    "problem_category": "Health",
+    "answer_type": "Single Answer",
+    "source_url": "https://huggingface.co/datasets/google/deepsearchqa",
+    "source_revision": "b2623f8653065c2672de6d941fc5434cd652376c",
+    "evidence_url": "https://www.nhs.uk/conditions/joint-hypermobility-syndrome/",
+    "license": "Apache-2.0",
+    "source_record": {
+      "problem": "By using the NHS website for “Shoulder Pain”, which of the possible causes of the condition creates symptoms like poor balance and coordination?",
+      "problem_category": "Health",
+      "answer": "Hypermobility",
+      "answer_type": "Single Answer"
+    },
+    "placement": {
+      "original_pages": [
+        32
+      ],
+      "japanese_pages": [
+        32
+      ],
+      "answer_page": 32
+    },
+    "onepage_trial": {
+      "font_pt": 17.5,
+      "question_full": true,
+      "core_required_bottom_in": 4.465,
+      "available_bottom_in": 5.0,
+      "original_JP_gold_samepage": true
+    }
+  },
+  {
+    "example": 5,
+    "id": "row-55",
+    "row_index": 55,
+    "title": "運送会社の営業費用の減少",
+    "role": "appendix",
+    "original": "Among Saia, Inc., Matson, Inc., and ArcBest Corporation, which company had the greatest reduction in operating expenses for the fiscal year ended December 31, 2023? Use the SEC website and filings.",
+    "original_scope": "Full question from fixed official CSV; no omissions",
+    "japanese": "Saia, Inc.、Matson, Inc.、ArcBest Corporationのうち、2023年12月31日を期末とする会計年度に営業費用が最も大きく減少した会社はどれか。SECのウェブサイトと提出書類を用いる。",
+    "gold": "ArcBest Corporation",
+    "expected": "ArcBest Corporation",
+    "explanation": "各社の2023年と2022年の営業費用を同じ単位で比較する。ArcBestは約46.34億ドルから約42.55億ドルへ、約3.80億ドル減少。Matsonの約2.38億ドル減少を上回り、Saiaは増加していた。",
+    "problem_category": "Finance & Economics",
+    "answer_type": "Single Answer",
+    "source_url": "https://huggingface.co/datasets/google/deepsearchqa",
+    "source_revision": "b2623f8653065c2672de6d941fc5434cd652376c",
+    "evidence_url": "https://www.sec.gov/Archives/edgar/data/894405/000155837024001622/arcb-20231231x10k.htm",
+    "license": "Apache-2.0",
+    "source_record": {
+      "problem": "Among Saia, Inc., Matson, Inc., and ArcBest Corporation, which company had the greatest reduction in operating expenses for the fiscal year ended December 31, 2023? Use the SEC website and filings.",
+      "problem_category": "Finance & Economics",
+      "answer": "ArcBest Corporation",
+      "answer_type": "Single Answer"
+    },
+    "placement": {
+      "original_pages": [
+        33
+      ],
+      "japanese_pages": [
+        33
+      ],
+      "answer_page": 33
+    },
+    "onepage_trial": {
+      "font_pt": 17.5,
+      "question_full": true,
+      "core_required_bottom_in": 4.465,
+      "available_bottom_in": 5.0,
+      "original_JP_gold_samepage": true
+    }
+  },
+  {
+    "example": 6,
+    "id": "row-80",
+    "row_index": 80,
+    "title": "共著者から授業の担当者を探す",
+    "role": "appendix",
+    "original": "Which of Isabelle Darcy's (2012) coauthors on the article \"Direct Mapping of Acoustics to Phonology: On the Lexical Encoding of Front Rounded Vowels in L1 English-- L2 French acquisition\" has taught courses on both the German language and constructed languages at Indiana University-Bloomington?",
+    "original_scope": "Full question from fixed official CSV; no omissions",
+    "japanese": "Isabelle Darcyの2012年の論文「Direct Mapping of Acoustics to Phonology: On the Lexical Encoding of Front Rounded Vowels in L1 English-- L2 French acquisition」の共著者のうち、インディアナ大学ブルーミントン校でドイツ語と人工言語の両方の授業を担当したことがあるのは誰か。",
+    "gold": "John H.G. Scott",
+    "expected": "John H.G. Scott",
+    "explanation": "論文の共著者を確認してから、各人の担当授業を調べる。「人工言語」は、人が意図的に設計した言語を指す。",
+    "problem_category": "Linguistics",
+    "answer_type": "Single Answer",
+    "source_url": "https://huggingface.co/datasets/google/deepsearchqa",
+    "source_revision": "b2623f8653065c2672de6d941fc5434cd652376c",
+    "evidence_url": "https://www.johnhgscott.com/teaching.html",
+    "license": "Apache-2.0",
+    "source_record": {
+      "problem": "Which of Isabelle Darcy's (2012) coauthors on the article \"Direct Mapping of Acoustics to Phonology: On the Lexical Encoding of Front Rounded Vowels in L1 English-- L2 French acquisition\" has taught courses on both the German language and constructed languages at Indiana University-Bloomington?",
+      "problem_category": "Linguistics",
+      "answer": "John H.G. Scott",
+      "answer_type": "Single Answer"
+    },
+    "placement": {
+      "original_pages": [
+        34
+      ],
+      "japanese_pages": [
+        35
+      ],
+      "answer_page": 35
+    },
+    "onepage_trial": {
+      "font_pt": 17.5,
+      "question_full": true,
+      "core_required_bottom_in": 5.32,
+      "available_bottom_in": 5.0,
+      "original_JP_gold_samepage": false
+    }
+  },
+  {
+    "example": 7,
+    "id": "row-219",
+    "row_index": 219,
+    "title": "首都以外の都市で開かれた万博",
+    "role": "appendix",
+    "original": "Consider all European cities that have ever hosted a World Expo (up to and including 2020) according to the Bureau International des Expositions (not Specialized Expos) but are not the capital of their respective country. List the year of the most recent World Expo hosted by each of those cities that are on the Iberian Peninsula.",
+    "original_scope": "Full question from fixed official CSV; no omissions",
+    "japanese": "国際博覧会事務局（BIE）による2020年までのWorld Expoの開催都市から、その国の首都ではないヨーロッパの都市を考える。イベリア半島にある該当都市について、それぞれで最も最近開かれたWorld Expoの開催年を挙げよ。Specialized Expoは含めない。",
+    "gold": "1929, 1992",
+    "expected": "1929年、1992年",
+    "explanation": "該当する開催都市はバルセロナとセビリア。World ExpoとSpecialized Expoの区分を確認し、開催年と都市を対応させる。",
+    "problem_category": "History",
+    "answer_type": "Set Answer",
+    "source_url": "https://huggingface.co/datasets/google/deepsearchqa",
+    "source_revision": "b2623f8653065c2672de6d941fc5434cd652376c",
+    "evidence_url": "https://www.bie-paris.org/site/en/all-world-expos",
+    "license": "Apache-2.0",
+    "source_record": {
+      "problem": "Consider all European cities that have ever hosted a World Expo (up to and including 2020) according to the Bureau International des Expositions (not Specialized Expos) but are not the capital of their respective country. List the year of the most recent World Expo hosted by each of those cities that are on the Iberian Peninsula.",
+      "problem_category": "History",
+      "answer": "1929, 1992",
+      "answer_type": "Set Answer"
+    },
+    "placement": {
+      "original_pages": [
+        36
+      ],
+      "japanese_pages": [
+        37
+      ],
+      "answer_page": 37
+    },
+    "onepage_trial": {
+      "font_pt": 17.5,
+      "question_full": true,
+      "core_required_bottom_in": 5.32,
+      "available_bottom_in": 5.0,
+      "original_JP_gold_samepage": false
+    }
+  },
+  {
+    "example": 8,
+    "id": "row-229",
+    "row_index": 229,
+    "title": "画材と描かれた場所で絞る作品",
+    "role": "appendix",
+    "original": "Which of Georgia O’Keeffe's works at the Art Institute of Chicago, as of June 2024, were landscapes of New Mexico created before 1940 with oil painting?",
+    "original_scope": "Full question from fixed official CSV; no omissions",
+    "japanese": "2024年6月時点のシカゴ美術館の所蔵品のうち、Georgia O’Keeffeが1940年より前に制作した、ニューメキシコの風景を描いた油彩作品はどれか。",
+    "gold": "Red Hills with Flowers (1937), Black Cross, New Mexico (1929)",
+    "expected": "Red Hills with Flowers（1937年）\nBlack Cross, New Mexico（1929年）",
+    "explanation": "所蔵作品の作者、制作年、画材、描かれた場所を照合する。参照回答の2点は、1937年と1929年に制作されたニューメキシコの風景の油彩作品。",
+    "problem_category": "Arts",
+    "answer_type": "Set Answer",
+    "source_url": "https://huggingface.co/datasets/google/deepsearchqa",
+    "source_revision": "b2623f8653065c2672de6d941fc5434cd652376c",
+    "evidence_url": "https://www.artic.edu/collection",
+    "license": "Apache-2.0",
+    "source_record": {
+      "problem": "Which of Georgia O’Keeffe's works at the Art Institute of Chicago, as of June 2024, were landscapes of New Mexico created before 1940 with oil painting?",
+      "problem_category": "Arts",
+      "answer": "Red Hills with Flowers (1937), Black Cross, New Mexico (1929)",
+      "answer_type": "Set Answer"
+    },
+    "placement": {
+      "original_pages": [
+        38
+      ],
+      "japanese_pages": [
+        38
+      ],
+      "answer_page": 38
+    },
+    "onepage_trial": {
+      "font_pt": 17.5,
+      "question_full": true,
+      "core_required_bottom_in": 4.528,
+      "available_bottom_in": 5.0,
+      "original_JP_gold_samepage": true
+    }
+  },
+  {
+    "example": 9,
+    "id": "row-286",
+    "row_index": 286,
+    "title": "二人分の身長を比較する",
+    "role": "appendix",
+    "original": "Which combined height is greater? Those of the two tallest players on the 2022-2023 Lehman College basketball team, or their counterparts on the 2023-2024?",
+    "original_scope": "Full question from fixed official CSV; no omissions",
+    "japanese": "レーマン・カレッジのバスケットボールチームで、2022–2023シーズンの身長が高い上位2人と、2023–2024シーズンの上位2人では、身長の合計はどちらが大きいか。",
+    "gold": "The 2023-2024 Lehman College basketball team had the larger combined height for the tallest two players.",
+    "expected": "2023–2024シーズンの上位2人",
+    "explanation": "上位2人の身長の合計は、2022–2023が156インチ、2023–2024が158インチ。後者が2インチ高い。",
+    "problem_category": "Sports",
+    "answer_type": "Single Answer",
+    "source_url": "https://huggingface.co/datasets/google/deepsearchqa",
+    "source_revision": "b2623f8653065c2672de6d941fc5434cd652376c",
+    "evidence_url": "https://lehmanathletics.com/sports/mens-basketball/roster/2023-24",
+    "license": "Apache-2.0",
+    "source_record": {
+      "problem": "Which combined height is greater? Those of the two tallest players on the 2022-2023 Lehman College basketball team, or their counterparts on the 2023-2024?",
+      "problem_category": "Sports",
+      "answer": "The 2023-2024 Lehman College basketball team had the larger combined height for the tallest two players.",
+      "answer_type": "Single Answer"
+    },
+    "placement": {
+      "original_pages": [
+        39
+      ],
+      "japanese_pages": [
+        39
+      ],
+      "answer_page": 39
+    },
+    "onepage_trial": {
+      "font_pt": 17.5,
+      "question_full": true,
+      "core_required_bottom_in": 4.465,
+      "available_bottom_in": 5.0,
+      "original_JP_gold_samepage": true
+    }
+  },
+  {
+    "example": 10,
+    "id": "row-828",
+    "row_index": 828,
+    "title": "二つの賞に共通する受賞者",
+    "role": "appendix",
+    "original": "Who has won a Ripple of Hope Award before the year 2017 and has also won a Nobel Prize before the year 2010?",
+    "original_scope": "Full question from fixed official CSV; no omissions",
+    "japanese": "2017年より前にRipple of Hope Awardを受賞し、かつ2010年より前にノーベル賞を受賞した人は誰か。",
+    "gold": "Al Gore, Muhammad Yunus, Desmond Tutu",
+    "expected": "Al Gore、Muhammad Yunus、Desmond Tutu",
+    "explanation": "二つの賞の受賞者一覧と受賞年を照合する。該当する3人のノーベル平和賞は、それぞれ2007年、2006年、1984年だった。",
+    "problem_category": "History",
+    "answer_type": "Set Answer",
+    "source_url": "https://huggingface.co/datasets/google/deepsearchqa",
+    "source_revision": "b2623f8653065c2672de6d941fc5434cd652376c",
+    "evidence_url": "https://rfkhumanrights.org/our-programs/ripple-of-hope-awards/",
+    "license": "Apache-2.0",
+    "source_record": {
+      "problem": "Who has won a Ripple of Hope Award before the year 2017 and has also won a Nobel Prize before the year 2010?",
+      "problem_category": "History",
+      "answer": "Al Gore, Muhammad Yunus, Desmond Tutu",
+      "answer_type": "Set Answer"
+    },
+    "placement": {
+      "original_pages": [
+        40
+      ],
+      "japanese_pages": [
+        40
+      ],
+      "answer_page": 40
+    },
+    "onepage_trial": {
+      "font_pt": 17.5,
+      "question_full": true,
+      "core_required_bottom_in": 3.899,
+      "available_bottom_in": 5.0,
+      "original_JP_gold_samepage": true
+    }
+  },
+  {
+    "example": 11,
+    "id": "row-109",
+    "row_index": 109,
+    "title": "肩書と研究歴から編集者を探す",
+    "role": "appendix",
+    "original": "Who is the Associate Editor of the SBL Study Bible who is a graduate of the University of Chicago, who teaches at a public university in Florida, and who co-authored an article on the Qumran manuscripts  in 2014 with Dennis Duke?",
+    "original_scope": "Full question from fixed official CSV; no omissions",
+    "japanese": "SBL Study Bibleの編集委員（Associate Editor）のうち、シカゴ大学の卒業生で、フロリダ州の公立大学で教え、2014年にDennis Dukeとクムラン文書に関する論文を共著したのは誰か。",
+    "gold": "Matthew Goff",
+    "expected": "Matthew Goff",
+    "explanation": "聖書の編集者一覧を手掛かりに、大学の教員紹介と研究業績を照合する。編集者としての役割、出身大学、勤務先、共著論文の4点をつなぐ。",
+    "problem_category": "History",
+    "answer_type": "Single Answer",
+    "source_url": "https://huggingface.co/datasets/google/deepsearchqa",
+    "source_revision": "b2623f8653065c2672de6d941fc5434cd652376c",
+    "evidence_url": "https://religion.fsu.edu/person/matthew-goff",
+    "license": "Apache-2.0",
+    "source_record": {
+      "problem": "Who is the Associate Editor of the SBL Study Bible who is a graduate of the University of Chicago, who teaches at a public university in Florida, and who co-authored an article on the Qumran manuscripts  in 2014 with Dennis Duke?",
+      "problem_category": "History",
+      "answer": "Matthew Goff",
+      "answer_type": "Single Answer"
+    },
+    "placement": {
+      "original_pages": [
+        41
+      ],
+      "japanese_pages": [
+        41
+      ],
+      "answer_page": 41
+    },
+    "onepage_trial": {
+      "font_pt": 17.5,
+      "question_full": true,
+      "core_required_bottom_in": 4.754,
+      "available_bottom_in": 5.0,
+      "original_JP_gold_samepage": true
+    }
+  },
+  {
+    "example": 12,
+    "id": "row-852",
+    "row_index": 852,
+    "title": "同じ執筆者の最初の記事を探す",
+    "role": "appendix",
+    "original": "Look at the Smithsonian Libraries and Archives official blog titled “Unbound”. Among the September 2023 posts is an article titled \"Exploring Yellowstone in 1919\". What was the title of the first Unbound blog post written by the author of \"Exploring Yellowstone in 1919\"?",
+    "original_scope": "Full question from fixed official CSV; no omissions",
+    "japanese": "スミソニアン図書館・文書館の公式ブログ「Unbound」の2023年9月の記事に「Exploring Yellowstone in 1919」がある。その執筆者がUnboundで最初に書いた記事の題名は何か。",
+    "gold": "Chocolate Rabbits and…Elephants!",
+    "expected": "Chocolate Rabbits and…Elephants!",
+    "explanation": "「Exploring Yellowstone in 1919」の執筆者はAlexia MacClain。その名前を手掛かりに、Unboundの著者別の記事一覧を古い順にたどる。",
+    "problem_category": "Arts",
+    "answer_type": "Single Answer",
+    "source_url": "https://huggingface.co/datasets/google/deepsearchqa",
+    "source_revision": "b2623f8653065c2672de6d941fc5434cd652376c",
+    "evidence_url": "https://blog.library.si.edu/",
+    "license": "Apache-2.0",
+    "source_record": {
+      "problem": "Look at the Smithsonian Libraries and Archives official blog titled “Unbound”. Among the September 2023 posts is an article titled \"Exploring Yellowstone in 1919\". What was the title of the first Unbound blog post written by the author of \"Exploring Yellowstone in 1919\"?",
+      "problem_category": "Arts",
+      "answer": "Chocolate Rabbits and…Elephants!",
+      "answer_type": "Single Answer"
+    },
+    "placement": {
+      "original_pages": [
+        42
+      ],
+      "japanese_pages": [
+        42
+      ],
+      "answer_page": 42
+    },
+    "onepage_trial": {
+      "font_pt": 17.5,
+      "question_full": true,
+      "core_required_bottom_in": 4.754,
+      "available_bottom_in": 5.0,
+      "original_JP_gold_samepage": true
+    }
+  },
+  {
+    "example": 13,
+    "id": "row-14",
+    "row_index": 14,
+    "title": "受験率と平均点で州を選ぶ",
+    "role": "appendix",
+    "original": "Determine which states had an ACT participation rate of 50% or higher for the graduating class of 2023 and received an average composite score of 20 or above. What percentage of each state's students met the science benchmark?",
+    "original_scope": "Full question from fixed official CSV; no omissions",
+    "japanese": "2023年の高校卒業者について、米国の大学進学適性試験ACTの受験率が50%以上、平均総合点が20点以上だった州を特定せよ。それぞれの州で、ACT受験者のうち理科の到達基準を満たしたのは何%だったか。",
+    "gold": "41% in Minnesota, 41% in South Dakota",
+    "expected": "ミネソタ州41%、サウスダコタ州41%",
+    "explanation": "ミネソタ州の受験率は68%、平均総合点は20.8点。サウスダコタ州は59%、21.1点。どちらもACT受験者の41%が理科の到達基準を満たした。",
+    "problem_category": "Education",
+    "answer_type": "Set Answer",
+    "source_url": "https://huggingface.co/datasets/google/deepsearchqa",
+    "source_revision": "b2623f8653065c2672de6d941fc5434cd652376c",
+    "evidence_url": "https://www.act.org/content/dam/act/unsecured/documents/2023-Average-ACT-Scores-by-State.pdf",
+    "license": "Apache-2.0",
+    "source_record": {
+      "problem": "Determine which states had an ACT participation rate of 50% or higher for the graduating class of 2023 and received an average composite score of 20 or above. What percentage of each state's students met the science benchmark?",
+      "problem_category": "Education",
+      "answer": "41% in Minnesota, 41% in South Dakota",
+      "answer_type": "Set Answer"
+    },
+    "placement": {
+      "original_pages": [
+        43
+      ],
+      "japanese_pages": [
+        43
+      ],
+      "answer_page": 43
+    },
+    "onepage_trial": {
+      "font_pt": 17.5,
+      "question_full": true,
+      "core_required_bottom_in": 4.754,
+      "available_bottom_in": 5.0,
+      "original_JP_gold_samepage": true
+    }
+  }
+]

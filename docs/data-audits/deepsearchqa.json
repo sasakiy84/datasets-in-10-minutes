@@ -1,0 +1,76 @@
+{
+  "dataset": "DeepSearchQA",
+  "artifact_sha256": {
+    "pdf": "f9270ee9390b2f25be1020f351af6c0900aacfbcb90a0030c9488cda95ef66d1",
+    "pptx": "8f17021b3ad7ba6269e393646353863260720c00dd7b75720872315afc06c71a"
+  },
+  "source_revision": "b2623f8653065c2672de6d941fc5434cd652376c",
+  "source_csv_sha256": "25d48dcf7efa872e5467032e8b8eedf38d301f59a252d0da95cda584baa78396",
+  "rows_downloaded": 900,
+  "selected_questions_personally_read": 13,
+  "all_selected_originals_and_gold_exact_fixed_csv": true,
+  "selected_row_indices": [
+    123,
+    364,
+    10,
+    29,
+    55,
+    80,
+    219,
+    229,
+    286,
+    828,
+    109,
+    852,
+    14
+  ],
+  "type_counts": {
+    "Single Answer": 316,
+    "Set Answer": 584
+  },
+  "category_counts": {
+    "Politics & Government": 148,
+    "Media & Entertainment": 29,
+    "Education": 94,
+    "Geography": 95,
+    "Other": 65,
+    "Health": 92,
+    "Science": 90,
+    "Finance & Economics": 132,
+    "History": 44,
+    "Sports": 20,
+    "Travel": 36,
+    "Current Events": 3,
+    "Arts": 26,
+    "Technology": 22,
+    "Linguistics": 1,
+    "Biology": 2,
+    "Arts & Entertainment": 1
+  },
+  "license": "Apache-2.0 declared in official pinned README metadata",
+  "source_reading_scope": {
+    "paper": "Creator read substantive pages 1–10 and grader Appendix pages 15–16; bibliography pages 11–14 not claimed fully read. Both original Google PDF and current arXiv version compared.",
+    "starter": "Creator read grading prompt and aggregate_ratings static source; code not run. Reviewer separately acquired public starter.",
+    "own_numeric_primary_reading": [
+      "SSA full state data extracted 1975 top5 ME/TX/CA",
+      "JMLR all author entries v1–3 and intersection",
+      "NWS five annual flood PDFs 2017–2021",
+      "ACT2023 all-state condition table",
+      "ArcBest/Saia SEC operating expense rows and Matson annual report expense table",
+      "NHS shoulder pain and linked hypermobility symptoms"
+    ],
+    "independent_reviewer_primary_scope": "Scott personal teaching/publications, BIE Expos, museum-published O’Keeffe catalog metadata, full Lehman season rosters, RFK/Nobel, FSU/CV/SBL, Smithsonian author archive additionally acquired and checked by external reviewer; creator does not claim own retrieval/full reading of all those pages."
+  },
+  "discrepancies": [
+    "Paper prose reverses 66.09 and 65.18 fully correct percentages; table and starter leaderboard used.",
+    "Paper single-answer binary claim differs from common set calculation in official starter; slides describe general set F1.",
+    "FBI row844 omitted a currently qualifying Carmichael case, excluded rather than gold rewritten."
+  ],
+  "metrics": "Per valid question set precision/recall/F1, then mean. Invalid/empty ratings or empty response are excluded in public starter; no model or grading call executed.",
+  "current_use": "Official Kimi K3 README reports DeepSearchQA F1 95.0 (max). DSQA-specific trials/harness not disclosed, so one adoption example shown without cross-vendor ranking.",
+  "external_generation_api_used": false,
+  "model_evaluation_run": false,
+  "planned_main_seconds": 600,
+  "actual_reading_seconds": null,
+  "final_review": "../skill-proofreading/deepsearchqa/review.json"
+}

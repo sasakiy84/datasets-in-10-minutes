@@ -1,0 +1,85 @@
+{
+  "dataset": "DeepSearchQA",
+  "reviewer": "/root/review_deepsearchqa",
+  "independently_acquired_csv_sha256": "25d48dcf7efa872e5467032e8b8eedf38d301f59a252d0da95cda584baa78396",
+  "fixed_revision": "b2623f8653065c2672de6d941fc5434cd652376c",
+  "original_japanese_gold_review": {
+    "complete_13_originals_read": true,
+    "complete_13_japanese_read": true,
+    "complete_13_gold_items_read": true,
+    "complete_13_original_gold_match_own_csv": true,
+    "conditions_reviewed": "All date bounds, sources, intersections, all/any quantifiers, units, thresholds, and named entities reviewed; Japanese question meaning preserved."
+  },
+  "primary_gold_verification": {
+    "row-123": "Own downloaded SSA state ZIP; extracted three states, male1975, all names sorted by count. Complete top5 and intersection recomputed.",
+    "row-364": "Own retrieved JMLR volume1/2/3 contents. All author entries parsed independently (27/60/136 unique). Complete intersection matches all3 gold names.",
+    "row-10": "Own downloaded all5 NWS annual flood PDFs. All state rows and final totals read/recomputed; only2021 fulfills>20 states and>100 deaths.",
+    "row-29": "Own NHS shoulder-pain and joint-hypermobility HTML; shoulder cause hyperlinks hypermobility; syndrome symptoms include poor balance/co-ordination. Gold aligns.",
+    "row-55": "Own SEC source acquisition and fiscal/unit/operating-expenses reading for all3 firms; independent decrease arithmetic matches ArcBest.",
+    "row-80": "Own JohnHGScott personal publication and teaching pages. Exact2012 paper coauthor, IU Bloomington German, constructed-language courses2015/2017. All conditions align.",
+    "row-219": "Own official BIE all-World-Expos index. Iberian World Expos1888Barcelona/1929Barcelona/1992Seville; last percity1929/1992. Not Specialized. Matchesgold.",
+    "row-229": "Own A&AePortal individual artwork metadata from ArtInstitute-issued catalogues. Bothgold works, dates1937/1929, oilcanvas, Chicagocollection and landscape context verified. Collection API/ArtInstitute current webpages denied403; not independently reconstructing entire June2024collection or asserting nootherhistoricalwork beyond officialgold. Additional own independent official O’KeeffeMuseum catalogue indexed record https://access-ok.okeeffemuseum.org/object/8892/ states archival GhostRanchNewMexico1937 for RedHillswithFlowers, and Chicago oilcanvas accession1992.649. Museum record distinguishes separate1940RedHillswithFlowers excluded by before1940condition. Fullsearchresult retained art-primary-indexed.json.",
+    "row-286": "Own both complete official men basketball roster tables. Two tallest heights156 vs158in. Goldseasoncorrect.",
+    "row-828": "Own RFK current officiallaureates list2016backthroughinitial; intersect factual Nobelwinners. GoreRFK2011/Nobel2007,YunusRFK2013/Nobel2006,TutuRFK2008/Nobel1984; Nobelofficial individualfacts own downloaded. All3golditemsverified.",
+    "row-109": "Own FSU faculty page direct verifies ChicagoPhD2002/FSUprofessor; author ownCV2015 onAcademia read through webopen verifies DennisDukeQumranpaper2014. SBL2023SocietyReport own primary indexedextract lists Goff underAssociateEditors; directPDF403. FSU2024CV direct404. Primary indexedcontent andauthorCVcrosscheck retained as scope limitation, no invented directdownload.",
+    "row-852": "Own Smithsonian Sept2023archive identifies Yellowstone articleSep26byAlexiaMacClain; own authorlastarchivepage26 ends ChocolateRabbitsApr12,2009, own exactfirstarticlepage sameauthor/title/date. Yellowstone individualarticle403 but archivebylinecomplete.",
+    "row-14": "Own ACT2023PDF allstate rows and denominatorread. Minnesota68%,20.8,science41%;SouthDakota59%,21.1,science41%. Allconditions preserved JP clarifies testedgraduates."
+  },
+  "excluded_candidate": {
+    "row": 844,
+    "reason": "Own current FBI StokelyCarmichael official page lists12parts, exceeding7 but officialgoldomitsCarmichael; excluded without editing officialgold."
+  },
+  "metric_static_code": {
+    "source": "raw/starter-source.txt",
+    "executed": false,
+    "inspected": "Entire extractednotebook source includinggraderprompt/reduce/ratingmetric/aggregatefunctions. No key access or externalgeneration.",
+    "findings": [
+      "Semantic expected-item bool and incorrectextra list yield TP/FP/FN; generic precision/recall/F1 for bothanswer types.",
+      "Macromean of successfullyrated questions. Invalid/empty flags skipped and counted separately.",
+      "Singlecorrect+extra givesF1=2/3 undercode, althoughpaperproseassertsbinary; slidesavoidbinaryclaim.",
+      "ExactsemanticsetsdefineFullyCorrect; nointersectionFullyIncorrect; propernonemptysubsetPartial; allgoldplusextrasExtraneous."
+    ]
+  },
+  "paper_read": {
+    "independent_google2025PDF": true,
+    "independent_arxiv2026PDF": true,
+    "sections": "Fullintro/construction/metric/results/limitations/extensions/conclusion/contributions/bibliography/judgeprompt appendix read across own acquired versions.",
+    "table4_prose_conflict": "Table4 Gemini66.09/GPT65.18 used; proseinvertsmodelorder."
+  },
+  "current_use": {
+    "source": "raw/kimi.md",
+    "own_direct_acquisition": true,
+    "read": "Benchmarktableheaders,DSQArowandentireevaluationfootnotes",
+    "values": {
+      "Kimi K3 max": 95.0,
+      "Claude Fable5 max w/fallback": 94.2,
+      "Claude Opus4.8 max": 93.1
+    },
+    "limitation": "NoDSQA-specifictrialcount/harnesssettingsprovided; recommendedonlyKimiK3 adoptionvalue toavoid unsupported controlledranking."
+  },
+  "no_gemini_or_external_generation": true,
+  "api_model_evaluation_executed": false,
+  "numeric_record": "numeric-original-audit.json",
+  "status": "Independent finalcandidate5exactreviewcomplete; see review.json",
+  "created_at_utc": "2026-10-25T06:36:15Z",
+  "fixed_originals": {
+    "own_csv_bytes": 355106,
+    "own_download_revision": "b2623f8653065c2672de6d941fc5434cd652376c",
+    "own_csv_sha256": "25d48dcf7efa872e5467032e8b8eedf38d301f59a252d0da95cda584baa78396"
+  },
+  "facts_source_access_limitations": [
+    "row109SBLreport textverifiedviaofficialprimaryindexextract; directfile403. FSUcurrentfaculty direct and authorown2015CV webopenverifyeducationalemployment/articleconditions.",
+    "row229eachoftwoofficialgolditemsverifiedfromArtInstitute-issuedcatalogue metadataonA&AePortal; historicalwholecollectioncompletenessnotindependentlyreconstructed.",
+    "row852YellowstoneauthorshipverifiedonownfetchedofficialSept2023archive, individualarticle403; firstarticleandlastauthorarchiveownfetched."
+  ],
+  "read_repository_guidance": {
+    "AGENTS.md": true,
+    "docs/user-instructions.md": "All940 lines read in four bounded chunks; prompt125 present. No R edits authorized to reviewer.",
+    "local_skills": [
+      "dataset-introduction-slides",
+      "japanese-slide-proofreading",
+      "master-guided-slides"
+    ],
+    "shared_brief": "../BRIEF.md"
+  }
+}
