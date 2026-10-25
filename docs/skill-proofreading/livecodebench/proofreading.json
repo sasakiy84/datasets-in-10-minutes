@@ -1,0 +1,158 @@
+{
+  "dataset": "LiveCodeBench",
+  "sha256": {
+    "pdf": "e060c07bbefff999e352c6418d3d20e1950c12864ad748ae1d94d4ed0ff28533",
+    "pptx": "1e654bca5883aec641bc10c06e2595ee6f0f27f1de18745f169d00a036eacfdf"
+  },
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "external_generation_api_used": false,
+  "reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67
+  ],
+  "reviewed_examples": 13,
+  "changes": [
+    {
+      "location": "標準入力の説明",
+      "before": "入力は標準入力からNを与える",
+      "after": "標準入力からNが与えられる",
+      "reason": "主語と述語を対応。S、Xにも適用"
+    },
+    {
+      "location": "関数形式の例",
+      "before": "配列と数値を改行だけで列挙",
+      "after": "nums=[…], k=1 / l=10, r=20 等",
+      "reason": "引数との対応を明示"
+    },
+    {
+      "location": "例2の解説",
+      "before": "既にあるkを減らす場合も含め区間を選ぶ必要がある",
+      "after": "区間内の別の値をkに変えると、もともとkだった要素も変わる。増える個数と失う個数の差を最大にする。",
+      "reason": "操作の影響を具体化"
+    },
+    {
+      "location": "例7の解説",
+      "before": "最短とは限らない",
+      "after": "末尾にある最長の回文部分を残し、それより前の部分を逆順にして付け足す。",
+      "reason": "最短化の方法を直接示す。独立レビューで「最長」を明示"
+    },
+    {
+      "location": "テスト説明 p17",
+      "before": "問題文と公開例の一致だけでなく、追加テストでもプログラムの動作を評価する",
+      "after": "公開された入出力例に通るかだけでなく、追加テストでもプログラムの動作を評価する",
+      "reason": "一致の対象が不明な表現を解消。独立レビュー提案採用"
+    },
+    {
+      "location": "現行モデル表",
+      "before": "報告値 (%)",
+      "after": "Pass@1 (%)",
+      "reason": "指標を具体化"
+    },
+    {
+      "location": "現行モデル表の注",
+      "before": "推論設定や評価手順は報告ごとに異なる",
+      "after": "Moonshot AIの2026年の報告。バージョン6を使用。KimiはThinking、K2.6は10試行平均、他モデルは公式報告の引用値。",
+      "reason": "一次脚注に沿い比較条件を明示"
+    },
+    {
+      "location": "p25出典",
+      "before": "2024年論文のみ",
+      "after": "論文と現行公式Leaderboardを併記",
+      "reason": "1055/454問の現行情報の根拠を補う"
+    },
+    {
+      "location": "短い4例",
+      "before": "日本語訳と、公開例の答えだけの別頁",
+      "after": "日本語訳・赤い期待出力・簡潔な解説を同頁へ",
+      "reason": "冗長な改頁を削減"
+    },
+    {
+      "location": "長い原文",
+      "before": "多数例を2頁へ分割",
+      "after": "17ptで12例は原文全文を1頁に。RangePowerSumのみ定義・入出力・制約／全公開例の2頁",
+      "reason": "原文を一つのスライドで読む優先順位を守る"
+    },
+    {
+      "location": "Appendix目次",
+      "before": "明示番号＋自動番号の二重表示",
+      "after": "自動番号一つ",
+      "reason": "作者画像実見で発見し修正"
+    },
+    {
+      "location": "p25出典",
+      "before": "著者年タイトルを2件併記し、URLはboard1本",
+      "after": "各文献を著者年タイトル＋対応URLの1行として2行表示",
+      "reason": "論文と現行表の各出典にURLを付ける"
+    }
+  ],
+  "before_snapshot": "examples-before-editorial.json",
+  "final_examples": "examples.json",
+  "skill": "local japanese-proofreading",
+  "changes_file": "proofreading.md"
+}

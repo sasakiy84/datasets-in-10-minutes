@@ -1,0 +1,922 @@
+[
+  {
+    "example": 1,
+    "id": "abc387_a",
+    "title": "和を二乗する",
+    "original": "You are given two positive integers A and B.\nOutput the square of A + B.\n\nInput\n\nThe input is given from Standard Input in the following format:\nA B\n\nOutput\n\nPrint the answer.\n\nConstraints\n\n\n- 1 \\leq A,B \\leq 2025\n- All input values are integers.\n\nSample Input 1\n\n20 25\n\nSample Output 1\n\n2025\r\n\n(20+25)^2=2025.\n\nSample Input 2\n\n30 25\n\nSample Output 2\n\n3025\n\nSample Input 3\n\n45 11\n\nSample Output 3\n\n3136\n\nSample Input 4\n\n2025 1111\n\nSample Output 4\n\n9834496",
+    "starter_code": "",
+    "original_scope": "full fixed official LiveCodeBench question_content + starter_code; mathematical typesetting rendered, all sample input/output and explanations retained",
+    "japanese_intro": "二つの正整数A、Bが与えられる。A+Bの二乗を出力せよ。",
+    "japanese_io": "入力は「A B」の形式で標準入力から与えられる。答えを出力する。",
+    "japanese_constraints": "1 ≤ A, B ≤ 2025。入力はすべて整数である。",
+    "japanese_samples": [
+      "(20+25)²=2025。",
+      "",
+      "",
+      ""
+    ],
+    "japanese": "二つの正整数A、Bが与えられる。A+Bの二乗を出力せよ。\n入力は「A B」の形式で標準入力から与えられる。答えを出力する。\n1 ≤ A, B ≤ 2025。入力はすべて整数である。\n例1: 入力20 25 / 出力2025。(20+25)²=2025。\n例2: 入力30 25 / 出力3025。\n例3: 入力45 11 / 出力3136。\n例4: 入力2025 1111 / 出力9834496。",
+    "expected": "公開例1の期待出力：2025",
+    "explanation": "入力1行から、和の二乗を1個の整数として出力する。",
+    "public_tests": [
+      {
+        "input": "20 25",
+        "output": "2025",
+        "testtype": "stdin"
+      },
+      {
+        "input": "30 25",
+        "output": "3025",
+        "testtype": "stdin"
+      },
+      {
+        "input": "45 11",
+        "output": "3136",
+        "testtype": "stdin"
+      },
+      {
+        "input": "2025 1111",
+        "output": "9834496",
+        "testtype": "stdin"
+      }
+    ],
+    "platform": "atcoder",
+    "difficulty": "easy",
+    "contest_date": "2025-01-04T00:00:00",
+    "role": "main",
+    "source_url": "https://atcoder.jp/contests/abc387/tasks/abc387_a?lang=en",
+    "dataset_url": "https://huggingface.co/datasets/livecodebench/code_generation_lite",
+    "source_revision": "0fe84c3912ea0c4d4a78037083943e8f0c4dd505",
+    "file": "test6.jsonl",
+    "license": "Contest question rights retained by original platforms; academic discussion quotation; benchmark code MIT; HF cc unspecified, loader MIT not treated as blanket question license",
+    "source_record": {
+      "question_title": "Happy New Year 2025",
+      "question_content": "You are given two positive integers A and B.\nOutput the square of A + B.\n\nInput\n\nThe input is given from Standard Input in the following format:\nA B\n\nOutput\n\nPrint the answer.\n\nConstraints\n\n\n- 1 \\leq A,B \\leq 2025\n- All input values are integers.\n\nSample Input 1\n\n20 25\n\nSample Output 1\n\n2025\r\n\n(20+25)^2=2025.\n\nSample Input 2\n\n30 25\n\nSample Output 2\n\n3025\n\nSample Input 3\n\n45 11\n\nSample Output 3\n\n3136\n\nSample Input 4\n\n2025 1111\n\nSample Output 4\n\n9834496",
+      "platform": "atcoder",
+      "question_id": "abc387_a",
+      "contest_id": "abc387",
+      "contest_date": "2025-01-04T00:00:00",
+      "starter_code": "",
+      "difficulty": "easy",
+      "public_test_cases": "[{\"input\": \"20 25\", \"output\": \"2025\", \"testtype\": \"stdin\"}, {\"input\": \"30 25\", \"output\": \"3025\", \"testtype\": \"stdin\"}, {\"input\": \"45 11\", \"output\": \"3136\", \"testtype\": \"stdin\"}, {\"input\": \"2025 1111\", \"output\": \"9834496\", \"testtype\": \"stdin\"}]",
+      "metadata": "{}"
+    },
+    "original_onepage_trial": {
+      "layout": "compact original paragraphs, all original words retained; sample line breaks retained in accompanying public test page",
+      "font_pt": 17,
+      "available_in": 3.42,
+      "required_in": 2.056,
+      "fits": true
+    },
+    "placement": {
+      "original_pages": [
+        7
+      ],
+      "japanese_pages": [
+        8
+      ],
+      "answer_page": 8
+    }
+  },
+  {
+    "example": 2,
+    "id": "3751",
+    "title": "区間への加算で出現回数を増やす",
+    "original": "You are given an array nums of length n. You are also given an integer k.\nYou perform the following operation on nums once:\n\nSelect a subarray nums[i..j] where 0 <= i <= j <= n - 1.\nSelect an integer x and add x to all the elements in nums[i..j].\n\nFind the maximum frequency of the value k after the operation.\n \nExample 1:\n\nInput: nums = [1,2,3,4,5,6], k = 1\nOutput: 2\nExplanation:\nAfter adding -5 to nums[2..5], 1 has a frequency of 2 in [1, 2, -2, -1, 0, 1].\n\nExample 2:\n\nInput: nums = [10,2,3,4,5,5,4,3,2,2], k = 10\nOutput: 4\nExplanation:\nAfter adding 8 to nums[1..9], 10 has a frequency of 4 in [10, 10, 11, 12, 13, 13, 12, 11, 10, 10].\n\n \nConstraints:\n\n1 <= n == nums.length <= 10^5\n1 <= nums[i] <= 50\n1 <= k <= 50",
+    "starter_code": "class Solution:\n    def maxFrequency(self, nums: List[int], k: int) -> int:\n        ",
+    "original_scope": "full fixed official LiveCodeBench question_content + starter_code; mathematical typesetting rendered, all sample input/output and explanations retained",
+    "japanese_intro": "長さnの配列numsと整数kが与えられる。操作をちょうど1回行う。0 ≤ i ≤ j ≤ n−1を満たす連続部分配列nums[i..j]を選び、整数xを選んでその区間の全要素にxを加える。操作後の値kの出現回数の最大値を求めよ。",
+    "japanese_io": "",
+    "japanese_constraints": "1 ≤ n = nums.length ≤ 10⁵、1 ≤ nums[i] ≤ 50、1 ≤ k ≤ 50。",
+    "japanese_samples": [
+      "nums[2..5]に−5を加えると、配列は[1, 2, −2, −1, 0, 1]となり、1の出現回数は2になる。",
+      "nums[1..9]に8を加えると、[10, 10, 11, 12, 13, 13, 12, 11, 10, 10]となり、10の出現回数は4になる。"
+    ],
+    "japanese": "長さnの配列numsと整数kが与えられる。操作をちょうど1回行う。0 ≤ i ≤ j ≤ n−1を満たす連続部分配列nums[i..j]を選び、整数xを選んでその区間の全要素にxを加える。操作後の値kの出現回数の最大値を求めよ。\n\n1 ≤ n = nums.length ≤ 10⁵、1 ≤ nums[i] ≤ 50、1 ≤ k ≤ 50。\n例1: 入力[1, 2, 3, 4, 5, 6]\n1 / 出力2。nums[2..5]に−5を加えると、配列は[1, 2, −2, −1, 0, 1]となり、1の出現回数は2になる。\n例2: 入力[10, 2, 3, 4, 5, 5, 4, 3, 2, 2]\n10 / 出力4。nums[1..9]に8を加えると、[10, 10, 11, 12, 13, 13, 12, 11, 10, 10]となり、10の出現回数は4になる。",
+    "expected": "公開例1の期待出力：2",
+    "explanation": "区間内の別の値をkに変えると、もともとkだった要素も変わる。増える個数と失う個数の差を最大にする。x=0も許されるので、値を変えない操作も選べる。",
+    "public_tests": [
+      {
+        "input": "[1, 2, 3, 4, 5, 6]\n1",
+        "output": "2",
+        "testtype": "functional"
+      },
+      {
+        "input": "[10, 2, 3, 4, 5, 5, 4, 3, 2, 2]\n10",
+        "output": "4",
+        "testtype": "functional"
+      }
+    ],
+    "platform": "leetcode",
+    "difficulty": "medium",
+    "contest_date": "2025-01-25T18:30:00",
+    "role": "main",
+    "source_url": "https://leetcode.com/problems/maximum-frequency-after-subarray-operation/",
+    "dataset_url": "https://huggingface.co/datasets/livecodebench/code_generation_lite",
+    "source_revision": "0fe84c3912ea0c4d4a78037083943e8f0c4dd505",
+    "file": "test6.jsonl",
+    "license": "Contest question rights retained by original platforms; academic discussion quotation; benchmark code MIT; HF cc unspecified, loader MIT not treated as blanket question license",
+    "source_record": {
+      "question_title": "maximum-frequency-after-subarray-operation",
+      "question_content": "You are given an array nums of length n. You are also given an integer k.\nYou perform the following operation on nums once:\n\nSelect a subarray nums[i..j] where 0 <= i <= j <= n - 1.\nSelect an integer x and add x to all the elements in nums[i..j].\n\nFind the maximum frequency of the value k after the operation.\n \nExample 1:\n\nInput: nums = [1,2,3,4,5,6], k = 1\nOutput: 2\nExplanation:\nAfter adding -5 to nums[2..5], 1 has a frequency of 2 in [1, 2, -2, -1, 0, 1].\n\nExample 2:\n\nInput: nums = [10,2,3,4,5,5,4,3,2,2], k = 10\nOutput: 4\nExplanation:\nAfter adding 8 to nums[1..9], 10 has a frequency of 4 in [10, 10, 11, 12, 13, 13, 12, 11, 10, 10].\n\n \nConstraints:\n\n1 <= n == nums.length <= 10^5\n1 <= nums[i] <= 50\n1 <= k <= 50",
+      "platform": "leetcode",
+      "question_id": "3751",
+      "contest_id": "weekly-contest-434",
+      "contest_date": "2025-01-25T18:30:00",
+      "starter_code": "class Solution:\n    def maxFrequency(self, nums: List[int], k: int) -> int:\n        ",
+      "difficulty": "medium",
+      "public_test_cases": "[{\"input\": \"[1, 2, 3, 4, 5, 6]\\n1\", \"output\": \"2\", \"testtype\": \"functional\"}, {\"input\": \"[10, 2, 3, 4, 5, 5, 4, 3, 2, 2]\\n10\", \"output\": \"4\", \"testtype\": \"functional\"}]",
+      "metadata": "{\"func_name\": \"maxFrequency\"}"
+    },
+    "original_onepage_trial": {
+      "layout": "compact original paragraphs, all original words retained; sample line breaks retained in accompanying public test page",
+      "font_pt": 17,
+      "available_in": 3.42,
+      "required_in": 3.16,
+      "fits": true
+    },
+    "placement": {
+      "original_pages": [
+        9
+      ],
+      "japanese_pages": [
+        10
+      ],
+      "answer_page": 11
+    }
+  },
+  {
+    "example": 3,
+    "id": "3801",
+    "title": "各桁の積と和で整数を数える",
+    "original": "You are given two positive integers, l and r. A positive integer is called beautiful if the product of its digits is divisible by the sum of its digits.\nReturn the count of beautiful numbers between l and r, inclusive.\n \nExample 1:\n\nInput: l = 10, r = 20\nOutput: 2\nExplanation:\nThe beautiful numbers in the range are 10 and 20.\n\nExample 2:\n\nInput: l = 1, r = 15\nOutput: 10\nExplanation:\nThe beautiful numbers in the range are 1, 2, 3, 4, 5, 6, 7, 8, 9, and 10.\n\n \nConstraints:\n\n1 <= l <= r < 10^9",
+    "starter_code": "class Solution:\n    def beautifulNumbers(self, l: int, r: int) -> int:\n        ",
+    "original_scope": "full fixed official LiveCodeBench question_content + starter_code; mathematical typesetting rendered, all sample input/output and explanations retained",
+    "japanese_intro": "正整数l、rが与えられる。各桁の積が各桁の和で割り切れる正整数をbeautiful numberと呼ぶ。l以上r以下にあるbeautiful numberの個数を返せ。",
+    "japanese_io": "",
+    "japanese_constraints": "1 ≤ l ≤ r < 10⁹。",
+    "japanese_samples": [
+      "この範囲で条件を満たすのは10と20。",
+      "条件を満たすのは1、2、3、4、5、6、7、8、9、10。"
+    ],
+    "japanese": "正整数l、rが与えられる。各桁の積が各桁の和で割り切れる正整数をbeautiful numberと呼ぶ。l以上r以下にあるbeautiful numberの個数を返せ。\n\n1 ≤ l ≤ r < 10⁹。\n例1: 入力10\n20 / 出力2。この範囲で条件を満たすのは10と20。\n例2: 入力1\n15 / 出力10。条件を満たすのは1、2、3、4、5、6、7、8、9、10。",
+    "expected": "公開例1の期待出力：2",
+    "explanation": "0を含む数では各桁の積が0となり、正の桁和で割り切れる。上限が10⁹未満なので、大きな範囲でも個数を求める実装が必要になる。",
+    "public_tests": [
+      {
+        "input": "10\n20",
+        "output": "2",
+        "testtype": "functional"
+      },
+      {
+        "input": "1\n15",
+        "output": "10",
+        "testtype": "functional"
+      }
+    ],
+    "platform": "leetcode",
+    "difficulty": "hard",
+    "contest_date": "2025-03-15T19:30:00",
+    "role": "main",
+    "source_url": "https://leetcode.com/problems/count-beautiful-numbers/",
+    "dataset_url": "https://huggingface.co/datasets/livecodebench/code_generation_lite",
+    "source_revision": "0fe84c3912ea0c4d4a78037083943e8f0c4dd505",
+    "file": "test6.jsonl",
+    "license": "Contest question rights retained by original platforms; academic discussion quotation; benchmark code MIT; HF cc unspecified, loader MIT not treated as blanket question license",
+    "source_record": {
+      "question_title": "count-beautiful-numbers",
+      "question_content": "You are given two positive integers, l and r. A positive integer is called beautiful if the product of its digits is divisible by the sum of its digits.\nReturn the count of beautiful numbers between l and r, inclusive.\n \nExample 1:\n\nInput: l = 10, r = 20\nOutput: 2\nExplanation:\nThe beautiful numbers in the range are 10 and 20.\n\nExample 2:\n\nInput: l = 1, r = 15\nOutput: 10\nExplanation:\nThe beautiful numbers in the range are 1, 2, 3, 4, 5, 6, 7, 8, 9, and 10.\n\n \nConstraints:\n\n1 <= l <= r < 10^9",
+      "platform": "leetcode",
+      "question_id": "3801",
+      "contest_id": "weekly-contest-441",
+      "contest_date": "2025-03-15T19:30:00",
+      "starter_code": "class Solution:\n    def beautifulNumbers(self, l: int, r: int) -> int:\n        ",
+      "difficulty": "hard",
+      "public_test_cases": "[{\"input\": \"10\\n20\", \"output\": \"2\", \"testtype\": \"functional\"}, {\"input\": \"1\\n15\", \"output\": \"10\", \"testtype\": \"functional\"}]",
+      "metadata": "{\"func_name\": \"beautifulNumbers\"}"
+    },
+    "original_onepage_trial": {
+      "layout": "compact original paragraphs, all original words retained; sample line breaks retained in accompanying public test page",
+      "font_pt": 17,
+      "available_in": 3.42,
+      "required_in": 2.451,
+      "fits": true
+    },
+    "placement": {
+      "original_pages": [
+        12
+      ],
+      "japanese_pages": [
+        13
+      ],
+      "answer_page": 14
+    }
+  },
+  {
+    "example": 4,
+    "id": "abc398_a",
+    "title": "中央に等号を置く",
+    "original": "Find a length-N string that satisfies all of the following conditions:\n\n- Each character is - or =.\n- It is a palindrome.\n- It contains exactly one or exactly two =s. If it contains two =s, they are adjacent.\n\nSuch a string is unique.\n\nInput\n\nThe input is given from Standard Input in the following format:\nN\n\nOutput\n\nPrint the answer.\n\nConstraints\n\n\n- 1 \\leq N \\leq 100\n- N is an integer.\n\nSample Input 1\n\n4\n\nSample Output 1\n\n-==-\n\nSample Input 2\n\n7\n\nSample Output 2\n\n---=---",
+    "starter_code": "",
+    "original_scope": "full fixed official LiveCodeBench question_content + starter_code; mathematical typesetting rendered, all sample input/output and explanations retained",
+    "japanese_intro": "次の条件をすべて満たす長さNの文字列を求めよ。各文字は「-」または「=」で、回文であり、「=」をちょうど1個または2個含む。2個含む場合は隣り合う。このような文字列は一意に定まる。",
+    "japanese_io": "標準入力からNが与えられる。答えを出力する。",
+    "japanese_constraints": "1 ≤ N ≤ 100。Nは整数である。",
+    "japanese_samples": [
+      "",
+      ""
+    ],
+    "japanese": "次の条件をすべて満たす長さNの文字列を求めよ。各文字は「-」または「=」で、回文であり、「=」をちょうど1個または2個含む。2個含む場合は隣り合う。このような文字列は一意に定まる。\n標準入力からNが与えられる。答えを出力する。\n1 ≤ N ≤ 100。Nは整数である。\n例1: 入力4 / 出力-==-。\n例2: 入力7 / 出力---=---。",
+    "expected": "公開例1の期待出力：-==-",
+    "explanation": "偶数長は中央の2文字、奇数長は中央の1文字を「=」にする。",
+    "public_tests": [
+      {
+        "input": "4",
+        "output": "-==-",
+        "testtype": "stdin"
+      },
+      {
+        "input": "7",
+        "output": "---=---",
+        "testtype": "stdin"
+      }
+    ],
+    "platform": "atcoder",
+    "difficulty": "easy",
+    "contest_date": "2025-03-22T00:00:00",
+    "role": "appendix",
+    "source_url": "https://atcoder.jp/contests/abc398/tasks/abc398_a?lang=en",
+    "dataset_url": "https://huggingface.co/datasets/livecodebench/code_generation_lite",
+    "source_revision": "0fe84c3912ea0c4d4a78037083943e8f0c4dd505",
+    "file": "test6.jsonl",
+    "license": "Contest question rights retained by original platforms; academic discussion quotation; benchmark code MIT; HF cc unspecified, loader MIT not treated as blanket question license",
+    "source_record": {
+      "question_title": "Doors in the Center",
+      "question_content": "Find a length-N string that satisfies all of the following conditions:\n\n- Each character is - or =.\n- It is a palindrome.\n- It contains exactly one or exactly two =s. If it contains two =s, they are adjacent.\n\nSuch a string is unique.\n\nInput\n\nThe input is given from Standard Input in the following format:\nN\n\nOutput\n\nPrint the answer.\n\nConstraints\n\n\n- 1 \\leq N \\leq 100\n- N is an integer.\n\nSample Input 1\n\n4\n\nSample Output 1\n\n-==-\n\nSample Input 2\n\n7\n\nSample Output 2\n\n---=---",
+      "platform": "atcoder",
+      "question_id": "abc398_a",
+      "contest_id": "abc398",
+      "contest_date": "2025-03-22T00:00:00",
+      "starter_code": "",
+      "difficulty": "easy",
+      "public_test_cases": "[{\"input\": \"4\", \"output\": \"-==-\", \"testtype\": \"stdin\"}, {\"input\": \"7\", \"output\": \"---=---\", \"testtype\": \"stdin\"}]",
+      "metadata": "{}"
+    },
+    "original_onepage_trial": {
+      "layout": "compact original paragraphs, all original words retained; sample line breaks retained in accompanying public test page",
+      "font_pt": 17,
+      "available_in": 3.42,
+      "required_in": 2.014,
+      "fits": true
+    },
+    "placement": {
+      "original_pages": [
+        34
+      ],
+      "japanese_pages": [
+        35
+      ],
+      "answer_page": 35
+    }
+  },
+  {
+    "example": 5,
+    "id": "3747",
+    "title": "環状配列の隣接差を求める",
+    "original": "Given a circular array nums, find the maximum absolute difference between adjacent elements.\nNote: In a circular array, the first and last elements are adjacent.\n \nExample 1:\n\nInput: nums = [1,2,4]\nOutput: 3\nExplanation:\nBecause nums is circular, nums[0] and nums[2] are adjacent. They have the maximum absolute difference of |4 - 1| = 3.\n\nExample 2:\n\nInput: nums = [-5,-10,-5]\nOutput: 5\nExplanation:\nThe adjacent elements nums[0] and nums[1] have the maximum absolute difference of |-5 - (-10)| = 5.\n\n \nConstraints:\n\n2 <= nums.length <= 100\n-100 <= nums[i] <= 100",
+    "starter_code": "class Solution:\n    def maxAdjacentDistance(self, nums: List[int]) -> int:\n        ",
+    "original_scope": "full fixed official LiveCodeBench question_content + starter_code; mathematical typesetting rendered, all sample input/output and explanations retained",
+    "japanese_intro": "環状配列numsが与えられる。隣接する要素の差の絶対値の最大値を求めよ。環状配列では先頭要素と末尾要素も隣り合う。",
+    "japanese_io": "",
+    "japanese_constraints": "2 ≤ nums.length ≤ 100、−100 ≤ nums[i] ≤ 100。",
+    "japanese_samples": [
+      "環状なのでnums[0]とnums[2]は隣り合い、最大の差は|4−1|=3になる。",
+      "隣接するnums[0]とnums[1]の差の絶対値は|−5−(−10)|=5になる。"
+    ],
+    "japanese": "環状配列numsが与えられる。隣接する要素の差の絶対値の最大値を求めよ。環状配列では先頭要素と末尾要素も隣り合う。\n\n2 ≤ nums.length ≤ 100、−100 ≤ nums[i] ≤ 100。\n例1: 入力[1, 2, 4] / 出力3。環状なのでnums[0]とnums[2]は隣り合い、最大の差は|4−1|=3になる。\n例2: 入力[-5, -10, -5] / 出力5。隣接するnums[0]とnums[1]の差の絶対値は|−5−(−10)|=5になる。",
+    "expected": "公開例1の期待出力：3",
+    "explanation": "末尾と先頭の組も比較する。例1の最大差は|4−1|=3となる。",
+    "public_tests": [
+      {
+        "input": "[1, 2, 4]",
+        "output": "3",
+        "testtype": "functional"
+      },
+      {
+        "input": "[-5, -10, -5]",
+        "output": "5",
+        "testtype": "functional"
+      }
+    ],
+    "platform": "leetcode",
+    "difficulty": "easy",
+    "contest_date": "2025-01-18T06:30:00",
+    "role": "appendix",
+    "source_url": "https://leetcode.com/problems/maximum-difference-between-adjacent-elements-in-a-circular-array/",
+    "dataset_url": "https://huggingface.co/datasets/livecodebench/code_generation_lite",
+    "source_revision": "0fe84c3912ea0c4d4a78037083943e8f0c4dd505",
+    "file": "test6.jsonl",
+    "license": "Contest question rights retained by original platforms; academic discussion quotation; benchmark code MIT; HF cc unspecified, loader MIT not treated as blanket question license",
+    "source_record": {
+      "question_title": "maximum-difference-between-adjacent-elements-in-a-circular-array",
+      "question_content": "Given a circular array nums, find the maximum absolute difference between adjacent elements.\nNote: In a circular array, the first and last elements are adjacent.\n \nExample 1:\n\nInput: nums = [1,2,4]\nOutput: 3\nExplanation:\nBecause nums is circular, nums[0] and nums[2] are adjacent. They have the maximum absolute difference of |4 - 1| = 3.\n\nExample 2:\n\nInput: nums = [-5,-10,-5]\nOutput: 5\nExplanation:\nThe adjacent elements nums[0] and nums[1] have the maximum absolute difference of |-5 - (-10)| = 5.\n\n \nConstraints:\n\n2 <= nums.length <= 100\n-100 <= nums[i] <= 100",
+      "platform": "leetcode",
+      "question_id": "3747",
+      "contest_id": "biweekly-contest-148",
+      "contest_date": "2025-01-18T06:30:00",
+      "starter_code": "class Solution:\n    def maxAdjacentDistance(self, nums: List[int]) -> int:\n        ",
+      "difficulty": "easy",
+      "public_test_cases": "[{\"input\": \"[1, 2, 4]\", \"output\": \"3\", \"testtype\": \"functional\"}, {\"input\": \"[-5, -10, -5]\", \"output\": \"5\", \"testtype\": \"functional\"}]",
+      "metadata": "{\"func_name\": \"maxAdjacentDistance\"}"
+    },
+    "original_onepage_trial": {
+      "layout": "compact original paragraphs, all original words retained; sample line breaks retained in accompanying public test page",
+      "font_pt": 17,
+      "available_in": 3.42,
+      "required_in": 2.924,
+      "fits": true
+    },
+    "placement": {
+      "original_pages": [
+        36
+      ],
+      "japanese_pages": [
+        37
+      ],
+      "answer_page": 37
+    }
+  },
+  {
+    "example": 6,
+    "id": "abc389_b",
+    "title": "階乗から元の整数を求める",
+    "original": "You are given an integer X not less than 2.\nFind the positive integer N such that N! = X.\nHere, N! denotes the factorial of N, and it is guaranteed that there is exactly one such N.\n\nInput\n\nThe input is given from Standard Input in the following format:\nX\n\nOutput\n\nPrint the answer.\n\nConstraints\n\n\n- 2 \\leq X \\leq 3 \\times 10^{18}\n- There is exactly one positive integer N such that N!=X.\n- All input values are integers.\n\nSample Input 1\n\n6\n\nSample Output 1\n\n3\r\n\nFrom 3!=3\\times2\\times1=6, print 3.\n\nSample Input 2\n\n2432902008176640000\n\nSample Output 2\n\n20\r\n\nFrom 20!=2432902008176640000, print 20.",
+    "starter_code": "",
+    "original_scope": "full fixed official LiveCodeBench question_content + starter_code; mathematical typesetting rendered, all sample input/output and explanations retained",
+    "japanese_intro": "2以上の整数Xが与えられる。N! = Xを満たす正整数Nを求めよ。N!はNの階乗を表し、そのようなNはちょうど一つ存在することが保証される。",
+    "japanese_io": "標準入力からXが与えられる。答えを出力する。",
+    "japanese_constraints": "2 ≤ X ≤ 3×10¹⁸。N! = Xを満たす正整数Nはちょうど一つ存在する。入力はすべて整数である。",
+    "japanese_samples": [
+      "3! = 3×2×1 = 6なので3を出力する。",
+      "20! = 2432902008176640000なので20を出力する。"
+    ],
+    "japanese": "2以上の整数Xが与えられる。N! = Xを満たす正整数Nを求めよ。N!はNの階乗を表し、そのようなNはちょうど一つ存在することが保証される。\n標準入力からXが与えられる。答えを出力する。\n2 ≤ X ≤ 3×10¹⁸。N! = Xを満たす正整数Nはちょうど一つ存在する。入力はすべて整数である。\n例1: 入力6 / 出力3。3! = 3×2×1 = 6なので3を出力する。\n例2: 入力2432902008176640000 / 出力20。20! = 2432902008176640000なので20を出力する。",
+    "expected": "公開例1の期待出力：3",
+    "explanation": "小さい階乗から順に比較できる。公開例には20!という大きな整数も含まれる。",
+    "public_tests": [
+      {
+        "input": "6",
+        "output": "3",
+        "testtype": "stdin"
+      },
+      {
+        "input": "2432902008176640000",
+        "output": "20",
+        "testtype": "stdin"
+      }
+    ],
+    "platform": "atcoder",
+    "difficulty": "easy",
+    "contest_date": "2025-01-18T00:00:00",
+    "role": "appendix",
+    "source_url": "https://atcoder.jp/contests/abc389/tasks/abc389_b?lang=en",
+    "dataset_url": "https://huggingface.co/datasets/livecodebench/code_generation_lite",
+    "source_revision": "0fe84c3912ea0c4d4a78037083943e8f0c4dd505",
+    "file": "test6.jsonl",
+    "license": "Contest question rights retained by original platforms; academic discussion quotation; benchmark code MIT; HF cc unspecified, loader MIT not treated as blanket question license",
+    "source_record": {
+      "question_title": "tcaF",
+      "question_content": "You are given an integer X not less than 2.\nFind the positive integer N such that N! = X.\nHere, N! denotes the factorial of N, and it is guaranteed that there is exactly one such N.\n\nInput\n\nThe input is given from Standard Input in the following format:\nX\n\nOutput\n\nPrint the answer.\n\nConstraints\n\n\n- 2 \\leq X \\leq 3 \\times 10^{18}\n- There is exactly one positive integer N such that N!=X.\n- All input values are integers.\n\nSample Input 1\n\n6\n\nSample Output 1\n\n3\r\n\nFrom 3!=3\\times2\\times1=6, print 3.\n\nSample Input 2\n\n2432902008176640000\n\nSample Output 2\n\n20\r\n\nFrom 20!=2432902008176640000, print 20.",
+      "platform": "atcoder",
+      "question_id": "abc389_b",
+      "contest_id": "abc389",
+      "contest_date": "2025-01-18T00:00:00",
+      "starter_code": "",
+      "difficulty": "easy",
+      "public_test_cases": "[{\"input\": \"6\", \"output\": \"3\", \"testtype\": \"stdin\"}, {\"input\": \"2432902008176640000\", \"output\": \"20\", \"testtype\": \"stdin\"}]",
+      "metadata": "{}"
+    },
+    "original_onepage_trial": {
+      "layout": "compact original paragraphs, all original words retained; sample line breaks retained in accompanying public test page",
+      "font_pt": 17,
+      "available_in": 3.42,
+      "required_in": 2.486,
+      "fits": true
+    },
+    "placement": {
+      "original_pages": [
+        38
+      ],
+      "japanese_pages": [
+        39
+      ],
+      "answer_page": 40
+    }
+  },
+  {
+    "example": 7,
+    "id": "abc398_f",
+    "title": "末尾を補って最短の回文にする",
+    "original": "Find one shortest palindrome that has S as its prefix.\n\nInput\n\nThe input is given from Standard Input in the following format:\nS\n\nOutput\n\nPrint the answer.\r\nIf multiple solutions exist, any of them is accepted.\n\nConstraints\n\n\n- S is a string of length between 1 and 500000, inclusive, consisting of uppercase English letters.\n\nSample Input 1\n\nABC\n\nSample Output 1\n\nABCBA\r\n\nABCBA is a shortest palindrome that has S= ABC as its prefix.\n\nSample Input 2\n\nZ\n\nSample Output 2\n\nZ\r\n\nZ is a shortest palindrome that has S= Z as its prefix.\n\nSample Input 3\n\nTREE\n\nSample Output 3\n\nTREERT\r\n\nTREERT is a shortest palindrome that has S= TREE as its prefix.",
+    "starter_code": "",
+    "original_scope": "full fixed official LiveCodeBench question_content + starter_code; mathematical typesetting rendered, all sample input/output and explanations retained",
+    "japanese_intro": "Sを接頭辞として持つ最短の回文を一つ求めよ。",
+    "japanese_io": "標準入力からSが与えられる。答えを出力する。複数の解がある場合はいずれを出力してもよい。",
+    "japanese_constraints": "Sは英大文字からなる長さ1以上500000以下の文字列である。",
+    "japanese_samples": [
+      "ABCBAはS=ABCを接頭辞として持つ最短の回文である。",
+      "ZはS=Zを接頭辞として持つ最短の回文である。",
+      "TREERTはS=TREEを接頭辞として持つ最短の回文である。"
+    ],
+    "japanese": "Sを接頭辞として持つ最短の回文を一つ求めよ。\n標準入力からSが与えられる。答えを出力する。複数の解がある場合はいずれを出力してもよい。\nSは英大文字からなる長さ1以上500000以下の文字列である。\n例1: 入力ABC / 出力ABCBA。ABCBAはS=ABCを接頭辞として持つ最短の回文である。\n例2: 入力Z / 出力Z。ZはS=Zを接頭辞として持つ最短の回文である。\n例3: 入力TREE / 出力TREERT。TREERTはS=TREEを接頭辞として持つ最短の回文である。",
+    "expected": "公開例1の期待出力：ABCBA",
+    "explanation": "末尾にある最長の回文部分を残し、それより前の部分を逆順にして付け足す。",
+    "public_tests": [
+      {
+        "input": "ABC",
+        "output": "ABCBA",
+        "testtype": "stdin"
+      },
+      {
+        "input": "Z",
+        "output": "Z",
+        "testtype": "stdin"
+      },
+      {
+        "input": "TREE",
+        "output": "TREERT",
+        "testtype": "stdin"
+      }
+    ],
+    "platform": "atcoder",
+    "difficulty": "hard",
+    "contest_date": "2025-03-22T00:00:00",
+    "role": "appendix",
+    "source_url": "https://atcoder.jp/contests/abc398/tasks/abc398_f?lang=en",
+    "dataset_url": "https://huggingface.co/datasets/livecodebench/code_generation_lite",
+    "source_revision": "0fe84c3912ea0c4d4a78037083943e8f0c4dd505",
+    "file": "test6.jsonl",
+    "license": "Contest question rights retained by original platforms; academic discussion quotation; benchmark code MIT; HF cc unspecified, loader MIT not treated as blanket question license",
+    "source_record": {
+      "question_title": "ABCBA",
+      "question_content": "Find one shortest palindrome that has S as its prefix.\n\nInput\n\nThe input is given from Standard Input in the following format:\nS\n\nOutput\n\nPrint the answer.\r\nIf multiple solutions exist, any of them is accepted.\n\nConstraints\n\n\n- S is a string of length between 1 and 500000, inclusive, consisting of uppercase English letters.\n\nSample Input 1\n\nABC\n\nSample Output 1\n\nABCBA\r\n\nABCBA is a shortest palindrome that has S= ABC as its prefix.\n\nSample Input 2\n\nZ\n\nSample Output 2\n\nZ\r\n\nZ is a shortest palindrome that has S= Z as its prefix.\n\nSample Input 3\n\nTREE\n\nSample Output 3\n\nTREERT\r\n\nTREERT is a shortest palindrome that has S= TREE as its prefix.",
+      "platform": "atcoder",
+      "question_id": "abc398_f",
+      "contest_id": "abc398",
+      "contest_date": "2025-03-22T00:00:00",
+      "starter_code": "",
+      "difficulty": "hard",
+      "public_test_cases": "[{\"input\": \"ABC\", \"output\": \"ABCBA\", \"testtype\": \"stdin\"}, {\"input\": \"Z\", \"output\": \"Z\", \"testtype\": \"stdin\"}, {\"input\": \"TREE\", \"output\": \"TREERT\", \"testtype\": \"stdin\"}]",
+      "metadata": "{}"
+    },
+    "original_onepage_trial": {
+      "layout": "compact original paragraphs, all original words retained; sample line breaks retained in accompanying public test page",
+      "font_pt": 17,
+      "available_in": 3.42,
+      "required_in": 2.743,
+      "fits": true
+    },
+    "placement": {
+      "original_pages": [
+        41
+      ],
+      "japanese_pages": [
+        42
+      ],
+      "answer_page": 43
+    }
+  },
+  {
+    "example": 8,
+    "id": "abc392_a",
+    "title": "並べ替えて積の等式を作る",
+    "original": "You are given a sequence of integers A = (A_1, A_2, A_3).\r\nLet B = (B_1, B_2, B_3) be any permutation of A.\r\nDetermine whether it is possible that B_1 \\times B_2 = B_3.\n\nInput\n\nThe input is given from Standard Input in the following format:\nA_1 A_2 A_3\n\nOutput\n\nIf it is possible that B_1 \\times B_2 = B_3, print Yes; otherwise, print No.\n\nConstraints\n\n\n- All input values are integers.\n- 1 \\le A_1, A_2, A_3 \\le 100\n\nSample Input 1\n\n3 15 5\n\nSample Output 1\n\nYes\r\n\nHere, A=(3,15,5).\r\nBy rearranging it as B=(3,5,15), we can satisfy B_1 \\times B_2 = B_3.\n\nSample Input 2\n\n5 3 2\n\nSample Output 2\n\nNo\r\n\nNo permutation of B satisfies B_1 \\times B_2 = B_3.",
+    "starter_code": "",
+    "original_scope": "full fixed official LiveCodeBench question_content + starter_code; mathematical typesetting rendered, all sample input/output and explanations retained",
+    "japanese_intro": "整数列A=(A₁,A₂,A₃)が与えられる。B=(B₁,B₂,B₃)をAの並べ替えとする。B₁×B₂=B₃を満たす並べ替えが可能か判定せよ。",
+    "japanese_io": "入力は「A₁ A₂ A₃」の形式で標準入力から与えられる。可能ならYes、不可能ならNoを出力する。",
+    "japanese_constraints": "入力はすべて整数で、1 ≤ A₁,A₂,A₃ ≤ 100。",
+    "japanese_samples": [
+      "A=(3,15,5)をB=(3,5,15)に並べ替えれば、B₁×B₂=B₃を満たす。",
+      "条件を満たす並べ替えは存在しない。"
+    ],
+    "japanese": "整数列A=(A₁,A₂,A₃)が与えられる。B=(B₁,B₂,B₃)をAの並べ替えとする。B₁×B₂=B₃を満たす並べ替えが可能か判定せよ。\n入力は「A₁ A₂ A₃」の形式で標準入力から与えられる。可能ならYes、不可能ならNoを出力する。\n入力はすべて整数で、1 ≤ A₁,A₂,A₃ ≤ 100。\n例1: 入力3 15 5 / 出力Yes。A=(3,15,5)をB=(3,5,15)に並べ替えれば、B₁×B₂=B₃を満たす。\n例2: 入力5 3 2 / 出力No。条件を満たす並べ替えは存在しない。",
+    "expected": "公開例1の期待出力：Yes",
+    "explanation": "三つの値の大小関係を固定せず、掛ける二つと積になる一つを選ぶ。",
+    "public_tests": [
+      {
+        "input": "3 15 5",
+        "output": "Yes",
+        "testtype": "stdin"
+      },
+      {
+        "input": "5 3 2",
+        "output": "No",
+        "testtype": "stdin"
+      }
+    ],
+    "platform": "atcoder",
+    "difficulty": "easy",
+    "contest_date": "2025-02-08T00:00:00",
+    "role": "appendix",
+    "source_url": "https://atcoder.jp/contests/abc392/tasks/abc392_a?lang=en",
+    "dataset_url": "https://huggingface.co/datasets/livecodebench/code_generation_lite",
+    "source_revision": "0fe84c3912ea0c4d4a78037083943e8f0c4dd505",
+    "file": "test6.jsonl",
+    "license": "Contest question rights retained by original platforms; academic discussion quotation; benchmark code MIT; HF cc unspecified, loader MIT not treated as blanket question license",
+    "source_record": {
+      "question_title": "Shuffled Equation",
+      "question_content": "You are given a sequence of integers A = (A_1, A_2, A_3).\r\nLet B = (B_1, B_2, B_3) be any permutation of A.\r\nDetermine whether it is possible that B_1 \\times B_2 = B_3.\n\nInput\n\nThe input is given from Standard Input in the following format:\nA_1 A_2 A_3\n\nOutput\n\nIf it is possible that B_1 \\times B_2 = B_3, print Yes; otherwise, print No.\n\nConstraints\n\n\n- All input values are integers.\n- 1 \\le A_1, A_2, A_3 \\le 100\n\nSample Input 1\n\n3 15 5\n\nSample Output 1\n\nYes\r\n\nHere, A=(3,15,5).\r\nBy rearranging it as B=(3,5,15), we can satisfy B_1 \\times B_2 = B_3.\n\nSample Input 2\n\n5 3 2\n\nSample Output 2\n\nNo\r\n\nNo permutation of B satisfies B_1 \\times B_2 = B_3.",
+      "platform": "atcoder",
+      "question_id": "abc392_a",
+      "contest_id": "abc392",
+      "contest_date": "2025-02-08T00:00:00",
+      "starter_code": "",
+      "difficulty": "easy",
+      "public_test_cases": "[{\"input\": \"3 15 5\", \"output\": \"Yes\", \"testtype\": \"stdin\"}, {\"input\": \"5 3 2\", \"output\": \"No\", \"testtype\": \"stdin\"}]",
+      "metadata": "{}"
+    },
+    "original_onepage_trial": {
+      "layout": "compact original paragraphs, all original words retained; sample line breaks retained in accompanying public test page",
+      "font_pt": 17,
+      "available_in": 3.42,
+      "required_in": 2.486,
+      "fits": true
+    },
+    "placement": {
+      "original_pages": [
+        44
+      ],
+      "japanese_pages": [
+        45
+      ],
+      "answer_page": 45
+    }
+  },
+  {
+    "example": 9,
+    "id": "abc400_b",
+    "title": "等比数列の和を求める",
+    "original": "You are given two positive integers N and M.\nLet X = \\displaystyle\\sum_{i = 0}^{M} N^i. If X \\leq 10^9, print the value of X. If X > 10^9, print inf.\n\nInput\n\nThe input is given from Standard Input in the following format:\nN M\n\nOutput\n\nPrint the value of X or inf as specified by the problem statement.\n\nConstraints\n\n\n- 1 \\leq N \\leq 10^9\n- 1 \\leq M \\leq 100\n- All input values are integers.\n\nSample Input 1\n\n7 3\n\nSample Output 1\n\n400\r\n\nX = 1 + 7 + 49 + 343 = 400. Since 400 \\leq 10^9, print 400.\n\nSample Input 2\n\n1000000 2\n\nSample Output 2\n\ninf\r\n\nX = 1000001000001 > 10^9, so print inf.\n\nSample Input 3\n\n999999999 1\n\nSample Output 3\n\n1000000000\n\nSample Input 4\n\n998244353 99\n\nSample Output 4\n\ninf",
+    "starter_code": "",
+    "original_scope": "full fixed official LiveCodeBench question_content + starter_code; mathematical typesetting rendered, all sample input/output and explanations retained",
+    "japanese_intro": "正整数N、Mが与えられる。X=Σᵢ₌₀ᴹNⁱとする。X ≤ 10⁹ならXを出力し、X > 10⁹ならinfを出力せよ。",
+    "japanese_io": "入力は「N M」の形式で標準入力から与えられる。問題文の指定どおりXまたはinfを出力する。",
+    "japanese_constraints": "1 ≤ N ≤ 10⁹、1 ≤ M ≤ 100。入力はすべて整数である。",
+    "japanese_samples": [
+      "X=1+7+49+343=400であり、400 ≤ 10⁹なので400を出力する。",
+      "X=1000001000001 > 10⁹なのでinfを出力する。",
+      "",
+      ""
+    ],
+    "japanese": "正整数N、Mが与えられる。X=Σᵢ₌₀ᴹNⁱとする。X ≤ 10⁹ならXを出力し、X > 10⁹ならinfを出力せよ。\n入力は「N M」の形式で標準入力から与えられる。問題文の指定どおりXまたはinfを出力する。\n1 ≤ N ≤ 10⁹、1 ≤ M ≤ 100。入力はすべて整数である。\n例1: 入力7 3 / 出力400。X=1+7+49+343=400であり、400 ≤ 10⁹なので400を出力する。\n例2: 入力1000000 2 / 出力inf。X=1000001000001 > 10⁹なのでinfを出力する。\n例3: 入力999999999 1 / 出力1000000000。\n例4: 入力998244353 99 / 出力inf。",
+    "expected": "公開例1の期待出力：400",
+    "explanation": "10⁹ちょうどは数値として出力する。上限を超えるかどうかも結果の一部になる。",
+    "public_tests": [
+      {
+        "input": "7 3",
+        "output": "400",
+        "testtype": "stdin"
+      },
+      {
+        "input": "1000000 2",
+        "output": "inf",
+        "testtype": "stdin"
+      },
+      {
+        "input": "999999999 1",
+        "output": "1000000000",
+        "testtype": "stdin"
+      },
+      {
+        "input": "998244353 99",
+        "output": "inf",
+        "testtype": "stdin"
+      }
+    ],
+    "platform": "atcoder",
+    "difficulty": "easy",
+    "contest_date": "2025-04-05T00:00:00",
+    "role": "appendix",
+    "source_url": "https://atcoder.jp/contests/abc400/tasks/abc400_b?lang=en",
+    "dataset_url": "https://huggingface.co/datasets/livecodebench/code_generation_lite",
+    "source_revision": "0fe84c3912ea0c4d4a78037083943e8f0c4dd505",
+    "file": "test6.jsonl",
+    "license": "Contest question rights retained by original platforms; academic discussion quotation; benchmark code MIT; HF cc unspecified, loader MIT not treated as blanket question license",
+    "source_record": {
+      "question_title": "Sum of Geometric Series",
+      "question_content": "You are given two positive integers N and M.\nLet X = \\displaystyle\\sum_{i = 0}^{M} N^i. If X \\leq 10^9, print the value of X. If X > 10^9, print inf.\n\nInput\n\nThe input is given from Standard Input in the following format:\nN M\n\nOutput\n\nPrint the value of X or inf as specified by the problem statement.\n\nConstraints\n\n\n- 1 \\leq N \\leq 10^9\n- 1 \\leq M \\leq 100\n- All input values are integers.\n\nSample Input 1\n\n7 3\n\nSample Output 1\n\n400\r\n\nX = 1 + 7 + 49 + 343 = 400. Since 400 \\leq 10^9, print 400.\n\nSample Input 2\n\n1000000 2\n\nSample Output 2\n\ninf\r\n\nX = 1000001000001 > 10^9, so print inf.\n\nSample Input 3\n\n999999999 1\n\nSample Output 3\n\n1000000000\n\nSample Input 4\n\n998244353 99\n\nSample Output 4\n\ninf",
+      "platform": "atcoder",
+      "question_id": "abc400_b",
+      "contest_id": "abc400",
+      "contest_date": "2025-04-05T00:00:00",
+      "starter_code": "",
+      "difficulty": "easy",
+      "public_test_cases": "[{\"input\": \"7 3\", \"output\": \"400\", \"testtype\": \"stdin\"}, {\"input\": \"1000000 2\", \"output\": \"inf\", \"testtype\": \"stdin\"}, {\"input\": \"999999999 1\", \"output\": \"1000000000\", \"testtype\": \"stdin\"}, {\"input\": \"998244353 99\", \"output\": \"inf\", \"testtype\": \"stdin\"}]",
+      "metadata": "{}"
+    },
+    "original_onepage_trial": {
+      "layout": "compact original paragraphs, all original words retained; sample line breaks retained in accompanying public test page",
+      "font_pt": 17,
+      "available_in": 3.42,
+      "required_in": 2.764,
+      "fits": true
+    },
+    "placement": {
+      "original_pages": [
+        46
+      ],
+      "japanese_pages": [
+        47
+      ],
+      "answer_page": 48
+    }
+  },
+  {
+    "example": 10,
+    "id": "3722",
+    "title": "重ならない区間の和を最大化する",
+    "original": "You are given an integer array nums and two integers, k and m.\nReturn the maximum sum of k non-overlapping subarrays of nums, where each subarray has a length of at least m.\n \nExample 1:\n\nInput: nums = [1,2,-1,3,3,4], k = 2, m = 2\nOutput: 13\nExplanation:\nThe optimal choice is:\n\nSubarray nums[3..5] with sum 3 + 3 + 4 = 10 (length is 3 >= m).\nSubarray nums[0..1] with sum 1 + 2 = 3 (length is 2 >= m).\n\nThe total sum is 10 + 3 = 13.\n\nExample 2:\n\nInput: nums = [-10,3,-1,-2], k = 4, m = 1\nOutput: -10\nExplanation:\nThe optimal choice is choosing each element as a subarray. The output is (-10) + 3 + (-1) + (-2) = -10.\n\n \nConstraints:\n\n1 <= nums.length <= 2000\n-10^4 <= nums[i] <= 10^4\n1 <= k <= floor(nums.length / m)\n1 <= m <= 3",
+    "starter_code": "class Solution:\n    def maxSum(self, nums: List[int], k: int, m: int) -> int:\n        ",
+    "original_scope": "full fixed official LiveCodeBench question_content + starter_code; mathematical typesetting rendered, all sample input/output and explanations retained",
+    "japanese_intro": "整数配列numsと整数k、mが与えられる。長さがそれぞれm以上の、重ならないk個の連続部分配列を選び、要素の和の最大値を返せ。",
+    "japanese_io": "",
+    "japanese_constraints": "1 ≤ nums.length ≤ 2000、−10⁴ ≤ nums[i] ≤ 10⁴、1 ≤ k ≤ floor(nums.length/m)、1 ≤ m ≤ 3。",
+    "japanese_samples": [
+      "nums[3..5]の和は3+3+4=10で、長さは3 ≥ m。nums[0..1]の和は1+2=3で、長さは2 ≥ m。合計は10+3=13。",
+      "各要素を一つの部分配列として選ぶのが最適で、合計は(−10)+3+(−1)+(−2)=−10。"
+    ],
+    "japanese": "整数配列numsと整数k、mが与えられる。長さがそれぞれm以上の、重ならないk個の連続部分配列を選び、要素の和の最大値を返せ。\n\n1 ≤ nums.length ≤ 2000、−10⁴ ≤ nums[i] ≤ 10⁴、1 ≤ k ≤ floor(nums.length/m)、1 ≤ m ≤ 3。\n例1: 入力[1, 2, -1, 3, 3, 4]\n2\n2 / 出力13。nums[3..5]の和は3+3+4=10で、長さは3 ≥ m。nums[0..1]の和は1+2=3で、長さは2 ≥ m。合計は10+3=13。\n例2: 入力[-10, 3, -1, -2]\n4\n1 / 出力-10。各要素を一つの部分配列として選ぶのが最適で、合計は(−10)+3+(−1)+(−2)=−10。",
+    "expected": "公開例1の期待出力：13",
+    "explanation": "区間をちょうどk個選ぶ。負の値があっても区間数を減らせないことが、二つ目の公開例に表れる。",
+    "public_tests": [
+      {
+        "input": "[1, 2, -1, 3, 3, 4]\n2\n2",
+        "output": "13",
+        "testtype": "functional"
+      },
+      {
+        "input": "[-10, 3, -1, -2]\n4\n1",
+        "output": "-10",
+        "testtype": "functional"
+      }
+    ],
+    "platform": "leetcode",
+    "difficulty": "medium",
+    "contest_date": "2025-03-01T18:30:00",
+    "role": "appendix",
+    "source_url": "https://leetcode.com/problems/sum-of-k-subarrays-with-length-at-least-m/",
+    "dataset_url": "https://huggingface.co/datasets/livecodebench/code_generation_lite",
+    "source_revision": "0fe84c3912ea0c4d4a78037083943e8f0c4dd505",
+    "file": "test6.jsonl",
+    "license": "Contest question rights retained by original platforms; academic discussion quotation; benchmark code MIT; HF cc unspecified, loader MIT not treated as blanket question license",
+    "source_record": {
+      "question_title": "sum-of-k-subarrays-with-length-at-least-m",
+      "question_content": "You are given an integer array nums and two integers, k and m.\nReturn the maximum sum of k non-overlapping subarrays of nums, where each subarray has a length of at least m.\n \nExample 1:\n\nInput: nums = [1,2,-1,3,3,4], k = 2, m = 2\nOutput: 13\nExplanation:\nThe optimal choice is:\n\nSubarray nums[3..5] with sum 3 + 3 + 4 = 10 (length is 3 >= m).\nSubarray nums[0..1] with sum 1 + 2 = 3 (length is 2 >= m).\n\nThe total sum is 10 + 3 = 13.\n\nExample 2:\n\nInput: nums = [-10,3,-1,-2], k = 4, m = 1\nOutput: -10\nExplanation:\nThe optimal choice is choosing each element as a subarray. The output is (-10) + 3 + (-1) + (-2) = -10.\n\n \nConstraints:\n\n1 <= nums.length <= 2000\n-10^4 <= nums[i] <= 10^4\n1 <= k <= floor(nums.length / m)\n1 <= m <= 3",
+      "platform": "leetcode",
+      "question_id": "3722",
+      "contest_id": "weekly-contest-439",
+      "contest_date": "2025-03-01T18:30:00",
+      "starter_code": "class Solution:\n    def maxSum(self, nums: List[int], k: int, m: int) -> int:\n        ",
+      "difficulty": "medium",
+      "public_test_cases": "[{\"input\": \"[1, 2, -1, 3, 3, 4]\\n2\\n2\", \"output\": \"13\", \"testtype\": \"functional\"}, {\"input\": \"[-10, 3, -1, -2]\\n4\\n1\", \"output\": \"-10\", \"testtype\": \"functional\"}]",
+      "metadata": "{\"func_name\": \"maxSum\"}"
+    },
+    "original_onepage_trial": {
+      "layout": "compact original paragraphs, all original words retained; sample line breaks retained in accompanying public test page",
+      "font_pt": 17,
+      "available_in": 3.42,
+      "required_in": 3.396,
+      "fits": true
+    },
+    "placement": {
+      "original_pages": [
+        49
+      ],
+      "japanese_pages": [
+        50
+      ],
+      "answer_page": 51
+    }
+  },
+  {
+    "example": 11,
+    "id": "abc387_c",
+    "title": "先頭の桁が最大の整数を数える",
+    "original": "A positive integer not less than 10 whose top digit (the most significant digit) in decimal representation is strictly larger than every other digit in that number is called a Snake number.\nFor example, 31 and 201 are Snake numbers, but 35 and 202 are not.\nFind how many Snake numbers exist between L and R, inclusive.\n\nInput\n\nThe input is given from Standard Input in the following format:\nL R\n\nOutput\n\nPrint the answer.\n\nConstraints\n\n\n- 10 \\leq L \\leq R \\leq 10^{18}\n- All input values are integers.\n\nSample Input 1\n\n97 210\n\nSample Output 1\n\n6\n\nThe Snake numbers between 97 and 210, inclusive, are 97, 98, 100, 200, 201, and 210: there are six.\n\nSample Input 2\n\n1000 9999\n\nSample Output 2\n\n2025\n\nSample Input 3\n\n252509054433933519 760713016476190692\n\nSample Output 3\n\n221852052834757",
+    "starter_code": "",
+    "original_scope": "full fixed official LiveCodeBench question_content + starter_code; mathematical typesetting rendered, all sample input/output and explanations retained",
+    "japanese_intro": "10以上の正整数で、十進表記の先頭の桁が他のすべての桁より厳密に大きいものをSnake numberと呼ぶ。31や201は該当するが、35や202は該当しない。L以上R以下のSnake numberの個数を求めよ。",
+    "japanese_io": "入力は「L R」の形式で標準入力から与えられる。答えを出力する。",
+    "japanese_constraints": "10 ≤ L ≤ R ≤ 10¹⁸。入力はすべて整数である。",
+    "japanese_samples": [
+      "97以上210以下では97、98、100、200、201、210の6個が該当する。",
+      "",
+      ""
+    ],
+    "japanese": "10以上の正整数で、十進表記の先頭の桁が他のすべての桁より厳密に大きいものをSnake numberと呼ぶ。31や201は該当するが、35や202は該当しない。L以上R以下のSnake numberの個数を求めよ。\n入力は「L R」の形式で標準入力から与えられる。答えを出力する。\n10 ≤ L ≤ R ≤ 10¹⁸。入力はすべて整数である。\n例1: 入力97 210 / 出力6。97以上210以下では97、98、100、200、201、210の6個が該当する。\n例2: 入力1000 9999 / 出力2025。\n例3: 入力252509054433933519 760713016476190692 / 出力221852052834757。",
+    "expected": "公開例1の期待出力：6",
+    "explanation": "先頭と同じ数字が後ろに現れると条件を満たさない。公開例の201と202の違いが、この厳密な大小関係を示す。",
+    "public_tests": [
+      {
+        "input": "97 210",
+        "output": "6",
+        "testtype": "stdin"
+      },
+      {
+        "input": "1000 9999",
+        "output": "2025",
+        "testtype": "stdin"
+      },
+      {
+        "input": "252509054433933519 760713016476190692",
+        "output": "221852052834757",
+        "testtype": "stdin"
+      }
+    ],
+    "platform": "atcoder",
+    "difficulty": "medium",
+    "contest_date": "2025-01-04T00:00:00",
+    "role": "appendix",
+    "source_url": "https://atcoder.jp/contests/abc387/tasks/abc387_c?lang=en",
+    "dataset_url": "https://huggingface.co/datasets/livecodebench/code_generation_lite",
+    "source_revision": "0fe84c3912ea0c4d4a78037083943e8f0c4dd505",
+    "file": "test6.jsonl",
+    "license": "Contest question rights retained by original platforms; academic discussion quotation; benchmark code MIT; HF cc unspecified, loader MIT not treated as blanket question license",
+    "source_record": {
+      "question_title": "Snake Numbers",
+      "question_content": "A positive integer not less than 10 whose top digit (the most significant digit) in decimal representation is strictly larger than every other digit in that number is called a Snake number.\nFor example, 31 and 201 are Snake numbers, but 35 and 202 are not.\nFind how many Snake numbers exist between L and R, inclusive.\n\nInput\n\nThe input is given from Standard Input in the following format:\nL R\n\nOutput\n\nPrint the answer.\n\nConstraints\n\n\n- 10 \\leq L \\leq R \\leq 10^{18}\n- All input values are integers.\n\nSample Input 1\n\n97 210\n\nSample Output 1\n\n6\n\nThe Snake numbers between 97 and 210, inclusive, are 97, 98, 100, 200, 201, and 210: there are six.\n\nSample Input 2\n\n1000 9999\n\nSample Output 2\n\n2025\n\nSample Input 3\n\n252509054433933519 760713016476190692\n\nSample Output 3\n\n221852052834757",
+      "platform": "atcoder",
+      "question_id": "abc387_c",
+      "contest_id": "abc387",
+      "contest_date": "2025-01-04T00:00:00",
+      "starter_code": "",
+      "difficulty": "medium",
+      "public_test_cases": "[{\"input\": \"97 210\", \"output\": \"6\", \"testtype\": \"stdin\"}, {\"input\": \"1000 9999\", \"output\": \"2025\", \"testtype\": \"stdin\"}, {\"input\": \"252509054433933519 760713016476190692\", \"output\": \"221852052834757\", \"testtype\": \"stdin\"}]",
+      "metadata": "{}"
+    },
+    "original_onepage_trial": {
+      "layout": "compact original paragraphs, all original words retained; sample line breaks retained in accompanying public test page",
+      "font_pt": 17,
+      "available_in": 3.42,
+      "required_in": 3.215,
+      "fits": true
+    },
+    "placement": {
+      "original_pages": [
+        52
+      ],
+      "japanese_pages": [
+        53
+      ],
+      "answer_page": 54
+    }
+  },
+  {
+    "example": 12,
+    "id": "abc399_f",
+    "title": "全区間の和を累乗して足す",
+    "original": "You are given positive integers N, K, and an integer sequence of length N: A = (A_1, A_2, \\dots, A_N).\nFind \\displaystyle \\sum_{1\\leq l\\leq r\\leq N} \\Bigg(\\sum_{l\\leq i\\leq r} A_i\\Bigg)^K, modulo 998244353.\n\nInput\n\nThe input is given from Standard Input in the following format:\nN K\r\nA_1 A_2 \\dots A_N\n\nOutput\n\nPrint the answer.\n\nConstraints\n\n\n- 1\\leq N \\leq 2\\times 10^5\n- 1\\leq K \\leq 10\n- 0 \\leq A_i < 998244353\n- All input values are integers.\n\nSample Input 1\n\n3 2\r\n3 1 2\n\nSample Output 1\n\n75\r\n\nThe value is A_1^2+A_2^2+A_3^2+(A_1+A_2)^2+(A_2+A_3)^2+(A_1+A_2+A_3)^2=3^2+1^2+2^2+4^2+3^2+6^2=75.\n\nSample Input 2\n\n1 10\r\n0\n\nSample Output 2\n\n0\n\nSample Input 3\n\n10 5\r\n91 59 85 60 57 72 12 3 27 16\n\nSample Output 3\n\n428633385\r\n\nBe sure to find the sum modulo 998244353.",
+    "starter_code": "",
+    "original_scope": "full fixed official LiveCodeBench question_content + starter_code; mathematical typesetting rendered, all sample input/output and explanations retained",
+    "japanese_intro": "正整数N、Kと長さNの整数列A=(A₁,A₂,…,Aₙ)が与えられる。すべての1 ≤ l ≤ r ≤ Nについて、区間Aₗ,…,Aᵣの和のK乗を足し、998244353で割った余りを求めよ。",
+    "japanese_io": "入力は1行目が「N K」、2行目が「A₁ A₂ … Aₙ」で、標準入力から与えられる。答えを出力する。",
+    "japanese_constraints": "1 ≤ N ≤ 2×10⁵、1 ≤ K ≤ 10、0 ≤ Aᵢ < 998244353。入力はすべて整数である。",
+    "japanese_samples": [
+      "値は3²+1²+2²+4²+3²+6²=75になる。",
+      "",
+      "998244353で割った余りを求めること。"
+    ],
+    "japanese": "正整数N、Kと長さNの整数列A=(A₁,A₂,…,Aₙ)が与えられる。すべての1 ≤ l ≤ r ≤ Nについて、区間Aₗ,…,Aᵣの和のK乗を足し、998244353で割った余りを求めよ。\n入力は1行目が「N K」、2行目が「A₁ A₂ … Aₙ」で、標準入力から与えられる。答えを出力する。\n1 ≤ N ≤ 2×10⁵、1 ≤ K ≤ 10、0 ≤ Aᵢ < 998244353。入力はすべて整数である。\n例1: 入力3 2\n3 1 2 / 出力75。値は3²+1²+2²+4²+3²+6²=75になる。\n例2: 入力1 10\n0 / 出力0。\n例3: 入力10 5\n91 59 85 60 57 72 12 3 27 16 / 出力428633385。998244353で割った余りを求めること。",
+    "expected": "公開例1の期待出力：75",
+    "explanation": "各区間の和を求めてからK乗する。区間の全要素を先にK乗して足す計算とは異なる。",
+    "public_tests": [
+      {
+        "input": "3 2\n3 1 2",
+        "output": "75",
+        "testtype": "stdin"
+      },
+      {
+        "input": "1 10\n0",
+        "output": "0",
+        "testtype": "stdin"
+      },
+      {
+        "input": "10 5\n91 59 85 60 57 72 12 3 27 16",
+        "output": "428633385",
+        "testtype": "stdin"
+      }
+    ],
+    "platform": "atcoder",
+    "difficulty": "hard",
+    "contest_date": "2025-03-29T00:00:00",
+    "role": "appendix",
+    "source_url": "https://atcoder.jp/contests/abc399/tasks/abc399_f?lang=en",
+    "dataset_url": "https://huggingface.co/datasets/livecodebench/code_generation_lite",
+    "source_revision": "0fe84c3912ea0c4d4a78037083943e8f0c4dd505",
+    "file": "test6.jsonl",
+    "license": "Contest question rights retained by original platforms; academic discussion quotation; benchmark code MIT; HF cc unspecified, loader MIT not treated as blanket question license",
+    "source_record": {
+      "question_title": "Range Power Sum",
+      "question_content": "You are given positive integers N, K, and an integer sequence of length N: A = (A_1, A_2, \\dots, A_N).\nFind \\displaystyle \\sum_{1\\leq l\\leq r\\leq N} \\Bigg(\\sum_{l\\leq i\\leq r} A_i\\Bigg)^K, modulo 998244353.\n\nInput\n\nThe input is given from Standard Input in the following format:\nN K\r\nA_1 A_2 \\dots A_N\n\nOutput\n\nPrint the answer.\n\nConstraints\n\n\n- 1\\leq N \\leq 2\\times 10^5\n- 1\\leq K \\leq 10\n- 0 \\leq A_i < 998244353\n- All input values are integers.\n\nSample Input 1\n\n3 2\r\n3 1 2\n\nSample Output 1\n\n75\r\n\nThe value is A_1^2+A_2^2+A_3^2+(A_1+A_2)^2+(A_2+A_3)^2+(A_1+A_2+A_3)^2=3^2+1^2+2^2+4^2+3^2+6^2=75.\n\nSample Input 2\n\n1 10\r\n0\n\nSample Output 2\n\n0\n\nSample Input 3\n\n10 5\r\n91 59 85 60 57 72 12 3 27 16\n\nSample Output 3\n\n428633385\r\n\nBe sure to find the sum modulo 998244353.",
+      "platform": "atcoder",
+      "question_id": "abc399_f",
+      "contest_id": "abc399",
+      "contest_date": "2025-03-29T00:00:00",
+      "starter_code": "",
+      "difficulty": "hard",
+      "public_test_cases": "[{\"input\": \"3 2\\n3 1 2\", \"output\": \"75\", \"testtype\": \"stdin\"}, {\"input\": \"1 10\\n0\", \"output\": \"0\", \"testtype\": \"stdin\"}, {\"input\": \"10 5\\n91 59 85 60 57 72 12 3 27 16\", \"output\": \"428633385\", \"testtype\": \"stdin\"}]",
+      "metadata": "{}"
+    },
+    "original_onepage_trial": {
+      "layout": "compact original paragraphs, all original words retained; sample line breaks retained in accompanying public test page",
+      "font_pt": 17,
+      "available_in": 3.42,
+      "required_in": 3.688,
+      "fits": false
+    },
+    "placement": {
+      "original_pages": [
+        55,
+        56
+      ],
+      "japanese_pages": [
+        57
+      ],
+      "answer_page": 58
+    }
+  },
+  {
+    "example": 13,
+    "id": "abc393_b",
+    "title": "等間隔に現れるABCを数える",
+    "original": "A string S is given.\nFind how many places in S have A, B, and C in this order at even intervals.\nSpecifically, find the number of triples of integers (i,j,k) that satisfy all of the following conditions. Here, |S| denotes the length of S, and S_x denotes the x-th character of S.\n\n- 1 \\leq i < j < k \\leq |S|\n- j - i = k - j\n- S_i = A\n- S_j = B\n- S_k = C\n\nInput\n\nThe input is given from Standard Input in the following format:\nS\n\nOutput\n\nPrint the answer.\n\nConstraints\n\n\n- S is an uppercase English string with length between 3 and 100, inclusive.\n\nSample Input 1\n\nAABCC\n\nSample Output 1\n\n2\r\n\nThere are two triples (i,j,k) = (1,3,5) and (2,3,4) that satisfy the conditions.\n\nSample Input 2\n\nARC\n\nSample Output 2\n\n0\n\nSample Input 3\n\nAABAAABBAEDCCCD\n\nSample Output 3\n\n4",
+    "starter_code": "",
+    "original_scope": "full fixed official LiveCodeBench question_content + starter_code; mathematical typesetting rendered, all sample input/output and explanations retained",
+    "japanese_intro": "文字列Sが与えられる。A、B、Cがこの順で等間隔に現れる箇所を数えよ。具体的には、1 ≤ i < j < k ≤ |S|、j−i=k−j、Sᵢ=A、Sⱼ=B、Sₖ=Cをすべて満たす整数の組(i,j,k)の個数を求める。|S|はSの長さ、SₓはSのx文字目を表す。",
+    "japanese_io": "標準入力からSが与えられる。答えを出力する。",
+    "japanese_constraints": "Sは英大文字からなる長さ3以上100以下の文字列である。",
+    "japanese_samples": [
+      "条件を満たす組は(i,j,k)=(1,3,5)と(2,3,4)の二つ。",
+      "",
+      ""
+    ],
+    "japanese": "文字列Sが与えられる。A、B、Cがこの順で等間隔に現れる箇所を数えよ。具体的には、1 ≤ i < j < k ≤ |S|、j−i=k−j、Sᵢ=A、Sⱼ=B、Sₖ=Cをすべて満たす整数の組(i,j,k)の個数を求める。|S|はSの長さ、SₓはSのx文字目を表す。\n標準入力からSが与えられる。答えを出力する。\nSは英大文字からなる長さ3以上100以下の文字列である。\n例1: 入力AABCC / 出力2。条件を満たす組は(i,j,k)=(1,3,5)と(2,3,4)の二つ。\n例2: 入力ARC / 出力0。\n例3: 入力AABAAABBAEDCCCD / 出力4。",
+    "expected": "公開例1の期待出力：2",
+    "explanation": "隣り合ったABCだけでなく、文字間に同じ数の文字がある並びも数える。",
+    "public_tests": [
+      {
+        "input": "AABCC",
+        "output": "2",
+        "testtype": "stdin"
+      },
+      {
+        "input": "ARC",
+        "output": "0",
+        "testtype": "stdin"
+      },
+      {
+        "input": "AABAAABBAEDCCCD",
+        "output": "4",
+        "testtype": "stdin"
+      }
+    ],
+    "platform": "atcoder",
+    "difficulty": "easy",
+    "contest_date": "2025-02-15T00:00:00",
+    "role": "appendix",
+    "source_url": "https://atcoder.jp/contests/abc393/tasks/abc393_b?lang=en",
+    "dataset_url": "https://huggingface.co/datasets/livecodebench/code_generation_lite",
+    "source_revision": "0fe84c3912ea0c4d4a78037083943e8f0c4dd505",
+    "file": "test6.jsonl",
+    "license": "Contest question rights retained by original platforms; academic discussion quotation; benchmark code MIT; HF cc unspecified, loader MIT not treated as blanket question license",
+    "source_record": {
+      "question_title": "A..B..C",
+      "question_content": "A string S is given.\nFind how many places in S have A, B, and C in this order at even intervals.\nSpecifically, find the number of triples of integers (i,j,k) that satisfy all of the following conditions. Here, |S| denotes the length of S, and S_x denotes the x-th character of S.\n\n- 1 \\leq i < j < k \\leq |S|\n- j - i = k - j\n- S_i = A\n- S_j = B\n- S_k = C\n\nInput\n\nThe input is given from Standard Input in the following format:\nS\n\nOutput\n\nPrint the answer.\n\nConstraints\n\n\n- S is an uppercase English string with length between 3 and 100, inclusive.\n\nSample Input 1\n\nAABCC\n\nSample Output 1\n\n2\r\n\nThere are two triples (i,j,k) = (1,3,5) and (2,3,4) that satisfy the conditions.\n\nSample Input 2\n\nARC\n\nSample Output 2\n\n0\n\nSample Input 3\n\nAABAAABBAEDCCCD\n\nSample Output 3\n\n4",
+      "platform": "atcoder",
+      "question_id": "abc393_b",
+      "contest_id": "abc393",
+      "contest_date": "2025-02-15T00:00:00",
+      "starter_code": "",
+      "difficulty": "easy",
+      "public_test_cases": "[{\"input\": \"AABCC\", \"output\": \"2\", \"testtype\": \"stdin\"}, {\"input\": \"ARC\", \"output\": \"0\", \"testtype\": \"stdin\"}, {\"input\": \"AABAAABBAEDCCCD\", \"output\": \"4\", \"testtype\": \"stdin\"}]",
+      "metadata": "{}"
+    },
+    "original_onepage_trial": {
+      "layout": "compact original paragraphs, all original words retained; sample line breaks retained in accompanying public test page",
+      "font_pt": 17,
+      "available_in": 3.42,
+      "required_in": 3.215,
+      "fits": true
+    },
+    "placement": {
+      "original_pages": [
+        59
+      ],
+      "japanese_pages": [
+        60
+      ],
+      "answer_page": 61
+    }
+  }
+]
