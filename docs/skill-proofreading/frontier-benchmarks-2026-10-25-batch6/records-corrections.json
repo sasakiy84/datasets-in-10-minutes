@@ -1,0 +1,29 @@
+{
+  "scope": "Records only; no artifact changes after exact-pair approval.",
+  "corrections": [
+    {
+      "dataset": "aime-2026",
+      "before": "all_rows_read:30",
+      "after": "all_rows_downloaded:30; personally read selected13 only",
+      "reason": "Separate downloaded release rows from actually read selected questions."
+    },
+    {
+      "dataset": "aime-2026",
+      "before": "root supplementary review retained old pending markers",
+      "after": "Synchronized latest root record; final p23 resolution inherited explicitly from independent final review",
+      "reason": "Keep own versus inherited evidence and current status accurate."
+    },
+    {
+      "dataset": "bfcl",
+      "before": "Independent review referenced audit log names outside intended JSON-only copy set",
+      "after": "Retained audit-*.log alongside independent review",
+      "reason": "Preserve named technical evidence in repository."
+    },
+    {
+      "dataset": "livecodebench",
+      "before": "Pass@1 label change recorded at23,24; citation changes recorded as general",
+      "after": "Pass@1 label correction applies24 only; both citation changes apply25",
+      "reason": "Replace text-match inferred scope with the actual changed page."
+    }
+  ]
+}
