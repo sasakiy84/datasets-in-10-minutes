@@ -1,0 +1,122 @@
+{
+  "dataset": "aime-2026",
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "skill": ".agents/skills/japanese-slide-proofreading/SKILL.md",
+  "artifact_sha256": {
+    "pdf": "668c1b6c4e41b2cfe0c8e2fc29a2a6316d824f5d470d561080f0a1ba5f1e5944",
+    "pptx": "a948c5e7c4388597785c1d021c5156d6ed3687e9abbd86845fa408f95b5eaceb"
+  },
+  "pairs": [
+    {
+      "page": 9,
+      "before": "到着までの時間T",
+      "after": "Patrickが出発してから到着するまでをT時間",
+      "reason": "時間の起点を明示する。",
+      "before_evidence": "earlier creator wording/notation retained in task history"
+    },
+    {
+      "page": 8,
+      "before": "Tanyaの速さはPatrickより時速2マイル速く、Joseの速さはTanyaより時速7マイル速かった。",
+      "after": "TanyaとJoseもそれぞれ一定の速さで進み、Tanyaの速さはPatrickより時速2マイル速く、Joseの速さはTanyaより時速7マイル速かった。",
+      "reason": "原文の一定速度の条件を明示する。",
+      "before_evidence": "draft1 native text"
+    },
+    {
+      "page": 11,
+      "before": "順序付き分割",
+      "after": "その和になる正の整数の並べ方",
+      "reason": "専門語を短く自然な説明にする。",
+      "before_evidence": "earlier creator wording/notation retained in task history"
+    },
+    {
+      "page": 54,
+      "before": "×s",
+      "after": "…",
+      "reason": "LaTeX変換順の誤りを修正し省略記号を保つ。",
+      "before_evidence": "earlier creator wording/notation retained in task history"
+    },
+    {
+      "page": 22,
+      "before": "この不一致は回答の1%未満だった。",
+      "after": "最終回答を採点する評価全体で、この不一致は回答の1%未満だった。",
+      "reason": "報告値の対象をAIMEだけと誤読させない。",
+      "before_evidence": "draft1 native text"
+    },
+    {
+      "page": 25,
+      "before": "AIMEは小規模モデルや、新しい方法の効果を調べる共通課題として使われる。",
+      "after": "小規模モデルや新しい方法の比較に役立つ課題と位置付けている。",
+      "reason": "実際の利用実績と著者の位置付けを区別する。",
+      "before_evidence": "draft1 native text"
+    },
+    {
+      "page": 30,
+      "before": "評価用コードはMIT Licenseである。問題を作成したMAA、データを公開したMathArena、今回加えた日本語訳と解説を、帰属情報で区別している。",
+      "after": "評価用コードはMIT Licenseで公開され、改変や再配布が認められている。",
+      "reason": "制作記録を削り利用条件の説明に集中する。",
+      "before_evidence": "draft1 native text"
+    },
+    {
+      "page": 62,
+      "before": "Jasper Dekoninck et al. (2025)",
+      "after": "Mislav Balunović et al. (2025)",
+      "reason": "2025年論文の第一著者を一次論文で確認し訂正する。",
+      "before_evidence": "draft1 native text"
+    },
+    {
+      "page": 36,
+      "before": "数えると70通り。",
+      "after": "数えると70個。",
+      "reason": "整数の個数なので助数詞を直す。",
+      "before_evidence": "draft1 native text"
+    },
+    {
+      "page": 59,
+      "before": "和と指定された三重積の和がともに0になるもの",
+      "after": "和と指定された三重積の和が、ともに3の倍数になるもの",
+      "reason": "合同条件を省かず数学的な意味を正確に伝える。",
+      "before_evidence": "draft1 native text"
+    },
+    {
+      "page": 58,
+      "before": "二つの合同条件を満たす7項組",
+      "after": "7項組の合同条件",
+      "reason": "長い見出しを短くし、末尾1字の折り返しを解消する。",
+      "before_evidence": "draft1 native text"
+    },
+    {
+      "page": 24,
+      "before": "Claude Opus 4.8 / max 100.00",
+      "after": "Claudeの行を削除し、GPT-5.5とGeminiの各問4試行の2行に統一。",
+      "reason": "公式トレースの選択肢がClaudeだけ2試行だったため、異なる試行条件を混ぜない。",
+      "before_evidence": "draft1 native table row"
+    },
+    {
+      "page": 23,
+      "before": "2026年論文の標準手順。現行表の次頁2モデルも各問4試行。",
+      "after": "2026年論文の標準手順。",
+      "reason": "不自然な他ページ参照を削除。各問4試行は成績表自体に示した。",
+      "before_evidence": "candidate2 native text"
+    }
+  ],
+  "layout_changes": [
+    {
+      "page": 14,
+      "change": "半球の断面図を加え、置ける範囲の半径ρを定義して等式と面積比を示す。"
+    },
+    {
+      "page": 16,
+      "change": "MAAとMathArenaの役割の二つの主張に二つの出典を添える。"
+    },
+    {
+      "pages": [
+        46,
+        52,
+        55,
+        58
+      ],
+      "change": "日本語本文と赤い正解の間隔を拡げる。"
+    }
+  ]
+}
