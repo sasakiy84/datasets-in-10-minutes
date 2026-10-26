@@ -1,0 +1,107 @@
+{
+  "reviewer": "/root/five_coordinator/create_ifeval",
+  "method": "Independent source acquisition and static reading/calculation; no model/evaluation run",
+  "own_data": "Full26529 JSONL independently acquired and machineparsed;13selected fulloriginalquestion/alloptions/JA/gold/explanation personallyread, notall26529personallyread. All13selected raw exactmatches own fetched fixedrevision.",
+  "primary_read_scope": {
+    "paper_v2": "Introduction, DataCollection2.1–2.3, Statistics3, BaselineModels4.1, selectedTable5 initialsample/macro rows and conditions; notallpaper/appendix read.",
+    "paper_v4": "Independently acquired; checked selected taxonomy/result passages only, notallpaperread.",
+    "eval_code": "extract_option_labels/extract_option_content, process_single_file, calculate_total_row; staticonly.",
+    "prompt": "Fullzero-shot.yaml",
+    "qwen_card": "Knowledge/resulttable and output-length paragraph, notfullcard.",
+    "license": "FullHFcardlicense and referenced-source responsibilities; relevant ODC scope/attribution clauses, notalllegalcommentary.",
+    "fact_sources": "Relevant sourcepassages listed peritem; noallbooks/allmedicalchapterclaim."
+  },
+  "selected_examples": [
+    {
+      "row": 59,
+      "gold": "B",
+      "own_method": "For continuous10A ideal inductor load: transformer current magnitude10A all cycle; thyristor conducts10A half cycle so RMS sqrt(100/2)=7.0711.",
+      "support": "own-statistics-and-math.json"
+    },
+    {
+      "row": 1668,
+      "gold": "A",
+      "own_method": "Independently fetched/read Rousseau BookIII ChapterXI passage: legislative power heart of State; executive power brain.",
+      "support": "sources/rousseau.html.txt"
+    },
+    {
+      "row": 17691,
+      "gold": "J",
+      "own_method": "Independently fetched Académie biography and award register: register1927, received1928 in prose. Britannica independently explicitly awarded1927. Nobel API own403 so not treated as read.",
+      "support": [
+        "sources/bergson-academy.html.txt",
+        "sources/bergson-britannica.html.txt"
+      ]
+    },
+    {
+      "row": 87,
+      "gold": "I",
+      "own_method": "Own Gutenberg Kant introduction read: all bodies are extended is analytical judgement; source question objects interpreted as physical bodies, not general entities.",
+      "support": "sources/kant.html.txt"
+    },
+    {
+      "row": 44,
+      "gold": "E",
+      "own_method": "Independent annuity-due geometric-series formula, payments compound1..10years, value27943.2853.",
+      "support": "own-statistics-and-math.json"
+    },
+    {
+      "row": 32,
+      "gold": "J",
+      "own_method": "Expand (2+sinx)^2=4.5+4sinx−cos2x/2; integrate0..5 timespi,80.1148743.",
+      "support": "own-statistics-and-math.json"
+    },
+    {
+      "row": 2598,
+      "gold": "C",
+      "own_method": "Row373 times Democrat column890 divided by total2571=129.120965.",
+      "support": "own-statistics-and-math.json"
+    },
+    {
+      "row": 2500,
+      "gold": "A",
+      "own_method": "Own Gutenberg Clausewitz BookI§24 and BookVIII political-intercourse discussion read; released TheTheoryonWar normalized to standard Japanese戦争論 while original stays unchanged.",
+      "support": "sources/clausewitz.html.txt"
+    },
+    {
+      "row": 1815,
+      "gold": "C",
+      "own_method": "Own Britannica article read: Nicaea325 firstecumenical council called by ConstantineI; church/state solidarity passage supports context. Released spelling NisianConference kept in original, standardJapanese adopted.",
+      "support": "sources/nicaea.html.txt"
+    },
+    {
+      "row": 676,
+      "gold": "J",
+      "own_method": "Own open linguistics textbook morpheme definition/free/bound/root-affixes read; independently segment swift+ly,engine+s,fruit+ful,dive+ing,kind+ness,walk+ed,remove+al,happy+ly,teach+ing vs bench one.",
+      "support": "sources/morphemes.html.txt"
+    },
+    {
+      "row": 2304,
+      "gold": "F",
+      "own_method": "Own FAO seed-storage passage links seed lifespan to periodretainingviability and temperature/moisture; ordinary seed lifespan/寿命 mapping fits F. Does not independently establish physiologicalmaturity as universal startpoint; that is question wording.",
+      "support": "sources/seed-storage.html.txt"
+    },
+    {
+      "row": 165,
+      "gold": "B",
+      "own_method": "Own Merck complications acutehemolysis passage read: hemoglobinuria/flankpain and subsequent jaundice. Asked jaundice type supportshemolyticB; G names whole reaction.",
+      "support": "sources/medical-merck.html.txt"
+    },
+    {
+      "row": 12211,
+      "gold": "D",
+      "own_method": "Own analyticchoose3,1choose5,3 + choose3,2choose5,2=60 and independent4personsubsetenumeration60.",
+      "support": "own-statistics-and-math.json"
+    }
+  ],
+  "numerical_checks": "own-statistics-and-math.json",
+  "metrics": "Atomic answer-letter match after label/content extraction; samplemean and unweightedmean ofcategoryaccuracies confirmed in code; missingcounted in denominator. Noevalrun.",
+  "initial_results": "OwnpaperTable5 selectedvalues61.82/60.24/48.16/47.73; DeepSeek-R1 sample/subfield/field/discipline61.82/62.61/61.23/59.95; temperature0,reasoning/chat0shot,base5shot,output32K/4K. Repeatedtrialcount not inferred.",
+  "later_result": "OwnQwen3-235B-A22B-Thinking-2507card SuperGPQA64.9 with knowledgeoutput32768,2025adoption; nosameharnessor2026latestclaim.",
+  "rights": "HFcompositedatabase ODC-BY, underlyingcontentnotlicensedbydatabasealone; peritemupstreamnotinreleasedrecord. Noattribution/permission invented.",
+  "main_native_read": "Owncandidate3main1–29 nativePDFtextfullyread beforecandidate4localchanges; appendix/native to complete.",
+  "inherited": "Root/coordinator earliermacro77/72 concern and creatorchecks are external observations, notowncompletedchecks. Ownfixeddataflat/pathcounts72/285 agree; initialmacroaxis counts omitted onslides.",
+  "remaining": [
+    "Finalimmutable visual/native/technical check pending."
+  ]
+}

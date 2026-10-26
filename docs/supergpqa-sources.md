@@ -1,0 +1,49 @@
+# SuperGPQAの出典と確認範囲
+
+## 資料の対象
+
+2025年にM-A-Pチームが公開したSuperGPQAを扱う。GPQAとは別に構築された、大学院水準の専門知識と推論の評価データである。公開データ26,529問から12の上位分野にわたる13問を選び、本編3問、Appendix10問を収録した。学部4年〜修士1年相当の読者が、概要、入力と正解、構築、採点、入手方法を把握できる構成とした。
+
+本編は600秒の流し読みを想定した計画であり、実測していない。Geminiなどの外部生成API、モデルによる解答生成、評価ハーネスの実行は行わず、ローカルの制作・日本語校正スキルを使った。
+
+## 中心となる一次資料
+
+- M-A-P Team et al. (2025). *SuperGPQA: Scaling LLM Evaluation across 285 Graduate Disciplines*. https://arxiv.org/abs/2502.14739 。取得したHTML v2の導入、構築§2、統計§3、評価§4、該当する回答指示を読んだ。全文HTMLを取得したことと、すべての付録を読了したことは区別している。
+- M-A-P (2025). *SuperGPQA*. https://huggingface.co/datasets/m-a-p/SuperGPQA 。公開JSONLをrevision `4430d4458112c7d4497fdcf94d7cc223313d6acf` で固定し、26,529行を機械集計した。全行を人が読んだとは扱わず、選定13問を原文・全選択肢・正解・日本語と照合した。
+- M-A-P. *SuperGPQA: Scaling LLM Evaluation across 285 Graduate Disciplines*. https://github.com/SuperGPQA/SuperGPQA 。README、ODC-BYのライセンス原文、`config/prompt/zero-shot.yaml`、`eval/eval.py`の抽出と集計を静的に読んだ。回答の記号を抽出し、失敗時に選択肢の文面も照合する処理を確認した。
+- Qwen Team (2025). *Qwen3-235B-A22B-Thinking-2507*. https://huggingface.co/Qwen/Qwen3-235B-A22B-Thinking-2507 。SuperGPQAの64.9と知識課題の出力上限32,768を読んだ。2025年7月の後続採用例として単独で紹介し、2026年時点の最高成績や、初期論文と同じ条件の順位とはしていない。集約方式の詳細と試行数は、このカードから確定できていない。
+- 公式サイト https://supergpqa.github.io/ を実際に描画し、CSSとフォントが反映された画面を開いて確認した。独立したHugging Face Spaceは401で取得できず、利用可能と断定しない。
+
+## 件数・分類と数値
+
+固定JSONLは13の`discipline`、72の`field`、285の`subfield`に分かれ、選択肢は平均9.668966個だった。10択は23,158問、残りは4〜9択である。全26,529問で正解記号から選んだ文面と`answer`の不一致はなかった。
+
+上位分野の理学9,838問、工学7,892問、医学2,755問は合計77.2%。経済学は873問である。難易度はeasy7,731、middle11,748、hard7,050、`is_calculation`は11,229問だった。このタグについて、論文の説明は数値計算だけでなく形式的推論も含める。
+
+自分で読んだ論文v2の統計は13/72/285と一致する。一方、メインの補助担当が別バージョンの論文内部に分類数などの不一致を見つけた。この別バージョン全体を自分で読んだとせず、スライドの件数・分類には固定公開データを用いた。初期モデルのマクロ平均の表には、現行データの区分数を機械的に付けなかった。不一致の原因は推測していない。
+
+## 13事例の正解と訳
+
+[事例票](skill-proofreading/supergpqa/examples.json)に原票のID、行位置、設問、全選択肢、正解記号・文、全訳、選定理由に当たる解説と確認方法を保存した。[正解の確認](skill-proofreading/supergpqa/source-fact-verification.json)は、数値5問の別計算と、文章8問の参照箇所を分けている。
+
+- 整流回路、年初の積立、回転体の積分、独立を仮定した期待度数、チームの組合せを、説明に必要な範囲で計算・列挙した。モデルの評価や回路の実機検証は行っていない。
+- ルソーの立法権の比喩は『社会契約論』、カントの分析判断は『純粋理性批判』、クラウゼヴィッツの政治と戦争は『戦争論』の公開本文を読んで確認した。Project Gutenbergで原典の英訳を参照した。
+- ベルクソンはAcadémie françaiseの受賞欄の1927年と、Britannicaの1927年を確認した。Académie本文の「1928年に受領」と賞の対象年を区別した。Nobel公式ページ/APIへのアクセスは403で、本文を確認できた扱いにしていない。
+- ニカイア公会議はBritannica、形態素の考え方はAndersonの公開言語学教材、種子の寿命と保存条件はFAO、溶血と黄疸はMerck Manualを読んだ。すべてを新たな一次研究とは呼ばず、原典・公式教材・百科事典・医学解説の役割を区別した。
+- 種子の設問にある「生理的成熟から」という始点は公開設問の文言である。これが普遍的な寿命の定義だと外部資料で確定したとは扱わない。
+
+原文の設問と全選択肢を保持し、数値・変数だけの候補は原文と訳で共有した。ルソーの例は、英語の候補名へ括弧で日本語名を添え、設問の訳・正解・根拠まで同じ頁へまとめた。クラウゼヴィッツの`The Theory on War`、歴史問題の`Nisian Conference`は原文で保持し、日本語では対応する標準的な書名・会議名で説明した。数式のドル記号は組版用の区切りとして扱い、数式の意味を変えずに表示した。
+
+## 利用条件と配布記録
+
+[ODC-BYライセンス原文](licenses/supergpqa/LICENSE-SuperGPQA-ODC-BY-1.0.txt)と、公式カードの参照元一覧を含む[帰属・内容条件](licenses/supergpqa/ATTRIBUTION-SuperGPQA.md)を保持する。ODC-BYが扱うのはデータベースの権利であり、個々の内容の権利を一律に与えるものではない。公開原票には各問の上流出典を示すフィールドがなく、選定13問がすべて新規作成されたと断定していない。13問は対象の分析・説明に必要な実例として引用し、元の第三者の権利と条件を保持する。
+
+[校正と配置の修正対](skill-proofreading/supergpqa/proofreading.json)、[構築・採点・利用の確認](data-audits/supergpqa.json)、[最終配布票](handoff.json)を残す。各種技術監査は実際に実行した範囲だけを記載し、作者の実施と独立レビュー担当の実施を分ける。
+
+## 最終配布物と確認記録
+
+[PPTX](../slides/datasets-in-10-minutes-supergpqa.pptx)・[PDF](../slides/datasets-in-10-minutes-supergpqa.pdf)。本編29頁、総60頁。本編の流し読みは600秒の予定で、閲覧時間は未実測。
+
+[原票・集計・出典の検証](data-audits/supergpqa.json)・[校正の修正対](skill-proofreading/supergpqa.md)・[全ページ文言](skill-proofreading/supergpqa/pages.jsonl)・[最終検証票](skill-proofreading/supergpqa/review.json)。作成担当の引継ぎ票は独立確認前の記録として保持し、最終承認は最終検証票に集約した。
+
+同梱ライセンス・帰属情報：[LICENSE-SuperGPQA-ODC-BY-1.0.txt](licenses/supergpqa/LICENSE-SuperGPQA-ODC-BY-1.0.txt)、[ATTRIBUTION-SuperGPQA.md](licenses/supergpqa/ATTRIBUTION-SuperGPQA.md)。

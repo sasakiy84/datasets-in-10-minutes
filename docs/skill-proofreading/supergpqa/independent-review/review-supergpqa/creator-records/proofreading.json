@@ -1,0 +1,83 @@
+{
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "skills": [
+    "japanese-slide-proofreading",
+    "dataset-introduction-slides",
+    "master-guided-slides"
+  ],
+  "corrections": [
+    {
+      "before": "問題ごとの正解率は、全26,529問で正解の割合を求める。",
+      "after": "全問の正解率は、26,529問に占める正解の割合である。",
+      "reason": "正解率の単位と主述を自然にした。",
+      "source": "draft1/content.py"
+    },
+    {
+      "before": "学部生・修士学生が、設問を英語の選択式へ整理する。",
+      "after": "学部生・修士課程の学生が、設問を英語の選択式へ整理する。",
+      "reason": "修士学生という省略を自然な表現にした。",
+      "source": "draft1/content.py"
+    },
+    {
+      "before": "分野の広がりを、問題数の偏りに左右されずに評価できる。",
+      "after": "問題の少ない分野にも、同じ重みを与える指標となる。",
+      "reason": "抽象的な効能より、平均の意味を具体的に説明した。",
+      "source": "draft1/content.py"
+    },
+    {
+      "before": "2 if maxw<230 else 1",
+      "after": "2 if maxw<400 else 1",
+      "reason": "短い選択肢を二つずつまとめ、原文と訳の縦の長さを抑えた。",
+      "source": "draft1/build.py"
+    },
+    {
+      "before": "285の専門領域を均等に平均",
+      "after": "専門領域を均等に平均",
+      "reason": "初期モデルの集計値に、現行公開データの区分数を重ねない。",
+      "source": "draft1/build.py"
+    },
+    {
+      "before": "72の分野を均等に平均",
+      "after": "分野を均等に平均",
+      "reason": "初期モデルの集計値と現行分類の件数を分けた。",
+      "source": "draft1/build.py"
+    },
+    {
+      "before": "13の上位分野を均等に平均",
+      "after": "上位分野を均等に平均",
+      "reason": "三つの集計軸の表現をそろえた。",
+      "source": "draft1/build.py"
+    },
+    {
+      "before": "seed lifespanは種子の寿命を指す。発芽するまでの日数や、成熟までの期間とは異なり、発芽能力を保てる期間を問う設問である。",
+      "after": "seed lifespanは種子の寿命を指す。貯蔵温度や含水率などによって、発芽能力を保てる期間は変わる。",
+      "reason": "設問の繰り返しを減らし、種子の寿命に関わる要因をFAOの説明に基づいて加えた。",
+      "source": "draft1/examples.json"
+    },
+    {
+      "before": "GPQAとは別にM-A-Pチームが構築したデータである。",
+      "after": "科学の知識を問うGPQAとは別に、M-A-Pチームが構築したデータである。",
+      "reason": "初出のGPQAが何を扱うか短く補った。",
+      "source": "candidate2/content.py"
+    },
+    {
+      "before": "ルソーの『社会契約論』は、立法権を国家の心臓、執行権を脳にたとえる。法律そのものの知識に加え、政治・法思想の知識も問われる。",
+      "after": "ルソーの『社会契約論』では、立法権を国家の心臓、執行権を脳にたとえている。",
+      "reason": "原文・訳・全選択肢・正解・根拠を一頁へまとめ、重複する説明を整理した。",
+      "source": "candidate2/examples.json"
+    },
+    {
+      "before": "原文ページと日本語訳ページに全候補名を別々に表示。",
+      "after": "原文の全候補名へ括弧で日本語名を添え、設問訳・正解・根拠まで同じ一頁に表示。",
+      "reason": "短い例を一頁で読めるよう再配置した。",
+      "source": "candidate2/pages.jsonl"
+    },
+    {
+      "before": "表紙主題の文字枠高71.10 pt。小文字pの下端が2.13 pt枠外。",
+      "after": "表紙主題の文字枠を6 pt拡張。",
+      "reason": "実描画の小文字pも編集可能な文字枠に収めた。",
+      "source": "candidate2/ink-audit.json"
+    }
+  ]
+}

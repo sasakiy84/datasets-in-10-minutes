@@ -1,0 +1,142 @@
+{
+  "dataset": "SuperGPQA",
+  "creator": "M-A-P Team",
+  "primary_paper": {
+    "url": "https://arxiv.org/abs/2502.14739",
+    "read_version": "v2",
+    "own_sections_read": [
+      "Introduction",
+      "Data collection2.1-2.3",
+      "Statistics3 including taxonomy/counts/difficulty",
+      "Evaluation4 and main result conditions",
+      "Prompt appendixF selected relevant portion"
+    ],
+    "downloaded_full_html": true,
+    "read_full_paper": false
+  },
+  "distribution": {
+    "url": "https://huggingface.co/datasets/m-a-p/SuperGPQA",
+    "revision": "4430d4458112c7d4497fdcf94d7cc223313d6acf",
+    "records": 26529,
+    "download_bytes": 23957124,
+    "download_sha256": "28b998e70205ee95e540317b5adc06a06552a3961fb50b153df126b833f7a910",
+    "gated": false,
+    "selected_read": 13,
+    "all_records_programmatically_counted": true,
+    "all_records_personally_read": false,
+    "record_fields": [
+      "uuid",
+      "question",
+      "options",
+      "answer",
+      "answer_letter",
+      "discipline",
+      "field",
+      "subfield",
+      "difficulty",
+      "is_calculation"
+    ]
+  },
+  "taxonomy": {
+    "discipline": 13,
+    "field": 72,
+    "subfield": 285
+  },
+  "counts": {
+    "discipline": {
+      "Engineering": 7892,
+      "Philosophy": 347,
+      "Medicine": 2755,
+      "Economics": 873,
+      "Science": 9838,
+      "Law": 656,
+      "History": 674,
+      "Education": 484,
+      "Military Science": 205,
+      "Management": 501,
+      "Literature and Arts": 1676,
+      "Agronomy": 485,
+      "Sociology": 143
+    },
+    "difficulty": {
+      "middle": 11748,
+      "hard": 7050,
+      "easy": 7731
+    },
+    "is_calculation": {
+      "False": 15300,
+      "True": 11229
+    },
+    "option_count": {
+      "10": 23158,
+      "6": 280,
+      "9": 1325,
+      "5": 204,
+      "7": 441,
+      "8": 683,
+      "4": 438
+    }
+  },
+  "all_answer_letter_text_mismatch": 0,
+  "selected_examples": 13,
+  "average_options": 9.668966037166873,
+  "license": {
+    "database": "ODC-BY1.0",
+    "underlying_rights": "not granted by database license; retain source attribution and referenced dataset conditions",
+    "individual_upstream_provenance": false
+  },
+  "evaluation": {
+    "metric": "answer extraction then exact reference-letter match; sample average and unweighted averages of group accuracies",
+    "code_read": "eval/eval.py extraction and process_single_file counting and group aggregation; config/prompt/zero-shot.yaml",
+    "code_executed": false,
+    "model_api_used": false,
+    "initial": {
+      "report_year": 2025,
+      "temperature": 0,
+      "reasoning_chat_shots": 0,
+      "base_shots": 5,
+      "reasoning_max_output_tokens": "32K",
+      "other_max_output_tokens": "4K",
+      "main_sample_accuracy": {
+        "DeepSeek-R1": 61.82,
+        "o1-2024-12-17": 60.24,
+        "Claude-3-5-sonnet-20241022": 48.16,
+        "Gemini-2.0-flash": 47.73
+      },
+      "DeepSeek_R1_averages": {
+        "sample": 61.82,
+        "subfield": 62.61,
+        "field": 61.23,
+        "discipline": 59.95
+      }
+    },
+    "later_adoption": {
+      "model": "Qwen3-235B-A22B-Thinking-2507",
+      "release": "2025-07",
+      "source": "https://huggingface.co/Qwen/Qwen3-235B-A22B-Thinking-2507",
+      "reported_SuperGPQA_score": 64.9,
+      "knowledge_output_limit": 32768,
+      "trial_count_confirmed": false,
+      "metric_aggregation_variant_confirmed": false,
+      "scope": "Single later adoption example; no claim of2026latest leader or same-harness ranking"
+    }
+  },
+  "source_version_notes": [
+    "Slides use fixed public data for counts and taxonomy.",
+    "Own read paper versionv2 states13/72/285; different later-version discrepancies noted byroot are not treated as personally acquired/solved.",
+    "Initial result averaging table omits counts attached to macro axes; public72 current grouping remains in data description."
+  ],
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "reading_time": {
+    "planned_main_seconds": 600,
+    "actual_seconds": null
+  },
+  "fact_verification": "source-fact-verification.json",
+  "artifact_sha256": {
+    "pdf": "bb4566a422dc939971c879fb21b991d9aaacfdec4e694a1546a63e4653dbfbb4",
+    "pptx": "d7faceda0742cb45ef846b6de97f71a22eee35ca1583f775a414197156c3fe84"
+  },
+  "final_review": "../skill-proofreading/supergpqa/review.json",
+  "final_independent_approved": true
+}

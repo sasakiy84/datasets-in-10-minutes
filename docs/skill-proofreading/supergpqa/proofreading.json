@@ -1,0 +1,216 @@
+{
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "skills": [
+    "japanese-slide-proofreading",
+    "dataset-introduction-slides",
+    "master-guided-slides"
+  ],
+  "corrections": [
+    {
+      "before": "問題ごとの正解率は、全26,529問で正解の割合を求める。",
+      "after": "全問の正解率は、26,529問に占める正解の割合である。",
+      "reason": "正解率の単位と主述を自然にした。",
+      "source": "draft1/content.py",
+      "id": 1,
+      "type": "text",
+      "page": 20,
+      "location": "p.20"
+    },
+    {
+      "before": "学部生・修士学生が、設問を英語の選択式へ整理する。",
+      "after": "学部生・修士課程の学生が、設問を英語の選択式へ整理する。",
+      "reason": "修士学生という省略を自然な表現にした。",
+      "source": "draft1/content.py",
+      "id": 2,
+      "type": "text",
+      "page": 13,
+      "location": "p.13"
+    },
+    {
+      "before": "分野の広がりを、問題数の偏りに左右されずに評価できる。",
+      "after": "問題の少ない分野にも、同じ重みを与える指標となる。",
+      "reason": "抽象的な効能より、平均の意味を具体的に説明した。",
+      "source": "draft1/content.py",
+      "id": 3,
+      "type": "text",
+      "page": 20,
+      "location": "p.20"
+    },
+    {
+      "before": "2 if maxw<230 else 1",
+      "after": "2 if maxw<400 else 1",
+      "reason": "短い選択肢を二つずつまとめ、原文と訳の縦の長さを抑えた。",
+      "source": "draft1/build.py",
+      "id": 4,
+      "type": "layout",
+      "location": "実例の選択肢配置"
+    },
+    {
+      "before": "285の専門領域を均等に平均",
+      "after": "専門領域を均等に平均",
+      "reason": "初期モデルの集計値に、現行公開データの区分数を重ねない。",
+      "source": "draft1/build.py",
+      "id": 5,
+      "type": "text",
+      "page": 23,
+      "location": "p.23"
+    },
+    {
+      "before": "72の分野を均等に平均",
+      "after": "分野を均等に平均",
+      "reason": "初期モデルの集計値と現行分類の件数を分けた。",
+      "source": "draft1/build.py",
+      "id": 6,
+      "type": "text",
+      "page": 23,
+      "location": "p.23"
+    },
+    {
+      "before": "13の上位分野を均等に平均",
+      "after": "上位分野を均等に平均",
+      "reason": "三つの集計軸の表現をそろえた。",
+      "source": "draft1/build.py",
+      "id": 7,
+      "type": "text",
+      "page": 23,
+      "location": "p.23"
+    },
+    {
+      "before": "seed lifespanは種子の寿命を指す。発芽するまでの日数や、成熟までの期間とは異なり、発芽能力を保てる期間を問う設問である。",
+      "after": "seed lifespanは種子の寿命を指す。貯蔵温度や含水率などによって、発芽能力を保てる期間は変わる。",
+      "reason": "設問の繰り返しを減らし、種子の寿命に関わる要因をFAOの説明に基づいて加えた。",
+      "source": "draft1/examples.json",
+      "id": 8,
+      "type": "text",
+      "page": 49,
+      "location": "p.49"
+    },
+    {
+      "before": "GPQAとは別にM-A-Pチームが構築したデータである。",
+      "after": "科学の知識を問うGPQAとは別に、M-A-Pチームが構築したデータである。",
+      "reason": "初出のGPQAが何を扱うか短く補った。",
+      "source": "candidate2/content.py",
+      "id": 9,
+      "type": "text",
+      "page": 12,
+      "location": "p.12"
+    },
+    {
+      "before": "ルソーの『社会契約論』は、立法権を国家の心臓、執行権を脳にたとえる。法律そのものの知識に加え、政治・法思想の知識も問われる。",
+      "after": "ルソーの『社会契約論』では、立法権を国家の心臓、執行権を脳にたとえている。",
+      "reason": "原文・訳・全選択肢・正解・根拠を一頁へまとめ、重複する説明を整理した。",
+      "source": "candidate2/examples.json",
+      "id": 10,
+      "type": "text",
+      "page": 9,
+      "location": "p.9"
+    },
+    {
+      "before": "原文ページと日本語訳ページに全候補名を別々に表示。",
+      "after": "原文の全候補名へ括弧で日本語名を添え、設問訳・正解・根拠まで同じ一頁に表示。",
+      "reason": "短い例を一頁で読めるよう再配置した。",
+      "source": "candidate2/pages.jsonl",
+      "id": 11,
+      "type": "layout",
+      "page": 9,
+      "location": "p.9"
+    },
+    {
+      "before": "表紙主題の文字枠高71.10 pt。小文字pの下端が2.13 pt枠外。",
+      "after": "表紙主題の文字枠を6 pt拡張。",
+      "reason": "実描画の小文字pも編集可能な文字枠に収めた。",
+      "source": "candidate2/ink-audit.json",
+      "id": 12,
+      "type": "layout",
+      "page": 1,
+      "location": "p.1"
+    },
+    {
+      "page": 9,
+      "type": "layout",
+      "before": "選択肢をABC / DEF / GHI / Jの4行に設定。Iの日本語名が折り返し、Jが引用背景外へ出た。",
+      "after": "ABC / DEF / GH / IJの4行に変更。",
+      "reason": "全候補を引用背景に収め、設問訳との接近を解消する。",
+      "source": "candidate3/build.py",
+      "id": 13,
+      "location": "p.9"
+    },
+    {
+      "page": 56,
+      "type": "text",
+      "before": "法律学",
+      "after": "法学",
+      "reason": "学問分野の自然な日本語名を使う。",
+      "source": "candidate3/build.py",
+      "id": 14,
+      "location": "p.56"
+    },
+    {
+      "page": 44,
+      "type": "layout",
+      "before": "引用枠高210.78pt。下余白が上側より大きい。",
+      "after": "引用枠高187.09pt。文字は保持し、実描画の最終行に背景下端を合わせる。",
+      "reason": "実際の文字位置から上下の余白を整える。",
+      "source": "candidate3 PDF",
+      "id": 15,
+      "location": "p.44"
+    },
+    {
+      "type": "text",
+      "before": "公開データの難易度は、易7,731問、中11,748問、難7,050問に分かれる。",
+      "after": "公開データには、易しい問題が7,731問、中程度の問題が11,748問、難しい問題が7,050問ある。",
+      "reason": "名詞の羅列を自然な文にした。",
+      "source": "candidate3/content.py",
+      "id": 16,
+      "page": 17,
+      "location": "p.17"
+    },
+    {
+      "type": "text",
+      "before": "全体の11,229問、42.3%には計算を要するというタグがある。",
+      "after": "全体の11,229問、42.3%は、計算や形式的な推論が必要な問題として分類されている。",
+      "reason": "論文の分類定義に合わせ、数学的な計算だけへ狭めずに説明した。",
+      "source": "candidate3/content.py",
+      "id": 17,
+      "page": 17,
+      "location": "p.17"
+    },
+    {
+      "type": "text",
+      "before": "SuperGPQA: Public Dataset",
+      "after": "SuperGPQA",
+      "reason": "HFの公式配布名を使い、役割は書誌と紹介文に示す。",
+      "source": "candidate3/content.py",
+      "id": 18,
+      "page": 59,
+      "location": "p.59"
+    },
+    {
+      "type": "text",
+      "before": "SuperGPQA: Evaluation Code",
+      "after": "SuperGPQA: Scaling LLM Evaluation across 285 Graduate Disciplines",
+      "reason": "GitHub READMEの正式見出し全文を使う。",
+      "source": "candidate3/content.py",
+      "id": 19,
+      "page": 60,
+      "location": "p.60"
+    },
+    {
+      "id": 20,
+      "page": 1,
+      "type": "layout",
+      "before": "主題枠を6pt広げても、TITLE layoutから継承した下揃えで文字も下がり、小文字pの下端が2.14pt枠外に残った。",
+      "after": "主題の下内余白を4pt確保し、文字も含めて枠内に収める。",
+      "reason": "継承された垂直配置を確認し、枠だけを広げる修正から改めた。",
+      "source": "candidate4 PPTX and ink-audit.json",
+      "location": "p.1"
+    }
+  ],
+  "dataset": "SuperGPQA",
+  "external_generation_api_used": false,
+  "final_artifact_sha256": {
+    "pdf": "bb4566a422dc939971c879fb21b991d9aaacfdec4e694a1546a63e4653dbfbb4",
+    "pptx": "d7faceda0742cb45ef846b6de97f71a22eee35ca1583f775a414197156c3fe84"
+  }
+}
