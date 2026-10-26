@@ -1,0 +1,1261 @@
+[
+  {
+    "page": 1,
+    "title": "LongBench v2",
+    "section": "",
+    "kind": "cover",
+    "main": true,
+    "seconds": 16.216216216216218
+  },
+  {
+    "page": 2,
+    "title": "",
+    "section": "目次",
+    "kind": "toc",
+    "main": true,
+    "seconds": 16.216216216216218
+  },
+  {
+    "page": 3,
+    "title": "LongBench v2の公式サイト",
+    "section": "概要",
+    "kind": "official-site",
+    "sources": [
+      "site"
+    ],
+    "main": true,
+    "seconds": 16.216216216216218
+  },
+  {
+    "page": 4,
+    "title": "1. 長い本文を使う課題と実例",
+    "section": "1. 長い本文を使う課題と実例",
+    "kind": "divider",
+    "main": true,
+    "seconds": 16.216216216216218
+  },
+  {
+    "page": 5,
+    "title": "長い入力から、根拠を結び付けて答える",
+    "section": "1. 長い本文を使う課題と実例",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "LongBench v2は、長い文書や会話、コードなどを読み、四つの選択肢から答える評価データセット。2024年12月に公開された。",
+      "503問はすべて英語。本文は論文で約8千〜200万語と報告され、複数箇所の関係や、本文で学んだ規則の適用を問う。"
+    ],
+    "main": true,
+    "seconds": 16.216216216216218
+  },
+  {
+    "page": 6,
+    "title": "入力は長い本文と設問、出力は一つの記号",
+    "section": "1. 長い本文を使う課題と実例",
+    "kind": "content",
+    "sources": [
+      "data"
+    ],
+    "body_text": [
+      "モデルには本文、設問、四つの選択肢を与える。参照正解はA〜Dの一文字で、説明文の似かよい方ではなく、選んだ記号で採点する。",
+      "以下は公開503問から選んだ実例。設問と選択肢は全文を載せ、長い入力本文は答えの根拠が読める範囲を抜粋する。"
+    ],
+    "main": true,
+    "seconds": 16.216216216216218
+  },
+  {
+    "page": 7,
+    "title": "例1 コードから保存先を決める：設問の原文",
+    "section": "1. 長い本文を使う課題と実例",
+    "kind": "example-question",
+    "sources": [
+      "data"
+    ],
+    "example_id": "6708a096bb02136c067d1789",
+    "original_text": "In this cloud storage system, the scheduler is a crucial component responsible for allocating file blocks to the appropriate slave servers. There are three Raspberry Pi devices acting as slave servers, named pi1, pi2, and pi3, with remaining storage capacities of 800 bytes, 700 bytes, and 500 bytes, respectively. A file has been divided into 9 blocks, each of 100 bytes, and two copies (including the original) need to be stored. Based on the scheduler’s allocation strategy, analyze how the two copies are distributed across the three Raspberry Pi devices:\nA: Copy 1: pi3(500), pi2(400). Copy 2: pi2(300), pi1(600)\nB: Copy 1: pi1(400), pi2(400), pi3(100). Copy 2: pi3(400), pi2(300), pi1(200)\nC: Copy 1: pi1(400), pi2(200), pi3(300). Copy 2: pi1(400), pi1(500)\nD: Copy 1: pi1(800), pi2(100). Copy 2: pi2(600), pi3(300)",
+    "original_scope": "Full question/all choices; long input context excerpt displayed separately",
+    "main": true,
+    "seconds": 16.216216216216218
+  },
+  {
+    "page": 8,
+    "title": "例1 コードから保存先を決める：本文の抜粋",
+    "section": "1. 長い本文を使う課題と実例",
+    "kind": "example-context",
+    "sources": [
+      "data"
+    ],
+    "example_id": "6708a096bb02136c067d1789",
+    "quoted_text": "n_empty_chunks.sort(key = lambda x: x[1], reverse = True)\nexclude_pi_names.add(n_empty_chunks[0][0])\n[...]\nfor pi_name, n_empty_chunk in n_empty_chunks:\n    if cnt_allocated + n_empty_chunk >= n_chunks:\n        pi_list.append((pi_name, n_chunks - cnt_allocated))\n        cnt_allocated = n_chunks\n        break\n    else:\n        pi_list.append((pi_name, n_empty_chunk))\n        cnt_allocated += n_empty_chunk",
+    "original_scope": "Relevant excerpt from complete long input; [...] marks disjoint ranges",
+    "quote_provenance": "Exact context2034–2035 and2040–2047, interruption explicit; leading common indentation removed for display.",
+    "main": true,
+    "seconds": 16.216216216216218
+  },
+  {
+    "page": 9,
+    "title": "例1 コードから保存先を決める：本文の抜粋",
+    "section": "1. 長い本文を使う課題と実例",
+    "kind": "example-context",
+    "sources": [
+      "data"
+    ],
+    "example_id": "6708a096bb02136c067d1789",
+    "quoted_text": "capacities = self.slave_states.get_capacities(exclude_pi_names = allocated)\n[...]\nif total_empty_chunks < n_chunks:\n    capacities = self.slave_states.get_capacities(exclude_pi_names = exclude_pi_names)",
+    "original_scope": "Relevant excerpt from complete long input; [...] marks disjoint ranges",
+    "quote_provenance": "Exact context2018 and2022–2023; [...] marks omitted lines.",
+    "main": true,
+    "seconds": 16.216216216216218
+  },
+  {
+    "page": 10,
+    "title": "例1 コードから保存先を決める：設問の日本語訳",
+    "section": "1. 長い本文を使う課題と実例",
+    "kind": "example-japanese-question",
+    "sources": [
+      "data"
+    ],
+    "example_id": "6708a096bb02136c067d1789",
+    "japanese_question": "クラウドストレージのスケジューラは、ファイルのブロックを保存先のサーバーへ割り当てる。pi1、pi2、pi3の空き容量は、それぞれ800、700、500バイト。100バイトのブロック9個を、原本を含めて二組保存するとき、実装に従う配置はどれか。\nA：一組目はpi3に500、pi2に400。二組目はpi2に300、pi1に600。\nB：一組目はpi1に400、pi2に400、pi3に100。二組目はpi3に400、pi2に300、pi1に200。\nC：一組目はpi1に400、pi2に200、pi3に300。二組目はpi1に400と500。\nD：一組目はpi1に800、pi2に100。二組目はpi2に600、pi3に300。",
+    "main": true,
+    "seconds": 16.216216216216218
+  },
+  {
+    "page": 11,
+    "title": "例1 コードから保存先を決める：答えの理由",
+    "section": "1. 長い本文を使う課題と実例",
+    "kind": "example-explanation",
+    "sources": [
+      "data"
+    ],
+    "example_id": "6708a096bb02136c067d1789",
+    "japanese_context": "コードでは、候補を空き容量順に並べ、必要なブロック数まで順番に割り当てる。各コピーで使った保存先と、先頭に選んだ保存先を別々に記録する。",
+    "main": true,
+    "seconds": 16.216216216216218
+  },
+  {
+    "page": 12,
+    "title": "例2 気象表で三つの条件を確かめる：原文と日本語訳",
+    "section": "1. 長い本文を使う課題と実例",
+    "kind": "example-question-bilingual",
+    "sources": [
+      "data"
+    ],
+    "example_id": "66f2a59d821e116aacb2a553",
+    "original_text": "If we define “wet-cold” as “humidity>95 as well as temperature<-5”, which of the following time is wet-cold without sun?\nA: 2017-01-22T04:10:00Z / B: 2017-01-06T02:10:00Z / C: 2017-01-22T00:10:00Z / D: 2017-02-09T15:10:00Z",
+    "original_scope": "Full question/all choices; long input context excerpt displayed separately",
+    "main": true,
+    "seconds": 16.216216216216218
+  },
+  {
+    "page": 13,
+    "title": "例2 気象表で三つの条件を確かめる：判定に使う4列",
+    "section": "1. 長い本文を使う課題と実例",
+    "kind": "content",
+    "sources": [
+      "data"
+    ],
+    "example_id": "66f2a59d821e116aacb2a553",
+    "derivation": {
+      "kind": "weather",
+      "rows": [
+        [
+          "2017-01-06T02:10:00Z",
+          "2",
+          "-7.3",
+          "96"
+        ],
+        [
+          "2017-01-22T00:10:00Z",
+          "2",
+          "-5.3",
+          "96"
+        ],
+        [
+          "2017-01-22T04:10:00Z",
+          "0",
+          "-7.8",
+          "96"
+        ],
+        [
+          "2017-02-09T15:10:00Z",
+          "0",
+          "1.1",
+          "80"
+        ]
+      ],
+      "provenance": "Exact four complete original rows; display projects time/sun/temperature/humidity columns. Other five columns and intervening rows omitted."
+    },
+    "main": true,
+    "seconds": 16.216216216216218
+  },
+  {
+    "page": 14,
+    "title": "例2 気象表で三つの条件を確かめる：答えの理由",
+    "section": "1. 長い本文を使う課題と実例",
+    "kind": "example-explanation",
+    "sources": [
+      "data"
+    ],
+    "example_id": "66f2a59d821e116aacb2a553",
+    "japanese_context": "四つの候補の行から、判定に使う4列を示した。sunは日照、temperatureは気温、humidityは湿度を表す。元のCSVには、ほかの列と多数の時刻の行も含まれる。",
+    "main": true,
+    "seconds": 16.216216216216218
+  },
+  {
+    "page": 15,
+    "title": "例3 天秤の説明書と操作を照合する：設問の原文",
+    "section": "1. 長い本文を使う課題と実例",
+    "kind": "example-question",
+    "sources": [
+      "data"
+    ],
+    "example_id": "66ec3a46821e116aacb1c49f",
+    "original_text": "Which of the following is incorrect according to the instruction book?\nA: When I use my right hand to handle the draft sheild and the other hand to load the balance, I push the right coupling element upward.\nB: When I determine the additional unit to display the result, I can refer to the table of conversion factors in Appendix.\nC: In dynamic weighing mode, I can press the \"F\" key to display time interval.\nD: Key \"C\" can be used to clear the display information when there's something wrong in calibration.",
+    "original_scope": "Full question/all choices; long input context excerpt displayed separately",
+    "main": true,
+    "seconds": 16.216216216216218
+  },
+  {
+    "page": 16,
+    "title": "例3 天秤の説明書と操作を照合する：本文の抜粋",
+    "section": "1. 長い本文を使う課題と実例",
+    "kind": "example-context",
+    "sources": [
+      "data"
+    ],
+    "example_id": "66ec3a46821e116aacb1c49f",
+    "quoted_text": "Example: If you operate the draft shield with your left hand and wish to load the balance with your right (this corresponds to the normal mode of operation for right-handers), push the right coupling element upward and the left downward. You can now open and close the right draft shield door with the bottom part of the left door handle.",
+    "original_scope": "Relevant excerpt from complete long input; [...] marks disjoint ranges",
+    "quote_provenance": "Mettler Toledo AG balance operating instructions; context lines620–637",
+    "main": true,
+    "seconds": 16.216216216216218
+  },
+  {
+    "page": 17,
+    "title": "例3 天秤の説明書と操作を照合する：設問の日本語訳",
+    "section": "1. 長い本文を使う課題と実例",
+    "kind": "example-japanese-question",
+    "sources": [
+      "data"
+    ],
+    "example_id": "66ec3a46821e116aacb1c49f",
+    "japanese_question": "説明書の内容と一致しないものはどれか。\nA：右手で風防を操作し、もう一方の手で試料を載せるとき、右側の連結部品を上へ押す。\nB：結果を表示する追加の単位を決めるときは、付録の換算係数表を参照できる。\nC：動的計量モードでは、Fキーで時間間隔を表示できる。\nD：校正中に問題が起きたときは、Cキーで表示を消せる。",
+    "main": true,
+    "seconds": 16.216216216216218
+  },
+  {
+    "page": 18,
+    "title": "例3 天秤の説明書と操作を照合する：答えの理由",
+    "section": "1. 長い本文を使う課題と実例",
+    "kind": "example-explanation",
+    "sources": [
+      "data"
+    ],
+    "example_id": "66ec3a46821e116aacb1c49f",
+    "japanese_context": "例えば、左手で風防を動かして右手で試料を載せる場合は、右の連結部品を上へ、左を下へ押す。すると、左のドアの取っ手の下部で、右の風防ドアを開閉できる。",
+    "main": true,
+    "seconds": 16.216216216216218
+  },
+  {
+    "page": 19,
+    "title": "2. 構築方法とデータの構成",
+    "section": "2. 構築方法とデータの構成",
+    "kind": "divider",
+    "main": true,
+    "seconds": 16.216216216216218
+  },
+  {
+    "page": 20,
+    "title": "97人が素材と設問を用意し、別担当が検証する",
+    "section": "2. 構築方法とデータの構成",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "大学で学ぶ人や卒業者97人が、自分で読んだり使ったりした文書を持ち寄った。24人が専門分野に応じて確認を担当した。",
+      "本文、設問、選択肢、答えとその根拠を作る。英語の本文が8,192語未満、または既存の素材と大きく重なる場合は採用しない。"
+    ],
+    "main": true,
+    "seconds": 16.216216216216218
+  },
+  {
+    "page": 21,
+    "title": "自動確認と人の確認で難しさをそろえる",
+    "section": "2. 構築方法とデータの構成",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "main": true,
+    "seconds": 16.216216216216218
+  },
+  {
+    "page": 22,
+    "title": "六つの領域に503問を収録する",
+    "section": "2. 構築方法とデータの構成",
+    "kind": "content",
+    "sources": [
+      "data"
+    ],
+    "main": true,
+    "seconds": 16.216216216216218
+  },
+  {
+    "page": 23,
+    "title": "文書の長さだけでなく、使い方にも幅がある",
+    "section": "2. 構築方法とデータの構成",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "単一文書には論文、金融報告、法的文書、小説などがある。複数文書では、資料をまたいで説明や数値を比較する。",
+      "説明書からの規則の適用、未知の言語の翻訳、多数の例からの分類も含む。会話、コード、表、知識グラフでは、形式に応じた情報の対応付けが必要になる。"
+    ],
+    "main": true,
+    "seconds": 16.216216216216218
+  },
+  {
+    "page": 24,
+    "title": "本文の長さと難しさを別々に分けて集計する",
+    "section": "2. 構築方法とデータの構成",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "main": true,
+    "seconds": 16.216216216216218
+  },
+  {
+    "page": 25,
+    "title": "本文の中央値は約5万4千語",
+    "section": "2. 構築方法とデータの構成",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "503問の本文は、論文の集計で中央値が約5万4千語、平均が約10万4千語。長い文書を一つ読めるだけでなく、複数の資料の関係を保つ力も試す。",
+      "本文の長さには領域差もある。単一文書の中央値は約5万1千語、複数文書は約3万4千語で、コードの課題は約16万7千語だった。"
+    ],
+    "main": true,
+    "seconds": 16.216216216216218
+  },
+  {
+    "page": 26,
+    "title": "3. 採点方法とモデルの成績",
+    "section": "3. 採点方法とモデルの成績",
+    "kind": "divider",
+    "main": true,
+    "seconds": 16.216216216216218
+  },
+  {
+    "page": 27,
+    "title": "選んだ記号の一致を、正解率にまとめる",
+    "section": "3. 採点方法とモデルの成績",
+    "kind": "content",
+    "sources": [
+      "repo"
+    ],
+    "body_text": [
+      "各問では、抽出したA〜Dの記号が参照正解と同じなら1点、異なる場合や記号を読み取れない場合は0点とする。全問の平均を百分率で示す。",
+      "公式コードは「The correct answer is (A)」などの回答形式から記号を取り出す。全体のほか、難しさ別、本文の長さ別の正解率も出す。"
+    ],
+    "main": true,
+    "seconds": 16.216216216216218
+  },
+  {
+    "page": 28,
+    "title": "公開時は、推論を行うo1-previewが57.7%",
+    "section": "3. 採点方法とモデルの成績",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "main": true,
+    "seconds": 16.216216216216218
+  },
+  {
+    "page": 29,
+    "title": "人の53.7%は、1問15分の条件で得た値",
+    "section": "3. 採点方法とモデルの成績",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "確認者は本文内の検索を使いながら回答し、15分を超える場合は「分からない」としてよい条件だった。正解率は53.7%で、全問の8%では回答を保留した。",
+      "確認者は専攻に合わせて担当し、客観的な答えか、本文が必要か、設問が適切かも点検した。単なる文字列の検索で答えられる問題は修正の対象にした。"
+    ],
+    "main": true,
+    "seconds": 16.216216216216218
+  },
+  {
+    "page": 30,
+    "title": "公式サイトには、後続モデルの成績もある",
+    "section": "3. 採点方法とモデルの成績",
+    "kind": "content",
+    "sources": [
+      "site"
+    ],
+    "main": true,
+    "seconds": 16.216216216216218
+  },
+  {
+    "page": 31,
+    "title": "2026年のQwen3.5の評価にも採用された",
+    "section": "3. 採点方法とモデルの成績",
+    "kind": "content",
+    "sources": [
+      "qwen"
+    ],
+    "body_text": [
+      "Qwen3.5-397B-A17Bの公式モデルカードは、長文理解の評価にLongBench v2を使い、63.2を報告している。",
+      "同じ表では長文推論や情報検索なども評価している。LongBench v2は、長い文章に含まれる情報を結び付けて考える課題として使われ続けている。"
+    ],
+    "main": true,
+    "seconds": 16.216216216216218
+  },
+  {
+    "page": 32,
+    "title": "読み切れない本文と、推論の予算が得点を変える",
+    "section": "3. 採点方法とモデルの成績",
+    "kind": "content",
+    "sources": [
+      "repo"
+    ],
+    "body_text": [
+      "公式の評価コードは、入力がモデルの上限を超えると、先頭と末尾を残して中央を削る。必要な根拠が中央にある場合には、モデルがその情報を読めなくなる。",
+      "推論ありの設定では、先に考えた内容を作り、その内容を含めて最終回答を求める。検索で選んだ本文だけを読む設定もあり、読む範囲と推論の設定が結果に関わる。"
+    ],
+    "main": true,
+    "seconds": 16.216216216216218
+  },
+  {
+    "page": 33,
+    "title": "4. 長文理解の評価での利用と入手",
+    "section": "4. 長文理解の評価での利用と入手",
+    "kind": "divider",
+    "main": true,
+    "seconds": 16.216216216216218
+  },
+  {
+    "page": 34,
+    "title": "LongBenchから、推論を要する四択問題へ",
+    "section": "4. 長文理解の評価での利用と入手",
+    "kind": "content",
+    "sources": [
+      "paper",
+      "v1"
+    ],
+    "body_text": [
+      "2023年公開のLongBenchは、中国語と英語の読解、要約、検索などをまとめた。課題ごとにF1やROUGEなどの指標を使う。",
+      "v2では全問を英語の四択に統一し、人が根拠と難しさを確認した。単純に答えの文字列を探すだけでは解きにくい課題へ重点を移した。"
+    ],
+    "main": true,
+    "seconds": 16.216216216216218
+  },
+  {
+    "page": 35,
+    "title": "公開データのtrainは、評価問題の保存名",
+    "section": "4. 長文理解の評価での利用と入手",
+    "kind": "content",
+    "sources": [
+      "data"
+    ],
+    "body_text": [
+      "公式配布はHugging FaceのTHUDM/LongBench-v2。trainという分割名で503問すべてを読み込む。用途はモデルの評価で、独立した学習用の正解データを意味しない。",
+      "各行には課題名、難しさ、長さの区分、本文、設問、四つの選択肢と正解がある。公開JSONは約465 MB。データカードはApache License 2.0を表示する。"
+    ],
+    "main": true,
+    "seconds": 16.216216216216218
+  },
+  {
+    "page": 36,
+    "title": "一つの公開問題の設問と選択肢を確認する",
+    "section": "4. 長文理解の評価での利用と入手",
+    "kind": "code",
+    "sources": [
+      "repo"
+    ],
+    "main": true,
+    "seconds": 16.216216216216218
+  },
+  {
+    "page": 37,
+    "title": "長い入力の理解を、根拠のある選択で確かめる",
+    "section": "4. 長文理解の評価での利用と入手",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "LongBench v2は、六つの課題領域に503問を持つ、英語の長文理解ベンチマーク。人が読んだ資料と根拠を使い、理解・適用・比較を問う四択問題を作った。",
+      "正解率とともに、本文の長さ、読む範囲、推論の設定を確認する。文書を受け付けられる長さだけでなく、その内容を使って答えを選ぶ力を調べられる。"
+    ],
+    "main": true,
+    "seconds": 16.21621621621614
+  },
+  {
+    "page": 38,
+    "title": "Appendix",
+    "section": "Appendix",
+    "kind": "appendix",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 39,
+    "title": "",
+    "section": "Appendix: 目次",
+    "kind": "toc",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 40,
+    "title": "1. 異なる課題の追加例",
+    "section": "Appendix: 1. 異なる課題の追加例",
+    "kind": "divider",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 41,
+    "title": "例4 電池モデルの容量を合わせる：設問の原文",
+    "section": "Appendix: 1. 異なる課題の追加例",
+    "kind": "example-question",
+    "sources": [
+      "data"
+    ],
+    "example_id": "66f56c9c821e116aacb33a45",
+    "original_text": "According to this tutorial, for a cell being calibrated, if the current autolion battery capacity display does not match the experimental value, how to quickly and significantly adjust?\nA: Change electrochemical materials in the GT library\nB: Change the cathode and anode coating areas\nC: Define different Cathode Loading cases\nD: Change 7 properties related to battery balance",
+    "original_scope": "Full question/all choices; long input context excerpt displayed separately",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 42,
+    "title": "例4 電池モデルの容量を合わせる：本文の抜粋",
+    "section": "Appendix: 1. 異なる課題の追加例",
+    "kind": "example-context",
+    "sources": [
+      "data"
+    ],
+    "example_id": "66f56c9c821e116aacb33a45",
+    "quoted_text": "d) Because the “Capacity Loading” attribute defines the amount of active material placed in the cathode and anode per unit area (Units are mAh/cm2), as the coated areas of the cathode and anode are increased, the capacity of the cells are automatically increased, as well.\n[...]\nd) Please note that all of these parameters will have an effect on the “balance” of the cell, but the most important are certainly the “Cathode Loading” and the “N over P” parameters.",
+    "original_scope": "Relevant excerpt from complete long input; [...] marks disjoint ranges",
+    "quote_provenance": "Gamma Technologies2022 AutoLion Calibration Tutorials; context lines504–509,917–922; page furniture not included",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 43,
+    "title": "例4 電池モデルの容量を合わせる：設問の日本語訳",
+    "section": "Appendix: 1. 異なる課題の追加例",
+    "kind": "example-japanese-question",
+    "sources": [
+      "data"
+    ],
+    "example_id": "66f56c9c821e116aacb33a45",
+    "japanese_question": "校正中のセルについて、AutoLionに表示される容量が実験値と一致しないとき、短時間で大きく調整する方法はどれか。\nA：GTライブラリの電極材料を変える。\nB：正極と負極の塗工面積を変える。\nC：Cathode Loadingを変えた複数のケースを設定する。\nD：セルのバランスに関係する七つの特性を変える。",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 44,
+    "title": "例4 電池モデルの容量を合わせる：答えの理由",
+    "section": "Appendix: 1. 異なる課題の追加例",
+    "kind": "example-explanation",
+    "sources": [
+      "data"
+    ],
+    "example_id": "66f56c9c821e116aacb33a45",
+    "japanese_context": "Capacity Loadingは、正極と負極の単位面積当たりに置く活物質の量を定める。塗工面積が増えるとセルの容量も自動的に増える。セルのバランスにはすべての設定が影響するが、特に重要なのはCathode LoadingとN over Pである。",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 45,
+    "title": "例5 注意機構を計算するクラスを探す：設問の原文",
+    "section": "Appendix: 1. 異なる課題の追加例",
+    "kind": "example-question",
+    "sources": [
+      "data"
+    ],
+    "example_id": "66ed3e90821e116aacb1f82f",
+    "original_text": "If I want to modify BLIP's VQA architecture and load parameters from the caption architecture, but only change the middleware, specifically the internal computation logic of the attention mechanism within the middleware, which class should I modify?\nA: BertLayer / B: BertAttention / C: BertSelfAttention / D: BertIntermediate",
+    "original_scope": "Full question/all choices; long input context excerpt displayed separately",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 46,
+    "title": "例5 注意機構を計算するクラスを探す：本文の抜粋（1/2）",
+    "section": "Appendix: 1. 異なる課題の追加例",
+    "kind": "example-context",
+    "sources": [
+      "data"
+    ],
+    "example_id": "66ed3e90821e116aacb1f82f",
+    "quoted_text": "class BertSelfAttention(nn.Module):\n[...]\nself.query = nn.Linear(config.hidden_size, self.all_head_size)\n[...]\nself.key = nn.Linear(config.hidden_size, self.all_head_size)\nself.value = nn.Linear(config.hidden_size, self.all_head_size)\n[...]\nclass BertAttention(nn.Module):\n            self.self = BertSelfAttention(config, is_cross_attention)",
+    "original_scope": "Relevant excerpt from complete long input; [...] marks disjoint ranges",
+    "quote_provenance": "BLIP Bert code within context; class definition and nested construction snippets",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 47,
+    "title": "例5 注意機構を計算するクラスを探す：本文の抜粋（2/2）",
+    "section": "Appendix: 1. 異なる課題の追加例",
+    "kind": "example-context",
+    "sources": [
+      "data"
+    ],
+    "example_id": "66ed3e90821e116aacb1f82f",
+    "quoted_text": "[...]\nclass BertLayer(nn.Module):\n        self.attention = BertAttention(config)      ",
+    "original_scope": "Relevant excerpt from complete long input; [...] marks disjoint ranges",
+    "quote_provenance": "BLIP Bert code within context; class definition and nested construction snippets",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 48,
+    "title": "例5 注意機構を計算するクラスを探す：設問の日本語訳",
+    "section": "Appendix: 1. 異なる課題の追加例",
+    "kind": "example-japanese-question",
+    "sources": [
+      "data"
+    ],
+    "example_id": "66ed3e90821e116aacb1f82f",
+    "japanese_question": "画像と言語を扱うBLIPの、画像質問応答の構成を変更し、画像説明用の構成からパラメータを読み込みたい。中間部分の注意機構の計算だけを変えるには、どのクラスを修正するか。\nA：BertLayer / B：BertAttention / C：BertSelfAttention / D：BertIntermediate",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 49,
+    "title": "例5 注意機構を計算するクラスを探す：答えの理由",
+    "section": "Appendix: 1. 異なる課題の追加例",
+    "kind": "example-explanation",
+    "sources": [
+      "data"
+    ],
+    "example_id": "66ed3e90821e116aacb1f82f",
+    "japanese_context": "BertLayerはBertAttentionを構成し、BertAttentionの内部ではBertSelfAttentionを使う。BertSelfAttentionはqueryを作り、交差注意を使う場合と使わない場合でkeyとvalueの入力の次元を切り替える。",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 50,
+    "title": "例6 TCPの終了処理を追う：設問の原文（1/2）",
+    "section": "Appendix: 1. 異なる課題の追加例",
+    "kind": "example-question",
+    "sources": [
+      "data"
+    ],
+    "example_id": "66f3ad93821e116aacb2e29f",
+    "original_text": "Regarding the statements about the TCP connection termination in this codebase, which is correct?\nA: When one party is ready to terminate the TCP connection, it first enters the FIN_WAIT_1 state, indicating that it has sent a termination request FIN signal to the other party and is waiting for confirmation.\nB: After receiving the FIN signal, the other party needs to return an ACK signal and meanwhile send a FIN signal, waiting for confirmation. Both parties send FIN signals and receive confirmation before the connection is terminated.\nC: The purpose of tcp->shutdown_waiting is to ensure that all unsent packets in the sending buffer are sent before the connection is terminated, but it cannot guarantee that all packets have been successfully received by the other party.",
+    "original_scope": "Full question/all choices; long input context excerpt displayed separately",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 51,
+    "title": "例6 TCPの終了処理を追う：設問の原文（2/2）",
+    "section": "Appendix: 1. 異なる課題の追加例",
+    "kind": "example-question",
+    "sources": [
+      "data"
+    ],
+    "example_id": "66f3ad93821e116aacb2e29f",
+    "original_text": "D: Before terminating the connection, using the Nagle algorithm when sending packets can combine scattered small packets for transmission to reduce network congestion.",
+    "original_scope": "Full question/all choices; long input context excerpt displayed separately",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 52,
+    "title": "例6 TCPの終了処理を追う：本文の抜粋",
+    "section": "Appendix: 1. 異なる課題の追加例",
+    "kind": "example-context",
+    "sources": [
+      "data"
+    ],
+    "example_id": "66f3ad93821e116aacb2e29f",
+    "quoted_text": "else if(tcp->shutdown_waiting){\n  send_pkt_directly(tcp);\n  if(tcp->send.size == 0){\n    // 发送FIN 包\n    send_fin_pkt(tcp);\n    tcp->snd_nxt += 1;\n    tcp->set_state(TCPState::FIN_WAIT_1);\n  }\n[...]\ntcp->shutdown_waiting = true;",
+    "original_scope": "Relevant excerpt from complete long input; [...] marks disjoint ranges",
+    "quote_provenance": "TCP teaching implementation; context lines3440–3456 and3468–3476",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 53,
+    "title": "例6 TCPの終了処理を追う：設問の日本語訳",
+    "section": "Appendix: 1. 異なる課題の追加例",
+    "kind": "example-japanese-question",
+    "sources": [
+      "data"
+    ],
+    "example_id": "66f3ad93821e116aacb2e29f",
+    "japanese_question": "このコードのTCP接続終了について、正しい説明はどれか。\nA：終了しようとする側は、相手へFINを送ることを示すFIN_WAIT_1状態へ最初に入る。\nB：FINを受け取った側はACKを返すと同時にFINも送り、両者が確認を受け取って終了する。\nC：shutdown_waitingは送信バッファー内の未送信パケットを送り終えてから終了するためのものだが、相手への到着をすべて保証するものではない。\nD：終了前にNagleアルゴリズムを使うと、小さいパケットをまとめてネットワークの混雑を減らせる。",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 54,
+    "title": "例6 TCPの終了処理を追う：答えの理由",
+    "section": "Appendix: 1. 異なる課題の追加例",
+    "kind": "example-explanation",
+    "sources": [
+      "data"
+    ],
+    "example_id": "66f3ad93821e116aacb2e29f",
+    "japanese_context": "shutdown_waitingが真の場合、パケットを送る処理を呼び出す。送信バッファーのsizeが0になるとFINを送り、状態をFIN_WAIT_1へ進める。一方、バッファーにデータが残る場合はshutdown_waitingを真にする。",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 55,
+    "title": "例7 二つの判例に共通する点を探す：設問の原文",
+    "section": "Appendix: 1. 異なる課題の追加例",
+    "kind": "example-question",
+    "sources": [
+      "data"
+    ],
+    "example_id": "66ec356a821e116aacb1c22b",
+    "original_text": "What do these two cases have in common?\nA: The truthfulness of the parties' intent in entering into the contract is of paramount importance.\nB: The defaulting party's reasons for refusing to honor the agreement are all that the other party's offer was too low.\nC: The basic terms of the main agreement are defined.\nD: The court upheld all of the plaintiff's claims.",
+    "original_scope": "Full question/all choices; long input context excerpt displayed separately",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 56,
+    "title": "例7 二つの判例に共通する点を探す：本文の抜粋",
+    "section": "Appendix: 1. 異なる課題の追加例",
+    "kind": "example-context",
+    "sources": [
+      "data"
+    ],
+    "example_id": "66ec356a821e116aacb1c22b",
+    "quoted_text": "The instrument sought to be enforced was written by A. H. Zehmer on December 20, 1952, in these words: “We hereby agree to sell to W. O. Lucy the Ferguson Farm complete for $50,000.00, title satisfactory to buyer,” and signed by the defendants, A. H. Zehmer and Ida S. Zehmer.\n[...]\n… There was sufficient evidence for the jury to conclude that the parties had reached agreement on all essential terms of the transaction with only the mechanics and details left to be supplied by the parties’ attorneys.",
+    "original_scope": "Relevant excerpt from complete long input; [...] marks disjoint ranges",
+    "quote_provenance": "Lucy v.Zehmer and Texaco Inc.v.Pennzoil Co., quoted course materials; two disjoint passages",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 57,
+    "title": "例7 二つの判例に共通する点を探す：設問の日本語訳",
+    "section": "Appendix: 1. 異なる課題の追加例",
+    "kind": "example-japanese-question",
+    "sources": [
+      "data"
+    ],
+    "example_id": "66ec356a821e116aacb1c22b",
+    "japanese_question": "二つの判例に共通する点は何か。\nA：契約を結ぶ当事者の内心の意思が、何よりも重要である。\nB：契約に従わない理由は、どちらも相手の提示額が低すぎたことだ。\nC：主たる合意の基本的な条件が定まっている。\nD：裁判所は原告の請求をすべて認めた。",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 58,
+    "title": "例7 二つの判例に共通する点を探す：答えの理由",
+    "section": "Appendix: 1. 異なる課題の追加例",
+    "kind": "example-explanation",
+    "sources": [
+      "data"
+    ],
+    "example_id": "66ec356a821e116aacb1c22b",
+    "japanese_context": "一つ目の判例では、農場全体を5万ドルで売り、買い手が納得する権原を条件とする合意書に、売り手夫婦が署名していた。二つ目の判例では、取引の主要条件にすべて合意しており、弁護士が詰めるのは手続や詳細だけだったと、陪審が判断するに足る証拠があった。",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 59,
+    "title": "例8 政策文書の内容と選択肢を照合する：設問の原文（1/2）",
+    "section": "Appendix: 1. 異なる課題の追加例",
+    "kind": "example-question",
+    "sources": [
+      "data"
+    ],
+    "example_id": "66f6bcf3bb02136c067c2703",
+    "original_text": "Which of the following options is not part of the U.S. national COVID-19 preparedness plan？\nA: With insufficient tools to fight COVID-19, the United States mobilized all of society to insist on surviving the outbreak with the least disruption to the United States.\nB: Minimize the impact of new variants on the United States by collecting and analyzing data on previous variants of COVID-19 and strengthening regulation and review of specific variants.\nC: Take specific measures for businesses and schools to help businesses and schools continue to operate through COVID-19 to reduce the cost and impact of the pandemic on the U.S. economy.",
+    "original_scope": "Full question/all choices; long input context excerpt displayed separately",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 60,
+    "title": "例8 政策文書の内容と選択肢を照合する：設問の原文（2/2）",
+    "section": "Appendix: 1. 異なる課題の追加例",
+    "kind": "example-question",
+    "sources": [
+      "data"
+    ],
+    "example_id": "66f6bcf3bb02136c067c2703",
+    "original_text": "D: Expand global access to COVID-19 medicines, facilitate the formation of pharmaceutical research alliances, and increase global funding.",
+    "original_scope": "Full question/all choices; long input context excerpt displayed separately",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 61,
+    "title": "例8 政策文書の内容と選択肢を照合する：本文の抜粋（1/2）",
+    "section": "Appendix: 1. 異なる課題の追加例",
+    "kind": "example-context",
+    "sources": [
+      "data"
+    ],
+    "example_id": "66f6bcf3bb02136c067c2703",
+    "quoted_text": "As the country emerges from the Omicron wave, our path forward relies on maintaining and continually enhancing the numerous tools we now have to protect ourselves and our loved ones – from vaccines, to tests, to treatments, to masks, and more. In January 2021, Americans had very few tools to protect against COVID-19, and the tools we did have were in limited supply. Over the last year, together, with states, localities, and public and private partners, the Administration has mobilized an unprecedented, whole-of-society effort to give Americans the tools they need to protect themselves.",
+    "original_scope": "Relevant excerpt from complete long input; [...] marks disjoint ranges",
+    "quote_provenance": "U.S.National COVID-19 Preparedness Plan in multi-document context; two disjoint passages",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 62,
+    "title": "例8 政策文書の内容と選択肢を照合する：本文の抜粋（2/2）",
+    "section": "Appendix: 1. 異なる課題の追加例",
+    "kind": "example-context",
+    "sources": [
+      "data"
+    ],
+    "example_id": "66f6bcf3bb02136c067c2703",
+    "quoted_text": "[...]\nThis plan lays out the roadmap to help us fight COVID-19 in the future as we begin to get back to our more normal routines.",
+    "original_scope": "Relevant excerpt from complete long input; [...] marks disjoint ranges",
+    "quote_provenance": "U.S.National COVID-19 Preparedness Plan in multi-document context; two disjoint passages",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 63,
+    "title": "例8 政策文書の内容と選択肢を照合する：設問の日本語訳",
+    "section": "Appendix: 1. 異なる課題の追加例",
+    "kind": "example-japanese-question",
+    "sources": [
+      "data"
+    ],
+    "example_id": "66f6bcf3bb02136c067c2703",
+    "japanese_question": "米国の国家COVID-19対策計画に含まれていない説明はどれか。\nA：対抗手段が不十分な中、社会全体を動員して、混乱を最小限に抑えながら流行を乗り切る。\nB：変異株に関するデータの収集・分析と監視を強め、新たな変異株の影響を抑える。\nC：企業や学校が活動を続けられるよう対策し、経済への費用と影響を減らす。\nD：COVID-19治療薬への世界的なアクセスを広げ、研究の連携と資金を増やす。",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 64,
+    "title": "例8 政策文書の内容と選択肢を照合する：答えの理由",
+    "section": "Appendix: 1. 異なる課題の追加例",
+    "kind": "example-explanation",
+    "sources": [
+      "data"
+    ],
+    "example_id": "66f6bcf3bb02136c067c2703",
+    "japanese_context": "オミクロン株の流行が落ち着く中、今後の方針はワクチン、検査、治療、マスクなど、すでにある多数の手段を維持し、強化することにある。2021年1月には手段も供給も限られていたが、その後の社会全体の取組で必要な手段を広げた。計画は、日常へ戻りながらCOVID-19と闘うための道筋を示す。",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 65,
+    "title": "例9 論文の数値から改善幅を求める：原文と日本語訳",
+    "section": "Appendix: 1. 異なる課題の追加例",
+    "kind": "example-question-bilingual",
+    "sources": [
+      "data"
+    ],
+    "example_id": "66ebda775a08c7b9b35e0dcb",
+    "original_text": "How much has Meta-Rewarding training improved on AlpacaEval 2?\nA: 39.4% / B: 22.9% / C: 16.5% / D: 18.7%",
+    "original_scope": "Full question/all choices; long input context excerpt displayed separately",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 66,
+    "title": "例9 論文の数値から改善幅を求める：本文の抜粋",
+    "section": "Appendix: 1. 異なる課題の追加例",
+    "kind": "example-context",
+    "sources": [
+      "data"
+    ],
+    "example_id": "66ebda775a08c7b9b35e0dcb",
+    "quoted_text": "In our experiments we start from Llama-3-8B-Instruct and perform multiple iterations of our Meta- Rewarding training. When evaluated on AlpacaEval 2 (Dubois et al., 2024b), we see a substantial improvement in the length-controlled (LC) win rate (from 22.9% to 39.4%), even outperforming GPT-4-03141. We also observe that our method outperforms standard Self-Rewarding training even if it is enhanced with our length-bias improvements (35.5% vs 39.4%), highlighting the importance of the meta-judge.",
+    "original_scope": "Relevant excerpt from complete long input; [...] marks disjoint ranges",
+    "quote_provenance": "Wu etal2024 Meta-Rewarding Language Models, introduction results paragraph",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 67,
+    "title": "例9 論文の数値から改善幅を求める：答えの理由",
+    "section": "Appendix: 1. 異なる課題の追加例",
+    "kind": "example-explanation",
+    "sources": [
+      "data"
+    ],
+    "example_id": "66ebda775a08c7b9b35e0dcb",
+    "japanese_context": "実験ではLlama-3-8B-Instructから始め、Meta-Rewardingを複数回繰り返した。AlpacaEval 2で、回答の長さを調整した勝率は22.9%から39.4%へ上がった。長さの偏りを調整した通常のSelf-Rewardingの35.5%も上回り、判断そのものを評価する工程の効果を示している。",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 68,
+    "title": "例10 三種類の液滴の凍結を比較する：設問の原文（1/3）",
+    "section": "Appendix: 1. 異なる課題の追加例",
+    "kind": "example-question",
+    "sources": [
+      "data"
+    ],
+    "example_id": "66f10d67821e116aacb268d0",
+    "original_text": "During freezing, pure water, ethanol-water mixtures, and nanofluids exhibit different solidification behaviors.Read the given articles and answer: why a sharp tip forms in pure water and ethanol-water mixtures but not in nanofluids?\nA: In the freezing of pure water and ethanol-water mixtures, heat conduction dominates the solidification process, leading to tip formation. In nanofluids, however, the presence of nanoparticles enhances fluid stability at the liquid-solid interface, suppressing local heat diffusion and flattening the solidification front, resulting in a plateau.",
+    "original_scope": "Full question/all choices; long input context excerpt displayed separately",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 69,
+    "title": "例10 三種類の液滴の凍結を比較する：設問の原文（2/3）",
+    "section": "Appendix: 1. 異なる課題の追加例",
+    "kind": "example-question",
+    "sources": [
+      "data"
+    ],
+    "example_id": "66f10d67821e116aacb268d0",
+    "original_text": "B: Nanoparticles accumulate along the freezing front during nanofluid solidification, generating capillary-driven compensating flows that counteract the formation of a tip, whereas the solute concentration gradient in ethanol-water mixtures induces an upward Marangoni flow, leading to self-lifting behavior, distinct from the sharp tip seen in pure water.\nC: In nanofluids, the scattering of heat by nanoparticles lowers the temperature gradient within the droplet, reducing surface tension effects and inhibiting tip formation. In pure water, the higher surface tension maintains the sharp tip structure, while the addition of ethanol creates an asymmetric cooling pattern and localized heat release, encouraging tip formation.",
+    "original_scope": "Full question/all choices; long input context excerpt displayed separately",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 70,
+    "title": "例10 三種類の液滴の凍結を比較する：設問の原文（3/3）",
+    "section": "Appendix: 1. 異なる課題の追加例",
+    "kind": "example-question",
+    "sources": [
+      "data"
+    ],
+    "example_id": "66f10d67821e116aacb268d0",
+    "original_text": "D: In nanofluids, nanoparticles cause a non-uniform freezing front that suppresses deformation at the solid-liquid interface, preventing tip formation. By contrast, the freezing front in pure water and ethanol-water mixtures progresses uniformly, with heat diffusion driving tip formation.",
+    "original_scope": "Full question/all choices; long input context excerpt displayed separately",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 71,
+    "title": "例10 三種類の液滴の凍結を比較する：本文の抜粋",
+    "section": "Appendix: 1. 異なる課題の追加例",
+    "kind": "example-context",
+    "sources": [
+      "data"
+    ],
+    "example_id": "66f10d67821e116aacb268d0",
+    "quoted_text": "A drop of water deposited on a cold plate freezes into an ice drop with a pointy tip. While this phenomenon clearly finds its origin in the expansion of water upon freezing, a quantitative description of the tip singularity has remained elusive.\n[...]\nThis counterintuitive observation is attributed to an internal solutal Marangoni flow up to 1 mm=s, which is driven by the enriched solute concentration locally in the vicinity of the solidification front.",
+    "original_scope": "Relevant excerpt from complete long input; [...] marks disjoint ranges",
+    "quote_provenance": "Marín etal2014 and Wang etal2024 abstracts/explanation excerpts",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 72,
+    "title": "例10 三種類の液滴の凍結を比較する：本文の抜粋",
+    "section": "Appendix: 1. 異なる課題の追加例",
+    "kind": "example-context",
+    "sources": [
+      "data"
+    ],
+    "example_id": "66f10d67821e116aacb268d0",
+    "quoted_text": "We propose an analytical model to attribute the plateau formation to a capillary driven compensating ﬂow due to segregated particles moving along the freezing interface.",
+    "original_scope": "Relevant excerpt from complete long input; [...] marks disjoint ranges",
+    "quote_provenance": "Zhao etal2021 mechanism paragraph; exact source excerpt",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 73,
+    "title": "例10 三種類の液滴の凍結を比較する：設問の日本語訳（1/2）",
+    "section": "Appendix: 1. 異なる課題の追加例",
+    "kind": "example-japanese-question",
+    "sources": [
+      "data"
+    ],
+    "example_id": "66f10d67821e116aacb268d0",
+    "japanese_question": "純水、エタノールと水の混合液、ナノ粒子を含む液体では凍結の仕方が異なる。純水と混合液には尖った先端ができ、ナノ粒子を含む液体にはできないのはなぜか。\nA：純水と混合液は熱伝導で先端ができる。ナノ粒子は界面を安定させ、熱拡散を抑えて平らにする。\nB：ナノ粒子が凍結面に集まり、毛管力による補償流が先端の形成を打ち消す。一方、混合液では濃度差による上向きのマランゴニ流が液滴を持ち上げ、純水の尖った先端とは異なる。",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 74,
+    "title": "例10 三種類の液滴の凍結を比較する：設問の日本語訳（2/2）",
+    "section": "Appendix: 1. 異なる課題の追加例",
+    "kind": "example-japanese-question",
+    "sources": [
+      "data"
+    ],
+    "example_id": "66f10d67821e116aacb268d0",
+    "japanese_question": "C：ナノ粒子による熱の散乱が温度勾配を下げ、先端の形成を抑える。純水の表面張力や混合液の非対称な冷却が先端を作る。\nD：ナノ粒子が凍結面を不均一にするため先端ができず、純水と混合液では均一な凍結面と熱拡散が先端を作る。",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 75,
+    "title": "例10 三種類の液滴の凍結を比較する：答えの理由",
+    "section": "Appendix: 1. 異なる課題の追加例",
+    "kind": "example-explanation",
+    "sources": [
+      "data"
+    ],
+    "example_id": "66f10d67821e116aacb268d0",
+    "japanese_context": "冷たい板の上の水滴は、尖った先端を持つ氷になる。凍結時に水が膨張することが、この現象の起源である。混合液の特異な動きは、凍結面の近くで溶質の濃度が高くなり、内部に溶質マランゴニ流が生じることで説明される。ナノ流体の平らな上面は、凍結面に沿って動く分離粒子による、毛管力で駆動される補償流としてモデル化される。",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 76,
+    "title": "例11 過去の会話から購入前の価格を求める：原文と日本語訳",
+    "section": "Appendix: 1. 異なる課題の追加例",
+    "kind": "example-question-bilingual",
+    "sources": [
+      "data"
+    ],
+    "example_id": "67191791bb02136c067d406c",
+    "original_text": "What was the original price of the Up & Up brand cleaning supplies the user bought?\nA: $12 / B: $120 / C: $60 / D: $80",
+    "original_scope": "Full question/all choices; long input context excerpt displayed separately",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 77,
+    "title": "例11 過去の会話から購入前の価格を求める：本文の抜粋",
+    "section": "Appendix: 1. 異なる課題の追加例",
+    "kind": "example-context",
+    "sources": [
+      "data"
+    ],
+    "example_id": "67191791bb02136c067d406c",
+    "quoted_text": "I'm planning to clean my house this weekend and I need to restock on some cleaning supplies. Can you tell me if there are any good deals on all-purpose cleaners or disinfecting wipes at Target this week? By the way, I saved $12 last week using a Cartwheel offer for 20% off on all Up & Up brand cleaning supplies at Target!",
+    "original_scope": "Relevant excerpt from complete long input; [...] marks disjoint ranges",
+    "quote_provenance": "One complete user turn from haystack_sessions; other sessions omitted; role preserved.",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 78,
+    "title": "例11 過去の会話から購入前の価格を求める：答えの理由",
+    "section": "Appendix: 1. 異なる課題の追加例",
+    "kind": "example-explanation",
+    "sources": [
+      "data"
+    ],
+    "example_id": "67191791bb02136c067d406c",
+    "japanese_context": "今週末に家を掃除するので、掃除用品を補充したい。今週、Targetで万能クリーナーや除菌シートのよい特売があるか知りたい。ちなみに先週は、Up & Upブランドの全掃除用品が20%引きになるCartwheelの特典を使って12ドル節約した。",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 79,
+    "title": "例12 知識グラフで二つの属性を照合する：原文と日本語訳",
+    "section": "Appendix: 1. 異なる課題の追加例",
+    "kind": "example-question-bilingual",
+    "sources": [
+      "data"
+    ],
+    "example_id": "6724938fbb02136c067d7657",
+    "original_text": "Which town has a TOID of 4000000074573917 and has an OS grid reference of SP8778?\nA: Q984613 / B: Q208143 / C: Q58900 / D: Q279000",
+    "original_scope": "Full question/all choices; long input context excerpt displayed separately",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 80,
+    "title": "例12 知識グラフで二つの属性を照合する：属性の対応",
+    "section": "Appendix: 1. 異なる課題の追加例",
+    "kind": "content",
+    "sources": [
+      "data"
+    ],
+    "example_id": "6724938fbb02136c067d7657",
+    "derivation": {
+      "kind": "kg-attributes",
+      "rows": [
+        [
+          "Q984613",
+          "4000000074573917",
+          "SP8778"
+        ],
+        [
+          "Q208143",
+          "4000000074548561",
+          "SD583055"
+        ],
+        [
+          "Q58900",
+          "4000000074574343",
+          "SE5702"
+        ],
+        [
+          "Q279000",
+          "4000000074551570",
+          "NZ365665"
+        ]
+      ],
+      "provenance": "Exact attributes of the four choice entities, no values changed; other entities and attributes omitted"
+    },
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 81,
+    "title": "例12 知識グラフで二つの属性を照合する：答えの理由",
+    "section": "Appendix: 1. 異なる課題の追加例",
+    "kind": "example-explanation",
+    "sources": [
+      "data"
+    ],
+    "example_id": "6724938fbb02136c067d7657",
+    "japanese_context": "表では、選択肢に現れる四つの町について、TOIDとOSグリッド参照の属性を取り出している。どちらも同じ町のレコードに含まれる属性である。",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 82,
+    "title": "例13 3Dの箱の符号化を読み取る：設問の原文（1/2）",
+    "section": "Appendix: 1. 異なる課題の追加例",
+    "kind": "example-question",
+    "sources": [
+      "data"
+    ],
+    "example_id": "66ec1de5821e116aacb1adca",
+    "original_text": "How does the MagicDrive encode the bounding box in training step?\nA: MagicDrive encode the class labels of bounding box by the method similar to Li et al, where the pooled embeddings of the class names are considered as the label embeddings. And then uses an MLP to compress both the class and text embeddings into a single hidden vector for each bounding box.\nB: MagicDrive uses Fourier embedding for 4 corner point and passes them through an MLP for encoding in training step. MagicDrive then uses an MLP to compress both the class label and position embeddings into a single hidden vector for each bounding box.",
+    "original_scope": "Full question/all choices; long input context excerpt displayed separately",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 83,
+    "title": "例13 3Dの箱の符号化を読み取る：設問の原文（2/2）",
+    "section": "Appendix: 1. 異なる課題の追加例",
+    "kind": "example-question",
+    "sources": [
+      "data"
+    ],
+    "example_id": "66ec1de5821e116aacb1adca",
+    "original_text": "C: MagicDrive using the text encoder to encode the class label of bounding box,  and then uses an MLP to compress both the class and text embeddings into a single hidden vector for each bounding box.\nD: MagicDrive encode the class labels and the corner points separately, and then uses an MLP to compress them into a vector.",
+    "original_scope": "Full question/all choices; long input context excerpt displayed separately",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 84,
+    "title": "例13 3Dの箱の符号化を読み取る：本文の抜粋",
+    "section": "Appendix: 1. 異なる課題の追加例",
+    "kind": "example-context",
+    "sources": [
+      "data"
+    ],
+    "example_id": "66ec1de5821e116aacb1adca",
+    "quoted_text": "For box positions bi ∈R8×3, represented by the coordinates of its 8 corner points, we utilize Fourier embedding to each point and pass through an MLP for encoding, as in Equation 4. Then, we use an MLP to compress both class and position embedding into one hidden vector, as in Equation 5.",
+    "original_scope": "Relevant excerpt from complete long input; [...] marks disjoint ranges",
+    "quote_provenance": "MagicDrive3D Bounding Box Encoding paragraph; exact excerpt, reading order as distributed",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 85,
+    "title": "例13 3Dの箱の符号化を読み取る：設問の日本語訳",
+    "section": "Appendix: 1. 異なる課題の追加例",
+    "kind": "example-japanese-question",
+    "sources": [
+      "data"
+    ],
+    "example_id": "66ec1de5821e116aacb1adca",
+    "japanese_question": "運転場面の画像を生成するMagicDriveは学習時に物体の境界ボックスをどのように符号化するか。\nA：クラス名の埋め込みをラベルとして使い、クラスとテキストの埋め込みをMLPで一つのベクトルにまとめる。\nB：四つの頂点をFourier埋め込みとMLPで符号化し、クラスと位置の埋め込みを一つのベクトルにまとめる。\nC：テキストエンコーダーでクラスを符号化し、クラスとテキストの埋め込みをMLPでまとめる。\nD：クラスラベルと頂点を別々に符号化した後、MLPで一つのベクトルにまとめる。",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 86,
+    "title": "例13 3Dの箱の符号化を読み取る：答えの理由",
+    "section": "Appendix: 1. 異なる課題の追加例",
+    "kind": "example-explanation",
+    "sources": [
+      "data"
+    ],
+    "example_id": "66ec1de5821e116aacb1adca",
+    "japanese_context": "ボックスの位置は、八つの頂点の座標で表す。それぞれの頂点へFourier埋め込みを使い、MLPで符号化する。その後、クラスと位置の埋め込みを、MLPで一つの隠れベクトルへまとめる。",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 87,
+    "title": "2. 課題の内訳とバージョン",
+    "section": "Appendix: 2. 課題の内訳とバージョン",
+    "kind": "divider",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 88,
+    "title": "単一文書と複数文書の課題の内訳",
+    "section": "Appendix: 2. 課題の内訳とバージョン",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 89,
+    "title": "学習・会話・コード・構造化データの内訳",
+    "section": "Appendix: 2. 課題の内訳とバージョン",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 90,
+    "title": "初代とv2では、言語と答えの形式が変わる",
+    "section": "Appendix: 2. 課題の内訳とバージョン",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 91,
+    "title": "3. 参考文献",
+    "section": "Appendix: 3. 参考文献",
+    "kind": "divider",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 92,
+    "title": "参考文献",
+    "section": "Appendix: 3. 参考文献",
+    "kind": "references",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 93,
+    "title": "参考文献",
+    "section": "Appendix: 3. 参考文献",
+    "kind": "references",
+    "main": false,
+    "seconds": 0
+  },
+  {
+    "page": 94,
+    "title": "参考文献",
+    "section": "Appendix: 3. 参考文献",
+    "kind": "references",
+    "main": false,
+    "seconds": 0
+  }
+]

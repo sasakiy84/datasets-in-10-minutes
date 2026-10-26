@@ -1,0 +1,687 @@
+[
+  {
+    "example": 1,
+    "id": "6708a096bb02136c067d1789",
+    "row_index": 295,
+    "title": "コードから保存先を決める",
+    "domain": "Code Repository Understanding",
+    "sub_domain": "Code repo QA",
+    "placement": "main",
+    "original": "In this cloud storage system, the scheduler is a crucial component responsible for allocating file blocks to the appropriate slave servers. There are three Raspberry Pi devices acting as slave servers, named pi1, pi2, and pi3, with remaining storage capacities of 800 bytes, 700 bytes, and 500 bytes, respectively. A file has been divided into 9 blocks, each of 100 bytes, and two copies (including the original) need to be stored. Based on the scheduler’s allocation strategy, analyze how the two copies are distributed across the three Raspberry Pi devices:\nA: Copy 1: pi3(500), pi2(400). Copy 2: pi2(300), pi1(600)\nB: Copy 1: pi1(400), pi2(400), pi3(100). Copy 2: pi3(400), pi2(300), pi1(200)\nC: Copy 1: pi1(400), pi2(200), pi3(300). Copy 2: pi1(400), pi1(500)\nD: Copy 1: pi1(800), pi2(100). Copy 2: pi2(600), pi3(300)",
+    "question_full": true,
+    "japanese": "クラウドストレージのスケジューラは、ファイルのブロックを保存先のサーバーへ割り当てる。pi1、pi2、pi3の空き容量は、それぞれ800、700、500バイト。100バイトのブロック9個を、原本を含めて二組保存するとき、実装に従う配置はどれか。\nA：一組目はpi3に500、pi2に400。二組目はpi2に300、pi1に600。\nB：一組目はpi1に400、pi2に400、pi3に100。二組目はpi3に400、pi2に300、pi1に200。\nC：一組目はpi1に400、pi2に200、pi3に300。二組目はpi1に400と500。\nD：一組目はpi1に800、pi2に100。二組目はpi2に600、pi3に300。",
+    "gold": "D",
+    "answer_text": "D：一組目はpi1に800、pi2に100。二組目はpi2に600、pi3に300。",
+    "explanation": "一組目はpi1に8個、pi2に1個。残るpi3だけでは二組目の9個を置けない。pi1を除いて候補を選び直すと、空きが6個のpi2と5個のpi3を使えるため、二組目はpi2に6個、pi3に3個となる。",
+    "context_quotes": [
+      {
+        "label": "空き容量順にブロックを割り当てる原文コード（抜粋）",
+        "text": "            n_empty_chunks.sort(key = lambda x: x[1], reverse = True)\n            exclude_pi_names.add(n_empty_chunks[0][0])\n[...]\n            for pi_name, n_empty_chunk in n_empty_chunks:\n                if cnt_allocated + n_empty_chunk >= n_chunks:\n                    pi_list.append((pi_name, n_chunks - cnt_allocated))\n                    cnt_allocated = n_chunks\n                    break\n                else:\n                    pi_list.append((pi_name, n_empty_chunk))\n                    cnt_allocated += n_empty_chunk",
+        "code": true,
+        "provenance": "Exact context2034–2035 and2040–2047, interruption explicit; leading common indentation removed for display."
+      },
+      {
+        "label": "候補を選び直す原文コード（離れた範囲の抜粋）",
+        "text": "            capacities = self.slave_states.get_capacities(exclude_pi_names = allocated)\n[...]\n            if total_empty_chunks < n_chunks:\n                capacities = self.slave_states.get_capacities(exclude_pi_names = exclude_pi_names)",
+        "code": true,
+        "provenance": "Exact context2018 and2022–2023; [...] marks omitted lines."
+      }
+    ],
+    "derived": null,
+    "context_scope": "Full question and all four choices; source context excerpt/derived table explicitly labelled. Whole original long context is not reproduced.",
+    "source_url": "https://huggingface.co/datasets/THUDM/LongBench-v2",
+    "dataset_revision": "2b48e494f2c7a2f0af81aae178e05c7e1dde0fe9",
+    "context_sha256": "4d948db1afd2645766f2a57d9c393841dd1ac68098fc1d1f05a4a6e5b6b38946",
+    "license": "Dataset card: Apache-2.0; short quoted source passages retain underlying authors/titles; repository code MIT.",
+    "own_read_scope": "All question/choices/gold and displayed source excerpts with surrounding relevant source sections; full long contexts acquired, not claimed fully read.",
+    "context_japanese": "コードでは、候補を空き容量順に並べ、必要なブロック数まで順番に割り当てる。各コピーで使った保存先と、先頭に選んだ保存先を別々に記録する。",
+    "context_japanese_label": "コードの読み方",
+    "placement_pages": {
+      "original_question": [
+        7
+      ],
+      "japanese_context": [
+        9
+      ],
+      "context": [
+        8,
+        9
+      ],
+      "japanese_question": [
+        10
+      ],
+      "answer": [
+        11
+      ]
+    }
+  },
+  {
+    "example": 2,
+    "id": "66f2a59d821e116aacb2a553",
+    "row_index": 270,
+    "title": "気象表で三つの条件を確かめる",
+    "domain": "Long Structured Data Understanding",
+    "sub_domain": "Table QA",
+    "placement": "main",
+    "original": "If we define “wet-cold” as “humidity>95 as well as temperature<-5”, which of the following time is wet-cold without sun?\nA: 2017-01-22T04:10:00Z\nB: 2017-01-06T02:10:00Z\nC: 2017-01-22T00:10:00Z\nD: 2017-02-09T15:10:00Z",
+    "question_full": true,
+    "japanese": "「湿って寒い」を、湿度が95より高く、気温が−5より低い状態と定義する。この条件を満たし、日照がない時刻はどれか。\nA：2017-01-22T04:10:00Z\nB：2017-01-06T02:10:00Z\nC：2017-01-22T00:10:00Z\nD：2017-02-09T15:10:00Z",
+    "gold": "A",
+    "answer_text": "A：2017-01-22T04:10:00Z",
+    "explanation": "Aはsun=0、temperature=−7.8、humidity=96で、三つの条件をすべて満たす。BとCはsun=2。Dは気温も湿度も条件を満たさない。",
+    "context_quotes": [],
+    "derived": {
+      "kind": "weather",
+      "rows": [
+        [
+          "2017-01-06T02:10:00Z",
+          "2",
+          "-7.3",
+          "96"
+        ],
+        [
+          "2017-01-22T00:10:00Z",
+          "2",
+          "-5.3",
+          "96"
+        ],
+        [
+          "2017-01-22T04:10:00Z",
+          "0",
+          "-7.8",
+          "96"
+        ],
+        [
+          "2017-02-09T15:10:00Z",
+          "0",
+          "1.1",
+          "80"
+        ]
+      ],
+      "provenance": "Exact four complete original rows; display projects time/sun/temperature/humidity columns. Other five columns and intervening rows omitted."
+    },
+    "context_scope": "Full question and all four choices; source context excerpt/derived table explicitly labelled. Whole original long context is not reproduced.",
+    "source_url": "https://huggingface.co/datasets/THUDM/LongBench-v2",
+    "dataset_revision": "2b48e494f2c7a2f0af81aae178e05c7e1dde0fe9",
+    "context_sha256": "044f94fb3731a0725754488da7a39a66e4cfc14e8a6b8e59dd123e71c165da99",
+    "license": "Dataset card: Apache-2.0; short quoted source passages retain underlying authors/titles; repository code MIT.",
+    "own_read_scope": "All question/choices/gold and displayed source excerpts with surrounding relevant source sections; full long contexts acquired, not claimed fully read.",
+    "context_japanese": "四つの候補の行から、判定に使う4列を示した。sunは日照、temperatureは気温、humidityは湿度を表す。元のCSVには、ほかの列と多数の時刻の行も含まれる。",
+    "context_japanese_label": "表の読み方",
+    "placement_pages": {
+      "original_question": [
+        12
+      ],
+      "japanese_question": [
+        12
+      ],
+      "japanese_context": [
+        13
+      ],
+      "context": [
+        13
+      ],
+      "answer": [
+        14
+      ]
+    }
+  },
+  {
+    "example": 3,
+    "id": "66ec3a46821e116aacb1c49f",
+    "row_index": 435,
+    "title": "天秤の説明書と操作を照合する",
+    "domain": "Long In-context Learning",
+    "sub_domain": "User guide QA",
+    "placement": "main",
+    "original": "Which of the following is incorrect according to the instruction book?\nA: When I use my right hand to handle the draft sheild and the other hand to load the balance, I push the right coupling element upward.\nB: When I determine the additional unit to display the result, I can refer to the table of conversion factors in Appendix.\nC: In dynamic weighing mode, I can press the \"F\" key to display time interval.\nD: Key \"C\" can be used to clear the display information when there's something wrong in calibration.",
+    "question_full": true,
+    "japanese": "説明書の内容と一致しないものはどれか。\nA：右手で風防を操作し、もう一方の手で試料を載せるとき、右側の連結部品を上へ押す。\nB：結果を表示する追加の単位を決めるときは、付録の換算係数表を参照できる。\nC：動的計量モードでは、Fキーで時間間隔を表示できる。\nD：校正中に問題が起きたときは、Cキーで表示を消せる。",
+    "gold": "A",
+    "answer_text": "A：右手で操作する場合の、連結部品の向きが逆。",
+    "explanation": "説明書では、左手で風防を動かして右手で試料を載せる場合に、右の部品を上へ、左を下へ押す。Aは操作する手を右手に変えながら同じ部品を上げており、左右の対応が逆になる。",
+    "context_quotes": [
+      {
+        "label": "天秤の説明書の原文（風防の操作に関する段落の抜粋）",
+        "text": "Example: If you operate the draft shield with your left hand and wish to load\nthe balance with your right (this corresponds to the normal mode of operation\nfor right-handers), push the right coupling element upward and the left\ndownward.\nYou can now open and close the right draft shield door with the bottom part\nof the left door handle.",
+        "code": false,
+        "provenance": "Mettler Toledo AG balance operating instructions; context lines620–637"
+      }
+    ],
+    "derived": null,
+    "context_scope": "Full question and all four choices; source context excerpt/derived table explicitly labelled. Whole original long context is not reproduced.",
+    "source_url": "https://huggingface.co/datasets/THUDM/LongBench-v2",
+    "dataset_revision": "2b48e494f2c7a2f0af81aae178e05c7e1dde0fe9",
+    "context_sha256": "f1ae2cafb9a461c3ae59579c02addbafd15ea34f53474ae17dcecdbc41f2d78d",
+    "license": "Dataset card: Apache-2.0; short quoted source passages retain underlying authors/titles; repository code MIT.",
+    "own_read_scope": "All question/choices/gold and displayed source excerpts with surrounding relevant source sections; full long contexts acquired, not claimed fully read.",
+    "context_japanese": "例えば、左手で風防を動かして右手で試料を載せる場合は、右の連結部品を上へ、左を下へ押す。すると、左のドアの取っ手の下部で、右の風防ドアを開閉できる。",
+    "context_japanese_label": "本文の日本語要約",
+    "placement_pages": {
+      "original_question": [
+        15
+      ],
+      "japanese_context": [
+        16
+      ],
+      "context": [
+        16
+      ],
+      "japanese_question": [
+        17
+      ],
+      "answer": [
+        18
+      ]
+    },
+    "context_japanese_scope": "Japanese summary of displayed context excerpt; full translation of question and all choices separately retained."
+  },
+  {
+    "example": 4,
+    "id": "66f56c9c821e116aacb33a45",
+    "row_index": 477,
+    "title": "電池モデルの容量を合わせる",
+    "domain": "Long In-context Learning",
+    "sub_domain": "User guide QA",
+    "placement": "appendix",
+    "original": "According to this tutorial, for a cell being calibrated, if the current autolion battery capacity display does not match the experimental value, how to quickly and significantly adjust?\nA: Change electrochemical materials in the GT library\nB: Change the cathode and anode coating areas\nC: Define different Cathode Loading cases\nD: Change 7 properties related to battery balance",
+    "question_full": true,
+    "japanese": "校正中のセルについて、AutoLionに表示される容量が実験値と一致しないとき、短時間で大きく調整する方法はどれか。\nA：GTライブラリの電極材料を変える。\nB：正極と負極の塗工面積を変える。\nC：Cathode Loadingを変えた複数のケースを設定する。\nD：セルのバランスに関係する七つの特性を変える。",
+    "gold": "C",
+    "answer_text": "C：Cathode Loadingを変えたケースを設定する。",
+    "explanation": "Cathode Loadingは正極の活物質の量に関わる設定で、セルの容量に影響する。複数の値でケースを用意して、実験値に合う範囲を調べる。材料ごとの特性を一つずつ調整する前に、容量を動かす主要な設定を使う。",
+    "context_quotes": [
+      {
+        "label": "AutoLionの教材の原文（電極と容量に関する抜粋）",
+        "text": "d) Because the “Capacity Loading” attribute defines the amount of active material placed in the\ncathode and anode per unit area (Units are mAh/cm2), as the coated areas of the cathode and\nanode are increased, the capacity of the cells are automatically increased, as well.\n[...]\nd) Please note that all of these parameters will have an effect on the “balance” of the cell, but the most important are certainly the “Cathode Loading” and the “N over P” parameters.",
+        "code": false,
+        "provenance": "Gamma Technologies2022 AutoLion Calibration Tutorials; context lines504–509,917–922; page furniture not included"
+      }
+    ],
+    "derived": null,
+    "context_scope": "Full question and all four choices; source context excerpt/derived table explicitly labelled. Whole original long context is not reproduced.",
+    "source_url": "https://huggingface.co/datasets/THUDM/LongBench-v2",
+    "dataset_revision": "2b48e494f2c7a2f0af81aae178e05c7e1dde0fe9",
+    "context_sha256": "52a43795d00da346a28c3b4594ce492c53e045e4f16bd9bb553e7ac04f41db6f",
+    "license": "Dataset card: Apache-2.0; short quoted source passages retain underlying authors/titles; repository code MIT.",
+    "own_read_scope": "All question/choices/gold and displayed source excerpts with surrounding relevant source sections; full long contexts acquired, not claimed fully read.",
+    "context_japanese": "Capacity Loadingは、正極と負極の単位面積当たりに置く活物質の量を定める。塗工面積が増えるとセルの容量も自動的に増える。セルのバランスにはすべての設定が影響するが、特に重要なのはCathode LoadingとN over Pである。",
+    "context_japanese_label": "本文の日本語要約",
+    "placement_pages": {
+      "original_question": [
+        41
+      ],
+      "context": [
+        42
+      ],
+      "japanese_question": [
+        43
+      ],
+      "answer": [
+        44
+      ]
+    },
+    "context_japanese_scope": "Japanese summary of displayed context excerpt; full translation of question and all choices separately retained."
+  },
+  {
+    "example": 5,
+    "id": "66ed3e90821e116aacb1f82f",
+    "row_index": 288,
+    "title": "注意機構を計算するクラスを探す",
+    "domain": "Code Repository Understanding",
+    "sub_domain": "Code repo QA",
+    "placement": "appendix",
+    "original": "If I want to modify BLIP's VQA architecture and load parameters from the caption architecture, but only change the middleware, specifically the internal computation logic of the attention mechanism within the middleware, which class should I modify?\nA: BertLayer\nB: BertAttention\nC: BertSelfAttention\nD: BertIntermediate",
+    "question_full": true,
+    "japanese": "画像と言語を扱うBLIPの、画像質問応答の構成を変更し、画像説明用の構成からパラメータを読み込みたい。中間部分の注意機構の計算だけを変えるには、どのクラスを修正するか。\nA：BertLayer\nB：BertAttention\nC：BertSelfAttention\nD：BertIntermediate",
+    "gold": "C",
+    "answer_text": "C：BertSelfAttention",
+    "explanation": "BertLayerはBertAttentionを持ち、その内部でBertSelfAttentionが使われる。BertSelfAttentionにはquery・key・valueの線形変換があり、注意機構の内部計算を担当する。",
+    "context_quotes": [
+      {
+        "label": "クラスの対応が分かる原文コード（離れた範囲の抜粋）",
+        "text": "class BertSelfAttention(nn.Module):\n[...]\n        self.query = nn.Linear(config.hidden_size, self.all_head_size)\n[...]\n            self.key = nn.Linear(config.hidden_size, self.all_head_size)\n            self.value = nn.Linear(config.hidden_size, self.all_head_size)\n[...]\nclass BertAttention(nn.Module):\n            self.self = BertSelfAttention(config, is_cross_attention)\n[...]\nclass BertLayer(nn.Module):\n        self.attention = BertAttention(config)      ",
+        "code": true,
+        "provenance": "BLIP Bert code within context; class definition and nested construction snippets"
+      }
+    ],
+    "derived": null,
+    "context_scope": "Full question and all four choices; source context excerpt/derived table explicitly labelled. Whole original long context is not reproduced.",
+    "source_url": "https://huggingface.co/datasets/THUDM/LongBench-v2",
+    "dataset_revision": "2b48e494f2c7a2f0af81aae178e05c7e1dde0fe9",
+    "context_sha256": "ec6734bcce7ba90cb87da58832af6376b7297188d1cde022232d3f67619f1557",
+    "license": "Dataset card: Apache-2.0; short quoted source passages retain underlying authors/titles; repository code MIT.",
+    "own_read_scope": "All question/choices/gold and displayed source excerpts with surrounding relevant source sections; full long contexts acquired, not claimed fully read.",
+    "context_japanese": "BertLayerはBertAttentionを構成し、BertAttentionの内部ではBertSelfAttentionを使う。BertSelfAttentionはqueryを作り、交差注意を使う場合と使わない場合でkeyとvalueの入力の次元を切り替える。",
+    "context_japanese_label": "コードの読み方",
+    "placement_pages": {
+      "original_question": [
+        45
+      ],
+      "context": [
+        46,
+        47
+      ],
+      "japanese_question": [
+        48
+      ],
+      "answer": [
+        49
+      ]
+    }
+  },
+  {
+    "example": 6,
+    "id": "66f3ad93821e116aacb2e29f",
+    "row_index": 196,
+    "title": "TCPの終了処理を追う",
+    "domain": "Code Repository Understanding",
+    "sub_domain": "Code repo QA",
+    "placement": "appendix",
+    "original": "Regarding the statements about the TCP connection termination in this codebase, which is correct?\nA: When one party is ready to terminate the TCP connection, it first enters the FIN_WAIT_1 state, indicating that it has sent a termination request FIN signal to the other party and is waiting for confirmation.\nB: After receiving the FIN signal, the other party needs to return an ACK signal and meanwhile send a FIN signal, waiting for confirmation. Both parties send FIN signals and receive confirmation before the connection is terminated.\nC: The purpose of tcp->shutdown_waiting is to ensure that all unsent packets in the sending buffer are sent before the connection is terminated, but it cannot guarantee that all packets have been successfully received by the other party.\nD: Before terminating the connection, using the Nagle algorithm when sending packets can combine scattered small packets for transmission to reduce network congestion.",
+    "question_full": true,
+    "japanese": "このコードのTCP接続終了について、正しい説明はどれか。\nA：終了しようとする側は、相手へFINを送ることを示すFIN_WAIT_1状態へ最初に入る。\nB：FINを受け取った側はACKを返すと同時にFINも送り、両者が確認を受け取って終了する。\nC：shutdown_waitingは送信バッファー内の未送信パケットを送り終えてから終了するためのものだが、相手への到着をすべて保証するものではない。\nD：終了前にNagleアルゴリズムを使うと、小さいパケットをまとめてネットワークの混雑を減らせる。",
+    "gold": "C",
+    "answer_text": "C：未送信データがなくなるまで待つためのフラグ。",
+    "explanation": "フラグが立っている間もsend_pkt_directlyを呼び、送信バッファーのsizeが0になった時点でFINを送る。判定するのは送信バッファーの残量で、相手からの確認がすべて済んだかどうかではない。",
+    "context_quotes": [
+      {
+        "label": "接続終了関数の原文（分岐の抜粋）",
+        "text": "  else if(tcp->shutdown_waiting){\n    send_pkt_directly(tcp);\n    if(tcp->send.size == 0){\n      // 发送FIN 包\n      send_fin_pkt(tcp);\n      tcp->snd_nxt += 1;\n      tcp->set_state(TCPState::FIN_WAIT_1);\n    }\n\n[...]\n      tcp->shutdown_waiting = true;",
+        "code": true,
+        "provenance": "TCP teaching implementation; context lines3440–3456 and3468–3476"
+      }
+    ],
+    "derived": null,
+    "context_scope": "Full question and all four choices; source context excerpt/derived table explicitly labelled. Whole original long context is not reproduced.",
+    "source_url": "https://huggingface.co/datasets/THUDM/LongBench-v2",
+    "dataset_revision": "2b48e494f2c7a2f0af81aae178e05c7e1dde0fe9",
+    "context_sha256": "2dd9c42c561b893add8a1e8e56053123d56309eace5997fd6a6d82217dd15eb6",
+    "license": "Dataset card: Apache-2.0; short quoted source passages retain underlying authors/titles; repository code MIT.",
+    "own_read_scope": "All question/choices/gold and displayed source excerpts with surrounding relevant source sections; full long contexts acquired, not claimed fully read.",
+    "context_japanese": "shutdown_waitingが真の場合、パケットを送る処理を呼び出す。送信バッファーのsizeが0になるとFINを送り、状態をFIN_WAIT_1へ進める。一方、バッファーにデータが残る場合はshutdown_waitingを真にする。",
+    "context_japanese_label": "コードの読み方",
+    "placement_pages": {
+      "original_question": [
+        50,
+        51
+      ],
+      "context": [
+        52
+      ],
+      "japanese_question": [
+        53
+      ],
+      "answer": [
+        54
+      ]
+    }
+  },
+  {
+    "example": 7,
+    "id": "66ec356a821e116aacb1c22b",
+    "row_index": 112,
+    "title": "二つの判例に共通する点を探す",
+    "domain": "Multi-Document QA",
+    "sub_domain": "Legal",
+    "placement": "appendix",
+    "original": "What do these two cases have in common?\nA: The truthfulness of the parties' intent in entering into the contract is of paramount importance.\nB: The defaulting party's reasons for refusing to honor the agreement are all that the other party's offer was too low.\nC: The basic terms of the main agreement are defined.\nD: The court upheld all of the plaintiff's claims.",
+    "question_full": true,
+    "japanese": "二つの判例に共通する点は何か。\nA：契約を結ぶ当事者の内心の意思が、何よりも重要である。\nB：契約に従わない理由は、どちらも相手の提示額が低すぎたことだ。\nC：主たる合意の基本的な条件が定まっている。\nD：裁判所は原告の請求をすべて認めた。",
+    "gold": "C",
+    "answer_text": "C：主たる合意の基本条件が定まっている。",
+    "explanation": "農場の売買では対象と代金が示され、企業買収でも主要条件に合意したという証拠がある。両判例は、契約に必要な主要条件の合意を認めている。内心の意思だけを最重要とするAとは異なる。",
+    "context_quotes": [
+      {
+        "label": "判例の原文（二つの文書からの抜粋）",
+        "text": "The instrument sought to be enforced was written by A. H. Zehmer on December 20, 1952, in these words: “We hereby agree to sell to W. O. Lucy the Ferguson Farm complete for $50,000.00, title satisfactory to buyer,” and signed by the defendants, A. H. Zehmer and Ida S. Zehmer.\n[...]\n… There was sufficient evidence for the jury to conclude that the parties had reached agreement on all essential terms of the transaction with only the mechanics and details left to be supplied by the parties’ attorneys.",
+        "code": false,
+        "provenance": "Lucy v.Zehmer and Texaco Inc.v.Pennzoil Co., quoted course materials; two disjoint passages"
+      }
+    ],
+    "derived": null,
+    "context_scope": "Full question and all four choices; source context excerpt/derived table explicitly labelled. Whole original long context is not reproduced.",
+    "source_url": "https://huggingface.co/datasets/THUDM/LongBench-v2",
+    "dataset_revision": "2b48e494f2c7a2f0af81aae178e05c7e1dde0fe9",
+    "context_sha256": "f7e1b2152bc9b2fadf817590c41a9fd7e826816936cb5c5322c4dcb1fe97dda5",
+    "license": "Dataset card: Apache-2.0; short quoted source passages retain underlying authors/titles; repository code MIT.",
+    "own_read_scope": "All question/choices/gold and displayed source excerpts with surrounding relevant source sections; full long contexts acquired, not claimed fully read.",
+    "context_japanese": "一つ目の判例では、農場全体を5万ドルで売り、買い手が納得する権原を条件とする合意書に、売り手夫婦が署名していた。二つ目の判例では、取引の主要条件にすべて合意しており、弁護士が詰めるのは手続や詳細だけだったと、陪審が判断するに足る証拠があった。",
+    "context_japanese_label": "本文の日本語要約",
+    "placement_pages": {
+      "original_question": [
+        55
+      ],
+      "context": [
+        56
+      ],
+      "japanese_question": [
+        57
+      ],
+      "answer": [
+        58
+      ]
+    },
+    "context_japanese_scope": "Japanese summary of displayed context excerpt; full translation of question and all choices separately retained."
+  },
+  {
+    "example": 8,
+    "id": "66f6bcf3bb02136c067c2703",
+    "row_index": 326,
+    "title": "政策文書の内容と選択肢を照合する",
+    "domain": "Multi-Document QA",
+    "sub_domain": "Governmental",
+    "placement": "appendix",
+    "original": "Which of the following options is not part of the U.S. national COVID-19 preparedness plan？\nA: With insufficient tools to fight COVID-19, the United States mobilized all of society to insist on surviving the outbreak with the least disruption to the United States.\nB: Minimize the impact of new variants on the United States by collecting and analyzing data on previous variants of COVID-19 and strengthening regulation and review of specific variants.\nC: Take specific measures for businesses and schools to help businesses and schools continue to operate through COVID-19 to reduce the cost and impact of the pandemic on the U.S. economy.\nD: Expand global access to COVID-19 medicines, facilitate the formation of pharmaceutical research alliances, and increase global funding.",
+    "question_full": true,
+    "japanese": "米国の国家COVID-19対策計画に含まれていない説明はどれか。\nA：対抗手段が不十分な中、社会全体を動員して、混乱を最小限に抑えながら流行を乗り切る。\nB：変異株に関するデータの収集・分析と監視を強め、新たな変異株の影響を抑える。\nC：企業や学校が活動を続けられるよう対策し、経済への費用と影響を減らす。\nD：COVID-19治療薬への世界的なアクセスを広げ、研究の連携と資金を増やす。",
+    "gold": "A",
+    "answer_text": "A：対抗手段が不十分だとする説明。",
+    "explanation": "文書は、すでに使える対抗手段を維持し、さらに強化する方針を示している。Aは「対抗手段が不十分な中」という過去の状況を、計画の現状に当てはめている。",
+    "context_quotes": [
+      {
+        "label": "政策文書の原文（計画と対抗手段に関する抜粋）",
+        "text": "As the country emerges from the Omicron wave, our path forward relies on maintaining and continually enhancing the numerous tools we now have to protect ourselves and our loved ones – from vaccines, to tests, to treatments, to masks, and more. \n\nIn January 2021, Americans had very few tools to protect against COVID-19, and the tools we did have were in limited supply. Over the last year, together, with states, localities, and public and private partners, the Administration has mobilized an unprecedented, whole-of-society effort to give Americans the tools they need to protect themselves.\n[...]\nThis plan lays out the roadmap to help us fight COVID-19 in the future as we begin to get back to our more normal routines.",
+        "code": false,
+        "provenance": "U.S.National COVID-19 Preparedness Plan in multi-document context; two disjoint passages"
+      }
+    ],
+    "derived": null,
+    "context_scope": "Full question and all four choices; source context excerpt/derived table explicitly labelled. Whole original long context is not reproduced.",
+    "source_url": "https://huggingface.co/datasets/THUDM/LongBench-v2",
+    "dataset_revision": "2b48e494f2c7a2f0af81aae178e05c7e1dde0fe9",
+    "context_sha256": "03bb8e61b29861a2b73c131a537e13060dedf93ce7039a09437075af6615404c",
+    "license": "Dataset card: Apache-2.0; short quoted source passages retain underlying authors/titles; repository code MIT.",
+    "own_read_scope": "All question/choices/gold and displayed source excerpts with surrounding relevant source sections; full long contexts acquired, not claimed fully read.",
+    "context_japanese": "オミクロン株の流行が落ち着く中、今後の方針はワクチン、検査、治療、マスクなど、すでにある多数の手段を維持し、強化することにある。2021年1月には手段も供給も限られていたが、その後の社会全体の取組で必要な手段を広げた。計画は、日常へ戻りながらCOVID-19と闘うための道筋を示す。",
+    "context_japanese_label": "本文の日本語要約",
+    "placement_pages": {
+      "original_question": [
+        59,
+        60
+      ],
+      "context": [
+        61,
+        62
+      ],
+      "japanese_question": [
+        63
+      ],
+      "answer": [
+        64
+      ]
+    },
+    "context_japanese_scope": "Japanese summary of displayed context excerpt; full translation of question and all choices separately retained."
+  },
+  {
+    "example": 9,
+    "id": "66ebda775a08c7b9b35e0dcb",
+    "row_index": 487,
+    "title": "論文の数値から改善幅を求める",
+    "domain": "Single-Document QA",
+    "sub_domain": "Academic",
+    "placement": "appendix",
+    "original": "How much has Meta-Rewarding training improved on AlpacaEval 2?\nA: 39.4%\nB: 22.9%\nC: 16.5%\nD: 18.7%",
+    "question_full": true,
+    "japanese": "Meta-Rewardingによって、AlpacaEval 2の得点はどれだけ改善したか。\nA：39.4%\nB：22.9%\nC：16.5%\nD：18.7%",
+    "gold": "C",
+    "answer_text": "C：16.5ポイントの改善。",
+    "explanation": "長さを調整した勝率は22.9%から39.4%へ上がっている。差は39.4−22.9=16.5ポイント。選択肢ではCに対応する。",
+    "context_quotes": [
+      {
+        "label": "Meta-Rewarding論文の原文（実験結果の段落の抜粋）",
+        "text": "In our experiments we start from Llama-3-8B-Instruct and perform multiple iterations of our Meta-\nRewarding training. When evaluated on AlpacaEval 2 (Dubois et al., 2024b), we see a substantial\nimprovement in the length-controlled (LC) win rate (from 22.9% to 39.4%), even outperforming\nGPT-4-03141. We also observe that our method outperforms standard Self-Rewarding training even\nif it is enhanced with our length-bias improvements (35.5% vs 39.4%), highlighting the importance\nof the meta-judge.",
+        "code": false,
+        "provenance": "Wu etal2024 Meta-Rewarding Language Models, introduction results paragraph"
+      }
+    ],
+    "derived": null,
+    "context_scope": "Full question and all four choices; source context excerpt/derived table explicitly labelled. Whole original long context is not reproduced.",
+    "source_url": "https://huggingface.co/datasets/THUDM/LongBench-v2",
+    "dataset_revision": "2b48e494f2c7a2f0af81aae178e05c7e1dde0fe9",
+    "context_sha256": "b203132a2db2bdbc2af0850d1de4fc3a7e9b9a532936ea1164901c97a7c890b1",
+    "license": "Dataset card: Apache-2.0; short quoted source passages retain underlying authors/titles; repository code MIT.",
+    "own_read_scope": "All question/choices/gold and displayed source excerpts with surrounding relevant source sections; full long contexts acquired, not claimed fully read.",
+    "context_japanese": "実験ではLlama-3-8B-Instructから始め、Meta-Rewardingを複数回繰り返した。AlpacaEval 2で、回答の長さを調整した勝率は22.9%から39.4%へ上がった。長さの偏りを調整した通常のSelf-Rewardingの35.5%も上回り、判断そのものを評価する工程の効果を示している。",
+    "context_japanese_label": "本文の日本語要約",
+    "placement_pages": {
+      "original_question": [
+        65
+      ],
+      "japanese_question": [
+        65
+      ],
+      "context": [
+        66
+      ],
+      "answer": [
+        67
+      ]
+    },
+    "context_japanese_scope": "Japanese summary of displayed context excerpt; full translation of question and all choices separately retained."
+  },
+  {
+    "example": 10,
+    "id": "66f10d67821e116aacb268d0",
+    "row_index": 492,
+    "title": "三種類の液滴の凍結を比較する",
+    "domain": "Multi-Document QA",
+    "sub_domain": "Academic",
+    "placement": "appendix",
+    "original": "During freezing, pure water, ethanol-water mixtures, and nanofluids exhibit different solidification behaviors.Read the given articles and answer: why a sharp tip forms in pure water and ethanol-water mixtures but not in nanofluids?\nA: In the freezing of pure water and ethanol-water mixtures, heat conduction dominates the solidification process, leading to tip formation. In nanofluids, however, the presence of nanoparticles enhances fluid stability at the liquid-solid interface, suppressing local heat diffusion and flattening the solidification front, resulting in a plateau.\nB: Nanoparticles accumulate along the freezing front during nanofluid solidification, generating capillary-driven compensating flows that counteract the formation of a tip, whereas the solute concentration gradient in ethanol-water mixtures induces an upward Marangoni flow, leading to self-lifting behavior, distinct from the sharp tip seen in pure water.\nC: In nanofluids, the scattering of heat by nanoparticles lowers the temperature gradient within the droplet, reducing surface tension effects and inhibiting tip formation. In pure water, the higher surface tension maintains the sharp tip structure, while the addition of ethanol creates an asymmetric cooling pattern and localized heat release, encouraging tip formation.\nD: In nanofluids, nanoparticles cause a non-uniform freezing front that suppresses deformation at the solid-liquid interface, preventing tip formation. By contrast, the freezing front in pure water and ethanol-water mixtures progresses uniformly, with heat diffusion driving tip formation.",
+    "question_full": true,
+    "japanese": "純水、エタノールと水の混合液、ナノ粒子を含む液体では凍結の仕方が異なる。純水と混合液には尖った先端ができ、ナノ粒子を含む液体にはできないのはなぜか。\nA：純水と混合液は熱伝導で先端ができる。ナノ粒子は界面を安定させ、熱拡散を抑えて平らにする。\nB：ナノ粒子が凍結面に集まり、毛管力による補償流が先端の形成を打ち消す。一方、混合液では濃度差による上向きのマランゴニ流が液滴を持ち上げ、純水の尖った先端とは異なる。\nC：ナノ粒子による熱の散乱が温度勾配を下げ、先端の形成を抑える。純水の表面張力や混合液の非対称な冷却が先端を作る。\nD：ナノ粒子が凍結面を不均一にするため先端ができず、純水と混合液では均一な凍結面と熱拡散が先端を作る。",
+    "gold": "B",
+    "answer_text": "B：粒子の集積による流れと、混合液の上向きの流れを説明する。",
+    "explanation": "三つの論文は異なる機構を説明している。純水では凍結時の体積膨張が尖った先端を作る。混合液では濃度差による表面張力の流れが液滴を持ち上げる。ナノ流体では粒子の集積に伴う流れが体積を再配分する。設問の導入は混合液も同じ先端形成とまとめているが、Bはその違いまで示している。",
+    "context_quotes": [
+      {
+        "label": "純水と混合液の論文の原文（抜粋）",
+        "text": "A drop of water deposited on a cold plate freezes into an ice drop with a pointy tip. While this phenomenon clearly finds its origin in the expansion of water upon freezing, a quantitative description of the tip singularity has remained elusive.\n[...]\nThis counterintuitive observation is attributed to an internal solutal Marangoni flow up to 1 mm=s, which is driven by the enriched solute concentration locally in the vicinity of the solidification front.",
+        "code": false,
+        "provenance": "Marín etal2014 and Wang etal2024 abstracts/explanation excerpts"
+      },
+      {
+        "label": "ナノ流体の論文の原文（抜粋）",
+        "text": "We propose an analytical model to attribute the plateau formation to a capillary driven compensating ﬂow due to segregated particles moving along the freezing interface.",
+        "code": false,
+        "provenance": "Zhao etal2021 mechanism paragraph; exact source excerpt"
+      }
+    ],
+    "derived": null,
+    "context_scope": "Full question and all four choices; source context excerpt/derived table explicitly labelled. Whole original long context is not reproduced.",
+    "source_url": "https://huggingface.co/datasets/THUDM/LongBench-v2",
+    "dataset_revision": "2b48e494f2c7a2f0af81aae178e05c7e1dde0fe9",
+    "context_sha256": "1a273f05446e03aac01f2fd87050ada9bf4ea4e73a54e0e0b8253d100f70033e",
+    "license": "Dataset card: Apache-2.0; short quoted source passages retain underlying authors/titles; repository code MIT.",
+    "own_read_scope": "All question/choices/gold and displayed source excerpts with surrounding relevant source sections; full long contexts acquired, not claimed fully read.",
+    "context_japanese": "冷たい板の上の水滴は、尖った先端を持つ氷になる。凍結時に水が膨張することが、この現象の起源である。混合液の特異な動きは、凍結面の近くで溶質の濃度が高くなり、内部に溶質マランゴニ流が生じることで説明される。ナノ流体の平らな上面は、凍結面に沿って動く分離粒子による、毛管力で駆動される補償流としてモデル化される。",
+    "context_japanese_label": "本文の日本語要約",
+    "placement_pages": {
+      "original_question": [
+        68,
+        69,
+        70
+      ],
+      "japanese_context": [
+        72
+      ],
+      "context": [
+        71,
+        72
+      ],
+      "japanese_question": [
+        73,
+        74
+      ],
+      "answer": [
+        75
+      ]
+    },
+    "context_japanese_scope": "Japanese summary of displayed context excerpt; full translation of question and all choices separately retained."
+  },
+  {
+    "example": 11,
+    "id": "67191791bb02136c067d406c",
+    "row_index": 398,
+    "title": "過去の会話から購入前の価格を求める",
+    "domain": "Long-dialogue History Understanding",
+    "sub_domain": "Dialogue history QA",
+    "placement": "appendix",
+    "original": "What was the original price of the Up & Up brand cleaning supplies the user bought?\nA: $12\nB: $120\nC: $60\nD: $80",
+    "question_full": true,
+    "japanese": "ユーザーが買ったUp & Upブランドの掃除用品は、割引前にいくらだったか。\nA：12ドル\nB：120ドル\nC：60ドル\nD：80ドル",
+    "gold": "C",
+    "answer_text": "C：60ドル",
+    "explanation": "20%引きによって12ドル安くなったので、割引前の価格は12÷0.20=60ドル。支払額ではなく、値引き前の価格を求める。",
+    "context_quotes": [
+      {
+        "label": "会話履歴の原文（関係するユーザー発言の全文）",
+        "text": "I'm planning to clean my house this weekend and I need to restock on some cleaning supplies. Can you tell me if there are any good deals on all-purpose cleaners or disinfecting wipes at Target this week? By the way, I saved $12 last week using a Cartwheel offer for 20% off on all Up & Up brand cleaning supplies at Target!",
+        "code": false,
+        "provenance": "One complete user turn from haystack_sessions; other sessions omitted; role preserved."
+      }
+    ],
+    "derived": null,
+    "context_scope": "Full question and all four choices; source context excerpt/derived table explicitly labelled. Whole original long context is not reproduced.",
+    "source_url": "https://huggingface.co/datasets/THUDM/LongBench-v2",
+    "dataset_revision": "2b48e494f2c7a2f0af81aae178e05c7e1dde0fe9",
+    "context_sha256": "308a2d5bb57bc8499f8bdb6a175657cbd62aa4f04026c3c6657eba856b80ad3f",
+    "license": "Dataset card: Apache-2.0; short quoted source passages retain underlying authors/titles; repository code MIT.",
+    "own_read_scope": "All question/choices/gold and displayed source excerpts with surrounding relevant source sections; full long contexts acquired, not claimed fully read.",
+    "context_japanese": "今週末に家を掃除するので、掃除用品を補充したい。今週、Targetで万能クリーナーや除菌シートのよい特売があるか知りたい。ちなみに先週は、Up & Upブランドの全掃除用品が20%引きになるCartwheelの特典を使って12ドル節約した。",
+    "context_japanese_label": "ユーザー発言の日本語訳",
+    "placement_pages": {
+      "original_question": [
+        76
+      ],
+      "japanese_question": [
+        76
+      ],
+      "japanese_context": [
+        77
+      ],
+      "context": [
+        77
+      ],
+      "answer": [
+        78
+      ]
+    }
+  },
+  {
+    "example": 12,
+    "id": "6724938fbb02136c067d7657",
+    "row_index": 478,
+    "title": "知識グラフで二つの属性を照合する",
+    "domain": "Long Structured Data Understanding",
+    "sub_domain": "Knowledge graph reasoning",
+    "placement": "appendix",
+    "original": "Which town has a TOID of 4000000074573917 and has an OS grid reference of SP8778?\nA: Q984613\nB: Q208143\nC: Q58900\nD: Q279000",
+    "question_full": true,
+    "japanese": "TOIDが4000000074573917で、OSグリッド参照がSP8778である町はどれか。\nA：Q984613\nB：Q208143\nC：Q58900\nD：Q279000",
+    "gold": "A",
+    "answer_text": "A：Q984613（Kettering）",
+    "explanation": "地物の識別子TOIDと、英国の位置表記であるOSグリッド参照を、同じ町の属性として照合する。Q984613の属性が両方に一致する。配布本文では町名Ketteringも確認できる。",
+    "context_quotes": [],
+    "derived": {
+      "kind": "kg-attributes",
+      "rows": [
+        [
+          "Q984613",
+          "4000000074573917",
+          "SP8778"
+        ],
+        [
+          "Q208143",
+          "4000000074548561",
+          "SD583055"
+        ],
+        [
+          "Q58900",
+          "4000000074574343",
+          "SE5702"
+        ],
+        [
+          "Q279000",
+          "4000000074551570",
+          "NZ365665"
+        ]
+      ],
+      "provenance": "Exact attributes of the four choice entities, no values changed; other entities and attributes omitted"
+    },
+    "context_scope": "Full question and all four choices; source context excerpt/derived table explicitly labelled. Whole original long context is not reproduced.",
+    "source_url": "https://huggingface.co/datasets/THUDM/LongBench-v2",
+    "dataset_revision": "2b48e494f2c7a2f0af81aae178e05c7e1dde0fe9",
+    "context_sha256": "7997ecb15096c0123a478a644f4de4507ec05acfc781e68c0c88a1a733e5c624",
+    "license": "Dataset card: Apache-2.0; short quoted source passages retain underlying authors/titles; repository code MIT.",
+    "own_read_scope": "All question/choices/gold and displayed source excerpts with surrounding relevant source sections; full long contexts acquired, not claimed fully read.",
+    "context_japanese": "表では、選択肢に現れる四つの町について、TOIDとOSグリッド参照の属性を取り出している。どちらも同じ町のレコードに含まれる属性である。",
+    "context_japanese_label": "表の読み方",
+    "placement_pages": {
+      "original_question": [
+        79
+      ],
+      "japanese_question": [
+        79
+      ],
+      "context": [
+        80
+      ],
+      "answer": [
+        81
+      ]
+    }
+  },
+  {
+    "example": 13,
+    "id": "66ec1de5821e116aacb1adca",
+    "row_index": 289,
+    "title": "3Dの箱の符号化を読み取る",
+    "domain": "Single-Document QA",
+    "sub_domain": "Academic",
+    "placement": "appendix",
+    "original": "How does the MagicDrive encode the bounding box in training step?\nA: MagicDrive encode the class labels of bounding box by the method similar to Li et al, where the pooled embeddings of the class names are considered as the label embeddings. And then uses an MLP to compress both the class and text embeddings into a single hidden vector for each bounding box.\nB: MagicDrive uses Fourier embedding for 4 corner point and passes them through an MLP for encoding in training step. MagicDrive then uses an MLP to compress both the class label and position embeddings into a single hidden vector for each bounding box.\nC: MagicDrive using the text encoder to encode the class label of bounding box,  and then uses an MLP to compress both the class and text embeddings into a single hidden vector for each bounding box.\nD: MagicDrive encode the class labels and the corner points separately, and then uses an MLP to compress them into a vector.",
+    "question_full": true,
+    "japanese": "運転場面の画像を生成するMagicDriveは学習時に物体の境界ボックスをどのように符号化するか。\nA：クラス名の埋め込みをラベルとして使い、クラスとテキストの埋め込みをMLPで一つのベクトルにまとめる。\nB：四つの頂点をFourier埋め込みとMLPで符号化し、クラスと位置の埋め込みを一つのベクトルにまとめる。\nC：テキストエンコーダーでクラスを符号化し、クラスとテキストの埋め込みをMLPでまとめる。\nD：クラスラベルと頂点を別々に符号化した後、MLPで一つのベクトルにまとめる。",
+    "gold": "D",
+    "answer_text": "D：クラスと頂点を別々に符号化して統合する。",
+    "explanation": "ラベルの情報と、八つの頂点で表す位置の情報を別々に符号化してから統合する。Bは頂点数を四つとしており、AとCは位置の情報をテキストの情報に置き換えている。",
+    "context_quotes": [
+      {
+        "label": "MagicDrive論文の原文（3Dボックスの符号化に関する抜粋）",
+        "text": "For box positions bi ∈R8×3, represented by the coordinates of its 8 corner points, we utilize Fourier embedding to each point and pass through an MLP for encoding, as in Equation 4. Then, we use an MLP to compress both class and position embedding into one hidden vector, as in Equation 5.",
+        "code": false,
+        "provenance": "MagicDrive3D Bounding Box Encoding paragraph; exact excerpt, reading order as distributed"
+      }
+    ],
+    "derived": null,
+    "context_scope": "Full question and all four choices; source context excerpt/derived table explicitly labelled. Whole original long context is not reproduced.",
+    "source_url": "https://huggingface.co/datasets/THUDM/LongBench-v2",
+    "dataset_revision": "2b48e494f2c7a2f0af81aae178e05c7e1dde0fe9",
+    "context_sha256": "f29133d2ac91b3e1fd1c32428c8c86a8b39f36cd83380666d602bb6b0661ac97",
+    "license": "Dataset card: Apache-2.0; short quoted source passages retain underlying authors/titles; repository code MIT.",
+    "own_read_scope": "All question/choices/gold and displayed source excerpts with surrounding relevant source sections; full long contexts acquired, not claimed fully read.",
+    "context_japanese": "ボックスの位置は、八つの頂点の座標で表す。それぞれの頂点へFourier埋め込みを使い、MLPで符号化する。その後、クラスと位置の埋め込みを、MLPで一つの隠れベクトルへまとめる。",
+    "context_japanese_label": "本文の日本語要約",
+    "placement_pages": {
+      "original_question": [
+        82,
+        83
+      ],
+      "japanese_context": [
+        84
+      ],
+      "context": [
+        84
+      ],
+      "japanese_question": [
+        85
+      ],
+      "answer": [
+        86
+      ]
+    },
+    "context_japanese_scope": "Japanese summary of displayed context excerpt; full translation of question and all choices separately retained."
+  }
+]

@@ -1,0 +1,61 @@
+{
+  "scope": "Static source parsing and arithmetic, not model/evaluation-harness run. Root independently read scheduler function excerpt and these weather rows; not whole raw dataset or all13 source checks.",
+  "scheduler": {
+    "initial_blocks": [
+      8,
+      7,
+      5
+    ],
+    "copy1": [
+      8,
+      1,
+      0
+    ],
+    "copy2": [
+      0,
+      6,
+      3
+    ],
+    "matching_gold": "D"
+  },
+  "weather": [
+    {
+      "choice": "A",
+      "time": "2017-01-22T04:10:00Z",
+      "sun": "0",
+      "temperature": "-7.8",
+      "humidity": "96",
+      "meets": true
+    },
+    {
+      "choice": "B",
+      "time": "2017-01-06T02:10:00Z",
+      "sun": "2",
+      "temperature": "-7.3",
+      "humidity": "96",
+      "meets": false
+    },
+    {
+      "choice": "C",
+      "time": "2017-01-22T00:10:00Z",
+      "sun": "2",
+      "temperature": "-5.3",
+      "humidity": "96",
+      "meets": false
+    },
+    {
+      "choice": "D",
+      "time": "2017-02-09T15:10:00Z",
+      "sun": "0",
+      "temperature": "1.1",
+      "humidity": "80",
+      "meets": false
+    }
+  ],
+  "balance": {
+    "scope": "Personally read raw context paragraph around coupling elements and compare full displayed choices/translation, not whole manual",
+    "left_hand_operation": "right coupling upward and left downward",
+    "right_hand_operation": "reversed hand/coupling relationship makes A inconsistent",
+    "matching_displayed_gold": "A"
+  }
+}

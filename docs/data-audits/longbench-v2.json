@@ -1,0 +1,446 @@
+{
+  "dataset": "https://huggingface.co/datasets/zai-org/LongBench-v2",
+  "review_date": "2026-10-26",
+  "original_creators": "Yushi Bai, Shangqing Tu et al.; Tsinghua University and Zhipu AI",
+  "release": "2024-12-20",
+  "paper": "https://arxiv.org/abs/2412.15204",
+  "official": "https://longbench2.github.io/",
+  "repository": "https://github.com/THUDM/LongBench",
+  "repository_revision": "2e00731f8d0bff23dc4325161044d0ed8af94c1e",
+  "dataset_revision": "2b48e494f2c7a2f0af81aae178e05c7e1dde0fe9",
+  "counts": {
+    "questions": 503,
+    "languages": [
+      "English"
+    ],
+    "choices_per_question": 4,
+    "domains": {
+      "Long In-context Learning": 81,
+      "Single-Document QA": 175,
+      "Multi-Document QA": 125,
+      "Long-dialogue History Understanding": 39,
+      "Code Repository Understanding": 50,
+      "Long Structured Data Understanding": 33
+    },
+    "distinct_domain_subdomain_pairs": 20,
+    "difficulty": {
+      "hard": 311,
+      "easy": 192
+    },
+    "length_groups": {
+      "long": 108,
+      "short": 180,
+      "medium": 215
+    }
+  },
+  "length": {
+    "paper_report": "8k–2M words (not tokens)",
+    "paper_median_words": 54000,
+    "paper_mean_words": 104000,
+    "current_machine_whitespace_words": {
+      "min": 8205,
+      "max": 1380741,
+      "median": 55106,
+      "mean": 106536.38767395627
+    },
+    "difference": "Published range and fetched-file machine counts are separately identified; cause not inferred."
+  },
+  "construction": {
+    "annotators": 97,
+    "reviewers": 24,
+    "automatic_screening": "GPT-4o-mini/GLM-4-Air/GLM-4-Flash, revise if all3 solve",
+    "human_review": "Verify accuracy, objectivity, context need; questions not solvable within3min",
+    "hard_definition": "At most1/3 screening models correct AND human solving time>10min"
+  },
+  "metric": {
+    "unit": "Exact A–D reference letter extracted by static regex; row score0/1 then mean of saved rows",
+    "no_llm_judge": true,
+    "direct_temperature": 0.1,
+    "direct_max_tokens": 128,
+    "cot_max_tokens": 1024,
+    "cot_calls": 2,
+    "context_handling": "If over configured capacity, keep half head and half tail; optional RAG changes available context.",
+    "failures": "pred.py can skip empty API failed rows; parse-None stored scores0. Macro mean in result.py applies to saved rows, not a proof503 were evaluated in every run.",
+    "model_runs_by_creator": false
+  },
+  "results": {
+    "initial_comparison": "Paper2024 direct/extra-CoT, GPT4o0806 50.1/51.2; Claude3.5Sonnet1022 41.0/46.7; Qwen2.5-72B39.4/38.8; o1-preview0912 57.7/56.2. Direct means no additional CoT prompt, not no internal reasoning.",
+    "human": "53.7% under15min per question;8% abstained after limit",
+    "later_official_board": "2025 rows separated from initial table, not called current SoTA",
+    "current_primary_use": {
+      "source": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B",
+      "model": "Qwen3.5-397B-A17B",
+      "own_report": 63.2,
+      "date": "2026",
+      "limits": "Only this own model-card row is evidence of use; other model columns not compared as matched harness."
+    }
+  },
+  "examples": [
+    {
+      "example": 1,
+      "row": 295,
+      "id": "6708a096bb02136c067d1789",
+      "gold": "D",
+      "pages": {
+        "original_question": [
+          7
+        ],
+        "japanese_context": [
+          9
+        ],
+        "context": [
+          8,
+          9
+        ],
+        "japanese_question": [
+          10
+        ],
+        "answer": [
+          11
+        ]
+      },
+      "source": "https://huggingface.co/datasets/THUDM/LongBench-v2"
+    },
+    {
+      "example": 2,
+      "row": 270,
+      "id": "66f2a59d821e116aacb2a553",
+      "gold": "A",
+      "pages": {
+        "original_question": [
+          12
+        ],
+        "japanese_question": [
+          12
+        ],
+        "japanese_context": [
+          13
+        ],
+        "context": [
+          13
+        ],
+        "answer": [
+          14
+        ]
+      },
+      "source": "https://huggingface.co/datasets/THUDM/LongBench-v2"
+    },
+    {
+      "example": 3,
+      "row": 435,
+      "id": "66ec3a46821e116aacb1c49f",
+      "gold": "A",
+      "pages": {
+        "original_question": [
+          15
+        ],
+        "japanese_context": [
+          16
+        ],
+        "context": [
+          16
+        ],
+        "japanese_question": [
+          17
+        ],
+        "answer": [
+          18
+        ]
+      },
+      "source": "https://huggingface.co/datasets/THUDM/LongBench-v2"
+    },
+    {
+      "example": 4,
+      "row": 477,
+      "id": "66f56c9c821e116aacb33a45",
+      "gold": "C",
+      "pages": {
+        "original_question": [
+          41
+        ],
+        "context": [
+          42,
+          43
+        ],
+        "japanese_question": [
+          44
+        ],
+        "answer": [
+          45
+        ]
+      },
+      "source": "https://huggingface.co/datasets/THUDM/LongBench-v2"
+    },
+    {
+      "example": 5,
+      "row": 288,
+      "id": "66ed3e90821e116aacb1f82f",
+      "gold": "C",
+      "pages": {
+        "original_question": [
+          46
+        ],
+        "context": [
+          47,
+          48
+        ],
+        "japanese_question": [
+          49
+        ],
+        "answer": [
+          49
+        ]
+      },
+      "source": "https://huggingface.co/datasets/THUDM/LongBench-v2"
+    },
+    {
+      "example": 6,
+      "row": 196,
+      "id": "66f3ad93821e116aacb2e29f",
+      "gold": "C",
+      "pages": {
+        "original_question": [
+          50,
+          51
+        ],
+        "context": [
+          52
+        ],
+        "japanese_question": [
+          53,
+          54
+        ],
+        "answer": [
+          55
+        ]
+      },
+      "source": "https://huggingface.co/datasets/THUDM/LongBench-v2"
+    },
+    {
+      "example": 7,
+      "row": 112,
+      "id": "66ec356a821e116aacb1c22b",
+      "gold": "C",
+      "pages": {
+        "original_question": [
+          56
+        ],
+        "context": [
+          57
+        ],
+        "japanese_question": [
+          58
+        ],
+        "answer": [
+          59
+        ]
+      },
+      "source": "https://huggingface.co/datasets/THUDM/LongBench-v2"
+    },
+    {
+      "example": 8,
+      "row": 326,
+      "id": "66f6bcf3bb02136c067c2703",
+      "gold": "A",
+      "pages": {
+        "original_question": [
+          60,
+          61
+        ],
+        "context": [
+          62,
+          63
+        ],
+        "japanese_question": [
+          64
+        ],
+        "answer": [
+          65
+        ]
+      },
+      "source": "https://huggingface.co/datasets/THUDM/LongBench-v2"
+    },
+    {
+      "example": 9,
+      "row": 487,
+      "id": "66ebda775a08c7b9b35e0dcb",
+      "gold": "C",
+      "pages": {
+        "original_question": [
+          66
+        ],
+        "japanese_question": [
+          66
+        ],
+        "context": [
+          67
+        ],
+        "answer": [
+          68
+        ]
+      },
+      "source": "https://huggingface.co/datasets/THUDM/LongBench-v2"
+    },
+    {
+      "example": 10,
+      "row": 492,
+      "id": "66f10d67821e116aacb268d0",
+      "gold": "B",
+      "pages": {
+        "original_question": [
+          69,
+          70,
+          71
+        ],
+        "japanese_context": [
+          73
+        ],
+        "context": [
+          72,
+          73
+        ],
+        "japanese_question": [
+          74,
+          75,
+          76
+        ],
+        "answer": [
+          77
+        ]
+      },
+      "source": "https://huggingface.co/datasets/THUDM/LongBench-v2"
+    },
+    {
+      "example": 11,
+      "row": 398,
+      "id": "67191791bb02136c067d406c",
+      "gold": "C",
+      "pages": {
+        "original_question": [
+          78
+        ],
+        "japanese_question": [
+          78
+        ],
+        "japanese_context": [
+          79
+        ],
+        "context": [
+          79
+        ],
+        "answer": [
+          80
+        ]
+      },
+      "source": "https://huggingface.co/datasets/THUDM/LongBench-v2"
+    },
+    {
+      "example": 12,
+      "row": 478,
+      "id": "6724938fbb02136c067d7657",
+      "gold": "A",
+      "pages": {
+        "original_question": [
+          81
+        ],
+        "japanese_question": [
+          81
+        ],
+        "context": [
+          82
+        ],
+        "answer": [
+          83
+        ]
+      },
+      "source": "https://huggingface.co/datasets/THUDM/LongBench-v2"
+    },
+    {
+      "example": 13,
+      "row": 289,
+      "id": "66ec1de5821e116aacb1adca",
+      "gold": "D",
+      "pages": {
+        "original_question": [
+          84,
+          85
+        ],
+        "japanese_context": [
+          86
+        ],
+        "context": [
+          86
+        ],
+        "japanese_question": [
+          87,
+          88
+        ],
+        "answer": [
+          89
+        ]
+      },
+      "source": "https://huggingface.co/datasets/THUDM/LongBench-v2"
+    }
+  ],
+  "static_gold_checks": {
+    "295": "Hand calculation: first8+1, fallback second6+3 =>D; root independently read wholefunction±10k chars and checked.",
+    "270": "A: sun0,temp−7.8,humidity96; other3 fail at least one condition.",
+    "435": "Direction inversion of left/right coupler operation makesA incorrect.",
+    "477": "CathodeLoading sweep3.0–3.9 across10cases directly supportsC.",
+    "288": "BertLayer ownsBertAttention ownsBertSelfAttention; query/key/value inSelfAttention =>C.",
+    "196": "Buffer empty vs ACK receipt distinct; C matches flag source.",
+    "112": "Both opinions find agreement on essential terms =>C.",
+    "326": "A assigns2021tool shortage to current plan.",
+    "487": "39.4−22.9=16.5percentagepoints =>C.",
+    "492": "B has capillary compensation/nanoparticles vs solutal Marangoni/selflifting; original question premise simplification retained and discussed.",
+    "398": "12/0.20=60 originalprice =>C.",
+    "478": "BothTOID4000000074573917 andgridSP8778 inQ984613 =>A.",
+    "289": "8corners, class/position embeddings merged byMLP =>D."
+  },
+  "exclusions": [
+    {
+      "row_index": 187,
+      "reason": "Question low clarity after cutting suggests noise reduction in source but gold B says proofreading; excluded."
+    },
+    {
+      "row_index": 282,
+      "reason": "Calculator key glyphs PUA lack readable unambiguous source; excluded."
+    },
+    {
+      "row_index": 43,
+      "reason": "DigiRL option improvement numbers do not agree with displayed original table; excluded."
+    },
+    {
+      "row_index": 86,
+      "reason": "Winner counts from round_records conflict with reference and player messages; excluded."
+    },
+    {
+      "row_index": 47,
+      "reason": "Global round_records and per-player utility lists disagree, though global derived gold matched. To avoid ambiguous evidence, replaced by dialogue398 with arithmetic fully supported."
+    },
+    {
+      "row_index": 464,
+      "reason": "Robot E03 prescribed actions do not uniquely justify reference B; excluded."
+    }
+  ],
+  "source_native_check": "source-native-audit.json",
+  "source_scope": {
+    "acquired": "All503 full contexts in canonical data.json (465490535bytes); selected13 fixed originals retained privately in workspace.",
+    "parsed": "Metadata/questions/choices/gold/whitespace word counts for503; not all465MB read.",
+    "read": "Paper construction/evaluation/results/references relevant sections; official README, pred.py,result.py,direct/CoT prompts; website board; Qwen3.5 adoption row and headers; all13 questions/all choices/golds and displayed contexts plus necessary surrounding sections.",
+    "not_claimed": "Not every word in13 full long contexts, not independent underlying manuals/repositories downloaded, not all503 full contexts read.",
+    "method": "Static source/logic/arithmetic inspection only; no evaluation/model or external generation API run."
+  },
+  "licenses": {
+    "data": "Apache-2.0 in canonical dataset card",
+    "repo_code": "MIT, copyright2023THU-KEG &ZhipuAI",
+    "site": "CC-BY-SA-4.0 site footer; actual attribution retained",
+    "underlying": "Dataset license does not replace thirdparty source rights; small attributed educational excerpts, not full underlying contexts distributed. See ATTRIBUTION-LongBench-v2.txt."
+  },
+  "artifact_sha256": {
+    "pdf": "136b0a66af6b1e2e28800aa0938ef9a6ac06ffed4628e7cab0c08e9662676a4d",
+    "pptx": "7317d8b040fffa0d2b206da0768860614bd41b6d3ff90ba82b9e8cd4dec5595a"
+  },
+  "final_review": "../skill-proofreading/longbench-v2/review.json",
+  "final_independent_approved": true
+}
