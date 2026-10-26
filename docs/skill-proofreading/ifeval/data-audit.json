@@ -1,0 +1,131 @@
+{
+  "dataset": "IFEval",
+  "original_creators": "Jeffrey Zhou et al.; Google and Yale affiliations as in 2023 paper",
+  "version": "Official public 541 prompts and current public Google verifier code, fetched 2026-10-26",
+  "source_revision_last_path_commit": "e6890f85757dd84e27ca6df2dd30651dafad28e0",
+  "source_acquisition": "source-acquisition.json",
+  "primary_reading_scope": {
+    "ifeval_paper": "Full main text sections1–4, creation/metrics/results and relevant taxonomy; not every references/appendix prompt page read.",
+    "google_code": "evaluation_lib.py whole; selected checker classes for all13 examples; instructions_registry.py and README; no evaluation harness execution",
+    "official_data": "All541 records machine parsed/counts; selected13 complete raw prompts, instruction IDs and kwargs personally read and compared against all Japanese translations. Machine retrieval of541 is not reading all541.",
+    "ifbench_paper": "Sections1–3 and generation setting paragraph in appendix; own p3 figure actual image read and source/metric/model settings checked.",
+    "ifbench_readme": "Full current README read; 25 classic IFEval verifiers plus58 new =83.",
+    "google_model_page": "Fetched but IFEval not found; no current Astra/Fable/Argon adoption claim derived."
+  },
+  "stats": {
+    "prompts": 541,
+    "verifier_instances": 834,
+    "types": {
+      "punctuation:no_comma": 66,
+      "detectable_format:number_highlighted_sections": 48,
+      "length_constraints:number_words": 52,
+      "detectable_content:number_placeholders": 27,
+      "combination:repeat_prompt": 41,
+      "detectable_format:title": 37,
+      "change_case:english_lowercase": 39,
+      "detectable_format:number_bullet_lists": 31,
+      "change_case:english_capital": 25,
+      "detectable_format:multiple_sections": 14,
+      "change_case:capital_word_frequency": 25,
+      "startend:quotation": 41,
+      "keywords:existence": 39,
+      "detectable_format:json_format": 17,
+      "length_constraints:number_paragraphs": 27,
+      "combination:two_responses": 24,
+      "language:response_language": 31,
+      "keywords:letter_frequency": 33,
+      "startend:end_checker": 26,
+      "keywords:forbidden_words": 49,
+      "keywords:frequency": 42,
+      "length_constraints:number_sentences": 52,
+      "detectable_content:postscript": 26,
+      "length_constraints:nth_paragraph_first_word": 12,
+      "detectable_format:constrained_response": 10
+    },
+    "prompts_by_constraint_count": {
+      "3": 57,
+      "1": 305,
+      "2": 179
+    }
+  },
+  "metrics": {
+    "atomic": "Each verifier determines boolean compliance; empty responses false",
+    "prompt_level": "Count prompts whose all verifier entries pass / number of prompts",
+    "instruction_level": "Sum passing entries / all instruction entries",
+    "strict": "Untransformed response",
+    "loose": "Any passing transformed candidate per instruction, eight candidates in current source (identity plus star/first/last/both combinations)."
+  },
+  "selected_examples": {
+    "count": 13,
+    "main": 3,
+    "appendix": 10,
+    "all_distinct": true,
+    "unique_gold": false,
+    "expected_behavior": "Official instruction_id_list and kwargs, not a created unique answer; no generated answers or checker/model execution."
+  },
+  "initial_results": {
+    "source": "2023 paper p5",
+    "model_response_acquisition": "GPT-4 November2023; PaLM2Small August2023",
+    "trial_count": "Repeated trial count not specified in source; no pass@k or single-run claim inferred.",
+    "metric_order": [
+      "prompt_strict",
+      "instruction_strict",
+      "prompt_loose",
+      "instruction_loose"
+    ],
+    "GPT4": [
+      76.89,
+      83.57,
+      79.3,
+      85.37
+    ],
+    "PaLM2S": [
+      43.07,
+      55.76,
+      46.95,
+      59.11
+    ]
+  },
+  "later_results": {
+    "source": "Pyatkin et al.2025 p3 Figure1 and appendixgeneration paragraph",
+    "metrics": "Prompt-level loose accuracy, single-turn",
+    "models": {
+      "Gemini2.5Pro": {
+        "IFEval": 65.4,
+        "IFBench": 52.3,
+        "temperature": 0
+      },
+      "Claude4Sonnet": {
+        "IFEval": 91.3,
+        "IFBench": 42.3,
+        "temperature": 0
+      },
+      "OpenAIo3": {
+        "IFEval": 95.0,
+        "IFBench": 69.3,
+        "temperature": 1
+      }
+    },
+    "trial_count": "Repeated trials not specified; no invented count.",
+    "year_scope": "2025 reported comparison, not latest2026 leaderboard."
+  },
+  "license": {
+    "data_and_code": "Apache2.0 (repo license; IFBench paper also identifies IFEval taxonomy under Apache2.0)",
+    "retained": [
+      "LICENSE-IFEval-Apache-2.0.txt",
+      "ATTRIBUTION-IFEval.md"
+    ]
+  },
+  "generation_or_evaluation_run": false,
+  "gemini_used": false,
+  "remaining": [],
+  "independent_review": {
+    "status": "approved",
+    "reviewer": "/root/five_coordinator/create_supergpqa",
+    "canonical_record": "../review-ifeval/review.json",
+    "artifact_sha256": {
+      "pdf": "ddb4cc694faabeffb1db4903f1c82128a8ca9b417c191ada2f0dfa921d263336",
+      "pptx": "0585f265b53d23dddcc6dbd416bf580aa0145d389a7ab45f930eb24fbb753966"
+    }
+  }
+}

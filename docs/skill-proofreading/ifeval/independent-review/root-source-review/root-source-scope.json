@@ -1,0 +1,33 @@
+{
+  "scope": "Root supplemental primary reading; does not substitute for creator or independent whole-deck review. No external generation APIs or model/harness execution.",
+  "own_acquisition": "See acquisition.json and paper-acquisition.json; download success does not imply whole-document reading.",
+  "own_reading": {
+    "ifeval": [
+      "Full official README",
+      "Paper main sections 1-3 and definitions/initial-result table; HTML-text first 23,500 characters including reference beginning"
+    ],
+    "longbench-v2": [
+      "Full official README",
+      "Paper first 31,000 plain-text characters: introductory sections 1-4.1 including construction, statistics, initial results"
+    ],
+    "supergpqa": [
+      "Full official README",
+      "Paper HTML v4 first17,000 text chars sections1-2 and statistics beginning; not whole large appendix."
+    ],
+    "mathvista": [
+      "Official README dataset overview, usage/data-format sections, community EvalScope integration, license section; other sections searched only"
+    ],
+    "multichallenge": [
+      "HF README full; paper v2 first18,000 plain-text chars through sections1-3.2 and construction introduction. Current Scale HTTP403, not self-verified."
+    ]
+  },
+  "findings_shared": [
+    "LongBench v2 words vs tokens and conditional human baseline",
+    "SuperGPQA hierarchical result denominators and composite-license scope",
+    "MathVista public/nonpublic gold split, underlying rights and official vs community scoring",
+    "IFEval four metrics, no unique reference gold, loose transformations require static code verification",
+    "MultiChallenge rubric pass polarity must follow each raw pass_criteria, not generic YES statement; initial/current sample counts kept separate",
+    "SuperGPQA v4 has internal Economics314 vs873 mismatch; creator v2/current-raw counts checked separately"
+  ],
+  "pending": "Deck supplement review after immutable drafts ready."
+}

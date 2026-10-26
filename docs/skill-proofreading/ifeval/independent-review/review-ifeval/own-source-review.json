@@ -1,0 +1,280 @@
+{
+  "reviewer": "create_supergpqa",
+  "scope": "Own independent HTTP acquisition, full-file mechanical count, selected 13 original/JA/request/explanation semantic reading. Did not read every one of the 541 prompts semantically. No model/API/evaluation harness run.",
+  "acquisition": "source-acquisition-own.json",
+  "counts": {
+    "prompts": 541,
+    "verifier_instances": 834,
+    "types": 25,
+    "prefix_groups": 9,
+    "conditions_per_prompt": {
+      "3": 57,
+      "1": 305,
+      "2": 179
+    }
+  },
+  "selected13": [
+    {
+      "id": "1001",
+      "exact_original_ids_kwargs": true,
+      "read_original_ja_expected_explanation": true,
+      "meaning_supported": true,
+      "checker_static_review": true,
+      "ids": [
+        "punctuation:no_comma"
+      ],
+      "kwargs": [
+        {}
+      ]
+    },
+    {
+      "id": "1075",
+      "exact_original_ids_kwargs": true,
+      "read_original_ja_expected_explanation": true,
+      "meaning_supported": true,
+      "checker_static_review": true,
+      "ids": [
+        "detectable_format:json_format"
+      ],
+      "kwargs": [
+        {}
+      ]
+    },
+    {
+      "id": "1658",
+      "exact_original_ids_kwargs": true,
+      "read_original_ja_expected_explanation": true,
+      "meaning_supported": true,
+      "checker_static_review": true,
+      "ids": [
+        "startend:quotation",
+        "keywords:existence"
+      ],
+      "kwargs": [
+        {},
+        {
+          "keywords": [
+            "python",
+            "java"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1005",
+      "exact_original_ids_kwargs": true,
+      "read_original_ja_expected_explanation": true,
+      "meaning_supported": true,
+      "checker_static_review": true,
+      "ids": [
+        "detectable_content:number_placeholders"
+      ],
+      "kwargs": [
+        {
+          "num_placeholders": 12
+        }
+      ]
+    },
+    {
+      "id": "1051",
+      "exact_original_ids_kwargs": true,
+      "read_original_ja_expected_explanation": true,
+      "meaning_supported": true,
+      "checker_static_review": true,
+      "ids": [
+        "change_case:english_lowercase"
+      ],
+      "kwargs": [
+        {}
+      ]
+    },
+    {
+      "id": "102",
+      "exact_original_ids_kwargs": true,
+      "read_original_ja_expected_explanation": true,
+      "meaning_supported": true,
+      "checker_static_review": true,
+      "ids": [
+        "detectable_format:number_bullet_lists"
+      ],
+      "kwargs": [
+        {
+          "num_bullets": 3
+        }
+      ]
+    },
+    {
+      "id": "1082",
+      "exact_original_ids_kwargs": true,
+      "read_original_ja_expected_explanation": true,
+      "meaning_supported": true,
+      "checker_static_review": true,
+      "ids": [
+        "length_constraints:number_paragraphs"
+      ],
+      "kwargs": [
+        {
+          "num_paragraphs": 2
+        }
+      ]
+    },
+    {
+      "id": "1092",
+      "exact_original_ids_kwargs": true,
+      "read_original_ja_expected_explanation": true,
+      "meaning_supported": true,
+      "checker_static_review": true,
+      "ids": [
+        "length_constraints:number_words"
+      ],
+      "kwargs": [
+        {
+          "relation": "less than",
+          "num_words": 300
+        }
+      ]
+    },
+    {
+      "id": "1098",
+      "exact_original_ids_kwargs": true,
+      "read_original_ja_expected_explanation": true,
+      "meaning_supported": true,
+      "checker_static_review": true,
+      "ids": [
+        "combination:two_responses"
+      ],
+      "kwargs": [
+        {}
+      ]
+    },
+    {
+      "id": "1127",
+      "exact_original_ids_kwargs": true,
+      "read_original_ja_expected_explanation": true,
+      "meaning_supported": true,
+      "checker_static_review": true,
+      "ids": [
+        "detectable_format:multiple_sections",
+        "startend:end_checker"
+      ],
+      "kwargs": [
+        {
+          "section_spliter": "SECTION",
+          "num_sections": 4
+        },
+        {
+          "end_phrase": "Can I get my money back for the classes I missed?"
+        }
+      ]
+    },
+    {
+      "id": "1246",
+      "exact_original_ids_kwargs": true,
+      "read_original_ja_expected_explanation": true,
+      "meaning_supported": true,
+      "checker_static_review": true,
+      "ids": [
+        "detectable_content:postscript"
+      ],
+      "kwargs": [
+        {
+          "postscript_marker": "P.P.S"
+        }
+      ]
+    },
+    {
+      "id": "1393",
+      "exact_original_ids_kwargs": true,
+      "read_original_ja_expected_explanation": true,
+      "meaning_supported": true,
+      "checker_static_review": true,
+      "ids": [
+        "keywords:frequency"
+      ],
+      "kwargs": [
+        {
+          "relation": "at least",
+          "keyword": "synonyms",
+          "frequency": 3
+        }
+      ]
+    },
+    {
+      "id": "1629",
+      "exact_original_ids_kwargs": true,
+      "read_original_ja_expected_explanation": true,
+      "meaning_supported": true,
+      "checker_static_review": true,
+      "ids": [
+        "keywords:forbidden_words"
+      ],
+      "kwargs": [
+        {
+          "forbidden_words": [
+            "station"
+          ]
+        }
+      ]
+    }
+  ],
+  "source_reading": {
+    "google_readme": "whole",
+    "google_registry": "active mapping",
+    "google_evaluation": "strict and loose implementations",
+    "google_checkers": "all selected 13 mapped checkers",
+    "google_utils": "count_words implementation",
+    "paper2023": "title, abstract, §§1-3, taxonomy and Table3; not full bibliography/Appendix",
+    "paper2025": "Figure1 actual page3 and discussion, §2 dataset text on p3, evaluation details Appendix G",
+    "ifbench_readme": "whole",
+    "license": "Apache2 terms"
+  },
+  "semantics_notes": [
+    "No unique gold output; red block is the requested format, separate from precise verifier acceptance.",
+    "No-comma only checks ASCII comma; JSON strips optional fences; bullet checker accepts * and -; section checker requires at least four. These distinctions are preserved.",
+    "Lowercase checker uses islower and English langdetect, with exception fallback; postscript tests marker existence; end checker strips/lowercases and quotation ends; keyword frequency is substring regex, forbidden word uses word boundaries. Slides keep reader-level meaning without false exact implementation promises.",
+    "Loose eight candidates are original plus combinations of removing first line, last line and all asterisks; each instruction can pass a different candidate."
+  ],
+  "initial_results": {
+    "columns": [
+      "prompt strict",
+      "instruction strict",
+      "prompt loose",
+      "instruction loose"
+    ],
+    "GPT4": [
+      76.89,
+      83.57,
+      79.3,
+      85.37
+    ],
+    "PaLM2S": [
+      43.07,
+      55.76,
+      46.95,
+      59.11
+    ],
+    "acquired": [
+      "November2023",
+      "August2023"
+    ],
+    "trials": "not specified; no invented claims"
+  },
+  "later_results": {
+    "metric": "prompt-level loose single-turn, 2025 reported",
+    "Gemini25Pro": [
+      65.4,
+      52.3
+    ],
+    "Claude4Sonnet": [
+      91.3,
+      42.3
+    ],
+    "OpenAIo3": [
+      95.0,
+      69.3
+    ],
+    "temperature": "0 generally, o3 1",
+    "trials": "not specified"
+  },
+  "remaining": []
+}

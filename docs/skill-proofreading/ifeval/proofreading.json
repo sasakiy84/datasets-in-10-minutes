@@ -1,0 +1,170 @@
+{
+  "dataset": "IFEval",
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "external_generation_api_used": false,
+  "changes": [
+    {
+      "location": "例1 見出し",
+      "page": 7,
+      "before": "読点を使わずに旅行日程を書く",
+      "after": "カンマを使わずに旅行日程を書く",
+      "reason": "原文の意味と公開判定器を保ち、自然な表現・実装に合う説明・同頁の読みやすさへ整える。",
+      "kind": "text",
+      "before_snapshot": "draft1"
+    },
+    {
+      "location": "例2 解説",
+      "page": 8,
+      "before": "JSONは、名前と値の組などで情報を表すデータ形式である。判定では、回答をJSONとして読み込めるかを確認する。広告の文章自体は一つに定まらない。",
+      "after": "JSONは、名前と値の組などで情報を表す。回答をJSONとして読み込めるかを判定する。",
+      "reason": "原文の意味と公開判定器を保ち、自然な表現・実装に合う説明・同頁の読みやすさへ整える。",
+      "kind": "text",
+      "before_snapshot": "draft1"
+    },
+    {
+      "location": "例4 解説",
+      "page": 29,
+      "before": "名前や住所など、後で書き換える箇所を角括弧で示す。判定では角括弧で囲まれた部分を数える。",
+      "after": "判定では、角括弧で囲まれた部分を数える。",
+      "reason": "原文の意味と公開判定器を保ち、自然な表現・実装に合う説明・同頁の読みやすさへ整える。",
+      "kind": "text",
+      "before_snapshot": "draft1"
+    },
+    {
+      "location": "例7 解説",
+      "page": 33,
+      "before": "空行だけで段落を分ける形式ではなく、指定された区切り記号で二つに分ける。判定もこの区切りに基づく。",
+      "after": "判定も、指定記号「***」による段落の区切りに基づく。",
+      "reason": "原文の意味と公開判定器を保ち、自然な表現・実装に合う説明・同頁の読みやすさへ整える。",
+      "kind": "text",
+      "before_snapshot": "draft1"
+    },
+    {
+      "location": "例9 解説",
+      "page": 35,
+      "before": "二つの候補を出し、指定記号を両者の区切りに使う。判定では二つの部分が空でなく、同じ内容になっていないかも確認する。",
+      "after": "区切った二つの部分が空でなく、同じ内容でないことを確かめる。",
+      "reason": "原文の意味と公開判定器を保ち、自然な表現・実装に合う説明・同頁の読みやすさへ整える。",
+      "kind": "text",
+      "before_snapshot": "draft1"
+    },
+    {
+      "location": "例10 日本語訳",
+      "page": 37,
+      "before": "授業に出られずにいる気持ちを詩にしてほしい。SECTION Xと記した4節で構成し、最後を次の文で終えること。「Can I get my money back for the classes I missed?」",
+      "after": "授業に出られずにいる気持ちを詩にしてほしい。SECTION Xと記した4節で構成し、最後を次の文で終えること。「Can I get my money back for the classes I missed?」（欠席した授業の料金を返してもらえますか。）",
+      "reason": "原文の意味と公開判定器を保ち、自然な表現・実装に合う説明・同頁の読みやすさへ整える。",
+      "kind": "text",
+      "before_snapshot": "draft1"
+    },
+    {
+      "location": "例12 解説",
+      "page": 39,
+      "before": "synonymsは「同義語」を意味する。公開コードは大文字・小文字を区別せず、単語として現れた回数を数える。",
+      "after": "synonymsは「同義語」を意味する。公開コードは大文字・小文字を区別せず、指定した文字列の出現回数を数える。",
+      "reason": "原文の意味と公開判定器を保ち、自然な表現・実装に合う説明・同頁の読みやすさへ整える。",
+      "kind": "text",
+      "before_snapshot": "draft1"
+    },
+    {
+      "location": "本編の実例の見方",
+      "page": 6,
+      "before": "自動判定の対象は、データに指定された検証可能な条件である。「面白く」「詩の形で」といった依頼の表現を、すべて同じ基準で採点するわけではない。",
+      "after": "自動判定の対象は、データに指定された検証可能な条件である。例えば「面白い広告を書く」依頼にJSON形式を指定した場合、機械判定ではJSONとして読めるかを確かめる。",
+      "reason": "抽象的な否定を、広告とJSONの具体例へ改める。",
+      "kind": "text",
+      "before_snapshot": "draft1"
+    },
+    {
+      "location": "重複する注意・説明のページを削除",
+      "page": null,
+      "before": "条件を組み合わせたときの失敗や、特定の形式に集中する失敗を調べられる。単語数、見出し、引用符など、条件ごとに結果を分けて比較できる。\n回答の事実性や有用性は、各条件を満たしたかとは別に確認する必要がある。例えばJSONとして読める広告でも、商品の説明が適切かは、その形式判定だけでは決まらない。",
+      "after": "",
+      "reason": "前者は実例から分かる自明な注意の反復、後者は直前の表と数値を重複し、条件と話題の区別という自明な補足が中心のため削除する。",
+      "kind": "deletion",
+      "before_snapshot": "draft2 page16"
+    },
+    {
+      "location": "重複する注意・説明のページを削除",
+      "page": null,
+      "before": "公式の公開データには541設問と834個の判定条件がある。1条件の設問が305件、2条件が179件、3条件が57件だった。\n条件の数は、回答に含まれる話題の数ではない。例えば、同じ単語の使用回数へ上限と下限を付けると、二つの条件として扱うことがある。",
+      "after": "",
+      "reason": "前者は実例から分かる自明な注意の反復、後者は直前の表と数値を重複し、条件と話題の区別という自明な補足が中心のため削除する。",
+      "kind": "deletion",
+      "before_snapshot": "draft2 page21"
+    },
+    {
+      "location": "四つの指標の表・設問単位の緩和判定",
+      "page": 13,
+      "before": "整形も試して全条件を満たす割合",
+      "after": "整形も試した全条件達成率",
+      "reason": "意味を保って、表セル末尾1字の折り返しをなくす。",
+      "kind": "text",
+      "before_snapshot": "candidate3"
+    },
+    {
+      "location": "四つの指標の表・指示単位の緩和判定",
+      "page": 13,
+      "before": "整形も試して条件を満たす割合",
+      "after": "整形も試した条件達成率",
+      "reason": "意味を保って、表セル末尾1字の折り返しをなくす。",
+      "kind": "text",
+      "before_snapshot": "candidate3"
+    },
+    {
+      "location": "指示の一覧・英字の表記",
+      "page": 43,
+      "before": "大文字・小文字",
+      "after": "英字の大小",
+      "reason": "表セルの末尾1字の折り返しを、意味を保つ短い名称で解消する。",
+      "kind": "text",
+      "before_snapshot": "candidate4"
+    },
+    {
+      "location": "IFBench公式リポジトリの参考文献名",
+      "page": 45,
+      "before": "IFBench: Code and Released Datasets",
+      "after": "Generalizing Verifiable Instruction Following",
+      "reason": "独自に付けた紹介名を、実際の公式README見出しへ一致させる。",
+      "kind": "text",
+      "before_snapshot": "candidate4"
+    }
+  ],
+  "layout_changes": [
+    {
+      "page": 18,
+      "before": "数値2列の表を全幅8.8inchに配置。第1列左揃え。",
+      "after": "幅5.4inchで中央に配置。両数値列と見出しを右揃えにする。",
+      "reason": "条件数と設問数の対応を近い距離で追えるようにする。",
+      "before_snapshot": "candidate3"
+    },
+    {
+      "page": 30,
+      "before": "1行で描画される原文を、2行高の背景として見積もった。",
+      "after": "実描画の1行に合わせて背景高と下の要素を調整する。",
+      "reason": "引用背景の下側だけに大きな余白が残ることを解消する。",
+      "before_snapshot": "candidate4"
+    },
+    {
+      "examples": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13
+      ],
+      "before": "原文と日本語訳・要求・説明を別頁にする短い例が多かった。",
+      "after": "短い11例を原文全文・日本語訳・要求・説明の同頁に整理する。長い例6/10は原文1頁を維持して訳を別頁にする。",
+      "reason": "原文を分割せず、短い例はページを往復せずに理解できるようにする。",
+      "before_snapshot": "draft1"
+    }
+  ],
+  "scope": "Before values are quoted verbatim from preserved creator drafts/snapshots; no hypothetical pre-edit wording. Public records retain these pairs; private draft PDF/PPTX snapshots remain in work directory."
+}

@@ -1,0 +1,523 @@
+[
+  {
+    "id": "1001",
+    "source_id": "1001",
+    "example": 1,
+    "role": "main",
+    "title": "カンマを使わずに旅行日程を書く",
+    "original": "I am planning a trip to Japan, and I would like thee to write an itinerary for my journey in a Shakespearean style. You are not allowed to use any commas in your response.",
+    "display_original": "I am planning a trip to Japan, and I would like thee to write an itinerary for my journey in a Shakespearean style. You are not allowed to use any commas in your response.",
+    "original_scope": "complete official prompt",
+    "ja": "日本への旅行を計画している。旅の日程をシェイクスピア風の文体で書いてほしい。回答にはカンマを一切使わないこと。",
+    "expected_behavior": "要求する形式：カンマを使わない",
+    "gold": null,
+    "gold_status": "No unique reference response: official per-instruction verifiers and kwargs define compliance.",
+    "explanation": "旅行日程を自由に作る依頼に、句読点の制約を加えている。この問題の自動判定は、回答に半角カンマが含まれていないかを確認する。",
+    "instruction_id_list": [
+      "punctuation:no_comma"
+    ],
+    "kwargs": [
+      {}
+    ],
+    "source_url": "https://github.com/google-research/google-research/blob/master/instruction_following_eval/data/input_data.jsonl",
+    "source_row": 2,
+    "source_key": 1001,
+    "license": "Apache-2.0",
+    "raw_selected": {
+      "key": 1001,
+      "prompt": "I am planning a trip to Japan, and I would like thee to write an itinerary for my journey in a Shakespearean style. You are not allowed to use any commas in your response.",
+      "instruction_id_list": [
+        "punctuation:no_comma"
+      ],
+      "kwargs": [
+        {}
+      ]
+    }
+  },
+  {
+    "id": "1075",
+    "source_id": "1075",
+    "example": 2,
+    "role": "main",
+    "title": "広告をJSON形式で返す",
+    "original": "Can you help me make an advertisement for a new product? It's a diaper that's designed to be more comfortable for babies and I want the entire output in JSON format.",
+    "display_original": "Can you help me make an advertisement for a new product? It's a diaper that's designed to be more comfortable for babies and I want the entire output in JSON format.",
+    "original_scope": "complete official prompt",
+    "ja": "新商品の広告を作るのを手伝ってほしい。赤ちゃんがより快適に過ごせるように設計したおむつである。出力全体をJSON形式にしてほしい。",
+    "expected_behavior": "要求する形式：出力全体をJSONにする",
+    "gold": null,
+    "gold_status": "No unique reference response: official per-instruction verifiers and kwargs define compliance.",
+    "explanation": "JSONは、名前と値の組などで情報を表す。回答をJSONとして読み込めるかを判定する。",
+    "instruction_id_list": [
+      "detectable_format:json_format"
+    ],
+    "kwargs": [
+      {}
+    ],
+    "source_url": "https://github.com/google-research/google-research/blob/master/instruction_following_eval/data/input_data.jsonl",
+    "source_row": 12,
+    "source_key": 1075,
+    "license": "Apache-2.0",
+    "raw_selected": {
+      "key": 1075,
+      "prompt": "Can you help me make an advertisement for a new product? It's a diaper that's designed to be more comfortable for babies and I want the entire output in JSON format.",
+      "instruction_id_list": [
+        "detectable_format:json_format"
+      ],
+      "kwargs": [
+        {}
+      ]
+    }
+  },
+  {
+    "id": "1658",
+    "source_id": "1658",
+    "example": 3,
+    "role": "main",
+    "title": "キーワードと引用符を両方守る",
+    "original": "Create a resume for a 20-year-old college student with no work experience. Include the keywords \"Python\" and \"Java\" and wrap the response with double quotation marks.",
+    "display_original": "Create a resume for a 20-year-old college student with no work experience. Include the keywords \"Python\" and \"Java\" and wrap the response with double quotation marks.",
+    "original_scope": "complete official prompt",
+    "ja": "職歴のない20歳の大学生の履歴書を作ってほしい。キーワード「Python」と「Java」を含め、回答全体を二重引用符で囲むこと。",
+    "expected_behavior": "要求する形式：Python・Javaと二重引用符",
+    "gold": null,
+    "gold_status": "No unique reference response: official per-instruction verifiers and kwargs define compliance.",
+    "explanation": "二つのキーワードを含むことと、回答全体を引用符で囲むことを別々に判定する。プロンプト単位では、両方を満たした回答だけが成功となる。",
+    "instruction_id_list": [
+      "startend:quotation",
+      "keywords:existence"
+    ],
+    "kwargs": [
+      {},
+      {
+        "keywords": [
+          "python",
+          "java"
+        ]
+      }
+    ],
+    "source_url": "https://github.com/google-research/google-research/blob/master/instruction_following_eval/data/input_data.jsonl",
+    "source_row": 127,
+    "source_key": 1658,
+    "license": "Apache-2.0",
+    "raw_selected": {
+      "key": 1658,
+      "prompt": "Create a resume for a 20-year-old college student with no work experience. Include the keywords \"Python\" and \"Java\" and wrap the response with double quotation marks.",
+      "instruction_id_list": [
+        "startend:quotation",
+        "keywords:existence"
+      ],
+      "kwargs": [
+        {},
+        {
+          "keywords": [
+            "python",
+            "java"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "1005",
+    "source_id": "1005",
+    "example": 4,
+    "role": "appendix",
+    "title": "差し込み欄を含む履歴書を書く",
+    "original": "Write a resume for a fresh high school graduate who is seeking their first job. Make sure to include at least 12 placeholder represented by square brackets, such as [address], [name].",
+    "display_original": "Write a resume for a fresh high school graduate who is seeking their first job. Make sure to include at least 12 placeholder represented by square brackets, such as [address], [name].",
+    "original_scope": "complete official prompt",
+    "ja": "初めての仕事を探している、高校を卒業したばかりの人の履歴書を書いてほしい。[address]や[name]のように、角括弧で表す差し込み欄を12個以上含めること。",
+    "expected_behavior": "要求する形式：角括弧の欄を12個以上",
+    "gold": null,
+    "gold_status": "No unique reference response: official per-instruction verifiers and kwargs define compliance.",
+    "explanation": "判定では、角括弧で囲まれた部分を数える。",
+    "instruction_id_list": [
+      "detectable_content:number_placeholders"
+    ],
+    "kwargs": [
+      {
+        "num_placeholders": 12
+      }
+    ],
+    "source_url": "https://github.com/google-research/google-research/blob/master/instruction_following_eval/data/input_data.jsonl",
+    "source_row": 3,
+    "source_key": 1005,
+    "license": "Apache-2.0",
+    "raw_selected": {
+      "key": 1005,
+      "prompt": "Write a resume for a fresh high school graduate who is seeking their first job. Make sure to include at least 12 placeholder represented by square brackets, such as [address], [name].",
+      "instruction_id_list": [
+        "detectable_content:number_placeholders"
+      ],
+      "kwargs": [
+        {
+          "num_placeholders": 12
+        }
+      ]
+    }
+  },
+  {
+    "id": "1051",
+    "source_id": "1051",
+    "example": 5,
+    "role": "appendix",
+    "title": "小文字だけで手紙を書く",
+    "original": "Write a letter to a friend in all lowercase letters ask them to go and vote.",
+    "display_original": "Write a letter to a friend in all lowercase letters ask them to go and vote.",
+    "original_scope": "complete official prompt",
+    "ja": "友人に投票へ行くよう呼びかける手紙を、すべて小文字で書いてほしい。",
+    "expected_behavior": "要求する形式：英語の小文字だけ",
+    "gold": null,
+    "gold_status": "No unique reference response: official per-instruction verifiers and kwargs define compliance.",
+    "explanation": "英文の内容に加えて表記を指定している。小文字かどうかと英語かどうかを、公開された判定器で確認する。",
+    "instruction_id_list": [
+      "change_case:english_lowercase"
+    ],
+    "kwargs": [
+      {}
+    ],
+    "source_url": "https://github.com/google-research/google-research/blob/master/instruction_following_eval/data/input_data.jsonl",
+    "source_row": 9,
+    "source_key": 1051,
+    "license": "Apache-2.0",
+    "raw_selected": {
+      "key": 1051,
+      "prompt": "Write a letter to a friend in all lowercase letters ask them to go and vote.",
+      "instruction_id_list": [
+        "change_case:english_lowercase"
+      ],
+      "kwargs": [
+        {}
+      ]
+    }
+  },
+  {
+    "id": "102",
+    "source_id": "102",
+    "example": 6,
+    "role": "appendix",
+    "title": "対話を三つの箇条書きにする",
+    "original": "Write a dialogue between two people, one is dressed up in a ball gown and the other is dressed down in sweats. The two are going to a nightly event. Your answer must contain exactly 3 bullet points in the markdown format (use \"* \" to indicate each bullet) such as:\n* This is the first point.\n* This is the second point.",
+    "display_original": "Write a dialogue between two people, one is dressed up in a ball gown and the other is dressed down in sweats. The two are going to a nightly event. Your answer must contain exactly 3 bullet points in the markdown format (use \"* \" to indicate each bullet) such as:\n* This is the first point.\n* This is the second point.",
+    "original_scope": "complete official prompt",
+    "ja": "一人は舞踏会用のドレス、もう一人はスウェットという対照的な服装の二人が、夜の催しに出かける場面の対話を書いてほしい。回答はMarkdownの箇条書きで、項目をちょうど3個にする。「* 」で各項目を始める。例：\n* これが一つ目の項目。\n* これが二つ目の項目。",
+    "expected_behavior": "要求する形式：箇条書きがちょうど3項目",
+    "gold": null,
+    "gold_status": "No unique reference response: official per-instruction verifiers and kwargs define compliance.",
+    "explanation": "自然な会話を書く依頼に、項目数の条件を加えている。公開コードは、行頭の「*」または「-」から始まる箇条書きを数える。",
+    "instruction_id_list": [
+      "detectable_format:number_bullet_lists"
+    ],
+    "kwargs": [
+      {
+        "num_bullets": 3
+      }
+    ],
+    "source_url": "https://github.com/google-research/google-research/blob/master/instruction_following_eval/data/input_data.jsonl",
+    "source_row": 6,
+    "source_key": 102,
+    "license": "Apache-2.0",
+    "raw_selected": {
+      "key": 102,
+      "prompt": "Write a dialogue between two people, one is dressed up in a ball gown and the other is dressed down in sweats. The two are going to a nightly event. Your answer must contain exactly 3 bullet points in the markdown format (use \"* \" to indicate each bullet) such as:\n* This is the first point.\n* This is the second point.",
+      "instruction_id_list": [
+        "detectable_format:number_bullet_lists"
+      ],
+      "kwargs": [
+        {
+          "num_bullets": 3
+        }
+      ]
+    }
+  },
+  {
+    "id": "1082",
+    "source_id": "1082",
+    "example": 7,
+    "role": "appendix",
+    "title": "物語を二つの段落にする",
+    "original": "Write a story of exactly 2 paragraphs about a man who wakes up one day and realizes that he's inside a video game. Separate the paragraphs with the markdown divider: ***",
+    "display_original": "Write a story of exactly 2 paragraphs about a man who wakes up one day and realizes that he's inside a video game. Separate the paragraphs with the markdown divider: ***",
+    "original_scope": "complete official prompt",
+    "ja": "ある日目を覚ますと、自分がビデオゲームの中にいると気付いた男性の物語を、ちょうど2段落で書いてほしい。段落はMarkdownの区切り「***」で分けること。",
+    "expected_behavior": "要求する形式：「***」で分けた2段落",
+    "gold": null,
+    "gold_status": "No unique reference response: official per-instruction verifiers and kwargs define compliance.",
+    "explanation": "判定も、指定記号「***」による段落の区切りに基づく。",
+    "instruction_id_list": [
+      "length_constraints:number_paragraphs"
+    ],
+    "kwargs": [
+      {
+        "num_paragraphs": 2
+      }
+    ],
+    "source_url": "https://github.com/google-research/google-research/blob/master/instruction_following_eval/data/input_data.jsonl",
+    "source_row": 13,
+    "source_key": 1082,
+    "license": "Apache-2.0",
+    "raw_selected": {
+      "key": 1082,
+      "prompt": "Write a story of exactly 2 paragraphs about a man who wakes up one day and realizes that he's inside a video game. Separate the paragraphs with the markdown divider: ***",
+      "instruction_id_list": [
+        "length_constraints:number_paragraphs"
+      ],
+      "kwargs": [
+        {
+          "num_paragraphs": 2
+        }
+      ]
+    }
+  },
+  {
+    "id": "1092",
+    "source_id": "1092",
+    "example": 8,
+    "role": "appendix",
+    "title": "語数の上限を守る",
+    "original": "Write a short blog post about a trip to Japan using less than 300 words.",
+    "display_original": "Write a short blog post about a trip to Japan using less than 300 words.",
+    "original_scope": "complete official prompt",
+    "ja": "日本旅行について、300語未満の短いブログ記事を書いてほしい。",
+    "expected_behavior": "要求する形式：300語未満",
+    "gold": null,
+    "gold_status": "No unique reference response: official per-instruction verifiers and kwargs define compliance.",
+    "explanation": "内容は自由に書けるが、長さに上限がある。公開された単語の数え方で299語以下なら、この制約を満たす。",
+    "instruction_id_list": [
+      "length_constraints:number_words"
+    ],
+    "kwargs": [
+      {
+        "relation": "less than",
+        "num_words": 300
+      }
+    ],
+    "source_url": "https://github.com/google-research/google-research/blob/master/instruction_following_eval/data/input_data.jsonl",
+    "source_row": 15,
+    "source_key": 1092,
+    "license": "Apache-2.0",
+    "raw_selected": {
+      "key": 1092,
+      "prompt": "Write a short blog post about a trip to Japan using less than 300 words.",
+      "instruction_id_list": [
+        "length_constraints:number_words"
+      ],
+      "kwargs": [
+        {
+          "relation": "less than",
+          "num_words": 300
+        }
+      ]
+    }
+  },
+  {
+    "id": "1098",
+    "source_id": "1098",
+    "example": 9,
+    "role": "appendix",
+    "title": "二つの回答を区切って出す",
+    "original": "What is a name that people call God? Please give exactly two different responses. Separate the responses with 6 asterisk symbols: ******.",
+    "display_original": "What is a name that people call God? Please give exactly two different responses. Separate the responses with 6 asterisk symbols: ******.",
+    "original_scope": "complete official prompt",
+    "ja": "神を呼ぶときに人々が使う名前には、どのようなものがあるか。異なる回答をちょうど二つ示してほしい。回答の間を、アスタリスク6個「******」で区切ること。",
+    "expected_behavior": "要求する形式：「******」で二つに分ける",
+    "gold": null,
+    "gold_status": "No unique reference response: official per-instruction verifiers and kwargs define compliance.",
+    "explanation": "区切った二つの部分が空でなく、同じ内容でないことを確かめる。",
+    "instruction_id_list": [
+      "combination:two_responses"
+    ],
+    "kwargs": [
+      {}
+    ],
+    "source_url": "https://github.com/google-research/google-research/blob/master/instruction_following_eval/data/input_data.jsonl",
+    "source_row": 17,
+    "source_key": 1098,
+    "license": "Apache-2.0",
+    "raw_selected": {
+      "key": 1098,
+      "prompt": "What is a name that people call God? Please give exactly two different responses. Separate the responses with 6 asterisk symbols: ******.",
+      "instruction_id_list": [
+        "combination:two_responses"
+      ],
+      "kwargs": [
+        {}
+      ]
+    }
+  },
+  {
+    "id": "1127",
+    "source_id": "1127",
+    "example": 10,
+    "role": "appendix",
+    "title": "節の見出しと結びの文を指定する",
+    "original": "Write a poem about how I am missing my classes. The poem must have 4 sections marked with SECTION X. Finish the poem with this exact phrase: \"Can I get my money back for the classes I missed?\"",
+    "display_original": "Write a poem about how I am missing my classes. The poem must have 4 sections marked with SECTION X. Finish the poem with this exact phrase: \"Can I get my money back for the classes I missed?\"",
+    "original_scope": "complete official prompt",
+    "ja": "授業に出られずにいる気持ちを詩にしてほしい。SECTION Xと記した4節で構成し、最後を次の文で終えること。「Can I get my money back for the classes I missed?」（欠席した授業の料金を返してもらえますか。）",
+    "expected_behavior": "要求する形式：4節と指定された結び",
+    "gold": null,
+    "gold_status": "No unique reference response: official per-instruction verifiers and kwargs define compliance.",
+    "explanation": "設問は4節を要求する。公開コードはSECTIONと番号の組を4個以上検出し、末尾が指定文と一致するかを別に確認する。",
+    "instruction_id_list": [
+      "detectable_format:multiple_sections",
+      "startend:end_checker"
+    ],
+    "kwargs": [
+      {
+        "section_spliter": "SECTION",
+        "num_sections": 4
+      },
+      {
+        "end_phrase": "Can I get my money back for the classes I missed?"
+      }
+    ],
+    "source_url": "https://github.com/google-research/google-research/blob/master/instruction_following_eval/data/input_data.jsonl",
+    "source_row": 21,
+    "source_key": 1127,
+    "license": "Apache-2.0",
+    "raw_selected": {
+      "key": 1127,
+      "prompt": "Write a poem about how I am missing my classes. The poem must have 4 sections marked with SECTION X. Finish the poem with this exact phrase: \"Can I get my money back for the classes I missed?\"",
+      "instruction_id_list": [
+        "detectable_format:multiple_sections",
+        "startend:end_checker"
+      ],
+      "kwargs": [
+        {
+          "section_spliter": "SECTION",
+          "num_sections": 4
+        },
+        {
+          "end_phrase": "Can I get my money back for the classes I missed?"
+        }
+      ]
+    }
+  },
+  {
+    "id": "1246",
+    "source_id": "1246",
+    "example": 11,
+    "role": "appendix",
+    "title": "追伸を付ける",
+    "original": "Write me a template for a product description in the form of a poem and end it with a post script starting with P.P.S",
+    "display_original": "Write me a template for a product description in the form of a poem and end it with a post script starting with P.P.S",
+    "original_scope": "complete official prompt",
+    "ja": "商品説明のテンプレートを詩の形で書いてほしい。最後に、P.P.Sで始まる追伸を付けること。",
+    "expected_behavior": "要求する形式：P.P.Sで始まる追伸",
+    "gold": null,
+    "gold_status": "No unique reference response: official per-instruction verifiers and kwargs define compliance.",
+    "explanation": "商品説明を詩にする依頼へ、追伸を加える条件を付けている。公開コードは、指定された追伸の印があるかを確認する。",
+    "instruction_id_list": [
+      "detectable_content:postscript"
+    ],
+    "kwargs": [
+      {
+        "postscript_marker": "P.P.S"
+      }
+    ],
+    "source_url": "https://github.com/google-research/google-research/blob/master/instruction_following_eval/data/input_data.jsonl",
+    "source_row": 47,
+    "source_key": 1246,
+    "license": "Apache-2.0",
+    "raw_selected": {
+      "key": 1246,
+      "prompt": "Write me a template for a product description in the form of a poem and end it with a post script starting with P.P.S",
+      "instruction_id_list": [
+        "detectable_content:postscript"
+      ],
+      "kwargs": [
+        {
+          "postscript_marker": "P.P.S"
+        }
+      ]
+    }
+  },
+  {
+    "id": "1393",
+    "source_id": "1393",
+    "example": 12,
+    "role": "appendix",
+    "title": "特定の語を繰り返す",
+    "original": "List the pros and cons of using two different names for the same thing. Make sure the word synonyms appears at least 3 time.",
+    "display_original": "List the pros and cons of using two different names for the same thing. Make sure the word synonyms appears at least 3 time.",
+    "original_scope": "complete official prompt",
+    "ja": "同じものに二つの異なる名前を使うことの長所と短所を挙げてほしい。「synonyms」という語を3回以上使うこと。",
+    "expected_behavior": "要求する形式：synonymsを3回以上",
+    "gold": null,
+    "gold_status": "No unique reference response: official per-instruction verifiers and kwargs define compliance.",
+    "explanation": "synonymsは「同義語」を意味する。公開コードは大文字・小文字を区別せず、指定した文字列の出現回数を数える。",
+    "instruction_id_list": [
+      "keywords:frequency"
+    ],
+    "kwargs": [
+      {
+        "relation": "at least",
+        "keyword": "synonyms",
+        "frequency": 3
+      }
+    ],
+    "source_url": "https://github.com/google-research/google-research/blob/master/instruction_following_eval/data/input_data.jsonl",
+    "source_row": 79,
+    "source_key": 1393,
+    "license": "Apache-2.0",
+    "raw_selected": {
+      "key": 1393,
+      "prompt": "List the pros and cons of using two different names for the same thing. Make sure the word synonyms appears at least 3 time.",
+      "instruction_id_list": [
+        "keywords:frequency"
+      ],
+      "kwargs": [
+        {
+          "relation": "at least",
+          "keyword": "synonyms",
+          "frequency": 3
+        }
+      ]
+    }
+  },
+  {
+    "id": "1629",
+    "source_id": "1629",
+    "example": 13,
+    "role": "appendix",
+    "title": "指定された語を避けて言い換える",
+    "original": "Make the sentence “The bus arrived at the station” sound more interesting. Avoid using the word “station”.",
+    "display_original": "Make the sentence “The bus arrived at the station” sound more interesting. Avoid using the word “station”.",
+    "original_scope": "complete official prompt",
+    "ja": "「The bus arrived at the station」という文を、より興味を引く表現に変えてほしい。「station」という語は使わないこと。",
+    "expected_behavior": "要求する形式：stationを使わない",
+    "gold": null,
+    "gold_status": "No unique reference response: official per-instruction verifiers and kwargs define compliance.",
+    "explanation": "元の文は「バスが駅に到着した」という意味である。言い換えた文に、禁止された単語が含まれていないかを確認する。",
+    "instruction_id_list": [
+      "keywords:forbidden_words"
+    ],
+    "kwargs": [
+      {
+        "forbidden_words": [
+          "station"
+        ]
+      }
+    ],
+    "source_url": "https://github.com/google-research/google-research/blob/master/instruction_following_eval/data/input_data.jsonl",
+    "source_row": 117,
+    "source_key": 1629,
+    "license": "Apache-2.0",
+    "raw_selected": {
+      "key": 1629,
+      "prompt": "Make the sentence “The bus arrived at the station” sound more interesting. Avoid using the word “station”.",
+      "instruction_id_list": [
+        "keywords:forbidden_words"
+      ],
+      "kwargs": [
+        {
+          "forbidden_words": [
+            "station"
+          ]
+        }
+      ]
+    }
+  }
+]
