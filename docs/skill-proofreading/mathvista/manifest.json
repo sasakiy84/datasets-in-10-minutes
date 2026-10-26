@@ -1,0 +1,600 @@
+[
+  {
+    "page": 1,
+    "title": "MathVista",
+    "section": "",
+    "kind": "cover"
+  },
+  {
+    "page": 2,
+    "title": "MathVistaの公式サイト",
+    "section": "公式サイト",
+    "kind": "image",
+    "sources": [
+      "site"
+    ]
+  },
+  {
+    "page": 3,
+    "title": "",
+    "section": "目次",
+    "kind": "toc"
+  },
+  {
+    "page": 4,
+    "title": "1. 図や表を使う数学問題と実例",
+    "section": "1. 図や表を使う数学問題と実例",
+    "kind": "divider"
+  },
+  {
+    "page": 5,
+    "title": "画像を読み、計算や推論で答えを求める",
+    "section": "1. 図や表を使う数学問題と実例",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "MathVistaは、図形、グラフ、表、写真などを含む数学的な質問に答える評価データセットである。",
+      "画像と設問を入力し、選択肢または短い数値・語句を返す。図の読み取りと、その情報を使う推論の両方が必要になる。",
+      "ここでは、正解が公開されているtestminiから13問を紹介する。"
+    ]
+  },
+  {
+    "page": 6,
+    "title": "例1 内角の二等分線から角度を求める",
+    "section": "1. 図や表を使う数学問題と実例",
+    "kind": "example",
+    "sources": [
+      "data"
+    ],
+    "source_example_id": "3",
+    "example_role": "main",
+    "original_scope": "Full question and all choices; source image displayed in full. TeX formulas are typeset into plain Unicode in native text.",
+    "image_source": "GeoQA+"
+  },
+  {
+    "page": 7,
+    "title": "例2 棒グラフの最大値と最小値の差を求める：原文",
+    "section": "1. 図や表を使う数学問題と実例",
+    "kind": "example-original",
+    "sources": [
+      "data"
+    ],
+    "source_example_id": "74",
+    "example_role": "main",
+    "original_scope": "Full question and all choices; source image displayed in full. TeX formulas are typeset into plain Unicode in native text.",
+    "image_source": "ChartQA"
+  },
+  {
+    "page": 8,
+    "title": "例2 棒グラフの最大値と最小値の差を求める：日本語訳と答え",
+    "section": "1. 図や表を使う数学問題と実例",
+    "kind": "example-answer",
+    "sources": [
+      "data"
+    ],
+    "source_example_id": "74",
+    "example_role": "main",
+    "original_scope": "Full question and all choices; source image displayed in full. TeX formulas are typeset into plain Unicode in native text.",
+    "image_source": "ChartQA"
+  },
+  {
+    "page": 9,
+    "title": "例3 価格表から買物の代金を計算する",
+    "section": "1. 図や表を使う数学問題と実例",
+    "kind": "example",
+    "sources": [
+      "data"
+    ],
+    "source_example_id": "44",
+    "example_role": "main",
+    "original_scope": "Full question and all choices; source image displayed in full. TeX formulas are typeset into plain Unicode in native text.",
+    "image_source": "TabMWP"
+  },
+  {
+    "page": 10,
+    "title": "2. 作成方法とデータの全体像",
+    "section": "2. 作成方法とデータの全体像",
+    "kind": "divider"
+  },
+  {
+    "page": 11,
+    "title": "一種類の図表だけでは測れない能力を集めた",
+    "section": "2. 作成方法とデータの全体像",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "従来の数学問題は文章だけのものが多く、図表を扱う評価も、幾何や特定形式のグラフなどに分かれていた。",
+      "MathVistaは、異なる視覚情報と数学的な操作を組み合わせ、得意・不得意を課題や推論の種類ごとに調べるために作られた。",
+      "Pan Luらが2023年に公開し、ICLR 2024で発表した。"
+    ]
+  },
+  {
+    "page": 12,
+    "title": "既存28データと新たな3データを組み合わせた",
+    "section": "2. 作成方法とデータの全体像",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "数学を主題とする9データから2,666問を収録した。幾何、表を使う文章題、理科の教科書問題などが含まれる。",
+      "一般的な視覚質問応答では70件以上のデータを調べ、数量や計算を扱う19データから2,739問を選んだ。",
+      "さらに、図形の規則、関数のグラフ、論文の図表を扱う736問を新たに用意した。"
+    ]
+  },
+  {
+    "page": 13,
+    "title": "数量を問う候補を絞り、人が内容を確認した",
+    "section": "2. 作成方法とデータの全体像",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "一般的な視覚質問応答では、数値で答える質問や、数量に関係する語を含む質問を自動的に集めた。",
+      "候補4,949問を3人の専門家が確認し、数学的な推論を必要とするかを多数決で判定した。",
+      "特定の収集元に偏らないよう、各データセットから採る問題は最大400問とした。"
+    ]
+  },
+  {
+    "page": 14,
+    "title": "不足していた図形の規則・関数・論文図表を補った",
+    "section": "2. 作成方法とデータの全体像",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "IQTestは、図形の並びやパズルから規則を見つける問題を扱う。FunctionQAは、関数のグラフから値や性質を読み取る。",
+      "PaperQAは、科学論文にある表やグラフについて、数値の比較などを求める。",
+      "新規問題は理工系の大学院生が注釈し、3人が独立に確認した。答えが一致しなかった6問は議論で解消した。"
+    ]
+  },
+  {
+    "page": 15,
+    "title": "6,141問には5,487枚の異なる画像がある",
+    "section": "2. 作成方法とデータの全体像",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "一つの画像に複数の質問が対応する場合があるため、画像数と問題数は異なる。",
+      "問題形式は選択式3,392問と自由回答2,749問である。自由回答では整数、小数、リストなどを答える。",
+      "設問の言語は英語5,737問、中国語400問、ペルシャ語4問。学年・画像の種類・必要な推論も注釈されている。"
+    ]
+  },
+  {
+    "page": 16,
+    "title": "五つの課題で、図表と数学の関係を捉える",
+    "section": "2. 作成方法とデータの全体像",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ]
+  },
+  {
+    "page": 17,
+    "title": "解く操作を七つの推論の種類で整理する",
+    "section": "2. 作成方法とデータの全体像",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "算術、代数、幾何、論理、数に関する常識、科学、統計という七つの種類を付けている。一問に複数の種類が対応する場合もある。",
+      "例えば、図形の角度を求める問題は幾何、価格表から代金を出す問題は算術、グラフの傾向を比較する問題は統計に関係する。",
+      "推論の種類の注釈は、収集元の情報を使って付け、1,000問を人が確認した。全ラベル集合の一致率は94.1%だった。"
+    ]
+  },
+  {
+    "page": 18,
+    "title": "公開1,000問と正解非公開5,141問を使い分ける",
+    "section": "2. 作成方法とデータの全体像",
+    "kind": "content",
+    "sources": [
+      "repo"
+    ],
+    "body_text": [
+      "testminiの1,000問は、開発や検証、計算資源が限られる場合の評価に使う。全問の正解を公開している。",
+      "testの5,141問は、標準の評価用である。質問と画像は公開されているが、正解は公開されていない。",
+      "testminiは収集元の構成が全体に近くなるように選んでいる。"
+    ]
+  },
+  {
+    "page": 19,
+    "title": "3. 回答の採点とモデルの成績",
+    "section": "3. 回答の採点とモデルの成績",
+    "kind": "divider"
+  },
+  {
+    "page": 20,
+    "title": "長い回答から答えを取り出し、正解率を求める",
+    "section": "3. 回答の採点とモデルの成績",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "評価では、画像と設問から回答を生成し、説明文に含まれる短い最終回答を抽出する。公開時の方法では抽出にGPT-4を用いた。",
+      "選択肢の記号や数値を所定の形式へ変換し、参照回答と一致すればその問題を正解とする。",
+      "正解率は、正解した問題数を評価した問題数で割った値である。課題別や推論の種類別にも集計する。"
+    ]
+  },
+  {
+    "page": 21,
+    "title": "選択肢と数値では、回答のそろえ方が異なる",
+    "section": "3. 回答の採点とモデルの成績",
+    "kind": "content",
+    "sources": [
+      "score"
+    ],
+    "body_text": [
+      "選択式では、記号を選択肢の本文へ対応させる。選択肢の文を答えた場合は、文字列が最も近い候補へ対応させる。",
+      "整数は整数の表記に、小数は問題で指定された桁数にそろえて比較する。例えば「18.0」は、整数回答なら「18」になる。"
+    ]
+  },
+  {
+    "page": 22,
+    "title": "画像を直接読む方法と、文章へ変換する方法を比べた",
+    "section": "3. 回答の採点とモデルの成績",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "2023年の評価では、画像を直接入力するモデルと、画像の説明文や文字認識結果を文章モデルへ渡す方法を調べた。",
+      "GPT-4Vは、当時APIがなかったためPlaygroundで手動評価した。公開1,000問で49.9%に達した。",
+      "人の比較値は、参加資格を確認した作業者が同じtestminiに回答した結果である。"
+    ]
+  },
+  {
+    "page": 23,
+    "title": "初期の公開1,000問では、GPT-4Vが49.9%",
+    "section": "3. 回答の採点とモデルの成績",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ]
+  },
+  {
+    "page": 24,
+    "title": "図の読み違いと、計算・推論の誤りを調べられる",
+    "section": "3. 回答の採点とモデルの成績",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "初期の分析では、画像の形や数値を読み違える誤りと、読み取った情報から答えを求める途中の誤りが見られた。",
+      "関数の点の位置、図形の条件、グラフの凡例など、答えに必要な手掛かりを正しく捉えられるかが重要になる。",
+      "課題や画像の種類ごとの成績を見ると、総合点だけでは分からない弱点を調べられる。"
+    ]
+  },
+  {
+    "page": 25,
+    "title": "4. 視覚モデルの評価と入手方法",
+    "section": "4. 視覚モデルの評価と入手方法",
+    "kind": "divider"
+  },
+  {
+    "page": 26,
+    "title": "2025年のOpenAI報告でも視覚評価に採用された",
+    "section": "4. 視覚モデルの評価と入手方法",
+    "kind": "content",
+    "sources": [
+      "gpt41",
+      "repo"
+    ],
+    "body_text": [
+      "OpenAIはGPT-4.1の公開時に、MathVistaを図や画像を使う数学問題の評価として報告した。",
+      "文章中心の知識問題や、図表の読解だけを問う評価と組み合わせ、画像から考える能力を調べている。",
+      "2026年の公式READMEには、外部の評価ツールEvalScopeによる実行方法も掲載されている。"
+    ]
+  },
+  {
+    "page": 27,
+    "title": "2025年の公開報告では、GPT-4.1が72.2%",
+    "section": "4. 視覚モデルの評価と入手方法",
+    "kind": "content",
+    "sources": [
+      "gpt41"
+    ]
+  },
+  {
+    "page": 28,
+    "title": "問題・画像・正解の形式を確認して利用する",
+    "section": "4. 視覚モデルの評価と入手方法",
+    "kind": "content",
+    "sources": [
+      "repo"
+    ],
+    "body_text": [
+      "公式サイトから、論文、データ、実装、公開結果へ進める。Hugging Faceではtestminiとtestを選んで読み込める。",
+      "questionに設問、choicesに選択肢、decoded_imageに画像、answerに参照回答が入る。metadataには収集元や課題がある。",
+      "正解があるtestminiで入出力と採点を確認し、目的に合う課題や推論の種類を選ぶ。"
+    ]
+  },
+  {
+    "page": 29,
+    "title": "一問の画像・設問・参照回答を確かめる",
+    "section": "4. 視覚モデルの評価と入手方法",
+    "kind": "code",
+    "sources": [
+      "repo"
+    ]
+  },
+  {
+    "page": 30,
+    "title": "画像・問題の出典と利用条件を引き継ぐ",
+    "section": "4. 視覚モデルの評価と入手方法",
+    "kind": "content",
+    "sources": [
+      "repo",
+      "iconqa"
+    ],
+    "body_text": [
+      "MathVistaの新たな貢献はCC BY-SA 4.0で提供される。元の画像と質問の著作権は各作成者にあり、metadataとsource.jsonで出典をたどれる。",
+      "MathVistaのREADMEは試験用途の商用利用を認め、学習用途を禁止している。一方、IconQAなどの収録元には非商用条件もある。",
+      "利用する例の出典と条件を確認し、帰属表示や同じ条件での共有を引き継ぐ。"
+    ]
+  },
+  {
+    "page": 31,
+    "title": "視覚情報と数学的な操作を組み合わせて評価する",
+    "section": "4. 視覚モデルの評価と入手方法",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "MathVistaは、図形、グラフ、表、写真などを含む6,141問を集め、画像を読み取って答えを求める能力を調べる。",
+      "五つの課題と七つの推論の種類から、モデルの得意・不得意を分析できる。",
+      "公開1,000問は、具体的な入出力や採点を確かめ、視覚モデルを比較する入口になる。"
+    ]
+  },
+  {
+    "page": 32,
+    "title": "Appendix",
+    "section": "Appendix",
+    "kind": "divider"
+  },
+  {
+    "page": 33,
+    "title": "",
+    "section": "Appendix: 目次",
+    "kind": "toc"
+  },
+  {
+    "page": 34,
+    "title": "1. 内容の異なる追加例",
+    "section": "Appendix: 1. 内容の異なる追加例",
+    "kind": "divider"
+  },
+  {
+    "page": 35,
+    "title": "例4 時計から時刻を読み取る：原文",
+    "section": "Appendix: 1. 内容の異なる追加例",
+    "kind": "example-original",
+    "sources": [
+      "data"
+    ],
+    "source_example_id": "7",
+    "example_role": "appendix",
+    "original_scope": "Full question and all choices; source image displayed in full. TeX formulas are typeset into plain Unicode in native text.",
+    "image_source": "IconQA"
+  },
+  {
+    "page": 36,
+    "title": "例4 時計から時刻を読み取る：日本語訳と答え",
+    "section": "Appendix: 1. 内容の異なる追加例",
+    "kind": "example-answer",
+    "sources": [
+      "data"
+    ],
+    "source_example_id": "7",
+    "example_role": "appendix",
+    "original_scope": "Full question and all choices; source image displayed in full. TeX formulas are typeset into plain Unicode in native text.",
+    "image_source": "IconQA"
+  },
+  {
+    "page": 37,
+    "title": "例5 図形の並びから規則を見つける",
+    "section": "Appendix: 1. 内容の異なる追加例",
+    "kind": "example",
+    "sources": [
+      "data"
+    ],
+    "source_example_id": "10",
+    "example_role": "appendix",
+    "original_scope": "Full question and all choices; source image displayed in full. TeX formulas are typeset into plain Unicode in native text.",
+    "image_source": "IQTest"
+  },
+  {
+    "page": 38,
+    "title": "例6 直角三角形の斜辺の中点を使う",
+    "section": "Appendix: 1. 内容の異なる追加例",
+    "kind": "example",
+    "sources": [
+      "data"
+    ],
+    "source_example_id": "17",
+    "example_role": "appendix",
+    "original_scope": "Full question and all choices; source image displayed in full. TeX formulas are typeset into plain Unicode in native text.",
+    "image_source": "GeoQA+"
+  },
+  {
+    "page": 39,
+    "title": "例7 関数の二点で傾きを比較する：原文",
+    "section": "Appendix: 1. 内容の異なる追加例",
+    "kind": "example-original",
+    "sources": [
+      "data"
+    ],
+    "source_example_id": "23",
+    "example_role": "appendix",
+    "original_scope": "Full question and all choices; source image displayed in full. TeX formulas are typeset into plain Unicode in native text.",
+    "image_source": "FunctionQA"
+  },
+  {
+    "page": 40,
+    "title": "例7 関数の二点で傾きを比較する：日本語訳と答え",
+    "section": "Appendix: 1. 内容の異なる追加例",
+    "kind": "example-answer",
+    "sources": [
+      "data"
+    ],
+    "source_example_id": "23",
+    "example_role": "appendix",
+    "original_scope": "Full question and all choices; source image displayed in full. TeX formulas are typeset into plain Unicode in native text.",
+    "image_source": "FunctionQA"
+  },
+  {
+    "page": 41,
+    "title": "例8 直径と三角形から円の半径を求める：原文",
+    "section": "Appendix: 1. 内容の異なる追加例",
+    "kind": "example-original",
+    "sources": [
+      "data"
+    ],
+    "source_example_id": "28",
+    "example_role": "appendix",
+    "original_scope": "Full question and all choices; source image displayed in full. TeX formulas are typeset into plain Unicode in native text.",
+    "image_source": "Geometry3K"
+  },
+  {
+    "page": 42,
+    "title": "例8 直径と三角形から円の半径を求める：日本語訳と答え",
+    "section": "Appendix: 1. 内容の異なる追加例",
+    "kind": "example-answer",
+    "sources": [
+      "data"
+    ],
+    "source_example_id": "28",
+    "example_role": "appendix",
+    "original_scope": "Full question and all choices; source image displayed in full. TeX formulas are typeset into plain Unicode in native text.",
+    "image_source": "Geometry3K"
+  },
+  {
+    "page": 43,
+    "title": "例9 階段状のグラフの連続性を判断する",
+    "section": "Appendix: 1. 内容の異なる追加例",
+    "kind": "example",
+    "sources": [
+      "data"
+    ],
+    "source_example_id": "34",
+    "example_role": "appendix",
+    "original_scope": "Full question and all choices; source image displayed in full. TeX formulas are typeset into plain Unicode in native text.",
+    "image_source": "FunctionQA"
+  },
+  {
+    "page": 44,
+    "title": "例10 関数の値と極限を区別する",
+    "section": "Appendix: 1. 内容の異なる追加例",
+    "kind": "example",
+    "sources": [
+      "data"
+    ],
+    "source_example_id": "37",
+    "example_role": "appendix",
+    "original_scope": "Full question and all choices; source image displayed in full. TeX formulas are typeset into plain Unicode in native text.",
+    "image_source": "FunctionQA"
+  },
+  {
+    "page": 45,
+    "title": "例11 月別の降水量の最大値を読む：原文",
+    "section": "Appendix: 1. 内容の異なる追加例",
+    "kind": "example-original",
+    "sources": [
+      "data"
+    ],
+    "source_example_id": "43",
+    "example_role": "appendix",
+    "original_scope": "Full question and all choices; source image displayed in full. TeX formulas are typeset into plain Unicode in native text.",
+    "image_source": "ScienceQA"
+  },
+  {
+    "page": 46,
+    "title": "例11 月別の降水量の最大値を読む：日本語訳と答え",
+    "section": "Appendix: 1. 内容の異なる追加例",
+    "kind": "example-answer",
+    "sources": [
+      "data"
+    ],
+    "source_example_id": "43",
+    "example_role": "appendix",
+    "original_scope": "Full question and all choices; source image displayed in full. TeX formulas are typeset into plain Unicode in native text.",
+    "image_source": "ScienceQA"
+  },
+  {
+    "page": 47,
+    "title": "例12 辺の長さから長方形の周囲を求める",
+    "section": "Appendix: 1. 内容の異なる追加例",
+    "kind": "example",
+    "sources": [
+      "data"
+    ],
+    "source_example_id": "56",
+    "example_role": "appendix",
+    "original_scope": "Full question and all choices; source image displayed in full. TeX formulas are typeset into plain Unicode in native text.",
+    "image_source": "IconQA"
+  },
+  {
+    "page": 48,
+    "title": "例13 論文の表で条件に合う手法を数える：原文",
+    "section": "Appendix: 1. 内容の異なる追加例",
+    "kind": "example-original",
+    "sources": [
+      "data"
+    ],
+    "source_example_id": "188",
+    "example_role": "appendix",
+    "original_scope": "Full question and all choices; source image displayed in full. TeX formulas are typeset into plain Unicode in native text.",
+    "image_source": "PaperQA"
+  },
+  {
+    "page": 49,
+    "title": "例13 論文の表で条件に合う手法を数える：日本語訳と答え",
+    "section": "Appendix: 1. 内容の異なる追加例",
+    "kind": "example-answer",
+    "sources": [
+      "data"
+    ],
+    "source_example_id": "188",
+    "example_role": "appendix",
+    "original_scope": "Full question and all choices; source image displayed in full. TeX formulas are typeset into plain Unicode in native text.",
+    "image_source": "PaperQA"
+  },
+  {
+    "page": 50,
+    "title": "2. データの構成と参考文献",
+    "section": "Appendix: 2. データの構成と参考文献",
+    "kind": "divider"
+  },
+  {
+    "page": 51,
+    "title": "31の収集元を組み合わせている",
+    "section": "Appendix: 2. データの構成と参考文献",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ]
+  },
+  {
+    "page": 52,
+    "title": "参考文献",
+    "section": "Appendix: 2. データの構成と参考文献",
+    "kind": "references"
+  },
+  {
+    "page": 53,
+    "title": "参考文献",
+    "section": "Appendix: 2. データの構成と参考文献",
+    "kind": "references"
+  }
+]

@@ -1,0 +1,137 @@
+{
+  "dataset": "MathVista",
+  "artifact_sha256": {
+    "pdf": "2cb9b6bdb74e37453ffdf67e258b08ee719049b3215fef3efea5064149b5e31a",
+    "pptx": "2365286dc2e2e16d11b9684745b4bd496f0fab038f8a96b3f54e3162f88c89fc"
+  },
+  "source_revision": "c5acd37d75a8c8f9756cb66c78fe2e54fa2c31fb",
+  "checked_date": "2026-10-26",
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "external_generation_api_used": false,
+  "evaluation_run": false,
+  "construction": {
+    "original_paper": "https://arxiv.org/abs/2310.02255",
+    "publication": "ICLR2024; firstpublic2023",
+    "own_paper_read_scope": "Abstract/introduction and main sections2collection,metadata,preparation,analysis;3evaluation/setup/results; relevant comparison table and selected qualitative descriptions. No claim of reading all116pages or allreferences.",
+    "existing_mathqa_sources": 9,
+    "existing_mathqa_questions": 2666,
+    "existing_vqa_sources": 19,
+    "existing_vqa_questions": 2739,
+    "new_sources": 3,
+    "new_questions": 736,
+    "candidate_vqa_questions": 4949,
+    "reviewers": 3,
+    "new_answer_disagreements": 6,
+    "metadata_type_set_agreement_percent": 94.1
+  },
+  "release": {
+    "downloaded_metadata_rows": 6141,
+    "question_files": {
+      "testmini": 1000,
+      "test": 5141
+    },
+    "personally_read_selected_original_questions": 13,
+    "images_personally_read_selected": 13,
+    "all_images_acquired_or_read": false,
+    "paper_reported_unique_images": 5487,
+    "task_counts_recomputed": {
+      "textbook question answering": 937,
+      "visual question answering": 1038,
+      "geometry problem solving": 1319,
+      "math word problem": 1200,
+      "figure question answering": 1647
+    },
+    "language_counts_recomputed": {
+      "english": 5737,
+      "chinese": 400,
+      "persian": 4
+    },
+    "question_type_counts_recomputed": {
+      "free_form": 2749,
+      "multi_choice": 3392
+    },
+    "new_source_counts_recomputed": {
+      "IQTest": 228,
+      "FunctionQA": 400,
+      "PaperQA": 108
+    },
+    "minor_source_discrepancy": "Paper prose states107PaperQA but released metadatahas108; newtotal736 agrees. Not expanded into a slide because source-specific1questiondifference doesnotchange overview.",
+    "test_gold_public": false,
+    "testmini_gold_public": true
+  },
+  "metrics": {
+    "pipeline": [
+      "responsegeneration",
+      "shortanswerextraction",
+      "typenormalization/exactcomparison"
+    ],
+    "official_extraction_initial": "GPT-4",
+    "official_normalization_static_read": "calculate_score.py: optionlettersmaptochoicetext; otherwiseclosestLevenshteinchoice; integer int(float(...));floatroundspecifiedprecision; compare normalizedstring toanswer",
+    "aggregate": "correct/evaluatedquestions; condition-specificsubsets also reported",
+    "official_evaluator_ran": false
+  },
+  "performance": {
+    "initial_paper_2023_testmini": {
+      "GPT4V_Playground": 49.9,
+      "Bard": 34.8,
+      "GPT4_2shot_PoT_captionOCR": 33.9,
+      "LLaVA_LLaMA2_13B": 26.1,
+      "human": 60.3
+    },
+    "initial_conditions": "1000testmini; GPT4VmanualPlayground; GPT4augmented2shotPoT. No trialcountinvented where not recovered.",
+    "later_primary_report": {
+      "source": "https://openai.com/index/gpt-4-1/",
+      "publication": "2025-04-14",
+      "GPT4.1": 72.2,
+      "GPT4.1mini": 73.1,
+      "GPT4.5": 72.3,
+      "o1_high": 71.8,
+      "GPT4o_2024_11_20": 61.4,
+      "source_scope": "OpenAI official vision table read directly. Source row labels MathVista; specific split/trials/extraction for thisrow not established, no claim of equalharness to2023paper and no2026latest/SOTA claim."
+    },
+    "2026_continuing_use": "OfficialREADME currently links communitymaintained EvalScope integration; its mathparser/numericequivalence not proven scoreparity withofficial; not usedasofficialgradeproxy."
+  },
+  "examples": {
+    "count": 13,
+    "main": 3,
+    "appendix": 10,
+    "ids": [
+      "3",
+      "74",
+      "44",
+      "7",
+      "10",
+      "17",
+      "23",
+      "28",
+      "34",
+      "37",
+      "43",
+      "56",
+      "188"
+    ],
+    "fact_verification": "source-fact-verification.json",
+    "whole_original_question_and_allchoices_ononepage": true,
+    "all13_source_images_shown": true,
+    "japanese_andanswers_read": 13
+  },
+  "rights": {
+    "aggregate": "MathVista newcontributions CCBYSA4.0; originalimage/questionrights retained",
+    "original_conditions_checked": [
+      "IconQA CCBYNCSA4.0",
+      "TabMWP CCBYNCSA4.0",
+      "ScienceQA CCBYNCSA4.0",
+      "ChartQA example74 imageCCBYcreditOWID/WHO/UNICEF",
+      "Geometry3K codeMIT notblanketimagegrant"
+    ],
+    "unresolved_originals_scope": "GeoQA+ README has noexplicit additionaldatasetlicense; IQTest/FunctionQA source.json doesnotidentifyindividualoriginalfigureURLs. No blanketoriginalimagepermission/relicense isasserted. Attributed educationalexamples preservecopyright/source conditions.",
+    "attribution": "ATTRIBUTION-MathVista.md",
+    "verbatim_original_statements": "SOURCE-LICENSE-STATEMENTS-MathVista.md"
+  },
+  "microsoft_powerpoint_validation": false,
+  "model_apis_or_harness_execution": false,
+  "remaining": [
+    "independent exactpair source/native/visual/technical review"
+  ]
+}
