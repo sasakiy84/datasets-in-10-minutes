@@ -35,3 +35,7 @@ MathVistaは13枚の実画像を読み、原票・選択肢・答え・訳を対
 Pythonテスト4件とNodeテストが成功した。121件のギャラリーを構築し、作成日時降順、IFEval検索と更新日時降順の組合せ、リセット後121件の表示をブラウザーで確認した。新5件の表紙サムネイルとブラウザー画面を実見した。既存116件のカタログ行と232配布ファイルが変わらないこと、10新規ファイルが承認済み版と一致することを確認した。[ローカル検証](frontier-benchmarks-2026-10-26-batch8/local-verification.json)と[表示確認](frontier-benchmarks-2026-10-26-batch8/gallery-created-desc.png)に残した。
 
 別担当の記録レビューと補助確認で、取得・実読の範囲、文言の修正前後と対象頁、利用条件、初期・現行の採点条件、最終承認票と相対リンクを照合した。[独立記録レビュー](frontier-benchmarks-2026-10-26-batch8/review-batch-records.json)に本人の確認と継承した確認を区別した。
+
+## 公開後の検証
+
+凍結した配布版のコミットは `1e27a6aa2542571d4565b6131814cd1bed781db5`。[Pagesのビルドと配信](https://github.com/sasakiy84/datasets-in-10-minutes/actions/runs/40289090116)がともに成功した。公開後、新規5件のPDF/PPTX計10ファイルとcatalog.jsonの11 URLへ実際にアクセスし、すべてHTTP 200と凍結SHAの一致を確認した。公開カタログは121件。[配布版の凍結](frontier-benchmarks-2026-10-26-batch8/publication-frozen.json)、[CI結果](frontier-benchmarks-2026-10-26-batch8/pages-run.json)、[11 URLの照合結果](frontier-benchmarks-2026-10-26-batch8/publication-result.json)に記録した。以後のコミットはこの検証記録のみを追加し、配布物は再生成していない。
