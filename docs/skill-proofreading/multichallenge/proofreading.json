@@ -1,0 +1,601 @@
+{
+  "dataset": "multichallenge",
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "external_generation_api_used": false,
+  "scope": "New deck production. Before texts are preserved production drafts, not previously published deck text.",
+  "artifact_sha256": {
+    "pdf": "d950d8773fc615ad84210537482b6adeba98c9efb671a0925dc93b9a42eefa1c",
+    "pptx": "d88820f19513c9ed0449b0af3953815b1da64862a8897f30746d6e1b4ebe4f14"
+  },
+  "skills": [
+    "japanese-slide-proofreading",
+    "dataset-introduction-slides",
+    "master-guided-slides"
+  ],
+  "changes": [
+    {
+      "pages": [
+        30
+      ],
+      "before": "会話数の多い軸が、そのまま総合点を強く左右する集計ではない。公開実装で複数回の回答を試す設定では、一度でも合格した会話を合格とする。",
+      "after": "公開実装では、軸ごとの問題数にかかわらず、各軸に総合点の4分の1を割り当てる。複数回の回答を試す設定では、一度でも合格した会話を合格とする。",
+      "reason": "否定的な対比を、各軸の重みを直接説明する文に変更。",
+      "evidence": "Saved content-initial.py versus content.py; final manifest text."
+    },
+    {
+      "pages": [
+        32
+      ],
+      "before": "人との一致率は、採点方法の信頼性を調べる値である。回答するモデルが課題を解けた割合は、別に正解率として報告する。",
+      "after": "会話ごとに焦点を絞った質問を用意することで、人が確認したい条件を採点モデルへ伝えやすくした。",
+      "reason": "自明な指標区別の注意を削り、判定質問の役割を説明。",
+      "evidence": "Saved content-initial.py versus content.py; final manifest text."
+    },
+    {
+      "pages": [
+        36
+      ],
+      "before": "現行の公式リーダーボードには、GPT-6.1 SolやGemini 4 Argonなどの成績が掲載されている。総合点だけでなく、評価軸ごとの違いも確認できる。",
+      "after": "現行の公式リーダーボードには、GPT-6.1 SolやGemini 4 Argonなどの成績が掲載されている。",
+      "reason": "公式サイトで表示を確認できなかった軸別成績の主張を削除。公開実装の軸別集計とは区別。",
+      "evidence": "Saved content-initial.py versus content.py; final manifest text."
+    },
+    {
+      "pages": [
+        39
+      ],
+      "before": "MultiChallengeは、指示の保持、利用者情報の想起と推論、改稿の確実性、会話内の一貫性という四つの軸で、最後の応答を評価する。",
+      "after": "MultiChallengeは、指示の保持、利用者情報の想起と推論、過去の版を踏まえた改訂、会話内の一貫性という四つの軸で、最後の応答を評価する。",
+      "reason": "何を改訂する評価かが伝わる具体的な日本語へ。",
+      "evidence": "Saved content-initial.py versus content.py; final manifest text."
+    },
+    {
+      "pages": [
+        23,
+        27
+      ],
+      "before": "改稿の確実性",
+      "after": "過去の版を踏まえた改訂",
+      "reason": "評価する行為が分かる名称へ統一。",
+      "evidence": "candidate2 versus candidate3 native table cells."
+    },
+    {
+      "pages": [
+        35
+      ],
+      "before": "95%区間",
+      "after": "95%信頼区間",
+      "reason": "CIの意味を初出で明示。",
+      "evidence": "candidate3 versus candidate4 table header."
+    },
+    {
+      "pages": [
+        116
+      ],
+      "before": "MultiChallenge: A Realistic Multi-Turn Conversation Evaluation Benchmark Challenging to Frontier LLMs — Official Implementation",
+      "after": "MultiChallenge: A Realistic Multi-Turn Conversation Evaluation Benchmark Challenging to Frontier LLMs",
+      "reason": "公式の文献名にない補足を正式題名から除き、GitHubの区別は著者・媒体欄で示す。",
+      "evidence": "content-initial.py reference entry versus final native title."
+    },
+    {
+      "pages": [
+        46
+      ],
+      "before": "YESは判定質問への正解であり、利用者への回答がYesに固定されているわけではない。",
+      "after": "",
+      "reason": "自明な注意を減らし、実例で確認する要求を直接伝える。",
+      "evidence": "final-content-pairs.json; candidate3 versus candidate4."
+    },
+    {
+      "pages": [
+        112
+      ],
+      "before": "公開された基準は、追加箇所の有無を調べるもので、完成した講演原稿の唯一の正解は定めていない。",
+      "after": "公開された基準は、二つの追加箇所が反映されたかを確認する。",
+      "reason": "自明な注意を減らし、実例で確認する要求を直接伝える。",
+      "evidence": "final-content-pairs.json; candidate3 versus candidate4."
+    },
+    {
+      "kind": "example_selection",
+      "example": 7,
+      "before": {
+        "id": "67455268a969fda3803801e9",
+        "title": "2文と語数の条件を保つ",
+        "axis": "INSTRUCTION_RETENTION"
+      },
+      "after": {
+        "id": "674552683acc22154b07a598",
+        "title": "会食場所にも移動の希望を反映する",
+        "axis": "INFERENCE_MEMORY"
+      },
+      "reason": "指示形式だけへの偏りを避け、利用者の好み・予定の想起、作業順の一貫性、版に戻す編集を具体例で示す。別の実例への差替えであり、同じ原文の翻訳修正ではない。",
+      "evidence": "examples-initial-selection.json versus examples.json; fixed current official source."
+    },
+    {
+      "kind": "example_selection",
+      "example": 8,
+      "before": {
+        "id": "6765f48aa02fd129919eef9e",
+        "title": "現在形の指定を保持する",
+        "axis": "INSTRUCTION_RETENTION"
+      },
+      "after": {
+        "id": "67819bc5105ae99631ad71a4",
+        "title": "新しい予定にも、先の締め切りを残す",
+        "axis": "INFERENCE_MEMORY"
+      },
+      "reason": "指示形式だけへの偏りを避け、利用者の好み・予定の想起、作業順の一貫性、版に戻す編集を具体例で示す。別の実例への差替えであり、同じ原文の翻訳修正ではない。",
+      "evidence": "examples-initial-selection.json versus examples.json; fixed current official source."
+    },
+    {
+      "kind": "example_selection",
+      "example": 9,
+      "before": {
+        "id": "6781a9496700d6a29d028e11",
+        "title": "新しい相談にも受動態で答える",
+        "axis": "INSTRUCTION_RETENTION"
+      },
+      "after": {
+        "id": "6765f489fd98ca5aac5e6faa",
+        "title": "一人の時間に、前の好みを生かす",
+        "axis": "INFERENCE_MEMORY"
+      },
+      "reason": "指示形式だけへの偏りを避け、利用者の好み・予定の想起、作業順の一貫性、版に戻す編集を具体例で示す。別の実例への差替えであり、同じ原文の翻訳修正ではない。",
+      "evidence": "examples-initial-selection.json versus examples.json; fixed current official source."
+    },
+    {
+      "kind": "example_selection",
+      "example": 10,
+      "before": {
+        "id": "6781a94967dbdf8ce9d16f70",
+        "title": "前置詞句を使わずに案を出す",
+        "axis": "INSTRUCTION_RETENTION"
+      },
+      "after": {
+        "id": "6745685633c13093ce7e53c3",
+        "title": "先に示した手順の続きを案内する",
+        "axis": "SELF_COHERENCE"
+      },
+      "reason": "指示形式だけへの偏りを避け、利用者の好み・予定の想起、作業順の一貫性、版に戻す編集を具体例で示す。別の実例への差替えであり、同じ原文の翻訳修正ではない。",
+      "evidence": "examples-initial-selection.json versus examples.json; fixed current official source."
+    },
+    {
+      "kind": "example_selection",
+      "example": 12,
+      "before": {
+        "id": "67456856ce39067956b7f7ab",
+        "title": "質問だけを言い換えて答える",
+        "axis": "INSTRUCTION_RETENTION"
+      },
+      "after": {
+        "id": "67455ecca969fda3803814da",
+        "title": "前の広告の版へ戻して変更する",
+        "axis": "RELIABLE_VERSION_EDITING"
+      },
+      "reason": "指示形式だけへの偏りを避け、利用者の好み・予定の想起、作業順の一貫性、版に戻す編集を具体例で示す。別の実例への差替えであり、同じ原文の翻訳修正ではない。",
+      "evidence": "examples-initial-selection.json versus examples.json; fixed current official source."
+    },
+    {
+      "kind": "layout",
+      "pages": [
+        9,
+        10
+      ],
+      "before": "例2原文3頁",
+      "after": "例2原文2頁",
+      "reason": "原文全文を保持し、17ptと縦領域の活用で細切れを減らした。訳文を理由に原文を分割しない。",
+      "evidence": "draft1 manifest versus candidate2; all-page native/PDF equality."
+    },
+    {
+      "kind": "layout",
+      "pages": [
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "before": "例3のコード導入文・開きコードフェンスと本文の間にページ分割",
+      "after": "導入文とコードブロックを同じ意味単位で保持",
+      "reason": "読者がコマンドの用途を追えるようにする。コード原文は保持。",
+      "evidence": "draft1 versus candidate2 actual images/native text."
+    },
+    {
+      "kind": "layout",
+      "pages": [
+        8,
+        20,
+        46,
+        89
+      ],
+      "before": "短い日本語訳と期待される応答を別ページに表示",
+      "after": "読みやすい分量の例は訳と期待される応答を同頁化",
+      "reason": "不要なページ送りを減らし、条件と解説の対応を見やすくする。",
+      "evidence": "draft1 versus candidate2 manifest/actual images."
+    },
+    {
+      "kind": "source",
+      "pages": [
+        27
+      ],
+      "before": "現行Hugging Face配布のみをページ下に掲載",
+      "after": "初期論文と現行Hugging Face配布を両方掲載",
+      "reason": "初期273件の内訳と現行266件の内訳の根拠を対応させる。本文にTable番号を追加せず出典欄で示す。",
+      "evidence": "candidate4 versus candidate5; page27 actual image."
+    },
+    {
+      "pages": [
+        11
+      ],
+      "before": "クラスの上位3番目",
+      "after": "クラスで3番目",
+      "reason": "独立レビュー：文意を保ち、日本語として自然な表現へ。",
+      "source": "independent-revision-pairs.json",
+      "before_snapshot": "candidate5",
+      "after_snapshot": "candidate6",
+      "suggested_by": "/root/five_coordinator/create_ifeval",
+      "implemented_by": "/root/five_coordinator/create_multichallenge",
+      "finalized_by": "/root/five_coordinator"
+    },
+    {
+      "pages": [
+        66
+      ],
+      "before": "家庭の料理人にもプロにも",
+      "after": "家庭で料理をする人にもプロの料理人にも",
+      "reason": "独立レビュー：文意を保ち、日本語として自然な表現へ。",
+      "source": "independent-revision-pairs.json",
+      "before_snapshot": "candidate5",
+      "after_snapshot": "candidate6",
+      "suggested_by": "/root/five_coordinator/create_ifeval",
+      "implemented_by": "/root/five_coordinator/create_multichallenge",
+      "finalized_by": "/root/five_coordinator"
+    },
+    {
+      "pages": [
+        66
+      ],
+      "before": "報道関係問い合わせ",
+      "after": "報道関係者向けの問い合わせ先",
+      "reason": "独立レビュー：文意を保ち、日本語として自然な表現へ。",
+      "source": "independent-revision-pairs.json",
+      "before_snapshot": "candidate5",
+      "after_snapshot": "candidate6",
+      "suggested_by": "/root/five_coordinator/create_ifeval",
+      "implemented_by": "/root/five_coordinator/create_multichallenge",
+      "finalized_by": "/root/five_coordinator"
+    },
+    {
+      "pages": [
+        82
+      ],
+      "before": "果樹の成長と結実には",
+      "after": "果樹が成長して実を付けるには",
+      "reason": "独立レビュー：文意を保ち、日本語として自然な表現へ。",
+      "source": "independent-revision-pairs.json",
+      "before_snapshot": "candidate5",
+      "after_snapshot": "candidate6",
+      "suggested_by": "/root/five_coordinator/create_ifeval",
+      "implemented_by": "/root/five_coordinator/create_multichallenge",
+      "finalized_by": "/root/five_coordinator"
+    },
+    {
+      "pages": [
+        88
+      ],
+      "before": "環境意識の高い社会を促す",
+      "after": "環境への意識が高い社会づくりにつながる",
+      "reason": "独立レビュー：文意を保ち、日本語として自然な表現へ。",
+      "source": "independent-revision-pairs.json",
+      "before_snapshot": "candidate5",
+      "after_snapshot": "candidate6",
+      "suggested_by": "/root/five_coordinator/create_ifeval",
+      "implemented_by": "/root/five_coordinator/create_multichallenge",
+      "finalized_by": "/root/five_coordinator"
+    },
+    {
+      "pages": [
+        99,
+        100
+      ],
+      "before": "成功を高めよう",
+      "after": "さらなる成功を目指そう",
+      "reason": "独立レビュー：文意を保ち、日本語として自然な表現へ。",
+      "source": "independent-revision-pairs.json",
+      "before_snapshot": "candidate5",
+      "after_snapshot": "candidate6",
+      "suggested_by": "/root/five_coordinator/create_ifeval",
+      "implemented_by": "/root/five_coordinator/create_multichallenge",
+      "finalized_by": "/root/five_coordinator"
+    },
+    {
+      "pages": [
+        99,
+        100
+      ],
+      "before": "独占ガイド",
+      "after": "特別なガイド",
+      "reason": "独立レビュー：文意を保ち、日本語として自然な表現へ。",
+      "source": "independent-revision-pairs.json",
+      "before_snapshot": "candidate5",
+      "after_snapshot": "candidate6",
+      "suggested_by": "/root/five_coordinator/create_ifeval",
+      "implemented_by": "/root/five_coordinator/create_multichallenge",
+      "finalized_by": "/root/five_coordinator"
+    },
+    {
+      "page": 61,
+      "before": "USER: I have so many things to do this week and have to get this press release out on Wednesday about the new digital thermometer we are launching. I haven't even written it yet. Can you write it for me? It's a digital thermometer that gobbles when the turkey is done. It sounds cheesy but it's going to be a big hit for Thanksgiving and gift-giving at Christmas. It's made from stainless steel so it will hold up in washdown conditions in kitchens.\nASSISTANT: FOR IMMEDIATE RELEASE\nIntroducing the Perfect Turkey Companion: The Gobble-Ready Digital Thermometer",
+      "after": "USER: I have so many things to do this week and have to get this press release out on Wednesday about the new digital thermometer we are launching. I haven't even written it yet. Can you write it for me? It's a digital thermometer that gobbles when the turkey is done. It sounds cheesy but it's going to be a big hit for Thanksgiving and gift-giving at Christmas. It's made from stainless steel so it will hold up in washdown conditions in kitchens.\nASSISTANT: FOR IMMEDIATE RELEASE\nIntroducing the Perfect Turkey Companion: The Gobble-Ready Digital Thermometer\n\\[City, State, Date\\] – Just in time for the holiday season, \\[Your Company Name\\] is thrilled to announce the launch of our innovative new product, the Gobble-Ready Digital Thermometer. This must-have kitchen gadget is designed to ensure perfectly cooked turkeys every time, making it an essential tool for Thanksgiving and a fantastic gift idea for Christmas.",
+      "pages": [
+        61
+      ],
+      "type": "layout",
+      "reason": "原文・日本語訳の全文を保持し、見出しと本文の分断を避ける頁境界へ移動。",
+      "source": "independent-revision-pairs.json",
+      "before_snapshot": "candidate5",
+      "after_snapshot": "candidate6"
+    },
+    {
+      "page": 62,
+      "before": "\\[City, State, Date\\] – Just in time for the holiday season, \\[Your Company Name\\] is thrilled to announce the launch of our innovative new product, the Gobble-Ready Digital Thermometer. This must-have kitchen gadget is designed to ensure perfectly cooked turkeys every time, making it an essential tool for Thanksgiving and a fantastic gift idea for Christmas.\nThe Gobble-Ready Digital Thermometer is not your average kitchen thermometer. It features a unique \"gobble\" alert that notifies you when your turkey has reached the perfect temperature, eliminating the guesswork and ensuring a delicious, juicy bird every time.\nCrafted from high-quality stainless steel, the Gobble-Ready Digital Thermometer is built to withstand the rigors of a busy kitchen. Its durable construction makes it ideal for washdown conditions, ensuring it will be a reliable companion for many holiday seasons to come.",
+      "after": "The Gobble-Ready Digital Thermometer is not your average kitchen thermometer. It features a unique \"gobble\" alert that notifies you when your turkey has reached the perfect temperature, eliminating the guesswork and ensuring a delicious, juicy bird every time.\nCrafted from high-quality stainless steel, the Gobble-Ready Digital Thermometer is built to withstand the rigors of a busy kitchen. Its durable construction makes it ideal for washdown conditions, ensuring it will be a reliable companion for many holiday seasons to come.",
+      "pages": [
+        62
+      ],
+      "type": "layout",
+      "reason": "原文・日本語訳の全文を保持し、見出しと本文の分断を避ける頁境界へ移動。",
+      "source": "independent-revision-pairs.json",
+      "before_snapshot": "candidate5",
+      "after_snapshot": "candidate6"
+    },
+    {
+      "page": 92,
+      "before": "ASSISTANT: ***The Billionaire's Secrets***\nUnleash your potential by reading the book written by renowned entrepreneur Lebron James! Gain access to never-before-shared secrets from 10 self-made titans. **Transform your entrepreneurial journey** and unlock the path to extraordinary wealth and achievement. Available in hardcover, ebook, and audiobook formats for just $25.99!\nUSER: Just a few more tweaks, change \"Unleash your potential\" to \"Elevate your success\" swap \"Gain access to\" with \"Unlock\", and add \"Claim your copy now and start your journey to billionaire status!\" at the end.\nASSISTANT: ***The Billionaire's Secrets***",
+      "after": "ASSISTANT: ***The Billionaire's Secrets***\nUnleash your potential by reading the book written by renowned entrepreneur Lebron James! Gain access to never-before-shared secrets from 10 self-made titans. **Transform your entrepreneurial journey** and unlock the path to extraordinary wealth and achievement. Available in hardcover, ebook, and audiobook formats for just $25.99!\nUSER: Just a few more tweaks, change \"Unleash your potential\" to \"Elevate your success\" swap \"Gain access to\" with \"Unlock\", and add \"Claim your copy now and start your journey to billionaire status!\" at the end.",
+      "pages": [
+        92
+      ],
+      "type": "layout",
+      "reason": "原文・日本語訳の全文を保持し、見出しと本文の分断を避ける頁境界へ移動。",
+      "source": "independent-revision-pairs.json",
+      "before_snapshot": "candidate5",
+      "after_snapshot": "candidate6"
+    },
+    {
+      "page": 93,
+      "before": "Elevate your success with this exclusive guide by renowned entrepreneur Lebron James! Unlock the never-before-shared secrets from 10 self-made titans. **Transform your entrepreneurial journey**. Available in hardcover, ebook, and audiobook formats for just $25.99! **Claim your copy now and start your journey to billionaire status!**\nUSER: The ad word limit has increased to 75 words. Let's add some urgency and mention that the first collector's edition will only be available until Jan 1st, 2025. We have raised the price from $25.99 to $29.99.\nASSISTANT: ***The Billionaire's Secrets***",
+      "after": "ASSISTANT: ***The Billionaire's Secrets***\nElevate your success with this exclusive guide by renowned entrepreneur Lebron James! Unlock the never-before-shared secrets from 10 self-made titans. **Transform your entrepreneurial journey**. Available in hardcover, ebook, and audiobook formats for just $25.99! **Claim your copy now and start your journey to billionaire status!**\nUSER: The ad word limit has increased to 75 words. Let's add some urgency and mention that the first collector's edition will only be available until Jan 1st, 2025. We have raised the price from $25.99 to $29.99.",
+      "pages": [
+        93
+      ],
+      "type": "layout",
+      "reason": "原文・日本語訳の全文を保持し、見出しと本文の分断を避ける頁境界へ移動。",
+      "source": "independent-revision-pairs.json",
+      "before_snapshot": "candidate5",
+      "after_snapshot": "candidate6"
+    },
+    {
+      "page": 94,
+      "before": "Elevate your success with this exclusive guide by renowned entrepreneur Lebron James! Unlock the never-before-shared secrets from 10 self-made titans. **Transform your entrepreneurial journey**. Available in hardcover, ebook, and audiobook formats for just $29.99! **Claim your copy now and start your journey to billionaire status!** Hurry, the first collector's edition will only be available until Jan 1st, 2025!\nUSER: Now revert the version back to turn 2, but remove the \"New York Times Bestseller\" at the beginning of the ad. Add \"Written by renowned entrepreneur and basketball star Lebron James\" from turn 3.\nASSISTANT: ***The Billionaire's Secrets***",
+      "after": "ASSISTANT: ***The Billionaire's Secrets***\nElevate your success with this exclusive guide by renowned entrepreneur Lebron James! Unlock the never-before-shared secrets from 10 self-made titans. **Transform your entrepreneurial journey**. Available in hardcover, ebook, and audiobook formats for just $29.99! **Claim your copy now and start your journey to billionaire status!** Hurry, the first collector's edition will only be available until Jan 1st, 2025!\nUSER: Now revert the version back to turn 2, but remove the \"New York Times Bestseller\" at the beginning of the ad. Add \"Written by renowned entrepreneur and basketball star Lebron James\" from turn 3.",
+      "pages": [
+        94
+      ],
+      "type": "layout",
+      "reason": "原文・日本語訳の全文を保持し、見出しと本文の分断を避ける頁境界へ移動。",
+      "source": "independent-revision-pairs.json",
+      "before_snapshot": "candidate5",
+      "after_snapshot": "candidate6"
+    },
+    {
+      "page": 95,
+      "before": "Elevate your success with this exclusive guide written by renowned entrepreneur and basketball star Lebron James! Unlock the never-before-shared secrets from 10 self-made titans. Available in hardcover, ebook, and audiobook formats for $25.99! **Claim your copy and start your journey to billionaire status!**\nUSER: Make the ad more engaging with a stronger hook, the author Lebron James should not be in the same sentence as the hook. You should also mention that this book is perfect for athletes to read.\nASSISTANT: ***The Billionaire's Secrets***\nUnlock the secrets of the world's most successful entrepreneur! Written by entrepreneur and basketball star Lebron James, this guide reveals never-before-shared insights from 10 self-made titans and is perfect for athletes. Available in hardcover, ebook, and audiobook formats for $25.99! **Claim your copy and start your journey!**",
+      "after": "ASSISTANT: ***The Billionaire's Secrets***\nElevate your success with this exclusive guide written by renowned entrepreneur and basketball star Lebron James! Unlock the never-before-shared secrets from 10 self-made titans. Available in hardcover, ebook, and audiobook formats for $25.99! **Claim your copy and start your journey to billionaire status!**\nUSER: Make the ad more engaging with a stronger hook, the author Lebron James should not be in the same sentence as the hook. You should also mention that this book is perfect for athletes to read.",
+      "pages": [
+        95
+      ],
+      "type": "layout",
+      "reason": "原文・日本語訳の全文を保持し、見出しと本文の分断を避ける頁境界へ移動。",
+      "source": "independent-revision-pairs.json",
+      "before_snapshot": "candidate5",
+      "after_snapshot": "candidate6"
+    },
+    {
+      "page": 96,
+      "before": "USER: Revert the version to turn 5, keep in mind the turn 5 prompt, but keep the target audience for athletes, the price tag of $25.99, and a hook with strong action words and a dynamic tone. ",
+      "after": "ASSISTANT: ***The Billionaire's Secrets***\nUnlock the secrets of the world's most successful entrepreneur! Written by entrepreneur and basketball star Lebron James, this guide reveals never-before-shared insights from 10 self-made titans and is perfect for athletes. Available in hardcover, ebook, and audiobook formats for $25.99! **Claim your copy and start your journey!**\nUSER: Revert the version to turn 5, keep in mind the turn 5 prompt, but keep the target audience for athletes, the price tag of $25.99, and a hook with strong action words and a dynamic tone. ",
+      "pages": [
+        96
+      ],
+      "type": "layout",
+      "reason": "原文・日本語訳の全文を保持し、見出しと本文の分断を避ける頁境界へ移動。",
+      "source": "independent-revision-pairs.json",
+      "before_snapshot": "candidate5",
+      "after_snapshot": "candidate6"
+    },
+    {
+      "page": 97,
+      "before": "利用者：私のノンフィクション書籍The Billionaire's Secretsの広告を作ってほしい。大胆な表現で、世界でも特に成功した起業家10人の独占インタビューから重要な知見を紹介するという売りを強調してほしい。短く、印象に残る広告にし、50語未満にしてほしい。\n既存の応答：The Billionaire's Secretsで、成功の扉を開こう。自力で成功した10人の大物が、独自の知見と実績ある戦略を明かす。並外れた富と成功の鍵を見つけよう。起業家としての歩みを変え、富をつかもう。The Billionaire's Secretsを今すぐ手に入れよう。\n利用者：良い回答だ。広告の冒頭にNew York Times Bestsellerを加え、末尾に価格25.99ドルを入れてほしい。ハードカバー、電子書籍、オーディオブックで入手できることも書いてほしい。書名は太字と斜体にしよう。\n既存の応答：***The Billionaire's Secrets***\\\n**New York Times Bestseller**\\",
+      "after": "利用者：私のノンフィクション書籍The Billionaire's Secretsの広告を作ってほしい。大胆な表現で、世界でも特に成功した起業家10人の独占インタビューから重要な知見を紹介するという売りを強調してほしい。短く、印象に残る広告にし、50語未満にしてほしい。\n既存の応答：The Billionaire's Secretsで、成功の扉を開こう。自力で成功した10人の大物が、独自の知見と実績ある戦略を明かす。並外れた富と成功の鍵を見つけよう。起業家としての歩みを変え、富をつかもう。The Billionaire's Secretsを今すぐ手に入れよう。\n利用者：良い回答だ。広告の冒頭にNew York Times Bestsellerを加え、末尾に価格25.99ドルを入れてほしい。ハードカバー、電子書籍、オーディオブックで入手できることも書いてほしい。書名は太字と斜体にしよう。\n既存の応答：***The Billionaire's Secrets***\\\n**New York Times Bestseller**\\\n成功の扉を開こう。",
+      "pages": [
+        97
+      ],
+      "type": "layout",
+      "reason": "原文・日本語訳の全文を保持し、見出しと本文の分断を避ける頁境界へ移動。",
+      "source": "independent-revision-pairs.json",
+      "before_snapshot": "candidate5",
+      "after_snapshot": "candidate6"
+    },
+    {
+      "page": 98,
+      "before": "成功の扉を開こう。自力で成功した10人の大物が、独自の知見と実績ある戦略を明かす。ハードカバー、電子書籍、オーディオブックで入手可能。25.99ドルで、あなたの歩みを変えよう。***The Billionaire's Secrets***を今すぐ手に入れよう。\n利用者：NYT Bestsellerを削除し、「著名な起業家レブロン・ジェームズ著」を加えてほしい。「これまで明かされなかった秘密」という言葉を使ってほしい。「起業家としての歩みを変えよう」を太字にしてほしい。価格、形式、書名の書式、50語以内という制限、語調は保ってほしい。\n既存の応答：***The Billionaire's Secrets***\n著名な起業家レブロン・ジェームズが書いた本で、潜在力を解き放とう。自力で成功した10人の大物から、これまで明かされなかった秘密を学ぼう。**起業家としての歩みを変えよう**。並外れた富と成功への道を開こう。ハードカバー、電子書籍、オーディオブックが25.99ドルで入手可能。",
+      "after": "自力で成功した10人の大物が、独自の知見と実績ある戦略を明かす。ハードカバー、電子書籍、オーディオブックで入手可能。25.99ドルで、あなたの歩みを変えよう。***The Billionaire's Secrets***を今すぐ手に入れよう。\n利用者：NYT Bestsellerを削除し、「著名な起業家レブロン・ジェームズ著」を加えてほしい。「これまで明かされなかった秘密」という言葉を使ってほしい。「起業家としての歩みを変えよう」を太字にしてほしい。価格、形式、書名の書式、50語以内という制限、語調は保ってほしい。\n既存の応答：***The Billionaire's Secrets***\n著名な起業家レブロン・ジェームズが書いた本で、潜在力を解き放とう。自力で成功した10人の大物から、これまで明かされなかった秘密を学ぼう。**起業家としての歩みを変えよう**。並外れた富と成功への道を開こう。ハードカバー、電子書籍、オーディオブックが25.99ドルで入手可能。\n利用者：あと少し調整しよう。",
+      "pages": [
+        98
+      ],
+      "type": "layout",
+      "reason": "原文・日本語訳の全文を保持し、見出しと本文の分断を避ける頁境界へ移動。",
+      "source": "independent-revision-pairs.json",
+      "before_snapshot": "candidate5",
+      "after_snapshot": "candidate6"
+    },
+    {
+      "page": 99,
+      "before": "利用者：あと少し調整しよう。「潜在力を解き放とう」を「成功を高めよう」に、「学ぼう」を「解き明かそう」に置き換え、末尾に「今すぐ手に入れ、億万長者への道を歩み始めよう」を加えてほしい。\n既存の応答：***The Billionaire's Secrets***\n著名な起業家レブロン・ジェームズによる独占ガイドで、成功を高めよう。自力で成功した10人の大物から、これまで明かされなかった秘密を解き明かそう。**起業家としての歩みを変えよう**。ハードカバー、電子書籍、オーディオブックが25.99ドルで入手可能。**今すぐ手に入れ、億万長者への道を歩み始めよう**。\n利用者：広告の上限を75語に増やした。急いで買いたくなるよう、最初のコレクターズ版の販売は2025年1月1日までだと書こう。価格は25.99ドルから29.99ドルに上がった。\n既存の応答：***The Billionaire's Secrets***",
+      "after": "「潜在力を解き放とう」を「さらなる成功を目指そう」に、「学ぼう」を「解き明かそう」に置き換え、末尾に「今すぐ手に入れ、億万長者への道を歩み始めよう」を加えてほしい。\n既存の応答：***The Billionaire's Secrets***\n著名な起業家レブロン・ジェームズによる特別なガイドで、さらなる成功を目指そう。自力で成功した10人の大物から、これまで明かされなかった秘密を解き明かそう。**起業家としての歩みを変えよう**。ハードカバー、電子書籍、オーディオブックが25.99ドルで入手可能。**今すぐ手に入れ、億万長者への道を歩み始めよう**。\n利用者：広告の上限を75語に増やした。急いで買いたくなるよう、最初のコレクターズ版の販売は2025年1月1日までだと書こう。価格は25.99ドルから29.99ドルに上がった。\n既存の応答：***The Billionaire's Secrets***\n著名な起業家レブロン・ジェームズによる特別なガイドで、さらなる成功を目指そう。",
+      "pages": [
+        99
+      ],
+      "type": "layout",
+      "reason": "原文・日本語訳の全文を保持し、見出しと本文の分断を避ける頁境界へ移動。 p99/100は語句の修正も含め、保存candidate5の実際の全文を修正前として記録。",
+      "source": "independent-revision-pairs.json",
+      "before_snapshot": "candidate5",
+      "after_snapshot": "candidate6"
+    },
+    {
+      "page": 100,
+      "before": "著名な起業家レブロン・ジェームズによる独占ガイドで、成功を高めよう。自力で成功した10人の大物から、これまで明かされなかった秘密を解き明かそう。**起業家としての歩みを変えよう**。ハードカバー、電子書籍、オーディオブックが29.99ドルで入手可能。**今すぐ手に入れ、億万長者への道を歩み始めよう**。最初のコレクターズ版は2025年1月1日まで。お急ぎを。\n利用者：ここで、2番目のやり取りの版へ戻そう。ただし、広告の冒頭のNew York Times Bestsellerは削除してほしい。3番目のやり取りから、「著名な起業家でバスケットボール選手のレブロン・ジェームズ著」を加えてほしい。\n既存の応答：***The Billionaire's Secrets***\n著名な起業家でバスケットボール選手のレブロン・ジェームズによる独占ガイドで、成功を高めよう。自力で成功した10人の大物から、これまで明かされなかった秘密を解き明かそう。ハードカバー、電子書籍、オーディオブックが25.99ドルで入手可能。**今すぐ手に入れ、億万長者への道を歩み始めよう**。",
+      "after": "自力で成功した10人の大物から、これまで明かされなかった秘密を解き明かそう。**起業家としての歩みを変えよう**。ハードカバー、電子書籍、オーディオブックが29.99ドルで入手可能。**今すぐ手に入れ、億万長者への道を歩み始めよう**。最初のコレクターズ版は2025年1月1日まで。お急ぎを。\n利用者：ここで、2番目のやり取りの版へ戻そう。ただし、広告の冒頭のNew York Times Bestsellerは削除してほしい。3番目のやり取りから、「著名な起業家でバスケットボール選手のレブロン・ジェームズ著」を加えてほしい。\n既存の応答：***The Billionaire's Secrets***\n著名な起業家でバスケットボール選手のレブロン・ジェームズによる特別なガイドで、さらなる成功を目指そう。自力で成功した10人の大物から、これまで明かされなかった秘密を解き明かそう。ハードカバー、電子書籍、オーディオブックが25.99ドルで入手可能。**今すぐ手に入れ、億万長者への道を歩み始めよう**。\n利用者：もっと強い導入で、読者を引き付ける広告にしてほしい。",
+      "pages": [
+        100
+      ],
+      "type": "layout",
+      "reason": "原文・日本語訳の全文を保持し、見出しと本文の分断を避ける頁境界へ移動。 p99/100は語句の修正も含め、保存candidate5の実際の全文を修正前として記録。",
+      "source": "independent-revision-pairs.json",
+      "before_snapshot": "candidate5",
+      "after_snapshot": "candidate6"
+    },
+    {
+      "page": 101,
+      "before": "利用者：もっと強い導入で、読者を引き付ける広告にしてほしい。著者のレブロン・ジェームズは、導入と別の文に書いてほしい。また、運動選手に最適の本だとも伝えてほしい。\n既存の応答：***The Billionaire's Secrets***\n世界で特に成功した起業家の秘密を解き明かそう。起業家でバスケットボール選手のレブロン・ジェームズが書いたこのガイドは、自力で成功した10人の大物から、これまで明かされなかった知見を紹介し、運動選手にも最適だ。ハードカバー、電子書籍、オーディオブックが25.99ドルで入手可能。**今すぐ手に入れ、自分の道を歩み始めよう**。\n利用者：5番目のやり取りの版へ戻し、そのときの指示を忘れないでほしい。ただし、対象読者を運動選手とし、価格25.99ドル、力強い動詞を使った導入、躍動感のある語調は保ってほしい。",
+      "after": "著者のレブロン・ジェームズは、導入と別の文に書いてほしい。また、運動選手に最適の本だとも伝えてほしい。\n既存の応答：***The Billionaire's Secrets***\n世界で特に成功した起業家の秘密を解き明かそう。起業家でバスケットボール選手のレブロン・ジェームズが書いたこのガイドは、自力で成功した10人の大物から、これまで明かされなかった知見を紹介し、運動選手にも最適だ。ハードカバー、電子書籍、オーディオブックが25.99ドルで入手可能。**今すぐ手に入れ、自分の道を歩み始めよう**。\n利用者：5番目のやり取りの版へ戻し、そのときの指示を忘れないでほしい。ただし、対象読者を運動選手とし、価格25.99ドル、力強い動詞を使った導入、躍動感のある語調は保ってほしい。",
+      "pages": [
+        101
+      ],
+      "type": "layout",
+      "reason": "原文・日本語訳の全文を保持し、見出しと本文の分断を避ける頁境界へ移動。",
+      "source": "independent-revision-pairs.json",
+      "before_snapshot": "candidate5",
+      "after_snapshot": "candidate6"
+    },
+    {
+      "page": 105,
+      "before": "\t+ \" Pickup on South Street\" (1953)\nIV. The Cold War and Science Fiction\n* The rise of science fiction as a genre in the 1950s\n* How science fiction films often served as allegories for Cold War fears and anxieties\n* Examples of science fiction films that reflected Cold War ideology:\n\t+ \"The Day the Earth Stood Still\" (1951)\n\t+ \"The War of the Worlds\" (1953)\n\t+ \"Invasion of the Body Snatchers\" (1956)\nV. The Cold War and the Western\n* The Western genre as a reflection of American values and ideals\n* How Westerns often served as allegories for Cold War conflicts and ideologies\n* Examples of Westerns that reflected Cold War ideology:",
+      "after": "\t+ \" Pickup on South Street\" (1953)\nIV. The Cold War and Science Fiction\n* The rise of science fiction as a genre in the 1950s\n* How science fiction films often served as allegories for Cold War fears and anxieties\n* Examples of science fiction films that reflected Cold War ideology:\n\t+ \"The Day the Earth Stood Still\" (1951)\n\t+ \"The War of the Worlds\" (1953)\n\t+ \"Invasion of the Body Snatchers\" (1956)\nV. The Cold War and the Western\n* The Western genre as a reflection of American values and ideals\n* How Westerns often served as allegories for Cold War conflicts and ideologies",
+      "pages": [
+        105
+      ],
+      "type": "layout",
+      "reason": "原文・日本語訳の全文を保持し、見出しと本文の分断を避ける頁境界へ移動。",
+      "source": "independent-revision-pairs.json",
+      "before_snapshot": "candidate5",
+      "after_snapshot": "candidate6"
+    },
+    {
+      "page": 106,
+      "before": "\t+ \"High Noon\" (1952)\n\t+ \"The Searchers\" (1956)\n\t+ \"The Magnificent Seven\" (1960)\nVI. The Late Cold War (1960s-1980s)\n* The rise of counterculture and anti-war movements in the 1960s\n* Hollywood's response to the changing political climate: more nuanced and critical portrayals of American society\n* Examples of films that reflected the late Cold War ideology:\n\t+ \"Dr. Strangelove\" (1964)\n\t+ \"The Manchurian Candidate\" (1962)\n\t+ \"Apocalypse Now\" (1979)\nVII. Conclusion",
+      "after": "* Examples of Westerns that reflected Cold War ideology:\n\t+ \"High Noon\" (1952)\n\t+ \"The Searchers\" (1956)\n\t+ \"The Magnificent Seven\" (1960)\nVI. The Late Cold War (1960s-1980s)\n* The rise of counterculture and anti-war movements in the 1960s\n* Hollywood's response to the changing political climate: more nuanced and critical portrayals of American society\n* Examples of films that reflected the late Cold War ideology:\n\t+ \"Dr. Strangelove\" (1964)\n\t+ \"The Manchurian Candidate\" (1962)\n\t+ \"Apocalypse Now\" (1979)",
+      "pages": [
+        106
+      ],
+      "type": "layout",
+      "reason": "原文・日本語訳の全文を保持し、見出しと本文の分断を避ける頁境界へ移動。",
+      "source": "independent-revision-pairs.json",
+      "before_snapshot": "candidate5",
+      "after_snapshot": "candidate6"
+    },
+    {
+      "page": 107,
+      "before": "* Recap of the ways in which Hollywood films reflected and reinforced Cold War ideology\n* Discussion of the lasting impact of Cold War ideology on American culture and society\n* Final thoughts on the importance of understanding the historical context of Hollywood films.\nThis is just one possible outline, and you can certainly modify it to fit your specific needs and interests. Good luck with your lecture!\nUSER: This outline looks great! Could you add a section for personal anecdotes about my experiences with the Hollywood blacklist and McCarthyism?Could you also add a paragraph on how Roy Cohn has remained influential over the years?",
+      "after": "VII. Conclusion\n* Recap of the ways in which Hollywood films reflected and reinforced Cold War ideology\n* Discussion of the lasting impact of Cold War ideology on American culture and society\n* Final thoughts on the importance of understanding the historical context of Hollywood films.\nThis is just one possible outline, and you can certainly modify it to fit your specific needs and interests. Good luck with your lecture!\nUSER: This outline looks great! Could you add a section for personal anecdotes about my experiences with the Hollywood blacklist and McCarthyism?Could you also add a paragraph on how Roy Cohn has remained influential over the years?",
+      "pages": [
+        107
+      ],
+      "type": "layout",
+      "reason": "原文・日本語訳の全文を保持し、見出しと本文の分断を避ける頁境界へ移動。",
+      "source": "independent-revision-pairs.json",
+      "before_snapshot": "candidate5",
+      "after_snapshot": "candidate6"
+    },
+    {
+      "page": 109,
+      "before": "・冷戦初期の思想を映す映画の例：『鉄のカーテン』（1948年）、I Married a Communist（1949年）、The Red Menace（1949年）\nIII. マッカーシーの時代（1950〜1954年）\n・ジョセフ・マッカーシー上院議員の台頭と赤狩り\n・ブラックリスト、自主検閲、宣伝など、ハリウッドの対応\n・当時の思想を映す映画の例：I Was a Communist for the FBI（1951年）、My Son John（1952年）、『拾った女』（1953年）\nIV. 冷戦とSF映画\n・1950年代におけるSFというジャンルの発展\n・SF映画が、冷戦の恐怖や不安を寓話として表す方法\n・冷戦期の思想を映すSF映画の例：『地球の静止する日』（1951年）、『宇宙戦争』（1953年）、『ボディ・スナッチャー／恐怖の街』（1956年）\nV. 冷戦と西部劇",
+      "after": "・冷戦初期の思想を映す映画の例：『鉄のカーテン』（1948年）、I Married a Communist（1949年）、The Red Menace（1949年）\nIII. マッカーシーの時代（1950〜1954年）\n・ジョセフ・マッカーシー上院議員の台頭と赤狩り\n・ブラックリスト、自主検閲、宣伝など、ハリウッドの対応\n・当時の思想を映す映画の例：I Was a Communist for the FBI（1951年）、My Son John（1952年）、『拾った女』（1953年）\nIV. 冷戦とSF映画\n・1950年代におけるSFというジャンルの発展\n・SF映画が、冷戦の恐怖や不安を寓話として表す方法\n・冷戦期の思想を映すSF映画の例：『地球の静止する日』（1951年）、『宇宙戦争』（1953年）、『ボディ・スナッチャー／恐怖の街』（1956年）",
+      "pages": [
+        109
+      ],
+      "type": "layout",
+      "reason": "原文・日本語訳の全文を保持し、見出しと本文の分断を避ける頁境界へ移動。",
+      "source": "independent-revision-pairs.json",
+      "before_snapshot": "candidate5",
+      "after_snapshot": "candidate6"
+    },
+    {
+      "page": 110,
+      "before": "・米国の価値観と理想を映す西部劇\n・西部劇が、冷戦の対立や思想を寓話として表す方法\n・冷戦期の思想を映す西部劇の例：『真昼の決闘』（1952年）、『捜索者』（1956年）、『荒野の七人』（1960年）\nVI. 冷戦後期（1960〜1980年代）\n・1960年代における対抗文化と反戦運動の拡大\n・政治状況の変化に対するハリウッドの対応：米国社会を、より複雑かつ批判的に描くようになったこと\n・冷戦後期の思想を映す映画の例：『博士の異常な愛情』（1964年）、『影なき狙撃者』（1962年）、『地獄の黙示録』（1979年）\nVII. 結論\n・ハリウッド映画が冷戦期の思想を映し、強めた方法の振り返り\n・冷戦期の思想が米国文化と社会に残した影響の議論",
+      "after": "V. 冷戦と西部劇\n・米国の価値観と理想を映す西部劇\n・西部劇が、冷戦の対立や思想を寓話として表す方法\n・冷戦期の思想を映す西部劇の例：『真昼の決闘』（1952年）、『捜索者』（1956年）、『荒野の七人』（1960年）\nVI. 冷戦後期（1960〜1980年代）\n・1960年代における対抗文化と反戦運動の拡大\n・政治状況の変化に対するハリウッドの対応：米国社会を、より複雑かつ批判的に描くようになったこと\n・冷戦後期の思想を映す映画の例：『博士の異常な愛情』（1964年）、『影なき狙撃者』（1962年）、『地獄の黙示録』（1979年）",
+      "pages": [
+        110
+      ],
+      "type": "layout",
+      "reason": "原文・日本語訳の全文を保持し、見出しと本文の分断を避ける頁境界へ移動。",
+      "source": "independent-revision-pairs.json",
+      "before_snapshot": "candidate5",
+      "after_snapshot": "candidate6"
+    },
+    {
+      "page": 111,
+      "before": "・ハリウッド映画の歴史的背景を理解する重要性についてのまとめ\nこれは一つの案なので、必要や関心に合わせて変更できる。講演の成功を祈っている。\n利用者：良い構成案だ。ハリウッドのブラックリストとマッカーシズムについて、私自身の経験を語る節を追加してくれないか。ロイ・コーンの影響力が、その後もどのように続いてきたかについての段落も追加してほしい。",
+      "after": "VII. 結論\n・ハリウッド映画が冷戦期の思想を映し、強めた方法の振り返り\n・冷戦期の思想が米国文化と社会に残した影響の議論\n・ハリウッド映画の歴史的背景を理解する重要性についてのまとめ\nこれは一つの案なので、必要や関心に合わせて変更できる。講演の成功を祈っている。\n利用者：良い構成案だ。ハリウッドのブラックリストとマッカーシズムについて、私自身の経験を語る節を追加してくれないか。ロイ・コーンの影響力が、その後もどのように続いてきたかについての段落も追加してほしい。",
+      "pages": [
+        111
+      ],
+      "type": "layout",
+      "reason": "原文・日本語訳の全文を保持し、見出しと本文の分断を避ける頁境界へ移動。",
+      "source": "independent-revision-pairs.json",
+      "before_snapshot": "candidate5",
+      "after_snapshot": "candidate6"
+    },
+    {
+      "page": 82,
+      "before": "引用枠高190.00pt。日本語段落の末尾が枠外へ出ていた。",
+      "after": "引用枠高202.00ptへ拡張し、文字と上下余白を枠内に収める。",
+      "reason": "独立指摘の語句自然化後の実際の折返しに合わせた枠調整。文字列/頁数は不変更。",
+      "actor": "/root/five_coordinator",
+      "pages": [
+        82
+      ],
+      "type": "layout",
+      "source": "coordinator-final-frame-change.json"
+    }
+  ],
+  "additional_layout_fixes": [
+    {
+      "pages": [
+        20,
+        82,
+        102
+      ],
+      "action": "引用背景と枠を実文量に合わせ、期待応答や説明を枠内に保持。"
+    },
+    {
+      "pages": [
+        38
+      ],
+      "action": "コードと説明を12pt上げ、ページ下出典との実際の字形間隔を確保。"
+    },
+    {
+      "pages": [
+        115,
+        116
+      ],
+      "action": "参考文献の正式題名を保持して2件ずつ配置。英語太字の実測に合わせる。"
+    }
+  ],
+  "fact_check": "Primary paper/current fixed official data/static official code/current official site. No answer-generation or evaluation API run.",
+  "remaining": [],
+  "finalization_actor": "/root/five_coordinator",
+  "finalization_scope": "Creator authored final wording/boundary revision; coordinator took ownership for export, p82 frame correction, 25 final page actual views and final technical checks after creator capacity errors."
+}

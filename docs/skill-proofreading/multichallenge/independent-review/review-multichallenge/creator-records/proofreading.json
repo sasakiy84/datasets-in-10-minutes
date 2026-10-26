@@ -1,0 +1,253 @@
+{
+  "dataset": "multichallenge",
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "external_generation_api_used": false,
+  "scope": "New deck production. Before texts are preserved production drafts, not previously published deck text.",
+  "artifact_sha256": {
+    "pdf": "3523351e9a889e5b66d52dd208344d7fc5b84de28dd9d205ea6fe625d1d65212",
+    "pptx": "02f5233a603929a90e8fd3b33569cf05204adff205a844a005f8e972a4ddda01"
+  },
+  "skills": [
+    "japanese-slide-proofreading",
+    "dataset-introduction-slides",
+    "master-guided-slides"
+  ],
+  "changes": [
+    {
+      "pages": [
+        30
+      ],
+      "before": "会話数の多い軸が、そのまま総合点を強く左右する集計ではない。公開実装で複数回の回答を試す設定では、一度でも合格した会話を合格とする。",
+      "after": "公開実装では、軸ごとの問題数にかかわらず、各軸に総合点の4分の1を割り当てる。複数回の回答を試す設定では、一度でも合格した会話を合格とする。",
+      "reason": "否定的な対比を、各軸の重みを直接説明する文に変更。",
+      "evidence": "Saved content-initial.py versus content.py; final manifest text."
+    },
+    {
+      "pages": [
+        32
+      ],
+      "before": "人との一致率は、採点方法の信頼性を調べる値である。回答するモデルが課題を解けた割合は、別に正解率として報告する。",
+      "after": "会話ごとに焦点を絞った質問を用意することで、人が確認したい条件を採点モデルへ伝えやすくした。",
+      "reason": "自明な指標区別の注意を削り、判定質問の役割を説明。",
+      "evidence": "Saved content-initial.py versus content.py; final manifest text."
+    },
+    {
+      "pages": [
+        36
+      ],
+      "before": "現行の公式リーダーボードには、GPT-6.1 SolやGemini 4 Argonなどの成績が掲載されている。総合点だけでなく、評価軸ごとの違いも確認できる。",
+      "after": "現行の公式リーダーボードには、GPT-6.1 SolやGemini 4 Argonなどの成績が掲載されている。",
+      "reason": "公式サイトで表示を確認できなかった軸別成績の主張を削除。公開実装の軸別集計とは区別。",
+      "evidence": "Saved content-initial.py versus content.py; final manifest text."
+    },
+    {
+      "pages": [
+        39
+      ],
+      "before": "MultiChallengeは、指示の保持、利用者情報の想起と推論、改稿の確実性、会話内の一貫性という四つの軸で、最後の応答を評価する。",
+      "after": "MultiChallengeは、指示の保持、利用者情報の想起と推論、過去の版を踏まえた改訂、会話内の一貫性という四つの軸で、最後の応答を評価する。",
+      "reason": "何を改訂する評価かが伝わる具体的な日本語へ。",
+      "evidence": "Saved content-initial.py versus content.py; final manifest text."
+    },
+    {
+      "pages": [
+        23,
+        27
+      ],
+      "before": "改稿の確実性",
+      "after": "過去の版を踏まえた改訂",
+      "reason": "評価する行為が分かる名称へ統一。",
+      "evidence": "candidate2 versus candidate3 native table cells."
+    },
+    {
+      "pages": [
+        35
+      ],
+      "before": "95%区間",
+      "after": "95%信頼区間",
+      "reason": "CIの意味を初出で明示。",
+      "evidence": "candidate3 versus candidate4 table header."
+    },
+    {
+      "pages": [
+        116
+      ],
+      "before": "MultiChallenge: A Realistic Multi-Turn Conversation Evaluation Benchmark Challenging to Frontier LLMs — Official Implementation",
+      "after": "MultiChallenge: A Realistic Multi-Turn Conversation Evaluation Benchmark Challenging to Frontier LLMs",
+      "reason": "公式の文献名にない補足を正式題名から除き、GitHubの区別は著者・媒体欄で示す。",
+      "evidence": "content-initial.py reference entry versus final native title."
+    },
+    {
+      "pages": [
+        46
+      ],
+      "before": "YESは判定質問への正解であり、利用者への回答がYesに固定されているわけではない。",
+      "after": "",
+      "reason": "自明な注意を減らし、実例で確認する要求を直接伝える。",
+      "evidence": "final-content-pairs.json; candidate3 versus candidate4."
+    },
+    {
+      "pages": [
+        112
+      ],
+      "before": "公開された基準は、追加箇所の有無を調べるもので、完成した講演原稿の唯一の正解は定めていない。",
+      "after": "公開された基準は、二つの追加箇所が反映されたかを確認する。",
+      "reason": "自明な注意を減らし、実例で確認する要求を直接伝える。",
+      "evidence": "final-content-pairs.json; candidate3 versus candidate4."
+    },
+    {
+      "kind": "example_selection",
+      "example": 7,
+      "before": {
+        "id": "67455268a969fda3803801e9",
+        "title": "2文と語数の条件を保つ",
+        "axis": "INSTRUCTION_RETENTION"
+      },
+      "after": {
+        "id": "674552683acc22154b07a598",
+        "title": "会食場所にも移動の希望を反映する",
+        "axis": "INFERENCE_MEMORY"
+      },
+      "reason": "指示形式だけへの偏りを避け、利用者の好み・予定の想起、作業順の一貫性、版に戻す編集を具体例で示す。別の実例への差替えであり、同じ原文の翻訳修正ではない。",
+      "evidence": "examples-initial-selection.json versus examples.json; fixed current official source."
+    },
+    {
+      "kind": "example_selection",
+      "example": 8,
+      "before": {
+        "id": "6765f48aa02fd129919eef9e",
+        "title": "現在形の指定を保持する",
+        "axis": "INSTRUCTION_RETENTION"
+      },
+      "after": {
+        "id": "67819bc5105ae99631ad71a4",
+        "title": "新しい予定にも、先の締め切りを残す",
+        "axis": "INFERENCE_MEMORY"
+      },
+      "reason": "指示形式だけへの偏りを避け、利用者の好み・予定の想起、作業順の一貫性、版に戻す編集を具体例で示す。別の実例への差替えであり、同じ原文の翻訳修正ではない。",
+      "evidence": "examples-initial-selection.json versus examples.json; fixed current official source."
+    },
+    {
+      "kind": "example_selection",
+      "example": 9,
+      "before": {
+        "id": "6781a9496700d6a29d028e11",
+        "title": "新しい相談にも受動態で答える",
+        "axis": "INSTRUCTION_RETENTION"
+      },
+      "after": {
+        "id": "6765f489fd98ca5aac5e6faa",
+        "title": "一人の時間に、前の好みを生かす",
+        "axis": "INFERENCE_MEMORY"
+      },
+      "reason": "指示形式だけへの偏りを避け、利用者の好み・予定の想起、作業順の一貫性、版に戻す編集を具体例で示す。別の実例への差替えであり、同じ原文の翻訳修正ではない。",
+      "evidence": "examples-initial-selection.json versus examples.json; fixed current official source."
+    },
+    {
+      "kind": "example_selection",
+      "example": 10,
+      "before": {
+        "id": "6781a94967dbdf8ce9d16f70",
+        "title": "前置詞句を使わずに案を出す",
+        "axis": "INSTRUCTION_RETENTION"
+      },
+      "after": {
+        "id": "6745685633c13093ce7e53c3",
+        "title": "先に示した手順の続きを案内する",
+        "axis": "SELF_COHERENCE"
+      },
+      "reason": "指示形式だけへの偏りを避け、利用者の好み・予定の想起、作業順の一貫性、版に戻す編集を具体例で示す。別の実例への差替えであり、同じ原文の翻訳修正ではない。",
+      "evidence": "examples-initial-selection.json versus examples.json; fixed current official source."
+    },
+    {
+      "kind": "example_selection",
+      "example": 12,
+      "before": {
+        "id": "67456856ce39067956b7f7ab",
+        "title": "質問だけを言い換えて答える",
+        "axis": "INSTRUCTION_RETENTION"
+      },
+      "after": {
+        "id": "67455ecca969fda3803814da",
+        "title": "前の広告の版へ戻して変更する",
+        "axis": "RELIABLE_VERSION_EDITING"
+      },
+      "reason": "指示形式だけへの偏りを避け、利用者の好み・予定の想起、作業順の一貫性、版に戻す編集を具体例で示す。別の実例への差替えであり、同じ原文の翻訳修正ではない。",
+      "evidence": "examples-initial-selection.json versus examples.json; fixed current official source."
+    },
+    {
+      "kind": "layout",
+      "pages": [
+        9,
+        10
+      ],
+      "before": "例2原文3頁",
+      "after": "例2原文2頁",
+      "reason": "原文全文を保持し、17ptと縦領域の活用で細切れを減らした。訳文を理由に原文を分割しない。",
+      "evidence": "draft1 manifest versus candidate2; all-page native/PDF equality."
+    },
+    {
+      "kind": "layout",
+      "pages": [
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "before": "例3のコード導入文・開きコードフェンスと本文の間にページ分割",
+      "after": "導入文とコードブロックを同じ意味単位で保持",
+      "reason": "読者がコマンドの用途を追えるようにする。コード原文は保持。",
+      "evidence": "draft1 versus candidate2 actual images/native text."
+    },
+    {
+      "kind": "layout",
+      "pages": [
+        8,
+        20,
+        46,
+        89
+      ],
+      "before": "短い日本語訳と期待される応答を別ページに表示",
+      "after": "読みやすい分量の例は訳と期待される応答を同頁化",
+      "reason": "不要なページ送りを減らし、条件と解説の対応を見やすくする。",
+      "evidence": "draft1 versus candidate2 manifest/actual images."
+    },
+    {
+      "kind": "source",
+      "pages": [
+        27
+      ],
+      "before": "現行Hugging Face配布のみをページ下に掲載",
+      "after": "初期論文と現行Hugging Face配布を両方掲載",
+      "reason": "初期273件の内訳と現行266件の内訳の根拠を対応させる。本文にTable番号を追加せず出典欄で示す。",
+      "evidence": "candidate4 versus candidate5; page27 actual image."
+    }
+  ],
+  "additional_layout_fixes": [
+    {
+      "pages": [
+        20,
+        82,
+        102
+      ],
+      "action": "引用背景と枠を実文量に合わせ、期待応答や説明を枠内に保持。"
+    },
+    {
+      "pages": [
+        38
+      ],
+      "action": "コードと説明を12pt上げ、ページ下出典との実際の字形間隔を確保。"
+    },
+    {
+      "pages": [
+        115,
+        116
+      ],
+      "action": "参考文献の正式題名を保持して2件ずつ配置。英語太字の実測に合わせる。"
+    }
+  ],
+  "fact_check": "Primary paper/current fixed official data/static official code/current official site. No answer-generation or evaluation API run.",
+  "remaining": []
+}

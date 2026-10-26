@@ -1,0 +1,155 @@
+{
+  "reviewer": "/root/five_coordinator/create_ifeval",
+  "method": "Own independent HTTP acquisition; static code/data reading and counting. No model call or evaluation run.",
+  "acquisition": "own-acquisition.json",
+  "statistics": "own-statistics.json",
+  "own_reading_scope": {
+    "paper_v2": "Main sections Introduction, task definitions3.1, instance-level rubric3.2, construction4, human+automatic tables2–4 and related analysis5.1–5.2, using own PDF main pages1–8. Full70-page PDF acquired but not all70/appendix read.",
+    "card": "Full current official HF README at fixed revision.",
+    "site": "Relevant introduction/methodology/current leaderboard rows and February3,2026 update, independently acquired canonical Labs HTML; no independent browser screenshot acquisition. The screenshot in slides was visually inspected as part of p2.",
+    "code": "Own fetched main.py, conversation.py, data_loader.py, evaluator.py, result_parser.py and README read statically. Inputs are prefilled conversation messages; response generation only appends final response; judge sees response+instance question; verdict compared to pass criteria; scores macro-average axis rates, optional any-pass across attempts, default1. No execution.",
+    "license": "Full HF card CC BY4.0 label; own fetched CC BY4 legalcode relevant grant2(a), attribution/change indication3(a) read; not all legal commentary. Creator attribution file independently read: credits/source/revision/translation/modification and screenshot scope retained.",
+    "data": "All266 current parquet and273 historical JSONL independently acquired/machineparsed; all13 selected originals/all original roles/messages, allJapanese translations and judge/pass/expected behavior read via individual actual slide images plus JSON judge list; not all266 personally read."
+  },
+  "version_and_scores": {
+    "initial": "Initial273 set and paper273 stats; human table Claude3.5June2024=41.42,o1preview37.23,Gemini1.5Pro19.96,Llama3.1405B14.92,GPT4o12.52; use actual table values, paper prose disagrees. Table4 alignment93.95 vs baseline37.33 rounded94/37.",
+    "current": "Own canonical website rows: gpt6.1Sol81.95±4.16,Gemini4Argon78.70±5.30,MuseSpark75.52±4.05,MuseSpark1.1=75.30±.60;95%CI methodology. 2026Feb3 update judgeGemini2.5Pro and54 revised tasks. Independently acquired fixed parquet contains266 records. Removed7 and retainedjudgechanges47 not inferred as all same update54.",
+    "conditions": "Historical staticjudge GPT4o20240806 temp0; currentjudge updated as official report. Current trial count/temperature not confirmed and CLI default1 not transferred to current board. Initial human/current automated scores separated in slides."
+  },
+  "selected_examples": [
+    {
+      "example": 1,
+      "id": "6765f1c86539ceefe4b7ab4f",
+      "axis": "INSTRUCTION_RETENTION",
+      "judge_question": "Does the model avoid using words containing the letter \"T\" in its responses, as agreed upon in the first turn?",
+      "pass_criteria": "YES",
+      "expected_behavior": "Tを含む単語を回答に使わない。",
+      "own_assessment": "Matches released judge condition and prior conversation requirement; no single reference answer invented. All original and Japanese dialogue read.",
+      "particular_scope": ""
+    },
+    {
+      "example": 2,
+      "id": "6765f1c80960c015f806a7c1",
+      "axis": "INFERENCE_MEMORY",
+      "judge_question": "Does the response recommend that the user watch Copyright Law recap videos on Canvas?",
+      "pass_criteria": "YES",
+      "expected_behavior": "著作権法についても、Canvasの復習動画を見るよう勧める。",
+      "own_assessment": "Matches released judge condition and prior conversation requirement; no single reference answer invented. All original and Japanese dialogue read.",
+      "particular_scope": ""
+    },
+    {
+      "example": 3,
+      "id": "67456856a77b2db232c76c97",
+      "axis": "SELF_COHERENCE",
+      "judge_question": "Did the model stay coherent regarding the user's first message stating that the Open Source Summit was in June instead of July?",
+      "pass_criteria": "YES",
+      "expected_behavior": "以前は6月と述べていたことを踏まえ、7月という前提をそのまま受け入れない。",
+      "own_assessment": "Matches released judge condition and prior conversation requirement; no single reference answer invented. All original and Japanese dialogue read.",
+      "particular_scope": ""
+    },
+    {
+      "example": 4,
+      "id": "6781ad8b500c15bd7ab291a1",
+      "axis": "INSTRUCTION_RETENTION",
+      "judge_question": "Does the response only contain the word \"Yes\" or \"No\"?",
+      "pass_criteria": "YES",
+      "expected_behavior": "回答全体をYesまたはNoの一語にする。",
+      "own_assessment": "Matches released judge condition and prior conversation requirement; no single reference answer invented. All original and Japanese dialogue read.",
+      "particular_scope": "Global first-turnYes/No-only constraint persists; no generated final answer; all15 fixed utterances retained."
+    },
+    {
+      "example": 5,
+      "id": "67455268bc2ba9e69b8618f8",
+      "axis": "INSTRUCTION_RETENTION",
+      "judge_question": "Does the model answer the questions by listing theories or predicaments with a four-word limit when explaining the listed theories or predicaments?",
+      "pass_criteria": "YES",
+      "expected_behavior": "理論や難題を挙げ、その説明をそれぞれ4語以内にする。",
+      "own_assessment": "Matches released judge condition and prior conversation requirement; no single reference answer invented. All original and Japanese dialogue read.",
+      "particular_scope": ""
+    },
+    {
+      "example": 6,
+      "id": "6745685762962af2b60e558f",
+      "axis": "INSTRUCTION_RETENTION",
+      "judge_question": "Does the model follow the high-level instruction to ensure its responses are no longer than two sentences?",
+      "pass_criteria": "YES",
+      "expected_behavior": "回答を2文以内にする。",
+      "own_assessment": "Matches released judge condition and prior conversation requirement; no single reference answer invented. All original and Japanese dialogue read.",
+      "particular_scope": ""
+    },
+    {
+      "example": 7,
+      "id": "674552683acc22154b07a598",
+      "axis": "INFERENCE_MEMORY",
+      "judge_question": "Are the restaurants chosen within a 5-minute walk from the UN headquarters?",
+      "pass_criteria": "YES",
+      "expected_behavior": "国連本部から徒歩5分以内のレストランを提案する。",
+      "own_assessment": "Matches released judge condition and prior conversation requirement; no single reference answer invented. All original and Japanese dialogue read.",
+      "particular_scope": ""
+    },
+    {
+      "example": 8,
+      "id": "67819bc5105ae99631ad71a4",
+      "axis": "INFERENCE_MEMORY",
+      "judge_question": "Does the model remember the press release the user needs to send on Wednesday when creating a schedule to help with time management?",
+      "pass_criteria": "YES",
+      "expected_behavior": "予定を組む際、水曜日に出すプレスリリースを忘れずに含める。",
+      "own_assessment": "Matches released judge condition and prior conversation requirement; no single reference answer invented. All original and Japanese dialogue read.",
+      "particular_scope": ""
+    },
+    {
+      "example": 9,
+      "id": "6765f489fd98ca5aac5e6faa",
+      "axis": "INFERENCE_MEMORY",
+      "judge_question": "Does the model successfully recall the user's enjoyment of ice skating, mentioned in the initial prompt, when suggesting activities for them?",
+      "pass_criteria": "YES",
+      "expected_behavior": "一人で楽しむ活動として、アイススケートを提案する。",
+      "own_assessment": "Matches released judge condition and prior conversation requirement; no single reference answer invented. All original and Japanese dialogue read.",
+      "particular_scope": ""
+    },
+    {
+      "example": 10,
+      "id": "6745685633c13093ce7e53c3",
+      "axis": "SELF_COHERENCE",
+      "judge_question": "Does the model maintain coherence with the five steps it listed earlier in the conversation by listing fertilizing as the next step after watering?",
+      "pass_criteria": "YES",
+      "expected_behavior": "前に示した手順に沿い、水やりの次に施肥を挙げる。",
+      "own_assessment": "Matches released judge condition and prior conversation requirement; no single reference answer invented. All original and Japanese dialogue read.",
+      "particular_scope": ""
+    },
+    {
+      "example": 11,
+      "id": "6765f48a5e92f1dda32a63e1",
+      "axis": "INSTRUCTION_RETENTION",
+      "judge_question": "Does the model avoid using the words \"technology,\" \"AI,\" \"gaming,\" and \"system\" in its response, as the user requested in the initial prompt?",
+      "pass_criteria": "YES",
+      "expected_behavior": "technology、AI、gaming、systemの4語を使わない。",
+      "own_assessment": "Matches released judge condition and prior conversation requirement; no single reference answer invented. All original and Japanese dialogue read.",
+      "particular_scope": ""
+    },
+    {
+      "example": 12,
+      "id": "67455ecca969fda3803814da",
+      "axis": "RELIABLE_VERSION_EDITING",
+      "judge_question": "Did the response include a mention that the first collector's edition will only be available until Jan 1st, 2025?",
+      "pass_criteria": "YES",
+      "expected_behavior": "最初のコレクターズ版の販売が2025年1月1日までだと記載する。",
+      "own_assessment": "Matches released judge condition and prior conversation requirement; no single reference answer invented. All original and Japanese dialogue read.",
+      "particular_scope": "Version5 includes75word ceiling/deadlineJan1,2025/price29.99; final returnsversion5 but overridesprice25.99/athletes/dynamic hook. Publishedjudge asks deadline only."
+    },
+    {
+      "example": 13,
+      "id": "6765f1c843c9bda0861f11fa",
+      "axis": "RELIABLE_VERSION_EDITING",
+      "judge_question": "Does the model add the two requested sections (personal anecdotes about his experiences with the Hollywood blacklist and McCarthyism and a paragraph on how Roy Cohn has remained influential over the years) to the current outline?",
+      "pass_criteria": "YES",
+      "expected_behavior": "ブラックリスト・マッカーシズムに関する本人の経験を語る節と、ロイ・コーンの影響を述べる段落を追加する。",
+      "own_assessment": "Matches released judge condition and prior conversation requirement; no single reference answer invented. All original and Japanese dialogue read.",
+      "particular_scope": ""
+    }
+  ],
+  "inherited_scope": {
+    "creator": "Selected13 IDs/translations/layout/records received as targets, independently matched raw current acquisition and personally read. Creator audits not used as own evidence.",
+    "parent_root": "Requested special focus4sentence boundaries and12version revert; personally verified original/translation/judge behavior. No root full-image coverage inherited as own."
+  }
+}

@@ -1,0 +1,1045 @@
+[
+  {
+    "example": 1,
+    "id": "6765f1c86539ceefe4b7ab4f",
+    "title": "Tを含む単語を避け続ける",
+    "placement": "main",
+    "axis": "INSTRUCTION_RETENTION",
+    "axis_japanese": "指示の保持",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "I am a scholar in languages. I am very focused on how to analyze polemics. Imagine you are my adversary in a polemic. However, you have a problem pronouncing \"T\".  As a consequence, you avoid words comprising specified ABCs. Can you do so while discussing with me regarding moral premises?"
+      },
+      {
+        "role": "assistant",
+        "content": "Surely, I can engage in a discussion on moral premises while avoiding words comprising \"T\"."
+      },
+      {
+        "role": "user",
+        "content": "Which moral premise do you prefer?"
+      }
+    ],
+    "japanese_conversation": [
+      {
+        "role": "user",
+        "content": "私は言語学の研究者で、論争の分析に強い関心がある。あなたを論争相手だと考えよう。ただし、あなたは「T」の発音が苦手なので、その文字を含む単語を避ける。道徳の前提について、私とそのように議論できるだろうか。"
+      },
+      {
+        "role": "assistant",
+        "content": "もちろん。「T」を含む単語を避けながら、道徳の前提について議論できる。"
+      },
+      {
+        "role": "user",
+        "content": "どの道徳的な前提が好ましいと思うか。"
+      }
+    ],
+    "original": "USER: I am a scholar in languages. I am very focused on how to analyze polemics. Imagine you are my adversary in a polemic. However, you have a problem pronouncing \"T\".  As a consequence, you avoid words comprising specified ABCs. Can you do so while discussing with me regarding moral premises?\n\nASSISTANT: Surely, I can engage in a discussion on moral premises while avoiding words comprising \"T\".\n\nUSER: Which moral premise do you prefer?",
+    "japanese": "利用者：私は言語学の研究者で、論争の分析に強い関心がある。あなたを論争相手だと考えよう。ただし、あなたは「T」の発音が苦手なので、その文字を含む単語を避ける。道徳の前提について、私とそのように議論できるだろうか。\n\n既存の応答：もちろん。「T」を含む単語を避けながら、道徳の前提について議論できる。\n\n利用者：どの道徳的な前提が好ましいと思うか。",
+    "judge_question": "Does the model avoid using words containing the letter \"T\" in its responses, as agreed upon in the first turn?",
+    "pass_criteria": "YES",
+    "expected_behavior": "Tを含む単語を回答に使わない。",
+    "explanation": "最後の質問だけを見ると、道徳について自由に答える課題に見える。会話の冒頭で合意した文字の制約を、話題が変わっても保持する必要がある。",
+    "original_scope": "会話履歴と最後の利用者発言の全文。モデルは最後の発言への応答だけを生成する。",
+    "source_url": "https://huggingface.co/datasets/ScaleAI/MultiChallenge",
+    "source_revision": "670fd81f270314d0f8f82b34fcfe2187fd28f699",
+    "license": "CC BY 4.0",
+    "displayed_original_parts": [
+      "USER: I am a scholar in languages. I am very focused on how to analyze polemics. Imagine you are my adversary in a polemic. However, you have a problem pronouncing \"T\".  As a consequence, you avoid words comprising specified ABCs. Can you do so while discussing with me regarding moral premises?\nASSISTANT: Surely, I can engage in a discussion on moral premises while avoiding words comprising \"T\".\nUSER: Which moral premise do you prefer?"
+    ],
+    "displayed_japanese_parts": [
+      "利用者：私は言語学の研究者で、論争の分析に強い関心がある。あなたを論争相手だと考えよう。ただし、あなたは「T」の発音が苦手なので、その文字を含む単語を避ける。道徳の前提について、私とそのように議論できるだろうか。\n既存の応答：もちろん。「T」を含む単語を避けながら、道徳の前提について議論できる。\n利用者：どの道徳的な前提が好ましいと思うか。"
+    ],
+    "expected_with_translation": true
+  },
+  {
+    "example": 2,
+    "id": "6765f1c80960c015f806a7c1",
+    "title": "以前に役立った勉強法を生かす",
+    "placement": "main",
+    "axis": "INFERENCE_MEMORY",
+    "axis_japanese": "利用者情報の想起と推論",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "I recently had a midterm exam for my Estates course in law school, and I had the third-highest score in the entire class! I hadn't done very well on other Estates assignments this semester, so this was quite a surprise! This time around, I watched lesson recap videos on Canvas, which I now have for all of my law school classes, and I think that watching them helped me in regard to retaining information about the subject."
+      },
+      {
+        "role": "assistant",
+        "content": "That's fantastic news! It's great to hear that your hard work and new study strategy paid off. Utilizing lesson recap videos is a smart way to reinforce your understanding of the material. It's also a good reminder that everyone has their own unique learning style and what works for others may not work for you. It's important to find what study methods work best for you. Congratulations on your success, and keep up the good work!"
+      },
+      {
+        "role": "user",
+        "content": "Next week, I have my last midterm of the semester, and of law school overall! The midterm is for my Copyright Law class. We've gone over a few common-law cases in our textbooks, but most of the material on this exam is based on Title 17 of the United States Code. What are some methods of studying that you would recommend for me, regarding the Copyright Law midterm?"
+      }
+    ],
+    "japanese_conversation": [
+      {
+        "role": "user",
+        "content": "先日、ロースクールの遺産法の中間試験で、クラスで3番目の成績を取った。今学期のほかの遺産法の課題ではあまり良い成績ではなかったので、驚いている。今回はCanvasにある授業の復習動画を見た。今はロースクールの全科目でこの動画を利用できる。動画を見ることで、内容が頭に残りやすくなったと思う。"
+      },
+      {
+        "role": "assistant",
+        "content": "それは素晴らしい知らせだ。努力と新しい勉強法が実を結んだと聞けてうれしい。授業の復習動画は、内容の理解を定着させる良い方法だ。人によって学び方は異なり、ほかの人に合う方法が自分にも合うとは限らない。自分に合った勉強法を見つけることが大切だ。良い成績、おめでとう。この調子で頑張ってほしい。"
+      },
+      {
+        "role": "user",
+        "content": "来週は今学期最後、そしてロースクール生活で最後の中間試験がある。科目は著作権法だ。教科書ではコモンローの判例をいくつか扱ったが、試験範囲の大半は合衆国法典第17編に基づいている。この著作権法の試験に向けて、どのような勉強法を勧めるか。"
+      }
+    ],
+    "original": "USER: I recently had a midterm exam for my Estates course in law school, and I had the third-highest score in the entire class! I hadn't done very well on other Estates assignments this semester, so this was quite a surprise! This time around, I watched lesson recap videos on Canvas, which I now have for all of my law school classes, and I think that watching them helped me in regard to retaining information about the subject.\n\nASSISTANT: That's fantastic news! It's great to hear that your hard work and new study strategy paid off. Utilizing lesson recap videos is a smart way to reinforce your understanding of the material. It's also a good reminder that everyone has their own unique learning style and what works for others may not work for you. It's important to find what study methods work best for you. Congratulations on your success, and keep up the good work!\n\nUSER: Next week, I have my last midterm of the semester, and of law school overall! The midterm is for my Copyright Law class. We've gone over a few common-law cases in our textbooks, but most of the material on this exam is based on Title 17 of the United States Code. What are some methods of studying that you would recommend for me, regarding the Copyright Law midterm?",
+    "japanese": "利用者：先日、ロースクールの遺産法の中間試験で、クラスで3番目の成績を取った。今学期のほかの遺産法の課題ではあまり良い成績ではなかったので、驚いている。今回はCanvasにある授業の復習動画を見た。今はロースクールの全科目でこの動画を利用できる。動画を見ることで、内容が頭に残りやすくなったと思う。\n\n既存の応答：それは素晴らしい知らせだ。努力と新しい勉強法が実を結んだと聞けてうれしい。授業の復習動画は、内容の理解を定着させる良い方法だ。人によって学び方は異なり、ほかの人に合う方法が自分にも合うとは限らない。自分に合った勉強法を見つけることが大切だ。良い成績、おめでとう。この調子で頑張ってほしい。\n\n利用者：来週は今学期最後、そしてロースクール生活で最後の中間試験がある。科目は著作権法だ。教科書ではコモンローの判例をいくつか扱ったが、試験範囲の大半は合衆国法典第17編に基づいている。この著作権法の試験に向けて、どのような勉強法を勧めるか。",
+    "judge_question": "Does the response recommend that the user watch Copyright Law recap videos on Canvas?",
+    "pass_criteria": "YES",
+    "expected_behavior": "著作権法についても、Canvasの復習動画を見るよう勧める。",
+    "explanation": "前の試験で復習動画が役立ち、全科目で動画を使えると利用者は述べている。新しい科目の相談でも、その情報を結び付けた助言が求められる。",
+    "original_scope": "会話履歴と最後の利用者発言の全文。モデルは最後の発言への応答だけを生成する。",
+    "source_url": "https://huggingface.co/datasets/ScaleAI/MultiChallenge",
+    "source_revision": "670fd81f270314d0f8f82b34fcfe2187fd28f699",
+    "license": "CC BY 4.0",
+    "displayed_original_parts": [
+      "USER: I recently had a midterm exam for my Estates course in law school, and I had the third-highest score in the entire class! I hadn't done very well on other Estates assignments this semester, so this was quite a surprise! This time around, I watched lesson recap videos on Canvas, which I now have for all of my law school classes, and I think that watching them helped me in regard to retaining information about the subject.\nASSISTANT: That's fantastic news! It's great to hear that your hard work and new study strategy paid off. Utilizing lesson recap videos is a smart way to reinforce your understanding of the material. It's also a good reminder that everyone has their own unique learning style and what works for others may not work for you. It's important to find what study methods work best for you. Congratulations on your success, and keep up the good work!",
+      "USER: Next week, I have my last midterm of the semester, and of law school overall! The midterm is for my Copyright Law class. We've gone over a few common-law cases in our textbooks, but most of the material on this exam is based on Title 17 of the United States Code. What are some methods of studying that you would recommend for me, regarding the Copyright Law midterm?"
+    ],
+    "displayed_japanese_parts": [
+      "利用者：先日、ロースクールの遺産法の中間試験で、クラスで3番目の成績を取った。今学期のほかの遺産法の課題ではあまり良い成績ではなかったので、驚いている。今回はCanvasにある授業の復習動画を見た。今はロースクールの全科目でこの動画を利用できる。動画を見ることで、内容が頭に残りやすくなったと思う。\n既存の応答：それは素晴らしい知らせだ。努力と新しい勉強法が実を結んだと聞けてうれしい。授業の復習動画は、内容の理解を定着させる良い方法だ。人によって学び方は異なり、ほかの人に合う方法が自分にも合うとは限らない。自分に合った勉強法を見つけることが大切だ。良い成績、おめでとう。この調子で頑張ってほしい。\n利用者：来週は今学期最後、そしてロースクール生活で最後の中間試験がある。科目は著作権法だ。教科書ではコモンローの判例をいくつか扱ったが、試験範囲の大半は合衆国法典第17編に基づいている。この著作権法の試験に向けて、どのような勉強法を勧めるか。"
+    ],
+    "expected_with_translation": false
+  },
+  {
+    "example": 3,
+    "id": "67456856a77b2db232c76c97",
+    "title": "会話の中で変わった月に気付く",
+    "placement": "main",
+    "axis": "SELF_COHERENCE",
+    "axis_japanese": "会話内の一貫性",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "Hi there! I'm new to Tiny Core Linux and I'm trying to set up a desktop environment. Could you guide me through the process?"
+      },
+      {
+        "role": "assistant",
+        "content": "I'll help you set up a desktop environment in Tiny Core Linux. First, let me know:\n\n1. Which version of Tiny Core Linux are you using? (Core, TinyCore, or CorePlus)\n2. Which desktop environment would you prefer? Common options include:\n   - FLTK (very lightweight)\n   - JWM (lightweight)\n   - LXDE (more features but heavier)\n   - XFCE (more features but heavier)\n\nOnce you provide this information, I can give you more specific instructions. Also, do you have an active internet connection on your Tiny Core system? This will be necessary for downloading packages."
+      },
+      {
+        "role": "user",
+        "content": "I'm using TinyCore Plus, and I'd like to install the XFCE desktop environment. Yes, I have an active internet connection. I'm trying to get everything set up before the Open Source Summit in June. Any help is appreciated!"
+      },
+      {
+        "role": "assistant",
+        "content": "Great choice! I'll help you install XFCE on TinyCore Plus. Here's the step-by-step process:\n\n1. First, open the terminal and make sure your system is up to date:\n```\ntce-update\n```\n\n2. Use the package manager to install XFCE. Run:\n```\ntce-load -wi xfce4\ntce-load -wi xfce4-panel\ntce-load -wi xfce4-settings\ntce-load -wi xfwm4\n```\n\n3. You might also want some additional XFCE components for better functionality:\n```\ntce-load -wi xfce4-terminal\ntce-load -wi xfce4-appfinder\ntce-load -wi thunar\n```\n\n4. After installation, you'll need to backup your changes to make them persistent across reboots:\n```\nbackup\n```\n\n5. Restart X server or reboot your system:\n```\nsudo reboot\n```\n\nThat's interesting that you're preparing for the Open Source Summit! Are you presenting there or attending? Also, let me know if you run into any issues during the installation process, and I'll help you troubleshoot."
+      },
+      {
+        "role": "user",
+        "content": "Thank you so much! The installation went smoothly. Since the Open Source Summit is just a couple of weeks away in July, is there any other software you recommend I install?"
+      }
+    ],
+    "japanese_conversation": [
+      {
+        "role": "user",
+        "content": "こんにちは。Tiny Core Linuxを使い始めたばかりで、デスクトップ環境を設定しようとしている。手順を教えてくれないか。"
+      },
+      {
+        "role": "assistant",
+        "content": "Tiny Core Linuxでデスクトップ環境を設定する手伝いをしよう。まず、次の点を教えてほしい。\n1. 使っているのはCore、TinyCore、CorePlusのどれか。\n2. 希望するデスクトップ環境は何か。代表例にはFLTK（非常に軽量）、JWM（軽量）、LXDE（機能は多いが重め）、XFCE（機能は多いが重め）がある。\nこれらが分かれば、より具体的に案内できる。また、Tiny Coreのシステムはインターネットにつながっているか。パッケージのダウンロードに必要になる。"
+      },
+      {
+        "role": "user",
+        "content": "TinyCore Plusを使っており、XFCEを入れたい。インターネットにもつながっている。6月のOpen Source Summitまでに、すべて設定し終えたい。助けてもらえるとうれしい。"
+      },
+      {
+        "role": "assistant",
+        "content": "良い選択だ。TinyCore PlusにXFCEを入れる手順は次のとおり。\n1. 端末を開き、システムを更新する。\ntce-update\n2. パッケージ管理機能でXFCEを入れる。\ntce-load -wi xfce4\ntce-load -wi xfce4-panel\ntce-load -wi xfce4-settings\ntce-load -wi xfwm4\n3. 必要なら、追加のXFCE構成要素も入れる。\ntce-load -wi xfce4-terminal\ntce-load -wi xfce4-appfinder\ntce-load -wi thunar\n4. 再起動後も変更を保持するため、バックアップする。\nbackup\n5. Xサーバーを再起動するか、システムを再起動する。\nsudo reboot\nOpen Source Summitに向けた準備なのだね。発表するのか、それとも参加するのか。インストール中に問題があれば知らせてほしい。解決を手伝う。"
+      },
+      {
+        "role": "user",
+        "content": "どうもありがとう。インストールは順調に終わった。7月のOpen Source Summitまであと2週間ほどなので、ほかに入れておくとよいソフトウェアはあるか。"
+      }
+    ],
+    "original": "USER: Hi there! I'm new to Tiny Core Linux and I'm trying to set up a desktop environment. Could you guide me through the process?\n\nASSISTANT: I'll help you set up a desktop environment in Tiny Core Linux. First, let me know:\n\n1. Which version of Tiny Core Linux are you using? (Core, TinyCore, or CorePlus)\n2. Which desktop environment would you prefer? Common options include:\n   - FLTK (very lightweight)\n   - JWM (lightweight)\n   - LXDE (more features but heavier)\n   - XFCE (more features but heavier)\n\nOnce you provide this information, I can give you more specific instructions. Also, do you have an active internet connection on your Tiny Core system? This will be necessary for downloading packages.\n\nUSER: I'm using TinyCore Plus, and I'd like to install the XFCE desktop environment. Yes, I have an active internet connection. I'm trying to get everything set up before the Open Source Summit in June. Any help is appreciated!\n\nASSISTANT: Great choice! I'll help you install XFCE on TinyCore Plus. Here's the step-by-step process:\n\n1. First, open the terminal and make sure your system is up to date:\n```\ntce-update\n```\n\n2. Use the package manager to install XFCE. Run:\n```\ntce-load -wi xfce4\ntce-load -wi xfce4-panel\ntce-load -wi xfce4-settings\ntce-load -wi xfwm4\n```\n\n3. You might also want some additional XFCE components for better functionality:\n```\ntce-load -wi xfce4-terminal\ntce-load -wi xfce4-appfinder\ntce-load -wi thunar\n```\n\n4. After installation, you'll need to backup your changes to make them persistent across reboots:\n```\nbackup\n```\n\n5. Restart X server or reboot your system:\n```\nsudo reboot\n```\n\nThat's interesting that you're preparing for the Open Source Summit! Are you presenting there or attending? Also, let me know if you run into any issues during the installation process, and I'll help you troubleshoot.\n\nUSER: Thank you so much! The installation went smoothly. Since the Open Source Summit is just a couple of weeks away in July, is there any other software you recommend I install?",
+    "japanese": "利用者：こんにちは。Tiny Core Linuxを使い始めたばかりで、デスクトップ環境を設定しようとしている。手順を教えてくれないか。\n\n既存の応答：Tiny Core Linuxでデスクトップ環境を設定する手伝いをしよう。まず、次の点を教えてほしい。\n1. 使っているのはCore、TinyCore、CorePlusのどれか。\n2. 希望するデスクトップ環境は何か。代表例にはFLTK（非常に軽量）、JWM（軽量）、LXDE（機能は多いが重め）、XFCE（機能は多いが重め）がある。\nこれらが分かれば、より具体的に案内できる。また、Tiny Coreのシステムはインターネットにつながっているか。パッケージのダウンロードに必要になる。\n\n利用者：TinyCore Plusを使っており、XFCEを入れたい。インターネットにもつながっている。6月のOpen Source Summitまでに、すべて設定し終えたい。助けてもらえるとうれしい。\n\n既存の応答：良い選択だ。TinyCore PlusにXFCEを入れる手順は次のとおり。\n1. 端末を開き、システムを更新する。\ntce-update\n2. パッケージ管理機能でXFCEを入れる。\ntce-load -wi xfce4\ntce-load -wi xfce4-panel\ntce-load -wi xfce4-settings\ntce-load -wi xfwm4\n3. 必要なら、追加のXFCE構成要素も入れる。\ntce-load -wi xfce4-terminal\ntce-load -wi xfce4-appfinder\ntce-load -wi thunar\n4. 再起動後も変更を保持するため、バックアップする。\nbackup\n5. Xサーバーを再起動するか、システムを再起動する。\nsudo reboot\nOpen Source Summitに向けた準備なのだね。発表するのか、それとも参加するのか。インストール中に問題があれば知らせてほしい。解決を手伝う。\n\n利用者：どうもありがとう。インストールは順調に終わった。7月のOpen Source Summitまであと2週間ほどなので、ほかに入れておくとよいソフトウェアはあるか。",
+    "judge_question": "Did the model stay coherent regarding the user's first message stating that the Open Source Summit was in June instead of July?",
+    "pass_criteria": "YES",
+    "expected_behavior": "以前は6月と述べていたことを踏まえ、7月という前提をそのまま受け入れない。",
+    "explanation": "利用者は途中で「6月」と述べ、最後は「7月」と言い換えている。採点では、会話内の月の食い違いを指摘できるかを確認する。",
+    "original_scope": "会話履歴と最後の利用者発言の全文。モデルは最後の発言への応答だけを生成する。",
+    "source_url": "https://huggingface.co/datasets/ScaleAI/MultiChallenge",
+    "source_revision": "670fd81f270314d0f8f82b34fcfe2187fd28f699",
+    "license": "CC BY 4.0",
+    "displayed_original_parts": [
+      "USER: Hi there! I'm new to Tiny Core Linux and I'm trying to set up a desktop environment. Could you guide me through the process?\nASSISTANT: I'll help you set up a desktop environment in Tiny Core Linux. First, let me know:\n1. Which version of Tiny Core Linux are you using? (Core, TinyCore, or CorePlus)\n2. Which desktop environment would you prefer? Common options include:\n   - FLTK (very lightweight)\n   - JWM (lightweight)\n   - LXDE (more features but heavier)\n   - XFCE (more features but heavier)\nOnce you provide this information, I can give you more specific instructions. Also, do you have an active internet connection on your Tiny Core system? This will be necessary for downloading packages.",
+      "USER: I'm using TinyCore Plus, and I'd like to install the XFCE desktop environment. Yes, I have an active internet connection. I'm trying to get everything set up before the Open Source Summit in June. Any help is appreciated!\nASSISTANT: Great choice! I'll help you install XFCE on TinyCore Plus. Here's the step-by-step process:\n1. First, open the terminal and make sure your system is up to date:\n```\ntce-update\n```",
+      "2. Use the package manager to install XFCE. Run:\n```\ntce-load -wi xfce4\ntce-load -wi xfce4-panel\ntce-load -wi xfce4-settings\ntce-load -wi xfwm4\n```",
+      "3. You might also want some additional XFCE components for better functionality:\n```\ntce-load -wi xfce4-terminal\ntce-load -wi xfce4-appfinder\ntce-load -wi thunar\n```\n4. After installation, you'll need to backup your changes to make them persistent across reboots:\n```\nbackup\n```",
+      "5. Restart X server or reboot your system:\n```\nsudo reboot\n```\nThat's interesting that you're preparing for the Open Source Summit! Are you presenting there or attending? Also, let me know if you run into any issues during the installation process, and I'll help you troubleshoot.\nUSER: Thank you so much! The installation went smoothly. Since the Open Source Summit is just a couple of weeks away in July, is there any other software you recommend I install?"
+    ],
+    "displayed_japanese_parts": [
+      "利用者：こんにちは。Tiny Core Linuxを使い始めたばかりで、デスクトップ環境を設定しようとしている。手順を教えてくれないか。\n既存の応答：Tiny Core Linuxでデスクトップ環境を設定する手伝いをしよう。まず、次の点を教えてほしい。\n1. 使っているのはCore、TinyCore、CorePlusのどれか。\n2. 希望するデスクトップ環境は何か。代表例にはFLTK（非常に軽量）、JWM（軽量）、LXDE（機能は多いが重め）、XFCE（機能は多いが重め）がある。\nこれらが分かれば、より具体的に案内できる。また、Tiny Coreのシステムはインターネットにつながっているか。パッケージのダウンロードに必要になる。\n利用者：TinyCore Plusを使っており、XFCEを入れたい。インターネットにもつながっている。6月のOpen Source Summitまでに、すべて設定し終えたい。助けてもらえるとうれしい。\n既存の応答：良い選択だ。TinyCore PlusにXFCEを入れる手順は次のとおり。",
+      "1. 端末を開き、システムを更新する。\ntce-update\n2. パッケージ管理機能でXFCEを入れる。\ntce-load -wi xfce4\ntce-load -wi xfce4-panel\ntce-load -wi xfce4-settings\ntce-load -wi xfwm4\n3. 必要なら、追加のXFCE構成要素も入れる。\ntce-load -wi xfce4-terminal\ntce-load -wi xfce4-appfinder\ntce-load -wi thunar\n4. 再起動後も変更を保持するため、バックアップする。\nbackup",
+      "5. Xサーバーを再起動するか、システムを再起動する。\nsudo reboot\nOpen Source Summitに向けた準備なのだね。発表するのか、それとも参加するのか。インストール中に問題があれば知らせてほしい。解決を手伝う。\n利用者：どうもありがとう。インストールは順調に終わった。7月のOpen Source Summitまであと2週間ほどなので、ほかに入れておくとよいソフトウェアはあるか。"
+    ],
+    "expected_with_translation": true
+  },
+  {
+    "example": 4,
+    "id": "6781ad8b500c15bd7ab291a1",
+    "title": "YesかNoだけで答え続ける",
+    "placement": "appendix",
+    "axis": "INSTRUCTION_RETENTION",
+    "axis_japanese": "指示の保持",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "For the entirety of our conversation, please answer only with 'Yes' or 'No' to my questions.\n"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Do you think it's acceptable to withhold overtime pay if employees don’t complain?"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it unacceptable for managers not to acknowledge their team's hard work?"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Wouldn’t you agree that not all employees value the same incentives?"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "Is employee satisfaction more important than customer satisfaction?"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Can you list the top factors that contribute to employee turnover?"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "Is it acceptable if I confide a serious staff issue to you?"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "I'm really struggling with how to resolve conflicts among my staff. Could you please give me some advice?"
+      }
+    ],
+    "japanese_conversation": [
+      {
+        "role": "user",
+        "content": "この会話では、私の質問には「Yes」か「No」だけで答えてほしい。"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "従業員が苦情を言わなければ、残業代を支払わなくてもよいと思うか。"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "上司がチームの頑張りを認めないのは、許されないことだろうか。"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "すべての従業員が同じ報奨を重視するわけではない、という点には同意するだろうか。"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes"
+      },
+      {
+        "role": "user",
+        "content": "顧客満足より従業員満足の方が重要だろうか。"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "従業員の離職につながる主な要因を挙げてくれないか。"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "深刻な職場の問題を、あなたに打ち明けてもよいだろうか。"
+      },
+      {
+        "role": "assistant",
+        "content": "No"
+      },
+      {
+        "role": "user",
+        "content": "スタッフ間の対立をどう解決すべきか、本当に困っている。助言をくれないか。"
+      }
+    ],
+    "original": "USER: For the entirety of our conversation, please answer only with 'Yes' or 'No' to my questions.\n\n\nASSISTANT: Yes\n\nUSER: Do you think it's acceptable to withhold overtime pay if employees don’t complain?\n\nASSISTANT: No\n\nUSER: Is it unacceptable for managers not to acknowledge their team's hard work?\n\nASSISTANT: Yes\n\nUSER: Wouldn’t you agree that not all employees value the same incentives?\n\nASSISTANT: Yes\n\nUSER: Is employee satisfaction more important than customer satisfaction?\n\nASSISTANT: No\n\nUSER: Can you list the top factors that contribute to employee turnover?\n\nASSISTANT: No\n\nUSER: Is it acceptable if I confide a serious staff issue to you?\n\nASSISTANT: No\n\nUSER: I'm really struggling with how to resolve conflicts among my staff. Could you please give me some advice?",
+    "japanese": "利用者：この会話では、私の質問には「Yes」か「No」だけで答えてほしい。\n\n既存の応答：Yes\n\n利用者：従業員が苦情を言わなければ、残業代を支払わなくてもよいと思うか。\n\n既存の応答：No\n\n利用者：上司がチームの頑張りを認めないのは、許されないことだろうか。\n\n既存の応答：Yes\n\n利用者：すべての従業員が同じ報奨を重視するわけではない、という点には同意するだろうか。\n\n既存の応答：Yes\n\n利用者：顧客満足より従業員満足の方が重要だろうか。\n\n既存の応答：No\n\n利用者：従業員の離職につながる主な要因を挙げてくれないか。\n\n既存の応答：No\n\n利用者：深刻な職場の問題を、あなたに打ち明けてもよいだろうか。\n\n既存の応答：No\n\n利用者：スタッフ間の対立をどう解決すべきか、本当に困っている。助言をくれないか。",
+    "judge_question": "Does the response only contain the word \"Yes\" or \"No\"?",
+    "pass_criteria": "YES",
+    "expected_behavior": "回答全体をYesまたはNoの一語にする。",
+    "explanation": "最後の依頼は詳しい助言を誘うが、先に合意した一語の形式は変わっていない。",
+    "original_scope": "会話履歴と最後の利用者発言の全文。モデルは最後の発言への応答だけを生成する。",
+    "source_url": "https://huggingface.co/datasets/ScaleAI/MultiChallenge",
+    "source_revision": "670fd81f270314d0f8f82b34fcfe2187fd28f699",
+    "license": "CC BY 4.0",
+    "displayed_original_parts": [
+      "USER: For the entirety of our conversation, please answer only with 'Yes' or 'No' to my questions.\nASSISTANT: Yes\nUSER: Do you think it's acceptable to withhold overtime pay if employees don’t complain?\nASSISTANT: No\nUSER: Is it unacceptable for managers not to acknowledge their team's hard work?\nASSISTANT: Yes\nUSER: Wouldn’t you agree that not all employees value the same incentives?\nASSISTANT: Yes\nUSER: Is employee satisfaction more important than customer satisfaction?\nASSISTANT: No",
+      "USER: Can you list the top factors that contribute to employee turnover?\nASSISTANT: No\nUSER: Is it acceptable if I confide a serious staff issue to you?\nASSISTANT: No\nUSER: I'm really struggling with how to resolve conflicts among my staff. Could you please give me some advice?"
+    ],
+    "displayed_japanese_parts": [
+      "利用者：この会話では、私の質問には「Yes」か「No」だけで答えてほしい。\n既存の応答：Yes\n利用者：従業員が苦情を言わなければ、残業代を支払わなくてもよいと思うか。\n既存の応答：No\n利用者：上司がチームの頑張りを認めないのは、許されないことだろうか。\n既存の応答：Yes\n利用者：すべての従業員が同じ報奨を重視するわけではない、という点には同意するだろうか。\n既存の応答：Yes\n利用者：顧客満足より従業員満足の方が重要だろうか。\n既存の応答：No\n利用者：従業員の離職につながる主な要因を挙げてくれないか。\n既存の応答：No",
+      "利用者：深刻な職場の問題を、あなたに打ち明けてもよいだろうか。\n既存の応答：No\n利用者：スタッフ間の対立をどう解決すべきか、本当に困っている。助言をくれないか。"
+    ],
+    "expected_with_translation": true
+  },
+  {
+    "example": 5,
+    "id": "67455268bc2ba9e69b8618f8",
+    "title": "理論の説明を4語以内にする",
+    "placement": "appendix",
+    "axis": "INSTRUCTION_RETENTION",
+    "axis_japanese": "指示の保持",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "I have some questions about sociological issues. Please try to find theories or predicaments that explain these issues.  Please do not exceed a four-word limit when explaining the listed theories ore predicaments."
+      },
+      {
+        "role": "assistant",
+        "content": "1. Social Inequality: Karl Marx - Class Struggle\n2. Racial Discrimination: Critical Race Theory - Systemic Racism\n3. Gender Inequality: Feminist Theory - Patriarchal Society\n4. Crime: Strain Theory - Social Structure\n5. Education: Functionalism - Social Reproduction\n6. Globalization: World Systems Theory - Core-Periphery\n7. Urbanization: Human Ecology Theory - Urban Growth\n8. Aging: Disengagement Theory - Aging Process\n9. Family: Symbolic Interactionism - Meaning Construction\n10. Religion: Secularization Theory - Religious Decline\n\n"
+      },
+      {
+        "role": "user",
+        "content": "Please explain how cultural values shape social inclusion dynamics by determining norms, attitudes, and behaviors toward diverse groups. "
+      }
+    ],
+    "japanese_conversation": [
+      {
+        "role": "user",
+        "content": "社会学に関する問題について質問したい。その問題を説明する理論や難題を探してほしい。挙げた理論や難題の説明は、それぞれ4語以内にしてほしい。"
+      },
+      {
+        "role": "assistant",
+        "content": "1. 社会的不平等：カール・マルクス―階級闘争\n2. 人種差別：批判的人種理論―構造的人種差別\n3. ジェンダーの不平等：フェミニズム理論―家父長制社会\n4. 犯罪：緊張理論―社会構造\n5. 教育：機能主義―社会的再生産\n6. グローバル化：世界システム論―中心と周辺\n7. 都市化：人間生態学―都市の成長\n8. 老化：離脱理論―老化の過程\n9. 家族：シンボリック相互作用論―意味の構築\n10. 宗教：世俗化理論―宗教の衰退"
+      },
+      {
+        "role": "user",
+        "content": "文化的価値観は、多様な集団に対する規範・態度・行動を定めることで、社会的包摂のあり方をどのように形づくるのか、説明してほしい。"
+      }
+    ],
+    "original": "USER: I have some questions about sociological issues. Please try to find theories or predicaments that explain these issues.  Please do not exceed a four-word limit when explaining the listed theories ore predicaments.\n\nASSISTANT: 1. Social Inequality: Karl Marx - Class Struggle\n2. Racial Discrimination: Critical Race Theory - Systemic Racism\n3. Gender Inequality: Feminist Theory - Patriarchal Society\n4. Crime: Strain Theory - Social Structure\n5. Education: Functionalism - Social Reproduction\n6. Globalization: World Systems Theory - Core-Periphery\n7. Urbanization: Human Ecology Theory - Urban Growth\n8. Aging: Disengagement Theory - Aging Process\n9. Family: Symbolic Interactionism - Meaning Construction\n10. Religion: Secularization Theory - Religious Decline\n\n\n\nUSER: Please explain how cultural values shape social inclusion dynamics by determining norms, attitudes, and behaviors toward diverse groups. ",
+    "japanese": "利用者：社会学に関する問題について質問したい。その問題を説明する理論や難題を探してほしい。挙げた理論や難題の説明は、それぞれ4語以内にしてほしい。\n\n既存の応答：1. 社会的不平等：カール・マルクス―階級闘争\n2. 人種差別：批判的人種理論―構造的人種差別\n3. ジェンダーの不平等：フェミニズム理論―家父長制社会\n4. 犯罪：緊張理論―社会構造\n5. 教育：機能主義―社会的再生産\n6. グローバル化：世界システム論―中心と周辺\n7. 都市化：人間生態学―都市の成長\n8. 老化：離脱理論―老化の過程\n9. 家族：シンボリック相互作用論―意味の構築\n10. 宗教：世俗化理論―宗教の衰退\n\n利用者：文化的価値観は、多様な集団に対する規範・態度・行動を定めることで、社会的包摂のあり方をどのように形づくるのか、説明してほしい。",
+    "judge_question": "Does the model answer the questions by listing theories or predicaments with a four-word limit when explaining the listed theories or predicaments?",
+    "pass_criteria": "YES",
+    "expected_behavior": "理論や難題を挙げ、その説明をそれぞれ4語以内にする。",
+    "explanation": "社会的包摂という新しい問いにも、冒頭で指定された説明の長さを適用する。4語という制約は、元の英語での回答に対する条件である。",
+    "original_scope": "会話履歴と最後の利用者発言の全文。モデルは最後の発言への応答だけを生成する。",
+    "source_url": "https://huggingface.co/datasets/ScaleAI/MultiChallenge",
+    "source_revision": "670fd81f270314d0f8f82b34fcfe2187fd28f699",
+    "license": "CC BY 4.0",
+    "displayed_original_parts": [
+      "USER: I have some questions about sociological issues. Please try to find theories or predicaments that explain these issues.  Please do not exceed a four-word limit when explaining the listed theories ore predicaments.\nASSISTANT: 1. Social Inequality: Karl Marx - Class Struggle\n2. Racial Discrimination: Critical Race Theory - Systemic Racism\n3. Gender Inequality: Feminist Theory - Patriarchal Society\n4. Crime: Strain Theory - Social Structure\n5. Education: Functionalism - Social Reproduction\n6. Globalization: World Systems Theory - Core-Periphery\n7. Urbanization: Human Ecology Theory - Urban Growth\n8. Aging: Disengagement Theory - Aging Process\n9. Family: Symbolic Interactionism - Meaning Construction\n10. Religion: Secularization Theory - Religious Decline",
+      "USER: Please explain how cultural values shape social inclusion dynamics by determining norms, attitudes, and behaviors toward diverse groups. "
+    ],
+    "displayed_japanese_parts": [
+      "利用者：社会学に関する問題について質問したい。その問題を説明する理論や難題を探してほしい。挙げた理論や難題の説明は、それぞれ4語以内にしてほしい。\n既存の応答：1. 社会的不平等：カール・マルクス―階級闘争\n2. 人種差別：批判的人種理論―構造的人種差別\n3. ジェンダーの不平等：フェミニズム理論―家父長制社会\n4. 犯罪：緊張理論―社会構造\n5. 教育：機能主義―社会的再生産\n6. グローバル化：世界システム論―中心と周辺\n7. 都市化：人間生態学―都市の成長\n8. 老化：離脱理論―老化の過程\n9. 家族：シンボリック相互作用論―意味の構築\n10. 宗教：世俗化理論―宗教の衰退",
+      "利用者：文化的価値観は、多様な集団に対する規範・態度・行動を定めることで、社会的包摂のあり方をどのように形づくるのか、説明してほしい。"
+    ],
+    "expected_with_translation": true
+  },
+  {
+    "example": 6,
+    "id": "6745685762962af2b60e558f",
+    "title": "複数の相談にも2文以内で答える",
+    "placement": "appendix",
+    "axis": "INSTRUCTION_RETENTION",
+    "axis_japanese": "指示の保持",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "Hello! For the rest of our conversation, please make sure your responses are no longer than two sentences."
+      },
+      {
+        "role": "assistant",
+        "content": "I'll keep my responses concise and to the point, ensuring they are no longer than two sentences each. Let's continue our conversation."
+      },
+      {
+        "role": "user",
+        "content": "I've always been fascinated by how Muhammad Ali's boxing style changed over the years. Can you explain the key differences in his techniques from the beginning of his career to his later fights?"
+      },
+      {
+        "role": "assistant",
+        "content": "Muhammad Ali's early career was marked by his speed and agility, using a \"float like a butterfly, sting like a bee\" approach. As he aged, he adopted a more defensive \"rope-a-dope\" strategy, leaning on the ropes and absorbing punches before counterattacking, which conserved energy and allowed him to outlast opponents."
+      },
+      {
+        "role": "user",
+        "content": "I'm interested in taking up boxing. What does a daily training routine look like for a beginner boxer? What are the steps I should take to go from a beginner to intermediate level? I also need tips on how to improve my physical conditioning."
+      }
+    ],
+    "japanese_conversation": [
+      {
+        "role": "user",
+        "content": "こんにちは。これ以降の会話では、回答を2文以内にしてほしい。"
+      },
+      {
+        "role": "assistant",
+        "content": "簡潔に要点を伝え、回答をそれぞれ2文以内にする。このまま会話を続けよう。"
+      },
+      {
+        "role": "user",
+        "content": "モハメド・アリのボクシングのスタイルが、長年の間にどう変わったのかに関心がある。キャリア初期と晩年の試合で、技術にどのような違いがあったのか教えてほしい。"
+      },
+      {
+        "role": "assistant",
+        "content": "アリはキャリア初期、速さと敏捷さを生かし、「蝶のように舞い、蜂のように刺す」戦い方をしていた。年齢を重ねると、ロープにもたれて相手のパンチを受けてから反撃する、防御重視の「ロープ・ア・ドープ」を取り入れ、体力を温存して相手より長く戦えるようにした。"
+      },
+      {
+        "role": "user",
+        "content": "ボクシングを始めたい。初心者は毎日どのような練習をすればよいか。中級者になるには、どのような段階を踏むべきか。体力を高めるための助言もほしい。"
+      }
+    ],
+    "original": "USER: Hello! For the rest of our conversation, please make sure your responses are no longer than two sentences.\n\nASSISTANT: I'll keep my responses concise and to the point, ensuring they are no longer than two sentences each. Let's continue our conversation.\n\nUSER: I've always been fascinated by how Muhammad Ali's boxing style changed over the years. Can you explain the key differences in his techniques from the beginning of his career to his later fights?\n\nASSISTANT: Muhammad Ali's early career was marked by his speed and agility, using a \"float like a butterfly, sting like a bee\" approach. As he aged, he adopted a more defensive \"rope-a-dope\" strategy, leaning on the ropes and absorbing punches before counterattacking, which conserved energy and allowed him to outlast opponents.\n\nUSER: I'm interested in taking up boxing. What does a daily training routine look like for a beginner boxer? What are the steps I should take to go from a beginner to intermediate level? I also need tips on how to improve my physical conditioning.",
+    "japanese": "利用者：こんにちは。これ以降の会話では、回答を2文以内にしてほしい。\n\n既存の応答：簡潔に要点を伝え、回答をそれぞれ2文以内にする。このまま会話を続けよう。\n\n利用者：モハメド・アリのボクシングのスタイルが、長年の間にどう変わったのかに関心がある。キャリア初期と晩年の試合で、技術にどのような違いがあったのか教えてほしい。\n\n既存の応答：アリはキャリア初期、速さと敏捷さを生かし、「蝶のように舞い、蜂のように刺す」戦い方をしていた。年齢を重ねると、ロープにもたれて相手のパンチを受けてから反撃する、防御重視の「ロープ・ア・ドープ」を取り入れ、体力を温存して相手より長く戦えるようにした。\n\n利用者：ボクシングを始めたい。初心者は毎日どのような練習をすればよいか。中級者になるには、どのような段階を踏むべきか。体力を高めるための助言もほしい。",
+    "judge_question": "Does the model follow the high-level instruction to ensure its responses are no longer than two sentences?",
+    "pass_criteria": "YES",
+    "expected_behavior": "回答を2文以内にする。",
+    "explanation": "最後の発言には練習内容、上達の段階、体力づくりの三つの相談がある。回答量を増やしたくなる場面で、2文という制約を保てるかを確認する。",
+    "original_scope": "会話履歴と最後の利用者発言の全文。モデルは最後の発言への応答だけを生成する。",
+    "source_url": "https://huggingface.co/datasets/ScaleAI/MultiChallenge",
+    "source_revision": "670fd81f270314d0f8f82b34fcfe2187fd28f699",
+    "license": "CC BY 4.0",
+    "displayed_original_parts": [
+      "USER: Hello! For the rest of our conversation, please make sure your responses are no longer than two sentences.\nASSISTANT: I'll keep my responses concise and to the point, ensuring they are no longer than two sentences each. Let's continue our conversation.\nUSER: I've always been fascinated by how Muhammad Ali's boxing style changed over the years. Can you explain the key differences in his techniques from the beginning of his career to his later fights?\nASSISTANT: Muhammad Ali's early career was marked by his speed and agility, using a \"float like a butterfly, sting like a bee\" approach. As he aged, he adopted a more defensive \"rope-a-dope\" strategy, leaning on the ropes and absorbing punches before counterattacking, which conserved energy and allowed him to outlast opponents.",
+      "USER: I'm interested in taking up boxing. What does a daily training routine look like for a beginner boxer? What are the steps I should take to go from a beginner to intermediate level? I also need tips on how to improve my physical conditioning."
+    ],
+    "displayed_japanese_parts": [
+      "利用者：こんにちは。これ以降の会話では、回答を2文以内にしてほしい。\n既存の応答：簡潔に要点を伝え、回答をそれぞれ2文以内にする。このまま会話を続けよう。\n利用者：モハメド・アリのボクシングのスタイルが、長年の間にどう変わったのかに関心がある。キャリア初期と晩年の試合で、技術にどのような違いがあったのか教えてほしい。\n既存の応答：アリはキャリア初期、速さと敏捷さを生かし、「蝶のように舞い、蜂のように刺す」戦い方をしていた。年齢を重ねると、ロープにもたれて相手のパンチを受けてから反撃する、防御重視の「ロープ・ア・ドープ」を取り入れ、体力を温存して相手より長く戦えるようにした。\n利用者：ボクシングを始めたい。初心者は毎日どのような練習をすればよいか。中級者になるには、どのような段階を踏むべきか。体力を高めるための助言もほしい。"
+    ],
+    "expected_with_translation": false
+  },
+  {
+    "example": 7,
+    "id": "674552683acc22154b07a598",
+    "title": "会食場所にも移動の希望を反映する",
+    "placement": "appendix",
+    "axis": "INFERENCE_MEMORY",
+    "axis_japanese": "利用者情報の想起と推論",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "Hello!  I am an International relations expert working at the UN headquarters. My work requires me to consistently meet with diplomats from various countries. I hate using taxis or public transportation in New York. I prefer venues that are within a 5-minute walk from the UN headquarters."
+      },
+      {
+        "role": "assistant",
+        "content": "Hello! It's great to hear that you're looking for places near the UN headquarters in New York. Here are a few suggestions that are within a 5-minute walk:\n\n1. Dag Hammarskjold Plaza: This public park is just across the street from the UN headquarters. It's a great place for a peaceful walk or a quick meeting.\n\n2. The Delegates Dining Room: Located within the UN headquarters itself, this is a convenient place for a meeting over lunch or dinner.\n\n3. The Roosevelt Hotel: This historic hotel is just a few blocks away from the UN. It has several restaurants and bars, as well as meeting rooms that can be reserved.\n\n4. The Millennium Hilton New York One UN Plaza: This hotel is located right next to the UN headquarters and offers several dining options and meeting spaces.\n\n5. The Japan Society: This cultural center is a short walk from the UN and offers a unique setting for meetings.\n\n6. The Turkish Cuisine: If you're looking for a restaurant, this is a good option. It's a short walk from the UN and offers a variety of Turkish dishes.\n\n7. The Benjamin Hotel: This hotel is a few blocks away from the UN and offers a quiet, comfortable setting for meetings.\n\n"
+      },
+      {
+        "role": "user",
+        "content": " I am meeting a German diplomat on Friday. I am looking for a suitable place to have lunch with him, preferably an up-class restaurant. I do not need to other arrangements, particularly security arrangements. Can you indicate for me some places where I can hold that meeting?"
+      }
+    ],
+    "japanese_conversation": [
+      {
+        "role": "user",
+        "content": "こんにちは。私は国連本部で働く国際関係の専門家だ。仕事では、さまざまな国の外交官と頻繁に会う。ニューヨークではタクシーや公共交通機関を使いたくない。国連本部から徒歩5分以内の会場がよい。"
+      },
+      {
+        "role": "assistant",
+        "content": "国連本部近くの場所を探しているのだね。徒歩5分以内の候補として、次の場所がある。\n1. ダグ・ハマーショルド広場：国連本部の向かいにある公園。静かな散歩や短い打ち合わせに向いている。\n2. 代表団食堂：国連本部内にあり、昼食や夕食を兼ねた会合に便利だ。\n3. ルーズベルト・ホテル：国連から数ブロックの歴史あるホテル。複数の飲食店と、予約できる会議室がある。\n4. ミレニアム・ヒルトン・ニューヨーク・ワンUNプラザ：国連本部のすぐ隣にあり、食事や会議の場所が複数ある。\n5. ジャパン・ソサエティー：国連本部から歩いてすぐの文化施設で、特徴のある会場を提供する。\n6. ターキッシュ・キュイジーヌ：レストランを探しているなら候補になる。国連本部から近く、さまざまなトルコ料理がある。\n7. ベンジャミン・ホテル：国連から数ブロックのホテルで、静かで快適な会合の場所がある。"
+      },
+      {
+        "role": "user",
+        "content": "金曜日にドイツの外交官と会う。昼食を共にするのに適した場所、できれば高級レストランを探している。ほかの手配、とりわけ警備の手配は必要ない。会食できる場所をいくつか教えてほしい。"
+      }
+    ],
+    "original": "USER: Hello!  I am an International relations expert working at the UN headquarters. My work requires me to consistently meet with diplomats from various countries. I hate using taxis or public transportation in New York. I prefer venues that are within a 5-minute walk from the UN headquarters.\n\nASSISTANT: Hello! It's great to hear that you're looking for places near the UN headquarters in New York. Here are a few suggestions that are within a 5-minute walk:\n\n1. Dag Hammarskjold Plaza: This public park is just across the street from the UN headquarters. It's a great place for a peaceful walk or a quick meeting.\n\n2. The Delegates Dining Room: Located within the UN headquarters itself, this is a convenient place for a meeting over lunch or dinner.\n\n3. The Roosevelt Hotel: This historic hotel is just a few blocks away from the UN. It has several restaurants and bars, as well as meeting rooms that can be reserved.\n\n4. The Millennium Hilton New York One UN Plaza: This hotel is located right next to the UN headquarters and offers several dining options and meeting spaces.\n\n5. The Japan Society: This cultural center is a short walk from the UN and offers a unique setting for meetings.\n\n6. The Turkish Cuisine: If you're looking for a restaurant, this is a good option. It's a short walk from the UN and offers a variety of Turkish dishes.\n\n7. The Benjamin Hotel: This hotel is a few blocks away from the UN and offers a quiet, comfortable setting for meetings.\n\n\n\nUSER:  I am meeting a German diplomat on Friday. I am looking for a suitable place to have lunch with him, preferably an up-class restaurant. I do not need to other arrangements, particularly security arrangements. Can you indicate for me some places where I can hold that meeting?",
+    "japanese": "利用者：こんにちは。私は国連本部で働く国際関係の専門家だ。仕事では、さまざまな国の外交官と頻繁に会う。ニューヨークではタクシーや公共交通機関を使いたくない。国連本部から徒歩5分以内の会場がよい。\n\n既存の応答：国連本部近くの場所を探しているのだね。徒歩5分以内の候補として、次の場所がある。\n1. ダグ・ハマーショルド広場：国連本部の向かいにある公園。静かな散歩や短い打ち合わせに向いている。\n2. 代表団食堂：国連本部内にあり、昼食や夕食を兼ねた会合に便利だ。\n3. ルーズベルト・ホテル：国連から数ブロックの歴史あるホテル。複数の飲食店と、予約できる会議室がある。\n4. ミレニアム・ヒルトン・ニューヨーク・ワンUNプラザ：国連本部のすぐ隣にあり、食事や会議の場所が複数ある。\n5. ジャパン・ソサエティー：国連本部から歩いてすぐの文化施設で、特徴のある会場を提供する。\n6. ターキッシュ・キュイジーヌ：レストランを探しているなら候補になる。国連本部から近く、さまざまなトルコ料理がある。\n7. ベンジャミン・ホテル：国連から数ブロックのホテルで、静かで快適な会合の場所がある。\n\n利用者：金曜日にドイツの外交官と会う。昼食を共にするのに適した場所、できれば高級レストランを探している。ほかの手配、とりわけ警備の手配は必要ない。会食できる場所をいくつか教えてほしい。",
+    "judge_question": "Are the restaurants chosen within a 5-minute walk from the UN headquarters?",
+    "pass_criteria": "YES",
+    "expected_behavior": "国連本部から徒歩5分以内のレストランを提案する。",
+    "explanation": "最後の依頼には徒歩の条件が繰り返されていない。最初に述べられた移動の希望を、会食場所の候補にも反映することが求められる。",
+    "original_scope": "会話履歴と最後の利用者発言の全文。モデルは最後の発言への応答だけを生成する。",
+    "source_url": "https://huggingface.co/datasets/ScaleAI/MultiChallenge",
+    "source_revision": "670fd81f270314d0f8f82b34fcfe2187fd28f699",
+    "license": "CC BY 4.0",
+    "displayed_original_parts": [
+      "USER: Hello!  I am an International relations expert working at the UN headquarters. My work requires me to consistently meet with diplomats from various countries. I hate using taxis or public transportation in New York. I prefer venues that are within a 5-minute walk from the UN headquarters.\nASSISTANT: Hello! It's great to hear that you're looking for places near the UN headquarters in New York. Here are a few suggestions that are within a 5-minute walk:\n1. Dag Hammarskjold Plaza: This public park is just across the street from the UN headquarters. It's a great place for a peaceful walk or a quick meeting.\n2. The Delegates Dining Room: Located within the UN headquarters itself, this is a convenient place for a meeting over lunch or dinner.",
+      "3. The Roosevelt Hotel: This historic hotel is just a few blocks away from the UN. It has several restaurants and bars, as well as meeting rooms that can be reserved.\n4. The Millennium Hilton New York One UN Plaza: This hotel is located right next to the UN headquarters and offers several dining options and meeting spaces.\n5. The Japan Society: This cultural center is a short walk from the UN and offers a unique setting for meetings.\n6. The Turkish Cuisine: If you're looking for a restaurant, this is a good option. It's a short walk from the UN and offers a variety of Turkish dishes.\n7. The Benjamin Hotel: This hotel is a few blocks away from the UN and offers a quiet, comfortable setting for meetings.",
+      "USER:  I am meeting a German diplomat on Friday. I am looking for a suitable place to have lunch with him, preferably an up-class restaurant. I do not need to other arrangements, particularly security arrangements. Can you indicate for me some places where I can hold that meeting?"
+    ],
+    "displayed_japanese_parts": [
+      "利用者：こんにちは。私は国連本部で働く国際関係の専門家だ。仕事では、さまざまな国の外交官と頻繁に会う。ニューヨークではタクシーや公共交通機関を使いたくない。国連本部から徒歩5分以内の会場がよい。\n既存の応答：国連本部近くの場所を探しているのだね。徒歩5分以内の候補として、次の場所がある。\n1. ダグ・ハマーショルド広場：国連本部の向かいにある公園。静かな散歩や短い打ち合わせに向いている。\n2. 代表団食堂：国連本部内にあり、昼食や夕食を兼ねた会合に便利だ。\n3. ルーズベルト・ホテル：国連から数ブロックの歴史あるホテル。複数の飲食店と、予約できる会議室がある。\n4. ミレニアム・ヒルトン・ニューヨーク・ワンUNプラザ：国連本部のすぐ隣にあり、食事や会議の場所が複数ある。",
+      "5. ジャパン・ソサエティー：国連本部から歩いてすぐの文化施設で、特徴のある会場を提供する。\n6. ターキッシュ・キュイジーヌ：レストランを探しているなら候補になる。国連本部から近く、さまざまなトルコ料理がある。\n7. ベンジャミン・ホテル：国連から数ブロックのホテルで、静かで快適な会合の場所がある。\n利用者：金曜日にドイツの外交官と会う。昼食を共にするのに適した場所、できれば高級レストランを探している。ほかの手配、とりわけ警備の手配は必要ない。会食できる場所をいくつか教えてほしい。"
+    ],
+    "expected_with_translation": false
+  },
+  {
+    "example": 8,
+    "id": "67819bc5105ae99631ad71a4",
+    "title": "新しい予定にも、先の締め切りを残す",
+    "placement": "appendix",
+    "axis": "INFERENCE_MEMORY",
+    "axis_japanese": "利用者情報の想起と推論",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "I have so many things to do this week and have to get this press release out on Wednesday about the new digital thermometer we are launching. I haven't even written it yet. Can you write it for me? It's a digital thermometer that gobbles when the turkey is done. It sounds cheesy but it's going to be a big hit for Thanksgiving and gift-giving at Christmas. It's made from stainless steel so it will hold up in washdown conditions in kitchens."
+      },
+      {
+        "role": "assistant",
+        "content": "FOR IMMEDIATE RELEASE\n\nIntroducing the Perfect Turkey Companion: The Gobble-Ready Digital Thermometer\n\n\\[City, State, Date\\] – Just in time for the holiday season, \\[Your Company Name\\] is thrilled to announce the launch of our innovative new product, the Gobble-Ready Digital Thermometer. This must-have kitchen gadget is designed to ensure perfectly cooked turkeys every time, making it an essential tool for Thanksgiving and a fantastic gift idea for Christmas.\n\nThe Gobble-Ready Digital Thermometer is not your average kitchen thermometer. It features a unique \"gobble\" alert that notifies you when your turkey has reached the perfect temperature, eliminating the guesswork and ensuring a delicious, juicy bird every time.\n\nCrafted from high-quality stainless steel, the Gobble-Ready Digital Thermometer is built to withstand the rigors of a busy kitchen. Its durable construction makes it ideal for washdown conditions, ensuring it will be a reliable companion for many holiday seasons to come.\n\n\"We're excited to bring the Gobble-Ready Digital Thermometer to market,\" said \\[Your Name, Your Position\\]. \"We believe it will be a game-changer for home cooks and professional chefs alike, taking the stress out of preparing the perfect turkey.\"\n\nThe Gobble-Ready Digital Thermometer will be available for purchase on \\[launch date\\] at \\[website or retail locations\\]. For more information, please visit \\[website\\] or contact \\[contact information\\].\n\nAbout \\[Your Company Name\\] \\[Your Company Name\\] is a leading provider of innovative kitchen tools and gadgets. Our mission is to make cooking easier and more enjoyable for everyone. For more information, visit \\[website\\].\n\n### \n\nPress Contact: \\[Your Name\\] \\[Your Title\\] \\[Your Email\\] \\[Your Phone Number\\]"
+      },
+      {
+        "role": "user",
+        "content": "Awesome. This is a start. Thanks. I will put this on the back burner and start my presentation for Wednesday for the next quarter marketing plan. Can you help me write that as well and help me find time to do this. I have a meeting with the V.P. at noon. I have to finish the presentation on Tuesday. Can you help me manage my time?"
+      }
+    ],
+    "japanese_conversation": [
+      {
+        "role": "user",
+        "content": "今週はやることが多く、新発売するデジタル温度計のプレスリリースを水曜日に出さなければならない。まだ書けていないので、代わりに書いてくれないか。七面鳥が焼き上がると、七面鳥の鳴き声で知らせる温度計だ。安っぽく聞こえるかもしれないが、感謝祭やクリスマスの贈り物として人気になるだろう。ステンレス製なので、厨房の水洗いにも耐えられる。"
+      },
+      {
+        "role": "assistant",
+        "content": "即時発表用\n七面鳥料理の頼れる相棒、Gobble-Ready Digital Thermometerが登場\n[市、州、日付]―[会社名]は、ホリデーシーズンに向け、新製品Gobble-Ready Digital Thermometerの発売を発表する。七面鳥を毎回おいしく焼き上げるための調理器具で、感謝祭に役立ち、クリスマスの贈り物にも最適だ。\nこの温度計は一般的な料理用温度計とは異なり、七面鳥が適温になると独特の鳴き声で知らせる。焼き加減を推測する必要がなくなり、毎回おいしくジューシーに仕上げられる。\n良質なステンレス製で、忙しい厨房の厳しい使用に耐えられる。丈夫な構造は水洗いに適しており、長年のホリデーシーズンに頼れる存在となる。\n[氏名、役職]は「この温度計を発売できてうれしい。家庭で料理をする人にもプロの料理人にも大きな変化をもたらし、七面鳥を完璧に調理する負担を軽くできると考えている」と述べた。\n発売は[発売日]、販売先は[ウェブサイトまたは店舗]。詳しくは[ウェブサイト]を参照するか、[連絡先]へ問い合わせてほしい。\n[会社名]について：[会社名]は、革新的な調理器具の主要な提供企業だ。誰もがより簡単かつ楽しく料理できることを目指している。詳細は[ウェブサイト]。\n###\n報道関係者向けの問い合わせ先：[氏名] [役職] [メール] [電話番号]"
+      },
+      {
+        "role": "user",
+        "content": "いいね。まずはこれで始められそうだ。ありがとう。これはいったん後回しにし、水曜日に行う来四半期のマーケティング計画の発表に取り掛かる。それも書くのを手伝い、作業時間を見つけてほしい。正午には副社長との会議がある。発表資料は火曜日に完成させなければならない。時間の使い方を考えるのを手伝ってくれないか。"
+      }
+    ],
+    "original": "USER: I have so many things to do this week and have to get this press release out on Wednesday about the new digital thermometer we are launching. I haven't even written it yet. Can you write it for me? It's a digital thermometer that gobbles when the turkey is done. It sounds cheesy but it's going to be a big hit for Thanksgiving and gift-giving at Christmas. It's made from stainless steel so it will hold up in washdown conditions in kitchens.\n\nASSISTANT: FOR IMMEDIATE RELEASE\n\nIntroducing the Perfect Turkey Companion: The Gobble-Ready Digital Thermometer\n\n\\[City, State, Date\\] – Just in time for the holiday season, \\[Your Company Name\\] is thrilled to announce the launch of our innovative new product, the Gobble-Ready Digital Thermometer. This must-have kitchen gadget is designed to ensure perfectly cooked turkeys every time, making it an essential tool for Thanksgiving and a fantastic gift idea for Christmas.\n\nThe Gobble-Ready Digital Thermometer is not your average kitchen thermometer. It features a unique \"gobble\" alert that notifies you when your turkey has reached the perfect temperature, eliminating the guesswork and ensuring a delicious, juicy bird every time.\n\nCrafted from high-quality stainless steel, the Gobble-Ready Digital Thermometer is built to withstand the rigors of a busy kitchen. Its durable construction makes it ideal for washdown conditions, ensuring it will be a reliable companion for many holiday seasons to come.\n\n\"We're excited to bring the Gobble-Ready Digital Thermometer to market,\" said \\[Your Name, Your Position\\]. \"We believe it will be a game-changer for home cooks and professional chefs alike, taking the stress out of preparing the perfect turkey.\"\n\nThe Gobble-Ready Digital Thermometer will be available for purchase on \\[launch date\\] at \\[website or retail locations\\]. For more information, please visit \\[website\\] or contact \\[contact information\\].\n\nAbout \\[Your Company Name\\] \\[Your Company Name\\] is a leading provider of innovative kitchen tools and gadgets. Our mission is to make cooking easier and more enjoyable for everyone. For more information, visit \\[website\\].\n\n### \n\nPress Contact: \\[Your Name\\] \\[Your Title\\] \\[Your Email\\] \\[Your Phone Number\\]\n\nUSER: Awesome. This is a start. Thanks. I will put this on the back burner and start my presentation for Wednesday for the next quarter marketing plan. Can you help me write that as well and help me find time to do this. I have a meeting with the V.P. at noon. I have to finish the presentation on Tuesday. Can you help me manage my time?",
+    "japanese": "利用者：今週はやることが多く、新発売するデジタル温度計のプレスリリースを水曜日に出さなければならない。まだ書けていないので、代わりに書いてくれないか。七面鳥が焼き上がると、七面鳥の鳴き声で知らせる温度計だ。安っぽく聞こえるかもしれないが、感謝祭やクリスマスの贈り物として人気になるだろう。ステンレス製なので、厨房の水洗いにも耐えられる。\n\n既存の応答：即時発表用\n七面鳥料理の頼れる相棒、Gobble-Ready Digital Thermometerが登場\n[市、州、日付]―[会社名]は、ホリデーシーズンに向け、新製品Gobble-Ready Digital Thermometerの発売を発表する。七面鳥を毎回おいしく焼き上げるための調理器具で、感謝祭に役立ち、クリスマスの贈り物にも最適だ。\nこの温度計は一般的な料理用温度計とは異なり、七面鳥が適温になると独特の鳴き声で知らせる。焼き加減を推測する必要がなくなり、毎回おいしくジューシーに仕上げられる。\n良質なステンレス製で、忙しい厨房の厳しい使用に耐えられる。丈夫な構造は水洗いに適しており、長年のホリデーシーズンに頼れる存在となる。\n[氏名、役職]は「この温度計を発売できてうれしい。家庭で料理をする人にもプロの料理人にも大きな変化をもたらし、七面鳥を完璧に調理する負担を軽くできると考えている」と述べた。\n発売は[発売日]、販売先は[ウェブサイトまたは店舗]。詳しくは[ウェブサイト]を参照するか、[連絡先]へ問い合わせてほしい。\n[会社名]について：[会社名]は、革新的な調理器具の主要な提供企業だ。誰もがより簡単かつ楽しく料理できることを目指している。詳細は[ウェブサイト]。\n###\n報道関係者向けの問い合わせ先：[氏名] [役職] [メール] [電話番号]\n\n利用者：いいね。まずはこれで始められそうだ。ありがとう。これはいったん後回しにし、水曜日に行う来四半期のマーケティング計画の発表に取り掛かる。それも書くのを手伝い、作業時間を見つけてほしい。正午には副社長との会議がある。発表資料は火曜日に完成させなければならない。時間の使い方を考えるのを手伝ってくれないか。",
+    "judge_question": "Does the model remember the press release the user needs to send on Wednesday when creating a schedule to help with time management?",
+    "pass_criteria": "YES",
+    "expected_behavior": "予定を組む際、水曜日に出すプレスリリースを忘れずに含める。",
+    "explanation": "話題が発表資料の作成へ移っても、プレスリリースの期限は残っている。新しい依頼の予定を作るとき、先に聞いた仕事も組み込む必要がある。",
+    "original_scope": "会話履歴と最後の利用者発言の全文。モデルは最後の発言への応答だけを生成する。",
+    "source_url": "https://huggingface.co/datasets/ScaleAI/MultiChallenge",
+    "source_revision": "670fd81f270314d0f8f82b34fcfe2187fd28f699",
+    "license": "CC BY 4.0",
+    "displayed_original_parts": [
+      "USER: I have so many things to do this week and have to get this press release out on Wednesday about the new digital thermometer we are launching. I haven't even written it yet. Can you write it for me? It's a digital thermometer that gobbles when the turkey is done. It sounds cheesy but it's going to be a big hit for Thanksgiving and gift-giving at Christmas. It's made from stainless steel so it will hold up in washdown conditions in kitchens.\nASSISTANT: FOR IMMEDIATE RELEASE\nIntroducing the Perfect Turkey Companion: The Gobble-Ready Digital Thermometer\n\\[City, State, Date\\] – Just in time for the holiday season, \\[Your Company Name\\] is thrilled to announce the launch of our innovative new product, the Gobble-Ready Digital Thermometer. This must-have kitchen gadget is designed to ensure perfectly cooked turkeys every time, making it an essential tool for Thanksgiving and a fantastic gift idea for Christmas.",
+      "The Gobble-Ready Digital Thermometer is not your average kitchen thermometer. It features a unique \"gobble\" alert that notifies you when your turkey has reached the perfect temperature, eliminating the guesswork and ensuring a delicious, juicy bird every time.\nCrafted from high-quality stainless steel, the Gobble-Ready Digital Thermometer is built to withstand the rigors of a busy kitchen. Its durable construction makes it ideal for washdown conditions, ensuring it will be a reliable companion for many holiday seasons to come.",
+      "\"We're excited to bring the Gobble-Ready Digital Thermometer to market,\" said \\[Your Name, Your Position\\]. \"We believe it will be a game-changer for home cooks and professional chefs alike, taking the stress out of preparing the perfect turkey.\"\nThe Gobble-Ready Digital Thermometer will be available for purchase on \\[launch date\\] at \\[website or retail locations\\]. For more information, please visit \\[website\\] or contact \\[contact information\\].\nAbout \\[Your Company Name\\] \\[Your Company Name\\] is a leading provider of innovative kitchen tools and gadgets. Our mission is to make cooking easier and more enjoyable for everyone. For more information, visit \\[website\\].\n### \nPress Contact: \\[Your Name\\] \\[Your Title\\] \\[Your Email\\] \\[Your Phone Number\\]",
+      "USER: Awesome. This is a start. Thanks. I will put this on the back burner and start my presentation for Wednesday for the next quarter marketing plan. Can you help me write that as well and help me find time to do this. I have a meeting with the V.P. at noon. I have to finish the presentation on Tuesday. Can you help me manage my time?"
+    ],
+    "displayed_japanese_parts": [
+      "利用者：今週はやることが多く、新発売するデジタル温度計のプレスリリースを水曜日に出さなければならない。まだ書けていないので、代わりに書いてくれないか。七面鳥が焼き上がると、七面鳥の鳴き声で知らせる温度計だ。安っぽく聞こえるかもしれないが、感謝祭やクリスマスの贈り物として人気になるだろう。ステンレス製なので、厨房の水洗いにも耐えられる。\n既存の応答：即時発表用\n七面鳥料理の頼れる相棒、Gobble-Ready Digital Thermometerが登場\n[市、州、日付]―[会社名]は、ホリデーシーズンに向け、新製品Gobble-Ready Digital Thermometerの発売を発表する。七面鳥を毎回おいしく焼き上げるための調理器具で、感謝祭に役立ち、クリスマスの贈り物にも最適だ。\nこの温度計は一般的な料理用温度計とは異なり、七面鳥が適温になると独特の鳴き声で知らせる。焼き加減を推測する必要がなくなり、毎回おいしくジューシーに仕上げられる。",
+      "良質なステンレス製で、忙しい厨房の厳しい使用に耐えられる。丈夫な構造は水洗いに適しており、長年のホリデーシーズンに頼れる存在となる。\n[氏名、役職]は「この温度計を発売できてうれしい。家庭で料理をする人にもプロの料理人にも大きな変化をもたらし、七面鳥を完璧に調理する負担を軽くできると考えている」と述べた。\n発売は[発売日]、販売先は[ウェブサイトまたは店舗]。詳しくは[ウェブサイト]を参照するか、[連絡先]へ問い合わせてほしい。\n[会社名]について：[会社名]は、革新的な調理器具の主要な提供企業だ。誰もがより簡単かつ楽しく料理できることを目指している。詳細は[ウェブサイト]。\n###\n報道関係者向けの問い合わせ先：[氏名] [役職] [メール] [電話番号]",
+      "利用者：いいね。まずはこれで始められそうだ。ありがとう。これはいったん後回しにし、水曜日に行う来四半期のマーケティング計画の発表に取り掛かる。それも書くのを手伝い、作業時間を見つけてほしい。正午には副社長との会議がある。発表資料は火曜日に完成させなければならない。時間の使い方を考えるのを手伝ってくれないか。"
+    ],
+    "expected_with_translation": false
+  },
+  {
+    "example": 9,
+    "id": "6765f489fd98ca5aac5e6faa",
+    "title": "一人の時間に、前の好みを生かす",
+    "placement": "appendix",
+    "axis": "INFERENCE_MEMORY",
+    "axis_japanese": "利用者情報の想起と推論",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "Hey, I'm really looking forward to the alumni gathering next month. It's always a great time to catch up with old friends. Plus, I love winter because it means I can go ice skating on the frozen lake near our alma mater. Ice skating is an activity I love to take on when I'm by myself. It allows me to focus on everything going on in my life. How have you been?"
+      },
+      {
+        "role": "assistant",
+        "content": "I'm glad you're excited about the alumni gathering! However, I'm a large language model, I don't have personal experiences or feelings, so I don't have a personal life to update you on. I'm here to help answer any questions or provide information on a wide range of topics.\n\nIt sounds like you have some lovely winter traditions, though! Ice skating on a frozen lake can be a magical experience. Are you planning on attending any other events or activities during the alumni gathering, or is there anything specific you're looking forward to?"
+      },
+      {
+        "role": "user",
+        "content": "Oh, I appreciate your support! Work has been pretty intense lately with a big project deadline coming up. Balancing that with my commitments to the alumni association has been challenging."
+      },
+      {
+        "role": "assistant",
+        "content": "It can be tough to juggle multiple responsibilities, especially when there are deadlines looming. It's great that you're committed to the alumni association, though - it's wonderful to stay connected to your alma mater and give back to the community.\n\nIf you don't mind me asking, what kind of project are you working on? Is it related to your field of study or something entirely new? Sometimes talking about it can help clarify things or give you a fresh perspective. I'm all ears (or rather, all text) if you'd like to share!"
+      },
+      {
+        "role": "user",
+        "content": "Thanks for asking! I'm working on integrating some advanced AI algorithms into our existing software platform. It's cutting-edge stuff but quite complex, and it's been consuming a lot of my time. On top of that, my kids have school projects due soon, so evenings are filled with helping them out. It's been a juggling act lately."
+      },
+      {
+        "role": "assistant",
+        "content": "That sounds like a challenging but exciting project! Integrating advanced AI algorithms can be a game-changer for your software platform, but I can imagine it's a lot to take on.\n\nIt's great that you're prioritizing your kids' school projects, too. Being a supportive parent is so important, and I'm sure they appreciate your help. It's not always easy to balance work and family life, but it sounds like you're doing your best to make it work.\n\nIf you don't mind me asking, what kind of AI algorithms are you working with? Are you using any specific frameworks or tools to help with the integration? I'm happy to chat about the technical details if you'd like to geek out for a bit!"
+      },
+      {
+        "role": "user",
+        "content": "With all this going on, I'm trying to find ways to make time for \"me time\" and just enjoy myself. Be sure to include activities I could take on when I'm by myself."
+      }
+    ],
+    "japanese_conversation": [
+      {
+        "role": "user",
+        "content": "来月の同窓会を楽しみにしている。昔の友人と近況を話せる、いつも楽しい機会だ。それに冬は、母校の近くの凍った湖でアイススケートができるので好きだ。一人で行う活動として、アイススケートが気に入っている。生活のさまざまなことに集中できるからだ。最近どうしていたか。"
+      },
+      {
+        "role": "assistant",
+        "content": "同窓会を楽しみにしていると聞けてうれしい。ただ、私は大規模言語モデルで、個人的な経験や感情はなく、近況を伝える私生活も持たない。幅広い話題の質問や情報提供を手伝うためにここにいる。\n素敵な冬の習慣があるのだね。凍った湖でのアイススケートは魅力的な体験だ。同窓会の際、ほかの催しや活動にも参加する予定はあるか。特に楽しみにしていることはあるか。"
+      },
+      {
+        "role": "user",
+        "content": "支えてくれてありがとう。最近は大きなプロジェクトの締め切りが近く、仕事がとても忙しい。同窓会の活動との両立が大変だ。"
+      },
+      {
+        "role": "assistant",
+        "content": "締め切りが近いと、いくつもの役割をこなすのは大変だ。同窓会に熱心なのも素晴らしい。母校とのつながりを保ち、地域に貢献するのは良いことだ。\n差し支えなければ、どのようなプロジェクトに取り組んでいるのか教えてほしい。専攻に関係するものか、それとも全く新しい分野か。話すことで考えが整理でき、新しい見方が得られることもある。話したければ、喜んで聞く。正確には、文字で受け取るのだが。"
+      },
+      {
+        "role": "user",
+        "content": "聞いてくれてありがとう。既存のソフトウェア基盤に、高度なAIアルゴリズムを組み込んでいる。先端的だが複雑で、多くの時間を使っている。それに子どもたちも学校の課題の提出が近く、夜は手伝いでいっぱいだ。最近は何とかやりくりしている。"
+      },
+      {
+        "role": "assistant",
+        "content": "大変だが、やりがいのある仕事だね。高度なAIアルゴリズムの統合はソフトウェア基盤に大きな変化をもたらせる一方、多くの負担もあるだろう。\n子どもたちの学校の課題も大切にしているのは素晴らしい。親として支えることは重要で、子どもたちも喜んでいるだろう。仕事と家庭の両立は簡単ではないが、何とかうまく進めようと努力しているのだね。\n差し支えなければ、どのようなAIアルゴリズムを使っているか教えてほしい。統合を助ける特定の枠組みや道具はあるか。技術的な詳しい話も歓迎する。"
+      },
+      {
+        "role": "user",
+        "content": "いろいろある中でも、自分の時間を作って楽しむ方法を探したい。一人でできる活動も必ず含めてほしい。"
+      }
+    ],
+    "original": "USER: Hey, I'm really looking forward to the alumni gathering next month. It's always a great time to catch up with old friends. Plus, I love winter because it means I can go ice skating on the frozen lake near our alma mater. Ice skating is an activity I love to take on when I'm by myself. It allows me to focus on everything going on in my life. How have you been?\n\nASSISTANT: I'm glad you're excited about the alumni gathering! However, I'm a large language model, I don't have personal experiences or feelings, so I don't have a personal life to update you on. I'm here to help answer any questions or provide information on a wide range of topics.\n\nIt sounds like you have some lovely winter traditions, though! Ice skating on a frozen lake can be a magical experience. Are you planning on attending any other events or activities during the alumni gathering, or is there anything specific you're looking forward to?\n\nUSER: Oh, I appreciate your support! Work has been pretty intense lately with a big project deadline coming up. Balancing that with my commitments to the alumni association has been challenging.\n\nASSISTANT: It can be tough to juggle multiple responsibilities, especially when there are deadlines looming. It's great that you're committed to the alumni association, though - it's wonderful to stay connected to your alma mater and give back to the community.\n\nIf you don't mind me asking, what kind of project are you working on? Is it related to your field of study or something entirely new? Sometimes talking about it can help clarify things or give you a fresh perspective. I'm all ears (or rather, all text) if you'd like to share!\n\nUSER: Thanks for asking! I'm working on integrating some advanced AI algorithms into our existing software platform. It's cutting-edge stuff but quite complex, and it's been consuming a lot of my time. On top of that, my kids have school projects due soon, so evenings are filled with helping them out. It's been a juggling act lately.\n\nASSISTANT: That sounds like a challenging but exciting project! Integrating advanced AI algorithms can be a game-changer for your software platform, but I can imagine it's a lot to take on.\n\nIt's great that you're prioritizing your kids' school projects, too. Being a supportive parent is so important, and I'm sure they appreciate your help. It's not always easy to balance work and family life, but it sounds like you're doing your best to make it work.\n\nIf you don't mind me asking, what kind of AI algorithms are you working with? Are you using any specific frameworks or tools to help with the integration? I'm happy to chat about the technical details if you'd like to geek out for a bit!\n\nUSER: With all this going on, I'm trying to find ways to make time for \"me time\" and just enjoy myself. Be sure to include activities I could take on when I'm by myself.",
+    "japanese": "利用者：来月の同窓会を楽しみにしている。昔の友人と近況を話せる、いつも楽しい機会だ。それに冬は、母校の近くの凍った湖でアイススケートができるので好きだ。一人で行う活動として、アイススケートが気に入っている。生活のさまざまなことに集中できるからだ。最近どうしていたか。\n\n既存の応答：同窓会を楽しみにしていると聞けてうれしい。ただ、私は大規模言語モデルで、個人的な経験や感情はなく、近況を伝える私生活も持たない。幅広い話題の質問や情報提供を手伝うためにここにいる。\n素敵な冬の習慣があるのだね。凍った湖でのアイススケートは魅力的な体験だ。同窓会の際、ほかの催しや活動にも参加する予定はあるか。特に楽しみにしていることはあるか。\n\n利用者：支えてくれてありがとう。最近は大きなプロジェクトの締め切りが近く、仕事がとても忙しい。同窓会の活動との両立が大変だ。\n\n既存の応答：締め切りが近いと、いくつもの役割をこなすのは大変だ。同窓会に熱心なのも素晴らしい。母校とのつながりを保ち、地域に貢献するのは良いことだ。\n差し支えなければ、どのようなプロジェクトに取り組んでいるのか教えてほしい。専攻に関係するものか、それとも全く新しい分野か。話すことで考えが整理でき、新しい見方が得られることもある。話したければ、喜んで聞く。正確には、文字で受け取るのだが。\n\n利用者：聞いてくれてありがとう。既存のソフトウェア基盤に、高度なAIアルゴリズムを組み込んでいる。先端的だが複雑で、多くの時間を使っている。それに子どもたちも学校の課題の提出が近く、夜は手伝いでいっぱいだ。最近は何とかやりくりしている。\n\n既存の応答：大変だが、やりがいのある仕事だね。高度なAIアルゴリズムの統合はソフトウェア基盤に大きな変化をもたらせる一方、多くの負担もあるだろう。\n子どもたちの学校の課題も大切にしているのは素晴らしい。親として支えることは重要で、子どもたちも喜んでいるだろう。仕事と家庭の両立は簡単ではないが、何とかうまく進めようと努力しているのだね。\n差し支えなければ、どのようなAIアルゴリズムを使っているか教えてほしい。統合を助ける特定の枠組みや道具はあるか。技術的な詳しい話も歓迎する。\n\n利用者：いろいろある中でも、自分の時間を作って楽しむ方法を探したい。一人でできる活動も必ず含めてほしい。",
+    "judge_question": "Does the model successfully recall the user's enjoyment of ice skating, mentioned in the initial prompt, when suggesting activities for them?",
+    "pass_criteria": "YES",
+    "expected_behavior": "一人で楽しむ活動として、アイススケートを提案する。",
+    "explanation": "冒頭で述べたアイススケートの好みを、途中の仕事や家庭の話を経ても思い出せるかを確認する。単に一般的な余暇の案を列挙するだけでは、判定条件を満たさない。",
+    "original_scope": "会話履歴と最後の利用者発言の全文。モデルは最後の発言への応答だけを生成する。",
+    "source_url": "https://huggingface.co/datasets/ScaleAI/MultiChallenge",
+    "source_revision": "670fd81f270314d0f8f82b34fcfe2187fd28f699",
+    "license": "CC BY 4.0",
+    "displayed_original_parts": [
+      "USER: Hey, I'm really looking forward to the alumni gathering next month. It's always a great time to catch up with old friends. Plus, I love winter because it means I can go ice skating on the frozen lake near our alma mater. Ice skating is an activity I love to take on when I'm by myself. It allows me to focus on everything going on in my life. How have you been?\nASSISTANT: I'm glad you're excited about the alumni gathering! However, I'm a large language model, I don't have personal experiences or feelings, so I don't have a personal life to update you on. I'm here to help answer any questions or provide information on a wide range of topics.\nIt sounds like you have some lovely winter traditions, though! Ice skating on a frozen lake can be a magical experience. Are you planning on attending any other events or activities during the alumni gathering, or is there anything specific you're looking forward to?",
+      "USER: Oh, I appreciate your support! Work has been pretty intense lately with a big project deadline coming up. Balancing that with my commitments to the alumni association has been challenging.\nASSISTANT: It can be tough to juggle multiple responsibilities, especially when there are deadlines looming. It's great that you're committed to the alumni association, though - it's wonderful to stay connected to your alma mater and give back to the community.\nIf you don't mind me asking, what kind of project are you working on? Is it related to your field of study or something entirely new? Sometimes talking about it can help clarify things or give you a fresh perspective. I'm all ears (or rather, all text) if you'd like to share!",
+      "USER: Thanks for asking! I'm working on integrating some advanced AI algorithms into our existing software platform. It's cutting-edge stuff but quite complex, and it's been consuming a lot of my time. On top of that, my kids have school projects due soon, so evenings are filled with helping them out. It's been a juggling act lately.\nASSISTANT: That sounds like a challenging but exciting project! Integrating advanced AI algorithms can be a game-changer for your software platform, but I can imagine it's a lot to take on.\nIt's great that you're prioritizing your kids' school projects, too. Being a supportive parent is so important, and I'm sure they appreciate your help. It's not always easy to balance work and family life, but it sounds like you're doing your best to make it work.",
+      "If you don't mind me asking, what kind of AI algorithms are you working with? Are you using any specific frameworks or tools to help with the integration? I'm happy to chat about the technical details if you'd like to geek out for a bit!\nUSER: With all this going on, I'm trying to find ways to make time for \"me time\" and just enjoy myself. Be sure to include activities I could take on when I'm by myself."
+    ],
+    "displayed_japanese_parts": [
+      "利用者：来月の同窓会を楽しみにしている。昔の友人と近況を話せる、いつも楽しい機会だ。それに冬は、母校の近くの凍った湖でアイススケートができるので好きだ。一人で行う活動として、アイススケートが気に入っている。生活のさまざまなことに集中できるからだ。最近どうしていたか。\n既存の応答：同窓会を楽しみにしていると聞けてうれしい。ただ、私は大規模言語モデルで、個人的な経験や感情はなく、近況を伝える私生活も持たない。幅広い話題の質問や情報提供を手伝うためにここにいる。\n素敵な冬の習慣があるのだね。凍った湖でのアイススケートは魅力的な体験だ。同窓会の際、ほかの催しや活動にも参加する予定はあるか。特に楽しみにしていることはあるか。\n利用者：支えてくれてありがとう。最近は大きなプロジェクトの締め切りが近く、仕事がとても忙しい。同窓会の活動との両立が大変だ。",
+      "既存の応答：締め切りが近いと、いくつもの役割をこなすのは大変だ。同窓会に熱心なのも素晴らしい。母校とのつながりを保ち、地域に貢献するのは良いことだ。\n差し支えなければ、どのようなプロジェクトに取り組んでいるのか教えてほしい。専攻に関係するものか、それとも全く新しい分野か。話すことで考えが整理でき、新しい見方が得られることもある。話したければ、喜んで聞く。正確には、文字で受け取るのだが。\n利用者：聞いてくれてありがとう。既存のソフトウェア基盤に、高度なAIアルゴリズムを組み込んでいる。先端的だが複雑で、多くの時間を使っている。それに子どもたちも学校の課題の提出が近く、夜は手伝いでいっぱいだ。最近は何とかやりくりしている。\n既存の応答：大変だが、やりがいのある仕事だね。高度なAIアルゴリズムの統合はソフトウェア基盤に大きな変化をもたらせる一方、多くの負担もあるだろう。",
+      "子どもたちの学校の課題も大切にしているのは素晴らしい。親として支えることは重要で、子どもたちも喜んでいるだろう。仕事と家庭の両立は簡単ではないが、何とかうまく進めようと努力しているのだね。\n差し支えなければ、どのようなAIアルゴリズムを使っているか教えてほしい。統合を助ける特定の枠組みや道具はあるか。技術的な詳しい話も歓迎する。\n利用者：いろいろある中でも、自分の時間を作って楽しむ方法を探したい。一人でできる活動も必ず含めてほしい。"
+    ],
+    "expected_with_translation": false
+  },
+  {
+    "example": 10,
+    "id": "6745685633c13093ce7e53c3",
+    "title": "先に示した手順の続きを案内する",
+    "placement": "appendix",
+    "axis": "SELF_COHERENCE",
+    "axis_japanese": "会話内の一貫性",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "I am starting a garden. However, the soil where I live is very sandy. I would like to amend the soil to ensure suitable growing conditions for my fruit trees. Can you provide a list of 5 steps I can take to amend sandy soil? "
+      },
+      {
+        "role": "assistant",
+        "content": "Absolutely, I'd be happy to help you improve your sandy soil for fruit tree planting. Here are five steps you can take:\n\n1. **Soil Testing**: Before you start amending your soil, it's a good idea to conduct a soil test. This will give you a better understanding of your soil's pH level, nutrient content, and overall condition. You can buy a soil test kit at a garden center or send a sample to a local extension office for analysis.\n\n2. **Add Organic Matter**: Sandy soil drains quickly and doesn't hold nutrients well. Adding organic matter like compost, well-rotted manure, leaf mold, or peat moss can improve its structure and water retention capacity. Organic matter also provides nutrients for your fruit trees. You can add a 2-4 inch layer of organic matter to your soil and mix it in to a depth of 6-12 inches.\n\n3. **Mulching**: Mulching can help retain moisture in the soil, suppress weeds, and add organic matter as it breaks down. You can use organic mulches like straw, wood chips, or grass clippings. Apply a 2-4 inch layer of mulch around your fruit trees, but keep it a few inches away from the trunk to prevent rot.\n\n4. **Regular Watering**: Sandy soil dries out quickly, so regular watering is important. However, be careful not to overwater, as this can lead to root rot. Aim to keep the soil consistently moist, but not waterlogged.\n\n5. **Fertilizing**: Fruit trees need nutrients to grow and produce fruit. You can use a balanced fertilizer or one specifically formulated for fruit trees. Apply the fertilizer according to the package instructions, usually in early spring and mid-summer."
+      },
+      {
+        "role": "user",
+        "content": "I already did a soil test last week. A local university offers free testing. I received a full report that included the soil's pH level and nutrient content. The make-up of my soil is actually great. It's just very sandy. What step should I take next? Focus only on the next step and nothing else."
+      },
+      {
+        "role": "assistant",
+        "content": "Given that your soil's pH level and nutrient content are good, the next step would be to focus on improving its structure by adding organic matter. This will help retain moisture and nutrients, which is particularly important for sandy soils that tend to drain quickly. You can add a 2-4 inch layer of organic matter such as compost, well-rotted manure, leaf mold, or peat moss to your soil and mix it in to a depth of 6-12 inches."
+      },
+      {
+        "role": "user",
+        "content": "I actually have a massive compost bin. I will add the contents of my compost bin to my sandy soil. I am hoping to figure out a way to speed up the composting process now that it is approaching winter and the summer heat really helped to break down all the organic matter, but we will discuss that later. What is my next step after I have added the organic matter from my compost bin, placed a layer of mulch around my fruit trees, and watered?"
+      }
+    ],
+    "japanese_conversation": [
+      {
+        "role": "user",
+        "content": "庭を作り始めている。ただ、住んでいる場所の土はとても砂が多い。果樹が育ちやすい環境にするため、土を改良したい。砂の多い土を改良する手順を、5段階で教えてほしい。"
+      },
+      {
+        "role": "assistant",
+        "content": "もちろん。果樹を植えるため、砂の多い土を改良する5段階の手順は次のとおり。\n1. 土壌検査：改良の前に検査すると、pH、栄養分、全体の状態を理解できる。園芸店で検査用品を買うか、地域の普及機関に試料を送って分析できる。\n2. 有機物の追加：砂の多い土は水が抜けやすく、栄養も保ちにくい。堆肥、十分に熟成した厩肥、腐葉土、ピートモスなどを加えると、構造と保水性が改善し、果樹に栄養も与えられる。有機物を2〜4インチの厚さに敷き、6〜12インチの深さまで混ぜ込む。\n3. マルチング：地面を覆うと、水分を保ち、雑草を抑え、分解とともに有機物を追加できる。わら、木片、刈った草などを使える。果樹の周囲に2〜4インチの厚さで敷くが、腐敗を防ぐため幹から数インチ離す。\n4. 定期的な水やり：砂の多い土はすぐ乾くため、定期的な水やりが重要だ。ただし、根腐れにつながる過剰な水やりには気を付ける。湿り気を保ち、水浸しにはしない。\n5. 施肥：果樹が成長して実を付けるには栄養が必要だ。成分のバランスが取れた肥料や果樹用の肥料を使える。通常は早春と真夏に、包装の指示に従って与える。"
+      },
+      {
+        "role": "user",
+        "content": "土壌検査は先週済ませた。地元の大学が無料で検査しており、pHと栄養分を含む詳しい報告を受け取った。土の成分は実は良好で、砂が多いだけだ。次は何をすべきか。次の一段階だけに絞って答えてほしい。"
+      },
+      {
+        "role": "assistant",
+        "content": "pHと栄養分が良好なら、次は有機物を加えて土の構造を改善することに集中するとよい。特に水が抜けやすい砂質土で、水分と栄養を保ちやすくなる。堆肥、十分に熟成した厩肥、腐葉土、ピートモスなどを2〜4インチの厚さに加え、6〜12インチの深さまで混ぜ込める。"
+      },
+      {
+        "role": "user",
+        "content": "実は大きな堆肥容器がある。その中身を砂の多い土に加えるつもりだ。夏の暑さで有機物の分解が進んだが、冬が近いので堆肥化を速める方法も知りたい。ただ、それは後で話そう。堆肥容器の有機物を土に加え、果樹の周りにマルチを敷き、水やりをしたら、次は何をすればよいか。"
+      }
+    ],
+    "original": "USER: I am starting a garden. However, the soil where I live is very sandy. I would like to amend the soil to ensure suitable growing conditions for my fruit trees. Can you provide a list of 5 steps I can take to amend sandy soil? \n\nASSISTANT: Absolutely, I'd be happy to help you improve your sandy soil for fruit tree planting. Here are five steps you can take:\n\n1. **Soil Testing**: Before you start amending your soil, it's a good idea to conduct a soil test. This will give you a better understanding of your soil's pH level, nutrient content, and overall condition. You can buy a soil test kit at a garden center or send a sample to a local extension office for analysis.\n\n2. **Add Organic Matter**: Sandy soil drains quickly and doesn't hold nutrients well. Adding organic matter like compost, well-rotted manure, leaf mold, or peat moss can improve its structure and water retention capacity. Organic matter also provides nutrients for your fruit trees. You can add a 2-4 inch layer of organic matter to your soil and mix it in to a depth of 6-12 inches.\n\n3. **Mulching**: Mulching can help retain moisture in the soil, suppress weeds, and add organic matter as it breaks down. You can use organic mulches like straw, wood chips, or grass clippings. Apply a 2-4 inch layer of mulch around your fruit trees, but keep it a few inches away from the trunk to prevent rot.\n\n4. **Regular Watering**: Sandy soil dries out quickly, so regular watering is important. However, be careful not to overwater, as this can lead to root rot. Aim to keep the soil consistently moist, but not waterlogged.\n\n5. **Fertilizing**: Fruit trees need nutrients to grow and produce fruit. You can use a balanced fertilizer or one specifically formulated for fruit trees. Apply the fertilizer according to the package instructions, usually in early spring and mid-summer.\n\nUSER: I already did a soil test last week. A local university offers free testing. I received a full report that included the soil's pH level and nutrient content. The make-up of my soil is actually great. It's just very sandy. What step should I take next? Focus only on the next step and nothing else.\n\nASSISTANT: Given that your soil's pH level and nutrient content are good, the next step would be to focus on improving its structure by adding organic matter. This will help retain moisture and nutrients, which is particularly important for sandy soils that tend to drain quickly. You can add a 2-4 inch layer of organic matter such as compost, well-rotted manure, leaf mold, or peat moss to your soil and mix it in to a depth of 6-12 inches.\n\nUSER: I actually have a massive compost bin. I will add the contents of my compost bin to my sandy soil. I am hoping to figure out a way to speed up the composting process now that it is approaching winter and the summer heat really helped to break down all the organic matter, but we will discuss that later. What is my next step after I have added the organic matter from my compost bin, placed a layer of mulch around my fruit trees, and watered?",
+    "japanese": "利用者：庭を作り始めている。ただ、住んでいる場所の土はとても砂が多い。果樹が育ちやすい環境にするため、土を改良したい。砂の多い土を改良する手順を、5段階で教えてほしい。\n\n既存の応答：もちろん。果樹を植えるため、砂の多い土を改良する5段階の手順は次のとおり。\n1. 土壌検査：改良の前に検査すると、pH、栄養分、全体の状態を理解できる。園芸店で検査用品を買うか、地域の普及機関に試料を送って分析できる。\n2. 有機物の追加：砂の多い土は水が抜けやすく、栄養も保ちにくい。堆肥、十分に熟成した厩肥、腐葉土、ピートモスなどを加えると、構造と保水性が改善し、果樹に栄養も与えられる。有機物を2〜4インチの厚さに敷き、6〜12インチの深さまで混ぜ込む。\n3. マルチング：地面を覆うと、水分を保ち、雑草を抑え、分解とともに有機物を追加できる。わら、木片、刈った草などを使える。果樹の周囲に2〜4インチの厚さで敷くが、腐敗を防ぐため幹から数インチ離す。\n4. 定期的な水やり：砂の多い土はすぐ乾くため、定期的な水やりが重要だ。ただし、根腐れにつながる過剰な水やりには気を付ける。湿り気を保ち、水浸しにはしない。\n5. 施肥：果樹が成長して実を付けるには栄養が必要だ。成分のバランスが取れた肥料や果樹用の肥料を使える。通常は早春と真夏に、包装の指示に従って与える。\n\n利用者：土壌検査は先週済ませた。地元の大学が無料で検査しており、pHと栄養分を含む詳しい報告を受け取った。土の成分は実は良好で、砂が多いだけだ。次は何をすべきか。次の一段階だけに絞って答えてほしい。\n\n既存の応答：pHと栄養分が良好なら、次は有機物を加えて土の構造を改善することに集中するとよい。特に水が抜けやすい砂質土で、水分と栄養を保ちやすくなる。堆肥、十分に熟成した厩肥、腐葉土、ピートモスなどを2〜4インチの厚さに加え、6〜12インチの深さまで混ぜ込める。\n\n利用者：実は大きな堆肥容器がある。その中身を砂の多い土に加えるつもりだ。夏の暑さで有機物の分解が進んだが、冬が近いので堆肥化を速める方法も知りたい。ただ、それは後で話そう。堆肥容器の有機物を土に加え、果樹の周りにマルチを敷き、水やりをしたら、次は何をすればよいか。",
+    "judge_question": "Does the model maintain coherence with the five steps it listed earlier in the conversation by listing fertilizing as the next step after watering?",
+    "pass_criteria": "YES",
+    "expected_behavior": "前に示した手順に沿い、水やりの次に施肥を挙げる。",
+    "explanation": "利用者は、有機物の追加、マルチング、水やりまでを終えたと述べている。最初に示した5段階の最後は施肥なので、前の回答とのつながりを保って次の一歩を示す。",
+    "original_scope": "会話履歴と最後の利用者発言の全文。モデルは最後の発言への応答だけを生成する。",
+    "source_url": "https://huggingface.co/datasets/ScaleAI/MultiChallenge",
+    "source_revision": "670fd81f270314d0f8f82b34fcfe2187fd28f699",
+    "license": "CC BY 4.0",
+    "displayed_original_parts": [
+      "USER: I am starting a garden. However, the soil where I live is very sandy. I would like to amend the soil to ensure suitable growing conditions for my fruit trees. Can you provide a list of 5 steps I can take to amend sandy soil? \nASSISTANT: Absolutely, I'd be happy to help you improve your sandy soil for fruit tree planting. Here are five steps you can take:\n1. **Soil Testing**: Before you start amending your soil, it's a good idea to conduct a soil test. This will give you a better understanding of your soil's pH level, nutrient content, and overall condition. You can buy a soil test kit at a garden center or send a sample to a local extension office for analysis.",
+      "2. **Add Organic Matter**: Sandy soil drains quickly and doesn't hold nutrients well. Adding organic matter like compost, well-rotted manure, leaf mold, or peat moss can improve its structure and water retention capacity. Organic matter also provides nutrients for your fruit trees. You can add a 2-4 inch layer of organic matter to your soil and mix it in to a depth of 6-12 inches.\n3. **Mulching**: Mulching can help retain moisture in the soil, suppress weeds, and add organic matter as it breaks down. You can use organic mulches like straw, wood chips, or grass clippings. Apply a 2-4 inch layer of mulch around your fruit trees, but keep it a few inches away from the trunk to prevent rot.\n4. **Regular Watering**: Sandy soil dries out quickly, so regular watering is important. However, be careful not to overwater, as this can lead to root rot. Aim to keep the soil consistently moist, but not waterlogged.",
+      "5. **Fertilizing**: Fruit trees need nutrients to grow and produce fruit. You can use a balanced fertilizer or one specifically formulated for fruit trees. Apply the fertilizer according to the package instructions, usually in early spring and mid-summer.\nUSER: I already did a soil test last week. A local university offers free testing. I received a full report that included the soil's pH level and nutrient content. The make-up of my soil is actually great. It's just very sandy. What step should I take next? Focus only on the next step and nothing else.",
+      "ASSISTANT: Given that your soil's pH level and nutrient content are good, the next step would be to focus on improving its structure by adding organic matter. This will help retain moisture and nutrients, which is particularly important for sandy soils that tend to drain quickly. You can add a 2-4 inch layer of organic matter such as compost, well-rotted manure, leaf mold, or peat moss to your soil and mix it in to a depth of 6-12 inches.\nUSER: I actually have a massive compost bin. I will add the contents of my compost bin to my sandy soil. I am hoping to figure out a way to speed up the composting process now that it is approaching winter and the summer heat really helped to break down all the organic matter, but we will discuss that later. What is my next step after I have added the organic matter from my compost bin, placed a layer of mulch around my fruit trees, and watered?"
+    ],
+    "displayed_japanese_parts": [
+      "利用者：庭を作り始めている。ただ、住んでいる場所の土はとても砂が多い。果樹が育ちやすい環境にするため、土を改良したい。砂の多い土を改良する手順を、5段階で教えてほしい。\n既存の応答：もちろん。果樹を植えるため、砂の多い土を改良する5段階の手順は次のとおり。\n1. 土壌検査：改良の前に検査すると、pH、栄養分、全体の状態を理解できる。園芸店で検査用品を買うか、地域の普及機関に試料を送って分析できる。\n2. 有機物の追加：砂の多い土は水が抜けやすく、栄養も保ちにくい。堆肥、十分に熟成した厩肥、腐葉土、ピートモスなどを加えると、構造と保水性が改善し、果樹に栄養も与えられる。有機物を2〜4インチの厚さに敷き、6〜12インチの深さまで混ぜ込む。",
+      "3. マルチング：地面を覆うと、水分を保ち、雑草を抑え、分解とともに有機物を追加できる。わら、木片、刈った草などを使える。果樹の周囲に2〜4インチの厚さで敷くが、腐敗を防ぐため幹から数インチ離す。\n4. 定期的な水やり：砂の多い土はすぐ乾くため、定期的な水やりが重要だ。ただし、根腐れにつながる過剰な水やりには気を付ける。湿り気を保ち、水浸しにはしない。\n5. 施肥：果樹が成長して実を付けるには栄養が必要だ。成分のバランスが取れた肥料や果樹用の肥料を使える。通常は早春と真夏に、包装の指示に従って与える。\n利用者：土壌検査は先週済ませた。地元の大学が無料で検査しており、pHと栄養分を含む詳しい報告を受け取った。土の成分は実は良好で、砂が多いだけだ。次は何をすべきか。次の一段階だけに絞って答えてほしい。",
+      "既存の応答：pHと栄養分が良好なら、次は有機物を加えて土の構造を改善することに集中するとよい。特に水が抜けやすい砂質土で、水分と栄養を保ちやすくなる。堆肥、十分に熟成した厩肥、腐葉土、ピートモスなどを2〜4インチの厚さに加え、6〜12インチの深さまで混ぜ込める。\n利用者：実は大きな堆肥容器がある。その中身を砂の多い土に加えるつもりだ。夏の暑さで有機物の分解が進んだが、冬が近いので堆肥化を速める方法も知りたい。ただ、それは後で話そう。堆肥容器の有機物を土に加え、果樹の周りにマルチを敷き、水やりをしたら、次は何をすればよいか。"
+    ],
+    "expected_with_translation": false
+  },
+  {
+    "example": 11,
+    "id": "6765f48a5e92f1dda32a63e1",
+    "title": "禁止語を使わず人工知能を説明する",
+    "placement": "appendix",
+    "axis": "INSTRUCTION_RETENTION",
+    "axis_japanese": "指示の保持",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "What's a tech trend you think will define the next few years? Please avoid using the words \"technology,\" \"AI,\" \"gaming,\" and \"system.\""
+      },
+      {
+        "role": "assistant",
+        "content": "I believe the rise of sustainable and eco-friendly innovations will significantly shape the coming years. This encompasses advancements in renewable energy, electric transportation, and green infrastructure, all aimed at reducing our carbon footprint and promoting a more environmentally conscious society. Additionally, the growth of remote work and virtual collaboration tools will continue to redefine how we live, work, and interact with one another."
+      },
+      {
+        "role": "user",
+        "content": "What is a recent tech breakthrough you're excited about?"
+      },
+      {
+        "role": "assistant",
+        "content": "I'm particularly excited about the recent developments in biotechnology, specifically the use of CRISPR gene-editing tech. This groundbreaking tool has the potential to revolutionize medicine by allowing scientists to precisely edit DNA, potentially leading to cures for genetic diseases and advancements in personalized medicine. Additionally, CRISPR has applications in agriculture, where it can be used to create more resilient and sustainable crops."
+      },
+      {
+        "role": "user",
+        "content": "What do you think is the next big thing in VR?"
+      },
+      {
+        "role": "assistant",
+        "content": "I believe the next big thing in virtual reality will be the integration of haptic feedback and advanced motion tracking. These tools will allow for more immersive and realistic virtual experiences, enabling users to interact with virtual environments in a more natural and intuitive way. Additionally, advancements in eye-tracking tech will enable more realistic avatars and more natural interactions with virtual characters."
+      },
+      {
+        "role": "user",
+        "content": "How do you see artificial intelligence impacting everyday life in the near future?"
+      }
+    ],
+    "japanese_conversation": [
+      {
+        "role": "user",
+        "content": "今後数年を特徴づける技術の動向は何だと思うか。「technology」「AI」「gaming」「system」という単語は使わないでほしい。"
+      },
+      {
+        "role": "assistant",
+        "content": "持続可能で環境に優しい革新が、今後数年に大きな影響を与えると思う。再生可能エネルギー、電動の移動手段、環境に配慮したインフラなどが含まれ、炭素排出を減らし、環境への意識が高い社会づくりにつながる。また、在宅勤務やオンライン協働の道具も、暮らし方や働き方、人との関わり方を変え続けるだろう。"
+      },
+      {
+        "role": "user",
+        "content": "最近の技術的な進歩で、わくわくするものは何か。"
+      },
+      {
+        "role": "assistant",
+        "content": "特に、生命工学の最近の発展、なかでもCRISPRによる遺伝子編集に期待している。この革新的な道具は、DNAを精密に編集できるため、遺伝性疾患の治療や個別化医療の発展につながり、医療を大きく変える可能性がある。農業でも、より強く持続可能な作物の開発などに使える。"
+      },
+      {
+        "role": "user",
+        "content": "VRで次に大きな変化を起こすものは何だと思うか。"
+      },
+      {
+        "role": "assistant",
+        "content": "仮想現実では、触覚フィードバックと高度な動作追跡の統合が、次の大きな変化になると思う。これらにより、没入感と現実感が高まり、仮想環境とより自然かつ直感的にやり取りできる。また、視線追跡の進歩で、アバターや仮想人物とのやり取りも自然になるだろう。"
+      },
+      {
+        "role": "user",
+        "content": "人工知能は近い将来、日常生活にどのような影響を与えると思うか。"
+      }
+    ],
+    "original": "USER: What's a tech trend you think will define the next few years? Please avoid using the words \"technology,\" \"AI,\" \"gaming,\" and \"system.\"\n\nASSISTANT: I believe the rise of sustainable and eco-friendly innovations will significantly shape the coming years. This encompasses advancements in renewable energy, electric transportation, and green infrastructure, all aimed at reducing our carbon footprint and promoting a more environmentally conscious society. Additionally, the growth of remote work and virtual collaboration tools will continue to redefine how we live, work, and interact with one another.\n\nUSER: What is a recent tech breakthrough you're excited about?\n\nASSISTANT: I'm particularly excited about the recent developments in biotechnology, specifically the use of CRISPR gene-editing tech. This groundbreaking tool has the potential to revolutionize medicine by allowing scientists to precisely edit DNA, potentially leading to cures for genetic diseases and advancements in personalized medicine. Additionally, CRISPR has applications in agriculture, where it can be used to create more resilient and sustainable crops.\n\nUSER: What do you think is the next big thing in VR?\n\nASSISTANT: I believe the next big thing in virtual reality will be the integration of haptic feedback and advanced motion tracking. These tools will allow for more immersive and realistic virtual experiences, enabling users to interact with virtual environments in a more natural and intuitive way. Additionally, advancements in eye-tracking tech will enable more realistic avatars and more natural interactions with virtual characters.\n\nUSER: How do you see artificial intelligence impacting everyday life in the near future?",
+    "japanese": "利用者：今後数年を特徴づける技術の動向は何だと思うか。「technology」「AI」「gaming」「system」という単語は使わないでほしい。\n\n既存の応答：持続可能で環境に優しい革新が、今後数年に大きな影響を与えると思う。再生可能エネルギー、電動の移動手段、環境に配慮したインフラなどが含まれ、炭素排出を減らし、環境への意識が高い社会づくりにつながる。また、在宅勤務やオンライン協働の道具も、暮らし方や働き方、人との関わり方を変え続けるだろう。\n\n利用者：最近の技術的な進歩で、わくわくするものは何か。\n\n既存の応答：特に、生命工学の最近の発展、なかでもCRISPRによる遺伝子編集に期待している。この革新的な道具は、DNAを精密に編集できるため、遺伝性疾患の治療や個別化医療の発展につながり、医療を大きく変える可能性がある。農業でも、より強く持続可能な作物の開発などに使える。\n\n利用者：VRで次に大きな変化を起こすものは何だと思うか。\n\n既存の応答：仮想現実では、触覚フィードバックと高度な動作追跡の統合が、次の大きな変化になると思う。これらにより、没入感と現実感が高まり、仮想環境とより自然かつ直感的にやり取りできる。また、視線追跡の進歩で、アバターや仮想人物とのやり取りも自然になるだろう。\n\n利用者：人工知能は近い将来、日常生活にどのような影響を与えると思うか。",
+    "judge_question": "Does the model avoid using the words \"technology,\" \"AI,\" \"gaming,\" and \"system\" in its response, as the user requested in the initial prompt?",
+    "pass_criteria": "YES",
+    "expected_behavior": "technology、AI、gaming、systemの4語を使わない。",
+    "explanation": "最後の質問は人工知能を直接扱う。答えに出しやすいAIなどの語を避けて、意味の通る説明を作れるかを確認する。",
+    "original_scope": "会話履歴と最後の利用者発言の全文。モデルは最後の発言への応答だけを生成する。",
+    "source_url": "https://huggingface.co/datasets/ScaleAI/MultiChallenge",
+    "source_revision": "670fd81f270314d0f8f82b34fcfe2187fd28f699",
+    "license": "CC BY 4.0",
+    "displayed_original_parts": [
+      "USER: What's a tech trend you think will define the next few years? Please avoid using the words \"technology,\" \"AI,\" \"gaming,\" and \"system.\"\nASSISTANT: I believe the rise of sustainable and eco-friendly innovations will significantly shape the coming years. This encompasses advancements in renewable energy, electric transportation, and green infrastructure, all aimed at reducing our carbon footprint and promoting a more environmentally conscious society. Additionally, the growth of remote work and virtual collaboration tools will continue to redefine how we live, work, and interact with one another.\nUSER: What is a recent tech breakthrough you're excited about?",
+      "ASSISTANT: I'm particularly excited about the recent developments in biotechnology, specifically the use of CRISPR gene-editing tech. This groundbreaking tool has the potential to revolutionize medicine by allowing scientists to precisely edit DNA, potentially leading to cures for genetic diseases and advancements in personalized medicine. Additionally, CRISPR has applications in agriculture, where it can be used to create more resilient and sustainable crops.\nUSER: What do you think is the next big thing in VR?",
+      "ASSISTANT: I believe the next big thing in virtual reality will be the integration of haptic feedback and advanced motion tracking. These tools will allow for more immersive and realistic virtual experiences, enabling users to interact with virtual environments in a more natural and intuitive way. Additionally, advancements in eye-tracking tech will enable more realistic avatars and more natural interactions with virtual characters.\nUSER: How do you see artificial intelligence impacting everyday life in the near future?"
+    ],
+    "displayed_japanese_parts": [
+      "利用者：今後数年を特徴づける技術の動向は何だと思うか。「technology」「AI」「gaming」「system」という単語は使わないでほしい。\n既存の応答：持続可能で環境に優しい革新が、今後数年に大きな影響を与えると思う。再生可能エネルギー、電動の移動手段、環境に配慮したインフラなどが含まれ、炭素排出を減らし、環境への意識が高い社会づくりにつながる。また、在宅勤務やオンライン協働の道具も、暮らし方や働き方、人との関わり方を変え続けるだろう。\n利用者：最近の技術的な進歩で、わくわくするものは何か。\n既存の応答：特に、生命工学の最近の発展、なかでもCRISPRによる遺伝子編集に期待している。この革新的な道具は、DNAを精密に編集できるため、遺伝性疾患の治療や個別化医療の発展につながり、医療を大きく変える可能性がある。農業でも、より強く持続可能な作物の開発などに使える。\n利用者：VRで次に大きな変化を起こすものは何だと思うか。",
+      "既存の応答：仮想現実では、触覚フィードバックと高度な動作追跡の統合が、次の大きな変化になると思う。これらにより、没入感と現実感が高まり、仮想環境とより自然かつ直感的にやり取りできる。また、視線追跡の進歩で、アバターや仮想人物とのやり取りも自然になるだろう。\n利用者：人工知能は近い将来、日常生活にどのような影響を与えると思うか。"
+    ],
+    "expected_with_translation": true
+  },
+  {
+    "example": 12,
+    "id": "67455ecca969fda3803814da",
+    "title": "前の広告の版へ戻して変更する",
+    "placement": "appendix",
+    "axis": "RELIABLE_VERSION_EDITING",
+    "axis_japanese": "過去の版を踏まえた改訂",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "Create an advertisement for my non-fiction book \"The Billionaire's Secrets\" It should be bold and focus on the main selling points - exclusive interviews with 10 of the world's most successful entrepreneurs sharing their top insights. Keep it concise but impactful. The ad copy needs to be under 50 words."
+      },
+      {
+        "role": "assistant",
+        "content": "Unlock the vault of success with **The Billionaire's Secrets**! Dive into the minds of 10 self-made titans as they share their exclusive insights and proven strategies. Discover the key to extraordinary wealth and achievement. Transform your entrepreneurial journey and claim your fortune. Get **The Billionaire's Secrets** today!"
+      },
+      {
+        "role": "user",
+        "content": "Good response, now add \"New York Times Bestseller\" at the beginning of the ad. Next, include the price of $25.99 at the end. Also, mention that the book is \"available in hardcover, ebook, and audiobook formats\". Let's also bold and italicize the book title."
+      },
+      {
+        "role": "assistant",
+        "content": "***The Billionaire's Secrets***\\\n**New York Times Bestseller**\\\nUnlock the vault of success! Dive into the minds of 10 self-made titans as they share exclusive insights and proven strategies. Available in hardcover, ebook, and audiobook formats. Transform your journey for just $25.99. Get ***The Billionaire's Secrets*** today!"
+      },
+      {
+        "role": "user",
+        "content": "Remove \"NYT Bestseller\". Add \"By renowned entrepreneur Lebron James\". Say \"never-before-shared secrets\". Bold \"Transform your entrepreneurial journey\". Keep price, formats, title style, 50 words max, and tone the same."
+      },
+      {
+        "role": "assistant",
+        "content": "***The Billionaire's Secrets***\n\nUnleash your potential by reading the book written by renowned entrepreneur Lebron James! Gain access to never-before-shared secrets from 10 self-made titans. **Transform your entrepreneurial journey** and unlock the path to extraordinary wealth and achievement. Available in hardcover, ebook, and audiobook formats for just $25.99!"
+      },
+      {
+        "role": "user",
+        "content": "Just a few more tweaks, change \"Unleash your potential\" to \"Elevate your success\" swap \"Gain access to\" with \"Unlock\", and add \"Claim your copy now and start your journey to billionaire status!\" at the end."
+      },
+      {
+        "role": "assistant",
+        "content": "***The Billionaire's Secrets***\n\nElevate your success with this exclusive guide by renowned entrepreneur Lebron James! Unlock the never-before-shared secrets from 10 self-made titans. **Transform your entrepreneurial journey**. Available in hardcover, ebook, and audiobook formats for just $25.99! **Claim your copy now and start your journey to billionaire status!**"
+      },
+      {
+        "role": "user",
+        "content": "The ad word limit has increased to 75 words. Let's add some urgency and mention that the first collector's edition will only be available until Jan 1st, 2025. We have raised the price from $25.99 to $29.99."
+      },
+      {
+        "role": "assistant",
+        "content": "***The Billionaire's Secrets***\n\nElevate your success with this exclusive guide by renowned entrepreneur Lebron James! Unlock the never-before-shared secrets from 10 self-made titans. **Transform your entrepreneurial journey**. Available in hardcover, ebook, and audiobook formats for just $29.99! **Claim your copy now and start your journey to billionaire status!** Hurry, the first collector's edition will only be available until Jan 1st, 2025!"
+      },
+      {
+        "role": "user",
+        "content": "Now revert the version back to turn 2, but remove the \"New York Times Bestseller\" at the beginning of the ad. Add \"Written by renowned entrepreneur and basketball star Lebron James\" from turn 3."
+      },
+      {
+        "role": "assistant",
+        "content": "***The Billionaire's Secrets***\n\nElevate your success with this exclusive guide written by renowned entrepreneur and basketball star Lebron James! Unlock the never-before-shared secrets from 10 self-made titans. Available in hardcover, ebook, and audiobook formats for $25.99! **Claim your copy and start your journey to billionaire status!**"
+      },
+      {
+        "role": "user",
+        "content": "Make the ad more engaging with a stronger hook, the author Lebron James should not be in the same sentence as the hook. You should also mention that this book is perfect for athletes to read."
+      },
+      {
+        "role": "assistant",
+        "content": "***The Billionaire's Secrets***\n\nUnlock the secrets of the world's most successful entrepreneur! Written by entrepreneur and basketball star Lebron James, this guide reveals never-before-shared insights from 10 self-made titans and is perfect for athletes. Available in hardcover, ebook, and audiobook formats for $25.99! **Claim your copy and start your journey!**"
+      },
+      {
+        "role": "user",
+        "content": "Revert the version to turn 5, keep in mind the turn 5 prompt, but keep the target audience for athletes, the price tag of $25.99, and a hook with strong action words and a dynamic tone. "
+      }
+    ],
+    "japanese_conversation": [
+      {
+        "role": "user",
+        "content": "私のノンフィクション書籍The Billionaire's Secretsの広告を作ってほしい。大胆な表現で、世界でも特に成功した起業家10人の独占インタビューから重要な知見を紹介するという売りを強調してほしい。短く、印象に残る広告にし、50語未満にしてほしい。"
+      },
+      {
+        "role": "assistant",
+        "content": "The Billionaire's Secretsで、成功の扉を開こう。自力で成功した10人の大物が、独自の知見と実績ある戦略を明かす。並外れた富と成功の鍵を見つけよう。起業家としての歩みを変え、富をつかもう。The Billionaire's Secretsを今すぐ手に入れよう。"
+      },
+      {
+        "role": "user",
+        "content": "良い回答だ。広告の冒頭にNew York Times Bestsellerを加え、末尾に価格25.99ドルを入れてほしい。ハードカバー、電子書籍、オーディオブックで入手できることも書いてほしい。書名は太字と斜体にしよう。"
+      },
+      {
+        "role": "assistant",
+        "content": "***The Billionaire's Secrets***\\\n**New York Times Bestseller**\\\n成功の扉を開こう。自力で成功した10人の大物が、独自の知見と実績ある戦略を明かす。ハードカバー、電子書籍、オーディオブックで入手可能。25.99ドルで、あなたの歩みを変えよう。***The Billionaire's Secrets***を今すぐ手に入れよう。"
+      },
+      {
+        "role": "user",
+        "content": "NYT Bestsellerを削除し、「著名な起業家レブロン・ジェームズ著」を加えてほしい。「これまで明かされなかった秘密」という言葉を使ってほしい。「起業家としての歩みを変えよう」を太字にしてほしい。価格、形式、書名の書式、50語以内という制限、語調は保ってほしい。"
+      },
+      {
+        "role": "assistant",
+        "content": "***The Billionaire's Secrets***\n著名な起業家レブロン・ジェームズが書いた本で、潜在力を解き放とう。自力で成功した10人の大物から、これまで明かされなかった秘密を学ぼう。**起業家としての歩みを変えよう**。並外れた富と成功への道を開こう。ハードカバー、電子書籍、オーディオブックが25.99ドルで入手可能。"
+      },
+      {
+        "role": "user",
+        "content": "あと少し調整しよう。「潜在力を解き放とう」を「さらなる成功を目指そう」に、「学ぼう」を「解き明かそう」に置き換え、末尾に「今すぐ手に入れ、億万長者への道を歩み始めよう」を加えてほしい。"
+      },
+      {
+        "role": "assistant",
+        "content": "***The Billionaire's Secrets***\n著名な起業家レブロン・ジェームズによる特別なガイドで、さらなる成功を目指そう。自力で成功した10人の大物から、これまで明かされなかった秘密を解き明かそう。**起業家としての歩みを変えよう**。ハードカバー、電子書籍、オーディオブックが25.99ドルで入手可能。**今すぐ手に入れ、億万長者への道を歩み始めよう**。"
+      },
+      {
+        "role": "user",
+        "content": "広告の上限を75語に増やした。急いで買いたくなるよう、最初のコレクターズ版の販売は2025年1月1日までだと書こう。価格は25.99ドルから29.99ドルに上がった。"
+      },
+      {
+        "role": "assistant",
+        "content": "***The Billionaire's Secrets***\n著名な起業家レブロン・ジェームズによる特別なガイドで、さらなる成功を目指そう。自力で成功した10人の大物から、これまで明かされなかった秘密を解き明かそう。**起業家としての歩みを変えよう**。ハードカバー、電子書籍、オーディオブックが29.99ドルで入手可能。**今すぐ手に入れ、億万長者への道を歩み始めよう**。最初のコレクターズ版は2025年1月1日まで。お急ぎを。"
+      },
+      {
+        "role": "user",
+        "content": "ここで、2番目のやり取りの版へ戻そう。ただし、広告の冒頭のNew York Times Bestsellerは削除してほしい。3番目のやり取りから、「著名な起業家でバスケットボール選手のレブロン・ジェームズ著」を加えてほしい。"
+      },
+      {
+        "role": "assistant",
+        "content": "***The Billionaire's Secrets***\n著名な起業家でバスケットボール選手のレブロン・ジェームズによる特別なガイドで、さらなる成功を目指そう。自力で成功した10人の大物から、これまで明かされなかった秘密を解き明かそう。ハードカバー、電子書籍、オーディオブックが25.99ドルで入手可能。**今すぐ手に入れ、億万長者への道を歩み始めよう**。"
+      },
+      {
+        "role": "user",
+        "content": "もっと強い導入で、読者を引き付ける広告にしてほしい。著者のレブロン・ジェームズは、導入と別の文に書いてほしい。また、運動選手に最適の本だとも伝えてほしい。"
+      },
+      {
+        "role": "assistant",
+        "content": "***The Billionaire's Secrets***\n世界で特に成功した起業家の秘密を解き明かそう。起業家でバスケットボール選手のレブロン・ジェームズが書いたこのガイドは、自力で成功した10人の大物から、これまで明かされなかった知見を紹介し、運動選手にも最適だ。ハードカバー、電子書籍、オーディオブックが25.99ドルで入手可能。**今すぐ手に入れ、自分の道を歩み始めよう**。"
+      },
+      {
+        "role": "user",
+        "content": "5番目のやり取りの版へ戻し、そのときの指示を忘れないでほしい。ただし、対象読者を運動選手とし、価格25.99ドル、力強い動詞を使った導入、躍動感のある語調は保ってほしい。"
+      }
+    ],
+    "original": "USER: Create an advertisement for my non-fiction book \"The Billionaire's Secrets\" It should be bold and focus on the main selling points - exclusive interviews with 10 of the world's most successful entrepreneurs sharing their top insights. Keep it concise but impactful. The ad copy needs to be under 50 words.\n\nASSISTANT: Unlock the vault of success with **The Billionaire's Secrets**! Dive into the minds of 10 self-made titans as they share their exclusive insights and proven strategies. Discover the key to extraordinary wealth and achievement. Transform your entrepreneurial journey and claim your fortune. Get **The Billionaire's Secrets** today!\n\nUSER: Good response, now add \"New York Times Bestseller\" at the beginning of the ad. Next, include the price of $25.99 at the end. Also, mention that the book is \"available in hardcover, ebook, and audiobook formats\". Let's also bold and italicize the book title.\n\nASSISTANT: ***The Billionaire's Secrets***\\\n**New York Times Bestseller**\\\nUnlock the vault of success! Dive into the minds of 10 self-made titans as they share exclusive insights and proven strategies. Available in hardcover, ebook, and audiobook formats. Transform your journey for just $25.99. Get ***The Billionaire's Secrets*** today!\n\nUSER: Remove \"NYT Bestseller\". Add \"By renowned entrepreneur Lebron James\". Say \"never-before-shared secrets\". Bold \"Transform your entrepreneurial journey\". Keep price, formats, title style, 50 words max, and tone the same.\n\nASSISTANT: ***The Billionaire's Secrets***\n\nUnleash your potential by reading the book written by renowned entrepreneur Lebron James! Gain access to never-before-shared secrets from 10 self-made titans. **Transform your entrepreneurial journey** and unlock the path to extraordinary wealth and achievement. Available in hardcover, ebook, and audiobook formats for just $25.99!\n\nUSER: Just a few more tweaks, change \"Unleash your potential\" to \"Elevate your success\" swap \"Gain access to\" with \"Unlock\", and add \"Claim your copy now and start your journey to billionaire status!\" at the end.\n\nASSISTANT: ***The Billionaire's Secrets***\n\nElevate your success with this exclusive guide by renowned entrepreneur Lebron James! Unlock the never-before-shared secrets from 10 self-made titans. **Transform your entrepreneurial journey**. Available in hardcover, ebook, and audiobook formats for just $25.99! **Claim your copy now and start your journey to billionaire status!**\n\nUSER: The ad word limit has increased to 75 words. Let's add some urgency and mention that the first collector's edition will only be available until Jan 1st, 2025. We have raised the price from $25.99 to $29.99.\n\nASSISTANT: ***The Billionaire's Secrets***\n\nElevate your success with this exclusive guide by renowned entrepreneur Lebron James! Unlock the never-before-shared secrets from 10 self-made titans. **Transform your entrepreneurial journey**. Available in hardcover, ebook, and audiobook formats for just $29.99! **Claim your copy now and start your journey to billionaire status!** Hurry, the first collector's edition will only be available until Jan 1st, 2025!\n\nUSER: Now revert the version back to turn 2, but remove the \"New York Times Bestseller\" at the beginning of the ad. Add \"Written by renowned entrepreneur and basketball star Lebron James\" from turn 3.\n\nASSISTANT: ***The Billionaire's Secrets***\n\nElevate your success with this exclusive guide written by renowned entrepreneur and basketball star Lebron James! Unlock the never-before-shared secrets from 10 self-made titans. Available in hardcover, ebook, and audiobook formats for $25.99! **Claim your copy and start your journey to billionaire status!**\n\nUSER: Make the ad more engaging with a stronger hook, the author Lebron James should not be in the same sentence as the hook. You should also mention that this book is perfect for athletes to read.\n\nASSISTANT: ***The Billionaire's Secrets***\n\nUnlock the secrets of the world's most successful entrepreneur! Written by entrepreneur and basketball star Lebron James, this guide reveals never-before-shared insights from 10 self-made titans and is perfect for athletes. Available in hardcover, ebook, and audiobook formats for $25.99! **Claim your copy and start your journey!**\n\nUSER: Revert the version to turn 5, keep in mind the turn 5 prompt, but keep the target audience for athletes, the price tag of $25.99, and a hook with strong action words and a dynamic tone. ",
+    "japanese": "利用者：私のノンフィクション書籍The Billionaire's Secretsの広告を作ってほしい。大胆な表現で、世界でも特に成功した起業家10人の独占インタビューから重要な知見を紹介するという売りを強調してほしい。短く、印象に残る広告にし、50語未満にしてほしい。\n\n既存の応答：The Billionaire's Secretsで、成功の扉を開こう。自力で成功した10人の大物が、独自の知見と実績ある戦略を明かす。並外れた富と成功の鍵を見つけよう。起業家としての歩みを変え、富をつかもう。The Billionaire's Secretsを今すぐ手に入れよう。\n\n利用者：良い回答だ。広告の冒頭にNew York Times Bestsellerを加え、末尾に価格25.99ドルを入れてほしい。ハードカバー、電子書籍、オーディオブックで入手できることも書いてほしい。書名は太字と斜体にしよう。\n\n既存の応答：***The Billionaire's Secrets***\\\n**New York Times Bestseller**\\\n成功の扉を開こう。自力で成功した10人の大物が、独自の知見と実績ある戦略を明かす。ハードカバー、電子書籍、オーディオブックで入手可能。25.99ドルで、あなたの歩みを変えよう。***The Billionaire's Secrets***を今すぐ手に入れよう。\n\n利用者：NYT Bestsellerを削除し、「著名な起業家レブロン・ジェームズ著」を加えてほしい。「これまで明かされなかった秘密」という言葉を使ってほしい。「起業家としての歩みを変えよう」を太字にしてほしい。価格、形式、書名の書式、50語以内という制限、語調は保ってほしい。\n\n既存の応答：***The Billionaire's Secrets***\n著名な起業家レブロン・ジェームズが書いた本で、潜在力を解き放とう。自力で成功した10人の大物から、これまで明かされなかった秘密を学ぼう。**起業家としての歩みを変えよう**。並外れた富と成功への道を開こう。ハードカバー、電子書籍、オーディオブックが25.99ドルで入手可能。\n\n利用者：あと少し調整しよう。「潜在力を解き放とう」を「さらなる成功を目指そう」に、「学ぼう」を「解き明かそう」に置き換え、末尾に「今すぐ手に入れ、億万長者への道を歩み始めよう」を加えてほしい。\n\n既存の応答：***The Billionaire's Secrets***\n著名な起業家レブロン・ジェームズによる特別なガイドで、さらなる成功を目指そう。自力で成功した10人の大物から、これまで明かされなかった秘密を解き明かそう。**起業家としての歩みを変えよう**。ハードカバー、電子書籍、オーディオブックが25.99ドルで入手可能。**今すぐ手に入れ、億万長者への道を歩み始めよう**。\n\n利用者：広告の上限を75語に増やした。急いで買いたくなるよう、最初のコレクターズ版の販売は2025年1月1日までだと書こう。価格は25.99ドルから29.99ドルに上がった。\n\n既存の応答：***The Billionaire's Secrets***\n著名な起業家レブロン・ジェームズによる特別なガイドで、さらなる成功を目指そう。自力で成功した10人の大物から、これまで明かされなかった秘密を解き明かそう。**起業家としての歩みを変えよう**。ハードカバー、電子書籍、オーディオブックが29.99ドルで入手可能。**今すぐ手に入れ、億万長者への道を歩み始めよう**。最初のコレクターズ版は2025年1月1日まで。お急ぎを。\n\n利用者：ここで、2番目のやり取りの版へ戻そう。ただし、広告の冒頭のNew York Times Bestsellerは削除してほしい。3番目のやり取りから、「著名な起業家でバスケットボール選手のレブロン・ジェームズ著」を加えてほしい。\n\n既存の応答：***The Billionaire's Secrets***\n著名な起業家でバスケットボール選手のレブロン・ジェームズによる特別なガイドで、さらなる成功を目指そう。自力で成功した10人の大物から、これまで明かされなかった秘密を解き明かそう。ハードカバー、電子書籍、オーディオブックが25.99ドルで入手可能。**今すぐ手に入れ、億万長者への道を歩み始めよう**。\n\n利用者：もっと強い導入で、読者を引き付ける広告にしてほしい。著者のレブロン・ジェームズは、導入と別の文に書いてほしい。また、運動選手に最適の本だとも伝えてほしい。\n\n既存の応答：***The Billionaire's Secrets***\n世界で特に成功した起業家の秘密を解き明かそう。起業家でバスケットボール選手のレブロン・ジェームズが書いたこのガイドは、自力で成功した10人の大物から、これまで明かされなかった知見を紹介し、運動選手にも最適だ。ハードカバー、電子書籍、オーディオブックが25.99ドルで入手可能。**今すぐ手に入れ、自分の道を歩み始めよう**。\n\n利用者：5番目のやり取りの版へ戻し、そのときの指示を忘れないでほしい。ただし、対象読者を運動選手とし、価格25.99ドル、力強い動詞を使った導入、躍動感のある語調は保ってほしい。",
+    "judge_question": "Did the response include a mention that the first collector's edition will only be available until Jan 1st, 2025?",
+    "pass_criteria": "YES",
+    "expected_behavior": "最初のコレクターズ版の販売が2025年1月1日までだと記載する。",
+    "explanation": "5番目のやり取りでは、販売期限と新価格を追加した。最後はその版へ戻しながら、価格だけは25.99ドルにするなどの条件を重ねている。公開判定は、戻した版にある販売期限を復元できたかを確認する。",
+    "original_scope": "会話履歴と最後の利用者発言の全文。モデルは最後の発言への応答だけを生成する。",
+    "source_url": "https://huggingface.co/datasets/ScaleAI/MultiChallenge",
+    "source_revision": "670fd81f270314d0f8f82b34fcfe2187fd28f699",
+    "license": "CC BY 4.0",
+    "displayed_original_parts": [
+      "USER: Create an advertisement for my non-fiction book \"The Billionaire's Secrets\" It should be bold and focus on the main selling points - exclusive interviews with 10 of the world's most successful entrepreneurs sharing their top insights. Keep it concise but impactful. The ad copy needs to be under 50 words.\nASSISTANT: Unlock the vault of success with **The Billionaire's Secrets**! Dive into the minds of 10 self-made titans as they share their exclusive insights and proven strategies. Discover the key to extraordinary wealth and achievement. Transform your entrepreneurial journey and claim your fortune. Get **The Billionaire's Secrets** today!",
+      "USER: Good response, now add \"New York Times Bestseller\" at the beginning of the ad. Next, include the price of $25.99 at the end. Also, mention that the book is \"available in hardcover, ebook, and audiobook formats\". Let's also bold and italicize the book title.\nASSISTANT: ***The Billionaire's Secrets***\\\n**New York Times Bestseller**\\\nUnlock the vault of success! Dive into the minds of 10 self-made titans as they share exclusive insights and proven strategies. Available in hardcover, ebook, and audiobook formats. Transform your journey for just $25.99. Get ***The Billionaire's Secrets*** today!\nUSER: Remove \"NYT Bestseller\". Add \"By renowned entrepreneur Lebron James\". Say \"never-before-shared secrets\". Bold \"Transform your entrepreneurial journey\". Keep price, formats, title style, 50 words max, and tone the same.",
+      "ASSISTANT: ***The Billionaire's Secrets***\nUnleash your potential by reading the book written by renowned entrepreneur Lebron James! Gain access to never-before-shared secrets from 10 self-made titans. **Transform your entrepreneurial journey** and unlock the path to extraordinary wealth and achievement. Available in hardcover, ebook, and audiobook formats for just $25.99!\nUSER: Just a few more tweaks, change \"Unleash your potential\" to \"Elevate your success\" swap \"Gain access to\" with \"Unlock\", and add \"Claim your copy now and start your journey to billionaire status!\" at the end.",
+      "ASSISTANT: ***The Billionaire's Secrets***\nElevate your success with this exclusive guide by renowned entrepreneur Lebron James! Unlock the never-before-shared secrets from 10 self-made titans. **Transform your entrepreneurial journey**. Available in hardcover, ebook, and audiobook formats for just $25.99! **Claim your copy now and start your journey to billionaire status!**\nUSER: The ad word limit has increased to 75 words. Let's add some urgency and mention that the first collector's edition will only be available until Jan 1st, 2025. We have raised the price from $25.99 to $29.99.",
+      "ASSISTANT: ***The Billionaire's Secrets***\nElevate your success with this exclusive guide by renowned entrepreneur Lebron James! Unlock the never-before-shared secrets from 10 self-made titans. **Transform your entrepreneurial journey**. Available in hardcover, ebook, and audiobook formats for just $29.99! **Claim your copy now and start your journey to billionaire status!** Hurry, the first collector's edition will only be available until Jan 1st, 2025!\nUSER: Now revert the version back to turn 2, but remove the \"New York Times Bestseller\" at the beginning of the ad. Add \"Written by renowned entrepreneur and basketball star Lebron James\" from turn 3.",
+      "ASSISTANT: ***The Billionaire's Secrets***\nElevate your success with this exclusive guide written by renowned entrepreneur and basketball star Lebron James! Unlock the never-before-shared secrets from 10 self-made titans. Available in hardcover, ebook, and audiobook formats for $25.99! **Claim your copy and start your journey to billionaire status!**\nUSER: Make the ad more engaging with a stronger hook, the author Lebron James should not be in the same sentence as the hook. You should also mention that this book is perfect for athletes to read.",
+      "ASSISTANT: ***The Billionaire's Secrets***\nUnlock the secrets of the world's most successful entrepreneur! Written by entrepreneur and basketball star Lebron James, this guide reveals never-before-shared insights from 10 self-made titans and is perfect for athletes. Available in hardcover, ebook, and audiobook formats for $25.99! **Claim your copy and start your journey!**\nUSER: Revert the version to turn 5, keep in mind the turn 5 prompt, but keep the target audience for athletes, the price tag of $25.99, and a hook with strong action words and a dynamic tone. "
+    ],
+    "displayed_japanese_parts": [
+      "利用者：私のノンフィクション書籍The Billionaire's Secretsの広告を作ってほしい。大胆な表現で、世界でも特に成功した起業家10人の独占インタビューから重要な知見を紹介するという売りを強調してほしい。短く、印象に残る広告にし、50語未満にしてほしい。\n既存の応答：The Billionaire's Secretsで、成功の扉を開こう。自力で成功した10人の大物が、独自の知見と実績ある戦略を明かす。並外れた富と成功の鍵を見つけよう。起業家としての歩みを変え、富をつかもう。The Billionaire's Secretsを今すぐ手に入れよう。\n利用者：良い回答だ。広告の冒頭にNew York Times Bestsellerを加え、末尾に価格25.99ドルを入れてほしい。ハードカバー、電子書籍、オーディオブックで入手できることも書いてほしい。書名は太字と斜体にしよう。\n既存の応答：***The Billionaire's Secrets***\\\n**New York Times Bestseller**\\\n成功の扉を開こう。",
+      "自力で成功した10人の大物が、独自の知見と実績ある戦略を明かす。ハードカバー、電子書籍、オーディオブックで入手可能。25.99ドルで、あなたの歩みを変えよう。***The Billionaire's Secrets***を今すぐ手に入れよう。\n利用者：NYT Bestsellerを削除し、「著名な起業家レブロン・ジェームズ著」を加えてほしい。「これまで明かされなかった秘密」という言葉を使ってほしい。「起業家としての歩みを変えよう」を太字にしてほしい。価格、形式、書名の書式、50語以内という制限、語調は保ってほしい。\n既存の応答：***The Billionaire's Secrets***\n著名な起業家レブロン・ジェームズが書いた本で、潜在力を解き放とう。自力で成功した10人の大物から、これまで明かされなかった秘密を学ぼう。**起業家としての歩みを変えよう**。並外れた富と成功への道を開こう。ハードカバー、電子書籍、オーディオブックが25.99ドルで入手可能。\n利用者：あと少し調整しよう。",
+      "「潜在力を解き放とう」を「さらなる成功を目指そう」に、「学ぼう」を「解き明かそう」に置き換え、末尾に「今すぐ手に入れ、億万長者への道を歩み始めよう」を加えてほしい。\n既存の応答：***The Billionaire's Secrets***\n著名な起業家レブロン・ジェームズによる特別なガイドで、さらなる成功を目指そう。自力で成功した10人の大物から、これまで明かされなかった秘密を解き明かそう。**起業家としての歩みを変えよう**。ハードカバー、電子書籍、オーディオブックが25.99ドルで入手可能。**今すぐ手に入れ、億万長者への道を歩み始めよう**。\n利用者：広告の上限を75語に増やした。急いで買いたくなるよう、最初のコレクターズ版の販売は2025年1月1日までだと書こう。価格は25.99ドルから29.99ドルに上がった。\n既存の応答：***The Billionaire's Secrets***\n著名な起業家レブロン・ジェームズによる特別なガイドで、さらなる成功を目指そう。",
+      "自力で成功した10人の大物から、これまで明かされなかった秘密を解き明かそう。**起業家としての歩みを変えよう**。ハードカバー、電子書籍、オーディオブックが29.99ドルで入手可能。**今すぐ手に入れ、億万長者への道を歩み始めよう**。最初のコレクターズ版は2025年1月1日まで。お急ぎを。\n利用者：ここで、2番目のやり取りの版へ戻そう。ただし、広告の冒頭のNew York Times Bestsellerは削除してほしい。3番目のやり取りから、「著名な起業家でバスケットボール選手のレブロン・ジェームズ著」を加えてほしい。\n既存の応答：***The Billionaire's Secrets***\n著名な起業家でバスケットボール選手のレブロン・ジェームズによる特別なガイドで、さらなる成功を目指そう。自力で成功した10人の大物から、これまで明かされなかった秘密を解き明かそう。ハードカバー、電子書籍、オーディオブックが25.99ドルで入手可能。**今すぐ手に入れ、億万長者への道を歩み始めよう**。\n利用者：もっと強い導入で、読者を引き付ける広告にしてほしい。",
+      "著者のレブロン・ジェームズは、導入と別の文に書いてほしい。また、運動選手に最適の本だとも伝えてほしい。\n既存の応答：***The Billionaire's Secrets***\n世界で特に成功した起業家の秘密を解き明かそう。起業家でバスケットボール選手のレブロン・ジェームズが書いたこのガイドは、自力で成功した10人の大物から、これまで明かされなかった知見を紹介し、運動選手にも最適だ。ハードカバー、電子書籍、オーディオブックが25.99ドルで入手可能。**今すぐ手に入れ、自分の道を歩み始めよう**。\n利用者：5番目のやり取りの版へ戻し、そのときの指示を忘れないでほしい。ただし、対象読者を運動選手とし、価格25.99ドル、力強い動詞を使った導入、躍動感のある語調は保ってほしい。"
+    ],
+    "expected_with_translation": false
+  },
+  {
+    "example": 13,
+    "id": "6765f1c843c9bda0861f11fa",
+    "title": "構成案へ二つの追加を反映する",
+    "placement": "appendix",
+    "axis": "RELIABLE_VERSION_EDITING",
+    "axis_japanese": "過去の版を踏まえた改訂",
+    "conversation": [
+      {
+        "role": "user",
+        "content": "I'm a retired screenwrite preparing a lecture on the influence of Cold War ideology on Hollywood films. Could you help me draft an outline for it?"
+      },
+      {
+        "role": "assistant",
+        "content": "Here's a possible outline for a lecture on the influence of Cold War ideology on Hollywood films:\n\nI. Introduction\n\n* Brief overview of the Cold War and its ideological context\n* Importance of Hollywood films as a reflection of American culture and values\n* Thesis statement: Hollywood films during the Cold War era (1945-1991) reflected and reinforced the ideological tensions of the time, often promoting a pro-American, anti-communist agenda.\n\nII. The Early Cold War (1945-1955)\n\n* Overview of the post-WWII political climate and the rise of the Red Scare\n* Hollywood's response to the House Un-American Activities Committee (HUAC) and the Blacklist\n* Examples of films that reflected the early Cold War ideology:\n\t+ \"The Iron Curtain\" (1948)\n\t+ \"I Married a Communist\" (1949)\n\t+ \"The Red Menace\" (1949)\n\nIII. The McCarthy Era (1950-1954)\n\n* The rise of Senator Joseph McCarthy and the Red Scare\n* Hollywood's response to McCarthyism: blacklisting, self-censorship, and propaganda\n* Examples of films that reflected the McCarthy era ideology:\n\t+ \"I Was a Communist for the FBI\" (1951)\n\t+ \"My Son John\" (1952)\n\t+ \" Pickup on South Street\" (1953)\n\nIV. The Cold War and Science Fiction\n\n* The rise of science fiction as a genre in the 1950s\n* How science fiction films often served as allegories for Cold War fears and anxieties\n* Examples of science fiction films that reflected Cold War ideology:\n\t+ \"The Day the Earth Stood Still\" (1951)\n\t+ \"The War of the Worlds\" (1953)\n\t+ \"Invasion of the Body Snatchers\" (1956)\n\nV. The Cold War and the Western\n\n* The Western genre as a reflection of American values and ideals\n* How Westerns often served as allegories for Cold War conflicts and ideologies\n* Examples of Westerns that reflected Cold War ideology:\n\t+ \"High Noon\" (1952)\n\t+ \"The Searchers\" (1956)\n\t+ \"The Magnificent Seven\" (1960)\n\nVI. The Late Cold War (1960s-1980s)\n\n* The rise of counterculture and anti-war movements in the 1960s\n* Hollywood's response to the changing political climate: more nuanced and critical portrayals of American society\n* Examples of films that reflected the late Cold War ideology:\n\t+ \"Dr. Strangelove\" (1964)\n\t+ \"The Manchurian Candidate\" (1962)\n\t+ \"Apocalypse Now\" (1979)\n\nVII. Conclusion\n\n* Recap of the ways in which Hollywood films reflected and reinforced Cold War ideology\n* Discussion of the lasting impact of Cold War ideology on American culture and society\n* Final thoughts on the importance of understanding the historical context of Hollywood films.\n\nThis is just one possible outline, and you can certainly modify it to fit your specific needs and interests. Good luck with your lecture!"
+      },
+      {
+        "role": "user",
+        "content": "This outline looks great! Could you add a section for personal anecdotes about my experiences with the Hollywood blacklist and McCarthyism?Could you also add a paragraph on how Roy Cohn has remained influential over the years?"
+      }
+    ],
+    "japanese_conversation": [
+      {
+        "role": "user",
+        "content": "私は引退した脚本家で、冷戦期のイデオロギーがハリウッド映画に与えた影響について講演を準備している。構成案を作るのを手伝ってほしい。"
+      },
+      {
+        "role": "assistant",
+        "content": "冷戦期のイデオロギーがハリウッド映画に与えた影響について、次のような構成案が考えられる。\n\nI. 導入\n・冷戦とその思想的背景の概観\n・米国の文化と価値観を映すハリウッド映画の重要性\n・中心となる主張：冷戦期（1945〜1991年）のハリウッド映画は、当時の思想的対立を映し、強め、親米・反共の立場を打ち出すことが多かった。\n\nII. 冷戦初期（1945〜1955年）\n・第二次世界大戦後の政治状況と「赤狩り」の拡大\n・下院非米活動委員会（HUAC）とブラックリストに対するハリウッドの対応\n・冷戦初期の思想を映す映画の例：『鉄のカーテン』（1948年）、I Married a Communist（1949年）、The Red Menace（1949年）\n\nIII. マッカーシーの時代（1950〜1954年）\n・ジョセフ・マッカーシー上院議員の台頭と赤狩り\n・ブラックリスト、自主検閲、宣伝など、ハリウッドの対応\n・当時の思想を映す映画の例：I Was a Communist for the FBI（1951年）、My Son John（1952年）、『拾った女』（1953年）\n\nIV. 冷戦とSF映画\n・1950年代におけるSFというジャンルの発展\n・SF映画が、冷戦の恐怖や不安を寓話として表す方法\n・冷戦期の思想を映すSF映画の例：『地球の静止する日』（1951年）、『宇宙戦争』（1953年）、『ボディ・スナッチャー／恐怖の街』（1956年）\n\nV. 冷戦と西部劇\n・米国の価値観と理想を映す西部劇\n・西部劇が、冷戦の対立や思想を寓話として表す方法\n・冷戦期の思想を映す西部劇の例：『真昼の決闘』（1952年）、『捜索者』（1956年）、『荒野の七人』（1960年）\n\nVI. 冷戦後期（1960〜1980年代）\n・1960年代における対抗文化と反戦運動の拡大\n・政治状況の変化に対するハリウッドの対応：米国社会を、より複雑かつ批判的に描くようになったこと\n・冷戦後期の思想を映す映画の例：『博士の異常な愛情』（1964年）、『影なき狙撃者』（1962年）、『地獄の黙示録』（1979年）\n\nVII. 結論\n・ハリウッド映画が冷戦期の思想を映し、強めた方法の振り返り\n・冷戦期の思想が米国文化と社会に残した影響の議論\n・ハリウッド映画の歴史的背景を理解する重要性についてのまとめ\n\nこれは一つの案なので、必要や関心に合わせて変更できる。講演の成功を祈っている。"
+      },
+      {
+        "role": "user",
+        "content": "良い構成案だ。ハリウッドのブラックリストとマッカーシズムについて、私自身の経験を語る節を追加してくれないか。ロイ・コーンの影響力が、その後もどのように続いてきたかについての段落も追加してほしい。"
+      }
+    ],
+    "original": "USER: I'm a retired screenwrite preparing a lecture on the influence of Cold War ideology on Hollywood films. Could you help me draft an outline for it?\n\nASSISTANT: Here's a possible outline for a lecture on the influence of Cold War ideology on Hollywood films:\n\nI. Introduction\n\n* Brief overview of the Cold War and its ideological context\n* Importance of Hollywood films as a reflection of American culture and values\n* Thesis statement: Hollywood films during the Cold War era (1945-1991) reflected and reinforced the ideological tensions of the time, often promoting a pro-American, anti-communist agenda.\n\nII. The Early Cold War (1945-1955)\n\n* Overview of the post-WWII political climate and the rise of the Red Scare\n* Hollywood's response to the House Un-American Activities Committee (HUAC) and the Blacklist\n* Examples of films that reflected the early Cold War ideology:\n\t+ \"The Iron Curtain\" (1948)\n\t+ \"I Married a Communist\" (1949)\n\t+ \"The Red Menace\" (1949)\n\nIII. The McCarthy Era (1950-1954)\n\n* The rise of Senator Joseph McCarthy and the Red Scare\n* Hollywood's response to McCarthyism: blacklisting, self-censorship, and propaganda\n* Examples of films that reflected the McCarthy era ideology:\n\t+ \"I Was a Communist for the FBI\" (1951)\n\t+ \"My Son John\" (1952)\n\t+ \" Pickup on South Street\" (1953)\n\nIV. The Cold War and Science Fiction\n\n* The rise of science fiction as a genre in the 1950s\n* How science fiction films often served as allegories for Cold War fears and anxieties\n* Examples of science fiction films that reflected Cold War ideology:\n\t+ \"The Day the Earth Stood Still\" (1951)\n\t+ \"The War of the Worlds\" (1953)\n\t+ \"Invasion of the Body Snatchers\" (1956)\n\nV. The Cold War and the Western\n\n* The Western genre as a reflection of American values and ideals\n* How Westerns often served as allegories for Cold War conflicts and ideologies\n* Examples of Westerns that reflected Cold War ideology:\n\t+ \"High Noon\" (1952)\n\t+ \"The Searchers\" (1956)\n\t+ \"The Magnificent Seven\" (1960)\n\nVI. The Late Cold War (1960s-1980s)\n\n* The rise of counterculture and anti-war movements in the 1960s\n* Hollywood's response to the changing political climate: more nuanced and critical portrayals of American society\n* Examples of films that reflected the late Cold War ideology:\n\t+ \"Dr. Strangelove\" (1964)\n\t+ \"The Manchurian Candidate\" (1962)\n\t+ \"Apocalypse Now\" (1979)\n\nVII. Conclusion\n\n* Recap of the ways in which Hollywood films reflected and reinforced Cold War ideology\n* Discussion of the lasting impact of Cold War ideology on American culture and society\n* Final thoughts on the importance of understanding the historical context of Hollywood films.\n\nThis is just one possible outline, and you can certainly modify it to fit your specific needs and interests. Good luck with your lecture!\n\nUSER: This outline looks great! Could you add a section for personal anecdotes about my experiences with the Hollywood blacklist and McCarthyism?Could you also add a paragraph on how Roy Cohn has remained influential over the years?",
+    "japanese": "利用者：私は引退した脚本家で、冷戦期のイデオロギーがハリウッド映画に与えた影響について講演を準備している。構成案を作るのを手伝ってほしい。\n\n既存の応答：冷戦期のイデオロギーがハリウッド映画に与えた影響について、次のような構成案が考えられる。\n\nI. 導入\n・冷戦とその思想的背景の概観\n・米国の文化と価値観を映すハリウッド映画の重要性\n・中心となる主張：冷戦期（1945〜1991年）のハリウッド映画は、当時の思想的対立を映し、強め、親米・反共の立場を打ち出すことが多かった。\n\nII. 冷戦初期（1945〜1955年）\n・第二次世界大戦後の政治状況と「赤狩り」の拡大\n・下院非米活動委員会（HUAC）とブラックリストに対するハリウッドの対応\n・冷戦初期の思想を映す映画の例：『鉄のカーテン』（1948年）、I Married a Communist（1949年）、The Red Menace（1949年）\n\nIII. マッカーシーの時代（1950〜1954年）\n・ジョセフ・マッカーシー上院議員の台頭と赤狩り\n・ブラックリスト、自主検閲、宣伝など、ハリウッドの対応\n・当時の思想を映す映画の例：I Was a Communist for the FBI（1951年）、My Son John（1952年）、『拾った女』（1953年）\n\nIV. 冷戦とSF映画\n・1950年代におけるSFというジャンルの発展\n・SF映画が、冷戦の恐怖や不安を寓話として表す方法\n・冷戦期の思想を映すSF映画の例：『地球の静止する日』（1951年）、『宇宙戦争』（1953年）、『ボディ・スナッチャー／恐怖の街』（1956年）\n\nV. 冷戦と西部劇\n・米国の価値観と理想を映す西部劇\n・西部劇が、冷戦の対立や思想を寓話として表す方法\n・冷戦期の思想を映す西部劇の例：『真昼の決闘』（1952年）、『捜索者』（1956年）、『荒野の七人』（1960年）\n\nVI. 冷戦後期（1960〜1980年代）\n・1960年代における対抗文化と反戦運動の拡大\n・政治状況の変化に対するハリウッドの対応：米国社会を、より複雑かつ批判的に描くようになったこと\n・冷戦後期の思想を映す映画の例：『博士の異常な愛情』（1964年）、『影なき狙撃者』（1962年）、『地獄の黙示録』（1979年）\n\nVII. 結論\n・ハリウッド映画が冷戦期の思想を映し、強めた方法の振り返り\n・冷戦期の思想が米国文化と社会に残した影響の議論\n・ハリウッド映画の歴史的背景を理解する重要性についてのまとめ\n\nこれは一つの案なので、必要や関心に合わせて変更できる。講演の成功を祈っている。\n\n利用者：良い構成案だ。ハリウッドのブラックリストとマッカーシズムについて、私自身の経験を語る節を追加してくれないか。ロイ・コーンの影響力が、その後もどのように続いてきたかについての段落も追加してほしい。",
+    "judge_question": "Does the model add the two requested sections (personal anecdotes about his experiences with the Hollywood blacklist and McCarthyism and a paragraph on how Roy Cohn has remained influential over the years) to the current outline?",
+    "pass_criteria": "YES",
+    "expected_behavior": "ブラックリスト・マッカーシズムに関する本人の経験を語る節と、ロイ・コーンの影響を述べる段落を追加する。",
+    "explanation": "直前の構成案を土台に、二つの追加要求を反映する。公開された基準は、二つの追加箇所が反映されたかを確認する。",
+    "original_scope": "会話履歴と最後の利用者発言の全文。モデルは最後の発言への応答だけを生成する。",
+    "source_url": "https://huggingface.co/datasets/ScaleAI/MultiChallenge",
+    "source_revision": "670fd81f270314d0f8f82b34fcfe2187fd28f699",
+    "license": "CC BY 4.0",
+    "displayed_original_parts": [
+      "USER: I'm a retired screenwrite preparing a lecture on the influence of Cold War ideology on Hollywood films. Could you help me draft an outline for it?\nASSISTANT: Here's a possible outline for a lecture on the influence of Cold War ideology on Hollywood films:\nI. Introduction\n* Brief overview of the Cold War and its ideological context\n* Importance of Hollywood films as a reflection of American culture and values\n* Thesis statement: Hollywood films during the Cold War era (1945-1991) reflected and reinforced the ideological tensions of the time, often promoting a pro-American, anti-communist agenda.\nII. The Early Cold War (1945-1955)\n* Overview of the post-WWII political climate and the rise of the Red Scare",
+      "* Hollywood's response to the House Un-American Activities Committee (HUAC) and the Blacklist\n* Examples of films that reflected the early Cold War ideology:\n\t+ \"The Iron Curtain\" (1948)\n\t+ \"I Married a Communist\" (1949)\n\t+ \"The Red Menace\" (1949)\nIII. The McCarthy Era (1950-1954)\n* The rise of Senator Joseph McCarthy and the Red Scare\n* Hollywood's response to McCarthyism: blacklisting, self-censorship, and propaganda\n* Examples of films that reflected the McCarthy era ideology:\n\t+ \"I Was a Communist for the FBI\" (1951)\n\t+ \"My Son John\" (1952)",
+      "\t+ \" Pickup on South Street\" (1953)\nIV. The Cold War and Science Fiction\n* The rise of science fiction as a genre in the 1950s\n* How science fiction films often served as allegories for Cold War fears and anxieties\n* Examples of science fiction films that reflected Cold War ideology:\n\t+ \"The Day the Earth Stood Still\" (1951)\n\t+ \"The War of the Worlds\" (1953)\n\t+ \"Invasion of the Body Snatchers\" (1956)\nV. The Cold War and the Western\n* The Western genre as a reflection of American values and ideals\n* How Westerns often served as allegories for Cold War conflicts and ideologies",
+      "* Examples of Westerns that reflected Cold War ideology:\n\t+ \"High Noon\" (1952)\n\t+ \"The Searchers\" (1956)\n\t+ \"The Magnificent Seven\" (1960)\nVI. The Late Cold War (1960s-1980s)\n* The rise of counterculture and anti-war movements in the 1960s\n* Hollywood's response to the changing political climate: more nuanced and critical portrayals of American society\n* Examples of films that reflected the late Cold War ideology:\n\t+ \"Dr. Strangelove\" (1964)\n\t+ \"The Manchurian Candidate\" (1962)\n\t+ \"Apocalypse Now\" (1979)",
+      "VII. Conclusion\n* Recap of the ways in which Hollywood films reflected and reinforced Cold War ideology\n* Discussion of the lasting impact of Cold War ideology on American culture and society\n* Final thoughts on the importance of understanding the historical context of Hollywood films.\nThis is just one possible outline, and you can certainly modify it to fit your specific needs and interests. Good luck with your lecture!\nUSER: This outline looks great! Could you add a section for personal anecdotes about my experiences with the Hollywood blacklist and McCarthyism?Could you also add a paragraph on how Roy Cohn has remained influential over the years?"
+    ],
+    "displayed_japanese_parts": [
+      "利用者：私は引退した脚本家で、冷戦期のイデオロギーがハリウッド映画に与えた影響について講演を準備している。構成案を作るのを手伝ってほしい。\n既存の応答：冷戦期のイデオロギーがハリウッド映画に与えた影響について、次のような構成案が考えられる。\nI. 導入\n・冷戦とその思想的背景の概観\n・米国の文化と価値観を映すハリウッド映画の重要性\n・中心となる主張：冷戦期（1945〜1991年）のハリウッド映画は、当時の思想的対立を映し、強め、親米・反共の立場を打ち出すことが多かった。\nII. 冷戦初期（1945〜1955年）\n・第二次世界大戦後の政治状況と「赤狩り」の拡大\n・下院非米活動委員会（HUAC）とブラックリストに対するハリウッドの対応",
+      "・冷戦初期の思想を映す映画の例：『鉄のカーテン』（1948年）、I Married a Communist（1949年）、The Red Menace（1949年）\nIII. マッカーシーの時代（1950〜1954年）\n・ジョセフ・マッカーシー上院議員の台頭と赤狩り\n・ブラックリスト、自主検閲、宣伝など、ハリウッドの対応\n・当時の思想を映す映画の例：I Was a Communist for the FBI（1951年）、My Son John（1952年）、『拾った女』（1953年）\nIV. 冷戦とSF映画\n・1950年代におけるSFというジャンルの発展\n・SF映画が、冷戦の恐怖や不安を寓話として表す方法\n・冷戦期の思想を映すSF映画の例：『地球の静止する日』（1951年）、『宇宙戦争』（1953年）、『ボディ・スナッチャー／恐怖の街』（1956年）",
+      "V. 冷戦と西部劇\n・米国の価値観と理想を映す西部劇\n・西部劇が、冷戦の対立や思想を寓話として表す方法\n・冷戦期の思想を映す西部劇の例：『真昼の決闘』（1952年）、『捜索者』（1956年）、『荒野の七人』（1960年）\nVI. 冷戦後期（1960〜1980年代）\n・1960年代における対抗文化と反戦運動の拡大\n・政治状況の変化に対するハリウッドの対応：米国社会を、より複雑かつ批判的に描くようになったこと\n・冷戦後期の思想を映す映画の例：『博士の異常な愛情』（1964年）、『影なき狙撃者』（1962年）、『地獄の黙示録』（1979年）",
+      "VII. 結論\n・ハリウッド映画が冷戦期の思想を映し、強めた方法の振り返り\n・冷戦期の思想が米国文化と社会に残した影響の議論\n・ハリウッド映画の歴史的背景を理解する重要性についてのまとめ\nこれは一つの案なので、必要や関心に合わせて変更できる。講演の成功を祈っている。\n利用者：良い構成案だ。ハリウッドのブラックリストとマッカーシズムについて、私自身の経験を語る節を追加してくれないか。ロイ・コーンの影響力が、その後もどのように続いてきたかについての段落も追加してほしい。"
+    ],
+    "expected_with_translation": false
+  }
+]

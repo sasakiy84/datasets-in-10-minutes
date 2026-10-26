@@ -1,0 +1,276 @@
+{
+  "dataset": "MultiChallenge",
+  "official_creators": "Sirdeshmukh et al., Scale AI",
+  "source_revision": "670fd81f270314d0f8f82b34fcfe2187fd28f699",
+  "current_records": 266,
+  "current_axes": {
+    "INFERENCE_MEMORY": 109,
+    "SELF_COHERENCE": 48,
+    "INSTRUCTION_RETENTION": 69,
+    "RELIABLE_VERSION_EDITING": 40
+  },
+  "current_all_pass_criteria": {
+    "YES": 266
+  },
+  "current_utterance_unit": "Each role/content message, including final user message. Not a user-assistant round.",
+  "current_utterances_min": 3,
+  "current_utterances_max": 19,
+  "current_utterances_mean": 9.172932330827068,
+  "historical_records": 273,
+  "historical_axes": {
+    "INFERENCE_MEMORY": 113,
+    "SELF_COHERENCE": 50,
+    "INSTRUCTION_RETENTION": 69,
+    "RELIABLE_VERSION_EDITING": 41
+  },
+  "current_removed_ids": [
+    "674568562274da0299d9b121",
+    "6765f4400e0c1f56ddde8290",
+    "6765f440b0ca0453b824ac33",
+    "6765f441d19c1caaffcdba35",
+    "6765fc5ec794f0de7ce718ad",
+    "67819bbb6e1295dafab2cd03",
+    "6781aa53113b7dd6a81d27cb"
+  ],
+  "retained_target_question_changes": 47,
+  "official_reported_update": "2026-02-03 judge Gemini2.5Pro, 54 task evaluation questions revised. No causal explanation inferred for removed IDs.",
+  "metric_static_evidence": {
+    "file": "repo-src/src--result_parser.py",
+    "function": "calculate_scores",
+    "per_axis": "100 * axis_passed / axis_total",
+    "overall": "arithmetic mean of per-axis percentages",
+    "multiple_attempts": "Any pass for one question counts the question passed",
+    "default_attempts": 1,
+    "judge_historical": "gpt-4o-2024-08-06, temperature0, from src/evaluator.py",
+    "judge_current": "Gemini2.5Pro from official page update; not claimed verified by running",
+    "judge_input": "Final model response and target_question; no full conversation passed in JUDGE_PROMPT",
+    "pass": "verdict == pass_criteria"
+  },
+  "historical_human_scores": {
+    "Claude3.5SonnetJune2024": 41.42,
+    "o1-preview": 37.23,
+    "Gemini1.5ProAug272024": 19.96,
+    "Llama3.1405BInstruct": 14.92,
+    "GPT4oAug2024": 12.52
+  },
+  "historical_table_prose_inconsistencies": "Paper main-results prose mentions 38.3/34.6/19.1, while its table reports 41.42/37.23/19.96. Slides use table values. Alignment table93.95/37.33 rounded about94/about37; paper narrative several different rounded values not mixed.",
+  "current_official_scores": {
+    "as_of": "2026-10-26",
+    "url": "https://labs.scale.com/leaderboard/multichallenge",
+    "models": [
+      {
+        "model": "gpt 6.1 Sol",
+        "score": 81.95,
+        "interval_pm": 4.16
+      },
+      {
+        "model": "Gemini 4 Argon",
+        "score": 78.7,
+        "interval_pm": 5.3
+      },
+      {
+        "model": "Muse Spark",
+        "score": 75.52,
+        "interval_pm": 4.05
+      },
+      {
+        "model": "Muse Spark 1.1",
+        "score": 75.3,
+        "interval_pm": 0.6
+      }
+    ],
+    "interval": "95% CI, website methodology",
+    "evaluation_trial_count": "Not confirmed from official current page, not invented. Public CLI defaults1 but not used to assert website trial count.",
+    "current_historical_comparison": "Separate pages, different source/time/judge; not presented as common-run ranking."
+  },
+  "source_reading_scope": {
+    "paper": "Actual read main pp1–9 and task definitions/source methodology/judge table; downloaded full70 pages, no claim all70 read.",
+    "official_site": "Actual read SSR methodology/current rows/update, styled screenshot actually opened.",
+    "data": "Machine acquisition of all266, exact counts/statistics and comparison; selected13 full conversations + allJP + target/pass actually read; not full266 manually read.",
+    "code": "Static read main.py, src/evaluator.py, src/conversation.py, src/result_parser.py; not executed.",
+    "licenses": "Current official HF card CC BY4.0 and actual CC4legalcode obtained/read, attribution retained.",
+    "own_vs_inherited": "This creator report contains creator actions only. Other reviewers supply their own separate records."
+  },
+  "examples": [
+    {
+      "example": 1,
+      "id": "6765f1c86539ceefe4b7ab4f",
+      "axis": "INSTRUCTION_RETENTION",
+      "utterances": 3,
+      "original_words": 74,
+      "conversation_exact": true,
+      "judge_exact": true,
+      "pass_exact": true,
+      "translation_turns_roles_match": true,
+      "full_original_jp_displayed_ignoring_whitespace": true
+    },
+    {
+      "example": 2,
+      "id": "6765f1c80960c015f806a7c1",
+      "axis": "INFERENCE_MEMORY",
+      "utterances": 3,
+      "original_words": 224,
+      "conversation_exact": true,
+      "judge_exact": true,
+      "pass_exact": true,
+      "translation_turns_roles_match": true,
+      "full_original_jp_displayed_ignoring_whitespace": true
+    },
+    {
+      "example": 3,
+      "id": "67456856a77b2db232c76c97",
+      "axis": "SELF_COHERENCE",
+      "utterances": 5,
+      "original_words": 331,
+      "conversation_exact": true,
+      "judge_exact": true,
+      "pass_exact": true,
+      "translation_turns_roles_match": true,
+      "full_original_jp_displayed_ignoring_whitespace": true
+    },
+    {
+      "example": 4,
+      "id": "6781ad8b500c15bd7ab291a1",
+      "axis": "INSTRUCTION_RETENTION",
+      "utterances": 15,
+      "original_words": 123,
+      "conversation_exact": true,
+      "judge_exact": true,
+      "pass_exact": true,
+      "translation_turns_roles_match": true,
+      "full_original_jp_displayed_ignoring_whitespace": true
+    },
+    {
+      "example": 5,
+      "id": "67455268bc2ba9e69b8618f8",
+      "axis": "INSTRUCTION_RETENTION",
+      "utterances": 3,
+      "original_words": 127,
+      "conversation_exact": true,
+      "judge_exact": true,
+      "pass_exact": true,
+      "translation_turns_roles_match": true,
+      "full_original_jp_displayed_ignoring_whitespace": true
+    },
+    {
+      "example": 6,
+      "id": "6745685762962af2b60e558f",
+      "axis": "INSTRUCTION_RETENTION",
+      "utterances": 5,
+      "original_words": 172,
+      "conversation_exact": true,
+      "judge_exact": true,
+      "pass_exact": true,
+      "translation_turns_roles_match": true,
+      "full_original_jp_displayed_ignoring_whitespace": true
+    },
+    {
+      "example": 7,
+      "id": "674552683acc22154b07a598",
+      "axis": "INFERENCE_MEMORY",
+      "utterances": 3,
+      "original_words": 306,
+      "conversation_exact": true,
+      "judge_exact": true,
+      "pass_exact": true,
+      "translation_turns_roles_match": true,
+      "full_original_jp_displayed_ignoring_whitespace": true
+    },
+    {
+      "example": 8,
+      "id": "67819bc5105ae99631ad71a4",
+      "axis": "INFERENCE_MEMORY",
+      "utterances": 3,
+      "original_words": 409,
+      "conversation_exact": true,
+      "judge_exact": true,
+      "pass_exact": true,
+      "translation_turns_roles_match": true,
+      "full_original_jp_displayed_ignoring_whitespace": true
+    },
+    {
+      "example": 9,
+      "id": "6765f489fd98ca5aac5e6faa",
+      "axis": "INFERENCE_MEMORY",
+      "utterances": 7,
+      "original_words": 503,
+      "conversation_exact": true,
+      "judge_exact": true,
+      "pass_exact": true,
+      "translation_turns_roles_match": true,
+      "full_original_jp_displayed_ignoring_whitespace": true
+    },
+    {
+      "example": 10,
+      "id": "6745685633c13093ce7e53c3",
+      "axis": "SELF_COHERENCE",
+      "utterances": 5,
+      "original_words": 543,
+      "conversation_exact": true,
+      "judge_exact": true,
+      "pass_exact": true,
+      "translation_turns_roles_match": true,
+      "full_original_jp_displayed_ignoring_whitespace": true
+    },
+    {
+      "example": 11,
+      "id": "6765f48a5e92f1dda32a63e1",
+      "axis": "INSTRUCTION_RETENTION",
+      "utterances": 7,
+      "original_words": 249,
+      "conversation_exact": true,
+      "judge_exact": true,
+      "pass_exact": true,
+      "translation_turns_roles_match": true,
+      "full_original_jp_displayed_ignoring_whitespace": true
+    },
+    {
+      "example": 12,
+      "id": "67455ecca969fda3803814da",
+      "axis": "RELIABLE_VERSION_EDITING",
+      "utterances": 15,
+      "original_words": 662,
+      "conversation_exact": true,
+      "judge_exact": true,
+      "pass_exact": true,
+      "translation_turns_roles_match": true,
+      "full_original_jp_displayed_ignoring_whitespace": true
+    },
+    {
+      "example": 13,
+      "id": "6765f1c843c9bda0861f11fa",
+      "axis": "RELIABLE_VERSION_EDITING",
+      "utterances": 3,
+      "original_words": 498,
+      "conversation_exact": true,
+      "judge_exact": true,
+      "pass_exact": true,
+      "translation_turns_roles_match": true,
+      "full_original_jp_displayed_ignoring_whitespace": true
+    }
+  ],
+  "selected_axes": {
+    "INSTRUCTION_RETENTION": 5,
+    "INFERENCE_MEMORY": 4,
+    "SELF_COHERENCE": 2,
+    "RELIABLE_VERSION_EDITING": 2
+  },
+  "external_generation_api_used": false,
+  "gemini_used": false,
+  "evaluation_harness_run": false,
+  "model_inference_run": false,
+  "source_urls": [
+    "https://arxiv.org/abs/2501.17399",
+    "https://labs.scale.com/leaderboard/multichallenge",
+    "https://huggingface.co/datasets/ScaleAI/MultiChallenge",
+    "https://github.com/ekwinox117/multi-challenge",
+    "https://creativecommons.org/licenses/by/4.0/"
+  ],
+  "creation_stage_remaining": [],
+  "artifact_sha256": {
+    "pdf": "d950d8773fc615ad84210537482b6adeba98c9efb671a0925dc93b9a42eefa1c",
+    "pptx": "d88820f19513c9ed0449b0af3953815b1da64862a8897f30746d6e1b4ebe4f14"
+  },
+  "final_review": "../skill-proofreading/multichallenge/review.json",
+  "final_independent_approved": true
+}
