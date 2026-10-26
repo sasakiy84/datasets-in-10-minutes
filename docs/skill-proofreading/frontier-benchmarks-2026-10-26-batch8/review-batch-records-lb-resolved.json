@@ -1,0 +1,2137 @@
+[
+  {
+    "index": 1,
+    "example": 1,
+    "field": "context_quote",
+    "page": null,
+    "before": [
+      {
+        "text": "        n_chunks = size // self.chunk_size + (1 if size % self.chunk_size != 0 else 0)\n        allocated = set()\n        exclude_pi_names = set()\n        chunk_handles = dict()\n        self.lock.acquire()\n        for i in range(self.n_backups):\n            capacities = self.slave_states.get_capacities(exclude_pi_names = allocated)\n            n_empty_chunks = [(capicity[0], capicity[1] // self.chunk_size) for capicity in capacities]\n            total_empty_chunks = sum([chunk[1] for chunk in n_empty_chunks])\n[...]\n            # sort n_empty_chunks by capacity\n            n_empty_chunks.sort(key = lambda x: x[1], reverse = True)\n            exclude_pi_names.add(n_empty_chunks[0][0])\n\n            # allocate chunks\n            cnt_allocated = 0\n            pi_list = []\n            for pi_name, n_empty_chunk in n_empty_chunks:\n                if cnt_allocated + n_empty_chunk >= n_chunks:\n                    pi_list.append((pi_name, n_chunks - cnt_allocated))\n                    cnt_allocated = n_chunks\n                    break\n                else:\n                    pi_list.append((pi_name, n_empty_chunk))\n                    cnt_allocated += n_empty_chunk\n",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/examples-before-editorial.json"
+        ],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ],
+    "after": [
+      {
+        "text": "        n_chunks = size // self.chunk_size + (1 if size % self.chunk_size != 0 else 0)\n[...]\n        for i in range(self.n_backups):\n            capacities = self.slave_states.get_capacities(exclude_pi_names = allocated)\n            n_empty_chunks = [(capicity[0], capicity[1] // self.chunk_size) for capicity in capacities]\n            total_empty_chunks = sum([chunk[1] for chunk in n_empty_chunks])\n            self.debug_print(f\"total_empty_chunks: {total_empty_chunks}, n_chunks: {n_chunks}\")\n            if total_empty_chunks < n_chunks:\n                capacities = self.slave_states.get_capacities(exclude_pi_names = exclude_pi_names)\n                n_empty_chunks = [(capicity[0], capicity[1] // self.chunk_size) for capicity in capacities]\n                total_empty_chunks = sum([chunk[1] for chunk in n_empty_chunks])\n                self.debug_print(f\" total_empty_chunks: {total_empty_chunks}, n_chunks: {n_chunks}\")\n                if total_empty_chunks < n_chunks:\n[...]\n            # sort n_empty_chunks by capacity\n            n_empty_chunks.sort(key = lambda x: x[1], reverse = True)\n            exclude_pi_names.add(n_empty_chunks[0][0])\n\n            # allocate chunks\n            cnt_allocated = 0\n            pi_list = []\n            for pi_name, n_empty_chunk in n_empty_chunks:\n                if cnt_allocated + n_empty_chunk >= n_chunks:\n                    pi_list.append((pi_name, n_chunks - cnt_allocated))\n                    cnt_allocated = n_chunks\n                    break\n                else:\n                    pi_list.append((pi_name, n_empty_chunk))\n                    cnt_allocated += n_empty_chunk\n\n[...]\n                    self._reduce_capacity(pi_name, self.chunk_size)\n                allocated.add(pi_name)\n",
+        "direct_saved": false,
+        "saved_files": [],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": [
+          8
+        ]
+      }
+    ]
+  },
+  {
+    "index": 2,
+    "example": 3,
+    "field": "context_quote",
+    "page": null,
+    "before": [
+      {
+        "text": "Adapting the draft shield\nThe draft shield of your balance can be easily adapted to your specific weighing needs. The coupling elements\nintegrated in the lower part of the door handles can be used for any combination of the left and right door of the draft\nshield. Your balance can thus be configured individually for right- and left-handers and for different types of loading.\nIf you operate the draft shield with one hand and wish to load the balance\nusing the other, push one coupling element downward and the other\nupward.\nExample: If you operate the draft shield with your left hand and wish to load\nthe balance with your right (this corresponds to the normal mode of operation\nfor right-handers), push the right coupling element upward and the left\ndownward.\nYou can now open and close the right draft shield door with the bottom part\nof the left door handle.\nIf you wish to open and close both draft shield doors individually, push both\ncoupling elements to the bottom position. Owing to the space requirements\nfor insertion of the doors, only one of the doors can be opened fully at any\none time.\nTo load the balance with small weighing samples, we",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/examples-before-editorial.json"
+        ],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ],
+    "after": [
+      {
+        "text": "Adapting the draft shield\nThe draft shield of your balance can be easily adapted to your specific weighing needs. The coupling elements\nintegrated in the lower part of the door handles can be used for any combination of the left and right door of the draft\nshield. Your balance can thus be configured individually for right- and left-handers and for different types of loading.\nIf you operate the draft shield with one hand and wish to load the balance\nusing the other, push one coupling element downward and the other\nupward.\nExample: If you operate the draft shield with your left hand and wish to load\nthe balance with your right (this corresponds to the normal mode of operation\nfor right-handers), push the right coupling element upward and the left\ndownward.\nYou can now open and close the right draft shield door with the bottom part\nof the left door handle.",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/examples-before-editorial.json"
+        ],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ]
+  },
+  {
+    "index": 3,
+    "example": 4,
+    "field": "context_quote",
+    "page": null,
+    "before": [
+      {
+        "text": "Length” of the cathode and the height of the anode is multiplied by the “Total Coated Length”\nof the anode in order to calculate the coated areas of the cathode and anode.\nd) Because the “Capacity Loading” attribute defines the amount of active material placed in the\ncathode and anode per unit area (Units are mAh/cm2), as the coated areas of the cathode and\nanode are increased, the capacity of the cells are automatically increased, as well.\n10.In Case Setup, change the “Capacity” parameter to the Operational Capacity of this cylindrical cell,\n[...]\nd) Please note that all of these parameters will have an effect on the “balance” of the cell, but the\nmost important are certainly the “Cathode Loading” and the “N over P” parameters.  With that\n\n\n56\nAutoLion Calibration Tutorials ",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/examples-before-editorial.json"
+        ],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ],
+    "after": [
+      {
+        "text": "d) Because the “Capacity Loading” attribute defines the amount of active material placed in the\ncathode and anode per unit area (Units are mAh/cm2), as the coated areas of the cathode and\nanode are increased, the capacity of the cells are automatically increased, as well.\n[...]\nd) Please note that all of these parameters will have an effect on the “balance” of the cell, but the most important are certainly the “Cathode Loading” and the “N over P” parameters.",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate3/manifest.json",
+          "longbench-v2/candidate3/examples.json",
+          "longbench-v2/candidate3/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate2/manifest.json",
+          "longbench-v2/candidate2/examples.json",
+          "longbench-v2/candidate2/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/draft1/manifest.json",
+          "longbench-v2/draft1/datasets-in-10-minutes-longbench-v2.pdf"
+        ],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": [
+          23
+        ]
+      }
+    ]
+  },
+  {
+    "index": 4,
+    "example": 5,
+    "field": "context_quote",
+    "page": null,
+    "before": [
+      {
+        "text": "class BertSelfAttention(nn.Module):\n    def __init__(self, config, is_cross_attention):\n        super().__init__()\n        self.config = config\n[...]\n        self.query = nn.Linear(config.hidden_size, self.all_head_size)\n        if is_cross_attention:\n[...]\nclass BertAttention(nn.Module):\n    def __init__(self, config, is_cross_attention=False, layer_num=-1):\n        super().__init__()\n        if is_cross_attention:\n            self.self0 = BertSelfAttention(config, is_cross_attention)\n            self.self1 = BertSelfAttention(config, is_cross_attention)\n        else:    \n            self.self = BertSelfAttention(config, is_cross_attention)\n        self.output = BertSelfOutput(config, twin=is_cross_attention, merge=(is_cross_attention and layer_num>=6))\n[...]\nclass BertLayer(nn.Module):\n    def __init__(self, config, layer_num):\n        super().__init__()\n        self.config = config\n        self.chunk_size_feed_forward = config.chunk_size_feed_forward\n        self.seq_len_dim = 1\n        self.attention = BertAttention(config)      ",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/examples-before-editorial.json"
+        ],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ],
+    "after": [
+      {
+        "text": "class BertSelfAttention(nn.Module):\n[...]\n        self.query = nn.Linear(config.hidden_size, self.all_head_size)\n        if is_cross_attention:\n            self.key = nn.Linear(config.encoder_width, self.all_head_size)\n            self.value = nn.Linear(config.encoder_width, self.all_head_size)\n        else:\n            self.key = nn.Linear(config.hidden_size, self.all_head_size)\n            self.value = nn.Linear(config.hidden_size, self.all_head_size)\n[...]\nclass BertAttention(nn.Module):\n[...]\n            self.self = BertSelfAttention(config, is_cross_attention)\n[...]\nclass BertLayer(nn.Module):\n[...]\n        self.attention = BertAttention(config)      ",
+        "direct_saved": false,
+        "saved_files": [],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": [
+          9
+        ]
+      }
+    ]
+  },
+  {
+    "index": 5,
+    "example": 6,
+    "field": "context_quote",
+    "page": null,
+    "before": [
+      {
+        "text": "void shutdown(TCP* tcp){\n  printf(\"In shutdown\\n\");\n\n  if(tcp->state == TCPState::FIN_WAIT_1){\n    // 已经进入了 FIN_WAIT_1 状态，不需要更多操作\n  }\n  else if(tcp->shutdown_waiting){\n    send_pkt_directly(tcp);\n    if(tcp->send.size == 0){\n      // 发送FIN 包\n      send_fin_pkt(tcp);\n      tcp->snd_nxt += 1;\n      tcp->set_state(TCPState::FIN_WAIT_1);\n    }\n\n  }\n  else if (tcp->state == TCPState::ESTABLISHED) {\n[...]\n      tcp->set_state(TCPState::FIN_WAIT_1);\n    }\n    // 如果没发完\n    else if(tcp->send.size > 0){\n      // 关闭等待状态，等发完才 fin\n      printf(\"tcp->shutdown_waiting = true;\\n\");\n      tcp->shutdown_waiting = true;\n    }\n    ",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/examples-before-editorial.json"
+        ],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ],
+    "after": [
+      {
+        "text": "  else if(tcp->shutdown_waiting){\n    send_pkt_directly(tcp);\n    if(tcp->send.size == 0){\n      // 发送FIN 包\n      send_fin_pkt(tcp);\n      tcp->snd_nxt += 1;\n      tcp->set_state(TCPState::FIN_WAIT_1);\n    }\n\n  }\n[...]\n    // 如果没发完\n    else if(tcp->send.size > 0){\n      // 关闭等待状态，等发完才 fin\n      printf(\"tcp->shutdown_waiting = true;\\n\");\n      tcp->shutdown_waiting = true;\n    }",
+        "direct_saved": false,
+        "saved_files": [],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": [
+          10
+        ]
+      }
+    ]
+  },
+  {
+    "index": 6,
+    "example": 10,
+    "field": "context_quote",
+    "page": null,
+    "before": [
+      {
+        "text": "Box 513, 5600 MB Eindhoven, The Netherlands (Received 25 April 2014; published 31 July 2014) A drop of water deposited on a cold plate freezes into an ice drop with a pointy tip.\n[...]\nThis counterintuitive observation is attributed to an internal solutal Marangoni flow up to 1 mm=s, which is driven by the enriched solute concentration locally in the vicinity of the solidification front.",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/examples-before-editorial.json"
+        ],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ],
+    "after": [
+      {
+        "text": "A drop of water deposited on a cold plate freezes into an ice drop with a pointy tip. While this phenomenon clearly finds its origin in the expansion of water upon freezing, a quantitative description of the tip singularity has remained elusive.\n[...]\nThis counterintuitive observation is attributed to an internal solutal Marangoni flow up to 1 mm=s, which is driven by the enriched solute concentration locally in the vicinity of the solidification front.",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate4/manifest.json",
+          "longbench-v2/candidate4/examples.json",
+          "longbench-v2/candidate4/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate7/manifest.json",
+          "longbench-v2/candidate7/examples.json",
+          "longbench-v2/candidate7/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate5/manifest.json",
+          "longbench-v2/candidate5/examples.json",
+          "longbench-v2/candidate5/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate3/manifest.json",
+          "longbench-v2/candidate3/examples.json",
+          "longbench-v2/candidate3/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate6/manifest.json",
+          "longbench-v2/candidate6/examples.json",
+          "longbench-v2/candidate6/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate2/manifest.json",
+          "longbench-v2/candidate2/examples.json",
+          "longbench-v2/candidate2/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/draft1/manifest.json",
+          "longbench-v2/draft1/datasets-in-10-minutes-longbench-v2.pdf"
+        ],
+        "current": true,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ]
+  },
+  {
+    "index": 7,
+    "example": 13,
+    "field": "context_quote",
+    "page": null,
+    "before": [
+      {
+        "text": "class labels, we utilize the method similar to Li et al. (2023b), where the pooled embeddings of class\nnames (Lci) are considered as label embeddings. For box positions bi ∈R8×3, represented by the\ncoordinates of its 8 corner points, we utilize Fourier embedding to each point and pass through an\nMLP for encoding, as in Equation 4. Then, we use an MLP to compress both class and position\nembedding into one hidden vector, as in Equation 5.",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/examples-before-editorial.json"
+        ],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ],
+    "after": [
+      {
+        "text": "For box positions bi ∈R8×3, represented by the coordinates of its 8 corner points, we utilize Fourier embedding to each point and pass through an MLP for encoding, as in Equation 4. Then, we use an MLP to compress both class and position embedding into one hidden vector, as in Equation 5.",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate4/manifest.json",
+          "longbench-v2/candidate4/examples.json",
+          "longbench-v2/candidate7/manifest.json",
+          "longbench-v2/candidate7/examples.json",
+          "longbench-v2/candidate5/manifest.json",
+          "longbench-v2/candidate5/examples.json",
+          "longbench-v2/candidate3/manifest.json",
+          "longbench-v2/candidate3/examples.json",
+          "longbench-v2/candidate6/manifest.json",
+          "longbench-v2/candidate6/examples.json",
+          "longbench-v2/candidate2/manifest.json",
+          "longbench-v2/candidate2/examples.json",
+          "longbench-v2/draft1/manifest.json",
+          "longbench-v2/examples-before-editorial.json"
+        ],
+        "current": true,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ]
+  },
+  {
+    "index": 8,
+    "example": 1,
+    "field": "context_quote",
+    "page": null,
+    "before": [
+      {
+        "text": "        n_chunks = size // self.chunk_size + (1 if size % self.chunk_size != 0 else 0)\n[...]\n        for i in range(self.n_backups):\n            capacities = self.slave_states.get_capacities(exclude_pi_names = allocated)\n            n_empty_chunks = [(capicity[0], capicity[1] // self.chunk_size) for capicity in capacities]\n            total_empty_chunks = sum([chunk[1] for chunk in n_empty_chunks])\n            self.debug_print(f\"total_empty_chunks: {total_empty_chunks}, n_chunks: {n_chunks}\")\n            if total_empty_chunks < n_chunks:\n                capacities = self.slave_states.get_capacities(exclude_pi_names = exclude_pi_names)\n                n_empty_chunks = [(capicity[0], capicity[1] // self.chunk_size) for capicity in capacities]\n                total_empty_chunks = sum([chunk[1] for chunk in n_empty_chunks])\n                self.debug_print(f\" total_empty_chunks: {total_empty_chunks}, n_chunks: {n_chunks}\")\n                if total_empty_chunks < n_chunks:\n[...]\n            # sort n_empty_chunks by capacity\n            n_empty_chunks.sort(key = lambda x: x[1], reverse = True)\n            exclude_pi_names.add(n_empty_chunks[0][0])\n\n            # allocate chunks\n            cnt_allocated = 0\n            pi_list = []\n            for pi_name, n_empty_chunk in n_empty_chunks:\n                if cnt_allocated + n_empty_chunk >= n_chunks:\n                    pi_list.append((pi_name, n_chunks - cnt_allocated))\n                    cnt_allocated = n_chunks\n                    break\n                else:\n                    pi_list.append((pi_name, n_empty_chunk))\n                    cnt_allocated += n_empty_chunk\n\n[...]\n                    self._reduce_capacity(pi_name, self.chunk_size)\n                allocated.add(pi_name)\n",
+        "direct_saved": false,
+        "saved_files": [],
+        "current": false,
+        "chain_previous_after": [
+          1
+        ],
+        "chain_next_before": []
+      }
+    ],
+    "after": [
+      {
+        "text": "            # sort n_empty_chunks by capacity\n            n_empty_chunks.sort(key = lambda x: x[1], reverse = True)\n[...]\n            for pi_name, n_empty_chunk in n_empty_chunks:\n                if cnt_allocated + n_empty_chunk >= n_chunks:\n                    pi_list.append((pi_name, n_chunks - cnt_allocated))\n                    cnt_allocated = n_chunks\n                    break\n                else:\n                    pi_list.append((pi_name, n_empty_chunk))\n                    cnt_allocated += n_empty_chunk\n\n[...]\n                    self._reduce_capacity(pi_name, self.chunk_size)",
+        "direct_saved": false,
+        "saved_files": [],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": [
+          12
+        ]
+      }
+    ]
+  },
+  {
+    "index": 9,
+    "example": 5,
+    "field": "context_quote",
+    "page": null,
+    "before": [
+      {
+        "text": "class BertSelfAttention(nn.Module):\n[...]\n        self.query = nn.Linear(config.hidden_size, self.all_head_size)\n        if is_cross_attention:\n            self.key = nn.Linear(config.encoder_width, self.all_head_size)\n            self.value = nn.Linear(config.encoder_width, self.all_head_size)\n        else:\n            self.key = nn.Linear(config.hidden_size, self.all_head_size)\n            self.value = nn.Linear(config.hidden_size, self.all_head_size)\n[...]\nclass BertAttention(nn.Module):\n[...]\n            self.self = BertSelfAttention(config, is_cross_attention)\n[...]\nclass BertLayer(nn.Module):\n[...]\n        self.attention = BertAttention(config)      ",
+        "direct_saved": false,
+        "saved_files": [],
+        "current": false,
+        "chain_previous_after": [
+          4
+        ],
+        "chain_next_before": []
+      }
+    ],
+    "after": [
+      {
+        "text": "class BertSelfAttention(nn.Module):\n[...]\n        self.query = nn.Linear(config.hidden_size, self.all_head_size)\n[...]\n            self.key = nn.Linear(config.hidden_size, self.all_head_size)\n            self.value = nn.Linear(config.hidden_size, self.all_head_size)\n[...]\nclass BertAttention(nn.Module):\n            self.self = BertSelfAttention(config, is_cross_attention)\n[...]\nclass BertLayer(nn.Module):\n        self.attention = BertAttention(config)      ",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate3/examples.json",
+          "longbench-v2/candidate2/examples.json"
+        ],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": [
+          28
+        ]
+      }
+    ]
+  },
+  {
+    "index": 10,
+    "example": 6,
+    "field": "context_quote",
+    "page": null,
+    "before": [
+      {
+        "text": "  else if(tcp->shutdown_waiting){\n    send_pkt_directly(tcp);\n    if(tcp->send.size == 0){\n      // 发送FIN 包\n      send_fin_pkt(tcp);\n      tcp->snd_nxt += 1;\n      tcp->set_state(TCPState::FIN_WAIT_1);\n    }\n\n  }\n[...]\n    // 如果没发完\n    else if(tcp->send.size > 0){\n      // 关闭等待状态，等发完才 fin\n      printf(\"tcp->shutdown_waiting = true;\\n\");\n      tcp->shutdown_waiting = true;\n    }",
+        "direct_saved": false,
+        "saved_files": [],
+        "current": false,
+        "chain_previous_after": [
+          5
+        ],
+        "chain_next_before": []
+      }
+    ],
+    "after": [
+      {
+        "text": "  else if(tcp->shutdown_waiting){\n    send_pkt_directly(tcp);\n    if(tcp->send.size == 0){\n      // 发送FIN 包\n      send_fin_pkt(tcp);\n      tcp->snd_nxt += 1;\n      tcp->set_state(TCPState::FIN_WAIT_1);\n    }\n\n[...]\n      tcp->shutdown_waiting = true;",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate4/manifest.json",
+          "longbench-v2/candidate4/examples.json",
+          "longbench-v2/candidate4/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate7/manifest.json",
+          "longbench-v2/candidate7/examples.json",
+          "longbench-v2/candidate7/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate5/manifest.json",
+          "longbench-v2/candidate5/examples.json",
+          "longbench-v2/candidate5/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate3/manifest.json",
+          "longbench-v2/candidate3/examples.json",
+          "longbench-v2/candidate3/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate6/manifest.json",
+          "longbench-v2/candidate6/examples.json",
+          "longbench-v2/candidate6/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate2/manifest.json",
+          "longbench-v2/candidate2/examples.json",
+          "longbench-v2/candidate2/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/draft1/manifest.json",
+          "longbench-v2/draft1/datasets-in-10-minutes-longbench-v2.pdf"
+        ],
+        "current": true,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ]
+  },
+  {
+    "index": 11,
+    "example": 11,
+    "field": null,
+    "page": null,
+    "before": [
+      {
+        "text": "ゲーム履歴から獲得金額を集計する / Which player wins the most golds in the game?\nA: player_0\nB: player_3\nC: player_4\nD: player_6",
+        "direct_saved": false,
+        "saved_files": [],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ],
+    "after": [
+      {
+        "text": "過去の会話から購入前の価格を求める / What was the original price of the Up & Up brand cleaning supplies the user bought?\nA: $12\nB: $120\nC: $60\nD: $80",
+        "direct_saved": false,
+        "saved_files": [],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ],
+    "before_structured_matches": [],
+    "after_structured_matches": [],
+    "before_structured_saved_matches": [
+      "longbench-v2/examples-before-editorial.json"
+    ],
+    "after_structured_saved_matches": [
+      "longbench-v2/examples.json",
+      "longbench-v2/candidate4/examples.json",
+      "longbench-v2/candidate7/examples.json",
+      "longbench-v2/candidate5/examples.json",
+      "longbench-v2/candidate3/examples.json",
+      "longbench-v2/candidate6/examples.json",
+      "longbench-v2/candidate2/examples.json",
+      "longbench-v2/candidate8/examples.json",
+      "longbench-v2/candidate4/datasets-in-10-minutes-longbench-v2.pptx",
+      "longbench-v2/candidate7/datasets-in-10-minutes-longbench-v2.pptx",
+      "longbench-v2/candidate5/datasets-in-10-minutes-longbench-v2.pptx",
+      "longbench-v2/candidate3/datasets-in-10-minutes-longbench-v2.pptx",
+      "longbench-v2/candidate6/datasets-in-10-minutes-longbench-v2.pptx",
+      "longbench-v2/candidate2/datasets-in-10-minutes-longbench-v2.pptx",
+      "longbench-v2/candidate8/datasets-in-10-minutes-longbench-v2.pptx",
+      "longbench-v2/draft1/datasets-in-10-minutes-longbench-v2.pptx"
+    ]
+  },
+  {
+    "index": 12,
+    "example": 1,
+    "field": "context_quotes",
+    "page": null,
+    "before": [
+      {
+        "text": "            # sort n_empty_chunks by capacity\n            n_empty_chunks.sort(key = lambda x: x[1], reverse = True)\n[...]\n            for pi_name, n_empty_chunk in n_empty_chunks:\n                if cnt_allocated + n_empty_chunk >= n_chunks:\n                    pi_list.append((pi_name, n_chunks - cnt_allocated))\n                    cnt_allocated = n_chunks\n                    break\n                else:\n                    pi_list.append((pi_name, n_empty_chunk))\n                    cnt_allocated += n_empty_chunk\n\n[...]\n                    self._reduce_capacity(pi_name, self.chunk_size)",
+        "direct_saved": false,
+        "saved_files": [],
+        "current": false,
+        "chain_previous_after": [
+          8
+        ],
+        "chain_next_before": []
+      }
+    ],
+    "after": [
+      {
+        "text": "            # sort n_empty_chunks by capacity\n            n_empty_chunks.sort(key = lambda x: x[1], reverse = True)\n            exclude_pi_names.add(n_empty_chunks[0][0])\n            # allocate chunks\n            cnt_allocated = 0\n            pi_list = []\n            for pi_name, n_empty_chunk in n_empty_chunks:\n                if cnt_allocated + n_empty_chunk >= n_chunks:\n                    pi_list.append((pi_name, n_chunks - cnt_allocated))\n                    cnt_allocated = n_chunks\n                    break\n                else:\n                    pi_list.append((pi_name, n_empty_chunk))\n                    cnt_allocated += n_empty_chunk",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/examples-before-editorial.json"
+        ],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      },
+      {
+        "text": "            capacities = self.slave_states.get_capacities(exclude_pi_names = allocated)\n[...]\n            if total_empty_chunks < n_chunks:\n                capacities = self.slave_states.get_capacities(exclude_pi_names = exclude_pi_names)",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate4/manifest.json",
+          "longbench-v2/candidate4/examples.json",
+          "longbench-v2/candidate4/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate7/manifest.json",
+          "longbench-v2/candidate7/examples.json",
+          "longbench-v2/candidate7/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate5/manifest.json",
+          "longbench-v2/candidate5/examples.json",
+          "longbench-v2/candidate5/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate3/manifest.json",
+          "longbench-v2/candidate3/examples.json",
+          "longbench-v2/candidate3/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate6/manifest.json",
+          "longbench-v2/candidate6/examples.json",
+          "longbench-v2/candidate6/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate2/manifest.json",
+          "longbench-v2/candidate2/examples.json",
+          "longbench-v2/candidate2/datasets-in-10-minutes-longbench-v2.pdf"
+        ],
+        "current": true,
+        "chain_previous_after": [],
+        "chain_next_before": [
+          20
+        ]
+      }
+    ]
+  },
+  {
+    "index": 13,
+    "example": 1,
+    "field": null,
+    "page": null,
+    "before": [
+      {
+        "text": "コードでは、ファイルの大きさをブロック数へ換算する。各コピーについて空き容量を調べ、前のコピーの保存先を除くと不足する場合には、除外するサーバーを絞って候補を選び直す。空きブロック数の多い順に並べ、必要な個数を満たすまで順番に割り当てる。保存先へ割り当てるたびに、そのサーバーの空き容量を減らす。",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/draft1/manifest.json",
+          "longbench-v2/draft1/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/edit_examples.py"
+        ],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ],
+    "after": [
+      {
+        "text": "空き容量の多い順に保存先を使う。前のコピーの保存先をすべて除くと空きが足りない場合は、最も空きが大きかった保存先だけを除いて候補を選び直す。",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/root_changes.py"
+        ],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ]
+  },
+  {
+    "index": 14,
+    "example": 2,
+    "field": null,
+    "page": null,
+    "before": [
+      {
+        "text": "time,sun,temperature,chill,humidity,wind direction,wind speed,visibility,air pressure\n2017-01-06T02:10:00Z,2,-7.3,-8.9,96,W,1,16000,1040.4\n2017-01-22T00:10:00Z,2,-5.3,-6.7,96,ZZO,1,8320,1027.9\n2017-01-22T04:10:00Z,0,-7.8,-9.5,96,ZO,1,617,1027.9\n2017-02-09T15:10:00Z,0,1.1,-3.6,80,NO,5,7110,1026.2",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/draft1/manifest.json",
+          "longbench-v2/draft1/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/examples-before-editorial.json"
+        ],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ],
+    "after": [
+      {
+        "text": "2017-01-06T02:10:00Z",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate4/manifest.json",
+          "longbench-v2/candidate4/examples.json",
+          "longbench-v2/candidate4/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate7/manifest.json",
+          "longbench-v2/candidate7/examples.json",
+          "longbench-v2/candidate7/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate5/manifest.json",
+          "longbench-v2/candidate5/examples.json",
+          "longbench-v2/candidate5/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate3/manifest.json",
+          "longbench-v2/candidate3/examples.json",
+          "longbench-v2/candidate3/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate6/manifest.json",
+          "longbench-v2/candidate6/examples.json",
+          "longbench-v2/candidate6/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate2/manifest.json",
+          "longbench-v2/candidate2/examples.json",
+          "longbench-v2/candidate2/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/draft1/manifest.json",
+          "longbench-v2/draft1/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/examples-before-editorial.json",
+          "longbench-v2/prepare_examples.py",
+          "longbench-v2/root_changes.py"
+        ],
+        "current": true,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      },
+      {
+        "text": "2",
+        "direct_saved": false,
+        "saved_files": [],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      },
+      {
+        "text": "-7.3",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate4/manifest.json",
+          "longbench-v2/candidate4/examples.json",
+          "longbench-v2/candidate4/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate7/manifest.json",
+          "longbench-v2/candidate7/examples.json",
+          "longbench-v2/candidate7/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate5/manifest.json",
+          "longbench-v2/candidate5/examples.json",
+          "longbench-v2/candidate5/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate3/manifest.json",
+          "longbench-v2/candidate3/examples.json",
+          "longbench-v2/candidate3/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate6/manifest.json",
+          "longbench-v2/candidate6/examples.json",
+          "longbench-v2/candidate6/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate2/manifest.json",
+          "longbench-v2/candidate2/examples.json",
+          "longbench-v2/candidate2/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/draft1/manifest.json",
+          "longbench-v2/draft1/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/examples-before-editorial.json"
+        ],
+        "current": true,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      },
+      {
+        "text": "96",
+        "direct_saved": false,
+        "saved_files": [],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      },
+      {
+        "text": "2017-01-22T00:10:00Z",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate4/manifest.json",
+          "longbench-v2/candidate4/examples.json",
+          "longbench-v2/candidate4/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate7/manifest.json",
+          "longbench-v2/candidate7/examples.json",
+          "longbench-v2/candidate7/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate5/manifest.json",
+          "longbench-v2/candidate5/examples.json",
+          "longbench-v2/candidate5/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate3/manifest.json",
+          "longbench-v2/candidate3/examples.json",
+          "longbench-v2/candidate3/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate6/manifest.json",
+          "longbench-v2/candidate6/examples.json",
+          "longbench-v2/candidate6/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate2/manifest.json",
+          "longbench-v2/candidate2/examples.json",
+          "longbench-v2/candidate2/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/draft1/manifest.json",
+          "longbench-v2/draft1/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/examples-before-editorial.json",
+          "longbench-v2/prepare_examples.py",
+          "longbench-v2/root_changes.py"
+        ],
+        "current": true,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      },
+      {
+        "text": "2",
+        "direct_saved": false,
+        "saved_files": [],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      },
+      {
+        "text": "-5.3",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate4/manifest.json",
+          "longbench-v2/candidate4/examples.json",
+          "longbench-v2/candidate4/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate7/manifest.json",
+          "longbench-v2/candidate7/examples.json",
+          "longbench-v2/candidate7/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate5/manifest.json",
+          "longbench-v2/candidate5/examples.json",
+          "longbench-v2/candidate5/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate3/manifest.json",
+          "longbench-v2/candidate3/examples.json",
+          "longbench-v2/candidate3/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate6/manifest.json",
+          "longbench-v2/candidate6/examples.json",
+          "longbench-v2/candidate6/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate2/manifest.json",
+          "longbench-v2/candidate2/examples.json",
+          "longbench-v2/candidate2/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/draft1/manifest.json",
+          "longbench-v2/draft1/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/examples-before-editorial.json"
+        ],
+        "current": true,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      },
+      {
+        "text": "96",
+        "direct_saved": false,
+        "saved_files": [],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      },
+      {
+        "text": "2017-01-22T04:10:00Z",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate4/manifest.json",
+          "longbench-v2/candidate4/examples.json",
+          "longbench-v2/candidate4/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate7/manifest.json",
+          "longbench-v2/candidate7/examples.json",
+          "longbench-v2/candidate7/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate5/manifest.json",
+          "longbench-v2/candidate5/examples.json",
+          "longbench-v2/candidate5/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate3/manifest.json",
+          "longbench-v2/candidate3/examples.json",
+          "longbench-v2/candidate3/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate6/manifest.json",
+          "longbench-v2/candidate6/examples.json",
+          "longbench-v2/candidate6/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate2/manifest.json",
+          "longbench-v2/candidate2/examples.json",
+          "longbench-v2/candidate2/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/draft1/manifest.json",
+          "longbench-v2/draft1/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/examples-before-editorial.json",
+          "longbench-v2/prepare_examples.py",
+          "longbench-v2/root_changes.py"
+        ],
+        "current": true,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      },
+      {
+        "text": "0",
+        "direct_saved": false,
+        "saved_files": [],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      },
+      {
+        "text": "-7.8",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate4/manifest.json",
+          "longbench-v2/candidate4/examples.json",
+          "longbench-v2/candidate4/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate7/manifest.json",
+          "longbench-v2/candidate7/examples.json",
+          "longbench-v2/candidate7/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate5/manifest.json",
+          "longbench-v2/candidate5/examples.json",
+          "longbench-v2/candidate5/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate3/manifest.json",
+          "longbench-v2/candidate3/examples.json",
+          "longbench-v2/candidate3/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate6/manifest.json",
+          "longbench-v2/candidate6/examples.json",
+          "longbench-v2/candidate6/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate2/manifest.json",
+          "longbench-v2/candidate2/examples.json",
+          "longbench-v2/candidate2/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/draft1/manifest.json",
+          "longbench-v2/draft1/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/examples-before-editorial.json",
+          "longbench-v2/prepare_examples.py",
+          "longbench-v2/final_records.py"
+        ],
+        "current": true,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      },
+      {
+        "text": "96",
+        "direct_saved": false,
+        "saved_files": [],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      },
+      {
+        "text": "2017-02-09T15:10:00Z",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate4/manifest.json",
+          "longbench-v2/candidate4/examples.json",
+          "longbench-v2/candidate4/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate7/manifest.json",
+          "longbench-v2/candidate7/examples.json",
+          "longbench-v2/candidate7/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate5/manifest.json",
+          "longbench-v2/candidate5/examples.json",
+          "longbench-v2/candidate5/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate3/manifest.json",
+          "longbench-v2/candidate3/examples.json",
+          "longbench-v2/candidate3/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate6/manifest.json",
+          "longbench-v2/candidate6/examples.json",
+          "longbench-v2/candidate6/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate2/manifest.json",
+          "longbench-v2/candidate2/examples.json",
+          "longbench-v2/candidate2/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/draft1/manifest.json",
+          "longbench-v2/draft1/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/examples-before-editorial.json",
+          "longbench-v2/prepare_examples.py",
+          "longbench-v2/root_changes.py"
+        ],
+        "current": true,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      },
+      {
+        "text": "0",
+        "direct_saved": false,
+        "saved_files": [],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      },
+      {
+        "text": "1.1",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate4/manifest.json",
+          "longbench-v2/candidate4/examples.json",
+          "longbench-v2/candidate4/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate7/manifest.json",
+          "longbench-v2/candidate7/examples.json",
+          "longbench-v2/candidate7/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate5/manifest.json",
+          "longbench-v2/candidate5/examples.json",
+          "longbench-v2/candidate5/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate3/manifest.json",
+          "longbench-v2/candidate3/examples.json",
+          "longbench-v2/candidate3/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate6/manifest.json",
+          "longbench-v2/candidate6/examples.json",
+          "longbench-v2/candidate6/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate2/manifest.json",
+          "longbench-v2/candidate2/examples.json",
+          "longbench-v2/candidate2/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/draft1/manifest.json",
+          "longbench-v2/draft1/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/examples-before-editorial.json"
+        ],
+        "current": true,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      },
+      {
+        "text": "80",
+        "direct_saved": false,
+        "saved_files": [],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ],
+    "weather_source_projection": {
+      "all4_original_CSV_rows_found_in_archived_context270": true,
+      "display_columns": [
+        "time",
+        "sun",
+        "temperature",
+        "humidity"
+      ],
+      "values_exact": true
+    }
+  },
+  {
+    "index": 15,
+    "example": 5,
+    "field": null,
+    "page": null,
+    "before": [
+      {
+        "text": "BLIPのVQA構成を変更し、画像説明用の構成からパラメータを読み込みたい。中間部分の注意機構の計算だけを変えるには、どのクラスを修正するか。\nA：BertLayer\nB：BertAttention\nC：BertSelfAttention\nD：BertIntermediate",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/examples-before-editorial.json"
+        ],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ],
+    "after": [
+      {
+        "text": "画像と言語を扱うBLIPの、画像質問応答の構成を変更し、画像説明用の構成からパラメータを読み込みたい。中間部分の注意機構の計算だけを変えるには、どのクラスを修正するか。\nA：BertLayer\nB：BertAttention\nC：BertSelfAttention\nD：BertIntermediate",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate4/examples.json",
+          "longbench-v2/candidate7/examples.json",
+          "longbench-v2/candidate5/examples.json",
+          "longbench-v2/candidate3/examples.json",
+          "longbench-v2/candidate6/examples.json",
+          "longbench-v2/candidate2/examples.json"
+        ],
+        "current": true,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ]
+  },
+  {
+    "index": 16,
+    "example": 13,
+    "field": null,
+    "page": null,
+    "before": [
+      {
+        "text": "MagicDriveは学習時に物体の境界ボックスをどのように符号化するか。\nA：クラス名の埋め込みをラベルとして使い、クラスとテキストの埋め込みをMLPで一つのベクトルにまとめる。\nB：四つの頂点をFourier埋め込みとMLPで符号化し、クラスと位置の埋め込みを一つのベクトルにまとめる。\nC：テキストエンコーダーでクラスを符号化し、クラスとテキストの埋め込みをMLPでまとめる。\nD：クラスラベルと頂点を別々に符号化した後、MLPで一つのベクトルにまとめる。",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate3/manifest.json",
+          "longbench-v2/candidate3/examples.json",
+          "longbench-v2/candidate3/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate2/manifest.json",
+          "longbench-v2/candidate2/examples.json",
+          "longbench-v2/candidate2/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/draft1/manifest.json",
+          "longbench-v2/draft1/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/examples-before-editorial.json"
+        ],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ],
+    "after": [
+      {
+        "text": "運転場面の画像を生成するMagicDriveは学習時に物体の境界ボックスをどのように符号化するか。\nA：クラス名の埋め込みをラベルとして使い、クラスとテキストの埋め込みをMLPで一つのベクトルにまとめる。\nB：四つの頂点をFourier埋め込みとMLPで符号化し、クラスと位置の埋め込みを一つのベクトルにまとめる。\nC：テキストエンコーダーでクラスを符号化し、クラスとテキストの埋め込みをMLPでまとめる。\nD：クラスラベルと頂点を別々に符号化した後、MLPで一つのベクトルにまとめる。",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate3/manifest.json",
+          "longbench-v2/candidate3/examples.json",
+          "longbench-v2/candidate3/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate2/manifest.json",
+          "longbench-v2/candidate2/examples.json",
+          "longbench-v2/candidate2/datasets-in-10-minutes-longbench-v2.pdf"
+        ],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": [
+          27
+        ]
+      }
+    ]
+  },
+  {
+    "index": 17,
+    "example": null,
+    "field": null,
+    "page": 17,
+    "before": [
+      {
+        "text": "本文の日本語訳",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/draft1/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/edit_examples.py"
+        ],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ],
+    "after": [
+      {
+        "text": "本文の日本語要約",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate4/examples.json",
+          "longbench-v2/candidate4/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate7/examples.json",
+          "longbench-v2/candidate7/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate5/examples.json",
+          "longbench-v2/candidate5/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate3/examples.json",
+          "longbench-v2/candidate3/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate6/examples.json",
+          "longbench-v2/candidate6/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate2/examples.json",
+          "longbench-v2/candidate2/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/independent_changes.py"
+        ],
+        "current": true,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ]
+  },
+  {
+    "index": 18,
+    "example": null,
+    "field": null,
+    "page": 73,
+    "before": [
+      {
+        "text": "本文の日本語訳",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/draft1/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/edit_examples.py"
+        ],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ],
+    "after": [
+      {
+        "text": "本文の日本語要約",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate4/examples.json",
+          "longbench-v2/candidate4/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate7/examples.json",
+          "longbench-v2/candidate7/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate5/examples.json",
+          "longbench-v2/candidate5/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate3/examples.json",
+          "longbench-v2/candidate3/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate6/examples.json",
+          "longbench-v2/candidate6/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate2/examples.json",
+          "longbench-v2/candidate2/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/independent_changes.py"
+        ],
+        "current": true,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ]
+  },
+  {
+    "index": 19,
+    "example": null,
+    "field": null,
+    "page": 85,
+    "before": [
+      {
+        "text": "本文の日本語訳",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/draft1/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/edit_examples.py"
+        ],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ],
+    "after": [
+      {
+        "text": "本文の日本語要約",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate4/examples.json",
+          "longbench-v2/candidate4/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate7/examples.json",
+          "longbench-v2/candidate7/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate5/examples.json",
+          "longbench-v2/candidate5/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate3/examples.json",
+          "longbench-v2/candidate3/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate6/examples.json",
+          "longbench-v2/candidate6/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate2/examples.json",
+          "longbench-v2/candidate2/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/independent_changes.py"
+        ],
+        "current": true,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ]
+  },
+  {
+    "index": 20,
+    "example": 1,
+    "field": null,
+    "page": null,
+    "before": [
+      {
+        "text": "            capacities = self.slave_states.get_capacities(exclude_pi_names = allocated)\n[...]\n            if total_empty_chunks < n_chunks:\n                capacities = self.slave_states.get_capacities(exclude_pi_names = exclude_pi_names)",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate4/manifest.json",
+          "longbench-v2/candidate4/examples.json",
+          "longbench-v2/candidate4/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate7/manifest.json",
+          "longbench-v2/candidate7/examples.json",
+          "longbench-v2/candidate7/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate5/manifest.json",
+          "longbench-v2/candidate5/examples.json",
+          "longbench-v2/candidate5/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate3/manifest.json",
+          "longbench-v2/candidate3/examples.json",
+          "longbench-v2/candidate3/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate6/manifest.json",
+          "longbench-v2/candidate6/examples.json",
+          "longbench-v2/candidate6/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate2/manifest.json",
+          "longbench-v2/candidate2/examples.json",
+          "longbench-v2/candidate2/datasets-in-10-minutes-longbench-v2.pdf"
+        ],
+        "current": false,
+        "chain_previous_after": [
+          12
+        ],
+        "chain_next_before": []
+      }
+    ],
+    "after": [
+      {
+        "text": "capacities = self.slave_states.get_capacities(\n    exclude_pi_names = allocated\n)\n[...]\nif total_empty_chunks < n_chunks:\n    capacities = self.slave_states.get_capacities(\n        exclude_pi_names = exclude_pi_names\n    )",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate4/manifest.json",
+          "longbench-v2/candidate4/examples.json",
+          "longbench-v2/candidate4/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate7/manifest.json",
+          "longbench-v2/candidate7/examples.json",
+          "longbench-v2/candidate7/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate5/manifest.json",
+          "longbench-v2/candidate5/examples.json",
+          "longbench-v2/candidate5/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate3/manifest.json",
+          "longbench-v2/candidate3/examples.json",
+          "longbench-v2/candidate3/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate6/manifest.json",
+          "longbench-v2/candidate6/examples.json",
+          "longbench-v2/candidate6/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate2/manifest.json",
+          "longbench-v2/candidate2/examples.json",
+          "longbench-v2/candidate2/datasets-in-10-minutes-longbench-v2.pdf"
+        ],
+        "current": true,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ]
+  },
+  {
+    "index": 21,
+    "example": 2,
+    "field": null,
+    "page": null,
+    "before": [
+      {
+        "text": "A〜Dの時刻を横一列で連結。日本語側にも四候補を再掲。",
+        "direct_saved": false,
+        "saved_files": [],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ],
+    "after": [
+      {
+        "text": "A〜Dの各時刻を1行ずつ表示し、設問だけの日本語訳を同頁へ添える。",
+        "direct_saved": false,
+        "saved_files": [],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ],
+    "layout_note": "Narrative before/after layout description, not a literal sentence claimed on a slide. Final A–D choices are separate lines in examples and native prompt; canonical full-page reviewer owns actual visual outcome."
+  },
+  {
+    "index": 22,
+    "example": null,
+    "field": null,
+    "page": null,
+    "before": [
+      {
+        "text": "引用枠とコードの段落で、図形から中央揃えと段落の字下げを継承。",
+        "direct_saved": false,
+        "saved_files": [],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ],
+    "after": [
+      {
+        "text": "全引用とコードの段落を左揃えにし、継承した段落字下げを0に設定。コードの原文の空白は保持。",
+        "direct_saved": false,
+        "saved_files": [],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ],
+    "native_panels_left_checked": 35,
+    "layout_note": "Narrative alignment/indent correction. Own native inspection confirms35 quote/code panels explicitly LEFT. Actual visual outcome is canonical reviewer scope."
+  },
+  {
+    "index": 23,
+    "example": 4,
+    "field": "context_quotes",
+    "page": null,
+    "before": [
+      {
+        "text": "d) Because the “Capacity Loading” attribute defines the amount of active material placed in the\ncathode and anode per unit area (Units are mAh/cm2), as the coated areas of the cathode and\nanode are increased, the capacity of the cells are automatically increased, as well.\n[...]\nd) Please note that all of these parameters will have an effect on the “balance” of the cell, but the most important are certainly the “Cathode Loading” and the “N over P” parameters.",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate3/manifest.json",
+          "longbench-v2/candidate3/examples.json",
+          "longbench-v2/candidate3/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate2/manifest.json",
+          "longbench-v2/candidate2/examples.json",
+          "longbench-v2/candidate2/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/draft1/manifest.json",
+          "longbench-v2/draft1/datasets-in-10-minutes-longbench-v2.pdf"
+        ],
+        "current": false,
+        "chain_previous_after": [
+          3
+        ],
+        "chain_next_before": []
+      }
+    ],
+    "after": [
+      {
+        "text": "20. Based upon these results, it is clear that the capacity of the AutoLion cell is much higher than the\ncapacity of the physical (“Experimental”) cell.  The overall shape of the two curves seem very\nsimilar, but the AutoLion curve appears more “stretched” in the Time axis.  Because of this, we\nshould go back to the AutoLion model and vary the Cathode’s “Capacity Loading” attribute until\nthe capacity of the cell more aligns with the experimental data.\n[...]\n22.In Case Setup:\na) Click the “Append Cases” button 9 times or use the “Append Multiple Cases” option to append\n9 new cases\nb) Sweep the “CathodeLoading” attribute from 3.0 to 3.9 in increments of 0.1 across the 10 cases.",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate4/examples.json",
+          "longbench-v2/candidate7/examples.json",
+          "longbench-v2/candidate5/examples.json",
+          "longbench-v2/candidate6/examples.json"
+        ],
+        "current": true,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ]
+  },
+  {
+    "index": 24,
+    "example": 6,
+    "field": "japanese",
+    "page": null,
+    "before": [
+      {
+        "text": "このコードのTCP接続終了について、正しい説明はどれか。\nA：終了しようとする側は、相手へFINを送ることを示すFIN_WAIT_1状態へ最初に入る。\nB：FINを受け取った側はACKを返すと同時にFINも送り、両者が確認を受け取って終了する。\nC：shutdown_waitingは送信バッファー内の未送信パケットを送り終えてから終了するためのものだが、相手への到着をすべて保証するものではない。\nD：終了前にNagleアルゴリズムを使うと、小さいパケットをまとめてネットワークの混雑を減らせる。",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate3/manifest.json",
+          "longbench-v2/candidate3/examples.json",
+          "longbench-v2/candidate3/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate2/manifest.json",
+          "longbench-v2/candidate2/examples.json",
+          "longbench-v2/candidate2/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/draft1/manifest.json",
+          "longbench-v2/draft1/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/examples-before-editorial.json"
+        ],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ],
+    "after": [
+      {
+        "text": "このコードのTCP接続終了について、正しい説明はどれか。\nA：一方がTCP接続を終了しようとすると、まずFIN_WAIT_1状態に入る。この状態は、相手へ終了要求のFIN信号を送り、その確認を待っていることを示す。\nB：FINを受け取った側はACK信号を返すと同時にFIN信号も送り、その確認を待つ。両者がFIN信号を送り、確認を受け取ってから接続が終了する。\nC：shutdown_waitingは、送信バッファー内の未送信パケットをすべて送り終えてから接続を終了するためのものだが、すべてのパケットが相手へ届いたことは保証できない。\nD：接続を終了する前に、パケット送信時にNagleアルゴリズムを使うと、分散した小さいパケットをまとめて送信し、ネットワークの混雑を減らせる。",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate4/examples.json",
+          "longbench-v2/candidate7/examples.json",
+          "longbench-v2/candidate5/examples.json",
+          "longbench-v2/candidate6/examples.json"
+        ],
+        "current": true,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ]
+  },
+  {
+    "index": 25,
+    "example": 8,
+    "field": "japanese",
+    "page": null,
+    "before": [
+      {
+        "text": "米国の国家COVID-19対策計画に含まれていない説明はどれか。\nA：対抗手段が不十分な中、社会全体を動員して、混乱を最小限に抑えながら流行を乗り切る。\nB：変異株に関するデータの収集・分析と監視を強め、新たな変異株の影響を抑える。\nC：企業や学校が活動を続けられるよう対策し、経済への費用と影響を減らす。\nD：COVID-19治療薬への世界的なアクセスを広げ、研究の連携と資金を増やす。",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate3/manifest.json",
+          "longbench-v2/candidate3/examples.json",
+          "longbench-v2/candidate3/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate2/manifest.json",
+          "longbench-v2/candidate2/examples.json",
+          "longbench-v2/candidate2/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/draft1/manifest.json",
+          "longbench-v2/draft1/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/examples-before-editorial.json"
+        ],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ],
+    "after": [
+      {
+        "text": "米国の国家COVID-19対策計画に含まれていない説明はどれか。\nA：対抗手段が不十分な中、社会全体を動員して、混乱を最小限に抑えながら流行を乗り切る。\nB：過去の変異株のデータを収集・分析し、特定の変異株に関する規制と審査を強化することで、新しい変異株が米国に与える影響を最小限にする。\nC：企業や学校が活動を続けられるよう対策し、経済への費用と影響を減らす。\nD：COVID-19の医薬品を世界で入手しやすくし、医薬品研究の連携体制の形成を促して、世界的な資金供給を増やす。",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate4/manifest.json",
+          "longbench-v2/candidate4/examples.json",
+          "longbench-v2/candidate4/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate7/manifest.json",
+          "longbench-v2/candidate7/examples.json",
+          "longbench-v2/candidate7/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate5/manifest.json",
+          "longbench-v2/candidate5/examples.json",
+          "longbench-v2/candidate5/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate6/manifest.json",
+          "longbench-v2/candidate6/examples.json",
+          "longbench-v2/candidate6/datasets-in-10-minutes-longbench-v2.pdf"
+        ],
+        "current": true,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ]
+  },
+  {
+    "index": 26,
+    "example": 10,
+    "field": "japanese",
+    "page": null,
+    "before": [
+      {
+        "text": "純水、エタノールと水の混合液、ナノ粒子を含む液体では凍結の仕方が異なる。純水と混合液には尖った先端ができ、ナノ粒子を含む液体にはできないのはなぜか。\nA：純水と混合液は熱伝導で先端ができる。ナノ粒子は界面を安定させ、熱拡散を抑えて平らにする。\nB：ナノ粒子が凍結面に集まり、毛管力による補償流が先端の形成を打ち消す。一方、混合液では濃度差による上向きのマランゴニ流が液滴を持ち上げ、純水の尖った先端とは異なる。\nC：ナノ粒子による熱の散乱が温度勾配を下げ、先端の形成を抑える。純水の表面張力や混合液の非対称な冷却が先端を作る。\nD：ナノ粒子が凍結面を不均一にするため先端ができず、純水と混合液では均一な凍結面と熱拡散が先端を作る。",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate3/examples.json",
+          "longbench-v2/candidate2/examples.json",
+          "longbench-v2/draft1/manifest.json",
+          "longbench-v2/draft1/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/examples-before-editorial.json"
+        ],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ],
+    "after": [
+      {
+        "text": "純水、エタノールと水の混合液、ナノ粒子を含む液体では凍結の仕方が異なる。純水と混合液には尖った先端ができ、ナノ粒子を含む液体にはできないのはなぜか。\nA：純水とエタノール・水の混合液の凍結では熱伝導が支配的になり、先端が形成される。一方、ナノ流体では、ナノ粒子が液体と固体の界面で流体の安定性を高め、局所的な熱拡散を抑える。これによって凍結面が平らになり、平坦な上面ができる。\nB：ナノ流体の固化では、ナノ粒子が凍結面に沿って集まり、毛管力による補償流が生じて、先端の形成を打ち消す。一方、エタノールと水の混合液では、溶質の濃度勾配が上向きのマランゴニ流を生み、液滴が自ら持ち上がる。これは純水に見られる尖った先端とは異なる。\nC：ナノ流体では、ナノ粒子が熱を散乱させることで液滴内部の温度勾配が小さくなり、表面張力の効果が弱まり、先端が形成されにくくなる。純水では高い表面張力が尖った先端を維持する。一方、エタノールを加えると冷却が非対称になって局所的な放熱が生じ、先端の形成を促す。\nD：ナノ流体では、ナノ粒子が不均一な凍結面を作り、固体と液体の界面の変形を抑えるため、先端が形成されなくなる。対照的に、純水とエタノール・水の混合液では凍結面が均一に進み、熱拡散が先端の形成を駆動する。",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate4/examples.json",
+          "longbench-v2/candidate7/examples.json",
+          "longbench-v2/candidate5/examples.json",
+          "longbench-v2/candidate6/examples.json"
+        ],
+        "current": true,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ]
+  },
+  {
+    "index": 27,
+    "example": 13,
+    "field": "japanese",
+    "page": null,
+    "before": [
+      {
+        "text": "運転場面の画像を生成するMagicDriveは学習時に物体の境界ボックスをどのように符号化するか。\nA：クラス名の埋め込みをラベルとして使い、クラスとテキストの埋め込みをMLPで一つのベクトルにまとめる。\nB：四つの頂点をFourier埋め込みとMLPで符号化し、クラスと位置の埋め込みを一つのベクトルにまとめる。\nC：テキストエンコーダーでクラスを符号化し、クラスとテキストの埋め込みをMLPでまとめる。\nD：クラスラベルと頂点を別々に符号化した後、MLPで一つのベクトルにまとめる。",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate3/manifest.json",
+          "longbench-v2/candidate3/examples.json",
+          "longbench-v2/candidate3/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate2/manifest.json",
+          "longbench-v2/candidate2/examples.json",
+          "longbench-v2/candidate2/datasets-in-10-minutes-longbench-v2.pdf"
+        ],
+        "current": false,
+        "chain_previous_after": [
+          16
+        ],
+        "chain_next_before": []
+      }
+    ],
+    "after": [
+      {
+        "text": "運転場面の画像を生成するMagicDriveは学習時に物体の境界ボックスをどのように符号化するか。\nA：境界ボックスのクラスラベルはLiらと同様の方法で符号化し、クラス名を埋め込んでプーリングした表現を、ラベルの埋め込みとする。その後、クラスとテキストの埋め込みの両方を、MLPでボックスごとに一つの隠れベクトルへ圧縮する。\nB：MagicDriveは、四つの頂点にFourier埋め込みを使い、学習時にMLPを通して符号化する。その後、MLPでクラスラベルと位置の埋め込みの両方を、各ボックスにつき一つの隠れベクトルへ圧縮する。\nC：MagicDriveは、テキストエンコーダーで境界ボックスのクラスラベルを符号化し、その後、MLPでクラスとテキストの埋め込みの両方を、各ボックスにつき一つの隠れベクトルへ圧縮する。\nD：MagicDriveはクラスラベルと頂点を別々に符号化し、その後、MLPを使ってそれらを一つのベクトルへ圧縮する。",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate4/examples.json",
+          "longbench-v2/candidate7/examples.json",
+          "longbench-v2/candidate5/examples.json",
+          "longbench-v2/candidate6/examples.json"
+        ],
+        "current": true,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ]
+  },
+  {
+    "index": 28,
+    "example": 5,
+    "field": "context_quotes",
+    "page": null,
+    "before": [
+      {
+        "text": "class BertSelfAttention(nn.Module):\n[...]\n        self.query = nn.Linear(config.hidden_size, self.all_head_size)\n[...]\n            self.key = nn.Linear(config.hidden_size, self.all_head_size)\n            self.value = nn.Linear(config.hidden_size, self.all_head_size)\n[...]\nclass BertAttention(nn.Module):\n            self.self = BertSelfAttention(config, is_cross_attention)\n[...]\nclass BertLayer(nn.Module):\n        self.attention = BertAttention(config)      ",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate3/examples.json",
+          "longbench-v2/candidate2/examples.json"
+        ],
+        "current": false,
+        "chain_previous_after": [
+          9
+        ],
+        "chain_next_before": []
+      }
+    ],
+    "after": [
+      {
+        "text": "class BertSelfAttention(nn.Module):\n[...]\nself.query = nn.Linear(\n    config.hidden_size, self.all_head_size\n)\n[...]\nself.key = nn.Linear(\n    config.hidden_size, self.all_head_size\n)\nself.value = nn.Linear(\n    config.hidden_size, self.all_head_size\n)",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate4/manifest.json",
+          "longbench-v2/candidate4/examples.json",
+          "longbench-v2/candidate4/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate7/manifest.json",
+          "longbench-v2/candidate7/examples.json",
+          "longbench-v2/candidate7/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate5/manifest.json",
+          "longbench-v2/candidate5/examples.json",
+          "longbench-v2/candidate5/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate3/manifest.json",
+          "longbench-v2/candidate3/examples.json",
+          "longbench-v2/candidate3/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate6/manifest.json",
+          "longbench-v2/candidate6/examples.json",
+          "longbench-v2/candidate6/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate2/manifest.json",
+          "longbench-v2/candidate2/examples.json",
+          "longbench-v2/candidate2/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/draft1/manifest.json",
+          "longbench-v2/draft1/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/independent_changes.py"
+        ],
+        "current": true,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      },
+      {
+        "text": "class BertAttention(nn.Module):\n[...]\nself.self = BertSelfAttention(\n    config, is_cross_attention\n)\n[...]\nclass BertLayer(nn.Module):\n[...]\nself.attention = BertAttention(config)",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate4/manifest.json",
+          "longbench-v2/candidate4/examples.json",
+          "longbench-v2/candidate4/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate7/manifest.json",
+          "longbench-v2/candidate7/examples.json",
+          "longbench-v2/candidate7/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate5/manifest.json",
+          "longbench-v2/candidate5/examples.json",
+          "longbench-v2/candidate5/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate6/manifest.json",
+          "longbench-v2/candidate6/examples.json",
+          "longbench-v2/candidate6/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/independent_changes.py"
+        ],
+        "current": true,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ]
+  },
+  {
+    "index": 29,
+    "example": 5,
+    "field": "explanation",
+    "page": null,
+    "before": [
+      {
+        "text": "BertLayerはBertAttentionを持ち、その内部でBertSelfAttentionが使われる。BertSelfAttentionにはquery・key・valueの線形変換があり、注意機構の内部計算を担当する。",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate3/examples.json",
+          "longbench-v2/candidate3/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate2/examples.json",
+          "longbench-v2/candidate2/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/draft1/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/examples-before-editorial.json",
+          "longbench-v2/prepare_examples.py"
+        ],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ],
+    "after": [
+      {
+        "text": "外側の二つのクラスは、注意機構の計算部分を組み込む役割を持つ。内部の計算だけを変える場合は、その本体であるBertSelfAttentionを修正する。",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate4/examples.json",
+          "longbench-v2/candidate4/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate7/examples.json",
+          "longbench-v2/candidate7/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate5/examples.json",
+          "longbench-v2/candidate5/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate6/examples.json",
+          "longbench-v2/candidate6/datasets-in-10-minutes-longbench-v2.pdf"
+        ],
+        "current": true,
+        "chain_previous_after": [],
+        "chain_next_before": [
+          36
+        ]
+      }
+    ]
+  },
+  {
+    "index": 30,
+    "example": 6,
+    "field": "explanation",
+    "page": null,
+    "before": [
+      {
+        "text": "フラグが立っている間もsend_pkt_directlyを呼び、送信バッファーのsizeが0になった時点でFINを送る。判定するのは送信バッファーの残量で、相手からの確認がすべて済んだかどうかではない。",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate3/examples.json",
+          "longbench-v2/candidate3/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate2/examples.json",
+          "longbench-v2/candidate2/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/draft1/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/examples-before-editorial.json",
+          "longbench-v2/prepare_examples.py"
+        ],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ],
+    "after": [
+      {
+        "text": "判定するのは送信バッファーの残量で、相手からの確認がすべて済んだかどうかではない。",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate4/examples.json",
+          "longbench-v2/candidate4/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate7/examples.json",
+          "longbench-v2/candidate7/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate5/examples.json",
+          "longbench-v2/candidate5/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate3/examples.json",
+          "longbench-v2/candidate3/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate6/examples.json",
+          "longbench-v2/candidate6/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate2/examples.json",
+          "longbench-v2/candidate2/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/draft1/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/examples-before-editorial.json",
+          "longbench-v2/prepare_examples.py"
+        ],
+        "current": true,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ]
+  },
+  {
+    "index": 31,
+    "example": 7,
+    "field": "explanation",
+    "page": null,
+    "before": [
+      {
+        "text": "農場の売買では対象と代金が示され、企業買収でも主要条件に合意したという証拠がある。両判例は、契約に必要な主要条件の合意を認めている。内心の意思だけを最重要とするAとは異なる。",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate3/examples.json",
+          "longbench-v2/candidate3/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate2/examples.json",
+          "longbench-v2/candidate2/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/draft1/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/examples-before-editorial.json",
+          "longbench-v2/prepare_examples.py"
+        ],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ],
+    "after": [
+      {
+        "text": "両判例は、契約に必要な主要条件の合意を認めている。内心の意思だけを最重要とするAとは異なる。",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate4/examples.json",
+          "longbench-v2/candidate4/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate7/examples.json",
+          "longbench-v2/candidate7/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate5/examples.json",
+          "longbench-v2/candidate5/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate3/examples.json",
+          "longbench-v2/candidate3/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate6/examples.json",
+          "longbench-v2/candidate6/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate2/examples.json",
+          "longbench-v2/candidate2/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/draft1/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/examples-before-editorial.json",
+          "longbench-v2/prepare_examples.py"
+        ],
+        "current": true,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ]
+  },
+  {
+    "index": 32,
+    "example": 8,
+    "field": "explanation",
+    "page": null,
+    "before": [
+      {
+        "text": "文書は、すでに使える対抗手段を維持し、さらに強化する方針を示している。Aは「対抗手段が不十分な中」という過去の状況を、計画の現状に当てはめている。",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate3/examples.json",
+          "longbench-v2/candidate3/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate2/examples.json",
+          "longbench-v2/candidate2/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/draft1/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/examples-before-editorial.json",
+          "longbench-v2/prepare_examples.py"
+        ],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ],
+    "after": [
+      {
+        "text": "Aの「対抗手段が不十分な中」という部分は、2021年1月の状況を計画の現状へ当てはめている。",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate4/examples.json",
+          "longbench-v2/candidate4/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate7/examples.json",
+          "longbench-v2/candidate7/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate5/examples.json",
+          "longbench-v2/candidate5/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate6/examples.json",
+          "longbench-v2/candidate6/datasets-in-10-minutes-longbench-v2.pdf"
+        ],
+        "current": true,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ]
+  },
+  {
+    "index": 33,
+    "example": 9,
+    "field": "explanation",
+    "page": null,
+    "before": [
+      {
+        "text": "長さを調整した勝率は22.9%から39.4%へ上がっている。差は39.4−22.9=16.5ポイント。選択肢ではCに対応する。",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate3/examples.json",
+          "longbench-v2/candidate3/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate2/examples.json",
+          "longbench-v2/candidate2/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/draft1/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/examples-before-editorial.json",
+          "longbench-v2/prepare_examples.py"
+        ],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ],
+    "after": [
+      {
+        "text": "39.4−22.9=16.5なので、改善幅は16.5ポイント。選択肢ではCに対応する。",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate4/examples.json",
+          "longbench-v2/candidate4/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate7/examples.json",
+          "longbench-v2/candidate7/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate5/examples.json",
+          "longbench-v2/candidate5/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate6/examples.json",
+          "longbench-v2/candidate6/datasets-in-10-minutes-longbench-v2.pdf"
+        ],
+        "current": true,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ]
+  },
+  {
+    "index": 34,
+    "example": 10,
+    "field": "explanation",
+    "page": null,
+    "before": [
+      {
+        "text": "三つの論文は異なる機構を説明している。純水では凍結時の体積膨張が尖った先端を作る。混合液では濃度差による表面張力の流れが液滴を持ち上げる。ナノ流体では粒子の集積に伴う流れが体積を再配分する。設問の導入は混合液も同じ先端形成とまとめているが、Bはその違いまで示している。",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate3/examples.json",
+          "longbench-v2/candidate3/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate2/examples.json",
+          "longbench-v2/candidate2/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/draft1/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/examples-before-editorial.json",
+          "longbench-v2/prepare_examples.py"
+        ],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ],
+    "after": [
+      {
+        "text": "設問の導入は、混合液も純水と同じように尖った先端ができるとまとめている。Bは、混合液が持ち上がる機構と純水の先端形成の違いまで示している。",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate4/examples.json",
+          "longbench-v2/candidate4/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate7/examples.json",
+          "longbench-v2/candidate7/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate5/examples.json",
+          "longbench-v2/candidate5/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate6/examples.json",
+          "longbench-v2/candidate6/datasets-in-10-minutes-longbench-v2.pdf"
+        ],
+        "current": true,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ]
+  },
+  {
+    "index": 35,
+    "example": 4,
+    "field": "context summary / explanation",
+    "page": null,
+    "before": [
+      {
+        "text": "計算上のセルの容量が実験値より大きいため、正極のCathode Loadingを変えて容量を合わせる。10ケースを用意し、3.0から3.9まで0.1ずつ設定を変えて比較する。",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate4/manifest.json",
+          "longbench-v2/candidate4/examples.json",
+          "longbench-v2/candidate4/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/independent_changes.py"
+        ],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      },
+      {
+        "text": "正極に配置する活物質の量に関わるCathode Loadingをケースごとに変える。容量と放電曲線を実験値に近づける手順として、教材が示している。",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate4/examples.json",
+          "longbench-v2/candidate4/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/independent_changes.py"
+        ],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ],
+    "after": [
+      {
+        "text": "計算上の容量が実験値を上回るため、正極の活物質の量に関わるCathode Loadingを変えて比較する。教材では10ケースを用意し、3.0から3.9まで0.1ずつ変える。",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate7/examples.json",
+          "longbench-v2/candidate7/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate5/examples.json",
+          "longbench-v2/candidate5/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate6/examples.json",
+          "longbench-v2/candidate6/datasets-in-10-minutes-longbench-v2.pdf"
+        ],
+        "current": true,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ]
+  },
+  {
+    "index": 36,
+    "example": 5,
+    "field": "context summary / explanation",
+    "page": null,
+    "before": [
+      {
+        "text": "BertLayerはBertAttentionを構成し、BertAttentionの内部ではBertSelfAttentionを使う。BertSelfAttentionはqueryを作り、交差注意を使う場合と使わない場合でkeyとvalueの入力の次元を切り替える。",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate4/manifest.json",
+          "longbench-v2/candidate4/examples.json",
+          "longbench-v2/candidate4/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate3/manifest.json",
+          "longbench-v2/candidate3/examples.json",
+          "longbench-v2/candidate3/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate2/manifest.json",
+          "longbench-v2/candidate2/examples.json",
+          "longbench-v2/candidate2/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/draft1/manifest.json",
+          "longbench-v2/draft1/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/edit_examples.py"
+        ],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      },
+      {
+        "text": "外側の二つのクラスは、注意機構の計算部分を組み込む役割を持つ。内部の計算だけを変える場合は、その本体であるBertSelfAttentionを修正する。",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate4/examples.json",
+          "longbench-v2/candidate4/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate7/examples.json",
+          "longbench-v2/candidate7/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate5/examples.json",
+          "longbench-v2/candidate5/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate6/examples.json",
+          "longbench-v2/candidate6/datasets-in-10-minutes-longbench-v2.pdf"
+        ],
+        "current": false,
+        "chain_previous_after": [
+          29
+        ],
+        "chain_next_before": []
+      }
+    ],
+    "after": [
+      {
+        "text": "外側の二つのクラスは、注意機構の計算部分を組み込む役割を持つ。内部の計算だけを変える場合は、その本体であるBertSelfAttentionを修正する。",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate4/examples.json",
+          "longbench-v2/candidate4/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate7/examples.json",
+          "longbench-v2/candidate7/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate5/examples.json",
+          "longbench-v2/candidate5/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate6/examples.json",
+          "longbench-v2/candidate6/datasets-in-10-minutes-longbench-v2.pdf"
+        ],
+        "current": true,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ]
+  },
+  {
+    "index": 37,
+    "example": 10,
+    "field": "context_japanese",
+    "page": null,
+    "before": [
+      {
+        "text": "冷たい板の上の水滴は、尖った先端を持つ氷になる。凍結時に水が膨張することが、この現象の起源である。混合液の特異な動きは、凍結面の近くで溶質の濃度が高くなり、内部に溶質マランゴニ流が生じることで説明される。ナノ流体の平らな上面は、凍結面に沿って動く分離粒子による、毛管力で駆動される補償流としてモデル化される。",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate4/manifest.json",
+          "longbench-v2/candidate4/examples.json",
+          "longbench-v2/candidate4/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate3/manifest.json",
+          "longbench-v2/candidate3/examples.json",
+          "longbench-v2/candidate3/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate2/manifest.json",
+          "longbench-v2/candidate2/examples.json",
+          "longbench-v2/candidate2/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/draft1/manifest.json",
+          "longbench-v2/draft1/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/edit_examples.py"
+        ],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ],
+    "after": [
+      {
+        "text": "冷たい板の上の水滴は、尖った先端を持つ氷になる。凍結時に水が膨張することが、この現象の起源である。混合液の特異な動きは、凍結面の近くで溶質の濃度が高くなり、内部に溶質マランゴニ流が生じることで説明される。ナノ流体の平らな上面は、凍結面に沿って動く偏在した粒子による、毛管力で駆動される補償流としてモデル化される。",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate7/manifest.json",
+          "longbench-v2/candidate7/examples.json",
+          "longbench-v2/candidate7/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate5/manifest.json",
+          "longbench-v2/candidate5/examples.json",
+          "longbench-v2/candidate5/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate6/manifest.json",
+          "longbench-v2/candidate6/examples.json",
+          "longbench-v2/candidate6/datasets-in-10-minutes-longbench-v2.pdf"
+        ],
+        "current": true,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ]
+  },
+  {
+    "index": 38,
+    "example": null,
+    "field": "Japanese choice paragraph line layout",
+    "page": 49,
+    "before": [
+      {
+        "text": "A：BertLayer / B：BertAttention / C：BertSelfAttention / D：BertIntermediate",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate4/manifest.json",
+          "longbench-v2/candidate4/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate7/manifest.json",
+          "longbench-v2/candidate5/manifest.json",
+          "longbench-v2/candidate5/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate3/manifest.json",
+          "longbench-v2/candidate3/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate6/manifest.json",
+          "longbench-v2/candidate6/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate2/manifest.json",
+          "longbench-v2/candidate2/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/draft1/manifest.json",
+          "longbench-v2/draft1/datasets-in-10-minutes-longbench-v2.pdf"
+        ],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ],
+    "after": [
+      {
+        "text": "A：BertLayer / B：BertAttention\nC：BertSelfAttention / D：BertIntermediate",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate4/manifest.json",
+          "longbench-v2/candidate4/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate7/manifest.json",
+          "longbench-v2/candidate7/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate5/manifest.json",
+          "longbench-v2/candidate5/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate6/manifest.json",
+          "longbench-v2/candidate6/datasets-in-10-minutes-longbench-v2.pdf"
+        ],
+        "current": true,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ]
+  },
+  {
+    "index": 39,
+    "example": null,
+    "field": "native full page text (unchanged surrounding text retained for exact audit)",
+    "page": 21,
+    "before": [
+      {
+        "text": "自動確認と人の確認で難しさをそろえる\n2. 構築方法とデータの構成\n段階 | 確認する内容\n三つのモデルで確認 | 三つとも正解する問題は、簡単すぎるとして修正\n人が本文を調べる | 3分以内に解ける問題や、正解に問題があるものを修正\n難問の分類 | モデルの正解が一つ以下、かつ人の解答に10分超\n[1] Bai et al. (2024), LongBench v2. https://arxiv.org/abs/2412.15204",
+        "direct_saved": false,
+        "saved_files": [],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ],
+    "after": [
+      {
+        "text": "自動確認と人の確認で難しさをそろえる\n2. 構築方法とデータの構成\n段階 | 確認する内容\n三つのモデルで確認 | 三つとも正解する問題を見直す\n人が本文を調べる | 3分以内に解ける問題や、正解に問題があるものを修正\n難問の分類 | モデルの正解が一つ以下、かつ人の解答に10分超\n[1] Bai et al. (2024), LongBench v2. https://arxiv.org/abs/2412.15204",
+        "direct_saved": false,
+        "saved_files": [],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ],
+    "before_full_page_line_matches": [],
+    "after_full_page_line_matches": [],
+    "before_structured_saved_matches": [
+      "longbench-v2/candidate4/datasets-in-10-minutes-longbench-v2.pptx",
+      "longbench-v2/candidate7/datasets-in-10-minutes-longbench-v2.pptx",
+      "longbench-v2/candidate5/datasets-in-10-minutes-longbench-v2.pptx",
+      "longbench-v2/candidate3/datasets-in-10-minutes-longbench-v2.pptx",
+      "longbench-v2/candidate6/datasets-in-10-minutes-longbench-v2.pptx",
+      "longbench-v2/candidate2/datasets-in-10-minutes-longbench-v2.pptx",
+      "longbench-v2/draft1/datasets-in-10-minutes-longbench-v2.pptx"
+    ],
+    "after_structured_saved_matches": [
+      "longbench-v2/candidate8/datasets-in-10-minutes-longbench-v2.pptx"
+    ]
+  },
+  {
+    "index": 40,
+    "example": null,
+    "field": "native full page text (unchanged surrounding text retained for exact audit)",
+    "page": 25,
+    "before": [
+      {
+        "text": "本文の中央値は約5万4千語\n503問の本文は、論文の集計で中央値が約5万4千語、平均が約10万4千語。長い文書を一つ読めるだけでなく、複数の資料の関係を保つ力も試す。\n単語数は英語の本文の量を表す。モデルごとのトークン数とは数え方が異なる。コードや表も、長い入力本文として含まれる。\n2. 構築方法とデータの構成\n[1] Bai et al. (2024), LongBench v2. https://arxiv.org/abs/2412.15204",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/draft1/datasets-in-10-minutes-longbench-v2.pdf"
+        ],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ],
+    "after": [
+      {
+        "text": "本文の中央値は約5万4千語\n503問の本文は、論文の集計で中央値が約5万4千語、平均が約10万4千語。長い文書を一つ読めるだけでなく、複数の資料の関係を保つ力も試す。\n本文の長さには領域差もある。単一文書の中央値は約5万1千語、複数文書は約3万4千語で、コードの課題は約16万7千語だった。\n2. 構築方法とデータの構成\n[1] Bai et al. (2024), LongBench v2. https://arxiv.org/abs/2412.15204",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate4/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate7/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate5/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate3/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate6/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate2/datasets-in-10-minutes-longbench-v2.pdf"
+        ],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ],
+    "before_full_page_line_matches": [],
+    "after_full_page_line_matches": [],
+    "before_structured_saved_matches": [
+      "longbench-v2/candidate3/datasets-in-10-minutes-longbench-v2.pptx",
+      "longbench-v2/candidate2/datasets-in-10-minutes-longbench-v2.pptx",
+      "longbench-v2/draft1/datasets-in-10-minutes-longbench-v2.pptx"
+    ],
+    "after_structured_saved_matches": [
+      "longbench-v2/candidate8/datasets-in-10-minutes-longbench-v2.pptx"
+    ]
+  },
+  {
+    "index": 41,
+    "example": null,
+    "field": "native full page text (unchanged surrounding text retained for exact audit)",
+    "page": 29,
+    "before": [
+      {
+        "text": "人の53.7%は、1問15分の条件で得た値\n確認者は本文内の検索を使いながら回答し、15分を超える場合は「分からない」としてよい条件だった。正解率は53.7%で、全問の8%では回答を保留した。\nモデルが読む範囲を長くするときも、本文を探す時間と、得た情報から考える時間の両方が必要になる。人の値は、この時間制限における到達水準を示す。\n3. 採点方法とモデルの成績\n[1] Bai et al. (2024), LongBench v2. https://arxiv.org/abs/2412.15204",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/draft1/datasets-in-10-minutes-longbench-v2.pdf"
+        ],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ],
+    "after": [
+      {
+        "text": "人の53.7%は、1問15分の条件で得た値\n確認者は本文内の検索を使いながら回答し、15分を超える場合は「分からない」としてよい条件だった。正解率は53.7%で、全問の8%では回答を保留した。\n確認者は専攻に合わせて担当し、客観的な答えか、本文が必要か、設問が適切かも点検した。単なる文字列の検索で答えられる問題は修正の対象にした。\n3. 採点方法とモデルの成績\n[1] Bai et al. (2024), LongBench v2. https://arxiv.org/abs/2412.15204",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate4/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate7/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate5/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate3/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate6/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate2/datasets-in-10-minutes-longbench-v2.pdf"
+        ],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ],
+    "before_full_page_line_matches": [],
+    "after_full_page_line_matches": [],
+    "before_structured_saved_matches": [
+      "longbench-v2/draft1/datasets-in-10-minutes-longbench-v2.pptx"
+    ],
+    "after_structured_saved_matches": [
+      "longbench-v2/candidate4/datasets-in-10-minutes-longbench-v2.pptx",
+      "longbench-v2/candidate7/datasets-in-10-minutes-longbench-v2.pptx",
+      "longbench-v2/candidate5/datasets-in-10-minutes-longbench-v2.pptx",
+      "longbench-v2/candidate3/datasets-in-10-minutes-longbench-v2.pptx",
+      "longbench-v2/candidate6/datasets-in-10-minutes-longbench-v2.pptx",
+      "longbench-v2/candidate2/datasets-in-10-minutes-longbench-v2.pptx",
+      "longbench-v2/candidate8/datasets-in-10-minutes-longbench-v2.pptx"
+    ]
+  },
+  {
+    "index": 42,
+    "example": null,
+    "field": "native full page text (unchanged surrounding text retained for exact audit)",
+    "page": 36,
+    "before": [
+      {
+        "text": "一つの公開問題の設問と答えを確認する\n4. 長文理解の評価での利用と入手\nfrom datasets import load_dataset\n\nds = load_dataset(\n    'THUDM/LongBench-v2', split='train'\n)\nx = ds[0]\nprint(x['domain'], x['question'])\nprint(x['choice_A'], x['answer'])\ncontextには長い本文が入る。設問だけで答えさせる場合とは、入力の条件が変わる。\n[1] LongBench Team (2026-10-26参照), LongBench. https://github.com/THUDM/LongBench",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/draft1/datasets-in-10-minutes-longbench-v2.pdf"
+        ],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ],
+    "after": [
+      {
+        "text": "一つの公開問題の設問と選択肢を確認する\n4. 長文理解の評価での利用と入手\nfrom datasets import load_dataset\n\nx = load_dataset(\n    'THUDM/LongBench-v2', split='train'\n)[0]\nprint(x['context'][:200])\nprint(x['question'])\nfor key in 'ABCD':\n    print(key, x['choice_' + key])\ncontextの先頭200文字と、設問・四つの選択肢を表示する。\n[1] LongBench Team (2026-10-26参照), LongBench. https://github.com/THUDM/LongBench",
+        "direct_saved": true,
+        "saved_files": [
+          "longbench-v2/candidate4/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate7/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate5/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate3/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate6/datasets-in-10-minutes-longbench-v2.pdf",
+          "longbench-v2/candidate2/datasets-in-10-minutes-longbench-v2.pdf"
+        ],
+        "current": false,
+        "chain_previous_after": [],
+        "chain_next_before": []
+      }
+    ],
+    "before_full_page_line_matches": [],
+    "after_full_page_line_matches": [],
+    "before_structured_saved_matches": [
+      "longbench-v2/draft1/datasets-in-10-minutes-longbench-v2.pptx"
+    ],
+    "after_structured_saved_matches": [
+      "longbench-v2/candidate4/datasets-in-10-minutes-longbench-v2.pptx",
+      "longbench-v2/candidate7/datasets-in-10-minutes-longbench-v2.pptx",
+      "longbench-v2/candidate5/datasets-in-10-minutes-longbench-v2.pptx",
+      "longbench-v2/candidate3/datasets-in-10-minutes-longbench-v2.pptx",
+      "longbench-v2/candidate6/datasets-in-10-minutes-longbench-v2.pptx",
+      "longbench-v2/candidate2/datasets-in-10-minutes-longbench-v2.pptx",
+      "longbench-v2/candidate8/datasets-in-10-minutes-longbench-v2.pptx"
+    ]
+  }
+]

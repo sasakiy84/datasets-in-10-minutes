@@ -1,0 +1,229 @@
+[
+  {
+    "file": "docs/supergpqa-sources.md",
+    "before": "[最終配布票](handoff.json)",
+    "after": "[最終配布票](skill-proofreading/supergpqa/creation-handoff.json)",
+    "reason": "Move creator handoff as creation-handoff.json; preserve correct public relative link."
+  },
+  {
+    "file": "docs/skill-proofreading/supergpqa/sources.md",
+    "before": "[最終配布票](handoff.json)",
+    "after": "[最終配布票](creation-handoff.json)",
+    "reason": "Move creator handoff as creation-handoff.json; preserve correct public relative link."
+  },
+  {
+    "file": "docs/skill-proofreading/supergpqa/proofreading.json",
+    "field": "corrections[id=12].source",
+    "before": "candidate2/ink-audit.json",
+    "after": "candidate2/datasets-in-10-minutes-supergpqa.pptx; candidate2/datasets-in-10-minutes-supergpqa.pdf",
+    "reason": "Replace absent archived audit filename with actual preserved pre-edit PPTX and PDF evidence."
+  },
+  {
+    "dataset": "supergpqa",
+    "field": "independent_records",
+    "before": [
+      "independent-review/root-source-review/mathvista-readme.md",
+      "independent-review/root-source-review/ifeval-readme.md",
+      "independent-review/root-source-review/supergpqa-readme.md",
+      "independent-review/root-source-review/longbench-v2-readme.md"
+    ],
+    "after": [],
+    "reason": "Raw downloaded README documents remain in private work/source cache; published packets retain actual reviewer notes, acquisition URLs and scope. Avoid relocating third-party README relative assets/links."
+  },
+  {
+    "dataset": "ifeval",
+    "field": "independent_records",
+    "before": [
+      "independent-review/root-source-review/mathvista-readme.md",
+      "independent-review/root-source-review/ifeval-readme.md",
+      "independent-review/root-source-review/supergpqa-readme.md",
+      "independent-review/root-source-review/longbench-v2-readme.md"
+    ],
+    "after": [],
+    "reason": "Raw downloaded README documents remain in private work/source cache; published packets retain actual reviewer notes, acquisition URLs and scope. Avoid relocating third-party README relative assets/links."
+  },
+  {
+    "file": "docs/skill-proofreading/supergpqa/review.json",
+    "field": "canonical_independent_approval",
+    "before": "review-supergpqa/review.json",
+    "after": "independent-review/review-supergpqa/review.json",
+    "reason": "Resolve formal approval path relative to the published packet, not the private work root."
+  },
+  {
+    "file": "docs/skill-proofreading/ifeval/review.json",
+    "field": "canonical_independent_approval",
+    "before": "review-ifeval/review.json",
+    "after": "independent-review/review-ifeval/review.json",
+    "reason": "Resolve formal approval path relative to the published packet, not the private work root."
+  },
+  {
+    "file": "docs/skill-proofreading/supergpqa/creator-visual-review.json",
+    "field": "remaining",
+    "before": [
+      "Independent reviewer exact-pair approval"
+    ],
+    "after": [],
+    "preserved_as": "creation_stage_remaining",
+    "resolved_by": "independent-review/review-supergpqa/review.json",
+    "reason": "Final independent exact-pair approval resolves this historical pending item; creator own visual/source scope unchanged."
+  },
+  {
+    "file": "docs/skill-proofreading/supergpqa/creation-handoff.json",
+    "field": "remaining",
+    "before": [
+      "Independent reviewer exact-pair approval"
+    ],
+    "after": [],
+    "preserved_as": "creation_stage_remaining",
+    "resolved_by": "independent-review/review-supergpqa/review.json",
+    "reason": "Final independent exact-pair approval resolves this historical pending item; creator own visual/source scope unchanged."
+  },
+  {
+    "file": "docs/skill-proofreading/ifeval/creator-visual-review.json",
+    "field": "remaining",
+    "before": [
+      "Independent reviewer full source/native/Japanese/visual/technical review and exact-pair approval."
+    ],
+    "after": [],
+    "preserved_as": "creation_stage_remaining",
+    "resolved_by": "independent-review/review-ifeval/review.json",
+    "reason": "Final independent exact-pair approval resolves this historical pending item; creator own visual/source scope unchanged."
+  },
+  {
+    "file": "docs/skill-proofreading/mathvista/creator-visual-review.json",
+    "field": "remaining",
+    "before": [
+      "independent exactpair source/native/visual/technical review"
+    ],
+    "after": [],
+    "preserved_as": "creation_stage_remaining",
+    "resolved_by": "independent-review/review-mathvista/review.json",
+    "reason": "Final independent exact-pair approval resolves this historical pending item; creator own visual/source scope unchanged."
+  },
+  {
+    "file": "docs/skill-proofreading/mathvista/creation-handoff.json",
+    "field": "remaining",
+    "before": [
+      "independent exactpair source/native/visual/technical review"
+    ],
+    "after": [],
+    "preserved_as": "creation_stage_remaining",
+    "resolved_by": "independent-review/review-mathvista/review.json",
+    "reason": "Final independent exact-pair approval resolves this historical pending item; creator own visual/source scope unchanged."
+  },
+  {
+    "file": "docs/skill-proofreading/mathvista/data-audit.json",
+    "field": "remaining",
+    "before": [
+      "independent exactpair source/native/visual/technical review"
+    ],
+    "after": [],
+    "preserved_as": "creation_stage_remaining",
+    "resolved_by": "independent-review/review-mathvista/review.json",
+    "reason": "Final independent exact-pair approval resolves this historical pending item; creator own visual/source scope unchanged."
+  },
+  {
+    "file": "site/datasets.csv",
+    "dataset": "ifeval",
+    "field": "tasks",
+    "before": "言語モデル評価|指示追従",
+    "after": "言語モデル評価",
+    "reason": "Use existing gallery task vocabulary without adding unrelated application taxonomy."
+  },
+  {
+    "file": "site/datasets.csv",
+    "dataset": "mathvista",
+    "field": "tasks",
+    "before": "質問応答|数学推論|言語モデル評価",
+    "after": "質問応答|言語モデル評価",
+    "reason": "Use existing gallery task vocabulary without adding unrelated application taxonomy."
+  },
+  {
+    "file": "docs/skill-proofreading/multichallenge/sources.md",
+    "before": "skill-proofreading/multichallenge/examples.json",
+    "after": "examples.json",
+    "reason": "Fix nested packet relative link after integration; top-level source document is unchanged."
+  },
+  {
+    "file": "docs/skill-proofreading/multichallenge/sources.md",
+    "before": "skill-proofreading/multichallenge/data-audit.json",
+    "after": "data-audit.json",
+    "reason": "Fix nested packet relative link after integration; top-level source document is unchanged."
+  },
+  {
+    "file": "docs/skill-proofreading/multichallenge/sources.md",
+    "before": "skill-proofreading/multichallenge.md",
+    "after": "../multichallenge.md",
+    "reason": "Fix nested packet relative link after integration; top-level source document is unchanged."
+  },
+  {
+    "file": "site/datasets.csv",
+    "dataset": "ifeval",
+    "field": "created_at/updated_at",
+    "before": [
+      "2026-10-26T06:49:28Z",
+      "2026-10-26T06:49:28Z"
+    ],
+    "after": [
+      "2026-10-26T06:49:53Z",
+      "2026-10-26T06:49:53Z"
+    ],
+    "reason": "Restore actual binary first/last commit times with build_site.py --update-dates; existing116 rows unchanged."
+  },
+  {
+    "file": "site/datasets.csv",
+    "dataset": "multichallenge",
+    "field": "created_at/updated_at",
+    "before": [
+      "2026-10-26T07:47:35Z",
+      "2026-10-26T07:47:35Z"
+    ],
+    "after": [
+      "2026-10-26T07:48:21Z",
+      "2026-10-26T07:48:21Z"
+    ],
+    "reason": "Restore actual binary first/last commit times with build_site.py --update-dates; existing116 rows unchanged."
+  },
+  {
+    "file": "site/datasets.csv",
+    "dataset": "longbench-v2",
+    "field": "created_at/updated_at",
+    "before": [
+      "2026-10-26T07:15:48Z",
+      "2026-10-26T07:15:48Z"
+    ],
+    "after": [
+      "2026-10-26T07:16:47Z",
+      "2026-10-26T07:16:47Z"
+    ],
+    "reason": "Restore actual binary first/last commit times with build_site.py --update-dates; existing116 rows unchanged."
+  },
+  {
+    "file": "site/datasets.csv",
+    "dataset": "supergpqa",
+    "field": "created_at/updated_at",
+    "before": [
+      "2026-10-26T06:36:44Z",
+      "2026-10-26T06:36:44Z"
+    ],
+    "after": [
+      "2026-10-26T06:37:51Z",
+      "2026-10-26T06:37:51Z"
+    ],
+    "reason": "Restore actual binary first/last commit times with build_site.py --update-dates; existing116 rows unchanged."
+  },
+  {
+    "file": "site/datasets.csv",
+    "dataset": "mathvista",
+    "field": "created_at/updated_at",
+    "before": [
+      "2026-10-26T06:56:18Z",
+      "2026-10-26T06:56:18Z"
+    ],
+    "after": [
+      "2026-10-26T06:57:32Z",
+      "2026-10-26T06:57:32Z"
+    ],
+    "reason": "Restore actual binary first/last commit times with build_site.py --update-dates; existing116 rows unchanged."
+  }
+]

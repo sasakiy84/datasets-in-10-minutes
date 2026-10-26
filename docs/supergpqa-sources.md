@@ -38,7 +38,7 @@
 
 [ODC-BYライセンス原文](licenses/supergpqa/LICENSE-SuperGPQA-ODC-BY-1.0.txt)と、公式カードの参照元一覧を含む[帰属・内容条件](licenses/supergpqa/ATTRIBUTION-SuperGPQA.md)を保持する。ODC-BYが扱うのはデータベースの権利であり、個々の内容の権利を一律に与えるものではない。公開原票には各問の上流出典を示すフィールドがなく、選定13問がすべて新規作成されたと断定していない。13問は対象の分析・説明に必要な実例として引用し、元の第三者の権利と条件を保持する。
 
-[校正と配置の修正対](skill-proofreading/supergpqa/proofreading.json)、[構築・採点・利用の確認](data-audits/supergpqa.json)、[最終配布票](handoff.json)を残す。各種技術監査は実際に実行した範囲だけを記載し、作者の実施と独立レビュー担当の実施を分ける。
+[校正と配置の修正対](skill-proofreading/supergpqa/proofreading.json)、[構築・採点・利用の確認](data-audits/supergpqa.json)、[最終配布票](skill-proofreading/supergpqa/creation-handoff.json)を残す。各種技術監査は実際に実行した範囲だけを記載し、作者の実施と独立レビュー担当の実施を分ける。
 
 ## 最終配布物と確認記録
 

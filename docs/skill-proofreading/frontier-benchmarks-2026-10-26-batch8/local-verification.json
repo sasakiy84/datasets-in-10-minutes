@@ -1,0 +1,105 @@
+{
+  "baseline": {
+    "existing_catalog_rows_unchanged": 116,
+    "existing_artifact_hashes_unchanged": 232,
+    "added": [
+      "ifeval",
+      "longbench-v2",
+      "mathvista",
+      "multichallenge",
+      "supergpqa"
+    ],
+    "catalog_count": 121,
+    "quality_history": "1–126, no gaps or duplicates, 126 balanced fences"
+  },
+  "new_decks": [
+    {
+      "slug": "ifeval",
+      "main_pages": 25,
+      "total_pages": 45,
+      "examples": 13,
+      "approved": true,
+      "artifact_sha256": {
+        "pdf": "ddb4cc694faabeffb1db4903f1c82128a8ca9b417c191ada2f0dfa921d263336",
+        "pptx": "0585f265b53d23dddcc6dbd416bf580aa0145d389a7ab45f930eb24fbb753966"
+      },
+      "independent_all_pages_covered": true
+    },
+    {
+      "slug": "multichallenge",
+      "main_pages": 39,
+      "total_pages": 116,
+      "examples": 13,
+      "approved": true,
+      "artifact_sha256": {
+        "pdf": "d950d8773fc615ad84210537482b6adeba98c9efb671a0925dc93b9a42eefa1c",
+        "pptx": "d88820f19513c9ed0449b0af3953815b1da64862a8897f30746d6e1b4ebe4f14"
+      },
+      "independent_all_pages_covered": true
+    },
+    {
+      "slug": "longbench-v2",
+      "main_pages": 37,
+      "total_pages": 97,
+      "examples": 13,
+      "approved": true,
+      "artifact_sha256": {
+        "pdf": "136b0a66af6b1e2e28800aa0938ef9a6ac06ffed4628e7cab0c08e9662676a4d",
+        "pptx": "7317d8b040fffa0d2b206da0768860614bd41b6d3ff90ba82b9e8cd4dec5595a"
+      },
+      "independent_all_pages_covered": true
+    },
+    {
+      "slug": "supergpqa",
+      "main_pages": 29,
+      "total_pages": 60,
+      "examples": 13,
+      "approved": true,
+      "artifact_sha256": {
+        "pdf": "bb4566a422dc939971c879fb21b991d9aaacfdec4e694a1546a63e4653dbfbb4",
+        "pptx": "d7faceda0742cb45ef846b6de97f71a22eee35ca1583f775a414197156c3fe84"
+      },
+      "independent_all_pages_covered": true
+    },
+    {
+      "slug": "mathvista",
+      "main_pages": 31,
+      "total_pages": 53,
+      "examples": 13,
+      "approved": true,
+      "artifact_sha256": {
+        "pdf": "2cb9b6bdb74e37453ffdf67e258b08ee719049b3215fef3efea5064149b5e31a",
+        "pptx": "2365286dc2e2e16d11b9684745b4bd496f0fab038f8a96b3f54e3162f88c89fc"
+      },
+      "independent_all_pages_covered": true
+    }
+  ],
+  "total_new_pages": 371,
+  "total_examples": 65,
+  "tests": {
+    "commands": [
+      {
+        "command": "venv/bin/python -m unittest discover -s tests -p test_*.py",
+        "result": "4 tests OK",
+        "exit_code": 0
+      },
+      {
+        "command": "node --test tests/gallery_query.test.cjs",
+        "result": "1 passed",
+        "exit_code": 0
+      }
+    ],
+    "scope": "Existing date/query/gallery regression tests; application code unchanged. Ran during production; final gallery/content built separately."
+  },
+  "browser": {
+    "created_desc_query_sort": true,
+    "title_query_and_updated_desc": true,
+    "reset_count121": true,
+    "browser": "system Chromium via Playwright",
+    "javascript_errors": [],
+    "broken_loaded_images": [],
+    "catalog_count": 121
+  },
+  "new10_preview_artifacts_match": true,
+  "gallery_count": 121
+}

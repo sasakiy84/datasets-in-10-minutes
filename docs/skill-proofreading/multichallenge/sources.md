@@ -23,7 +23,7 @@
 
 原文と日本語訳は全文を示す。文量が多い会話は、発言・段落・コードブロックなどの意味のまとまりで分け、コードの導入文とブロックを一緒に保つ。元の空行は読みやすさのため詰めることがあるが、文言・数値・役割・列挙・コードを削除しない。訳を同じページへ入れるために原文を分割していない。短い最終訳と期待挙動・解説をまとめられる場合は同じページに置いた。
 
-原票・日本語訳・採点質問の対応は[実例記録](skill-proofreading/multichallenge/examples.json)、集計・版・採点・確認範囲は[データ監査](skill-proofreading/multichallenge/data-audit.json)、変更対は[校正記録](skill-proofreading/multichallenge.md)に残す。
+原票・日本語訳・採点質問の対応は[実例記録](examples.json)、集計・版・採点・確認範囲は[データ監査](data-audit.json)、変更対は[校正記録](../multichallenge.md)に残す。
 
 ## 利用条件と帰属
 
