@@ -1,0 +1,42 @@
+{
+  "actor": "/root/maps_coordinator/review_gsi_dem",
+  "scope": "Only the two requested OSM public record summaries, private source correspondence, and unchanged approvals/artifact SHA; no renewed whole-deck review.",
+  "checks": [
+    {
+      "file": "map-manifest.json",
+      "maps": 4,
+      "source_id_counts": [
+        5115,
+        378,
+        5115,
+        5719
+      ],
+      "representative_first10_exact": true,
+      "full_list_json_sha256_exact": true,
+      "all_other_fields_unchanged": true
+    },
+    {
+      "file": "relation-missing-members.json",
+      "missing_member_count": 11601,
+      "relations_affected": 126,
+      "by_member_type": {
+        "node": 2127,
+        "way": 8991,
+        "relation": 483
+      },
+      "representative_first5_exact": true,
+      "private_sha256_exact": true,
+      "input_xml_sha256_exact": true,
+      "source_url_bbox_exact": true
+    }
+  ],
+  "approved": true,
+  "remaining": [],
+  "compaction_log_old_new_sha256_exact": true,
+  "canonical_approval_still_true": true,
+  "artifact_sha256": {
+    "pdf": "27fd888348d0becb9f303d23741e8bacb27fb34fc5b5547ef272d67e4be45150",
+    "pptx": "b143dca42800a1ce6c6ea80e0a4d25b8138c76a7d837080ba8506c0c7d70a195"
+  },
+  "artifact_hashes_unchanged_from_prior_review": true
+}

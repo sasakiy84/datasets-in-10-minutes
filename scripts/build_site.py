@@ -14,8 +14,8 @@ from urllib.parse import urlparse
 import fitz
 
 ROOT = Path(__file__).resolve().parents[1]
-MODALITIES = ('画像', '動画', '言語')
-TASKS = ('画像分類', '物体認識', '行動認識', '自然言語推論', '質問応答', '言語モデル学習', '言語モデル評価', 'エージェント操作', '抽象推論', '文書解析', '文書検索', 'コード生成', '文章補完', '真実性評価', '感情分析', '要約', '文法判定', 'バイアス評価', '文章分類', '翻訳')
+MODALITIES = ('画像', '動画', '言語', '地理空間')
+TASKS = ('画像分類', '物体認識', '行動認識', '自然言語推論', '質問応答', '言語モデル学習', '言語モデル評価', 'エージェント操作', '抽象推論', '文書解析', '文書検索', 'コード生成', '文章補完', '真実性評価', '感情分析', '要約', '文法判定', 'バイアス評価', '文章分類', '翻訳', '地図作成', '地形解析')
 SITE_LIMIT = 1_000_000_000
 GIT_FILE_LIMIT = 100 * 1024 * 1024
 
@@ -171,7 +171,7 @@ def build(output, *, update_dates=False):
 <script type="application/ld+json">{json.dumps(structured, ensure_ascii=False).replace('<', '\\u003c')}</script></head>
 <body><a class="skip" href="#gallery">スライド一覧へ</a>
 <main><section class="intro"><h1>{esc(config['title'])}</h1><p class="note">LLMで生成した資料であり、内容は保証していません。</p><p class="note">年は、紹介するデータセットや課題の公表年を示します。ICEは国際共同計画の開始年（1990年）です。派生版や改訂版の公開年とは異なる場合があります。</p></section>
-<section aria-label="スライド一覧"><div class="gallery-tools"><p id="result-count" role="status" aria-live="polite"><strong>{len(rows)}</strong> datasets</p><div class="filters" hidden><label class="title-search">タイトル検索<input id="title-search" type="search" placeholder="データセット名" autocomplete="off" spellcheck="false"></label><label>データの種類<select id="modality"><option value="">すべて</option>{options(MODALITIES)}</select></label><label>タスク<select id="task"><option value="">すべて</option>{options(TASKS)}</select></label><label>公開・開始年<select id="year"><option value="">すべて</option>{options(sorted({r['year'] for r in rows}, reverse=True))}</select></label><label>並び順<select id="sort-order"><option value="year-desc">公開・開始年：新しい順</option><option value="year-asc">公開・開始年：古い順</option><option value="created-desc">作成日時：新しい順</option><option value="created-asc">作成日時：古い順</option><option value="updated-desc">更新日時：新しい順</option><option value="updated-asc">更新日時：古い順</option></select></label><button id="reset" type="button">リセット</button></div></div>
+<section aria-label="スライド一覧"><div class="gallery-tools"><p id="result-count" role="status" aria-live="polite"><strong>{len(rows)}</strong> datasets</p><div class="filters" hidden><label class="title-search">タイトル検索<input id="title-search" type="search" placeholder="データセット名" autocomplete="off" spellcheck="false"></label><label>データの種類<select id="modality"><option value="">すべて</option>{options(MODALITIES)}</select></label><label>タスク・用途<select id="task"><option value="">すべて</option>{options(TASKS)}</select></label><label>公開・開始年<select id="year"><option value="">すべて</option>{options(sorted({r['year'] for r in rows}, reverse=True))}</select></label><label>並び順<select id="sort-order"><option value="year-desc">公開・開始年：新しい順</option><option value="year-asc">公開・開始年：古い順</option><option value="created-desc">作成日時：新しい順</option><option value="created-asc">作成日時：古い順</option><option value="updated-desc">更新日時：新しい順</option><option value="updated-asc">更新日時：古い順</option></select></label><button id="reset" type="button">リセット</button></div></div>
 <div id="gallery" class="gallery">{''.join(cards)}</div><p id="empty" hidden>該当する資料がありません。条件を変えてお試しください。</p></section>
 </main>
 <footer><span>{esc(config['title'])} / {esc(config['author'])}</span></footer></body></html>'''
