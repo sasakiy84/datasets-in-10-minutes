@@ -1,0 +1,198 @@
+{
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "actor": "/root/maps_coordinator/resume_wordnet",
+  "baseline_sha256": "a5abd51935068be30bc1f76fedbacb312635342ebc2eb7c929cf8eaf85f41732",
+  "final_sha256": "a18a29226ee4e1461f1d3eb3efadead37be926d7d5b11663426111e69555e829",
+  "pairs": [
+    {
+      "page": 8,
+      "shape_id": 2,
+      "location": [
+        "paragraph",
+        0
+      ],
+      "before": "語・語義・概念を分けて読む",
+      "after": "語・語義・概念の三つの単位",
+      "reason": "「分けて読む」を避け、説明する三つの単位を直接示す。"
+    },
+    {
+      "page": 10,
+      "shape_id": 15,
+      "location": [
+        "paragraph",
+        0
+      ],
+      "before": "矢印は下位→上位。緑線は日本語側の関係、灰線は英語側の関係を併用。",
+      "after": "矢印は下位→上位。緑は日本語側、灰は英語側の関係を併用。",
+      "reason": "線色の説明を短くし、図の凡例として自然にする。"
+    },
+    {
+      "page": 11,
+      "shape_id": 2,
+      "location": [
+        "paragraph",
+        0
+      ],
+      "before": "種類・構成員・行為のつながりをたどる",
+      "after": "種類・構成員・行為の関係をたどる",
+      "reason": "実例で示す意味関係を見出しで直接示す。"
+    },
+    {
+      "page": 17,
+      "shape_id": 3,
+      "location": [
+        "paragraph",
+        1
+      ],
+      "before": "その後、文章中の語に意味を付ける作業を通じて、不足する語義や日本語に必要な概念を追加した。",
+      "after": "その後、文章中の語がどの意味で使われたかを記録し、不足する語義や日本語に必要な概念を追加した。",
+      "reason": "語義付与の作業を初見の読者が理解できる説明にする。"
+    },
+    {
+      "page": 19,
+      "shape_id": 3,
+      "location": [
+        "paragraph",
+        1
+      ],
+      "before": "LLMによる複数回の確認やエラー報告を基に、誤りと判定された語義を削除し、日本語SemCorの見直しから語義を追加した。",
+      "after": "LLMによる複数回の確認やエラー報告を基に、誤りと判定された語義を削除し、語義付きコーパス「日本語SemCor」の見直しから語義を追加した。",
+      "reason": "SemCorを初出で語義付きコーパスと説明する。"
+    },
+    {
+      "page": 23,
+      "shape_id": 4,
+      "location": [
+        "paragraph",
+        3
+      ],
+      "before": "  <Sense id=\"wnja-02787772-n-32857\"",
+      "after": "  <Sense id=\"wnja-08420278-n-32857\"",
+      "reason": "続く概念XMLと同じ実在する金融機関の語義へ例を揃え、参照先を明確にする。"
+    },
+    {
+      "page": 23,
+      "shape_id": 4,
+      "location": [
+        "paragraph",
+        4
+      ],
+      "before": "         synset=\"wnja-02787772-n\"/>",
+      "after": "         synset=\"wnja-08420278-n\"/>",
+      "reason": "続く概念XMLと同じ実在する金融機関の語義へ例を揃え、参照先を明確にする。"
+    },
+    {
+      "page": 23,
+      "shape_id": 5,
+      "location": [
+        "paragraph",
+        0
+      ],
+      "before": "「銀行」の実レコードを整形して抜粋。Senseのsynset属性が、概念のIDを指す。",
+      "after": "「銀行」の金融機関の語義を抜粋。Senseのsynset属性が、概念のIDを指す。",
+      "reason": "続く概念XMLと同じ実在する金融機関の語義へ例を揃え、参照先を明確にする。"
+    },
+    {
+      "page": 28,
+      "shape_id": 7,
+      "location": [
+        "paragraph",
+        0
+      ],
+      "before": "",
+      "after": "Japanese WordNet 2.1 © 2009–2011 NICT; © 2012–2015, 2018–2020 Francis Bond;",
+      "reason": "配布LICENSEの著作権表示を成果物に追加する。"
+    },
+    {
+      "page": 28,
+      "shape_id": 7,
+      "location": [
+        "paragraph",
+        1
+      ],
+      "before": "",
+      "after": "© 2016–2017, 2021–2026 Francis Bond, Takayuki Kuribayashi. WordNet 3.0 © 2006 Princeton University.",
+      "reason": "配布LICENSEの著作権表示を成果物に追加する。"
+    },
+    {
+      "page": 29,
+      "shape_id": 2,
+      "location": [
+        "paragraph",
+        0
+      ],
+      "before": "語を一つの意味に結び、概念の関係をたどる",
+      "after": "語と意味を結び、概念の関係をたどる",
+      "reason": "多義語を一つの意味に限定するような誤解を避ける。"
+    },
+    {
+      "page": 33,
+      "shape_id": 2,
+      "location": [
+        "paragraph",
+        0
+      ],
+      "before": "「猫」は、一つの概念と三つの代表表記に結び付く",
+      "after": "「猫」の概念には、三つの語が登録されている",
+      "reason": "概念と語の関係を実収録レコードに即して自然に示す。"
+    },
+    {
+      "page": 38,
+      "shape_id": 4,
+      "location": [
+        "cell",
+        2,
+        2
+      ],
+      "before": "wnで語・語義・概念を検索",
+      "after": "wnで語と意味を検索",
+      "reason": "検索の用途を短く自然に表す。"
+    },
+    {
+      "page": 41,
+      "shape_id": 4,
+      "location": [
+        "paragraph",
+        0
+      ],
+      "before": "Development of Japanese WordNet",
+      "after": "Development of the Japanese WordNet",
+      "reason": "出典の正式題名へ合わせる。"
+    }
+  ],
+  "format_only": [
+    {
+      "page": 1,
+      "change": "subtitle native frame extended; visible position retained"
+    },
+    {
+      "page": 7,
+      "change": "definition kept verbatim; font20 for isolated-character wrap"
+    },
+    {
+      "page": 8,
+      "change": "semantic-unit column widths and font18.5"
+    },
+    {
+      "page": 10,
+      "change": "flat graph; shadows removed, all nodes and edges retained"
+    },
+    {
+      "page": 16,
+      "change": "two-column statistics table 7in centered"
+    },
+    {
+      "page": 18,
+      "change": "date column and header right aligned"
+    },
+    {
+      "page": 38,
+      "change": "version column and header right aligned"
+    },
+    {
+      "page": 40,
+      "change": "native frame extended for J outline; visible position retained"
+    }
+  ]
+}

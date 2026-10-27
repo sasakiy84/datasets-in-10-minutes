@@ -1,0 +1,28 @@
+{
+  "actor": "/root/maps_coordinator/resume_wordnet",
+  "artifact_sha256": {
+    "pdf": "0bc1a75b135a12a6bed44ca6fd2cbeafba6b1d208fbcfec53fc59307d3b7cea5",
+    "pptx": "a18a29226ee4e1461f1d3eb3efadead37be926d7d5b11663426111e69555e829"
+  },
+  "scope": "Static syntax only plus own explicit local wn queries recorded in data-audit.json. Exact extracted P25/P26 execution was not performed by this actor.",
+  "checks": [
+    {
+      "page": 23,
+      "result": "XML well formed"
+    },
+    {
+      "page": 24,
+      "result": "XML well formed"
+    },
+    {
+      "page": 25,
+      "result": "Python ast syntax valid; not executed by this actor"
+    },
+    {
+      "page": 26,
+      "result": "Python ast syntax valid; not executed by this actor"
+    }
+  ],
+  "execution_coverage": "Independent review_wordnet_final reports exact native P25/P26 execution separately. Prior acquisition/install work is inherited.",
+  "blocked_attempt": "Automatic approval rejected an extracted-code execution/download command before any execution. No retry or workaround; static parsing and explicit prewritten local data queries were used."
+}
