@@ -1,0 +1,383 @@
+[
+  {
+    "page": 1,
+    "title": "UniDic",
+    "section": "",
+    "kind": "cover"
+  },
+  {
+    "page": 2,
+    "title": "UniDicの公式サイト",
+    "section": "公式サイト",
+    "kind": "image",
+    "sources": [
+      "home"
+    ]
+  },
+  {
+    "page": 3,
+    "title": "",
+    "section": "目次",
+    "kind": "toc"
+  },
+  {
+    "page": 4,
+    "title": "1. 文を分けて語の情報を読む",
+    "section": "1. 文を分けて語の情報を読む",
+    "kind": "divider"
+  },
+  {
+    "page": 5,
+    "title": "文を区切り、語の情報を対応づける",
+    "section": "1. 文を分けて語の情報を読む",
+    "kind": "content",
+    "sources": [
+      "about"
+    ],
+    "body_text": [
+      "UniDicは、国語研の「短単位」に基づく辞書。形態素解析器MeCabと組み合わせて、文を区切り、品詞や読みを付ける。",
+      "語彙素という見出しに、表記や活用の異なる形を対応づける。その関係を、階層的な構造で管理している。",
+      "ここでは現代書き言葉2025.12を使う。MeCabをPythonから使うfugashiで、本資料の入力文を解析した。"
+    ]
+  },
+  {
+    "page": 6,
+    "title": "「本を読んだ。」を解析すると",
+    "section": "1. 文を分けて語の情報を読む",
+    "kind": "content",
+    "sources": [
+      "package"
+    ]
+  },
+  {
+    "page": 7,
+    "title": "「読ん」の形と活用を読む",
+    "section": "1. 文を分けて語の情報を読む",
+    "kind": "content",
+    "sources": [
+      "package"
+    ]
+  },
+  {
+    "page": 8,
+    "title": "「国立国語研究所」は四つの短単位",
+    "section": "1. 文を分けて語の情報を読む",
+    "kind": "content",
+    "sources": [
+      "package"
+    ]
+  },
+  {
+    "page": 9,
+    "title": "区切りの基準をそろえ、用例を集める",
+    "section": "1. 文を分けて語の情報を読む",
+    "kind": "content",
+    "sources": [
+      "den",
+      "glossary"
+    ],
+    "body_text": [
+      "語の区切り方が資料ごとに異なると、用例の検索条件や語数の数え方も変わってしまう。",
+      "UniDicは、用例収集に適した短単位を定め、表記や活用の違いをまとめて探せる見出しを持たせた。",
+      "単なる文字列の一致から、語の単位と属性を使った検索へつなげるための辞書である。"
+    ]
+  },
+  {
+    "page": 10,
+    "title": "2. 見出し構造と短単位",
+    "section": "2. 見出し構造と短単位",
+    "kind": "divider"
+  },
+  {
+    "page": 11,
+    "title": "語彙素・語形・書字形を対応づける",
+    "section": "2. 見出し構造と短単位",
+    "kind": "content",
+    "sources": [
+      "glossary"
+    ]
+  },
+  {
+    "page": 12,
+    "title": "三つの表記から、同じ語彙素へ",
+    "section": "2. 見出し構造と短単位",
+    "kind": "content",
+    "sources": [
+      "package"
+    ]
+  },
+  {
+    "page": 13,
+    "title": "活用した形を、基本形へ結び付ける",
+    "section": "2. 見出し構造と短単位",
+    "kind": "content",
+    "sources": [
+      "package"
+    ]
+  },
+  {
+    "page": 14,
+    "title": "仮名での読みと、発音を別に持つ",
+    "section": "2. 見出し構造と短単位",
+    "kind": "content",
+    "sources": [
+      "package"
+    ]
+  },
+  {
+    "page": 15,
+    "title": "品詞で、取り得る用法をまとめて表す",
+    "section": "2. 見出し構造と短単位",
+    "kind": "content",
+    "sources": [
+      "package"
+    ]
+  },
+  {
+    "page": 16,
+    "title": "検索・集計の目的に合わせて項目を選ぶ",
+    "section": "2. 見出し構造と短単位",
+    "kind": "content",
+    "sources": [
+      "glossary"
+    ],
+    "body_text": [
+      "活用した形をまとめたいときは基本形を使う。表記そのものを調べたいときは、書字形を保って集計する。",
+      "「大きい・おおきい・おっきい」をまとめて探すなら、語彙素を使う。異なる語彙素が同じ読みを持つこともあるので、見出しの識別も利用する。",
+      "どの違いをまとめ、どの違いを残すかを選べることが、階層的な見出しの利点である。"
+    ]
+  },
+  {
+    "page": 17,
+    "title": "3. 辞書の構築と配布形式",
+    "section": "3. 辞書の構築と配布形式",
+    "kind": "divider"
+  },
+  {
+    "page": 18,
+    "title": "コーパスの形態論情報付与を支える",
+    "section": "3. 辞書の構築と配布形式",
+    "kind": "content",
+    "sources": [
+      "about"
+    ],
+    "body_text": [
+      "UniDicは、日本語話し言葉コーパスや現代日本語書き言葉均衡コーパスの形態論情報付与を支えてきた。",
+      "辞書を使った自動解析の結果を人手で修正し、コーパスの形態論情報を整える。語の情報は辞書データベースと対応づけて管理する。",
+      "辞書と用例の対応を保つことで、同じ語への情報付与をそろえ、用例の検索にもつなげる。"
+    ]
+  },
+  {
+    "page": 19,
+    "title": "設計・データベース・解析用辞書",
+    "section": "3. 辞書の構築と配布形式",
+    "kind": "content",
+    "sources": [
+      "about"
+    ]
+  },
+  {
+    "page": 20,
+    "title": "2025.12版は見出し語と品詞を更新",
+    "section": "3. 辞書の構築と配布形式",
+    "kind": "content",
+    "sources": [
+      "package"
+    ],
+    "body_text": [
+      "現代書き言葉UniDic 2025.12は、見出し語を追加し、一部の品詞を見直したバージョン。",
+      "配布パッケージには、解析用のバイナリ辞書、文字種や未知語の情報、出力などの設定が入る。",
+      "以前のバージョンもバックナンバーから入手できる。解析結果を共有するときは、使用した辞書の種類とバージョンを添える。"
+    ]
+  },
+  {
+    "page": 21,
+    "title": "配布フォルダの主なファイル",
+    "section": "3. 辞書の構築と配布形式",
+    "kind": "content",
+    "sources": [
+      "package"
+    ]
+  },
+  {
+    "page": 22,
+    "title": "2025.12版の配布規模",
+    "section": "3. 辞書の構築と配布形式",
+    "kind": "content",
+    "sources": [
+      "package"
+    ]
+  },
+  {
+    "page": 23,
+    "title": "4. 使い方と辞書の選択",
+    "section": "4. 使い方と辞書の選択",
+    "kind": "divider"
+  },
+  {
+    "page": 24,
+    "title": "解析したい文章に合う辞書を選ぶ",
+    "section": "4. 使い方と辞書の選択",
+    "kind": "content",
+    "sources": [
+      "editions"
+    ]
+  },
+  {
+    "page": 25,
+    "title": "Pythonから解析結果を取り出す",
+    "section": "4. 使い方と辞書の選択",
+    "kind": "code",
+    "sources": [
+      "fugashi"
+    ]
+  },
+  {
+    "page": 26,
+    "title": "語の形を保ちながら、検索や集計へ",
+    "section": "4. 使い方と辞書の選択",
+    "kind": "content",
+    "sources": [
+      "home"
+    ],
+    "body_text": [
+      "語彙素を使って語の頻度を集計したり、品詞を指定して名詞や動詞の用例を取り出したりできる。",
+      "書字形や発音形を残せば、同じ見出しの中で、どの表記や読みが使われたかも調べられる。",
+      "オンラインのWeb茶まめでも、複数のUniDicを使った解析を試せる。手元に環境を作る前の入口として利用できる。"
+    ]
+  },
+  {
+    "page": 27,
+    "title": "取得先と利用条件",
+    "section": "4. 使い方と辞書の選択",
+    "kind": "content",
+    "sources": [
+      "package",
+      "commerce"
+    ],
+    "body_text": [
+      "公式サイトから、対象の文章とバージョンに合う解析用辞書を取得する。",
+      "ここで使った現代書き言葉2025.12は、GPL・LGPL・修正BSDから選んで利用できる。本資料の辞書出力は修正BSDに基づき、国立国語研究所をクレジットする。",
+      "古文用などには別の条件で配布される辞書もある。利用するパッケージに付いたライセンスを確認する。"
+    ]
+  },
+  {
+    "page": 28,
+    "title": "UniDicの要点",
+    "section": "4. 使い方と辞書の選択",
+    "kind": "content",
+    "sources": [
+      "about"
+    ],
+    "body_text": [
+      "短単位の区切りと語の属性をそろえ、コーパスの用例検索や語彙調査を支える辞書。",
+      "語彙素・語形・書字形・発音形を対応づけ、活用や表記の違いを、目的に合わせてまとめられる。",
+      "文章に合った解析用辞書を選び、MeCabなどの解析環境から、その見出しと特徴情報を利用する。"
+    ]
+  },
+  {
+    "page": 29,
+    "title": "Appendix",
+    "section": "Appendix",
+    "kind": "divider"
+  },
+  {
+    "page": 30,
+    "title": "",
+    "section": "Appendix: 目次",
+    "kind": "toc"
+  },
+  {
+    "page": 31,
+    "title": "表記の違い：「引っ越し」と「引越し」",
+    "section": "Appendix: 1. 追加の解析例",
+    "kind": "content",
+    "sources": [
+      "package"
+    ]
+  },
+  {
+    "page": 32,
+    "title": "語種：「山」「学校」「テレビ」",
+    "section": "Appendix: 1. 追加の解析例",
+    "kind": "content",
+    "sources": [
+      "package"
+    ]
+  },
+  {
+    "page": 33,
+    "title": "同じ読みでも、見出しを区別できる",
+    "section": "Appendix: 1. 追加の解析例",
+    "kind": "content",
+    "sources": [
+      "package"
+    ]
+  },
+  {
+    "page": 34,
+    "title": "固有名詞も短単位と属性で扱う",
+    "section": "Appendix: 1. 追加の解析例",
+    "kind": "content",
+    "sources": [
+      "package"
+    ]
+  },
+  {
+    "page": 35,
+    "title": "未知語では、文字種から候補を作る",
+    "section": "Appendix: 1. 追加の解析例",
+    "kind": "content",
+    "sources": [
+      "package",
+      "mecab"
+    ],
+    "body_text": [
+      "「OpenStreetMapを調べる。」を解析すると、OpenStreetMapは未知語として扱われた。品詞候補は「名詞－普通名詞－一般」だった。",
+      "この候補には、登録語のような語彙素や読みは入っていない。未知語の出力を扱うときは、得られた項目に合わせて処理する。",
+      "MeCabは文字種などの設定から未知語候補を作る。品詞の推定と、辞書に見出しが登録されていることは別の情報になる。"
+    ]
+  },
+  {
+    "page": 36,
+    "title": "活用した形を、語彙素IDでも結べる",
+    "section": "Appendix: 2. 特徴列と参考資料",
+    "kind": "content",
+    "sources": [
+      "package"
+    ]
+  },
+  {
+    "page": 37,
+    "title": "解析結果の主な特徴情報",
+    "section": "Appendix: 2. 特徴列と参考資料",
+    "kind": "content",
+    "sources": [
+      "faq"
+    ]
+  },
+  {
+    "page": 38,
+    "title": "参考文献",
+    "section": "Appendix: 2. 特徴列と参考資料",
+    "kind": "references"
+  },
+  {
+    "page": 39,
+    "title": "参考文献",
+    "section": "Appendix: 2. 特徴列と参考資料",
+    "kind": "references"
+  },
+  {
+    "page": 40,
+    "title": "参考文献",
+    "section": "Appendix: 2. 特徴列と参考資料",
+    "kind": "references"
+  },
+  {
+    "page": 41,
+    "title": "参考文献",
+    "section": "Appendix: 2. 特徴列と参考資料",
+    "kind": "references"
+  }
+]

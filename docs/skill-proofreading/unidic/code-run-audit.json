@@ -1,0 +1,12 @@
+{
+  "actor": "root",
+  "page": 25,
+  "pptx_sha256": "f630e3a2f780853e3cc22b33f75f8c1ea994e965d6daf69f19f0d24389ddcfff",
+  "exact_displayed_code": "from fugashi import GenericTagger\nargs = \"-r ./unidic-cwj/dicrc -d ./unidic-cwj\"\ntagger = GenericTagger(args)\nfor word in tagger(\"本を読んだ。\"):\n    print(word.surface, word.feature[7], sep=\"\\t\")",
+  "code_sha256": "4f6a71f86ab9c3bfc26c6e91f154dba98bac56079de46cadc9430436560bea77",
+  "execution": "Executed native PPTX code verbatim with real official dictionary files exposed at displayed relative directory path. Local MeCab only.",
+  "fugashi_version": "1.5.2",
+  "stdout": "本\t本\nを\tを\n読ん\t読む\nだ\tた\n。\t。\n",
+  "success": true,
+  "inheritance": "Native page25 XML exactly matches creator previously executed candidate2; page22 only compact table change."
+}
