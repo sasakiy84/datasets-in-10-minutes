@@ -1,0 +1,83 @@
+{
+  "actor": "/root/wikimedia_coordinator/review_pageviews",
+  "dataset": "mediawiki-history",
+  "artifact_sha256": {
+    "pdf": "46493ac89a3d61a26715b9b76c86ce742f174148c9b5f429d1911d5532e183c0",
+    "pptx": "083c0e399dd4599aa9009a7ad3198dce579edaf63b68ac41cedc407f90223a3c"
+  },
+  "approved": true,
+  "remaining": [],
+  "native_pages_checked": 39,
+  "native_nonempty_paragraph_and_cell_paragraph_count": 325,
+  "planned_main_seconds": 600,
+  "actual_reading_seconds": null,
+  "true_pairs_same_page_shape_paragraph_or_cell": [
+    {
+      "page": 13,
+      "element": [
+        "paragraph",
+        5,
+        0
+      ],
+      "before": "2026-09版は78列。利用者の変更イベントでは、ページ・版の列は空欄になる。",
+      "after": "2026-09版は78列。名前空間は、記事・カテゴリなどのページの用途を表す。利用者イベントでは、ページ・版の列は空欄になる。",
+      "reason": "名前空間の役割を初出で説明する。"
+    },
+    {
+      "page": 16,
+      "element": [
+        "paragraph",
+        3,
+        2
+      ],
+      "before": "編集回数の累計や直前の編集からの秒数もあり、編集のたびに増える回数や編集間隔を分析できる。",
+      "after": "編集回数の累計や直前の編集からの秒数もあり、編集活動の量や編集間隔を分析できる。",
+      "reason": "累計回数の説明を自然な文にする。"
+    },
+    {
+      "page": 25,
+      "element": [
+        "paragraph",
+        3,
+        2
+      ],
+      "before": "本文を集める用途と違い、最初から全言語・全期間を取得する必要はない。対象のウィキと分析期間を決めて始められる。",
+      "after": "必要なウィキと分析期間を選んで取得できる。小規模なウィキを選べば、全履歴の読み込みや集計を手元で試しやすい。",
+      "reason": "本文配布との根拠のない比較を除き、小規模wikiを選ぶ利点を説明する。"
+    },
+    {
+      "page": 36,
+      "element": [
+        "paragraph",
+        5,
+        0
+      ],
+      "before": "利用者イベントは同じ78列に入るが、ページIDと版IDは空欄になる。ここでは利用者名やIDを表示せず、イベントの構造を示した。",
+      "after": "利用者イベントは同じ78列に入るが、ページIDと版IDは空欄になる。変更の対象となった利用者の情報は、user_で始まる列に入る。",
+      "reason": "制作上の表示判断を、利用者イベントの列の説明に替える。"
+    },
+    {
+      "page": 37,
+      "element": [
+        "tablecell",
+        4,
+        4,
+        0,
+        0
+      ],
+      "before": "差し戻されるまでの時間",
+      "after": "差し戻しまでの時間",
+      "reason": "表セルの末尾1字だけの改行を解消する。"
+    }
+  ],
+  "separate_records": {
+    "code_and_schema_adjustments": 10,
+    "source_adjustments": 1,
+    "added_native_paragraphs": 5,
+    "removed_native_paragraphs": 2,
+    "format_adjustments": 4
+  },
+  "meaning_review": "All five before/after linguistic pairs read: namespace introduced, activity-volume phrase natural, unsupported contrast with text corpus removed, production decision replaced by actual user_ fields, last one-character table tail removed. All code/schema/source/added/removed identities separately matched to preserved actual native before and after.",
+  "raster_scope": "All native paragraphs and all nonempty table-cell paragraphs exact; chart internal labels/screenshot not claimed as OCR. Native chart values separately checked against actual full TSV aggregate; final actual pages read.",
+  "public_links": "Pending separate scope after coordinator integration."
+}

@@ -1,0 +1,76 @@
+{
+  "actor": "/root/wikimedia_coordinator/create_history",
+  "artifact_sha256": {
+    "pdf": "46493ac89a3d61a26715b9b76c86ce742f174148c9b5f429d1911d5532e183c0",
+    "pptx": "083c0e399dd4599aa9009a7ad3198dce579edaf63b68ac41cedc407f90223a3c"
+  },
+  "acquired_file": {
+    "url": "https://dumps.wikimedia.org/other/mediawiki_history/2026-09/nawiki/2026-09.nawiki.all-time.tsv.bz2",
+    "retrieved": "2026-10-28 JST",
+    "http_status": 200,
+    "bytes": 6194151,
+    "sha256": "3428831beef30f73ea8e0fa6897a542f52ec8d580016042c412237473bfe80b8",
+    "rows": 116372,
+    "scope": "full nawiki all-time file, snapshot 2026-09",
+    "schema_columns": 78,
+    "widths": [
+      78
+    ]
+  },
+  "schema": {
+    "official_hql_total_fields_including_partition": 80,
+    "dump_schema_columns": 78,
+    "official_hql_data_order_matches": false,
+    "hql_remaining_partition_fields": [
+      "snapshot"
+    ],
+    "actual_all_row_widths": [
+      78
+    ],
+    "internal_only_fields": [
+      "page_artificial_id",
+      "snapshot"
+    ],
+    "public_order_after_excluding_internal_fields_matches": true,
+    "official_hql_data_fields": 79,
+    "official_hql_partition_fields": [
+      "snapshot"
+    ],
+    "internal_only_fields_not_in_public_tsv": [
+      "page_artificial_id",
+      "snapshot"
+    ],
+    "serializer_source": "https://github.com/wikimedia/analytics-refinery-source/blob/master/refinery-job/src/main/scala/org/wikimedia/analytics/refinery/job/mediawikihistory/denormalized/MediawikiEvent.scala",
+    "serializer_explicit_omission": "toTSVLine: Note pageArtificialId is not printed."
+  },
+  "all_rows_parsed": 116372,
+  "all_row_widths": [
+    78
+  ],
+  "event_counts": {
+    "user/create": 12220,
+    "revision/create": 90024,
+    "page/create": 5820,
+    "page/delete": 5989,
+    "user/altergroups": 163,
+    "user/alterblocks": 73,
+    "page/move": 261,
+    "page/restore": 14,
+    "user/rename": 892,
+    "page/create-page": 916
+  },
+  "actual_scope": "Entire116372-record file parsed and aggregate calculations executed. Selected native displayed fields compared to exact actual records; public records exclude unneeded actor identities.",
+  "main_examples_verified": [
+    "revision6835 parent6825, bytesdiff2",
+    "page1967 historicalUkraina/Ukraine,currentIukrain",
+    "revision94 revertedby95, bytesdiff−4818/+4818"
+  ],
+  "additional_examples_verified": 5,
+  "time_and_namespace_native_charts": "Chart values computed from same complete file; caches and embedded workbook series names are編集数, no copied family labels.",
+  "source_read_scope": "Official public dumpdoc fullbody/schema/changes;history full definition/changes; reconstruction fullbody;FAQ fullbody; officialreadme wholebody; HQL fieldorder and MediawikiEvent.toTSVLine for omission of pageArtificialId; Content File Exports definition/current/history only. Entire CC0 legalcode saved, not legal advice.",
+  "gemini_used": false,
+  "external_generation_api_used": false,
+  "model_evaluation_run": false,
+  "final_review": "../skill-proofreading/mediawiki-history/review.json",
+  "final_independent_approved": true
+}

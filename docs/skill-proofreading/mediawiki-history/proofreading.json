@@ -1,0 +1,280 @@
+{
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "actor": "/root/wikimedia_coordinator/create_history",
+  "skill": ".agents/skills/japanese-slide-proofreading/SKILL.md",
+  "scope": "All39 pages read in actual rendered images; wording fixes separate from code/schema and formatting corrections.",
+  "before_source": "Saved authoring-draft0 nativePPTX (private)",
+  "before_pptx_sha256": "368b481c521e78be57135c332a7d0f04143f2ed1adb2ea688ea0fdf7ad7fc44a",
+  "after_artifact_sha256": {
+    "pdf": "46493ac89a3d61a26715b9b76c86ce742f174148c9b5f429d1911d5532e183c0",
+    "pptx": "083c0e399dd4599aa9009a7ad3198dce579edaf63b68ac41cedc407f90223a3c"
+  },
+  "identity": "Same actual page + native shapeID + paragraph index or table row/cell/paragraph; no title-based pairing.",
+  "pairs": [
+    {
+      "page": 13,
+      "element": [
+        "paragraph",
+        5,
+        0
+      ],
+      "before": "2026-09版は78列。利用者の変更イベントでは、ページ・版の列は空欄になる。",
+      "after": "2026-09版は78列。名前空間は、記事・カテゴリなどのページの用途を表す。利用者イベントでは、ページ・版の列は空欄になる。",
+      "reason": "名前空間の役割を初出で説明する。"
+    },
+    {
+      "page": 16,
+      "element": [
+        "paragraph",
+        3,
+        2
+      ],
+      "before": "編集回数の累計や直前の編集からの秒数もあり、編集のたびに増える回数や編集間隔を分析できる。",
+      "after": "編集回数の累計や直前の編集からの秒数もあり、編集活動の量や編集間隔を分析できる。",
+      "reason": "累計回数の説明を自然な文にする。"
+    },
+    {
+      "page": 25,
+      "element": [
+        "paragraph",
+        3,
+        2
+      ],
+      "before": "本文を集める用途と違い、最初から全言語・全期間を取得する必要はない。対象のウィキと分析期間を決めて始められる。",
+      "after": "必要なウィキと分析期間を選んで取得できる。小規模なウィキを選べば、全履歴の読み込みや集計を手元で試しやすい。",
+      "reason": "本文配布との根拠のない比較を除き、小規模wikiを選ぶ利点を説明する。"
+    },
+    {
+      "page": 36,
+      "element": [
+        "paragraph",
+        5,
+        0
+      ],
+      "before": "利用者イベントは同じ78列に入るが、ページIDと版IDは空欄になる。ここでは利用者名やIDを表示せず、イベントの構造を示した。",
+      "after": "利用者イベントは同じ78列に入るが、ページIDと版IDは空欄になる。変更の対象となった利用者の情報は、user_で始まる列に入る。",
+      "reason": "制作上の表示判断を、利用者イベントの列の説明に替える。"
+    },
+    {
+      "page": 37,
+      "element": [
+        "tablecell",
+        4,
+        4,
+        0,
+        0
+      ],
+      "before": "差し戻されるまでの時間",
+      "after": "差し戻しまでの時間",
+      "reason": "表セルの末尾1字だけの改行を解消する。"
+    }
+  ],
+  "code_and_schema_adjustments": [
+    {
+      "page": 6,
+      "element": [
+        "paragraph",
+        4,
+        1
+      ],
+      "before": "event_entity / event_type revision / create",
+      "after": "event_timestamp          2005-07-11 15:16:49.0"
+    },
+    {
+      "page": 6,
+      "element": [
+        "paragraph",
+        4,
+        0
+      ],
+      "before": "wiki_db                  nawiki",
+      "after": "event_entity / event_type revision / create"
+    },
+    {
+      "page": 6,
+      "element": [
+        "paragraph",
+        4,
+        3
+      ],
+      "before": "revision_id / parent_id   6835 / 6825",
+      "after": "revision_parent_id       6825"
+    },
+    {
+      "page": 6,
+      "element": [
+        "paragraph",
+        4,
+        2
+      ],
+      "before": "event_timestamp          2005-07-11 15:16:49.0",
+      "after": "revision_id              6835"
+    },
+    {
+      "page": 26,
+      "element": [
+        "paragraph",
+        4,
+        1
+      ],
+      "before": "from collections import Counter",
+      "after": "path = \"2026-09.nawiki.all-time.tsv.bz2\""
+    },
+    {
+      "page": 26,
+      "element": [
+        "paragraph",
+        4,
+        4
+      ],
+      "before": "with bz2.open(path, \"rt\", encoding=\"utf-8\") as f:",
+      "after": "                      quoting=csv.QUOTE_NONE)"
+    },
+    {
+      "page": 26,
+      "element": [
+        "paragraph",
+        4,
+        3
+      ],
+      "before": "counts = Counter()",
+      "after": "    rows = csv.reader(f, delimiter=\"\\t\","
+    },
+    {
+      "page": 26,
+      "element": [
+        "paragraph",
+        4,
+        6
+      ],
+      "before": "                          quoting=csv.QUOTE_NONE):",
+      "after": "print(n)"
+    },
+    {
+      "page": 26,
+      "element": [
+        "paragraph",
+        4,
+        5
+      ],
+      "before": "    for row in csv.reader(f, delimiter=\"\\t\",",
+      "after": "    n = sum(r[2:4] == [\"revision\", \"create\"] for r in rows)"
+    },
+    {
+      "page": 26,
+      "element": [
+        "paragraph",
+        4,
+        2
+      ],
+      "before": "path = \"2026-09.nawiki.all-time.tsv.bz2\"",
+      "after": "with bz2.open(path, \"rt\", encoding=\"utf-8\") as f:"
+    }
+  ],
+  "source_adjustments": [
+    {
+      "page": 18,
+      "element": [
+        "paragraph",
+        5,
+        0
+      ],
+      "before": "[1] Wikimedia Foundation, 2026. MediaWiki History配布ディレクトリ（参照2026-10-28）  https://dumps.wikimedia.org/other/mediawiki_history/",
+      "after": "[1] Wikimedia Foundation, n.d. MediaWiki history dumps（参照2026-10-28）"
+    }
+  ],
+  "added_native_paragraphs": [
+    {
+      "page": 10,
+      "element": [
+        "paragraph",
+        5,
+        2
+      ],
+      "after": "[2] Wikimedia Foundation, n.d. MediaWiki Content File Exports（参照2026-10-28）  https://wikitech.wikimedia.org/wiki/MediaWiki_Content_File_Exports"
+    },
+    {
+      "page": 18,
+      "element": [
+        "paragraph",
+        5,
+        1
+      ],
+      "after": "https://wikitech.wikimedia.org/wiki/Data_Platform/Data_Lake/Edits/MediaWiki_history_dumps"
+    },
+    {
+      "page": 18,
+      "element": [
+        "paragraph",
+        5,
+        2
+      ],
+      "after": "[2] Wikimedia Foundation, 2026. MediaWiki History配布ディレクトリ（参照2026-10-28）  https://dumps.wikimedia.org/other/mediawiki_history/"
+    },
+    {
+      "page": 28,
+      "element": [
+        "paragraph",
+        5,
+        1
+      ],
+      "after": "[2] Wikimedia Foundation, n.d. MediaWiki history dumps（参照2026-10-28）"
+    },
+    {
+      "page": 28,
+      "element": [
+        "paragraph",
+        5,
+        2
+      ],
+      "after": "https://wikitech.wikimedia.org/wiki/Data_Platform/Data_Lake/Edits/MediaWiki_history_dumps"
+    }
+  ],
+  "removed_native_paragraphs": [
+    {
+      "page": 26,
+      "element": [
+        "paragraph",
+        4,
+        7
+      ],
+      "before": "        counts[(row[2], row[3])] += 1"
+    },
+    {
+      "page": 26,
+      "element": [
+        "paragraph",
+        4,
+        8
+      ],
+      "before": "print(counts[(\"revision\", \"create\")])"
+    }
+  ],
+  "format_adjustments": [
+    {
+      "pages": [
+        1,
+        30
+      ],
+      "change": "Native title frames expanded4pt; cover bottom margin4pt retains original visible position; Appendix top−2pt."
+    },
+    {
+      "page": 9,
+      "change": "NumericID column and header right-aligned."
+    },
+    {
+      "pages": [
+        10,
+        23,
+        24,
+        26
+      ],
+      "change": "Content/body/code/note font and spacing adjusted for readable source gap."
+    },
+    {
+      "page": 24,
+      "change": "Horizontal chart ticks every10000."
+    }
+  ]
+}

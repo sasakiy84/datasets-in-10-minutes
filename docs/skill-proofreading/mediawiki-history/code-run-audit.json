@@ -1,0 +1,14 @@
+{
+  "actor": "/root/wikimedia_coordinator/create_history",
+  "page": 26,
+  "artifact_sha256": {
+    "pdf": "46493ac89a3d61a26715b9b76c86ce742f174148c9b5f429d1911d5532e183c0",
+    "pptx": "083c0e399dd4599aa9009a7ad3198dce579edaf63b68ac41cedc407f90223a3c"
+  },
+  "exact_displayed_code": "import bz2, csv\npath = \"2026-09.nawiki.all-time.tsv.bz2\"\nwith bz2.open(path, \"rt\", encoding=\"utf-8\") as f:\n    rows = csv.reader(f, delimiter=\"\\t\",\n                      quoting=csv.QUOTE_NONE)\n    n = sum(r[2:4] == [\"revision\", \"create\"] for r in rows)\nprint(n)",
+  "code_sha256": "41ec13094a43e0b41ef94f8903940f40f5fd24ec6a96d1ae4baf89cd965d19ed",
+  "execution": "Native PPTX code executed verbatim from directory containing actual downloaded official nawiki all-time TSV.BZ2",
+  "stdout": "90024\n",
+  "success": true,
+  "external_generation_api_used": false
+}

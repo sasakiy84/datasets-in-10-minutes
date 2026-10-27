@@ -1,0 +1,648 @@
+{
+  "dataset": "MediaWiki History public TSV dump",
+  "snapshot": "2026-09",
+  "source": {
+    "url": "https://dumps.wikimedia.org/other/mediawiki_history/2026-09/nawiki/2026-09.nawiki.all-time.tsv.bz2",
+    "retrieved": "2026-10-28 JST",
+    "http_status": 200,
+    "bytes": 6194151,
+    "sha256": "3428831beef30f73ea8e0fa6897a542f52ec8d580016042c412237473bfe80b8",
+    "rows": 116372,
+    "scope": "full nawiki all-time file, snapshot 2026-09",
+    "schema_columns": 78,
+    "widths": [
+      78
+    ]
+  },
+  "schema_fields": [
+    {
+      "name": "wiki_db",
+      "type": "string",
+      "description": "enwiki, dewiki, eswiktionary, etc."
+    },
+    {
+      "name": "event_log_id",
+      "type": "bigint",
+      "description": "In page/user events: id of the logging table row that caused this event. NULL for revision events."
+    },
+    {
+      "name": "event_entity",
+      "type": "string",
+      "description": "revision, user or page"
+    },
+    {
+      "name": "event_type",
+      "type": "string",
+      "description": "create, move, delete, etc. Detailed explanation in the docs under #Event_types"
+    },
+    {
+      "name": "event_timestamp",
+      "type": "string",
+      "description": "When this event ocurred"
+    },
+    {
+      "name": "event_comment",
+      "type": "string",
+      "description": "Comment related to this event, sourced from log_comment, rev_comment, etc."
+    },
+    {
+      "name": "event_user_id",
+      "type": "bigint",
+      "description": "ID of the user that caused the event. Null if the user is anonymous or if from a revision where the user has been revision deleted."
+    },
+    {
+      "name": "event_user_central_id",
+      "type": "bigint",
+      "description": "Global (central) ID of the user that caused the event"
+    },
+    {
+      "name": "event_user_text_historical",
+      "type": "string",
+      "description": "Historical username (IP address for anonymous user) of the user that caused the event. Null for revisions where the user has been revision deleted."
+    },
+    {
+      "name": "event_user_text",
+      "type": "string",
+      "description": "Current username of the user that caused the event. Null for anonymous users (the IP is stored in event_user_text_historical). Null for revisions where the user has been revision deleted."
+    },
+    {
+      "name": "event_user_blocks_historical",
+      "type": "array<string>",
+      "description": "Historical blocks of the user that caused the event"
+    },
+    {
+      "name": "event_user_blocks",
+      "type": "array<string>",
+      "description": "Current blocks of the user that caused the event"
+    },
+    {
+      "name": "event_user_groups_historical",
+      "type": "array<string>",
+      "description": "Historical groups of the user that caused the event"
+    },
+    {
+      "name": "event_user_groups",
+      "type": "array<string>",
+      "description": "Current groups of the user that caused the event"
+    },
+    {
+      "name": "event_user_is_bot_by_historical",
+      "type": "array<string>",
+      "description": "Historical bot information of the user that caused the event, can contain values name or group"
+    },
+    {
+      "name": "event_user_is_bot_by",
+      "type": "array<string>",
+      "description": "Bot information of the user that caused the event, can contain values name or group"
+    },
+    {
+      "name": "event_user_is_created_by_self",
+      "type": "boolean",
+      "description": "Whether the event_user created their own account"
+    },
+    {
+      "name": "event_user_is_created_by_system",
+      "type": "boolean",
+      "description": "Whether the event_user account was created by mediawiki (eg. centralauth)"
+    },
+    {
+      "name": "event_user_is_created_by_peer",
+      "type": "boolean",
+      "description": "Whether the event_user account was created by another user"
+    },
+    {
+      "name": "event_user_is_anonymous",
+      "type": "boolean",
+      "description": "Whether the event_user is not registered, using the old way that surfaced the IP publicly. True for revisions where the user has been revision deleted, even if the user was actually registered."
+    },
+    {
+      "name": "event_user_is_temporary",
+      "type": "boolean",
+      "description": "Whether the event_user is not registered, using the new temporary account way. True for revisions where the user has been revision deleted, even if the user was actually registered."
+    },
+    {
+      "name": "event_user_is_permanent",
+      "type": "boolean",
+      "description": "Whether the event_user is registered."
+    },
+    {
+      "name": "event_user_is_cross_wiki",
+      "type": "boolean",
+      "description": "True if the event_user is an interwiki-imported editor (usertext contains \">\", is anonymous, and not temporary). NULL for user/page events."
+    },
+    {
+      "name": "event_user_registration_timestamp",
+      "type": "string",
+      "description": "Registration timestamp of the user that caused the event (from user table)"
+    },
+    {
+      "name": "event_user_creation_timestamp",
+      "type": "string",
+      "description": "Creation timestamp of the user that caused the event (from logging table)"
+    },
+    {
+      "name": "event_user_first_edit_timestamp",
+      "type": "string",
+      "description": "Timestamp of the first edit of the user that caused the event"
+    },
+    {
+      "name": "event_user_revision_count",
+      "type": "bigint",
+      "description": "Number of revisions made by the event_user up to the historical time in this wiki_db (only available in revision-create events so far). For revision-create events, this includes the event itself."
+    },
+    {
+      "name": "event_user_seconds_since_previous_revision",
+      "type": "bigint",
+      "description": "In revision events: seconds elapsed since the previous revision made by the current event_user_id (only available in revision-create events so far)"
+    },
+    {
+      "name": "page_id",
+      "type": "bigint",
+      "description": "In revision/page events: id of the page"
+    },
+    {
+      "name": "page_title_historical",
+      "type": "string",
+      "description": "In revision/page events: historical title of the page"
+    },
+    {
+      "name": "page_title",
+      "type": "string",
+      "description": "In revision/page events: current title of the page"
+    },
+    {
+      "name": "page_namespace_historical",
+      "type": "int",
+      "description": "In revision/page events: historical namespace of the page."
+    },
+    {
+      "name": "page_namespace_is_content_historical",
+      "type": "boolean",
+      "description": "In revision/page events: historical namespace of the page is categorized as content"
+    },
+    {
+      "name": "page_namespace",
+      "type": "int",
+      "description": "In revision/page events: current namespace of the page"
+    },
+    {
+      "name": "page_namespace_is_content",
+      "type": "boolean",
+      "description": "In revision/page events: current namespace of the page is categorized as content"
+    },
+    {
+      "name": "page_is_redirect",
+      "type": "boolean",
+      "description": "In revision/page events: whether the page is currently a redirect"
+    },
+    {
+      "name": "page_is_deleted",
+      "type": "boolean",
+      "description": "In revision/page events: Whether the page is rebuilt from a delete event"
+    },
+    {
+      "name": "page_creation_timestamp",
+      "type": "string",
+      "description": "In revision/page events: creation timestamp of the page"
+    },
+    {
+      "name": "page_first_edit_timestamp",
+      "type": "string",
+      "description": "In revision/page events: timestamp of the page's first revision. Can be before the page_creation in some restore/merge cases (see revision_is_from_before_page_creation)."
+    },
+    {
+      "name": "page_revision_count",
+      "type": "bigint",
+      "description": "In revision/page events: Cumulative revision count per page for the current page_id (only available in revision-create events so far)"
+    },
+    {
+      "name": "page_seconds_since_previous_revision",
+      "type": "bigint",
+      "description": "In revision/page events: seconds elapsed since the previous revision made on the current page_id (only available in revision-create events so far)"
+    },
+    {
+      "name": "user_id",
+      "type": "bigint",
+      "description": "In user events: id of the user"
+    },
+    {
+      "name": "user_central_id",
+      "type": "bigint",
+      "description": "In user events: global (central) id of the user"
+    },
+    {
+      "name": "user_text_historical",
+      "type": "string",
+      "description": "In user events: historical username or IP address of the user"
+    },
+    {
+      "name": "user_text",
+      "type": "string",
+      "description": "In user events: current username or IP address of the user"
+    },
+    {
+      "name": "user_blocks_historical",
+      "type": "array<string>",
+      "description": "In user events: historical user blocks"
+    },
+    {
+      "name": "user_blocks",
+      "type": "array<string>",
+      "description": "In user events: current user blocks"
+    },
+    {
+      "name": "user_groups_historical",
+      "type": "array<string>",
+      "description": "In user events: historical user groups"
+    },
+    {
+      "name": "user_groups",
+      "type": "array<string>",
+      "description": "In user events: current user groups"
+    },
+    {
+      "name": "user_is_bot_by_historical",
+      "type": "array<string>",
+      "description": "In user events: Historical bot information of the user, can contain values name or group"
+    },
+    {
+      "name": "user_is_bot_by",
+      "type": "array<string>",
+      "description": "In user events: Bot information of the user, can contain values name or group"
+    },
+    {
+      "name": "user_is_created_by_self",
+      "type": "boolean",
+      "description": "In user events: whether the user created their own account"
+    },
+    {
+      "name": "user_is_created_by_system",
+      "type": "boolean",
+      "description": "In user events: whether the user account was created by mediawiki"
+    },
+    {
+      "name": "user_is_created_by_peer",
+      "type": "boolean",
+      "description": "In user events: whether the user account was created by another user"
+    },
+    {
+      "name": "user_is_anonymous",
+      "type": "boolean",
+      "description": "In user events: whether the user is not registered, using the old way that surfaced the IP publicly"
+    },
+    {
+      "name": "user_is_temporary",
+      "type": "boolean",
+      "description": "In user events: whether the user is not registered, using the new temporary account way"
+    },
+    {
+      "name": "user_is_permanent",
+      "type": "boolean",
+      "description": "In user events: whether the user is registered"
+    },
+    {
+      "name": "user_registration_timestamp",
+      "type": "string",
+      "description": "In user events: registration timestamp of the user."
+    },
+    {
+      "name": "user_creation_timestamp",
+      "type": "string",
+      "description": "In user events: Creation timestamp of the user (from logging table)"
+    },
+    {
+      "name": "user_first_edit_timestamp",
+      "type": "string",
+      "description": "In user events: Timestamp of the first edit of the user"
+    },
+    {
+      "name": "revision_id",
+      "type": "bigint",
+      "description": "In revision events: id of the revision"
+    },
+    {
+      "name": "revision_parent_id",
+      "type": "bigint",
+      "description": "In revision events: id of the parent revision"
+    },
+    {
+      "name": "revision_minor_edit",
+      "type": "boolean",
+      "description": "In revision events: whether it is a minor edit or not"
+    },
+    {
+      "name": "revision_deleted_parts",
+      "type": "array<string>",
+      "description": "In revision events: Deleted parts of the revision, can contain values text, comment and user"
+    },
+    {
+      "name": "revision_deleted_parts_are_suppressed",
+      "type": "boolean",
+      "description": "In revision events: Whether the deleted parts are deleted to admin as well (visible only by stewards)"
+    },
+    {
+      "name": "revision_text_bytes",
+      "type": "bigint",
+      "description": "In revision events: number of bytes of revision"
+    },
+    {
+      "name": "revision_text_bytes_diff",
+      "type": "bigint",
+      "description": "In revision events: change in bytes relative to parent revision (can be negative)."
+    },
+    {
+      "name": "revision_text_sha1",
+      "type": "string",
+      "description": "In revision events: sha1 hash of the revision"
+    },
+    {
+      "name": "revision_content_model",
+      "type": "string",
+      "description": "In revision events: content model of revision"
+    },
+    {
+      "name": "revision_content_format",
+      "type": "string",
+      "description": "In revision events: content format of revision"
+    },
+    {
+      "name": "revision_is_deleted_by_page_deletion",
+      "type": "boolean",
+      "description": "In revision events: whether this revision has been deleted (moved to archive table)"
+    },
+    {
+      "name": "revision_deleted_by_page_deletion_timestamp",
+      "type": "string",
+      "description": "In revision events: the timestamp when the revision was deleted"
+    },
+    {
+      "name": "revision_is_identity_reverted",
+      "type": "boolean",
+      "description": "In revision events: whether this revision was reverted by another future revision"
+    },
+    {
+      "name": "revision_first_identity_reverting_revision_id",
+      "type": "bigint",
+      "description": "In revision events: id of the revision that reverted this revision"
+    },
+    {
+      "name": "revision_seconds_to_identity_revert",
+      "type": "bigint",
+      "description": "In revision events: seconds elapsed between revision posting and its revert (if there was one)"
+    },
+    {
+      "name": "revision_is_identity_revert",
+      "type": "boolean",
+      "description": "In revision events: whether this revision reverts other revisions"
+    },
+    {
+      "name": "revision_is_from_before_page_creation",
+      "type": "boolean",
+      "description": "In revision events: True if the revision timestamp is before the page creation (can happen with restore events)"
+    },
+    {
+      "name": "revision_tags",
+      "type": "array<string>",
+      "description": "In revision events: Tags associated to the revision"
+    }
+  ],
+  "schema_source": "https://wikitech.wikimedia.org/wiki/Data_Platform/Data_Lake/Edits/MediaWiki_history_dumps",
+  "schema_count_note": "Current detailed public schema and all observed rows78; overview still states76. Internal HQL also has page_artificial_id and snapshot omitted from publicTSV.",
+  "scope": "Complete smallwiki nawiki all-time file; no enwiki/global data acquisition, no representative global sample claim.",
+  "summary": {
+    "count": 116372,
+    "entities": {
+      "user": 13348,
+      "revision": 90024,
+      "page": 13000
+    },
+    "event_types": {
+      "user/create": 12220,
+      "revision/create": 90024,
+      "page/create": 5820,
+      "page/delete": 5989,
+      "user/altergroups": 163,
+      "user/alterblocks": 73,
+      "page/move": 261,
+      "page/restore": 14,
+      "user/rename": 892,
+      "page/create-page": 916
+    },
+    "annual_revisions": {
+      "2003": 22,
+      "2004": 3836,
+      "2005": 5517,
+      "2006": 4424,
+      "2007": 8071,
+      "2008": 9288,
+      "2009": 9538,
+      "2010": 10401,
+      "2011": 13221,
+      "2012": 9654,
+      "2013": 4825,
+      "2014": 3561,
+      "2015": 839,
+      "2016": 523,
+      "2017": 561,
+      "2018": 569,
+      "2019": 652,
+      "2020": 989,
+      "2021": 2488,
+      "2022": 805,
+      "2023": 197,
+      "2024": 15,
+      "2025": 11,
+      "2026": 17
+    },
+    "columns": 78,
+    "time_range": [
+      "2003-08-09 22:34:36.0",
+      "2026-09-29 18:05:54.0"
+    ],
+    "wikis_in_snapshot": 1008
+  },
+  "license": "CC0 per official readme; Wikitech documentation text separately CC BY-SA4.0",
+  "private_source_files": [
+    {
+      "name": "sources/MediawikiEvent.scala",
+      "bytes": 51199,
+      "sha256": "4e0e3f8da5117f889fb84f3c8e6f04eebb9fc62a32b233da69d2604d14bf214a"
+    },
+    {
+      "name": "sources/MediawikiHistoryDumper.scala",
+      "bytes": 12890,
+      "sha256": "9a742fdacc0b10f27f3fac57bc45a5f4d26280068499dcf52365ea422978d6c8"
+    },
+    {
+      "name": "sources/aawiki-directory.clean.txt",
+      "bytes": 195,
+      "sha256": "a80bf1fb5582dbfe081789b21de1b4618f9f8ff4ef67a0fd7cd0a8233f327004"
+    },
+    {
+      "name": "sources/aawiki-directory.html",
+      "bytes": 349,
+      "sha256": "3ad3e6b691edf841a0451d08b74e9e0dfd14a3844a72cbf662cfd5c3017209ed"
+    },
+    {
+      "name": "sources/angwiki-directory.clean.txt",
+      "bytes": 197,
+      "sha256": "f59b453f24d88eebb5ce6dc17a6e76431aadfadb965a0d476bf61d7caabd75f0"
+    },
+    {
+      "name": "sources/angwiki-directory.html",
+      "bytes": 352,
+      "sha256": "f0f52c33ab8cb68c3a9e51a3a597c0d1827bc7bc69adab6e969f0b2078616521"
+    },
+    {
+      "name": "sources/content-exports.html",
+      "bytes": 72439,
+      "sha256": "e24f7e21d4649865b1f198dd6926180c90e1607f3cb4b89db7df1cd1bbac1cbc"
+    },
+    {
+      "name": "sources/dumpdoc.clean.txt",
+      "bytes": 17434,
+      "sha256": "1a0200d1ef8fb20950a987122a47f9e12b480bce521074dace88c0e2f22219eb"
+    },
+    {
+      "name": "sources/dumpdoc.html",
+      "bytes": 97931,
+      "sha256": "b80e6ae0a1d58e3846c407496b5c90ec6287850aa2ca9dbf6434286b6242e426"
+    },
+    {
+      "name": "sources/dumpdoc.txt",
+      "bytes": 30663,
+      "sha256": "994bbc13e357cd90fee11cda31550cf29d13507eaf1e23401ae6ef84299be9d0"
+    },
+    {
+      "name": "sources/dumps.clean.txt",
+      "bytes": 343,
+      "sha256": "36f5b03a3a6f53f900f0c8ef26aac3c4ce184e1156eac4f4bd545c0124e45c0e"
+    },
+    {
+      "name": "sources/dumps.html",
+      "bytes": 525,
+      "sha256": "3ebab1fdb48c3382fd261f9d263a2a3ec85af6ae68fe64953ae589f363739f3c"
+    },
+    {
+      "name": "sources/dumps.txt",
+      "bytes": 343,
+      "sha256": "36f5b03a3a6f53f900f0c8ef26aac3c4ce184e1156eac4f4bd545c0124e45c0e"
+    },
+    {
+      "name": "sources/faq.clean.txt",
+      "bytes": 1566,
+      "sha256": "999515953d91ecedae7c9296cfc76a9950e6c4a71032c2cfa927d2d8f60876f9"
+    },
+    {
+      "name": "sources/faq.html",
+      "bytes": 54729,
+      "sha256": "fcad394003246ef05bf912b4fc9f455556e232e5c26c506ca0b4b326b920778f"
+    },
+    {
+      "name": "sources/faq.txt",
+      "bytes": 12260,
+      "sha256": "4de82148c4518589a4be73e7c9dc360bba0e35196c1c4a289e2bb1c1dc513517"
+    },
+    {
+      "name": "sources/hawiki-directory.clean.txt",
+      "bytes": 195,
+      "sha256": "7955aee3bc5064cc8f5b87918e27bd8d23fa4969180bde0bb4134f1732126f5d"
+    },
+    {
+      "name": "sources/hawiki-directory.html",
+      "bytes": 349,
+      "sha256": "b68c71546e9d05a169617e5435ef6943a09cbb34547511c6360ebd6e77bf1191"
+    },
+    {
+      "name": "sources/history.clean.txt",
+      "bytes": 4969,
+      "sha256": "62134e90838ce7afd5d7b665395f8d853a393193a2633c7ab2a13ebd1eff5882"
+    },
+    {
+      "name": "sources/history.html",
+      "bytes": 70469,
+      "sha256": "c068a922c4e16766f322ba4ad258083fd475fad5a814c3cdbb9ee9db07d50f18"
+    },
+    {
+      "name": "sources/history.txt",
+      "bytes": 15407,
+      "sha256": "22d04b4bb412fb665337c61b5050507f6b4e0f1e69ce971a01fd4cce78e86893"
+    },
+    {
+      "name": "sources/hql.clean.txt",
+      "bytes": 18000,
+      "sha256": "c3bac9fa8ea99b7b213f0a52e5ba714388ad643679228af4aa22fd14ef04bd98"
+    },
+    {
+      "name": "sources/hql.html",
+      "bytes": 18000,
+      "sha256": "c3bac9fa8ea99b7b213f0a52e5ba714388ad643679228af4aa22fd14ef04bd98"
+    },
+    {
+      "name": "sources/nawiki-directory.clean.txt",
+      "bytes": 195,
+      "sha256": "a4a946c869d34ce0b401f59dfc16e399f8da8f4d4acbc709d0e77e96445e4d04"
+    },
+    {
+      "name": "sources/nawiki-directory.html",
+      "bytes": 349,
+      "sha256": "20b7b64a2e7e190395bb244cabd211d951e00197c9124cabab0acb6f3a4b1f0c"
+    },
+    {
+      "name": "sources/readme.clean.txt",
+      "bytes": 6439,
+      "sha256": "8dd8be5cb2959413492b0304a7a5c67b43f1d8132abdd70f36754b23d2fd7108"
+    },
+    {
+      "name": "sources/readme.html",
+      "bytes": 8290,
+      "sha256": "f8c5ce0ce64899fe2d73ed65af265348d824a90d9f7874248300a04b5fb0acfc"
+    },
+    {
+      "name": "sources/readme.txt",
+      "bytes": 6439,
+      "sha256": "8dd8be5cb2959413492b0304a7a5c67b43f1d8132abdd70f36754b23d2fd7108"
+    },
+    {
+      "name": "sources/reconstruction.clean.txt",
+      "bytes": 4947,
+      "sha256": "2b047e4c9a80093e982e5bf2c31110e3e538696f92ec63dad896b8934f1a5f87"
+    },
+    {
+      "name": "sources/reconstruction.html",
+      "bytes": 60887,
+      "sha256": "8267486667e78a95d69cc0f0283851f5561ffc58489b224de42bd7e5747d1e1a"
+    },
+    {
+      "name": "sources/reconstruction.txt",
+      "bytes": 16068,
+      "sha256": "dd89865a7b9acc277e3081bc779242599a590399526104691a204f6bd9252ce7"
+    },
+    {
+      "name": "sources/rendered.txt",
+      "bytes": 18511,
+      "sha256": "018b673fff17562ed0e003fb381815f643e69aa6267a55ec112a8b48276359b8"
+    },
+    {
+      "name": "sources/schema.hql",
+      "bytes": 13498,
+      "sha256": "5c988afaa48ee126828ff8211f04aa3c5e1f58c4a4ffb00094f3b1f95a7bc5fd"
+    },
+    {
+      "name": "sources/snapshot.clean.txt",
+      "bytes": 89804,
+      "sha256": "a3006a39f3936554c6afdf5859e4cc1735fcdb8d6a8d6ad30f98f522e34a8a60"
+    },
+    {
+      "name": "sources/snapshot.html",
+      "bytes": 117016,
+      "sha256": "e9c43244d36956772f0e3983e34d91e05741d8cb3012f3e2738462ebe60a6a10"
+    },
+    {
+      "name": "sources/snapshot.txt",
+      "bytes": 89804,
+      "sha256": "a3006a39f3936554c6afdf5859e4cc1735fcdb8d6a8d6ad30f98f522e34a8a60"
+    }
+  ],
+  "examples": "examples.json"
+}
