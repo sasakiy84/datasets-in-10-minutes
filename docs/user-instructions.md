@@ -956,3 +956,9 @@ CNN / DailyMail は、記事冒頭 1 文の抜粋を表示しても仕方がな�
 ~~~~text
 OpenStreetMap・Overture Maps・国土地理院DEM をそれぞれつくって
 ~~~~
+
+### 129. 語彙資源と歴史地理データ6件のスライドを制作する
+
+~~~~text
+終わったら、日本語WordNet, https://github.com/masayu-a/WLSP , Sudachi の同義語辞書、Unidic、『日本歴史地名大系』地名項目データセット（https://geoshape.ex.nii.ac.jp/nrct/?utm_source=chatgpt.com）、歴史的行政区域データセットβ版（https://geoshape.ex.nii.ac.jp/city/?utm_source=chatgpt.com）のスライドも作って。
+~~~~
