@@ -1,0 +1,21 @@
+{
+  "actor": "root",
+  "page": 36,
+  "artifact_sha256": {
+    "pdf": "488192167f11025195bf75cb1859f648c4a5f85525cb42b1ed81ce035e1a8561",
+    "pptx": "0d327ddb0bfe776730d6112d7c739f17c36850af322629194848c05613a069c9"
+  },
+  "exact_displayed_code": "import bz2\nimport xml.etree.ElementTree as ET\nns = \"{http://www.mediawiki.org/xml/export-0.11/}\"\nwith bz2.open(\"biwiki.xml.bz2\", \"rb\") as f:\n    for _, page in ET.iterparse(f, events=(\"end\",)):\n        if page.tag == ns + \"page\":\n            print(page.findtext(ns + \"title\"))\n            page.clear()",
+  "code_sha256": "1f4842cf5b992ab6b2415d93662b756abb56380efb5a51bb30c0d6d166a2b7f4",
+  "execution": "Native PPTX code executed verbatim against actual official compressed XML; relative filename symlink points to complete downloaded file.",
+  "output_lines": 3485,
+  "output_first_five": [
+    "Nambawan Pej",
+    "Talk:Nambawan Pej",
+    "Talk:Tok Pisin",
+    "User talk:Milaiklainim~biwiki",
+    "User:Milaiklainim~biwiki"
+  ],
+  "all_titles_match_independently_parsed_xml": true,
+  "success": true
+}

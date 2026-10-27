@@ -1,0 +1,395 @@
+[
+  {
+    "page": 1,
+    "title": "Wikipedia本文データ",
+    "section": "",
+    "kind": "cover"
+  },
+  {
+    "page": 2,
+    "title": "本文データの公式配布案内",
+    "section": "公式サイト",
+    "kind": "image",
+    "sources": [
+      "exports"
+    ]
+  },
+  {
+    "page": 3,
+    "title": "",
+    "section": "目次",
+    "kind": "toc"
+  },
+  {
+    "page": 4,
+    "title": "1. 記事本文をデータとして読む",
+    "section": "1. 記事本文をデータとして読む",
+    "kind": "divider"
+  },
+  {
+    "page": 5,
+    "title": "百科事典の記事を、まとめて取得する",
+    "section": "1. 記事本文をデータとして読む",
+    "kind": "content",
+    "sources": [
+      "exports"
+    ],
+    "body_text": [
+      "Wikipediaの記事は、人が編集する百科事典のページ。公式の本文データを取得すれば、検索や言語分析などにまとめて利用できる。",
+      "ダンプは、サイトのデータを書き出したファイル。記事の文章だけでなく、ページ名や編集された版の情報も含む。",
+      "ここでは、月次XMLのMediaWiki Content File Exportsを使い、本文をコーパスとして利用するまでを見ていく。"
+    ]
+  },
+  {
+    "page": 6,
+    "title": "小さな言語版を、一式読んでみる",
+    "section": "1. 記事本文をデータとして読む",
+    "kind": "content",
+    "sources": [
+      "data",
+      "bislama"
+    ],
+    "body_text": [
+      "実例には、ビスラマ語版Wikipediaの2026年10月1日分を使う。ビスラマ語は、バヌアツで使われる言語。",
+      "biwikiは、この言語版の識別名。currentの全ファイルを取得し、XML内のページを集計した。",
+      "日本語版や英語版でも、同じ形式で記事を取り出せる。ここで示す件数や容量は、ビスラマ語版の取得分に限る。"
+    ]
+  },
+  {
+    "page": 7,
+    "title": "取得したXMLは、記事だけではない",
+    "section": "1. 記事本文をデータとして読む",
+    "kind": "content",
+    "sources": [
+      "data"
+    ]
+  },
+  {
+    "page": 8,
+    "title": "Port Vilaの記事本文を読む",
+    "section": "1. 記事本文をデータとして読む",
+    "kind": "quote",
+    "sources": [
+      "port"
+    ]
+  },
+  {
+    "page": 9,
+    "title": "文章の周囲に、構造を表す記法がある",
+    "section": "1. 記事本文をデータとして読む",
+    "kind": "content",
+    "sources": [
+      "port"
+    ]
+  },
+  {
+    "page": 10,
+    "title": "2. ページと版をXMLで表す",
+    "section": "2. ページと版をXMLで表す",
+    "kind": "divider"
+  },
+  {
+    "page": 11,
+    "title": "ページの中に、編集された版が入る",
+    "section": "2. ページと版をXMLで表す",
+    "kind": "content",
+    "sources": [
+      "xml"
+    ]
+  },
+  {
+    "page": 12,
+    "title": "Port Vilaのページと版を対応づける",
+    "section": "2. ページと版をXMLで表す",
+    "kind": "content",
+    "sources": [
+      "data"
+    ]
+  },
+  {
+    "page": 13,
+    "title": "最新の本文か、過去の本文も含めるか",
+    "section": "2. ページと版をXMLで表す",
+    "kind": "content",
+    "sources": [
+      "exports"
+    ]
+  },
+  {
+    "page": 14,
+    "title": "名前空間で、ページの役割を区別する",
+    "section": "2. ページと版をXMLで表す",
+    "kind": "content",
+    "sources": [
+      "xml",
+      "data"
+    ],
+    "body_text": [
+      "記事、会話ページ、利用者ページ、テンプレートなどは、名前空間という区分を持つ。XMLではnsの数値で分かる。",
+      "記事本文のコーパスを作るなら、まず標準名前空間のns=0を対象にする。全ページをそのまま記事として数えない。",
+      "転送ページは、別の記事へ案内するページ。本文の分析では除き、見出しの別名が必要なら対応関係を残す。"
+    ]
+  },
+  {
+    "page": 15,
+    "title": "別名から、転送先の記事へつながる",
+    "section": "2. ページと版をXMLで表す",
+    "kind": "content",
+    "sources": [
+      "data"
+    ]
+  },
+  {
+    "page": 16,
+    "title": "3. コーパスを作るときの選択",
+    "section": "3. コーパスを作るときの選択",
+    "kind": "divider"
+  },
+  {
+    "page": 17,
+    "title": "配布データから、目的に合う本文へ",
+    "section": "3. コーパスを作るときの選択",
+    "kind": "content",
+    "sources": [
+      "exports"
+    ],
+    "body_text": [
+      "言語版と月を選び、必要なページと版を取り出す。次に、転送ページやテンプレートなどを、目的に応じて扱う。",
+      "wikitextから文章を取り出す場合は、リンクの表示文字列、節、表、注釈などをどう残すか決める。",
+      "最後に、記事と段落の単位を保って検索や集計へ渡す。どの処理をしたかを残すと、結果の解釈もしやすい。"
+    ]
+  },
+  {
+    "page": 18,
+    "title": "記法を消すだけでは、意味が変わる",
+    "section": "3. コーパスを作るときの選択",
+    "kind": "content",
+    "sources": [
+      "xml"
+    ]
+  },
+  {
+    "page": 19,
+    "title": "HTMLとwikitextでは、使いやすい場面が違う",
+    "section": "3. コーパスを作るときの選択",
+    "kind": "content",
+    "sources": [
+      "xml",
+      "enterprise"
+    ],
+    "body_text": [
+      "wikitextは、編集用の記法やテンプレートの呼び出しを持つ。編集内容や記事の作り方を調べるときに役立つ。",
+      "HTMLは、テンプレートなどを展開して表示するための形式。節や表の構造を利用して、読者が見る文章を取り出す入口になる。",
+      "Wikimedia EnterpriseはHTMLを含むデータの取得手段を提供する。現在の取得条件は、旧HTMLダンプのアーカイブとは異なる。"
+    ]
+  },
+  {
+    "page": 20,
+    "title": "同じ記事の中に、異なる首相名が残る",
+    "section": "3. コーパスを作るときの選択",
+    "kind": "content",
+    "sources": [
+      "japan"
+    ]
+  },
+  {
+    "page": 21,
+    "title": "公式の配布と、加工されたコーパスを分ける",
+    "section": "3. コーパスを作るときの選択",
+    "kind": "content",
+    "sources": [
+      "exports"
+    ],
+    "body_text": [
+      "公式のXMLは、サイトの内容と版の情報を書き出したデータ。平文の選別や重複除去が済んだ学習用コーパスではない。",
+      "第三者が配布するWikipedia由来のコーパスには、文章抽出、言語判定、品質選別など独自の処理が入る。",
+      "言語版・取得月・加工方法が違えば、収録内容も変わる。目的に合う配布物を選ぶ。"
+    ]
+  },
+  {
+    "page": 22,
+    "title": "4. 取得先と更新・利用条件",
+    "section": "4. 取得先と更新・利用条件",
+    "kind": "divider"
+  },
+  {
+    "page": 23,
+    "title": "言語版と月を選び、圧縮XMLを取得する",
+    "section": "4. 取得先と更新・利用条件",
+    "kind": "content",
+    "sources": [
+      "exports",
+      "xml"
+    ],
+    "body_text": [
+      "公式の配布案内から、currentかhistoryを選ぶ。次に、jawikiなどの言語版IDと、対象の月を指定する。",
+      "一つの言語版が複数ファイルに分かれることもある。ファイル一覧が公開されてから、その月に必要な分割ファイルを取得する。",
+      "大きなXMLは、ページ単位で順に読む。全体を一度にメモリへ載せる方法は、大きな言語版には向かない。"
+    ]
+  },
+  {
+    "page": 24,
+    "title": "配布日は、収録した時点と区別する",
+    "section": "4. 取得先と更新・利用条件",
+    "kind": "content",
+    "sources": [
+      "sunset"
+    ]
+  },
+  {
+    "page": 25,
+    "title": "旧方式から、新しい配布への移行が進む",
+    "section": "4. 取得先と更新・利用条件",
+    "kind": "content",
+    "sources": [
+      "sunset"
+    ],
+    "body_text": [
+      "2026年1月に新しい配布方式が始まった。最新の本文や全版の本文など、旧XMLの一部の出力から移行するための方式である。",
+      "移行対象の六つの旧出力は、2027年1月に公開を終了する予定。本文や履歴の収録範囲を確認して、新しい取得先へ切り替える。",
+      "pages-articlesなど他のXMLや、SQL・JSON・RDFまで、すべて廃止されるという告知ではない。"
+    ]
+  },
+  {
+    "page": 26,
+    "title": "現行HTMLと、過去のアーカイブを区別する",
+    "section": "4. 取得先と更新・利用条件",
+    "kind": "content",
+    "sources": [
+      "archive",
+      "enterprise"
+    ],
+    "body_text": [
+      "dumpsサイトのHTML Dumps Archiveは、過去のHTML配布の保存先。Enterpriseデータの同サイトへの複製は、2025年3月24日に終了している。",
+      "現行の一括HTMLは、Wikimedia EnterpriseのSnapshot APIなどで取得する。無料アカウントで利用できる月次の配布がある。",
+      "古いアーカイブを現在の月次データだと思って使わず、配布日・対象プロジェクト・利用条件を確認する。"
+    ]
+  },
+  {
+    "page": 27,
+    "title": "本文の再利用には、出典とライセンスを添える",
+    "section": "4. 取得先と更新・利用条件",
+    "kind": "content",
+    "sources": [
+      "terms"
+    ],
+    "body_text": [
+      "Wikipediaの本文は、一般にCC BY-SA 4.0などの条件で再利用できる。転載部分などには、別の条件が付く場合もある。",
+      "記事へのリンクなどで著者を表示し、ライセンスを示す。加工・翻訳にも同じ条件が適用され、変更したことを明記する。",
+      "画像などは、ファイルごとに条件が異なる。本文XMLの画像名から画像ファイルも利用する場合は、その配布先と利用条件を別に確認する。"
+    ]
+  },
+  {
+    "page": 28,
+    "title": "Wikipedia本文データの要点",
+    "section": "4. 取得先と更新・利用条件",
+    "kind": "content",
+    "sources": [
+      "exports"
+    ],
+    "body_text": [
+      "記事の文章に加え、ページ・版・リンク・節などの構造を持つ、百科事典由来の言語資源。",
+      "最新の本文を使うか、文章の変化を追うかで、currentとhistoryを選ぶ。名前空間や転送を見て、収録対象を整える。",
+      "言語版・取得月・抽出方法・利用条件を確認し、目的に合う本文データとして使う。"
+    ]
+  },
+  {
+    "page": 29,
+    "title": "Appendix",
+    "section": "Appendix",
+    "kind": "divider"
+  },
+  {
+    "page": 30,
+    "title": "",
+    "section": "Appendix: 目次",
+    "kind": "toc"
+  },
+  {
+    "page": 31,
+    "title": "追加例1：Bislamaの言語情報",
+    "section": "Appendix: 1. 実データの追加例",
+    "kind": "content",
+    "sources": [
+      "bislama"
+    ]
+  },
+  {
+    "page": 32,
+    "title": "追加例2：Ostreliaの国情報",
+    "section": "Appendix: 1. 実データの追加例",
+    "kind": "content",
+    "sources": [
+      "ostrelia"
+    ]
+  },
+  {
+    "page": 33,
+    "title": "追加例3：Vanuatuの表には列の対応がある",
+    "section": "Appendix: 1. 実データの追加例",
+    "kind": "content",
+    "sources": [
+      "vanuatu"
+    ]
+  },
+  {
+    "page": 34,
+    "title": "追加例4：Efateの記事内リンク",
+    "section": "Appendix: 1. 実データの追加例",
+    "kind": "content",
+    "sources": [
+      "efate"
+    ]
+  },
+  {
+    "page": 35,
+    "title": "追加例5：テンプレートも独立したページ",
+    "section": "Appendix: 1. 実データの追加例",
+    "kind": "content",
+    "sources": [
+      "delete"
+    ]
+  },
+  {
+    "page": 36,
+    "title": "圧縮XMLから、ページ名を順に読む",
+    "section": "Appendix: 2. 形式と参考資料",
+    "kind": "code",
+    "sources": [
+      "xml"
+    ]
+  },
+  {
+    "page": 37,
+    "title": "今回取得したビスラマ語版の容量",
+    "section": "Appendix: 2. 形式と参考資料",
+    "kind": "content",
+    "sources": [
+      "data"
+    ]
+  },
+  {
+    "page": 38,
+    "title": "参考文献",
+    "section": "Appendix: 2. 形式と参考資料",
+    "kind": "references"
+  },
+  {
+    "page": 39,
+    "title": "参考文献",
+    "section": "Appendix: 2. 形式と参考資料",
+    "kind": "references"
+  },
+  {
+    "page": 40,
+    "title": "参考文献",
+    "section": "Appendix: 2. 形式と参考資料",
+    "kind": "references"
+  },
+  {
+    "page": 41,
+    "title": "参考文献",
+    "section": "Appendix: 2. 形式と参考資料",
+    "kind": "references"
+  }
+]

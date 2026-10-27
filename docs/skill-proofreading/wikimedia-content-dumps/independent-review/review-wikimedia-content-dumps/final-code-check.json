@@ -1,0 +1,15 @@
+{
+  "actor": "/root/wikimedia_coordinator/review_clickstream",
+  "page": 36,
+  "native_code": "import bz2\nimport xml.etree.ElementTree as ET\nns = \"{http://www.mediawiki.org/xml/export-0.11/}\"\nwith bz2.open(\"biwiki.xml.bz2\", \"rb\") as f:\n    for _, page in ET.iterparse(f, events=(\"end\",)):\n        if page.tag == ns + \"page\":\n            print(page.findtext(ns + \"title\"))\n            page.clear()",
+  "executed": true,
+  "output_rows": 3485,
+  "matches_all_ordered_titles": true,
+  "raw_acquisition": "creator acquired; my independent execution and XML parse",
+  "final_pair_sha256": {
+    "pdf": "488192167f11025195bf75cb1859f648c4a5f85525cb42b1ed81ce035e1a8561",
+    "pptx": "0d327ddb0bfe776730d6112d7c739f17c36850af322629194848c05613a069c9"
+  },
+  "final_code_reexecuted": true,
+  "final_native_code_equal_previous_executed": true
+}

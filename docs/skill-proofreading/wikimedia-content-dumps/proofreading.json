@@ -1,0 +1,689 @@
+{
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "external_generation_api_used": false,
+  "actor": "root",
+  "before_source": "Saved initial authoring-draft0 editablePPTX. Actual before strings retained verbatim.",
+  "before_pptx_sha256": "42850703e8fa0188273c7b90adc6d084e8c9f32d16bb09f72ad3d44309030168",
+  "after_artifact_sha256": {
+    "pdf": "488192167f11025195bf75cb1859f648c4a5f85525cb42b1ed81ce035e1a8561",
+    "pptx": "0d327ddb0bfe776730d6112d7c739f17c36850af322629194848c05613a069c9"
+  },
+  "identity": "Same page + native shapeID + paragraph or table-cell coordinates; not matched by titles.",
+  "pairs": [
+    {
+      "page": 5,
+      "element": [
+        "paragraph",
+        3,
+        2
+      ],
+      "before": "ここでは、月ごとのXML配布であるMediaWiki Content File Exportsを中心に、本文コーパスにするまでを見ていく。",
+      "after": "ここでは、月次XMLのMediaWiki Content File Exportsを使い、本文をコーパスとして利用するまでを見ていく。",
+      "reason": "説明を短くし、本文の抽出から利用までを自然な日本語にする。"
+    },
+    {
+      "page": 6,
+      "element": [
+        "paragraph",
+        3,
+        1
+      ],
+      "before": "biwikiは、この言語版を識別する名前。公開されているcurrentの全ファイルを取得し、XML内のページを集計した。",
+      "after": "biwikiは、この言語版の識別名。currentの全ファイルを取得し、XML内のページを集計した。",
+      "reason": "識別名と実際に行った集計を簡潔に説明する。"
+    },
+    {
+      "page": 7,
+      "element": [
+        "paragraph",
+        5,
+        0
+      ],
+      "before": "標準名前空間はns=0。件数はこのダンプの集計であり、公式の「記事数」と同じ定義ではない。",
+      "after": "標準名前空間には、通常の記事などが入る。ここでの件数は、公式の「記事数」とは定義が異なる。",
+      "reason": "2文字だけのセル折り返しを解消し、件数の定義を注記する。"
+    },
+    {
+      "page": 7,
+      "element": [
+        "cell",
+        4,
+        2,
+        0
+      ],
+      "before": "標準名前空間（通常の記事など）",
+      "after": "標準名前空間（ns=0）",
+      "reason": "2文字だけのセル折り返しを解消し、件数の定義を注記する。"
+    },
+    {
+      "page": 11,
+      "element": [
+        "cell",
+        4,
+        0,
+        0
+      ],
+      "before": "XMLのまとまり",
+      "after": "要素",
+      "reason": "隣の列との境界が分かる短い見出しへ整える。"
+    },
+    {
+      "page": 13,
+      "element": [
+        "cell",
+        4,
+        1,
+        2
+      ],
+      "before": "本文検索・コーパス作成",
+      "after": "本文検索・語彙調査",
+      "reason": "短い末尾行を避け、用途と収録範囲を読みやすくする。"
+    },
+    {
+      "page": 13,
+      "element": [
+        "cell",
+        4,
+        2,
+        2
+      ],
+      "before": "文章の変化・編集過程の分析",
+      "after": "文章変化の分析",
+      "reason": "短い末尾行を避け、用途と収録範囲を読みやすくする。"
+    },
+    {
+      "page": 13,
+      "element": [
+        "cell",
+        4,
+        2,
+        1
+      ],
+      "before": "公開されている過去・現在の版",
+      "after": "過去・現在の版",
+      "reason": "短い末尾行を避け、用途と収録範囲を読みやすくする。"
+    },
+    {
+      "page": 14,
+      "element": [
+        "paragraph",
+        3,
+        0
+      ],
+      "before": "通常の記事、会話ページ、利用者ページ、テンプレートなどは、名前空間という区分を持つ。XMLではnsの数値で分かる。",
+      "after": "記事、会話ページ、利用者ページ、テンプレートなどは、名前空間という区分を持つ。XMLではnsの数値で分かる。",
+      "reason": "名前空間の導入を簡潔にし、転送を本文の重複と断定しない。"
+    },
+    {
+      "page": 14,
+      "element": [
+        "paragraph",
+        3,
+        2
+      ],
+      "before": "転送ページは、別の記事へ案内するページ。同じ内容の重複として扱うか、見出しの別名として残すかを用途に合わせて決める。",
+      "after": "転送ページは、別の記事へ案内するページ。本文の分析では除き、見出しの別名が必要なら対応関係を残す。",
+      "reason": "名前空間の導入を簡潔にし、転送を本文の重複と断定しない。"
+    },
+    {
+      "page": 21,
+      "element": [
+        "paragraph",
+        3,
+        2
+      ],
+      "before": "同じ「Wikipediaのデータ」でも、言語版・取得月・加工方法が違えば収録内容は変わる。目的に合う配布物を選ぶ。",
+      "after": "言語版・取得月・加工方法が違えば、収録内容も変わる。目的に合う配布物を選ぶ。",
+      "reason": "重複した説明を短くする。"
+    },
+    {
+      "page": 25,
+      "element": [
+        "paragraph",
+        3,
+        0
+      ],
+      "before": "2026年1月に新しい配布方式が始まり、旧pages-meta-current、pages-meta-history、stub-meta-history系の六つの出力が移行対象になった。",
+      "after": "2026年1月に新しい配布方式が始まった。最新の本文や全版の本文など、旧XMLの一部の出力から移行するための方式である。",
+      "reason": "初見では細かすぎる旧ジョブ名の列挙を省き、移行の意味を説明する。"
+    },
+    {
+      "page": 25,
+      "element": [
+        "paragraph",
+        3,
+        1
+      ],
+      "before": "対象の旧出力は、2027年1月に公開を終了する予定。現在の移行案内と、必要な本文・履歴の収録範囲を確認して切り替える。",
+      "after": "移行対象の六つの旧出力は、2027年1月に公開を終了する予定。本文や履歴の収録範囲を確認して、新しい取得先へ切り替える。",
+      "reason": "初見では細かすぎる旧ジョブ名の列挙を省き、移行の意味を説明する。"
+    },
+    {
+      "page": 25,
+      "element": [
+        "paragraph",
+        2,
+        0
+      ],
+      "before": "旧XMLのうち、六つの出力が移行対象",
+      "after": "旧方式から、新しい配布への移行が進む",
+      "reason": "初見では細かすぎる旧ジョブ名の列挙を省き、移行の意味を説明する。"
+    },
+    {
+      "page": 26,
+      "element": [
+        "paragraph",
+        3,
+        1
+      ],
+      "before": "現行の一括HTMLは、Wikimedia EnterpriseのSnapshot APIなどで取得する。案内では無料アカウントなどの利用経路が示されている。",
+      "after": "現行の一括HTMLは、Wikimedia EnterpriseのSnapshot APIなどで取得する。無料アカウントで利用できる月次の配布がある。",
+      "reason": "実読した公式API案内に基づき、無料アカウントの月次配布を明示する。"
+    },
+    {
+      "page": 27,
+      "element": [
+        "paragraph",
+        3,
+        0
+      ],
+      "before": "Wikipediaの本文は、一般にCC BY-SA 4.0などの条件で再利用できる。転載された文章などには、別途確認が必要な場合もある。",
+      "after": "Wikipediaの本文は、一般にCC BY-SA 4.0などの条件で再利用できる。転載部分などには、別の条件が付く場合もある。",
+      "reason": "ライセンスを加工・翻訳時にも引き継ぐことと、媒体の別条件を簡潔に示す。"
+    },
+    {
+      "page": 27,
+      "element": [
+        "paragraph",
+        3,
+        2
+      ],
+      "before": "画像などの媒体は、ファイルごとに条件が異なる。本文XMLに画像名があっても、画像データそのものや利用許諾が一括で付くわけではない。",
+      "after": "画像などは、ファイルごとに条件が異なる。本文XMLの画像名から画像ファイルも利用する場合は、その配布先と利用条件を別に確認する。",
+      "reason": "ライセンスを加工・翻訳時にも引き継ぐことと、媒体の別条件を簡潔に示す。"
+    },
+    {
+      "page": 27,
+      "element": [
+        "paragraph",
+        3,
+        1
+      ],
+      "before": "記事へのリンクなどで著者の表示を行い、ライセンスを示す。文章を加工・翻訳した場合は、そのことも明記する。",
+      "after": "記事へのリンクなどで著者を表示し、ライセンスを示す。加工・翻訳にも同じ条件が適用され、変更したことを明記する。",
+      "reason": "ライセンスを加工・翻訳時にも引き継ぐことと、媒体の別条件を簡潔に示す。"
+    },
+    {
+      "page": 28,
+      "element": [
+        "paragraph",
+        3,
+        2
+      ],
+      "before": "配布物をそのままコーパスとみなさず、言語版・月・抽出方法・利用条件をそろえて使う。",
+      "after": "言語版・取得月・抽出方法・利用条件を確認し、目的に合う本文データとして使う。",
+      "reason": "配布物がコーパスではないと一律に否定せず、利用時に確認する条件をまとめる。"
+    },
+    {
+      "page": 31,
+      "element": [
+        "cell",
+        4,
+        3,
+        0
+      ],
+      "before": "テンプレートのiso1",
+      "after": "iso1（2字の言語コード）",
+      "reason": "フィールド名の意味を日本語で補い、注記を短くする。"
+    },
+    {
+      "page": 31,
+      "element": [
+        "cell",
+        4,
+        5,
+        0
+      ],
+      "before": "テンプレートのglotto",
+      "after": "glotto（言語の識別子）",
+      "reason": "フィールド名の意味を日本語で補い、注記を短くする。"
+    },
+    {
+      "page": 31,
+      "element": [
+        "cell",
+        4,
+        4,
+        0
+      ],
+      "before": "テンプレートのiso3",
+      "after": "iso3（3字の言語コード）",
+      "reason": "フィールド名の意味を日本語で補い、注記を短くする。"
+    },
+    {
+      "page": 31,
+      "element": [
+        "paragraph",
+        5,
+        0
+      ],
+      "before": "ページ内のToktokテンプレートの値を抜粋。話者数は記事の記載値であり、最新の公式統計として扱わない。",
+      "after": "Toktokテンプレートの値を抜粋。話者数はこの記事の記載値。",
+      "reason": "フィールド名の意味を日本語で補い、注記を短くする。"
+    },
+    {
+      "page": 31,
+      "element": [
+        "cell",
+        4,
+        2,
+        0
+      ],
+      "before": "テンプレートのspeakers",
+      "after": "speakers（話者数）",
+      "reason": "フィールド名の意味を日本語で補い、注記を短くする。"
+    },
+    {
+      "page": 33,
+      "element": [
+        "cell",
+        4,
+        0,
+        2
+      ],
+      "before": "Populeisen (2000)",
+      "after": "人口（2000年）",
+      "reason": "表の見出しを日本語で示し、実記事への出典と加工の表示を添える。"
+    },
+    {
+      "page": 33,
+      "element": [
+        "cell",
+        4,
+        0,
+        1
+      ],
+      "before": "Eria (km²)",
+      "after": "面積 (km²)",
+      "reason": "表の見出しを日本語で示し、実記事への出典と加工の表示を添える。"
+    },
+    {
+      "page": 33,
+      "element": [
+        "paragraph",
+        5,
+        0
+      ],
+      "before": "記事Vanuatuの州別表から3行を抜粋。人口は2000年の列。文章化するときも、列と年の対応を保つ。",
+      "after": "Vanuatuの州別表から3行を抜粋し、見出しを日本語化。人口は2000年の列。",
+      "reason": "表の見出しを日本語で示し、実記事への出典と加工の表示を添える。"
+    },
+    {
+      "page": 33,
+      "element": [
+        "cell",
+        4,
+        0,
+        0
+      ],
+      "before": "Provins",
+      "after": "州",
+      "reason": "表の見出しを日本語で示し、実記事への出典と加工の表示を添える。"
+    },
+    {
+      "page": 33,
+      "element": [
+        "cell",
+        4,
+        0,
+        3
+      ],
+      "before": "Kapital",
+      "after": "州都",
+      "reason": "表の見出しを日本語で示し、実記事への出典と加工の表示を添える。"
+    },
+    {
+      "page": 33,
+      "element": [
+        "paragraph",
+        6,
+        0
+      ],
+      "before": "[1] Wikipedia contributors. biwiki current, 2026-10-01. 本資料で集計.  https://dumps.wikimedia.org/other/mediawiki_content_current/biwiki/",
+      "after": "[1] Wikipedia contributors. Vanuatu, rev.44216. 抜粋・見出し訳：本資料. CC BY-SA 4.0.  https://bi.wikipedia.org/w/index.php?title=Vanuatu&oldid=44216",
+      "reason": "表の見出しを日本語で示し、実記事への出典と加工の表示を添える。"
+    },
+    {
+      "page": 34,
+      "element": [
+        "paragraph",
+        6,
+        0
+      ],
+      "before": "[1] Wikipedia contributors. biwiki current, 2026-10-01. 本資料で集計.  https://dumps.wikimedia.org/other/mediawiki_content_current/biwiki/",
+      "after": "[1] Wikipedia contributors. Efate, rev.41761. 抜粋・説明：本資料. CC BY-SA 4.0.  https://bi.wikipedia.org/w/index.php?title=Efate&oldid=41761",
+      "reason": "本文を抜粋した実記事への出典と加工の表示を添える。"
+    },
+    {
+      "page": 35,
+      "element": [
+        "paragraph",
+        6,
+        0
+      ],
+      "before": "[1] Wikipedia contributors. biwiki current, 2026-10-01. 本資料で集計.  https://dumps.wikimedia.org/other/mediawiki_content_current/biwiki/",
+      "after": "[1] Wikipedia contributors. Template:Delete, rev.41593. 抜粋・訳：本資料. CC BY-SA 4.0.  https://bi.wikipedia.org/w/index.php?title=Template:Delete&oldid=41593",
+      "reason": "テンプレート本文の訳と実ページへの出典を添える。"
+    },
+    {
+      "page": 35,
+      "element": [
+        "paragraph",
+        5,
+        0
+      ],
+      "before": "Template:Deleteは、削除を求める案内を表示するテンプレート。記事と区別して保持される。",
+      "after": "Template:Deleteは、削除を求める案内を表示する。抜粋は「このページの削除を求める人がいる」の意。",
+      "reason": "テンプレート本文の訳と実ページへの出典を添える。"
+    }
+  ],
+  "additions": [
+    {
+      "page": 20,
+      "element": [
+        "paragraph",
+        6,
+        0
+      ],
+      "text": "[1] Wikipedia contributors. Japan, rev.44104. 抜粋：本資料. CC BY-SA 4.0.  https://bi.wikipedia.org/w/index.php?title=Japan&oldid=44104"
+    },
+    {
+      "page": 20,
+      "element": [
+        "cell",
+        4,
+        0,
+        1
+      ],
+      "text": "原文の抜粋"
+    },
+    {
+      "page": 20,
+      "element": [
+        "cell",
+        4,
+        1,
+        1
+      ],
+      "text": "praem minista = [[Sanae Takaichi]]"
+    },
+    {
+      "page": 20,
+      "element": [
+        "cell",
+        4,
+        2,
+        1
+      ],
+      "text": "Praem Minista: [[Fumio Kishida]]"
+    },
+    {
+      "page": 20,
+      "element": [
+        "cell",
+        4,
+        0,
+        0
+      ],
+      "text": "Japanの記事内の位置"
+    },
+    {
+      "page": 20,
+      "element": [
+        "cell",
+        4,
+        1,
+        0
+      ],
+      "text": "冒頭テンプレート"
+    },
+    {
+      "page": 20,
+      "element": [
+        "cell",
+        4,
+        2,
+        0
+      ],
+      "text": "本文"
+    },
+    {
+      "page": 32,
+      "element": [
+        "cell",
+        4,
+        3,
+        0
+      ],
+      "text": "lanwis"
+    },
+    {
+      "page": 32,
+      "element": [
+        "cell",
+        4,
+        4,
+        1
+      ],
+      "text": "7 692 024"
+    },
+    {
+      "page": 32,
+      "element": [
+        "cell",
+        4,
+        4,
+        0
+      ],
+      "text": "eria"
+    },
+    {
+      "page": 32,
+      "element": [
+        "cell",
+        4,
+        3,
+        1
+      ],
+      "text": "[[Inglis]]"
+    }
+  ],
+  "removals": [
+    {
+      "page": 20,
+      "element": [
+        "paragraph",
+        3,
+        1
+      ],
+      "text": "同じ対象の記事を結び付けても、文や段落が一対一に対応するとは限らない。対訳コーパスにするには、別に対応付けが必要。"
+    },
+    {
+      "page": 20,
+      "element": [
+        "paragraph",
+        4,
+        0
+      ],
+      "text": "3. コーパスを作るときの選択"
+    },
+    {
+      "page": 20,
+      "element": [
+        "paragraph",
+        3,
+        2
+      ],
+      "text": "収録範囲や記述の偏りもある。百科事典由来の文章を使った結果を、日常会話やすべての分野へそのまま広げて解釈しない。"
+    }
+  ],
+  "format_adjustments": [
+    {
+      "pages": [
+        1,
+        29
+      ],
+      "change": "Native title frames expanded; cover bottom margin4pt so actual descenders are inside frames."
+    },
+    {
+      "page": 9,
+      "change": "Widened left column4.7in and font18pt, leaving complete heading on one line."
+    },
+    {
+      "page": 37,
+      "change": "Right aligned capacity header and unit-bearing numeric values."
+    }
+  ],
+  "content_replacements": [
+    {
+      "page": 20,
+      "element": [
+        "paragraph",
+        3,
+        0
+      ],
+      "before": "同じ主題でも、言語版によって記事の長さ、説明する観点、出典、更新時期が異なる。",
+      "after": "3. コーパスを作るときの選択",
+      "reason": "一般的な注意の段落を、同一記事で首相名が食い違う実際の表へ置き換え、異常例を本編で説明する。"
+    },
+    {
+      "page": 20,
+      "element": [
+        "paragraph",
+        2,
+        0
+      ],
+      "before": "言語版の記事は、対応する翻訳対ではない",
+      "after": "同じ記事の中に、異なる首相名が残る",
+      "reason": "一般的な注意の段落を、同一記事で首相名が食い違う実際の表へ置き換え、異常例を本編で説明する。"
+    },
+    {
+      "page": 20,
+      "element": [
+        "paragraph",
+        5,
+        0
+      ],
+      "before": "[1] Wikimedia. Data dumps.  https://meta.wikimedia.org/wiki/Data_dumps",
+      "after": "同じ版に高市早苗と岸田文雄の名前がある実例。ダンプの本文を、整合性の確認済みの事実一覧として扱わない。",
+      "reason": "一般的な注意の段落を、同一記事で首相名が食い違う実際の表へ置き換え、異常例を本編で説明する。"
+    },
+    {
+      "page": 32,
+      "element": [
+        "paragraph",
+        6,
+        0
+      ],
+      "before": "[1] Wikipedia contributors. Japan, rev.44104. 抜粋：本資料. CC BY-SA 4.0.  https://bi.wikipedia.org/w/index.php?title=Japan&oldid=44104",
+      "after": "[1] Wikipedia contributors. Ostrelia, rev.43876. 抜粋・説明：本資料. CC BY-SA 4.0.  https://bi.wikipedia.org/w/index.php?title=Ostrelia&oldid=43876",
+      "reason": "Japanの異常例を本編p20へ移し、付録をOstreliaの別の実例へ差し替える。"
+    },
+    {
+      "page": 32,
+      "element": [
+        "cell",
+        4,
+        0,
+        1
+      ],
+      "before": "原文の抜粋",
+      "after": "実際の値",
+      "reason": "Japanの異常例を本編p20へ移し、付録をOstreliaの別の実例へ差し替える。"
+    },
+    {
+      "page": 32,
+      "element": [
+        "cell",
+        4,
+        1,
+        1
+      ],
+      "before": "praem minista = [[Sanae Takaichi]]",
+      "after": "Komenwelth blong Ostrelia",
+      "reason": "Japanの異常例を本編p20へ移し、付録をOstreliaの別の実例へ差し替える。"
+    },
+    {
+      "page": 32,
+      "element": [
+        "paragraph",
+        5,
+        0
+      ],
+      "before": "取得した同じ版に異なる名前がある例。ダンプの本文は、整合性の確認済みの事実一覧ではない。",
+      "after": "Ostreliaはオーストラリア。国名・首都・言語・面積の欄を抜粋。リンクの値も、ただの数値も同じテンプレート内に入る。",
+      "reason": "Japanの異常例を本編p20へ移し、付録をOstreliaの別の実例へ差し替える。"
+    },
+    {
+      "page": 32,
+      "element": [
+        "cell",
+        4,
+        2,
+        1
+      ],
+      "before": "Praem Minista: [[Fumio Kishida]]",
+      "after": "[[Canberra]]",
+      "reason": "Japanの異常例を本編p20へ移し、付録をOstreliaの別の実例へ差し替える。"
+    },
+    {
+      "page": 32,
+      "element": [
+        "cell",
+        4,
+        0,
+        0
+      ],
+      "before": "同じ版の位置",
+      "after": "テンプレートの項目",
+      "reason": "Japanの異常例を本編p20へ移し、付録をOstreliaの別の実例へ差し替える。"
+    },
+    {
+      "page": 32,
+      "element": [
+        "cell",
+        4,
+        1,
+        0
+      ],
+      "before": "冒頭テンプレート",
+      "after": "nem ofisial",
+      "reason": "Japanの異常例を本編p20へ移し、付録をOstreliaの別の実例へ差し替える。"
+    },
+    {
+      "page": 32,
+      "element": [
+        "paragraph",
+        2,
+        0
+      ],
+      "before": "追加例2：Japanには異なる首相名が残る",
+      "after": "追加例2：Ostreliaの国情報",
+      "reason": "Japanの異常例を本編p20へ移し、付録をOstreliaの別の実例へ差し替える。"
+    },
+    {
+      "page": 32,
+      "element": [
+        "cell",
+        4,
+        2,
+        0
+      ],
+      "before": "本文",
+      "after": "kaptel",
+      "reason": "Japanの異常例を本編p20へ移し、付録をOstreliaの別の実例へ差し替える。"
+    }
+  ],
+  "classification_note": "Page20/32 were reconstructed with reused shape IDs. Their12 mechanically corresponding before/after values are content replacements, not Japanese wording corrections. Wordpairs33/additions11/removals3 remain separately classified."
+}
