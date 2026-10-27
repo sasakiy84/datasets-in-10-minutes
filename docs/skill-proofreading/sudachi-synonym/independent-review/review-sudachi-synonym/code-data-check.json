@@ -1,0 +1,79 @@
+{
+  "actor": "/root/maps_coordinator/resume_wordnet",
+  "own_scope": "Own independently written explicit CSV parse/reference algorithm executed on own HTTP acquisition; native snippets statically parsed and visually matched. No extracted artifact code execution. creator exact-native execution is separate coverage.",
+  "histogram": {
+    "5–9": 1887,
+    "10以上": 144,
+    "4": 2101,
+    "2": 16493,
+    "3": 5693,
+    "1": 6
+  },
+  "domains": {
+    "企業名": 10426,
+    "人名": 4244,
+    "ビジネス": 3204,
+    "IT": 2108,
+    "料理": 1973
+  },
+  "domain_absent": 26964,
+  "native_chart_values_match": true,
+  "query_results": {
+    "人工知能": [
+      "アーティフィシャルインテリジェンス",
+      "artificial intelligence",
+      "AI"
+    ],
+    "AI": [],
+    "インフルエンザ": [
+      "influenza",
+      "インフル",
+      "流行性感冒",
+      "流感"
+    ],
+    "支払い": [
+      "支払",
+      "支払う",
+      "勘定",
+      "精算",
+      "会計",
+      "御愛想",
+      "愛想",
+      "決済"
+    ],
+    "はやい": [],
+    "自動車": [
+      "車",
+      "くるま",
+      "クルマ",
+      "カー",
+      "car"
+    ]
+  },
+  "static": [
+    {
+      "page": 27,
+      "syntax_valid": true,
+      "text": "import csv\n\nwith open(\"synonyms.txt\", encoding=\"utf-8\") as f:\n    rows = [r for r in csv.reader(f) if r]\n\nprint([(r[0], r[2]) for r in rows\n       if r[8] == \"人工知能\"])"
+    },
+    {
+      "page": 28,
+      "syntax_valid": true,
+      "text": "word = \"人工知能\"\nids = {r[0] for r in rows\n       if r[8] == word and r[2] in (\"\", \"0\")}\ncandidates = [r[8] for r in rows\n              if r[0] in ids and r[2] != \"2\"\n              and r[8] != word]\nprint(list(dict.fromkeys(candidates)))"
+    }
+  ],
+  "counts": {
+    "rows": 71875,
+    "controls": {
+      "0": 59732,
+      "1": 11636,
+      "2": 507
+    },
+    "active": 71368,
+    "groups": 26324,
+    "headwords": 68334
+  },
+  "all_pass": true,
+  "chikkar_runtime_executed": false,
+  "gemini_used": false
+}

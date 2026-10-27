@@ -1,0 +1,442 @@
+[
+  {
+    "page": 1,
+    "title": "Sudachi 同義語辞書",
+    "section": "",
+    "kind": "cover"
+  },
+  {
+    "page": 2,
+    "title": "Sudachiの公式リソース一覧",
+    "section": "公式サイト",
+    "kind": "image",
+    "sources": [
+      "site"
+    ]
+  },
+  {
+    "page": 3,
+    "title": "",
+    "section": "目次",
+    "kind": "toc"
+  },
+  {
+    "page": 4,
+    "title": "1. 同義語グループと展開の向き",
+    "section": "1. 同義語グループと展開の向き",
+    "kind": "divider"
+  },
+  {
+    "page": 5,
+    "title": "検索語を、別の表現へ広げる辞書",
+    "section": "1. 同義語グループと展開の向き",
+    "kind": "content",
+    "sources": [
+      "docs"
+    ],
+    "body_text": [
+      "Sudachi 同義語辞書は、Sudachi辞書に登録された語句へ、同義語グループと関係情報を付けた日本語の語彙資源。",
+      "「インフルエンザ」から「インフル」や「流行性感冒」へ、検索に使う表現を広げられる。",
+      "グループへの所属に加え、略語、表記の違い、展開の向きなどを記録する。"
+    ]
+  },
+  {
+    "page": 6,
+    "title": "英語表記や略語も、同じグループに含む",
+    "section": "1. 同義語グループと展開の向き",
+    "kind": "content",
+    "sources": [
+      "data"
+    ],
+    "group_ids": [
+      "000127"
+    ]
+  },
+  {
+    "page": 7,
+    "title": "入力語から、検索に使う候補を得る",
+    "section": "1. 同義語グループと展開の向き",
+    "kind": "local-reference-result",
+    "sources": [
+      "data"
+    ],
+    "group_ids": [
+      "000127"
+    ],
+    "raw_scope": "selected actual source rows, not invented examples"
+  },
+  {
+    "page": 8,
+    "title": "「AI」は展開の出力だけに使う",
+    "section": "1. 同義語グループと展開の向き",
+    "kind": "content",
+    "sources": [
+      "data"
+    ],
+    "group_ids": [
+      "010717"
+    ]
+  },
+  {
+    "page": 9,
+    "title": "展開の向きは、同じグループ内でも異なる",
+    "section": "1. 同義語グループと展開の向き",
+    "kind": "directional-example",
+    "sources": [
+      "data"
+    ],
+    "group_ids": [
+      "010717"
+    ],
+    "raw_scope": "selected actual source rows, not invented examples"
+  },
+  {
+    "page": 10,
+    "title": "同じ「AI」が、複数の語群に登録される",
+    "section": "1. 同義語グループと展開の向き",
+    "kind": "content",
+    "sources": [
+      "data"
+    ],
+    "group_ids": [
+      "010717",
+      "010718",
+      "010719",
+      "010721"
+    ]
+  },
+  {
+    "page": 11,
+    "title": "削除した見出しも、履歴として保持する",
+    "section": "1. 同義語グループと展開の向き",
+    "kind": "content",
+    "sources": [
+      "data"
+    ],
+    "group_ids": [
+      "000020"
+    ]
+  },
+  {
+    "page": 12,
+    "title": "2. CSVと関係情報の読み方",
+    "section": "2. CSVと関係情報の読み方",
+    "kind": "divider"
+  },
+  {
+    "page": 13,
+    "title": "1語1行のCSVで、同じ群をまとめる",
+    "section": "2. CSVと関係情報の読み方",
+    "kind": "content",
+    "sources": [
+      "docs"
+    ],
+    "body_text": [
+      "ソースはUTF-8のCSV。1行が一つの見出しを表し、各行は11列で構成される。",
+      "同じグループ番号を持つ行が、一つの同義語グループになる。グループ番号は6桁の数字。",
+      "見出し、関係情報、展開制御などが列に入り、末尾の2列は予約されている。"
+    ]
+  },
+  {
+    "page": 14,
+    "title": "配布CSVでは、関係を数値の列で表す",
+    "section": "2. CSVと関係情報の読み方",
+    "kind": "code",
+    "sources": [
+      "data"
+    ],
+    "group_ids": [
+      "000127"
+    ]
+  },
+  {
+    "page": 15,
+    "title": "グループ・制御・見出しを、別の列で持つ",
+    "section": "2. CSVと関係情報の読み方",
+    "kind": "content",
+    "sources": [
+      "docs"
+    ]
+  },
+  {
+    "page": 16,
+    "title": "同じ語の表記と、別の語彙を分けて記録する",
+    "section": "2. CSVと関係情報の読み方",
+    "kind": "content",
+    "sources": [
+      "docs"
+    ],
+    "body_text": [
+      "「インフルエンザ」「influenza」「インフル」は、同じ語彙素として整理される。語彙素は、表記や語形の違いをまとめる単位。",
+      "「流行性感冒」と略語の「流感」は、もう一つの語彙素として、同じ同義語グループに入る。",
+      "語彙素の中では、語形種別、略語・略称、表記ゆれという階層で関係を記録する。"
+    ]
+  },
+  {
+    "page": 17,
+    "title": "略語の表記ゆれも、階層を重ねて記録する",
+    "section": "2. CSVと関係情報の読み方",
+    "kind": "content",
+    "sources": [
+      "data"
+    ],
+    "group_ids": [
+      "006201"
+    ]
+  },
+  {
+    "page": 18,
+    "title": "同じ見出しでも、語群ごとに制御を持つ",
+    "section": "2. CSVと関係情報の読み方",
+    "kind": "multi-group-example",
+    "sources": [
+      "data"
+    ],
+    "group_ids": [
+      "000008",
+      "021742"
+    ]
+  },
+  {
+    "page": 19,
+    "title": "3. 作成方法と収録内容",
+    "section": "3. 作成方法と収録内容",
+    "kind": "divider"
+  },
+  {
+    "page": 20,
+    "title": "企業内の全文検索に使う語彙を、人手で整理",
+    "section": "3. 作成方法と収録内容",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "商用の全文検索で使える同義語資源と、企業内文書の語彙を充実させるために作られた。",
+      "Sudachi辞書の見出しへ人手で同義関係を付け、不足する語を辞書へ追加する方法を採った。",
+      "語句を集めるだけでなく、検索での展開を選べるように、関係の種類や代表形を整理した。"
+    ]
+  },
+  {
+    "page": 21,
+    "title": "代表形は、経験のある作業者が選定する",
+    "section": "3. 作成方法と収録内容",
+    "kind": "content",
+    "sources": [
+      "paper"
+    ],
+    "body_text": [
+      "代表語・代表語形・代表表記は、それぞれの階層で関係を記述する基準となる。",
+      "2020年の報告では、言語資源の作成経験が豊富な3名が代表形を選び、相互に確認した。",
+      "出現頻度だけで代表を決めず、利用者にとって自然な表記を考慮する方針が述べられている。"
+    ]
+  },
+  {
+    "page": 22,
+    "title": "2019年の公開から、語彙の追加・修正へ",
+    "section": "3. 作成方法と収録内容",
+    "kind": "content",
+    "sources": [
+      "history"
+    ],
+    "body_text": [
+      "同義語ソースは2019年11月に公開リポジトリへ追加され、2020年に設計と作成方法が発表された。",
+      "現在もSudachiDictで、語彙や関係情報の追加・修正を含むソースが配布されている。",
+      "2026年10月15日更新のsynonyms.txtには、見出しと関係情報がCSV形式で収録されている。"
+    ]
+  },
+  {
+    "page": 23,
+    "title": "利用対象の見出しレコードは約7.1万件",
+    "section": "3. 作成方法と収録内容",
+    "kind": "content",
+    "sources": [
+      "data"
+    ]
+  },
+  {
+    "page": 24,
+    "title": "2〜3件の見出しを持つグループが多い",
+    "section": "3. 作成方法と収録内容",
+    "kind": "content",
+    "sources": [
+      "data"
+    ],
+    "analysis": "active group size histogram"
+  },
+  {
+    "page": 25,
+    "title": "一般語に加え、固有名や専門語も収録",
+    "section": "3. 作成方法と収録内容",
+    "kind": "content",
+    "sources": [
+      "data"
+    ]
+  },
+  {
+    "page": 26,
+    "title": "4. 読み込みと利用方法",
+    "section": "4. 読み込みと利用方法",
+    "kind": "divider"
+  },
+  {
+    "page": 27,
+    "title": "CSVから、見出しの登録行を読む",
+    "section": "4. 読み込みと利用方法",
+    "kind": "code",
+    "sources": [
+      "data"
+    ]
+  },
+  {
+    "page": 28,
+    "title": "展開制御に従って、候補を列挙する",
+    "section": "4. 読み込みと利用方法",
+    "kind": "code",
+    "sources": [
+      "data"
+    ]
+  },
+  {
+    "page": 29,
+    "title": "検索処理には、専用ライブラリも使える",
+    "section": "4. 読み込みと利用方法",
+    "kind": "content",
+    "sources": [
+      "py"
+    ],
+    "body_text": [
+      "chikkarは、Sudachi同義語辞書を使うJavaライブラリ。CSVからバイナリ辞書を作成して読み込む。",
+      "Python版のchikkarpyは、単語からの検索に加え、SudachiPyの解析結果への同義語情報の追加に対応する。",
+      "体言・用言の出力や、複数の辞書の優先順位など、実装側でも検索条件を選べる。"
+    ]
+  },
+  {
+    "page": 30,
+    "title": "検索のほか、語の関係を使う研究にも利用",
+    "section": "4. 読み込みと利用方法",
+    "kind": "content",
+    "sources": [
+      "yama"
+    ],
+    "body_text": [
+      "検索では、入力語から同じグループの候補を取り出し、別表現を含む文書を探すために使える。",
+      "関係情報を選べば、略語や表記ゆれなど、必要な種類の候補を抽出できる。",
+      "2022年のyamaMomoでは、この辞書の同義関係や分野情報から、日本語の単語ベクトルを評価するデータが作られた。"
+    ]
+  },
+  {
+    "page": 31,
+    "title": "CSVを入手し、用途に合わせて利用する",
+    "section": "4. 読み込みと利用方法",
+    "kind": "content",
+    "sources": [
+      "license"
+    ],
+    "body_text": [
+      "同義語ソースはSudachiDictのsrc/main/text/synonyms.txt、列の説明はdocs/synonyms.mdで公開されている。",
+      "Apache License 2.0で提供され、商用利用や改変・再配布が可能。再配布ではライセンスと帰属を保ち、変更を明示する。",
+      "更新したCSVを取り込むときは、見出しだけでなく、展開制御と関係情報も読み込む。"
+    ]
+  },
+  {
+    "page": 32,
+    "title": "語句のつながりと、展開できる向きを使う",
+    "section": "4. 読み込みと利用方法",
+    "kind": "content",
+    "sources": [
+      "docs"
+    ],
+    "body_text": [
+      "同義語グループの中に、別の語彙、略語、英語表記、表記ゆれを整理している。",
+      "展開制御によって、入力に使える語、出力だけに使う語、展開に使わない語を指定する。",
+      "CSVの列を読み、必要な関係を選ぶことで、検索や語彙処理へ組み込める。"
+    ]
+  },
+  {
+    "page": 33,
+    "title": "Appendix",
+    "section": "Appendix",
+    "kind": "divider"
+  },
+  {
+    "page": 34,
+    "title": "",
+    "section": "Appendix: 目次",
+    "kind": "toc"
+  },
+  {
+    "page": 35,
+    "title": "パソコン：長い名称と略語の関係",
+    "section": "Appendix: 1. 追加の語群と列仕様",
+    "kind": "content",
+    "sources": [
+      "data"
+    ],
+    "group_ids": [
+      "014881"
+    ]
+  },
+  {
+    "page": 36,
+    "title": "自動車：広く使われる短い語は出力側へ",
+    "section": "Appendix: 1. 追加の語群と列仕様",
+    "kind": "content",
+    "sources": [
+      "data"
+    ],
+    "group_ids": [
+      "013614"
+    ]
+  },
+  {
+    "page": 37,
+    "title": "「はやい」は、異なる語群に共通する",
+    "section": "Appendix: 1. 追加の語群と列仕様",
+    "kind": "content",
+    "sources": [
+      "data"
+    ],
+    "group_ids": [
+      "024872",
+      "000404"
+    ]
+  },
+  {
+    "page": 38,
+    "title": "CSVの列仕様：グループと語形の情報",
+    "section": "Appendix: 1. 追加の語群と列仕様",
+    "kind": "content",
+    "sources": [
+      "docs",
+      "data"
+    ]
+  },
+  {
+    "page": 39,
+    "title": "CSVの列仕様：略語・表記・分野",
+    "section": "Appendix: 1. 追加の語群と列仕様",
+    "kind": "content",
+    "sources": [
+      "docs"
+    ]
+  },
+  {
+    "page": 40,
+    "title": "参考文献",
+    "section": "Appendix: 2. 参考文献",
+    "kind": "references"
+  },
+  {
+    "page": 41,
+    "title": "参考文献",
+    "section": "Appendix: 2. 参考文献",
+    "kind": "references"
+  },
+  {
+    "page": 42,
+    "title": "参考文献",
+    "section": "Appendix: 2. 参考文献",
+    "kind": "references"
+  }
+]

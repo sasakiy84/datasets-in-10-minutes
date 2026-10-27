@@ -1,0 +1,141 @@
+{
+  "actor": "/root/maps_coordinator/resume_sudachi",
+  "artifact_sha256": {
+    "pdf": "3900853b4ed5df8fcac2a16c6e7576602662fc63da405204d8319d9ff29a05dc",
+    "pptx": "437c3a2a6eb0474e0057eeeace38c0bfbf000c2de0600fcd46407ca7fcf42601"
+  },
+  "method": "Own separate HTTP pinned CSV/format/license retrieval, full structural CSV parse, selected raw-record human reading, final native and code checks.",
+  "source_acquisition": {
+    "actor": "/root/maps_coordinator/resume_sudachi",
+    "retrieved_at": "2026-10-27T17:36:35.861534+00:00",
+    "files": [
+      {
+        "name": "synonyms.txt",
+        "url": "https://raw.githubusercontent.com/WorksApplications/SudachiDict/830bf9e1313f6f75235ba87ee041e144dbcad8c1/src/main/text/synonyms.txt",
+        "status": 200,
+        "bytes": 3133723,
+        "sha256": "0b0c80c0505015fa6bd625b5f3b1ad4f5dcd15d4cf3e5215790ff86efe98a716",
+        "matches_prior_acquisition": true
+      },
+      {
+        "name": "synonyms.md",
+        "url": "https://raw.githubusercontent.com/WorksApplications/SudachiDict/830bf9e1313f6f75235ba87ee041e144dbcad8c1/docs/synonyms.md",
+        "status": 200,
+        "bytes": 9483,
+        "sha256": "dbd68b512f125594998379a18a68893dbb16b32c7bb15ddbd1e88203bf2b40a6",
+        "matches_prior_acquisition": true
+      },
+      {
+        "name": "LICENSE-2.0.txt",
+        "url": "https://raw.githubusercontent.com/WorksApplications/SudachiDict/830bf9e1313f6f75235ba87ee041e144dbcad8c1/LICENSE-2.0.txt",
+        "status": 200,
+        "bytes": 11358,
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "matches_prior_acquisition": true
+      }
+    ]
+  },
+  "structure": {
+    "actor": "/root/maps_coordinator/resume_sudachi",
+    "input_sha256": "0b0c80c0505015fa6bd625b5f3b1ad4f5dcd15d4cf3e5215790ff86efe98a716",
+    "all_structurally_parsed_rows": 71875,
+    "columns": 11,
+    "control_counts": {
+      "0": 59732,
+      "1": 11636,
+      "2": 507
+    },
+    "active_records": 71368,
+    "active_groups": 26324,
+    "distinct_active_headwords": 68334,
+    "field3_slash_rows": 63,
+    "field7_slash_rows": 1986,
+    "field7_slash_active": 1982,
+    "domain_rows": {
+      "ビジネス": 3204,
+      "時間": 664,
+      "人": 2998,
+      "店": 241,
+      "企業名": 10426,
+      "料理": 1973,
+      "IT": 2108,
+      "動植物": 2042,
+      "娯楽": 692,
+      "ファッション": 1529,
+      "スポーツ": 2247,
+      "地名": 2253,
+      "政治": 295,
+      "観光": 94,
+      "交通": 1864,
+      "医療": 1036,
+      "美容": 333,
+      "国名": 672,
+      "建築": 416,
+      "商品": 354,
+      "音楽": 1045,
+      "教育": 499,
+      "法律": 341,
+      "組織名": 523,
+      "地形": 219,
+      "旧企業名": 948,
+      "色": 263,
+      "店名": 45,
+      "HR": 2,
+      "旧組織名": 5,
+      "人名": 4244,
+      "キャラ": 35,
+      "単位": 356,
+      "化学": 148,
+      "不快": 7,
+      "大学名": 2259,
+      "旧大学名": 13
+    },
+    "domain_absent_active": 26964,
+    "reserved9_10_nonempty": 0,
+    "selected_groups": [
+      "000127",
+      "010717",
+      "010718",
+      "010719",
+      "010721",
+      "000020",
+      "006201",
+      "000008",
+      "021742",
+      "014881",
+      "013614",
+      "024872",
+      "000404"
+    ],
+    "human_scope": "Own reading of official format full text, 2020 paper pages1–3, Apache2.0 full text, chikkarpy README, and selected slide records; not all CSV rows human-read.",
+    "schema_values_checked": "Own checks: six-digit IDs; body/predicate, expansion, word-form, abbreviation and spelling flags within official enums; slash-separated lexeme-number syntax; parenthesized domains; both reserved fields empty."
+  },
+  "own_primary_reading": [
+    "Official synonyms.md full text",
+    "2020 initial paper pages1–3",
+    "Apache2.0 full text",
+    "chikkarpy README full text",
+    "2022 yamaMomo paper abstract and start of construction section pages1–2",
+    "Selected 13 raw groups as stored privately in resume-selected-groups.json"
+  ],
+  "inherited_scope": {
+    "actor": "/root/maps_coordinator/create_overture",
+    "scope": "Prior draft1/candidate2 generation, early screenshot acquisition, source retrieval, and initial edits. The current actor did not treat the prior actor actual-view reports as own actual viewing."
+  },
+  "first_public_year": {
+    "year": 2019,
+    "meaning": "First synonym dictionary addition to the public source history",
+    "date": "2019-11-11",
+    "url": "https://github.com/WorksApplications/SudachiDict/commit/e32387bbc0913fd4352e571faa0954605dcf077c"
+  },
+  "chikkar_runtime_executed": false,
+  "native_csv_reference_code_executed": true,
+  "gemini_used": false,
+  "external_generation_api_used": false,
+  "model_evaluation_run": false,
+  "creation_stage_remaining": [
+    "Independent final exact-pair approval by separate actor"
+  ],
+  "final_review": "../skill-proofreading/sudachi-synonym/review.json",
+  "final_independent_approved": true
+}
