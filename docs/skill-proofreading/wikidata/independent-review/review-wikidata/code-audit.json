@@ -1,0 +1,41 @@
+{
+  "actor": "root",
+  "page": 26,
+  "exact_native_code": "import json\nfrom pathlib import Path\nobj = json.loads(Path(\"Q42.json\").read_text())\nitem = obj[\"entities\"][\"Q42\"]\nstmt = item[\"claims\"][\"P569\"][0]\nprint(stmt[\"mainsnak\"][\"datavalue\"][\"value\"][\"time\"])",
+  "code_sha256": "7a8392bffea1cd8ce4204a74e1441ebf173ed43abfdaa95ba97db51f24cd4819",
+  "execution": "Verbatim native PPTX Python code against independently acquired official Q42 JSON; no network or model API during execution.",
+  "stdout": "+1952-03-11T00:00:00Z\n",
+  "success": true,
+  "sparql": {
+    "page": 27,
+    "exact_query": "SELECT ?item ?birth WHERE {\n  VALUES ?item { wd:Q42 }\n  ?item wdt:P569 ?birth\n}",
+    "query_sha256": "015f4335ab0220cb5c950db7ead992b7f19f0f161e7090dfdc816a9038a5fc75",
+    "independent_HTTP_status": 200,
+    "bindings": [
+      {
+        "item": {
+          "type": "uri",
+          "value": "http://www.wikidata.org/entity/Q42"
+        },
+        "birth": {
+          "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+          "type": "literal",
+          "value": "1952-03-11T00:00:00Z"
+        }
+      }
+    ],
+    "endpoint": "https://query.wikidata.org/sparql",
+    "scope": "Exact displayed finite query executed independently; one item/one property, no fullglobalquery."
+  },
+  "rdf": {
+    "page": 19,
+    "independent_HTTP_status": 200,
+    "revision": 2560674217,
+    "snippet_verified": "wd:Q42 wdt:P69 wd:Q4961791 and wd:Q691283",
+    "method": "Read own independently retrieved Turtle subject/predicate/object block, corroborated with independentQ42JSON. No claim of a complete RDFgraph parser."
+  },
+  "artifact_sha256": {
+    "pdf": "8466b2105d0b6fd755ba5b9d8864a1d9ae2c88bce7fd8d70576ca8f78239cd81",
+    "pptx": "38627c4c79cb7480e5013a25930d89cdede420a2474990a055c27516de941f7b"
+  }
+}

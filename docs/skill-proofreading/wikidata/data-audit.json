@@ -1,0 +1,74 @@
+{
+  "dataset": "Wikidata",
+  "actor": "/root/wikimedia_coordinator/create_wikidata_replacement",
+  "artifact_sha256": {
+    "pdf": "8466b2105d0b6fd755ba5b9d8864a1d9ae2c88bce7fd8d70576ca8f78239cd81",
+    "pptx": "38627c4c79cb7480e5013a25930d89cdede420a2474990a055c27516de941f7b"
+  },
+  "main_pages": 30,
+  "total_pages": 41,
+  "source_scope": "Own reading of official introduction and selected sections of current JSON/RDF, access/dump/license/ranking/birthday documentation. Initial files acquired by prior collector; own HTTP support data and screenshot explicitly identified in manifest.",
+  "raw_scope": "Selected fields of real individual entities, with exact identities/values/qualifiers/references/units and revised labels checked. No world-fact correctness guarantee inferred from a preferred rank.",
+  "checks": {
+    "main_and_appendix_entities_disjoint": true,
+    "chart": {
+      "series_and_workbook_heading": "人口（百万人）",
+      "years": [
+        1995,
+        2000,
+        2005,
+        2010,
+        2015,
+        2020
+      ],
+      "integer_population": [
+        125570246,
+        126925843,
+        127767994,
+        128057352,
+        127094745,
+        126146099
+      ],
+      "display_unit": "million people",
+      "underlying_values": [
+        125.570246,
+        126.925843,
+        127.767994,
+        128.057352,
+        127.094745,
+        126.146099
+      ],
+      "label_number_format": "0.0"
+    },
+    "Q8577": {
+      "start": "2012-07-27",
+      "end": "2012-08-12",
+      "place": "Q84",
+      "participant_values": {
+        "Olympic delegations": 204,
+        "athletes": 10568
+      }
+    },
+    "population_rank_example": {
+      "2020-10-01": {
+        "value": 126146099,
+        "method": "Q39825 国勢調査",
+        "rank": "normal"
+      },
+      "2024-10-01": {
+        "value": 123802000,
+        "method": "Q11381946 住民基本台帳",
+        "rank": "preferred"
+      }
+    },
+    "code": "code-run-audit.json",
+    "all_native_paragraphs_and_tablecells": "pages.jsonl",
+    "same_role_wording_pairs": 9,
+    "raster_OCR_performed": false
+  },
+  "licenses": "ATTRIBUTION-WIKIDATA.md",
+  "gemini_used": false,
+  "external_generation_api_used": false,
+  "model_evaluation_run": false,
+  "remaining": []
+}

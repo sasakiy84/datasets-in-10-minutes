@@ -1,0 +1,133 @@
+{
+  "remaining": [],
+  "own_reviews": {
+    "coordinator": {
+      "actor": "/root/wikimedia_coordinator",
+      "snapshot": "candidate1/snapshot.json",
+      "artifact_sha256": {
+        "pdf": "8466b2105d0b6fd755ba5b9d8864a1d9ae2c88bce7fd8d70576ca8f78239cd81",
+        "pptx": "38627c4c79cb7480e5013a25930d89cdede420a2474990a055c27516de941f7b"
+      },
+      "own_scope": {
+        "main_pdf_extracted_text_read_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ],
+        "actual_individually_displayed_pages": [
+          10,
+          16
+        ],
+        "actual_image_paths": [
+          "candidate1/renders/p010.png",
+          "candidate1/renders/p016.png"
+        ],
+        "text_extraction_method": "PyMuPDF PDF get_text, not a complete native PPTX paragraph/cell audit",
+        "source_review": false,
+        "all_page_visual_review": false,
+        "independent_review": false,
+        "baseline_main_pdf_extracted_text_read_pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30
+        ],
+        "final_changed_extracted_text_read_pages": [
+          7,
+          9,
+          10,
+          12,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          23,
+          24,
+          25,
+          30,
+          36,
+          38
+        ],
+        "comparison_record": "root-final-pixelbridge.json",
+        "inheritance": "Same actor read baseline main PDF extracted text. Full comparison found17 RGB changes and16 PDF text changes; all changed PDF text read, own actual10/16 both individually displayed again. Chart source/embedded-series finding belongs to root independent reviewer."
+      },
+      "findings": [
+        {
+          "pages": [
+            10,
+            16,
+            17,
+            25
+          ],
+          "issues": "Chart labels split decimals; JSON caption below page; short trailing header/cell lines",
+          "status": "Resolved: final candidate1 changed PDF text and actual pages10/16 inspected"
+        }
+      ],
+      "remaining": [],
+      "inherited_source_checks": {
+        "reviewer": "root",
+        "record": "review-wikidata/review.json",
+        "detail": "Additional p21 population method labels independently verified by root JSON qualifiers and separate HTTP label lookup. Coordinator does not claim source reading."
+      },
+      "independent_final_approval_checked": "review-wikidata/review.json"
+    }
+  },
+  "additional_review_directories": [],
+  "scope_note": "Each own scope names the exact snapshots and actual pages read/opened. Final full-deck visual/source/technical coverage belongs to the separate independent reviewer; root/coordinator supplementary reviews do not claim that coverage. Any acquired-but-unread full dataset is not counted as personally read.",
+  "private_evidence_path_scope": "Snapshot/checkpoint/render/raw/original artifact paths identify private workspace evidence, not public relative links. Public file references are the explicit record and distribution links."
+}

@@ -1,0 +1,55 @@
+{
+  "actor": "/root/wikimedia_coordinator/create_wikidata_replacement",
+  "artifact_sha256": {
+    "pdf": "8466b2105d0b6fd755ba5b9d8864a1d9ae2c88bce7fd8d70576ca8f78239cd81",
+    "pptx": "38627c4c79cb7480e5013a25930d89cdede420a2474990a055c27516de941f7b"
+  },
+  "checks": [
+    {
+      "page": 26,
+      "language": "Python",
+      "code": "import json\nfrom pathlib import Path\nobj = json.loads(Path(\"Q42.json\").read_text())\nitem = obj[\"entities\"][\"Q42\"]\nstmt = item[\"claims\"][\"P569\"][0]\nprint(stmt[\"mainsnak\"][\"datavalue\"][\"value\"][\"time\"])",
+      "execution": "Exact final native text run verbatim with cwd containing acquired Q42.json",
+      "stdout": "+1952-03-11T00:00:00Z\n",
+      "passed": true
+    },
+    {
+      "page": 16,
+      "language": "JSON",
+      "validation": "Exact native JSON parsed and every displayed selected field matched actual Q42 P69 statement",
+      "passed": true
+    },
+    {
+      "page": 19,
+      "language": "Turtle fragment",
+      "validation": "Two displayed relations matched actual simple RDF; prefix declarations intentionally omitted as caption states. Not represented as standalone executable RDF document.",
+      "passed": true
+    },
+    {
+      "page": 27,
+      "language": "SPARQL",
+      "code": "SELECT ?item ?birth WHERE {\n  VALUES ?item { wd:Q42 }\n  ?item wdt:P569 ?birth\n}",
+      "execution": "Exact final native query executed by bounded public HTTP GET, predefined WDQS prefixes",
+      "status": 200,
+      "result_rows": 1,
+      "result": [
+        {
+          "item": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q42"
+          },
+          "birth": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "1952-03-11T00:00:00Z"
+          }
+        }
+      ],
+      "response_sha256": "4f0952f027370835d5af768c5d2fba108a9ba71ad04d51ae3eec1ac059e03783",
+      "passed": true
+    }
+  ],
+  "model_evaluation_run": false,
+  "external_generation_api_used": false,
+  "remaining": []
+}

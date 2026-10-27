@@ -1,0 +1,401 @@
+[
+  {
+    "page": 1,
+    "title": "Wikidata",
+    "section": "",
+    "kind": "cover"
+  },
+  {
+    "page": 2,
+    "title": "Wikidata の公式サイト",
+    "section": "公式サイト",
+    "kind": "image",
+    "sources": [
+      "home"
+    ]
+  },
+  {
+    "page": 3,
+    "title": "",
+    "section": "目次",
+    "kind": "toc"
+  },
+  {
+    "page": 4,
+    "title": "1. 実例から見る構造化知識",
+    "section": "1. 実例から見る構造化知識",
+    "kind": "divider"
+  },
+  {
+    "page": 5,
+    "title": "Wikipedia と関連する、別の知識ベース",
+    "section": "1. 実例から見る構造化知識",
+    "kind": "content",
+    "sources": [
+      "intro"
+    ],
+    "body_text": [
+      "Wikidataは、人物・場所・作品などの情報を、項目とその属性・関係として共同編集する多言語の知識ベースである。",
+      "Wikipediaとは別のWikimediaプロジェクトで、言語間リンクや情報ボックスなどへ構造化データを提供する。",
+      "記事本文を読む代わりに、人物の学歴、国の人口、出来事の開催期間などを同じ仕組みで取り出せる。"
+    ]
+  },
+  {
+    "page": 6,
+    "title": "ダグラス・アダムズの学歴を表す",
+    "section": "1. 実例から見る構造化知識",
+    "kind": "content",
+    "sources": [
+      "Q42"
+    ]
+  },
+  {
+    "page": 7,
+    "title": "項目とプロパティで、関係を記録する",
+    "section": "1. 実例から見る構造化知識",
+    "kind": "content",
+    "sources": [
+      "intro"
+    ],
+    "body_text": [
+      "Q42はダグラス・アダムズという対象の項目ID。Qから始まるIDで、表示する言語が変わっても同じ対象を参照する。",
+      "P69は「出身校」を表すプロパティ。項目の属性・関係と値を記録する単位を「文（ステートメント）」と呼ぶ。",
+      "値には別の項目のほか、日付、数量、座標、外部データベースのIDなどを入れられる。"
+    ]
+  },
+  {
+    "page": 8,
+    "title": "学歴には、在籍した期間も付けられる",
+    "section": "1. 実例から見る構造化知識",
+    "kind": "content",
+    "sources": [
+      "Q42"
+    ]
+  },
+  {
+    "page": 9,
+    "title": "出典も、文ごとに記録される",
+    "section": "1. 実例から見る構造化知識",
+    "kind": "content",
+    "sources": [
+      "Q42"
+    ]
+  },
+  {
+    "page": 10,
+    "title": "日本の人口には、時点ごとの値がある",
+    "section": "1. 実例から見る構造化知識",
+    "kind": "content",
+    "sources": [
+      "Q17"
+    ]
+  },
+  {
+    "page": 11,
+    "title": "ロンドン2012大会の期間と場所を表す",
+    "section": "1. 実例から見る構造化知識",
+    "kind": "content",
+    "sources": [
+      "Q8577"
+    ]
+  },
+  {
+    "page": 12,
+    "title": "参加数には、何を数えたかが付く",
+    "section": "1. 実例から見る構造化知識",
+    "kind": "content",
+    "sources": [
+      "Q8577"
+    ]
+  },
+  {
+    "page": 13,
+    "title": "2. 項目・文・データ形式",
+    "section": "2. 項目・文・データ形式",
+    "kind": "divider"
+  },
+  {
+    "page": 14,
+    "title": "一つの項目に、名前・説明・リンクが付く",
+    "section": "2. 項目・文・データ形式",
+    "kind": "content",
+    "sources": [
+      "intro"
+    ],
+    "body_text": [
+      "項目には、言語ごとのラベル、短い説明、別名がある。ラベルは人が読める名前で、項目の識別にはQIDを使う。",
+      "サイトリンクは、同じ対象について書かれた各言語版のWikipedia記事などへつなぐ。",
+      "その下に、プロパティと値からなる「文」を並べる。同じプロパティに複数の文があることも多い。"
+    ]
+  },
+  {
+    "page": 15,
+    "title": "文は、値に文脈と出典を付ける単位",
+    "section": "2. 項目・文・データ形式",
+    "kind": "content",
+    "sources": [
+      "Q42",
+      "json"
+    ]
+  },
+  {
+    "page": 16,
+    "title": "JSON のclaimsに、文の配列が入る",
+    "section": "2. 項目・文・データ形式",
+    "kind": "code",
+    "sources": [
+      "Q42",
+      "json"
+    ]
+  },
+  {
+    "page": 17,
+    "title": "日付には、値と精度がある",
+    "section": "2. 項目・文・データ形式",
+    "kind": "content",
+    "sources": [
+      "Q42",
+      "json"
+    ]
+  },
+  {
+    "page": 18,
+    "title": "ランクで、複数の値の扱いを指定する",
+    "section": "2. 項目・文・データ形式",
+    "kind": "content",
+    "sources": [
+      "rank"
+    ]
+  },
+  {
+    "page": 19,
+    "title": "RDF では、項目と値を三つ組で結ぶ",
+    "section": "2. 項目・文・データ形式",
+    "kind": "code",
+    "sources": [
+      "Q42",
+      "rdf"
+    ]
+  },
+  {
+    "page": 20,
+    "title": "修飾子や出典を使うなら、文をたどる",
+    "section": "2. 項目・文・データ形式",
+    "kind": "content",
+    "sources": [
+      "rdf"
+    ],
+    "body_text": [
+      "RDFの完全な表現では、項目から文のノードへつなぎ、その文に値・ランク・修飾子・出典を付ける。",
+      "truthyは、preferredの文があればその値を優先し、なければnormalの文の値を使う簡略表現。deprecatedの文は含まない。",
+      "直接の値だけでは、学歴の開始年・終了年や人口の測定時点は得られない。それらには文の修飾子が必要になる。"
+    ]
+  },
+  {
+    "page": 21,
+    "title": "人口の値を、時点・方法・ランクと読む",
+    "section": "2. 項目・文・データ形式",
+    "kind": "content",
+    "sources": [
+      "Q17",
+      "rank"
+    ]
+  },
+  {
+    "page": 22,
+    "title": "3. 構築と取得・利用方法",
+    "section": "3. 構築と取得・利用方法",
+    "kind": "divider"
+  },
+  {
+    "page": 23,
+    "title": "人とボットが編集し、継続して更新する",
+    "section": "3. 構築と取得・利用方法",
+    "kind": "content",
+    "sources": [
+      "intro",
+      "birthday"
+    ],
+    "body_text": [
+      "Wikidataは2012年10月29日に公開された。Wikimediaの各言語版で、共通の情報を保守しやすくするために作られた。",
+      "編集者が項目や文、出典を追加・修正し、ボットもデータ入力を行う。記録する内容や管理のルールは共同体で決める。",
+      "公開データは、編集とともに内容が変わる。保存したJSONには項目の版IDと更新時刻も含まれる。"
+    ]
+  },
+  {
+    "page": 24,
+    "title": "人物・場所・作品などを、共通のIDで結ぶ",
+    "section": "3. 構築と取得・利用方法",
+    "kind": "content",
+    "sources": [
+      "access",
+      "intro"
+    ],
+    "body_text": [
+      "公式のデータ利用案内では、1.2億を超える項目を紹介している。人物、都市、作品、組織、出来事などが同じ仕組みでつながる。",
+      "項目どうしの関係に加え、図書館や地名など外部データベースの識別子も記録する。異なる資料の対応付けに使える。",
+      "ここまでの例は、取得した個別項目から選んだもの。語彙や日付、数量などの型を組み合わせて利用できる。"
+    ]
+  },
+  {
+    "page": 25,
+    "title": "必要な範囲から、取得方法を選ぶ",
+    "section": "3. 構築と取得・利用方法",
+    "kind": "content",
+    "sources": [
+      "access"
+    ]
+  },
+  {
+    "page": 26,
+    "title": "Q42 のJSONから、出生年月日を読む",
+    "section": "3. 構築と取得・利用方法",
+    "kind": "code",
+    "sources": [
+      "Q42",
+      "access"
+    ]
+  },
+  {
+    "page": 27,
+    "title": "SPARQL で、指定項目の値を取り出す",
+    "section": "3. 構築と取得・利用方法",
+    "kind": "code",
+    "sources": [
+      "query"
+    ]
+  },
+  {
+    "page": 28,
+    "title": "一括配布には、JSON とRDF がある",
+    "section": "3. 構築と取得・利用方法",
+    "kind": "content",
+    "sources": [
+      "dump"
+    ],
+    "body_text": [
+      "推奨されるJSONダンプは、全体が一つの配列で、各項目が1行のオブジェクトとして保存される。週次で生成される。",
+      "RDFのallは文・修飾子・出典を含む表現。truthyは優先される直接の値に絞り、修飾子と出典を省く。",
+      "まず少数の項目で必要な型やフィールドを確かめ、広い範囲の分析ではダンプの容量や処理方法を検討する。"
+    ]
+  },
+  {
+    "page": 29,
+    "title": "構造化データはCC0 で再利用できる",
+    "section": "3. 構築と取得・利用方法",
+    "kind": "content",
+    "sources": [
+      "license",
+      "access"
+    ],
+    "body_text": [
+      "項目の文・ラベル・説明・別名などの構造化データはCC0で公開され、加工や再配布、商用利用にも使える。",
+      "ヘルプなど他の名前空間の文章はCC BY-SA 4.0、画像はファイルごとの条件で提供される。",
+      "APIではアプリ名や連絡先をUser-Agentに設定し、制限応答があれば指定時間を空ける。利用する項目と版を残すと、更新後の値と照合しやすい。"
+    ]
+  },
+  {
+    "page": 30,
+    "title": "Wikidata の要点",
+    "section": "3. 構築と取得・利用方法",
+    "kind": "content",
+    "sources": [
+      "intro"
+    ],
+    "body_text": [
+      "Wikipediaと関連する別の知識ベースで、人物・場所・出来事などを、共通の項目IDと関係で結ぶ。",
+      "文には値とランクがあり、期間・測定時点などの修飾子や出典を付けられる。",
+      "JSONやRDF、条件検索で必要な範囲を取得し、時点・単位・出典を含む構造化知識として利用できる。"
+    ]
+  },
+  {
+    "page": 31,
+    "title": "Appendix",
+    "section": "Appendix",
+    "kind": "appendix"
+  },
+  {
+    "page": 32,
+    "title": "",
+    "section": "Appendix: 目次",
+    "kind": "toc"
+  },
+  {
+    "page": 33,
+    "title": "追加例1 ネコの項目は多言語の名前を持つ",
+    "section": "Appendix: 1. 異なる型の追加例",
+    "kind": "content",
+    "sources": [
+      "Q146"
+    ]
+  },
+  {
+    "page": 34,
+    "title": "追加例2 地球の質量は単位付きの数量",
+    "section": "Appendix: 1. 異なる型の追加例",
+    "kind": "content",
+    "sources": [
+      "Q2"
+    ]
+  },
+  {
+    "page": 35,
+    "title": "追加例3 パリの座標には精度と天体が付く",
+    "section": "Appendix: 1. 異なる型の追加例",
+    "kind": "content",
+    "sources": [
+      "Q90"
+    ]
+  },
+  {
+    "page": 36,
+    "title": "追加例4 ベルリンの面積には複数の文がある",
+    "section": "Appendix: 1. 異なる型の追加例",
+    "kind": "content",
+    "sources": [
+      "Q64"
+    ]
+  },
+  {
+    "page": 37,
+    "title": "追加例5 ニューヨークを外部IDで結ぶ",
+    "section": "Appendix: 1. 異なる型の追加例",
+    "kind": "content",
+    "sources": [
+      "Q60"
+    ]
+  },
+  {
+    "page": 38,
+    "title": "個別項目とダンプは、外側の構造が異なる",
+    "section": "Appendix: 2. 取得形式と参考文献",
+    "kind": "content",
+    "sources": [
+      "json",
+      "dump"
+    ],
+    "body_text": [
+      "Special:EntityDataの応答では、entitiesの下にQIDをキーとして項目が入る。掲載したPythonコードはこの形式を読む。",
+      "JSONダンプは、一つの配列の中に各項目が並ぶ。項目ごとの改行に加えて、配列の括弧や区切りもある。",
+      "項目の版ID、ラベル、文などの基本構造を確かめ、取得元の外側の形式に合わせて読み込む。"
+    ]
+  },
+  {
+    "page": 39,
+    "title": "参考文献",
+    "section": "Appendix: 2. 取得形式と参考文献",
+    "kind": "references"
+  },
+  {
+    "page": 40,
+    "title": "参考文献",
+    "section": "Appendix: 2. 取得形式と参考文献",
+    "kind": "references"
+  },
+  {
+    "page": 41,
+    "title": "参考文献",
+    "section": "Appendix: 2. 取得形式と参考文献",
+    "kind": "references"
+  }
+]
