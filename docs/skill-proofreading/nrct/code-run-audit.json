@@ -1,0 +1,14 @@
+{
+  "scope": "exact native code from final slide15; no manual retyping",
+  "code": "import csv\nwith open(\"nrct-20250719.csv\",\n          encoding=\"utf-8\", newline=\"\") as f:\n    rows = list(csv.DictReader(f))\nhits = [r for r in rows if r[\"名称\"] == \"大町\"]\nprint(len(hits))",
+  "input_sha256": "f70a6c3fc7ae9a74e01efa85d7fa8eabe215869fb3c2f62061f6047618652e7c",
+  "returncode": 0,
+  "stdout": "32\n",
+  "stderr": "",
+  "artifact_sha256": {
+    "pdf_sha256": "b406857af782d79c8487bc0367547d7131c07fe4ac5126591ad4bd619817dfea",
+    "pptx_sha256": "32b0be9784b81e0f5424ca45718fd24cea90acbc9fd7148f315cca95329d06c6",
+    "main_pages": 27,
+    "total_pages": 38
+  }
+}

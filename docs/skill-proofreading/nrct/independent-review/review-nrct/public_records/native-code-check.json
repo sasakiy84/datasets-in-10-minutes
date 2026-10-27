@@ -1,0 +1,8 @@
+{
+  "actor": "review_unidic_final",
+  "page": 15,
+  "native_code": "import csv\nwith open(\"nrct-20250719.csv\",\n          encoding=\"utf-8\", newline=\"\") as f:\n    rows = list(csv.DictReader(f))\nhits = [r for r in rows if r[\"名称\"] == \"大町\"]\nprint(len(hits))",
+  "only_change_for_execution": "Relative CSV path replaced by own independently downloaded source path.",
+  "stdout": "32\n",
+  "pass": true
+}
