@@ -1,0 +1,146 @@
+{
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "actor": "root",
+  "before_pptx_sha256": "7634d8c0d12ecba6004cbca7573431ca4dbf248475df643d6700218b255818ed",
+  "after_artifact_sha256": {
+    "pdf": "16f6fdcf27535a6ea62794339ba77e1c015d7040edb1e49f7e045c6c465f75b5",
+    "pptx": "b248a89a87d79ba22eb90613ba75d96d7799c626b9d13fe9cb884e6d80ce49bb"
+  },
+  "identity": "Same page/native shapeID/paragraph or tablecell indices; no title-only matching.",
+  "pairs": [
+    {
+      "page": 14,
+      "element": [
+        "paragraph",
+        5,
+        0
+      ],
+      "before": "1923年の座標列の冒頭。...は本資料で省略した部分。",
+      "after": "1923年の座標列の冒頭。経緯度は度単位。...は省略した部分。",
+      "reason": "座標の単位を明記する。"
+    },
+    {
+      "page": 20,
+      "element": [
+        "paragraph",
+        5,
+        0
+      ],
+      "before": "1889〜1919年の収録は一部の都道府県。1920年以降は両資料の統合が進められている。",
+      "after": "1889〜1919年の収録は一部の都道府県。1920年以降は、二つの資料を統合している。",
+      "reason": "公式の統合済み範囲へ説明を合わせる。正式名を意味のまとまりで改行する。"
+    },
+    {
+      "page": 21,
+      "element": [
+        "paragraph",
+        3,
+        0
+      ],
+      "before": "元の境界データをGeoJSON・TopoJSONへ変換し、名称、標準地域コード、廃置分合の情報などから市区町村IDを付ける。",
+      "after": "元の境界データをGeoJSON・TopoJSONへ変換し、名称、標準地域コード、合併などの履歴から市区町村IDを付ける。",
+      "reason": "初出の廃置分合を、合併などの履歴と言い換える。"
+    },
+    {
+      "page": 24,
+      "element": [
+        "paragraph",
+        2,
+        0
+      ],
+      "before": "公開後も、年代と内容が追加・修正された",
+      "after": "公開後も、境界データが追加された",
+      "reason": "ファイル名の細かな修正履歴を外し、境界データ追加の歩みを示す。更新年月は一次資料へ照合して訂正。"
+    },
+    {
+      "page": 24,
+      "element": [
+        "cell",
+        4,
+        2,
+        0
+      ],
+      "before": "2023-07-05",
+      "after": "2019-07",
+      "reason": "ファイル名の細かな修正履歴を外し、境界データ追加の歩みを示す。更新年月は一次資料へ照合して訂正。"
+    },
+    {
+      "page": 24,
+      "element": [
+        "cell",
+        4,
+        2,
+        1
+      ],
+      "before": "一部のファイル名の月日を0000から1231へ修正",
+      "after": "2019年の境界データを追加",
+      "reason": "ファイル名の細かな修正履歴を外し、境界データ追加の歩みを示す。更新年月は一次資料へ照合して訂正。"
+    },
+    {
+      "page": 24,
+      "element": [
+        "cell",
+        4,
+        3,
+        0
+      ],
+      "before": "2023-10",
+      "after": "2023-07",
+      "reason": "ファイル名の細かな修正履歴を外し、境界データ追加の歩みを示す。更新年月は一次資料へ照合して訂正。"
+    },
+    {
+      "page": 25,
+      "element": [
+        "paragraph",
+        2,
+        0
+      ],
+      "before": "境界の差を、そのまま自治体の変更と読まない",
+      "after": "境界線の差には、元資料の違いも表れる",
+      "reason": "読み手が得られる知見を示す自然な見出しにする。"
+    },
+    {
+      "page": 30,
+      "element": [
+        "paragraph",
+        3,
+        1
+      ],
+      "before": "GeoJSONは形状と属性を、TopoJSONは共有する境界線を表す。代表点とID一覧のCSVも、用途に応じて組み合わせられる。",
+      "after": "GeoJSONは形状と属性を持ち、TopoJSONは境界線を共有できる。代表点とID一覧のCSVも、用途に応じて組み合わせられる。",
+      "reason": "形式と属性の関係を自然な文に整える。"
+    }
+  ],
+  "layout_changes": [
+    {
+      "page": 20,
+      "change": "Source tablecell split at semantic boundary after筑波大学; same text preserved."
+    },
+    {
+      "page": 1,
+      "change": "Cover title native frame and vertical anchor adjusted so beta descender is inside frame."
+    },
+    {
+      "page": 23,
+      "change": "Three-row numeric table compacted to6.6in and centered; valuefont/RIGHT preserved."
+    },
+    {
+      "page": 31,
+      "change": "Appendix title frame expanded4pt for Latin descenders."
+    },
+    {
+      "pages": [
+        6,
+        7,
+        8,
+        33,
+        34,
+        35,
+        36,
+        37
+      ],
+      "change": "Map credits reflect precise actual source; Sakyo x-ticks separated, Miyake scale bar moved clear of minor island."
+    }
+  ]
+}

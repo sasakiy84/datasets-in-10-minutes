@@ -1,0 +1,10 @@
+{
+  "actor": "root",
+  "page": 27,
+  "pptx_sha256": "b248a89a87d79ba22eb90613ba75d96d7799c626b9d13fe9cb884e6d80ce49bb",
+  "exact_displayed_code": "import json\nfrom urllib.request import urlopen\nbase = \"https://geoshape.ex.nii.ac.jp/city/\"\npath = \"geojson/20230101/01/01202A1968.geojson\"\nwith urlopen(base + path) as response:\n    data = json.load(response)\nfeature = data[\"features\"][0]\nprint(feature[\"properties\"][\"N03_004\"])",
+  "code_sha256": "9bac1d79eed9cda28de05869d852c9fecdb2ea86c46343eaf43291d89098bdd6",
+  "stdout": "函館市\n",
+  "success": true,
+  "scope": "NativePPTX code executed verbatim, live public GeoJSON read. External socket default timeout45s, no code rewrite. Initial attempt HTTP502; retried public endpoint. No external generation API."
+}
