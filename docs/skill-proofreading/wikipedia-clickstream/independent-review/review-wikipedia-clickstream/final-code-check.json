@@ -1,0 +1,14 @@
+{
+  "actor": "/root/wikimedia_coordinator/review_clickstream",
+  "page": 24,
+  "native_code": "import csv, gzip\npath = \"clickstream-jawiki-2026-09.tsv.gz\"\nwith gzip.open(path, \"rt\", encoding=\"utf-8\") as f:\n    rows = csv.reader(\n        f, delimiter=\"\\t\", quoting=csv.QUOTE_NONE)\n    for prev, curr, kind, n in rows:\n        if prev == \"富士山\" and curr == \"富士登山\":\n            print(prev, curr, kind, int(n))",
+  "executed": true,
+  "stdout": "富士山 富士登山 link 232\n",
+  "expected": "富士山 富士登山 link 232\n",
+  "match": true,
+  "scope": "Finalnative code executed verbatim on entire sharedgzip; acquisition creator, independent execution",
+  "artifact_sha256": {
+    "pdf": "807c5951f8908529bf377330ef01de4bff171c5a1feeeb0aedaa4e0a36402c86",
+    "pptx": "ab50e53bc78c0fd0fa34d336cf7e1c8465339fc3c22fada9fe60341c009ebd98"
+  }
+}

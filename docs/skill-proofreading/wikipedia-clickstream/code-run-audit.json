@@ -1,0 +1,27 @@
+{
+  "actor": "create_clickstream",
+  "artifact_sha256": {
+    "pptx": "ab50e53bc78c0fd0fa34d336cf7e1c8465339fc3c22fada9fe60341c009ebd98",
+    "pdf": "807c5951f8908529bf377330ef01de4bff171c5a1feeeb0aedaa4e0a36402c86"
+  },
+  "page": 24,
+  "exact_displayed_code": "import csv, gzip\npath = \"clickstream-jawiki-2026-09.tsv.gz\"\nwith gzip.open(path, \"rt\", encoding=\"utf-8\") as f:\n    rows = csv.reader(\n        f, delimiter=\"\\t\", quoting=csv.QUOTE_NONE)\n    for prev, curr, kind, n in rows:\n        if prev == \"富士山\" and curr == \"富士登山\":\n            print(prev, curr, kind, int(n))",
+  "code_sha256": "7d69581ad8191e71e111323a8d8a6c8947c4db2b971ba10f497d6214cec9eeba",
+  "input": {
+    "url": "https://dumps.wikimedia.org/other/clickstream/2026-09/clickstream-jawiki-2026-09.tsv.gz",
+    "retrieved_utc": "2026-10-27T19:33:20.976094+00:00",
+    "status": 200,
+    "bytes": 94943464,
+    "sha256": "638f3cb334323a1c94e618f02c6270c937e5d412f55bb764305f7f7d7d8e8413",
+    "scope": "Complete one language/month gzip downloaded. gzip CRC validated by complete decompression; all6269506 TSV rows parsed with4 fields and integer n. No other language dump acquired.",
+    "language": "jawiki",
+    "month": "2026-09",
+    "latest_index_seen": "2026-09",
+    "upstream_index_modified": "2026-10-03 00:31UTC",
+    "network": "Ordinary public HTTPS through inherited proxy+CA, TLS verification on; descriptive User-Agent added per official robotpolicy after initial403.",
+    "genuine_source": true
+  },
+  "execution": "Exact nativePPTX code run with displayed relative path in data directory against full acquired gzip; no API key/model/generation involved.",
+  "stdout": "富士山 富士登山 link 232\n",
+  "success": true
+}

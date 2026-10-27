@@ -1,0 +1,102 @@
+{
+  "actor": "/root/wikimedia_coordinator",
+  "snapshot": "candidate1/snapshot.json",
+  "artifact_sha256": {
+    "pdf": "807c5951f8908529bf377330ef01de4bff171c5a1feeeb0aedaa4e0a36402c86",
+    "pptx": "ab50e53bc78c0fd0fa34d336cf7e1c8465339fc3c22fada9fe60341c009ebd98"
+  },
+  "own_scope": {
+    "actual_individually_displayed_pages": [
+      11,
+      24
+    ],
+    "actual_image_paths": [
+      "main-wikipedia-clickstream-review/candidate1/renders/p011.png",
+      "main-wikipedia-clickstream-review/candidate1/renders/p024.png"
+    ],
+    "source_review": false,
+    "all_page_visual_review": false,
+    "independent_review": false,
+    "main_pdf_extracted_text_read_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26
+    ],
+    "text_extraction_method": "PyMuPDF PDF get_text, not a complete native PPTX paragraph/cell audit",
+    "final_changed_extracted_text_read_pages": [
+      1,
+      15,
+      17,
+      21,
+      22,
+      24
+    ],
+    "baseline_main_pdf_extracted_text_read_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26
+    ],
+    "inheritance": "Same actor personally read draft1 main PDF extracted text. Full PDF extraction comparison shows only listed main text pages changed; all such changed text read in candidate1. Own two actual pages both changed and were individually displayed again.",
+    "comparison_record": "root-final-pixelbridge.json"
+  },
+  "findings": [
+    {
+      "page": 24,
+      "issue": "csv.reader line extends beyond code-background right edge",
+      "status": "Resolved: candidate1 changed text and page24 actual inspected"
+    },
+    {
+      "page": 21,
+      "issue": "Link-following wording may overstate referer plus link-presence aggregation",
+      "status": "Resolved: candidate1 changed text and page24 actual inspected"
+    }
+  ],
+  "remaining": [],
+  "independent_final_approval_checked": "review-wikipedia-clickstream/review.json"
+}

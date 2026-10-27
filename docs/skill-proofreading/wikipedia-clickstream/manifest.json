@@ -1,0 +1,389 @@
+[
+  {
+    "page": 1,
+    "title": "Wikipedia Clickstream",
+    "section": "",
+    "kind": "cover"
+  },
+  {
+    "page": 2,
+    "title": "",
+    "section": "目次",
+    "kind": "toc"
+  },
+  {
+    "page": 3,
+    "title": "1. 記事間の移動を集計する",
+    "section": "1. 記事間の移動を集計する",
+    "kind": "divider"
+  },
+  {
+    "page": 4,
+    "title": "Wikipedia Clickstream",
+    "section": "1. 記事間の移動を集計する",
+    "kind": "image",
+    "sources": [
+      "meta"
+    ]
+  },
+  {
+    "page": 5,
+    "title": "どの記事から、どの記事へ移ったか",
+    "section": "1. 記事間の移動を集計する",
+    "kind": "content",
+    "sources": [
+      "meta",
+      "data"
+    ],
+    "body_text": [
+      "Wikipediaへのアクセスを、参照元と移動先の記事の組ごとに月単位で集計した公式データである。",
+      "記事間のつながりに、その月の遷移回数が付く。検索エンジンなどからの記事への流入も含む。",
+      "以下では、日本語版の2026年9月の配布データを使う。"
+    ]
+  },
+  {
+    "page": 6,
+    "title": "「富士山」への流入",
+    "section": "1. 記事間の移動を集計する",
+    "kind": "content",
+    "sources": [
+      "data"
+    ],
+    "example": "富士山 incoming"
+  },
+  {
+    "page": 7,
+    "title": "検索からの流入と記事間の移動が分かる",
+    "section": "1. 記事間の移動を集計する",
+    "kind": "content",
+    "sources": [
+      "data",
+      "code"
+    ],
+    "body_text": [
+      "「富士山」には、検索エンジンを参照元とするアクセスが13,798回ある。検索サイト名や検索語は公開されない。",
+      "other-emptyは参照元が空または解析できないアクセスで、4,047回ある。ブックマークや直接入力だけとは特定できない。",
+      "記事名が入る行では、どのWikipedia記事を参照して到達したかを読める。"
+    ]
+  },
+  {
+    "page": 8,
+    "title": "「富士山」からの移動",
+    "section": "1. 記事間の移動を集計する",
+    "kind": "content",
+    "sources": [
+      "data"
+    ]
+  },
+  {
+    "page": 9,
+    "title": "「人工知能」からの移動",
+    "section": "1. 記事間の移動を集計する",
+    "kind": "content",
+    "sources": [
+      "data"
+    ]
+  },
+  {
+    "page": 10,
+    "title": "「ネコ」と「イヌ」の移動は方向ごとに数える",
+    "section": "1. 記事間の移動を集計する",
+    "kind": "content",
+    "sources": [
+      "data"
+    ]
+  },
+  {
+    "page": 11,
+    "title": "「富士山」からどの記事へ移ったか",
+    "section": "1. 記事間の移動を集計する",
+    "kind": "content",
+    "sources": [
+      "data"
+    ]
+  },
+  {
+    "page": 12,
+    "title": "2. ファイルとデータの作り方",
+    "section": "2. ファイルとデータの作り方",
+    "kind": "divider"
+  },
+  {
+    "page": 13,
+    "title": "1行は参照元と移動先の組を表す",
+    "section": "2. ファイルとデータの作り方",
+    "kind": "content",
+    "sources": [
+      "data",
+      "meta"
+    ],
+    "body_text": [
+      "1か月分が言語ごとのgzip圧縮TSVで配布される。区切り文字はタブで、先頭に列名の行はない。",
+      "列はprev、curr、type、nの4つ。記事名では空白がアンダースコアで表される。",
+      "nはその組に該当するアクセスの回数である。人数や読者数ではない。"
+    ]
+  },
+  {
+    "page": 14,
+    "title": "TSVには4つの列がある",
+    "section": "2. ファイルとデータの作り方",
+    "kind": "content",
+    "sources": [
+      "data"
+    ]
+  },
+  {
+    "page": 15,
+    "title": "typeは参照元と移動先の関係を示す",
+    "section": "2. ファイルとデータの作り方",
+    "kind": "content",
+    "sources": [
+      "data",
+      "code"
+    ]
+  },
+  {
+    "page": 16,
+    "title": "記事名以外の参照元を5区分へまとめる",
+    "section": "2. ファイルとデータの作り方",
+    "kind": "content",
+    "sources": [
+      "code"
+    ]
+  },
+  {
+    "page": 17,
+    "title": "アクセスの記録を加工して公開する",
+    "section": "2. ファイルとデータの作り方",
+    "kind": "content",
+    "sources": [
+      "data",
+      "code"
+    ],
+    "body_text": [
+      "Wikimediaのアクセス記録から、ページ閲覧と判定されたものを選び、既知のボットなどの自動アクセスを除いて集計する。",
+      "記事を収録する標準名前空間を対象とし、リダイレクト先へまとめる。記事のリンク情報を使ってtypeを付ける。",
+      "2026年9月の日本語版には10回以上の組が含まれる。回数が少ない組や同じ記事への遷移は省かれる。"
+    ]
+  },
+  {
+    "page": 18,
+    "title": "日本語版は約627万組を収録する",
+    "section": "2. ファイルとデータの作り方",
+    "kind": "content",
+    "sources": [
+      "data"
+    ]
+  },
+  {
+    "page": 19,
+    "title": "集計の対象月と言語を選べる",
+    "section": "2. ファイルとデータの作り方",
+    "kind": "content",
+    "sources": [
+      "data"
+    ],
+    "body_text": [
+      "2026年9月の配布先には40言語版がある。日本語版、英語版のほか、アラビア語版や中国語版なども含む。",
+      "月ごとに独立したファイルを提供する。記事名やリンク構造も変わるため、複数月を比べるときは対象記事の改名などを確認する。",
+      "今回の日本語版は圧縮約94.9 MBである。1言語・1か月単位で取得できる。"
+    ]
+  },
+  {
+    "page": 20,
+    "title": "3. 利用方法と公開範囲",
+    "section": "3. 利用方法と公開範囲",
+    "kind": "divider"
+  },
+  {
+    "page": 21,
+    "title": "流入、回遊、記事間の関連を調べる",
+    "section": "3. 利用方法と公開範囲",
+    "kind": "content",
+    "sources": [
+      "meta"
+    ],
+    "body_text": [
+      "特定の記事へ、検索や他の記事からどの程度アクセスがあるかを調べられる。",
+      "ある記事から読まれている関連記事を取り出し、記事間の移動を重み付きのネットワークとして扱える。",
+      "リンクの有無と、参照元の記事から移動先の記事への遷移回数を対応させられる。"
+    ]
+  },
+  {
+    "page": 22,
+    "title": "個々の読者の閲覧履歴は含まない",
+    "section": "3. 利用方法と公開範囲",
+    "kind": "content",
+    "sources": [
+      "data",
+      "meta"
+    ],
+    "body_text": [
+      "公開ファイルには、ユーザーID、IPアドレス、各アクセスの時刻、検索語は含まれない。",
+      "公開されるのは月間の組と回数である。記事AからBへの行と、BからCへの行があっても、それらが同じ読者による一連の移動だったかは分からない。",
+      "少数の組が省かれるため、公開行の合計は元のアクセス記録全体を表すものではない。"
+    ]
+  },
+  {
+    "page": 23,
+    "title": "ファイルを取得して4列として読む",
+    "section": "3. 利用方法と公開範囲",
+    "kind": "content",
+    "sources": [
+      "data"
+    ],
+    "body_text": [
+      "公式配布先で対象月を開き、言語版のTSV.gzを取得する。今回のファイル名はclickstream-jawiki-2026-09.tsv.gzである。",
+      "Pythonのgzipとcsvで展開しながら読める。数値のnは文字列から整数へ変換する。",
+      "記事名には引用符も現れるので、TSVの引用符解釈を無効にして読み込む。"
+    ]
+  },
+  {
+    "page": 24,
+    "title": "「富士山」から「富士登山」への行を読む",
+    "section": "3. 利用方法と公開範囲",
+    "kind": "code",
+    "sources": [
+      "data"
+    ]
+  },
+  {
+    "page": 25,
+    "title": "公開データはCC0で提供される",
+    "section": "3. 利用方法と公開範囲",
+    "kind": "content",
+    "sources": [
+      "readme",
+      "cc0"
+    ],
+    "body_text": [
+      "配布先の説明では、Analyticsの公開データにCC0を適用している。データの加工・再配布にも利用できる。",
+      "Wikipediaの記事本文を別途転載する場合は、本文側のライセンス条件を確認する。ClickstreamのCC0が記事本文へそのまま適用されるわけではない。",
+      "分析や図には、対象の言語版と月、Wikipedia Clickstreamを使ったことを示すと出所が伝わる。"
+    ]
+  },
+  {
+    "page": 26,
+    "title": "記事間の移動を月次の表として使う",
+    "section": "3. 利用方法と公開範囲",
+    "kind": "content",
+    "sources": [
+      "meta",
+      "data"
+    ],
+    "body_text": [
+      "Wikipedia Clickstreamは、記事間遷移と集約された流入元を、4列のTSVとして提供する公式データである。",
+      "参照元と移動先の組に月間回数が付き、リンクの有無との関係も分かる。",
+      "記事本文、ページごとの閲覧数、個別の編集履歴とは異なる。読まれ方を記事間の関係から調べるためのデータである。"
+    ]
+  },
+  {
+    "page": 27,
+    "title": "Appendix",
+    "section": "Appendix",
+    "kind": "divider"
+  },
+  {
+    "page": 28,
+    "title": "",
+    "section": "Appendix: 目次",
+    "kind": "toc"
+  },
+  {
+    "page": 29,
+    "title": "1. 追加の遷移例",
+    "section": "Appendix: 1. 追加の遷移例",
+    "kind": "divider"
+  },
+  {
+    "page": 30,
+    "title": "「京都市」からの移動",
+    "section": "Appendix: 1. 追加の遷移例",
+    "kind": "content",
+    "sources": [
+      "data"
+    ]
+  },
+  {
+    "page": 31,
+    "title": "「太陽系」からの移動",
+    "section": "Appendix: 1. 追加の遷移例",
+    "kind": "content",
+    "sources": [
+      "data"
+    ]
+  },
+  {
+    "page": 32,
+    "title": "「村上春樹」からの移動",
+    "section": "Appendix: 1. 追加の遷移例",
+    "kind": "content",
+    "sources": [
+      "data"
+    ]
+  },
+  {
+    "page": 33,
+    "title": "「北海道」からの移動",
+    "section": "Appendix: 1. 追加の遷移例",
+    "kind": "content",
+    "sources": [
+      "data"
+    ]
+  },
+  {
+    "page": 34,
+    "title": "「国際連合」からの移動",
+    "section": "Appendix: 1. 追加の遷移例",
+    "kind": "content",
+    "sources": [
+      "data"
+    ]
+  },
+  {
+    "page": 35,
+    "title": "2. 関連データと参考文献",
+    "section": "Appendix: 2. 関連データと参考文献",
+    "kind": "divider"
+  },
+  {
+    "page": 36,
+    "title": "2015年の研究公開から月次配布へ",
+    "section": "Appendix: 2. 関連データと参考文献",
+    "kind": "content",
+    "sources": [
+      "meta"
+    ],
+    "body_text": [
+      "Ellery WulczynとDario Taraborelliが2015年にWikipedia Clickstreamを公開した。",
+      "初期の2015年1月・2月はデスクトップのみだったが、その後はモバイルWebとアプリのアクセスも対象になった。",
+      "2017年11月から自動的な月次配布となった。現行ファイルの列と対象言語は、利用する月の配布先で確認できる。"
+    ]
+  },
+  {
+    "page": 37,
+    "title": "WikiNavは記事の流入と移動先を表示する",
+    "section": "Appendix: 2. 関連データと参考文献",
+    "kind": "content",
+    "sources": [
+      "meta",
+      "nav"
+    ],
+    "body_text": [
+      "Wikimedia ResearchのWikiNavは、Clickstreamを使って記事への流入元と記事からの移動先を表示するツールである。",
+      "Pageviewsは記事ごとの閲覧数、Clickstreamは参照元と記事の組を提供する。個別記事の時系列と、記事間の移動では調べる対象が異なる。"
+    ]
+  },
+  {
+    "page": 38,
+    "title": "参考文献",
+    "section": "Appendix: 2. 関連データと参考文献",
+    "kind": "references"
+  },
+  {
+    "page": 39,
+    "title": "参考文献",
+    "section": "Appendix: 2. 関連データと参考文献",
+    "kind": "references"
+  }
+]

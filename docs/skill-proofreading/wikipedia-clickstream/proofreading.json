@@ -1,0 +1,173 @@
+{
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "actor": "create_clickstream",
+  "before_pptx_sha256": "3c14cad6562780c68f050200ec6c46a0b9361ef02502c861c2ead299f0becfa1",
+  "before_source": "Saved authoring-draft0 native PPTX, private.",
+  "after_artifact_sha256": {
+    "pptx": "ab50e53bc78c0fd0fa34d336cf7e1c8465339fc3c22fada9fe60341c009ebd98",
+    "pdf": "807c5951f8908529bf377330ef01de4bff171c5a1feeeb0aedaa4e0a36402c86"
+  },
+  "identity": "Same page, native shapeID and paragraph or tablecellparagraph. Repeated titles not used as keys.",
+  "pairs": [
+    {
+      "page": 15,
+      "element": [
+        "paragraph",
+        2,
+        0
+      ],
+      "before": "typeは参照元とリンクの関係を示す",
+      "after": "typeは参照元と移動先の関係を示す",
+      "reason": "参照元と移動先という列間の関係を題名にする。"
+    },
+    {
+      "page": 17,
+      "element": [
+        "paragraph",
+        3,
+        0
+      ],
+      "before": "Wikimediaのアクセス記録から、ページ閲覧と判定され、人間からのアクセスに分類されたものを集計する。",
+      "after": "Wikimediaのアクセス記録から、ページ閲覧と判定されたものを選び、既知のボットなどの自動アクセスを除いて集計する。",
+      "reason": "アクセス分類を、人間の確定ではなく自動アクセスを除く処理として説明する。"
+    },
+    {
+      "page": 21,
+      "element": [
+        "paragraph",
+        3,
+        2
+      ],
+      "before": "リンクが存在することと、そのリンクが実際にたどられた回数を対応させられる。",
+      "after": "リンクの有無と、参照元の記事から移動先の記事への遷移回数を対応させられる。",
+      "reason": "HTTP参照元の集計を、個々のクリックの厳密な証明として言い切らない。"
+    },
+    {
+      "page": 22,
+      "element": [
+        "paragraph",
+        3,
+        1
+      ],
+      "before": "公開されるのは月間の組と回数である。A→BとB→Cの行があっても、同じ読者のA→B→Cという連続した経路は復元できない。",
+      "after": "公開されるのは月間の組と回数である。記事AからBへの行と、BからCへの行があっても、それらが同じ読者による一連の移動だったかは分からない。",
+      "reason": "記号だけの経路を自然な日本語へ置き換え、読者単位の情報がない意味を明確にする。"
+    }
+  ],
+  "format_text_changes": [
+    {
+      "page": 1,
+      "element": [
+        "paragraph",
+        2,
+        0
+      ],
+      "before": "Wikipedia\nClickstream",
+      "after": "Wikipedia Clickstream"
+    },
+    {
+      "page": 38,
+      "element": [
+        "paragraph",
+        3,
+        0
+      ],
+      "before": "Appendix: 3. 研究と参考文献",
+      "after": "Appendix: 2. 関連データと参考文献"
+    },
+    {
+      "page": 39,
+      "element": [
+        "paragraph",
+        3,
+        0
+      ],
+      "before": "Appendix: 3. 研究と参考文献",
+      "after": "Appendix: 2. 関連データと参考文献"
+    },
+    {
+      "page": 24,
+      "shape_id": 4,
+      "before": "import csv, gzip\npath = \"clickstream-jawiki-2026-09.tsv.gz\"\nwith gzip.open(path, \"rt\", encoding=\"utf-8\") as f:\n    rows = csv.reader(f, delimiter=\"\\t\", quoting=csv.QUOTE_NONE)\n    for prev, curr, kind, n in rows:\n        if prev == \"富士山\" and curr == \"富士登山\":\n            print(prev, curr, kind, int(n))",
+      "after": "import csv, gzip\npath = \"clickstream-jawiki-2026-09.tsv.gz\"\nwith gzip.open(path, \"rt\", encoding=\"utf-8\") as f:\n    rows = csv.reader(\n        f, delimiter=\"\\t\", quoting=csv.QUOTE_NONE)\n    for prev, curr, kind, n in rows:\n        if prev == \"富士山\" and curr == \"富士登山\":\n            print(prev, curr, kind, int(n))",
+      "classification": "Whole code block reformatted by adding one line break; per-paragraph shifts are not word-edit pairs."
+    }
+  ],
+  "content_additions": [
+    {
+      "page": 38,
+      "element": [
+        "paragraph",
+        5,
+        1
+      ],
+      "before": "Wikimedia contributors. Meta-Wiki.",
+      "after": "Wikimedia contributors, n.d. Meta-Wiki. 参照2026-10-28.",
+      "reason": "Missing Web reference date/retrievaldate added."
+    },
+    {
+      "page": 39,
+      "element": [
+        "paragraph",
+        4,
+        1
+      ],
+      "before": "Wikimedia Foundation.",
+      "after": "Wikimedia Foundation, n.d. 参照2026-10-28.",
+      "reason": "Missing Web reference date/retrievaldate added."
+    },
+    {
+      "page": 39,
+      "element": [
+        "paragraph",
+        5,
+        1
+      ],
+      "before": "Wikimedia Foundation. GitHub.",
+      "after": "Wikimedia Foundation, n.d. GitHub. 参照2026-10-28.",
+      "reason": "Missing Web reference date/retrievaldate added."
+    }
+  ],
+  "format_adjustments": [
+    {
+      "pages": [
+        1
+      ],
+      "change": "Title centered on one48pt line; native frame enlarged to include descenders."
+    },
+    {
+      "pages": [
+        6,
+        8,
+        9,
+        10,
+        30,
+        31,
+        32,
+        33,
+        34
+      ],
+      "change": "Actual native table extent aligned to sum of column widths; example tables resized19pt and captions placed after table."
+    },
+    {
+      "pages": [
+        11
+      ],
+      "change": "Removed inherited connector shadow, linear count/100pt thickness and larger caption/source gap."
+    },
+    {
+      "pages": [
+        24
+      ],
+      "change": "Wrapped csv.reader call onto two code lines, preserving exact Python semantics."
+    },
+    {
+      "pages": [
+        38,
+        39
+      ],
+      "change": "Reference band aligned with Appendix section2."
+    }
+  ]
+}
