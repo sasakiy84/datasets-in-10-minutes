@@ -1,0 +1,45 @@
+{
+  "role": "Root supplemental source reading and data check; not creator/independent full review.",
+  "own_primary_reading": {
+    "OpenStreetMap": [
+      "Elements official wiki: node/way/relation/tags, id spaces, closedway ambiguity, metadata",
+      "OSMF attribution guidelines: overview/static map attribution requirements"
+    ],
+    "Overture Maps": [
+      "Official accessing catalog page: six themes, core GeoParquet and PMTiles distinction, release and STAC organization",
+      "Official attribution page: Base/Buildings/Divisions/Transportation theme ODbL; visibly retrieved selected Places CDLA vendor entries only, other source conditions delegated to creator full read"
+    ],
+    "GSI DEM": [
+      "Official demtile.html: whole TXT256x256/PNG24bit format, equations and NoData definition",
+      "Official current tile index snippets: DEM variants, smoothing distinction; not whole distribution metadata",
+      "Full-history official web page relevant2008-04-01 initial release entry through notes: 5m aeriallaser/photogrammetry selectedregions,10m24volcanoes,50m nationalexceptNorthernTerritories,250mNorthernTerritories",
+      "GSI publicrelations2023Dec No666 PDF p3 relevantparagraph: aeriallaser5m since2008,1m start2023-11-30; otherPDFpages not read"
+    ]
+  },
+  "own_data_acquisition": "gsi-tile-acquisition.json: one official example tile TXT plus PNG downloaded independently.",
+  "own_data_check": "gsi-tile-decode-check.json: correct RGB24 decoding, NoData mask and all pixels comparison. PNG original mode RGB/no transparency. Actual two current served formats differ at some pixels and masks; Last-Modified differs; cause not inferred. No claim that all current tiles differ or creator-chosen tiles are checked.",
+  "shared_findings": [
+    "Do not generalize current TXT/PNG exact equality from old specification example",
+    "Do not conflate resampled webtiles with native DEM grids",
+    "Respect actual Overture theme/source licenses and map attribution",
+    "Preserve OSM topology and area semantics; explicit selection and clipping scope"
+  ],
+  "pending": "Root supplement full main native and representative image review after immutable drafts ready.",
+  "dem_publication_year_evidence": {
+    "scope": "Initial public distribution of FoundationMapInformation DEM series, not earliest any GSI elevation product",
+    "date": "2008-04-01",
+    "url": "https://service.gsi.go.jp/kiban/app/data_update_info_all/",
+    "support_url": "https://www.gsi.go.jp/common/000253816.pdf",
+    "read_via": "web tool official HTML lines2416-2447 andPDFp3 text"
+  },
+  "additional_read": [
+    {
+      "source": "../gsi-dem/sources/ichiran.txt",
+      "scope": "lines 6882–6904: dem TXT is DEM10B, max zoom14, TXT updates stopped October2024; personally read current official saved text"
+    },
+    {
+      "source": "../overture-maps/sources/original-building-parquet-metadata.json",
+      "scope": "geo metadata: 1.1.0 WKB Polygon/MultiPolygon, CRS field absent; did not decode ARROW schema blob"
+    }
+  ]
+}

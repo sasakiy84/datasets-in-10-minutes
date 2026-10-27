@@ -1,0 +1,26 @@
+{
+  "reviewer": "review_osm",
+  "reviewed_image": "../openstreetmap/map-overview.png",
+  "actual_visual": true,
+  "issues": [
+    {
+      "id": "OSM-M1",
+      "status": "sent_creator",
+      "description": "SVG clipping uses panel rectangle after aspect preserving minscale; panel corresponds to wider longitude extent than stated bbox. Exact transformed bbox clip or updated bbox required."
+    },
+    {
+      "id": "OSM-M2",
+      "status": "sent_creator",
+      "description": "All leisure/landuse polygons rendered green but labeled greenery. Restrict tag values to actual vegetation/park kinds or rename and separate categories."
+    }
+  ],
+  "independent_source_request": {
+    "url": "https://api.openstreetmap.org/api/0.6/way/20927292/full",
+    "status": 200,
+    "element": "way/20927292",
+    "version": "53",
+    "timestamp": "2026-03-02T14:46:44Z",
+    "consistent_with_creator_raw": true,
+    "scope": "single way with full nodes; not independent bbox/fullplanet download"
+  }
+}

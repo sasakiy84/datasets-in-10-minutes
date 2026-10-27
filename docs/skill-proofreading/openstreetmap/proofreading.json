@@ -1,0 +1,60 @@
+{
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "actor": "create_osm",
+  "skill": "japanese-slide-proofreading",
+  "actual_saved_before": "initial-pages.jsonl / initial-build.py",
+  "pairs": [
+    {
+      "page": 16,
+      "title": "タグは、地物の種類と詳しい属性を表す",
+      "before": "タグは、地物の種類と詳しい属性を表す\nタグはkey=valueの組。highway=primaryは主要な道路、building=yesは建物を表す。\n名称、営業時間、一方通行などもタグで記録する。必要な属性は地物ごとに異なる。\n例：道路のoneway=yesは、wayのnode列の向きに沿った一方通行を表す。\n2. 地物を表す三つの要素\n[1] OpenStreetMap contributors. n.d. Map features. OpenStreetMap Wiki.\nhttps://wiki.openstreetmap.org/wiki/Map_features",
+      "after": "タグは、地物の種類と詳しい属性を表す\nタグはkey=valueの組。highway=primaryは主要な道路、building=yesは建物を表す。\n名称、営業時間、一方通行などもタグで記録する。記録される属性は地物ごとに異なる。\n例：道路のoneway=yesは、wayのnode列の向きに沿った一方通行を表す。\n2. 地物を表す三つの要素\n[1] OpenStreetMap contributors. n.d. Map features. OpenStreetMap Wiki.\nhttps://wiki.openstreetmap.org/wiki/Map_features",
+      "reason": "自然な日本語と必要な情報量へ調整。原レコードと定義を再照合。"
+    },
+    {
+      "page": 20,
+      "title": "OSM XMLとPBFは、同じ要素モデルを保存する",
+      "before": "OSM XMLとPBFは、同じ要素モデルを保存する\n3. ファイル形式と座標\n形式\n保存の仕方\n読み方の特徴\nOSM XML\n.osm\nタグと参照をテキストで記述\n中身を直接読める\nPBF\n.osm.pbf\nProtocol Buffersと圧縮を利用\n小さく、効率よく読める\nGeoJSON\n.geojson\n座標列と属性に変換して保存\nGISやWeb地図で使いやすい\nGeoJSONは変換後の表現。OSMの参照構造を、そのまま保存する形式ではない。\n[1] OpenStreetMap contributors. n.d. PBF Format. OpenStreetMap Wiki.\nhttps://wiki.openstreetmap.org/wiki/PBF_Format",
+      "after": "OSM XMLとPBFは、同じ要素モデルを保存する\n3. ファイル形式と座標\n形式\n保存の仕方\n読み方の特徴\nOSM XML\n.osm\nタグと参照をXMLで記述\n中身を直接読める\nPBF\n.osm.pbf\nProtocol Buffersで符号化し圧縮\n小さく、効率よく読める\nGeoJSON\n.geojson\n座標列と属性を保存\nGISやWeb地図向き\nGeoJSONは変換後の表現。OSMの参照構造を、そのまま保存する形式ではない。\n[1] OpenStreetMap contributors. n.d. PBF Format. OpenStreetMap Wiki.\nhttps://wiki.openstreetmap.org/wiki/PBF_Format",
+      "reason": "自然な日本語と必要な情報量へ調整。原レコードと定義を再照合。"
+    },
+    {
+      "page": 24,
+      "title": "編集は、地物ごとの履歴として蓄積される",
+      "before": "編集は、地物ごとの履歴として蓄積される\n各要素はIDを保ち、変更のたびにversionが増える。timestampは、そのバージョンの更新時刻。\n複数の編集はchangesetという編集単位にまとめる。変更の説明や履歴を確認できる。\n地物の更新時刻と、データを取得した日時は別に扱う。\n4. 更新・入手・利用条件\n[1] OpenStreetMap contributors. n.d. API v0.6. OpenStreetMap Wiki.\nhttps://wiki.openstreetmap.org/wiki/API_v0.6",
+      "after": "編集は、地物ごとの履歴として蓄積される\n各要素にはIDが付き、変更のたびにversionが増える。timestampは、そのバージョンの更新時刻。\n複数の編集はchangesetという編集単位にまとめる。変更の説明や履歴を確認できる。\n地物の更新時刻と、データを取得した日時は別に扱う。\n4. 更新・入手・利用条件\n[1] OpenStreetMap contributors. n.d. API v0.6. OpenStreetMap Wiki.\nhttps://wiki.openstreetmap.org/wiki/API_v0.6",
+      "reason": "自然な日本語と必要な情報量へ調整。原レコードと定義を再照合。"
+    },
+    {
+      "page": 25,
+      "title": "地図の充実度は、地域や属性によって異なる",
+      "before": "地図の充実度は、地域や属性によって異なる\n道路、建物、施設はそれぞれ追加・修正される。建物が詳しい地域でも、営業時間までそろっているとは限らない。\n利用する地域で必要な地物・属性を確認し、不足があれば現地情報や他の資料で補う。\n施設が記録された時刻だけでは、営業中かどうかは分からない。\n4. 更新・入手・利用条件\n[1] OpenStreetMap Foundation. n.d. About OpenStreetMap.\nhttps://www.openstreetmap.org/about",
+      "after": "地図の充実度は、地域や属性によって異なる\n道路、建物、施設はそれぞれ追加・修正される。建物が詳しい地域でも、営業時間までそろっているとは限らない。\n利用する地域で必要な地物・属性を確認し、不足があれば現地情報や他の資料で補う。\n4. 更新・入手・利用条件\n[1] OpenStreetMap Foundation. n.d. About OpenStreetMap.\nhttps://www.openstreetmap.org/about",
+      "reason": "自然な日本語と必要な情報量へ調整。原レコードと定義を再照合。"
+    },
+    {
+      "page": 26,
+      "title": "地域の抽出と、用途に応じた入手先を選ぶ",
+      "before": "地域の抽出と、用途に応じた入手先を選ぶ\n4. 更新・入手・利用条件\n入手先\n適した使い方\n公式サイトのエクスポート／API\n小地域の要素を取得する\nOverpass API\nタグや範囲を指定して検索する\nPlanet／Geofabrikなどの抽出\n世界全体・国や地域のPBFを読む\n差分ファイル\n手元のデータへ更新を取り込む\n[1] OpenStreetMap Foundation. n.d. Planet OSM.\nhttps://planet.openstreetmap.org/",
+      "after": "地域の抽出と、用途に応じた入手先を選ぶ\n4. 更新・入手・利用条件\n入手先\n適した使い方\n公式サイト／API\n小地域の要素を取得する\nOverpass API\nタグや範囲を指定して検索する\nPlanet／Geofabrik\n世界全体・国や地域のPBFを読む\n差分ファイル\n手元のデータへ更新を取り込む\n[1] OpenStreetMap Foundation. n.d. Planet OSM.\nhttps://planet.openstreetmap.org/",
+      "reason": "自然な日本語と必要な情報量へ調整。原レコードと定義を再照合。"
+    },
+    {
+      "page": 35,
+      "title": "XMLを開き、施設の座標と名前を読む",
+      "before": "XMLを開き、施設の座標と名前を読む\nAppendix: 1. 実データを詳しく読む\nimport xml.etree.ElementTree as ET\n\nroot = ET.parse(\"kyoto.osm\").getroot()\nfor node in root.findall(\"node\"):\n    tags = {t.get(\"k\"): t.get(\"v\") for t in node.findall(\"tag\")}\n    if tags.get(\"amenity\") == \"post_office\":\n        print(tags.get(\"name\"), node.get(\"lat\"), node.get(\"lon\"))\n小地域のOSM XMLを読み込む例。広域のPBFにはストリーム処理ができる専用ライブラリを使う。\n[1] OpenStreetMap contributors. n.d. OSM XML. OpenStreetMap Wiki.\nhttps://wiki.openstreetmap.org/wiki/OSM_XML",
+      "after": "XMLを開き、施設の座標と名前を読む\nAppendix: 1. 実データを詳しく読む\nimport xml.etree.ElementTree as ET\n\nroot = ET.parse(\"kyoto.osm\").getroot()\nfor node in root.findall(\"node\"):\n    tags = {t.get(\"k\"): t.get(\"v\")\n            for t in node.findall(\"tag\")}\n    if tags.get(\"amenity\") == \"post_office\":\n        print(tags.get(\"name\"), node.get(\"lat\"), node.get(\"lon\"))\n小地域のOSM XMLを読み込む例。広域のPBFにはストリーム処理ができる専用ライブラリを使う。\n[1] OpenStreetMap contributors. n.d. OSM XML. OpenStreetMap Wiki.\nhttps://wiki.openstreetmap.org/wiki/OSM_XML",
+      "reason": "自然な日本語と必要な情報量へ調整。原レコードと定義を再照合。"
+    },
+    {
+      "page": 18,
+      "before": "relationは、複数のwayを一つの地物にまとめる",
+      "after": "relationは、複数の要素と役割をまとめる",
+      "reason": "建物の例に限定せず、relationの一般定義とつながる題名へ修正。",
+      "origin": "actual saved initial-build.py"
+    }
+  ],
+  "scope": "all native Japanese text read; audit production details omitted from slides",
+  "record_correction": "Removed four false pairings caused by duplicate title keys (main/appendix TOCs and repeated reference-page titles); only actual saved text changes remain."
+}
