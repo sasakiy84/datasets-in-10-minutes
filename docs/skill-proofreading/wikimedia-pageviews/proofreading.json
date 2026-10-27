@@ -1,0 +1,297 @@
+{
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "skill": ".agents/skills/japanese-slide-proofreading/SKILL.md",
+  "actor": "/root/wikimedia_coordinator/create_pageviews",
+  "baseline_pptx_sha256": "0ae29b1a248cdb0fde9d13b6e29590afc7c6f0db2ee3d4122694fcfb5892af51",
+  "final_pptx_sha256": "50b4ee6a0041d38eb189852423e670c5ccb9b16a1679f05dad2d360d73e41adc",
+  "final_pdf_sha256": "018e76b549433abcb8624e490a8eb882e859177d08608844047c2b296903983f",
+  "text_pairs": [
+    {
+      "page": 7,
+      "location": {
+        "shape_id": 3,
+        "paragraph": 2
+      },
+      "before": "編集操作や、多くの特別ページへの要求は集計から除かれる。",
+      "after": "編集操作や、多くの特別ページは除く。検索ページなど一部の特別ページは含む。",
+      "kind": "native_text_edit"
+    },
+    {
+      "page": 15,
+      "location": {
+        "shape_id": 6,
+        "paragraph": 0
+      },
+      "before": "[1] Wikimedia Analytics API. 富士山、2025-09・日次・user。CC0.",
+      "after": "[1] Wikimedia Analytics API. 富士山、2025-09・月次・アクセス方法別・user。CC0.",
+      "kind": "native_text_edit"
+    },
+    {
+      "page": 20,
+      "location": {
+        "shape_id": 5,
+        "paragraph": 0
+      },
+      "before": "「富士山」の2025年9月1日分。実際の応答では、日ごとのレコードがitems配列に並ぶ。",
+      "after": "「富士山」の1日分。日次レコードはitems配列に並ぶ。",
+      "kind": "native_text_edit"
+    },
+    {
+      "page": 26,
+      "location": {
+        "shape_id": 5,
+        "paragraph": 0
+      },
+      "before": "requestsを導入して実行する。User-Agentの連絡先を自分のものへ変更する。",
+      "after": "requestsを導入し、連絡先を自分のものに変更して実行する。",
+      "kind": "native_text_edit"
+    },
+    {
+      "page": 34,
+      "location": {
+        "shape_id": 4,
+        "row": 0,
+        "column": 0
+      },
+      "before": "公式順位",
+      "after": "順位",
+      "kind": "native_text_edit"
+    }
+  ],
+  "structural_and_code_changes": [
+    {
+      "pages": [
+        23
+      ],
+      "kind": "page_reconstruction",
+      "reason": "Replace prose-only format explanation and incorrect URL encoding statement with actual hourly dump line, four-column table and UTC end-of-window explanation. Shape identities are not treated as corresponding across this reconstruction.",
+      "before_native": [
+        {
+          "shape_id": 2,
+          "paragraph": 0,
+          "text": "時間別dumpは、1行に1ページの集計を置く"
+        },
+        {
+          "shape_id": 3,
+          "paragraph": 0,
+          "text": "pageviewsの時間別ファイルは、プロジェクトコード、ページタイトル、閲覧数、第4列の値を空白で区切る。"
+        },
+        {
+          "shape_id": 3,
+          "paragraph": 1,
+          "text": "ファイル名の日時が、どの1時間を集計したかを表す。ページタイトルはURLエンコードされ、mobileサイトはコードでも分かれる。"
+        },
+        {
+          "shape_id": 3,
+          "paragraph": 2,
+          "text": "旧形式と互換性を保つ第4列は、現在のpageviewsでは応答容量の測定値として使わない。記事別の回数を読むなら最初の3列が中心になる。"
+        },
+        {
+          "shape_id": 4,
+          "paragraph": 0,
+          "text": "3. データの作成と配布形式"
+        },
+        {
+          "shape_id": 5,
+          "paragraph": 0,
+          "text": "[1] Wikimedia Foundation. Data Platform/Data Lake/Traffic/Pageviews."
+        },
+        {
+          "shape_id": 5,
+          "paragraph": 1,
+          "text": "https://wikitech.wikimedia.org/wiki/Data_Platform/Data_Lake/Traffic/Pageviews"
+        }
+      ],
+      "after_native": [
+        {
+          "shape_id": 2,
+          "paragraph": 0,
+          "text": "時間別dumpは、1行に1ページの集計を置く"
+        },
+        {
+          "shape_id": 3,
+          "paragraph": 0,
+          "text": "3. データの作成と配布形式"
+        },
+        {
+          "shape_id": 4,
+          "paragraph": 0,
+          "text": "af.m Adidas 1 0"
+        },
+        {
+          "shape_id": 5,
+          "row": 0,
+          "column": 0,
+          "text": "フィールド"
+        },
+        {
+          "shape_id": 5,
+          "row": 0,
+          "column": 1,
+          "text": "実レコードの意味"
+        },
+        {
+          "shape_id": 5,
+          "row": 1,
+          "column": 0,
+          "text": "domain_code"
+        },
+        {
+          "shape_id": 5,
+          "row": 1,
+          "column": 1,
+          "text": "af.m はアフリカーンス語版のmobileサイト"
+        },
+        {
+          "shape_id": 5,
+          "row": 2,
+          "column": 0,
+          "text": "page_title"
+        },
+        {
+          "shape_id": 5,
+          "row": 2,
+          "column": 1,
+          "text": "Adidasというページ名。空白は_で表す"
+        },
+        {
+          "shape_id": 5,
+          "row": 3,
+          "column": 0,
+          "text": "count_views"
+        },
+        {
+          "shape_id": 5,
+          "row": 3,
+          "column": 1,
+          "text": "その1時間に1回閲覧された"
+        },
+        {
+          "shape_id": 5,
+          "row": 4,
+          "column": 0,
+          "text": "total_response_size"
+        },
+        {
+          "shape_id": 5,
+          "row": 4,
+          "column": 1,
+          "text": "0。旧形式に合わせて残る互換列"
+        },
+        {
+          "shape_id": 6,
+          "paragraph": 0,
+          "text": "20250901-010000のファイルから取得。2025-09-01 01:00 UTCで終わる1時間の集計。"
+        },
+        {
+          "shape_id": 7,
+          "paragraph": 0,
+          "text": "[1] Wikimedia Foundation. Data Platform/Data Lake/Traffic/Pageviews."
+        },
+        {
+          "shape_id": 7,
+          "paragraph": 1,
+          "text": "https://wikitech.wikimedia.org/wiki/Data_Platform/Data_Lake/Traffic/Pageviews"
+        }
+      ]
+    },
+    {
+      "pages": [
+        26
+      ],
+      "kind": "code_block_reformat",
+      "shape_id": 4,
+      "before": "import requests\nfrom urllib.parse import quote\nbase = \"https://wikimedia.org/api/rest_v1/metrics/pageviews\"\npath = \"/per-article/ja.wikipedia/all-access/user/\"\npath += quote(\"富士山\") + \"/daily/2025090100/2025093000\"\nheaders = {\"User-Agent\": \"my-analysis/1.0 (contact@example.org)\"}\nr = requests.get(base + path, headers=headers, timeout=30)\nr.raise_for_status()\ndata = r.json()\nprint(data[\"items\"][0])",
+      "after": "import requests; from urllib.parse import quote\nbase = \"https://wikimedia.org/api/rest_v1/metrics/pageviews\"\npath = \"/per-article/ja.wikipedia/all-access/user/\"\npath += quote(\"富士山\") + \"/daily/2025090100/2025093000\"\nheaders = {\"User-Agent\": \"my-analysis/1.0 (contact@example.org)\"}\nr = requests.get(base + path, headers=headers, timeout=30)\nr.raise_for_status()\ndata = r.json()\nprint(data[\"items\"][0])",
+      "reason": "Combine import lines to keep code and human note readable with footer clearance; same executable request."
+    }
+  ],
+  "format_only_changes": [
+    {
+      "pages": [
+        1,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        11,
+        13,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        29,
+        30,
+        31,
+        32,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40
+      ],
+      "description": "Native frame containment and specified source clearances; title left glyph bearings, code note sizes, and numeric table widths. Text pairs above exclude format-only edits."
+    }
+  ],
+  "reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40
+  ],
+  "remaining": [],
+  "creation_stage_remaining": [
+    "independent final pair approval"
+  ],
+  "independent_review_resolved_by": "independent-review/review-wikimedia-pageviews/review.json"
+}

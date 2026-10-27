@@ -1,0 +1,86 @@
+{
+  "actor": "/root/wikimedia_coordinator/review_pageviews",
+  "dataset": "wikimedia-pageviews",
+  "artifact_sha256": {
+    "pdf": "018e76b549433abcb8624e490a8eb882e859177d08608844047c2b296903983f",
+    "pptx": "50b4ee6a0041d38eb189852423e670c5ccb9b16a1679f05dad2d360d73e41adc"
+  },
+  "approved": true,
+  "remaining": [],
+  "true_pairs_same_page_shape_paragraph_or_cell": [
+    {
+      "page": 7,
+      "location": {
+        "shape_id": 3,
+        "paragraph": 2
+      },
+      "before": "編集操作や、多くの特別ページへの要求は集計から除かれる。",
+      "after": "編集操作や、多くの特別ページは除く。検索ページなど一部の特別ページは含む。",
+      "kind": "native_text_edit"
+    },
+    {
+      "page": 15,
+      "location": {
+        "shape_id": 6,
+        "paragraph": 0
+      },
+      "before": "[1] Wikimedia Analytics API. 富士山、2025-09・日次・user。CC0.",
+      "after": "[1] Wikimedia Analytics API. 富士山、2025-09・月次・アクセス方法別・user。CC0.",
+      "kind": "native_text_edit"
+    },
+    {
+      "page": 20,
+      "location": {
+        "shape_id": 5,
+        "paragraph": 0
+      },
+      "before": "「富士山」の2025年9月1日分。実際の応答では、日ごとのレコードがitems配列に並ぶ。",
+      "after": "「富士山」の1日分。日次レコードはitems配列に並ぶ。",
+      "kind": "native_text_edit"
+    },
+    {
+      "page": 26,
+      "location": {
+        "shape_id": 5,
+        "paragraph": 0
+      },
+      "before": "requestsを導入して実行する。User-Agentの連絡先を自分のものへ変更する。",
+      "after": "requestsを導入し、連絡先を自分のものに変更して実行する。",
+      "kind": "native_text_edit"
+    },
+    {
+      "page": 34,
+      "location": {
+        "shape_id": 4,
+        "row": 0,
+        "column": 0
+      },
+      "before": "公式順位",
+      "after": "順位",
+      "kind": "native_text_edit"
+    }
+  ],
+  "structural_and_code_separate": [
+    {
+      "pages": [
+        23
+      ],
+      "kind": "page_reconstruction"
+    },
+    {
+      "pages": [
+        26
+      ],
+      "kind": "code_block_reformat"
+    }
+  ],
+  "format_only_separate": true,
+  "native_pages_checked": 40,
+  "native_nonempty_paragraphs_plus_all_cells": 388,
+  "planned_main_seconds": 600,
+  "actual_reading_seconds": null,
+  "raster_text_scope": "All native slide paragraphs and each complete table cell checked. Internal plot lettering and screenshot not OCRed; actual page images individually read.",
+  "dump_line_exact_in_partial_raw": true,
+  "meaning_review": "All five actual before/after pairs read. Special-search inclusion, source monthly/access scope, concise JSON/note wording, rank header keep intended meaning. p23 rebuilt with genuine line and explicit UTC end; p26 code reformat separate from prose; additions/format-only not passed off as linguistic pairs.",
+  "public_link_review": "Pending coordinator integration; separate scope to follow."
+}

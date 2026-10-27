@@ -1,0 +1,380 @@
+[
+  {
+    "page": 1,
+    "title": "Wikimedia Pageviews",
+    "section": "",
+    "kind": "cover"
+  },
+  {
+    "page": 2,
+    "title": "Wikimedia Analytics APIの公式サイト",
+    "section": "公式サイト",
+    "kind": "image",
+    "sources": [
+      "home"
+    ]
+  },
+  {
+    "page": 3,
+    "title": "",
+    "section": "目次",
+    "kind": "toc"
+  },
+  {
+    "page": 4,
+    "title": "1. 閲覧数と時系列の実例",
+    "section": "1. 閲覧数と時系列の実例",
+    "kind": "divider"
+  },
+  {
+    "page": 5,
+    "title": "「富士山」は、1日に何回閲覧されたか",
+    "section": "1. 閲覧数と時系列の実例",
+    "kind": "figure",
+    "sources": [
+      "fuji"
+    ]
+  },
+  {
+    "page": 6,
+    "title": "9月1日の1レコードを読む",
+    "section": "1. 閲覧数と時系列の実例",
+    "kind": "content",
+    "sources": [
+      "fuji"
+    ]
+  },
+  {
+    "page": 7,
+    "title": "ページの内容を返した要求を数える",
+    "section": "1. 閲覧数と時系列の実例",
+    "kind": "content",
+    "sources": [
+      "concept"
+    ],
+    "body_text": [
+      "Pageviewsは、Wikipediaなどのページの内容を返した要求の回数を集計する。Wikimedia Foundationが公式に提供している。",
+      "WebではHTML、モバイルアプリでは所定のJSON要求を対象とし、応答が200または304などの条件を満たすものを数える。",
+      "編集操作や、多くの特別ページは除く。検索ページなど一部の特別ページは含む。"
+    ]
+  },
+  {
+    "page": 8,
+    "title": "閲覧回数と読者数では、数える単位が違う",
+    "section": "1. 閲覧数と時系列の実例",
+    "kind": "content",
+    "sources": [
+      "unique"
+    ]
+  },
+  {
+    "page": 9,
+    "title": "「大谷翔平」は、日による変化が大きい",
+    "section": "1. 閲覧数と時系列の実例",
+    "kind": "figure",
+    "sources": [
+      "ohtani"
+    ]
+  },
+  {
+    "page": 10,
+    "title": "月の合計と、閲覧が多かった日",
+    "section": "1. 閲覧数と時系列の実例",
+    "kind": "content",
+    "sources": [
+      "ohtani"
+    ]
+  },
+  {
+    "page": 11,
+    "title": "2. 集計条件による違い",
+    "section": "2. 集計条件による違い",
+    "kind": "divider"
+  },
+  {
+    "page": 12,
+    "title": "同じページでも、集計条件を指定できる",
+    "section": "2. 集計条件による違い",
+    "kind": "content",
+    "sources": [
+      "api"
+    ]
+  },
+  {
+    "page": 13,
+    "title": "agentで自動アクセスを分類する",
+    "section": "2. 集計条件による違い",
+    "kind": "content",
+    "sources": [
+      "concept"
+    ]
+  },
+  {
+    "page": 14,
+    "title": "日本語版全体では、自動アクセスも多い",
+    "section": "2. 集計条件による違い",
+    "kind": "content",
+    "sources": [
+      "data"
+    ]
+  },
+  {
+    "page": 15,
+    "title": "「富士山」の閲覧をアクセス方法で分ける",
+    "section": "2. 集計条件による違い",
+    "kind": "content",
+    "sources": [
+      "access"
+    ]
+  },
+  {
+    "page": 16,
+    "title": "時刻はUTCで、日次・月次を選ぶ",
+    "section": "2. 集計条件による違い",
+    "kind": "content",
+    "sources": [
+      "api"
+    ],
+    "body_text": [
+      "日次データのtimestampは、集計する日の開始をUTCで表す。2025090100は2025年9月1日0時 UTCで、日本時間の同日9時に当たる。",
+      "日ごとの変動を調べるならdaily、月単位の規模を比較するならmonthlyを使う。月の日数も比較する量に合わせて扱う。",
+      "現在のPageviews APIは2015年7月1日以降を提供する。ここでは確定した過去月の2025年9月を使った。"
+    ]
+  },
+  {
+    "page": 17,
+    "title": "記事名を指定するときは転送も考える",
+    "section": "2. 集計条件による違い",
+    "kind": "content",
+    "sources": [
+      "concept"
+    ],
+    "body_text": [
+      "記事別の系列は、指定したページタイトルに対応する。表記違いや別名からの転送先へ、閲覧数が自動で合算されるわけではない。",
+      "同じ対象への関心を調べたい場合は、現在のタイトルだけでなく、転送ページや改名の有無も調べて対象を決める。",
+      "「記事の主題への関心」として解釈する前に、どのページ名の閲覧を集めたかをそろえる。"
+    ]
+  },
+  {
+    "page": 18,
+    "title": "3. データの作成と配布形式",
+    "section": "3. データの作成と配布形式",
+    "kind": "divider"
+  },
+  {
+    "page": 19,
+    "title": "Web要求を分類し、時刻やページで集計する",
+    "section": "3. データの作成と配布形式",
+    "kind": "content",
+    "sources": [
+      "hourly"
+    ],
+    "body_text": [
+      "Wikimediaのサーバーへの要求から、ページ閲覧の定義に合う要求を選ぶ。アクセス方法や自動アクセスの分類も付ける。",
+      "ページ、プロジェクト、時刻などの単位で回数を集計し、公開用の統計へまとめる。APIや配布ファイルからその集計を取得できる。",
+      "記事本文のコーパスとは異なり、ここに入るのは閲覧回数と集計条件。本文の内容を分析する場合は、別途本文データと対応づける。"
+    ]
+  },
+  {
+    "page": 20,
+    "title": "APIは集計条件と回数をJSONで返す",
+    "section": "3. データの作成と配布形式",
+    "kind": "code",
+    "sources": [
+      "fuji"
+    ]
+  },
+  {
+    "page": 21,
+    "title": "JSONの文字列から集計対象を読める",
+    "section": "3. データの作成と配布形式",
+    "kind": "content",
+    "sources": [
+      "fuji"
+    ]
+  },
+  {
+    "page": 22,
+    "title": "APIとファイル配布を使い分ける",
+    "section": "3. データの作成と配布形式",
+    "kind": "content",
+    "sources": [
+      "api",
+      "dump"
+    ]
+  },
+  {
+    "page": 23,
+    "title": "時間別dumpは、1行に1ページの集計を置く",
+    "section": "3. データの作成と配布形式",
+    "kind": "data-format",
+    "sources": [
+      "format"
+    ]
+  },
+  {
+    "page": 24,
+    "title": "公開するのは集計済みの統計",
+    "section": "3. データの作成と配布形式",
+    "kind": "content",
+    "sources": [
+      "hourly"
+    ],
+    "body_text": [
+      "記事別APIは、ページ・日や月・アクセス方法・agentごとの閲覧回数を公開する。閲覧した人のIPアドレスや識別子は含まない。",
+      "内部のpageview_hourlyには国・都市や参照元などの細かな属性もあるが、プライバシー保護のため、そのテーブル自体は非公開。",
+      "国別の統計などは別の公開APIで提供される。記事別系列と自由に組み合わせられる個票が公開されているわけではない。"
+    ]
+  },
+  {
+    "page": 25,
+    "title": "4. 取得して分析に使う",
+    "section": "4. 取得して分析に使う",
+    "kind": "divider"
+  },
+  {
+    "page": 26,
+    "title": "Pythonで1記事の日次データを取得する",
+    "section": "4. 取得して分析に使う",
+    "kind": "code",
+    "sources": [
+      "policy"
+    ]
+  },
+  {
+    "page": 27,
+    "title": "取得した日次データを集計する",
+    "section": "4. 取得して分析に使う",
+    "kind": "code",
+    "sources": [
+      "fuji"
+    ]
+  },
+  {
+    "page": 28,
+    "title": "月間の人気ページも、一覧で取得できる",
+    "section": "4. 取得して分析に使う",
+    "kind": "content",
+    "sources": [
+      "data"
+    ]
+  },
+  {
+    "page": 29,
+    "title": "記事の比較や、閲覧の推移の調査に使う",
+    "section": "4. 取得して分析に使う",
+    "kind": "content",
+    "sources": [
+      "home"
+    ],
+    "body_text": [
+      "記事ごとの時系列を比べると、継続して読まれるページと、短期間に閲覧が増えるページの違いを調べられる。",
+      "人気ページの一覧から対象を見つけ、記事別APIで日ごとの推移を調べる。内容や出来事との対応は、記事本文や別資料で確かめる。",
+      "公式のWikimedia Statisticsや、Pageviews Analysisの画面からも統計を探索できる。APIは、その集計を自分の分析へ取り込む入口になる。"
+    ]
+  },
+  {
+    "page": 30,
+    "title": "CC0で利用でき、APIには識別情報を付ける",
+    "section": "4. 取得して分析に使う",
+    "kind": "content",
+    "sources": [
+      "policy"
+    ],
+    "body_text": [
+      "Analytics APIのデータとAnalyticsの配布統計は、CC0 1.0で提供される。本資料のグラフと表は、その閲覧統計から作成した。",
+      "APIを呼ぶときは、アプリ名と連絡先をUser-Agentに設定する。要求は順番に送り、制限応答があれば指定された時間を空ける。",
+      "記事本文や公式文書の文章・画像にはそれぞれ別の条件がある。統計データのCC0を、Wikipediaの内容全般の条件へ広げない。"
+    ]
+  },
+  {
+    "page": 31,
+    "title": "Wikimedia Pageviewsの要点",
+    "section": "4. 取得して分析に使う",
+    "kind": "content",
+    "sources": [
+      "api"
+    ],
+    "body_text": [
+      "Wikipediaなどのページが、いつ、何回閲覧されたかを調べる公式の集計データ。人や訪問の個票ではなく、要求の回数を扱う。",
+      "記事・言語版・期間・アクセス方法・agentをそろえることで、閲覧の規模や時間変化を比較できる。",
+      "少数記事ならAPI、大きな範囲や長期間なら配布ファイルを選ぶ。JSONやテキストとして取得し、本文などの別データと組み合わせて使える。"
+    ]
+  },
+  {
+    "page": 32,
+    "title": "Appendix",
+    "section": "Appendix",
+    "kind": "divider"
+  },
+  {
+    "page": 33,
+    "title": "",
+    "section": "Appendix: 目次",
+    "kind": "toc"
+  },
+  {
+    "page": 34,
+    "title": "分野の異なる5ページの月間レコード",
+    "section": "Appendix: 1. 追加のレコードと集計",
+    "kind": "content",
+    "sources": [
+      "data"
+    ]
+  },
+  {
+    "page": 35,
+    "title": "同じ日の閲覧を2記事で並べる",
+    "section": "Appendix: 1. 追加のレコードと集計",
+    "kind": "content",
+    "sources": [
+      "data"
+    ]
+  },
+  {
+    "page": 36,
+    "title": "長期の配布データには旧系列も含まれる",
+    "section": "Appendix: 2. 長期データと関連指標",
+    "kind": "content",
+    "sources": [
+      "complete"
+    ],
+    "body_text": [
+      "pageview_completeは2007年12月以降の長い時系列を、共通の形式で提供する。日次ファイルの各行に、日合計と時間別の値を持つ。",
+      "元データは年代で異なり、2015年より前には旧pagecounts系列を使う。2015年以降は現在のpageview定義による系列が中心となる。",
+      "page IDは2015年以降、検出した自動アクセスの情報は2020年以降など、利用できる属性も時期で異なる。長期分析では期間ごとの収録条件を確認する。"
+    ]
+  },
+  {
+    "page": 37,
+    "title": "Unique devicesは、端末の訪問を推計する",
+    "section": "Appendix: 2. 長期データと関連指標",
+    "kind": "content",
+    "sources": [
+      "unique"
+    ],
+    "body_text": [
+      "Unique devicesは、閲覧回数とは別に、Wikimediaプロジェクトへ訪れた端末の数を間接的に推計する指標。",
+      "最終訪問の時期を記録するCookieを使い、同じ端末の再訪を日次・月次の集計へ反映する。",
+      "1人が複数端末を使うこともあるため、端末数は読者数を近似するための量となる。記事別の閲覧回数と同じ単位にはならない。"
+    ]
+  },
+  {
+    "page": 38,
+    "title": "参考文献",
+    "section": "Appendix: 3. 参考文献",
+    "kind": "references"
+  },
+  {
+    "page": 39,
+    "title": "参考文献",
+    "section": "Appendix: 3. 参考文献",
+    "kind": "references"
+  },
+  {
+    "page": 40,
+    "title": "参考文献",
+    "section": "Appendix: 3. 参考文献",
+    "kind": "references"
+  }
+]
