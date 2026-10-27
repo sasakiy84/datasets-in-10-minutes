@@ -962,3 +962,9 @@ OpenStreetMap・Overture Maps・国土地理院DEM をそれぞれつくって
 ~~~~text
 終わったら、日本語WordNet, https://github.com/masayu-a/WLSP , Sudachi の同義語辞書、Unidic、『日本歴史地名大系』地名項目データセット（https://geoshape.ex.nii.ac.jp/nrct/?utm_source=chatgpt.com）、歴史的行政区域データセットβ版（https://geoshape.ex.nii.ac.jp/city/?utm_source=chatgpt.com）のスライドも作って。
 ~~~~
+
+### 130. Wikipedia公式の本文・統計・イベントなどのデータを紹介する
+
+~~~~text
+Wikipedia の公式が提供しているデータについてもやって。コーパスとかイベントとかいろいろ派生データがありそうな気がしている
+~~~~

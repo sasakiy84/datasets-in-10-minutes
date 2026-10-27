@@ -1,0 +1,374 @@
+{
+  "baseline": {
+    "existing_catalog_rows_unchanged": 130,
+    "existing_artifact_hashes_unchanged": 260,
+    "added": [
+      "mediawiki-history",
+      "wikidata",
+      "wikimedia-content-dumps",
+      "wikimedia-eventstreams",
+      "wikimedia-pageviews",
+      "wikipedia-clickstream"
+    ],
+    "catalog_count": 136,
+    "quality_history": "1–130, no gaps or duplicates, balanced fences"
+  },
+  "new_decks": [
+    {
+      "slug": "wikimedia-content-dumps",
+      "main_pages": 28,
+      "total_pages": 41,
+      "examples_manifest_type": "dict",
+      "examples_manifest_nonempty": true,
+      "approved": true,
+      "artifact_sha256": {
+        "pdf": "488192167f11025195bf75cb1859f648c4a5f85525cb42b1ed81ce035e1a8561",
+        "pptx": "0d327ddb0bfe776730d6112d7c739f17c36850af322629194848c05613a069c9"
+      },
+      "independent_all_pages_covered": true
+    },
+    {
+      "slug": "wikimedia-pageviews",
+      "main_pages": 31,
+      "total_pages": 40,
+      "examples_manifest_type": "dict",
+      "examples_manifest_nonempty": true,
+      "approved": true,
+      "artifact_sha256": {
+        "pdf": "018e76b549433abcb8624e490a8eb882e859177d08608844047c2b296903983f",
+        "pptx": "50b4ee6a0041d38eb189852423e670c5ccb9b16a1679f05dad2d360d73e41adc"
+      },
+      "independent_all_pages_covered": true
+    },
+    {
+      "slug": "wikipedia-clickstream",
+      "main_pages": 26,
+      "total_pages": 39,
+      "examples_manifest_type": "dict",
+      "examples_manifest_nonempty": true,
+      "approved": true,
+      "artifact_sha256": {
+        "pdf": "807c5951f8908529bf377330ef01de4bff171c5a1feeeb0aedaa4e0a36402c86",
+        "pptx": "ab50e53bc78c0fd0fa34d336cf7e1c8465339fc3c22fada9fe60341c009ebd98"
+      },
+      "independent_all_pages_covered": true
+    },
+    {
+      "slug": "mediawiki-history",
+      "main_pages": 29,
+      "total_pages": 39,
+      "examples_manifest_type": "dict",
+      "examples_manifest_nonempty": true,
+      "approved": true,
+      "artifact_sha256": {
+        "pdf": "46493ac89a3d61a26715b9b76c86ce742f174148c9b5f429d1911d5532e183c0",
+        "pptx": "083c0e399dd4599aa9009a7ad3198dce579edaf63b68ac41cedc407f90223a3c"
+      },
+      "independent_all_pages_covered": true
+    },
+    {
+      "slug": "wikimedia-eventstreams",
+      "main_pages": 30,
+      "total_pages": 39,
+      "examples_manifest_type": "dict",
+      "examples_manifest_nonempty": true,
+      "approved": true,
+      "artifact_sha256": {
+        "pdf": "0c017da955786c5ebbb44cfa5c7d238d2089ebaae43b5ca602a72076f8fd9170",
+        "pptx": "71e2c069bb3f646c728e3c0077ed7448d5ee570c9c80fd71d3ee479839585172"
+      },
+      "independent_all_pages_covered": true
+    },
+    {
+      "slug": "wikidata",
+      "main_pages": 30,
+      "total_pages": 41,
+      "examples_manifest_type": "dict",
+      "examples_manifest_nonempty": true,
+      "approved": true,
+      "artifact_sha256": {
+        "pdf": "8466b2105d0b6fd755ba5b9d8864a1d9ae2c88bce7fd8d70576ca8f78239cd81",
+        "pptx": "38627c4c79cb7480e5013a25930d89cdede420a2474990a055c27516de941f7b"
+      },
+      "independent_all_pages_covered": true
+    }
+  ],
+  "total_new_pages": 239,
+  "tests": {
+    "verified_at": "2026-10-27T20:32:19.483801+00:00",
+    "phase": "all136 integrated, final product pairs frozen",
+    "python_unittest": {
+      "command": "python -m unittest discover -s tests -v",
+      "tests": 4,
+      "result": "OK"
+    },
+    "node_gallery_query": {
+      "command": "node tests/gallery_query.test.cjs",
+      "tests": 4,
+      "pass": 4,
+      "fail": 0
+    }
+  },
+  "browser": {
+    "actor": "root",
+    "catalog_count": 136,
+    "query_checks": [
+      {
+        "task": "本文コーパス",
+        "expected_count": 1,
+        "titles": [
+          "Wikipedia本文データ（MediaWiki Content File Exports）"
+        ],
+        "sort_updated_desc": true
+      },
+      {
+        "task": "閲覧統計",
+        "expected_count": 2,
+        "titles": [
+          "Wikimedia Pageviews",
+          "Wikipedia Clickstream"
+        ],
+        "sort_updated_desc": true
+      },
+      {
+        "task": "編集履歴",
+        "expected_count": 1,
+        "titles": [
+          "MediaWiki History"
+        ],
+        "sort_updated_desc": true
+      },
+      {
+        "task": "イベント配信",
+        "expected_count": 1,
+        "titles": [
+          "Wikimedia EventStreams"
+        ],
+        "sort_updated_desc": true
+      },
+      {
+        "task": "知識検索",
+        "expected_count": 1,
+        "titles": [
+          "Wikidata"
+        ],
+        "sort_updated_desc": true
+      }
+    ],
+    "preview": "/workspace/artifacts/wikimedia-official-preview-2026-10-28",
+    "created_desc_query_sort": true,
+    "structured_five": [
+      "Wikimedia EventStreams",
+      "Wikidata",
+      "MediaWiki History",
+      "Wikimedia Pageviews",
+      "Wikipedia Clickstream"
+    ],
+    "title_query_synced": true,
+    "reset_count136": true,
+    "new_six_thumbnails": [
+      {
+        "slug": "wikimedia-content-dumps",
+        "file": "/workspace/artifacts/wikimedia-official-preview-2026-10-28/thumbnails/wikimedia-content-dumps.png",
+        "png_sha256": "d62b31c024481570292bcbd96e8d2189427e4c19f14cc0e63cc704ac56ca2c45",
+        "browser_loaded_size": [
+          960,
+          541
+        ],
+        "source_pdf_first_page_rgb_exact_match": true,
+        "actual_image_opened_yet": true,
+        "public_thumbnail_url": "https://datasets-in-10-minutes.sasakiy84.net/thumbnails/wikimedia-content-dumps.png"
+      },
+      {
+        "slug": "wikimedia-pageviews",
+        "file": "/workspace/artifacts/wikimedia-official-preview-2026-10-28/thumbnails/wikimedia-pageviews.png",
+        "png_sha256": "ea44c341941b61690faed5df3b527d6d06a6d8120996f65663a5f40b80629842",
+        "browser_loaded_size": [
+          960,
+          541
+        ],
+        "source_pdf_first_page_rgb_exact_match": true,
+        "actual_image_opened_yet": true,
+        "public_thumbnail_url": "https://datasets-in-10-minutes.sasakiy84.net/thumbnails/wikimedia-pageviews.png"
+      },
+      {
+        "slug": "wikipedia-clickstream",
+        "file": "/workspace/artifacts/wikimedia-official-preview-2026-10-28/thumbnails/wikipedia-clickstream.png",
+        "png_sha256": "03e5380a3c13d9813caed0a5cad22760e1b23b95b052f81be1c1861a4c5ae0bf",
+        "browser_loaded_size": [
+          960,
+          541
+        ],
+        "source_pdf_first_page_rgb_exact_match": true,
+        "actual_image_opened_yet": true,
+        "public_thumbnail_url": "https://datasets-in-10-minutes.sasakiy84.net/thumbnails/wikipedia-clickstream.png"
+      },
+      {
+        "slug": "mediawiki-history",
+        "file": "/workspace/artifacts/wikimedia-official-preview-2026-10-28/thumbnails/mediawiki-history.png",
+        "png_sha256": "b36711ef7ecd696a0822b79f5caccccf070abee05e92d9cd32b5b65f492cb279",
+        "browser_loaded_size": [
+          960,
+          541
+        ],
+        "source_pdf_first_page_rgb_exact_match": true,
+        "actual_image_opened_yet": true,
+        "public_thumbnail_url": "https://datasets-in-10-minutes.sasakiy84.net/thumbnails/mediawiki-history.png"
+      },
+      {
+        "slug": "wikimedia-eventstreams",
+        "file": "/workspace/artifacts/wikimedia-official-preview-2026-10-28/thumbnails/wikimedia-eventstreams.png",
+        "png_sha256": "34187798a3f07df4717139eb06b93c67226fa1f3af0afa104cee200ef2e4f605",
+        "browser_loaded_size": [
+          960,
+          541
+        ],
+        "source_pdf_first_page_rgb_exact_match": true,
+        "actual_image_opened_yet": true,
+        "public_thumbnail_url": "https://datasets-in-10-minutes.sasakiy84.net/thumbnails/wikimedia-eventstreams.png"
+      },
+      {
+        "slug": "wikidata",
+        "file": "/workspace/artifacts/wikimedia-official-preview-2026-10-28/thumbnails/wikidata.png",
+        "png_sha256": "37dd47f5920690649d35225e2d451a1f1d4683d6e61bc0877731c78a9dba18e4",
+        "browser_loaded_size": [
+          960,
+          541
+        ],
+        "source_pdf_first_page_rgb_exact_match": true,
+        "actual_image_opened_yet": true,
+        "public_thumbnail_url": "https://datasets-in-10-minutes.sasakiy84.net/thumbnails/wikidata.png"
+      }
+    ],
+    "browser": "Chromium via Playwright",
+    "javascript_errors": [],
+    "broken_loaded_images": [],
+    "screenshots_actually_viewed_yet": true,
+    "approved": true,
+    "remaining": [],
+    "actually_opened_screenshots": [
+      "created-desc.png",
+      "structured-query.png"
+    ],
+    "visual_result": "All six cover titles and subtitles legible; created-desc six new cards correctly leading; structured five filter count and visible cards agree; no visible overflow or overlapping layout.",
+    "checked_at": "2026-10-27T20:38:35.188325+00:00",
+    "preview_catalog_sha256": "06454e820650ad002d8dc0dec20c896d76eb2fc186f46d6ad0b2ec2d88d0d649",
+    "private_evidence_path_scope": "Preview absolute paths refer to private verification evidence. Published screenshots are included alongside this record; thumbnail hashes are those of the verified preview."
+  },
+  "new12_preview_artifacts_match": true,
+  "gallery_count": 136,
+  "individual_dataset_commits": {
+    "wikipedia-clickstream": "bd86401b06f3033a94c4778353b67ff75d8d2b0f",
+    "wikimedia-pageviews": "30ad9f377a52901211a081e446899772e853ec68",
+    "mediawiki-history": "339ad7b546fd422c3460950c8710e01e6cfcdbd5",
+    "wikimedia-content-dumps": "27d1c43f3e21aaca35a503de115a90ce00590aed",
+    "wikidata": "83726fb64afb3d9a10a5f6d5970b414604fbee38",
+    "wikimedia-eventstreams": "f71afea6886d5c67bf3af6320f905dd0acc10f6f"
+  },
+  "native_page_transcripts": {
+    "actor": "/root/wikimedia_coordinator",
+    "checks": [
+      {
+        "slug": "wikimedia-content-dumps",
+        "pages": 41,
+        "all_native_paragraphs_tablecells_in_order": true,
+        "native_text_whitespace_normalized": true,
+        "pages_jsonl_sha256": "4f53d4b33b72928b5888df2c3bf3ab86a6f5ebb2f0eef575acbfe0be033c0595",
+        "declared_independent_public_records": 8,
+        "all_records_resolve": true
+      },
+      {
+        "slug": "wikimedia-pageviews",
+        "pages": 40,
+        "all_native_paragraphs_tablecells_in_order": true,
+        "native_text_whitespace_normalized": true,
+        "pages_jsonl_sha256": "a93b57bd8214f665128740e853fbe4385adda946f9b3a8ada623e44b27b1c1f9",
+        "declared_independent_public_records": 7,
+        "all_records_resolve": true
+      },
+      {
+        "slug": "wikipedia-clickstream",
+        "pages": 39,
+        "all_native_paragraphs_tablecells_in_order": true,
+        "native_text_whitespace_normalized": true,
+        "pages_jsonl_sha256": "aabaef2d00fe0969f26fe22e673cd5b61421beb6353f94dd7ba8bdab1f5a0dc9",
+        "declared_independent_public_records": 8,
+        "all_records_resolve": true
+      },
+      {
+        "slug": "mediawiki-history",
+        "pages": 39,
+        "all_native_paragraphs_tablecells_in_order": true,
+        "native_text_whitespace_normalized": true,
+        "pages_jsonl_sha256": "7df02f64110eeb3bbf8b4ddf0d94fd337b79ffbd9ef80c415d52df5dc0fd811e",
+        "declared_independent_public_records": 8,
+        "all_records_resolve": true
+      },
+      {
+        "slug": "wikimedia-eventstreams",
+        "pages": 39,
+        "all_native_paragraphs_tablecells_in_order": true,
+        "native_text_whitespace_normalized": true,
+        "pages_jsonl_sha256": "29c5dddb029f247834513ad5b9b0c2791572a374e0a8c9adb5cea1a59d86d659",
+        "declared_independent_public_records": 7,
+        "all_records_resolve": true
+      },
+      {
+        "slug": "wikidata",
+        "pages": 41,
+        "all_native_paragraphs_tablecells_in_order": true,
+        "native_text_whitespace_normalized": true,
+        "pages_jsonl_sha256": "a6e72d67696d3be84468f66fd19674a1a4d227ad375d2c14c6efd34da113b8ed",
+        "declared_independent_public_records": 13,
+        "all_records_resolve": true
+      }
+    ],
+    "total_pages": 239,
+    "issues": [],
+    "scope": "Mechanical comparison of final native PPTX text in shape/paragraph/cell order including group descendants to public pages JSONL. Does not perform raster OCR or human page viewing. Canonical reviewer public_records resolved relative to its published review.json."
+  },
+  "record_markdown_links": {
+    "checked_local_links": 112,
+    "broken": []
+  },
+  "public_records_peer": {
+    "wikimedia-content-dumps": {
+      "approved": true,
+      "remaining": [],
+      "japanese_wording_pairs": 33,
+      "record": "../wikimedia-content-dumps/independent-record-review.json"
+    },
+    "wikimedia-pageviews": {
+      "approved": true,
+      "remaining": [],
+      "japanese_wording_pairs": 5,
+      "record": "../wikimedia-pageviews/independent-record-review.json"
+    },
+    "wikipedia-clickstream": {
+      "approved": true,
+      "remaining": [],
+      "japanese_wording_pairs": 4,
+      "record": "../wikipedia-clickstream/independent-record-review.json"
+    },
+    "mediawiki-history": {
+      "approved": true,
+      "remaining": [],
+      "japanese_wording_pairs": 5,
+      "record": "../mediawiki-history/independent-record-review.json"
+    },
+    "wikimedia-eventstreams": {
+      "approved": true,
+      "remaining": [],
+      "japanese_wording_pairs": 3,
+      "record": "../wikimedia-eventstreams/independent-record-review.json"
+    },
+    "wikidata": {
+      "approved": true,
+      "remaining": [],
+      "japanese_wording_pairs": 9,
+      "record": "../wikidata/independent-record-review.json"
+    }
+  },
+  "japanese_wording_pairs_total": 59,
+  "publication_scope": "Local verification only; deployment and live HTTP/hash checks are recorded separately after push."
+}
