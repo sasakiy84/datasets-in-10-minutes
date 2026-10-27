@@ -1,0 +1,99 @@
+{
+  "actor": "/root/maps_coordinator/create_gsi_dem",
+  "method": "Own primary-source reading + complete pinned CSV parsing + own displayed-record/code checks",
+  "gemini_used": false,
+  "external_generation_api_used": false,
+  "model_evaluation_run": false,
+  "artifact_sha256": {
+    "pdf": "e8b72122cf0e7d63b51f674e5cfc478267ab13464a97b1fca6c9fcadd239c1c5",
+    "pptx": "070d2e26d44eec44326eae3918d6b8beab42a2617d16b8da1111caa70366d3e5"
+  },
+  "source_commit": "e809cf8203f8ab2ab2adef60d2fd0b2f643ac524",
+  "CSV_sha256": "87ed2e8293e832feaf49da40878be27e338f8a8d8aff1e36cf3b5a44f6ce95fe",
+  "version_scope": {
+    "declared": "1.0.1",
+    "readme_date": "2018-03-14",
+    "electronic_database_first_distributed": 2004,
+    "book_first_edition": 1964,
+    "book_revised_enlarged": 2004,
+    "first_DB_distribution_source": "readme.txt,paragraph1"
+  },
+  "actual_structure": {
+    "rows": 101067,
+    "all_widths": {
+      "15": 101067
+    },
+    "header": false,
+    "Shift_JIS_strict_decode": true,
+    "CP932_strict_decode": true,
+    "UTF8_strict_decode": false,
+    "readme_actual_encoding": "UTF8",
+    "CSV_actual_line_endings": "LF",
+    "readme_declared_line_endings": "CRLF",
+    "types_remain_strings": true,
+    "IDs_unique": true,
+    "semantic_separator_records": 240,
+    "nonseparator_records": 100827,
+    "all_headword_numbers": 96051,
+    "nonseparator_headword_numbers": 95811,
+    "nonseparator_headword_bodies_distinct_strings": 81271,
+    "distinct_classification_numbers": 895,
+    "distinct_middle_codes": 95,
+    "class_counts_including_separators": {
+      "体": 67011,
+      "用": 23762,
+      "相": 9388,
+      "他": 906
+    },
+    "record_types": {
+      "A": 93463,
+      "B": 2588,
+      "1": 2589,
+      "2": 2283,
+      "3": 114,
+      "4": 27,
+      "5": 2,
+      "6": 1
+    }
+  },
+  "count_interpretation": {
+    "official_introduction_records": 101070,
+    "old_manual_version": "Version1.0 / 2004-02-25",
+    "pinned_repo_actual_records": 101067,
+    "difference_handling": "Versions/scopes kept separate. No slide devoted to3-row difference or line-ending audit. About100k records on main slides. No count is called total distinct vocabulary."
+  },
+  "hierarchy_checks": {
+    "class_first_digit": "1体/2用/3相/4他",
+    "department": "first decimal digit; absent for other class",
+    "middle": "first two decimal digits",
+    "classification_item": "full 4decimal-digit code",
+    "paragraph_small_paragraph": "convenient semantic groupings for search; not claimed as strict additional taxonomy levels",
+    "same_item_not_exclusively_synonym": "actual上がる/下がる share2.1540",
+    "same_written_form_multiple_classifications": "actual手 and晴れる"
+  },
+  "display_checks": {
+    "examples_record_ids": "examples.json holds selected records only",
+    "source_prioritized_over_old_manual_examples": true,
+    "numeric_strings_preserved": true,
+    "code_example": "code-run-audit.json",
+    "source_screenshot": {
+      "embedded_slide": 2,
+      "capture_sha256": "9b3ae1fdbd0b2e3062907139280902295169c18a1bbbecfa226c0f74ac273fd0",
+      "source_url": "https://clrd.ninjal.ac.jp/goihyo.html",
+      "CSS_fonts_loaded": true,
+      "creator_image_opened": true
+    }
+  },
+  "source_scope": "sources.md records precisely read sections and downloaded-only resources. Complete CSV parse is not a claim of human reading every row. Selected displayed raw records were human-read. Related-resource datasets were not loaded/benchmarked.",
+  "rights": {
+    "copyright": "国立国語研究所",
+    "license": "CC BY-NC-SA3.0 Unported",
+    "README_required_citation": "国立国語研究所(2004)『分類語彙表増補改訂版データベース』(ver.1.0)",
+    "license_files": [
+      "SOURCE-NOTICE-WLSP.txt",
+      "LICENSE-CC-BY-NC-SA-3.0.txt",
+      "ATTRIBUTION-WLSP.md"
+    ]
+  },
+  "independent_review": "Separate actor /root/maps_coordinator/review_osm; its own raw/source/visual/tech not counted as creator work."
+}

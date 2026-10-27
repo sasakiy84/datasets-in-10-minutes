@@ -1,0 +1,111 @@
+{
+  "method": "skill_based_codex",
+  "gemini_used": false,
+  "actor": "/root/maps_coordinator/create_gsi_dem",
+  "baseline_snapshot": "draft1",
+  "baseline_artifact_sha256": {
+    "pdf": "9aec29faa2f8198e7e7085742f1c70e13df7a58b0223bbd119408b1b4cecee7a",
+    "pptx": "01698cd13b9ba05c06d9924e06e9eb329a9240ecfd5f1f7b2be5baa50edf2dc9"
+  },
+  "target_artifact_sha256": {
+    "pdf": "e8b72122cf0e7d63b51f674e5cfc478267ab13464a97b1fca6c9fcadd239c1c5",
+    "pptx": "070d2e26d44eec44326eae3918d6b8beab42a2617d16b8da1111caa70366d3e5"
+  },
+  "alignment": "Stable slide ordinal1–39 + native shape ID/paragraph/table coordinates; repeated titles not used as unique keys; no re-pagination",
+  "pairs": [
+    {
+      "baseline_page": 6,
+      "target_page": 6,
+      "native_path": "shape4/table/r0/c1",
+      "before": "国語の値",
+      "after": "国語の分類",
+      "reason": "分類の値という曖昧な列名を自然化"
+    },
+    {
+      "baseline_page": 11,
+      "target_page": 11,
+      "native_path": "shape4/table/r3/c1",
+      "before": "指定リポジトリのDB v1.0.1",
+      "after": "データベースv1.0.1の公開",
+      "reason": "依頼経緯を知らない読者向けの版の説明"
+    },
+    {
+      "baseline_page": 13,
+      "target_page": 13,
+      "native_path": "shape2/paragraph0",
+      "before": "指定配布版は、約10万レコード",
+      "after": "公開データは、約10万レコード",
+      "reason": "読者向け表現と、単位付き数値列の右揃え"
+    },
+    {
+      "baseline_page": 13,
+      "target_page": 13,
+      "native_path": "shape5/paragraph0",
+      "before": "指定リポジトリのv1.0.1。レコードには併記から分けた行と区切りも含む。",
+      "after": "masayu-a/WLSPのv1.0.1。レコードには併記から分けた行と区切りも含む。",
+      "reason": "読者向け表現と、単位付き数値列の右揃え"
+    },
+    {
+      "baseline_page": 18,
+      "target_page": 18,
+      "native_path": "shape2/paragraph0",
+      "before": "1レコードは、ヘッダなしの15列CSV",
+      "after": "ヘッダなしの15列CSVで配布される",
+      "reason": "ファイル全体のヘッダの有無を主語にし、列範囲を右揃え"
+    },
+    {
+      "baseline_page": 23,
+      "target_page": 23,
+      "native_path": "shape4/paragraph1",
+      "before": "with open(\"bunruidb.txt\", encoding=\"shift_jis\", newline=\"\") as f:",
+      "after": "with open(\"bunruidb.txt\", encoding=\"shift_jis\") as f:",
+      "reason": "コード幅に収まる読込例。改行の引数を省いても実データの読込結果は同じ"
+    },
+    {
+      "baseline_page": 27,
+      "target_page": 27,
+      "native_path": "shape3/paragraph0",
+      "before": "指定リポジトリのデータは、CC BY-NC-SA 3.0で公開されている。",
+      "after": "公開リポジトリのデータは、CC BY-NC-SA 3.0で公開されている。",
+      "reason": "依頼経緯の表現を公開リポジトリへ"
+    },
+    {
+      "baseline_page": 35,
+      "target_page": 35,
+      "native_path": "shape5/paragraph0",
+      "before": "指定リポジトリの全レコードを集計。縦の分類ごとに、レコード数を示す。",
+      "after": "全レコードを類別に集計。意味の区切りを表す行も含む。",
+      "reason": "類別集計の説明を自然化し、軸目盛を2万刻み・桁区切りへ"
+    },
+    {
+      "baseline_page": 37,
+      "target_page": 37,
+      "native_path": "shape5/paragraph2",
+      "before": "指定リポジトリの配布データ、版の説明、利用条件を収める。",
+      "after": "公開リポジトリの配布データ、版の説明、利用条件を収める。",
+      "reason": "依頼経緯を含めず配布物の内容を紹介"
+    }
+  ],
+  "layout_changes": [
+    {
+      "page": 13,
+      "change": "unit-bearing numeric values and header alignedRIGHT"
+    },
+    {
+      "page": 18,
+      "change": "column ranges and header alignedRIGHT"
+    },
+    {
+      "page": 23,
+      "change": "code line length reduced; exact output verified by executing native code"
+    },
+    {
+      "page": 25,
+      "change": "table/caption moved up14.4pt together; all6 records retained, no text change counted"
+    },
+    {
+      "page": 35,
+      "change": "axis major-unit20000 and comma grouping; source values unchanged"
+    }
+  ]
+}
