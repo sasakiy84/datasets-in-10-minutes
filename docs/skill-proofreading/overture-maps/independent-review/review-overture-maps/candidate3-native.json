@@ -1,0 +1,166 @@
+[
+  {
+    "page": 1,
+    "text": "Overture Maps\n世界の地物を、共通の構造で扱う\nsasakiy84\ndatasets in 10 minutes (2026-10-28)"
+  },
+  {
+    "page": 2,
+    "text": "Overture Mapsの公式サイト\n公式サイト\n\n[1] Overture Maps Foundation, n.d., Overture Maps\nhttps://overturemaps.org/"
+  },
+  {
+    "page": 3,
+    "text": "\n地図を構成するデータ\n形状と属性の読み方\n統合・更新と利用方法\n目次"
+  },
+  {
+    "page": 4,
+    "text": "1. 地図を構成するデータ\n1. 地図を構成するデータ"
+  },
+  {
+    "page": 5,
+    "text": "複数の出所を、共通の地図データへ\nOverture Mapsは、世界の建物、道路、施設などを、共通の構造で配布するオープンな地理データ。\n企業・公的機関・OpenStreetMapなどのデータを統合し、地物の形状と属性を提供する。\n必要な範囲や種類を抽出し、自分の地図や分析に使える。\n1. 地図を構成するデータ\n[1] Overture Maps Foundation, 2026, Accessing the Overture Catalog\nhttps://docs.overturemaps.org/getting-data/cloud-sources/"
+  },
+  {
+    "page": 6,
+    "text": "6テーマで、地物の種類を整理する\n1. 地図を構成するデータ\nテーマ\n収録するもの\nAddresses\n住所とその位置\nBase\n水域、土地被覆、土地利用など\nBuildings\n建物と建物の部分\nDivisions\n行政区画とその範囲・境界\nPlaces\n店舗や施設などの地点\nTransportation\n道路・鉄道などの線と接続点\n[1] Overture Maps Foundation, 2026, Accessing the Overture Catalog\nhttps://docs.overturemaps.org/getting-data/cloud-sources/"
+  },
+  {
+    "page": 7,
+    "text": "京都の同じ範囲を、地物ごとに描く\n建物の輪郭、道路の中心線、施設の位置は、それぞれ別のレコードとして格納される。\nここでは京都中心部の配布データから、建物・交通・施設を取り出して描画する。\n使用するデータのバージョンは2026-10-21.0。地図の色や線の太さは、この資料で付けた。\n1. 地図を構成するデータ\n[1] Overture Maps Foundation, 2026, Release 2026-10-21.0\nhttps://stac.overturemaps.org/2026-10-21.0/catalog.json"
+  },
+  {
+    "page": 8,
+    "text": "京都中心部：建物・交通・水域\n1. 地図を構成するデータ\n\n[1] Overture Maps Foundation, 2026, Release 2026-10-21.0\nhttps://stac.overturemaps.org/2026-10-21.0/catalog.json"
+  },
+  {
+    "page": 9,
+    "text": "建物の輪郭を拡大する\n1. 地図を構成するデータ\n\n[1] Overture Maps Foundation, 2026, Release 2026-10-21.0\nhttps://stac.overturemaps.org/2026-10-21.0/catalog.json"
+  },
+  {
+    "page": 10,
+    "text": "建物レコード：錦市場の屋根\n1. 地図を構成するデータ\nフィールド\n配布データの値\nnames.primary\n錦市場\nclass\nroof\nheight\nnull\ngeometryの種類\nPOLYGON\nこのレコードではclassがroof。heightはnullで、高さの値は入っていない。\n[1] Overture Maps Foundation, 2026, Release 2026-10-21.0\nhttps://stac.overturemaps.org/2026-10-21.0/catalog.json"
+  },
+  {
+    "page": 11,
+    "text": "交通の線を、種類ごとに描く\n1. 地図を構成するデータ\n\n[1] Overture Maps Foundation, 2026, Release 2026-10-21.0\nhttps://stac.overturemaps.org/2026-10-21.0/catalog.json"
+  },
+  {
+    "page": 12,
+    "text": "交通レコード：錦小路通\n1. 地図を構成するデータ\nフィールド\n配布データの値\nnames.primary\n錦小路通\nsubtype\nroad\nclass\npedestrian\n接続点の数\n10\n歩行者用道路の線として表される。接続点の識別子と、線上の位置も属性に持つ。\n[1] Overture Maps Foundation, 2026, Release 2026-10-21.0\nhttps://stac.overturemaps.org/2026-10-21.0/catalog.json"
+  },
+  {
+    "page": 13,
+    "text": "施設の位置と名前を重ねる\n1. 地図を構成するデータ\n\n[1] Overture Maps Foundation, 2026, Release 2026-10-21.0\nhttps://stac.overturemaps.org/2026-10-21.0/catalog.json"
+  },
+  {
+    "page": 14,
+    "text": "施設レコード：名前と分類を読む\n1. 地図を構成するデータ\nフィールド\n配布データの値\nnames.primary\n汸臼庵京都錦本店\ntaxonomy.primary\njapanese_restaurant\noperating_status\nnull\ngeometryの種類\nPOINT\n施設の点に、名称や営業状況、階層のあるカテゴリが結び付く。\n[1] Overture Maps Foundation, 2026, Release 2026-10-21.0\nhttps://stac.overturemaps.org/2026-10-21.0/catalog.json"
+  },
+  {
+    "page": 15,
+    "text": "2. 形状と属性の読み方\n2. 形状と属性の読み方"
+  },
+  {
+    "page": 16,
+    "text": "GeoParquetは、形状を持つ列指向の表\n1行が一つの地物を表し、geometry列に位置や輪郭、ほかの列に名前・種類・出所などを持つ。\nParquetは列単位で圧縮する形式。必要な列と範囲を選び、クラウド上のファイルから読み込める。\nGeoParquetのメタデータが、形状の符号化方式や座標系を表に結び付ける。\n2. 形状と属性の読み方\n[1] GeoParquet, n.d., GeoParquet Format Specification v1.1.0\nhttps://geoparquet.org/releases/v1.1.0/"
+  },
+  {
+    "page": 17,
+    "text": "点・線・面が、geometry列に入る\n2. 形状と属性の読み方\nデータの例\n形状\n表すもの\nplace\nPoint\n施設の位置\nsegment\nLineString\n道路などの中心線\nbuilding\nPolygon / MultiPolygon\n建物の輪郭\ngeometryはWKB（形状をバイナリで表す形式）で保存される。\n[1] Overture Maps Foundation, 2026, Release 2026-10-21.0\nhttps://stac.overturemaps.org/2026-10-21.0/catalog.json"
+  },
+  {
+    "page": 18,
+    "text": "保存する座標と、地図に描く座標\n取得したgeometry列の座標系はOGC:CRS84。座標は経度、緯度の順で、単位は度。\nこの資料の地図はEPSG:3857へ投影して描画した。平面上の表示座標はメートル単位になる。\n元の輪郭はベクトルの頂点列。画像のような固定の画素間隔はなく、地物ごとに頂点数が異なる。\n2. 形状と属性の読み方\n[1] Overture Maps Foundation, 2026, Release 2026-10-21.0\nhttps://stac.overturemaps.org/2026-10-21.0/catalog.json"
+  },
+  {
+    "page": 19,
+    "text": "名前と出所も、階層のある属性\nnamesには代表名に加え、言語別の名前などが入る。単純な文字列1列には収まらない。\nsourcesは出所の配列。どの属性に、どのデータが使われたかを記録する。\n道路の通行条件なども配列や入れ子の構造を持つ。使いたい属性を選んで取り出す。\n2. 形状と属性の読み方\n[1] Overture Maps Foundation, n.d., Schema Reference\nhttps://docs.overturemaps.org/schema/"
+  },
+  {
+    "page": 20,
+    "text": "入れ子の属性から、必要な値を読む\n2. 形状と属性の読み方\nnames\n  primary: \"錦市場\"\nsources[0]\n  dataset: \"OpenStreetMap\"\n  license: \"ODbL-1.0\"\n  record_id: \"w772134672@9\"\n建物レコードの一部。名前の構造と、出所の配列を示す。\n[1] Overture Maps Foundation, 2026, Release 2026-10-21.0\nhttps://stac.overturemaps.org/2026-10-21.0/catalog.json"
+  },
+  {
+    "page": 21,
+    "text": "建物の輪郭から、用途や高さへ\nbuildingのgeometryは建物の平面形状を表す。名前、用途、階数、高さなどを追加できる構造を持つ。\n高さなどの属性の充実度は地域や出所で異なる。京都の抽出では、高さの値は大半の建物に入っていない。\n輪郭を重ねるだけでなく、属性がある建物を選び、用途別の分布などを調べられる。\n2. 形状と属性の読み方\n[1] Overture Maps Foundation, n.d., Schema Reference\nhttps://docs.overturemaps.org/schema/"
+  },
+  {
+    "page": 22,
+    "text": "交通データは、線と接続点で表す\nsegmentが道路や鉄道などの線を表し、connectorが線同士の接続点を表す。\n線の形状に加え、道路の種類、名称、通行方向や制限などの属性を持つ。\n経路探索では、形状を描くだけでなく、接続関係と通行条件を使ってネットワークを組み立てる。\n2. 形状と属性の読み方\n[1] Overture Maps Foundation, n.d., Schema Reference\nhttps://docs.overturemaps.org/schema/"
+  },
+  {
+    "page": 23,
+    "text": "3. 統合・更新と利用方法\n3. 統合・更新と利用方法"
+  },
+  {
+    "page": 24,
+    "text": "2023年の初公開から、毎月の配布へ\n財団は2022年に設立され、最初の世界規模のデータは2023年7月に公開された。\n初公開は施設・建物・交通・行政界の4テーマ。その後、背景となる地物や住所も加わった。\n現在は毎月のリリースを、日付に基づくバージョンで配布する。リリース日は、個々の地物を更新した日付とは別に管理される。\n3. 統合・更新と利用方法\n[1] Overture Maps Foundation, 2023, First World-Wide Open Map Dataset\nhttps://overturemaps.org/announcements/2023/overture-maps-foundation-releases-first-world-wide-open-map-dataset/"
+  },
+  {
+    "page": 25,
+    "text": "出所の違いを、地物単位で統合する\n同じ建物や施設でも、データによって位置や名称の表記が違う。対応を付けて統合する処理をconflationと呼ぶ。\nOvertureは共通の構造と品質確認を通じ、複数の出所を一つの参照地図へまとめる。\n使うときはsourcesで出所を調べられる。全地域・全属性が同じ方法で作られたわけではない。\n3. 統合・更新と利用方法\n[1] Overture Maps Foundation, n.d., What is GERS?\nhttps://docs.overturemaps.org/gers/"
+  },
+  {
+    "page": 26,
+    "text": "GERSで、同じ地物に情報を結び付ける\nGERS（Global Entity Reference System）は、地物を継続して参照するための識別の仕組み。\n自分の施設情報を対応する地物へ一度結び付ければ、その識別子を使って情報を結合できる。\n識別子の登録簿、変更情報、元データとの対応表が、バージョンをまたぐ更新を支える。\n3. 統合・更新と利用方法\n[1] Overture Maps Foundation, n.d., What is GERS?\nhttps://docs.overturemaps.org/gers/"
+  },
+  {
+    "page": 27,
+    "text": "識別子の安定性は、登録簿で確かめる\nGERSの登録対象は、建物、行政区画、施設、交通の地物。UUID自体には位置や種類の意味を持たせない。\nbaseの地物とbuilding_partにもUUIDはあるが、GERSとしての安定性は約束されていない。\n更新時には、登録簿で地物の継続状況を調べ、変更情報を使って対応関係を更新する。\n3. 統合・更新と利用方法\n[1] Overture Maps Foundation, n.d., What is GERS?\nhttps://docs.overturemaps.org/gers/"
+  },
+  {
+    "page": 28,
+    "text": "必要なテーマと地域だけを取り出す\nSTACカタログでバージョン、テーマ、地物の種類を選ぶ。ファイルはAWSとAzureから公開されている。\nDuckDBやPythonクライアントで、範囲と列を指定する。全世界をダウンロードせずに使い始められる。\nExplorerでは地物を地図上で確認できる。アプリ用の背景地図は、GeoParquetから用途に合わせて作成できる。\n3. 統合・更新と利用方法\n[1] Overture Maps Foundation, 2026, Accessing the Overture Catalog\nhttps://docs.overturemaps.org/getting-data/cloud-sources/"
+  },
+  {
+    "page": 29,
+    "text": "コマンドで京都の建物を取得する\n3. 統合・更新と利用方法\npip install overturemaps\n\noverturemaps download \\\n  --bbox=135.748,34.997,135.780,35.008 \\\n  -f geoparquet --type=building \\\n  -o kyoto-buildings.parquet\nbboxは西端経度、南端緯度、東端経度、北端緯度の順。\n[1] Overture Maps Foundation, n.d., Python Client\nhttps://docs.overturemaps.org/getting-data/overturemaps-py/"
+  },
+  {
+    "page": 30,
+    "text": "利用条件は、テーマと出所に対応する\nBase・Buildings・Divisions・TransportationはODbL。地図には必要な帰属を表示する。\nPlacesにはCDLA Permissive 2.0、Apache 2.0、CC0などの出所があり、Addressesは国・地域ごとに条件が異なる。\n再配布するデータや地図に使う範囲を決めたら、配布元のライセンスと出所ごとの帰属を確認する。\n3. 統合・更新と利用方法\n[1] Overture Maps Foundation, 2026, Attribution and Licensing\nhttps://docs.overturemaps.org/attribution/"
+  },
+  {
+    "page": 31,
+    "text": "形状・属性・識別子を、自分の用途に使う\n建物・交通・施設などを共通の構造で扱えることが、Overture Mapsの特徴。\nGeoParquetから地域と列を選び、描画、空間集計、ほかの情報との結合に使える。\n保存形式だけでなく、地物の種類、座標系、出所、更新バージョンをそろえて読む。\n3. 統合・更新と利用方法\n[1] Overture Maps Foundation, 2026, Accessing the Overture Catalog\nhttps://docs.overturemaps.org/getting-data/cloud-sources/"
+  },
+  {
+    "page": 32,
+    "text": "Appendix\nAppendix"
+  },
+  {
+    "page": 33,
+    "text": "\n抽出と構造の補足\n参考文献\nAppendix: 目次"
+  },
+  {
+    "page": 34,
+    "text": "bboxで候補を絞り、形状で範囲を決める\nbboxは地物全体を囲む最小の矩形。xmin・xmaxが経度、ymin・ymaxが緯度の範囲を表す。\n矩形同士が重なる条件で候補を絞ると、クラウドから読む量を減らせる。\n曲がった線や複雑な面を厳密に選ぶときは、その後でgeometryと対象領域の交差を調べる。\nAppendix: 1. 抽出と構造の補足\n[1] Overture Maps Foundation, n.d., DuckDB\nhttps://docs.overturemaps.org/getting-data/duckdb/"
+  },
+  {
+    "page": 35,
+    "text": "抽出したGeoParquetの属性を確かめる\nAppendix: 1. 抽出と構造の補足\nSELECT names.primary, height, class\nFROM read_parquet('kyoto-buildings.parquet')\nWHERE names.primary IS NOT NULL\nLIMIT 5;\n構造体の中の値は、names.primaryのように指定する。\n[1] Overture Maps Foundation, n.d., DuckDB\nhttps://docs.overturemaps.org/getting-data/duckdb/"
+  },
+  {
+    "page": 36,
+    "text": "京都の抽出範囲に含まれたレコード\nAppendix: 1. 抽出と構造の補足\n地物の種類\n件数\nbuilding\n185,307\nsegment\n23,963\nplace\n32,495\nwater\n942\n135.72–135.80°E、34.97–35.03°Nとbboxが交差する候補。\n[1] Overture Maps Foundation, 2026, Release 2026-10-21.0\nhttps://stac.overturemaps.org/2026-10-21.0/catalog.json"
+  },
+  {
+    "page": 37,
+    "text": "建物の属性は、輪郭以外にも広がる\nAppendix: 1. 抽出と構造の補足\n属性\n意味\nheight / min_height\n建物の高さ／下端の高さ（m）\nnum_floors\n地上の階数\nclass / subtype\n建物の用途・分類\nroof_shape / roof_height\n屋根の形状／高さ\nhas_parts\n建物部分への分割の有無\n[1] Overture Maps Foundation, n.d., Schema Reference\nhttps://docs.overturemaps.org/schema/"
+  },
+  {
+    "page": 38,
+    "text": "GeoParquetとPMTilesの役割\nGeoParquetは、地物と属性を読み込んで解析・加工するための配布形式。\nPMTilesは、地図をズームして表示するためのベクトルタイルを、一つのファイルにまとめる形式。\nOvertureの配布PMTilesはデータ確認用として提供され、Explorerでも使われる。\nAppendix: 1. 抽出と構造の補足\n[1] Overture Maps Foundation, 2026, Accessing the Overture Catalog\nhttps://docs.overturemaps.org/getting-data/cloud-sources/"
+  },
+  {
+    "page": 39,
+    "text": "参考文献\nAppendix: 2. 参考文献\nAccessing the Overture Catalog\nOverture Maps Foundation, n.d.（参照2026-10-28）\nSTAC、テーマ別の配布パス、GeoParquetとPMTilesをまとめた公式文書。\nhttps://docs.overturemaps.org/getting-data/cloud-sources/\nSchema Reference\nOverture Maps Foundation, n.d.（参照2026-10-28）\n地物の種類、属性の意味、共通のデータ構造を定義する。\nhttps://docs.overturemaps.org/schema/"
+  },
+  {
+    "page": 40,
+    "text": "参考文献\nAppendix: 2. 参考文献\nWhat is GERS?\nOverture Maps Foundation, n.d.（参照2026-10-28）\n識別子、登録簿、変更情報、対応表からなる地物参照の仕組みを説明する。\nhttps://docs.overturemaps.org/gers/\nGeoParquet Format Specification v1.1.0\nGeoParquet, n.d.（参照2026-10-28）\nParquetに地理情報を格納するメタデータ、座標系、形状の符号化を定める。\nhttps://geoparquet.org/releases/v1.1.0/"
+  },
+  {
+    "page": 41,
+    "text": "参考文献\nAppendix: 2. 参考文献\nAttribution and Licensing\nOverture Maps Foundation, 2026（参照2026-10-28）\nテーマとデータ提供元ごとの利用条件・帰属を列挙する。\nhttps://docs.overturemaps.org/attribution/\nOverture Maps Foundation Releases Its First World-Wide Open Map Dataset\nOverture Maps Foundation, 2023-07-26\n最初の4テーマの公開と、複数の出所を統合する目的を紹介する。\nhttps://overturemaps.org/announcements/2023/overture-maps-foundation-releases-first-world-wide-open-map-dataset/"
+  }
+]

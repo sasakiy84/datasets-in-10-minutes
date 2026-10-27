@@ -1,0 +1,268 @@
+{
+  "purpose": "Map-data views and records; no benchmark/gold-answer quota applies",
+  "main_examples": [
+    {
+      "id": "kyoto-overview",
+      "kind": "real_geospatial_render",
+      "extent_lonlat": [
+        135.72,
+        34.988,
+        135.8,
+        35.013
+      ],
+      "input": {
+        "building": [
+          "https://overturemaps-us-west-2.s3.us-west-2.amazonaws.com/release/2026-10-21.0/theme=buildings/type=building/part-00499-606c1969-357a-5c9d-b448-bf383b5be546-c000.zstd.parquet"
+        ],
+        "segment": [
+          "https://overturemaps-us-west-2.s3.us-west-2.amazonaws.com/release/2026-10-21.0/theme=transportation/type=segment/part-00124-63401875-780b-5d6f-9dee-bb3815b7b73b-c000.zstd.parquet",
+          "https://overturemaps-us-west-2.s3.us-west-2.amazonaws.com/release/2026-10-21.0/theme=transportation/type=segment/part-00125-a2a0db14-7660-5f16-b02a-00ed665c7ce7-c000.zstd.parquet",
+          "https://overturemaps-us-west-2.s3.us-west-2.amazonaws.com/release/2026-10-21.0/theme=transportation/type=segment/part-00126-481f0788-772e-59fe-be40-034fa4911dff-c000.zstd.parquet"
+        ],
+        "water": [
+          "https://overturemaps-us-west-2.s3.us-west-2.amazonaws.com/release/2026-10-21.0/theme=base/type=water/part-00027-ae01f3fc-9546-580d-8cd4-3451d8289240-c000.zstd.parquet",
+          "https://overturemaps-us-west-2.s3.us-west-2.amazonaws.com/release/2026-10-21.0/theme=base/type=water/part-00031-ff57031f-2765-5695-8bea-b3769986c897-c000.zstd.parquet"
+        ]
+      },
+      "image_sha256": "5e2387646e3b75e7873758c46e0d22c05aa6a3aae9c70fb8a00383e44705c005",
+      "display_crs": "EPSG:3857",
+      "record_counts": {
+        "building": 78539,
+        "segment": 10324,
+        "water": 482
+      },
+      "distinctness": "Same selected region serves a different data representation: overview/building polygons/transport lines/place points."
+    },
+    {
+      "id": "building-detail",
+      "kind": "real_geospatial_render",
+      "extent_lonlat": [
+        135.748,
+        34.997,
+        135.78,
+        35.008
+      ],
+      "input": {
+        "building": [
+          "https://overturemaps-us-west-2.s3.us-west-2.amazonaws.com/release/2026-10-21.0/theme=buildings/type=building/part-00499-606c1969-357a-5c9d-b448-bf383b5be546-c000.zstd.parquet"
+        ],
+        "segment": [
+          "https://overturemaps-us-west-2.s3.us-west-2.amazonaws.com/release/2026-10-21.0/theme=transportation/type=segment/part-00124-63401875-780b-5d6f-9dee-bb3815b7b73b-c000.zstd.parquet",
+          "https://overturemaps-us-west-2.s3.us-west-2.amazonaws.com/release/2026-10-21.0/theme=transportation/type=segment/part-00125-a2a0db14-7660-5f16-b02a-00ed665c7ce7-c000.zstd.parquet",
+          "https://overturemaps-us-west-2.s3.us-west-2.amazonaws.com/release/2026-10-21.0/theme=transportation/type=segment/part-00126-481f0788-772e-59fe-be40-034fa4911dff-c000.zstd.parquet"
+        ],
+        "water": [
+          "https://overturemaps-us-west-2.s3.us-west-2.amazonaws.com/release/2026-10-21.0/theme=base/type=water/part-00027-ae01f3fc-9546-580d-8cd4-3451d8289240-c000.zstd.parquet",
+          "https://overturemaps-us-west-2.s3.us-west-2.amazonaws.com/release/2026-10-21.0/theme=base/type=water/part-00031-ff57031f-2765-5695-8bea-b3769986c897-c000.zstd.parquet"
+        ]
+      },
+      "image_sha256": "82355d671302b6c3348cd418f38c8cc5682903e5787231fd5b1cbade24eead96",
+      "display_crs": "EPSG:3857",
+      "record_counts": {
+        "building": 19807,
+        "segment": 1954,
+        "water": 67
+      },
+      "distinctness": "Same selected region serves a different data representation: overview/building polygons/transport lines/place points."
+    },
+    {
+      "id": "transport-detail",
+      "kind": "real_geospatial_render",
+      "extent_lonlat": [
+        135.748,
+        34.997,
+        135.78,
+        35.008
+      ],
+      "input": {
+        "segment": [
+          "https://overturemaps-us-west-2.s3.us-west-2.amazonaws.com/release/2026-10-21.0/theme=transportation/type=segment/part-00124-63401875-780b-5d6f-9dee-bb3815b7b73b-c000.zstd.parquet",
+          "https://overturemaps-us-west-2.s3.us-west-2.amazonaws.com/release/2026-10-21.0/theme=transportation/type=segment/part-00125-a2a0db14-7660-5f16-b02a-00ed665c7ce7-c000.zstd.parquet",
+          "https://overturemaps-us-west-2.s3.us-west-2.amazonaws.com/release/2026-10-21.0/theme=transportation/type=segment/part-00126-481f0788-772e-59fe-be40-034fa4911dff-c000.zstd.parquet"
+        ],
+        "water": [
+          "https://overturemaps-us-west-2.s3.us-west-2.amazonaws.com/release/2026-10-21.0/theme=base/type=water/part-00027-ae01f3fc-9546-580d-8cd4-3451d8289240-c000.zstd.parquet",
+          "https://overturemaps-us-west-2.s3.us-west-2.amazonaws.com/release/2026-10-21.0/theme=base/type=water/part-00031-ff57031f-2765-5695-8bea-b3769986c897-c000.zstd.parquet"
+        ]
+      },
+      "image_sha256": "3016f88c35478b018c78a871d91b603ee74f474b1e17eb1c00a4e0033e0f3637",
+      "display_crs": "EPSG:3857",
+      "record_counts": {
+        "segment": 1954,
+        "water": 67
+      },
+      "distinctness": "Same selected region serves a different data representation: overview/building polygons/transport lines/place points."
+    },
+    {
+      "id": "places-detail",
+      "kind": "real_geospatial_render",
+      "extent_lonlat": [
+        135.748,
+        34.997,
+        135.78,
+        35.008
+      ],
+      "input": {
+        "place": [
+          "https://overturemaps-us-west-2.s3.us-west-2.amazonaws.com/release/2026-10-21.0/theme=places/type=place/part-00015-eb1c1331-f519-5db6-8fef-74a77e5776ff-c000.zstd.parquet"
+        ],
+        "segment": [
+          "https://overturemaps-us-west-2.s3.us-west-2.amazonaws.com/release/2026-10-21.0/theme=transportation/type=segment/part-00124-63401875-780b-5d6f-9dee-bb3815b7b73b-c000.zstd.parquet",
+          "https://overturemaps-us-west-2.s3.us-west-2.amazonaws.com/release/2026-10-21.0/theme=transportation/type=segment/part-00125-a2a0db14-7660-5f16-b02a-00ed665c7ce7-c000.zstd.parquet",
+          "https://overturemaps-us-west-2.s3.us-west-2.amazonaws.com/release/2026-10-21.0/theme=transportation/type=segment/part-00126-481f0788-772e-59fe-be40-034fa4911dff-c000.zstd.parquet"
+        ],
+        "water": [
+          "https://overturemaps-us-west-2.s3.us-west-2.amazonaws.com/release/2026-10-21.0/theme=base/type=water/part-00027-ae01f3fc-9546-580d-8cd4-3451d8289240-c000.zstd.parquet",
+          "https://overturemaps-us-west-2.s3.us-west-2.amazonaws.com/release/2026-10-21.0/theme=base/type=water/part-00031-ff57031f-2765-5695-8bea-b3769986c897-c000.zstd.parquet"
+        ]
+      },
+      "image_sha256": "7a31eecb766b7a077657c3ed1b3452f3efcc68dff287da3efe1caefad4cc0de5",
+      "display_crs": "EPSG:3857",
+      "record_counts": {
+        "place": 11047,
+        "segment": 1954,
+        "water": 67
+      },
+      "distinctness": "Same selected region serves a different data representation: overview/building polygons/transport lines/place points."
+    },
+    {
+      "id": "ca880961-9f61-4fef-8e2e-f53dc39fb365",
+      "kind": "native_record_excerpt",
+      "type": "building",
+      "name": "錦市場",
+      "raw_record_file": "data/inspection.json",
+      "geometry_wkt": "POLYGON ((135.76682 35.00503, 135.7668189 35.0050473, 135.7663882 35.0050563, 135.7663894 35.0050813, 135.7663535 35.0050822, 135.766325 35.005083, 135.7663241 35.0050542, 135.7662795 35.0050548, 135.7656627 35.0050452, 135.7656635 35.0050744, 135.7656286 35.005074, 135.7655957 35.0050737, 135.765595 35.0050442, 135.7649423 35.0050341, 135.7649423 35.0050789, 135.764911 35.0050788, 135.7648765 35.0050786, 135.7648755 35.005033, 135.763958 35.0050188, 135.7625983 35.005008, 135.7625989 35.0049985, 135.7625989 35.0049865, 135.76396 35.0049902, 135.7648765 35.0050046, 135.7648763 35.0049759, 135.7649109 35.0049772, 135.7649393 35.0049783, 135.7649407 35.005002, 135.7655971 35.0050099, 135.7655979 35.0049863, 135.7656294 35.0049862, 135.7656644 35.0049858, 135.7656648 35.0050107, 135.7662825 35.0050181, 135.7663245 35.0050175, 135.7663248 35.0049973, 135.7663532 35.0049975, 135.7663891 35.0049977, 135.7663899 35.0050165, 135.7668201 35.0050102, 135.76682 35.00503))",
+      "sources": [
+        {
+          "property": "",
+          "dataset": "OpenStreetMap",
+          "license": "ODbL-1.0",
+          "record_id": "w772134672@9",
+          "update_time": "2025-07-30T10:52:56.000Z",
+          "confidence": null,
+          "between": null,
+          "provider": "osm",
+          "resource": "planet",
+          "version": "2026-09-06T00:00:00.000Z"
+        }
+      ],
+      "shown": "Selected name/type/class/height or connector count/taxonomy/operating status; selected fields only."
+    },
+    {
+      "id": "85c96d4d-804c-4c5d-8586-133ff41bcde5",
+      "kind": "native_record_excerpt",
+      "type": "segment",
+      "name": "錦小路通",
+      "raw_record_file": "data/inspection.json",
+      "geometry_wkt": "LINESTRING (135.7625917 35.0036758, 135.7625919 35.0037668, 135.7625812 35.0049536, 135.7625809 35.0049984, 135.7625989 35.0049985, 135.7632758 35.0050033, 135.7639713 35.0050046, 135.7649114 35.0050192, 135.7656293 35.0050299, 135.7663533 35.0050389, 135.76682 35.00503, 135.7668613 35.0050292, 135.7669717 35.0050249, 135.7671845 35.005019)",
+      "sources": [
+        {
+          "property": "/routes",
+          "dataset": "OpenStreetMap",
+          "license": "ODbL-1.0",
+          "record_id": "r11577482@10",
+          "update_time": null,
+          "confidence": null,
+          "between": null,
+          "provider": "osm",
+          "resource": "planet",
+          "version": "2026-10-10"
+        },
+        {
+          "property": "/routes",
+          "dataset": "OpenStreetMap",
+          "license": "ODbL-1.0",
+          "record_id": "r19408270@3",
+          "update_time": null,
+          "confidence": null,
+          "between": null,
+          "provider": "osm",
+          "resource": "planet",
+          "version": "2026-10-10"
+        },
+        {
+          "property": "",
+          "dataset": "OpenStreetMap",
+          "license": "ODbL-1.0",
+          "record_id": "w1148700851@9",
+          "update_time": "2025-11-26T05:46:30Z",
+          "confidence": null,
+          "between": [
+            0.0,
+            0.258767893
+          ],
+          "provider": "osm",
+          "resource": "planet",
+          "version": "2026-10-10"
+        },
+        {
+          "property": "",
+          "dataset": "OpenStreetMap",
+          "license": "ODbL-1.0",
+          "record_id": "w66703315@10",
+          "update_time": "2025-07-30T10:52:56Z",
+          "confidence": null,
+          "between": [
+            0.258767893,
+            0.947933825
+          ],
+          "provider": "osm",
+          "resource": "planet",
+          "version": "2026-10-10"
+        },
+        {
+          "property": "",
+          "dataset": "OpenStreetMap",
+          "license": "ODbL-1.0",
+          "record_id": "w66703316@7",
+          "update_time": "2025-09-02T02:33:58Z",
+          "confidence": null,
+          "between": [
+            0.947933825,
+            1.0
+          ],
+          "provider": "osm",
+          "resource": "planet",
+          "version": "2026-10-10"
+        }
+      ],
+      "shown": "Selected name/type/class/height or connector count/taxonomy/operating status; selected fields only."
+    },
+    {
+      "id": "322e4d81-46aa-404d-bd1e-0453541c3786",
+      "kind": "native_record_excerpt",
+      "type": "place",
+      "name": "汸臼庵京都錦本店",
+      "raw_record_file": "data/inspection.json",
+      "geometry_wkt": "POINT (135.76506132 35.00501042)",
+      "sources": [
+        {
+          "property": "",
+          "dataset": "meta",
+          "license": "CDLA-Permissive-2.0",
+          "record_id": "355034878231518",
+          "update_time": "2026-09-14T00:00:00.000Z",
+          "confidence": 0.7339020371437073,
+          "between": null,
+          "provider": "meta",
+          "resource": "meta",
+          "version": "2026-09-14"
+        },
+        {
+          "property": "/properties/confidence",
+          "dataset": "Overture",
+          "license": "CDLA-Permissive-2.0",
+          "record_id": null,
+          "update_time": "2026-10-15T18:00:21Z",
+          "confidence": null,
+          "between": null,
+          "provider": "overture",
+          "resource": "confidence_calculation",
+          "version": "2026-10-15"
+        }
+      ],
+      "shown": "Selected name/type/class/height or connector count/taxonomy/operating status; selected fields only."
+    }
+  ],
+  "appendix": "Schema/access clarifications, no padded problem list"
+}

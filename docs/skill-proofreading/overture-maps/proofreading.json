@@ -1,0 +1,40 @@
+{
+  "method": "skill_based_codex",
+  "skill": "japanese-slide-proofreading",
+  "gemini_used": false,
+  "external_generation_api_used": false,
+  "actor": "/root/maps_coordinator/create_overture",
+  "scope": "Japanese naturalness and brevity; final full text read separately",
+  "changes": [
+    {
+      "page": 5,
+      "before": "地図画像を受け取るのではなく、必要な範囲や種類を抽出して、自分の地図や分析に使う。",
+      "after": "必要な範囲や種類を抽出し、自分の地図や分析に使える。",
+      "reason": "同じ段落に必要な機能を直接説明し、不要な否定の対比を除く。"
+    },
+    {
+      "page": 17,
+      "before": "取得したGeoParquetのgeometryはWKBで符号化されている。",
+      "after": "geometryはWKB（形状をバイナリで表す形式）で保存される。",
+      "reason": "形式の略語を、その役割が伝わる短い説明とともに示す。"
+    },
+    {
+      "page": 21,
+      "before": "京都の抽出にも、値が入っていない建物がある。",
+      "after": "京都の抽出では、高さの値は大半の建物に入っていない。",
+      "reason": "実際の取得範囲で高さがあるのは193/185307件。欠損の多さが利用判断に伝わるようにする。"
+    },
+    {
+      "page": 24,
+      "before": "更新間隔は各地物の観測日とは異なる。",
+      "after": "リリース日は、個々の地物を更新した日付とは別に管理される。",
+      "reason": "期間と日付を比較する不自然な文を直し、配布日と地物の更新日の関係を説明する。"
+    },
+    {
+      "page": 29,
+      "before": "Pythonで京都の建物を取得する",
+      "after": "コマンドで京都の建物を取得する",
+      "reason": "表示するのはPythonパッケージのコマンド呼び出しなので、その操作を見出しにする。"
+    }
+  ]
+}

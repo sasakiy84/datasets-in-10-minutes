@@ -1,0 +1,123 @@
+{
+  "actor": "/root/maps_coordinator/create_overture",
+  "scope": "Actual STAC and extracted Kyoto records inspected; no claim of world-wide row-by-row verification",
+  "release": "2026-10-21.0",
+  "acquisition_date": "2026-10-28",
+  "bbox": [
+    135.72,
+    34.97,
+    135.8,
+    35.03
+  ],
+  "selection": "bbox overlap, not exact geometry clip",
+  "types": {
+    "building": {
+      "extracted_records": 185307,
+      "bytes": 22886727,
+      "sha256": "7ca4f60d7b27bf4b544e430734ac039cb9b4f462531a42c0d3ce69a4a638b78d",
+      "source_urls": [
+        "https://overturemaps-us-west-2.s3.us-west-2.amazonaws.com/release/2026-10-21.0/theme=buildings/type=building/part-00499-606c1969-357a-5c9d-b448-bf383b5be546-c000.zstd.parquet"
+      ]
+    },
+    "segment": {
+      "extracted_records": 23963,
+      "bytes": 5692375,
+      "sha256": "7c446ce81b9429dc117606ed55fcb564e130d887b649dfef7641f077b7e3d298",
+      "source_urls": [
+        "https://overturemaps-us-west-2.s3.us-west-2.amazonaws.com/release/2026-10-21.0/theme=transportation/type=segment/part-00124-63401875-780b-5d6f-9dee-bb3815b7b73b-c000.zstd.parquet",
+        "https://overturemaps-us-west-2.s3.us-west-2.amazonaws.com/release/2026-10-21.0/theme=transportation/type=segment/part-00125-a2a0db14-7660-5f16-b02a-00ed665c7ce7-c000.zstd.parquet",
+        "https://overturemaps-us-west-2.s3.us-west-2.amazonaws.com/release/2026-10-21.0/theme=transportation/type=segment/part-00126-481f0788-772e-59fe-be40-034fa4911dff-c000.zstd.parquet"
+      ]
+    },
+    "place": {
+      "extracted_records": 32495,
+      "bytes": 5691191,
+      "sha256": "d248a03c49c57c53766c6ec7781256f896cb2db15e84dd667e4516881e807bfa",
+      "source_urls": [
+        "https://overturemaps-us-west-2.s3.us-west-2.amazonaws.com/release/2026-10-21.0/theme=places/type=place/part-00015-eb1c1331-f519-5db6-8fef-74a77e5776ff-c000.zstd.parquet"
+      ]
+    },
+    "water": {
+      "extracted_records": 942,
+      "bytes": 6974517,
+      "sha256": "74afc34fb05a847308e27a5df460564411ccc345bd49a53fc7453911e781954c",
+      "source_urls": [
+        "https://overturemaps-us-west-2.s3.us-west-2.amazonaws.com/release/2026-10-21.0/theme=base/type=water/part-00027-ae01f3fc-9546-580d-8cd4-3451d8289240-c000.zstd.parquet",
+        "https://overturemaps-us-west-2.s3.us-west-2.amazonaws.com/release/2026-10-21.0/theme=base/type=water/part-00031-ff57031f-2765-5695-8bea-b3769986c897-c000.zstd.parquet"
+      ]
+    }
+  },
+  "original_building_geoparquet": {
+    "version": "1.1.0",
+    "primary_column": "geometry",
+    "columns": {
+      "geometry": {
+        "encoding": "WKB",
+        "geometry_types": [
+          "MultiPolygon",
+          "Polygon"
+        ],
+        "bbox": [
+          133.34202575683594,
+          34.70895767211914,
+          136.17019653320312,
+          36.175209045410156
+        ],
+        "covering": {
+          "bbox": {
+            "xmin": [
+              "bbox",
+              "xmin"
+            ],
+            "ymin": [
+              "bbox",
+              "ymin"
+            ],
+            "xmax": [
+              "bbox",
+              "xmax"
+            ],
+            "ymax": [
+              "bbox",
+              "ymax"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "crs_inference": "Original geo metadata omits crs. GeoParquet 1.1 default is OGC:CRS84 (longitude,latitude degrees). DuckDB DESCRIBE read actual source as GEOMETRY(OGC:CRS84).",
+  "local_extraction_format": "DuckDB 2.0 COPY preserves geometry/WKB and writes GeoParquet 1.0 metadata. Original cloud file is GeoParquet 1.1.",
+  "selected_record_verification": {
+    "building": {
+      "id": "ca880961-9f61-4fef-8e2e-f53dc39fb365",
+      "name": "錦市場",
+      "geometry_type": "POLYGON",
+      "fields_match": true
+    },
+    "segment": {
+      "id": "85c96d4d-804c-4c5d-8586-133ff41bcde5",
+      "name": "錦小路通",
+      "geometry_type": "LINESTRING",
+      "fields_match": true
+    },
+    "place": {
+      "id": "322e4d81-46aa-404d-bd1e-0453541c3786",
+      "name": "汸臼庵京都錦本店",
+      "geometry_type": "POINT",
+      "fields_match": true
+    }
+  },
+  "global_counts_from_actual_stac": {
+    "building": 2533842612,
+    "segment": 353327860,
+    "place": 88418121,
+    "water": 66814038
+  },
+  "api_use": {
+    "gemini": false,
+    "external_generation": false,
+    "model_evaluation": false
+  },
+  "creator_actual_review": "See creator-visual-review.json for final image/native/source scope; acquisition and automation are not claimed as visual review."
+}
