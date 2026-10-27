@@ -1,0 +1,353 @@
+[
+  {
+    "page": 1,
+    "title": "Wikimedia\nEventStreams",
+    "section": "",
+    "kind": "cover"
+  },
+  {
+    "page": 2,
+    "title": "EventStreamsの公式文書",
+    "section": "公式サイト",
+    "kind": "image",
+    "sources": [
+      "home"
+    ]
+  },
+  {
+    "page": 3,
+    "title": "",
+    "section": "目次",
+    "kind": "toc"
+  },
+  {
+    "page": 4,
+    "title": "1. 変更イベントの実例",
+    "section": "1. 変更イベントの実例",
+    "kind": "divider"
+  },
+  {
+    "page": 5,
+    "title": "ファイル説明ページの変更が1件届く",
+    "section": "1. 変更イベントの実例",
+    "kind": "content",
+    "sources": [
+      "capture"
+    ]
+  },
+  {
+    "page": 6,
+    "title": "イベントは、Wiki内で起きた状態の変化",
+    "section": "1. 変更イベントの実例",
+    "kind": "content",
+    "sources": [
+      "home"
+    ],
+    "body_text": [
+      "EventStreamsは、Wikimediaプロジェクトの変更を、構造化されたイベントとして継続配信する公式サービス。",
+      "ここで扱うrecentchangeは、編集・新規ページ・ログ・カテゴリ変更などの記録を送る。実世界の出来事を集めたコーパスとは対象が異なる。",
+      "一度接続すると、変更が起きるたびにメッセージが届く。月ごとにファイルを取得するデータ配布とは使い方が変わる。"
+    ]
+  },
+  {
+    "page": 7,
+    "title": "記事以外の、新規ページも届く",
+    "section": "1. 変更イベントの実例",
+    "kind": "content",
+    "sources": [
+      "capture"
+    ]
+  },
+  {
+    "page": 8,
+    "title": "カテゴリへの追加・削除も別の種類で届く",
+    "section": "1. 変更イベントの実例",
+    "kind": "content",
+    "sources": [
+      "capture"
+    ]
+  },
+  {
+    "page": 9,
+    "title": "編集以外の操作は、ログとして届く",
+    "section": "1. 変更イベントの実例",
+    "kind": "content",
+    "sources": [
+      "capture"
+    ]
+  },
+  {
+    "page": 10,
+    "title": "同じ接続で、複数のプロジェクトを受信する",
+    "section": "1. 変更イベントの実例",
+    "kind": "content",
+    "sources": [
+      "capture"
+    ]
+  },
+  {
+    "page": 11,
+    "title": "2. SSEとJSONのデータ構造",
+    "section": "2. SSEとJSONのデータ構造",
+    "kind": "divider"
+  },
+  {
+    "page": 12,
+    "title": "SSEの枠組みに、JSONの変更情報が入る",
+    "section": "2. SSEとJSONのデータ構造",
+    "kind": "sse-example",
+    "sources": [
+      "home"
+    ]
+  },
+  {
+    "page": 13,
+    "title": "変更の内容はdataの各フィールドで表す",
+    "section": "2. SSEとJSONのデータ構造",
+    "kind": "content",
+    "sources": [
+      "rcfeed"
+    ]
+  },
+  {
+    "page": 14,
+    "title": "日時のフィールドも、役割と単位が異なる",
+    "section": "2. SSEとJSONのデータ構造",
+    "kind": "content",
+    "sources": [
+      "schema",
+      "home"
+    ]
+  },
+  {
+    "page": 15,
+    "title": "版IDと、ストリームの再開位置を使い分ける",
+    "section": "2. SSEとJSONのデータ構造",
+    "kind": "content",
+    "sources": [
+      "rcfeed",
+      "home"
+    ]
+  },
+  {
+    "page": 16,
+    "title": "内容の長さは、51 bytes増えている",
+    "section": "2. SSEとJSONのデータ構造",
+    "kind": "content",
+    "sources": [
+      "rctable"
+    ]
+  },
+  {
+    "page": 17,
+    "title": "変更の種類によって、届く項目が変わる",
+    "section": "2. SSEとJSONのデータ構造",
+    "kind": "content",
+    "sources": [
+      "capture"
+    ]
+  },
+  {
+    "page": 18,
+    "title": "3. 配信の仕組みとストリーム",
+    "section": "3. 配信の仕組みとストリーム",
+    "kind": "divider"
+  },
+  {
+    "page": 19,
+    "title": "2017年に、再接続できる配信方式を公開",
+    "section": "3. 配信の仕組みとストリーム",
+    "kind": "content",
+    "sources": [
+      "launch"
+    ],
+    "body_text": [
+      "Wikimedia FoundationのAndrew Ottoが、2017年3月20日にEventStreamsの公開を紹介した。",
+      "先行するRCStreamやIRC配信では、サービス再起動で接続が途切れ、継続して変更を追うツールの維持が難しかった。",
+      "標準的なHTTPとSSEを使い、切断後の再開を支援した。最近の更新以外の種類も同じ仕組みで公開できるようにした。"
+    ]
+  },
+  {
+    "page": 20,
+    "title": "Wikiの変更を、KafkaからHTTPへ配信する",
+    "section": "3. 配信の仕組みとストリーム",
+    "kind": "content",
+    "sources": [
+      "home"
+    ],
+    "body_text": [
+      "Wiki上の操作から構造化されたイベントを作り、イベントを蓄積・配信するApache Kafkaへ送る。",
+      "EventStreamsはKafkaのストリームを読み、外部のクライアントへHTTPで配信する。受信したイベントは、検索索引や手元のデータの更新に利用できる。",
+      "公開されるのは設定されたストリーム。Wikimedia内部のすべてのイベントが公開されるわけではない。"
+    ]
+  },
+  {
+    "page": 21,
+    "title": "最近の更新以外のストリームも選べる",
+    "section": "3. 配信の仕組みとストリーム",
+    "kind": "content",
+    "sources": [
+      "api"
+    ]
+  },
+  {
+    "page": 22,
+    "title": "SSEと、1行ずつ読むJSONを選べる",
+    "section": "3. 配信の仕組みとストリーム",
+    "kind": "content",
+    "sources": [
+      "home"
+    ]
+  },
+  {
+    "page": 23,
+    "title": "必要なWikiや変更の種類を受信側で選ぶ",
+    "section": "3. 配信の仕組みとストリーム",
+    "kind": "code",
+    "sources": [
+      "home"
+    ]
+  },
+  {
+    "page": 24,
+    "title": "4. 受信・再開とデータの利用",
+    "section": "4. 受信・再開とデータの利用",
+    "kind": "divider"
+  },
+  {
+    "page": 25,
+    "title": "ブラウザから、短時間だけ受信する",
+    "section": "4. 受信・再開とデータの利用",
+    "kind": "code",
+    "sources": [
+      "home"
+    ]
+  },
+  {
+    "page": 26,
+    "title": "接続が切れたら、保存した位置から再開する",
+    "section": "4. 受信・再開とデータの利用",
+    "kind": "content",
+    "sources": [
+      "home"
+    ],
+    "body_text": [
+      "SSEのidを保存しておき、再接続するときにLast-Event-IDへ渡すと、その位置から受信を再開できる。EventSourceは接続の再開を支援する。",
+      "idには、複数のKafkaトピックやパーティションの位置が入る。受信した配列をそのまま保存し、一つの版IDで置き換えない。",
+      "受信位置と処理済みイベントを記録すると、切断後もデータ更新を継続しやすい。"
+    ]
+  },
+  {
+    "page": 27,
+    "title": "時刻から遡れる期間は、ストリームで異なる",
+    "section": "4. 受信・再開とデータの利用",
+    "kind": "content",
+    "sources": [
+      "home"
+    ],
+    "body_text": [
+      "URLにsinceを指定すると、UTC日時から受信を始められる。時刻に近い、Kafka内の位置を探して読み始める仕組み。",
+      "履歴の保持期間は設定に依存し、公式文書では7〜31日程度とされる。過去の全変更を永続的に取得するための保管庫ではない。",
+      "長期の履歴が必要なら、本文の履歴ダンプや、編集・ページ・利用者の履歴をまとめたMediaWiki historyも利用する。"
+    ]
+  },
+  {
+    "page": 28,
+    "title": "公開情報の取得と、再利用の条件を確かめる",
+    "section": "4. 受信・再開とデータの利用",
+    "kind": "content",
+    "sources": [
+      "policy"
+    ],
+    "body_text": [
+      "公開ストリームには、利用者名や編集要約などが含まれる場合もある。用途に必要なフィールドを選んで保存し、取得する量と接続数を抑える。",
+      "API仕様やサービス実装のライセンスと、元プロジェクトの投稿内容の利用条件は対象が異なる。本文や編集要約を再利用するときは、元データの条件を確認する。"
+    ]
+  },
+  {
+    "page": 29,
+    "title": "配信と一括配布は、更新の用途が異なる",
+    "section": "4. 受信・再開とデータの利用",
+    "kind": "content",
+    "sources": [
+      "home"
+    ]
+  },
+  {
+    "page": 30,
+    "title": "Wikimedia EventStreamsの要点",
+    "section": "4. 受信・再開とデータの利用",
+    "kind": "content",
+    "sources": [
+      "home"
+    ],
+    "body_text": [
+      "Wiki内の編集や操作を、構造化イベントとして継続的に配信する公式サービス。Wikipedia以外のWikimediaプロジェクトも含む。",
+      "SSEの枠組みと、その中のJSONを読む。版ID、内容のバイト数、変更の種類などを、用途に合わせて使う。",
+      "受信側でWikiや種類を選び、再開位置を保存する。長期の履歴分析や初期データの取得には、一括配布のデータも組み合わせる。"
+    ]
+  },
+  {
+    "page": 31,
+    "title": "Appendix",
+    "section": "Appendix",
+    "kind": "divider"
+  },
+  {
+    "page": 32,
+    "title": "",
+    "section": "Appendix: 目次",
+    "kind": "toc"
+  },
+  {
+    "page": 33,
+    "title": "主編とは別の、5件の変更イベント",
+    "section": "Appendix: 1. 追加の実レコード",
+    "kind": "content",
+    "sources": [
+      "capture"
+    ]
+  },
+  {
+    "page": 34,
+    "title": "受信順に見ても、変更時刻は前後する",
+    "section": "Appendix: 1. 追加の実レコード",
+    "kind": "content",
+    "sources": [
+      "capture"
+    ]
+  },
+  {
+    "page": 35,
+    "title": "PythonではNDJSONを1行ずつ読める",
+    "section": "Appendix: 2. 取得コードと参考文献",
+    "kind": "code",
+    "sources": [
+      "home"
+    ]
+  },
+  {
+    "page": 36,
+    "title": "参考文献",
+    "section": "Appendix: 2. 取得コードと参考文献",
+    "kind": "references"
+  },
+  {
+    "page": 37,
+    "title": "参考文献",
+    "section": "Appendix: 2. 取得コードと参考文献",
+    "kind": "references"
+  },
+  {
+    "page": 38,
+    "title": "参考文献",
+    "section": "Appendix: 2. 取得コードと参考文献",
+    "kind": "references"
+  },
+  {
+    "page": 39,
+    "title": "参考文献",
+    "section": "Appendix: 2. 取得コードと参考文献",
+    "kind": "references"
+  }
+]

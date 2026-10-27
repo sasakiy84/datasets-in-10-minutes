@@ -1,0 +1,31 @@
+{
+  "dataset": "wikimedia-eventstreams",
+  "actor": "/root/wikimedia_coordinator/create_history",
+  "role": "independent reviewer",
+  "creator_actor": "/root/wikimedia_coordinator/create_pageviews",
+  "approved": true,
+  "artifact_sha256": {
+    "pdf": "0c017da955786c5ebbb44cfa5c7d238d2089ebaae43b5ca602a72076f8fd9170",
+    "pptx": "71e2c069bb3f646c728e3c0077ed7448d5ee570c9c80fd71d3ee479839585172"
+  },
+  "main_pages": 30,
+  "total_pages": 39,
+  "planned_main_seconds": 600,
+  "actual_reading_seconds": null,
+  "source_review": "Official documents, current API, schemas1.0.0/1.0.1, RCFeed and record definitions, launch/update articles and licensing/reuse sections independently read. Independent bounded SSE8 records obtained.",
+  "data_review": "Creator SSE30 records independently reparsed; four main plus five additional distinct real events, fields, bytes, UTC times and counts match.",
+  "visual_review": "All39 pages individually viewed at1600px; every changed page separately reopened using only the same reviewer's own saved RGB baselines.",
+  "technical_review": "Six independent checks passed on this exact final pair; no remaining package/render/layout/table/ink/link issues.",
+  "code_review": "Exact native handler body, real browser EventSource parsing of actual SSE replay, and live Python NDJSON executed with finite limits. Final code hashes match.",
+  "native_record_review": "All389 nonempty native text items, including176 nonempty table cells, match finalPPTX in actual order; all176 table cells separately checked. Three true wording pairs checked against saved native before/final. Content/code/field/source/bibliography replacements kept separate.",
+  "public_records": [
+    "review.json",
+    "source-summary.md",
+    "visual-review.json",
+    "technical-summary.json",
+    "code-review.json",
+    "records-review.json",
+    "examples-check.json"
+  ],
+  "remaining": []
+}

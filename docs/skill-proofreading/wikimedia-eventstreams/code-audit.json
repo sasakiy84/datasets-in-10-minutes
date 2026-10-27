@@ -1,0 +1,41 @@
+{
+  "browser": {
+    "scope": "Exact final native p25 JavaScript through real Chromium EventSource/SSE parser; HTTP response replayed from original30-event bounded capture; no extra public live SSE request",
+    "console": [
+      "wikidatawiki edit",
+      "frwiki log",
+      "frwiki new",
+      "commonswiki categorize",
+      "kowiktionary categorize"
+    ],
+    "closed_after_five": true
+  },
+  "filter": {
+    "scope": "Native p23 callback body wrapped as callback and executed against all30 original captured event JSON records",
+    "matched_titles": [
+      "Magali Le Huche"
+    ],
+    "matched_count": 1
+  },
+  "python": {
+    "scope": "Exact native p35 code executed through one public live request; only instructed User-Agent contact field changed; 20sec outer harness cap; five nonempty JSON-object cap plus8sec read timeout",
+    "http": {
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "url": "https://stream.wikimedia.org/v2/stream/recentchange"
+    },
+    "lines": 5,
+    "bytes": 5492,
+    "elapsed_seconds": 0.6005883070029086,
+    "connection_closed": true,
+    "output": "edit\nnew\nedit\ncategorize\nedit\n"
+  },
+  "gemini_used": false,
+  "final_pptx_sha256": "71e2c069bb3f646c728e3c0077ed7448d5ee570c9c80fd71d3ee479839585172",
+  "native_code_hashes": {
+    "23": "e430533374f43ac89433656417ca6661ff959a910087355f09dd31d5ca34b061",
+    "25": "13daf8f1de1f0a822943b7379c1b8a5dccf6a9fbbb9cc4ae0157ecefb3225291",
+    "35": "bd7e51316edc2204a643a9bc417274096171984aff4fc5501899cbfba79557c5"
+  },
+  "final_bridge_scope": "Native p23/25/35 snippets unchanged across last export, which changed only p12 display and p38 reference title."
+}

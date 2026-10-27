@@ -1,0 +1,187 @@
+{
+  "source_requests": [
+    {
+      "id": "home",
+      "url": "https://wikitech.wikimedia.org/wiki/EventStreams",
+      "status": 200,
+      "bytes": 169172,
+      "resolved": "https://wikitech.wikimedia.org/wiki/EventStreams"
+    },
+    {
+      "id": "schema",
+      "url": "https://schema.wikimedia.org/repositories/primary/jsonschema/mediawiki/recentchange/1.0.0",
+      "status": 200,
+      "bytes": 4019,
+      "resolved": "https://schema.wikimedia.org/repositories/primary/jsonschema/mediawiki/recentchange/1.0.0"
+    },
+    {
+      "id": "recentchanges",
+      "url": "https://www.mediawiki.org/wiki/API:RecentChanges",
+      "status": 200,
+      "bytes": 119330,
+      "resolved": "https://www.mediawiki.org/wiki/API:RecentChanges"
+    },
+    {
+      "id": "terms",
+      "url": "https://www.mediawiki.org/wiki/API:Etiquette",
+      "status": 200,
+      "bytes": 95035,
+      "resolved": "https://www.mediawiki.org/wiki/API:Etiquette"
+    },
+    {
+      "id": "privacy",
+      "url": "https://meta.wikimedia.org/wiki/Privacy_policy",
+      "status": 200,
+      "bytes": 111742,
+      "resolved": "https://meta.wikimedia.org/wiki/Privacy_policy"
+    },
+    {
+      "id": "introduction",
+      "url": "https://blog.wikimedia.org/2017/06/28/event-streams/",
+      "status": 404,
+      "bytes": 33643,
+      "resolved": "https://diff.wikimedia.org/2017/06/28/event-streams/"
+    },
+    {
+      "id": "launch",
+      "url": "https://diff.wikimedia.org/2017/03/20/eventstreams/",
+      "status": 200,
+      "bytes": 111855,
+      "content_type": "text/html; charset=UTF-8",
+      "resolved_url": "https://diff.wikimedia.org/2017/03/20/eventstreams/"
+    },
+    {
+      "id": "updates",
+      "url": "https://diff.wikimedia.org/2018/08/08/eventstreams-updates/",
+      "status": 200,
+      "bytes": 81573,
+      "content_type": "text/html; charset=UTF-8",
+      "resolved_url": "https://diff.wikimedia.org/2018/08/08/eventstreams-updates/"
+    },
+    {
+      "id": "rcfeed",
+      "url": "https://www.mediawiki.org/wiki/Manual:RCFeed",
+      "status": 200,
+      "bytes": 70671,
+      "content_type": "text/html; charset=UTF-8",
+      "resolved_url": "https://www.mediawiki.org/wiki/Manual:RCFeed"
+    },
+    {
+      "id": "table",
+      "url": "https://www.mediawiki.org/wiki/Manual:Recentchanges_table",
+      "status": 200,
+      "bytes": 200400,
+      "content_type": "text/html; charset=UTF-8",
+      "resolved_url": "https://www.mediawiki.org/wiki/Manual:Recentchanges_table"
+    },
+    {
+      "id": "spec",
+      "url": "https://stream.wikimedia.org/?spec",
+      "status": 200,
+      "bytes": 748055,
+      "content_type": "application/json; charset=utf-8",
+      "resolved_url": "https://stream.wikimedia.org/?spec"
+    },
+    {
+      "id": "terms-use",
+      "url": "https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use",
+      "status": 200,
+      "bytes": 152998,
+      "content_type": "text/html; charset=UTF-8",
+      "resolved_url": "https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use"
+    }
+  ],
+  "capture": {
+    "url": "https://stream.wikimedia.org/v2/stream/recentchange",
+    "status": 200,
+    "content_type": "text/event-stream; charset=utf-8",
+    "start_utc": "2026-10-27T19:52:54.349094+00:00",
+    "events": 30,
+    "elapsed_seconds": 2.800383016001433,
+    "bytes_read": 46223,
+    "limit_events": 30,
+    "limit_seconds": 7,
+    "limit_bytes": 350000,
+    "full_stream_fetched": false,
+    "bytes_read_definition": "Sum of UTF8 lengths of decoded read lines, excluding line delimiters and HTTP framing; not wire bytes.",
+    "saved_sse_bytes": 46375
+  },
+  "raw_files": [
+    {
+      "path": "raw/code-ndjson.jsonl",
+      "bytes": 5497,
+      "sha256": "5021609c302be4d10fe673c01ead2ba93b5ee7aaa22b415dd23093678b6e141b",
+      "public_record": false
+    },
+    {
+      "path": "raw/events.json",
+      "bytes": 56031,
+      "sha256": "7e7933499572baf37b73af5117d0c6dab07362e447393a708924f219c72eba69",
+      "public_record": false
+    },
+    {
+      "path": "raw/ndjson-diagnostic-prefix.txt",
+      "bytes": 9618,
+      "sha256": "0cf19aee40d4afb9fdb7ec06ccd210818bda90fc2065cb7603ff9b9df2c3f923",
+      "public_record": false
+    },
+    {
+      "path": "raw/recentchange.sse",
+      "bytes": 46375,
+      "sha256": "d6eb01a71c9af55d5fc82690562c8b32ab4e91aaa6cc18aa215ea4a28b348018",
+      "public_record": false
+    }
+  ],
+  "main_events_raw_indices": [
+    5,
+    2,
+    4,
+    1
+  ],
+  "additional_distinct_raw_indices": [
+    13,
+    24,
+    25,
+    20,
+    19
+  ],
+  "total_distinct_displayed_events": 9,
+  "source_schema": "/mediawiki/recentchange/1.0.0",
+  "schema_payload_format": "YAML, original URL without extension",
+  "selection": "Actual finite capture, not a global census or representative frequency sample",
+  "sse_example_scope": {
+    "page": 12,
+    "id_value_omitted": true,
+    "data_selected_exact_fields": [
+      "wiki",
+      "type"
+    ],
+    "actual_raw_event_index": 5
+  },
+  "replay_history_scope": "Not queried; official setting-dependent range7–31days cited, not a tested universal promise.",
+  "licenses": [
+    {
+      "resource": "OpenAPI specification metadata / service information",
+      "license": "Apache2 as stated by info.license; not applied to all event payloads",
+      "source": "https://stream.wikimedia.org/?spec"
+    },
+    {
+      "resource": "Wikitech text and official documentation screenshot context",
+      "license": "Wikitech text CC BY-SA4.0; logos retain their respective identities/marks, reproduced in page screenshot with attribution",
+      "source": "https://wikitech.wikimedia.org/wiki/EventStreams"
+    },
+    {
+      "resource": "Event payloads",
+      "license": "No stream-wide blanket data license established from service/schema/Terms documents. Reproduce selected factual metadata with source attribution; do not claim CC0 for all event content.",
+      "source": "https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use"
+    }
+  ],
+  "excluded_product_fields": [
+    "user",
+    "comment",
+    "parsedcomment",
+    "log target user-page title",
+    "IP data"
+  ],
+  "code_capture": "raw/code-ndjson.jsonl is a separate five-object live code test, not mixed into original30 sample"
+}

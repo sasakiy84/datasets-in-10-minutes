@@ -1,0 +1,109 @@
+{
+  "slug": "wikimedia-eventstreams",
+  "title": "Wikimedia EventStreams",
+  "year": 2017,
+  "year_evidence": {
+    "title": "Get live updates to Wikimedia projects with EventStreams",
+    "author": "Andrew Otto",
+    "published": "2017-03-20",
+    "url": "https://diff.wikimedia.org/2017/03/20/eventstreams/"
+  },
+  "version": "2026-10-28確認、recentchangeスキーマ1.0.0実例",
+  "author": "sasakiy84",
+  "affiliation": null,
+  "date": "2026-10-28",
+  "timezone": "Asia/Tokyo",
+  "audience": "B4–M1",
+  "language": "ja",
+  "main_pages": 30,
+  "total_pages": 39,
+  "main_seconds_plan": 600,
+  "actual_reading_seconds": null,
+  "notes": false,
+  "modality": "構造化",
+  "usage": "イベント配信",
+  "artifact_paths": {
+    "pdf": "../../../slides/datasets-in-10-minutes-wikimedia-eventstreams.pdf",
+    "pptx": "../../../slides/datasets-in-10-minutes-wikimedia-eventstreams.pptx"
+  },
+  "final_sha256": {
+    "pptx": "71e2c069bb3f646c728e3c0077ed7448d5ee570c9c80fd71d3ee479839585172",
+    "pdf": "0c017da955786c5ebbb44cfa5c7d238d2089ebaae43b5ca602a72076f8fd9170"
+  },
+  "record_files": [
+    "manifest.json",
+    "build-info.json",
+    "pages.jsonl",
+    "examples.json",
+    "data-manifest.json",
+    "data-audit.json",
+    "sources.md",
+    "license-attribution.md",
+    "proofreading.json",
+    "creator-visual-review.json",
+    "creator-checks.json",
+    "package-audit.json",
+    "render-audit.json",
+    "layout-audit.json",
+    "tables-audit.json",
+    "ink-audit.json",
+    "extra-audit.json",
+    "code-audit.json",
+    "panel-padding.json",
+    "screenshot-log.json",
+    "creator-rgb-bridge.json",
+    "creator-draft1-to-candidate-bridge.json"
+  ],
+  "licenses": [
+    {
+      "resource": "OpenAPI specification metadata / service information",
+      "license": "Apache2 as stated by info.license; not applied to all event payloads",
+      "source": "https://stream.wikimedia.org/?spec"
+    },
+    {
+      "resource": "Wikitech text and official documentation screenshot context",
+      "license": "Wikitech text CC BY-SA4.0; logos retain their respective identities/marks, reproduced in page screenshot with attribution",
+      "source": "https://wikitech.wikimedia.org/wiki/EventStreams"
+    },
+    {
+      "resource": "Event payloads",
+      "license": "No stream-wide blanket data license established from service/schema/Terms documents. Reproduce selected factual metadata with source attribution; do not claim CC0 for all event content.",
+      "source": "https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use"
+    }
+  ],
+  "creator_complete": true,
+  "creator_actor": "/root/wikimedia_coordinator/create_pageviews",
+  "independent_review_actor": "/root/wikimedia_coordinator/create_history",
+  "independent_review_path": "independent-review/review-wikimedia-eventstreams/review.json",
+  "remaining": [],
+  "data_scope": {
+    "original_capture_events": 30,
+    "main_distinct_events": 4,
+    "additional_distinct_events": 5,
+    "full_stream_fetched": false,
+    "schema": "/mediawiki/recentchange/1.0.0"
+  },
+  "limitations": [
+    "Finite event sample, not a global frequency census.",
+    "No historical replay workload executed.",
+    "No stream-wide blanket payload CC0 licensing claim.",
+    "Browser code uses original live SSE bytes replayed through real EventSource; Python code separately tested live."
+  ],
+  "independent_approved": true,
+  "record_stage": "Creator handoff before repository integration; remaining lists the items pending at that time, not final review status.",
+  "final_integration_review": "review.json",
+  "origin_private_artifact_paths": {
+    "pptx": "/workspace/artifacts/wikimedia-official-datasets-2026-10-28/wikimedia-eventstreams/datasets-in-10-minutes-wikimedia-eventstreams.pptx",
+    "pdf": "/workspace/artifacts/wikimedia-official-datasets-2026-10-28/wikimedia-eventstreams/datasets-in-10-minutes-wikimedia-eventstreams.pdf"
+  },
+  "artifact_sha256": {
+    "pptx": "71e2c069bb3f646c728e3c0077ed7448d5ee570c9c80fd71d3ee479839585172",
+    "pdf": "0c017da955786c5ebbb44cfa5c7d238d2089ebaae43b5ca602a72076f8fd9170"
+  },
+  "licensefiles": [
+    "../../licenses/wikimedia-eventstreams/license-attribution.md"
+  ],
+  "source_license_filenames": [
+    "license-attribution.md"
+  ]
+}

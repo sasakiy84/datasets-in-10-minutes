@@ -1,0 +1,81 @@
+{
+  "actor": "/root/wikimedia_coordinator/create_history",
+  "creator_raw_normalized_sse_sha256": "d6eb01a71c9af55d5fc82690562c8b32ab4e91aaa6cc18aa215ea4a28b348018",
+  "creator_raw_events_json_sha256": "7e7933499572baf37b73af5117d0c6dab07362e447393a708924f219c72eba69",
+  "normalized_sse_reparsed_exactly_equals_json": true,
+  "events": 30,
+  "canary_events": 0,
+  "types": {
+    "edit": 8,
+    "log": 3,
+    "new": 2,
+    "categorize": 17
+  },
+  "wikis": {
+    "wikidatawiki": 4,
+    "frwiki": 5,
+    "commonswiki": 4,
+    "kowiktionary": 1,
+    "enwiktionary": 4,
+    "zhwikisource": 10,
+    "enwiki": 1,
+    "cewiki": 1
+  },
+  "main_actual_examples": 4,
+  "additional_actual_examples": 5,
+  "example_checks": [
+    {
+      "role": "main",
+      "raw_index": 5,
+      "actual_payload_selected_fields_match": true
+    },
+    {
+      "role": "main",
+      "raw_index": 2,
+      "actual_payload_selected_fields_match": true
+    },
+    {
+      "role": "main",
+      "raw_index": 4,
+      "actual_payload_selected_fields_match": true
+    },
+    {
+      "role": "main",
+      "raw_index": 1,
+      "actual_payload_selected_fields_match": true
+    },
+    {
+      "role": "additional",
+      "raw_index": 13,
+      "actual_payload_selected_fields_match": true
+    },
+    {
+      "role": "additional",
+      "raw_index": 24,
+      "actual_payload_selected_fields_match": true
+    },
+    {
+      "role": "additional",
+      "raw_index": 25,
+      "actual_payload_selected_fields_match": true
+    },
+    {
+      "role": "additional",
+      "raw_index": 20,
+      "actual_payload_selected_fields_match": true
+    },
+    {
+      "role": "additional",
+      "raw_index": 19,
+      "actual_payload_selected_fields_match": true
+    }
+  ],
+  "all_selected_events_distinct": true,
+  "all_selected_fields_match_raw": true,
+  "byte_sizes_and_51_difference_verified": true,
+  "six_received_order_event_times_utc_verified": true,
+  "presence_table_scope": "Four selected actualexamples; correctabsenceofoldkey/newpage andlength/revisionforlog/categorize in theseexamples.",
+  "capture_byte_scope": "Creator bytes_read counts UTF8decodedline bytes excludinglinebreaks; normalized savedSSEprefixandvalues areverified, not a claim ofexactHTTPwirebytes.",
+  "source_scope": "PublicofficialRecentChange events; no actorname/IP/comment/logparams displayed asselectedexample fields.",
+  "result": "pass"
+}
