@@ -24,3 +24,7 @@ Wikipedia本文、閲覧回数、記事間の遷移、編集等の履歴、変�
 最終ローカル検査では、新規6資料のPDF/PPTXとプレビューの一致、全239頁のnative段落・表セルの順序と重複、6件の公開記録peer承認、既存130行・260配布物の保持を確認した。日本語の校正対は合計59件で、内容の変更・差し替えや書式の調整と分けている。ギャラリーでは136件、新しい用途と構造化の絞り込み、作成・更新順、タイトル検索、リセットを検査し、作成担当とは別の担当が2画面と新6サムネイルを個別に表示して確認した。
 
 [ローカル検証票](wikimedia-official-datasets-2026-10-28/local-verification.json)・[全頁文言の照合](wikimedia-official-datasets-2026-10-28/native-page-transcripts.json)・[ギャラリーの機能確認](wikimedia-official-datasets-2026-10-28/gallery-browser-check.json)・[ギャラリーの実見](wikimedia-official-datasets-2026-10-28/gallery-visual-review.json)・[資料別コミット](wikimedia-official-datasets-2026-10-28/dataset-commits.json)。
+
+GitHub Pagesのbuildとdeployが成功した後、公開先の新規6PDF・6PPTX・カタログの計13件がHTTP 200を返し、承認・凍結したファイルとSHA-256が一致することを確認した。公開カタログは136件である。配布・ギャラリーのソースコミットは `9a8293a2f56f0a03b9e99e8bbe347ce87a0dacf0`。その後の記録追加はdocsのみで、配布物を変更していない。
+
+[公開13件の照合](wikimedia-official-datasets-2026-10-28/publication.json)・[CIの結果](wikimedia-official-datasets-2026-10-28/ci-result.json)・[公開前の凍結値](wikimedia-official-datasets-2026-10-28/publication-frozen.json)。
