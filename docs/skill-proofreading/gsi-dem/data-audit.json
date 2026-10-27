@@ -1,0 +1,198 @@
+{
+  "actor": "create_gsi_dem",
+  "method": "official public HTTP acquisition, full numeric parse of selected TXT tiles; own reading of specified official sections",
+  "gemini_used": false,
+  "external_generation_api_used": false,
+  "model_evaluation_run": false,
+  "artifact_sha256": {
+    "pdf": "d120977632bb8d9d83a746aeac56fd0475d9ac67c569bec17fd4b714b235095f",
+    "pptx": "ddb9da928c892491bb8e777ffd8309390844df2aee331be02d07fe6d3304be18"
+  },
+  "downloaded_scope": {
+    "TXT_tiles": 18,
+    "parsed_cells": 1179648,
+    "GML_distribution_files": 0,
+    "GML_specification": "5.3, 2026-07-31",
+    "whole_DEM_distribution_read": false
+  },
+  "regional_statistics": {
+    "fuji": {
+      "z": 13,
+      "x": [
+        7251,
+        7252,
+        7253
+      ],
+      "y": [
+        3233,
+        3234,
+        3235
+      ],
+      "bbox_lonlat": [
+        138.6474609375,
+        35.31736632923787,
+        138.779296875,
+        35.42486791930557
+      ],
+      "pixel_m_at_center": 15.582064831235389,
+      "min": 817.1,
+      "max": 3772.96,
+      "valid": 589824,
+      "missing": 0,
+      "total": 589824,
+      "shape": [
+        768,
+        768
+      ],
+      "central_5x5": [
+        [
+          2822.08,
+          2828.56,
+          2836.95,
+          2845.7,
+          2851.66
+        ],
+        [
+          2829.39,
+          2835.9,
+          2844.41,
+          2852.55,
+          2858.87
+        ],
+        [
+          2836.87,
+          2843.68,
+          2851.97,
+          2859.44,
+          2865.73
+        ],
+        [
+          2846.35,
+          2853.09,
+          2860.19,
+          2867.49,
+          2873.61
+        ],
+        [
+          2851.59,
+          2858.41,
+          2866.0,
+          2873.82,
+          2881.04
+        ]
+      ]
+    },
+    "kyoto": {
+      "z": 14,
+      "x": [
+        14369,
+        14370,
+        14371
+      ],
+      "y": [
+        6488,
+        6489,
+        6490
+      ],
+      "bbox_lonlat": [
+        135.72509765625,
+        34.97600151317588,
+        135.791015625,
+        35.02999636902566
+      ],
+      "pixel_m_at_center": 7.82640663960998,
+      "min": 18.0,
+      "max": 241.93,
+      "valid": 589824,
+      "missing": 0,
+      "total": 589824,
+      "shape": [
+        768,
+        768
+      ],
+      "central_5x5": [
+        [
+          36.95,
+          36.95,
+          36.95,
+          36.97,
+          37.03
+        ],
+        [
+          36.88,
+          36.88,
+          36.89,
+          36.92,
+          36.97
+        ],
+        [
+          36.83,
+          36.83,
+          36.85,
+          36.9,
+          36.92
+        ],
+        [
+          36.76,
+          36.79,
+          36.82,
+          36.86,
+          36.9
+        ],
+        [
+          36.7,
+          36.75,
+          36.8,
+          36.82,
+          36.88
+        ]
+      ]
+    }
+  },
+  "tile_source": "dem = DEM10B, current tile catalog",
+  "TXT_update_status": "Official catalog: stopped October 2024; retrieved 2026-10-28 JST",
+  "parsing": "comma-separated256 rows×256columns; e→NaN; units metres; originNW; x east/y south",
+  "mosaic": "tiles joined by exact x/y indices before derivatives; no filling/missing interpolation",
+  "derivation": {
+    "grid_ground_spacing": "2π*6378137/(2^z*256)*cos(central_latitude), same local metric scale for both axes",
+    "map_display": "WebMercator grid uniformly scaled at central latitude, local southwest origin; approximate physical distances",
+    "hillshade": "numpy gradient on complete mosaic with physical dx/dy; NW light azimuth315deg altitude45deg; normalized normal dot light; NaN remains masked",
+    "contours": "matplotlib contour on original height grid, 500m interval, no zero fill",
+    "profile": "full west-east row459 at pixel centers; argmax of selected Fuji mosaic falls on this row",
+    "precision_note": "0.01m text representation is not centimetre measurement accuracy"
+  },
+  "numerical_checks": {
+    "each_tile_shape_verified": true,
+    "selected_grid_native_values_match_raw": true,
+    "mosaic_minmax_values_from_raw": true,
+    "profile_max_m": 3772.96,
+    "unknown_NODATA_as_zero": false,
+    "selected_tiles_missing_count": 0,
+    "PNG_pixels_downloaded_for_this_creator": 0,
+    "PNG_TXT_identity_claimed": false
+  },
+  "GML_scope": "official specification explanation only: array sizes, startSequence and sequencingRule, class/type and -9999; not a raw file acquired or parsed",
+  "year": {
+    "value": 2008,
+    "meaning": "start of this foundational map information DEM distribution series",
+    "source": "https://service.gsi.go.jp/kiban/app/data_update_info_all/",
+    "actual_record": "2008-04-01 5m laser/photo, 10m24volcanoes etc"
+  },
+  "height_revision": {
+    "effective": "2025-04-01",
+    "DEM1A_5A_5B_5C": "revised data provided2025-07-31",
+    "DEM10A_10B": "not revised because of allowed accuracy",
+    "source": "https://www.gsi.go.jp/sokuchikijun/hyoko2024rev-QA.html"
+  },
+  "rights": {
+    "terms": "PDL1.0 by current GSI content terms unless otherwise stated",
+    "attribution": "source + processed statement retained within every map image",
+    "license_files": [
+      "LICENSE-GSI-CONTENTS.txt",
+      "LICENSE-PDL-1.0.txt",
+      "ATTRIBUTION-GSI-DEM.md"
+    ]
+  },
+  "own_visual_status": "recorded separately in creator-visual-review.json, not inferred from image generation",
+  "independent_status": "separate actor review_gsi_dem; not claimed as own work"
+}
